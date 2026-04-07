@@ -74,17 +74,23 @@
         to give self-contained verbalizations of these
         constructions, we have...
 
+        !! __$\tan\theta$ is the $y$-coordinate of the
+        !! intersection of the line through the origin
+        !! and $(\cos\theta, \sin\theta)$ with the
+        !! line $x = 1$__
         __$\tan\theta$ is the $y$-coordinate of the
-        intersection of the line through the origin
-        and $(\cos\theta, \sin\theta)$ with the
-        line $x = 1$__
+        intersection of $x = 1$ with the line through
+        the origin and $(\cos\theta, \sin\theta)$__
 
         ...for $\tan\theta$, and...
 
+        !! __$\cot\theta$ is the $x$-coordinate of the
+        !! intersection of the line through the origin
+        !! and $(\cos\theta, \sin\theta)$ with the
+        !! line $y = 1$__
         __$\cot\theta$ is the $x$-coordinate of the
-        intersection of the line through the origin
-        and $(\cos\theta, \sin\theta)$ with the
-        line $y = 1$__
+        intersection of $y = 1$ with the line through the origin
+        and $(\cos\theta, \sin\theta)$__
 
         ...for $\cot\theta$!
 

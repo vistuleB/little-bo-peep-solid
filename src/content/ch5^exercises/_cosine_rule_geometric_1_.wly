@@ -15,17 +15,16 @@
 
     |> Solution
 
-        It appears two places; 
-        it is 
-        !! it is, in the first instance, 
-        the area of this
+        It appears two places; it is the area of this
         rectangle here on the left:
+        !! It is the area of this rectangle here:
 
         |> Image
             src=images/e5_cosine_rule_geometric_1_sol1.svg
 
         It is also
         the area of this rectangle here on the right:
+        !! And of this rectangle here:
 
         |> Image
             src=images/e5_cosine_rule_geometric_1_sol2.svg
@@ -43,7 +42,7 @@
 
         |> Pause
 
-        This means that the rectangles have areas
+        This means that the rectangles have area
 
         $$
         \Large a(b\cdot \cos\theta_{ab}) = b(a\cdot \cos\theta_{ab}) = ab\cos\theta_{ab}

@@ -48,7 +48,7 @@
             src=images/svg_ch5_ex_theta_tangent_Q1_second_solve.svg
 
         ...i.e., in the first quadrant, at least, the
-        coordinates are $\sec(\theta)$ and $\csc(\theta)$:
+        coordinates are $\sec(\theta)$ and $\csc( theta):
 
         |> Image
             src=images/svg_ch5_ex_theta_tangent_Q1_with_answer.svg
@@ -63,28 +63,28 @@
         marked by purple arrows is the same in all four
         quadrants, because “minus times minus is plus”; but
         in first quadrant, the product is $1$, because
-        we know the product takes the form $\cos(\theta)\cdot\sec(\theta)$
+        we know the product takes the form $\cos\theta\cdot\sec\theta$
         in that quadrant;
         therefore the product is $1$ in _all_ quadrants; but
         the coordinate marked by the inside purple arrow is
-        $\cos(\theta)$ in all quadrants; therefore, lastly,
+        $\cos\theta$ in all quadrants; therefore, lastly,
         the coordinate marked by the _outside_ purple arrow
-        is $\sec(\theta)$ in all quadrants, since $\sec(\theta)$
-        is the unique number whose product with $\cos(\theta)$
+        is $\sec\theta$ in all quadrants, since $\sec\theta$
+        is the unique number whose product with $\cos\theta$
         is $1$; similarly the inside orange arrow marks coordinate
-        $\sin(\theta)$ is all quadrants, so the outside orange
-        arrow (by similar reasoning) has coordinate $\csc(\theta)$
+        $\sin\theta$ is all quadrants, so the outside orange
+        arrow (by similar reasoning) has coordinate $\csc\theta$
         in all quadrants, QED. (I.e., the grand conclusion is that the
         two coordinates are
 
         $$
-        \Huge \sec(\theta)
+        \Huge \sec\theta
         $$
 
         for the $x$-axis intersection, and
 
         $$
-        \Huge \csc(\theta)
+        \Huge \csc\theta
         $$
 
         for the $y$-axis intersection, no matter the quadrant.)

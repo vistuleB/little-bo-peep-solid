@@ -21,9 +21,6 @@
 
         Prove your conjecture by algebra.
 
-    |> Image
-        src=images/e5_more_closely_related_followup_reference_graphs.svg
-
     |> Solution
 
         For $\cos^2$ we take
@@ -91,7 +88,7 @@
         vertically by ${1\over 2}$.
 
         For $\sin^2$ we can similarly conjecture that
-        $\sin^2$ is the graph of $\cos(2x)$...
+        $\sin^2$ is the graph of $\cos(2x)$
 
         __vertically scaled by $-1/2$,
         translated up by $1/2$__
@@ -99,7 +96,7 @@
         |> ImageLeft
             src=images/e5_more_closely_related_followup_cloud3.svg
 
-        ...and, indeed,
+        and, indeed,
 
         $$
         \begin{aligned}
@@ -115,7 +112,7 @@
             src=images/e5_more_closely_related_followup_cloud5.svg
             offset_y=0.2em
 
-        as conjectured.
+        which completes a proof.
 
         For $\sin\cdot\cos$ it seems that $\sin(2x)$ is
         more closely related:
@@ -123,7 +120,7 @@
         |> Image
             src=images/e5_more_closely_related_followup_sol3.svg
 
-        Indeed, it seems that $\sin\cdot\cos$ is just $y = \sin(2x)$
+        In fact, it seems that $\sin\cdot\cos$ is just $y = \sin(2x)$
 
         __vertically scaled by $1/2$__
 
@@ -145,4 +142,30 @@
         {1\over 2}\sin(2x) = \sin x\cos x
         $$
 
-        matching the conjecture.
+        as per the conjecture!
+
+        |> SolutionNote
+
+            Here is a “pretty” rearrangement of the formulas
+            discovered above:
+
+            |> Boxed
+                $$
+                \begin{gathered}
+                \cos^2(x) = {1\over 2} + {1\over 2}\cos(2x) \\
+                \up{2.1}\sin^2(x) = {1\over 2} - {1\over 2}\cos(2x) \\
+                \up{2.1}\sin(x)\cos(x) = {1\over 2}\sin(2x)
+                \end{gathered}
+                $$
+
+
+            Another pretty arrangement:
+
+            |> Boxed
+                $$
+                \begin{gathered}
+                \cos^2(x) = {1 + \cos(2x) \over 2}\\
+                \up{2.1}\sin^2(x) = {1 - \cos(2x) \over 2} \\
+                \up{2.1}\sin(x)\cos(x) = {\sin(2x) \over 2 }
+                \end{gathered}
+                $$

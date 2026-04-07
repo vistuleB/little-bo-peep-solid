@@ -12652,9 +12652,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It appears two places; 
-              it is 
-              the area of this
+              It appears two places; it is the area of this
               rectangle here on the left:
             </OuterP>
             <Pause />
@@ -12695,7 +12693,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/9Sks.svg" />
             <Pause />
             <OuterP>
-              This means that the rectangles have areas
+              This means that the rectangles have area
             </OuterP>
             <Pause />
             <MathBlock>
@@ -13895,13 +13893,7 @@ const Rest = () => {
               <Math>
                 $\sec(\theta)$
               </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $\csc(\theta)$
-                </Math>
-                :
-              </NoBreak>
+              {" "} and $\csc( theta):
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/i6Bn.svg" />
@@ -13927,7 +13919,7 @@ const Rest = () => {
               {" "} because
               we know the product takes the form {" "}
               <Math>
-                $\cos(\theta)\cdot\sec(\theta)$
+                $\cos\theta\cdot\sec\theta$
               </Math>
               {" "}
               in that quadrant;
@@ -13943,7 +13935,7 @@ const Rest = () => {
               the coordinate marked by the inside purple arrow is
               {" "}
               <Math>
-                $\cos(\theta)$
+                $\cos\theta$
               </Math>
               {" "} in all quadrants; therefore, lastly,
               the coordinate marked by the {" "}
@@ -13953,16 +13945,16 @@ const Rest = () => {
               {" "} purple arrow
               is {" "}
               <Math>
-                $\sec(\theta)$
+                $\sec\theta$
               </Math>
               {" "} in all quadrants, since {" "}
               <Math>
-                $\sec(\theta)$
+                $\sec\theta$
               </Math>
               {" "}
               is the unique number whose product with {" "}
               <Math>
-                $\cos(\theta)$
+                $\cos\theta$
               </Math>
               {" "}
               is {" "}
@@ -13975,12 +13967,12 @@ const Rest = () => {
               {" "} similarly the inside orange arrow marks coordinate
               {" "}
               <Math>
-                $\sin(\theta)$
+                $\sin\theta$
               </Math>
               {" "} is all quadrants, so the outside orange
               arrow (by similar reasoning) has coordinate {" "}
               <Math>
-                $\csc(\theta)$
+                $\csc\theta$
               </Math>
               {" "}
               in all quadrants, QED. (I.e., the grand conclusion is that the
@@ -13989,7 +13981,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Huge \sec(\theta)
+              \Huge \sec\theta
               $$
             </MathBlock>
             <Pause />
@@ -14006,7 +13998,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \Huge \csc(\theta)
+              \Huge \csc\theta
               $$
             </MathBlock>
             <Pause />
@@ -14199,15 +14191,14 @@ const Rest = () => {
                 -coordinate
               </NoBreak>
               {" "} of the
-              intersection of the line through the origin
-              and {" "}
-              <Math>
-                $(\cos\theta, \sin\theta)$
-              </Math>
-              {" "} with the
-              line {" "}
+              intersection of {" "}
               <Math>
                 $x = 1$
+              </Math>
+              {" "} with the line through
+              the origin and {" "}
+              <Math>
+                $(\cos\theta, \sin\theta)$
               </Math>
             </CentralDisplayItalic>
             <Pause />
@@ -14234,15 +14225,14 @@ const Rest = () => {
                 -coordinate
               </NoBreak>
               {" "} of the
-              intersection of the line through the origin
+              intersection of {" "}
+              <Math>
+                $y = 1$
+              </Math>
+              {" "} with the line through the origin
               and {" "}
               <Math>
                 $(\cos\theta, \sin\theta)$
-              </Math>
-              {" "} with the
-              line {" "}
-              <Math>
-                $y = 1$
               </Math>
             </CentralDisplayItalic>
             <Pause />
@@ -14257,7 +14247,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={42}>
+        <Exercise
+          work="ing"
+          number={42}
+        >
           <ExerciseStatement id="_125_hgi_">
             <OuterP>
               <b>
@@ -14288,7 +14281,7 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:0.8em;"
-              src="/build-img/svgo-svg/j4h0.svg"
+              src="/tmp-images/e5_line_with_0_1_and_A.svg"
             />
             <Pause />
             <OuterP>
@@ -14363,9 +14356,9 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/kxTm.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_secant.svg" />
             <Pause />
-            <Image src="/build-img/svgo-svg/ryx0.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_cos.svg" />
             <Pause />
             <OuterP>
               (Cf. {" "}
@@ -14412,7 +14405,7 @@ const Rest = () => {
               this, the procedure is to use two circles of equal radius:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/JM7s.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step1.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14426,7 +14419,7 @@ const Rest = () => {
               center is that midpoint:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/eQmC.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step2.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14446,7 +14439,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/emr1.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step3.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14462,19 +14455,19 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/XE7K.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step4.svg" />
             <Pause />
             <OuterP>
               (The reason that the whole procedure works is that
               this triangle...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/KO2V.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg" />
             <Pause />
             <OuterP>
               ...is actually right-angled at its upper corner
               by 
-              the Peloponnesian Theorem.
+              the Peloponnesian circle theorem.
               This implies that the line from {" "}
               <Math>
                 $(A, 0)$
@@ -14490,6 +14483,15 @@ const Rest = () => {
               {" "} which is
               what we want/need.)
             </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              x = 1 \\
+              y = 1
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
             <Pause />
             <CentralDisplayItalic>
               ~ ~ case {" "}
@@ -14529,7 +14531,7 @@ const Rest = () => {
               of any radius:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/RGWo.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14553,7 +14555,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/4MXO.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14580,7 +14582,7 @@ const Rest = () => {
               intersection of the circle with the perpendicular:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/FPj6.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14600,7 +14602,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/hKBQ.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -14660,7 +14662,7 @@ const Rest = () => {
               {" "}{" "}
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/SB49.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_without_A.svg" />
             <Pause />
             <OuterP>
               However,
@@ -14706,7 +14708,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/vM7r.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_idea.svg" />
             <Pause />
             <OuterP>
               Or, symmetrically, we can treat {" "}
@@ -14734,7 +14736,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/5-80.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_idea_symmetric.svg" />
             <Pause />
             <OuterP>
               The second diagram
@@ -14754,7 +14756,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/xbp-.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_idea_symmetric_slope_explained.svg" />
             <Pause />
             <OuterP>
               ...like so; 
@@ -14773,7 +14775,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/YikH.svg" />
+            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_idea_slope_explained.svg" />
             <Pause />
             <OuterP>
               ...like so, since {" "}
@@ -16513,16 +16515,20 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Imagine turning the graphs {" "}
-              <Math>
-                $y = \sin^2(x)$
-              </Math>
-              {" "}
-              and {" "}
-              <Math>
-                $y = \cos^2(x)$
-              </Math>
-              {" "} into wooden cutouts:
+              Imagine wooden cutouts made from {" "}
+              <NoBreak>
+                <Math>
+                  $\sin^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\cos^2$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image
@@ -16537,7 +16543,8 @@ const Rest = () => {
             <Pause />
             <OuterP>
               It seems that if we would vertically flip
-              one of the cutouts (in this case {" "}
+              one of the cutouts 
+              (in this case {" "}
               <NoBreak>
                 <Math>
                   $y = \cos^2(x)$
@@ -16954,8 +16961,6 @@ const Rest = () => {
                 </p>
               </Item>
             </List>
-            <Pause />
-            <Image src="/images/e5_more_closely_related_followup_reference_graphs.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -17138,12 +17143,9 @@ const Rest = () => {
                 $\sin^2$
               </Math>
               {" "} is the graph of {" "}
-              <NoBreak>
-                <Math>
-                  $\cos(2x)$
-                </Math>
-                ...
-              </NoBreak>
+              <Math>
+                $\cos(2x)$
+              </Math>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -17163,7 +17165,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              ...and, indeed,
+              and, indeed,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -17184,7 +17186,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              as conjectured.
+              which completes a proof.
             </OuterP>
             <OuterP class="indent-10">
               For {" "}
@@ -17202,7 +17204,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/ADAv.svg" />
             <Pause />
             <OuterP>
-              Indeed, it seems that {" "}
+              In fact, it seems that {" "}
               <Math>
                 $\sin\cdot\cos$
               </Math>
@@ -17265,14 +17267,47 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              matching the conjecture.
+              as per the conjecture!
             </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Here is a “pretty” rearrangement of the formulas
+                discovered above:
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \begin&#123;gathered&#125;
+                  \cos^2(x) = &#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x) \\
+                  \up&#123;2.1&#125;\sin^2(x) = &#123;1\over 2&#125; - &#123;1\over 2&#125;\cos(2x) \\
+                  \up&#123;2.1&#125;\sin(x)\cos(x) = &#123;1\over 2&#125;\sin(2x)
+                  \end&#123;gathered&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                Another pretty arrangement:
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \begin&#123;gathered&#125;
+                  \cos^2(x) = &#123;1 + \cos(2x) \over 2&#125;\\
+                  \up&#123;2.1&#125;\sin^2(x) = &#123;1 - \cos(2x) \over 2&#125; \\
+                  \up&#123;2.1&#125;\sin(x)\cos(x) = &#123;\sin(2x) \over 2 &#125;
+                  \end&#123;gathered&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+            </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={51}
-        >
+        <Exercise number={51}>
           <ExerciseStatement id="_134_hgi_">
             <OuterP>
               <b>
@@ -17308,7 +17343,7 @@ const Rest = () => {
                 $x$
               </Math>
               {" "} is it achieved?
-              (Reason geometrically, NOT by calculus.)
+              (Reason geometrically.)
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -17382,7 +17417,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/2Wso.svg" />
             <Pause />
             <OuterP>
-              This generalizes all over the circle (...
+              Some more examples:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/Q0sd.svg" />
@@ -17392,8 +17427,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/50WM.svg" />
             <Pause />
             <OuterP>
-              ...some more examples) and,
-              given this description, it seems obvious (or:
+              Given this description, it seems obvious (or:
               it {" "}
               <i>
                 is
@@ -17501,18 +17535,7 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                occurs at {" "}
-                <Math>
-                  $x = -135^\circ$
-                </Math>
-                {" "}
-                and its added multiples of {" "}
-                <NoBreak>
-                  <Math>
-                    $360^\circ$
-                  </Math>
-                  .
-                </NoBreak>
+                occurs at the other end of the circle.
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -17829,7 +17852,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              ...absolute corroboration!!!!
+              ...victory!!
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -18236,18 +18259,18 @@ const Rest = () => {
               {" "}
               Relate {" "}
               <InChapterLink
-                href="/article/chapter5#_136_hgi_"
+                href="/article/chapter5#_135_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 53
+                Exercise 52
               </InChapterLink>
               {" "} to {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_135_hgi_"
+                  href="/article/chapter5#_136_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 52
+                  Exercise 53
                 </InChapterLink>
                 .
               </NoBreak>

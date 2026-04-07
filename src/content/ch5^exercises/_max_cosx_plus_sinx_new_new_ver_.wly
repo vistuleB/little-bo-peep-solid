@@ -1,5 +1,4 @@
 |> Exercise
-    work=ing
     handle=_max_cosx_plus_sinx_new_new_ver_
 
     The graph $y = \cos x + \sin x$ from Exercise 
@@ -10,7 +9,7 @@
 
     What is this maximum value, and for which
     value(s) of $x$ is it achieved?
-    (Reason geometrically, NOT by calculus.)
+    (Reason geometrically.)
 
     |> Solution
 
@@ -40,7 +39,8 @@
         |> Image
             src=images/e5_max_cosx_plus_sinx_sol1_without_lines.svg
 
-        This generalizes all over the circle (...
+        !! This generalizes all over the circle (...
+        Some more examples:
 
         |> Image
             src=images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_2.svg
@@ -52,8 +52,8 @@
         |> Image
             src=images/e5_max_cosx_plus_sinx_sol1_negative_cos_example_6.svg
 
-        ...some more examples) and,
-        given this description, it seems obvious (or:
+        !! ...some more examples) and,
+        Given this description, it seems obvious (or:
         it _is_ obvious) that the value of $x$ that
         maximizes $\cos x + \sin x$ is $x = \eta/2$,
         to make the line that rains down at $-45^\circ$
@@ -91,8 +91,11 @@
             \large
             -\sqrt{2}
             $$
-            occurs at $x = -135^\circ$
-            and its added multiples of $360^\circ$.
+            occurs at the other end of the circle.
+            !! occurs at $x = -135^\circ + k360^\circ$.
+            !! and 
+            !! together with
+            !! its added multiples of $360^\circ$.
 
         |> SolutionNote
 

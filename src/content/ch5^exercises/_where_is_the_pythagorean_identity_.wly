@@ -5,9 +5,9 @@
     apparent in the four graphs of Exercise >>_four_graphs_?
 
     |> Solution
-        !! Imagine wooden cutouts of $y = \sin^2(x)$, $y = \cos^2(x)$:
-        Imagine turning the graphs $y = \sin^2(x)$
-        and $y = \cos^2(x)$ into wooden cutouts:
+        Imagine wooden cutouts made from $\sin^2$, $\cos^2$:
+        !! Imagine turning the graphs $y = \sin^2(x)$
+        !! and $y = \cos^2(x)$ into wooden cutouts:
 
         |> Image
             style=margin-top:1.1em;margin-bottom:1.1em;
@@ -17,7 +17,9 @@
             src=images/svg_ch5_ex_pythagorean_graphs_cos2.svg
 
         It seems that if we would vertically flip
-        one of the cutouts (in this case $y = \cos^2(x)$),
+        one of the cutouts 
+        (in this case $y = \cos^2(x)$),
+        !! (in this case $\cos^2$),
         it would perfectly fit on top of the other to make the
         constant function $y = 1$:
 

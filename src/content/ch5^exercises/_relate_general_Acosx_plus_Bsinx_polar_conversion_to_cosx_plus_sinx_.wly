@@ -2,7 +2,21 @@
     work=ing
     handle=_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
 
-    Relate Exercise >>_Acosx_plus_Bsinx_as_sinusoid_ to Exercise >>_cosx_plus_sinx_as_sinusoid_.
+    Relate Exercise >>_cosx_plus_sinx_as_sinusoid_ to Exercise >>_Acosx_plus_Bsinx_as_sinusoid_.
+
+    !! Relate the solution of Exercise >>_Acosx_plus_Bsinx_as_sinusoid_ to the result of Exercise >>_cosx_plus_sinx_as_sinusoid_,
+    !! which, to recall the latter, is the fact that
+    !! $
+    !! \cos x + \sin x = \sqrt{2}\cos(x - \eta/2)
+    !! $
+    !! for all $x \in \rr$.
+
+    !! Does Exercise >>_cosx_plus_sinx_as_sinusoid_ relate to Exercise >>_Acosx_plus_Bsinx_as_sinusoid_?
+
+    !! Does Exercise >>_Acosx_plus_Bsinx_as_sinusoid_ relate to Exercise >>_cosx_plus_sinx_as_sinusoid_?
+
+    !! In Exercise >>_Acosx_plus_Bsinx_as_sinusoid_, which $W$ and $\psi$ are obtained
+    !! if $A = B = 1$?
 
     |> Solution
 
