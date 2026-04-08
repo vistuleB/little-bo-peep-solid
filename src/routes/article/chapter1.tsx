@@ -551,8 +551,8 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <List
-          type="decimal"
-          style="gap: 2px;"
+          marker="decimal"
+          style="gap:2px;"
         >
           <Item>
             <p>

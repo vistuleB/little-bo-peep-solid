@@ -4742,7 +4742,7 @@ const Rest = () => {
               that:
             </OuterP>
             <Pause />
-            <List style="padding-left: 1.2em; gap: 0.4em;">
+            <List style="padding-left:1.2em;gap:0.4em;">
               <Item>
                 <p>
                   the red arrows indicate which particle
@@ -4822,7 +4822,7 @@ const Rest = () => {
               in this figure:
             </OuterP>
             <Pause />
-            <List style="padding-left: 1.4em; gap: 0.4em;">
+            <List style="padding-left:1.4em;gap:0.4em;">
               <Item>
                 <p>
                   in {" "}
@@ -6467,7 +6467,7 @@ const Rest = () => {
               Express the...
             </OuterP>
             <Pause />
-            <List style="padding-left: 2.4em; gap: 0.1em;">
+            <List style="padding-left:2.4em;gap:0.1em;">
               <Item>
                 <p>
                   associativity of function composition
@@ -6499,7 +6499,7 @@ const Rest = () => {
               ...as well as the...
             </OuterP>
             <Pause />
-            <List style="padding-left: 2.4em; gap: 0.1em;">
+            <List style="padding-left:2.4em;gap:0.1em;">
               <Item>
                 <p>
                   associativity of real number multiplication
@@ -6533,7 +6533,7 @@ const Rest = () => {
             <Pause />
             <List>
               <Item>
-                <p>
+                <Item>
                   <i>
                     the associativity of function multiplication is
                     the fact that {" "}
@@ -6607,14 +6607,12 @@ const Rest = () => {
                       </Math>
                       ]
                     </NoBreak>
+                    <ImageLeft
+                      src="/build-img/svgo-svg/pcYW.svg"
+                      offset_x="4em"
+                    />
                   </i>
-                </p>
-              </Item>
-              <Item>
-                <ImageLeft
-                  src="/build-img/svgo-svg/pcYW.svg"
-                  offset_x="4em"
-                />
+                </Item>
               </Item>
               <Item>
                 <p>

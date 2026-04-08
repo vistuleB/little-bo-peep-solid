@@ -1343,9 +1343,9 @@
     One can polish a few more details by noting that:
     
     |> List
-        type=lower-roman-paren
-        marker-bold=true
-        style=gap: 1em;
+        marker=lower-roman-paren
+        marker-font-family=Baskerville Bold
+        style=gap:1em;
 
         the segment can be tangent to the
         arc at one point, the proof will still go

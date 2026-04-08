@@ -4,7 +4,7 @@
     Express the...
     
     |> List
-        style=padding-left: 2.4em; gap: 0.1em;
+        style=padding-left:2.4em;gap:0.1em;
 
         associativity of function composition
         
@@ -19,7 +19,7 @@
     ...as well as the...
     
     |> List
-        style=padding-left: 2.4em; gap: 0.1em;
+        style=padding-left:2.4em;gap:0.1em;
 
         associativity of real number multiplication
         
@@ -37,15 +37,16 @@
         
         |> List
 
-            _the associativity of function multiplication is
-            the fact that $(f \circ g) \circ h = f \circ (g \circ h)$
-            for all functions $f$, $g$, $h$ such that
-            $h : D \ra C$, $g : C \ra B$, $f : B \ra A$
-            [for arbitrary sets $A$, $B$, $C$, $D$]_
+            |> Item
+                _the associativity of function multiplication is
+                the fact that $(f \circ g) \circ h = f \circ (g \circ h)$
+                for all functions $f$, $g$, $h$ such that
+                $h : D \ra C$, $g : C \ra B$, $f : B \ra A$
+                [for arbitrary sets $A$, $B$, $C$, $D$]_
 
-            |> ImageLeft
-                src=images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg
-                offset_x= 4em
+                |> ImageLeft
+                    src=images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg
+                    offset_x=4em
 
             _the associativity of function multiplication is
             the fact that $f(gh) = (fg)h$ for all $f, g, h : \rr \ra \rr$_

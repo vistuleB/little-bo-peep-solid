@@ -23,8 +23,8 @@
         For which the graphs are respectively obtained by:
         
         |> List
-            type=decimal
-            style=padding-left: 2em;
+            marker=decimal
+            style=padding-left:2em;
 
             horizontally translating the graph of $f$ by $A$ units to the left;
 

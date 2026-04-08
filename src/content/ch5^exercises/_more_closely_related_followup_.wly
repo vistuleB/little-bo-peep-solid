@@ -5,7 +5,7 @@
     For each of $\cos^2$, $\sin^2$, and $\sin\cdot\cos$:
 
     |> List
-        type=decimal
+        marker=decimal
 
         Choose either $\cos(2x)$ or $\sin(2x)$ as a
         “most closely related starting point”, according

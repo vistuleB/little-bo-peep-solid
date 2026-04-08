@@ -14,7 +14,7 @@
     Then, in the following order, we...
 
     |> List
-        type=decimal
+        marker=decimal
         style=padding-left:20%;
 
         ...increase $C$ from $0$ to $1{}.33$; and

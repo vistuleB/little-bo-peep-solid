@@ -150,8 +150,8 @@
     can be thought of in a few different ways:
 
     |> List
-        type=decimal
-        style=gap: 2px;
+        marker=decimal
+        style=gap:2px;
 
         Fifty halves (i.e., $50 \times {1\over 2}$).
 

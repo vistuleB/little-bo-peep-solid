@@ -3474,9 +3474,9 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <List
-          type="lower-roman-paren"
-          markerBold={true}
-          style="gap: 1em;"
+          marker="lower-roman-paren"
+          markerFontFamily="Baskerville Bold"
+          style="gap:1em;"
         >
           <Item>
             <p>
@@ -6404,7 +6404,7 @@ const Rest = () => {
               motion at uniform speed. In this case:
             </OuterP>
             <Pause />
-            <List style="padding-left: 2em; gap: 0.2em;">
+            <List style="padding-left:2em;gap:0.2em;">
               <Item>
                 <p>
                   <Math>
@@ -6434,7 +6434,7 @@ const Rest = () => {
               And either:
             </OuterP>
             <Pause />
-            <List style="padding-left: 2em;">
+            <List style="padding-left:2em;">
               <Item>
                 <p>
                   <Math>
@@ -6478,7 +6478,7 @@ const Rest = () => {
               Or:
             </OuterP>
             <Pause />
-            <List style="padding-left: 2em;">
+            <List style="padding-left:2em;">
               <Item>
                 <p>
                   <Math>
@@ -7400,7 +7400,7 @@ const Rest = () => {
               And:
             </OuterP>
             <Pause />
-            <List style="padding-left: 2.2em; gap: 0.2em;">
+            <List style="padding-left:2.2em;gap:0.2em;">
               <Item>
                 <p>
                   all distances are in inches
@@ -11430,8 +11430,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <List
-              type="lower-alpha-paren"
-              markerBold={true}
+              marker="lower-alpha-paren"
+              markerFontFamily="Baskerville Bold"
               style="gap:0.2em;padding-left:2em;"
             >
               <Item>
@@ -11681,8 +11681,8 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <List
-              type="decimal"
-              style="padding-left: 2em;"
+              marker="decimal"
+              style="padding-left:2em;"
             >
               <Item>
                 <p>
@@ -11862,7 +11862,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <List
-              type="decimal"
+              marker="decimal"
               style="padding-left:20%;"
             >
               <Item>
@@ -16890,7 +16890,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <List type="decimal">
+            <List marker="decimal">
               <Item>
                 <p>
                   Choose either {" "}

@@ -4,7 +4,7 @@ import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
 
-type ListMarker =
+type ListMarkerType =
   | "disc"
   | "decimal"
   | "lower-alpha"
@@ -17,51 +17,55 @@ type ListMarker =
   | "upper-roman-paren";
 
 interface ListProps extends SharedProps {
-  type?: ListMarker;
+  marker?: ListMarkerType;
   markerPrefix?: string;
   markerSuffix?: string;
-  markerBold?: boolean;
+  markerFontFamily?: string;
 }
 
-const markerMap: Record<ListMarker, string> = {
-  disc: "list-disc",
-  decimal: "list-custom-decimal",
-  "lower-alpha": "list-custom-lower-alpha",
-  "upper-alpha": "list-custom-upper-alpha",
-  "lower-roman": "list-custom-lower-roman",
-  "upper-roman": "list-custom-upper-roman",
-  "lower-alpha-paren": "list-custom-lower-alpha",
-  "upper-alpha-paren": "list-custom-upper-alpha",
-  "lower-roman-paren": "list-custom-lower-roman",
-  "upper-roman-paren": "list-custom-upper-roman",
+const markerMap: Record<ListMarkerType, string> = {
+  "disc": "list-disc",
+  "decimal": "list-custom-marker list-custom-decimal",
+  "lower-alpha": "list-custom-marker list-custom-lower-alpha",
+  "upper-alpha": "list-custom-marker list-custom-upper-alpha",
+  "lower-roman": "list-custom-marker list-custom-lower-roman",
+  "upper-roman": "list-custom-marker list-custom-upper-roman",
+  "lower-alpha-paren": "list-custom-marker list-custom-lower-alpha",
+  "upper-alpha-paren": "list-custom-marker list-custom-upper-alpha",
+  "lower-roman-paren": "list-custom-marker list-custom-lower-roman",
+  "upper-roman-paren": "list-custom-marker list-custom-upper-roman",
 };
 
 export const List = (props: ParentProps & ListProps) => {
   // Determine tag: 'ul' for discs, 'ol' for everything else
-  const Tag = () => (props.type === "disc" ? "ul" : "ol");
+  const Tag = () => (props.marker === "disc" ? "ul" : "ol");
 
   const effectivePrefix = () => {
     if (props.markerPrefix !== undefined) return props.markerPrefix;
-    if (props.type?.endsWith("-paren")) return "(";
+    if (props.marker?.endsWith("-paren")) return "(";
     return "";
   };
 
   const effectiveSuffix = () => {
     if (props.markerSuffix !== undefined) return props.markerSuffix;
-    if (props.type?.endsWith("-paren")) return ")";
+    if (props.marker?.endsWith("-paren")) return ")";
     if (props.markerPrefix !== undefined) return "";
     return ".";
   };
 
+  const defaultMarkerFont = "Baskerville Regular";
+
   return (
-    <div class={twJoin("text-column from_list_primitive", props.class)}>
+    // recently removed: 'from_list_primitive' class, whose
+    // remnants you can still (?) find in app.css:
+    <div class={twJoin("text-column", props.class)}>
       <Dynamic
         component={Tag()}
-        style={`${props.style ?? ""}; --marker-prefix: "${effectivePrefix()}"; --marker-suffix: "${effectiveSuffix()}"; --marker-font-family: ${props.markerBold ? "Baskerville Bold" : "Baskerville Regular"}`}
+        style={`${props.style ?? ""};--marker-prefix:"${effectivePrefix()}";--marker-suffix:"${effectiveSuffix()}";--marker-font-family:"${props.markerFontFamily?props.markerFontFamily:defaultMarkerFont}"`}
         class={twJoin(
-          "px-4 ml-6",
+          "pl-10 pr-4", // was "px-4 ml-6" until recently
           "flex flex-col",
-          markerMap[props.type ?? "disc"],
+          markerMap[props.marker ?? "disc"],
         )}
       >
         {props.children}

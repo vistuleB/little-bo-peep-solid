@@ -13,8 +13,8 @@
     Rewrite each case:
     
     |> List
-        type=lower-alpha-paren
-        marker-bold=true
+        marker=lower-alpha-paren
+        marker-font-family=Baskerville Bold
         style=gap:0.2em;padding-left:2em;
 
         using the composition “$\circ$” operator;

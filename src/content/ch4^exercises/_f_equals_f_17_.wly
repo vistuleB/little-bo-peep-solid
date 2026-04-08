@@ -149,7 +149,7 @@
         that:
         
         |> List
-            style=padding-left: 1.2em; gap: 0.4em;
+            style=padding-left:1.2em;gap:0.4em;
 
             the red arrows indicate which particle
             takes its velocity from the position
@@ -201,7 +201,7 @@
         in this figure:
         
         |> List
-            style=padding-left: 1.4em; gap: 0.4em;
+            style=padding-left:1.4em;gap:0.4em;
 
             in 
             |> span
