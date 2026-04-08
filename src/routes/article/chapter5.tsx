@@ -14247,10 +14247,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={42}
-        >
+        <Exercise number={42}>
           <ExerciseStatement id="_125_hgi_">
             <OuterP>
               <b>
@@ -15751,10 +15748,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={45}
-        >
+        <Exercise number={45}>
           <ExerciseStatement id="_128_hgi_">
             <OuterP>
               <b>
@@ -15998,10 +15992,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={46}
-        >
+        <Exercise number={46}>
           <ExerciseStatement id="_129_hgi_">
             <OuterP>
               <b>
@@ -16592,10 +16583,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={49}
-        >
+        <Exercise number={49}>
           <ExerciseStatement id="_132_hgi_">
             <OuterP>
               <b>
@@ -16857,10 +16845,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={50}
-        >
+        <Exercise number={50}>
           <ExerciseStatement id="_133_hgi_">
             <OuterP>
               <b>
@@ -17307,7 +17292,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={51}>
+        <Exercise
+          work="ing"
+          number={51}
+        >
           <ExerciseStatement id="_134_hgi_">
             <OuterP>
               <b>
@@ -17337,18 +17325,18 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/TH1y.svg" />
             <Pause />
             <OuterP>
-              What is this maximum value, and for which
+              Reasoning geometrically,
+              what is this maximum value, and for which
               value(s) of {" "}
               <Math>
                 $x$
               </Math>
               {" "} is it achieved?
-              (Reason geometrically.)
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              From basics,
+              By the definition,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -17420,11 +17408,7 @@ const Rest = () => {
               Some more examples:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Q0sd.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/rIoB.svg" />
-            <Pause />
-            <Image src="/build-img/svgo-svg/50WM.svg" />
+            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_without_lines_more_examples.svg" />
             <Pause />
             <OuterP>
               Given this description, it seems obvious (or:
@@ -18090,10 +18074,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={53}
-        >
+        <Exercise number={53}>
           <ExerciseStatement id="_136_hgi_">
             <OuterP>
               <b>
@@ -18247,10 +18228,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={54}
-        >
+        <Exercise number={54}>
           <ExerciseStatement id="_137_hgi_">
             <OuterP>
               <b>
