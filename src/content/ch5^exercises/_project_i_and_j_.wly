@@ -1,5 +1,5 @@
 |> Exercise
-    !! work=ing
+    work=ing
     handle=_project_i_and_j_
 
     What are the orthogonal (= perpendicular) 
@@ -11,8 +11,7 @@
     |> Image
         src=images/e5_project_i_and_j_statement.svg
 
-    (I.e., find the 
-    ruler-readings
+    (I.e., find the ruler-readings
     marked ‘1’ and ‘2’ above
     as a function of the angle $\theta$.)
 
@@ -84,9 +83,6 @@
         “forward end” of the ruler and the forward end of
         the vector, measured as an angle between $0^\circ$
         and $180^\circ$, and this angle remains the same.)
-        !! If we apply this to the problem statement, twice,
-        !! the unique ruler is replaced by a unique vector,
-        !! while the two vectors are each replaced by a ruler:
         If we apply this to the problem statement
         the unique ruler is replaced by a unique vector
         while the two vectors are each replaced by a ruler:
@@ -94,8 +90,95 @@
         |> Image
             src=images/e5_project_i_and_j_sol5_v2.svg
 
-        ...and in the new configuration, at bottom right, it is 
-        !! ...and, in this new configuration, it becomes 
-        trivial to see 
-        that the answers are $\cos(\theta)$ (‘1’),
-        $\sin(\theta)$ (‘2’)!
+        ...and in the new configuration, at bottom right, 
+        one can see by the original definitions of sin
+        and cos that the projections are
+        are $\cos(\theta)$ (‘1’), $\sin(\theta)$ (‘2’).
+
+        |> SolutionNote
+
+            !! The original definition of cosine is as pictured
+            !! in the next graphic, with a rotating point that is
+            !! projected onto a fixed axis, namely the $x$ axis:
+            !! While the original definition of cosine rotates
+            !! a point and then projects that point onto the $x$ axis...
+            !! take the $x$-coordinate of a rotating point:
+
+            !! While the original definitions of sin and cos
+            !! involve a point rotating around the unit circle,
+            !! projected in two different directions, as in the
+            !! following diagrams...
+
+            The original definitions of sin and cos involve
+            a single point rotating around the unit circle projected
+            onto two fixed rulers, resulting in two
+            functions:
+
+            |> Image
+                src=images/e5_project_i_and_j_note1.svg
+
+            |> Pause
+
+            |> Image
+                src=images/e5_project_i_and_j_note1_sin_v2.svg
+
+            !! But this exercise shows that the definition can be
+            !! turned on its head, so that cosine is obtained by
+            !! keeping the point fixed while rotating the ruler, instead:
+            !! projecting a fixed point onto a rotating axis, instead:
+            !! ...this exercise shows that we can also characterize
+            !! sin and cos as the projections of two separate fixed points
+            !! onto a single rotating ruler, essentially turning the 
+            !! entire definition on its head:
+            By contrast, this exercise shows that we can also view
+            sin and cos as the projections of two different fixed points onto
+            a single ruler, which is the rotating object:
+
+            |> Image
+                src=images/e5_project_i_and_j_note2.svg
+
+            |> Image
+                src=images/e5_project_i_and_j_note2_sin.svg
+
+            To paraphrase, according to the first definition,
+            sin and cos are
+
+            __the measurements obtained by virtue of being
+            at a certain position (angle) in the plane__
+
+            while according to the second definition, sin and cos
+            are 
+
+            __the measurements obtained by virtue of
+            measuring according to a certain direction in the plane__
+
+            where in the former case, to underscore the philosophical difference,
+            it is the thing being
+            measured that varies, while in the latter case,
+            it is the instrument of measurement that varies.
+            !! which is kind of cool. (?)
+            
+            !! which underscores a kind of “duality” between the
+            !! concept of an object being measured, and the tool
+            !! that is measuring it—by fixing the object to be
+            !! constant, and letting the tool range over all possible
+            !! measuring tools, the tables have turned, with the object
+            !! suddenly becoming a measurement device of the tools! 
+            !! (I.e.,
+            !! because the object is ascribing a number to each of the
+            !! measuring tools—its own measure!) 
+            !! So to paraphrase again, the traditional definitions
+            !! of sin and cos follow the mold of
+
+            !! __points as measured by a specific ruler__
+
+            !! (for each of sin and cos individually, we mean),
+            !! while the
+            !! newly found characterizations of sin and cos follow the
+            !! mold of
+
+            !! __rulers as measured by a specific point__
+
+            !! if we lean in to the metaphor of a measuring device
+            !! being “measured” by the thing it is supposed to measure.
+

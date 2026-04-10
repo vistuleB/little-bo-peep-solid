@@ -1,5 +1,4 @@
 |> Exercise
-    !! work=ing
     handle=_geometric_construction_of_1_over_A_new_ver_
 
     If $0$, $1$, and a value $A > 1$ are marked
@@ -7,7 +6,7 @@
 
     |> Image
         style=margin-top:0.8em;margin-bottom:0.8em;
-        src=tmp-images/e5_line_with_0_1_and_A.svg
+        src=images/e5_line_with_0_1_and_A.svg
 
     ...how can we find the placement of...
 
@@ -27,10 +26,10 @@
         or symmetrically, such that $A = \cos(\theta)$, if $|A| < 1$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_and_secant.svg
+            src=images/e5_line_with_0_1_and_A_and_secant.svg
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_and_cos.svg
+            src=images/e5_line_with_0_1_and_A_and_cos.svg
 
         (Cf. Exercise >>_secant_cosecant_intersections_.)
         We now proceed with
@@ -44,31 +43,31 @@
         this, the procedure is to use two circles of equal radius:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step1.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step1.svg
 
         _Step 2._ Draw a semicircle of radius $A/2$ whose
         center is that midpoint:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step2.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step2.svg
 
         _Step 3._ Draw a circle of radius $1$ whose center
         is $(0, 0)$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step3.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step3.svg
 
         _Step 4._ Draw a line through the intersections
         of the two circles to find the position of $1/A$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step4.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step4.svg
 
         (The reason that the whole procedure works is that
         this triangle...
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg
+            src=images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg
 
         ...is actually right-angled at its upper corner
         by 
@@ -94,14 +93,14 @@
         of any radius:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg
+            src=images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg
 
         _Step 2._ Use these points to draw a perpendicular 
         through $A$, similarly to the first step of
         the case $|A| > 1$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg
+            src=images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg
 
         _Step 3._ 
         Draw a circle of radius $1$ centered at $(0, 0)$,
@@ -109,7 +108,7 @@
         intersection of the circle with the perpendicular:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg
+            src=images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg
 
         _Step 4._ 
         Construct a perpendicular to this line
@@ -119,7 +118,7 @@
         main axis is $1/A$:
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg
+            src=images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg
 
         |> StarDivider
 
@@ -134,7 +133,7 @@
         (this figure is just a recap of Exercise >>_tan_cot_on_unit_circle_):
         
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_tancot_without_A.svg
+            src=images/e5_line_with_0_1_and_A_tancot_without_A.svg
 
         However,
 
@@ -147,7 +146,7 @@
         of $1/A$, shown here for $0 < A < 1$ (though it works for all $A \in \rr$):
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_tancot_idea.svg
+            src=images/e5_line_with_0_1_and_A_tancot_idea.svg
 
         Or, symmetrically, we can treat $A$ as $\cot\theta$, from
         which $\tan\theta$ becomes $1/A$:
@@ -177,13 +176,13 @@
         !! which gives us (basic idea):
 
         !! |> Image
-        !!     src=tmp-images/e5_line_with_0_1_and_A_tancot_idea.svg
+        !!     src=images/e5_line_with_0_1_and_A_tancot_idea.svg
         !!     style=margin-bottom:-1em;
 
         !! Or (symmetric basic idea):
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_tancot_idea_symmetric.svg
+            src=images/e5_line_with_0_1_and_A_tancot_idea_symmetric.svg
 
         !! (By the way this second construction 
         The second diagram
@@ -193,7 +192,7 @@
         triangle until the run hits $1$...
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_tancot_idea_symmetric_slope_explained.svg
+            src=images/e5_line_with_0_1_and_A_tancot_idea_symmetric_slope_explained.svg
 
         ...like so; 
         !! symmetrically, speaking of which, the first construction can
@@ -202,7 +201,7 @@
         triangle until the _rise_ hits $1$...
 
         |> Image
-            src=tmp-images/e5_line_with_0_1_and_A_tancot_idea_slope_explained.svg
+            src=images/e5_line_with_0_1_and_A_tancot_idea_slope_explained.svg
 
         ...like so, since “$\te{run} = {\te{rise}\over \te{slope}}$”
         implies “$\te{run} = {1\over \te{slope}}$” by the

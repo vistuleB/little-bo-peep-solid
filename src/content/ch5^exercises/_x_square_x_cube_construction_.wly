@@ -9,8 +9,6 @@
     |> Solution
 
         _Solution 1._ If $A > 1$,
-        !! |> Image
-        !!     src=images/e5_x_square_x_cube_construction_0.svg
         start by constructing a perpendicular to the $x$ axis
         (“the number line” = “the $x$ axis”) through $1$:
 
@@ -133,9 +131,3 @@
                 src=images/e5_x_square_x_cube_construction_16_v6.svg
 
             (No such thing exists for $A > 1$.)
-            !! Curiously, there is no similar 
-            !! construction for $A > 1$, all of
-            !! which require three-compass-and-one-ruler-stroke constructions
-            !! of perpendiculars to keep “reaching” the next
-            !! power of $A$.
-

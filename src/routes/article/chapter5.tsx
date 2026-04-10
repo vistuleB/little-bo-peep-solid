@@ -155,10 +155,7 @@ export default function __Chapter5__() {
       <ArticleTitle banner="Chapter 5:">
         The Trigonometric Functions
       </ArticleTitle>
-      <Section
-        work="ing"
-        id="section-1"
-      >
+      <Section id="section-1">
         <OuterP>
           <b>
             Cos and Sin. (“Cosine” and “sine”.)
@@ -14278,7 +14275,7 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:0.8em;"
-              src="/tmp-images/e5_line_with_0_1_and_A.svg"
+              src="/build-img/svgo-svg/j4h0.svg"
             />
             <Pause />
             <OuterP>
@@ -14353,9 +14350,9 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_secant.svg" />
+            <Image src="/build-img/svgo-svg/kxTm.svg" />
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_and_cos.svg" />
+            <Image src="/build-img/svgo-svg/ryx0.svg" />
             <Pause />
             <OuterP>
               (Cf. {" "}
@@ -14402,7 +14399,7 @@ const Rest = () => {
               this, the procedure is to use two circles of equal radius:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step1.svg" />
+            <Image src="/build-img/svgo-svg/JM7s.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14416,7 +14413,7 @@ const Rest = () => {
               center is that midpoint:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step2.svg" />
+            <Image src="/build-img/svgo-svg/eQmC.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14436,7 +14433,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step3.svg" />
+            <Image src="/build-img/svgo-svg/emr1.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14452,14 +14449,14 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step4.svg" />
+            <Image src="/build-img/svgo-svg/XE7K.svg" />
             <Pause />
             <OuterP>
               (The reason that the whole procedure works is that
               this triangle...
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg" />
+            <Image src="/build-img/svgo-svg/KO2V.svg" />
             <Pause />
             <OuterP>
               ...is actually right-angled at its upper corner
@@ -14528,7 +14525,7 @@ const Rest = () => {
               of any radius:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg" />
+            <Image src="/build-img/svgo-svg/RGWo.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14552,7 +14549,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg" />
+            <Image src="/build-img/svgo-svg/4MXO.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14579,7 +14576,7 @@ const Rest = () => {
               intersection of the circle with the perpendicular:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg" />
+            <Image src="/build-img/svgo-svg/FPj6.svg" />
             <Pause />
             <OuterP>
               <i>
@@ -14599,7 +14596,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg" />
+            <Image src="/build-img/svgo-svg/hKBQ.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -14659,7 +14656,7 @@ const Rest = () => {
               {" "}{" "}
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_without_A.svg" />
+            <Image src="/build-img/svgo-svg/SB49.svg" />
             <Pause />
             <OuterP>
               However,
@@ -14705,7 +14702,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_idea.svg" />
+            <Image src="/build-img/svgo-svg/vM7r.svg" />
             <Pause />
             <OuterP>
               Or, symmetrically, we can treat {" "}
@@ -14733,7 +14730,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_idea_symmetric.svg" />
+            <Image src="/build-img/svgo-svg/5-80.svg" />
             <Pause />
             <OuterP>
               The second diagram
@@ -14753,7 +14750,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_idea_symmetric_slope_explained.svg" />
+            <Image src="/build-img/svgo-svg/xbp-.svg" />
             <Pause />
             <OuterP>
               ...like so; 
@@ -14772,7 +14769,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_line_with_0_1_and_A_tancot_idea_slope_explained.svg" />
+            <Image src="/build-img/svgo-svg/YikH.svg" />
             <Pause />
             <OuterP>
               ...like so, since {" "}
@@ -15748,7 +15745,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={45}>
+        <Exercise
+          work="ing"
+          number={45}
+        >
           <ExerciseStatement id="_128_hgi_">
             <OuterP>
               <b>
@@ -15787,8 +15787,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/QGG0.svg" />
             <Pause />
             <OuterP>
-              (I.e., find the 
-              ruler-readings
+              (I.e., find the ruler-readings
               marked ‘1’ and ‘2’ above
               as a function of the angle {" "}
               <NoBreak>
@@ -15977,19 +15976,74 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/Xur8.svg" />
             <Pause />
             <OuterP>
-              ...and in the new configuration, at bottom right, it is 
-              trivial to see 
-              that the answers are {" "}
+              ...and in the new configuration, at bottom right, 
+              one can see by the original definitions of sin
+              and cos that the projections are
+              are {" "}
               <Math>
                 $\cos(\theta)$
               </Math>
-              {" "} (‘1’),
-              {" "}
+              {" "} (‘1’), {" "}
               <Math>
                 $\sin(\theta)$
               </Math>
-              {" "} (‘2’)!
+              {" "} (‘2’).
             </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The original definitions of sin and cos involve
+                a single point rotating around the unit circle projected
+                onto two fixed rulers, resulting in two
+                functions:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/7rKp.svg" />
+              <Pause />
+              <Pause />
+              <Image src="/build-img/svgo-svg/27CP.svg" />
+              <Pause />
+              <OuterP>
+                By contrast, this exercise shows that we can also view
+                sin and cos as the projections of two different fixed points onto
+                a single ruler, which is the rotating object:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/mOAf.svg" />
+              <Pause />
+              <Image src="/build-img/svgo-svg/OGM8.svg" />
+              <Pause />
+              <OuterP>
+                To paraphrase, according to the first definition,
+                sin and cos are
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the measurements obtained by virtue of being
+                at a certain position (angle) in the plane
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                while according to the second definition, sin and cos
+                are
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the measurements obtained by virtue of
+                measuring according to a certain direction in the plane
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                where in the former case, to underscore the philosophical difference,
+                it is the thing being
+                measured that varies, while in the latter case,
+                it is the instrument of measurement that varies.
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={46}>
@@ -17292,10 +17346,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={51}
-        >
+        <Exercise number={51}>
           <ExerciseStatement id="_134_hgi_">
             <OuterP>
               <b>
@@ -17408,7 +17459,7 @@ const Rest = () => {
               Some more examples:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_max_cosx_plus_sinx_sol1_without_lines_more_examples.svg" />
+            <Image src="/build-img/svgo-svg/yFHg.svg" />
             <Pause />
             <OuterP>
               Given this description, it seems obvious (or:
@@ -18257,7 +18308,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              To recall, {" "}
+              {" "}{" "}
               <InChapterLink
                 href="/article/chapter5#_135_hgi_"
                 class="handle-in-chapter-link"
