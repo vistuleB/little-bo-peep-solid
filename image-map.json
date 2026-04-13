@@ -2332,13 +2332,13 @@
     "3chars": []
   },
   "_e5_cosine_rule_geometric_2_sol1.svg": {
-    "build-version": "svgo-svg/q6NB.svg",
-    "build-version-created-on": 1775923771,
-    "build-method": "svgo",
-    "build-version-size": 24789,
-    "original-size": 118858,
-    "compressed-size": 24789,
-    "compression": "79.14%",
+    "build-version": "svg/q6NB.svg",
+    "build-version-created-on": 1775935611,
+    "build-method": "cp",
+    "build-version-size": 110574,
+    "original-size": 110574,
+    "compressed-size": 110574,
+    "compression": "0.0%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7535,13 +7535,13 @@
     "3chars": []
   },
   "_e5_cosine_rule_geometric_2_sol3.svg": {
-    "build-version": "svgo-svg/Prt-.svg",
-    "build-version-created-on": 1775923772,
-    "build-method": "svgo",
-    "build-version-size": 189455,
-    "original-size": 416643,
-    "compressed-size": 189455,
-    "compression": "54.53%",
+    "build-version": "svg/Prt-.svg",
+    "build-version-created-on": 1775935611,
+    "build-method": "cp",
+    "build-version-size": 415797,
+    "original-size": 415797,
+    "compressed-size": 415797,
+    "compression": "0.0%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },

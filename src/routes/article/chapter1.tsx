@@ -7,6 +7,7 @@ import InChapterLink  from "~/components/InChapterLink";
 import { Math, MathBlock }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
+import { ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
@@ -18,7 +19,7 @@ export default function __Chapter1__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_4_hgi_"
+      id="_5_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -117,7 +118,7 @@ const Rest = () => {
   return <>
     {showMore() && <>
       <Pause />
-      <Exercises id="_3_hgi_">
+      <Exercises id="_4_hgi_">
         <Exercise
           work="ing"
           number={1}
@@ -343,7 +344,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/build-img/svgo-svg/q6NB.svg"
+              src="/build-img/svg/q6NB.svg"
               local_url="./images/_e5_cosine_rule_geometric_2_sol1.svg"
             />
             <Pause />
@@ -376,7 +377,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/build-img/svgo-svg/Prt-.svg"
+              src="/build-img/svg/Prt-.svg"
               local_url="./images/_e5_cosine_rule_geometric_2_sol3.svg"
             />
             <Pause />
@@ -402,6 +403,207 @@ const Rest = () => {
                   ./src/content/ch5^exercises/_cosine_rule_geometric_2_.wly:39:9
                 </span>
               </span>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={3}
+        >
+          <ExerciseStatement id="_3_hgi_">
+            <OuterP>
+              <b>
+                Exercise 3.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Find various &amp; varied expressions for the
+                <span class="t-3003">
+                  ./src/content/ch5^exercises/_cosine_rule_geometric_3_.wly:5:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              areas A, B, C, D below that allow you to find
+              a formula for {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} in terms of all variables that do not
+              contain {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $c$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} in their name:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/tmp-images/_e5_cosine_rule_geometric_3_statement.svg"
+              local_url="./public/tmp-images/_e5_cosine_rule_geometric_3_statement.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/ch5^exercises/_cosine_rule_geometric_3_.wly:15:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(2\eta - x) = -\cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch5^exercises/_cosine_rule_geometric_3_.wly:21:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(2\eta - \theta_&#123;ab&#125;) = -\cos \theta_&#123;ab&#125;
+              $$
+              <ImageLeft
+                src="/tmp-images/_e5_cosine_rule_geometric_3_cloud.svg"
+                offset_x="2em"
+                compensate_offset_x_for_large_text_columns={true}
+                local_url="./public/tmp-images/_e5_cosine_rule_geometric_3_cloud.svg"
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                in particular, we have these orange
+                <span class="t-3003">
+                  ./src/content/ch5^exercises/_cosine_rule_geometric_3_.wly:31:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              measurements &amp; accompanying purple areas (A &amp; B):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/tmp-images/_e5_cosine_rule_geometric_3_sol1.svg"
+              local_url="./public/tmp-images/_e5_cosine_rule_geometric_3_sol1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Secondly we have these measurements and areas, giving us two
+                <span class="t-3003">
+                  ./src/content/ch5^exercises/_cosine_rule_geometric_3_.wly:37:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              more different ways of writing A and B, as well:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/tmp-images/_e5_cosine_rule_geometric_3_sol2.svg"
+              local_url="./public/tmp-images/_e5_cosine_rule_geometric_3_sol2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Thus
+                <span class="t-3003">
+                  ./src/content/ch5^exercises/_cosine_rule_geometric_3_.wly:43:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \te&#123;A&#125; = \te&#123;D&#125; = bc\cos\theta_&#123;bc&#125; = b^2 - ab\cos\theta_&#123;ab&#125;, \\
+              \up&#123;1.4&#125;\te&#123;B&#125; = \te&#123;C&#125; = ac\cos\theta_&#123;ac&#125; = a^2 - ab\cos\theta_&#123;ab&#125;\,
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                summarizing the two figures, and
+                <span class="t-3003">
+                  ./src/content/ch5^exercises/_cosine_rule_geometric_3_.wly:52:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large
+              c = \sqrt&#123;c^2&#125; = \sqrt&#123;\te&#123;C&#125; + \te&#123;D&#125;&#125; = \sqrt&#123;\te&#123;B&#125; + \te&#123;A&#125;&#125; = \sqrt&#123;b^2 - ab\cos\theta_&#123;ab&#125; + a^2 - ab\cos\theta_&#123;ab&#125;&#125; = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                where we use {" "}
+                <span class="t-3003">
+                  ./src/content/ch5^exercises/_cosine_rule_geometric_3_.wly:59:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\te&#123;C&#125; = \te&#123;B&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\te&#123;D&#125; = \te&#123;A&#125;$
+              </Math>
+              {" "} in the third
+              equality, or
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \Large c = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                in conclusion, which is the same formula as obtained in {" "}
+                <span class="t-3003">
+                  ./src/content/ch5^exercises/_cosine_rule_geometric_3_.wly:68:9
+                </span>
+              </span>
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter1#_2_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  Exercise 2
+                </InChapterLink>
+                !
+              </NoBreak>
+              {" "}{" "}
             </OuterP>
           </Solution>
         </Exercise>

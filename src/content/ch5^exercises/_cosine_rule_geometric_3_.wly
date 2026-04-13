@@ -1,0 +1,68 @@
+|> Exercise
+    work=ing
+    handle=_cosine_rule_geometric_3_
+
+    Find various & varied expressions for the
+    areas A, B, C, D below that allow you to find
+    a formula for $c$ in terms of all variables that do not
+    contain “$c$” in their name:
+
+    |> Image
+        src=tmp-images/_e5_cosine_rule_geometric_3_statement.svg
+
+    |> Solution
+
+        Since
+
+        $$
+        \cos(2\eta - x) = -\cos x
+        $$
+
+        for all $x \in \rr$, and
+
+        $$
+        \cos(2\eta - \theta_{ab}) = -\cos \theta_{ab}
+        $$
+
+        |> ImageLeft
+            src=tmp-images/_e5_cosine_rule_geometric_3_cloud.svg
+            offset_x=2em
+
+        in particular, we have these orange
+        measurements & accompanying purple areas (A & B):
+        
+        |> Image
+            src=tmp-images/_e5_cosine_rule_geometric_3_sol1.svg
+
+        Secondly we have these measurements and areas, giving us two
+        more different ways of writing A and B, as well:
+
+        |> Image
+            src=tmp-images/_e5_cosine_rule_geometric_3_sol2.svg
+
+        Thus
+
+        $$
+        \begin{gathered}
+        \te{A} = \te{D} = bc\cos\theta_{bc} = b^2 - ab\cos\theta_{ab}, \\
+        \up{1.4}\te{B} = \te{C} = ac\cos\theta_{ac} = a^2 - ab\cos\theta_{ab}\,
+        \end{gathered}
+        $$
+
+        summarizing the two figures, and
+
+        $$
+        \Large
+        c = \sqrt{c^2} = \sqrt{\te{C} + \te{D}} = \sqrt{\te{B} + \te{A}} = \sqrt{b^2 - ab\cos\theta_{ab} + a^2 - ab\cos\theta_{ab}} = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+        $$
+
+        where we use $\te{C} = \te{B}$, $\te{D} = \te{A}$ in the third
+        equality, or
+
+        |> Boxed
+
+            $$
+            \Large c = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+            $$
+
+        in conclusion, which is the same formula as obtained in Exercise >>_cosine_rule_geometric_2_!
