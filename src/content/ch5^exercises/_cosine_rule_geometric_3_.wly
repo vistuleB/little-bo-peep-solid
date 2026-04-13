@@ -1,14 +1,15 @@
 |> Exercise
-    work=ing
     handle=_cosine_rule_geometric_3_
 
-    Find various & varied expressions for the
+    Find 
+    !! various & varied 
+    expressions for the
     areas A, B, C, D below that allow you to find
     a formula for $c$ in terms of all variables that do not
     contain “$c$” in their name:
 
     |> Image
-        src=tmp-images/_e5_cosine_rule_geometric_3_statement.svg
+        src=images/_e5_cosine_rule_geometric_3_statement.svg
 
     |> Solution
 
@@ -24,21 +25,21 @@
         \cos(2\eta - \theta_{ab}) = -\cos \theta_{ab}
         $$
 
-        |> ImageLeft
-            src=tmp-images/_e5_cosine_rule_geometric_3_cloud.svg
-            offset_x=2em
-
         in particular, we have these orange
         measurements & accompanying purple areas (A & B):
         
         |> Image
-            src=tmp-images/_e5_cosine_rule_geometric_3_sol1.svg
+            src=images/_e5_cosine_rule_geometric_3_sol1.svg
+
+        |> ImageLeft
+            src=images/_e5_cosine_rule_geometric_3_cloud.svg
+            offset_y=44%
 
         Secondly we have these measurements and areas, giving us two
         more different ways of writing A and B, as well:
 
         |> Image
-            src=tmp-images/_e5_cosine_rule_geometric_3_sol2.svg
+            src=images/_e5_cosine_rule_geometric_3_sol2.svg
 
         Thus
 

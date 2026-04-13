@@ -2111,6 +2111,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "_e5_cosine_rule_geometric_3_cloud.svg": {
+    "build-version": "svgo-svg/MAh-.svg",
+    "build-version-created-on": 1776092321,
+    "build-method": "svgo",
+    "build-version-size": 25676,
+    "original-size": 34384,
+    "compressed-size": 25676,
+    "compression": "25.33%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch5_ch_etaOver3_example_displacement_version.svg": {
     "build-version": "svg/ysx5.svg",
     "build-version-created-on": 1770478456,
@@ -2487,12 +2498,12 @@
   },
   "e5_cosine_rule_geometric_1_sol4.svg": {
     "build-version": "svgo-svg/9Sks.svg",
-    "build-version-created-on": 1774951224,
+    "build-version-created-on": 1776094047,
     "build-method": "svgo",
-    "build-version-size": 35770,
-    "original-size": 139396,
-    "compressed-size": 35770,
-    "compression": "74.34%",
+    "build-version-size": 28860,
+    "original-size": 139342,
+    "compressed-size": 28860,
+    "compression": "79.29%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3697,12 +3708,12 @@
   },
   "e5_project_i_and_j_note2_sin.svg": {
     "build-version": "svgo-svg/OGM8.svg",
-    "build-version-created-on": 1775923775,
+    "build-version-created-on": 1776094050,
     "build-method": "svgo",
-    "build-version-size": 792679,
-    "original-size": 1392528,
-    "compressed-size": 792679,
-    "compression": "43.08%",
+    "build-version-size": 562843,
+    "original-size": 1392764,
+    "compressed-size": 562843,
+    "compression": "59.59%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4346,12 +4357,12 @@
   },
   "e5_cosine_rule_geometric_1_sol3.svg": {
     "build-version": "svgo-svg/PJpl.svg",
-    "build-version-created-on": 1774951224,
+    "build-version-created-on": 1776094046,
     "build-method": "svgo",
-    "build-version-size": 35207,
-    "original-size": 113536,
-    "compressed-size": 35207,
-    "compression": "68.99%",
+    "build-version-size": 29996,
+    "original-size": 113535,
+    "compressed-size": 29996,
+    "compression": "73.58%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4434,12 +4445,12 @@
   },
   "e5_project_i_and_j_note2.svg": {
     "build-version": "svgo-svg/mOAf.svg",
-    "build-version-created-on": 1775923774,
+    "build-version-created-on": 1776094049,
     "build-method": "svgo",
-    "build-version-size": 718285,
-    "original-size": 1302072,
-    "compressed-size": 718285,
-    "compression": "44.84%",
+    "build-version-size": 565768,
+    "original-size": 1301464,
+    "compressed-size": 565768,
+    "compression": "56.53%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4453,6 +4464,17 @@
     "compression": "3.42%",
     "used-last-build": true,
     "3chars": ["ch3"]
+  },
+  "_e5_cosine_rule_geometric_3_sol2.svg": {
+    "build-version": "svgo-svg/pgYq.svg",
+    "build-version-created-on": 1776094047,
+    "build-method": "svgo",
+    "build-version-size": 100111,
+    "original-size": 378821,
+    "compressed-size": 100111,
+    "compression": "73.57%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "svg_ch4_RATS_over_Dt_first_term.svg": {
     "build-version": "svgo-svg/MvBw.svg",
@@ -5180,6 +5202,17 @@
     "used-last-build": true,
     "3chars": ["ch4"]
   },
+  "_e5_cosine_rule_geometric_3_statement.svg": {
+    "build-version": "svgo-svg/1BmZ.svg",
+    "build-version-created-on": 1776094047,
+    "build-method": "svgo",
+    "build-version-size": 41975,
+    "original-size": 183492,
+    "compressed-size": 41975,
+    "compression": "77.12%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch5_ex_x_plus_y_intersections.svg": {
     "build-version": "svgo-svg/Ocj9.svg",
     "build-version-created-on": 1767342812,
@@ -5881,6 +5914,17 @@
     "original-size": 138585,
     "compressed-size": 27332,
     "compression": "80.28%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
+  "_e5_cosine_rule_geometric_3_sol1.svg": {
+    "build-version": "svgo-svg/HsYC.svg",
+    "build-version-created-on": 1776094047,
+    "build-method": "svgo",
+    "build-version-size": 82323,
+    "original-size": 526879,
+    "compressed-size": 82323,
+    "compression": "84.38%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6678,12 +6722,12 @@
   },
   "e5_project_i_and_j_note1_sin_v2.svg": {
     "build-version": "svgo-svg/27CP.svg",
-    "build-version-created-on": 1775923773,
+    "build-version-created-on": 1776094254,
     "build-method": "svgo",
-    "build-version-size": 686053,
-    "original-size": 1396837,
-    "compressed-size": 686053,
-    "compression": "50.89%",
+    "build-version-size": 555207,
+    "original-size": 1397016,
+    "compressed-size": 555207,
+    "compression": "60.26%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7690,12 +7734,12 @@
   },
   "e5_project_i_and_j_note1.svg": {
     "build-version": "svgo-svg/7rKp.svg",
-    "build-version-created-on": 1775923773,
+    "build-version-created-on": 1776094048,
     "build-method": "svgo",
-    "build-version-size": 698304,
-    "original-size": 1423819,
-    "compressed-size": 698304,
-    "compression": "50.96%",
+    "build-version-size": 567667,
+    "original-size": 1423924,
+    "compressed-size": 567667,
+    "compression": "60.13%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },

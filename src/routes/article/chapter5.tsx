@@ -12652,16 +12652,11 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It appears two places; it is the area of this
-              rectangle here on the left:
+              It appears two places; it is the area of 
+              both of these rectangles:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/QsAd.svg" />
-            <Pause />
-            <OuterP>
-              It is also
-              the area of this rectangle here on the right:
-            </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/FZ9q.svg" />
             <Pause />
@@ -12693,18 +12688,27 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/9Sks.svg" />
             <Pause />
             <OuterP>
-              This means that the rectangles have area
+              Thus the rectangles respectively have areas...
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \Large a(b\cdot \cos\theta_&#123;ab&#125;) = b(a\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
+              \Large a(b\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              while forming the product in two different ways,
-              but arriving at the same end result.
+              ...and...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large b(a\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...as claimed!
             </OuterP>
           </Solution>
         </Exercise>
@@ -12802,17 +12806,15 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={38}
-        >
+        <Exercise number={38}>
           <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
                 Exercise 38.
               </b>
               {" "}
-              Find various &amp; varied expressions for the
+              Find 
+              expressions for the
               areas A, B, C, D below that allow you to find
               a formula for {" "}
               <Math>
@@ -12830,7 +12832,7 @@ const Rest = () => {
               {" "} in their name:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/_e5_cosine_rule_geometric_3_statement.svg" />
+            <Image src="/build-img/svgo-svg/1BmZ.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -12858,11 +12860,6 @@ const Rest = () => {
               $$
               \cos(2\eta - \theta_&#123;ab&#125;) = -\cos \theta_&#123;ab&#125;
               $$
-              <ImageLeft
-                src="/tmp-images/_e5_cosine_rule_geometric_3_cloud.svg"
-                offset_x="2em"
-                compensate_offset_x_for_large_text_columns={true}
-              />
             </MathBlock>
             <Pause />
             <OuterP>
@@ -12870,14 +12867,19 @@ const Rest = () => {
               measurements &amp; accompanying purple areas (A &amp; B):
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/_e5_cosine_rule_geometric_3_sol1.svg" />
+            <Image src="/build-img/svgo-svg/HsYC.svg">
+              <ImageLeft
+                src="/build-img/svgo-svg/MAh-.svg"
+                offset_y="44%"
+              />
+            </Image>
             <Pause />
             <OuterP>
               Secondly we have these measurements and areas, giving us two
               more different ways of writing A and B, as well:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/_e5_cosine_rule_geometric_3_sol2.svg" />
+            <Image src="/build-img/svgo-svg/pgYq.svg" />
             <Pause />
             <OuterP>
               Thus
@@ -16249,32 +16251,7 @@ const Rest = () => {
               <Pause />
               <Image src="/build-img/svgo-svg/OGM8.svg" />
               <Pause />
-              <OuterP>
-                To paraphrase, according to the first definition,
-                sin and cos are
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                the measurements obtained by virtue of being
-                at a certain position (angle) in the plane
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                while according to the second definition, sin and cos
-                are
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                the measurements obtained by virtue of
-                measuring according to a certain direction in the plane
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                where in the former case, to underscore the philosophical difference,
-                it is the thing being
-                measured that varies, while in the latter case,
-                it is the instrument of measurement that varies.
-              </OuterP>
+              <StarDivider />
             </SolutionNote>
           </Solution>
         </Exercise>
