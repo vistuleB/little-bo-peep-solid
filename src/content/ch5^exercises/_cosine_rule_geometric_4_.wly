@@ -23,8 +23,8 @@
     |> Solution
 
         We can calculate each area as a plain “width $\times$ height”
-        while keeping in mind that $\cos\theta_{ab} < 0$ (or more exactly
-        that $\cos(2\eta - \theta_{ab}) = -\cos\theta_{ab}$),
+        while keeping in mind that $\cos\theta_{ac} < 0$ (or more exactly
+        that $\cos(2\eta - \theta_{ac}) = -\cos\theta_{ac}$),
         similarly to exercises >>_cosine_rule_geometric_1_,
         >>_cosine_rule_geometric_2_, and >>_cosine_rule_geometric_3_:
         !! the following
@@ -75,4 +75,4 @@
             \Large c = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
             $$
 
-        ...as in exercises >>_cosine_rule_geometric_1_, >>_cosine_rule_geometric_2_, and >>_cosine_rule_geometric_3_.
+        ...as in exercises >>_cosine_rule_geometric_2_ and >>_cosine_rule_geometric_3_.

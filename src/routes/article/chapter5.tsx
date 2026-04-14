@@ -12965,13 +12965,13 @@ const Rest = () => {
               {" "} height”
               while keeping in mind that {" "}
               <Math>
-                $\cos\theta_&#123;ab&#125; &lt; 0$
+                $\cos\theta_&#123;ac&#125; &lt; 0$
               </Math>
               {" "} (or more exactly
               that {" "}
               <NoBreak>
                 <Math>
-                  $\cos(2\eta - \theta_&#123;ab&#125;) = -\cos\theta_&#123;ab&#125;$
+                  $\cos(2\eta - \theta_&#123;ac&#125;) = -\cos\theta_&#123;ac&#125;$
                 </Math>
                 ),
               </NoBreak>
@@ -13074,25 +13074,12 @@ const Rest = () => {
             </Boxed>
             <OuterP>
               ...as in exercises {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter5#_119_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  36
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter5#_120_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  37
-                </InChapterLink>
-                ,
-              </NoBreak>
+              <InChapterLink
+                href="/article/chapter5#_120_hgi_"
+                class="handle-in-chapter-link"
+              >
+                37
+              </InChapterLink>
               {" "} and {" "}
               <NoBreak>
                 <InChapterLink
