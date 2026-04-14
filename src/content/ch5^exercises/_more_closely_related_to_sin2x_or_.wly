@@ -55,7 +55,7 @@
             since, for example,
 
             $$
-            \sin(x + 2\eta)\cos(x + 2\eta) = (-\sin(x))(-\cos(x)) = \sin x\cos x
+            \sin(x + 2\eta)\cos(x + 2\eta) = (-\sin x)(-\cos x) = \sin x\cos x
             $$
             |> ImageLeft
                 src=images/e5_more_closely_related_to_sin2x_or_left_2eta_cloud.svg

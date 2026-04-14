@@ -52,7 +52,7 @@
         |> ImageLeft
             src=images/e5_more_closely_related_followup_cloud2.svg
 
-        ...equivalently; for the proof,
+        ...equivalently; for the proof, the sum-formula
         !! for the algebraic proof, we use the
         !! fact that 
 
@@ -66,7 +66,8 @@
         \cos(2x) = \cos^2 x - \sin^2 x
         $$
 
-        by putting $A = B = x$, from which
+        !! by putting $A = B = x$, 
+        from which
 
         $$
         \begin{aligned}

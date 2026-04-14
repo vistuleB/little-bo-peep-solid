@@ -2110,16 +2110,13 @@ const Rest = () => {
               </i>
               {" "}
               As explained in {" "}
-              <NoBreak>
-                <a
-                  href="/article/chapter3#_53_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Chapter 3
-                </a>
-                ,
-              </NoBreak>
-              {" "} an empty circle of
+              <a
+                href="/article/chapter3#_53_hgi_"
+                class="handle-out-chapter-link"
+              >
+                Chapter 3
+              </a>
+              &#8288;, an empty circle of
               this type
             </OuterP>
             <Pause />

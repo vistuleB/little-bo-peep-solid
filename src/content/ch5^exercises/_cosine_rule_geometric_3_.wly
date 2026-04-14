@@ -1,12 +1,11 @@
 |> Exercise
+    work=ing
     handle=_cosine_rule_geometric_3_
 
-    Find 
-    !! various & varied 
-    expressions for the
+    Find expressions for the
     areas A, B, C, D below that allow you to find
-    a formula for $c$ in terms of all variables that do not
-    contain “$c$” in their name:
+    a formula for $c$ in terms of 
+    all variables that do not contain “$c$” in their name:
 
     |> Image
         src=images/_e5_cosine_rule_geometric_3_statement.svg

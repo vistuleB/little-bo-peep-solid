@@ -20,7 +20,7 @@
     |> Solution
 
         _Solution 1._
-        The basic idea of the solution is to find
+        The basic idea of this solution is to find
         an angle $\theta$ such that $A = \sec(\theta)$,
         if $|A| > 1$,
         or symmetrically, such that $A = \cos(\theta)$, if $|A| < 1$:

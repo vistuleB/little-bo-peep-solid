@@ -140,7 +140,7 @@
         Draw a perpendicular
         to the segment at the point where $A$ and $B$
         meet, which defines again a right triangle by the
-        Peloponnesian theorem:
+        Peloponnesian circle theorem:
 
         |> Image
             src=images/e5_sqrt_AB_solution2_2.svg

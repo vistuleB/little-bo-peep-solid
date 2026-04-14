@@ -6410,16 +6410,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 as briefly flashed by, e.g., in {" "}
-                <NoBreak>
-                  <a
-                    href="/article/chapter1#_24_hgi_"
-                    class="handle-out-chapter-link"
-                  >
-                    Chapter 1
-                  </a>
-                  .
-                </NoBreak>
-                {" "}{" "}
+                <a
+                  href="/article/chapter1#_24_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Chapter 1
+                </a>
+                &#8288;.
               </OuterP>
             </SolutionNote>
           </Solution>

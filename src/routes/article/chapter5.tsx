@@ -24,7 +24,7 @@ export default function __Chapter5__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_141_hgi_"
+      id="_142_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -163,16 +163,13 @@ export default function __Chapter5__() {
           {" "} We've
           already encountered the ‘cos’ function in 
           {" "}
-          <NoBreak>
-            <a
-              href="/article/chapter3#_37_hgi_"
-              class="handle-out-chapter-link"
-            >
-              Exercise 7 of Chapter 3
-            </a>
-            ,
-          </NoBreak>
-          {" "}
+          <a
+            href="/article/chapter3#_37_hgi_"
+            class="handle-out-chapter-link"
+          >
+            Exercise 7 of Chapter 3
+          </a>
+          &#8288;,
           e.g.. It is the one that has this graph:
         </OuterP>
         <Pause />
@@ -888,16 +885,13 @@ const Rest = () => {
         <OuterP>
           These are the same four curves that
           appear in {" "}
-          <NoBreak>
-            <a
-              href="/article/chapter4#_66_hgi_"
-              class="handle-out-chapter-link"
-            >
-              Exercise 12 of Chapter 4
-            </a>
-            .
-          </NoBreak>
-          {" "}
+          <a
+            href="/article/chapter4#_66_hgi_"
+            class="handle-out-chapter-link"
+          >
+            Exercise 12 of Chapter 4
+          </a>
+          &#8288;.
           In particular,
         </OuterP>
         <Pause />
@@ -973,16 +967,13 @@ const Rest = () => {
           </a>
           {" "}
           and {" "}
-          <NoBreak>
-            <a
-              href="/article/chapter4#_65_hgi_"
-              class="handle-out-chapter-link"
-            >
-              Exercise 11 of Chapter 4
-            </a>
-            ),
-          </NoBreak>
-          {" "}
+          <a
+            href="/article/chapter4#_65_hgi_"
+            class="handle-out-chapter-link"
+          >
+            Exercise 11 of Chapter 4
+          </a>
+          &#8288;),
           which implies that
         </OuterP>
         <Pause />
@@ -1087,26 +1078,20 @@ const Rest = () => {
           </NoBreak>
           {" "}
           (Cf. {" "}
-          <NoBreak>
-            <a
-              href="/article/chapter4#_80_hgi_"
-              class="handle-out-chapter-link"
-            >
-              Exercise 24
-            </a>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <a
-              href="/article/chapter4#_82_hgi_"
-              class="handle-out-chapter-link"
-            >
-              Chapter 4
-            </a>
-            .)
-          </NoBreak>
-          {" "} You should
+          <a
+            href="/article/chapter4#_80_hgi_"
+            class="handle-out-chapter-link"
+          >
+            Exercise 24
+          </a>
+          &#8288;, {" "}
+          <a
+            href="/article/chapter4#_82_hgi_"
+            class="handle-out-chapter-link"
+          >
+            Chapter 4
+          </a>
+          &#8288;.) You should
           be able to verify each of these identities
           just by looking at them and thinking of the
           definitions of {" "}
@@ -4366,7 +4351,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_140_hgi_">
+      <Exercises id="_141_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_84_hgi_">
             <OuterP>
@@ -4414,16 +4399,13 @@ const Rest = () => {
                 affine
               </i>
               , cf. {" "}
-              <NoBreak>
-                <a
-                  href="/article/chapter3#_53_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Chapter 3
-                </a>
-                ).
-              </NoBreak>
-              {" "}{" "}
+              <a
+                href="/article/chapter3#_53_hgi_"
+                class="handle-out-chapter-link"
+              >
+                Chapter 3
+              </a>
+              &#8288;).
             </OuterP>
             <OuterP class="indent-10">
               As for the “something”—the bumpy one—it appears
@@ -4604,16 +4586,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} cf. {" "}
-              <NoBreak>
-                <a
-                  href="/article/chapter3#_53_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Chapter 3
-                </a>
-                .]
-              </NoBreak>
-              {" "}{" "}
+              <a
+                href="/article/chapter3#_53_hgi_"
+                class="handle-out-chapter-link"
+              >
+                Chapter 3
+              </a>
+              &#8288;.]
             </OuterP>
             <OuterP class="indent-10">
               As the parabola is symmetric about the {" "}
@@ -11741,27 +11720,21 @@ const Rest = () => {
             <Pause />
             <OuterP>
               (Cf. {" "}
-              <NoBreak>
-                <a
-                  href="/article/chapter3#_37_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Exercise 7 of Chapter 3
-                </a>
-                ,
-              </NoBreak>
-              {" "} 
+              <a
+                href="/article/chapter3#_37_hgi_"
+                class="handle-out-chapter-link"
+              >
+                Exercise 7 of Chapter 3
+              </a>
+              &#8288;, 
               {" "}
-              <NoBreak>
-                <a
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Exercise 14 of Chapter 3
-                </a>
-                .)
-              </NoBreak>
-              {" "}{" "}
+              <a
+                href="/article/chapter3#_45_hgi_"
+                class="handle-out-chapter-link"
+              >
+                Exercise 14 of Chapter 3
+              </a>
+              &#8288;.)
             </OuterP>
           </Solution>
         </Exercise>
@@ -12806,22 +12779,24 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={38}>
+        <Exercise
+          work="ing"
+          number={38}
+        >
           <ExerciseStatement id="_121_hgi_">
             <OuterP>
               <b>
                 Exercise 38.
               </b>
               {" "}
-              Find 
-              expressions for the
+              Find expressions for the
               areas A, B, C, D below that allow you to find
               a formula for {" "}
               <Math>
                 $c$
               </Math>
-              {" "} in terms of all variables that do not
-              contain {" "}
+              {" "} in terms of 
+              all variables that do not contain {" "}
               <NoBreak>
                 “
                 <Math>
@@ -12942,11 +12917,201 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={39}>
+        <Exercise
+          work="ing"
+          number={39}
+        >
           <ExerciseStatement id="_122_hgi_">
             <OuterP>
               <b>
                 Exercise 39.
+              </b>
+              {" "}
+              Find expressions for
+              areas A—F
+              and use these to give a formula for {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} in terms of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $b$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_&#123;ab&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/_e5_cosine_rule_geometric_4_statement_v2.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We can calculate each area as a plain “width {" "}
+              <Math>
+                $\times$
+              </Math>
+              {" "} height”
+              while keeping in mind that {" "}
+              <Math>
+                $\cos\theta_&#123;ab&#125; &lt; 0$
+              </Math>
+              {" "} (or more exactly
+              that {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(2\eta - \theta_&#123;ab&#125;) = -\cos\theta_&#123;ab&#125;$
+                </Math>
+                ),
+              </NoBreak>
+              {" "}
+              similarly to exercises {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_119_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  36
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_120_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  37
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_121_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  38
+                </InChapterLink>
+                :
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/_e5_cosine_rule_geometric_4_sol1.svg" />
+            <Pause />
+            <OuterP>
+              I.e.,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \te&#123;A&#125; = \te&#123;F&#125; = ab\cos\theta_&#123;ab&#125;\\
+              \up&#123;1.4&#125;\te&#123;B&#125; = \te&#123;E&#125; = bc\cos\theta_&#123;bc&#125;\\
+              \up&#123;1.4&#125;\te&#123;C&#125; = \te&#123;D&#125; = -ac\cos\theta_&#123;ac&#125;
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              from which...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large c = \sqrt&#123;c^2&#125; = \sqrt&#123;B - D&#125; = \sqrt&#123;E - C&#125; = \sqrt&#123;(b^2 - A) - (F - a^2)&#125; = \sqrt&#123;(b^2 - ab\cos\theta_&#123;ab&#125;) - (ab\cos\theta_&#123;ab&#125; - a^2)&#125; = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...where we use
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \te&#123;B&#125; = \te&#123;E&#125;\\
+              \up&#123;1.4&#125;\te&#123;D&#125; = \te&#123;C&#125;
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              in the third equality, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \te&#123;E&#125; = b^2 - A\\
+              \up&#123;1.4&#125;\te&#123;D&#125; = F - a^2
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              in the fourth equality. The answer is therefore...
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \Large c = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              ...as in exercises {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_119_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  36
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_120_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  37
+                </InChapterLink>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <InChapterLink
+                  href="/article/chapter5#_121_hgi_"
+                  class="handle-in-chapter-link"
+                >
+                  38
+                </InChapterLink>
+                .
+              </NoBreak>
+              {" "}{" "}
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={40}>
+          <ExerciseStatement id="_123_hgi_">
+            <OuterP>
+              <b>
+                Exercise 40.
               </b>
               {" "}
               Let points {" "}
@@ -13541,11 +13706,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={40}>
-          <ExerciseStatement id="_123_hgi_">
+        <Exercise number={41}>
+          <ExerciseStatement id="_124_hgi_">
             <OuterP>
               <b>
-                Exercise 40.
+                Exercise 41.
               </b>
               {" "}
               What is the dotted line distance as a function
@@ -13589,10 +13754,10 @@ const Rest = () => {
               of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_122_hgi_"
+                  href="/article/chapter5#_123_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 39
+                  Exercise 40
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -13640,10 +13805,10 @@ const Rest = () => {
                 Like the “polar distance” formula from {" "}
                 <NoBreak>
                   <InChapterLink
-                    href="/article/chapter5#_122_hgi_"
+                    href="/article/chapter5#_123_hgi_"
                     class="handle-in-chapter-link"
                   >
-                    Exercise 39
+                    Exercise 40
                   </InChapterLink>
                   ,
                 </NoBreak>
@@ -13673,11 +13838,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={41}>
-          <ExerciseStatement id="_124_hgi_">
+        <Exercise number={42}>
+          <ExerciseStatement id="_125_hgi_">
             <OuterP>
               <b>
-                Exercise 41.
+                Exercise 42.
               </b>
               {" "}
               How to express the two sides marked ‘?’ as functions
@@ -13989,11 +14154,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={42}>
-          <ExerciseStatement id="_125_hgi_">
+        <Exercise number={43}>
+          <ExerciseStatement id="_126_hgi_">
             <OuterP>
               <b>
-                Exercise 42.
+                Exercise 43.
               </b>
               {" "}
               In the drawing below, at what coordinates,
@@ -14248,11 +14413,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={43}>
-          <ExerciseStatement id="_126_hgi_">
+        <Exercise number={44}>
+          <ExerciseStatement id="_127_hgi_">
             <OuterP>
               <b>
-                Exercise 43.
+                Exercise 44.
               </b>
               {" "}
               Stipulating
@@ -14481,11 +14646,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={44}>
-          <ExerciseStatement id="_127_hgi_">
+        <Exercise number={45}>
+          <ExerciseStatement id="_128_hgi_">
             <OuterP>
               <b>
-                Exercise 44.
+                Exercise 45.
               </b>
               {" "}
               If {" "}
@@ -14550,7 +14715,7 @@ const Rest = () => {
                 Solution 1.
               </i>
               {" "}
-              The basic idea of the solution is to find
+              The basic idea of this solution is to find
               an angle {" "}
               <Math>
                 $\theta$
@@ -14595,10 +14760,10 @@ const Rest = () => {
               (Cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_125_hgi_"
+                  href="/article/chapter5#_126_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 42
+                  Exercise 43
                 </InChapterLink>
                 .)
               </NoBreak>
@@ -14874,19 +15039,19 @@ const Rest = () => {
               can be
               found here and here, by {" "}
               <InChapterLink
-                href="/article/chapter5#_126_hgi_"
+                href="/article/chapter5#_127_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 43
+                Exercise 44
               </InChapterLink>
               {" "}
               (this figure is just a recap of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_126_hgi_"
+                  href="/article/chapter5#_127_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 43
+                  Exercise 44
                 </InChapterLink>
                 ):
               </NoBreak>
@@ -15058,11 +15223,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={45}>
-          <ExerciseStatement id="_128_hgi_">
+        <Exercise number={46}>
+          <ExerciseStatement id="_129_hgi_">
             <OuterP>
               <b>
-                Exercise 45.
+                Exercise 46.
               </b>
               {" "}
               Given a number line with {" "}
@@ -15404,11 +15569,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={46}>
-          <ExerciseStatement id="_129_hgi_">
+        <Exercise number={47}>
+          <ExerciseStatement id="_130_hgi_">
             <OuterP>
               <b>
-                Exercise 46.
+                Exercise 47.
               </b>
               {" "}
               Given two lengths {" "}
@@ -15756,7 +15921,7 @@ const Rest = () => {
               </Math>
               {" "}
               meet, which defines again a right triangle by the
-              Peloponnesian theorem:
+              Peloponnesian circle theorem:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/-W11.svg" />
@@ -15968,25 +16133,22 @@ const Rest = () => {
                   Note 1
                 </a>
                 {" "} in {" "}
-                <NoBreak>
-                  <a
-                    href="/article/chapter4#_77_hgi_"
-                    class="handle-out-chapter-link"
-                  >
-                    Exercise 21 of Chapter 4
-                  </a>
-                  .)
-                </NoBreak>
-                {" "}{" "}
+                <a
+                  href="/article/chapter4#_77_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Exercise 21 of Chapter 4
+                </a>
+                &#8288;.)
               </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={47}>
-          <ExerciseStatement id="_130_hgi_">
+        <Exercise number={48}>
+          <ExerciseStatement id="_131_hgi_">
             <OuterP>
               <b>
-                Exercise 47.
+                Exercise 48.
               </b>
               {" "}
               What are the orthogonal (= perpendicular) 
@@ -16255,11 +16417,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={48}>
-          <ExerciseStatement id="_131_hgi_">
+        <Exercise number={49}>
+          <ExerciseStatement id="_132_hgi_">
             <OuterP>
               <b>
-                Exercise 48.
+                Exercise 49.
               </b>
               {" "}
               Show that
@@ -16356,10 +16518,10 @@ const Rest = () => {
             <OuterP>
               As established in {" "}
               <InChapterLink
-                href="/article/chapter5#_130_hgi_"
+                href="/article/chapter5#_131_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 47
+                Exercise 48
               </InChapterLink>
               {" "}
               {" "}
@@ -16501,11 +16663,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={49}>
-          <ExerciseStatement id="_132_hgi_">
+        <Exercise number={50}>
+          <ExerciseStatement id="_133_hgi_">
             <OuterP>
               <b>
-                Exercise 49.
+                Exercise 50.
               </b>
               {" "}
               Which function is most plausibly associated to
@@ -16736,11 +16898,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={50}>
-          <ExerciseStatement id="_133_hgi_">
+        <Exercise number={51}>
+          <ExerciseStatement id="_134_hgi_">
             <OuterP>
               <b>
-                Exercise 50.
+                Exercise 51.
               </b>
               {" "}
               Where or how, if at all, is the
@@ -16754,10 +16916,10 @@ const Rest = () => {
               apparent in the four graphs of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_132_hgi_"
+                  href="/article/chapter5#_133_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 49
+                  Exercise 50
                 </InChapterLink>
                 ?
               </NoBreak>
@@ -16843,20 +17005,20 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={51}>
-          <ExerciseStatement id="_134_hgi_">
+        <Exercise number={52}>
+          <ExerciseStatement id="_135_hgi_">
             <OuterP>
               <b>
-                Exercise 51.
+                Exercise 52.
               </b>
               {" "}
               Based on the graphs of {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_132_hgi_"
+                  href="/article/chapter5#_133_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 49
+                  Exercise 50
                 </InChapterLink>
                 ,
               </NoBreak>
@@ -17072,7 +17234,7 @@ const Rest = () => {
               <Pause />
               <MathBlock>
                 $$
-                \sin(x + 2\eta)\cos(x + 2\eta) = (-\sin(x))(-\cos(x)) = \sin x\cos x
+                \sin(x + 2\eta)\cos(x + 2\eta) = (-\sin x)(-\cos x) = \sin x\cos x
                 $$
                 <ImageLeft
                   src="/build-img/svgo-svg/hCre.svg"
@@ -17105,11 +17267,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={52}>
-          <ExerciseStatement id="_135_hgi_">
+        <Exercise number={53}>
+          <ExerciseStatement id="_136_hgi_">
             <OuterP>
               <b>
-                Exercise 52.
+                Exercise 53.
               </b>
               {" "}
               For each of {" "}
@@ -17300,7 +17462,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              ...equivalently; for the proof,
+              ...equivalently; for the proof, the sum-formula
             </OuterP>
             <Pause />
             <MathBlock>
@@ -17320,14 +17482,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              by putting {" "}
-              <NoBreak>
-                <Math>
-                  $A = B = x$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} from which
+              from which
             </OuterP>
             <Pause />
             <MathBlock>
@@ -17552,11 +17707,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={53}>
-          <ExerciseStatement id="_136_hgi_">
+        <Exercise number={54}>
+          <ExerciseStatement id="_137_hgi_">
             <OuterP>
               <b>
-                Exercise 53.
+                Exercise 54.
               </b>
               {" "}
               The graph {" "}
@@ -17565,10 +17720,10 @@ const Rest = () => {
               </Math>
               {" "} from {" "}
               <InChapterLink
-                href="/article/chapter5#_132_hgi_"
+                href="/article/chapter5#_133_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 49
+                Exercise 50
               </InChapterLink>
               {" "} has a maximum value greater than {" "}
               <NoBreak>
@@ -17662,7 +17817,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/2Wso.svg" />
             <Pause />
             <OuterP>
-              Some more examples:
+              Some more examples (if need be):
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/yFHg.svg" />
@@ -17828,11 +17983,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={54}>
-          <ExerciseStatement id="_137_hgi_">
+        <Exercise number={55}>
+          <ExerciseStatement id="_138_hgi_">
             <OuterP>
               <b>
-                Exercise 54.
+                Exercise 55.
               </b>
               {" "}
               A geometric interpretation of
@@ -17842,10 +17997,10 @@ const Rest = () => {
               </Math>
               {" "} is given in {" "}
               <InChapterLink
-                href="/article/chapter5#_136_hgi_"
+                href="/article/chapter5#_137_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 53
+                Exercise 54
               </InChapterLink>
               {" "}
               that, to recap, involves “raining down at {" "}
@@ -17961,10 +18116,10 @@ const Rest = () => {
               {" "} as covered in {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_136_hgi_"
+                  href="/article/chapter5#_137_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 53
+                  Exercise 54
                 </InChapterLink>
                 .)
               </NoBreak>
@@ -18268,10 +18423,10 @@ const Rest = () => {
                 (cf. {" "}
                 <NoBreak>
                   <InChapterLink
-                    href="/article/chapter5#_136_hgi_"
+                    href="/article/chapter5#_137_hgi_"
                     class="handle-in-chapter-link"
                   >
-                    Exercise 53
+                    Exercise 54
                   </InChapterLink>
                   )...
                 </NoBreak>
@@ -18328,11 +18483,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={55}>
-          <ExerciseStatement id="_138_hgi_">
+        <Exercise number={56}>
+          <ExerciseStatement id="_139_hgi_">
             <OuterP>
               <b>
-                Exercise 55.
+                Exercise 56.
               </b>
               {" "}
               Show that for all {" "}
@@ -18385,10 +18540,10 @@ const Rest = () => {
               by the “angle-difference formula” (cf. {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_131_hgi_"
+                  href="/article/chapter5#_132_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 48
+                  Exercise 49
                 </InChapterLink>
                 )
               </NoBreak>
@@ -18482,27 +18637,27 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={56}>
-          <ExerciseStatement id="_139_hgi_">
+        <Exercise number={57}>
+          <ExerciseStatement id="_140_hgi_">
             <OuterP>
               <b>
-                Exercise 56.
+                Exercise 57.
               </b>
               {" "}
               Relate {" "}
               <InChapterLink
-                href="/article/chapter5#_137_hgi_"
+                href="/article/chapter5#_138_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 54
+                Exercise 55
               </InChapterLink>
               {" "} to {" "}
               <NoBreak>
                 <InChapterLink
-                  href="/article/chapter5#_138_hgi_"
+                  href="/article/chapter5#_139_hgi_"
                   class="handle-in-chapter-link"
                 >
-                  Exercise 55
+                  Exercise 56
                 </InChapterLink>
                 .
               </NoBreak>
@@ -18513,10 +18668,10 @@ const Rest = () => {
             <OuterP>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter5#_137_hgi_"
+                href="/article/chapter5#_138_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 54
+                Exercise 55
               </InChapterLink>
               {" "}
               establishes that
@@ -18542,10 +18697,10 @@ const Rest = () => {
               of
               {" "}
               <InChapterLink
-                href="/article/chapter5#_138_hgi_"
+                href="/article/chapter5#_139_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 55
+                Exercise 56
               </InChapterLink>
               {" "} since
             </OuterP>

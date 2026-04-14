@@ -41,7 +41,7 @@
         |> Image
             src=images/e5_max_cosx_plus_sinx_sol1_without_lines.svg
 
-        Some more examples:
+        Some more examples (if need be):
 
         |> Image
             src=images/e5_max_cosx_plus_sinx_sol1_without_lines_more_examples.svg

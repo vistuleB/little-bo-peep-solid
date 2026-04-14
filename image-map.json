@@ -1805,11 +1805,11 @@
   },
   "svg_ch5_ex_theta_tangent_all_quadrants.svg": {
     "build-version": "svgo-svg/TRpy.svg",
-    "build-version-created-on": 1775553685,
+    "build-version-created-on": 1776156839,
     "build-method": "svgo",
-    "build-version-size": 43633,
-    "original-size": 193648,
-    "compressed-size": 43633,
+    "build-version-size": 43635,
+    "original-size": 193658,
+    "compressed-size": 43635,
     "compression": "77.47%",
     "used-last-build": true,
     "3chars": ["ch5"]
@@ -3719,12 +3719,12 @@
   },
   "e5_more_closely_related_to_sin2x_or_left_2eta_cloud.svg": {
     "build-version": "svgo-svg/hCre.svg",
-    "build-version-created-on": 1775493975,
+    "build-version-created-on": 1776195955,
     "build-method": "svgo",
-    "build-version-size": 33884,
-    "original-size": 44644,
-    "compressed-size": 33884,
-    "compression": "24.1%",
+    "build-version-size": 14088,
+    "original-size": 66365,
+    "compressed-size": 14088,
+    "compression": "78.77%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
