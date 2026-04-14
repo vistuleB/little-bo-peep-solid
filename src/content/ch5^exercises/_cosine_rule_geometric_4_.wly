@@ -10,7 +10,7 @@
     $a$, $b$ and $\theta_{ab}$:
 
     |> Image
-        src=tmp-images/_e5_cosine_rule_geometric_4_statement_v2.svg
+        src=images/_e5_cosine_rule_geometric_4_statement_v2.svg
 
     !! $$
     !! \begin{gathered}
@@ -31,7 +31,7 @@
         !! figure is color-coded for equal areas:
 
         |> Image
-            src=tmp-images/_e5_cosine_rule_geometric_4_sol1.svg
+            src=images/_e5_cosine_rule_geometric_4_sol1.svg
 
         I.e.,
 

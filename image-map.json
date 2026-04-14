@@ -1594,6 +1594,17 @@
     "used-last-build": true,
     "3chars": ["ch5"]
   },
+  "_e5_cosine_rule_geometric_4_sol1.svg": {
+    "build-version": "svgo-svg/VpDU.svg",
+    "build-version-created-on": 1776197036,
+    "build-method": "svgo",
+    "build-version-size": 285637,
+    "original-size": 420393,
+    "compressed-size": 285637,
+    "compression": "32.05%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
+  },
   "svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg": {
     "build-version": "svgo-svg/YcZS.svg",
     "build-version-created-on": 1767342812,
@@ -3001,6 +3012,17 @@
     "compression": "0.02%",
     "used-last-build": true,
     "3chars": ["bt2"]
+  },
+  "_e5_cosine_rule_geometric_4_statement_v2.svg": {
+    "build-version": "svgo-svg/hnrJ.svg",
+    "build-version-created-on": 1776197035,
+    "build-method": "svgo",
+    "build-version-size": 68498,
+    "original-size": 304243,
+    "compressed-size": 68498,
+    "compression": "77.49%",
+    "used-last-build": true,
+    "3chars": ["ch5"]
   },
   "how_many_bumps_derivative.svg": {
     "build-version": "svgo-svg/dDBS.svg",

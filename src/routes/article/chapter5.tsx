@@ -12954,7 +12954,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/_e5_cosine_rule_geometric_4_statement_v2.svg" />
+            <Image src="/build-img/svgo-svg/hnrJ.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -13010,7 +13010,7 @@ const Rest = () => {
               {" "}{" "}
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/_e5_cosine_rule_geometric_4_sol1.svg" />
+            <Image src="/build-img/svgo-svg/VpDU.svg" />
             <Pause />
             <OuterP>
               I.e.,
