@@ -8,7 +8,7 @@
     point rotating at unit speed around a unit
     circle what is an approximation to the
     circumference of a unit circle that can be
-    deduced, by staring at the graph?
+    deduced by looking (closely) at the graph?
 
     |> Image
         src=images/svg_ch4_cosine_for_eta.svg
@@ -18,12 +18,16 @@
         Because the particle is going at unit speed the
         circumference of the unit circle is equal to the
         amount of time it takes the particle to complete one
-        revolution of the circle. That is, for example, the
-        time covered by the yellow interval below, from crest to crest:
+        revolution of the circle—that is, for example, the
+        time covered by the yellow interval below, from crest
+        to crest*:
 
         |> Image
             src=images/svg_ch4_cosine_for_eta_with_yellow.svg
 
+        (*We're just going to assume that the graph
+        passes through the point $(0, 1)$, which is as good
+        as our eyesight can tell, anyway.)
         From the graph, then, it seems as if the circumference
         of a unit circle is
 
@@ -31,11 +35,24 @@
         {\Large \approx 6.3}
         $$
 
-        or thereabouts. However, a bit of detective work
-        reveals a more precise approximation—indeed, 
-        note that the graph seems to go almost exactly through
-        the point $(11, 0)$:
-        !! , a few units over to the right:
+        and another possibility would be
+
+        $$
+        \Large \approx {12.5\over 2} = 6.25
+        $$
+
+        since it seems like the graph ends at $t = 12.5$ (?)
+        after going through exactly (??) two cycles.
+
+        However, the exact position of “cresting” is hard to
+        determine because the graph flattens at that point,
+        and a more determining clue is actually that the graph seems to go almost exactly through
+        $(t, x) = (11, 0)$:
+        !! at which point it is jogging straight up:
+        !! or thereabouts. However, but a bit of detective work
+        !! reveals a more precise approximation: note 
+        !! that the graph seems to go almost exactly through
+        !! the point $(11, 0)$:
 
         |> Image
             src=images/svg_ch4_cosine_for_eta_11_noticed.svg
@@ -50,42 +67,106 @@
         $$
         quarter-turns,
         as each half-bump corresponds to a
-        quarter-turn (if you think about it), and there
-        are seven half-bumps:
+        quarter-turn, if you think about it, and there
+        are seven half-bumps from $t = 0$ to that point:
 
         |> Image
             src=images/svg_ch4_cosine_for_eta_counting_quarter_turns.svg
 
         Thus
 
-        $$
-        \Large {11 \over 7}
-        $$
-
-        units of time is approximately one quarter-turn, and
-
-        $$
-        \Large 4 \cdot {11 \over 7} = {44 \over 7}
-        $$
-
-        units of time is approximately one full
-        revolution (four quarter-turns), i.e.,
-
         |> Boxed
             $$
-            \Large {44 \over 7} = 6.\overline{285714}
+            \Large {4\over 7} \cdot 11 = {44 \over 7} = 6.\overline{285714}
             $$
+
+        !! Thus
+
+        !! $$
+        !! \Large {11 \over 7}
+        !! $$
+
+        !! units of time is approximately one quarter-turn, and
+
+        !! $$
+        !! \Large 4 \cdot {11 \over 7} = {44 \over 7}
+        !! $$
+
+        !! units of time is approximately one full
+        !! revolution (four quarter-turns), i.e.,
+
+        !! |> Boxed
+        !!     $$
+        !!     \Large {44 \over 7} = 6.\overline{285714}
+        !!     $$
         
-        is an approximation to the circumference of a
-        unit circle, which ends
-        up being about half-a-part-in-a-thousand too
-        large ($0.040249943...\%$ too large) (or just:
-        “$0.00040249943...$ too large”) whereas our initial
-        approximation of
+        must be an approximation to the circumference of a
+        unit circle, by the graph. 
+        !! that we can guess from the graph. 
+        !! (That
+        !! corroborates at least somewhat with our initial
+        !! approximations of $6.3$ and $6.25$.)
+        !! (But that is
+        !! _not_ exact, because the graph does _not_ actually
+        !! quite go through the point $(11, 0)$.) (Though it
+        !! _does_ go through the point $(0, 1)$, as cosine is
+        !! defined.)
+        
+        !! which ends
+        !! up being about half-a-part-in-a-thousand too
+        !! large ($0.040249943...\%$ too large) (or just:
+        !! “$0.00040249943...$ too large”) whereas our initial
+        !! approximations of
 
-        $$
-        \Large 6.3
-        $$
+        !! $$
+        !! \Large 6.3
+        !! $$
 
-        ends up being roughly half-a-part-in-one-hundred
-        too large, $10$ times worse!
+        !! and
+
+        !! $$
+        !! \Large 6.25
+        !! $$
+
+        !! ends up being roughly half-a-part-in-one-hundred
+        !! too large, $10$ times worse!
+
+        |> SolutionNote
+
+            This approximation ends up being about half-a-part-in-a-thousand
+            too large, or
+
+            $$
+            0.040249943...\%
+            $$
+            
+            too large (or just: “$0.00040249943...$ too large”, no “$\%$”
+            needed if you shift the decimals over two places), because
+            the graph is actually crossing through $0$ just shy of $t = 11$,
+            not _at_ $t = 11$.
+
+        |> SolutionNote
+
+            The “core” approximation is actually that of
+
+            $$
+            \Large {11\over 7}
+            $$
+
+            for one-quarter the circumference of a unit circle; from
+            which,
+
+            !! $$
+            !! \Large {22\over 7}, {33\over 7}, \,\,\te{and}\,\, {44\over 7}
+            !! $$
+            $$
+            \Large {22\over 7}, {33\over 7},
+            $$
+
+            and
+
+            $$
+            \Large {44\over 7}
+            $$
+            are derived approximations for one-half, three-quarters,
+            and the full circumference of the unit circle!

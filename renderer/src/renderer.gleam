@@ -246,13 +246,39 @@ fn cli_usage_supplementary() {
 pub fn main() {
   let args = argv.load().arguments
 
-  let #(args, digest) = case list.contains(args, "--echo-args") {
+  let #(args, use_last_command) = case list.contains(args, "--last-command") {
+    True -> {
+      let args = list.filter(args, fn(s) { s != "--last-command" })
+      #(args, True)
+    }
+    False -> #(args, False)
+  }
+
+  assert !list.contains(args, "--last-command")
+
+  let args = case use_last_command {
+    True -> case simplifile.read(".last-command") {
+      Ok(contents) -> {
+        string.split(contents, " ")
+        |> list.map(string.trim)
+        |> list.filter(fn(s) { !string.is_empty(s) })
+        |> list.append(args)
+      }
+      Error(_) -> {
+        panic as "unable to find '.last-command'"
+      }
+    }
+    False -> args
+  }
+  
+  let args_string = string.join(args, " ")
+
+  let #(args, echo_args) = case list.contains(args, "--echo-args") {
     True -> {
       let args = list.filter(args, fn(s) { s != "--echo-args" })
-      let digest = "gleam run -- " <> string.join(args, " ")
-      #(args, digest)
+      #(args, True)
     }
-    False -> #(args, "")
+    False -> #(args, False)
   }
 
   use _ <- on.stay(case args {
@@ -377,12 +403,17 @@ pub fn main() {
   )
 
   // echo cli args, if was requested:
-  case digest {
-    "" -> Nil
-    _ -> {
+  case echo_args {
+    False -> Nil
+    True -> {
       io.println("")
-      io.print("end <" <> digest <> ">")
+      io.print("end <gleam run -- " <> args_string <> ">")
       io.println("")
     }
+  }
+
+  case simplifile.write(".last-command", args_string) {
+    Ok(_) -> Nil
+    _ -> io.println("Warning: unable to write args_string to .last-command")
   }
 }

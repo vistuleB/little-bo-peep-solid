@@ -3015,12 +3015,12 @@
   },
   "_e5_cosine_rule_geometric_4_statement_v2.svg": {
     "build-version": "svgo-svg/hnrJ.svg",
-    "build-version-created-on": 1776197035,
+    "build-version-created-on": 1776324406,
     "build-method": "svgo",
-    "build-version-size": 68498,
-    "original-size": 304243,
-    "compressed-size": 68498,
-    "compression": "77.49%",
+    "build-version-size": 67514,
+    "original-size": 303608,
+    "compressed-size": 67514,
+    "compression": "77.76%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },

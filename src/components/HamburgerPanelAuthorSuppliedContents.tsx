@@ -10,11 +10,7 @@ const HamburgerPanelAuthorSuppliedContents = () => {
           article_type={1}
           href="chapter1"
         >
-          A {" "}
-          <i>
-            Few
-          </i>
-          {" "} Refreshers
+          A Few Refreshers
         </HamburgerPanelItem>
         <HamburgerPanelItem
           article_type={2}

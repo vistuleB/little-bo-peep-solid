@@ -4883,8 +4883,7 @@ const Rest = () => {
                 Exercise 15.
               </b>
               {" "}
-              Add elements to the drawing below until all
-              parts of the fraction
+              The fraction
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4894,21 +4893,39 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              are found in the drawing. Can you thereby reveal
-              the geometric meaning of the fraction?
+              where
+              {" "}
+              <Math>
+                $f : \rr \ra \rr$
+              </Math>
+              {" "} 
+              is called a {" "}
+              <i>
+                difference quotient
+              </i>
+              .
+              Add elements to the diagram below such that
+              both the numerator and denominator of the quotient
+              can be found
+              in the diagram, and
+              thereby explain the geometric significance (or “meaning”) of 
+              this quotient.
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1hYI.svg" />
+            <Image
+              src="/build-img/svgo-svg/1hYI.svg"
+              style="margin-top:0.4em"
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Adding elements:
+              The teacher would like to see:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/cWTG.svg" />
             <Pause />
             <OuterP>
-              In particular,
+              Thus
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4945,30 +4962,12 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              at the other end. 
-              (This is also the case
-              if {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} is negative, by the way.)
+              at the other end.
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                Vocabulary #1.
-              </i>
-              {" "} A fraction of this form is called
-              a {" "}
-              <i>
-                difference quotient
-              </i>
-              .
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Vocabulary #2.
+                Vocabulary.
               </i>
               {" "}
               The pale brown line is sometimes known as
@@ -5078,7 +5077,7 @@ const Rest = () => {
                 Exercise 16.
               </b>
               {" "}
-              The identity
+              What English-language aphorism might summarize the identity
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5088,7 +5087,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              happens to be true for differentiable
+              that happens to be true for differentiable
               functions {" "}
               <NoBreak>
                 <Math>
@@ -5101,15 +5100,8 @@ const Rest = () => {
                 <Math>
                   $g$
                 </Math>
-                .
+                ?
               </NoBreak>
-              {" "} What English-language
-              aphorism can summarize it? (This identity
-              is known as the {" "}
-              <i>
-                sum rule
-              </i>
-              , by the way.)
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -5143,6 +5135,20 @@ const Rest = () => {
             <OuterP>
               (etc).
             </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                This identity is known as the {" "}
+                <i>
+                  sum rule
+                </i>
+                .
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={17}>
@@ -9789,7 +9795,7 @@ const Rest = () => {
               point rotating at unit speed around a unit
               circle what is an approximation to the
               circumference of a unit circle that can be
-              deduced, by staring at the graph?
+              deduced by looking (closely) at the graph?
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/njEr.svg" />
@@ -9799,13 +9805,24 @@ const Rest = () => {
               Because the particle is going at unit speed the
               circumference of the unit circle is equal to the
               amount of time it takes the particle to complete one
-              revolution of the circle. That is, for example, the
-              time covered by the yellow interval below, from crest to crest:
+              revolution of the circle—that is, for example, the
+              time covered by the yellow interval below, from crest
+              to crest*:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/KEtq.svg" />
             <Pause />
             <OuterP>
+              (*We're just going to assume that the graph
+              passes through the point {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 1)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which is as good
+              as our eyesight can tell, anyway.)
               From the graph, then, it seems as if the circumference
               of a unit circle is
             </OuterP>
@@ -9817,13 +9834,31 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              or thereabouts. However, a bit of detective work
-              reveals a more precise approximation—indeed, 
-              note that the graph seems to go almost exactly through
-              the point {" "}
+              and another possibility would be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \approx &#123;12.5\over 2&#125; = 6.25
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              since it seems like the graph ends at {" "}
+              <Math>
+                $t = 12.5$
+              </Math>
+              {" "} (?)
+              after going through exactly (??) two cycles.
+            </OuterP>
+            <OuterP class="indent-10">
+              However, the exact position of “cresting” is hard to
+              determine because the graph flattens at that point,
+              and a more determining clue is actually that the graph seems to go almost exactly through
+              {" "}
               <NoBreak>
                 <Math>
-                  $(11, 0)$
+                  $(t, x) = (11, 0)$
                 </Math>
                 :
               </NoBreak>
@@ -9854,8 +9889,12 @@ const Rest = () => {
             <OuterP>
               quarter-turns,
               as each half-bump corresponds to a
-              quarter-turn (if you think about it), and there
-              are seven half-bumps:
+              quarter-turn, if you think about it, and there
+              are seven half-bumps from {" "}
+              <Math>
+                $t = 0$
+              </Math>
+              {" "} to that point:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/9cV2.svg" />
@@ -9863,71 +9902,119 @@ const Rest = () => {
             <OuterP>
               Thus
             </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;11 \over 7&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              units of time is approximately one quarter-turn, and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 4 \cdot &#123;11 \over 7&#125; = &#123;44 \over 7&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              units of time is approximately one full
-              revolution (four quarter-turns), i.e.,
-            </OuterP>
             <Boxed>
               <MathBlock>
                 $$
-                \Large &#123;44 \over 7&#125; = 6.\overline&#123;285714&#125;
+                \Large &#123;4\over 7&#125; \cdot 11 = &#123;44 \over 7&#125; = 6.\overline&#123;285714&#125;
                 $$
               </MathBlock>
             </Boxed>
             <OuterP>
-              is an approximation to the circumference of a
-              unit circle, which ends
-              up being about half-a-part-in-a-thousand too
-              large {" "}
-              <NoBreak>
-                (
-                <Math>
-                  $0.040249943...\%$
-                </Math>
-              </NoBreak>
-              {" "} too large) (or just:
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $0.00040249943...$
-                </Math>
-              </NoBreak>
-              {" "} too large”) whereas our initial
-              approximation of
+              must be an approximation to the circumference of a
+              unit circle, by the graph.
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              \Large 6.3
-              $$
-            </MathBlock>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                This approximation ends up being about half-a-part-in-a-thousand
+                too large, or
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                0.040249943...\%
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                too large (or just: {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $0.00040249943...$
+                  </Math>
+                </NoBreak>
+                {" "} too large”, no {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $\%$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}
+                needed if you shift the decimals over two places), because
+                the graph is actually crossing through {" "}
+                <Math>
+                  $0$
+                </Math>
+                {" "} just shy of {" "}
+                <NoBreak>
+                  <Math>
+                    $t = 11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                not {" "}
+                <i>
+                  at
+                </i>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $t = 11$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
             <Pause />
-            <OuterP>
-              ends up being roughly half-a-part-in-one-hundred
-              too large, {" "}
-              <Math>
-                $10$
-              </Math>
-              {" "} times worse!
-            </OuterP>
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The “core” approximation is actually that of
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large &#123;11\over 7&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                for one-quarter the circumference of a unit circle; from
+                which,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large &#123;22\over 7&#125;, &#123;33\over 7&#125;,
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large &#123;44\over 7&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                are derived approximations for one-half, three-quarters,
+                and the full circumference of the unit circle!
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
       </Exercises>

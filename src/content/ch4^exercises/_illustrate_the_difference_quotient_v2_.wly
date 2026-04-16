@@ -1,27 +1,40 @@
 |> Exercise
-    handle=_illustrate_the_difference_quotient_old_
+    handle=_illustrate_the_difference_quotient_
 
-    Add elements to the drawing below until all
-    parts of the fraction
+    The fraction
 
     $$
     {f(x+h) - f(x) \over h}
     $$
 
-    are found in the drawing. Can you thereby reveal
-    the geometric meaning of the fraction?
+    where
+    $f : \rr \ra \rr$ 
+    is called a _difference quotient_.
+    !! Like in a children's book, 
+    Add elements to the diagram below such that
+    both the numerator and denominator of the quotient
+    !! become visible 
+    !! are illustrated
+    can be found
+    in the diagram, and
+    thereby explain the geometric significance (or “meaning”) of 
+    this quotient.
+    !! the difference quotient:
+    !! to illustrate the quotient:
 
     |> Image
         src=images/svg_ch4_newton_quotient_unfinished.svg
+        style=margin-top:0.4em
 
     |> Solution
 
-        Adding elements:
+        !! Adding elements:
+        The teacher would like to see:
 
         |> Image
             src=images/svg_ch4_newton_quotient_finished.svg
 
-        In particular,
+        Thus
 
         $$
         {f(x + h) - f(x)\over h}
@@ -47,17 +60,17 @@
         !!     src=images/svg_ch4_new_quatient_x_fxplush_cloud.svg
 
         at the other end. 
-        (This is also the case
-        if $h$ is negative, by the way.)
+        !! (This is also the case
+        !! if $h$ is negative, by the way.)
 
-        |> Pause
+        !! |> Pause
             
-        _Vocabulary #1._ A fraction of this form is called
-        a _difference quotient_.
+        !! _Vocabulary #1._ A fraction of this form is called
+        !! a _difference quotient_.
 
         |> Pause
 
-        _Vocabulary #2._
+        _Vocabulary._
         The pale brown line is sometimes known as
         the _secant_ [through $(x, f(x))$, $(x+h, f(x+h))$].
         “Secant” is a general term for “line passing
@@ -65,7 +78,7 @@
         curve”.
 
         |> SolutionNote
-            !! handle=_limit_of_difference_quotient_
+            handle=_limit_of_difference_quotient_
             If we let $h$ drop to $0$, and if $f$ is
             differentiable at $x$, the
             difference-quotient-a.k.a.-slope-of-the-secant

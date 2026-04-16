@@ -55,11 +55,7 @@ export default function __Chapter1__() {
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 1:">
-        A {" "}
-        <i>
-          Few
-        </i>
-        {" "} Refreshers
+        A Few Refreshers
       </ArticleTitle>
       <Section id="first-section">
         <OuterP>

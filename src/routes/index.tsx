@@ -18,11 +18,7 @@ export default function __Home__() {
             article_type={1}
             href="chapter1"
           >
-            A {" "}
-            <i>
-              Few
-            </i>
-            {" "} Refreshers
+            A Few Refreshers
           </TOCItem>
           <TOCItem
             article_type={2}
