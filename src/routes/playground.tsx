@@ -11,7 +11,9 @@ export default function Playground() {
       <ArticleTitle banner="">Components Playground</ArticleTitle>
       <Section id="grid">
         <OuterP>
-          <b>Grid</b> component
+          <b>Grid</b> used for putting items in a controlled grid layout, a more
+          friendly alternative to Table component that needs all special html
+          tags tr, colgroup ...etc
         </OuterP>
 
         <Pause />
