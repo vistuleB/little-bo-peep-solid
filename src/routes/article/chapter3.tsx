@@ -2455,16 +2455,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} apply the function from {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_34_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 4
-                </InChapterLink>
-                ):
-              </NoBreak>
-              {" "}{" "}
+              <InChapterLink
+                href="/article/chapter3#_34_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 4
+              </InChapterLink>
+              &#8288;):
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/Kgso.svg" />
@@ -2516,16 +2513,13 @@ const Rest = () => {
               </NoBreak>
               {" "}
               (the formula for the function from {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_34_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 4
-                </InChapterLink>
-                ).
-              </NoBreak>
-              {" "}{" "}
+              <InChapterLink
+                href="/article/chapter3#_34_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 4
+              </InChapterLink>
+              &#8288;).
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -2924,16 +2918,13 @@ const Rest = () => {
             <OuterP>
               because all we have to do is to multiply
               {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_35_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 5
-                </InChapterLink>
-                's
-              </NoBreak>
-              {" "} formula by {" "}
+              <InChapterLink
+                href="/article/chapter3#_35_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 5
+              </InChapterLink>
+              &#8288;'s formula by {" "}
               <NoBreak>
                 <Math>
                   $2$
@@ -3411,16 +3402,13 @@ const Rest = () => {
               </b>
               {" "}
               Same question as {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_38_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 8
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} but for
+              <InChapterLink
+                href="/article/chapter3#_38_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 8
+              </InChapterLink>
+              &#8288;, but for
               {" "}
               <NoBreak>
                 “
@@ -4486,16 +4474,13 @@ const Rest = () => {
                 </Math>
               </NoBreak>
               {" "} {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_41_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 10
-                </InChapterLink>
-                )
-              </NoBreak>
-              {" "} has no solutions {" "}
+              <InChapterLink
+                href="/article/chapter3#_41_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 10
+              </InChapterLink>
+              &#8288;) has no solutions {" "}
               <NoBreak>
                 <Math>
                   $x \in \rr$
@@ -4517,16 +4502,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_41_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 10
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} but this implies
+              <InChapterLink
+                href="/article/chapter3#_41_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 10
+              </InChapterLink>
+              &#8288;, but this implies
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5541,16 +5523,13 @@ const Rest = () => {
               </Math>
               {" "} by the following
               sequence of transformations (cf. {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 14
-                </InChapterLink>
-                ):
-              </NoBreak>
-              {" "}{" "}
+              <InChapterLink
+                href="/article/chapter3#_45_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 14
+              </InChapterLink>
+              &#8288;):
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -5577,16 +5556,13 @@ const Rest = () => {
             <OuterP>
               (We put the vertical translation first.)
               By {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_46_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 15
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} the 
+              <InChapterLink
+                href="/article/chapter3#_46_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 15
+              </InChapterLink>
+              &#8288;, the 
               roots of {" "}
               <Math>
                 $y = Ax^2 + Bx$
@@ -6024,16 +6000,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               and, similarly to {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 14
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} write
+              <InChapterLink
+                href="/article/chapter3#_45_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 14
+              </InChapterLink>
+              &#8288;, write
             </OuterP>
             <Pause />
             <MathBlock>
@@ -6091,30 +6064,24 @@ const Rest = () => {
                 ”
               </NoBreak>
               {" "} of {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 14
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "}
+              <InChapterLink
+                href="/article/chapter3#_45_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 14
+              </InChapterLink>
+              &#8288;,
               that also has a minus sign out front.)
             </OuterP>
             <OuterP class="indent-10">
               By direct analogy with {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_45_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 14
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} the three
+              <InChapterLink
+                href="/article/chapter3#_45_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 14
+              </InChapterLink>
+              &#8288;, the three
               transformations are thus...
             </OuterP>
             <Pause />
@@ -6322,16 +6289,13 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter3#_46_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 15
-                </InChapterLink>
-                .
-              </NoBreak>
-              {" "} {" "}
+              <InChapterLink
+                href="/article/chapter3#_46_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 15
+              </InChapterLink>
+              &#8288;. {" "}
               <Math>
                 $\rightarrow$
               </Math>

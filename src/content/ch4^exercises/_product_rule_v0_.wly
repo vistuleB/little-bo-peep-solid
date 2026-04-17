@@ -1,0 +1,324 @@
+|> Exercise
+    work=ing
+    handle=_product_rule_v0_
+
+    In this exercise we consider two points
+    in time $t_0$ and $t_0 + \Delta{}t$ (here
+    “$\Delta{}t$”, read “delta $t$”, is a
+    standard notation for a small amount of
+    time):
+
+    |> Image
+        src=images/svg_ch4_RATS_timeline.svg
+
+    We also consider quantities $A$ and $B$
+    that are changing with time; $A$ and $B$
+    have some value at $t_0$, and, say, grow
+    to be larger at $t_0 + \Delta{}t$:
+
+    |> Image
+        src=images/svg_ch4_RATS_timeline_with_A_B.svg
+
+    More specifically, we are interested in
+    the change in the value of the product
+
+    $$
+    \Large AB
+    $$
+
+    over said course of time.
+
+    To introduce an unsolicited metaphor,
+    imagine $A$ and $B$ as
+
+    |> Image
+        src=images/svg_ch4_RATS_rats.svg
+
+    that are crossing a hallway surveyed by
+    a cat. One side of the hallway is time
+    $t_0$, the other side of the hallway is
+    time $t_0 + \Delta{}t$. So great is 
+    $A$ and $B$'s terror
+    that they have decided to
+    cross the hallway one at a time. First
+    $A$ will go, then $B$. In so, 
+    three moments of interest
+    can be separated
+    (“moments” that exist inside the
+    metaphorical timeline of the story, not
+    on the $t$-number line, to be clear):
+
+    |> ImageLeft
+        offset_x= 0.5em
+        offset_y=-0.5em
+        src=images/svg_ch4_RATS_corridor_cloud.svg
+
+    |> TextParent
+        |> ol
+            style=margin:0 1.5em 0.5em 2em;list-style:auto;list-style-position:outside;
+
+            |> li
+                style=margin-top:0.5em
+                when $A$ and $B$ are both still at $t_0$
+
+            |> li
+                style=margin-top:0.5em
+                when $A$ has made it to $t_0 + \Delta{}t$,
+                and $B$ is still at $t_0$
+
+            |> li
+                style=margin-top:0.5em
+                |> del
+                    when _B_'s tail is sticking out of the
+                    cat's mouth, and
+                \ when $A$ and $B$ have both made it
+                to $t_0 + \Delta{}t$
+
+    Correspondingly, the product
+
+    $$
+    \Large AB
+    $$
+
+    changes in two increments: first as $A$
+    makes it to the other side of the hallway
+    (and $A$ grows bigger); then as $B$ joins
+    him/her (and $B$ grows bigger). In an
+    equation:
+
+    |> Image
+        src=images/svg_ch4_RATS_equation.svg
+
+    If we divide the above equation by $\Delta{}t$
+    and let $\Delta{}t$ drop to $0$, what does
+    each term become?
+
+    |> Solution
+
+        Dividing by $\Delta{}t$:
+
+        |> Image
+            src=images/svg_ch4_RATS_equation_over_Dt.svg
+
+        As $\Delta{}t$ approaches $0$, the term
+        on the left-hand side approaches
+
+        $$
+        (AB)'(t_0)
+        $$
+
+        where we view $A$ and $B$ as functions
+        of time with, therefore, the product $AB$
+        also becoming a function of time. (By
+        definition, $AB$ is the function
+
+        $$
+        t \rightarrow A(t)B(t)
+        $$
+
+        where $A(t)$ is the value of $A$ at time
+        $t$, $B(t)$ is the value of $B$ at time
+        $t$.) Indeed, a ratio of the form
+
+        $$
+        {f(t_0 + \Delta{}t) - f(t_0)\over \Delta{}t}
+        $$
+
+        is a difference quotient (cf. Exercise >>_difference_quotient_illustration_),
+        !! that approaches
+        and such a difference quotient approaches
+
+        $$
+        f'(t_0)
+        $$
+
+        as $\Delta{}t$ approaches $0$, assuming
+        $f$ is differentiable at $t_0$ (cf.
+        Note >>_difference_quotient_limit_ of
+        Exercise >>_difference_quotient_illustration_), and
+
+        |> Image
+            src=images/svg_ch4_RATS_over_Dt_first_term.svg
+
+        has the form
+
+        $$
+        {f(t_0 + \Delta{}t) - f(t_0)\over \Delta{}t}
+        $$
+
+        for $f = AB$.
+
+        |> ImageLeft
+            src=images/svg_ch4_RATS_for_f_equals_AB_cloud.svg
+
+        The first term on the right-hand side, for
+        its part, approaches
+
+        |> ImageRight
+            src=images/svg_ch4_RATS_first_term_cloud.svg
+
+        $$
+        B(t_0)A'(t_0)
+        $$
+
+        as $\Delta{}t$ approaches $0$. Indeed,
+        when you write it out, that term becomes
+        the algebraic expression
+
+        $$
+        {A(t_0 + \Delta{}t)B(t_0) - A(t_0)B(t_0) \over \Delta{}t}
+        $$
+
+        where every term on top contains a
+        “$B(t_0)$”, that can therefore be factored
+        out, giving us the equivalent expression
+
+        $$
+        B(t_0)\cdot{A(t_0 + \Delta{}t) - A(t_0) \over \Delta{}t}
+        $$
+
+        that, you will notice, has the form
+
+        $$
+        B(t_0)\cdot{f(t_0 + \Delta{}t) - f(t_0) \over \Delta{}t}
+        $$
+
+        for $f = A$, and thus approaches
+
+        $$
+        B(t_0) \cdot A'(t_0)
+        $$
+
+        as $\Delta t$ approaches $0$, by the property
+        of the difference quotient.
+
+        Lastly the most interesting term is the
+        second term on the right-hand side!
+        Symmetrically to the first term on the
+        right-hand side, the second term approaches
+
+        |> ImageRight
+            src=images/svg_ch4_RATS_second_term_cloud.svg
+
+        $$
+        A(t_0)B'(t_0)
+        $$
+
+        as $\Delta{}t$ approaches $0$, but the
+        reasons are slightly different! (Slightly.)
+        Indeed, this term, written out, is
+
+        $$
+        {A(t_0 + \Delta{}t)B(t_0+\Delta{}t) - A(t_0+ \Delta{}t)B(t_0) \over \Delta{}t}
+        $$
+
+        which is equal to
+
+        $$
+        A(t_0 + \Delta{}t)\cdot{B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
+        $$
+
+        by factoring out the common term $A(t_0 + \Delta{}t)$;
+        and
+
+        $$
+        {B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
+        $$
+
+        approaches
+
+        $$
+        B'(t_0)
+        $$
+
+        as $\Delta{}t$ approaches $0$, like before
+        (when we had $AB$ or $A$ instead of $B$)
+        whereas
+
+        $$
+        A(t_0 + \Delta{}t)
+        $$
+
+        —which is a bit different from before—approaches
+
+        $$
+        A(t_0)
+        $$
+
+        as $\Delta{}t$ approaches $0$—so that makes up
+        $A(t_0)B'(t_0)$. (The
+
+        __differentiability__
+
+        of $A$ and $B$ at $t_0$—that we are tacitly
+        assuming—implies
+
+        __continuity__
+
+        as well, which implies that $A(t_0 + \Delta{}t)$
+        approaches $A(t_0)$ as $\Delta t$ approaches $0$.)
+
+        Summarizing, the three terms separately
+        approach
+
+        $$
+        (AB)'(t_0)
+        $$
+        $$
+        B(t_0)A'(t_0)
+        $$
+        $$
+        A(t_0)B'(t_0)
+        $$
+
+        as $\Delta{}t$ approaches $0$ and, in fact,
+        because the equation holds no matter how
+        close we make each term to its respective limit
+        above, one can conclude that
+
+        $$
+        (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
+        $$
+
+        for functions $A$, $B$ differentiable at
+        a point $t_0$.
+
+        |> SolutionNote
+            Keeping things alphabetical everywhere, the
+            same equation is more often written
+
+            |> Boxed
+                $$
+                (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
+                $$
+
+            with “$A'(t_0)B(t_0)$” in the middle. (But
+            which is the same, of course, as $B(t_0)A'(t_0)$.)
+
+        |> SolutionNote
+            By the rules for adding and multiplying
+            functions 
+            we can just write
+            !! the product rule can also be written
+
+            |> Boxed
+                $$
+                (AB)' = A'B + AB'
+                $$
+
+            more shortly, for
+            $A, B : \rr \ra \rr$ differentiable, or
+
+            |> Boxed
+                $$
+                (fg)' = f'g + fg'
+                $$
+
+            if we replace “$A$” and “$B$” by the more familiar “$f$” and “$g$”.
+
+            !! by the rules for
+            !! adding and multiplying functions.
+
+        |> SolutionNote
+            This result is known as the _product rule_.
+

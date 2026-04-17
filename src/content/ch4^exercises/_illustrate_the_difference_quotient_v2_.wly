@@ -1,5 +1,6 @@
 |> Exercise
-    handle=_illustrate_the_difference_quotient_
+    work=ing
+    handle=_difference_quotient_illustration_
 
     The fraction
 
@@ -7,20 +8,12 @@
     {f(x+h) - f(x) \over h}
     $$
 
-    where
-    $f : \rr \ra \rr$ 
-    is called a _difference quotient_.
-    !! Like in a children's book, 
-    Add elements to the diagram below such that
-    both the numerator and denominator of the quotient
-    !! become visible 
-    !! are illustrated
-    can be found
-    in the diagram, and
-    thereby explain the geometric significance (or “meaning”) of 
-    this quotient.
-    !! the difference quotient:
-    !! to illustrate the quotient:
+    where $f : \rr \ra \rr$ is called a _difference
+    quotient_. Add elements to the diagram below such
+    that both the numerator and denominator of the
+    quotient can be found in the diagram, and thereby
+    explain the geometric meaning
+    of this quotient.
 
     |> Image
         src=images/svg_ch4_newton_quotient_unfinished.svg
@@ -28,7 +21,6 @@
 
     |> Solution
 
-        !! Adding elements:
         The teacher would like to see:
 
         |> Image
@@ -78,7 +70,7 @@
         curve”.
 
         |> SolutionNote
-            handle=_limit_of_difference_quotient_
+            handle=_difference_quotient_limit_
             If we let $h$ drop to $0$, and if $f$ is
             differentiable at $x$, the
             difference-quotient-a.k.a.-slope-of-the-secant
@@ -100,15 +92,3 @@
             $$
 
             is undefined.)
-
-        !! |> SolutionNote
-        !!     However, one
-        !!     cannot directly set $h = 0$ to compute $f'(x)$
-        !!     because
-
-        !!     $$
-        !!     {f(x+0)-f(x)\over 0} = {0 \over 0}
-        !!     $$
-
-        !!     is undefined!
-

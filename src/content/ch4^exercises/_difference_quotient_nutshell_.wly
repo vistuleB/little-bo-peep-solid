@@ -1,0 +1,13 @@
+|> Exercise
+    work=ing
+    handle=_difference_quotient_nutshell_
+
+    Just to make sure we're all on the same
+    page, and recapping Note >>_difference_quotient_limit_
+    of Exercise >>_difference_quotient_nutshell_, can you
+    say, in a nutshell, what a difference quotient is good for?
+
+    |> Solution
+
+        “Approximating the slope of the tangent to a function
+        $f : \rr \ra \rr$ at a point $x \in \rr$.”

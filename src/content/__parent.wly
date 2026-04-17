@@ -17,7 +17,7 @@
         >>_chinese_ten_thousand_
         >>_kilometers_per_millimeter_
         >>_kilometers_per_10^24_millimeters_
-        >>_US_yearly_budget_%_
+        >>_US_yearly_budget_percentage_
         >>_what_is_log_base_10_of_one_trillion_
         >>_what_is_log_base_10_of_1_
         >>_what_is_log_base_10_of_product_of_powers_of_10_
@@ -86,12 +86,13 @@
         >>_first_law_of_differentiation_
         >>_define_product_of_constant_and_function_
         >>_four_particles_
-        >>_f_equals_f_5_
-        >>_f_equals_f_17_
-        !! >>_illustrate_the_difference_quotient_
-        >>_illustrate_the_difference_quotient_
         >>_sum_rule_summary_
-        >>_product_rule_
+        >>_difference_quotient_illustration_
+        >>_difference_quotient_nutshell_
+        >>_verbal_to_arithmetic_A_change_
+        >>_verbal_to_arithmetic_A_change_pt2_
+        >>_change_in_f_
+        >>_product_rule_technical_ver_
         >>_big_A_product_approach_as_h_goes_to_0_
         >>_express_the_associativity_etc_
         >>_associativity_of_function_multiplication_
@@ -99,6 +100,8 @@
         >>_1d_blue_yellow_particles_
         >>_four_particles_at_2_4_
         >>_eta_approximation_from_cosine_graph_
+        >>_f_equals_f_5_
+        >>_f_equals_f_17_
 
         !! >>_sketch_middle_function_g_
         !! >>_sketch_middle_function_h_

@@ -6,19 +6,8 @@
     (f + g)' = f' + g'
     $$
 
-    that happens to be true for differentiable
-    functions $f$, $g$?
-
-    !! The identity
-
-    !! $$
-    !! (f + g)' = f' + g'
-    !! $$
-
-    !! happens to be true for differentiable
-    !! functions $f$, $g$. What English-language
-    !! aphorism can summarize it? (This identity
-    !! is known as the _sum rule_, by the way.)
+    (that happens to be true for differentiable
+    functions $f$, $g$)?
 
     |> Solution
 

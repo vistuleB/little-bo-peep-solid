@@ -1,0 +1,78 @@
+|> Exercise
+    work=ing
+    handle=_verbal_to_arithmetic_A_change_pt2_
+
+    By what should the change mentioned in Exercise >>_verbal_to_arithmetic_A_change_
+    be divided by in order 
+    to obtain a difference quotient (cf. Exercise >>_difference_quotient_illustration_)?
+
+    |> Solution
+
+        One should divide by
+
+        $$
+        0.001
+        $$
+
+        since $11.2 = 11.199 + 0.001$. In more detail, we obtain the
+        fraction 
+
+        $$
+        {A(11.2) - A(11.199) \over 0.001}
+        $$
+
+        after dividing by $0.001$,
+        which is a difference
+        quotient, having the form
+
+        $$
+        {f(x + h) - f(x) \over h}
+        $$
+
+        with $f = A$, $x = 11.199$, and $h = 0.001$. 
+
+        |> StarDivider
+
+        |> SolutionNote
+
+            Very—_very_—anecdotally, one can observe that
+
+            $$
+            {A(11.199) - A(11.2) \over -0.001}
+            $$
+
+            is also a difference quotient, equal to the one
+            above in value if not in syntax; in this case
+            $$
+            x = 11.2
+            $$
+            and
+            $$
+            h = -0.001
+            $$
+            compared to
+            $$
+            x = 11.199
+            $$
+            and
+            $$
+            h = 0.001
+            $$
+            above; what this underscores is that this diagram...
+
+            |> Image
+                src=tmp-images/_e5_verbal_to_arithmetic_note1.svg
+
+            ...can either be completed to illustrate
+            a difference quotient like this...
+
+            |> Image
+                src=images/svg_ch4_newton_quotient_finished.svg
+
+            ...or else like this...
+
+            |> Image
+                src=tmp-images/_e5_verbal_to_arithmetic_note3.svg
+
+            ...with $x$ and $x + h$ interchanged, and with a sign
+            change in $h$, computing the same slope of the same secant!

@@ -2224,16 +2224,13 @@ const Rest = () => {
               {" "}
               Digressing on the second-to-last equation
               in the solution to {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/chapter2#_26_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 2
-                </InChapterLink>
-                ,
-              </NoBreak>
-              {" "} explain why
+              <InChapterLink
+                href="/article/chapter2#_26_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 2
+              </InChapterLink>
+              &#8288;, explain why
             </OuterP>
             <Pause />
             <MathBlock>

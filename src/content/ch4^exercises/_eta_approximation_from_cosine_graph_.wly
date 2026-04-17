@@ -46,7 +46,7 @@
 
         However, the exact position of “cresting” is hard to
         determine because the graph flattens at that point,
-        and a more determining clue is actually that the graph seems to go almost exactly through
+        and a more clever clue to pick up on is actually that the graph seems to go almost exactly through
         $(t, x) = (11, 0)$:
         !! at which point it is jogging straight up:
         !! or thereabouts. However, but a bit of detective work

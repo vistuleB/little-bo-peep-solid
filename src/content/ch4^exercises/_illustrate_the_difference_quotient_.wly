@@ -1,5 +1,5 @@
 |> Exercise
-    handle=_illustrate_the_difference_quotient_old_
+    handle=_difference_quotient_illustration_old_
 
     Add elements to the drawing below until all
     parts of the fraction
@@ -65,7 +65,7 @@
         curve”.
 
         |> SolutionNote
-            !! handle=_limit_of_difference_quotient_
+            !! handle=_difference_quotient_limit_
             If we let $h$ drop to $0$, and if $f$ is
             differentiable at $x$, the
             difference-quotient-a.k.a.-slope-of-the-secant

@@ -328,18 +328,14 @@ const Rest = () => {
             .
           </NoBreak>
           {" "}
-          Moreover, {" "}
-          <NoBreak>
-            (
-            <InChapterLink
-              href="/article/bootcamp2#_2_hgi_"
-              class="handle-in-chapter-link"
-            >
-              A
-            </InChapterLink>
-            )
-          </NoBreak>
-          {" "} actually holds for
+          Moreover, (&#8288;
+          <InChapterLink
+            href="/article/bootcamp2#_2_hgi_"
+            class="handle-in-chapter-link"
+          >
+            A
+          </InChapterLink>
+          &#8288;) actually holds for
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -355,33 +351,25 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} which is mildly important. In more
-          detail, {" "}
-          <NoBreak>
-            (
-            <InChapterLink
-              href="/article/bootcamp2#_2_hgi_"
-              class="handle-in-chapter-link"
-            >
-              A
-            </InChapterLink>
-            )
-          </NoBreak>
-          {" "} holds for {" "}
+          detail, (&#8288;
+          <InChapterLink
+            href="/article/bootcamp2#_2_hgi_"
+            class="handle-in-chapter-link"
+          >
+            A
+          </InChapterLink>
+          &#8288;) holds for {" "}
           <Math>
             $n = 0$
           </Math>
-          {" "} by inspection, and {" "}
-          <NoBreak>
-            (
-            <InChapterLink
-              href="/article/bootcamp2#_2_hgi_"
-              class="handle-in-chapter-link"
-            >
-              A
-            </InChapterLink>
-            )
-          </NoBreak>
-          {" "}
+          {" "} by inspection, and (&#8288;
+          <InChapterLink
+            href="/article/bootcamp2#_2_hgi_"
+            class="handle-in-chapter-link"
+          >
+            A
+          </InChapterLink>
+          &#8288;)
           is equivalent to the identity
           <ImageLeft
             src="/build-img/svgo-svg/rdZz.svg"
@@ -427,29 +415,21 @@ const Rest = () => {
             ”
           </NoBreak>
           {" "}
-          in {" "}
-          <NoBreak>
-            (
-            <InChapterLink
-              href="/article/bootcamp2#_3_hgi_"
-              class="handle-in-chapter-link"
-            >
-              AA
-            </InChapterLink>
-            )
-          </NoBreak>
-          {" "} lands you right back on {" "}
-          <NoBreak>
-            (
-            <InChapterLink
-              href="/article/bootcamp2#_3_hgi_"
-              class="handle-in-chapter-link"
-            >
-              AA
-            </InChapterLink>
-            ),
-          </NoBreak>
-          {" "} due to the fact
+          in (&#8288;
+          <InChapterLink
+            href="/article/bootcamp2#_3_hgi_"
+            class="handle-in-chapter-link"
+          >
+            AA
+          </InChapterLink>
+          &#8288;) lands you right back on (&#8288;
+          <InChapterLink
+            href="/article/bootcamp2#_3_hgi_"
+            class="handle-in-chapter-link"
+          >
+            AA
+          </InChapterLink>
+          &#8288;), due to the fact
           that {" "}
           <NoBreak>
             <Math>
@@ -457,18 +437,14 @@ const Rest = () => {
             </Math>
             .)
           </NoBreak>
-          {" "} (So, namely, if {" "}
-          <NoBreak>
-            (
-            <InChapterLink
-              href="/article/bootcamp2#_3_hgi_"
-              class="handle-in-chapter-link"
-            >
-              AA
-            </InChapterLink>
-            )
-          </NoBreak>
-          {" "} holds for all
+          {" "} (So, namely, if (&#8288;
+          <InChapterLink
+            href="/article/bootcamp2#_3_hgi_"
+            class="handle-in-chapter-link"
+          >
+            AA
+          </InChapterLink>
+          &#8288;) holds for all
           positive values of {" "}
           <NoBreak>
             <Math>
@@ -534,29 +510,21 @@ const Rest = () => {
         <Pause />
         <OuterP>
           ...and any one of these equations implies the other two.
-          Thus, either of {" "}
-          <NoBreak>
-            (
-            <InChapterLink
-              href="/article/bootcamp2#_2_hgi_"
-              class="handle-in-chapter-link"
-            >
-              A
-            </InChapterLink>
-            )
-          </NoBreak>
-          {" "} and {" "}
-          <NoBreak>
-            (
-            <InChapterLink
-              href="/article/bootcamp2#_3_hgi_"
-              class="handle-in-chapter-link"
-            >
-              AA
-            </InChapterLink>
-            )
-          </NoBreak>
-          {" "}
+          Thus, either of (&#8288;
+          <InChapterLink
+            href="/article/bootcamp2#_2_hgi_"
+            class="handle-in-chapter-link"
+          >
+            A
+          </InChapterLink>
+          &#8288;) and (&#8288;
+          <InChapterLink
+            href="/article/bootcamp2#_3_hgi_"
+            class="handle-in-chapter-link"
+          >
+            AA
+          </InChapterLink>
+          &#8288;)
           expresses the
         </OuterP>
         <Pause />
@@ -2962,18 +2930,14 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              stated earlier in the chapter as {" "}
-              <NoBreak>
-                (
-                <InChapterLink
-                  href="/article/bootcamp2#_2_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  A
-                </InChapterLink>
-                ),
-              </NoBreak>
-              {" "}
+              stated earlier in the chapter as (&#8288;
+              <InChapterLink
+                href="/article/bootcamp2#_2_hgi_"
+                class="handle-in-chapter-link"
+              >
+                A
+              </InChapterLink>
+              &#8288;),
               while the third equality uses additivity of exponents,
               also stated earlier. (So: We are only using “known”
               facts, alongside some ordinary arithmetic.)
@@ -3316,16 +3280,13 @@ const Rest = () => {
                 $z$
               </Math>
               {" "} (as in {" "}
-              <NoBreak>
-                <InChapterLink
-                  href="/article/bootcamp2#_17_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Exercise 14
-                </InChapterLink>
-                ):
-              </NoBreak>
-              {" "}{" "}
+              <InChapterLink
+                href="/article/bootcamp2#_17_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 14
+              </InChapterLink>
+              &#8288;):
             </OuterP>
             <Pause />
             <MathBlock>

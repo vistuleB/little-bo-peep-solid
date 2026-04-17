@@ -1,6 +1,6 @@
 |> Exercise
     work=ing
-    handle=_product_rule_
+    handle=_product_rule_technical_ver_
 
     In this exercise we consider two points
     in time $t_0$ and $t_0 + \Delta{}t$ (here
@@ -38,7 +38,6 @@
     a cat. One side of the hallway is time
     $t_0$, the other side of the hallway is
     time $t_0 + \Delta{}t$. So great is 
-    !! $A$ and $B$'s 
     their terror
     that $A$ and $B$ have decided to
     cross the hallway one at a time—first
@@ -93,8 +92,12 @@
     If we divide the above equation by $\Delta{}t$
     and let $\Delta{}t$ drop to $0$, what does
     each term become?
-
-    !! PS: We assume $A$, $B$, and $AB$ differentiable at $t_0$.
+    
+    PS: You can assume that all functions involved are
+    differentiable at $t_0$.
+    !! $A$, $B$, as well as $AB : \rr \ra \rr$
+    !! $A$, $B$, $AB$
+    !! are differentiable at $t_0$.
 
     |> Solution
 
@@ -105,6 +108,10 @@
 
         The first term on the left-hand side comes
         out to
+
+        |> ImageRight
+            src=images/svg_ch4_RATS_first_term_lhs_cloud.svg
+            offset_x=-3em
 
         $$
         {(AB)(t_0 + \Delta t) - (AB)(t_0)\over \Delta t}
@@ -124,7 +131,8 @@
         {f(t_0 + \Delta{}t) - f(t_0)\over \Delta{}t}
         $$
 
-        of a difference quotient, with $f = AB$. (Cf. Note
+        of a difference quotient, with $f = AB$, and by assumed
+        differentiability of $AB$ at $t_0$. (Cf. Note
         >>_difference_quotient_limit_ of Exercise >>_difference_quotient_illustration_.)
         
         [Nb: $AB : \rr \ra \rr$ is the function
@@ -165,8 +173,8 @@
         $$
 
         as $\Delta t$ approaches $0$, being a difference 
-        quotient,
-        !! quotient and using the differentiability of $A$ at $t_0$,
+        !! quotient,
+        quotient and by the assumed differentiability of $A$ at $t_0$,
         so the whole term approaches
 
         |> Boxed
@@ -178,9 +186,9 @@
         as $\Delta t$ approaches $0$, reintroducing the “$B(t_0)$”
         back in.
 
-        [Nb: We assume $A$ and $B$ are differentiable at $t_0$, etc—the
-        exercise has all the veneer of conceptuality, not so much
-        of technicality.]
+        !! [Nb: We assume $A$ and $B$ are differentiable at $t_0$, etc—the
+        !! exercise has all the veneer of conceptuality, not so much
+        !! of technicality.]
 
         Lastly the second term on the right-hand side
         comes out to
@@ -198,7 +206,8 @@
         A(t_0 + \Delta{}t)\cdot{B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
         $$
 
-        when factoring out the common term $A(t_0 + \Delta{}t)$
+        when factoring out 
+        “$A(t_0 + \Delta{}t)$”
         from the numerator; on the one hand,
 
         $$
@@ -212,9 +221,8 @@
         $$
 
         as $\Delta{}t$ approaches $0$ by the property of the
-        difference quotient,
-        !! on the other hand
-        while
+        difference quotient & differentiability,
+        while, on the other hand,
 
         $$
         A(t_0 + \Delta{}t)
@@ -250,98 +258,8 @@
 
         as $\Delta t$ approaches $0$.
 
-        !! Lastly the most interesting term is the
-        !! second term on the right-hand side!
-        !! Symmetrically to the first term on the
-        !! right-hand side, the second term approaches
-
-        !! |> ImageRight
-        !!     src=images/svg_ch4_RATS_second_term_cloud.svg
-
-        !! $$
-        !! A(t_0)B'(t_0)
-        !! $$
-
-        !! as $\Delta{}t$ approaches $0$, but the
-        !! reasons are slightly different! (Slightly.)
-        !! Indeed, this term, written out, is
-
-        !! $$
-        !! {A(t_0 + \Delta{}t)B(t_0+\Delta{}t) - A(t_0+ \Delta{}t)B(t_0) \over \Delta{}t}
-        !! $$
-
-        !! which is equal to
-
-        !! $$
-        !! A(t_0 + \Delta{}t)\cdot{B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
-        !! $$
-
-        !! by factoring out the common term $A(t_0 + \Delta{}t)$;
-        !! and
-
-        !! $$
-        !! {B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
-        !! $$
-
-        !! approaches
-
-        !! $$
-        !! B'(t_0)
-        !! $$
-
-        !! as $\Delta{}t$ approaches $0$, like before
-        !! (when we had $AB$ or $A$ instead of $B$)
-        !! whereas
-
-        !! $$
-        !! A(t_0 + \Delta{}t)
-        !! $$
-
-        !! —which is a bit different from before—approaches
-
-        !! $$
-        !! A(t_0)
-        !! $$
-
-        !! as $\Delta{}t$ approaches $0$—so that makes up
-        !! $A(t_0)B'(t_0)$. (The
-
-        !! __differentiability__
-
-        !! of $A$ and $B$ at $t_0$—that we are tacitly
-        !! assuming—implies
-
-        !! __continuity__
-
-        !! as well, which implies that $A(t_0 + \Delta{}t)$
-        !! approaches $A(t_0)$ as $\Delta t$ approaches $0$.)
-
-        !! Summarizing, the three terms separately
-        !! approach
-
-        !! $$
-        !! (AB)'(t_0)
-        !! $$
-        !! $$
-        !! B(t_0)A'(t_0)
-        !! $$
-        !! $$
-        !! A(t_0)B'(t_0)
-        !! $$
-
-        !! as $\Delta{}t$ approaches $0$ and, in fact,
-        !! because the equation holds no matter how
-        !! close we make each term to its respective limit
-        !! above, one can conclude that
-
-        !! $$
-        !! (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
-        !! $$
-
-        !! for functions $A$, $B$ differentiable at
-        !! a point $t_0$.
-
         |> SolutionNote
+            handle=_product_rule_first_note_
 
             We deduce 
 
@@ -352,51 +270,13 @@
 
             since, as the three terms inch closer and closer to
 
-            !! $$
-            !! \begin{gathered}
-            !! \,(AB)'(t_0), \\
-            !! \up{1.5} \,A'(t_0)B(t_0), \\
-            !! \up{1.5} A(t_0)B'(t_0)
-            !! \end{gathered}
-            !! $$
-            !! $$
-            !! \begin{gathered}
-            !! \,(AB)'(t_0), \\
-            !! \up{1.6} \,A'(t_0)B(t_0), \\
-            !! \end{gathered}
-            !! $$
-            !! $$
-            !! \,(AB)'(t_0),
-            !! $$
-            !! $$
-            !! \,A'(t_0)B(t_0),
-            !! $$
-
-            !! and 
-
-            !! $$
-            !! A(t_0)B'(t_0)
-            !! $$
-            !! $$
-            !! (AB)'(t_0),\,\,A'(t_0)B(t_0),\,\,\,\te{ and }\,\,\,A(t_0)B'(t_0)
-            !! $$
             $$
             (AB)'(t_0),\,\,B(t_0)A'(t_0)\,\,\,\te{ and }\,\,\,A(t_0)B'(t_0)
             $$
 
             respectively as $\Delta t$ approaches $0$, it
             would be impossible for the equation boxed in red
-            !! |> Boxed
-            !!     $$
-            !!     (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
-            !!     $$
-            !! |> Boxed
-            !!     $$
-            !!     (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
-            !!     $$
-            to _not_ hold—if this equation
-            !! the equation boxed in red 
-            didn't hold, then
+            to _not_ hold—if the boxed equation didn't hold, then
             at some point, “something would have to break”
             in the original equation...
 
@@ -404,28 +284,46 @@
                 src=images/svg_ch4_RATS_equation_over_Dt.svg
 
             ...as $\Delta t$ goes to $0$.
-            !! (You can't have this
-            !! be an equation, and the equation boxed in red _not_
-            !! be an equation, if each term of 
-            !! this one goes to each term of that one.)
+
+        |> SolutionNote
+
+            The differentiability of $AB$ at $t_0$ can
+            be deduced from the computation itself, because
+            the fact that the difference quotient
+
+            $$
+            {(AB)(t_0 + \Delta t) - (AB)(t_0)\over \Delta t}
+            $$
+
+            approaches a fixed value as $\Delta t$ goes to
+            $0$, as the computation shows from the right-hand
+            side, implies the
+            differentiability of $AB$ at $t_0$. So the only
+            “truly necessary assumptions” are the differentiability
+            of $A$ and $B$ at $t_0$!
+
+            !! The assumption that $AB$ is differentiable at
+            !! $t_0$ can be dropped, being deduced as a
+            !! consequence of the computation itself.
+            !! What remains is the assumption that $A$ and $B$,
+            !! individually, are differentiable at $t_0$, from
+            !! which the boxed equation of Note >>_product_rule_first_note_
+            !! follows!
 
         |> SolutionNote
             Keeping things alphabetical everywhere, the
-            same equation is more often written
+            !! same equation
+            boxed equation of Note >>_product_rule_first_note_
+            is more often written
 
             |> Boxed
                 $$
                 (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
                 $$
 
-            with “$A'(t_0)B(t_0)$” in the middle, valid
-            for $A$, $B$ differentiable at $t_0 \in \rr$,
-            !! . (But
-            !! which is the same, of course, as $B(t_0)A'(t_0)$.)
+            with “$A'(t_0)B(t_0)$” in the middle, which is
+            namely valid for $A$, $B$ differentiable at $t_0 \in \rr$,
             or 
-            !! by the rules for adding and multiplying
-            !! functions we can also just write
-            !! the product rule can also be written
 
             |> Boxed
                 $$
