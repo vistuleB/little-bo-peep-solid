@@ -1468,9 +1468,9 @@ const Rest = () => {
             <Pause />
             <Grid
               cols={3}
-              sm_cols={2}
-              sm_cutoff={520}
-              center_on_overflow={true}
+              mobileCols={2}
+              mobileCutoff={520}
+              centerOnOverflow={true}
             >
               <Item>
                 a. {" "}
@@ -2129,7 +2129,7 @@ const Rest = () => {
             <Pause />
             <Grid
               cols={3}
-              place_items="end"
+              placeItems="end"
             >
               <Item>
                 <Math>

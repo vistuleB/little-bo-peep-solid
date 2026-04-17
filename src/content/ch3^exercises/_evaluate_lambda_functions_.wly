@@ -5,10 +5,10 @@
 
     |> Grid
         cols=2
-        sm_cols=1
-        place_items=start
-        with_padding=false
-        column_first=true
+        mobile-cols=1
+        place-items=start
+        with-padding=false
+        column-first=true
 
         i. $(\lambda u.u^3)(0.5)$
 
@@ -25,10 +25,10 @@
 
         |> Grid
             cols=2
-            sm_cols=1
-            place_items=start
-            with_padding=false
-            column_first=true
+            mobile-cols=1
+            place-items=start
+            with-padding=false
+            column-first=true
 
             i. $0.5^3 = 0.125$
 

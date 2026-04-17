@@ -179,9 +179,13 @@ const Page = (props: ParentProps & PageProps) => {
       getNextPage();
       return;
     }
-    if (e.key === "d" && env == "DEV") {
+    if (e.key === "d" && (env === "DEV" || env === "LOCAL")) {
       e.preventDefault();
       set_store("show_areas", !store.show_areas);
+    }
+    if (e.key === "p" && (env === "DEV" || env === "LOCAL")) {
+      e.preventDefault();
+      getPage("/playground");
     }
     if (e.key === "0") {
       e.preventDefault();

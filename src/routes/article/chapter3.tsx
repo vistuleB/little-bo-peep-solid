@@ -2130,10 +2130,10 @@ const Rest = () => {
             <Pause />
             <Grid
               cols={2}
-              sm_cols={1}
-              place_items="start"
-              with_padding={false}
-              column_first={true}
+              mobileCols={1}
+              placeItems="start"
+              withPadding={false}
+              columnFirst={true}
             >
               <Item>
                 i. {" "}
@@ -2168,10 +2168,10 @@ const Rest = () => {
             <Pause />
             <Grid
               cols={2}
-              sm_cols={1}
-              place_items="start"
-              with_padding={false}
-              column_first={true}
+              mobileCols={1}
+              placeItems="start"
+              withPadding={false}
+              columnFirst={true}
             >
               <Item>
                 i. {" "}

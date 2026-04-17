@@ -4,9 +4,9 @@
 
     |> Grid
         cols=3
-        sm_cols=2
-        sm_cutoff=520
-        center_on_overflow=true
+        mobile-cols=2
+        mobile-cutoff=520
+        center-on-overflow=true
 
         a. $0.9^2 < 0.9$
 
@@ -326,7 +326,7 @@
 
         |> Grid
             cols=3
-            place_items=end
+            place-items=end
 
             $ (-1)^1 = $
 
