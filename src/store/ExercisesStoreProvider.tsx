@@ -27,15 +27,15 @@ type StoreContextType = {
 };
 
 // Default store instance — used only when no provider is present (e.g. PageTopBottomArrows at article level)
-const [_default_store, _default_set_store] = createStore<Store>({
+const [default_store, default_set_store] = createStore<Store>({
   selected_exo: 0,
   exercises: [],
   list_view: false,
 });
 
 export const StoreContext = createContext<StoreContextType>({
-  exercises_store: _default_store,
-  set_exercises_store: _default_set_store,
+  exercises_store: default_store,
+  set_exercises_store: default_set_store,
   group_id: "",
 });
 
@@ -52,18 +52,25 @@ export const ExercisesStoreProvider: ParentComponent<{ group_id: string }> = (
     list_view: window.innerWidth > MOBILE_MAX_WIDTH,
   });
 
+  const digit = props.group_id.replace(/\D/g, "");
+  const niceId = `group_${digit}`;
+
   const registry = useExerciseGroupRegistry();
-  onMount(() => registry?.register(props.group_id, { exercises_store, set_exercises_store }));
-  onCleanup(() => registry?.unregister(props.group_id));
+  onMount(() =>
+    registry?.register(niceId, {
+      exercises_store,
+      set_exercises_store,
+    }),
+  );
+  onCleanup(() => registry?.unregister(niceId));
 
   return (
     <StoreContext.Provider
       value={{
         exercises_store,
         set_exercises_store,
-        group_id: props.group_id,
-      }}
-    >
+        group_id: niceId,
+      }}>
       {props.children}
     </StoreContext.Provider>
   );
@@ -78,7 +85,7 @@ export const useExercisesStateHelpers = () => {
       Array.from({ length }).map((el) => ({
         solution_open: false,
         transition_duration: 1000,
-      }))
+      })),
     );
   };
 
@@ -87,7 +94,7 @@ export const useExercisesStateHelpers = () => {
     update_obj: {
       field: keyof ExerciseState;
       value: any;
-    }
+    },
   ) => {
     set_exercises_store("exercises", (prev) =>
       prev.map((exercise, i) => {
@@ -98,7 +105,7 @@ export const useExercisesStateHelpers = () => {
           };
         }
         return exercise;
-      })
+      }),
     );
   };
 
@@ -110,6 +117,6 @@ export const useExercisesStateHelpers = () => {
 
 export const closeAllSolutions = (set_store: any) => {
   set_store("exercises", (exercises: ExerciseState[]) =>
-    exercises.map((exercise) => ({ ...exercise, solution_open: false }))
+    exercises.map((exercise) => ({ ...exercise, solution_open: false })),
   );
 };

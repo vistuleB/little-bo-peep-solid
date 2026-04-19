@@ -7,8 +7,11 @@ import {
 } from "~/store/ExercisesStoreProvider";
 
 const useExercises = (length: number) => {
-  const { set_exercises_store: set_store, exercises_store: store, group_id } =
-    useExercisesContext();
+  const {
+    set_exercises_store: set_store,
+    exercises_store: store,
+    group_id,
+  } = useExercisesContext();
   const { updateExerciseByIndex } = useExercisesStateHelpers();
 
   const stored_selected_exo = () => store.selected_exo;
@@ -44,7 +47,9 @@ const useExercises = (length: number) => {
       prev.map((exo, i) => ({
         ...exo,
         solution_open:
-          localStorage.getItem(`${article()}_${group_id}_exo_${i + 1}_opened`) == "true",
+          localStorage.getItem(
+            `${article()}_${group_id}_exo_${i + 1}_opened`,
+          ) == "true",
       })),
     );
   });
