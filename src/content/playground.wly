@@ -1,0 +1,306 @@
+|> Bootcamp
+    title=Components Playground
+    handle=playground
+    page-necessary-margin=270
+    max-element-width=1200
+
+    |> Exercises
+        handle=_bt3_exercises_1
+
+        |> Exercise
+            |> ExerciseStatement
+                What is the purpose of life 1?
+            |> Solution
+                EAAAT
+        |> Exercise
+            |> ExerciseStatement
+                What is the purpose of life 2?
+            |> Solution
+                SLEEP
+    |> Section
+        id=grid
+
+        _*Grid*_ used for putting items in a controlled grid layout, a more friendly alternative to Table component that needs all special html tags tr, colgroup ...etc
+
+        |> Pause
+
+        _*Case 1:*_ 3 cols, 2 on mobile, place-items="start"
+
+        |> Grid
+            cols=3
+            mobile-cols=2
+            place-items=start
+
+            Item 1
+
+            Item 2
+
+            Item 3
+
+            Item 4
+
+            Item 5
+
+            Item 6
+
+        |> Pause
+
+        _*Case 2:*_ 3 cols, place-items="center" (default)
+
+        |> Grid
+            cols=3
+
+            Short
+
+            Medium text
+
+            A longer piece of text
+
+            Item 4
+
+            Item 5
+
+            Item 6
+
+        |> Pause
+
+        _*Case 3:*_ 3 cols, place-items="end"
+
+        |> Grid
+            cols=3
+            place-items=end
+
+            Short
+
+            Medium text
+
+            A longer piece of text
+
+            Item 4
+
+            Item 5
+
+            Item 6
+
+        |> Pause
+
+        _*Case 4:*_ 2 cols, column-first=true (fills top-to-bottom)
+
+        |> Grid
+            cols=2
+            column-first=true
+            place-items=start
+
+            1st
+
+            2nd
+
+            3rd
+
+            4th
+
+            5th
+
+            6th
+
+        |> Pause
+
+        _*Case 5:*_ 2 cols, column-first=false (default, fills left-to-right)
+
+        |> Grid
+            cols=2
+            place-items=start
+
+            1st
+
+            2nd
+
+            3rd
+
+            4th
+
+            5th
+
+            6th
+
+        |> Pause
+
+        _*Case 6:*_ with-padding=false
+
+        |> Grid
+            cols=3
+            with-padding=false
+            place-items=start
+
+            Item 1
+
+            Item 2
+
+            Item 3
+
+            Item 4
+
+            Item 5
+
+            Item 6
+
+        |> Pause
+
+        _*Case 7:*_ custom gap="2rem"
+
+        |> Grid
+            cols=3
+            gap=2rem
+            place-items=start
+
+            Item 1
+
+            Item 2
+
+            Item 3
+
+            Item 4
+
+            Item 5
+
+            Item 6
+
+        |> Pause
+
+        _*Case 8:*_ custom gap="0.25rem"
+
+        |> Grid
+            cols=3
+            gap=0.25rem
+            place-items=start
+
+            Item 1
+
+            Item 2
+
+            Item 3
+
+            Item 4
+
+            Item 5
+
+            Item 6
+
+        |> Pause
+
+        _*Case 9:*_ margin-top=40, margin-bottom=40
+
+        |> Grid
+            cols=3
+            margin-top=40
+            margin-bottom=40
+            place-items=start
+
+            Item 1
+
+            Item 2
+
+            Item 3
+
+            Item 4
+
+            Item 5
+
+            Item 6
+
+        |> Pause
+
+        _*Case 10:*_ custom mobile-cutoff=800 (switches to mobile layout at 800px)
+
+        |> Grid
+            cols=4
+            mobile-cols=2
+            mobile-cutoff=800
+            place-items=start
+
+            Item 1
+
+            Item 2
+
+            Item 3
+
+            Item 4
+
+            Item 5
+
+            Item 6
+
+            Item 7
+
+            Item 8
+
+        |> Pause
+
+        _*Case 11:*_ overflow row (5 items in 3 cols)
+
+        |> Grid
+            cols=3
+            place-items=start
+
+            Item 1
+
+            Item 2
+
+            Item 3
+
+            Item 4
+
+            Item 5
+
+        |> Pause
+
+        _*Case 12:*_ column-first + mobile-cols (2 cols desktop, 1 on mobile)
+
+        |> Grid
+            cols=2
+            mobile-cols=1
+            column-first=true
+            place-items=start
+            with-padding=false
+
+            1st
+
+            2nd
+
+            3rd
+
+            4th
+
+        |> Pause
+
+        _*Case 13:*_ custom style (light pink background)
+
+        |> Grid
+            cols=3
+            place-items=start
+            style=background-color:#ffe4e6
+
+            Item 1
+
+            Item 2
+
+            Item 3
+
+            Item 4
+
+            Item 5
+
+            Item 6
+
+        |> Exercises
+            handle=_bt3_exercises_2
+
+            |> Exercise
+
+                |> ExerciseStatement
+                    What is the purpose of life 1?
+                |> Solution
+                    REPEAAAT
+            |> Exercise
+                |> ExerciseStatement
+                    What is the purpose of life 2?

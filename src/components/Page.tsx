@@ -185,7 +185,7 @@ const Page = (props: ParentProps & PageProps) => {
     }
     if (e.key === "p" && (env === "DEV" || env === "LOCAL")) {
       e.preventDefault();
-      getPage("/playground");
+      getPage("/article/bootcamp3");
     }
     if (e.key === "0") {
       e.preventDefault();
