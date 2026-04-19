@@ -73,7 +73,7 @@ export const Solution = (props: SolutionProps) => {
   let buttonRef: HTMLDivElement | undefined;
 
   let { store: global_store, set_store: set_global_store } = useGlobalContext();
-  const { set_exercises_store: set_store, exercises_store: store } =
+  const { set_exercises_store: set_store, exercises_store: store, group_id } =
     useExercisesContext();
   let {
     store: { number: solution_number },
@@ -152,7 +152,8 @@ export const Solution = (props: SolutionProps) => {
   createEffect(() => {
     // green div height
     // if exercise question is too small we increase green div height
-    let exo = document.querySelectorAll(".exercise")?.item(solution_number - 1);
+    const _section = document.querySelector(`[data-exercise-group-id="${group_id}"]`);
+    let exo = (_section ?? document).querySelectorAll(".exercise")?.item(solution_number - 1);
     if (exo?.clientHeight < 200 + green_div_height()) {
       set_green_div_height(700);
     } else {
@@ -281,7 +282,7 @@ type SolutionBtnProps = {
 };
 
 const SolutionButton = (props: SolutionBtnProps) => {
-  const { exercises_store: store } = useExercisesContext();
+  const { exercises_store: store, group_id } = useExercisesContext();
   const { updateExerciseByIndex } = useExercisesStateHelpers();
   const solution_open = () =>
     store.exercises[props.solution_number - 1]?.solution_open;
@@ -333,7 +334,7 @@ const SolutionButton = (props: SolutionBtnProps) => {
             // update localstorage for the solution . as useExercises hook only updates the selectedExo which works only in carousel view
             let article = location.pathname.split("/").pop();
             localStorage.setItem(
-              `${article}_exo_${props.solution_number}_opened`,
+              `${article}_${group_id}_exo_${props.solution_number}_opened`,
               String(solution_open()),
             );
           }
@@ -350,18 +351,20 @@ const SolutionButton = (props: SolutionBtnProps) => {
 
 export const BackupArrow = () => {
   let { store } = useGlobalContext();
-  let { exercises_store } = useExercisesContext();
+  let { exercises_store, group_id } = useExercisesContext();
 
   let w = PREV_NEXT_EXERCISE_BUTTON_W;
   let rx = PREV_NEXT_EXERCISE_BUTTON_RX;
 
   const { calculateTargetCenterOnPage } = useScrollToInChapter();
-  const selectedExercise = () =>
-    document
+  const selectedExercise = () => {
+    const section = document.querySelector(`[data-exercise-group-id="${group_id}"]`);
+    return (section ?? document)
       .querySelectorAll(".exo-statement")
       .item(
         exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
       ) as HTMLElement;
+  };
 
   let h = w;
   let triangle_sidelength = 11.5;
@@ -387,7 +390,7 @@ export const BackupArrow = () => {
             store.animations ? 100 : 0,
           );
         } else {
-          document?.getElementById("exo")?.scrollIntoView();
+          document?.getElementById(`exo-${group_id}`)?.scrollIntoView();
         }
       }}>
       <path

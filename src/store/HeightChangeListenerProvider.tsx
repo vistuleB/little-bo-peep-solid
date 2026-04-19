@@ -15,12 +15,11 @@ const HeightChangeListenerContext = createContext<{
 export const useHeightChangeListenerContext = () =>
   useContext(HeightChangeListenerContext);
 
-const [height_change_listener_store, set_height_change_listener_store] =
-  createStore({
-    re_calculate_height: false,
-  });
-
 export const HeightChangeListenerProvider = (props: ParentProps) => {
+  const [height_change_listener_store, set_height_change_listener_store] =
+    createStore({
+      re_calculate_height: false,
+    });
   return (
     <HeightChangeListenerContext.Provider
       value={{

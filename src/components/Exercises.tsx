@@ -1,4 +1,4 @@
-import { children, For, ParentProps } from "solid-js";
+import { children, createUniqueId, For, ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import Image from "./Image";
 import { JSX } from "solid-js/h/jsx-runtime";
@@ -6,6 +6,7 @@ import { twJoin } from "tailwind-merge";
 import useExercises from "~/hooks/useExercises";
 import {
   closeAllSolutions,
+  ExercisesStoreProvider,
   useExercisesContext,
   useExercisesStateHelpers,
   close_solutions_on_exiting_list_view,
@@ -24,6 +25,18 @@ type ExerciseProps = ParentProps & {
 };
 
 export const Exercises = (props: ExercisesProps) => {
+  const fallback_id = createUniqueId();
+  const group_id = props.id ?? fallback_id;
+  return (
+    <ExercisesStoreProvider group_id={group_id}>
+      <ExercisesInner {...props} _group_id={group_id} />
+    </ExercisesStoreProvider>
+  );
+};
+
+type ExercisesInnerProps = ExercisesProps & { _group_id: string };
+
+const ExercisesInner = (props: ExercisesInnerProps) => {
   let children_list = children(() => props.children);
   let num_exercises = children_list.toArray().length;
 
@@ -45,14 +58,17 @@ export const Exercises = (props: ExercisesProps) => {
   return (
     <>
       <Image
-        id="exo"
+        id={`exo-${props._group_id}`}
         src="/non-build-img/separator.png"
         height="50px"
         class="mt-[15px] mb-[40px]"
       ></Image>
-      <Switcher exercises={children_list.toArray()} />
+      <Switcher exercises={children_list.toArray()} group_id={props._group_id} />
       <div class="h-[31px]"></div>
-      <section id="exercises">
+      <section
+        id={`exercises-${props._group_id}`}
+        data-exercise-group-id={props._group_id}
+      >
         <For each={children_list.toArray()}>
           {(child, index) => {
             return (
@@ -76,6 +92,7 @@ export const Exercises = (props: ExercisesProps) => {
 
 type SwitcherProps = {
   exercises: JSX.Element[];
+  group_id: string;
 };
 
 const Switcher = (props: SwitcherProps) => {
@@ -104,7 +121,6 @@ const Switcher = (props: SwitcherProps) => {
   let dr = 2.8;
   let r2 = r1 - dr;
   let c2c = (r1 * 15) / 9.5;
-  // let toggle_transition = 100;
 
   let toggle_cx = () => {
     return store.list_view ? 1 + r1 : 1 + r1 + c2c;
@@ -121,7 +137,7 @@ const Switcher = (props: SwitcherProps) => {
   return (
     <div class="m-auto">
       <div
-        id="exercises-btns"
+        id={`exercises-btns-${props.group_id}`}
         class="flex justify-center !text-xl gap-0 mt-[2px]"
       >
         <svg
@@ -196,7 +212,6 @@ const Switcher = (props: SwitcherProps) => {
                   : "inactive_exercises_button_arrow_fill",
               )}
               d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-              // fill={right_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
             ></path>
             <path
               class={twJoin(
@@ -205,7 +220,6 @@ const Switcher = (props: SwitcherProps) => {
                   : "inactive_exercises_button_arrow_fill",
               )}
               d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}
-              // fill={right_on() ? `${button_stroke_on}` : `${button_stroke_off}`}
             ></path>
           </svg>
           <svg

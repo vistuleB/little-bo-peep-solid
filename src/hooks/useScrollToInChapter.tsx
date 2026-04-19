@@ -1,27 +1,44 @@
+import { useContext } from "solid-js";
 import {
-  useExercisesContext,
-  useExercisesStateHelpers,
+  StoreContext,
 } from "~/store/ExercisesStoreProvider";
+import { useExerciseGroupRegistry } from "~/store/ExerciseGroupRegistryProvider";
 import elementPosOnPage from "../utils/elementPosOnPage";
 import smoothScrollTo from "../utils/smoothScrollTo";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 const useScrollToInChapter = () => {
-  const { exercises_store, set_exercises_store } = useExercisesContext();
+  const ctx = useContext(StoreContext);
+  const registry = useExerciseGroupRegistry();
   const { store } = useGlobalContext();
-  const { updateExerciseByIndex } = useExercisesStateHelpers();
+
+  // Returns the exercises group store for the given DOM target.
+  // If called from inside a provider (ctx has a non-empty group_id), use it directly.
+  // Otherwise walk up the DOM to find data-exercise-group-id and look up the registry.
+  const resolveGroupForTarget = (target: HTMLElement | null) => {
+    if (ctx?.group_id) return ctx;
+    let el: HTMLElement | null = target;
+    while (el) {
+      const gid = el.dataset.exerciseGroupId;
+      if (gid) return registry?.get(gid);
+      el = el.parentElement;
+    }
+    return undefined;
+  };
 
   const getClosestExerciseParentIndex = (
     target: HTMLElement | null,
+    section: Element | null,
   ): number => {
     if (!target) return -1;
 
     let current: HTMLElement | null = target;
-    const allExercises = document.querySelectorAll(".exercise");
+    const allExercises = section
+      ? section.querySelectorAll(".exercise")
+      : document.querySelectorAll(".exercise");
 
     while (current) {
       if (current.classList.contains("exercise")) {
-        // Find position of this exercise among all exercises
         const position = Array.from(allExercises).findIndex(
           (ex) => ex === current,
         );
@@ -31,6 +48,15 @@ const useScrollToInChapter = () => {
     }
 
     return -1;
+  };
+
+  const findGroupSection = (target: HTMLElement | null): Element | null => {
+    let el: HTMLElement | null = target;
+    while (el) {
+      if (el.dataset.exerciseGroupId) return el;
+      el = el.parentElement;
+    }
+    return null;
   };
 
   const isInsideElementWithClass = (
@@ -56,8 +82,8 @@ const useScrollToInChapter = () => {
 
   const calculateTargetCenterOnPage = (target: HTMLElement | null) =>
     elementPosOnPage(target) -
-    store.innerHeight / 2 + // step 1:  center top of element on screen
-    Math.min(getHeight(target) / 2, store.innerHeight / 2); // if target height is bigger than screen step 1 is reveresed | else the target itself is centered on screen
+    store.innerHeight / 2 +
+    Math.min(getHeight(target) / 2, store.innerHeight / 2);
 
   const firstSectionEdgeCase = (target: HTMLElement | null) => {
     if (!target) return false;
@@ -66,11 +92,18 @@ const useScrollToInChapter = () => {
   };
 
   const exercisesEdgeCase = (target: HTMLElement | null) => {
-    if (!target || target.id !== "exercises") return target;
+    if (!target) return target;
+    // Handle sections marked as exercise groups (data-exercise-group-id attribute)
+    const gid = target.dataset.exerciseGroupId;
+    if (!gid) return target;
+    const groupCtx = resolveGroupForTarget(target);
+    if (!groupCtx) return target;
     return target
       ?.querySelectorAll(".exo-statement")
       ?.item(
-        exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
+        groupCtx.exercises_store.list_view
+          ? 0
+          : groupCtx.exercises_store.selected_exo - 1,
       ) as HTMLElement;
   };
 
@@ -78,10 +111,9 @@ const useScrollToInChapter = () => {
     if (!target) return 0;
     let scrollTo = calculateTargetCenterOnPage(target);
     if (getHeight(target) > store.innerHeight) {
-      scrollTo -= 20; // for safe margin
+      scrollTo -= 20;
     }
 
-    // another edge case for exo-statement
     if (target.classList.contains("exo-statement")) {
       scrollTo += 50;
     }
@@ -96,26 +128,30 @@ const useScrollToInChapter = () => {
     let target = document.getElementById(targetId);
     target = exercisesEdgeCase(target);
 
-    // check if target is not inside exercise
     if (!isInsideElementWithClass("exercise", target)) {
-      // just scroll to the target
       smoothScrollTo(
         firstSectionEdgeCase(target) ? 0 : addSafeMarginForLongTarget(target),
         store.animations ? scrollDuration : 0,
       );
       return;
     }
-    const exo_number = getClosestExerciseParentIndex(target);
 
-    // check if taget is inside solution
+    const groupSection = findGroupSection(target);
+    const exo_number = getClosestExerciseParentIndex(target, groupSection);
+    const groupCtx = resolveGroupForTarget(target);
+
     if (isInsideElementWithClass("solution", target)) {
-      updateExerciseByIndex(exo_number - 1, {
-        field: "solution_open",
-        value: true,
-      });
+      groupCtx?.set_exercises_store("exercises", (prev) =>
+        prev.map((exercise, i) => {
+          if (i === exo_number - 1) {
+            return { ...exercise, solution_open: true };
+          }
+          return exercise;
+        })
+      );
     }
 
-    if (exercises_store.list_view) {
+    if (groupCtx?.exercises_store.list_view) {
       smoothScrollTo(
         addSafeMarginForLongTarget(target),
         store.animations ? scrollDuration : 0,
@@ -123,7 +159,7 @@ const useScrollToInChapter = () => {
       return;
     }
 
-    set_exercises_store("selected_exo", exo_number);
+    groupCtx?.set_exercises_store("selected_exo", exo_number);
     if (
       target &&
       (target.getBoundingClientRect().top < 0 ||

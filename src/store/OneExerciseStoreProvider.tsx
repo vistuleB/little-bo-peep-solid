@@ -5,11 +5,6 @@ interface Store {
   number: number;
 }
 
-// Store Provider
-const [store, set_store] = createStore<Store>({
-  number: 0,
-});
-
 const StoreContext = createContext<{
   store: Store;
   set_store: SetStoreFunction<Store>;
@@ -20,7 +15,9 @@ export const useOneExerciseContext = () => useContext(StoreContext)!;
 export const OneExerciseStoreProvider: ParentComponent<{ number: number }> = (
   props,
 ) => {
-  set_store("number", props.number);
+  const [store, set_store] = createStore<Store>({
+    number: props.number,
+  });
   return (
     <StoreContext.Provider
       value={{

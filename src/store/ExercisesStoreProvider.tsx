@@ -1,11 +1,13 @@
 import { MOBILE_MAX_WIDTH } from "~/constants";
 import {
   createContext,
+  onCleanup,
+  onMount,
   ParentComponent,
-  ParentProps,
   useContext,
 } from "solid-js";
 import { SetStoreFunction, createStore } from "solid-js/store";
+import { useExerciseGroupRegistry } from "./ExerciseGroupRegistryProvider";
 
 type ExerciseState = {
   solution_open: boolean;
@@ -18,28 +20,48 @@ interface Store {
   list_view: boolean;
 }
 
-// Store Provider
-const [exercises_store, set_exercises_store] = createStore<Store>({
-  selected_exo: 0,
-  exercises: [],
-  list_view: window.innerWidth > MOBILE_MAX_WIDTH,
-});
-
-const StoreContext = createContext<{
+type StoreContextType = {
   exercises_store: Store;
   set_exercises_store: SetStoreFunction<Store>;
-}>();
+  group_id: string;
+};
+
+// Default store instance — used only when no provider is present (e.g. PageTopBottomArrows at article level)
+const [_default_store, _default_set_store] = createStore<Store>({
+  selected_exo: 0,
+  exercises: [],
+  list_view: false,
+});
+
+export const StoreContext = createContext<StoreContextType>({
+  exercises_store: _default_store,
+  set_exercises_store: _default_set_store,
+  group_id: "",
+});
 
 export const close_solutions_on_exiting_list_view = true;
 export const close_solutions_on_entering_list_view = true;
-export const useExercisesContext = () => useContext(StoreContext)!;
+export const useExercisesContext = () => useContext(StoreContext);
 
-export const ExercisesStoreProvider: ParentComponent = (props: ParentProps) => {
+export const ExercisesStoreProvider: ParentComponent<{ group_id: string }> = (
+  props,
+) => {
+  const [exercises_store, set_exercises_store] = createStore<Store>({
+    selected_exo: 0,
+    exercises: [],
+    list_view: window.innerWidth > MOBILE_MAX_WIDTH,
+  });
+
+  const registry = useExerciseGroupRegistry();
+  onMount(() => registry?.register(props.group_id, { exercises_store, set_exercises_store }));
+  onCleanup(() => registry?.unregister(props.group_id));
+
   return (
     <StoreContext.Provider
       value={{
         exercises_store,
         set_exercises_store,
+        group_id: props.group_id,
       }}
     >
       {props.children}
