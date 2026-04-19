@@ -5793,8 +5793,8 @@
     "original-size": 166852,
     "compressed-size": 60341,
     "compression": "63.84%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_ch_position_by_time_der_der.svg": {
     "build-version": "svgo-svg/cBcm.svg",
