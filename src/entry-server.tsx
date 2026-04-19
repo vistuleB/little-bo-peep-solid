@@ -67,6 +67,11 @@ export default createHandler(() => (
                 rel="apple-touch-icon-precomposed"
                 href="/apple-touch-icon-dev.png"
               />
+              <script
+                defer
+                src="https://cloud.umami.is/script.js"
+                data-website-id="6ef76d0c-cf74-4368-ad72-55a1f5091018"
+              ></script>
             </>
           ) : (
             <>
@@ -107,8 +112,6 @@ export default createHandler(() => (
             src={resolveMathJAXEnv()}
             defer={true}
           />
-
-          <script defer src="https://cloud.umami.is/script.js" data-website-id="6ef76d0c-cf74-4368-ad72-55a1f5091018"></script>
 
           <title>Little Bo Peep</title>
 
