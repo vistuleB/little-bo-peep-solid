@@ -4,21 +4,11 @@
 
     Find expressions for
     areas A—F
-    !! that allow you to find a formula for $c$ in terms of 
-    !! all variables that do not contain “$c$” in their name:
     and use these to give a formula for $c$ in terms of
     $a$, $b$ and $\theta_{ab}$:
 
     |> Image
         src=images/_e5_cosine_rule_geometric_4_statement_v2.svg
-
-    !! $$
-    !! \begin{gathered}
-    !! ab\cos\theta_{ab} \\
-    !! bc\cos\theta_{bc} \\
-    !! -ac\cos\theta_{ac} \\
-    !! \end{gathered}
-    !! $$
 
     |> Solution
 
@@ -27,8 +17,6 @@
         that $\cos(2\eta - \theta_{ac}) = -\cos\theta_{ac}$),
         similarly to exercises >>_cosine_rule_geometric_1_,
         >>_cosine_rule_geometric_2_, and >>_cosine_rule_geometric_3_:
-        !! the following
-        !! figure is color-coded for equal areas:
 
         |> Image
             src=images/_e5_cosine_rule_geometric_4_sol1.svg

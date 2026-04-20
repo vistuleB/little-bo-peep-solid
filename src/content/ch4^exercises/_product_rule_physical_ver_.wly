@@ -38,7 +38,6 @@
     a cat. One side of the hallway is time
     $t_0$, the other side of the hallway is
     time $t_0 + \Delta{}t$. So great is 
-    !! $A$ and $B$'s 
     their terror
     that $A$ and $B$ have decided to
     cross the hallway one at a time—first
@@ -94,8 +93,6 @@
     and let $\Delta{}t$ drop to $0$, what does
     each term become?
 
-    !! PS: We assume $A$, $B$, and $AB$ differentiable at $t_0$.
-
     |> Solution
 
         Dividing by $\Delta{}t$:
@@ -127,8 +124,8 @@
 
         of a difference quotient, with $f = AB$. (Cf. Note
         >>_difference_quotient_limit_ of Exercise >>_difference_quotient_illustration_.)
-        (Nb: We assume these are all physical processes,
-        therefore differentiable.)
+        (Nb: We assume differentiability, otherwise
+        there is no conclusion to draw.)
         
         [Nb: $AB : \rr \ra \rr$ is the function
         given by 
@@ -181,10 +178,6 @@
         as $\Delta t$ approaches $0$, reintroducing the “$B(t_0)$”
         back in.
 
-        !! [Nb: We assume $A$ and $B$ are differentiable at $t_0$, etc—the
-        !! exercise has all the veneer of conceptuality, not so much
-        !! of technicality.]
-
         Lastly the second term on the right-hand side
         comes out to
 
@@ -229,21 +222,11 @@
         A(t_0)
         $$
 
-        as $\Delta t$ approaches $0$, by
-        differentiability-which-implies-continuity, 
+        as $\Delta t$ approaches 
+        $0$ (technically: differentiability, that we are assuming,
+        implies continuity, and continuity implies that $A(t_0 + \Delta{}t)$ approaches
+        $A(t_0)$),
         so as the
-        !! —(from the technical standpoint,
-        !! the
-
-        !! __differentiability__
-
-        !! of $A$ at $t_0$ implies the
-
-        !! __continuity__
-
-        !! of $A$ at $t_0$, which implies that $A(t_0 + \Delta{}t)$
-        !! approaches $A(t_0)$ as $\Delta t$ approaches $0$, but
-        !! anyway)—so as the
         
         __product-of-two-things-each-approaching-a-certain-value-approaches-the-product-of-the-two-approached-values__
 
@@ -256,97 +239,6 @@
 
         as $\Delta t$ approaches $0$.
 
-        !! Lastly the most interesting term is the
-        !! second term on the right-hand side!
-        !! Symmetrically to the first term on the
-        !! right-hand side, the second term approaches
-
-        !! |> ImageRight
-        !!     src=images/svg_ch4_RATS_second_term_cloud.svg
-
-        !! $$
-        !! A(t_0)B'(t_0)
-        !! $$
-
-        !! as $\Delta{}t$ approaches $0$, but the
-        !! reasons are slightly different! (Slightly.)
-        !! Indeed, this term, written out, is
-
-        !! $$
-        !! {A(t_0 + \Delta{}t)B(t_0+\Delta{}t) - A(t_0+ \Delta{}t)B(t_0) \over \Delta{}t}
-        !! $$
-
-        !! which is equal to
-
-        !! $$
-        !! A(t_0 + \Delta{}t)\cdot{B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
-        !! $$
-
-        !! by factoring out the common term $A(t_0 + \Delta{}t)$;
-        !! and
-
-        !! $$
-        !! {B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
-        !! $$
-
-        !! approaches
-
-        !! $$
-        !! B'(t_0)
-        !! $$
-
-        !! as $\Delta{}t$ approaches $0$, like before
-        !! (when we had $AB$ or $A$ instead of $B$)
-        !! whereas
-
-        !! $$
-        !! A(t_0 + \Delta{}t)
-        !! $$
-
-        !! —which is a bit different from before—approaches
-
-        !! $$
-        !! A(t_0)
-        !! $$
-
-        !! as $\Delta{}t$ approaches $0$—so that makes up
-        !! $A(t_0)B'(t_0)$. (The
-
-        !! __differentiability__
-
-        !! of $A$ and $B$ at $t_0$—that we are tacitly
-        !! assuming—implies
-
-        !! __continuity__
-
-        !! as well, which implies that $A(t_0 + \Delta{}t)$
-        !! approaches $A(t_0)$ as $\Delta t$ approaches $0$.)
-
-        !! Summarizing, the three terms separately
-        !! approach
-
-        !! $$
-        !! (AB)'(t_0)
-        !! $$
-        !! $$
-        !! B(t_0)A'(t_0)
-        !! $$
-        !! $$
-        !! A(t_0)B'(t_0)
-        !! $$
-
-        !! as $\Delta{}t$ approaches $0$ and, in fact,
-        !! because the equation holds no matter how
-        !! close we make each term to its respective limit
-        !! above, one can conclude that
-
-        !! $$
-        !! (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
-        !! $$
-
-        !! for functions $A$, $B$ differentiable at
-        !! a point $t_0$.
-
         |> SolutionNote
 
             We deduce 
@@ -358,50 +250,13 @@
 
             since, as the three terms inch closer and closer to
 
-            !! $$
-            !! \begin{gathered}
-            !! \,(AB)'(t_0), \\
-            !! \up{1.5} \,A'(t_0)B(t_0), \\
-            !! \up{1.5} A(t_0)B'(t_0)
-            !! \end{gathered}
-            !! $$
-            !! $$
-            !! \begin{gathered}
-            !! \,(AB)'(t_0), \\
-            !! \up{1.6} \,A'(t_0)B(t_0), \\
-            !! \end{gathered}
-            !! $$
-            !! $$
-            !! \,(AB)'(t_0),
-            !! $$
-            !! $$
-            !! \,A'(t_0)B(t_0),
-            !! $$
-
-            !! and 
-
-            !! $$
-            !! A(t_0)B'(t_0)
-            !! $$
-            !! $$
-            !! (AB)'(t_0),\,\,A'(t_0)B(t_0),\,\,\,\te{ and }\,\,\,A(t_0)B'(t_0)
-            !! $$
             $$
             (AB)'(t_0),\,\,B(t_0)A'(t_0)\,\,\,\te{ and }\,\,\,A(t_0)B'(t_0)
             $$
 
             respectively as $\Delta t$ approaches $0$, it
             would be impossible for the equation boxed in red
-            !! |> Boxed
-            !!     $$
-            !!     (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
-            !!     $$
-            !! |> Boxed
-            !!     $$
-            !!     (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
-            !!     $$
             to _not_ hold—if this equation
-            !! the equation boxed in red 
             didn't hold, then
             at some point, “something would have to break”
             in the original equation...
@@ -410,10 +265,6 @@
                 src=images/svg_ch4_RATS_equation_over_Dt.svg
 
             ...as $\Delta t$ goes to $0$.
-            !! (You can't have this
-            !! be an equation, and the equation boxed in red _not_
-            !! be an equation, if each term of 
-            !! this one goes to each term of that one.)
 
         |> SolutionNote
             Keeping things alphabetical everywhere, the
@@ -426,7 +277,7 @@
 
             with “$A'(t_0)B(t_0)$” in the middle, valid
             when $A$ and $B$ (and therefore, one can show by
-            this selfsame computation, $AB$) are differentiable at $t_0 \in \rr$,
+            this computation, $AB$) are differentiable at $t_0 \in \rr$,
             or 
 
             |> Boxed
@@ -441,9 +292,8 @@
                 (fg)' = f'g + fg'
                 $$
 
-            if we replace “$A$” and “$B$” by the more familiar “$f$” and “$g$”,
-            for $f, g : \rr \ra \rr$ differentiable.
-            !! This result is known as the _product rule_.
+            if we replace “$A$” and “$B$” by the more familiar “$f$” and “$g$”.
+            !! for $f, g : \rr \ra \rr$ differentiable.
 
         |> SolutionNote
             This result is known as the _product rule_.
