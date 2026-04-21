@@ -4351,7 +4351,10 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises id="_146_hgi_">
+      <Exercises
+        at_end_of_page={true}
+        id="_146_hgi_"
+      >
         <Exercise number={1}>
           <ExerciseStatement id="_89_hgi_">
             <OuterP>

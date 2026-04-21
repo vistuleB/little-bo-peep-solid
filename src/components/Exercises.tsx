@@ -18,7 +18,10 @@ import {
   PREV_NEXT_EXERCISE_BUTTON_W,
 } from "~/constants";
 
-type ExercisesProps = ParentProps & SharedProps;
+type ExercisesProps = ParentProps &
+  SharedProps & {
+    at_end_of_page?: boolean;
+  };
 
 type ExerciseProps = ParentProps & {
   number: number;
@@ -27,14 +30,16 @@ type ExerciseProps = ParentProps & {
 export const Exercises = (props: ExercisesProps) => {
   const fallback_id = createUniqueId();
   const group_id = props.id ?? fallback_id;
+  const at_end_of_page = props.at_end_of_page ?? false;
+
   return (
-    <ExercisesStoreProvider group_id={group_id}>
-      <ExercisesInner {...props} _group_id={group_id} />
+    <ExercisesStoreProvider group_id={group_id} at_end_of_page={at_end_of_page}>
+      <ExercisesInner {...props} />
     </ExercisesStoreProvider>
   );
 };
 
-type ExercisesInnerProps = ExercisesProps & { _group_id: string };
+type ExercisesInnerProps = ParentProps & SharedProps;
 
 const ExercisesInner = (props: ExercisesInnerProps) => {
   let children_list = children(() => props.children);
@@ -42,8 +47,12 @@ const ExercisesInner = (props: ExercisesInnerProps) => {
 
   useExercises(num_exercises);
 
-  const { set_exercises_store: set_store, exercises_store: store } =
-    useExercisesContext();
+  const {
+    set_exercises_store: set_store,
+    exercises_store: store,
+    at_end_of_page,
+    group_id,
+  } = useExercisesContext();
   const { initExercisesState } = useExercisesStateHelpers();
 
   let selected_exo = () => store.selected_exo;
@@ -57,18 +66,16 @@ const ExercisesInner = (props: ExercisesInnerProps) => {
 
   return (
     <>
-      <Image
-        id={`exo-${props._group_id}`}
-        src="/non-build-img/separator.png"
-        height="50px"
-        class="mt-[15px] mb-[40px]"
-      ></Image>
-      <Switcher exercises={children_list.toArray()} group_id={props._group_id} />
+      {at_end_of_page && (
+        <Image
+          id={`exo-${group_id}`}
+          src="/non-build-img/separator.png"
+          height="50px"
+          class="mt-[15px] mb-[40px]"></Image>
+      )}
+      <Switcher exercises={children_list.toArray()} group_id={group_id} />
       <div class="h-[31px]"></div>
-      <section
-        id={`exercises-${props._group_id}`}
-        data-exercise-group-id={props._group_id}
-      >
+      <section id={`exercises-${group_id}`} data-exercise-group-id={group_id}>
         <For each={children_list.toArray()}>
           {(child, index) => {
             return (
@@ -78,8 +85,7 @@ const ExercisesInner = (props: ExercisesInnerProps) => {
                   selected_exo() == index() + 1 || store.list_view
                     ? "opacity-100 h-auto overflow-visible transition-none"
                     : "opacity-0 h-0 overflow-hidden transition-opacity",
-                )}
-              >
+                )}>
                 {child}
               </div>
             );
@@ -138,8 +144,7 @@ const Switcher = (props: SwitcherProps) => {
     <div class="m-auto">
       <div
         id={`exercises-btns-${props.group_id}`}
-        class="flex justify-center !text-xl gap-0 mt-[2px]"
-      >
+        class="flex justify-center !text-xl gap-0 mt-[2px]">
         <svg
           width={`${2 + w}`}
           height={`${2 + w}`}
@@ -155,30 +160,26 @@ const Switcher = (props: SwitcherProps) => {
             if (left_on()) {
               set_store("selected_exo", selected_exo() - 1);
             }
-          }}
-        >
+          }}>
           <path
             class={twJoin(
               left_on()
                 ? "active_exercises_button"
                 : "inactive_exercises_button",
             )}
-            d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-          ></path>
+            d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}></path>
           <path
             class={twJoin(
               left_on()
                 ? "active_exercises_button_arrow_fill"
                 : "inactive_exercises_button_arrow_fill",
             )}
-            d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}
-          ></path>
+            d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}></path>
         </svg>
         <svg
           width={`${gap}`}
           height={`${2 + w}`}
-          xmlns="http://www.w3.org/2000/svg"
-        ></svg>
+          xmlns="http://www.w3.org/2000/svg"></svg>
         <div class="relative w-fit">
           <svg
             width={`${2 + w}`}
@@ -195,32 +196,28 @@ const Switcher = (props: SwitcherProps) => {
               if (right_on()) {
                 set_store("selected_exo", selected_exo() + 1);
               }
-            }}
-          >
+            }}>
             <path
               class={twJoin(
                 right_on()
                   ? "active_exercises_button"
                   : "inactive_exercises_button",
               )}
-              d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-            ></path>
+              d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}></path>
             <path
               class={twJoin(
                 right_on()
                   ? "active_exercises_button_arrow_fill"
                   : "inactive_exercises_button_arrow_fill",
               )}
-              d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-            ></path>
+              d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}></path>
             <path
               class={twJoin(
                 right_on()
                   ? "active_exercises_button_arrow_fill"
                   : "inactive_exercises_button_arrow_fill",
               )}
-              d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}
-            ></path>
+              d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}></path>
           </svg>
           <svg
             class={twJoin(
@@ -236,18 +233,11 @@ const Switcher = (props: SwitcherProps) => {
               e.stopPropagation();
               const new_list_view = !store.list_view;
               set_store("list_view", new_list_view);
-              if (
-                store.list_view &&
-                close_solutions_on_entering_list_view
-              )
+              if (store.list_view && close_solutions_on_entering_list_view)
                 closeAllSolutions(set_store);
-              if (
-                !store.list_view &&
-                close_solutions_on_exiting_list_view
-              )
+              if (!store.list_view && close_solutions_on_exiting_list_view)
                 closeAllSolutions(set_store);
-            }}
-          >
+            }}>
             <path
               d={`
                 M ${1 + r1 + c2c} ${w / 2 - r1}
@@ -262,8 +252,7 @@ const Switcher = (props: SwitcherProps) => {
                 store.list_view
                   ? "inactive_exercises_button"
                   : "active_exercises_button_toggle",
-              )}
-            ></path>
+              )}></path>
             <circle
               cx={`${toggle_cx()}`}
               cy={`${w / 2}`}
@@ -272,8 +261,7 @@ const Switcher = (props: SwitcherProps) => {
                 store.list_view
                   ? "inactive_exercises_toggle_circle"
                   : "active_exercises_toggle_circle",
-              )}
-            ></circle>
+              )}></circle>
           </svg>
         </div>
       </div>

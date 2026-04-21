@@ -24,6 +24,7 @@ type StoreContextType = {
   exercises_store: Store;
   set_exercises_store: SetStoreFunction<Store>;
   group_id: string;
+  at_end_of_page: boolean;
 };
 
 // Default store instance — used only when no provider is present (e.g. PageTopBottomArrows at article level)
@@ -37,15 +38,17 @@ export const StoreContext = createContext<StoreContextType>({
   exercises_store: default_store,
   set_exercises_store: default_set_store,
   group_id: "",
+  at_end_of_page: false,
 });
 
 export const close_solutions_on_exiting_list_view = true;
 export const close_solutions_on_entering_list_view = true;
 export const useExercisesContext = () => useContext(StoreContext);
 
-export const ExercisesStoreProvider: ParentComponent<{ group_id: string }> = (
-  props,
-) => {
+export const ExercisesStoreProvider: ParentComponent<{
+  group_id: string;
+  at_end_of_page: boolean;
+}> = (props) => {
   const [exercises_store, set_exercises_store] = createStore<Store>({
     selected_exo: 0,
     exercises: [],
@@ -70,6 +73,7 @@ export const ExercisesStoreProvider: ParentComponent<{ group_id: string }> = (
         exercises_store,
         set_exercises_store,
         group_id: niceId,
+        at_end_of_page: props.at_end_of_page,
       }}>
       {props.children}
     </StoreContext.Provider>

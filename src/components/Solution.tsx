@@ -73,8 +73,12 @@ export const Solution = (props: SolutionProps) => {
   let buttonRef: HTMLDivElement | undefined;
 
   let { store: global_store, set_store: set_global_store } = useGlobalContext();
-  const { set_exercises_store: set_store, exercises_store: store, group_id } =
-    useExercisesContext();
+  const {
+    set_exercises_store: set_store,
+    exercises_store: store,
+    group_id,
+    at_end_of_page,
+  } = useExercisesContext();
   let {
     store: { number: solution_number },
   } = useOneExerciseContext();
@@ -152,8 +156,12 @@ export const Solution = (props: SolutionProps) => {
   createEffect(() => {
     // green div height
     // if exercise question is too small we increase green div height
-    const _section = document.querySelector(`[data-exercise-group-id="${group_id}"]`);
-    let exo = (_section ?? document).querySelectorAll(".exercise")?.item(solution_number - 1);
+    const _section = document.querySelector(
+      `[data-exercise-group-id="${group_id}"]`,
+    );
+    let exo = (_section ?? document)
+      .querySelectorAll(".exercise")
+      ?.item(solution_number - 1);
     if (exo?.clientHeight < 200 + green_div_height()) {
       set_green_div_height(700);
     } else {
@@ -237,36 +245,34 @@ export const Solution = (props: SolutionProps) => {
             solution_fully_opened() && "opacity-0",
           )}></div>
       </div>
-
-      {/* Possible backup arrow */}
-      {(!store.list_view || solution_number === num_exercises()) && (
+      {at_end_of_page && (
         <>
-          <SpaceBeforeBackupArrow />
+          {/* Possible backup arrow */}
+          {(!store.list_view || solution_number === num_exercises()) && (
+            <>
+              <SpaceBeforeBackupArrow />
+              <BackupArrow
+                solution_open={solution_open}
+                solution_fully_opened={solution_fully_opened}
+                solution_transition={solution_transition}
+                bot_div={bot_div}
+              />
+            </>
+          )}
+          {store.list_view && solution_number !== num_exercises() && (
+            <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
+          )}
+
+          {/* Green Div */}
           <div
+            class="text-column transition-all col-start-2"
             style={{
-              "transition-duration": `${!global_store.animations ? 0 : solution_open() ? solution_transition() : 50}ms`,
-            }}
-            class={twJoin(
-              "flex items-center justify-center",
-              (!solution_open() || !solution_fully_opened()) && "opacity-0",
-              bot_div() && "delay-[2s]",
-            )}>
-            <BackupArrow />
-          </div>
+              height: `${(!store.list_view || solution_number === num_exercises()) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
+              "background-color": global_store.show_areas ? "#00440050" : "",
+              "transition-duration": `${global_store.animations ? green_div_transition() : 0}ms`,
+            }}></div>
         </>
       )}
-      {store.list_view && solution_number !== num_exercises() && (
-        <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
-      )}
-
-      {/* Green Div */}
-      <div
-        class="text-column transition-all col-start-2"
-        style={{
-          height: `${(!store.list_view || solution_number === num_exercises()) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
-          "background-color": global_store.show_areas ? "#00440050" : "",
-          "transition-duration": `${global_store.animations ? green_div_transition() : 0}ms`,
-        }}></div>
     </HeightChangeListenerProvider>
   );
 };
@@ -349,16 +355,28 @@ const SolutionButton = (props: SolutionBtnProps) => {
   );
 };
 
-export const BackupArrow = () => {
+type BackupArrowProps = {
+  solution_open: Accessor<boolean>;
+  solution_fully_opened: Accessor<boolean>;
+  solution_transition: Accessor<number>;
+  bot_div: Accessor<boolean>;
+};
+
+export const BackupArrow = (props: BackupArrowProps) => {
   let { store } = useGlobalContext();
   let { exercises_store, group_id } = useExercisesContext();
+
+  const { solution_open, solution_fully_opened, solution_transition, bot_div } =
+    props;
 
   let w = PREV_NEXT_EXERCISE_BUTTON_W;
   let rx = PREV_NEXT_EXERCISE_BUTTON_RX;
 
   const { calculateTargetCenterOnPage } = useScrollToInChapter();
   const selectedExercise = () => {
-    const section = document.querySelector(`[data-exercise-group-id="${group_id}"]`);
+    const section = document.querySelector(
+      `[data-exercise-group-id="${group_id}"]`,
+    );
     return (section ?? document)
       .querySelectorAll(".exo-statement")
       .item(
@@ -368,46 +386,53 @@ export const BackupArrow = () => {
 
   let h = w;
   let triangle_sidelength = 11.5;
-  let triangle_height = triangle_sidelength * Math.sqrt(3) / 2;
+  let triangle_height = (triangle_sidelength * Math.sqrt(3)) / 2;
   let triangle_tip_to_edge = 8.5;
   let arrow_start_to_edge = 9;
   let arrow_body_width = 2;
   let arrow_body_length = 13;
 
   return (
-    <svg
-      id="backup-btn"
-      width={`${2 + w}`}
-      height={`${2 + w}`}
-      viewBox={`0 0 ${2 + w} ${2 + w}`}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      class="tab cursor-pointer z-10"
-      onClick={() => {
-        if (store.innerWidth > MOBILE_MAX_WIDTH) {
-          smoothScrollTo(
-            calculateTargetCenterOnPage(selectedExercise()) + 50,
-            store.animations ? 100 : 0,
-          );
-        } else {
-          document?.getElementById(`exo-${group_id}`)?.scrollIntoView();
-        }
-      }}>
-      <path
-        d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-        class="active_exercises_button"
-      ></path>
-      {/* could not compound these two into single path without getting evenodd
+    <div
+      style={{
+        "transition-duration": `${!store.animations ? 0 : solution_open() ? solution_transition() : 50}ms`,
+      }}
+      class={twJoin(
+        "flex items-center justify-center",
+        (!solution_open() || !solution_fully_opened()) && "opacity-0",
+        bot_div() && "delay-[2s]",
+      )}>
+      <svg
+        id="backup-btn"
+        width={`${2 + w}`}
+        height={`${2 + w}`}
+        viewBox={`0 0 ${2 + w} ${2 + w}`}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="tab cursor-pointer z-10"
+        onClick={() => {
+          if (store.innerWidth > MOBILE_MAX_WIDTH) {
+            smoothScrollTo(
+              calculateTargetCenterOnPage(selectedExercise()) + 50,
+              store.animations ? 100 : 0,
+            );
+          } else {
+            document?.getElementById(`exo-${group_id}`)?.scrollIntoView();
+          }
+        }}>
+        <path
+          d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
+          class="active_exercises_button"></path>
+        {/* could not compound these two into single path without getting evenodd
           fill-style, who knows why */}
-      <path
-        d={`M ${1 + w / 2 - arrow_body_width / 2} ${1 + h - arrow_start_to_edge} h ${arrow_body_width} v ${-arrow_body_length} h ${-arrow_body_width} z`}
-        fill="black"
-        ></path>
-      <path
-        d={`M ${1 + w / 2} ${1 + triangle_tip_to_edge} l ${triangle_sidelength * 0.5} ${triangle_height} h ${-triangle_sidelength} z`}
-        fill="black"
-      ></path>
-    </svg>
+        <path
+          d={`M ${1 + w / 2 - arrow_body_width / 2} ${1 + h - arrow_start_to_edge} h ${arrow_body_width} v ${-arrow_body_length} h ${-arrow_body_width} z`}
+          fill="black"></path>
+        <path
+          d={`M ${1 + w / 2} ${1 + triangle_tip_to_edge} l ${triangle_sidelength * 0.5} ${triangle_height} h ${-triangle_sidelength} z`}
+          fill="black"></path>
+      </svg>
+    </div>
   );
 };
 
@@ -433,7 +458,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
             <rect
               aria-label="solution_button_focus_rect"
               class={twJoin(
-                (global_store.animations ? "solution_button_transition" : ""),
+                global_store.animations ? "solution_button_transition" : "",
                 props.solution_open()
                   ? "inactive_solution_button_rect"
                   : "active_solution_button_rect",
@@ -443,7 +468,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
             <path
               aria-label="solution_button_lip"
               class={twJoin(
-                (global_store.animations ? "solution_button_transition" : ""),
+                global_store.animations ? "solution_button_transition" : "",
                 props.solution_open()
                   ? "inactive_solution_button_lip"
                   : "active_solution_button_lip",
@@ -452,7 +477,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
             <g
               aria-label="solution_button_finger_pair"
               class={twJoin(
-                (global_store.animations ? "solution_button_transition" : ""),
+                global_store.animations ? "solution_button_transition" : "",
                 props.solution_open()
                   ? "inactive_solution_button_hands"
                   : "active_solution_button_hands",
@@ -463,7 +488,10 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
               <use
                 href="#finger_pointing_left"
                 transform="scale(-1, 1) translate(-8, 20)"></use>
-              <use x="-2" href="#solution_button_text" style="pointer-events:none;"></use>
+              <use
+                x="-2"
+                href="#solution_button_text"
+                style="pointer-events:none;"></use>
             </g>
           </g>
         </svg>
