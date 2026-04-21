@@ -31,17 +31,27 @@ export const Exercises = (props: ExercisesProps) => {
   const fallback_id = createUniqueId();
   const group_id = props.id ?? fallback_id;
   const at_end_of_page = props.at_end_of_page ?? false;
+  let children_list = children(() => props.children);
 
   return (
     <ExercisesStoreProvider group_id={group_id} at_end_of_page={at_end_of_page}>
-      <ExercisesInner {...props} />
+      {at_end_of_page && (
+        <Image
+          id={`exo-${group_id}`}
+          src="/non-build-img/separator.png"
+          height="50px"
+          class="mt-[15px] mb-[40px]"></Image>
+      )}
+      <Switcher exercises={children_list.toArray()} group_id={group_id} />
+      <div class="h-[31px]"></div>
+      <ExercisesGroup {...props} />
     </ExercisesStoreProvider>
   );
 };
 
-type ExercisesInnerProps = ParentProps & SharedProps;
+type ExercisesGroupProps = ParentProps & SharedProps;
 
-const ExercisesInner = (props: ExercisesInnerProps) => {
+const ExercisesGroup = (props: ExercisesGroupProps) => {
   let children_list = children(() => props.children);
   let num_exercises = children_list.toArray().length;
 
@@ -50,7 +60,6 @@ const ExercisesInner = (props: ExercisesInnerProps) => {
   const {
     set_exercises_store: set_store,
     exercises_store: store,
-    at_end_of_page,
     group_id,
   } = useExercisesContext();
   const { initExercisesState } = useExercisesStateHelpers();
@@ -65,34 +74,23 @@ const ExercisesInner = (props: ExercisesInnerProps) => {
   }
 
   return (
-    <>
-      {at_end_of_page && (
-        <Image
-          id={`exo-${group_id}`}
-          src="/non-build-img/separator.png"
-          height="50px"
-          class="mt-[15px] mb-[40px]"></Image>
-      )}
-      <Switcher exercises={children_list.toArray()} group_id={group_id} />
-      <div class="h-[31px]"></div>
-      <section id={`exercises-${group_id}`} data-exercise-group-id={group_id}>
-        <For each={children_list.toArray()}>
-          {(child, index) => {
-            return (
-              <div
-                class={twJoin(
-                  "exercise duration-500 ",
-                  selected_exo() == index() + 1 || store.list_view
-                    ? "opacity-100 h-auto overflow-visible transition-none"
-                    : "opacity-0 h-0 overflow-hidden transition-opacity",
-                )}>
-                {child}
-              </div>
-            );
-          }}
-        </For>
-      </section>
-    </>
+    <section id={`exercises-${group_id}`} data-exercise-group-id={group_id}>
+      <For each={children_list.toArray()}>
+        {(child, index) => {
+          return (
+            <div
+              class={twJoin(
+                "exercise duration-500 ",
+                selected_exo() == index() + 1 || store.list_view
+                  ? "opacity-100 h-auto overflow-visible transition-none"
+                  : "opacity-0 h-0 overflow-hidden transition-opacity",
+              )}>
+              {child}
+            </div>
+          );
+        }}
+      </For>
+    </section>
   );
 };
 
