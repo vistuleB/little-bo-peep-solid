@@ -34,7 +34,8 @@
     |> Image
         src=images/svg_ch4_RATS_rats.svg
 
-    that are crossing a hallway surveyed by
+    that are crossing a hallway,
+    and the hallway is surveyed by
     a cat. One side of the hallway is time
     $t_0$, the other side of the hallway is
     time $t_0 + \Delta{}t$. So great is 

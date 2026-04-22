@@ -34,7 +34,8 @@
     |> Image
         src=images/svg_ch4_RATS_rats.svg
 
-    that are crossing a hallway surveyed by
+    that are crossing a hallway,
+    and the hallway is surveyed by
     a cat. One side of the hallway is time
     $t_0$, the other side of the hallway is
     time $t_0 + \Delta{}t$. So great is 
@@ -102,6 +103,9 @@
 
         The first term on the left-hand side comes
         out to
+
+        |> ImageRight
+            src=images/svg_ch4_RATS_first_term_lhs_cloud.svg
 
         $$
         {(AB)(t_0 + \Delta t) - (AB)(t_0)\over \Delta t}
@@ -188,14 +192,15 @@
         {A(t_0 + \Delta{}t)B(t_0+\Delta{}t) - A(t_0+ \Delta{}t)B(t_0) \over \Delta{}t}
         $$
 
-        or
+        when written out, or
 
         $$
         A(t_0 + \Delta{}t)\cdot{B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
         $$
 
-        when factoring out the common term $A(t_0 + \Delta{}t)$
-        from the numerator; on the one hand,
+        !! when factoring out the common term $A(t_0 + \Delta{}t)$
+        by factoring out “$A(t_0 + \Delta{}t)$”
+        from the numerator; here, on the one hand,
 
         $$
         {B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
@@ -207,10 +212,11 @@
         B'(t_0)
         $$
 
-        as $\Delta{}t$ approaches $0$ by the property of the
-        difference quotient
-        (cf. Note >>_difference_quotient_limit_ of Exercise >>_difference_quotient_illustration_),
-        while
+        as $\Delta{}t$ approaches $0$ by the 
+        afore-mentioned property of 
+        difference quotients,
+        !! (cf. Note >>_difference_quotient_limit_ of Exercise >>_difference_quotient_illustration_),
+        while, on the other hand,
 
         $$
         A(t_0 + \Delta{}t)
@@ -222,10 +228,16 @@
         A(t_0)
         $$
 
-        as $\Delta t$ approaches 
-        $0$ (technically: differentiability, that we are assuming,
-        implies continuity, and continuity implies that $A(t_0 + \Delta{}t)$ approaches
-        $A(t_0)$),
+        !! as $\Delta t$ approaches $0$ (technically: differentiability, that we are assuming,
+        !! implies continuity, and continuity implies that $A(t_0 + \Delta{}t)$ approaches
+        !! $A(t_0)$),
+        !! so as the
+        because, technically, the differentiability $A$—that
+        we are post-hoc-ad-hoc-cum-hoc assuming—implies the
+        _continuity_ of $A$ (anyway, nevermind);
+        !! as $\Delta t$ approaches $0$ (technically: differentiability, that we are assuming,
+        !! implies continuity, and continuity implies that $A(t_0 + \Delta{}t)$ approaches
+        !! $A(t_0)$),
         so as the
         
         __product-of-two-things-each-approaching-a-certain-value-approaches-the-product-of-the-two-approached-values__
@@ -237,7 +249,7 @@
             A(t_0)B'(t_0)
             $$
 
-        as $\Delta t$ approaches $0$.
+        as $\Delta t$ approaches $0$. $\ra$ ~ The End ~
 
         |> SolutionNote
 

@@ -8,13 +8,6 @@
     $\theta_{bc}$, $\theta_{ac}$, $\theta_{ab}$
     respectively, prove _Jack's rule_, which is the triplet of equations...
 
-    !! $$
-    !! \begin{gathered}
-    !! a = b\cos\theta_{ab} + c\cos\theta_{ac} \\
-    !! \up{1.4}b = a\cos\theta_{ab} + c\cos\theta_{bc} \\
-    !! \up{1.4}c = a\cos\theta_{ac} + b\cos\theta_{bc}
-    !! \end{gathered}
-    !! $$
     $$
     \begin{gathered}
     a\cos\theta_{ac} + b\cos\theta_{bc} = c \\
@@ -22,19 +15,18 @@
     a\cos\theta_{ab} + c\cos\theta_{bc} = b \up{1.4}
     \end{gathered}
     $$
-    !! and angles $\theta_{ab}$, $\theta_{ac}$ and $\theta_{bc}$
-    !! as in exercises >>_cosine_rule_geometric_1_—>>_cosine_rule_geometric_4_,
+
     ...and then prove the _cosine rule_, which is the equation...
 
     $$
     c^2 = a^2 + b^2  - 2ab\cos\theta_{ab}
     $$
 
-    ...by manipulating the equations in Jack's rule.
+    ...by manipulating the equations in$\rt{0.1}$ Jack's rule.
 
     |> Solution
 
-        Because the equations in Jack's rule are
+        Because the equations in$\rt{0.1}$ Jack's rule are
         symmetric it suffices to prove the first equation.
         We need to consider two cases according to
         whether 
@@ -44,7 +36,7 @@
         angle are symmetric to one another, we consider only one):
 
         |> Image
-            src=tmp-images/_e5_cosine_rule_via_jacks_two_cases.svg
+            src=images/_e5_cosine_rule_via_jacks_two_cases.svg
 
         In Case 1 we obviously have
 
@@ -52,7 +44,7 @@
         c = a\cos\theta_{ac} + b\cos\theta_{bc}
         $$
 
-        verifying Jack's rule,
+        verifying$\rt{0.1}$ Jack's rule,
         whereas, in Case 2, note that
 
         $$
@@ -66,14 +58,14 @@
         c = b\cos\theta_{bc} - (-a\cos\theta_{ac}) = b\cos\theta_{bc} + a\cos\theta_{ac}
         $$
 
-        again verifying Jack's rule, 
+        again verifying$\rt{0.1}$ Jack's rule, 
         and which completes the proof thereof. 
         |> InlineImage
-            src=tmp-images/_e5_cosine_rule_via_jacks_JACK_logo_.svg
+            src=images/_e5_cosine_rule_via_jacks_JACK_logo_.svg
             style=transform:translate(0,-3px)
 
         Next, for the algebraic manipulation of the equations,
-        start by multiplying each equation in Jack's rule
+        start by multiplying each equation in$\rt{0.1}$ Jack's rule
         by its own right-hand side, obtaining...
 
         $$
@@ -83,12 +75,27 @@
         ab\cos\theta_{ab} + bc\cos\theta_{bc} = b^2 \up{1.4}
         \end{gathered}
         $$
+        |> ImageRight
+            src=images/_e5_cosine_rule_via_jacks_multiplying_cloud_.svg
+            offset_x=0.5em
+
+        !! $$
+        !! \begin{gathered}
+        !! (a\cos\theta_{ac} + b\cos\theta_{bc} = c) * c \\
+        !! (b\cos\theta_{ab} + c\cos\theta_{ac} = a) * a \up{1.4}\\
+        !! (a\cos\theta_{ab} + c\cos\theta_{bc} = b) * b \up{1.4}
+        !! \end{gathered}
+        !! $$
 
         ...but then if we subtract the last two equations from
         the first we obtain...
+        |> ImageLeft
+            src=images/_e5_cosine_rule_via_jacks_equation_adding_cloud.svg
+            offset_x=0.5em
 
         $$
         -2ab\cos\theta_{ab} = c^2 - a^2 - b^2
         $$
+
 
         ...which is the cosine rule, rearranged!

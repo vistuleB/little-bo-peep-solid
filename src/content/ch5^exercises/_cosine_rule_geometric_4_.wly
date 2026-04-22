@@ -21,23 +21,23 @@
         |> Image
             src=images/_e5_cosine_rule_geometric_4_sol1.svg
 
-        I.e.,
+        !! I.e.,
 
-        $$
-        \begin{gathered}
-        \te{A} = \te{F} = ab\cos\theta_{ab}\\
-        \up{1.4}\te{B} = \te{E} = bc\cos\theta_{bc}\\
-        \up{1.4}\te{C} = \te{D} = -ac\cos\theta_{ac}
-        \end{gathered}
-        $$
+        !! $$
+        !! \begin{gathered}
+        !! \te{A} = \te{F} = ab\cos\theta_{ab}\\
+        !! \up{1.4}\te{B} = \te{E} = bc\cos\theta_{bc}\\
+        !! \up{1.4}\te{C} = \te{D} = -ac\cos\theta_{ac}
+        !! \end{gathered}
+        !! $$
 
-        from which...
+        From which...
 
         $$
         \Large c = \sqrt{c^2} = \sqrt{B - D} = \sqrt{E - C} = \sqrt{(b^2 - A) - (F - a^2)} = \sqrt{(b^2 - ab\cos\theta_{ab}) - (ab\cos\theta_{ab} - a^2)} = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
         $$
 
-        ...where we use
+        ...where we use the fact that
 
         $$
         \begin{gathered}
@@ -46,12 +46,12 @@
         \end{gathered}
         $$
 
-        in the third equality, and
+        in the third equality, and the fact that
 
         $$
         \begin{gathered}
         \te{E} = b^2 - A\\
-        \up{1.4}\te{D} = F - a^2
+        \up{1.4}\te{C} = F - a^2
         \end{gathered}
         $$
 
