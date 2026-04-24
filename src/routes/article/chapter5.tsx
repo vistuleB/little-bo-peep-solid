@@ -7785,7 +7785,7 @@ const Rest = () => {
               Hello.
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/_e5_max_cosx_sinx_one_over_x_graph.svg" />
+            <Image src="/build-img/svgo-svg/HPwG.svg" />
             <Pause />
             <OuterP>
               While it may seem unrelated to the problem
@@ -12753,29 +12753,37 @@ const Rest = () => {
                 Exercise 38.
               </b>
               {" "}
-              Find expressions for the
-              areas A, B, C, D below that allow you to find
-              a formula for {" "}
+              Find expressions for areas A—F and use these to
+              give a formula for {" "}
               <Math>
                 $c$
               </Math>
-              {" "} in terms of 
-              all variables that do not contain {" "}
+              {" "} in terms of {" "}
               <NoBreak>
-                “
                 <Math>
-                  $c$
+                  $a$
                 </Math>
-                ”
+                ,
               </NoBreak>
-              {" "} in their name:
+              {" "} {" "}
+              <Math>
+                $b$
+              </Math>
+              {" "} and
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_&#123;ab&#125;$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1BmZ.svg" />
+            <Image src="/build-img/svgo-svg/cigo.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since
+              Keeping in mind that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -12788,86 +12796,83 @@ const Rest = () => {
               for all {" "}
               <NoBreak>
                 <Math>
-                  $x \in \rr$
+                  $x\in \rr$
                 </Math>
                 ,
               </NoBreak>
-              {" "} and
+              {" "}
+              and that, in particular,
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \cos(2\eta - \theta_&#123;ab&#125;) = -\cos \theta_&#123;ab&#125;
+              \cos(2\eta - \theta_&#123;ab&#125;) = -\cos\theta_&#123;ab&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              in particular, we have these orange
-              measurements &amp; accompanying purple areas (A &amp; B):
+              is a positive number in this diagram since
+              {" "}
+              <Math>
+                $0 &lt; 2\eta - \theta_&#123;ab&#125; &lt; \eta$
+              </Math>
+              {" "} is an acute angle, 
+              the areas are:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/HsYC.svg">
-              <ImageLeft
-                src="/build-img/svgo-svg/MAh-.svg"
-                offset_y="44%"
-              />
-            </Image>
+            <Image src="/build-img/svgo-svg/H_Um.svg" />
             <Pause />
             <OuterP>
-              Secondly we have these measurements and areas, giving us two
-              more different ways of writing A and B, as well:
+              Then
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/pgYq.svg" />
+            <MathBlock>
+              $$
+              \Large c = \sqrt&#123;c^2&#125; = \sqrt&#123;\te&#123;D&#125; + \te&#123;C&#125;&#125; = \sqrt&#123;\te&#123;E&#125; + \te&#123;F&#125;&#125; = \sqrt&#123;(a^2 + \te&#123;B&#125;) + (b^2 + \te&#123;A&#125;)&#125; = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
-              Thus
+              where we use the fact that
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \begin&#123;gathered&#125;
-              \te&#123;A&#125; = \te&#123;D&#125; = bc\cos\theta_&#123;bc&#125; = b^2 - ab\cos\theta_&#123;ab&#125;, \\
-              \up&#123;1.4&#125;\te&#123;B&#125; = \te&#123;C&#125; = ac\cos\theta_&#123;ac&#125; = a^2 - ab\cos\theta_&#123;ab&#125;\,
+              \te&#123;D&#125; = \te&#123;E&#125;, \\
+              \up&#123;1.4&#125;\te&#123;C&#125; = \te&#123;F&#125;\,
               \end&#123;gathered&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              summarizing the two figures, and
+              in the third equality, and the fact that
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \Large
-              c = \sqrt&#123;c^2&#125; = \sqrt&#123;\te&#123;C&#125; + \te&#123;D&#125;&#125; = \sqrt&#123;\te&#123;B&#125; + \te&#123;A&#125;&#125; = \sqrt&#123;b^2 - ab\cos\theta_&#123;ab&#125; + a^2 - ab\cos\theta_&#123;ab&#125;&#125; = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+              \begin&#123;gathered&#125;
+              \te&#123;E&#125; = a^2 + \te&#123;B&#125;, \\
+              \up&#123;1.4&#125;\te&#123;F&#125; = b^2 + \te&#123;A&#125;\,
+              \end&#123;gathered&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              where we use {" "}
-              <NoBreak>
-                <Math>
-                  $\te&#123;C&#125; = \te&#123;B&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $\te&#123;D&#125; = \te&#123;A&#125;$
-              </Math>
-              {" "} in the third
-              equality, or
+              in the fourth equality, and the fact that
             </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                \Large c = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
-                $$
-              </MathBlock>
-            </Boxed>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;A&#125; = \te&#123;B&#125; = -ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
-              in conclusion, which is the same formula as obtained in {" "}
+              in the last equality.
+            </OuterP>
+            <OuterP class="indent-10">
+              So we obtain the same formula as in {" "}
               <InChapterLink
                 href="/article/chapter5#_124_hgi_"
                 class="handle-in-chapter-link"
@@ -12888,14 +12893,12 @@ const Rest = () => {
                 Exercise 39.
               </b>
               {" "}
-              Find expressions for
-              areas A—F
-              and use these to give a formula for {" "}
+              Find expressions for areas A—F and use these to
+              give a formula for {" "}
               <Math>
                 $c$
               </Math>
-              {" "} in terms of
-              {" "}
+              {" "} in terms of {" "}
               <NoBreak>
                 <Math>
                   $a$
@@ -12906,7 +12909,8 @@ const Rest = () => {
               <Math>
                 $b$
               </Math>
-              {" "} and {" "}
+              {" "} and
+              {" "}
               <NoBreak>
                 <Math>
                   $\theta_&#123;ab&#125;$

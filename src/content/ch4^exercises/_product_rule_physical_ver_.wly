@@ -228,16 +228,9 @@
         A(t_0)
         $$
 
-        !! as $\Delta t$ approaches $0$ (technically: differentiability, that we are assuming,
-        !! implies continuity, and continuity implies that $A(t_0 + \Delta{}t)$ approaches
-        !! $A(t_0)$),
-        !! so as the
         because, technically, the differentiability $A$—that
         we are post-hoc-ad-hoc-cum-hoc assuming—implies the
         _continuity_ of $A$ (anyway, nevermind);
-        !! as $\Delta t$ approaches $0$ (technically: differentiability, that we are assuming,
-        !! implies continuity, and continuity implies that $A(t_0 + \Delta{}t)$ approaches
-        !! $A(t_0)$),
         so as the
         
         __product-of-two-things-each-approaching-a-certain-value-approaches-the-product-of-the-two-approached-values__

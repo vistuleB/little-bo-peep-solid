@@ -17,7 +17,7 @@
         Hello.
 
         |> Image
-            src=tmp-images/_e5_max_cosx_sinx_one_over_x_graph.svg
+            src=images/_e5_max_cosx_sinx_one_over_x_graph.svg
 
         While it may seem unrelated to the problem
         at hand, we start by noting that the “isosets”
