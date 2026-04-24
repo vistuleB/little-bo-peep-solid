@@ -52,7 +52,7 @@
 
         $$
         \begin{gathered}
-        \te{D} = \te{E}, \\
+        \te{D} = \te{E}\, \\
         \up{1.4}\te{C} = \te{F}\,
         \end{gathered}
         $$
@@ -61,7 +61,7 @@
 
         $$
         \begin{gathered}
-        \te{E} = a^2 + \te{B}, \\
+        \te{E} = a^2 + \te{B}\, \\
         \up{1.4}\te{F} = b^2 + \te{A}\,
         \end{gathered}
         $$
