@@ -4,6 +4,21 @@
     page-necessary-margin=270
     max-element-width=1200
 
+    |> Exercises
+        handle=_bt3_exercises_1
+
+        |> Exercise
+
+            |> ExerciseStatement
+                What is the purpose of life 1?
+            |> Solution
+                EAT
+        |> Exercise
+            |> ExerciseStatement
+                What is the purpose of life 2?
+            |> Solution
+                SLEEEP
+
     _*Standalone exercise*_
     |> Exercise
         |> ExerciseStatement
