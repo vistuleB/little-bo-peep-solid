@@ -1,13 +1,13 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
-import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
+import { Exercises, ExerciseStatement, Exercise }  from "~/components/Exercises";
 import Grid  from "~/components/Grid";
 import InChapterLink  from "~/components/InChapterLink";
 import { Item }  from "~/components/List";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import Solution  from "~/components/Solution";
-import { Section, Pause }  from "~/components/Wrappers";
+import { Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Bootcamp3__() {
@@ -17,7 +17,7 @@ export default function __Bootcamp3__() {
       nextPage="/article/bootcamp2"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
-      id="_150_hgi_"
+      id="_149_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -25,52 +25,29 @@ export default function __Bootcamp3__() {
             grid
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=exercises">
-            exercises
-          </InChapterLink>
-        </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Bootcamp 3:">
         Components Playground
       </ArticleTitle>
-      <Pause />
-      <Exercises id="_148_hgi_">
-        <Exercise number={1}>
-          <ExerciseStatement>
-            <OuterP>
-              <b>
-                Exercise 1.
-              </b>
-              <ExerciseStatement>
-                What is the purpose of life 1?
-              </ExerciseStatement>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              EAAAT
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={2}>
-          <ExerciseStatement>
-            <OuterP>
-              <b>
-                Exercise 2.
-              </b>
-              <ExerciseStatement>
-                What is the purpose of life 2?
-              </ExerciseStatement>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              SLEEP
-            </OuterP>
-          </Solution>
-        </Exercise>
-      </Exercises>
+      <OuterP>
+        <i>
+          <b>
+            Standalone exercise
+          </b>
+        </i>
+      </OuterP>
+      <Exercise>
+        <ExerciseStatement>
+          <OuterP>
+            <b>
+              Exercise
+            </b>
+            <ExerciseStatement>
+              Does this standalone exercise work?
+            </ExerciseStatement>
+          </OuterP>
+        </ExerciseStatement>
+      </Exercise>
       <Section id="grid">
         <OuterP>
           <i>
@@ -519,7 +496,7 @@ export default function __Bootcamp3__() {
         <Pause />
         <Exercises
           at_end_of_page={true}
-          id="_149_hgi_"
+          id="_148_hgi_"
         >
           <Exercise number={1}>
             <ExerciseStatement>

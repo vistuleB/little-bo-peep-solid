@@ -4,19 +4,11 @@
     page-necessary-margin=270
     max-element-width=1200
 
-    |> Exercises
-        handle=_bt3_exercises_1
+    _*Standalone exercise*_
+    |> Exercise
+        |> ExerciseStatement
+            Does this standalone exercise work?
 
-        |> Exercise
-            |> ExerciseStatement
-                What is the purpose of life 1?
-            |> Solution
-                EAAAT
-        |> Exercise
-            |> ExerciseStatement
-                What is the purpose of life 2?
-            |> Solution
-                SLEEP
     |> Section
         id=grid
 
