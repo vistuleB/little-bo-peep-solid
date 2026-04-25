@@ -1,6 +1,6 @@
 import { ParentProps } from "solid-js";
 import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
-import { ExercisesStoreProvider } from "~/store/ExercisesStoreProvider";
+import { ExerciseGroupRegistryProvider } from "~/store/ExerciseGroupRegistryProvider";
 import PageTopBottomArrows from "./PageTopBottomArrows";
 import Page from "./Page";
 import PageUpDownArrows from "./PageUpDownArrows";
@@ -20,17 +20,17 @@ const Article = (props: ParentProps & ArticleProps) => {
       maxElementWidth={props.maxElementWidth}
       nextPage={props.nextPage}
       prevPage={props.prevPage}>
-      <ExercisesStoreProvider>
+      <ExerciseGroupRegistryProvider>
         <span id={props.id} class="id_span"></span>
-        <ExercisesStoreConsumer>{props.children}</ExercisesStoreConsumer>
+        <ArticleScrollCoordinator>{props.children}</ArticleScrollCoordinator>
         <PageTopBottomArrows />
         <PageUpDownArrows />
-      </ExercisesStoreProvider>
+      </ExerciseGroupRegistryProvider>
     </Page>
   );
 };
 
-const ExercisesStoreConsumer = (props: ParentProps) => {
+const ArticleScrollCoordinator = (props: ParentProps) => {
   useCheckedSavedScroll();
   return <>{props.children}</>;
 };

@@ -1,5 +1,5 @@
 import { useLocation, useSearchParams } from "@solidjs/router";
-import { createEffect, createSignal } from "solid-js";
+import { createEffect } from "solid-js";
 import { useLocalStorage } from "solidjs-hooks";
 import {
   useExercisesContext,
@@ -7,8 +7,11 @@ import {
 } from "~/store/ExercisesStoreProvider";
 
 const useExercises = (length: number) => {
-  const { set_exercises_store: set_store, exercises_store: store } =
-    useExercisesContext();
+  const {
+    set_exercises_store: set_store,
+    exercises_store: store,
+    group_id,
+  } = useExercisesContext();
   const { updateExerciseByIndex } = useExercisesStateHelpers();
 
   const stored_selected_exo = () => store.selected_exo;
@@ -20,21 +23,21 @@ const useExercises = (length: number) => {
   const article = () => location.pathname.split("/").pop();
 
   // Check if this is the first load in this tab/session
-  const sessionKey = `${article()}_has_loaded`;
+  const sessionKey = `${article()}_${group_id}_has_loaded`;
   const isFirstLoad = !sessionStorage.getItem(sessionKey);
 
   if (isFirstLoad) {
-    // Mark that the page has been loaded in this session
     sessionStorage.setItem(sessionKey, "true");
-
-    // Clear all exercise solutions from localStorage
     for (let i = 1; i <= length; i++) {
-      localStorage.removeItem(`${article()}_exo_${i}_opened`);
+      localStorage.removeItem(`${article()}_${group_id}_exo_${i}_opened`);
     }
   }
 
+  const selected_param = `${group_id}_selected`;
+  const opened_param = `${group_id}_opened`;
+
   const [selected_exo, set_selected_exo] = useLocalStorage(
-    `${article()}_selected_exo`,
+    `${article()}_${group_id}_selected_exo`,
     "0",
   );
   set_store("selected_exo", Number(selected_exo()));
@@ -44,7 +47,9 @@ const useExercises = (length: number) => {
       prev.map((exo, i) => ({
         ...exo,
         solution_open:
-          localStorage.getItem(`${article()}_exo_${i + 1}_opened`) == "true",
+          localStorage.getItem(
+            `${article()}_${group_id}_exo_${i + 1}_opened`,
+          ) == "true",
       })),
     );
   });
@@ -55,7 +60,7 @@ const useExercises = (length: number) => {
     update_store: boolean = true,
   ) => {
     localStorage.setItem(
-      `${article()}_exo_${exercise_number}_opened`,
+      `${article()}_${group_id}_exo_${exercise_number}_opened`,
       String(value),
     );
     if (update_store) {
@@ -67,23 +72,23 @@ const useExercises = (length: number) => {
   };
 
   // set local stored values from search params if they exist
-  if (typeof searchParams.selected === "string") {
-    set_selected_exo(searchParams.selected);
+  if (typeof searchParams[selected_param] === "string") {
+    set_selected_exo(searchParams[selected_param]);
     set_store("selected_exo", Number(selected_exo()));
   }
 
-  if (typeof searchParams.opened === "string") {
+  if (typeof searchParams[opened_param] === "string") {
     update_solution_open(
       Number(selected_exo()),
-      searchParams.opened === "true",
+      searchParams[opened_param] === "true",
     );
   }
 
   createEffect(() => {
     set_selected_exo(String(stored_selected_exo()));
     setSearchParams({
-      selected: String(stored_selected_exo()),
-      opened: stored_solutions_open()[stored_selected_exo() - 1],
+      [selected_param]: String(stored_selected_exo()),
+      [opened_param]: stored_solutions_open()[stored_selected_exo() - 1],
     });
   });
 
@@ -94,8 +99,8 @@ const useExercises = (length: number) => {
       false,
     );
     setSearchParams({
-      opened: stored_solutions_open()[stored_selected_exo() - 1],
-      selected: String(stored_selected_exo()),
+      [opened_param]: stored_solutions_open()[stored_selected_exo() - 1],
+      [selected_param]: String(stored_selected_exo()),
     });
   });
 };
