@@ -42,8 +42,12 @@ export const Exercises = (props: ExercisesProps) => {
           height="50px"
           class="mt-[15px] mb-[40px]"></Image>
       )}
-      <Switcher exercises={children_list.toArray()} group_id={group_id} />
-      <div class="h-[31px]"></div>
+      {children_list.length > 1 && (
+        <>
+          <Switcher exercises={children_list.toArray()} group_id={group_id} />
+          <div class="h-[31px]"></div>
+        </>
+      )}
       <ExercisesGroup {...props} />
     </ExercisesStoreProvider>
   );
