@@ -61,7 +61,7 @@
             above; what this underscores is that this diagram...
 
             |> Image
-                src=tmp-images/_e5_verbal_to_arithmetic_note1.svg
+                src=images/_e5_verbal_to_arithmetic_note1.svg
 
             ...can either be completed to illustrate
             a difference quotient like this...
@@ -72,7 +72,7 @@
             ...or else like this...
 
             |> Image
-                src=tmp-images/_e5_verbal_to_arithmetic_note3.svg
+                src=images/_e5_verbal_to_arithmetic_note3.svg
 
             ...with $x$ and $x + h$ interchanged, and with a sign
             change in $h$, computing the same slope of the same secant!

@@ -18,38 +18,21 @@
 
         It appears two places; it is the area of 
         both of these rectangles:
-        !! this rectangle here on the left:
-        !! It is the area of this rectangle here:
 
         |> Image
-            src=images/e5_cosine_rule_geometric_1_sol1.svg
-
-        !! It is also
-        !! the area of this rectangle here on the right:
-        !! And of this rectangle here:
-
-        |> Image
-            src=images/e5_cosine_rule_geometric_1_sol2.svg
+            src=images/e5_cosine_rule_geometric_1_sol1_v2.svg
 
         In more detail, here is how “$b\cdot\cos\theta_{ab}$” 
-        and “$a\cdot\cos\theta_{ab}$” 
-        show up as the widths of the two rectangles, respectively, 
-        zooming in:
+        and “$a\cdot\cos\theta_{ab}$” show up as the widths of
+        the two rectangles, respectively, zooming in:
 
         |> Image
-            src=images/e5_cosine_rule_geometric_1_sol3.svg
-
-        |> Image
-            src=images/e5_cosine_rule_geometric_1_sol4.svg
+            src=images/e5_cosine_rule_geometric_1_sol34_combined.svg
 
         |> Pause
 
-        !! This means that the rectangles have area
         Thus the rectangles respectively have areas...
 
-        !! $$
-        !! \Large a(b\cdot \cos\theta_{ab}) = b(a\cdot \cos\theta_{ab}) = ab\cos\theta_{ab}
-        !! $$
         $$
         \Large a(b\cdot \cos\theta_{ab}) = ab\cos\theta_{ab}
         $$
@@ -59,5 +42,3 @@
         $$
 
         ...as claimed!
-        !! while forming the product in two different ways,
-        !! but arriving at the same end result.

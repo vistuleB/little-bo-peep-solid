@@ -24,7 +24,7 @@ export default function __Chapter4__() {
       nextPage="/article/chapter5"
       pageNecessaryMargin={1450}
       maxElementWidth={700}
-      id="_87_hgi_"
+      id="_86_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -1834,10 +1834,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Exercises
-        at_end_of_page={true}
-        id="_86_hgi_"
-      >
+      <Exercises id="_85_hgi_">
         <Exercise number={1}>
           <ExerciseStatement id="_55_hgi_">
             <OuterP>
@@ -4113,7 +4110,7 @@ const Rest = () => {
                 above; what this underscores is that this diagram...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/_e5_verbal_to_arithmetic_note1.svg" />
+              <Image src="/build-img/svgo-svg/F0SL.svg" />
               <Pause />
               <OuterP>
                 ...can either be completed to illustrate
@@ -4126,7 +4123,7 @@ const Rest = () => {
                 ...or else like this...
               </OuterP>
               <Pause />
-              <Image src="/tmp-images/_e5_verbal_to_arithmetic_note3.svg" />
+              <Image src="/build-img/svgo-svg/oADf.svg" />
               <Pause />
               <OuterP>
                 ...with {" "}
@@ -4275,7 +4272,7 @@ const Rest = () => {
           work="ing"
           number={19}
         >
-          <ExerciseStatement id="_75_hgi_">
+          <ExerciseStatement id="_74_hgi_">
             <OuterP>
               <b>
                 Exercise 19.
@@ -4381,7 +4378,8 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/zn1D.svg" />
             <Pause />
             <OuterP>
-              that are crossing a hallway surveyed by
+              that are crossing a hallway,
+              and the hallway is surveyed by
               a cat. One side of the hallway is time
               {" "}
               <NoBreak>
@@ -4559,16 +4557,6 @@ const Rest = () => {
               {" "} what does
               each term become?
             </OuterP>
-            <OuterP class="indent-10">
-              PS: You can assume that all functions involved are
-              differentiable at {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -4586,10 +4574,7 @@ const Rest = () => {
             <OuterP>
               The first term on the left-hand side comes
               out to
-              <ImageRight
-                src="/build-img/svgo-svg/xIsR.svg"
-                offset_x="-3em"
-              />
+              <ImageRight src="/build-img/svgo-svg/xIsR.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4620,7 +4605,8 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} because it has the
+              {" "} 
+              because it has the
               form
             </OuterP>
             <Pause />
@@ -4636,18 +4622,6 @@ const Rest = () => {
                 <Math>
                   $f = AB$
                 </Math>
-                ,
-              </NoBreak>
-              {" "} and by assumed
-              differentiability of {" "}
-              <Math>
-                $AB$
-              </Math>
-              {" "} at {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
                 .
               </NoBreak>
               {" "} (Cf. {" "}
@@ -4658,6 +4632,8 @@ const Rest = () => {
                 Note 1 of Exercise 14
               </InChapterLink>
               &#8288;.)
+              (Nb: We assume differentiability, otherwise
+              there is no conclusion to draw.)
             </OuterP>
             <OuterP class="indent-10">
               [Nb: {" "}
@@ -4740,18 +4716,15 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} being a difference 
-              quotient and by the assumed differentiability of {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} at {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
+              quotient 
+              (cf. {" "}
+              <InChapterLink
+                href="/article/chapter4#_68_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Note 1 of Exercise 14
+              </InChapterLink>
+              &#8288;),
               so the whole term approaches
             </OuterP>
             <Boxed>
@@ -4797,7 +4770,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              or
+              when written out, or
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4807,8 +4780,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              when factoring out 
-              {" "}
+              by factoring out {" "}
               <NoBreak>
                 “
                 <Math>
@@ -4817,7 +4789,7 @@ const Rest = () => {
                 ”
               </NoBreak>
               {" "}
-              from the numerator; on the one hand,
+              from the numerator; here, on the one hand,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4845,8 +4817,9 @@ const Rest = () => {
               <Math>
                 $0$
               </Math>
-              {" "} by the property of the
-              difference quotient &amp; differentiability,
+              {" "} by the 
+              afore-mentioned property of 
+              difference quotients,
               while, on the other hand,
             </OuterP>
             <Pause />
@@ -4867,75 +4840,25 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              as {" "}
-              <Math>
-                $\Delta t$
-              </Math>
-              {" "} approaches {" "}
+              because, technically, the differentiability {" "}
               <NoBreak>
                 <Math>
-                  $0$
+                  $A$
                 </Math>
-                —(from
+                —that
               </NoBreak>
-              {" "} the technical standpoint,
-              the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              differentiability
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} at {" "}
-              <Math>
-                $t_0$
-              </Math>
-              {" "} implies the
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              continuity
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              of {" "}
-              <Math>
-                $A$
-              </Math>
-              {" "} at {" "}
-              <NoBreak>
-                <Math>
-                  $t_0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which implies that {" "}
-              <Math>
-                $A(t_0 + \Delta&#123;&#125;t)$
-              </Math>
               {" "}
-              approaches {" "}
+              we are post-hoc-ad-hoc-cum-hoc assuming—implies the
+              {" "}
+              <i>
+                continuity
+              </i>
+              {" "} of {" "}
               <Math>
-                $A(t_0)$
+                $A$
               </Math>
-              {" "} as {" "}
-              <Math>
-                $\Delta t$
-              </Math>
-              {" "} approaches {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} but
-              anyway)—so as the
+              {" "} (anyway, nevermind);
+              so as the
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -4964,9 +4887,14 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\ra$
+              </Math>
+              {" "} ~ The End ~
             </OuterP>
             <Pause />
-            <SolutionNote id="_74_hgi_">
+            <SolutionNote>
               <OuterP>
                 <i>
                   Note 1.
@@ -5009,7 +4937,8 @@ const Rest = () => {
                 <i>
                   not
                 </i>
-                {" "} hold—if the boxed equation didn't hold, then
+                {" "} hold—if this equation
+                didn't hold, then
                 at some point, “something would have to break”
                 in the original equation...
               </OuterP>
@@ -5037,87 +4966,8 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                The differentiability of {" "}
-                <Math>
-                  $AB$
-                </Math>
-                {" "} at {" "}
-                <Math>
-                  $t_0$
-                </Math>
-                {" "} can
-                be deduced from the computation itself, because
-                the fact that the difference quotient
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                &#123;(AB)(t_0 + \Delta t) - (AB)(t_0)\over \Delta t&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                approaches a fixed value as {" "}
-                <Math>
-                  $\Delta t$
-                </Math>
-                {" "} goes to
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $0$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} as the computation shows from the right-hand
-                side, implies the
-                differentiability of {" "}
-                <Math>
-                  $AB$
-                </Math>
-                {" "} at {" "}
-                <NoBreak>
-                  <Math>
-                    $t_0$
-                  </Math>
-                  .
-                </NoBreak>
-                {" "} So the only
-                “truly necessary assumptions” are the differentiability
-                of {" "}
-                <Math>
-                  $A$
-                </Math>
-                {" "} and {" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "} at {" "}
-                <NoBreak>
-                  <Math>
-                    $t_0$
-                  </Math>
-                  !
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
                 Keeping things alphabetical everywhere, the
-                boxed equation of {" "}
-                <InChapterLink
-                  href="/article/chapter4#_74_hgi_"
-                  class="handle-in-chapter-link"
-                >
-                  Note 1
-                </InChapterLink>
-                {" "}
-                is more often written
+                same equation is more often written
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -5135,19 +4985,24 @@ const Rest = () => {
                   </Math>
                   ”
                 </NoBreak>
-                {" "} in the middle, which is
-                namely valid for {" "}
-                <NoBreak>
-                  <Math>
-                    $A$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
+                {" "} in the middle, valid
+                when {" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "} and {" "}
                 <Math>
                   $B$
                 </Math>
-                {" "} differentiable at {" "}
+                {" "} (and therefore, one can show by
+                this computation, {" "}
+                <NoBreak>
+                  <Math>
+                    $AB$
+                  </Math>
+                  )
+                </NoBreak>
+                {" "} are differentiable at {" "}
                 <NoBreak>
                   <Math>
                     $t_0 \in \rr$
@@ -5165,8 +5020,7 @@ const Rest = () => {
                 </MathBlock>
               </Boxed>
               <OuterP>
-                more shortly, valid for
-                {" "}
+                more shortly, for {" "}
                 <Math>
                   $A, B : \rr \ra \rr$
                 </Math>
@@ -5218,7 +5072,7 @@ const Rest = () => {
             <SolutionNote>
               <OuterP>
                 <i>
-                  Note 4.
+                  Note 3.
                 </i>
                 {" "}
                 This result is known as the {" "}
@@ -5231,7 +5085,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={20}>
-          <ExerciseStatement id="_76_hgi_">
+          <ExerciseStatement id="_75_hgi_">
             <OuterP>
               <b>
                 Exercise 20.
@@ -5574,7 +5428,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={21}>
-          <ExerciseStatement id="_77_hgi_">
+          <ExerciseStatement id="_76_hgi_">
             <OuterP>
               <b>
                 Exercise 21.
@@ -5881,7 +5735,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={22}>
-          <ExerciseStatement id="_78_hgi_">
+          <ExerciseStatement id="_77_hgi_">
             <OuterP>
               <b>
                 Exercise 22.
@@ -6214,7 +6068,7 @@ const Rest = () => {
           work="in"
           number={23}
         >
-          <ExerciseStatement id="_80_hgi_">
+          <ExerciseStatement id="_79_hgi_">
             <OuterP>
               <b>
                 Exercise 23.
@@ -6257,7 +6111,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see {" "}
               <InChapterLink
-                href="/article/chapter4#_79_hgi_"
+                href="/article/chapter4#_78_hgi_"
                 class="handle-in-chapter-link"
               >
                 Note 1
@@ -6416,7 +6270,7 @@ const Rest = () => {
               {" "} no matter how far back in time we look.)
             </OuterP>
             <Pause />
-            <SolutionNote id="_79_hgi_">
+            <SolutionNote id="_78_hgi_">
               <OuterP>
                 <i>
                   Note 1.
@@ -6514,7 +6368,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={24}>
-          <ExerciseStatement id="_81_hgi_">
+          <ExerciseStatement id="_80_hgi_">
             <OuterP>
               <b>
                 Exercise 24.
@@ -6700,7 +6554,7 @@ const Rest = () => {
                 {" "} axis of the graph of the 
                 particle of {" "}
                 <InChapterLink
-                  href="/article/chapter4#_80_hgi_"
+                  href="/article/chapter4#_79_hgi_"
                   class="handle-in-chapter-link"
                 >
                   Exercise 23
@@ -6766,7 +6620,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={25}>
-          <ExerciseStatement id="_82_hgi_">
+          <ExerciseStatement id="_81_hgi_">
             <OuterP>
               <b>
                 Exercise 25.
@@ -7087,7 +6941,7 @@ const Rest = () => {
               identical to the behavior of the red
               particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_80_hgi_"
+                href="/article/chapter4#_79_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 23
@@ -7097,7 +6951,7 @@ const Rest = () => {
               “UNO particle” has a slight head-start over the
               red particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_80_hgi_"
+                href="/article/chapter4#_79_hgi_"
                 class="handle-in-chapter-link"
               >
                 Exercise 23
@@ -8854,7 +8708,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={26}>
-          <ExerciseStatement id="_83_hgi_">
+          <ExerciseStatement id="_82_hgi_">
             <OuterP>
               <b>
                 Exercise 26.
@@ -9116,7 +8970,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={27}>
-          <ExerciseStatement id="_84_hgi_">
+          <ExerciseStatement id="_83_hgi_">
             <OuterP>
               <b>
                 Exercise 27.
@@ -9994,7 +9848,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={28}>
-          <ExerciseStatement id="_85_hgi_">
+          <ExerciseStatement id="_84_hgi_">
             <OuterP>
               <b>
                 Exercise 28.

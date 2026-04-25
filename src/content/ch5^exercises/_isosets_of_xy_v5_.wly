@@ -1,5 +1,6 @@
 |> Exercise
-    handle=_isosets_of_xy_v4_
+    work=ing
+    handle=_isosets_of_xy_v5_
 
     What are the maximum and minimum values
     of 
@@ -12,6 +13,11 @@
     (Reason geometrically, not by calculus.)
 
     |> Solution
+
+        Hello.
+
+        |> Image
+            src=images/_e5_max_cosx_sinx_one_over_x_graph.svg
 
         While it may seem unrelated to the problem
         at hand, we start by noting that the “isosets”
