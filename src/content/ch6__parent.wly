@@ -1,6 +1,9 @@
 |> Chapter
-    !! title=Taylor Series via Euler's Method
-    title=Euler's Method
-    handle=eulers
+    ref=rence
+    !! title=The Chain Rule and Its Accolytes
+    !! title=Differentiation Must-Knows
+    !! title=Dimensional Analysis
+    title=Differentiation via Dimensional Analysis _&_ More
+    handle=chain
     page-necessary-margin=950
     max-element-width=1000

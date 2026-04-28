@@ -44,6 +44,16 @@ export default function __Home__() {
           >
             The Trigonometric Functions
           </TOCItem>
+          <TOCItem
+            article_type={6}
+            href="chapter6"
+          >
+            Differentiation via Dimensional Analysis {" "}
+            <i>
+              &amp;
+            </i>
+            {" "} More
+          </TOCItem>
         </ul>
       </div>
       <Spacer />
@@ -61,12 +71,6 @@ export default function __Home__() {
             href="bootcamp2"
           >
             Powers of 10
-          </TOCItem>
-          <TOCItem
-            article_type={3}
-            href="bootcamp3"
-          >
-            Components Playground
           </TOCItem>
         </ul>
       </div>

@@ -1774,6 +1774,189 @@ const Rest = () => {
                 Exercise 2.
               </b>
               {" "}
+              Plot the vertical velocity of {" "}
+              <del>
+                an object
+              </del>
+              {" "} a mosquito whose height over time is
+              given by this graph (use the same time interval
+              as the graph):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/lnNr.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Here is the “official” graph of the (vertical)
+              velocity:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/u0yv.svg" />
+            <Pause />
+            <OuterP>
+              On each interval, the velocity is rate of
+              change of the height, i.e., the {" "}
+              <i>
+                slope
+              </i>
+              {" "} of
+              the height. For example, the rate of change
+              of the height is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\te&#123;m&#125; \over 1\te&#123;s&#125;&#125; = 1\te&#123;m&#125;/\te&#123;s&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              between {" "}
+              <NoBreak>
+                <Math>
+                  $-4$
+                </Math>
+                s
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $-3$
+                </Math>
+                s,
+              </NoBreak>
+              {" "} where the mosquito
+              goes up by one meter during a one second
+              period, so the vertical velocity is {" "}
+              <NoBreak>
+                1m
+                <Math>
+                  $/$
+                </Math>
+                s
+              </NoBreak>
+              {" "}
+              for that time interval, etc.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 1.
+              </i>
+              {" "}
+              As explained in {" "}
+              <a
+                href="/article/chapter3#_53_hgi_"
+                class="handle-out-chapter-link"
+              >
+                Chapter 3
+              </a>
+              &#8288;, an empty circle of
+              this type
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Jp8B.svg" />
+            <Pause />
+            <OuterP>
+              indicates a “missing” value. Specifically, in
+              our case, the vertical velocity is {" "}
+              <i>
+                undefined
+              </i>
+              {" "}
+              wherever the graph of the height has a sharp
+              corner. (Because the slope of the graph is not
+              well-defined at such corners.)
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 2.
+              </i>
+              {" "}
+              For the time interval from {" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                s
+              </NoBreak>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $2.5$
+                </Math>
+                s,
+              </NoBreak>
+              {" "} the
+              slope is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;-2\rt&#123;0.05&#125;\te&#123;m&#125; \over 0.5\rt&#123;0.05&#125;\te&#123;s&#125;&#125; = -\rt&#123;0.07&#125;4\rt&#123;0.1&#125;\te&#123;m&#125;/\te&#123;s&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and similarly for the time interval from
+              {" "}
+              <NoBreak>
+                <Math>
+                  $2.5$
+                </Math>
+                s
+              </NoBreak>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $3$
+                </Math>
+                s
+              </NoBreak>
+              {" "} the slope is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;2\rt&#123;0.05&#125;\te&#123;m&#125; \over 0.5\rt&#123;0.05&#125;\te&#123;s&#125;&#125; = 4\rt&#123;0.1&#125;\te&#123;m&#125;/\te&#123;s&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because {" "}
+              <NoBreak>
+                <Math>
+                  $2/0.5 = 4$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (Think: {" "}
+              <i>
+                how many times
+              </i>
+              {" "}
+              does {" "}
+              <Math>
+                $0.5$
+              </Math>
+              {" "} go into {" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ?)
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={3}>
+          <ExerciseStatement id="_27_hgi_">
+            <OuterP>
+              <b>
+                Exercise 3.
+              </b>
+              {" "}
               Find the general equation of a line of slope
               {" "}
               <Math>
@@ -2035,189 +2218,6 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={3}>
-          <ExerciseStatement id="_27_hgi_">
-            <OuterP>
-              <b>
-                Exercise 3.
-              </b>
-              {" "}
-              Plot the vertical velocity of {" "}
-              <del>
-                an object
-              </del>
-              {" "} a mosquito whose height over time is
-              given by this graph (use the same time interval
-              as the graph):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/lnNr.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Here is the “official” graph of the (vertical)
-              velocity:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/u0yv.svg" />
-            <Pause />
-            <OuterP>
-              On each interval, the velocity is rate of
-              change of the height, i.e., the {" "}
-              <i>
-                slope
-              </i>
-              {" "} of
-              the height. For example, the rate of change
-              of the height is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1\te&#123;m&#125; \over 1\te&#123;s&#125;&#125; = 1\te&#123;m&#125;/\te&#123;s&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              between {" "}
-              <NoBreak>
-                <Math>
-                  $-4$
-                </Math>
-                s
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $-3$
-                </Math>
-                s,
-              </NoBreak>
-              {" "} where the mosquito
-              goes up by one meter during a one second
-              period, so the vertical velocity is {" "}
-              <NoBreak>
-                1m
-                <Math>
-                  $/$
-                </Math>
-                s
-              </NoBreak>
-              {" "}
-              for that time interval, etc.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "}
-              As explained in {" "}
-              <a
-                href="/article/chapter3#_53_hgi_"
-                class="handle-out-chapter-link"
-              >
-                Chapter 3
-              </a>
-              &#8288;, an empty circle of
-              this type
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Jp8B.svg" />
-            <Pause />
-            <OuterP>
-              indicates a “missing” value. Specifically, in
-              our case, the vertical velocity is {" "}
-              <i>
-                undefined
-              </i>
-              {" "}
-              wherever the graph of the height has a sharp
-              corner. (Because the slope of the graph is not
-              well-defined at such corners.)
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              For the time interval from {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                s
-              </NoBreak>
-              {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $2.5$
-                </Math>
-                s,
-              </NoBreak>
-              {" "} the
-              slope is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;-2\rt&#123;0.05&#125;\te&#123;m&#125; \over 0.5\rt&#123;0.05&#125;\te&#123;s&#125;&#125; = -\rt&#123;0.07&#125;4\rt&#123;0.1&#125;\te&#123;m&#125;/\te&#123;s&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and similarly for the time interval from
-              {" "}
-              <NoBreak>
-                <Math>
-                  $2.5$
-                </Math>
-                s
-              </NoBreak>
-              {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $3$
-                </Math>
-                s
-              </NoBreak>
-              {" "} the slope is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;2\rt&#123;0.05&#125;\te&#123;m&#125; \over 0.5\rt&#123;0.05&#125;\te&#123;s&#125;&#125; = 4\rt&#123;0.1&#125;\te&#123;m&#125;/\te&#123;s&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because {" "}
-              <NoBreak>
-                <Math>
-                  $2/0.5 = 4$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (Think: {" "}
-              <i>
-                how many times
-              </i>
-              {" "}
-              does {" "}
-              <Math>
-                $0.5$
-              </Math>
-              {" "} go into {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ?)
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
         <Exercise number={4}>
           <ExerciseStatement id="_28_hgi_">
             <OuterP>
@@ -2228,10 +2228,10 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2#_26_hgi_"
+                href="/article/chapter2#_27_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 2
+                Exercise 3
               </InChapterLink>
               &#8288;, explain why
             </OuterP>

@@ -131,7 +131,10 @@ export default function __Chapter3__() {
       <ArticleTitle banner="Chapter 3:">
         Functions
       </ArticleTitle>
-      <Section id="section-1">
+      <Section
+        ref="rence"
+        id="section-1"
+      >
         <OuterP>
           <b>
             Syntax.
@@ -2035,37 +2038,81 @@ const Rest = () => {
                 Exercise 1.
               </b>
               {" "}
-              How can you define the absolute value
-              function using “definition by cases”?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The absolute value function is
+              Show that
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              x \ra \begin&#123;cases&#125; x &amp; \te&#123;if $x \geq 0$,&#125;\\ -x\!\!\up&#123;1.2&#125; &amp; \te&#123;if $x &lt; 0$&#125;\end&#123;cases&#125;
+              x^2 + 10x + 30
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              because {" "}
+              can be written in the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x + \dots)^2 + \,\dots
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some numbers {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\dots$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\dots$
+                </Math>
+                ”.
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The answer is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x + 5)^2 + 5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align&#125;
+              \,\,\,\,(x + 5)^2
+              &amp;= x^2 + (2\cdot 5)x + 5^2 \\
+              &amp;= \up&#123;1.4&#125; x^2 + 10x + 25
+              \end&#123;align&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and adding {" "}
+              <Math>
+                $5$
+              </Math>
+              {" "} gives {" "}
               <NoBreak>
                 <Math>
-                  $-(-1) = 1$
+                  $x^2 + 10x + 30$
                 </Math>
-                ,
+                .
               </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $-(-5) = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} etc.
             </OuterP>
           </Solution>
         </Exercise>
@@ -2076,48 +2123,224 @@ const Rest = () => {
                 Exercise 2.
               </b>
               {" "}
-              How can you define the absolute value
-              function using an “ordinary” algebraic formula?
+              Solve {" "}
+              <InChapterLink
+                href="/article/chapter3#_31_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 1
+              </InChapterLink>
+              {" "} using
+              algebra {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} variables.
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We have
+              Put an unknown {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $U$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} for the first set
+              of dots and an unknown {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $V$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} for the
+              second set of dots. Then
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              |x| = \sqrt&#123;x^2&#125;
+              (x + U)^2 + V = x^2 + 10x + 30
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              because {" "}
-              <NoBreak>
-                <Math>
-                  $\sqrt&#123;(-1)^2&#125; = 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $\sqrt&#123;(-5)^2&#125; = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              etc.
+              becomes the equation to satisfy.
+              Expanding the left-hand side, we get:
             </OuterP>
             <Pause />
+            <MathBlock>
+              $$
+              x^2 + 2Ux + U^2 + V = x^2 + 10x + 30.
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
-              <i>
-                Note 1.
-              </i>
+              In order for this equation to hold as an
+              equality between polynomials (i.e., for all
               {" "}
-              This definition is less ad-hoc than might seem,
-              being a 1-dimensional form of the Pythagorean
-              theorem.
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                )
+              </NoBreak>
+              {" "} the coefficients of {" "}
+              <Math>
+                $x^2$
+              </Math>
+              {" "} on both
+              sides of the equation must be equal, the
+              coefficients of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} on both sides of the
+              equation must be equal, and the constant
+              terms on boths of the equation must be
+              equal—this gives us
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (equating the coefficients of {" "}
+              <NoBreak>
+                <Math>
+                  $x^2$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2U = 10
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (equating the coefficients of {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              U^2 + V = 30
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (equating the constant terms). Only the
+              latter two equations contain information.
+              In particular,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2U = 10
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              implies {" "}
+              <NoBreak>
+                <Math>
+                  $U = 5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so {" "}
+              <Math>
+                $U^2 + V = 30$
+              </Math>
+              {" "} becomes
+              {" "}
+              <NoBreak>
+                <Math>
+                  $25 + V = 30$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and
+              {" "}
+              <NoBreak>
+                <Math>
+                  $V = 30 - 25 = 5$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              So {" "}
+              <NoBreak>
+                <Math>
+                  $U = V = 5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as previously found.
+              (But now we know that the solution is {" "}
+              <i>
+                unique
+              </i>
+              ,
+              because the only number {" "}
+              <Math>
+                $U$
+              </Math>
+              {" "} that satisfies
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2U = 10
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $U = 5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and the only number {" "}
+              <Math>
+                $V$
+              </Math>
+              {" "} that
+              satisfies
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              25 + V = 30
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $V = 5$
+                </Math>
+                .)
+              </NoBreak>
             </OuterP>
           </Solution>
         </Exercise>
@@ -2126,1100 +2349,6 @@ const Rest = () => {
             <OuterP>
               <b>
                 Exercise 3.
-              </b>
-              {" "}
-              Evaluate:
-            </OuterP>
-            <Pause />
-            <Grid
-              cols={2}
-              mobileCols={1}
-              placeItems="start"
-              withPadding={false}
-              columnFirst={true}
-            >
-              <Item>
-                i. {" "}
-                <Math>
-                  $(\lambda u.u^3)(0.5)$
-                </Math>
-              </Item>
-              <Item>
-                ii. {" "}
-                <Math>
-                  $(u \ra u^2)(x + 1)$
-                </Math>
-              </Item>
-              <Item>
-                iii. {" "}
-                <Math>
-                  $(\lambda t.t - 1)(100) \cdot (\lambda t.t + 1)(100)$
-                </Math>
-              </Item>
-              <Item>
-                iv. {" "}
-                <Math>
-                  $(u \ra u^2)(a + b)$
-                </Math>
-              </Item>
-            </Grid>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The answers are:
-            </OuterP>
-            <Pause />
-            <Grid
-              cols={2}
-              mobileCols={1}
-              placeItems="start"
-              withPadding={false}
-              columnFirst={true}
-            >
-              <Item>
-                i. {" "}
-                <Math>
-                  $0.5^3 = 0.125$
-                </Math>
-              </Item>
-              <Item>
-                ii. {" "}
-                <Math>
-                  $(x + 1)^2 = x^2 + 2x + 1$
-                </Math>
-              </Item>
-              <Item>
-                iii. {" "}
-                <Math>
-                  $(100 - 1) \cdot (100 + 1) = 9999$
-                </Math>
-              </Item>
-              <Item>
-                iv. {" "}
-                <Math>
-                  $(a + b)^2 = a^2 + 2ab + b^2$
-                </Math>
-              </Item>
-            </Grid>
-          </Solution>
-        </Exercise>
-        <Exercise number={4}>
-          <ExerciseStatement id="_34_hgi_">
-            <OuterP>
-              <b>
-                Exercise 4.
-              </b>
-              {" "}
-              The {" "}
-              <i>
-                floor
-              </i>
-              {" "} of a real number {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} written
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \lfloor x \rfloor,
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the greatest integer less than or equal
-              to {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (Start at {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} and travel left on the
-              number line until you meet an integer; but if
-              {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} is already an integer, stay there; the
-              place you land is {" "}
-              <NoBreak>
-                <Math>
-                  $\lfloor x \rfloor$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Sketch the graph {" "}
-              <NoBreak>
-                <Math>
-                  $y = \floor&#123;x&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Secondly, find a formula for a function whose
-              graph looks like this, where you are allowed
-              to use {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\floor&#123;x&#125;$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} in your formula:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/DEja.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              As {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} grows, so does {" "}
-              <NoBreak>
-                <Math>
-                  $\floor&#123;x&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} but
-              {" "}
-              <Math>
-                $\floor&#123;x&#125;$
-              </Math>
-              {" "} only “levels up” each time that {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              reaches a new integer, and flatlines
-              otherwise; this gives rise to the following
-              staircase-shaped graph:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Ymia.svg" />
-            <Pause />
-            <OuterP>
-              (For example, {" "}
-              <Math>
-                $\floor&#123;1&#125; = 1$
-              </Math>
-              {" "} because the
-              greatest integer less than or equal to {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}
-              is {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $\floor&#123;-0.5&#125; = -1$
-              </Math>
-              {" "} because the greatest
-              integer less than or equal to {" "}
-              <Math>
-                $-0.5$
-              </Math>
-              {" "} is {" "}
-              <NoBreak>
-                <Math>
-                  $-1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              and so on.)
-            </OuterP>
-            <OuterP class="indent-10">
-              For the second part note that the following
-              two displacements, excerpted from the “factory
-              roof” graph in the statement, are equal:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Mfbc.svg" />
-            <Pause />
-            <OuterP>
-              The red dot to the left of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} has {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "}
-              {" "}
-              <NoBreak>
-                <Math>
-                  $\floor&#123;x&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so the horizontal displacement is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x - \floor&#123;x&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so the equation of the graph is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              y = x - \floor&#123;x&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because the {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} {" "}
-              <i>
-                is
-              </i>
-              {" "} the
-              vertical displacement, given that the vertical
-              displacement starts at {" "}
-              <NoBreak>
-                <Math>
-                  $y = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and because
-              the vertical and horizontal displacements are
-              equal.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={5}>
-          <ExerciseStatement id="_35_hgi_">
-            <OuterP>
-              <b>
-                Exercise 5.
-              </b>
-              {" "}
-              Find the formula for a function whose graph
-              looks like this, again using the floor function
-              {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $\lfloor \cdot \rfloor$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} as a building block:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/9u3r.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              We would like to argue the correctness of
-              the following two-step process (divide the
-              input by {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} apply the function from {" "}
-              <InChapterLink
-                href="/article/chapter3#_34_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 4
-              </InChapterLink>
-              &#8288;):
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Kgso.svg" />
-            <Pause />
-            <OuterP>
-              Indeed, the two graphs featured above differ
-              only by a horizontal dilation; dividing the
-              input by {" "}
-              <Math>
-                $2$
-              </Math>
-              {" "} “undoes” the dilation, at which
-              point it suffices to apply the function pictured
-              in the second graph; having declared our method
-              correct, the answer is thus...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;x/2 - \lfloor x/2 \rfloor&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...as obtained by substituting {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x/2$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} (the halved
-              input) for of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\,x - \lfloor x \rfloor$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              (the formula for the function from {" "}
-              <InChapterLink
-                href="/article/chapter3#_34_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 4
-              </InChapterLink>
-              &#8288;).
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                One can check the answer by typing “x/2 - floor(x/2)”
-                in DESMOS. Viz:
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/jpg/pc6h.jpg"
-                width="1400px"
-              />
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                Alternately, enter “f(x) = x - floor(x)” and
-                then “f(x/2)”:
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/jpg/FUw3.jpg"
-                width="1400px"
-              />
-              <Pause />
-              <OuterP>
-                Or:
-              </OuterP>
-              <Pause />
-              <Image
-                src="/build-img/jpg/Gowo.jpg"
-                width="1400px"
-              />
-              <Pause />
-              <OuterP>
-                The above features the
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                composition
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                of functions {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} and {" "}
-                <NoBreak>
-                  <Math>
-                    $g$
-                  </Math>
-                  ;
-                </NoBreak>
-                {" "} in more detail, if we 
-                switch the “input tube” and “output tube” sides of
-                a function...
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/TgEh.svg" />
-              <Pause />
-              <OuterP>
-                ...(compared to the drawing at the top of the
-                chapter), then the composition of 
-                {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} and {" "}
-                <NoBreak>
-                  <Math>
-                    $g$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} written
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \f \circ g
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                and read
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                <NoBreak>
-                  “
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
-                {" "} of {" "}
-                <NoBreak>
-                  <Math>
-                    $\hlfbk&#123;&#125;g$
-                  </Math>
-                  ”
-                </NoBreak>
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                is the function that you get by
-                gluing {" "}
-                <NoBreak>
-                  <Math>
-                    $g$
-                  </Math>
-                  's
-                </NoBreak>
-                {" "} box to the right of {" "}
-                <NoBreak>
-                  <Math>
-                    $\f$
-                  </Math>
-                  's
-                </NoBreak>
-                {" "} box, like so:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/FwQo.svg" />
-              <Pause />
-              <OuterP>
-                In other words, {" "}
-                <NoBreak>
-                  <Math>
-                    $g$
-                  </Math>
-                  's
-                </NoBreak>
-                {" "} output is passed on to {" "}
-                <Math>
-                  $-f$
-                </Math>
-                {" "}
-                for further processing. (A certain movie called
-                “The Human Centipede” comes to mind.)
-              </OuterP>
-              <OuterP class="indent-10">
-                (To be perfectly clear,
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/5UVl.svg" />
-              <Pause />
-              <OuterP>
-                <Math>
-                  $f \circ g$
-                </Math>
-                {" "} is a {" "}
-                <i>
-                  function
-                </i>
-                , defined as the
-                above assemblage of {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $g$
-                  </Math>
-                </NoBreak>
-                {" "} first, {" "}
-                <Math>
-                  $f$
-                </Math>
-                {" "} second”.)
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 3.
-                </i>
-                {" "}
-                A formal definition of {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f \circ g$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} can be given
-                as
-              </OuterP>
-              <Boxed>
-                <MathBlock>
-                  $$
-                  &#123;(f \circ g)(x) = f(g(x))&#125;
-                  $$
-                </MathBlock>
-              </Boxed>
-              <OuterP>
-                or as
-              </OuterP>
-              <Boxed>
-                <MathBlock>
-                  $$
-                  f \circ g = (x \ra f(g(x)))
-                  $$
-                </MathBlock>
-              </Boxed>
-              <OuterP>
-                where one can also clarify that
-              </OuterP>
-              <Boxed>
-                <MathBlock>
-                  $$
-                  &#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;
-                  $$
-                </MathBlock>
-              </Boxed>
-              <OuterP>
-                which is to say that the domain of {" "}
-                <Math>
-                  $f \circ g$
-                </Math>
-                {" "}
-                consists of all {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "} such that: {" "}
-                <b>
-                  (i)
-                </b>
-                {" "} {" "}
-                <Math>
-                  $g(x)$
-                </Math>
-                {" "}
-                exists (a.k.a, {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $x \in \dom g$
-                  </Math>
-                  ”)
-                </NoBreak>
-                {" "} and,
-                {" "}
-                <b>
-                  (ii)
-                </b>
-                {" "} {" "}
-                <Math>
-                  $f(g(x))$
-                </Math>
-                {" "} exists (a.k.a., {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $g(x) \in \dom f$
-                  </Math>
-                  ”).
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 4.
-                </i>
-                {" "}
-                Amusingly—or not—both sides of the afore-mentioned
-              </OuterP>
-              <Pause />
-              <CentralDisplay>
-                <NoBreak>
-                  “
-                  <Math>
-                    $(f \circ g)(x) = f(g(x))$
-                  </Math>
-                  ”
-                </NoBreak>
-              </CentralDisplay>
-              <Pause />
-              <OuterP>
-                are read
-              </OuterP>
-              <Pause />
-              <CentralDisplay>
-                <NoBreak>
-                  “
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
-                {" "} of {" "}
-                <Math>
-                  $\hlfbk&#123;&#125;g$
-                </Math>
-                {" "} of {" "}
-                <NoBreak>
-                  <Math>
-                    $x\hspace&#123;0.1em&#125;$
-                  </Math>
-                  ”
-                </NoBreak>
-              </CentralDisplay>
-              <Pause />
-              <OuterP>
-                since {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f \circ g$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} is read {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
-                {" "} of {" "}
-                <NoBreak>
-                  <Math>
-                    $g\rt&#123;0.1&#125;$
-                  </Math>
-                  ”,
-                </NoBreak>
-                {" "}
-                and {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f(\dots)$
-                  </Math>
-                  ”
-                </NoBreak>
-                {" "} is read {" "}
-                <NoBreak>
-                  “
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
-                {" "} of ...”.
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={6}>
-          <ExerciseStatement id="_36_hgi_">
-            <OuterP>
-              <b>
-                Exercise 6.
-              </b>
-              {" "}
-              Find formulas for functions whose graphs look
-              like these:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/e9Dt.svg" />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              For the first graph, {" "}
-              <del>
-                the
-              </del>
-              {" "} an answer is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2 \cdot(x/2 - \fl&#123;x/2&#125;)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which simplifies to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x - 2\fl&#123;x/2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because all we have to do is to multiply
-              {" "}
-              <InChapterLink
-                href="/article/chapter3#_35_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 5
-              </InChapterLink>
-              &#8288;'s formula by {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              For the second graph, an answer is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x/3 - \fl&#123;x/3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because the problem is similar to {" "}
-              <InChapterLink
-                href="/article/chapter3#_35_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 5
-              </InChapterLink>
-              {" "}
-              except with a factor {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "} horizontal dilation.
-            </OuterP>
-            <OuterP class="indent-10">
-              For the third graph, we will first stop to
-              find a formula  for the function depicted
-              here:
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/E5ox.svg" />
-            <Pause />
-            <OuterP>
-              And that formula is...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/mS6k.svg" />
-            <Pause />
-            <OuterP>
-              ...iiiiiiiS...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x-1)/3 - \fl&#123;(x-1)/3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as obtained by substituting {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x - 1$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              (the input, minus {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                )
-              </NoBreak>
-              {" "} in place of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} in
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\,x/3 - \fl&#123;x/3&#125;$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "} the formula for the
-              second graph. Then we multiply that by {" "}
-              <Math>
-                $3$
-              </Math>
-              {" "}
-              (to go from {" "}
-              <NoBreak>
-                “
-                <InlineImage
-                  src="/build-img/svgo-svg/X25H.svg"
-                  width="0.9em"
-                  bottom="0.15em"
-                />
-                ” {" "}
-              </NoBreak>
-              to {" "}
-              <NoBreak>
-                “
-                <InlineImage
-                  src="/build-img/svgo-svg/7n38.svg"
-                  width="0.9em"
-                  bottom="0.15em"
-                />
-                ”, {" "}
-              </NoBreak>
-              namely), meaning that the final answer is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              3 \cdot ((x-1)/3 - \fl&#123;(x-1)/3&#125;)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x - 1) - 3\fl&#123;(x-1)/3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              after simplification. (Or just
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x - 1 - 3\fl&#123;(x-1)/3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              though we personally prefer the previous
-              form, it being more “talkative”.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={7}>
-          <ExerciseStatement id="_37_hgi_">
-            <OuterP>
-              <b>
-                Exercise 7.
-              </b>
-              {" "}
-              If
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos \dblcol \rr \ra \rr
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (the “hollow dot colon” means that {" "}
-              <NoBreak>
-                <Math>
-                  $\dom \cos = \rr$
-                </Math>
-                )
-              </NoBreak>
-              {" "}
-              is a function whose graph looks like so...
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/PlXB.svg" />
-            <Pause />
-            <OuterP>
-              ...then does the function...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;x \ra \cos(1000x)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...have a graph that looks like a bunch of very tight
-              bumps, or, instead, very flat {" "}
-              <i>
-                &amp;
-              </i>
-              {" "} spaced-out bumps??
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Consider how to “read off” a value of {" "}
-              <Math>
-                $y = \cos(1000x)$
-              </Math>
-              {" "}
-              from the graph {" "}
-              <NoBreak>
-                <Math>
-                  $y = \cos(x)$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/u0Dn.svg" />
-            <Pause />
-            <OuterP>
-              By the first step, a
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              horizontal dilation by a factor 1000
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              maps the first graph onto the second graph—i.e.,
-              a point
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x, y)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is on the first graph if and only the dilated
-              point
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (1000x, y)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is on the second graph. The first graph is
-              therefore some very compressed thing, full of
-              scrunched bumps!
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                One can also reason that a small change in {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "}
-                results in a large change in {" "}
-                <NoBreak>
-                  <Math>
-                    $1000x$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} so that
-                {" "}
-                <Math>
-                  $\cos(1000x)$
-                </Math>
-                {" "} must “cycle” much faster through
-                values than {" "}
-                <Math>
-                  $\cos(x)$
-                </Math>
-                {" "} does.
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={8}>
-          <ExerciseStatement id="_38_hgi_">
-            <OuterP>
-              <b>
-                Exercise 8.
               </b>
               {" "}
               Rewrite
@@ -3397,19 +2526,19 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement id="_40_hgi_">
+        <Exercise number={4}>
+          <ExerciseStatement id="_35_hgi_">
             <OuterP>
               <b>
-                Exercise 9.
+                Exercise 4.
               </b>
               {" "}
               Same question as {" "}
               <InChapterLink
-                href="/article/chapter3#_38_hgi_"
+                href="/article/chapter3#_33_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 8
+                Exercise 3
               </InChapterLink>
               &#8288;, but for
               {" "}
@@ -4033,7 +3162,7 @@ const Rest = () => {
               </OuterP>
             </SolutionNote>
             <Pause />
-            <SolutionNote id="_39_hgi_">
+            <SolutionNote id="_34_hgi_">
               <OuterP>
                 <i>
                   Note 6.
@@ -4140,6 +3269,776 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
+        <Exercise
+          ref="rence"
+          number={5}
+        >
+          <ExerciseStatement id="_36_hgi_">
+            <OuterP>
+              <b>
+                Exercise 5.
+              </b>
+              {" "}
+              If
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos \dblcol \rr \ra \rr
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (the “hollow dot colon” means that {" "}
+              <NoBreak>
+                <Math>
+                  $\dom \cos = \rr$
+                </Math>
+                )
+              </NoBreak>
+              {" "}
+              is a function whose graph looks like so...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/PlXB.svg" />
+            <Pause />
+            <OuterP>
+              ...then does the function...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;x \ra \cos(1000x)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...have a graph that looks like a bunch of very tight
+              bumps, or, instead, very flat {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} spaced-out bumps??
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Consider how to “read off” a value of {" "}
+              <Math>
+                $y = \cos(1000x)$
+              </Math>
+              {" "}
+              from the graph {" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos(x)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/u0Dn.svg" />
+            <Pause />
+            <OuterP>
+              By the first step, a
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              horizontal dilation by a factor 1000
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              maps the first graph onto the second graph—i.e.,
+              a point
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x, y)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is on the first graph if and only the dilated
+              point
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (1000x, y)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is on the second graph. The first graph is
+              therefore some very compressed thing, full of
+              scrunched bumps!
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                One can also reason that a small change in {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "}
+                results in a large change in {" "}
+                <NoBreak>
+                  <Math>
+                    $1000x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} so that
+                {" "}
+                <Math>
+                  $\cos(1000x)$
+                </Math>
+                {" "} must “cycle” much faster through
+                values than {" "}
+                <Math>
+                  $\cos(x)$
+                </Math>
+                {" "} does.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={6}>
+          <ExerciseStatement id="_37_hgi_">
+            <OuterP>
+              <b>
+                Exercise 6.
+              </b>
+              {" "}
+              How can you define the absolute value
+              function using an “ordinary” algebraic formula?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              |x| = \sqrt&#123;x^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;(-1)^2&#125; = 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;(-5)^2&#125; = 5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              etc.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Note 1.
+              </i>
+              {" "}
+              This definition is less ad-hoc than might seem,
+              being a 1-dimensional form of the Pythagorean
+              theorem.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={7}>
+          <ExerciseStatement id="_38_hgi_">
+            <OuterP>
+              <b>
+                Exercise 7.
+              </b>
+              {" "}
+              How can you define the absolute value
+              function using “definition by cases”?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The absolute value function is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \begin&#123;cases&#125; x &amp; \te&#123;if $x \geq 0$,&#125;\\ -x\!\!\up&#123;1.2&#125; &amp; \te&#123;if $x &lt; 0$&#125;\end&#123;cases&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because {" "}
+              <NoBreak>
+                <Math>
+                  $-(-1) = 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $-(-5) = 5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} etc.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={8}>
+          <ExerciseStatement id="_39_hgi_">
+            <OuterP>
+              <b>
+                Exercise 8.
+              </b>
+              {" "}
+              Evaluate:
+            </OuterP>
+            <Pause />
+            <Grid
+              cols={2}
+              mobileCols={1}
+              placeItems="start"
+              withPadding={false}
+              columnFirst={true}
+            >
+              <Item>
+                i. {" "}
+                <Math>
+                  $(\lambda u.u^3)(0.5)$
+                </Math>
+              </Item>
+              <Item>
+                ii. {" "}
+                <Math>
+                  $(u \ra u^2)(x + 1)$
+                </Math>
+              </Item>
+              <Item>
+                iii. {" "}
+                <Math>
+                  $(\lambda t.t - 1)(100) \cdot (\lambda t.t + 1)(100)$
+                </Math>
+              </Item>
+              <Item>
+                iv. {" "}
+                <Math>
+                  $(u \ra u^2)(a + b)$
+                </Math>
+              </Item>
+            </Grid>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The answers are:
+            </OuterP>
+            <Pause />
+            <Grid
+              cols={2}
+              mobileCols={1}
+              placeItems="start"
+              withPadding={false}
+              columnFirst={true}
+            >
+              <Item>
+                i. {" "}
+                <Math>
+                  $0.5^3 = 0.125$
+                </Math>
+              </Item>
+              <Item>
+                ii. {" "}
+                <Math>
+                  $(x + 1)^2 = x^2 + 2x + 1$
+                </Math>
+              </Item>
+              <Item>
+                iii. {" "}
+                <Math>
+                  $(100 - 1) \cdot (100 + 1) = 9999$
+                </Math>
+              </Item>
+              <Item>
+                iv. {" "}
+                <Math>
+                  $(a + b)^2 = a^2 + 2ab + b^2$
+                </Math>
+              </Item>
+            </Grid>
+          </Solution>
+        </Exercise>
+        <Exercise number={9}>
+          <ExerciseStatement id="_40_hgi_">
+            <OuterP>
+              <b>
+                Exercise 9.
+              </b>
+              {" "}
+              Find the formula for a function whose graph
+              looks like this, again using the floor function
+              {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\lfloor \cdot \rfloor$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} as a building block:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/9u3r.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We would like to argue the correctness of
+              the following two-step process (divide the
+              input by {" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} apply the function from {" "}
+              <InChapterLink
+                href="/article/chapter3#_42_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 11
+              </InChapterLink>
+              &#8288;):
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Kgso.svg" />
+            <Pause />
+            <OuterP>
+              Indeed, the two graphs featured above differ
+              only by a horizontal dilation; dividing the
+              input by {" "}
+              <Math>
+                $2$
+              </Math>
+              {" "} “undoes” the dilation, at which
+              point it suffices to apply the function pictured
+              in the second graph; having declared our method
+              correct, the answer is thus...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;x/2 - \lfloor x/2 \rfloor&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...as obtained by substituting {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x/2$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} (the halved
+              input) for of {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} in {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\,x - \lfloor x \rfloor$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              (the formula for the function from {" "}
+              <InChapterLink
+                href="/article/chapter3#_42_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 11
+              </InChapterLink>
+              &#8288;).
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                One can check the answer by typing “x/2 - floor(x/2)”
+                in DESMOS. Viz:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/jpg/pc6h.jpg"
+                width="1400px"
+              />
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                Alternately, enter “f(x) = x - floor(x)” and
+                then “f(x/2)”:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/jpg/FUw3.jpg"
+                width="1400px"
+              />
+              <Pause />
+              <OuterP>
+                Or:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/jpg/Gowo.jpg"
+                width="1400px"
+              />
+              <Pause />
+              <OuterP>
+                The above features the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                composition
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                of functions {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} in more detail, if we 
+                switch the “input tube” and “output tube” sides of
+                a function...
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/TgEh.svg" />
+              <Pause />
+              <OuterP>
+                ...(compared to the drawing at the top of the
+                chapter), then the composition of 
+                {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} written
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \f \circ g
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                and read
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                </NoBreak>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $\hlfbk&#123;&#125;g$
+                  </Math>
+                  ”
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                is the function that you get by
+                gluing {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} box to the right of {" "}
+                <NoBreak>
+                  <Math>
+                    $\f$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} box, like so:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/FwQo.svg" />
+              <Pause />
+              <OuterP>
+                In other words, {" "}
+                <NoBreak>
+                  <Math>
+                    $g$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} output is passed on to {" "}
+                <Math>
+                  $-f$
+                </Math>
+                {" "}
+                for further processing. (A certain movie called
+                “The Human Centipede” comes to mind.)
+              </OuterP>
+              <OuterP class="indent-10">
+                (To be perfectly clear,
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/5UVl.svg" />
+              <Pause />
+              <OuterP>
+                <Math>
+                  $f \circ g$
+                </Math>
+                {" "} is a {" "}
+                <i>
+                  function
+                </i>
+                , defined as the
+                above assemblage of {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $g$
+                  </Math>
+                </NoBreak>
+                {" "} first, {" "}
+                <Math>
+                  $f$
+                </Math>
+                {" "} second”.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}
+                A formal definition of {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f \circ g$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} can be given
+                as
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  &#123;(f \circ g)(x) = f(g(x))&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                or as
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  f \circ g = (x \ra f(g(x)))
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                where one can also clarify that
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  &#123;\dom f \circ g = \&#123;x\, \in\, \dom g:\, g(x)\, \in\, \dom f\&#125;&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                which is to say that the domain of {" "}
+                <Math>
+                  $f \circ g$
+                </Math>
+                {" "}
+                consists of all {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} such that: {" "}
+                <b>
+                  (i)
+                </b>
+                {" "} {" "}
+                <Math>
+                  $g(x)$
+                </Math>
+                {" "}
+                exists (a.k.a, {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $x \in \dom g$
+                  </Math>
+                  ”)
+                </NoBreak>
+                {" "} and,
+                {" "}
+                <b>
+                  (ii)
+                </b>
+                {" "} {" "}
+                <Math>
+                  $f(g(x))$
+                </Math>
+                {" "} exists (a.k.a., {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $g(x) \in \dom f$
+                  </Math>
+                  ”).
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 4.
+                </i>
+                {" "}
+                Amusingly—or not—both sides of the afore-mentioned
+              </OuterP>
+              <Pause />
+              <CentralDisplay>
+                <NoBreak>
+                  “
+                  <Math>
+                    $(f \circ g)(x) = f(g(x))$
+                  </Math>
+                  ”
+                </NoBreak>
+              </CentralDisplay>
+              <Pause />
+              <OuterP>
+                are read
+              </OuterP>
+              <Pause />
+              <CentralDisplay>
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                </NoBreak>
+                {" "} of {" "}
+                <Math>
+                  $\hlfbk&#123;&#125;g$
+                </Math>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $x\hspace&#123;0.1em&#125;$
+                  </Math>
+                  ”
+                </NoBreak>
+              </CentralDisplay>
+              <Pause />
+              <OuterP>
+                since {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f \circ g$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} is read {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                </NoBreak>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $g\rt&#123;0.1&#125;$
+                  </Math>
+                  ”,
+                </NoBreak>
+                {" "}
+                and {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f(\dots)$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} is read {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $f$
+                  </Math>
+                </NoBreak>
+                {" "} of ...”.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
         <Exercise number={10}>
           <ExerciseStatement id="_41_hgi_">
             <OuterP>
@@ -4147,81 +4046,195 @@ const Rest = () => {
                 Exercise 10.
               </b>
               {" "}
-              Show that
+              Find formulas for functions whose graphs look
+              like these:
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              x^2 + 10x + 30
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              can be written in the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x + \dots)^2 + \,\dots
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for some numbers {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\dots$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\dots$
-                </Math>
-                ”.
-              </NoBreak>
-            </OuterP>
+            <Image src="/build-img/svgo-svg/e9Dt.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The answer is
+              For the first graph, {" "}
+              <del>
+                the
+              </del>
+              {" "} an answer is
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              (x + 5)^2 + 5
+              2 \cdot(x/2 - \fl&#123;x/2&#125;)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              because
+              which simplifies to
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
-              \,\,\,\,(x + 5)^2
-              &amp;= x^2 + (2\cdot 5)x + 5^2 \\
-              &amp;= \up&#123;1.4&#125; x^2 + 10x + 25
-              \end&#123;align&#125;
+              x - 2\fl&#123;x/2&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              and adding {" "}
-              <Math>
-                $5$
-              </Math>
-              {" "} gives {" "}
+              because all we have to do is to multiply
+              {" "}
+              <InChapterLink
+                href="/article/chapter3#_40_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 9
+              </InChapterLink>
+              &#8288;'s formula by {" "}
               <NoBreak>
                 <Math>
-                  $x^2 + 10x + 30$
+                  $2$
                 </Math>
                 .
               </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              For the second graph, an answer is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x/3 - \fl&#123;x/3&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because the problem is similar to {" "}
+              <InChapterLink
+                href="/article/chapter3#_40_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 9
+              </InChapterLink>
+              {" "}
+              except with a factor {" "}
+              <Math>
+                $3$
+              </Math>
+              {" "} horizontal dilation.
+            </OuterP>
+            <OuterP class="indent-10">
+              For the third graph, we will first stop to
+              find a formula  for the function depicted
+              here:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/E5ox.svg" />
+            <Pause />
+            <OuterP>
+              And that formula is...
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/mS6k.svg" />
+            <Pause />
+            <OuterP>
+              ...iiiiiiiS...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x-1)/3 - \fl&#123;(x-1)/3&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as obtained by substituting {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x - 1$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              (the input, minus {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                )
+              </NoBreak>
+              {" "} in place of {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} in
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\,x/3 - \fl&#123;x/3&#125;$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} the formula for the
+              second graph. Then we multiply that by {" "}
+              <Math>
+                $3$
+              </Math>
+              {" "}
+              (to go from {" "}
+              <NoBreak>
+                “
+                <InlineImage
+                  src="/build-img/svgo-svg/X25H.svg"
+                  width="0.9em"
+                  bottom="0.15em"
+                />
+                ” {" "}
+              </NoBreak>
+              to {" "}
+              <NoBreak>
+                “
+                <InlineImage
+                  src="/build-img/svgo-svg/7n38.svg"
+                  width="0.9em"
+                  bottom="0.15em"
+                />
+                ”, {" "}
+              </NoBreak>
+              namely), meaning that the final answer is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              3 \cdot ((x-1)/3 - \fl&#123;(x-1)/3&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x - 1) - 3\fl&#123;(x-1)/3&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              after simplification. (Or just
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x - 1 - 3\fl&#123;(x-1)/3&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              though we personally prefer the previous
+              form, it being more “talkative”.)
             </OuterP>
           </Solution>
         </Exercise>
@@ -4232,224 +4245,217 @@ const Rest = () => {
                 Exercise 11.
               </b>
               {" "}
-              Solve {" "}
-              <InChapterLink
-                href="/article/chapter3#_41_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 10
-              </InChapterLink>
-              {" "} using
-              algebra {" "}
+              The {" "}
               <i>
-                &amp;
+                floor
               </i>
-              {" "} variables.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Put an unknown {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $U$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} for the first set
-              of dots and an unknown {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $V$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} for the
-              second set of dots. Then
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x + U)^2 + V = x^2 + 10x + 30
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              becomes the equation to satisfy.
-              Expanding the left-hand side, we get:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x^2 + 2Ux + U^2 + V = x^2 + 10x + 30.
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              In order for this equation to hold as an
-              equality between polynomials (i.e., for all
-              {" "}
+              {" "} of a real number {" "}
               <NoBreak>
                 <Math>
                   $x$
                 </Math>
-                )
+                ,
               </NoBreak>
-              {" "} the coefficients of {" "}
-              <Math>
-                $x^2$
-              </Math>
-              {" "} on both
-              sides of the equation must be equal, the
-              coefficients of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} on both sides of the
-              equation must be equal, and the constant
-              terms on boths of the equation must be
-              equal—this gives us
+              {" "} written
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              1 = 1
+              \lfloor x \rfloor,
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              (equating the coefficients of {" "}
-              <NoBreak>
-                <Math>
-                  $x^2$
-                </Math>
-                ),
-              </NoBreak>
-              {" "} and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2U = 10
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (equating the coefficients of {" "}
+              is the greatest integer less than or equal
+              to {" "}
               <NoBreak>
                 <Math>
                   $x$
-                </Math>
-                ),
-              </NoBreak>
-              {" "} and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              U^2 + V = 30
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (equating the constant terms). Only the
-              latter two equations contain information.
-              In particular,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2U = 10
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              implies {" "}
-              <NoBreak>
-                <Math>
-                  $U = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so {" "}
-              <Math>
-                $U^2 + V = 30$
-              </Math>
-              {" "} becomes
-              {" "}
-              <NoBreak>
-                <Math>
-                  $25 + V = 30$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and
-              {" "}
-              <NoBreak>
-                <Math>
-                  $V = 30 - 25 = 5$
                 </Math>
                 .
               </NoBreak>
+              {" "} (Start at {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} and travel left on the
+              number line until you meet an integer; but if
               {" "}
-              So {" "}
-              <NoBreak>
-                <Math>
-                  $U = V = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} as previously found.
-              (But now we know that the solution is {" "}
-              <i>
-                unique
-              </i>
-              ,
-              because the only number {" "}
               <Math>
-                $U$
+                $x$
               </Math>
-              {" "} that satisfies
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2U = 10
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is {" "}
+              {" "} is already an integer, stay there; the
+              place you land is {" "}
               <NoBreak>
                 <Math>
-                  $U = 5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and the only number {" "}
-              <Math>
-                $V$
-              </Math>
-              {" "} that
-              satisfies
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              25 + V = 30
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is {" "}
-              <NoBreak>
-                <Math>
-                  $V = 5$
+                  $\lfloor x \rfloor$
                 </Math>
                 .)
               </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Sketch the graph {" "}
+              <NoBreak>
+                <Math>
+                  $y = \floor&#123;x&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Secondly, find a formula for a function whose
+              graph looks like this, where you are allowed
+              to use {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\floor&#123;x&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} in your formula:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/DEja.svg" />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              As {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} grows, so does {" "}
+              <NoBreak>
+                <Math>
+                  $\floor&#123;x&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} but
+              {" "}
+              <Math>
+                $\floor&#123;x&#125;$
+              </Math>
+              {" "} only “levels up” each time that {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              reaches a new integer, and flatlines
+              otherwise; this gives rise to the following
+              staircase-shaped graph:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Ymia.svg" />
+            <Pause />
+            <OuterP>
+              (For example, {" "}
+              <Math>
+                $\floor&#123;1&#125; = 1$
+              </Math>
+              {" "} because the
+              greatest integer less than or equal to {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\floor&#123;-0.5&#125; = -1$
+              </Math>
+              {" "} because the greatest
+              integer less than or equal to {" "}
+              <Math>
+                $-0.5$
+              </Math>
+              {" "} is {" "}
+              <NoBreak>
+                <Math>
+                  $-1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and so on.)
+            </OuterP>
+            <OuterP class="indent-10">
+              For the second part note that the following
+              two displacements, excerpted from the “factory
+              roof” graph in the statement, are equal:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Mfbc.svg" />
+            <Pause />
+            <OuterP>
+              The red dot to the left of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} has {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "}
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\floor&#123;x&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so the horizontal displacement is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x - \floor&#123;x&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so the equation of the graph is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = x - \floor&#123;x&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because the {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} {" "}
+              <i>
+                is
+              </i>
+              {" "} the
+              vertical displacement, given that the vertical
+              displacement starts at {" "}
+              <NoBreak>
+                <Math>
+                  $y = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and because
+              the vertical and horizontal displacements are
+              equal.
             </OuterP>
           </Solution>
         </Exercise>
@@ -4458,6 +4464,252 @@ const Rest = () => {
             <OuterP>
               <b>
                 Exercise 12.
+              </b>
+              {" "}
+              If {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} are functions then we define
+              (and not just us but people in general)
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f + g
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              t \ra f(t) + g(t)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (use {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $x$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} if you like),
+              i.e., to be the function that applies {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}
+              and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} separately and then takes the sum,
+              and we define
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              fg
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z \ra f(z)g(z)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (use {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $t$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} if you like, hehe),
+              i.e., to be the function that applies {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and
+              {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} separately and then takes the product.
+              (These definitions are similar to how we define
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ g
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              u \ra f(g(u))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for the symbol {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\circ$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} except that now we
+              are defining the {" "}
+              <i>
+                sum
+              </i>
+              {" "} and {" "}
+              <i>
+                product
+              </i>
+              {" "} of functions,
+              instead of their {" "}
+              <i>
+                composition
+              </i>
+              , namely.)
+            </OuterP>
+            <OuterP class="indent-10">
+              Given these definitions, which of the following
+              equalities hold, in general for all functions {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ (g + h) = (x \ra f(g(x) + h(x)))
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (g + h) \circ f = (x \ra h(f(x)) + g(f(x)))
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (g + h) \circ f = (x \ra (g + h)(f(x)))
+              $$
+            </MathBlock>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The first equality is false because the
+              right-hand side is actually
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f \circ g) + (f \circ h)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              not {" "}
+              <NoBreak>
+                <Math>
+                  $f \circ (g + h)$
+                </Math>
+                ;
+              </NoBreak>
+              {" "} the second equality is
+              true; the third equality is true even though you
+              would expect the right-hand side to be written
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra g(f(x)) + h(f(x)))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              with {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $g$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $h$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} switched (but addition is
+              commutative, so it doesn't matter); the fourth
+              equality is true: it is the definition of {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\circ$
+                </Math>
+                ”.
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={13}>
+          <ExerciseStatement id="_44_hgi_">
+            <OuterP>
+              <b>
+                Exercise 13.
               </b>
               {" "}
               Show that
@@ -4478,10 +4730,10 @@ const Rest = () => {
               </NoBreak>
               {" "} {" "}
               <InChapterLink
-                href="/article/chapter3#_41_hgi_"
+                href="/article/chapter3#_31_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 10
+                Exercise 1
               </InChapterLink>
               &#8288;) has no solutions {" "}
               <NoBreak>
@@ -4506,10 +4758,10 @@ const Rest = () => {
             <OuterP>
               by {" "}
               <InChapterLink
-                href="/article/chapter3#_41_hgi_"
+                href="/article/chapter3#_31_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 10
+                Exercise 1
               </InChapterLink>
               &#8288;, but this implies
             </OuterP>
@@ -4527,11 +4779,353 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_44_hgi_">
+        <Exercise number={14}>
+          <ExerciseStatement id="_45_hgi_">
             <OuterP>
               <b>
-                Exercise 13.
+                Exercise 14.
+              </b>
+              {" "}
+              Summon your senses of extrapolation {" "}
+              <i>
+                &amp;
+              </i>
+              {" "}
+              imagination to evaluate this expression:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (Hint: The answer is a specific real number.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              ...in an expression such as...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra x^3)(6)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...we pair the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} with {" "}
+              <NoBreak>
+                <Math>
+                  $6$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/WvHW.svg" />
+            <Pause />
+            <OuterP>
+              ...and {" "}
+              <Math>
+                $6$
+              </Math>
+              {" "} becomes the value to use for {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              in {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x^3$
+                </Math>
+                ”:
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/F0A4.svg" />
+            <Pause />
+            <OuterP>
+              ...; in an expression such as...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra y \ra x^3y)(6)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...we also pair the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} with {" "}
+              <NoBreak>
+                <Math>
+                  $6$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Kg7y.svg" />
+            <Pause />
+            <OuterP>
+              ...and {" "}
+              <Math>
+                $6$
+              </Math>
+              {" "} becomes the value to use for {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              in {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $y \ra x^3y$
+                </Math>
+                ”:
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/tRsN.svg" />
+            <Pause />
+            <OuterP>
+              ...(in this case the result is not a number,
+              but a function—a function is a mathematical
+              object like another, after all); in an
+              expression such as...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra y \ra x^3y)(6)(8)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...we pair the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} with {" "}
+              <Math>
+                $6$
+              </Math>
+              {" "} and the {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} with {" "}
+              <NoBreak>
+                <Math>
+                  $8$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/HuXq.svg" />
+            <Pause />
+            <OuterP>
+              ...and {" "}
+              <Math>
+                $6$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $8$
+              </Math>
+              {" "} become respectively the
+              values to use for {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} in {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x^3y$
+                </Math>
+                ”:
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/1gJS.svg" />
+            <Pause />
+            <OuterP>
+              ...; now in an expression such as...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...we pair the {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} with {" "}
+              <NoBreak>
+                <Math>
+                  $x \ra x^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the
+              {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} with {" "}
+              <NoBreak>
+                <Math>
+                  $5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and the {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "} with {" "}
+              <NoBreak>
+                <Math>
+                  $0.1$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/1JTc.svg" />
+            <Pause />
+            <OuterP>
+              ...and {" "}
+              <NoBreak>
+                <Math>
+                  $x \ra x^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $5$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $0.1$
+              </Math>
+              {" "} become
+              respectively the values to use for {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              and {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "} in {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $&#123;f(x + h) - f(x)\over h&#125;$
+                </Math>
+                ”:
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/-AHn.svg" />
+            <Pause />
+            <OuterP>
+              ...; evaluating...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;(x \ra x^2)(5 + 0.1) - (x \ra x^2)(5) \over 0.1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...we...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;(x \ra x^2)(5.1) - (x \ra x^2)(5) \over 0.1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...get...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;5.1^2 - 5^2 \over 0.1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...this...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;26.01 - 25 \over 0.1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...
+              <i>
+                thiiis
+              </i>
+              ...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1.01 \over 0.1&#125; = 1.01 \times 10 = 10.1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...result! (The answer is: ten point one.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={15}>
+          <ExerciseStatement id="_46_hgi_">
+            <OuterP>
+              <b>
+                Exercise 15.
               </b>
               {" "}
               Show that
@@ -4616,11 +5210,821 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_45_hgi_">
+        <Exercise number={16}>
+          <ExerciseStatement id="_47_hgi_">
             <OuterP>
               <b>
-                Exercise 14.
+                Exercise 16.
+              </b>
+              {" "}
+              Use the results of the previous two exercises
+              to find the value(s) of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} such that
+              {" "}
+              <Math>
+                $Ax^2 + Bx = 0$
+              </Math>
+              {" "} for constants {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} such
+              that {" "}
+              <NoBreak>
+                <Math>
+                  $A \ne 0$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Well,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Ax^2 + Bx = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              obviously has solution {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} to start
+              with, so we {" "}
+              <i>
+                don't need
+              </i>
+              {" "} the previous
+              exercises for one of the roots at least—actually,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Ax^2 + Bx = x(Ax + B)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so the equation is equivalent to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x(Ax + B) = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and so one of the roots is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and the other root is the value of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              such that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Ax + B = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which is {" "}
+              <NoBreak>
+                <Math>
+                  $x = -B/A$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (In order for the product
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x(Ax + B)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to be {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} you either need the first term to
+              be {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} leading us to {" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} or the second
+              term to be {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} leading us to {" "}
+              <NoBreak>
+                <Math>
+                  $Ax + B = 0$
+                </Math>
+                —the
+              </NoBreak>
+              {" "}
+              product of two things is {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} if and only if
+              one of the two things is {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              So the roots are {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $x = -B/A$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              To complete the problem {" "}
+              <i>
+                as we were asked
+              </i>
+              ,
+              however, we will use the fact that {" "}
+              <Math>
+                $y = Ax^2 + Bx$
+              </Math>
+              {" "}
+              is obtained from {" "}
+              <Math>
+                $y = x^2$
+              </Math>
+              {" "} by the following
+              sequence of transformations (cf. {" "}
+              <InChapterLink
+                href="/article/chapter3#_50_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 19
+              </InChapterLink>
+              &#8288;):
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              1. vertical translation by {" "}
+              <Math>
+                $-&#123;B^2 \over 4A^2&#125;$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              2. horizontal translation by {" "}
+              <Math>
+                $-&#123;B \over 2A&#125;$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              3. vertical scaling by {" "}
+              <Math>
+                $A$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (We put the vertical translation first.)
+              By {" "}
+              <InChapterLink
+                href="/article/chapter3#_49_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 18
+              </InChapterLink>
+              &#8288;, the 
+              roots of {" "}
+              <Math>
+                $y = Ax^2 + Bx$
+              </Math>
+              {" "} are thus at
+            </OuterP>
+            <Pause />
+            <TextParent>
+              <MathBlock>
+                $$
+                \tag&#123;A&#125;
+                x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;
+                $$
+              </MathBlock>
+            </TextParent>
+            <Pause />
+            <OuterP>
+              which looks a little different than our
+              previous result of {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $x = -B/A$
+              </Math>
+              {" "}
+              until you realize that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (because
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and even though {" "}
+              <Math>
+                $&#123;B\over 2A&#125;$
+              </Math>
+              {" "} could be
+              negative, the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\pm$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} on either side of
+              the equation means that the {" "}
+              <i>
+                set
+              </i>
+              {" "} of values
+              on either side of the equation is the same),
+              so that (A) becomes
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = -&#123;B\over 2A&#125; \pm &#123;B \over 2A&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and, on the one hand,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -&#123;B\over 2A&#125; + &#123;B \over 2A&#125; = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              while, on the other hand,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -&#123;B\over 2A&#125; - &#123;B \over 2A&#125; = -&#123;2B\over 2A&#125; = -&#123;B\over A&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so here too we find that the roots are {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "}
+              and {" "}
+              <NoBreak>
+                <Math>
+                  $x = -B/A$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (It must be the right answer!)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={17}>
+          <ExerciseStatement id="_48_hgi_">
+            <OuterP>
+              <b>
+                Exercise 17.
+              </b>
+              {" "}
+              What are the roots (i.e., solutions) {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Ax^2 + Bx + C = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for constants {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} such that {" "}
+              <NoBreak>
+                <Math>
+                  $A \ne 0$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The curve
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = Ax^2 + Bx + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is obtained from the curve {" "}
+              <Math>
+                $y = x^2$
+              </Math>
+              {" "} by the following sequence of
+              transformations (cf. Exercise 19):
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              1. vertical translation by {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
+                </Math>
+                ,
+              </NoBreak>
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              2. horizontal translation by {" "}
+              <NoBreak>
+                <Math>
+                  $-&#123;B \over 2A&#125;$
+                </Math>
+                ,
+              </NoBreak>
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              3. vertical scaling by {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                .
+              </NoBreak>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              On the one hand, if
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              then
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -&#123;B^2 - 4AC \over 4A^2&#125; &gt; 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and the vertical translation is {" "}
+              <i>
+                upward
+              </i>
+              ,
+              the curve detaches from the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis never
+              to see it again, and there are no roots!
+            </OuterP>
+            <OuterP class="indent-10">
+              On the other hand, if
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;B^2 - 4AC \over 4A^2&#125; \geq 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              then the roots are given by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = -&#123;B \over 2A&#125; \pm \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by {" "}
+              <InChapterLink
+                href="/article/chapter3#_49_hgi_"
+                class="handle-in-chapter-link"
+              >
+                Exercise 18
+              </InChapterLink>
+              &#8288;. {" "}
+              <Math>
+                $\rightarrow$
+              </Math>
+              {" "} ~The End~ {" "}
+              <Math>
+                $\leftarrow$
+              </Math>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                In fact,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                (square both sides of the equation—in general,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \pm E = \pm F
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                as one set of two values equalling another
+                set of two values, if and only if
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                |E| = |F|
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                or
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                E^2 = F^2
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                —so that's why we say “square both sides”),
+                so the formula for the roots can also be written
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x = -&#123;B \over 2A&#125; \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                or
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x = &#123;&#123;-B \pm \sqrt&#123;B^2 - 4AC&#125;&#125; \over 2A&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                as briefly flashed by, e.g., in {" "}
+                <a
+                  href="/article/chapter1#_24_hgi_"
+                  class="handle-out-chapter-link"
+                >
+                  Chapter 1
+                </a>
+                &#8288;.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={18}>
+          <ExerciseStatement id="_49_hgi_">
+            <OuterP>
+              <b>
+                Exercise 18.
+              </b>
+              {" "}
+              Let {" "}
+              <NoBreak>
+                <Math>
+                  $x_0 \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $y_0 \in \rr$
+              </Math>
+              {" "} and
+              {" "}
+              <Math>
+                $a \in \rr$
+              </Math>
+              {" "} with {" "}
+              <NoBreak>
+                <Math>
+                  $y_0 \geq 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $a \ne 0.$
+              </Math>
+              {" "}
+              If you apply these transformations...
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              1. vertical translation by {" "}
+              <Math>
+                $-y_0$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              2. horizontal translation by {" "}
+              <Math>
+                $x_0$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <CentralDisplayItalic>
+              3. vertical scaling by {" "}
+              <Math>
+                $a$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              ...to the curve {" "}
+              <NoBreak>
+                <Math>
+                  $y = x^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} what are the
+              roots of the final curve that you obtain?
+              (Nb: {" "}
+              <i>
+                Roots
+              </i>
+              {" "} are values of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} such
+              that {" "}
+              <NoBreak>
+                <Math>
+                  $y = 0$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Start by noting that the point
+              {" "}
+              <Math>
+                $(\sqrt&#123;y_0&#125;, y_0)$
+              </Math>
+              {" "} is on the curve {" "}
+              <NoBreak>
+                <Math>
+                  $y = x^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              as well as the point {" "}
+              <NoBreak>
+                <Math>
+                  $(-\sqrt&#123;y_0&#125;, y_0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              because
+              {" "}
+              <Math>
+                $(\sqrt&#123;y_0&#125;)^2 = (-\sqrt&#123;y_0&#125;)^2 =$
+              </Math>
+              {" "} {" "}
+              <Math>
+                $y_0;$
+              </Math>
+              {" "}
+              here is a sketch of the situation before
+              anything happens:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/kIUQ.svg"
+              width="660px"
+            />
+            <Pause />
+            <OuterP>
+              After vertically translating by {" "}
+              <Math>
+                $-y_0$
+              </Math>
+              {" "}
+              the roots will therefore be at {" "}
+              <NoBreak>
+                <Math>
+                  $x = \pm\sqrt&#123;y_0&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/gYAV.svg"
+              width="660px"
+            />
+            <Pause />
+            <OuterP>
+              Then after horizontally translating by {" "}
+              <Math>
+                $x_0$
+              </Math>
+              {" "}
+              the roots mosey over to {" "}
+              <NoBreak>
+                <Math>
+                  $x = x_0\pm\sqrt&#123;y_0&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/cfTn.svg"
+              width="660px"
+            />
+            <Pause />
+            <OuterP>
+              Lastly, vertical scaling does not affect
+              the position of the roots, because it
+              stretches the graph {" "}
+              <i>
+                about
+              </i>
+              {" "} the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              axis (here {" "}
+              <NoBreak>
+                <Math>
+                  $a \approx 1.7$
+                </Math>
+                ):
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/L9MD.svg"
+              width="660px"
+            />
+            <Pause />
+            <OuterP>
+              So the roots are at: {" "}
+              <NoBreak>
+                <Math>
+                  $x = x_0 \pm \sqrt&#123;y_0&#125;$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              (Like we found them after the second step.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={19}>
+          <ExerciseStatement id="_50_hgi_">
+            <OuterP>
+              <b>
+                Exercise 19.
               </b>
               {" "}
               What sequence of geometric transformations
@@ -5118,818 +6522,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_46_hgi_">
+        <Exercise number={20}>
+          <ExerciseStatement id="_51_hgi_">
             <OuterP>
               <b>
-                Exercise 15.
-              </b>
-              {" "}
-              Let {" "}
-              <NoBreak>
-                <Math>
-                  $x_0 \in \rr$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $y_0 \in \rr$
-              </Math>
-              {" "} and
-              {" "}
-              <Math>
-                $a \in \rr$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $y_0 \geq 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $a \ne 0.$
-              </Math>
-              {" "}
-              If you apply these transformations...
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by {" "}
-              <Math>
-                $-y_0$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by {" "}
-              <Math>
-                $x_0$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by {" "}
-              <Math>
-                $a$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              ...to the curve {" "}
-              <NoBreak>
-                <Math>
-                  $y = x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} what are the
-              roots of the final curve that you obtain?
-              (Nb: {" "}
-              <i>
-                Roots
-              </i>
-              {" "} are values of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} such
-              that {" "}
-              <NoBreak>
-                <Math>
-                  $y = 0$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Start by noting that the point
-              {" "}
-              <Math>
-                $(\sqrt&#123;y_0&#125;, y_0)$
-              </Math>
-              {" "} is on the curve {" "}
-              <NoBreak>
-                <Math>
-                  $y = x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              as well as the point {" "}
-              <NoBreak>
-                <Math>
-                  $(-\sqrt&#123;y_0&#125;, y_0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              because
-              {" "}
-              <Math>
-                $(\sqrt&#123;y_0&#125;)^2 = (-\sqrt&#123;y_0&#125;)^2 =$
-              </Math>
-              {" "} {" "}
-              <Math>
-                $y_0;$
-              </Math>
-              {" "}
-              here is a sketch of the situation before
-              anything happens:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/kIUQ.svg"
-              width="660px"
-            />
-            <Pause />
-            <OuterP>
-              After vertically translating by {" "}
-              <Math>
-                $-y_0$
-              </Math>
-              {" "}
-              the roots will therefore be at {" "}
-              <NoBreak>
-                <Math>
-                  $x = \pm\sqrt&#123;y_0&#125;$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/gYAV.svg"
-              width="660px"
-            />
-            <Pause />
-            <OuterP>
-              Then after horizontally translating by {" "}
-              <Math>
-                $x_0$
-              </Math>
-              {" "}
-              the roots mosey over to {" "}
-              <NoBreak>
-                <Math>
-                  $x = x_0\pm\sqrt&#123;y_0&#125;$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/cfTn.svg"
-              width="660px"
-            />
-            <Pause />
-            <OuterP>
-              Lastly, vertical scaling does not affect
-              the position of the roots, because it
-              stretches the graph {" "}
-              <i>
-                about
-              </i>
-              {" "} the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              axis (here {" "}
-              <NoBreak>
-                <Math>
-                  $a \approx 1.7$
-                </Math>
-                ):
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/L9MD.svg"
-              width="660px"
-            />
-            <Pause />
-            <OuterP>
-              So the roots are at: {" "}
-              <NoBreak>
-                <Math>
-                  $x = x_0 \pm \sqrt&#123;y_0&#125;$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              (Like we found them after the second step.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={16}>
-          <ExerciseStatement id="_47_hgi_">
-            <OuterP>
-              <b>
-                Exercise 16.
-              </b>
-              {" "}
-              Use the results of the previous two exercises
-              to find the value(s) of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} such that
-              {" "}
-              <Math>
-                $Ax^2 + Bx = 0$
-              </Math>
-              {" "} for constants {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} such
-              that {" "}
-              <NoBreak>
-                <Math>
-                  $A \ne 0$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Well,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              Ax^2 + Bx = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              obviously has solution {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "} to start
-              with, so we {" "}
-              <i>
-                don't need
-              </i>
-              {" "} the previous
-              exercises for one of the roots at least—actually,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              Ax^2 + Bx = x(Ax + B)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so the equation is equivalent to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x(Ax + B) = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and so one of the roots is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and the other root is the value of {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              such that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              Ax + B = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which is {" "}
-              <NoBreak>
-                <Math>
-                  $x = -B/A$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (In order for the product
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x(Ax + B)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} you either need the first term to
-              be {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} leading us to {" "}
-              <NoBreak>
-                <Math>
-                  $x = 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} or the second
-              term to be {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} leading us to {" "}
-              <NoBreak>
-                <Math>
-                  $Ax + B = 0$
-                </Math>
-                —the
-              </NoBreak>
-              {" "}
-              product of two things is {" "}
-              <Math>
-                $0$
-              </Math>
-              {" "} if and only if
-              one of the two things is {" "}
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              So the roots are {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $x = -B/A$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              To complete the problem {" "}
-              <i>
-                as we were asked
-              </i>
-              ,
-              however, we will use the fact that {" "}
-              <Math>
-                $y = Ax^2 + Bx$
-              </Math>
-              {" "}
-              is obtained from {" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              {" "} by the following
-              sequence of transformations (cf. {" "}
-              <InChapterLink
-                href="/article/chapter3#_45_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 14
-              </InChapterLink>
-              &#8288;):
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by {" "}
-              <Math>
-                $-&#123;B^2 \over 4A^2&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by {" "}
-              <Math>
-                $-&#123;B \over 2A&#125;$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by {" "}
-              <Math>
-                $A$
-              </Math>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (We put the vertical translation first.)
-              By {" "}
-              <InChapterLink
-                href="/article/chapter3#_46_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 15
-              </InChapterLink>
-              &#8288;, the 
-              roots of {" "}
-              <Math>
-                $y = Ax^2 + Bx$
-              </Math>
-              {" "} are thus at
-            </OuterP>
-            <Pause />
-            <TextParent>
-              <MathBlock>
-                $$
-                \tag&#123;A&#125;
-                x = -&#123;B\over 2A&#125; \pm \sqrt&#123;B^2 \over 4A^2&#125;
-                $$
-              </MathBlock>
-            </TextParent>
-            <Pause />
-            <OuterP>
-              which looks a little different than our
-              previous result of {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $x = -B/A$
-              </Math>
-              {" "}
-              until you realize that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \pm \sqrt&#123;B^2 \over 4A^2&#125; = \pm &#123;B \over 2A&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (because
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;B \over 2A&#125;\right)^&#123;\!2&#125; = &#123;B^2 \over 4A^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and even though {" "}
-              <Math>
-                $&#123;B\over 2A&#125;$
-              </Math>
-              {" "} could be
-              negative, the {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\pm$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} on either side of
-              the equation means that the {" "}
-              <i>
-                set
-              </i>
-              {" "} of values
-              on either side of the equation is the same),
-              so that (A) becomes
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = -&#123;B\over 2A&#125; \pm &#123;B \over 2A&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and, on the one hand,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              -&#123;B\over 2A&#125; + &#123;B \over 2A&#125; = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              while, on the other hand,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              -&#123;B\over 2A&#125; - &#123;B \over 2A&#125; = -&#123;2B\over 2A&#125; = -&#123;B\over A&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so here too we find that the roots are {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "}
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $x = -B/A$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (It must be the right answer!)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={17}>
-          <ExerciseStatement id="_48_hgi_">
-            <OuterP>
-              <b>
-                Exercise 17.
-              </b>
-              {" "}
-              If {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} are functions then we define
-              (and not just us but people in general)
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f + g
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              t \ra f(t) + g(t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (use {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $x$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} if you like),
-              i.e., to be the function that applies {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}
-              and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} separately and then takes the sum,
-              and we define
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              fg
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              z \ra f(z)g(z)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (use {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $t$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} if you like, hehe),
-              i.e., to be the function that applies {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and
-              {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} separately and then takes the product.
-              (These definitions are similar to how we define
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ g
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              u \ra f(g(u))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for the symbol {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”,
-              </NoBreak>
-              {" "} except that now we
-              are defining the {" "}
-              <i>
-                sum
-              </i>
-              {" "} and {" "}
-              <i>
-                product
-              </i>
-              {" "} of functions,
-              instead of their {" "}
-              <i>
-                composition
-              </i>
-              , namely.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Given these definitions, which of the following
-              equalities hold, in general for all functions {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $h$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ (g + h) = (x \ra f(g(x) + h(x)))
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (g + h) \circ f = (x \ra h(f(x)) + g(f(x)))
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (g + h) \circ f = (x \ra (g + h)(f(x)))
-              $$
-            </MathBlock>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The first equality is false because the
-              right-hand side is actually
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \circ g) + (f \circ h)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              not {" "}
-              <NoBreak>
-                <Math>
-                  $f \circ (g + h)$
-                </Math>
-                ;
-              </NoBreak>
-              {" "} the second equality is
-              true; the third equality is true even though you
-              would expect the right-hand side to be written
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra g(f(x)) + h(f(x)))
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              with {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $g$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} and {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $h$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} switched (but addition is
-              commutative, so it doesn't matter); the fourth
-              equality is true: it is the definition of {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\circ$
-                </Math>
-                ”.
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={18}>
-          <ExerciseStatement id="_49_hgi_">
-            <OuterP>
-              <b>
-                Exercise 18.
+                Exercise 20.
               </b>
               {" "}
               What sequence of geometric transformations
@@ -6004,10 +6601,10 @@ const Rest = () => {
             <OuterP>
               and, similarly to {" "}
               <InChapterLink
-                href="/article/chapter3#_45_hgi_"
+                href="/article/chapter3#_50_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 14
+                Exercise 19
               </InChapterLink>
               &#8288;, write
             </OuterP>
@@ -6068,10 +6665,10 @@ const Rest = () => {
               </NoBreak>
               {" "} of {" "}
               <InChapterLink
-                href="/article/chapter3#_45_hgi_"
+                href="/article/chapter3#_50_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 14
+                Exercise 19
               </InChapterLink>
               &#8288;,
               that also has a minus sign out front.)
@@ -6079,10 +6676,10 @@ const Rest = () => {
             <OuterP class="indent-10">
               By direct analogy with {" "}
               <InChapterLink
-                href="/article/chapter3#_45_hgi_"
+                href="/article/chapter3#_50_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 14
+                Exercise 19
               </InChapterLink>
               &#8288;, the three
               transformations are thus...
@@ -6136,597 +6733,6 @@ const Rest = () => {
             <Pause />
             <OuterP>
               ...if we put the vertical translation first.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={19}>
-          <ExerciseStatement id="_50_hgi_">
-            <OuterP>
-              <b>
-                Exercise 19.
-              </b>
-              {" "}
-              What are the roots (i.e., solutions) {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              Ax^2 + Bx + C = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for constants {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $C$
-              </Math>
-              {" "} such that {" "}
-              <NoBreak>
-                <Math>
-                  $A \ne 0$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The curve
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              y = Ax^2 + Bx + C
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is obtained from the curve {" "}
-              <Math>
-                $y = x^2$
-              </Math>
-              {" "} by the following sequence of
-              transformations (cf. Exercise 19):
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              1. vertical translation by {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;-&#123;B^2 - 4AC \over 4A^2&#125;&#125;$
-                </Math>
-                ,
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              2. horizontal translation by {" "}
-              <NoBreak>
-                <Math>
-                  $-&#123;B \over 2A&#125;$
-                </Math>
-                ,
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <CentralDisplayItalic>
-              3. vertical scaling by {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                .
-              </NoBreak>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              On the one hand, if
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;B^2 - 4AC \over 4A^2&#125; &lt; 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              then
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              -&#123;B^2 - 4AC \over 4A^2&#125; &gt; 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and the vertical translation is {" "}
-              <i>
-                upward
-              </i>
-              ,
-              the curve detaches from the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis never
-              to see it again, and there are no roots!
-            </OuterP>
-            <OuterP class="indent-10">
-              On the other hand, if
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;B^2 - 4AC \over 4A^2&#125; \geq 0
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              then the roots are given by
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x = -&#123;B \over 2A&#125; \pm \sqrt&#123;B^2 - 4AC \over 4A^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by {" "}
-              <InChapterLink
-                href="/article/chapter3#_46_hgi_"
-                class="handle-in-chapter-link"
-              >
-                Exercise 15
-              </InChapterLink>
-              &#8288;. {" "}
-              <Math>
-                $\rightarrow$
-              </Math>
-              {" "} ~The End~ {" "}
-              <Math>
-                $\leftarrow$
-              </Math>
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                In fact,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \pm\sqrt&#123;B^2 - 4AC \over 4A^2&#125; = \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                (square both sides of the equation—in general,
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \pm E = \pm F
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                as one set of two values equalling another
-                set of two values, if and only if
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                |E| = |F|
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                or
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                E^2 = F^2
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                —so that's why we say “square both sides”),
-                so the formula for the roots can also be written
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x = -&#123;B \over 2A&#125; \pm &#123;\sqrt&#123;B^2 - 4AC&#125; \over 2A&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                or
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x = &#123;&#123;-B \pm \sqrt&#123;B^2 - 4AC&#125;&#125; \over 2A&#125;
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                as briefly flashed by, e.g., in {" "}
-                <a
-                  href="/article/chapter1#_24_hgi_"
-                  class="handle-out-chapter-link"
-                >
-                  Chapter 1
-                </a>
-                &#8288;.
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_51_hgi_">
-            <OuterP>
-              <b>
-                Exercise 20.
-              </b>
-              {" "}
-              Summon your senses of extrapolation {" "}
-              <i>
-                &amp;
-              </i>
-              {" "}
-              imagination to evaluate this expression:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (Hint: The answer is a specific real number.)
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              ...in an expression such as...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra x^3)(6)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...we pair the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $6$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/WvHW.svg" />
-            <Pause />
-            <OuterP>
-              ...and {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} becomes the value to use for {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x^3$
-                </Math>
-                ”:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/F0A4.svg" />
-            <Pause />
-            <OuterP>
-              ...; in an expression such as...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra y \ra x^3y)(6)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...we also pair the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $6$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/Kg7y.svg" />
-            <Pause />
-            <OuterP>
-              ...and {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} becomes the value to use for {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $y \ra x^3y$
-                </Math>
-                ”:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/tRsN.svg" />
-            <Pause />
-            <OuterP>
-              ...(in this case the result is not a number,
-              but a function—a function is a mathematical
-              object like another, after all); in an
-              expression such as...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (x \ra y \ra x^3y)(6)(8)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...we pair the {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} with {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} and the {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $8$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/HuXq.svg" />
-            <Pause />
-            <OuterP>
-              ...and {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $8$
-              </Math>
-              {" "} become respectively the
-              values to use for {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $x^3y$
-                </Math>
-                ”:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/1gJS.svg" />
-            <Pause />
-            <OuterP>
-              ...; now in an expression such as...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f \ra x \ra h \ra &#123;f(x+h) - f(x)\over h&#125;)(x \ra x^2)(5)(0.1)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...we pair the {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $x \ra x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} the
-              {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and the {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $0.1$
-                </Math>
-                ...
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/1JTc.svg" />
-            <Pause />
-            <OuterP>
-              ...and {" "}
-              <NoBreak>
-                <Math>
-                  $x \ra x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $5$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $0.1$
-              </Math>
-              {" "} become
-              respectively the values to use for {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "}
-              and {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $&#123;f(x + h) - f(x)\over h&#125;$
-                </Math>
-                ”:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/-AHn.svg" />
-            <Pause />
-            <OuterP>
-              ...; evaluating...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;(x \ra x^2)(5 + 0.1) - (x \ra x^2)(5) \over 0.1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...we...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;(x \ra x^2)(5.1) - (x \ra x^2)(5) \over 0.1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...get...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;5.1^2 - 5^2 \over 0.1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...this...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;26.01 - 25 \over 0.1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...
-              <i>
-                thiiis
-              </i>
-              ...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1.01 \over 0.1&#125; = 1.01 \times 10 = 10.1
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...result! (The answer is: ten point one.)
             </OuterP>
           </Solution>
         </Exercise>

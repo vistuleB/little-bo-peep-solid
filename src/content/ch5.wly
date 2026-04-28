@@ -156,23 +156,38 @@
     |> Image
         src=images/svg_ch5_ch_unit_circle_with_four_particles.svg
 
-    These labels are chosen
-    because
-    the $x$-coordinate of the
-    “$-\!\sin$”
-    particle is
+    !! These labels are chosen because
+    !! the
+    !! “$-\!\sin$”
+    !! particle
+    !! defines the function
+    !! $$
+    !! x \ra -\!\sin(x)
+    !! $$
+    !! which couldn't be more logical,
+    !! and which also accords with the fact that 
+    !! we more generally define
+    !! $$
+    !! -f = (x \ra -f(x))
+    !! $$
+    !! for all $f : \rr \ra \rr$! (So these labels can
+    !! just be seen as referring to this definition.)
+
+    These labels are chosen because the $x$-coordinate
+    of the “$-\!\sin$” particle (e.g.) is
+
     $$
     -\!\sin(x)
     $$
-    by symmetry with the $\sin$ particle,
-    meaning that the
-    “$-\!\sin$”
-    particle
-    defines the function
+
+    by symmetry with the $\sin$ particle, meaning that 
+    the “$-\!\sin$” particle defines the function
+
     $$
     x \ra -\!\sin(x)
     $$
-    also known simply as
+
+    which is also known simply as
 
     _|“$-\!\sin$”|_
 
@@ -180,8 +195,9 @@
     $$
     -f = (x \ra -f(x))
     $$
-    for all $f : \rr \ra \rr$,
-    and similarly for “$-\!\cos$”.
+    for all $f : \rr \ra \rr$.
+    !! and similarly for $\cos$ and $-\!\cos$.
+    !! and where the same logic applies to $-\!\cos$.
 
     Adding the curves for $-\!\sin$ and $-\!\cos$
     to the graphs fills the “gap” between $y = \sin(x)$
@@ -226,7 +242,13 @@
     (cf. Exercise >>_first_law_of_differentiation_
     and Exercise >>_define_product_of_constant_and_function_
     of Chapter >>derivatives),
-    which implies that
+    which implies that 
+    !! the second two equations mechanically follow from
+    !! the first two.
+    !! one need only remember
+    !! the first two equations, of these $4$.
+    !! with the second two
+    !! being the sign-negated versions of the first two.
     $$
     (-\!\sin)' = -\!\sin'
     $$
@@ -245,12 +267,15 @@
     $$
     to finish the computation),
     which means that one only needs to
-    remember the first two equations. 
-    !! Though,
-    !! in fact, one really just needs to remember
-    !! the four-particle diagram!
-    !! (Or really,
-    !! just remember the four-particle diagram.)
+    remember the first two equations—though
+    even better is to just remember the entire
+    four-particle diagram, and never think about
+    signs again!
+    !! !! Though,
+    !! !! in fact, one really just needs to remember
+    !! !! the four-particle diagram!
+    !! !! (Or really,
+    !! !! just remember the four-particle diagram.)
 
 |> Section
 

@@ -10,53 +10,48 @@
     $$
 
     and for which $\theta$ are they attained?
-    (Reason geometrically, not by calculus.)
+    (Reason geometrically or algebraically, not by calculus.)
 
     |> Solution
 
-        Hello.
+        _Solution 1._ For a geometric solution we start by
+        reminding to ourselves that if we plot all the solutions of
+
+        $$
+        xy = 1
+        $$
+
+        we find the curve 
+
+        $$
+        y = {1\over x}
+        $$
+
+        (equivalent!) whose general aspect is...
 
         |> Image
             src=images/_e5_max_cosx_sinx_one_over_x_graph.svg
+            width=470px
 
-        While it may seem unrelated to the problem
-        at hand, we start by noting that the “isosets”
-        of the two-variable function
+        ...like so; a little more generally,
+        “isosets” of the two-variable function...
 
         $$
         (x, y) \ra xy
         $$
 
-        have this general aspect:
-
-        !! The “isosets” (nevermind what that means) of
-
-        !! $$
-        !! (x, y) \ra xy
-        !! $$
-
-        !! (lambda-notation for a two-variable function)
-        !! have this general aspect (nb: we are investigating
-
-        !! $$
-        !! (x, y) \ra xy
-        !! $$
-
-        !! because
-
-        !! $$
-        !! \cos(\theta)\cdot\sin(\theta)
-        !! $$
-
-        !! is the product of an $x$-coordinate and a
-        !! $y$-coordinate of a point on the unit circle):
+        ...have this general aspect...
 
         |> Image
-            src=images/svg_ch5_ex_max_xy_xy_isosets.svg
+            src=tmp-images/svg_ch5_ex_max_xy_xy_isosets.svg
             style=margin-bottom:0.5em;
 
-        What will give us a similar level of
-        insight is a “heatmap” of $(x, y) \ra xy$:
+        ...where you see the curve “$xy = 1$” among a
+        mix of other such curves, of the form $xy = C$;
+        what will give us a maybe even better level of
+        insight is the following “heatmap” of $(x, y) \ra xy$,
+        where the curves above show up as boundaries between
+        the regions of different color:
         !! drawn here in the same $[-4, 4] \times [-4, 4]$ window:
 
         !! These isosets give rise to the boundaries

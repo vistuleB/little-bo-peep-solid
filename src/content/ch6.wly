@@ -1,4 +1,395 @@
 |> Section
     handle=_ch6_start_
 
-    *Ch6.* This is a stub.
+    *Notation.*
+    We write
+
+    $$
+    \Large f : [\te{A}] \ra [\te{B}]
+    $$
+
+    to indicate that $f$ is a function $f : \rr \ra \rr$
+    that takes inputs with units A
+    and produces outputs with units B. 
+    For example,
+
+    $$
+    \Large h : [\te{kg}] \ra [^\circ\te{F}]
+    $$
+
+    indicates that $h$ 
+    is a function whose inputs denote kilograms and whose
+    outputs denote degrees fahrenheit, etc.
+    (These are purely “physical” concepts, not
+    mathematical, but we're cool with that.)
+
+    |> Pause
+
+    *Vocabulary.* The input and output units of a function,
+    when present as above, are referred to as the
+
+    __signature__
+
+    of the function.
+
+|> Section
+    *Compatible signatures for function operations.* 
+    Taking the sum or product of functions etc
+    presupposes some “compatibility” between their
+    signatures—for 
+
+|> Section
+    *Function signatures.* 
+    In some real-world
+    scenarios the inputs and outputs of a function
+    come with certain units attached. In this case,
+    we write
+    !! the numbers fed to a function may come
+    !! with a certain type of unit attached, and 
+    !! those output by the function as well; in this context, we
+    !! write
+
+    $$
+    \Large f : [\te{A}] \ra [\te{B}]
+    $$
+
+    to indicate that the 
+    units of inputs to $f$ are A while the units
+    of numbers output by $f$ are B. 
+    !! former and latter units
+    !! are respectively A and B.
+    !! i.e., the above indicates that 
+    !! $f$ is a function $f : \rr \ra \rr$
+    !! that takes inputs with units A
+    !! and produces outputs with units B. 
+    For example,
+
+    $$
+    \Large h : [\te{kg}] \ra [^\circ\te{F}]
+    $$
+
+    indicates that $h$ 
+    is a function whose inputs denote kilograms and whose
+    outputs denote degrees fahrenheit!
+
+    |> Pause
+
+    _Vocabulary_. We refer to this notation or
+    to the ordered pair $(\te{A}, \te{B})$ as the
+
+    __signature__
+
+    of the function. (Thus a function signature has
+    two parts: the units of the input, and the units
+    of the output!)
+    !! (Or “function signature”.) (Well.) 
+
+    !! To put a fine point on it, a function signature
+    !! has two parts: the units of the input (PART 1), and the units
+    !! of the output (PART 2)!
+
+    |> Pause
+
+    Note that when we take the sum...
+
+    $$
+    \Large f + g
+    $$
+
+    ...of two functions, the same input, when evaluating the
+    sum, is fed to both functions:
+
+    $$
+    \Large (f + g)(x) = f(x) + g(x).
+    $$
+
+    This means that in order for the sum to be make sense at
+    all, the functions must take inputs with the same
+    units; in addition, because apples should not be added
+    to oranges, the two functions must output values with the
+    same units as well; in other words, if $f$ and $g$ have
+    signatures...
+
+    $$
+    \Large
+    \begin{gathered}
+    f : [\te{A}] \ra [\te{B}] \\
+    g : [\te{C}] \ra [\te{D}] \up{1.35}
+    \end{gathered}
+    $$
+
+    ...then taking the sum...
+
+    $$
+    \Large f + g
+    $$
+
+    ...implies the constraints...
+
+    $$
+    \Large
+    \begin{aligned}
+    \te{A} &= \te{C} \\
+    \te{B} &= \te{D} \up{1.35}
+    \end{aligned}
+    $$
+
+    ...on the units in order for the sum to be “well-formed”, not
+    nonsensical!; i.e., the most general signature under which
+    a sum of $f$ and $g$ makes sense is...
+
+    $$
+    \Large
+    \begin{aligned}
+    f : [\te{A}] \ra [\te{B}]& \\
+    g : [\te{A}] \ra [\te{B}]& \up{1.35}
+    \end{aligned}
+    $$
+
+    ...with the _same_ input units, and the _same_ output
+    units!
+
+
+
+
+
+    !! |> Pause
+    !! *Constraints on function signatures imposed by
+    !! function operations.* Taking the sum, product,
+    !! quotient, etc, of two functions imposes certain
+    !! constraints on their signatures, in order for the
+    !! operation to not be physically meaningless.
+    !! The following table shows the
+    !! most general patterns that are possible:
+    !! of signature possible when taking
+    !! the sum, product, quotient, or composition of two functions:
+
+
+|> Section
+    work=ing
+    *Function operation and units.* Taking the sum or
+    product, etc, of two functions imposes certain
+    constraints on their signatures in order for the operation
+    to not be physically meaningless, in ways that are
+    worth being aware of. The following table shows the
+    most general pattern of signature possible when taking
+    the sum, product, quotient, or composition of two functions:
+
+    
+
+    !! of two functions
+
+    !! $$
+    !! \Large (f + g)(x) = f(x) + g(x)
+    !! $$
+    $$
+    \Large f + g
+    $$
+
+    !! presupposes that the inputs and outputs of
+    !! $f$ and $g$ meet certain requirements; e.g.,
+
+    !! $$
+    !! \Large 
+    !! $$
+
+|> Section
+    work=ing
+    !! *Function operations.*
+    *The constraints imposed by function operations
+    on units.*
+    When we add two functions the
+    same input shows up as an input to both functions:
+
+    $$
+    \Large (f + g)(x) = f(x) + g(x)
+    $$
+
+    What this means is that if units are present 
+    $f$ and $g$ must both take the _same kind_ of input, units-wise,
+    in order for the function addition to
+    make any sense; if we write
+
+    $$
+    \Large f : [\te{A}] \ra [\te{B}]
+    $$
+
+    !! to indicate that the inputs to $f$ have
+    !! unit A and the output of $f$ have unit B, then
+    to indicate that $f$ takes inputs with units A
+    and produces outputs with units B, and
+
+    $$
+    \Large g : [\te{C}] \ra [\te{D}]
+    $$
+
+    likewise for $g$ for some units C and D, then the sum
+
+    $$
+    \Large f + g
+    $$
+
+    cannot/must not/should not take place unless
+
+    $$
+    \Large \te{A} = \te{C}
+    $$
+
+    because the same input $x$ must have units A
+    when it is fed to $f$, and units C when it is fed
+    to $g$! In addition, we must have
+    !! the constraint
+    !! to $g$!!!!!!!!!! Though in this case, the constraint
+
+    $$
+    \Large \te{B} = \te{D}
+    $$
+
+    also in this case, by the old addage that apples should
+    not be added to oranges. (Specifically, note 
+    that $f(x)$ has units B, that
+    $g(x)$ has units D, and that $f(x)$ is added to $g(x)$.)
+    
+    By contrast,
+
+    __apples can be multiplied by oranges__
+
+    as testified by units such as __meters squared__ or __kilowatt-hours__
+    or __worker years__ or even __meters per second__
+    that is “meters times per seconds” (or “meters times seconds inverse ($\te{s}^{-1}$)”),
+    !! (take _meters squared_ or _kilowatt-hours_,
+    !! or even _meters per second_, where in the last
+    !! case we multiply _meters_ by 
+    !! _per seconds_, $\te{s}^{-1}$)
+    !! and so 
+    so to form the product of two functions
+
+    $$
+    \Large fg
+    $$
+
+    with signatures 
+
+    $$
+    \begin{gathered}
+    \,\Large f : [\te{A}] \ra [\te{B}], \\
+    \Large g : [\te{C}] \ra [\te{D}] \up{1.35}
+    \end{gathered}
+    $$
+
+    the constraint 
+
+    $$
+    \Large \te{A} = \te{C}
+    $$
+
+    must still be obeyed (because
+
+    $$
+    \Large (fg)(x) = f(x)g(x)
+    $$
+
+    and ‘$x$’ again appears as an input to both $f$ and
+    $g$), but, by  the constraint
+
+    $$
+    \Large \te{B} = \te{D}
+    $$
+
+    can be dropped, because any kind of unit can be
+    multiplied by any other kind of unit! So in this case
+    the “general form” of $f$ and $g$ would be
+
+    $$
+    \begin{gathered}
+    \,\Large f : [\te{A}] \ra [\te{B}], \\
+    \,\Large g : [\te{A}] \ra [\te{C}]\, \up{1.35}
+    \end{gathered}
+    $$
+
+    for some units A, B, C, while in the case of function
+    addition the “general form” would be
+
+    $$
+    \begin{gathered}
+    \,\Large f : [\te{A}] \ra [\te{B}], \\
+    \,\Large g : [\te{A}] \ra [\te{B}]\, \up{1.35}
+    \end{gathered}
+    $$
+
+    with only two degrees of freedom in the units, A and B.
+
+    !! $$
+    !! \Large \te{A} = \te{C}
+    !! $$
+
+    !! remains, while the constraint
+
+    !! $$
+    !! \Large \te{B} = \te{D}
+    !! $$
+    
+    !! is dropped,
+    !! by contrast,
+    !! and the output units B and D can be 
+    !! completely arbitrary!
+
+    !! is lost, for $f : [A] \ra [B]$, $g : [C] \ra [D]$.
+    !! —because the same input $x$ is used as
+    !! an input to both $f$ and $g$—but
+
+
+
+    !! “seconds inverse”,
+    !! or “one over seconds”, $\te{s}^{-1}$)
+    !! must also be satisfied in order for the function
+    !! addition to make any sense, because the outputs
+    !! $f(x)$ and $g(x)$ are added together, and by the
+    !! old addage about adding apples to oranges.
+
+
+
+    !! $$
+    !! \begin{gathered}
+    !! \Large f : [\te{A}] \ra [\te{B}] \\
+    !! \Large g : [\te{C}] \ra [\te{D}] \up{1.2}
+    !! \end{gathered}
+    !! $$
+
+|> Section
+    work=ing
+    *The chain rule.* 
+    Starting slow, we invite you to verify the following
+    multiplication:
+
+    $$
+    2.22 \times 10.1 = 22.422.
+    $$
+
+    Here is a multiplication only
+    of units:
+
+    $$
+    \,\left[{\te{m}\over \te{s}}\right]\times\left[{\te{\$}\over \te{m}}\right] = \left[{\te{\$}\over \te{m}}\right].
+    $$
+
+    We can combine the two:
+
+    |> Boxed
+        $$
+        2.22[\te{m}/\te{s}] \times 10.1[\te{\$}/\te{m}] = 22.422[\te{\$}/\te{s}]
+        $$
+
+    The multiplication of
+
+    __meters per second__
+
+    (“[m$/$s]”) by
+
+    __dollars per meter__
+
+    (“[\$$/$m]”) gives
+
+    __dollars per second__
+
+    (“[\$$/$s]”) yay!

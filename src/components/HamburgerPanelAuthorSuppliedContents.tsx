@@ -36,6 +36,16 @@ const HamburgerPanelAuthorSuppliedContents = () => {
         >
           The Trigonometric Functions
         </HamburgerPanelItem>
+        <HamburgerPanelItem
+          article_type={6}
+          href="chapter6"
+        >
+          Differentiation via Dimensional Analysis {" "}
+          <i>
+            &amp;
+          </i>
+          {" "} More
+        </HamburgerPanelItem>
       </ul>
     </div>
     <div id="bootcamp">
@@ -52,12 +62,6 @@ const HamburgerPanelAuthorSuppliedContents = () => {
           href="bootcamp2"
         >
           Powers of 10
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={3}
-          href="bootcamp3"
-        >
-          Components Playground
         </HamburgerPanelItem>
       </ul>
     </div>
