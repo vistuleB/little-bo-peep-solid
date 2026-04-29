@@ -135,63 +135,63 @@
         content=selection
         chapter=>>trigonometry
         >>_guesstimate_cos_10x_linear_
-        !! >>_guesstimate_cos_10x_parabolic_
-        !! >>_guesstimate_sinusoid_
-        !! >>_triangle_conch_
-        !! >>_0_point_2_radians_
-        !! >>_handdrawn_oval_P_position_
-        !! >>_eta_and_4eta_as_ratios_
-        !! >>_vector_addition_definition_
-        !! >>_circular_motion_from_x_coordinate_
-        !! >>_spherical_to_cartesian_coordinates_1_
-        !! >>_spherical_to_cartesian_coordinates_2_
-        !! >>_blueprints_top_and_side_
-        !! >>_blueprints_open_thin_door_
-        !! >>_powers_of_secant_
-        !! >>_isosets_of_xy_v5_
-        !! >>_long_division_11_over_7_
-        !! >>_long_division_22_over_7_
-        !! >>_long_division_15542486476949_777_
-        !! >>_complement_calculation_
-        !! >>_complement_of_complement_
-        !! >>_rotate_central_90_
-        !! >>_ratio_A_over_B_tan^2_
-        !! >>_ratio_A_over_B_1_+_tan^2_
-        !! >>_archimedean_projection_new_ver_
-        !! >>_rank_the_7_slices_
-        !! >>_sphere_area_formula_from_archimedean_property_
-        !! >>_sphere_volume_
-        !! >>_gas_tank_
-        !! >>_gas_tank_decimal_approximation_
-        !! >>_three_quarters_decimal_approximation_
-        !! >>_a_ship_
-        !! >>_four_compositions_expressed_
-        !! >>_four_compositions_graphed_
-        !! >>_ABCD_roles_
-        !! >>_draw_the_sandwich_
-        !! >>_cosine_rule_geometric_1_
-        !! >>_cosine_rule_geometric_2_
-        !! >>_cosine_rule_geometric_3_
-        !! >>_cosine_rule_geometric_4_
-        !! >>_cosine_rule_via_jacks_rule_
-        !! >>_polar_distance_
-        !! >>_cosine_rule_
-        !! >>_sine_rule_
-        !! >>_secant_cosecant_intersections_
-        !! >>_tan_cot_on_unit_circle_
-        !! >>_geometric_construction_of_1_over_A_new_ver_
-        !! >>_x_square_x_cube_construction_
-        !! >>_sqrt_xy_construction_
-        !! >>_project_i_and_j_
-        !! >>_unit_dot_product_geometric_interpretation_
-        !! >>_four_graphs_
-        !! >>_where_is_the_pythagorean_identity_
-        !! >>_more_closely_related_to_sin2x_or_
-        !! >>_more_closely_related_followup_
-        !! >>_max_cosx_plus_sinx_new_new_ver_
-        !! >>_cosx_plus_sinx_as_sinusoid_
-        !! >>_Acosx_plus_Bsinx_as_sinusoid_
-        !! >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
+        >>_guesstimate_cos_10x_parabolic_
+        >>_guesstimate_sinusoid_
+        >>_triangle_conch_
+        >>_0_point_2_radians_
+        >>_handdrawn_oval_P_position_
+        >>_eta_and_4eta_as_ratios_
+        >>_vector_addition_definition_
+        >>_circular_motion_from_x_coordinate_
+        >>_spherical_to_cartesian_coordinates_1_
+        >>_spherical_to_cartesian_coordinates_2_
+        >>_blueprints_top_and_side_
+        >>_blueprints_open_thin_door_
+        >>_powers_of_secant_
+        >>_isosets_of_xy_v5_
+        >>_long_division_11_over_7_
+        >>_long_division_22_over_7_
+        >>_long_division_15542486476949_777_
+        >>_complement_calculation_
+        >>_complement_of_complement_
+        >>_rotate_central_90_
+        >>_ratio_A_over_B_tan^2_
+        >>_ratio_A_over_B_1_+_tan^2_
+        >>_archimedean_projection_new_ver_
+        >>_rank_the_7_slices_
+        >>_sphere_area_formula_from_archimedean_property_
+        >>_sphere_volume_
+        >>_gas_tank_
+        >>_gas_tank_decimal_approximation_
+        >>_three_quarters_decimal_approximation_
+        >>_a_ship_
+        >>_four_compositions_expressed_
+        >>_four_compositions_graphed_
+        >>_ABCD_roles_
+        >>_draw_the_sandwich_
+        >>_cosine_rule_geometric_1_
+        >>_cosine_rule_geometric_2_
+        >>_cosine_rule_geometric_3_
+        >>_cosine_rule_geometric_4_
+        >>_cosine_rule_via_jacks_rule_
+        >>_polar_distance_
+        >>_cosine_rule_
+        >>_sine_rule_
+        >>_secant_cosecant_intersections_
+        >>_tan_cot_on_unit_circle_
+        >>_geometric_construction_of_1_over_A_new_ver_
+        >>_x_square_x_cube_construction_
+        >>_sqrt_xy_construction_
+        >>_project_i_and_j_
+        >>_unit_dot_product_geometric_interpretation_
+        >>_four_graphs_
+        >>_where_is_the_pythagorean_identity_
+        >>_more_closely_related_to_sin2x_or_
+        >>_more_closely_related_followup_
+        >>_max_cosx_plus_sinx_new_new_ver_
+        >>_cosx_plus_sinx_as_sinusoid_
+        >>_Acosx_plus_Bsinx_as_sinusoid_
+        >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
 
 
 
