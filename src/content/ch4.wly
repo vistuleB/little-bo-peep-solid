@@ -287,7 +287,7 @@
 
     |> ImageRight
         src=images/derivative_units1_cloud.svg
-        offset_y=-0.6em
+        offset_y=0.6em
     
     |> List
         style=padding-left:2.5rem;padding-right:2rem;
@@ -687,20 +687,26 @@
     per second_ (a measure of acceleration!)
     is being gained or lost _per second_.
 
-    The term “jerk” is at least half-way well-chosen,
+    The term “jerk” is well-chosen,
     too, considering that
 
     __jerk__
 
-    implies a change in acceleration insofar as the
+    implies a change in acceleration, insofar as the
     everyday meaning of the word is concerned—think
     of experiencing a
 
     __constant acceleration__
 
     in a train or subway car, etc—the
-    “constant” qualifier, if you think about it, implies
-    a non-jerky experience!
+    “constant” qualifier
+    implies a buttery-smooth, “non-jerky” experience!
+    (And therefore, vice-versa, some “jerk” implies a
+    non-constant acceleration, i.e., some nonzero
+    _rate of change_ of the acceleration, i.e.,
+    nonzero _jerk_ in the mathematical sense.)
+    !! , if you think about it, implies
+    !! a non-jerky experience!
 
     !! The word “jerk” is aptly chosen,
     !! too, considering that

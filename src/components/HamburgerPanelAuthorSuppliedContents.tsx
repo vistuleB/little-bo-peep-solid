@@ -1,5 +1,6 @@
 import HamburgerPanelItem  from "~/components/HamburgerPanelItem";
 import HamburgerPanelTitle  from "~/components/HamburgerPanelTitle";
+import { Math }  from "~/components/Math";
 
 const HamburgerPanelAuthorSuppliedContents = () => {
   return <>
@@ -35,6 +36,21 @@ const HamburgerPanelAuthorSuppliedContents = () => {
           href="chapter5"
         >
           The Trigonometric Functions
+        </HamburgerPanelItem>
+        <HamburgerPanelItem
+          article_type={6}
+          href="chapter6"
+        >
+          Dimensional Analysis
+        </HamburgerPanelItem>
+        <HamburgerPanelItem
+          article_type={7}
+          href="chapter7"
+        >
+          The Derivative of {" "}
+          <Math>
+            $x^2$
+          </Math>
         </HamburgerPanelItem>
       </ul>
     </div>

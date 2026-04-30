@@ -33,69 +33,72 @@ export default createHandler(() => (
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          {import.meta.env.VITE_ENV === "LOCAL" ? (
-            <>
-              <link rel="icon" href="/favicon-local.ico" />
-              <link
-                rel="apple-touch-icon"
-                sizes="180x180"
-                href="/apple-touch-icon-local.png"
-              />
-              <link
-                rel="apple-touch-startup-image"
-                href="/apple-touch-icon-local.png"
-              />
-            </>
-          ) : import.meta.env.VITE_ENV === "DEV" ? (
-            <>
-              <link rel="icon" href="/favicon-dev.ico" />
-              <link
-                rel="apple-touch-icon"
-                sizes="180x180"
-                href="/apple-touch-icon-dev.png"
-              />
-              <link
-                rel="apple-touch-startup-image"
-                href="/apple-touch-icon-dev.png"
-              />
-              <link
-                rel="mask-icon"
-                href="/safari-pinned-tab-dev.svg"
-                color="#5bbad5"
-              />
-              <link
-                rel="apple-touch-icon-precomposed"
-                href="/apple-touch-icon-dev.png"
-              />
-              <script
-                defer
-                src="https://cloud.umami.is/script.js"
-                data-website-id="6ef76d0c-cf74-4368-ad72-55a1f5091018"
-              ></script>
-            </>
-          ) : (
-            <>
-              <link rel="icon" href="/favicon.ico" />
-              <link
-                rel="apple-touch-icon"
-                sizes="180x180"
-                href="/apple-touch-icon.png"
-              />
-              <link
-                rel="apple-touch-startup-image"
-                href="/apple-touch-icon.png"
-              />
-              <link
-                rel="mask-icon"
-                href="/safari-pinned-tab.svg"
-                color="#5bbad5"
-              />
-              <link
-                rel="apple-touch-icon-precomposed"
-                href="/apple-touch-icon.png"
-              />
-            </>
-          )}
+          {
+            import.meta.env.VITE_ENV === "LOCAL" ? (
+              <>
+                <link rel="icon" href="/favicon-local.ico" />
+                <link
+                  rel="apple-touch-icon"
+                  sizes="180x180"
+                  href="/apple-touch-icon-local.png"
+                />
+                <link
+                  rel="apple-touch-startup-image"
+                  href="/apple-touch-icon-local.png"
+                />
+              </>
+            ) : (
+              <>
+                <link rel="icon" href="/favicon-dev.ico" />
+                <link
+                  rel="apple-touch-icon"
+                  sizes="180x180"
+                  href="/apple-touch-icon-dev.png"
+                />
+                <link
+                  rel="apple-touch-startup-image"
+                  href="/apple-touch-icon-dev.png"
+                />
+                <link
+                  rel="mask-icon"
+                  href="/safari-pinned-tab-dev.svg"
+                  color="#5bbad5"
+                />
+                <link
+                  rel="apple-touch-icon-precomposed"
+                  href="/apple-touch-icon-dev.png"
+                />
+                <script
+                  defer
+                  src="https://cloud.umami.is/script.js"
+                  data-website-id="6ef76d0c-cf74-4368-ad72-55a1f5091018"
+                ></script>
+              </>
+            )
+            // : (
+            //   <>
+            //     <link rel="icon" href="/favicon.ico" />
+            //     <link
+            //       rel="apple-touch-icon"
+            //       sizes="180x180"
+            //       href="/apple-touch-icon.png"
+            //     />
+            //     <link
+            //       rel="apple-touch-startup-image"
+            //       href="/apple-touch-icon.png"
+            //     />
+            //     <link
+            //       rel="mask-icon"
+            //       href="/safari-pinned-tab.svg"
+            //       color="#5bbad5"
+            //     />
+            //     <link
+            //       rel="apple-touch-icon-precomposed"
+            //       href="/apple-touch-icon.png"
+            //     />
+            //   </>
+            // )
+          }
 
           <meta
             name="viewport"

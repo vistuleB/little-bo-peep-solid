@@ -1,3 +1,4 @@
+import { Math }  from "~/components/Math";
 import { Spacer }  from "~/components/Spacer";
 import TOC  from "~/components/TOC";
 import TOCItem  from "~/components/TOCItem";
@@ -43,6 +44,21 @@ export default function __Home__() {
             href="chapter5"
           >
             The Trigonometric Functions
+          </TOCItem>
+          <TOCItem
+            article_type={6}
+            href="chapter6"
+          >
+            Dimensional Analysis
+          </TOCItem>
+          <TOCItem
+            article_type={7}
+            href="chapter7"
+          >
+            The Derivative of {" "}
+            <Math>
+              $x^2$
+            </Math>
           </TOCItem>
         </ul>
       </div>

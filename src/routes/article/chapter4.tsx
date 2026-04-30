@@ -852,7 +852,7 @@ const Rest = () => {
           ...then the “after” graph will have units of...
           <ImageRight
             src="/build-img/svgo-svg/whL5.svg"
-            offset_y="-0.6em"
+            offset_y="0.6em"
           />
         </OuterP>
         <Pause />
@@ -1662,7 +1662,7 @@ const Rest = () => {
           .
         </OuterP>
         <OuterP class="indent-10">
-          The term “jerk” is at least half-way well-chosen,
+          The term “jerk” is well-chosen,
           too, considering that
         </OuterP>
         <Pause />
@@ -1671,7 +1671,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          implies a change in acceleration insofar as the
+          implies a change in acceleration, insofar as the
           everyday meaning of the word is concerned—think
           of experiencing a
         </OuterP>
@@ -1682,8 +1682,20 @@ const Rest = () => {
         <Pause />
         <OuterP>
           in a train or subway car, etc—the
-          “constant” qualifier, if you think about it, implies
-          a non-jerky experience!
+          “constant” qualifier
+          implies a buttery-smooth, non-jerky experience!
+          (And therefore, vice-versa, some “jerk” implies a
+          non-constant acceleration, i.e., some nonzero
+          {" "}
+          <i>
+            rate of change
+          </i>
+          {" "} of the acceleration, i.e.,
+          nonzero {" "}
+          <i>
+            jerk
+          </i>
+          {" "} in the mathematical sense.)
         </OuterP>
         <Pause />
         <OuterP>

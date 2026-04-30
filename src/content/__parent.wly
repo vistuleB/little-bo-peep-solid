@@ -274,3 +274,7 @@
     |> In
         content=selection
         chapter=>>chain
+
+    |> In
+        content=selection
+        chapter=>>esoteric
