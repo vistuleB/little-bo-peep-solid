@@ -1683,7 +1683,7 @@ const Rest = () => {
         <OuterP>
           in a train or subway car, etc—the
           “constant” qualifier
-          implies a buttery-smooth, non-jerky experience!
+          implies a buttery-smooth, “non-jerky” experience!
           (And therefore, vice-versa, some “jerk” implies a
           non-constant acceleration, i.e., some nonzero
           {" "}
