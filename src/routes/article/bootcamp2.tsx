@@ -2129,6 +2129,762 @@ const Rest = () => {
                 Exercise 1.
               </b>
               {" "}
+              Compute {" "}
+              <NoBreak>
+                <Math>
+                  $2^&#123;-2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $2^&#123;-3&#125;$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $2^&#123;-4&#125;$
+              </Math>
+              {" "} by hand.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since {" "}
+              <NoBreak>
+                <Math>
+                  $2^&#123;-1&#125; = 1/2 = 0.5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} one has
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 2^&#123;-2&#125; = &#123;2^&#123;-1&#125;\over 2&#125; = &#123;0.5 \over 2&#125; = 0.25
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 2^&#123;-3&#125; = &#123;2^&#123;-2&#125;\over 2&#125; = &#123;0.25 \over 2&#125; = 0.125
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 2^&#123;-4&#125; = &#123;2^&#123;-3&#125;\over 2&#125; = &#123;0.125 \over 2&#125; = 0.0625
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              respectively.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                For the last computation, {" "}
+                <Math>
+                  $0.125$
+                </Math>
+                {" "} can be viewed
+                as twelve hundredths plus {" "}
+                <Math>
+                  $5$
+                </Math>
+                {" "} thousandths:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/KJqj.svg" />
+              <Pause />
+              <OuterP>
+                Half of twelve hundredths is six hundredths, and
+                half of {" "}
+                <Math>
+                  $5$
+                </Math>
+                {" "} thousandths is {" "}
+                <Math>
+                  $2.5$
+                </Math>
+                {" "} thousandths:
+              </OuterP>
+              <Pause />
+              <Image src="/build-img/svgo-svg/SBDm.svg" />
+              <Pause />
+              <OuterP>
+                ...so {" "}
+                <Math>
+                  $0.125/2$
+                </Math>
+                {" "} is {" "}
+                <NoBreak>
+                  <Math>
+                    $0.06 + 0.0025 = 0.0625$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={2}>
+          <ExerciseStatement id="_5_hgi_">
+            <OuterP>
+              <b>
+                Exercise 2.
+              </b>
+              {" "}
+              Compute {" "}
+              <Math>
+                $100/16$
+              </Math>
+              {" "} by hand.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;1 \over 16&#125; = &#123;1 \over 2\cdot 2\cdot 2\cdot 2&#125; = 2^&#123;-4&#125; = 0.0625
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;100 \over 16&#125; = 100 \cdot &#123;1 \over 16&#125; = 100\cdot 0.0625 = 6.25
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and that's all there is to it! (Or you could repeatedly divide {" "}
+              <Math>
+                $100$
+              </Math>
+              {" "} by {" "}
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              until you reach {" "}
+              <NoBreak>
+                <Math>
+                  $6.25$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} after the fourth division.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={3}>
+          <ExerciseStatement id="_6_hgi_">
+            <OuterP>
+              <b>
+                Exercise 3.
+              </b>
+              {" "}
+              If “万” is Chinese for {" "}
+              <i>
+                ten thousand
+              </i>
+              , what is “万万” in English?
+              What about “万万万”?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              “万万” is “ten thousand ten thousand”, or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^4 \times 10^4 = 10^8
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or {" "}
+              <i>
+                one hundred million
+              </i>
+              {" "} since {" "}
+              <Math>
+                $10^8 = 10^2 \times 10^6$
+              </Math>
+              {" "} is a hundred times a
+              million. Similarly, “万万万” is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^4 \times 10^4 \times 10^4 = 10^&#123;12&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which is just one trillion.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Notes.
+              </i>
+              {" "}
+              Rearranging
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              ten thousand ten thousand
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              to
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              ten ten thousand thousand
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              directly leads us to “hundred million”
+              without having to use exponents, since ten
+              times ten is a hundred and since a thousand
+              times a thousand is a million.
+            </OuterP>
+            <OuterP class="indent-10">
+              (Similarly,
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              ten thousand ten thousand ten thousand
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              becomes
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              ten ten ten thousand thousand thousand
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              after rearrangement, which can be seen to
+              equal one trillion because “ten ten ten” is
+              a thousand.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={4}>
+          <ExerciseStatement id="_7_hgi_">
+            <OuterP>
+              <b>
+                Exercise 4.
+              </b>
+              {" "}
+              How many millimeters in a kilometer?
+              How many kilometers in a millimeter?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              There are {" "}
+              <Math>
+                $10^3$
+              </Math>
+              {" "} millimeters in a meter
+              (
+              <i>
+                milli
+              </i>
+              {" "} = thousandth) and {" "}
+              <Math>
+                $10^3$
+              </Math>
+              {" "} meters
+              in a kilometer, so there are
+              {" "}
+              <Math>
+                $10^3 \times 10^3 = 10^6$
+              </Math>
+              {" "}
+              millimeters in a kilometer.
+            </OuterP>
+            <OuterP class="indent-10">
+              From there, it automatically follows that
+              there are {" "}
+              <Math>
+                $1/10^6 = 10^&#123;-6&#125;$
+              </Math>
+              {" "} kilometers in
+              a millimeter.
+            </OuterP>
+            <OuterP class="indent-10">
+              (Or you can run the reverse reasoning:
+              There are {" "}
+              <Math>
+                $10^&#123;-3&#125;$
+              </Math>
+              {" "} kilometers in a meter,
+              and {" "}
+              <Math>
+                $10^&#123;-3&#125;$
+              </Math>
+              {" "} meters in a millimeter,
+              so {" "}
+              <Math>
+                $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
+              </Math>
+              {" "}
+              kilometers in a millimeter.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={5}>
+          <ExerciseStatement id="_8_hgi_">
+            <OuterP>
+              <b>
+                Exercise 5.
+              </b>
+              {" "}
+              How many kilometers is {" "}
+              <Math>
+                $10^&#123;24&#125;$
+              </Math>
+              {" "} millimeters?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 1\textrm&#123;mm&#125; = 10^&#123;-6&#125;\textrm&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the previous problem, so
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^&#123;24&#125; \textrm&#123;mm&#125; = 10^&#123;24&#125;\cdot 10^&#123;-6&#125;\textrm&#123;km&#125; = 10^&#123;18&#125;\textrm&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by direct substitution. (You can do that with
+              units.) The answer is therefore: {" "}
+              <NoBreak>
+                <Math>
+                  $10^&#123;18&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={6}>
+          <ExerciseStatement id="_9_hgi_">
+            <OuterP>
+              <b>
+                Exercise 6.
+              </b>
+              {" "}
+              If the US yearly budget is {" "}
+              <Math>
+                $4$
+              </Math>
+              {" "} trillion
+              dollars, what percentage of the budget is
+              one hundred billion $?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              One hundred billion is {" "}
+              <Math>
+                $10\%$
+              </Math>
+              {" "} of one trillion [cf.:
+              {" "}
+              <NoBreak>
+                <Math>
+                  $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
+                </Math>
+                ]
+              </NoBreak>
+              {" "}
+              and one trillion is a quarter of {" "}
+              <Math>
+                $4$
+              </Math>
+              {" "}
+              trillion, so the answer is {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Postscript
+              </i>
+              :
+              There is no such thing as “the U.S. budget”. A
+              monetarily sovereign nation {" "}
+              <i>
+                spends
+              </i>
+              {" "} its currency
+              into existence. (And taxes it out of existence.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={7}>
+          <ExerciseStatement id="_10_hgi_">
+            <OuterP>
+              <b>
+                Exercise 7.
+              </b>
+              {" "}
+              What is the logarithm base {" "}
+              <Math>
+                $10$
+              </Math>
+              {" "} of one trillion?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <NoBreak>
+                <Math>
+                  $12$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because one trillion is {" "}
+              <NoBreak>
+                <Math>
+                  $10^&#123;12&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={8}>
+          <ExerciseStatement id="_11_hgi_">
+            <OuterP>
+              <b>
+                Exercise 8.
+              </b>
+              {" "}
+              What is the logarithm base {" "}
+              <Math>
+                $10$
+              </Math>
+              {" "} of {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because {" "}
+              <NoBreak>
+                <Math>
+                  $1 = 10^0$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={9}>
+          <ExerciseStatement id="_12_hgi_">
+            <OuterP>
+              <b>
+                Exercise 9.
+              </b>
+              {" "}
+              What is the logarithm base {" "}
+              <Math>
+                $10$
+              </Math>
+              {" "} of: {" "}
+              <i>
+                a trillion times a billion times a million times a thousand
+              </i>
+              ?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^&#123;12&#125;\times 10^&#123;9&#125;\times 10^&#123;6&#125;\times 10^3 = 10^&#123;12+9+6+3&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              the answer is {" "}
+              <NoBreak>
+                <Math>
+                  $12+9+6+3$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} or {" "}
+              <NoBreak>
+                <Math>
+                  $30$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={10}>
+          <ExerciseStatement id="_13_hgi_">
+            <OuterP>
+              <b>
+                Exercise 10.
+              </b>
+              {" "}
+              Evaluate:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125;
+              $$
+            </MathBlock>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; = &#123;10^&#123;6-12+10&#125; \over 10^&#123;-4 -4&#125;&#125; = &#123;10^4 \over 10^&#123;-8&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;10^4 \over 10^&#123;-8&#125;&#125; = 10^4 \cdot &#123;1 \over 10^&#123;-8&#125;&#125; = 10^4\cdot 10^&#123;-(-8)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^4\cdot 10^&#123;-(-8)&#125; = 10^4\cdot 10^8 = 10^&#123;4 + 8&#125; = 10^&#123;12&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so the answer is {" "}
+              <NoBreak>
+                <Math>
+                  $10^&#123;12&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={11}>
+          <ExerciseStatement id="_14_hgi_">
+            <OuterP>
+              <b>
+                Exercise 11.
+              </b>
+              {" "}
+              How many {" "}
+              <i>
+                millibits
+              </i>
+              {" "} in a {" "}
+              <i>
+                gigabyte
+              </i>
+              ?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Presumably, there are {" "}
+              <Math>
+                $1000$
+              </Math>
+              {" "} “millibits”
+              (whatever those are, we can go along with
+              the joke here) in one bit. Since there are
+              eight bits in a byte, and a million bytes
+              in a gigabyte, this means that there would
+              be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 1000 \times 8 \times 10^6 = 8 \times 10^9
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or {" "}
+              <Math>
+                $8$
+              </Math>
+              {" "} billion “millibits” per gigabyte.
+              (But to reiterate, there is no such thing
+              as a “millibit”; a bit is a {" "}
+              <i>
+                discrete
+              </i>
+              —i.e.,
+              indivisible—unit of computer memory.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={12}>
+          <ExerciseStatement id="_15_hgi_">
+            <OuterP>
+              <b>
+                Exercise 12.
+              </b>
+              {" "}
+              It so happens that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 6.25
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (i.e., the value of {" "}
+              <NoBreak>
+                <Math>
+                  $100/16$
+                </Math>
+                )
+              </NoBreak>
+              {" "} is also
+              famous for being equal to {" "}
+              <NoBreak>
+                <Math>
+                  $2.5^2$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (You can
+              verify that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 25^2 = 625
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and, by shifting two decimal places, one
+              finds {" "}
+              <NoBreak>
+                <Math>
+                  $2.5^2 = 6.25$
+                </Math>
+                .)
+              </NoBreak>
+              {" "} Can you elucidate
+              why it would be that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;100 \over 16&#125; = 2.5^2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by using some kind of algebra?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              One has
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large &#123;100 \over 16&#125; = &#123;10^2 \over 4^2&#125; = \left(\!&#123;10\over 4&#125;\!\right)^&#123;\!\!2&#125; = \left(\!&#123;5\over 2&#125;\!\right)^&#123;\!\!2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and {" "}
+              <NoBreak>
+                <Math>
+                  $5/2 = 2.5$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (Ta-daa!)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={13}>
+          <ExerciseStatement id="_16_hgi_">
+            <OuterP>
+              <b>
+                Exercise 13.
+              </b>
+              {" "}
               Prove that
             </OuterP>
             <Pause />
@@ -2243,99 +2999,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={2}>
-          <ExerciseStatement id="_5_hgi_">
+        <Exercise number={14}>
+          <ExerciseStatement id="_17_hgi_">
             <OuterP>
               <b>
-                Exercise 2.
-              </b>
-              {" "}
-              It so happens that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 6.25
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (i.e., the value of {" "}
-              <NoBreak>
-                <Math>
-                  $100/16$
-                </Math>
-                )
-              </NoBreak>
-              {" "} is also
-              famous for being equal to {" "}
-              <NoBreak>
-                <Math>
-                  $2.5^2$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (You can
-              verify that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 25^2 = 625
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and, by shifting two decimal places, one
-              finds {" "}
-              <NoBreak>
-                <Math>
-                  $2.5^2 = 6.25$
-                </Math>
-                .)
-              </NoBreak>
-              {" "} Can you elucidate
-              why it would be that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;100 \over 16&#125; = 2.5^2
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by using some kind of algebra?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              One has
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;100 \over 16&#125; = &#123;10^2 \over 4^2&#125; = \left(\!&#123;10\over 4&#125;\!\right)^&#123;\!\!2&#125; = \left(\!&#123;5\over 2&#125;\!\right)^&#123;\!\!2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $5/2 = 2.5$
-                </Math>
-                .
-              </NoBreak>
-              {" "} (Ta-daa!)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={3}>
-          <ExerciseStatement id="_6_hgi_">
-            <OuterP>
-              <b>
-                Exercise 3.
+                Exercise 14.
               </b>
               {" "}
               Rewrite each of these expressions...
@@ -2482,581 +3150,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={4}>
-          <ExerciseStatement id="_7_hgi_">
+        <Exercise number={15}>
+          <ExerciseStatement id="_18_hgi_">
             <OuterP>
               <b>
-                Exercise 4.
-              </b>
-              {" "}
-              If the US yearly budget is {" "}
-              <Math>
-                $4$
-              </Math>
-              {" "} trillion
-              dollars, what percentage of the budget is
-              one hundred billion $?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              One hundred billion is {" "}
-              <Math>
-                $10\%$
-              </Math>
-              {" "} of one trillion [cf.:
-              {" "}
-              <NoBreak>
-                <Math>
-                  $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
-                </Math>
-                ]
-              </NoBreak>
-              {" "}
-              and one trillion is a quarter of {" "}
-              <Math>
-                $4$
-              </Math>
-              {" "}
-              trillion, so the answer is {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Postscript
-              </i>
-              :
-              There is no such thing as “the U.S. budget”. A
-              monetarily sovereign nation {" "}
-              <i>
-                spends
-              </i>
-              {" "} its currency
-              into existence. (And taxes it out of existence.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={5}>
-          <ExerciseStatement id="_8_hgi_">
-            <OuterP>
-              <b>
-                Exercise 5.
-              </b>
-              {" "}
-              Compute {" "}
-              <NoBreak>
-                <Math>
-                  $2^&#123;-2&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $2^&#123;-3&#125;$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $2^&#123;-4&#125;$
-              </Math>
-              {" "} by hand.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Since {" "}
-              <NoBreak>
-                <Math>
-                  $2^&#123;-1&#125; = 1/2 = 0.5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} one has
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2^&#123;-2&#125; = &#123;2^&#123;-1&#125;\over 2&#125; = &#123;0.5 \over 2&#125; = 0.25
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2^&#123;-3&#125; = &#123;2^&#123;-2&#125;\over 2&#125; = &#123;0.25 \over 2&#125; = 0.125
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 2^&#123;-4&#125; = &#123;2^&#123;-3&#125;\over 2&#125; = &#123;0.125 \over 2&#125; = 0.0625
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              respectively.
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                For the last computation, {" "}
-                <Math>
-                  $0.125$
-                </Math>
-                {" "} can be viewed
-                as twelve hundredths plus {" "}
-                <Math>
-                  $5$
-                </Math>
-                {" "} thousandths:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/KJqj.svg" />
-              <Pause />
-              <OuterP>
-                Half of twelve hundredths is six hundredths, and
-                half of {" "}
-                <Math>
-                  $5$
-                </Math>
-                {" "} thousandths is {" "}
-                <Math>
-                  $2.5$
-                </Math>
-                {" "} thousandths:
-              </OuterP>
-              <Pause />
-              <Image src="/build-img/svgo-svg/SBDm.svg" />
-              <Pause />
-              <OuterP>
-                ...so {" "}
-                <Math>
-                  $0.125/2$
-                </Math>
-                {" "} is {" "}
-                <NoBreak>
-                  <Math>
-                    $0.06 + 0.0025 = 0.0625$
-                  </Math>
-                  .
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={6}>
-          <ExerciseStatement id="_9_hgi_">
-            <OuterP>
-              <b>
-                Exercise 6.
-              </b>
-              {" "}
-              Compute {" "}
-              <Math>
-                $100/16$
-              </Math>
-              {" "} by hand.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              We have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;1 \over 16&#125; = &#123;1 \over 2\cdot 2\cdot 2\cdot 2&#125; = 2^&#123;-4&#125; = 0.0625
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;100 \over 16&#125; = 100 \cdot &#123;1 \over 16&#125; = 100\cdot 0.0625 = 6.25
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and that's all there is to it! (Or you could repeatedly divide {" "}
-              <Math>
-                $100$
-              </Math>
-              {" "} by {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              until you reach {" "}
-              <NoBreak>
-                <Math>
-                  $6.25$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} after the fourth division.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={7}>
-          <ExerciseStatement id="_10_hgi_">
-            <OuterP>
-              <b>
-                Exercise 7.
-              </b>
-              {" "}
-              Evaluate:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125;
-              $$
-            </MathBlock>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              We have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; = &#123;10^&#123;6-12+10&#125; \over 10^&#123;-4 -4&#125;&#125; = &#123;10^4 \over 10^&#123;-8&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large &#123;10^4 \over 10^&#123;-8&#125;&#125; = 10^4 \cdot &#123;1 \over 10^&#123;-8&#125;&#125; = 10^4\cdot 10^&#123;-(-8)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^4\cdot 10^&#123;-(-8)&#125; = 10^4\cdot 10^8 = 10^&#123;4 + 8&#125; = 10^&#123;12&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so the answer is {" "}
-              <NoBreak>
-                <Math>
-                  $10^&#123;12&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={8}>
-          <ExerciseStatement id="_11_hgi_">
-            <OuterP>
-              <b>
-                Exercise 8.
-              </b>
-              {" "}
-              How many kilometers is {" "}
-              <Math>
-                $10^&#123;24&#125;$
-              </Math>
-              {" "} millimeters?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              We have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1\textrm&#123;mm&#125; = 10^&#123;-6&#125;\textrm&#123;km&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by the previous problem, so
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^&#123;24&#125; \textrm&#123;mm&#125; = 10^&#123;24&#125;\cdot 10^&#123;-6&#125;\textrm&#123;km&#125; = 10^&#123;18&#125;\textrm&#123;km&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by direct substitution. (You can do that with
-              units.) The answer is therefore: {" "}
-              <NoBreak>
-                <Math>
-                  $10^&#123;18&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement id="_12_hgi_">
-            <OuterP>
-              <b>
-                Exercise 9.
-              </b>
-              {" "}
-              How many millimeters in a kilometer?
-              How many kilometers in a millimeter?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              There are {" "}
-              <Math>
-                $10^3$
-              </Math>
-              {" "} millimeters in a meter
-              (
-              <i>
-                milli
-              </i>
-              {" "} = thousandth) and {" "}
-              <Math>
-                $10^3$
-              </Math>
-              {" "} meters
-              in a kilometer, so there are
-              {" "}
-              <Math>
-                $10^3 \times 10^3 = 10^6$
-              </Math>
-              {" "}
-              millimeters in a kilometer.
-            </OuterP>
-            <OuterP class="indent-10">
-              From there, it automatically follows that
-              there are {" "}
-              <Math>
-                $1/10^6 = 10^&#123;-6&#125;$
-              </Math>
-              {" "} kilometers in
-              a millimeter.
-            </OuterP>
-            <OuterP class="indent-10">
-              (Or you can run the reverse reasoning:
-              There are {" "}
-              <Math>
-                $10^&#123;-3&#125;$
-              </Math>
-              {" "} kilometers in a meter,
-              and {" "}
-              <Math>
-                $10^&#123;-3&#125;$
-              </Math>
-              {" "} meters in a millimeter,
-              so {" "}
-              <Math>
-                $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
-              </Math>
-              {" "}
-              kilometers in a millimeter.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={10}>
-          <ExerciseStatement id="_13_hgi_">
-            <OuterP>
-              <b>
-                Exercise 10.
-              </b>
-              {" "}
-              What is the logarithm base {" "}
-              <Math>
-                $10$
-              </Math>
-              {" "} of one trillion?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              <NoBreak>
-                <Math>
-                  $12$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} because one trillion is {" "}
-              <NoBreak>
-                <Math>
-                  $10^&#123;12&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement id="_14_hgi_">
-            <OuterP>
-              <b>
-                Exercise 11.
-              </b>
-              {" "}
-              What is the logarithm base {" "}
-              <Math>
-                $10$
-              </Math>
-              {" "} of {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              <NoBreak>
-                <Math>
-                  $0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} because {" "}
-              <NoBreak>
-                <Math>
-                  $1 = 10^0$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={12}>
-          <ExerciseStatement id="_15_hgi_">
-            <OuterP>
-              <b>
-                Exercise 12.
-              </b>
-              {" "}
-              What is the logarithm base {" "}
-              <Math>
-                $10$
-              </Math>
-              {" "} of: {" "}
-              <i>
-                a trillion times a billion times a million times a thousand
-              </i>
-              ?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^&#123;12&#125;\times 10^&#123;9&#125;\times 10^&#123;6&#125;\times 10^3 = 10^&#123;12+9+6+3&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              the answer is {" "}
-              <NoBreak>
-                <Math>
-                  $12+9+6+3$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} or {" "}
-              <NoBreak>
-                <Math>
-                  $30$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_16_hgi_">
-            <OuterP>
-              <b>
-                Exercise 13.
-              </b>
-              {" "}
-              How many {" "}
-              <i>
-                millibits
-              </i>
-              {" "} in a {" "}
-              <i>
-                gigabyte
-              </i>
-              ?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Presumably, there are {" "}
-              <Math>
-                $1000$
-              </Math>
-              {" "} “millibits”
-              (whatever those are, we can go along with
-              the joke here) in one bit. Since there are
-              eight bits in a byte, and a million bytes
-              in a gigabyte, this means that there would
-              be
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 1000 \times 8 \times 10^6 = 8 \times 10^9
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or {" "}
-              <Math>
-                $8$
-              </Math>
-              {" "} billion “millibits” per gigabyte.
-              (But to reiterate, there is no such thing
-              as a “millibit”; a bit is a {" "}
-              <i>
-                discrete
-              </i>
-              —i.e.,
-              indivisible—unit of computer memory.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_17_hgi_">
-            <OuterP>
-              <b>
-                Exercise 14.
+                Exercise 15.
               </b>
               {" "}
               Find integers {" "}
@@ -3186,10 +3284,10 @@ const Rest = () => {
               </Math>
               {" "} (as in {" "}
               <InChapterLink
-                href="/article/bootcamp2#_6_hgi_"
+                href="/article/bootcamp2#_17_hgi_"
                 class="handle-in-chapter-link"
               >
-                Exercise 3
+                Exercise 14
               </InChapterLink>
               &#8288;):
             </OuterP>
@@ -3603,104 +3701,6 @@ const Rest = () => {
                 </Math>
                 ).
               </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_18_hgi_">
-            <OuterP>
-              <b>
-                Exercise 15.
-              </b>
-              {" "}
-              If “万” is Chinese for {" "}
-              <i>
-                ten thousand
-              </i>
-              , what is “万万” in English?
-              What about “万万万”?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              “万万” is “ten thousand ten thousand”, or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^4 \times 10^4 = 10^8
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or {" "}
-              <i>
-                one hundred million
-              </i>
-              {" "} since {" "}
-              <Math>
-                $10^8 = 10^2 \times 10^6$
-              </Math>
-              {" "} is a hundred times a
-              million. Similarly, “万万万” is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large 10^4 \times 10^4 \times 10^4 = 10^&#123;12&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which is just one trillion.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Notes.
-              </i>
-              {" "}
-              Rearranging
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              ten thousand ten thousand
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              to
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              ten ten thousand thousand
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              directly leads us to “hundred million”
-              without having to use exponents, since ten
-              times ten is a hundred and since a thousand
-              times a thousand is a million.
-            </OuterP>
-            <OuterP class="indent-10">
-              (Similarly,
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              ten thousand ten thousand ten thousand
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              becomes
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              ten ten ten thousand thousand thousand
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              after rearrangement, which can be seen to
-              equal one trillion because “ten ten ten” is
-              a thousand.)
             </OuterP>
           </Solution>
         </Exercise>
