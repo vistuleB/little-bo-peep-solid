@@ -17,6 +17,7 @@ import {
   PREV_NEXT_EXERCISE_BUTTON_RX,
   PREV_NEXT_EXERCISE_BUTTON_W,
 } from "~/constants";
+import { Spacer } from "./Spacer";
 
 type ExercisesProps = ParentProps &
   SharedProps & {
@@ -42,7 +43,7 @@ export const Exercises = (props: ExercisesProps) => {
           height="50px"
           class="mt-[15px] mb-[40px]"></Image>
       )}
-      {children_list.length > 1 && (
+      {children_list.toArray().length > 1 && (
         <>
           <Switcher exercises={children_list.toArray()} group_id={group_id} />
           <div class="h-[31px]"></div>

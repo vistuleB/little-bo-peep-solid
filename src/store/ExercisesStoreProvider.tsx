@@ -52,7 +52,7 @@ export const ExercisesStoreProvider: ParentComponent<{
   const [exercises_store, set_exercises_store] = createStore<Store>({
     selected_exo: 0,
     exercises: [],
-    list_view: window.innerWidth > MOBILE_MAX_WIDTH,
+    list_view: false,
   });
 
   const digit = props.group_id.replace(/\D/g, "");

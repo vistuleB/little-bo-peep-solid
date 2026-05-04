@@ -21,7 +21,7 @@ export default function __Chapter5__() {
   return (
     <Article
       prevPage="/article/chapter4"
-      nextPage=""
+      nextPage="/article/appendix1"
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
       id="_147_hgi_"

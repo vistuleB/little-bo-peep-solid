@@ -70,6 +70,18 @@ export default function __Home__() {
           </TOCItem>
         </ul>
       </div>
+      <Spacer />
+      <div id="appendix">
+        <TOCTitle label="Appendices" />
+        <ul>
+          <TOCItem
+            article_type={1}
+            href="appendix1"
+          >
+            Exercise Graveyard
+          </TOCItem>
+        </ul>
+      </div>
     </TOC>
   );
 };
