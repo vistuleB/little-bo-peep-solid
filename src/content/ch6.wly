@@ -1,4 +1,555 @@
 |> Section
+    *Function signatures.* 
+    In some real-world
+    scenarios the inputs and outputs of a function
+    come with certain units attached. In this case,
+    we write
+    !! the numbers fed to a function may come
+    !! with a certain type of unit attached, and 
+    !! those output by the function as well; in this context, we
+    !! write
+
+    $$
+    \Large f : [\te{A}] \ra [\te{B}]
+    $$
+
+    to indicate that the 
+    units of inputs to $f$ are A while the units
+    of numbers output by $f$ are B. 
+    !! former and latter units
+    !! are respectively A and B.
+    !! i.e., the above indicates that 
+    !! $f$ is a function $f : \rr \ra \rr$
+    !! that takes inputs with units A
+    !! and produces outputs with units B. 
+    For example,
+
+    $$
+    \Large h : [\te{kg}] \ra [^\circ\te{F}]
+    $$
+
+    would indicate that $h$ 
+    is a function whose inputs denote kilograms and whose
+    outputs denote degrees fahrenheit.
+    We refer 
+    to the ordered pair $(\te{A}, \te{B})$ as the
+
+    __signature__
+
+    of the function. Thus a
+    function signature has
+    two parts: the units of the input, and the units
+    of the output!
+
+|> Section
+    *Dimensionless units.* There is a special unit
+    that we denote
+
+    $$
+    \Large[1]
+    $$
+
+    that stands for a “dimensionless unit” or “dimensionless
+    ratio” that, conceptually, arises when a quantity
+    is divided by a like-dimensioned quantity. For example,
+
+    __radians__
+
+    are defined as “length over length” in the $xy$-plane—specifically,
+    arc length divided by radius—and are one example
+    of quantities that carry units of “$[1]$”.
+    The outputs of sin, cos, etc, are other examples
+    of dimensionless quantities,
+    being ratios of the form
+    “opposite over adjacent”, etc.
+    Thus
+    !! it would be correct to write
+
+    $$
+    \Large \cos : [1] \ra [1]
+    $$
+
+    !! (and likewise for any other trigonometric function)
+    where the first ‘$[1]$’ 
+    stands for a ratio of a curved length
+    divided by a straight length—the radian—and the second
+    ‘$[1]$’ stands for a ratio
+    of one straight length by another*—the afore-mentioned
+    “opposite over adjacent”. (Or “adjacent over hypotenuse”,
+    in the case of cosine!)
+
+    |> Pause
+
+    _*Note._ To be precise, these “lengths” are actually
+    coordinate changes that may be negative—except for the
+    hypotenuse, which is always positive—so they
+    are “signed lengths”, or _displacements_, more accurately. 
+    Also the radian carries a sign—the radian says “rotate by
+    this multiple of the radius, with ‘$+$’ for counterclockwise and ‘$-$’
+    for clockwise\*\*”!
+
+    !! |> Pause
+
+    !! _\*\*Subnote #1._ Except for the hypotenuse, which is
+    !! always nonnegative! (It's “opposite” and “adjacent” that
+    !! change sign as you go around the circle, not “hypotenuse”.)
+
+    |> Pause
+
+    _\*\*Second Note._ To get into the weeds—re: clockwise
+    vs. counterclockwise—what counts as the “positive” direction
+    of rotation is actually the direction _from the positive $x$
+    axis to the positive $y$ axis_:
+
+    |> Pause
+
+    What we mean is that if it was our custom to draw the
+    $y$ axis pointing downwards, but still draw the $x$ axis
+    pointing rightward, the “positive” direction of rotation
+    would be clockwise, not counterclockwise:
+    !! (This actually
+    !! happens inside of certain drawing programs that deal with
+    !! image formats for which the Y axis grows going downwards,
+    !! such as SVG, in particular, the standard for so-called “vector graphics” in the web.)
+
+    |> Pause
+
+    (This actually happens inside of SVG, the web-based
+    standard for so-called “vector graphics”, in which the $y$
+    axis points downwards; in an SVG file, 
+    |> span
+        class=code-cartouche
+        rotate(10)
+    \ will rotate an object by 10$^\circ$ _clockwise_!)
+
+|> Section
+    *Fun fact. (“Fun.”)* 
+    Imagine that we define the radian value of an
+    angle between $0^\circ$ and $360^\circ$ as
+
+    __length subtended by the angle on the unit circle__
+
+    as opposed to
+
+    __arc length over radius__
+
+    which is the more “traditional” definition. In 
+    the second 
+    !! (“traditional”) 
+    case, the dimensions of the
+    radian are
+    
+    $$
+    {\te{length}\over\te{length}} = \te{dimensionless}
+    $$
+
+    whereas under the first definition it sounds like
+    the dimensions are simply “length”. BUT: “length”
+    _in what plane_? The “original” plane in which the
+    unit circle is embedded has dimensionless axes! And
+    therefore _length itself_ in that plane is a dimensionless
+    quantity, not the usual “physical” notion of length!
+    So both cases assign radians to be a dimensionless 
+    unit! Whoo-hoo!
+
+    !! |> StarDivider
+
+    !! Relatedly to the fact mentioned above, we will explain
+    !! why some people use the following notation 
+
+    !! |> Section
+    !!     *Second (fun) fact.*
+    !!     Hello.
+
+    Relatedly to this idea of the original “vanilla”
+    $xy$-plane having dimensionless axes, you may
+    have seen people label axes this way, writing
+    “time/s” instead of “time $[\te{s}]$”:
+    !! or “weight/kg” instead of “weight $[\te{kg}]$”:
+
+    |> Pause
+
+    The idea behind this notation is that the plane
+    itself is a pristine dimensionless object, so by doing
+
+    $$
+    \Large {\te{time}\over\te{s}}
+    $$
+
+    where “time” is a time measurements in seconds,
+    we have “taken the units out of the measurement”
+    and obtained a “pure number” that “fits” inside
+    the plane; (!); for example, this ‘$3$’ here...
+
+    |> Pause
+
+    ...is really a
+    “$3$ without any units”
+    !! $$
+    !! \Large 3[1]
+    !! $$
+    !! ...(“$3$ with dimensionless units”) 
+    because the
+    entire plane is dimensionless, but if we follow
+    the semantics of the axis label, we find...
+
+    $$
+    \Large 3 = {\te{time}\over \te{s}}
+    $$
+
+    ...which implies...
+
+    $$
+    \Large 3\te{s} = \te{time}
+    $$
+
+    ...or “time equals $3$ seconds”, i.e., that vertical
+    slice of the plane corresponds to the moment when
+    the “time” variable—which _does_ have units—equals
+    $3$ _seconds_, not just ‘$3$’, the pure number!
+
+    (Nb: We will not be so artful in our labeling of axes,
+    preferring the usual “time $[s]$” notation.)
+
+|> Section
+
+    *Function operations and signatures.*
+    When we take the sum...
+
+    $$
+    \Large f + g
+    $$
+
+    ...of two functions, the same input, when evaluating the
+    sum, is fed to both functions:
+
+    $$
+    \Large (f + g)(x) = f(x) + g(x).
+    $$
+
+    This means that in order for the sum to be make sense at
+    all, the functions must take inputs with the same
+    units; in addition, because apples should not be added
+    to oranges, the two functions must output values with the
+    same units as well; in other words, if $f$ and $g$ have
+    signatures...
+
+    $$
+    \Large
+    \begin{gathered}
+    f : [\te{A}] \ra [\te{B}] \\
+    g : [\te{C}] \ra [\te{D}] \up{1.35}
+    \end{gathered}
+    $$
+
+    ...then taking the sum...
+
+    $$
+    \Large f + g
+    $$
+
+    ...implies the constraints...
+
+    $$
+    \Large
+    \begin{aligned}
+    \te{A} &= \te{C} \\
+    \te{B} &= \te{D} \up{1.35}
+    \end{aligned}
+    $$
+
+    ...on the units in order for the sum to be “well-formed”, not
+    nonsensical!; i.e., the most general signature under which
+    a sum of $f$ and $g$ makes sense is...
+
+    $$
+    \Large
+    \begin{aligned}
+    f : [\te{A}] \ra [\te{B}]& \\
+    g : [\te{A}] \ra [\te{B}]& \up{1.35}
+    \end{aligned}
+    $$
+
+    ...with the _same_ input units, and the _same_ output
+    units!
+
+|> Section
     handle=_ch6_start_
 
-    *Ch6.* This is a stub.
+    *Notation.*
+    We write
+
+    $$
+    \Large f : [\te{A}] \ra [\te{B}]
+    $$
+
+    to indicate that $f$ is a function $f : \rr \ra \rr$
+    that takes inputs with units A
+    and produces outputs with units B. 
+    For example,
+
+    $$
+    \Large h : [\te{kg}] \ra [^\circ\te{F}]
+    $$
+
+    indicates that $h$ 
+    is a function whose inputs denote kilograms and whose
+    outputs denote degrees fahrenheit, etc.
+    (These are purely “physical” concepts, not
+    mathematical, but we're cool with that.)
+
+    |> Pause
+
+    *Vocabulary.* The input and output units of a function,
+    when present as above, are referred to as the
+
+    __signature__
+
+    of the function.
+
+|> Section
+    *Compatible signatures for function operations.* 
+    Taking the sum or product of functions etc
+    presupposes some “compatibility” between their
+    signatures—for 
+
+    !! |> Pause
+    !! *Constraints on function signatures imposed by
+    !! function operations.* Taking the sum, product,
+    !! quotient, etc, of two functions imposes certain
+    !! constraints on their signatures, in order for the
+    !! operation to not be physically meaningless.
+    !! The following table shows the
+    !! most general patterns that are possible:
+    !! of signature possible when taking
+    !! the sum, product, quotient, or composition of two functions:
+
+
+|> Section
+    work=ing
+    *Function operation and units.* Taking the sum or
+    product, etc, of two functions imposes certain
+    constraints on their signatures in order for the operation
+    to not be physically meaningless, in ways that are
+    worth being aware of. The following table shows the
+    most general pattern of signature possible when taking
+    the sum, product, quotient, or composition of two functions:
+
+    
+
+    !! of two functions
+
+    !! $$
+    !! \Large (f + g)(x) = f(x) + g(x)
+    !! $$
+    $$
+    \Large f + g
+    $$
+
+    !! presupposes that the inputs and outputs of
+    !! $f$ and $g$ meet certain requirements; e.g.,
+
+    !! $$
+    !! \Large 
+    !! $$
+
+|> Section
+    work=ing
+    !! *Function operations.*
+    *The constraints imposed by function operations
+    on units.*
+    When we add two functions the
+    same input shows up as an input to both functions:
+
+    $$
+    \Large (f + g)(x) = f(x) + g(x)
+    $$
+
+    What this means is that if units are present 
+    $f$ and $g$ must both take the _same kind_ of input, units-wise,
+    in order for the function addition to
+    make any sense; if we write
+
+    $$
+    \Large f : [\te{A}] \ra [\te{B}]
+    $$
+
+    !! to indicate that the inputs to $f$ have
+    !! unit A and the output of $f$ have unit B, then
+    to indicate that $f$ takes inputs with units A
+    and produces outputs with units B, and
+
+    $$
+    \Large g : [\te{C}] \ra [\te{D}]
+    $$
+
+    likewise for $g$ for some units C and D, then the sum
+
+    $$
+    \Large f + g
+    $$
+
+    cannot/must not/should not take place unless
+
+    $$
+    \Large \te{A} = \te{C}
+    $$
+
+    because the same input $x$ must have units A
+    when it is fed to $f$, and units C when it is fed
+    to $g$! In addition, we must have
+    !! the constraint
+    !! to $g$!!!!!!!!!! Though in this case, the constraint
+
+    $$
+    \Large \te{B} = \te{D}
+    $$
+
+    also in this case, by the old addage that apples should
+    not be added to oranges. (Specifically, note 
+    that $f(x)$ has units B, that
+    $g(x)$ has units D, and that $f(x)$ is added to $g(x)$.)
+    
+    By contrast,
+
+    __apples can be multiplied by oranges__
+
+    as testified by units such as __meters squared__ or __kilowatt-hours__
+    or __worker years__ or even __meters per second__
+    that is “meters times per seconds” (or “meters times seconds inverse ($\te{s}^{-1}$)”),
+    !! (take _meters squared_ or _kilowatt-hours_,
+    !! or even _meters per second_, where in the last
+    !! case we multiply _meters_ by 
+    !! _per seconds_, $\te{s}^{-1}$)
+    !! and so 
+    so to form the product of two functions
+
+    $$
+    \Large fg
+    $$
+
+    with signatures 
+
+    $$
+    \begin{gathered}
+    \,\Large f : [\te{A}] \ra [\te{B}], \\
+    \Large g : [\te{C}] \ra [\te{D}] \up{1.35}
+    \end{gathered}
+    $$
+
+    the constraint 
+
+    $$
+    \Large \te{A} = \te{C}
+    $$
+
+    must still be obeyed (because
+
+    $$
+    \Large (fg)(x) = f(x)g(x)
+    $$
+
+    and ‘$x$’ again appears as an input to both $f$ and
+    $g$), but, by  the constraint
+
+    $$
+    \Large \te{B} = \te{D}
+    $$
+
+    can be dropped, because any kind of unit can be
+    multiplied by any other kind of unit! So in this case
+    the “general form” of $f$ and $g$ would be
+
+    $$
+    \begin{gathered}
+    \,\Large f : [\te{A}] \ra [\te{B}], \\
+    \,\Large g : [\te{A}] \ra [\te{C}]\, \up{1.35}
+    \end{gathered}
+    $$
+
+    for some units A, B, C, while in the case of function
+    addition the “general form” would be
+
+    $$
+    \begin{gathered}
+    \,\Large f : [\te{A}] \ra [\te{B}], \\
+    \,\Large g : [\te{A}] \ra [\te{B}]\, \up{1.35}
+    \end{gathered}
+    $$
+
+    with only two degrees of freedom in the units, A and B.
+
+    !! $$
+    !! \Large \te{A} = \te{C}
+    !! $$
+
+    !! remains, while the constraint
+
+    !! $$
+    !! \Large \te{B} = \te{D}
+    !! $$
+    
+    !! is dropped,
+    !! by contrast,
+    !! and the output units B and D can be 
+    !! completely arbitrary!
+
+    !! is lost, for $f : [A] \ra [B]$, $g : [C] \ra [D]$.
+    !! —because the same input $x$ is used as
+    !! an input to both $f$ and $g$—but
+
+
+
+    !! “seconds inverse”,
+    !! or “one over seconds”, $\te{s}^{-1}$)
+    !! must also be satisfied in order for the function
+    !! addition to make any sense, because the outputs
+    !! $f(x)$ and $g(x)$ are added together, and by the
+    !! old addage about adding apples to oranges.
+
+
+
+    !! $$
+    !! \begin{gathered}
+    !! \Large f : [\te{A}] \ra [\te{B}] \\
+    !! \Large g : [\te{C}] \ra [\te{D}] \up{1.2}
+    !! \end{gathered}
+    !! $$
+
+|> Section
+    work=ing
+    *The chain rule.* 
+    Starting slow, we invite you to verify the following
+    multiplication:
+
+    $$
+    2.22 \times 10.1 = 22.422.
+    $$
+
+    Here is a multiplication only
+    of units:
+
+    $$
+    \,\left[{\te{m}\over \te{s}}\right]\times\left[{\te{\$}\over \te{m}}\right] = \left[{\te{\$}\over \te{m}}\right].
+    $$
+
+    We can combine the two:
+
+    |> Boxed
+        $$
+        2.22[\te{m}/\te{s}] \times 10.1[\te{\$}/\te{m}] = 22.422[\te{\$}/\te{s}]
+        $$
+
+    The multiplication of
+
+    __meters per second__
+
+    (“[m$/$s]”) by
+
+    __dollars per meter__
+
+    (“[\$$/$m]”) gives
+
+    __dollars per second__
+
+    (“[\$$/$s]”) yay!

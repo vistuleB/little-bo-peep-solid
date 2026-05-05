@@ -142,8 +142,11 @@
 
         |> SolutionNote
 
-            We can draw annotated graphs of $\cos x\sin x$, in 
-            radians and in degrees:
+            !! We can draw annotated graphs of $\cos x\sin x$, in 
+            !! radians and in degrees:
+            Here are annotated graphs of $x \ra \cos x\sin x$, in 
+            radians and in degrees, proudly displaying the newly
+            discovered max & min:
             !! For interest, here is the graph $y = \cos(x)\sin(x)$,
             !! as previously given in Exercise >>_four_graphs_, annotated
             !! with the maximum, minimum, and the values $x$ at which they

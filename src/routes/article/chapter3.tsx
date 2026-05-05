@@ -131,7 +131,10 @@ export default function __Chapter3__() {
       <ArticleTitle banner="Chapter 3:">
         Functions
       </ArticleTitle>
-      <Section id="section-1">
+      <Section
+        ref="rence"
+        id="section-1"
+      >
         <OuterP>
           <b>
             Syntax.
@@ -3079,7 +3082,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={7}>
+        <Exercise
+          ref="rence"
+          number={7}
+        >
           <ExerciseStatement id="_37_hgi_">
             <OuterP>
               <b>

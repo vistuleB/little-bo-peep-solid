@@ -8,8 +8,9 @@
         >>functions    >>_ch3_start_  >>_ch3_exercises_
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
-        >>playground
         >>exercise-graveyard
+        !! >>chain        >>_ch6_start_
+        !! >>playground
 
     |> In
         content=selection
@@ -98,7 +99,7 @@
         >>_verbal_to_arithmetic_A_change_
         >>_verbal_to_arithmetic_A_change_pt2_
         >>_change_in_f_
-        >>_product_rule_technical_ver_
+        >>_product_rule_physical_ver_
         >>_big_A_product_approach_as_h_goes_to_0_
         >>_express_the_associativity_etc_
         >>_associativity_of_function_multiplication_
@@ -148,7 +149,7 @@
         >>_blueprints_top_and_side_
         >>_blueprints_open_thin_door_
         >>_powers_of_secant_
-        >>_isosets_of_xy_v4_
+        >>_isosets_of_xy_v5_
         >>_long_division_11_over_7_
         >>_long_division_22_over_7_
         >>_long_division_15542486476949_777_
@@ -173,6 +174,7 @@
         >>_cosine_rule_geometric_2_
         >>_cosine_rule_geometric_3_
         >>_cosine_rule_geometric_4_
+        >>_cosine_rule_via_jacks_rule_
         >>_polar_distance_
         >>_cosine_rule_
         >>_sine_rule_
@@ -191,6 +193,12 @@
         >>_cosx_plus_sinx_as_sinusoid_
         >>_Acosx_plus_Bsinx_as_sinusoid_
         >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
+
+
+
+
+
+        
         !! >>_ab_inequality_
         !! >>_ab_inequality_relation_to_sine_cosine_
         !! >>_cosx_plus_sinx_algebraic_upper_bounding_
@@ -264,10 +272,151 @@
         !!    - rewriting Acosx + Bsinx as a sinusoid
         !!    - sum formulas for tan & cot
 
-        !! try to MINIMIZE DEPENDENCIES & MAXIMIZE MODULARITY!
+    |> In
+        content=selection
+        chapter=>>chain
 
         !! estimate: 40 exercises (that little ?)
 
     |> In
         content=selection
+        chapter=>>esoteric
+
+    |> In
+        content=selection
         chapter=>>exercise-graveyard
+        >>_ch1_gy_
+        >>_ch2_gy_
+        >>_ch3_gy_
+        >>_ch4_gy_
+        >>_ch5_gy_
+        >>_bt1_gy_
+        >>_gy_0
+        >>_gy_1
+        >>_gy_2
+        >>_gy_3
+        >>_gy_4
+        >>_gy_5
+        >>_gy_6
+        >>_gy_7
+        >>_gy_8
+        >>_gy_9
+        >>_gy_10
+        >>_gy_11
+        >>_gy_12
+        >>_gy_13
+        >>_gy_14
+        >>_gy_15
+        >>_gy_16
+        >>_gy_17
+        >>_gy_18
+        >>_gy_19
+        >>_gy_20
+        >>_gy_21
+        >>_gy_22
+        >>_gy_23
+        >>_gy_24
+        >>_gy_25
+        >>_gy_26
+        >>_gy_27
+        >>_gy_28
+        >>_gy_29
+        >>_gy_30
+        >>_gy_31
+        >>_gy_32
+        >>_gy_33
+        >>_gy_34
+        >>_gy_35
+        >>_gy_36
+        >>_gy_37
+        >>_gy_38
+        >>_gy_39
+        >>_gy_40
+        >>_gy_41
+        >>_gy_42
+        >>_gy_43
+        >>_gy_44
+        >>_gy_45
+        >>_gy_46
+        >>_gy_47
+        >>_gy_48
+        >>_gy_49
+        >>_gy_50
+        >>_gy_51
+        >>_gy_52
+        >>_gy_53
+        >>_gy_54
+        >>_gy_55
+        >>_gy_56
+        >>_gy_57
+        >>_gy_58
+        >>_gy_59
+        >>_gy_60
+        >>_gy_61
+        >>_gy_62
+        >>_gy_63
+        >>_gy_64
+        >>_gy_65
+        >>_gy_66
+        >>_gy_67
+        >>_gy_68
+        >>_gy_69
+        >>_gy_70
+        >>_gy_71
+        >>_gy_72
+        >>_gy_73
+        >>_gy_74
+        >>_gy_75
+        >>_gy_76
+        >>_gy_77
+        >>_gy_78
+        >>_gy_79
+        >>_gy_80
+        >>_gy_81
+        >>_gy_82
+        >>_gy_83
+        >>_gy_84
+        >>_gy_85
+        >>_gy_86
+        >>_gy_87
+        >>_gy_88
+        >>_gy_89
+        >>_gy_90
+        >>_gy_91
+        >>_gy_92
+        >>_gy_93
+        >>_gy_94
+        >>_gy_95
+        >>_gy_96
+        >>_gy_97
+        >>_gy_98
+        >>_gy_99
+        >>_gy_100
+        >>_gy_101
+        >>_gy_102
+        >>_gy_103
+        >>_gy_104
+        >>_gy_105
+        >>_gy_106
+        >>_gy_107
+        >>_gy_108
+        >>_gy_109
+        >>_gy_110
+        >>_gy_111
+        >>_gy_112
+        >>_gy_113
+        >>_gy_114
+        >>_gy_115
+        >>_gy_116
+        >>_gy_117
+        >>_gy_118
+        >>_gy_119
+        >>_gy_120
+        >>_gy_121
+        >>_gy_122
+        >>_gy_123
+        >>_gy_124
+        >>_gy_125
+
+
+

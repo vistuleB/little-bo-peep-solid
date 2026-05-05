@@ -2,67 +2,140 @@
     work=ing
     handle=_cosine_rule_geometric_3_
 
-    Find expressions for the
-    areas A, B, C, D below that allow you to find
-    a formula for $c$ in terms of 
-    all variables that do not contain “$c$” in their name:
+    Find expressions for areas A—F and use these to
+    give a formula for $c$ in terms of $a$, $b$ and
+    $\theta_{ab}$:
+    !! Find expressions for the
+    !! areas A, B, C, D below that allow you to find
+    !! a formula for $c$ in terms of 
+    !! all variables that do not contain “$c$” in their name:
 
     |> Image
-        src=images/_e5_cosine_rule_geometric_3_statement.svg
+        !! src=images/_e5_cosine_rule_geometric_3_statement.svg
+        src=images/_e5_cosine_rule_geometric_3_statement_v2.svg
 
     |> Solution
 
-        Since
+        Keeping in mind that
 
         $$
         \cos(2\eta - x) = -\cos x
         $$
 
-        for all $x \in \rr$, and
+        for all $x\in \rr$,
+        and that, in particular,
 
         $$
-        \cos(2\eta - \theta_{ab}) = -\cos \theta_{ab}
+        \cos(2\eta - \theta_{ab}) = -\cos\theta_{ab}
         $$
 
-        in particular, we have these orange
-        measurements & accompanying purple areas (A & B):
-        
-        |> Image
-            src=images/_e5_cosine_rule_geometric_3_sol1.svg
-
-        |> ImageLeft
-            src=images/_e5_cosine_rule_geometric_3_cloud.svg
-            offset_y=44%
-
-        Secondly we have these measurements and areas, giving us two
-        more different ways of writing A and B, as well:
+        is a positive number in this diagram since
+        $0 < 2\eta - \theta_{ab} < \eta$ is an acute angle, 
+        the areas are:
 
         |> Image
-            src=images/_e5_cosine_rule_geometric_3_sol2.svg
+            src=images/_e5_cosine_rule_geometric_3_sol1_v2.svg
 
-        Thus
+        !! |> ImageLeft
+        !!     line=0.5
+        !!     src=images/_e5_cosine_rule_geometric_3_sol1_cloud.svg
+        !!     offset_x=-28%
+        !!     offset_y=-2em
+
+        Then
+
+        $$
+        \Large c = \sqrt{c^2} = \sqrt{\te{D} + \te{C}} = \sqrt{\te{E} + \te{F}} = \sqrt{(a^2 + \te{B}) + (b^2 + \te{A})} = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+        $$
+
+        where we use the fact that
 
         $$
         \begin{gathered}
-        \te{A} = \te{D} = bc\cos\theta_{bc} = b^2 - ab\cos\theta_{ab}, \\
-        \up{1.4}\te{B} = \te{C} = ac\cos\theta_{ac} = a^2 - ab\cos\theta_{ab}\,
+        \te{D} = \te{E}\, \\
+        \up{1.4}\te{C} = \te{F}\,
         \end{gathered}
         $$
 
-        summarizing the two figures, and
+        in the third equality, and the fact that
 
         $$
-        \Large
-        c = \sqrt{c^2} = \sqrt{\te{C} + \te{D}} = \sqrt{\te{B} + \te{A}} = \sqrt{b^2 - ab\cos\theta_{ab} + a^2 - ab\cos\theta_{ab}} = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+        \begin{gathered}
+        \te{E} = a^2 + \te{B}\, \\
+        \up{1.4}\te{F} = b^2 + \te{A}\,
+        \end{gathered}
         $$
 
-        where we use $\te{C} = \te{B}$, $\te{D} = \te{A}$ in the third
-        equality, or
+        in the fourth equality, and the fact that
 
-        |> Boxed
+        $$
+        \te{A} = \te{B} = -ab\cos\theta_{ab}
+        $$
 
-            $$
-            \Large c = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
-            $$
+        in the last equality.
+        
+        So we obtain the same formula as in Exercise >>_cosine_rule_geometric_2_!
+        !! I.e.,
 
-        in conclusion, which is the same formula as obtained in Exercise >>_cosine_rule_geometric_2_!
+        !! |> Boxed
+
+        !!     $$
+        !!     \Large c = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+        !!     $$
+
+        !! ...the same formula as in Exercise >>_cosine_rule_geometric_2_.
+
+        !! Since
+
+        !! $$
+        !! \cos(2\eta - x) = -\cos x
+        !! $$
+
+        !! for all $x \in \rr$, and
+
+        !! $$
+        !! \cos(2\eta - \theta_{ab}) = -\cos \theta_{ab}
+        !! $$
+
+        !! in particular, we have these orange
+        !! measurements & accompanying purple areas (A & B):
+        
+        !! |> Image
+        !!     src=images/_e5_cosine_rule_geometric_3_sol1.svg
+
+        !! |> ImageLeft
+        !!     src=images/_e5_cosine_rule_geometric_3_cloud.svg
+        !!     offset_y=44%
+
+        !! Secondly we have these measurements and areas, giving us two
+        !! more different ways of writing A and B, as well:
+
+        !! |> Image
+        !!     src=images/_e5_cosine_rule_geometric_3_sol2.svg
+
+        !! Thus
+
+        !! $$
+        !! \begin{gathered}
+        !! \te{A} = \te{D} = bc\cos\theta_{bc} = b^2 - ab\cos\theta_{ab}, \\
+        !! \up{1.4}\te{B} = \te{C} = ac\cos\theta_{ac} = a^2 - ab\cos\theta_{ab}\,
+        !! \end{gathered}
+        !! $$
+
+        !! summarizing the two figures, and
+
+        !! $$
+        !! \Large
+        !! c = \sqrt{c^2} = \sqrt{\te{C} + \te{D}} = \sqrt{\te{B} + \te{A}} = \sqrt{b^2 - ab\cos\theta_{ab} + a^2 - ab\cos\theta_{ab}} = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+        !! $$
+
+        !! where we use $\te{C} = \te{B}$, $\te{D} = \te{A}$ in the third
+        !! equality, or
+
+        !! |> Boxed
+
+        !!     $$
+        !!     \Large c = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+        !!     $$
+
+        !! in conclusion, which is the same formula as obtained in Exercise >>_cosine_rule_geometric_2_!
