@@ -15,12 +15,12 @@ export default function __Appendix1__() {
       nextPage=""
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_150_hgi_"
+      id="_278_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            exercise 1
+            lbp appendix
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
@@ -28,15 +28,21 @@ export default function __Appendix1__() {
         Exercise Graveyard
       </ArticleTitle>
       <Section id="section-1">
+        <OuterP>
+          <b>
+            LBP Appendix
+          </b>
+        </OuterP>
+        <Pause />
         <StarDivider />
         <Pause />
         <OuterP>
           Chapter 1 graveyard:
         </OuterP>
         <Pause />
-        <Exercises>
+        <Exercises id="_150_hgi_">
           <Exercise number={1}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_148_hgi_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -53,7 +59,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_149_hgi_">
               <OuterP>
                 <b>
                   Exercise 2.
@@ -77,9 +83,9 @@ export default function __Appendix1__() {
           Chapter 2 graveyard:
         </OuterP>
         <Pause />
-        <Exercises>
+        <Exercises id="_155_hgi_">
           <Exercise number={1}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_151_hgi_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -96,7 +102,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_152_hgi_">
               <OuterP>
                 <b>
                   Exercise 2.
@@ -113,7 +119,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={3}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_153_hgi_">
               <OuterP>
                 <b>
                   Exercise 3.
@@ -130,7 +136,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={4}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_154_hgi_">
               <OuterP>
                 <b>
                   Exercise 4.
@@ -154,9 +160,9 @@ export default function __Appendix1__() {
           Chapter 3 graveyard:
         </OuterP>
         <Pause />
-        <Exercises>
+        <Exercises id="_176_hgi_">
           <Exercise number={1}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_156_hgi_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -173,7 +179,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_157_hgi_">
               <OuterP>
                 <b>
                   Exercise 2.
@@ -190,7 +196,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={3}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_158_hgi_">
               <OuterP>
                 <b>
                   Exercise 3.
@@ -207,7 +213,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={4}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_159_hgi_">
               <OuterP>
                 <b>
                   Exercise 4.
@@ -224,7 +230,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={5}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_160_hgi_">
               <OuterP>
                 <b>
                   Exercise 5.
@@ -241,7 +247,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={6}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_161_hgi_">
               <OuterP>
                 <b>
                   Exercise 6.
@@ -258,7 +264,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={7}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_162_hgi_">
               <OuterP>
                 <b>
                   Exercise 7.
@@ -275,7 +281,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={8}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_163_hgi_">
               <OuterP>
                 <b>
                   Exercise 8.
@@ -292,7 +298,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={9}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_164_hgi_">
               <OuterP>
                 <b>
                   Exercise 9.
@@ -309,7 +315,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={10}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_165_hgi_">
               <OuterP>
                 <b>
                   Exercise 10.
@@ -326,7 +332,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={11}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_166_hgi_">
               <OuterP>
                 <b>
                   Exercise 11.
@@ -343,7 +349,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={12}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_167_hgi_">
               <OuterP>
                 <b>
                   Exercise 12.
@@ -360,7 +366,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={13}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_168_hgi_">
               <OuterP>
                 <b>
                   Exercise 13.
@@ -377,7 +383,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={14}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_169_hgi_">
               <OuterP>
                 <b>
                   Exercise 14.
@@ -394,7 +400,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={15}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_170_hgi_">
               <OuterP>
                 <b>
                   Exercise 15.
@@ -411,7 +417,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={16}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_171_hgi_">
               <OuterP>
                 <b>
                   Exercise 16.
@@ -428,7 +434,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={17}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_172_hgi_">
               <OuterP>
                 <b>
                   Exercise 17.
@@ -445,7 +451,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={18}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_173_hgi_">
               <OuterP>
                 <b>
                   Exercise 18.
@@ -462,7 +468,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={19}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_174_hgi_">
               <OuterP>
                 <b>
                   Exercise 19.
@@ -479,7 +485,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={20}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_175_hgi_">
               <OuterP>
                 <b>
                   Exercise 20.
@@ -503,9 +509,9 @@ export default function __Appendix1__() {
           Chapter 4 graveyard:
         </OuterP>
         <Pause />
-        <Exercises>
+        <Exercises id="_204_hgi_">
           <Exercise number={1}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_177_hgi_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -522,7 +528,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_178_hgi_">
               <OuterP>
                 <b>
                   Exercise 2.
@@ -539,7 +545,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={3}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_179_hgi_">
               <OuterP>
                 <b>
                   Exercise 3.
@@ -556,7 +562,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={4}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_180_hgi_">
               <OuterP>
                 <b>
                   Exercise 4.
@@ -573,7 +579,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={5}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_181_hgi_">
               <OuterP>
                 <b>
                   Exercise 5.
@@ -590,7 +596,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={6}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_182_hgi_">
               <OuterP>
                 <b>
                   Exercise 6.
@@ -607,7 +613,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={7}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_183_hgi_">
               <OuterP>
                 <b>
                   Exercise 7.
@@ -624,7 +630,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={8}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_184_hgi_">
               <OuterP>
                 <b>
                   Exercise 8.
@@ -641,7 +647,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={9}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_185_hgi_">
               <OuterP>
                 <b>
                   Exercise 9.
@@ -658,7 +664,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={10}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_186_hgi_">
               <OuterP>
                 <b>
                   Exercise 10.
@@ -675,7 +681,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={11}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_187_hgi_">
               <OuterP>
                 <b>
                   Exercise 11.
@@ -692,7 +698,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={12}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_188_hgi_">
               <OuterP>
                 <b>
                   Exercise 12.
@@ -709,7 +715,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={13}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_189_hgi_">
               <OuterP>
                 <b>
                   Exercise 13.
@@ -726,7 +732,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={14}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_190_hgi_">
               <OuterP>
                 <b>
                   Exercise 14.
@@ -743,7 +749,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={15}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_191_hgi_">
               <OuterP>
                 <b>
                   Exercise 15.
@@ -760,7 +766,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={16}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_192_hgi_">
               <OuterP>
                 <b>
                   Exercise 16.
@@ -777,7 +783,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={17}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_193_hgi_">
               <OuterP>
                 <b>
                   Exercise 17.
@@ -794,7 +800,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={18}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_194_hgi_">
               <OuterP>
                 <b>
                   Exercise 18.
@@ -811,7 +817,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={19}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_195_hgi_">
               <OuterP>
                 <b>
                   Exercise 19.
@@ -821,14 +827,14 @@ export default function __Appendix1__() {
                     href="/article/chapter4#_75_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Product Rule Technical Version
+                    Big A Product Approach as h Goes to 0
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={20}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_196_hgi_">
               <OuterP>
                 <b>
                   Exercise 20.
@@ -838,14 +844,14 @@ export default function __Appendix1__() {
                     href="/article/chapter4#_76_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Big A Product Approach as h Goes to 0
+                    Express the Associativity etc.
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={21}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_197_hgi_">
               <OuterP>
                 <b>
                   Exercise 21.
@@ -855,31 +861,31 @@ export default function __Appendix1__() {
                     href="/article/chapter4#_77_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Express the Associativity etc.
-                  </a>
-                </ExerciseStatement>
-              </OuterP>
-            </ExerciseStatement>
-          </Exercise>
-          <Exercise number={22}>
-            <ExerciseStatement>
-              <OuterP>
-                <b>
-                  Exercise 22.
-                </b>
-                <ExerciseStatement>
-                  <a
-                    href="/article/chapter4#_78_hgi_"
-                    class="handle-out-chapter-link"
-                  >
                     Associativity of Function Multiplication
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
+          <Exercise number={22}>
+            <ExerciseStatement id="_198_hgi_">
+              <OuterP>
+                <b>
+                  Exercise 22.
+                </b>
+                <ExerciseStatement>
+                  <a
+                    href="/article/chapter4#_79_hgi_"
+                    class="handle-out-chapter-link"
+                  >
+                    1D Red Particle
+                  </a>
+                </ExerciseStatement>
+              </OuterP>
+            </ExerciseStatement>
+          </Exercise>
           <Exercise number={23}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_199_hgi_">
               <OuterP>
                 <b>
                   Exercise 23.
@@ -889,14 +895,14 @@ export default function __Appendix1__() {
                     href="/article/chapter4#_80_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    1D Red Particle
+                    1D Blue-Yellow Particles
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={24}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_200_hgi_">
               <OuterP>
                 <b>
                   Exercise 24.
@@ -906,14 +912,14 @@ export default function __Appendix1__() {
                     href="/article/chapter4#_81_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    1D Blue-Yellow Particles
+                    Four Particles at 2, 4
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={25}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_201_hgi_">
               <OuterP>
                 <b>
                   Exercise 25.
@@ -923,14 +929,14 @@ export default function __Appendix1__() {
                     href="/article/chapter4#_82_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Four Particles at 2, 4
+                    Eta Approximation from Cosine Graph
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={26}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_202_hgi_">
               <OuterP>
                 <b>
                   Exercise 26.
@@ -940,14 +946,14 @@ export default function __Appendix1__() {
                     href="/article/chapter4#_83_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Eta Approximation from Cosine Graph
+                    f Equals f at 5
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={27}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_203_hgi_">
               <OuterP>
                 <b>
                   Exercise 27.
@@ -955,23 +961,6 @@ export default function __Appendix1__() {
                 <ExerciseStatement>
                   <a
                     href="/article/chapter4#_84_hgi_"
-                    class="handle-out-chapter-link"
-                  >
-                    f Equals f at 5
-                  </a>
-                </ExerciseStatement>
-              </OuterP>
-            </ExerciseStatement>
-          </Exercise>
-          <Exercise number={28}>
-            <ExerciseStatement>
-              <OuterP>
-                <b>
-                  Exercise 28.
-                </b>
-                <ExerciseStatement>
-                  <a
-                    href="/article/chapter4#_85_hgi_"
                     class="handle-out-chapter-link"
                   >
                     f Equals f at 17
@@ -988,16 +977,16 @@ export default function __Appendix1__() {
           Chapter 5 graveyard:
         </OuterP>
         <Pause />
-        <Exercises>
+        <Exercises id="_261_hgi_">
           <Exercise number={1}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_205_hgi_">
               <OuterP>
                 <b>
                   Exercise 1.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_89_hgi_"
+                    href="/article/chapter5#_88_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Guesstimate cos(10x) Linear
@@ -1007,14 +996,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_206_hgi_">
               <OuterP>
                 <b>
                   Exercise 2.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_90_hgi_"
+                    href="/article/chapter5#_89_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Guesstimate cos(10x) Parabolic
@@ -1024,14 +1013,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={3}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_207_hgi_">
               <OuterP>
                 <b>
                   Exercise 3.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_91_hgi_"
+                    href="/article/chapter5#_90_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Guesstimate Sinusoid
@@ -1041,14 +1030,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={4}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_208_hgi_">
               <OuterP>
                 <b>
                   Exercise 4.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_92_hgi_"
+                    href="/article/chapter5#_91_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Triangle Conch
@@ -1058,14 +1047,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={5}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_209_hgi_">
               <OuterP>
                 <b>
                   Exercise 5.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_93_hgi_"
+                    href="/article/chapter5#_92_hgi_"
                     class="handle-out-chapter-link"
                   >
                     0.2 Radians
@@ -1075,14 +1064,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={6}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_210_hgi_">
               <OuterP>
                 <b>
                   Exercise 6.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_94_hgi_"
+                    href="/article/chapter5#_93_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Handdrawn Oval P Position
@@ -1092,14 +1081,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={7}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_211_hgi_">
               <OuterP>
                 <b>
                   Exercise 7.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_95_hgi_"
+                    href="/article/chapter5#_94_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Eta and 4-Eta as Ratios
@@ -1109,14 +1098,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={8}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_212_hgi_">
               <OuterP>
                 <b>
                   Exercise 8.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_96_hgi_"
+                    href="/article/chapter5#_95_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Vector Addition Definition
@@ -1126,14 +1115,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={9}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_213_hgi_">
               <OuterP>
                 <b>
                   Exercise 9.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_97_hgi_"
+                    href="/article/chapter5#_96_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Circular Motion from x Coordinate
@@ -1143,14 +1132,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={10}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_214_hgi_">
               <OuterP>
                 <b>
                   Exercise 10.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_98_hgi_"
+                    href="/article/chapter5#_97_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Spherical to Cartesian Coordinates 1
@@ -1160,14 +1149,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={11}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_215_hgi_">
               <OuterP>
                 <b>
                   Exercise 11.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_99_hgi_"
+                    href="/article/chapter5#_98_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Spherical to Cartesian Coordinates 2
@@ -1177,14 +1166,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={12}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_216_hgi_">
               <OuterP>
                 <b>
                   Exercise 12.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_100_hgi_"
+                    href="/article/chapter5#_99_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Blueprints Top and Side
@@ -1194,14 +1183,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={13}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_217_hgi_">
               <OuterP>
                 <b>
                   Exercise 13.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_101_hgi_"
+                    href="/article/chapter5#_100_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Blueprints: Open Thin Door
@@ -1211,14 +1200,14 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={14}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_218_hgi_">
               <OuterP>
                 <b>
                   Exercise 14.
                 </b>
                 <ExerciseStatement>
                   <a
-                    href="/article/chapter5#_102_hgi_"
+                    href="/article/chapter5#_101_hgi_"
                     class="handle-out-chapter-link"
                   >
                     Powers of Secant
@@ -1228,7 +1217,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={15}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_219_hgi_">
               <OuterP>
                 <b>
                   Exercise 15.
@@ -1238,14 +1227,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_103_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Isosets of xy
+                    Long Division 11/7
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={16}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_220_hgi_">
               <OuterP>
                 <b>
                   Exercise 16.
@@ -1255,14 +1244,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_104_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Long Division 11/7
+                    Long Division 22/7
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={17}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_221_hgi_">
               <OuterP>
                 <b>
                   Exercise 17.
@@ -1272,14 +1261,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_105_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Long Division 22/7
+                    Long Division 15542486476949/777
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={18}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_222_hgi_">
               <OuterP>
                 <b>
                   Exercise 18.
@@ -1289,14 +1278,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_106_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Long Division 15542486476949/777
+                    Complement Calculation
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={19}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_223_hgi_">
               <OuterP>
                 <b>
                   Exercise 19.
@@ -1306,14 +1295,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_107_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Complement Calculation
+                    Complement of Complement
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={20}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_224_hgi_">
               <OuterP>
                 <b>
                   Exercise 20.
@@ -1323,14 +1312,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_108_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Complement of Complement
+                    Rotate Central 90 Degrees
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={21}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_225_hgi_">
               <OuterP>
                 <b>
                   Exercise 21.
@@ -1340,14 +1329,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_109_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Rotate Central 90 Degrees
+                    Ratio A/B: tan squared
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={22}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_226_hgi_">
               <OuterP>
                 <b>
                   Exercise 22.
@@ -1357,14 +1346,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_110_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Ratio A/B: tan squared
+                    Ratio A/B: 1 + tan squared
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={23}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_227_hgi_">
               <OuterP>
                 <b>
                   Exercise 23.
@@ -1374,14 +1363,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_111_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Ratio A/B: 1 + tan squared
+                    Archimedean Projection
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={24}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_228_hgi_">
               <OuterP>
                 <b>
                   Exercise 24.
@@ -1391,14 +1380,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_112_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Archimedean Projection
+                    Rank the 7 Slices
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={25}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_229_hgi_">
               <OuterP>
                 <b>
                   Exercise 25.
@@ -1408,14 +1397,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_113_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Rank the 7 Slices
+                    Sphere Area Formula from Archimedean Property
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={26}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_230_hgi_">
               <OuterP>
                 <b>
                   Exercise 26.
@@ -1425,14 +1414,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_114_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Sphere Area Formula from Archimedean Property
+                    Sphere Volume
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={27}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_231_hgi_">
               <OuterP>
                 <b>
                   Exercise 27.
@@ -1442,14 +1431,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_115_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Sphere Volume
+                    Gas Tank
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={28}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_232_hgi_">
               <OuterP>
                 <b>
                   Exercise 28.
@@ -1459,14 +1448,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_116_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Gas Tank
+                    Gas Tank Decimal Approximation
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={29}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_233_hgi_">
               <OuterP>
                 <b>
                   Exercise 29.
@@ -1476,14 +1465,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_117_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Gas Tank Decimal Approximation
+                    Three Quarters Decimal Approximation
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={30}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_234_hgi_">
               <OuterP>
                 <b>
                   Exercise 30.
@@ -1493,14 +1482,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_118_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Three Quarters Decimal Approximation
+                    A Ship
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={31}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_235_hgi_">
               <OuterP>
                 <b>
                   Exercise 31.
@@ -1510,14 +1499,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_119_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    A Ship
+                    Four Compositions Expressed
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={32}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_236_hgi_">
               <OuterP>
                 <b>
                   Exercise 32.
@@ -1527,14 +1516,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_120_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Four Compositions Expressed
+                    Four Compositions Graphed
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={33}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_237_hgi_">
               <OuterP>
                 <b>
                   Exercise 33.
@@ -1544,14 +1533,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_121_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Four Compositions Graphed
+                    ABCD Roles
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={34}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_238_hgi_">
               <OuterP>
                 <b>
                   Exercise 34.
@@ -1561,14 +1550,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_122_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    ABCD Roles
+                    Draw the Sandwich
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={35}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_239_hgi_">
               <OuterP>
                 <b>
                   Exercise 35.
@@ -1578,14 +1567,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_123_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Draw the Sandwich
+                    Cosine Rule Geometric 1
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={36}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_240_hgi_">
               <OuterP>
                 <b>
                   Exercise 36.
@@ -1595,14 +1584,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_124_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Cosine Rule Geometric 1
+                    Cosine Rule Geometric 2
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={37}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_241_hgi_">
               <OuterP>
                 <b>
                   Exercise 37.
@@ -1612,14 +1601,14 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_125_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Cosine Rule Geometric 2
+                    Cosine Rule Geometric 3
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
           <Exercise number={38}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_242_hgi_">
               <OuterP>
                 <b>
                   Exercise 38.
@@ -1629,34 +1618,17 @@ export default function __Appendix1__() {
                     href="/article/chapter5#_126_hgi_"
                     class="handle-out-chapter-link"
                   >
-                    Cosine Rule Geometric 3
-                  </a>
-                </ExerciseStatement>
-              </OuterP>
-            </ExerciseStatement>
-          </Exercise>
-          <Exercise number={39}>
-            <ExerciseStatement>
-              <OuterP>
-                <b>
-                  Exercise 39.
-                </b>
-                <ExerciseStatement>
-                  <a
-                    href="/article/chapter5#_127_hgi_"
-                    class="handle-out-chapter-link"
-                  >
                     Cosine Rule Geometric 4
                   </a>
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={40}>
-            <ExerciseStatement>
+          <Exercise number={39}>
+            <ExerciseStatement id="_243_hgi_">
               <OuterP>
                 <b>
-                  Exercise 40.
+                  Exercise 39.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1669,11 +1641,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={41}>
-            <ExerciseStatement>
+          <Exercise number={40}>
+            <ExerciseStatement id="_244_hgi_">
               <OuterP>
                 <b>
-                  Exercise 41.
+                  Exercise 40.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1686,11 +1658,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={42}>
-            <ExerciseStatement>
+          <Exercise number={41}>
+            <ExerciseStatement id="_245_hgi_">
               <OuterP>
                 <b>
-                  Exercise 42.
+                  Exercise 41.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1703,11 +1675,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={43}>
-            <ExerciseStatement>
+          <Exercise number={42}>
+            <ExerciseStatement id="_246_hgi_">
               <OuterP>
                 <b>
-                  Exercise 43.
+                  Exercise 42.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1720,11 +1692,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={44}>
-            <ExerciseStatement>
+          <Exercise number={43}>
+            <ExerciseStatement id="_247_hgi_">
               <OuterP>
                 <b>
-                  Exercise 44.
+                  Exercise 43.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1737,11 +1709,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={45}>
-            <ExerciseStatement>
+          <Exercise number={44}>
+            <ExerciseStatement id="_248_hgi_">
               <OuterP>
                 <b>
-                  Exercise 45.
+                  Exercise 44.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1754,11 +1726,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={46}>
-            <ExerciseStatement>
+          <Exercise number={45}>
+            <ExerciseStatement id="_249_hgi_">
               <OuterP>
                 <b>
-                  Exercise 46.
+                  Exercise 45.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1771,11 +1743,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={47}>
-            <ExerciseStatement>
+          <Exercise number={46}>
+            <ExerciseStatement id="_250_hgi_">
               <OuterP>
                 <b>
-                  Exercise 47.
+                  Exercise 46.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1788,11 +1760,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={48}>
-            <ExerciseStatement>
+          <Exercise number={47}>
+            <ExerciseStatement id="_251_hgi_">
               <OuterP>
                 <b>
-                  Exercise 48.
+                  Exercise 47.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1805,11 +1777,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={49}>
-            <ExerciseStatement>
+          <Exercise number={48}>
+            <ExerciseStatement id="_252_hgi_">
               <OuterP>
                 <b>
-                  Exercise 49.
+                  Exercise 48.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1822,11 +1794,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={50}>
-            <ExerciseStatement>
+          <Exercise number={49}>
+            <ExerciseStatement id="_253_hgi_">
               <OuterP>
                 <b>
-                  Exercise 50.
+                  Exercise 49.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1839,11 +1811,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={51}>
-            <ExerciseStatement>
+          <Exercise number={50}>
+            <ExerciseStatement id="_254_hgi_">
               <OuterP>
                 <b>
-                  Exercise 51.
+                  Exercise 50.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1856,11 +1828,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={52}>
-            <ExerciseStatement>
+          <Exercise number={51}>
+            <ExerciseStatement id="_255_hgi_">
               <OuterP>
                 <b>
-                  Exercise 52.
+                  Exercise 51.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1873,11 +1845,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={53}>
-            <ExerciseStatement>
+          <Exercise number={52}>
+            <ExerciseStatement id="_256_hgi_">
               <OuterP>
                 <b>
-                  Exercise 53.
+                  Exercise 52.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1890,11 +1862,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={54}>
-            <ExerciseStatement>
+          <Exercise number={53}>
+            <ExerciseStatement id="_257_hgi_">
               <OuterP>
                 <b>
-                  Exercise 54.
+                  Exercise 53.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1907,11 +1879,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={55}>
-            <ExerciseStatement>
+          <Exercise number={54}>
+            <ExerciseStatement id="_258_hgi_">
               <OuterP>
                 <b>
-                  Exercise 55.
+                  Exercise 54.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1924,11 +1896,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={56}>
-            <ExerciseStatement>
+          <Exercise number={55}>
+            <ExerciseStatement id="_259_hgi_">
               <OuterP>
                 <b>
-                  Exercise 56.
+                  Exercise 55.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1941,11 +1913,11 @@ export default function __Appendix1__() {
               </OuterP>
             </ExerciseStatement>
           </Exercise>
-          <Exercise number={57}>
-            <ExerciseStatement>
+          <Exercise number={56}>
+            <ExerciseStatement id="_260_hgi_">
               <OuterP>
                 <b>
-                  Exercise 57.
+                  Exercise 56.
                 </b>
                 <ExerciseStatement>
                   <a
@@ -1966,9 +1938,12 @@ export default function __Appendix1__() {
           Bootcamp 1 graveyard:
         </OuterP>
         <Pause />
-        <Exercises at_end_of_page={true}>
+        <Exercises
+          at_end_of_page={true}
+          id="_277_hgi_"
+        >
           <Exercise number={1}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_262_hgi_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -1985,7 +1960,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_263_hgi_">
               <OuterP>
                 <b>
                   Exercise 2.
@@ -2002,7 +1977,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={3}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_264_hgi_">
               <OuterP>
                 <b>
                   Exercise 3.
@@ -2019,7 +1994,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={4}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_265_hgi_">
               <OuterP>
                 <b>
                   Exercise 4.
@@ -2036,7 +2011,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={5}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_266_hgi_">
               <OuterP>
                 <b>
                   Exercise 5.
@@ -2053,7 +2028,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={6}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_267_hgi_">
               <OuterP>
                 <b>
                   Exercise 6.
@@ -2070,7 +2045,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={7}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_268_hgi_">
               <OuterP>
                 <b>
                   Exercise 7.
@@ -2087,7 +2062,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={8}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_269_hgi_">
               <OuterP>
                 <b>
                   Exercise 8.
@@ -2104,7 +2079,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={9}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_270_hgi_">
               <OuterP>
                 <b>
                   Exercise 9.
@@ -2121,7 +2096,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={10}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_271_hgi_">
               <OuterP>
                 <b>
                   Exercise 10.
@@ -2138,7 +2113,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={11}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_272_hgi_">
               <OuterP>
                 <b>
                   Exercise 11.
@@ -2155,7 +2130,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={12}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_273_hgi_">
               <OuterP>
                 <b>
                   Exercise 12.
@@ -2172,7 +2147,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={13}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_274_hgi_">
               <OuterP>
                 <b>
                   Exercise 13.
@@ -2189,7 +2164,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={14}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_275_hgi_">
               <OuterP>
                 <b>
                   Exercise 14.
@@ -2206,7 +2181,7 @@ export default function __Appendix1__() {
             </ExerciseStatement>
           </Exercise>
           <Exercise number={15}>
-            <ExerciseStatement>
+            <ExerciseStatement id="_276_hgi_">
               <OuterP>
                 <b>
                   Exercise 15.
