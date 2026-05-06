@@ -11,11 +11,11 @@
         |> Exercise
             handle=_gy_0
             |> ExerciseStatement
-                >>_true_false_{{True False}}
+                [True False](>>_true_false_)
         |> Exercise
             handle=_gy_1
             |> ExerciseStatement
-                >>_approximate_1_over_n_minus_1_over_n+1_{{ Approximate 1 over n minus 1 over n+1 }}
+                [Approximate 1 over n minus 1 over n+1](>>_approximate_1_over_n_minus_1_over_n+1_)
 
     |> StarDivider
 
@@ -26,19 +26,19 @@
         |> Exercise
             handle=_gy_2
             |> ExerciseStatement
-                >>_lines_of_slope_1_over_2_{{Lines of Slope 1/2}}
+                [Lines of Slope 1/2](>>_lines_of_slope_1_over_2_)
         |> Exercise
             handle=_gy_3
             |> ExerciseStatement
-                >>_x0_y0_slope_p_general_equation_{{x0, y0, Slope p: General Equation}}
+                [x0, y0, Slope p: General Equation](>>_x0_y0_slope_p_general_equation_)
         |> Exercise
             handle=_gy_4
             |> ExerciseStatement
-                >>_vertical_velocity_plot_{{Vertical Velocity Plot}}
+                [Vertical Velocity Plot](>>_vertical_velocity_plot_)
         |> Exercise
             handle=_gy_5
             |> ExerciseStatement
-                >>_y0-px_0_intercept_explanation_{{y0 - px0 Intercept Explanation}}
+                [y0 - px0 Intercept Explanation](>>_y0-px_0_intercept_explanation_)
 
     |> StarDivider
 
@@ -49,83 +49,83 @@
         |> Exercise
             handle=_gy_6
             |> ExerciseStatement
-                >>_define_abs_val_by_cases_{{Define Absolute Value by Cases}}
+                [Define Absolute Value by Cases](>>_define_abs_val_by_cases_)
         |> Exercise
             handle=_gy_7
             |> ExerciseStatement
-                >>_define_abs_val_by_algebraic_formula_{{Define Absolute Value by Algebraic Formula}}
+                [Define Absolute Value by Algebraic Formula](>>_define_abs_val_by_algebraic_formula_)
         |> Exercise
             handle=_gy_8
             |> ExerciseStatement
-                >>_evaluate_lambda_functions_{{Evaluate Lambda Functions}}
+                [Evaluate Lambda Functions](>>_evaluate_lambda_functions_)
         |> Exercise
             handle=_gy_9
             |> ExerciseStatement
-                >>_floor_introduction_{{Floor Introduction}}
+                [Floor Introduction](>>_floor_introduction_)
         |> Exercise
             handle=_gy_10
             |> ExerciseStatement
-                >>_factory_roof_functions_1_{{Factory Roof Functions 1}}
+                [Factory Roof Functions 1](>>_factory_roof_functions_1_)
         |> Exercise
             handle=_gy_11
             |> ExerciseStatement
-                >>_factory_roof_functions_2_{{Factory Roof Functions 2}}
+                [Factory Roof Functions 2](>>_factory_roof_functions_2_)
         |> Exercise
             handle=_gy_12
             |> ExerciseStatement
-                >>_cosine_of_1000x_{{Cosine of 1000x}}
+                [Cosine of 1000x](>>_cosine_of_1000x_)
         |> Exercise
             handle=_gy_13
             |> ExerciseStatement
-                >>_composition_order_1_{{Composition Order 1}}
+                [Composition Order 1](>>_composition_order_1_)
         |> Exercise
             handle=_gy_14
             |> ExerciseStatement
-                >>_composition_order_2_{{Composition Order 2}}
+                [Composition Order 2](>>_composition_order_2_)
         |> Exercise
             handle=_gy_15
             |> ExerciseStatement
-                >>_complete_square_1_{{Complete the Square 1}}
+                [Complete the Square 1](>>_complete_square_1_)
         |> Exercise
             handle=_gy_16
             |> ExerciseStatement
-                >>_complete_square_2_{{Complete the Square 2}}
+                [Complete the Square 2](>>_complete_square_2_)
         |> Exercise
             handle=_gy_17
             |> ExerciseStatement
-                >>_no_solutions_by_complete_square_{{No Solutions by Complete Square}}
+                [No Solutions by Complete Square](>>_no_solutions_by_complete_square_)
         |> Exercise
             handle=_gy_18
             |> ExerciseStatement
-                >>_two_solutions_by_complete_square_{{Two Solutions by Complete Square}}
+                [Two Solutions by Complete Square](>>_two_solutions_by_complete_square_)
         |> Exercise
             handle=_gy_19
             |> ExerciseStatement
-                >>_what_seq_AB_{{What Sequence AB}}
+                [What Sequence AB](>>_what_seq_AB_)
         |> Exercise
             handle=_gy_20
             |> ExerciseStatement
-                >>_what_roots_by_x0_y0_seq_{{What Roots by x0, y0 Sequence}}
+                [What Roots by x0, y0 Sequence](>>_what_roots_by_x0_y0_seq_)
         |> Exercise
             handle=_gy_21
             |> ExerciseStatement
-                >>_use_previous_two_AB_{{Use Previous Two AB}}
+                [Use Previous Two AB](>>_use_previous_two_AB_)
         |> Exercise
             handle=_gy_22
             |> ExerciseStatement
-                >>_function_operations_Q_and_A_{{Function Operations Q&A}}
+                [Function Operations Q&A](>>_function_operations_Q_and_A_)
         |> Exercise
             handle=_gy_23
             |> ExerciseStatement
-                >>_what_seq_AB_C_{{What Sequence ABC}}
+                [What Sequence ABC](>>_what_seq_AB_C_)
         |> Exercise
             handle=_gy_24
             |> ExerciseStatement
-                >>_what_are_the_roots_ABC_{{What Are the Roots ABC}}
+                [What Are the Roots ABC](>>_what_are_the_roots_ABC_)
         |> Exercise
             handle=_gy_25
             |> ExerciseStatement
-                >>_summon_the_currying_{{Summon the Currying}}
+                [Summon the Currying](>>_summon_the_currying_)
 
     |> StarDivider
 
@@ -136,111 +136,111 @@
         |> Exercise
             handle=_gy_26
             |> ExerciseStatement
-                >>_see_saw_{{See-Saw}}
+                [See-Saw](>>_see_saw_)
         |> Exercise
             handle=_gy_27
             |> ExerciseStatement
-                >>_derivative_of_1_over_x_near_0_{{Derivative of 1/x near 0}}
+                [Derivative of 1/x near 0](>>_derivative_of_1_over_x_near_0_)
         |> Exercise
             handle=_gy_28
             |> ExerciseStatement
-                >>_see_saw_second_derivative_{{See-Saw Second Derivative}}
+                [See-Saw Second Derivative](>>_see_saw_second_derivative_)
         |> Exercise
             handle=_gy_29
             |> ExerciseStatement
-                >>_see_saw_with_units_{{See-Saw with Units}}
+                [See-Saw with Units](>>_see_saw_with_units_)
         |> Exercise
             handle=_gy_30
             |> ExerciseStatement
-                >>_correct_incorrect_or_nonsensical_{{Correct, Incorrect, or Nonsensical}}
+                [Correct, Incorrect, or Nonsensical](>>_correct_incorrect_or_nonsensical_)
         |> Exercise
             handle=_gy_31
             |> ExerciseStatement
-                >>_complete_the_missing_units_{{Complete the Missing Units}}
+                [Complete the Missing Units](>>_complete_the_missing_units_)
         |> Exercise
             handle=_gy_32
             |> ExerciseStatement
-                >>_how_many_bumps_{{How Many Bumps}}
+                [How Many Bumps](>>_how_many_bumps_)
         |> Exercise
             handle=_gy_33
             |> ExerciseStatement
-                >>_reorder_derivatives_{{Reorder Derivatives}}
+                [Reorder Derivatives](>>_reorder_derivatives_)
         |> Exercise
             handle=_gy_34
             |> ExerciseStatement
-                >>_narrow_and_less_narrow_bends_{{Narrow and Less Narrow Bends}}
+                [Narrow and Less Narrow Bends](>>_narrow_and_less_narrow_bends_)
         |> Exercise
             handle=_gy_35
             |> ExerciseStatement
-                >>_first_law_of_differentiation_{{First Law of Differentiation}}
+                [First Law of Differentiation](>>_first_law_of_differentiation_)
         |> Exercise
             handle=_gy_36
             |> ExerciseStatement
-                >>_define_product_of_constant_and_function_{{Define Product of Constant and Function}}
+                [Define Product of Constant and Function](>>_define_product_of_constant_and_function_)
         |> Exercise
             handle=_gy_37
             |> ExerciseStatement
-                >>_four_particles_{{Four Particles}}
+                [Four Particles](>>_four_particles_)
         |> Exercise
             handle=_gy_38
             |> ExerciseStatement
-                >>_sum_rule_summary_{{Sum Rule Summary}}
+                [Sum Rule Summary](>>_sum_rule_summary_)
         |> Exercise
             handle=_gy_39
             |> ExerciseStatement
-                >>_difference_quotient_illustration_{{Difference Quotient Illustration}}
+                [Difference Quotient Illustration](>>_difference_quotient_illustration_)
         |> Exercise
             handle=_gy_40
             |> ExerciseStatement
-                >>_difference_quotient_nutshell_{{Difference Quotient Nutshell}}
+                [Difference Quotient Nutshell](>>_difference_quotient_nutshell_)
         |> Exercise
             handle=_gy_41
             |> ExerciseStatement
-                >>_verbal_to_arithmetic_A_change_{{Verbal to Arithmetic: A Change}}
+                [Verbal to Arithmetic: A Change](>>_verbal_to_arithmetic_A_change_)
         |> Exercise
             handle=_gy_42
             |> ExerciseStatement
-                >>_verbal_to_arithmetic_A_change_pt2_{{Verbal to Arithmetic: A Change pt.2}}
+                [Verbal to Arithmetic: A Change pt.2](>>_verbal_to_arithmetic_A_change_pt2_)
         |> Exercise
             handle=_gy_43
             |> ExerciseStatement
-                >>_change_in_f_{{Change in f}}
+                [Change in f](>>_change_in_f_)
         |> Exercise
             handle=_gy_45
             |> ExerciseStatement
-                >>_big_A_product_approach_as_h_goes_to_0_{{Big A Product Approach as h Goes to 0}}
+                [Big A Product Approach as h Goes to 0](>>_big_A_product_approach_as_h_goes_to_0_)
         |> Exercise
             handle=_gy_46
             |> ExerciseStatement
-                >>_express_the_associativity_etc_{{Express the Associativity etc.}}
+                [Express the Associativity etc.](>>_express_the_associativity_etc_)
         |> Exercise
             handle=_gy_47
             |> ExerciseStatement
-                >>_associativity_of_function_multiplication_{{Associativity of Function Multiplication}}
+                [Associativity of Function Multiplication](>>_associativity_of_function_multiplication_)
         |> Exercise
             handle=_gy_48
             |> ExerciseStatement
-                >>_1d_red_particle_{{1D Red Particle}}
+                [1D Red Particle](>>_1d_red_particle_)
         |> Exercise
             handle=_gy_49
             |> ExerciseStatement
-                >>_1d_blue_yellow_particles_{{1D Blue-Yellow Particles}}
+                [1D Blue-Yellow Particles](>>_1d_blue_yellow_particles_)
         |> Exercise
             handle=_gy_50
             |> ExerciseStatement
-                >>_four_particles_at_2_4_{{Four Particles at 2, 4}}
+                [Four Particles at 2, 4](>>_four_particles_at_2_4_)
         |> Exercise
             handle=_gy_51
             |> ExerciseStatement
-                >>_eta_approximation_from_cosine_graph_{{Eta Approximation from Cosine Graph}}
+                [Eta Approximation from Cosine Graph](>>_eta_approximation_from_cosine_graph_)
         |> Exercise
             handle=_gy_52
             |> ExerciseStatement
-                >>_f_equals_f_5_{{f Equals f at 5}}
+                [f Equals f at 5](>>_f_equals_f_5_)
         |> Exercise
             handle=_gy_53
             |> ExerciseStatement
-                >>_f_equals_f_17_{{f Equals f at 17}}
+                [f Equals f at 17](>>_f_equals_f_17_)
 
     |> StarDivider
 
@@ -251,227 +251,227 @@
         |> Exercise
             handle=_gy_54
             |> ExerciseStatement
-                >>_guesstimate_cos_10x_linear_{{Guesstimate cos(10x) Linear}}
+                [Guesstimate cos(10x) Linear](>>_guesstimate_cos_10x_linear_)
         |> Exercise
             handle=_gy_55
             |> ExerciseStatement
-                >>_guesstimate_cos_10x_parabolic_{{Guesstimate cos(10x) Parabolic}}
+                [Guesstimate cos(10x) Parabolic](>>_guesstimate_cos_10x_parabolic_)
         |> Exercise
             handle=_gy_56
             |> ExerciseStatement
-                >>_guesstimate_sinusoid_{{Guesstimate Sinusoid}}
+                [Guesstimate Sinusoid](>>_guesstimate_sinusoid_)
         |> Exercise
             handle=_gy_57
             |> ExerciseStatement
-                >>_triangle_conch_{{Triangle Conch}}
+                [Triangle Conch](>>_triangle_conch_)
         |> Exercise
             handle=_gy_58
             |> ExerciseStatement
-                >>_0_point_2_radians_{{0.2 Radians}}
+                [0.2 Radians](>>_0_point_2_radians_)
         |> Exercise
             handle=_gy_59
             |> ExerciseStatement
-                >>_handdrawn_oval_P_position_{{Handdrawn Oval P Position}}
+                [Handdrawn Oval P Position](>>_handdrawn_oval_P_position_)
         |> Exercise
             handle=_gy_60
             |> ExerciseStatement
-                >>_eta_and_4eta_as_ratios_{{Eta and 4-Eta as Ratios}}
+                [Eta and 4-Eta as Ratios](>>_eta_and_4eta_as_ratios_)
         |> Exercise
             handle=_gy_61
             |> ExerciseStatement
-                >>_vector_addition_definition_{{Vector Addition Definition}}
+                [Vector Addition Definition](>>_vector_addition_definition_)
         |> Exercise
             handle=_gy_62
             |> ExerciseStatement
-                >>_circular_motion_from_x_coordinate_{{Circular Motion from x Coordinate}}
+                [Circular Motion from x Coordinate](>>_circular_motion_from_x_coordinate_)
         |> Exercise
             handle=_gy_63
             |> ExerciseStatement
-                >>_spherical_to_cartesian_coordinates_1_{{Spherical to Cartesian Coordinates 1}}
+                [Spherical to Cartesian Coordinates 1](>>_spherical_to_cartesian_coordinates_1_)
         |> Exercise
             handle=_gy_64
             |> ExerciseStatement
-                >>_spherical_to_cartesian_coordinates_2_{{Spherical to Cartesian Coordinates 2}}
+                [Spherical to Cartesian Coordinates 2](>>_spherical_to_cartesian_coordinates_2_)
         |> Exercise
             handle=_gy_65
             |> ExerciseStatement
-                >>_blueprints_top_and_side_{{Blueprints Top and Side}}
+                [Blueprints Top and Side](>>_blueprints_top_and_side_)
         |> Exercise
             handle=_gy_66
             |> ExerciseStatement
-                >>_blueprints_open_thin_door_{{Blueprints: Open Thin Door}}
+                [Blueprints: Open Thin Door](>>_blueprints_open_thin_door_)
         |> Exercise
             handle=_gy_67
             |> ExerciseStatement
-                >>_powers_of_secant_{{Powers of Secant}}
+                [Powers of Secant](>>_powers_of_secant_)
         |> Exercise
             handle=_gy_69
             |> ExerciseStatement
-                >>_long_division_11_over_7_{{Long Division 11/7}}
+                [Long Division 11/7](>>_long_division_11_over_7_)
         |> Exercise
             handle=_gy_70
             |> ExerciseStatement
-                >>_long_division_22_over_7_{{Long Division 22/7}}
+                [Long Division 22/7](>>_long_division_22_over_7_)
         |> Exercise
             handle=_gy_71
             |> ExerciseStatement
-                >>_long_division_15542486476949_777_{{Long Division 15542486476949/777}}
+                [Long Division 15542486476949/777](>>_long_division_15542486476949_777_)
         |> Exercise
             handle=_gy_72
             |> ExerciseStatement
-                >>_complement_calculation_{{Complement Calculation}}
+                [Complement Calculation](>>_complement_calculation_)
         |> Exercise
             handle=_gy_73
             |> ExerciseStatement
-                >>_complement_of_complement_{{Complement of Complement}}
+                [Complement of Complement](>>_complement_of_complement_)
         |> Exercise
             handle=_gy_74
             |> ExerciseStatement
-                >>_rotate_central_90_{{Rotate Central 90 Degrees}}
+                [Rotate Central 90 Degrees](>>_rotate_central_90_)
         |> Exercise
             handle=_gy_75
             |> ExerciseStatement
-                >>_ratio_A_over_B_tan^2_{{Ratio A/B: tan squared}}
+                [Ratio A/B: tan squared](>>_ratio_A_over_B_tan^2_)
         |> Exercise
             handle=_gy_76
             |> ExerciseStatement
-                >>_ratio_A_over_B_1_+_tan^2_{{Ratio A/B: 1 + tan squared}}
+                [Ratio A/B: 1 + tan squared](>>_ratio_A_over_B_1_+_tan^2_)
         |> Exercise
             handle=_gy_77
             |> ExerciseStatement
-                >>_archimedean_projection_new_ver_{{Archimedean Projection}}
+                [Archimedean Projection](>>_archimedean_projection_new_ver_)
         |> Exercise
             handle=_gy_78
             |> ExerciseStatement
-                >>_rank_the_7_slices_{{Rank the 7 Slices}}
+                [Rank the 7 Slices](>>_rank_the_7_slices_)
         |> Exercise
             handle=_gy_79
             |> ExerciseStatement
-                >>_sphere_area_formula_from_archimedean_property_{{Sphere Area Formula from Archimedean Property}}
+                [Sphere Area Formula from Archimedean Property](>>_sphere_area_formula_from_archimedean_property_)
         |> Exercise
             handle=_gy_80
             |> ExerciseStatement
-                >>_sphere_volume_{{Sphere Volume}}
+                [Sphere Volume](>>_sphere_volume_)
         |> Exercise
             handle=_gy_81
             |> ExerciseStatement
-                >>_gas_tank_{{Gas Tank}}
+                [Gas Tank](>>_gas_tank_)
         |> Exercise
             handle=_gy_82
             |> ExerciseStatement
-                >>_gas_tank_decimal_approximation_{{Gas Tank Decimal Approximation}}
+                [Gas Tank Decimal Approximation](>>_gas_tank_decimal_approximation_)
         |> Exercise
             handle=_gy_83
             |> ExerciseStatement
-                >>_three_quarters_decimal_approximation_{{Three Quarters Decimal Approximation}}
+                [Three Quarters Decimal Approximation](>>_three_quarters_decimal_approximation_)
         |> Exercise
             handle=_gy_84
             |> ExerciseStatement
-                >>_a_ship_{{A Ship}}
+                [A Ship](>>_a_ship_)
         |> Exercise
             handle=_gy_85
             |> ExerciseStatement
-                >>_four_compositions_expressed_{{Four Compositions Expressed}}
+                [Four Compositions Expressed](>>_four_compositions_expressed_)
         |> Exercise
             handle=_gy_86
             |> ExerciseStatement
-                >>_four_compositions_graphed_{{Four Compositions Graphed}}
+                [Four Compositions Graphed](>>_four_compositions_graphed_)
         |> Exercise
             handle=_gy_87
             |> ExerciseStatement
-                >>_ABCD_roles_{{ABCD Roles}}
+                [ABCD Roles](>>_ABCD_roles_)
         |> Exercise
             handle=_gy_88
             |> ExerciseStatement
-                >>_draw_the_sandwich_{{Draw the Sandwich}}
+                [Draw the Sandwich](>>_draw_the_sandwich_)
         |> Exercise
             handle=_gy_89
             |> ExerciseStatement
-                >>_cosine_rule_geometric_1_{{Cosine Rule Geometric 1}}
+                [Cosine Rule Geometric 1](>>_cosine_rule_geometric_1_)
         |> Exercise
             handle=_gy_90
             |> ExerciseStatement
-                >>_cosine_rule_geometric_2_{{Cosine Rule Geometric 2}}
+                [Cosine Rule Geometric 2](>>_cosine_rule_geometric_2_)
         |> Exercise
             handle=_gy_91
             |> ExerciseStatement
-                >>_cosine_rule_geometric_3_{{Cosine Rule Geometric 3}}
+                [Cosine Rule Geometric 3](>>_cosine_rule_geometric_3_)
         |> Exercise
             handle=_gy_92
             |> ExerciseStatement
-                >>_cosine_rule_geometric_4_{{Cosine Rule Geometric 4}}
+                [Cosine Rule Geometric 4](>>_cosine_rule_geometric_4_)
         |> Exercise
             handle=_gy_93
             |> ExerciseStatement
-                >>_polar_distance_{{Polar Distance}}
+                [Polar Distance](>>_polar_distance_)
         |> Exercise
             handle=_gy_94
             |> ExerciseStatement
-                >>_cosine_rule_{{Cosine Rule}}
+                [Cosine Rule](>>_cosine_rule_)
         |> Exercise
             handle=_gy_95
             |> ExerciseStatement
-                >>_sine_rule_{{Sine Rule}}
+                [Sine Rule](>>_sine_rule_)
         |> Exercise
             handle=_gy_96
             |> ExerciseStatement
-                >>_secant_cosecant_intersections_{{Secant-Cosecant Intersections}}
+                [Secant-Cosecant Intersections](>>_secant_cosecant_intersections_)
         |> Exercise
             handle=_gy_97
             |> ExerciseStatement
-                >>_tan_cot_on_unit_circle_{{Tan-Cot on Unit Circle}}
+                [Tan-Cot on Unit Circle](>>_tan_cot_on_unit_circle_)
         |> Exercise
             handle=_gy_98
             |> ExerciseStatement
-                >>_geometric_construction_of_1_over_A_new_ver_{{Geometric Construction of 1/A}}
+                [Geometric Construction of 1/A](>>_geometric_construction_of_1_over_A_new_ver_)
         |> Exercise
             handle=_gy_99
             |> ExerciseStatement
-                >>_x_square_x_cube_construction_{{x-Square x-Cube Construction}}
+                [x-Square x-Cube Construction](>>_x_square_x_cube_construction_)
         |> Exercise
             handle=_gy_100
             |> ExerciseStatement
-                >>_sqrt_xy_construction_{{Square Root of xy Construction}}
+                [Square Root of xy Construction](>>_sqrt_xy_construction_)
         |> Exercise
             handle=_gy_101
             |> ExerciseStatement
-                >>_project_i_and_j_{{Project i and j}}
+                [Project i and j](>>_project_i_and_j_)
         |> Exercise
             handle=_gy_102
             |> ExerciseStatement
-                >>_unit_dot_product_geometric_interpretation_{{Unit Dot Product Geometric Interpretation}}
+                [Unit Dot Product Geometric Interpretation](>>_unit_dot_product_geometric_interpretation_)
         |> Exercise
             handle=_gy_103
             |> ExerciseStatement
-                >>_four_graphs_{{Four Graphs}}
+                [Four Graphs](>>_four_graphs_)
         |> Exercise
             handle=_gy_104
             |> ExerciseStatement
-                >>_where_is_the_pythagorean_identity_{{Where Is the Pythagorean Identity}}
+                [Where Is the Pythagorean Identity](>>_where_is_the_pythagorean_identity_)
         |> Exercise
             handle=_gy_105
             |> ExerciseStatement
-                >>_more_closely_related_to_sin2x_or_{{More Closely Related to sin(2x)?}}
+                [More Closely Related to sin(2x)?](>>_more_closely_related_to_sin2x_or_)
         |> Exercise
             handle=_gy_106
             |> ExerciseStatement
-                >>_more_closely_related_followup_{{More Closely Related Followup}}
+                [More Closely Related Followup](>>_more_closely_related_followup_)
         |> Exercise
             handle=_gy_107
             |> ExerciseStatement
-                >>_max_cosx_plus_sinx_new_new_ver_{{Max cos(x) + sin(x)}}
+                [Max cos(x) + sin(x)](>>_max_cosx_plus_sinx_new_new_ver_)
         |> Exercise
             handle=_gy_108
             |> ExerciseStatement
-                >>_cosx_plus_sinx_as_sinusoid_{{cos(x) + sin(x) as Sinusoid}}
+                [cos(x) + sin(x) as Sinusoid](>>_cosx_plus_sinx_as_sinusoid_)
         |> Exercise
             handle=_gy_109
             |> ExerciseStatement
-                >>_Acosx_plus_Bsinx_as_sinusoid_{{A cos(x) + B sin(x) as Sinusoid}}
+                [A cos(x) + B sin(x) as Sinusoid](>>_Acosx_plus_Bsinx_as_sinusoid_)
         |> Exercise
             handle=_gy_110
             |> ExerciseStatement
-                >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_{{Relate A cos(x) + B sin(x) Polar Conversion to cos(x) + sin(x)}}
+                [Relate A cos(x) + B sin(x) Polar Conversion to cos(x) + sin(x)](>>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_)
 
     |> StarDivider
 
@@ -482,60 +482,60 @@
         |> Exercise
             handle=_gy_111
             |> ExerciseStatement
-                >>_2^-1_and_2^-3_and_2^-4_by_hand_{{2^-1, 2^-3, and 2^-4 by Hand}}
+                [2^-1, 2^-3, and 2^-4 by Hand](>>_2^-1_and_2^-3_and_2^-4_by_hand_)
         |> Exercise
             handle=_gy_112
             |> ExerciseStatement
-                >>_100_over_16_by_hand_{{100/16 by Hand}}
+                [100/16 by Hand](>>_100_over_16_by_hand_)
         |> Exercise
             handle=_gy_113
             |> ExerciseStatement
-                >>_chinese_ten_thousand_{{Chinese Ten Thousand}}
+                [Chinese Ten Thousand](>>_chinese_ten_thousand_)
         |> Exercise
             handle=_gy_114
             |> ExerciseStatement
-                >>_kilometers_per_millimeter_{{Kilometers per Millimeter}}
+                [Kilometers per Millimeter](>>_kilometers_per_millimeter_)
         |> Exercise
             handle=_gy_115
             |> ExerciseStatement
-                >>_kilometers_per_10^24_millimeters_{{Kilometers per 10^24 Millimeters}}
+                [Kilometers per 10^24 Millimeters](>>_kilometers_per_10^24_millimeters_)
         |> Exercise
             handle=_gy_116
             |> ExerciseStatement
-                >>_US_yearly_budget_percentage_{{US Yearly Budget Percentage}}
+                [US Yearly Budget Percentage](>>_US_yearly_budget_percentage_)
         |> Exercise
             handle=_gy_117
             |> ExerciseStatement
-                >>_what_is_log_base_10_of_one_trillion_{{What Is log base 10 of One Trillion}}
+                [What Is log base 10 of One Trillion](>>_what_is_log_base_10_of_one_trillion_)
         |> Exercise
             handle=_gy_118
             |> ExerciseStatement
-                >>_what_is_log_base_10_of_1_{{What Is log base 10 of 1}}
+                [What Is log base 10 of 1](>>_what_is_log_base_10_of_1_)
         |> Exercise
             handle=_gy_119
             |> ExerciseStatement
-                >>_what_is_log_base_10_of_product_of_powers_of_10_{{What Is log base 10 of Product of Powers of 10}}
+                [What Is log base 10 of Product of Powers of 10](>>_what_is_log_base_10_of_product_of_powers_of_10_)
         |> Exercise
             handle=_gy_120
             |> ExerciseStatement
-                >>_evaluate_fraction_of_multiples_of_powers_of_10_{{Evaluate Fraction of Multiples of Powers of 10}}
+                [Evaluate Fraction of Multiples of Powers of 10](>>_evaluate_fraction_of_multiples_of_powers_of_10_)
         |> Exercise
             handle=_gy_121
             |> ExerciseStatement
-                >>_how_many_millibits_in_a_gigabyte_{{How Many Millibits in a Gigabyte}}
+                [How Many Millibits in a Gigabyte](>>_how_many_millibits_in_a_gigabyte_)
         |> Exercise
             handle=_gy_122
             |> ExerciseStatement
-                >>_6_point_25_other_way_of_writing_{{6.25: Other Way of Writing}}
+                [6.25: Other Way of Writing](>>_6_point_25_other_way_of_writing_)
         |> Exercise
             handle=_gy_123
             |> ExerciseStatement
-                >>_10^n_over_10^m_equals_10^n-m_{{10^n / 10^m = 10^(n-m)}}
+                [10^n / 10^m = 10^(n-m)](>>_10^n_over_10^m_equals_10^n-m_)
         |> Exercise
             handle=_gy_124
             |> ExerciseStatement
-                >>_M_L_T_rewrite_{{M, L, T Rewrite}}
+                [M, L, T Rewrite](>>_M_L_T_rewrite_)
         |> Exercise
             handle=_gy_125
             |> ExerciseStatement
-                >>_solve_for_a_b_c_{{Solve for a, b, c}}
+                [Solve for a, b, c](>>_solve_for_a_b_c_)
