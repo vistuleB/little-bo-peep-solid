@@ -36,6 +36,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar),
     pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis),
+    pp.markdown_link_splitting(["MathBlock", "Math"]),
     [
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
       dl.append_attribute(#("Book", "counter", "ChapterCounter", infra.GoBack)),
@@ -79,6 +80,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.handles_add_ids(),
       dl.handles_generate_dictionary_and_id_list("path"),
       dl.handles_substitute_and_fix_nonlocal_id_links(#("path", "InChapterLink", "a", [#("class", "handle-in-chapter-link")], [#("class", "handle-out-chapter-link")])),
+      dl.table_marker(),
       dl.unwrap("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Bootcamp", "ArticleTitle", "banner"), ["Chapter"]),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Chapter", "ArticleTitle", "banner"), ["Bootcamp"]),
@@ -103,7 +105,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     [
       dl.find_replace__outside(#("\\*", "*"), ["MathBlock", "Math"]),
       dl.find_replace__outside(#("\\_", "_"), ["MathBlock", "Math"]),
-      dl.table_marker(),
       // dl.insert_word_joiner_into_adjacent_text_nodes(["Math", "i", "b"]),
       dl.wrap_adjacent_non_whitespace_text_with(#(["Math"], "NoBreak")),
       // cleaning 'p' second time around (not sure all the steps are necessary this time):
@@ -177,6 +178,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         #("Chapter <a href=1>_1_</a>", "<a href=1>Chapter _1_</a>"),
         #("Bootcamp <a href=1>_1_</a>", "<a href=1>Bootcamp _1_</a>"),
         #("Exercise <a href=1>_1_</a>", "<a href=1>Exercise _1_</a>"),
+        #("(Exercise <a href=1>_1_</a>", "<a href=1>(Exercise _1_</a>"),
         #("Example <a href=1>_1_</a>", "<a href=1>Example _1_</a>"),
         #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
       ]),

@@ -505,8 +505,8 @@ table.first-line tr td:first-child {
   text-decoration: underline;
 }
 
-.handle-in-chapter-link:hover,
-.handle-out-chapter-link:hover {
+.in-chapter-link:hover,
+.out-chapter-link:hover {
   text-decoration: underline;
 }
 
@@ -701,27 +701,27 @@ ul.toc_ul {
 
 .list-custom-decimal li::marker {
   content: var(--marker-prefix, "") counter(list-item, decimal)
-    var(--marker-suffix, ".") " ";
+    var(--marker-suffix, ".") "\2009\2009";
 }
 
 .list-custom-lower-alpha li::marker {
   content: var(--marker-prefix, "") counter(list-item, lower-alpha)
-    var(--marker-suffix, ".") " ";
+    var(--marker-suffix, ".") "\2009\2009";
 }
 
 .list-custom-upper-alpha li::marker {
   content: var(--marker-prefix, "") counter(list-item, upper-alpha)
-    var(--marker-suffix, ".") " ";
+    var(--marker-suffix, ".") "\2009\2009";
 }
 
 .list-custom-lower-roman li::marker {
   content: var(--marker-prefix, "") counter(list-item, lower-roman)
-    var(--marker-suffix, ".") " ";
+    var(--marker-suffix, ".") "\2009\2009";
 }
 
 .list-custom-upper-roman li::marker {
   content: var(--marker-prefix, "") counter(list-item, upper-roman)
-    var(--marker-suffix, ".") " ";
+    var(--marker-suffix, ".") "\2009\2009";
 }
 
 .text-column {
@@ -768,7 +768,8 @@ ul.toc_ul {
 
 .code-cartouche {
   font-family: monaco;
-  background-color: #bbb;
+  /* background-color: #bfbfbf; */
+  background-color: #ccc;
   font-size: 0.8em;
   border-radius: 0.4em;
   padding: 0.1em 0.3em;

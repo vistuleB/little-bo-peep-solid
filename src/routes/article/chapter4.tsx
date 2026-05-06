@@ -179,17 +179,16 @@ export default function __Chapter4__() {
           <Math>
             $y = f'(x)$
           </Math>
-          {" "} {" "}
+          {" "} [ “after”].
+          (Meaning, the “after” graph records the slope
+          of the “before” graph.) 
+          {" "}
           <NoBreak>
-            [
+            E.g.:
             <Math>
               $=$
             </Math>
           </NoBreak>
-          {" "} “after”].
-          (Meaning, the “after” graph records the slope
-          of the “before” graph.) 
-          E.g.:
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/G9zf.svg" />
@@ -3738,24 +3737,24 @@ const Rest = () => {
               <i>
                 secant
               </i>
-              {" "} [through {" "}
+              {" "} [].
+              “Secant” is a general term for “line passing
+              through two specified points on another
+              {" "}
               <NoBreak>
+                curve”.
                 <Math>
-                  $(x, f(x))$
+                  $(x+h, f(x+h))$
                 </Math>
                 ,
               </NoBreak>
               {" "} {" "}
               <NoBreak>
                 <Math>
-                  $(x+h, f(x+h))$
+                  $(x, f(x))$
                 </Math>
-                ].
+                through
               </NoBreak>
-              {" "}
-              “Secant” is a general term for “line passing
-              through two specified points on another
-              curve”.
             </OuterP>
             <Pause />
             <SolutionNote id="_68_hgi_">
@@ -4660,12 +4659,14 @@ const Rest = () => {
               there is no conclusion to draw.)
             </OuterP>
             <OuterP class="indent-10">
-              [Nb: {" "}
-              <Math>
-                $AB : \rr \ra \rr$
-              </Math>
-              {" "} is the function
-              given by
+              [ is the function
+              given by {" "}
+              <NoBreak>
+                <Math>
+                  $AB : \rr \ra \rr$
+                </Math>
+                Nb:
+              </NoBreak>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5201,12 +5202,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} per which
-              (Exercise {" "}
+              {" "}
               <InChapterLink
                 href="/article/chapter4#_69_hgi_"
                 class="handle-in-chapter-link"
               >
-                14
+                (Exercise 14
               </InChapterLink>
               {" "} Note 3), the fraction approaches
             </OuterP>
@@ -5573,39 +5574,40 @@ const Rest = () => {
                       $f : B \ra A$
                     </Math>
                     {" "}
-                    [for arbitrary sets {" "}
-                    <NoBreak>
-                      <Math>
-                        $A$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $B$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $C$
-                      </Math>
-                      ,
-                    </NoBreak>
-                    {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $D$
-                      </Math>
-                      ]
-                    </NoBreak>
-                    <ImageLeft
-                      src="/build-img/svgo-svg/pcYW.svg"
-                      offset_x="4em"
-                    />
+                    []
                   </i>
+                  <NoBreak>
+                    <Math>
+                      $D$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <NoBreak>
+                    <Math>
+                      $C$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "} {" "}
+                  <NoBreak>
+                    <Math>
+                      $A$
+                    </Math>
+                    for
+                  </NoBreak>
+                  {" "} arbitrary sets {" "}
+                  <ImageLeft
+                    src="/build-img/svgo-svg/pcYW.svg"
+                    offset_x="4em"
+                  />
                 </Item>
               </Item>
               <Item>
@@ -5678,46 +5680,58 @@ const Rest = () => {
               <Item>
                 <p>
                   <i>
-                    the associativity of [real number] multiplication is
-                    the fact that {" "}
+                    the associativity of [
+                  </i>
+                  <Math>
+                    $a, b, c \in \rr$
+                  </Math>
+                  {" "} for all {" "}
+                  <NoBreak>
                     <Math>
                       $a(bc) = (ab)c$
                     </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b, c \in \rr$
-                    </Math>
-                  </i>
+                    real
+                  </NoBreak>
+                  {" "} number] multiplication is
+                  the fact that
                 </p>
               </Item>
               <Item>
                 <p>
                   <i>
-                    the associativity of [real number] addition is
-                    the fact that {" "}
+                    the associativity of [
+                  </i>
+                  <Math>
+                    $a, b, c \in \rr$
+                  </Math>
+                  {" "} for all {" "}
+                  <NoBreak>
                     <Math>
                       $a + (b + c) = (a + b) + c$
                     </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b, c \in \rr$
-                    </Math>
-                  </i>
+                    real
+                  </NoBreak>
+                  {" "} number] addition is
+                  the fact that
                 </p>
               </Item>
               <Item>
                 <p>
                   <i>
-                    the commutativity of [real number] multiplication is
-                    the fact that {" "}
+                    the commutativity of [
+                  </i>
+                  <Math>
+                    $a, b \in \rr$
+                  </Math>
+                  {" "} for all {" "}
+                  <NoBreak>
                     <Math>
                       $ab = ba$
                     </Math>
-                    {" "} for all {" "}
-                    <Math>
-                      $a, b \in \rr$
-                    </Math>
-                  </i>
+                    real
+                  </NoBreak>
+                  {" "} number] multiplication is
+                  the fact that
                 </p>
               </Item>
               <Item>
