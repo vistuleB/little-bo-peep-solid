@@ -1,0 +1,561 @@
+|> AvoidLinterComplaints
+    !! Then
+
+    !! $$
+    !! \Large f \circ g
+    !! $$
+
+    !! imposes its own constraints on signatures, 
+    !! !! but we can summarize everything in this flower bed:
+    !! as summarized in this flower bed:
+
+    !! |> Pause
+
+    !! |> StarDivider
+
+    !! Applying similar logic to $f - g$, $f/g$, and $f\circ g$, we
+    !! obtain the following flower bed, that
+    !! (the former two add 
+    !! |> del
+    !!     hardly anything
+    !! \ nothing new); we summarize the situation in the following
+    !! flowerbed:
+
+
+    !! Similarly, a composition
+
+    !! $$
+    !! \Large f \circ g
+    !! $$
+
+    !! only makes sense if the signatures of $f$ and $g$ have
+    !! the form
+
+    !! $$
+    !! \Large
+    !! \begin{aligned}
+    !! f &: [\te{B}] \ra [\te{C}] \\
+    !! g &: [\te{A}] \ra [\te{B}] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! since in the formula
+
+    !! $$
+    !! \Large (f\circ g)(x) = f(g(x))
+    !! $$
+
+    !! an output of $g$ becomes an input of $f$, but nothing
+    !! else is otherwise needed to make the pieces “fit”, and
+    !! so on—we summarize the situation...
+
+    !! |> Pause
+
+    !! ...in this flower bed.
+
+    ===
+
+
+!! |> Section
+
+!!     *Function operations and signatures.*
+!!     When we take the sum...
+
+!!     $$
+!!     \Large f + g
+!!     $$
+
+!!     ...of two functions, the same input, when evaluating the
+!!     sum, is fed to both functions:
+
+!!     $$
+!!     \Large (f + g)(x) = f(x) + g(x).
+!!     $$
+
+!!     This means that in order for the sum to make sense 
+!!     !! at all, 
+!!     the functions must take inputs with the same
+!!     units; in addition, by the old adage apples should not be added
+!!     to oranges, the two functions must output values with the
+!!     same units as well; in other words, if $f$ and $g$ have
+!!     signatures...
+
+!!     $$
+!!     \Large
+!!     \begin{gathered}
+!!     f : [\te{A}] \ra [\te{B}] \\
+!!     g : [\te{C}] \ra [\te{D}] \up{1.35}
+!!     \end{gathered}
+!!     $$
+
+!!     ...then taking the sum...
+
+!!     $$
+!!     \Large f + g
+!!     $$
+
+!!     ...implies the constraints...
+
+!!     $$
+!!     \Large
+!!     \begin{aligned}
+!!     \te{A} &= \te{C} \\
+!!     \te{B} &= \te{D} \up{1.35}
+!!     \end{aligned}
+!!     $$
+
+!!     ...on the units in order for the sum to be “well-formed”, not
+!!     nonsensical!; i.e., the most general signature under which
+!!     a sum of $f$ and $g$ makes sense is...
+
+!!     $$
+!!     \Large
+!!     \begin{aligned}
+!!     f : [\te{A}] \ra [\te{B}]& \\
+!!     g : [\te{A}] \ra [\te{B}]& \up{1.35}
+!!     \end{aligned}
+!!     $$
+
+!!     ...with the _same_ input units, and the _same_ output
+!!     units!
+
+!! |> Section
+!!     *Notation.*
+!!     We write
+
+!!     $$
+!!     \Large f : [\te{A}] \ra [\te{B}]
+!!     $$
+
+!!     to indicate that $f$ is a function $f : \rr \ra \rr$
+!!     that takes inputs with units A
+!!     and produces outputs with units B. 
+!!     For example,
+
+!!     $$
+!!     \Large h : [\te{kg}] \ra [^\circ\te{F}]
+!!     $$
+
+!!     indicates that $h$ 
+!!     is a function whose inputs denote kilograms and whose
+!!     outputs denote degrees fahrenheit, etc.
+!!     (These are purely “physical” concepts, not
+!!     mathematical, but we're cool with that.)
+
+!!     |> Pause
+
+!!     *Vocabulary.* The input and output units of a function,
+!!     when present as above, are referred to as the
+
+!!     __signature__
+
+!!     of the function.
+
+!! |> Section
+!!     *Compatible signatures for function operations.* 
+!!     Taking the sum or product of functions etc
+!!     presupposes some “compatibility” between their
+!!     signatures—for 
+
+!!     !! |> Pause
+!!     !! *Constraints on function signatures imposed by
+!!     !! function operations.* Taking the sum, product,
+!!     !! quotient, etc, of two functions imposes certain
+!!     !! constraints on their signatures, in order for the
+!!     !! operation to not be physically meaningless.
+!!     !! The following table shows the
+!!     !! most general patterns that are possible:
+!!     !! of signature possible when taking
+!!     !! the sum, product, quotient, or composition of two functions:
+
+
+!! |> Section
+!!     work=ing
+!!     *Function operation and units.* Taking the sum or
+!!     product, etc, of two functions imposes certain
+!!     constraints on their signatures in order for the operation
+!!     to not be physically meaningless, in ways that are
+!!     worth being aware of. The following table shows the
+!!     most general pattern of signature possible when taking
+!!     the sum, product, quotient, or composition of two functions:
+
+    
+
+!!     !! of two functions
+
+!!     !! $$
+!!     !! \Large (f + g)(x) = f(x) + g(x)
+!!     !! $$
+!!     $$
+!!     \Large f + g
+!!     $$
+
+!!     !! presupposes that the inputs and outputs of
+!!     !! $f$ and $g$ meet certain requirements; e.g.,
+
+!!     !! $$
+!!     !! \Large 
+!!     !! $$
+
+!! |> Section
+!!     work=ing
+!!     !! *Function operations.*
+!!     *The constraints imposed by function operations
+!!     on units.*
+!!     When we add two functions the
+!!     same input shows up as an input to both functions:
+
+!!     $$
+!!     \Large (f + g)(x) = f(x) + g(x)
+!!     $$
+
+!!     What this means is that if units are present 
+!!     $f$ and $g$ must both take the _same kind_ of input, units-wise,
+!!     in order for the function addition to
+!!     make any sense; if we write
+
+!!     $$
+!!     \Large f : [\te{A}] \ra [\te{B}]
+!!     $$
+
+!!     !! to indicate that the inputs to $f$ have
+!!     !! unit A and the output of $f$ have unit B, then
+!!     to indicate that $f$ takes inputs with units A
+!!     and produces outputs with units B, and
+
+!!     $$
+!!     \Large g : [\te{C}] \ra [\te{D}]
+!!     $$
+
+!!     likewise for $g$ for some units C and D, then the sum
+
+!!     $$
+!!     \Large f + g
+!!     $$
+
+!!     cannot/must not/should not take place unless
+
+!!     $$
+!!     \Large \te{A} = \te{C}
+!!     $$
+
+!!     because the same input $x$ must have units A
+!!     when it is fed to $f$, and units C when it is fed
+!!     to $g$! In addition, we must have
+!!     !! the constraint
+!!     !! to $g$!!!!!!!!!! Though in this case, the constraint
+
+!!     $$
+!!     \Large \te{B} = \te{D}
+!!     $$
+
+!!     also in this case, by the old addage that apples should
+!!     not be added to oranges. (Specifically, note 
+!!     that $f(x)$ has units B, that
+!!     $g(x)$ has units D, and that $f(x)$ is added to $g(x)$.)
+    
+!!     By contrast,
+
+!!     __apples can be multiplied by oranges__
+
+!!     as testified by units such as __meters squared__ or __kilowatt-hours__
+!!     or __worker years__ or even __meters per second__
+!!     that is “meters times per seconds” (or “meters times seconds inverse ($\te{s}^{-1}$)”),
+!!     !! (take _meters squared_ or _kilowatt-hours_,
+!!     !! or even _meters per second_, where in the last
+!!     !! case we multiply _meters_ by 
+!!     !! _per seconds_, $\te{s}^{-1}$)
+!!     !! and so 
+!!     so to form the product of two functions
+
+!!     $$
+!!     \Large fg
+!!     $$
+
+!!     with signatures 
+
+!!     $$
+!!     \begin{gathered}
+!!     \,\Large f : [\te{A}] \ra [\te{B}], \\
+!!     \Large g : [\te{C}] \ra [\te{D}] \up{1.35}
+!!     \end{gathered}
+!!     $$
+
+!!     the constraint 
+
+!!     $$
+!!     \Large \te{A} = \te{C}
+!!     $$
+
+!!     must still be obeyed (because
+
+!!     $$
+!!     \Large (fg)(x) = f(x)g(x)
+!!     $$
+
+!!     and ‘$x$’ again appears as an input to both $f$ and
+!!     $g$), but, by  the constraint
+
+!!     $$
+!!     \Large \te{B} = \te{D}
+!!     $$
+
+!!     can be dropped, because any kind of unit can be
+!!     multiplied by any other kind of unit! So in this case
+!!     the “general form” of $f$ and $g$ would be
+
+!!     $$
+!!     \begin{gathered}
+!!     \,\Large f : [\te{A}] \ra [\te{B}], \\
+!!     \,\Large g : [\te{A}] \ra [\te{C}]\, \up{1.35}
+!!     \end{gathered}
+!!     $$
+
+!!     for some units A, B, C, while in the case of function
+!!     addition the “general form” would be
+
+!!     $$
+!!     \begin{gathered}
+!!     \,\Large f : [\te{A}] \ra [\te{B}], \\
+!!     \,\Large g : [\te{A}] \ra [\te{B}]\, \up{1.35}
+!!     \end{gathered}
+!!     $$
+
+!!     with only two degrees of freedom in the units, A and B.
+
+!!     !! $$
+!!     !! \Large \te{A} = \te{C}
+!!     !! $$
+
+!!     !! remains, while the constraint
+
+!!     !! $$
+!!     !! \Large \te{B} = \te{D}
+!!     !! $$
+    
+!!     !! is dropped,
+!!     !! by contrast,
+!!     !! and the output units B and D can be 
+!!     !! completely arbitrary!
+
+!!     !! is lost, for $f : [A] \ra [B]$, $g : [C] \ra [D]$.
+!!     !! —because the same input $x$ is used as
+!!     !! an input to both $f$ and $g$—but
+
+
+
+!!     !! “seconds inverse”,
+!!     !! or “one over seconds”, $\te{s}^{-1}$)
+!!     !! must also be satisfied in order for the function
+!!     !! addition to make any sense, because the outputs
+!!     !! $f(x)$ and $g(x)$ are added together, and by the
+!!     !! old addage about adding apples to oranges.
+
+
+
+!!     !! $$
+!!     !! \begin{gathered}
+!!     !! \Large f : [\te{A}] \ra [\te{B}] \\
+!!     !! \Large g : [\te{C}] \ra [\te{D}] \up{1.2}
+!!     !! \end{gathered}
+!!     !! $$
+
+!! |> Section
+!!     work=ing
+!!     *The chain rule.* 
+!!     Starting slow, we invite you to verify the following
+!!     multiplication:
+
+!!     $$
+!!     2.22 \times 10.1 = 22.422.
+!!     $$
+
+!!     Here is a multiplication only
+!!     of units:
+
+!!     $$
+!!     \,\left[{\te{m}\over \te{s}}\right]\times\left[{\te{\$}\over \te{m}}\right] = \left[{\te{\$}\over \te{m}}\right].
+!!     $$
+
+!!     We can combine the two:
+
+!!     |> Boxed
+!!         $$
+!!         2.22[\te{m}/\te{s}] \times 10.1[\te{\$}/\te{m}] = 22.422[\te{\$}/\te{s}]
+!!         $$
+
+!!     The multiplication of
+
+!!     __meters per second__
+
+!!     (“[m$/$s]”) by
+
+!!     __dollars per meter__
+
+!!     (“[\$$/$m]”) gives
+
+!!     __dollars per second__
+
+!!     (“[\$$/$s]”) yay!
+
+
+|> SomeMore
+
+    !! , at least, insofar as
+    !! dimensional analysis is concerned!
+
+
+    !! “initial constraint” on the
+    !! signatures as we do on the left-hand side of the equation!
+
+    !! Firstly, taking the sum
+
+    !! $$
+    !! \Large f + g
+    !! $$
+
+    !! implies that $f$ and $g$ have signatures
+    !! of the form
+
+    !! $$
+    !! \Large
+    !! \begin{aligned}
+    !! f : [\te{A}] &\ra [\te{B}] \\
+    !! g : [\te{A}] &\ra [\te{B}] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! for some units A, B, as per the rules of Table 1.1; 
+    !! then one finds, one by one, that:
+
+    !! $$
+    !! \Large
+    !! \begin{gathered}
+    !! f + g : [\te{A}] \ra [\te{B}] \\
+    !! (f + g)' : [\te{A}] \ra [\tB/\tA] \up{1.35} \\
+    !! f' :  [\te{A}] \ra [\tB/\tA] \up{1.35} \\
+    !! g' :  [\te{A}] \ra [\tB/\tA] \up{1.35} \\
+    !! f' + g' :  [\te{A}] \ra [\tB/\tA] \up{1.35}
+    !! \end{gathered}
+    !! $$
+
+    !! ...by the rules according to which function
+    !! signatures change or don't change under summation
+    !! and differentation; 
+    !! in particular, 
+
+    !! $$
+    !! \Large (f + g)'
+    !! $$
+
+    !! is found to have the same signature as
+
+    !! $$
+    !! \Large f' + g'
+    !! $$
+
+    !! which is concordant with the sum rule—_we have
+    !! at least not debunked the sum rule_ by our
+    !! cursory glance at the units!
+
+    !! Though maybe we have another chance at debunking
+    !! the rule, as the “initial constraints” 
+
+    !! $$
+    !! \Large
+    !! \begin{aligned}
+    !! f : [\te{A}] &\ra [\te{B}] \\
+    !! g : [\te{A}] &\ra [\te{B}] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! on the signatures
+    !! were deduced by looking at the presence of “$f + g$”
+    !! in the sum rule, but which appears in the left-hand
+    !! side of the equation only; maybe there is a chance that
+    !! the right-hand side of the equation accepts a greater
+    !! variety of signatures than the left-hand side,
+    !! leading to breakage of the sum rule after all?
+    
+    !! To double-check against the latter possibility,
+    !! i.e., 
+    !! to check if the right-hand side doesn't perchance
+    !! accept a greater variety of $f$ and $g$ signatures than the
+    !! left-hand side,
+    !! start by taking
+    !! an “agnostic” view on the signatures of $f$ and $g$ on the
+    !! right-hand side,
+    !! writing
+
+    !! $$
+    !! \Large
+    !! \begin{aligned}
+    !! f : [\te{A}] &\ra [\te{B}] \\
+    !! g : [\te{C}] &\ra [\te{D}] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! for some arbitrary units A, B, C, D. Then
+
+    !! $$
+    !! \Large
+    !! \begin{aligned}
+    !! f' : [\te{A}] &\ra [\te{B}/\tA] \\
+    !! g' : [\te{C}] &\ra [\te{D}/\tC] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! !! but 
+    !! and the fact that we are taking the sum
+
+    !! $$
+    !! \Large f' + g'
+    !! $$
+
+    !! implies 
+
+    !! $$
+    !! \Large
+    !! \begin{aligned}
+    !! \tA &= \tC \\
+    !! \tB/\tA &= \tD/\tC \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! [a.k.a., “the input units of $f'$ equal the input units
+    !! of $g'$ and the output units of $f'$ equal the output
+    !! units of $g'$”]
+    !! which, together, imply 
+
+    !! $$
+    !! \Large
+    !! \begin{aligned}
+    !! \tA &= \tC \\
+    !! \tB &= \tD \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! ...and we recover the same “initial constraint” on the
+    !! signatures as we do on the left-hand side of the equation!
+
+    !! (So, the sum rule survives all of our scrutiny.)
+
+
+
+
+
+
+    !! !! !! We need to check:
+
+    !! !! !! |> List
+    !! !! !!     marker=lower-roman-paren
+    !! !! !!     !! marker-font-family=Baskerville Bold
+    !! !! !!     !! style=padding-left:3em
+
+    !! !! !!     That the constraints on the signatures
+    !! !! !!     of $f$ and $g$ are the same on either side
+    !! !! !!     of the equation.
+
+    !! !! !!     That if the constraints are met, we
+    !! !! !!     obtain the same final function signature
+    !! !! !!     on either side of the equation.

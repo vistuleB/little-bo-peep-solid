@@ -234,31 +234,29 @@ export default function __Chapter3__() {
         </MathBlock>
         <Pause />
         <OuterP>
+          [, {" "}
           <NoBreak>
-            [“
+            and
             <Math>
-              $f$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
-          <Math>
-            $2$
-          </Math>
-          {" "} equals {" "}
-          <NoBreak>
-            <Math>
-              $4$
+              $2^2 = 4$
             </Math>
             ”]
           </NoBreak>
           {" "} because {" "}
+          <Math>
+            $4$
+          </Math>
+          {" "} equals {" "}
+          <Math>
+            $2$
+          </Math>
+          {" "} of {" "}
           <NoBreak>
             <Math>
-              $2^2 = 4$
+              $f$
             </Math>
-            ,
+            “
           </NoBreak>
-          {" "} and
         </OuterP>
         <Pause />
         <MathBlock>
@@ -268,31 +266,29 @@ export default function __Chapter3__() {
         </MathBlock>
         <Pause />
         <OuterP>
+          [, {" "}
           <NoBreak>
-            [“
+            and
             <Math>
-              $f$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
-          <Math>
-            $3$
-          </Math>
-          {" "} equals {" "}
-          <NoBreak>
-            <Math>
-              $9$
+              $3^2 = 9$
             </Math>
             ”]
           </NoBreak>
           {" "} because {" "}
+          <Math>
+            $9$
+          </Math>
+          {" "} equals {" "}
+          <Math>
+            $3$
+          </Math>
+          {" "} of {" "}
           <NoBreak>
             <Math>
-              $3^2 = 9$
+              $f$
             </Math>
-            ,
+            “
           </NoBreak>
-          {" "} and
         </OuterP>
         <Pause />
         <MathBlock>
@@ -302,14 +298,15 @@ export default function __Chapter3__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          [...] because {" "}
+          [, and so on. {" "}
           <NoBreak>
+            Also,
             <Math>
               $0.1^2 = 0.01$
             </Math>
-            ,
+            ...]
           </NoBreak>
-          {" "} and so on. Also,
+          {" "} because
         </OuterP>
         <Pause />
         <MathBlock>
@@ -319,25 +316,25 @@ export default function __Chapter3__() {
         </MathBlock>
         <Pause />
         <OuterP>
+          [”] more generally, which
+          is actually {" "}
           <NoBreak>
-            [“
-            <Math>
-              $f$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} equals {" "}
-          <NoBreak>
+            the
             <Math>
               $x^2$
             </Math>
-            ”]
           </NoBreak>
-          {" "} more generally, which
-          is actually the
+          {" "} equals {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} of {" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            “
+          </NoBreak>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1099,16 +1096,20 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          [translation: {" "}
+          [ is a subset of
+          the set of real numbers
           <i>
-            the domain of {" "}
-            <Math>
-              $f$
-            </Math>
-            {" "} is a subset of
-            the set of real numbers
+            ] and {" "}
+            <NoBreak>
+              that
+              <Math>
+                $f$
+              </Math>
+              translation:
+            </NoBreak>
+            {" "} {" "}
           </i>
-          ] and that
+          the domain of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1118,16 +1119,19 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          [translation: {" "}
+          [
+          is a subset of the set of real numbers
           <i>
-            the set of values output by {" "}
-            <Math>
-              $f$
-            </Math>
-            {" "}
-            is a subset of the set of real numbers
+            <NoBreak>
+              ].
+              <Math>
+                $f$
+              </Math>
+              translation:
+            </NoBreak>
+            {" "} {" "}
           </i>
-          ].
+          the set of values output by
         </OuterP>
         <OuterP class="indent-10">
           Generalizing,
@@ -1217,13 +1221,21 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          observes that a graph {" "}
+          observes that a graph [-value (a.k.a.,
+          output). In other words, every vertical line
+          should intersect the graph at most {" "}
           <NoBreak>
-            [
+            once.
             <Math>
-              $=$
+              $y$
             </Math>
+            -value
           </NoBreak>
+          {" "} (a.k.a., input)
+          corresponds to at most one {" "}
+          <Math>
+            $x$
+          </Math>
           {" "} {" "}
           <i>
             set of points
@@ -1231,23 +1243,9 @@ const Rest = () => {
           </i>
           ] is a function graph if and
           only if every {" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            -value
-          </NoBreak>
-          {" "} (a.k.a., input)
-          corresponds to at most one {" "}
-          <NoBreak>
-            <Math>
-              $y$
-            </Math>
-            -value
-          </NoBreak>
-          {" "} (a.k.a.,
-          output). In other words, every vertical line
-          should intersect the graph at most once.
+          <Math>
+            $=$
+          </Math>
         </OuterP>
         <OuterP class="indent-10">
           For example, this particular graph...

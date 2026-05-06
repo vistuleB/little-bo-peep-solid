@@ -17,6 +17,7 @@ window.MathJax = {
       dblcol:
         "\\!\\rt{0.1}\\mathrel{\\raise.13ex{\\substack{\\small \\circ \\\\ \\small \\circ}}}",
       hc: "\\!\\rt{0.1}\\mathrel{\\raise.13ex{\\substack{\\small \\circ \\\\ \\small \\circ}}}",
+      lhc: "\\!\\rt{0.1}\\mathrel{\\raise.05ex{\\substack{\\small \\circ \\\\ \\small \\circ}}}",
       rr: "\\mathbb{R}",
       zz: "\\mathbb{Z}",
       nn: "\\mathbb{N}",
@@ -59,6 +60,14 @@ window.MathJax = {
       floor: ["\\lfloor{#1}\\rfloor", 1],
       faketextelement: "{\\color{white}\\text{*}}\\!\\!\\!\\rt{0.1}",
       vecb: ["\\vec{\\mathbf{#1}}", 1],
+      tA: ["\\text{A}"],
+      tB: ["\\text{B}"],
+      tC: ["\\text{C}"],
+      tD: ["\\text{D}"],
+      uA: ["[\\text{A}]"],
+      uB: ["[\\text{B}]"],
+      uC: ["[\\text{C}]"],
+      uD: ["[\\text{D}]"],
     }, // end Macros
   },
   options: {
