@@ -1831,15 +1831,15 @@ const Rest = () => {
         <Pause />
         <OuterP>
           is a thousand meters
-          [ “kilo” = thousand],
-          while {" "}
+          {" "}
           <NoBreak>
-            a
+            [b/
             <Math>
               $\!\hspace&#123;0.1ex&#125;\rm&#123;c&#125;$
             </Math>
-            b/
           </NoBreak>
+          {" "} “kilo” = thousand],
+          while a
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -2523,28 +2523,26 @@ const Rest = () => {
               <Math>
                 $10\%$
               </Math>
-              {" "} of one trillion {" "}
-              <NoBreak>
-                [.
-                <Math>
-                  $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
-                </Math>
-              </NoBreak>
+              {" "} of one trillion [cf.:
               {" "}
-              trillion, so the answer is {" "}
               <NoBreak>
                 <Math>
-                  $4$
+                  $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
                 </Math>
                 ]
               </NoBreak>
               {" "}
               and one trillion is a quarter of {" "}
+              <Math>
+                $4$
+              </Math>
+              {" "}
+              trillion, so the answer is {" "}
               <NoBreak>
                 <Math>
-                  $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
+                  $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
                 </Math>
-                cf.:
+                .
               </NoBreak>
             </OuterP>
             <Pause />

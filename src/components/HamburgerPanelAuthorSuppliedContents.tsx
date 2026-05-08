@@ -36,6 +36,12 @@ const HamburgerPanelAuthorSuppliedContents = () => {
         >
           The Trigonometric Functions
         </HamburgerPanelItem>
+        <HamburgerPanelItem
+          article_type={6}
+          href="chapter6"
+        >
+          Dimensional Analysis
+        </HamburgerPanelItem>
       </ul>
     </div>
     <div id="bootcamp">

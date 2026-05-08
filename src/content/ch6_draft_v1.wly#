@@ -8,12 +8,7 @@
     conversely, by virtue of knowing that some
     maladies and inconsistencies must be avoided,
     of artfully guessing formulas ahead of time,
-    by considering just the units!
-
-|> Section
-    only=this
-    *Terminology: “dimension” vs. “dimensional”.*
-    As explained in the [Epilogue to Chapter >>slopes#decoy:2](>>slopes)
+    by considering only the units!
 
 |> Section
 
@@ -222,7 +217,6 @@
     $3$ _seconds_, not just ‘$3$’, the pure number!
 
 |> Section
-    only=this
     *Function operations and signatures.* 
     Take $f$, $g : \rr \ra \rr$ with generic signatures $\uA \ra \uB$,
     $\uC \ra \uD$:
@@ -248,14 +242,17 @@
     \Large (f + g)(x) = f(x) + g(x)
     $$
 
+    !! ...so the sum cannot makes sense unless
     ...so taking the sum implies that
 
     $$
     \Large \tA = \tC
     $$
 
-    [a.K.a.] “units of input for $f$ equals units of input for $g$”
+    [a.k.a., “units of input for $f$ equals units of input for $g$”]
     or else $f + g$ doesn't really make any sense;
+    !! cannot be given a sensible signature of its own;
+    !! which imposes one restriction on the signatures; 
     also,
     following the adage that oranges must not be added to apples,
     we need

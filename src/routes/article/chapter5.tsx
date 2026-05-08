@@ -22,7 +22,7 @@ export default function __Chapter5__() {
   return (
     <Article
       prevPage="/article/chapter4"
-      nextPage=""
+      nextPage="/article/chapter6"
       ref="rence"
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
@@ -4160,27 +4160,23 @@ const Rest = () => {
               Example 6.
             </b>
             {" "}
-            If the Earth {" "}
-            <NoBreak>
-              [:
-              <Math>
-                $\cos(\theta)$
-              </Math>
-            </NoBreak>
-            {" "} has radius {" "}
+            If the Earth [is modeled as] a sphere
+            of radius {" "}
             <Math>
-              $\theta$
+              $1$
             </Math>
             {" "} then, as stands to reason, the circle
             of latitude {" "}
+            <Math>
+              $\theta$
+            </Math>
+            {" "} has radius {" "}
             <NoBreak>
               <Math>
-                $1$
+                $\cos(\theta)$
               </Math>
-              is
+              :
             </NoBreak>
-            {" "} modeled as] a sphere
-            of radius
           </OuterP>
           <Pause />
           <Image
@@ -4202,15 +4198,13 @@ const Rest = () => {
             “Lambert projection” depicted below
             (that just sends each latitude out to
             its own height), the radius of a latitude is dilated
-            by {" "}
+            by [a factor of] {" "}
             <NoBreak>
-              [:
               <Math>
                 $\sec(\theta)$
               </Math>
-              a
+              :
             </NoBreak>
-            {" "} factor of]
           </OuterP>
           <Pause />
           <Image
@@ -6609,15 +6603,12 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              [ “clockwise”].
-              Per the one interpretation of {" "}
-              <NoBreak>
-                ‘cos’,
-                <Math>
-                  $\ra$
-                </Math>
-                “counterclockwise”
-              </NoBreak>
+              [“counterclockwise” {" "}
+              <Math>
+                $\ra$
+              </Math>
+              {" "} “clockwise”].
+              Per the one interpretation of ‘cos’,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -9156,20 +9147,11 @@ const Rest = () => {
               <Image src="/build-img/svgo-svg/5nhK.svg" />
               <Pause />
               <OuterP>
-                Next we ask “by how many [’?”, we
-                will write the answer {" "}
+                Next we ask “by how many {" "}
                 <NoBreak>
-                  below:
+                  [
                   <Math>
-                    $9$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "} into a {" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $5$
+                    $10$
                   </Math>
                   s
                 </NoBreak>
@@ -9178,9 +9160,20 @@ const Rest = () => {
                 <NoBreak>
                   ‘
                   <Math>
-                    $10$
+                    $5$
                   </Math>
+                  ’
                 </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’?”,
+                </NoBreak>
+                {" "} we
+                will write the answer below:
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/_-US.svg" />
@@ -9190,13 +9183,15 @@ const Rest = () => {
                 <Math>
                   $6$
                 </Math>
-                {" "} [s of {" "}
+                {" "} {" "}
                 <NoBreak>
-                  miles]:
+                  [
                   <Math>
                     $10$
                   </Math>
+                  s
                 </NoBreak>
+                {" "} of miles]:
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/jj0a.svg" />
@@ -9241,20 +9236,11 @@ const Rest = () => {
               <Image src="/build-img/svgo-svg/qylE.svg" />
               <Pause />
               <OuterP>
-                Next we ask “by how many [’?”, we
-                will write the answer {" "}
+                Next we ask “by how many {" "}
                 <NoBreak>
-                  below:
+                  [
                   <Math>
-                    $0$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "} into a {" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $9$
+                    $100$
                   </Math>
                   s
                 </NoBreak>
@@ -9263,9 +9249,20 @@ const Rest = () => {
                 <NoBreak>
                   ‘
                   <Math>
-                    $100$
+                    $9$
                   </Math>
+                  ’
                 </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’?”,
+                </NoBreak>
+                {" "} we
+                will write the answer below:
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/anHE.svg" />
@@ -9275,13 +9272,15 @@ const Rest = () => {
                 <Math>
                   $9$
                 </Math>
-                {" "} [s of {" "}
+                {" "} {" "}
                 <NoBreak>
-                  miles]:
+                  [
                   <Math>
                     $100$
                   </Math>
+                  s
                 </NoBreak>
+                {" "} of miles]:
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/Tte9.svg" />
@@ -9289,17 +9288,9 @@ const Rest = () => {
               <OuterP>
                 Next we ask “by how many {" "}
                 <NoBreak>
-                  [’?”:
+                  [
                   <Math>
-                    $5$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "} into a {" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $9$
+                    $1000$
                   </Math>
                   s
                 </NoBreak>
@@ -9308,8 +9299,17 @@ const Rest = () => {
                 <NoBreak>
                   ‘
                   <Math>
-                    $1000$
+                    $9$
                   </Math>
+                  ’
+                </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’?”:
                 </NoBreak>
               </OuterP>
               <Pause />
@@ -9320,13 +9320,15 @@ const Rest = () => {
                 <Math>
                   $4$
                 </Math>
-                {" "} [s of {" "}
+                {" "} {" "}
                 <NoBreak>
-                  miles]:
+                  [
                   <Math>
                     $1000$
                   </Math>
+                  s
                 </NoBreak>
+                {" "} of miles]:
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/jqe5.svg" />
@@ -9641,19 +9643,16 @@ const Rest = () => {
                 <Math>
                   $y$
                 </Math>
-                {" "} axis to the counterclockwise tangent []
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
+                {" "} axis to the counterclockwise tangent [of angle {" "}
                 <NoBreak>
                   <Math>
                     $\theta$
                   </Math>
-                  of
+                  ]
                 </NoBreak>
-                {" "} angle
-              </OuterP>
-              <OuterP class="indent-10">
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
                 With the various terms illustrated here:
               </OuterP>
               <Pause />
@@ -12238,7 +12237,15 @@ const Rest = () => {
                 ),
               </NoBreak>
               {" "}
-              it compresses the [, also as discussed in {" "}
+              it compresses the [current] graph horizontally by
+              a factor {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} also as discussed in {" "}
               <InChapterLink
                 href="/article/chapter5#_120_hgi_"
                 class="handle-in-chapter-link"
@@ -12247,16 +12254,7 @@ const Rest = () => {
               </InChapterLink>
               &#8288;;
               step 3 brings the box immediately to the
-              left of sin {" "}
-              <NoBreak>
-                online...
-                <Math>
-                  $B$
-                </Math>
-                current]
-              </NoBreak>
-              {" "} graph horizontally by
-              a factor
+              left of sin online...
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/DvlU.svg" />
@@ -16899,16 +16897,76 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              are nonnegative [the last standing possibility is...
-              {" "}
-              <NoBreak>
-                ,
-                <Math>
-                  $-1$
-                </Math>
-              </NoBreak>
-              {" "}
-              and at times less than {" "}
+              are nonnegative [the square of a number
+              is nonnegative]
+              these functions must either be
+              the top right or bottom left graphs, as the
+              other two graphs weave in and out of negative territory;
+              given additionally that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\cos(0) = 1,
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(0) = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              we can further deduce that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \sin^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can only be the top right graph, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \cos^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              can only be the bottom left graph; moreover, since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              |\sin x \cdot \cos x| \leq 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for all {" "}
+              <Math>
+                $x \in \rr$
+              </Math>
+              {" "} (as the product of
+              two numbers that are between {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} is
+              itself between {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "} and {" "}
               <NoBreak>
                 <Math>
                   $1$
@@ -16920,77 +16978,16 @@ const Rest = () => {
               <Math>
                 $1$
               </Math>
-              {" "} and {" "}
-              <Math>
-                $-1$
-              </Math>
-              {" "} is
-              itself between {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $-1$
-              </Math>
-              {" "} (as the product of
-              two numbers that are between {" "}
-              <Math>
-                $x \in \rr$
-              </Math>
               {" "}
-              for all
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              |\sin x \cdot \cos x| \leq 1
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              can only be the bottom left graph; moreover, since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra \cos^2 x
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              can only be the top right graph, and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x \ra \sin^2 x
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              we can further deduce that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sin(0) = 0
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \,\cos(0) = 1,
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              the square of a number
-              is nonnegative]
-              these functions must either be
-              the top right or bottom left graphs, as the
-              other two graphs weave in and out of negative territory;
-              given additionally that
+              and at times less than {" "}
+              <NoBreak>
+                <Math>
+                  $-1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              the last standing possibility is...
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/Ninz.svg" />
@@ -18064,19 +18061,18 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              [, resulting in an infinite
-              set of points at which the maximum is {" "}
+              [we don't need to say “or subtracted”
+              because “multiple” intimates “integer multiple”,
+              which subsumes negative multiples]
+              to {" "}
               <NoBreak>
-                achieved.
                 <Math>
                   $x = \eta/2$
                 </Math>
-                we
+                ,
               </NoBreak>
-              {" "} don't need to say “or subtracted”
-              because “multiple” intimates “integer multiple”,
-              which subsumes negative multiples]
-              to
+              {" "} resulting in an infinite
+              set of points at which the maximum is achieved.
             </OuterP>
             <Pause />
             <SolutionNote>

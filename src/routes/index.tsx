@@ -44,6 +44,12 @@ export default function __Home__() {
           >
             The Trigonometric Functions
           </TOCItem>
+          <TOCItem
+            article_type={6}
+            href="chapter6"
+          >
+            Dimensional Analysis
+          </TOCItem>
         </ul>
       </div>
       <Spacer />
