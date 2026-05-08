@@ -4,15 +4,16 @@ import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises"
 import InChapterLink  from "~/components/InChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
+import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import { Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
-export default function __Appendix1__() {
+export default function __AppendixA__() {
   return (
     <Article
       prevPage="/article/chapter5"
-      nextPage=""
+      nextPage="/article/appendix2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
       id="_278_hgi_"
@@ -24,7 +25,7 @@ export default function __Appendix1__() {
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
-      <ArticleTitle banner="Appendix 1:">
+      <ArticleTitle banner="Appendix A:">
         Exercise Graveyard
       </ArticleTitle>
       <Section id="section-1">
@@ -54,6 +55,11 @@ export default function __Appendix1__() {
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
+            <Solution>
+              <OuterP>
+                Baaam !!
+              </OuterP>
+            </Solution>
           </Exercise>
           <Exercise number={2}>
             <ExerciseStatement id="_149_hgi_">
@@ -68,6 +74,11 @@ export default function __Appendix1__() {
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
+            <Solution>
+              <OuterP>
+                Baaam !!
+              </OuterP>
+            </Solution>
           </Exercise>
         </Exercises>
         <Pause />
@@ -91,6 +102,11 @@ export default function __Appendix1__() {
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
+            <Solution>
+              <OuterP>
+                Baaam !!
+              </OuterP>
+            </Solution>
           </Exercise>
           <Exercise number={2}>
             <ExerciseStatement id="_152_hgi_">
@@ -119,6 +135,11 @@ export default function __Appendix1__() {
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
+            <Solution>
+              <OuterP>
+                Baaam !!
+              </OuterP>
+            </Solution>
           </Exercise>
           <Exercise number={4}>
             <ExerciseStatement id="_154_hgi_">
@@ -133,6 +154,11 @@ export default function __Appendix1__() {
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
+            <Solution>
+              <OuterP>
+                Baaam !!
+              </OuterP>
+            </Solution>
           </Exercise>
         </Exercises>
         <Pause />
@@ -156,6 +182,11 @@ export default function __Appendix1__() {
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
+            <Solution>
+              <OuterP>
+                Baaam !!
+              </OuterP>
+            </Solution>
           </Exercise>
           <Exercise number={2}>
             <ExerciseStatement id="_157_hgi_">
@@ -170,6 +201,11 @@ export default function __Appendix1__() {
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
+            <Solution>
+              <OuterP>
+                Baaam !!
+              </OuterP>
+            </Solution>
           </Exercise>
           <Exercise number={3}>
             <ExerciseStatement id="_158_hgi_">
@@ -184,6 +220,11 @@ export default function __Appendix1__() {
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
+            <Solution>
+              <OuterP>
+                Baaam !!
+              </OuterP>
+            </Solution>
           </Exercise>
           <Exercise number={4}>
             <ExerciseStatement id="_159_hgi_">
@@ -198,6 +239,11 @@ export default function __Appendix1__() {
                 </ExerciseStatement>
               </OuterP>
             </ExerciseStatement>
+            <Solution>
+              <OuterP>
+                Baaam !!
+              </OuterP>
+            </Solution>
           </Exercise>
           <Exercise number={5}>
             <ExerciseStatement id="_160_hgi_">

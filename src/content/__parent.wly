@@ -9,6 +9,7 @@
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
         >>exercise-graveyard
+        >>classical-circle-theorems
         !! >>chain        >>_ch6_start_
         !! >>playground
 
@@ -335,7 +336,7 @@
         >>_gy_41
         >>_gy_42
         >>_gy_43
-        >>_gy_44
+        !! >>_gy_44
         >>_gy_45
         >>_gy_46
         >>_gy_47
@@ -359,7 +360,7 @@
         >>_gy_65
         >>_gy_66
         >>_gy_67
-        >>_gy_68
+        !! >>_gy_68
         >>_gy_69
         >>_gy_70
         >>_gy_71
@@ -418,5 +419,7 @@
         >>_gy_124
         >>_gy_125
 
-
+    |> In
+        content=selection
+        chapter=>>classical-circle-theorems
 

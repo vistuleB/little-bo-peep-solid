@@ -69,10 +69,16 @@ export default function __Home__() {
         <TOCTitle label="Appendices" />
         <ul>
           <TOCItem
-            article_type={1}
-            href="appendix1"
+            article_type="A"
+            href="appendixA"
           >
             Exercise Graveyard
+          </TOCItem>
+          <TOCItem
+            article_type="B"
+            href="appendixB"
+          >
+            Classical Circle Theorems
           </TOCItem>
         </ul>
       </div>
