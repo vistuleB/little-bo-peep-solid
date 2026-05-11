@@ -4,66 +4,125 @@
     *What is it?*
     “Dimensional analysis” is the art of
     “checking the units” on an equation or formula
-    for signs of malady or inconsistency. Or,
-    conversely, by virtue of knowing that some
-    maladies and inconsistencies must be avoided,
-    of artfully guessing formulas ahead of time,
-    by considering just the units!
+    and/or of guessing new formulas based on considerations
+    about the units and/or dimensions [see below].
+
+    !! and, 
+    !! conversely,
+    !! of 
+    !! guessing new formulas
+    !! by virtue that the units and/or
+    !! dimensions should be consistent.
 
 |> Section
     only=this
     *Terminology: “dimension” vs. “dimensional”.*
-    As explained in the [Epilogue to Chapter >>slopes#decoy:2](>>slopes)
+    As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions_epilogue), the
+    term
+
+    __dimension__
+
+    can mean a qualitative category of units, such as
+    in the phrase “$x$ has dimensions of time”.
+    On the other hand,
+    !! the term
+
+    __dimensional__
+
+    is the adjective that means “that which relates to
+    dimensions _or_ units”—as there is no special adjective
+    that just means “that which relates to units”, we have this catch-all instead!
+    !! (So it is.)
 
 |> Section
-
-    *Function signatures.* 
-    In some real-world
-    scenarios the inputs and outputs of a function
-    come with certain units attached. In this case,
+    *Function signatures.*
+    If $f$ is a function from $\rr$ to $\rr$
     we write
-    !! the numbers fed to a function may come
-    !! with a certain type of unit attached, and 
-    !! those output by the function as well; in this context, we
-    !! write
 
     $$
     \Large f : [\te{A}] \ra [\te{B}]
     $$
 
-    to indicate that the 
-    units of inputs to $f$ are A while the units
-    of numbers output by $f$ are B. 
-    !! former and latter units
-    !! are respectively A and B.
-    !! i.e., the above indicates that 
-    !! $f$ is a function $f : \rr \ra \rr$
-    !! that takes inputs with units A
-    !! and produces outputs with units B. 
+    to indicates that inputs passed to $f$ have semantics
+    of units A while outputs returned by $f$ have semantics
+    of units B. 
     For example,
 
     $$
     \Large h : [\te{kg}] \ra [^\circ\te{F}]
     $$
 
-    would indicate that $h$ 
-    is a function whose inputs denote kilograms and whose
-    outputs denote degrees fahrenheit.
-    We refer to the ordered pair of units
+    indicates that $h$ 
+    is a function 
+    !! whose inputs 
+    for which the inputs
+    denote kilograms and 
+    !! whose outputs 
+    for which the outputs
+    denote degrees fahrenheit.
+    We refer to the ordered pair 
+    !! of units $(\te{A}, \te{B})$ 
+    !! the ordered pair 
     $(\te{A}, \te{B})$ 
-    !! the ordered pair $(\te{A}, \te{B})$ 
-    !! or to 
-    !! !! the notation 
-    !! or “$[\te{A}] \ra [\te{B}]$”
+    or to the notation 
+    
+    $$
+    \Large\te{“}[\te{A}] \ra [\te{B}]\te{”}
+    $$
+    
     as the
+    _signature_
+    of $f$.
+    
+!! |> Section
 
-    __signature__
+!!     *Function signatures.* 
+!!     In some real-world
+!!     scenarios the inputs and outputs of a function
+!!     come with certain units attached. In this case,
+!!     we write
+!!     !! the numbers fed to a function may come
+!!     !! with a certain type of unit attached, and 
+!!     !! those output by the function as well; in this context, we
+!!     !! write
 
-    of the function.
-    !! Thus a
-    !! function signature has
-    !! two parts: the units of the input, and the units
-    !! of the output!
+!!     $$
+!!     \Large f : [\te{A}] \ra [\te{B}]
+!!     $$
+
+!!     to indicate that the 
+!!     units of inputs to $f$ are A while the units
+!!     of numbers output by $f$ are B. 
+!!     !! former and latter units
+!!     !! are respectively A and B.
+!!     !! i.e., the above indicates that 
+!!     !! $f$ is a function $f : \rr \ra \rr$
+!!     !! that takes inputs with units A
+!!     !! and produces outputs with units B. 
+!!     For example,
+
+!!     $$
+!!     \Large h : [\te{kg}] \ra [^\circ\te{F}]
+!!     $$
+
+!!     would indicate that $h$ 
+!!     is a function whose inputs denote kilograms and whose
+!!     outputs denote degrees fahrenheit.
+!!     We refer to the ordered pair of units
+!!     $(\te{A}, \te{B})$ 
+!!     !! the ordered pair $(\te{A}, \te{B})$ 
+!!     !! or to 
+!!     !! !! the notation 
+!!     !! or “$[\te{A}] \ra [\te{B}]$”
+!!     as the
+
+!!     __signature__
+
+!!     of the function.
+!!     !! Thus a
+!!     !! function signature has
+!!     !! two parts: the units of the input, and the units
+!!     !! of the output!
 
 |> Section
     *Dimensionless units.* There is a special unit
@@ -142,182 +201,33 @@
         rotate(10)
     \ will rotate an object by 10$^\circ$ _clockwise_!)
 
-    !! |> StarDivider
+|> Section
+
+    *Default signature.*
+    For the sake of logical 
+    uniformity 
+    we assume that every function from $\rr$ to
+    $\rr$ has a signature, where we can revert to
+    ascribing the dimensionless signature 
+
+    $$
+    \Large [1] \ra [1]
+    $$
+
+    for functions for which no other information is available.
 
 |> Section
-    !! *Fun fact. (“Fun.”)* 
-    !! *The pure plane.*
-    !! *The plane as a dimensionless object.*
-    *Radians _&_ the dimensionless plane.*
-    Imagine that we define the radian value of an
-    angle as
-    !! between $0^\circ$ and $360^\circ$ as
-
-    __length subtended by the angle on the unit circle__
-
-    as opposed to
-
-    __arc length over radius__
-
-    which is the more “traditional” definition. In 
-    the second 
-    !! (“traditional”) 
-    case, the dimensions of the
-    radian are
-    
-    $$
-    {\te{length}\over\te{length}} = \te{dimensionless}
-    $$
-
-    whereas under the first definition it sounds like
-    the dimensions are simply “length”. BUT: “length”
-    _in what plane_? The “original” plane in which the
-    unit circle is embedded has dimensionless axes! And
-    therefore _length itself_$\rt{0.2}$ in that plane is a dimensionless
-    quantity, not the usual “physical” notion of length!
-    So both cases assign radians to be a dimensionless 
-    unit!
-    Whoo-hoo!
-
-    Relatedly to this idea of the original “vanilla”
-    $xy$-plane having dimensionless axes, you may
-    have seen people label axes this way, writing
-    “time/s” instead of “time $[\te{s}]$”:
-
-    |> Pause
-
-    The idea behind this notation is that the plane
-    itself is a pristine dimensionless object, so by doing
-
-    $$
-    \Large {\te{time}\over\te{s}}
-    $$
-
-    where “time” is a time measurements in seconds,
-    we have “taken the units out of the measurement”
-    and obtained a “pure number” that “fits” inside
-    the plane; (!); for example, this ‘$3$’ here...
-
-    |> Pause
-
-    ...is really a
-    “$3$ without any units”
-    because the
-    entire plane is dimensionless, but if we follow
-    the semantics of the axis label, we find...
-
-    $$
-    \Large 3 = {\te{time}\over \te{s}}
-    $$
-
-    ...which implies...
-
-    $$
-    \Large 3\te{s} = \te{time}
-    $$
-
-    ...or “time equals $3$ seconds”, i.e., that vertical
-    slice of the plane corresponds to the moment when
-    the “time” variable—which _does_ have units—equals
-    $3$ _seconds_, not just ‘$3$’, the pure number!
-
-|> Section
-    only=this
-    *Function operations and signatures.* 
-    Take $f$, $g : \rr \ra \rr$ with generic signatures $\uA \ra \uB$,
-    $\uC \ra \uD$:
-
-    $$
-    \Large
-    \begin{aligned}
-    f : [\te{A}] &\ra [\te{B}] \\
-    g : [\te{C}] &\ra [\te{D}] \up{1.35}
-    \end{aligned}
-    $$
-
-    If we try to form the sum 
-
-    $$
-    \Large f + g
-    $$
-
-    of $f$ and $g$ we find that the same input shows up as an
-    input to both $f$ and $g$, by the definition of function addition...
+    *Restrictions imposed on signatures by function
+    operations.*
+    When we add two functions, the same input is passed
+    to both functions:
 
     $$
     \Large (f + g)(x) = f(x) + g(x)
     $$
 
-    ...so taking the sum implies that
-
-    $$
-    \Large \tA = \tC
-    $$
-
-    [a.K.a.] “units of input for $f$ equals units of input for $g$”
-    or else $f + g$ doesn't really make any sense;
-    also,
-    following the adage that oranges must not be added to apples,
-    we need
-
-    $$
-    \Large \tB = \tD
-    $$
-
-    [a.k.a., “units of output for $f$ equals units of output for $g$”]
-    or else “$f(x)$” would become the proverbial orange (apple?)
-    and “$g(x)$” the proverbial apple (orange?); thus, altogether,
-    !! constraints
-    we need
-
-    $$
-    \Large
-    \begin{aligned}
-    \te{A} &= \te{C} \\
-    \te{B} &= \te{D} \up{1.35}
-    \end{aligned}
-    $$
-
-    in order for the sum to make physical sense,
-    !! are imposed in order for the sum to make sense, 
-    i.e., 
-    the pair of signatures must be of the form
-    !! we can only take the sum $f + g$ for functions of the form
-    !! $f$ and $g$ must have signatures of the form
-
-    $$
-    \Large
-    \begin{aligned}
-    f : [\te{A}] \ra [\te{B}]& \\
-    g : [\te{A}] \ra [\te{B}]& \up{1.35}
-    \end{aligned}
-    $$    
-    
-    !! for some arbitrary units A and B;
-    !! in order for the sum to make sense;
-    for some units A, B;
-    also note that
-
-    $$
-    \Large f + g : \uA \ra \uB
-    $$
-
-    in this case, i.e., 
-    the signatures of $f$ and $g$ 
-    “propagate to” or “infect” 
-    !! (why didn't we just say “determine”???)
-    (OK, we could just have said “determine”, but it's less dramatic)
-    the signature of $f + g$!
-
-    A little bit differently, however,
-
-    __apples can be multiplied by oranges__
-
-    or at least in the abstract, such as when we
-    speak of “meters squared”, “meters per second”,
-    “kilowatt-hours”, “worker years”, etc. This means
-    that the product of two functions can be taken
-    even if the output units are different. Specifically, if
+    This means that for the sum to make sense, $f$ and
+    $g$ need to have the same units of input, i.e.,
 
     $$
     \Large
@@ -325,68 +235,233 @@
     f : [\te{A}] &\ra [\te{B}] \\
     g : [\te{A}] &\ra [\te{C}] \up{1.35}
     \end{aligned}
-    $$   
-
-    for arbitrary units A, B, C, then
-
-    $$
-    \Large fg
     $$
 
-    is a well-formed product, and, more specifically,
-    !! has a well-formed signature of its own, 
-    !! with signature
-    !! namely
+    would be the most general signature 
+    !! pair
+    that one could hope for, in order for the sum to not
+    be nonsencial; but even this is too optimistic,
+    since we actually need
 
     $$
-    \Large fg : \uA \ra [\text{BC}]
+    \Large
+    \begin{aligned}
+    f : [\te{A}] &\ra [\te{B}] \\
+    g : [\te{A}] &\ra [\te{B}] \up{1.35}
+    \end{aligned}
     $$
 
-    since in the formula “$(fg)(x) = f(x)g(x)$” for
-    evaluating $fg$ we see
-    that (#1) 
-    all that we need from “$x$” in order to evaluate
-    “$f(x)g(x)$” is to have units A, and
-    (#2) the units of “$f(x)g(x)$” are $\tB\cdot\tC = \tB\tC$.
+    in order not to add apples to oranges at the output
+    end, either, 
+    with “$f(x) =$ apples” and “$g(x) =$ oranges” being
+    the combination to avoid. 
+    !! Moreover,
+    !! $$
+    !! \Large f + g : [\te{A}] \ra [\te{B}]
+    !! $$
+    !! in this case.
 
-    !! Other function operations are summarized in this flower bed:
-    !! Summarizing, and for other function operations:
-    !! whose logic is similar:
-    As well, differences, 
-    quotients, and compositions of functions...
+    By contrast, when multiplying two functions we can
+    stomach the output units to be different since
+    composite units such as “kilowatt-hour”, “worker-years”, etc,
+    are a thing, and likewise when dividing.
+    !! (Mileage will vary on how meaningful these
+    !! various units are, 
+    !! but mathematically we don't distinguish—it is not
+    !! really for us to worry about the fact that “workers times years”
+    !! is more meaningful than “apples times oranges”.)
+    Altogether, the following table records the various restrictions
+    that apply when 
+    !! adding, subtracting, etc, functions, as well 
+    combining functions according to the standard
+    operations, 
+    as well as the signature of the 
+    !! function that is created:
+    function that is created in the process:
 
-    $$
-    \Large f - g
-    $$
+    !! Similarly other function operations such as
+    !! multiplication and composition impose their own
+    !! set of restrictions on the signatures, enumerated
+    !! together in the following table:
 
-    !! and quotients of functions
+    !! A bit differently, when multiplying two functions 
+    !! the output units can be different since
+    !! composite units such as “kilowatt-hour”, “worker-years”, etc,
+    !! are a thing, and likewise when dividing two functions.
 
-    $$
-    \Large f/g
-    $$
+    !! Altogether, the following table records the various restrictions
+    !! that apply when 
+    !! combining functions according to the standard
+    !! operations, 
+    !! as well as the signature of the 
+    !! newly created function in each case:
 
-    !! and compositions of functions
+!! |> Section
+!!     only=this
+!!     *Function operations and signatures.* 
+!!     Take $f$, $g : \rr \ra \rr$ with generic signatures $\uA \ra \uB$,
+!!     $\uC \ra \uD$:
 
-    $$
-    \Large f \circ g
-    $$
+!!     $$
+!!     \Large
+!!     \begin{aligned}
+!!     f : [\te{A}] &\ra [\te{B}] \\
+!!     g : [\te{C}] &\ra [\te{D}] \up{1.35}
+!!     \end{aligned}
+!!     $$
 
-    ...only make sense when certain constraints on the
-    signatures of $f$ and $g$ are presupposed, deduced by similar
-    (or sometimes identical!) reasoning;  
-    !! are all subject to similar constraints, emerging from what is
-    !! sufficient and necessary to evaluate the operation at a given
-    !! input; 
-    summarizing the situation, we have...
-    !! necessary to evaluate the formula for the operation; 
-    !! summarizing the conclusions, that you should be able to
-    !! reproduce yourself (!), we have...
+!!     If we try to form the sum 
 
-    |> Pause
+!!     $$
+!!     \Large f + g
+!!     $$
 
-    ...the above table, that you should be able to verify
-    for yourself.
-    !! we duly take note of.
+!!     of $f$ and $g$ we find that the same input shows up as an
+!!     input to both $f$ and $g$, by the definition of function addition...
+
+!!     $$
+!!     \Large (f + g)(x) = f(x) + g(x)
+!!     $$
+
+!!     ...so taking the sum implies that
+
+!!     $$
+!!     \Large \tA = \tC
+!!     $$
+
+!!     [a.K.a.] “units of input for $f$ equals units of input for $g$”
+!!     or else $f + g$ doesn't really make any sense;
+!!     also,
+!!     following the adage that oranges must not be added to apples,
+!!     we need
+
+!!     $$
+!!     \Large \tB = \tD
+!!     $$
+
+!!     [a.k.a., “units of output for $f$ equals units of output for $g$”]
+!!     or else “$f(x)$” would become the proverbial orange (apple?)
+!!     and “$g(x)$” the proverbial apple (orange?); thus, altogether,
+!!     !! constraints
+!!     we need
+
+!!     $$
+!!     \Large
+!!     \begin{aligned}
+!!     \te{A} &= \te{C} \\
+!!     \te{B} &= \te{D} \up{1.35}
+!!     \end{aligned}
+!!     $$
+
+!!     in order for the sum to make physical sense,
+!!     !! are imposed in order for the sum to make sense, 
+!!     i.e., 
+!!     the pair of signatures must be of the form
+!!     !! we can only take the sum $f + g$ for functions of the form
+!!     !! $f$ and $g$ must have signatures of the form
+
+!!     $$
+!!     \Large
+!!     \begin{aligned}
+!!     f : [\te{A}] \ra [\te{B}]& \\
+!!     g : [\te{A}] \ra [\te{B}]& \up{1.35}
+!!     \end{aligned}
+!!     $$    
+    
+!!     !! for some arbitrary units A and B;
+!!     !! in order for the sum to make sense;
+!!     for some units A, B;
+!!     also note that
+
+!!     $$
+!!     \Large f + g : \uA \ra \uB
+!!     $$
+
+!!     in this case, i.e., 
+!!     the signatures of $f$ and $g$ 
+!!     “propagate to” or “infect” 
+!!     !! (why didn't we just say “determine”???)
+!!     (OK, we could just have said “determine”, but it's less dramatic)
+!!     the signature of $f + g$!
+
+!!     A little bit differently, however,
+
+!!     __apples can be multiplied by oranges__
+
+!!     or at least in the abstract, such as when we
+!!     speak of “meters squared”, “meters per second”,
+!!     “kilowatt-hours”, “worker years”, etc. This means
+!!     that the product of two functions can be taken
+!!     even if the output units are different. Specifically, if
+
+!!     $$
+!!     \Large
+!!     \begin{aligned}
+!!     f : [\te{A}] &\ra [\te{B}] \\
+!!     g : [\te{A}] &\ra [\te{C}] \up{1.35}
+!!     \end{aligned}
+!!     $$   
+
+!!     for arbitrary units A, B, C, then
+
+!!     $$
+!!     \Large fg
+!!     $$
+
+!!     is a well-formed product, and, more specifically,
+!!     !! has a well-formed signature of its own, 
+!!     !! with signature
+!!     !! namely
+
+!!     $$
+!!     \Large fg : \uA \ra [\text{BC}]
+!!     $$
+
+!!     since in the formula “$(fg)(x) = f(x)g(x)$” for
+!!     evaluating $fg$ we see
+!!     that (#1) 
+!!     all that we need from “$x$” in order to evaluate
+!!     “$f(x)g(x)$” is to have units A, and
+!!     (#2) the units of “$f(x)g(x)$” are $\tB\cdot\tC = \tB\tC$.
+
+!!     !! Other function operations are summarized in this flower bed:
+!!     !! Summarizing, and for other function operations:
+!!     !! whose logic is similar:
+!!     As well, differences, 
+!!     quotients, and compositions of functions...
+
+!!     $$
+!!     \Large f - g
+!!     $$
+
+!!     !! and quotients of functions
+
+!!     $$
+!!     \Large f/g
+!!     $$
+
+!!     !! and compositions of functions
+
+!!     $$
+!!     \Large f \circ g
+!!     $$
+
+!!     ...only make sense when certain constraints on the
+!!     signatures of $f$ and $g$ are presupposed, deduced by similar
+!!     (or sometimes identical!) reasoning;  
+!!     !! are all subject to similar constraints, emerging from what is
+!!     !! sufficient and necessary to evaluate the operation at a given
+!!     !! input; 
+!!     summarizing the situation, we have...
+!!     !! necessary to evaluate the formula for the operation; 
+!!     !! summarizing the conclusions, that you should be able to
+!!     !! reproduce yourself (!), we have...
+
+!!     |> Pause
+
+!!     ...the above table, that you should be able to verify
+!!     for yourself.
+!!     !! we duly take note of.
 
 !! |> Section
 !!     *Short form.*
@@ -406,8 +481,110 @@
 !!         $$
 
 |> Section
+    *Differentiation and signatures.*
+    As reviewed in [Chapter >>derivatives#decoy:4](>>units_of_the_derivative)
+    (see also Exercise >>_complete_the_missing_units_#decoy:6 of Chapter >>derivatives#decoy:4),
+    differentiation divides the units of the output
+    by the units of the input. In terms of signatures, we have
+
+    $$
+    \Large f' : [\tA] \ra [\tB/\tA]
+    $$
+
+    if 
+    $$
+    \Large f : [\tA] \ra [\tB]
+    $$
     
-    *Differentiation.*
+    for any units A, B. It might also bear observing
+    that this “if” is really “if and only if”—put
+    differently, this means that
+    
+    !! It bears noting that the operation
+    !! is reversible: we have
+
+    $$
+    \Large f : [\tC] \ra \left[{\tC\tD}\right]
+    $$
+
+    if
+
+    $$
+    \Large f' : [\tC] \ra [\tD]
+    $$
+    
+    for any units C, D.
+    (I.e., to recover the
+    signature of $f$ from the signature of $f'$ one
+    needs to multiply the output units of $f'$ by the input units
+    of $f'$, while keeping the input units the same.)
+
+|> Section
+    *The differentation “operator”.*
+    Hello...
+
+|> Section
+    *Differentiation and signatures.*
+    As reviewed in [Chapter >>derivatives#decoy:4](>>units_of_the_derivative)
+    (see also Exercise >>_complete_the_missing_units_#decoy:6 of Chapter >>derivatives#decoy:4),
+    differentiation divides the units of the output
+    by the units of the input: we have
+
+    $$
+    \Large f' : [\tA] \ra [\tB/\tA]
+    $$
+
+    for $f : [\tA] \ra [\tB]$. Moreover, the operation
+    is reversible: we have
+
+    $$
+    \Large f : [\tC] \ra \left[{\tC\tD}\right]
+    $$
+
+    for $f' : [\tC] \ra [\tD]$. (I.e., to recover the
+    signature of $f$ from the signature of $f'$ you
+    need multiply the output units of $f'$ by the input units
+    of $f'$, while keeping the input units the same.)
+
+    !! In other words, if
+
+    !! $$
+    !! \Large f : [\tA] \ra [\tB]
+    !! $$
+
+    !! !! implies
+    !! then
+
+    !! $$
+    !! \Large f' : [\tA] \ra [\tB/\tA]
+    !! $$
+    !! !! $$
+    !! !! \Large f' : [\tA] \ra \left[{\tB \over \tA}\right]
+    !! !! $$
+
+    !! !! and vice-versa: knowing the signature of $f'$ will
+    !! !! also tell you the units of $f$!
+    !! for any units A, B.
+
+    !! (Specifically,
+
+    !! $$
+    !! \Large f' : [\tC] \ra \left[{\tD}\right]
+    !! $$
+
+    !! implies
+
+    !! $$
+    !! \Large f : [\tC] \ra \left[{\tC\tD}\right]
+    !! $$
+
+    !! by the same principle, but inverted—you have to
+    !! multiply the output units of $f'$ by the input units
+    !! of $f'$ to recover the output units of $f$!)
+
+|> Section
+    
+    *Differentiation and signatures.*
     The 
     
     __differentiation operator__
@@ -479,16 +656,16 @@
 
     _On the topic of operators._ Hello...
 
-|> Section
-    *What is dimensional analysis?* Said topic of
+!! |> Section
+!!     *What is dimensional analysis?* Said topic of
 
-    __dimensional analysis__
+!!     __dimensional analysis__
 
-    is nothing more than “checking that the units
-    work out” in an equation, i.e., that both sides
-    of an equation carry the same units. It is a means of quickly catching mistakes
-    but also, sometimes, of guessing a formula by virtue of knowing
-    that the units must work out to such-and-such.
+!!     is nothing more than “checking that the units
+!!     work out” in an equation, i.e., that both sides
+!!     of an equation carry the same units. It is a means of quickly catching mistakes
+!!     but also, sometimes, of guessing a formula by virtue of knowing
+!!     that the units must work out to such-and-such.
 
 |> Section
     *Dimensional analysis of the sum rule.*
@@ -1356,3 +1533,76 @@
         the values of $\sin(\sin(x))$ are stuck between
         sine of $-1$ radian at the low end and sine of $+1$ radian
         at the high end, which produces the graph above.)
+
+
+|> Section
+    *Appendix: Radians _&_ the dimensionless plane.*
+    Imagine that we define the radian value of an
+    angle as
+
+    __length subtended by the angle on the unit circle__
+
+    as opposed to
+
+    __arc length over radius__
+
+    which is the more “traditional” definition. In 
+    the second 
+    case, the dimensions of the
+    radian are
+    
+    $$
+    {\te{length}\over\te{length}} = \te{dimensionless}
+    $$
+
+    whereas under the first definition it sounds like
+    the dimensions are simply “length”. BUT: “length”
+    _in what plane_? The “original” plane in which the
+    unit circle is embedded has dimensionless axes! And
+    therefore _length itself_$\rt{0.2}$ in that plane is a dimensionless
+    quantity, not the usual “physical” notion of length!
+    So both cases assign radians to be a dimensionless 
+    unit!
+    Whoo-hoo!
+
+    Relatedly to this idea of the original “vanilla”
+    $xy$-plane having dimensionless axes, you may
+    have seen people label axes this way, writing
+    “time/s” instead of “time $[\te{s}]$”:
+
+    |> Pause
+
+    The idea behind this notation is that the plane
+    itself is a pristine dimensionless object, so by doing
+
+    $$
+    \Large {\te{time}\over\te{s}}
+    $$
+
+    where “time” is a time measurements in seconds,
+    we have “taken the units out of the measurement”
+    and obtained a “pure number” that “fits” inside
+    the plane; (!); for example, this ‘$3$’ here...
+
+    |> Pause
+
+    ...is really a
+    “$3$ without any units”
+    because the
+    entire plane is dimensionless, but if we follow
+    the semantics of the axis label, we find...
+
+    $$
+    \Large 3 = {\te{time}\over \te{s}}
+    $$
+
+    ...which implies...
+
+    $$
+    \Large 3\te{s} = \te{time}
+    $$
+
+    ...or “time equals $3$ seconds”, i.e., that vertical
+    slice of the plane corresponds to the moment when
+    the “time” variable—which _does_ have units—equals
+    $3$ _seconds_, not just ‘$3$’, the pure number!

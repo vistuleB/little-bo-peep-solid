@@ -2463,7 +2463,7 @@ const Rest = () => {
               {" "} apply the function from {" "}
               <InChapterLink
                 href="/article/chapter3#_34_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 4
               </InChapterLink>
@@ -2521,7 +2521,7 @@ const Rest = () => {
               (the formula for the function from {" "}
               <InChapterLink
                 href="/article/chapter3#_34_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 4
               </InChapterLink>
@@ -2926,7 +2926,7 @@ const Rest = () => {
               {" "}
               <InChapterLink
                 href="/article/chapter3#_35_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 5
               </InChapterLink>
@@ -2952,7 +2952,7 @@ const Rest = () => {
               because the problem is similar to {" "}
               <InChapterLink
                 href="/article/chapter3#_35_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 5
               </InChapterLink>
@@ -3413,7 +3413,7 @@ const Rest = () => {
               Same question as {" "}
               <InChapterLink
                 href="/article/chapter3#_38_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 8
               </InChapterLink>
@@ -4241,7 +4241,7 @@ const Rest = () => {
               Solve {" "}
               <InChapterLink
                 href="/article/chapter3#_41_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 10
               </InChapterLink>
@@ -4485,7 +4485,7 @@ const Rest = () => {
               {" "} {" "}
               <InChapterLink
                 href="/article/chapter3#_41_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 10
               </InChapterLink>
@@ -4513,7 +4513,7 @@ const Rest = () => {
               by {" "}
               <InChapterLink
                 href="/article/chapter3#_41_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 10
               </InChapterLink>
@@ -5534,7 +5534,7 @@ const Rest = () => {
               sequence of transformations (cf. {" "}
               <InChapterLink
                 href="/article/chapter3#_45_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>
@@ -5567,7 +5567,7 @@ const Rest = () => {
               By {" "}
               <InChapterLink
                 href="/article/chapter3#_46_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 15
               </InChapterLink>
@@ -6011,7 +6011,7 @@ const Rest = () => {
               and, similarly to {" "}
               <InChapterLink
                 href="/article/chapter3#_45_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>
@@ -6075,7 +6075,7 @@ const Rest = () => {
               {" "} of {" "}
               <InChapterLink
                 href="/article/chapter3#_45_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>
@@ -6086,7 +6086,7 @@ const Rest = () => {
               By direct analogy with {" "}
               <InChapterLink
                 href="/article/chapter3#_45_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>
@@ -6300,7 +6300,7 @@ const Rest = () => {
               by {" "}
               <InChapterLink
                 href="/article/chapter3#_46_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 15
               </InChapterLink>
@@ -6385,7 +6385,7 @@ const Rest = () => {
                 as briefly flashed by, e.g., in {" "}
                 <a
                   href="/article/chapter1#_24_hgi_"
-                  class="handle-out-chapter-link"
+                  class="out-chapter-link"
                 >
                   Chapter 1
                 </a>

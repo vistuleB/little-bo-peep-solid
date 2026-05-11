@@ -36,7 +36,7 @@ export default createHandler(() => (
           {
             import.meta.env.VITE_ENV === "LOCAL" ? (
               <>
-                <link rel="icon" href="/favicon-local.ico" />
+                <link rel="icon" href="/favicon-local.svg" />
                 <link
                   rel="apple-touch-icon"
                   sizes="180x180"
