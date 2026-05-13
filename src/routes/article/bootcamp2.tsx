@@ -331,7 +331,7 @@ const Rest = () => {
           Moreover, (&#8288;
           <InChapterLink
             href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link"
+            class="in-chapter-link"
           >
             A
           </InChapterLink>
@@ -354,7 +354,7 @@ const Rest = () => {
           detail, (&#8288;
           <InChapterLink
             href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link"
+            class="in-chapter-link"
           >
             A
           </InChapterLink>
@@ -365,7 +365,7 @@ const Rest = () => {
           {" "} by inspection, and (&#8288;
           <InChapterLink
             href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link"
+            class="in-chapter-link"
           >
             A
           </InChapterLink>
@@ -418,14 +418,14 @@ const Rest = () => {
           in (&#8288;
           <InChapterLink
             href="/article/bootcamp2#_3_hgi_"
-            class="handle-in-chapter-link"
+            class="in-chapter-link"
           >
             AA
           </InChapterLink>
           &#8288;) lands you right back on (&#8288;
           <InChapterLink
             href="/article/bootcamp2#_3_hgi_"
-            class="handle-in-chapter-link"
+            class="in-chapter-link"
           >
             AA
           </InChapterLink>
@@ -440,7 +440,7 @@ const Rest = () => {
           {" "} (So, namely, if (&#8288;
           <InChapterLink
             href="/article/bootcamp2#_3_hgi_"
-            class="handle-in-chapter-link"
+            class="in-chapter-link"
           >
             AA
           </InChapterLink>
@@ -513,14 +513,14 @@ const Rest = () => {
           Thus, either of (&#8288;
           <InChapterLink
             href="/article/bootcamp2#_2_hgi_"
-            class="handle-in-chapter-link"
+            class="in-chapter-link"
           >
             A
           </InChapterLink>
           &#8288;) and (&#8288;
           <InChapterLink
             href="/article/bootcamp2#_3_hgi_"
-            class="handle-in-chapter-link"
+            class="in-chapter-link"
           >
             AA
           </InChapterLink>
@@ -1831,15 +1831,15 @@ const Rest = () => {
         <Pause />
         <OuterP>
           is a thousand meters
-          [ “kilo” = thousand],
-          while {" "}
+          {" "}
           <NoBreak>
-            a
+            [b/
             <Math>
               $\!\hspace&#123;0.1ex&#125;\rm&#123;c&#125;$
             </Math>
-            b/
           </NoBreak>
+          {" "} “kilo” = thousand],
+          while a
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -2523,28 +2523,26 @@ const Rest = () => {
               <Math>
                 $10\%$
               </Math>
-              {" "} of one trillion {" "}
-              <NoBreak>
-                [.
-                <Math>
-                  $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
-                </Math>
-              </NoBreak>
+              {" "} of one trillion [cf.:
               {" "}
-              trillion, so the answer is {" "}
               <NoBreak>
                 <Math>
-                  $4$
+                  $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
                 </Math>
                 ]
               </NoBreak>
               {" "}
               and one trillion is a quarter of {" "}
+              <Math>
+                $4$
+              </Math>
+              {" "}
+              trillion, so the answer is {" "}
               <NoBreak>
                 <Math>
-                  $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
+                  $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
                 </Math>
-                cf.:
+                .
               </NoBreak>
             </OuterP>
             <Pause />
@@ -2938,7 +2936,7 @@ const Rest = () => {
               stated earlier in the chapter as (&#8288;
               <InChapterLink
                 href="/article/bootcamp2#_2_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 A
               </InChapterLink>
@@ -3287,7 +3285,7 @@ const Rest = () => {
               {" "} (as in {" "}
               <InChapterLink
                 href="/article/bootcamp2#_17_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>

@@ -1564,10 +1564,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section
-        divider={false}
-        id="section-9"
-      >
+      <Section id="section-9">
         <OuterP>
           <b>
             Postscript: units vs dimensions.
@@ -2115,7 +2112,7 @@ const Rest = () => {
               As explained in {" "}
               <a
                 href="/article/chapter3#_53_hgi_"
-                class="handle-out-chapter-link"
+                class="out-chapter-link"
               >
                 Chapter 3
               </a>
@@ -2229,7 +2226,7 @@ const Rest = () => {
               in the solution to {" "}
               <InChapterLink
                 href="/article/chapter2#_26_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 2
               </InChapterLink>

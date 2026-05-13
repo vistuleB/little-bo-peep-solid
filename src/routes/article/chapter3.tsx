@@ -234,29 +234,31 @@ export default function __Chapter3__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          [, {" "}
           <NoBreak>
-            and
+            [“
             <Math>
-              $2^2 = 4$
+              $f$
+            </Math>
+          </NoBreak>
+          {" "} of {" "}
+          <Math>
+            $2$
+          </Math>
+          {" "} equals {" "}
+          <NoBreak>
+            <Math>
+              $4$
             </Math>
             ”]
           </NoBreak>
           {" "} because {" "}
-          <Math>
-            $4$
-          </Math>
-          {" "} equals {" "}
-          <Math>
-            $2$
-          </Math>
-          {" "} of {" "}
           <NoBreak>
             <Math>
-              $f$
+              $2^2 = 4$
             </Math>
-            “
+            ,
           </NoBreak>
+          {" "} and
         </OuterP>
         <Pause />
         <MathBlock>
@@ -266,29 +268,31 @@ export default function __Chapter3__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          [, {" "}
           <NoBreak>
-            and
+            [“
             <Math>
-              $3^2 = 9$
+              $f$
+            </Math>
+          </NoBreak>
+          {" "} of {" "}
+          <Math>
+            $3$
+          </Math>
+          {" "} equals {" "}
+          <NoBreak>
+            <Math>
+              $9$
             </Math>
             ”]
           </NoBreak>
           {" "} because {" "}
-          <Math>
-            $9$
-          </Math>
-          {" "} equals {" "}
-          <Math>
-            $3$
-          </Math>
-          {" "} of {" "}
           <NoBreak>
             <Math>
-              $f$
+              $3^2 = 9$
             </Math>
-            “
+            ,
           </NoBreak>
+          {" "} and
         </OuterP>
         <Pause />
         <MathBlock>
@@ -298,15 +302,14 @@ export default function __Chapter3__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          [, and so on. {" "}
+          [...] because {" "}
           <NoBreak>
-            Also,
             <Math>
               $0.1^2 = 0.01$
             </Math>
-            ...]
+            ,
           </NoBreak>
-          {" "} because
+          {" "} and so on. Also,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -316,25 +319,25 @@ export default function __Chapter3__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          [”] more generally, which
-          is actually {" "}
           <NoBreak>
-            the
-            <Math>
-              $x^2$
-            </Math>
-          </NoBreak>
-          {" "} equals {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} of {" "}
-          <NoBreak>
+            [“
             <Math>
               $f$
             </Math>
-            “
           </NoBreak>
+          {" "} of {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} equals {" "}
+          <NoBreak>
+            <Math>
+              $x^2$
+            </Math>
+            ”]
+          </NoBreak>
+          {" "} more generally, which
+          is actually the
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1096,20 +1099,16 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          [ is a subset of
-          the set of real numbers
+          [translation: {" "}
           <i>
-            ] and {" "}
-            <NoBreak>
-              that
-              <Math>
-                $f$
-              </Math>
-              translation:
-            </NoBreak>
-            {" "} {" "}
+            the domain of {" "}
+            <Math>
+              $f$
+            </Math>
+            {" "} is a subset of
+            the set of real numbers
           </i>
-          the domain of
+          ] and that
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1119,19 +1118,16 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          [
-          is a subset of the set of real numbers
+          [translation: {" "}
           <i>
-            <NoBreak>
-              ].
-              <Math>
-                $f$
-              </Math>
-              translation:
-            </NoBreak>
-            {" "} {" "}
+            the set of values output by {" "}
+            <Math>
+              $f$
+            </Math>
+            {" "}
+            is a subset of the set of real numbers
           </i>
-          the set of values output by
+          ].
         </OuterP>
         <OuterP class="indent-10">
           Generalizing,
@@ -1221,21 +1217,13 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          observes that a graph [-value (a.k.a.,
-          output). In other words, every vertical line
-          should intersect the graph at most {" "}
+          observes that a graph {" "}
           <NoBreak>
-            once.
+            [
             <Math>
-              $y$
+              $=$
             </Math>
-            -value
           </NoBreak>
-          {" "} (a.k.a., input)
-          corresponds to at most one {" "}
-          <Math>
-            $x$
-          </Math>
           {" "} {" "}
           <i>
             set of points
@@ -1243,9 +1231,23 @@ const Rest = () => {
           </i>
           ] is a function graph if and
           only if every {" "}
-          <Math>
-            $=$
-          </Math>
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -value
+          </NoBreak>
+          {" "} (a.k.a., input)
+          corresponds to at most one {" "}
+          <NoBreak>
+            <Math>
+              $y$
+            </Math>
+            -value
+          </NoBreak>
+          {" "} (a.k.a.,
+          output). In other words, every vertical line
+          should intersect the graph at most once.
         </OuterP>
         <OuterP class="indent-10">
           For example, this particular graph...
@@ -2461,7 +2463,7 @@ const Rest = () => {
               {" "} apply the function from {" "}
               <InChapterLink
                 href="/article/chapter3#_34_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 4
               </InChapterLink>
@@ -2519,7 +2521,7 @@ const Rest = () => {
               (the formula for the function from {" "}
               <InChapterLink
                 href="/article/chapter3#_34_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 4
               </InChapterLink>
@@ -2924,7 +2926,7 @@ const Rest = () => {
               {" "}
               <InChapterLink
                 href="/article/chapter3#_35_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 5
               </InChapterLink>
@@ -2950,7 +2952,7 @@ const Rest = () => {
               because the problem is similar to {" "}
               <InChapterLink
                 href="/article/chapter3#_35_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 5
               </InChapterLink>
@@ -3411,7 +3413,7 @@ const Rest = () => {
               Same question as {" "}
               <InChapterLink
                 href="/article/chapter3#_38_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 8
               </InChapterLink>
@@ -4239,7 +4241,7 @@ const Rest = () => {
               Solve {" "}
               <InChapterLink
                 href="/article/chapter3#_41_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 10
               </InChapterLink>
@@ -4483,7 +4485,7 @@ const Rest = () => {
               {" "} {" "}
               <InChapterLink
                 href="/article/chapter3#_41_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 10
               </InChapterLink>
@@ -4511,7 +4513,7 @@ const Rest = () => {
               by {" "}
               <InChapterLink
                 href="/article/chapter3#_41_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 10
               </InChapterLink>
@@ -5532,7 +5534,7 @@ const Rest = () => {
               sequence of transformations (cf. {" "}
               <InChapterLink
                 href="/article/chapter3#_45_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>
@@ -5565,7 +5567,7 @@ const Rest = () => {
               By {" "}
               <InChapterLink
                 href="/article/chapter3#_46_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 15
               </InChapterLink>
@@ -6009,7 +6011,7 @@ const Rest = () => {
               and, similarly to {" "}
               <InChapterLink
                 href="/article/chapter3#_45_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>
@@ -6073,7 +6075,7 @@ const Rest = () => {
               {" "} of {" "}
               <InChapterLink
                 href="/article/chapter3#_45_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>
@@ -6084,7 +6086,7 @@ const Rest = () => {
               By direct analogy with {" "}
               <InChapterLink
                 href="/article/chapter3#_45_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>
@@ -6298,7 +6300,7 @@ const Rest = () => {
               by {" "}
               <InChapterLink
                 href="/article/chapter3#_46_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 15
               </InChapterLink>
@@ -6383,7 +6385,7 @@ const Rest = () => {
                 as briefly flashed by, e.g., in {" "}
                 <a
                   href="/article/chapter1#_24_hgi_"
-                  class="handle-out-chapter-link"
+                  class="out-chapter-link"
                 >
                   Chapter 1
                 </a>

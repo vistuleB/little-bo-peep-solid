@@ -2629,7 +2629,7 @@ const Rest = () => {
               In the solution to {" "}
               <InChapterLink
                 href="/article/chapter1#_21_hgi_"
-                class="handle-in-chapter-link"
+                class="in-chapter-link"
               >
                 Exercise 1
               </InChapterLink>
