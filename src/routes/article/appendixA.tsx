@@ -49,7 +49,10 @@ export default function __AppendixA__() {
                   Exercise 1.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter1#_21_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter1#_21_hgi_"
+                  >
                     True False
                   </a>
                 </ExerciseStatement>
@@ -68,7 +71,10 @@ export default function __AppendixA__() {
                   Exercise 2.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter1#_22_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter1#_22_hgi_"
+                  >
                     Approximate 1 over n minus 1 over n+1
                   </a>
                 </ExerciseStatement>
@@ -96,7 +102,10 @@ export default function __AppendixA__() {
                   Exercise 1.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter2#_25_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter2#_25_hgi_"
+                  >
                     Lines of Slope 1/2
                   </a>
                 </ExerciseStatement>
@@ -115,7 +124,10 @@ export default function __AppendixA__() {
                   Exercise 2.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter2#_26_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter2#_26_hgi_"
+                  >
                     x0, y0, Slope p: General Equation
                   </a>
                 </ExerciseStatement>
@@ -129,7 +141,10 @@ export default function __AppendixA__() {
                   Exercise 3.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter2#_27_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter2#_27_hgi_"
+                  >
                     Vertical Velocity Plot
                   </a>
                 </ExerciseStatement>
@@ -148,7 +163,10 @@ export default function __AppendixA__() {
                   Exercise 4.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter2#_28_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter2#_28_hgi_"
+                  >
                     y0 - px0 Intercept Explanation
                   </a>
                 </ExerciseStatement>
@@ -176,7 +194,10 @@ export default function __AppendixA__() {
                   Exercise 1.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_31_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_31_hgi_"
+                  >
                     Define Absolute Value by Cases
                   </a>
                 </ExerciseStatement>
@@ -195,7 +216,10 @@ export default function __AppendixA__() {
                   Exercise 2.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_32_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_32_hgi_"
+                  >
                     Define Absolute Value by Algebraic Formula
                   </a>
                 </ExerciseStatement>
@@ -214,7 +238,10 @@ export default function __AppendixA__() {
                   Exercise 3.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_33_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_33_hgi_"
+                  >
                     Evaluate Lambda Functions
                   </a>
                 </ExerciseStatement>
@@ -233,7 +260,10 @@ export default function __AppendixA__() {
                   Exercise 4.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_34_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_34_hgi_"
+                  >
                     Floor Introduction
                   </a>
                 </ExerciseStatement>
@@ -252,7 +282,10 @@ export default function __AppendixA__() {
                   Exercise 5.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_35_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_35_hgi_"
+                  >
                     Factory Roof Functions 1
                   </a>
                 </ExerciseStatement>
@@ -266,7 +299,10 @@ export default function __AppendixA__() {
                   Exercise 6.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_36_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_36_hgi_"
+                  >
                     Factory Roof Functions 2
                   </a>
                 </ExerciseStatement>
@@ -280,7 +316,10 @@ export default function __AppendixA__() {
                   Exercise 7.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_37_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_37_hgi_"
+                  >
                     Cosine of 1000x
                   </a>
                 </ExerciseStatement>
@@ -294,7 +333,10 @@ export default function __AppendixA__() {
                   Exercise 8.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_38_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_38_hgi_"
+                  >
                     Composition Order 1
                   </a>
                 </ExerciseStatement>
@@ -308,7 +350,10 @@ export default function __AppendixA__() {
                   Exercise 9.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_40_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_40_hgi_"
+                  >
                     Composition Order 2
                   </a>
                 </ExerciseStatement>
@@ -322,7 +367,10 @@ export default function __AppendixA__() {
                   Exercise 10.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_41_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_41_hgi_"
+                  >
                     Complete the Square 1
                   </a>
                 </ExerciseStatement>
@@ -336,7 +384,10 @@ export default function __AppendixA__() {
                   Exercise 11.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_42_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_42_hgi_"
+                  >
                     Complete the Square 2
                   </a>
                 </ExerciseStatement>
@@ -350,7 +401,10 @@ export default function __AppendixA__() {
                   Exercise 12.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_43_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_43_hgi_"
+                  >
                     No Solutions by Complete Square
                   </a>
                 </ExerciseStatement>
@@ -364,7 +418,10 @@ export default function __AppendixA__() {
                   Exercise 13.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_44_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_44_hgi_"
+                  >
                     Two Solutions by Complete Square
                   </a>
                 </ExerciseStatement>
@@ -378,7 +435,10 @@ export default function __AppendixA__() {
                   Exercise 14.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_45_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_45_hgi_"
+                  >
                     What Sequence AB
                   </a>
                 </ExerciseStatement>
@@ -392,7 +452,10 @@ export default function __AppendixA__() {
                   Exercise 15.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_46_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_46_hgi_"
+                  >
                     What Roots by x0, y0 Sequence
                   </a>
                 </ExerciseStatement>
@@ -406,7 +469,10 @@ export default function __AppendixA__() {
                   Exercise 16.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_47_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_47_hgi_"
+                  >
                     Use Previous Two AB
                   </a>
                 </ExerciseStatement>
@@ -420,7 +486,10 @@ export default function __AppendixA__() {
                   Exercise 17.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_48_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_48_hgi_"
+                  >
                     Function Operations Q&amp;A
                   </a>
                 </ExerciseStatement>
@@ -434,7 +503,10 @@ export default function __AppendixA__() {
                   Exercise 18.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_49_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_49_hgi_"
+                  >
                     What Sequence ABC
                   </a>
                 </ExerciseStatement>
@@ -448,7 +520,10 @@ export default function __AppendixA__() {
                   Exercise 19.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_50_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_50_hgi_"
+                  >
                     What Are the Roots ABC
                   </a>
                 </ExerciseStatement>
@@ -462,7 +537,10 @@ export default function __AppendixA__() {
                   Exercise 20.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter3#_51_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter3#_51_hgi_"
+                  >
                     Summon the Currying
                   </a>
                 </ExerciseStatement>
@@ -485,7 +563,10 @@ export default function __AppendixA__() {
                   Exercise 1.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_55_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_55_hgi_"
+                  >
                     See-Saw
                   </a>
                 </ExerciseStatement>
@@ -499,7 +580,10 @@ export default function __AppendixA__() {
                   Exercise 2.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_56_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_56_hgi_"
+                  >
                     Derivative of 1/x near 0
                   </a>
                 </ExerciseStatement>
@@ -513,7 +597,10 @@ export default function __AppendixA__() {
                   Exercise 3.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_57_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_57_hgi_"
+                  >
                     See-Saw Second Derivative
                   </a>
                 </ExerciseStatement>
@@ -527,7 +614,10 @@ export default function __AppendixA__() {
                   Exercise 4.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_58_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_58_hgi_"
+                  >
                     See-Saw with Units
                   </a>
                 </ExerciseStatement>
@@ -541,7 +631,10 @@ export default function __AppendixA__() {
                   Exercise 5.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_59_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_59_hgi_"
+                  >
                     Correct, Incorrect, or Nonsensical
                   </a>
                 </ExerciseStatement>
@@ -555,7 +648,10 @@ export default function __AppendixA__() {
                   Exercise 6.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_60_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_60_hgi_"
+                  >
                     Complete the Missing Units
                   </a>
                 </ExerciseStatement>
@@ -569,7 +665,10 @@ export default function __AppendixA__() {
                   Exercise 7.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_61_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_61_hgi_"
+                  >
                     How Many Bumps
                   </a>
                 </ExerciseStatement>
@@ -583,7 +682,10 @@ export default function __AppendixA__() {
                   Exercise 8.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_62_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_62_hgi_"
+                  >
                     Reorder Derivatives
                   </a>
                 </ExerciseStatement>
@@ -597,7 +699,10 @@ export default function __AppendixA__() {
                   Exercise 9.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_63_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_63_hgi_"
+                  >
                     Narrow and Less Narrow Bends
                   </a>
                 </ExerciseStatement>
@@ -611,7 +716,10 @@ export default function __AppendixA__() {
                   Exercise 10.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_64_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_64_hgi_"
+                  >
                     First Law of Differentiation
                   </a>
                 </ExerciseStatement>
@@ -625,7 +733,10 @@ export default function __AppendixA__() {
                   Exercise 11.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_65_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_65_hgi_"
+                  >
                     Define Product of Constant and Function
                   </a>
                 </ExerciseStatement>
@@ -639,7 +750,10 @@ export default function __AppendixA__() {
                   Exercise 12.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_66_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_66_hgi_"
+                  >
                     Four Particles
                   </a>
                 </ExerciseStatement>
@@ -653,7 +767,10 @@ export default function __AppendixA__() {
                   Exercise 13.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_67_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_67_hgi_"
+                  >
                     Sum Rule Summary
                   </a>
                 </ExerciseStatement>
@@ -667,7 +784,10 @@ export default function __AppendixA__() {
                   Exercise 14.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_69_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_69_hgi_"
+                  >
                     Difference Quotient Illustration
                   </a>
                 </ExerciseStatement>
@@ -681,7 +801,10 @@ export default function __AppendixA__() {
                   Exercise 15.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_70_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_70_hgi_"
+                  >
                     Difference Quotient Nutshell
                   </a>
                 </ExerciseStatement>
@@ -695,7 +818,10 @@ export default function __AppendixA__() {
                   Exercise 16.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_71_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_71_hgi_"
+                  >
                     Verbal to Arithmetic: A Change
                   </a>
                 </ExerciseStatement>
@@ -709,7 +835,10 @@ export default function __AppendixA__() {
                   Exercise 17.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_72_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_72_hgi_"
+                  >
                     Verbal to Arithmetic: A Change pt.2
                   </a>
                 </ExerciseStatement>
@@ -723,7 +852,10 @@ export default function __AppendixA__() {
                   Exercise 18.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_73_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_73_hgi_"
+                  >
                     Change in f
                   </a>
                 </ExerciseStatement>
@@ -737,7 +869,10 @@ export default function __AppendixA__() {
                   Exercise 19.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_75_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_75_hgi_"
+                  >
                     Big A Product Approach as h Goes to 0
                   </a>
                 </ExerciseStatement>
@@ -751,7 +886,10 @@ export default function __AppendixA__() {
                   Exercise 20.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_76_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_76_hgi_"
+                  >
                     Express the Associativity etc.
                   </a>
                 </ExerciseStatement>
@@ -765,7 +903,10 @@ export default function __AppendixA__() {
                   Exercise 21.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_77_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_77_hgi_"
+                  >
                     Associativity of Function Multiplication
                   </a>
                 </ExerciseStatement>
@@ -779,7 +920,10 @@ export default function __AppendixA__() {
                   Exercise 22.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_79_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_79_hgi_"
+                  >
                     1D Red Particle
                   </a>
                 </ExerciseStatement>
@@ -793,7 +937,10 @@ export default function __AppendixA__() {
                   Exercise 23.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_80_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_80_hgi_"
+                  >
                     1D Blue-Yellow Particles
                   </a>
                 </ExerciseStatement>
@@ -807,7 +954,10 @@ export default function __AppendixA__() {
                   Exercise 24.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_81_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_81_hgi_"
+                  >
                     Four Particles at 2, 4
                   </a>
                 </ExerciseStatement>
@@ -821,7 +971,10 @@ export default function __AppendixA__() {
                   Exercise 25.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_82_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_82_hgi_"
+                  >
                     Eta Approximation from Cosine Graph
                   </a>
                 </ExerciseStatement>
@@ -835,7 +988,10 @@ export default function __AppendixA__() {
                   Exercise 26.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_83_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_83_hgi_"
+                  >
                     f Equals f at 5
                   </a>
                 </ExerciseStatement>
@@ -849,7 +1005,10 @@ export default function __AppendixA__() {
                   Exercise 27.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter4#_84_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter4#_84_hgi_"
+                  >
                     f Equals f at 17
                   </a>
                 </ExerciseStatement>
@@ -872,7 +1031,10 @@ export default function __AppendixA__() {
                   Exercise 1.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_88_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_88_hgi_"
+                  >
                     Guesstimate cos(10x) Linear
                   </a>
                 </ExerciseStatement>
@@ -886,7 +1048,10 @@ export default function __AppendixA__() {
                   Exercise 2.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_89_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_89_hgi_"
+                  >
                     Guesstimate cos(10x) Parabolic
                   </a>
                 </ExerciseStatement>
@@ -900,7 +1065,10 @@ export default function __AppendixA__() {
                   Exercise 3.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_90_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_90_hgi_"
+                  >
                     Guesstimate Sinusoid
                   </a>
                 </ExerciseStatement>
@@ -914,7 +1082,10 @@ export default function __AppendixA__() {
                   Exercise 4.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_91_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_91_hgi_"
+                  >
                     Triangle Conch
                   </a>
                 </ExerciseStatement>
@@ -928,7 +1099,10 @@ export default function __AppendixA__() {
                   Exercise 5.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_92_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_92_hgi_"
+                  >
                     0.2 Radians
                   </a>
                 </ExerciseStatement>
@@ -942,7 +1116,10 @@ export default function __AppendixA__() {
                   Exercise 6.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_93_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_93_hgi_"
+                  >
                     Handdrawn Oval P Position
                   </a>
                 </ExerciseStatement>
@@ -956,7 +1133,10 @@ export default function __AppendixA__() {
                   Exercise 7.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_94_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_94_hgi_"
+                  >
                     Eta and 4-Eta as Ratios
                   </a>
                 </ExerciseStatement>
@@ -970,7 +1150,10 @@ export default function __AppendixA__() {
                   Exercise 8.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_95_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_95_hgi_"
+                  >
                     Vector Addition Definition
                   </a>
                 </ExerciseStatement>
@@ -984,7 +1167,10 @@ export default function __AppendixA__() {
                   Exercise 9.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_96_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_96_hgi_"
+                  >
                     Circular Motion from x Coordinate
                   </a>
                 </ExerciseStatement>
@@ -998,7 +1184,10 @@ export default function __AppendixA__() {
                   Exercise 10.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_97_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_97_hgi_"
+                  >
                     Spherical to Cartesian Coordinates 1
                   </a>
                 </ExerciseStatement>
@@ -1012,7 +1201,10 @@ export default function __AppendixA__() {
                   Exercise 11.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_98_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_98_hgi_"
+                  >
                     Spherical to Cartesian Coordinates 2
                   </a>
                 </ExerciseStatement>
@@ -1026,7 +1218,10 @@ export default function __AppendixA__() {
                   Exercise 12.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_99_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_99_hgi_"
+                  >
                     Blueprints Top and Side
                   </a>
                 </ExerciseStatement>
@@ -1040,7 +1235,10 @@ export default function __AppendixA__() {
                   Exercise 13.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_100_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_100_hgi_"
+                  >
                     Blueprints: Open Thin Door
                   </a>
                 </ExerciseStatement>
@@ -1054,7 +1252,10 @@ export default function __AppendixA__() {
                   Exercise 14.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_101_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_101_hgi_"
+                  >
                     Powers of Secant
                   </a>
                 </ExerciseStatement>
@@ -1068,7 +1269,10 @@ export default function __AppendixA__() {
                   Exercise 15.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_103_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_103_hgi_"
+                  >
                     Long Division 11/7
                   </a>
                 </ExerciseStatement>
@@ -1082,7 +1286,10 @@ export default function __AppendixA__() {
                   Exercise 16.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_104_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_104_hgi_"
+                  >
                     Long Division 22/7
                   </a>
                 </ExerciseStatement>
@@ -1096,7 +1303,10 @@ export default function __AppendixA__() {
                   Exercise 17.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_105_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_105_hgi_"
+                  >
                     Long Division 15542486476949/777
                   </a>
                 </ExerciseStatement>
@@ -1110,7 +1320,10 @@ export default function __AppendixA__() {
                   Exercise 18.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_106_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_106_hgi_"
+                  >
                     Complement Calculation
                   </a>
                 </ExerciseStatement>
@@ -1124,7 +1337,10 @@ export default function __AppendixA__() {
                   Exercise 19.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_107_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_107_hgi_"
+                  >
                     Complement of Complement
                   </a>
                 </ExerciseStatement>
@@ -1138,7 +1354,10 @@ export default function __AppendixA__() {
                   Exercise 20.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_108_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_108_hgi_"
+                  >
                     Rotate Central 90 Degrees
                   </a>
                 </ExerciseStatement>
@@ -1152,7 +1371,10 @@ export default function __AppendixA__() {
                   Exercise 21.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_109_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_109_hgi_"
+                  >
                     Ratio A/B: tan squared
                   </a>
                 </ExerciseStatement>
@@ -1166,7 +1388,10 @@ export default function __AppendixA__() {
                   Exercise 22.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_110_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_110_hgi_"
+                  >
                     Ratio A/B: 1 + tan squared
                   </a>
                 </ExerciseStatement>
@@ -1180,7 +1405,10 @@ export default function __AppendixA__() {
                   Exercise 23.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_111_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_111_hgi_"
+                  >
                     Archimedean Projection
                   </a>
                 </ExerciseStatement>
@@ -1194,7 +1422,10 @@ export default function __AppendixA__() {
                   Exercise 24.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_112_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_112_hgi_"
+                  >
                     Rank the 7 Slices
                   </a>
                 </ExerciseStatement>
@@ -1208,7 +1439,10 @@ export default function __AppendixA__() {
                   Exercise 25.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_113_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_113_hgi_"
+                  >
                     Sphere Area Formula from Archimedean Property
                   </a>
                 </ExerciseStatement>
@@ -1222,7 +1456,10 @@ export default function __AppendixA__() {
                   Exercise 26.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_114_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_114_hgi_"
+                  >
                     Sphere Volume
                   </a>
                 </ExerciseStatement>
@@ -1236,7 +1473,10 @@ export default function __AppendixA__() {
                   Exercise 27.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_115_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_115_hgi_"
+                  >
                     Gas Tank
                   </a>
                 </ExerciseStatement>
@@ -1250,7 +1490,10 @@ export default function __AppendixA__() {
                   Exercise 28.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_116_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_116_hgi_"
+                  >
                     Gas Tank Decimal Approximation
                   </a>
                 </ExerciseStatement>
@@ -1264,7 +1507,10 @@ export default function __AppendixA__() {
                   Exercise 29.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_117_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_117_hgi_"
+                  >
                     Three Quarters Decimal Approximation
                   </a>
                 </ExerciseStatement>
@@ -1278,7 +1524,10 @@ export default function __AppendixA__() {
                   Exercise 30.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_118_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_118_hgi_"
+                  >
                     A Ship
                   </a>
                 </ExerciseStatement>
@@ -1292,7 +1541,10 @@ export default function __AppendixA__() {
                   Exercise 31.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_119_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_119_hgi_"
+                  >
                     Four Compositions Expressed
                   </a>
                 </ExerciseStatement>
@@ -1306,7 +1558,10 @@ export default function __AppendixA__() {
                   Exercise 32.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_120_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_120_hgi_"
+                  >
                     Four Compositions Graphed
                   </a>
                 </ExerciseStatement>
@@ -1320,7 +1575,10 @@ export default function __AppendixA__() {
                   Exercise 33.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_121_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_121_hgi_"
+                  >
                     ABCD Roles
                   </a>
                 </ExerciseStatement>
@@ -1334,7 +1592,10 @@ export default function __AppendixA__() {
                   Exercise 34.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_122_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_122_hgi_"
+                  >
                     Draw the Sandwich
                   </a>
                 </ExerciseStatement>
@@ -1348,7 +1609,10 @@ export default function __AppendixA__() {
                   Exercise 35.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_123_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_123_hgi_"
+                  >
                     Cosine Rule Geometric 1
                   </a>
                 </ExerciseStatement>
@@ -1362,7 +1626,10 @@ export default function __AppendixA__() {
                   Exercise 36.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_124_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_124_hgi_"
+                  >
                     Cosine Rule Geometric 2
                   </a>
                 </ExerciseStatement>
@@ -1376,7 +1643,10 @@ export default function __AppendixA__() {
                   Exercise 37.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_125_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_125_hgi_"
+                  >
                     Cosine Rule Geometric 3
                   </a>
                 </ExerciseStatement>
@@ -1390,7 +1660,10 @@ export default function __AppendixA__() {
                   Exercise 38.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_126_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_126_hgi_"
+                  >
                     Cosine Rule Geometric 4
                   </a>
                 </ExerciseStatement>
@@ -1404,7 +1677,10 @@ export default function __AppendixA__() {
                   Exercise 39.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_128_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_128_hgi_"
+                  >
                     Polar Distance
                   </a>
                 </ExerciseStatement>
@@ -1418,7 +1694,10 @@ export default function __AppendixA__() {
                   Exercise 40.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_129_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_129_hgi_"
+                  >
                     Cosine Rule
                   </a>
                 </ExerciseStatement>
@@ -1432,7 +1711,10 @@ export default function __AppendixA__() {
                   Exercise 41.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_130_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_130_hgi_"
+                  >
                     Sine Rule
                   </a>
                 </ExerciseStatement>
@@ -1446,7 +1728,10 @@ export default function __AppendixA__() {
                   Exercise 42.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_131_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_131_hgi_"
+                  >
                     Secant-Cosecant Intersections
                   </a>
                 </ExerciseStatement>
@@ -1460,7 +1745,10 @@ export default function __AppendixA__() {
                   Exercise 43.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_132_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_132_hgi_"
+                  >
                     Tan-Cot on Unit Circle
                   </a>
                 </ExerciseStatement>
@@ -1474,7 +1762,10 @@ export default function __AppendixA__() {
                   Exercise 44.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_133_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_133_hgi_"
+                  >
                     Geometric Construction of 1/A
                   </a>
                 </ExerciseStatement>
@@ -1488,7 +1779,10 @@ export default function __AppendixA__() {
                   Exercise 45.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_134_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_134_hgi_"
+                  >
                     x-Square x-Cube Construction
                   </a>
                 </ExerciseStatement>
@@ -1502,7 +1796,10 @@ export default function __AppendixA__() {
                   Exercise 46.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_135_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_135_hgi_"
+                  >
                     Square Root of xy Construction
                   </a>
                 </ExerciseStatement>
@@ -1516,7 +1813,10 @@ export default function __AppendixA__() {
                   Exercise 47.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_136_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_136_hgi_"
+                  >
                     Project i and j
                   </a>
                 </ExerciseStatement>
@@ -1530,7 +1830,10 @@ export default function __AppendixA__() {
                   Exercise 48.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_137_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_137_hgi_"
+                  >
                     Unit Dot Product Geometric Interpretation
                   </a>
                 </ExerciseStatement>
@@ -1544,7 +1847,10 @@ export default function __AppendixA__() {
                   Exercise 49.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_138_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_138_hgi_"
+                  >
                     Four Graphs
                   </a>
                 </ExerciseStatement>
@@ -1558,7 +1864,10 @@ export default function __AppendixA__() {
                   Exercise 50.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_139_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_139_hgi_"
+                  >
                     Where Is the Pythagorean Identity
                   </a>
                 </ExerciseStatement>
@@ -1572,7 +1881,10 @@ export default function __AppendixA__() {
                   Exercise 51.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_140_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_140_hgi_"
+                  >
                     More Closely Related to sin(2x)?
                   </a>
                 </ExerciseStatement>
@@ -1586,7 +1898,10 @@ export default function __AppendixA__() {
                   Exercise 52.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_141_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_141_hgi_"
+                  >
                     More Closely Related Followup
                   </a>
                 </ExerciseStatement>
@@ -1600,7 +1915,10 @@ export default function __AppendixA__() {
                   Exercise 53.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_142_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_142_hgi_"
+                  >
                     Max cos(x) + sin(x)
                   </a>
                 </ExerciseStatement>
@@ -1614,7 +1932,10 @@ export default function __AppendixA__() {
                   Exercise 54.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_143_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_143_hgi_"
+                  >
                     cos(x) + sin(x) as Sinusoid
                   </a>
                 </ExerciseStatement>
@@ -1628,7 +1949,10 @@ export default function __AppendixA__() {
                   Exercise 55.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_144_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_144_hgi_"
+                  >
                     A cos(x) + B sin(x) as Sinusoid
                   </a>
                 </ExerciseStatement>
@@ -1642,7 +1966,10 @@ export default function __AppendixA__() {
                   Exercise 56.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/chapter5#_145_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/chapter5#_145_hgi_"
+                  >
                     Relate A cos(x) + B sin(x) Polar Conversion to cos(x) + sin(x)
                   </a>
                 </ExerciseStatement>
@@ -1668,7 +1995,10 @@ export default function __AppendixA__() {
                   Exercise 1.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_4_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_4_hgi_"
+                  >
                     2^-1, 2^-3, and 2^-4 by Hand
                   </a>
                 </ExerciseStatement>
@@ -1682,7 +2012,10 @@ export default function __AppendixA__() {
                   Exercise 2.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_5_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_5_hgi_"
+                  >
                     100/16 by Hand
                   </a>
                 </ExerciseStatement>
@@ -1696,7 +2029,10 @@ export default function __AppendixA__() {
                   Exercise 3.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_6_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_6_hgi_"
+                  >
                     Chinese Ten Thousand
                   </a>
                 </ExerciseStatement>
@@ -1710,7 +2046,10 @@ export default function __AppendixA__() {
                   Exercise 4.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_7_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_7_hgi_"
+                  >
                     Kilometers per Millimeter
                   </a>
                 </ExerciseStatement>
@@ -1724,7 +2063,10 @@ export default function __AppendixA__() {
                   Exercise 5.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_8_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_8_hgi_"
+                  >
                     Kilometers per 10^24 Millimeters
                   </a>
                 </ExerciseStatement>
@@ -1738,7 +2080,10 @@ export default function __AppendixA__() {
                   Exercise 6.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_9_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_9_hgi_"
+                  >
                     US Yearly Budget Percentage
                   </a>
                 </ExerciseStatement>
@@ -1752,7 +2097,10 @@ export default function __AppendixA__() {
                   Exercise 7.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_10_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_10_hgi_"
+                  >
                     What Is log base 10 of One Trillion
                   </a>
                 </ExerciseStatement>
@@ -1766,7 +2114,10 @@ export default function __AppendixA__() {
                   Exercise 8.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_11_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_11_hgi_"
+                  >
                     What Is log base 10 of 1
                   </a>
                 </ExerciseStatement>
@@ -1780,7 +2131,10 @@ export default function __AppendixA__() {
                   Exercise 9.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_12_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_12_hgi_"
+                  >
                     What Is log base 10 of Product of Powers of 10
                   </a>
                 </ExerciseStatement>
@@ -1794,7 +2148,10 @@ export default function __AppendixA__() {
                   Exercise 10.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_13_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_13_hgi_"
+                  >
                     Evaluate Fraction of Multiples of Powers of 10
                   </a>
                 </ExerciseStatement>
@@ -1808,7 +2165,10 @@ export default function __AppendixA__() {
                   Exercise 11.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_14_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_14_hgi_"
+                  >
                     How Many Millibits in a Gigabyte
                   </a>
                 </ExerciseStatement>
@@ -1822,7 +2182,10 @@ export default function __AppendixA__() {
                   Exercise 12.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_15_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_15_hgi_"
+                  >
                     6.25: Other Way of Writing
                   </a>
                 </ExerciseStatement>
@@ -1836,7 +2199,10 @@ export default function __AppendixA__() {
                   Exercise 13.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_16_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_16_hgi_"
+                  >
                     10^n / 10^m = 10^(n-m)
                   </a>
                 </ExerciseStatement>
@@ -1850,7 +2216,10 @@ export default function __AppendixA__() {
                   Exercise 14.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_17_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_17_hgi_"
+                  >
                     M, L, T Rewrite
                   </a>
                 </ExerciseStatement>
@@ -1864,7 +2233,10 @@ export default function __AppendixA__() {
                   Exercise 15.
                 </b>
                 <ExerciseStatement>
-                  <a href="/article/bootcamp2#_18_hgi_">
+                  <a
+                    class="out-chapter-link"
+                    href="/article/bootcamp2#_18_hgi_"
+                  >
                     Solve for a, b, c
                   </a>
                 </ExerciseStatement>
