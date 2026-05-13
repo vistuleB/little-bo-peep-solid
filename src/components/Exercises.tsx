@@ -17,7 +17,6 @@ import {
   PREV_NEXT_EXERCISE_BUTTON_RX,
   PREV_NEXT_EXERCISE_BUTTON_W,
 } from "~/constants";
-import { Spacer } from "./Spacer";
 
 type ExercisesProps = ParentProps &
   SharedProps & {

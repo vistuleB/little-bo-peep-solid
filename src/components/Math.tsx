@@ -7,6 +7,7 @@ import {
 } from "solid-js";
 import { TEXT_X_PADDING } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
+import SharedProps from "./types/SharedProps";
 
 export const Math = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
@@ -41,7 +42,7 @@ export const Math = (props: ParentProps) => {
   );
 };
 
-export const MathBlock = (props: ParentProps) => {
+export const MathBlock = (props: SharedProps & ParentProps) => {
   let ref: HTMLDivElement | undefined;
   const { store, set_store } = useGlobalContext();
   const [visible, setVisible] = createSignal(false);
@@ -88,7 +89,7 @@ export const MathBlock = (props: ParentProps) => {
     if (ref) {
       observer.observe(ref);
     }
-    
+
     const measureOriginalWidth: () => boolean = () => {
       let svg = null;
       if (ref) {
@@ -99,7 +100,7 @@ export const MathBlock = (props: ParentProps) => {
         }
       }
       return svg != null;
-    }
+    };
 
     setTimeout(measureOriginalWidth, 50);
 
@@ -121,7 +122,10 @@ export const MathBlock = (props: ParentProps) => {
 
   createEffect(() => {
     if (scaledDown()) {
-      console.log("setting it here to: ", store.innerWidth - TEXT_X_PADDING * 2 + "px")
+      console.log(
+        "setting it here to: ",
+        store.innerWidth - TEXT_X_PADDING * 2 + "px",
+      );
       ref?.style.setProperty(
         "width",
         store.innerWidth - TEXT_X_PADDING * 2 + "px",
@@ -129,15 +133,14 @@ export const MathBlock = (props: ParentProps) => {
       return;
     }
     ref?.style.setProperty(
-      "width", 
-      (ref && originalWidth() > 0)
-      ? originalWidth() + "px"
-      : "auto"
+      "width",
+      ref && originalWidth() > 0 ? originalWidth() + "px" : "auto",
     );
   });
 
   return (
     <div
+      id={props.id}
       class={`mathblock transition-all`}
       style={{ opacity: visible() ? "1" : "0" }}
       onClick={handleClick}
