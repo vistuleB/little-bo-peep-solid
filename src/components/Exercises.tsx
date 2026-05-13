@@ -22,6 +22,7 @@ import { Spacer } from "./Spacer";
 type ExercisesProps = ParentProps &
   SharedProps & {
     at_end_of_page?: boolean;
+    show_curlicue?: boolean;
   };
 
 type ExerciseProps = ParentProps & {
@@ -32,11 +33,12 @@ export const Exercises = (props: ExercisesProps) => {
   const fallback_id = createUniqueId();
   const group_id = props.id ?? fallback_id;
   const at_end_of_page = props.at_end_of_page ?? false;
+  const show_curlicue = props.show_curlicue ?? false;
   let children_list = children(() => props.children);
 
   return (
     <ExercisesStoreProvider group_id={group_id} at_end_of_page={at_end_of_page}>
-      {at_end_of_page && (
+      {show_curlicue && (
         <Image
           id={`exo-${group_id}`}
           src="/non-build-img/separator.png"

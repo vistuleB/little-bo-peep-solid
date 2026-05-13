@@ -30,6 +30,9 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.delete("WriterlyComment"),
       dl.delete_attribute_if(fn(key, _) { string.starts_with(key, "!!")}),
       dl.wrap_if_not_child_of(#("Exercise", "Exercises", ["Exercises"])),
+      dl.lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes(),
+      dl.lbp_move_to_be_moved_to_grand_wrapper(),
+      dl.lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard(),
       dl.lbp_select_content(),
       dl.delete_first_child_occurrences_of_and_recurse("WriterlyBlankLine"),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Bootcamp", "ArticleTitle", "title"), ["Chapter"]),
@@ -69,6 +72,8 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.append_attribute(#("Solution", "counter", "SolutionNoteCounter", infra.GoBack)),
       dl.append_attribute_if(#("Section", fn(section) { !infra.v_has_attr_with_key(section, "id") }, "id", "section-::++SectionCounter", infra.Continue)),
       dl.append_attribute_if_fancy(#("Exercises", fn(_, _, _, _, following_siblings) { list.is_empty(following_siblings) }, "at_end_of_page", "true", infra.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.v_is_descendant_of(ancestors, "Appendix") }, "show_curlicue", "true", infra.GoBack)),
+
       dl.prepend_counter_incrementing_attribute__outside(#("Chapter", "ChapterCounter", infra.GoBack), ["Bootcamp"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Bootcamp", "BootcampCounter", infra.GoBack), ["Chapter"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Appendix", "AppendixCounter", infra.GoBack), ["Chapter", "Bootcamp"]),
