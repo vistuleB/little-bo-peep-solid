@@ -11,11 +11,13 @@
         >>exercise-graveyard
         >>classical-circle-theorems
         !! >>chain        >>_ch6_start_
-        !! >>playground
+        >>playground
 
     |> In
         content=selection
         chapter=>>playground
+        >>grid-component
+        >>table-component
 
     |> In
         content=selection
