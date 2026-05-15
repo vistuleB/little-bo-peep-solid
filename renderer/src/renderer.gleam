@@ -312,8 +312,8 @@ pub fn main() {
 
   let renderer =
     ds.Renderer(
-      assembler: ds.default_writerly_assembler(amendments.only_paths),
-      parser: ds.default_writerly_parser(amendments.only_key_values),
+      assembler: ds.default_writerly_assembler(_, amendments.only_paths),
+      parser: ds.default_writerly_parser,
       pipeline: our_pipeline(only, dict.has_key(amendments.user_args, remove_unused_build_img_option), dict.has_key(amendments.user_args, author_mode)),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
@@ -339,6 +339,15 @@ pub fn main() {
       profiling_table: None,
     )
     |> ds.amend_renderer_options_by_command_line_amendments(amendments)
+
+  // safegard content=selection nodes:
+  let options = case options.only_key_values {
+    [] -> options
+    _ -> {
+      let only_key_values = [#("content", "selection"), ..options.only_key_values]
+      ds.RendererOptions(..options, only_key_values: only_key_values)
+    }
+  }
 
   let _ = Some(1)
   let _ = None

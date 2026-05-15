@@ -23,7 +23,7 @@ export default function __AppendixA__() {
   return (
     <Article
       prevPage="/article/chapter5"
-      nextPage="/article/appendix2"
+      nextPage="/article/appendixB"
       pageNecessaryMargin={800}
       maxElementWidth={500}
       id="_198_hgi_"
@@ -50,7 +50,7 @@ export default function __AppendixA__() {
             <ExerciseStatement id="_148_hgi_">
               <OuterP>
                 <b>
-                  Exercise
+                  Exercise 1.
                 </b>
                 {" "}
                 True or false {" "}

@@ -10,7 +10,7 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __AppendixB__() {
   return (
     <Article
-      prevPage="/article/appendix1"
+      prevPage="/article/appendixA"
       nextPage=""
       pageNecessaryMargin={800}
       maxElementWidth={500}
