@@ -18,6 +18,7 @@ type LBPFragmentClassifer {
   Article(String)
   TOC
   HamburgerPanelAuthorSuppliedContents
+  HeaderBlob
 }
 
 type LBPFragment(z) = ds.OutputFragment(LBPFragmentClassifer, z)
@@ -26,6 +27,7 @@ type BL = List(OutputLine)
 type LBPSplitterError {
   NoTOC
   MoreThanOneTOC
+  MoreThanOneHeaderBlob
   NoHamburgerPanelAuthorSuppliedContents
   MoreThanOneHamburgerPanelAuthorSuppliedContents
 }
@@ -65,11 +67,19 @@ fn our_splitter(
     },
   )
 
+  let header_blob_vxml  = case infra.v_unique_child_with_singleton_error(root, "HeaderBlob") {
+    Ok(value) -> Ok(value)
+    Error(infra.LessThanOne) -> Ok(V(blame_us("our_splitter"), "", [], []))
+    Error(infra.MoreThanOne) -> Error(MoreThanOneHeaderBlob)
+  }
+  use header_blob_vxml <- on.ok(header_blob_vxml)
+
   Ok(
     list.flatten([
       [
         ds.OutputFragment(TOC, "routes/index.tsx", toc_vxml),
         ds.OutputFragment(HamburgerPanelAuthorSuppliedContents, "components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml),
+        ds.OutputFragment(HeaderBlob, "components/HeaderBlob.tsx", header_blob_vxml),
       ],
       list.map(
         articles,
@@ -188,9 +198,10 @@ fn toc_emitter(
   Ok(ds.OutputFragment(..fr, payload: lines))
 }
 
-fn hpausc_emitter(
+fn standard_component_emitter(
   fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
+  component_name: String,
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
   use component_imports <- on.error_ok(
     fr.payload
@@ -203,16 +214,16 @@ fn hpausc_emitter(
     list.flatten([
       component_imports,
       [
-        OutputLine(blame_us("hpausc_emitter"), 0, ""),
-        OutputLine(blame_us("hpausc_emitter"), 0, "const HamburgerPanelAuthorSuppliedContents = () => {"),
-        OutputLine(blame_us("hpausc_emitter"), 2, "return <>"),
+        OutputLine(blame_us("standard_component_emitter"), 0, ""),
+        OutputLine(blame_us("standard_component_emitter"), 0, "const " <> component_name <> " = () => {"),
+        OutputLine(blame_us("standard_component_emitter"), 2, "return <>"),
       ],
       vxml.vxmls_to_jsx_output_lines(fr.payload |> infra.v_get_children, 4, 2),
       [
-        OutputLine(blame_us("hpausc_emitter"), 2, "</>;"),
-        OutputLine(blame_us("hpausc_emitter"), 0, "};"),
-        OutputLine(blame_us("hpausc_emitter"), 0, ""),
-        OutputLine(blame_us("hpausc_emitter"), 0, "export default HamburgerPanelAuthorSuppliedContents;"),
+        OutputLine(blame_us("standard_component_emitter"), 2, "</>;"),
+        OutputLine(blame_us("standard_component_emitter"), 0, "};"),
+        OutputLine(blame_us("standard_component_emitter"), 0, ""),
+        OutputLine(blame_us("standard_component_emitter"), 0, "export default " <> component_name <> ";"),
       ],
     ])
 
@@ -226,7 +237,8 @@ fn our_emitter(
   case fragment.classifier {
     Article(_) -> article_emitter(fragment, imports_lookup)
     TOC -> toc_emitter(fragment, imports_lookup)
-    HamburgerPanelAuthorSuppliedContents -> hpausc_emitter(fragment, imports_lookup)
+    HamburgerPanelAuthorSuppliedContents -> standard_component_emitter(fragment, imports_lookup, "HamburgerPanelAuthorSuppliedContents")
+    HeaderBlob -> standard_component_emitter(fragment, imports_lookup, "HeaderBlob")
   }
 }
 

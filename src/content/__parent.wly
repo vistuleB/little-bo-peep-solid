@@ -1,4 +1,27 @@
 |> Book
+
+    |> HeaderBlob
+        !! TEST 1 : Little Bo Peep SVG
+        !! |> img
+        !!     style=padding-block:1em;
+        !!     src=public/header-blob.svg
+        !! TEST 2 : Wrapped Little Bo Peep SVGs
+        |> img
+            style=padding-block:1em;
+            src=public/header-blob.svg
+        |> img
+            style=padding-block:1em;
+            src=public/header-blob.svg
+        !! TEST 3 : Wrapped text
+        !! |> p
+        !!     Little Bo Peep
+        !!     |> br 
+        !!     Little Bo Peep
+        !!     |> br
+        !!     Little Bo Peep
+        !!     |> br
+        !!     Little Bo Peep
+
     |> ChapterSelection
         content=selection
         !! bootcamps:

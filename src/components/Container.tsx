@@ -3,16 +3,10 @@ import Nav from "./Nav";
 import { useGlobalContext } from "~/store/StoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import LoadingGraphic from "./LoadingGraphic";
+import containerWidth from "~/hooks/useContainerWidth";
 
 const Container = (props: ParentProps) => {
   let { store } = useGlobalContext();
-
-  const containerWidth = () =>
-    Math.max(
-      store.innerWidth,
-      store.maxElementWidth + 60,
-      mainColumnWidth() + 2 * store.pageNecessaryMargin,
-    );
 
   const marginWidth = () => (containerWidth() - mainColumnWidth()) / 2;
 
@@ -59,11 +53,11 @@ const Container = (props: ParentProps) => {
         {props.children}
         {store.loading && <LoadingGraphic />}
         {/* </div> */}
-        <div class="h-14"
+        <div
+          class="h-14"
           style={{
-            background: (store.show_areas) ? "teal" : "#0000"
-          }}
-        ></div>
+            background: store.show_areas ? "teal" : "#0000",
+          }}></div>
       </div>
     </>
   );
