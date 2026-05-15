@@ -588,7 +588,6 @@ const Rest = () => {
             </tr>
           </tbody>
         </Table>
-        <Pause />
         <OuterP>
           In fact, we {" "}
           <i>

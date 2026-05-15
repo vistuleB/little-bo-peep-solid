@@ -1820,7 +1820,6 @@ const Rest = () => {
             </tr>
           </tbody>
         </Table>
-        <Pause />
         <OuterP>
           For example, a
         </OuterP>
