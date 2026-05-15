@@ -2,11 +2,7 @@
 const HeaderBlob = () => {
   return <>
     <img
-      style="padding-block:1em;"
-      src="/public/header-blob.svg"
-    />
-    <img
-      style="padding-block:1em;"
+      style="padding-top:0.6em;padding-bottom:0.4em;"
       src="/public/header-blob.svg"
     />
   </>;
