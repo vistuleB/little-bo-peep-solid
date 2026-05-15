@@ -5,15 +5,19 @@
         >>powers       >>_bt1_start_
         >>refreshers   >>_ch1_start_  >>_ch1_exercises_
         >>slopes       >>_ch2_start_  >>_ch2_exercises_
-        >>functions    >>_ch3_start_  >>_ch3_exercises_
+        >>functions    >>_ch3_start_
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
+        >>exercise-graveyard
+        >>classical-circle-theorems
         !! >>chain        >>_ch6_start_
-        !! >>playground
+        >>playground
 
     |> In
         content=selection
         chapter=>>playground
+        >>grid-component
+        >>table-component
 
     |> In
         content=selection
@@ -71,7 +75,6 @@
         >>_what_seq_AB_
         >>_what_roots_by_x0_y0_seq_
         >>_use_previous_two_AB_
-        !! >>_true_or_false_composition_questions_
         >>_function_operations_Q_and_A_
         >>_what_seq_AB_C_
         >>_what_are_the_roots_ABC_
@@ -108,28 +111,6 @@
         >>_eta_approximation_from_cosine_graph_
         >>_f_equals_f_5_
         >>_f_equals_f_17_
-
-        !! >>_sketch_middle_function_g_
-        !! >>_sketch_middle_function_h_
-        !! >>_pacman_1_
-        !! >>_pacman_2_
-        !! >>_associativity_of_function_addition_
-        !! >>_rat_fundraising_1_
-        !! >>_rat_fundraising_2_
-        !! >>_rat_fundraising_3_
-        !! >>_rat_fundraising_3_
-        !! >>_circular_motion_2_3_velocity_vector_sketch_
-        !! >>_circular_motion_2_3_acceleration_vector_sketch_
-        !! >>_circular_motion_3_2_all_sketch_
-        !! >>_circular_motion_r_v_all_sketch_
-        !! >>_circular_motion_3_3_four_particles_sketch_
-        !! >>_angular_velocity_dimensions_
-        !! >>_translational_differential_equation_
-        !! >>_circular_motion_amplitude_2_
-        !! >>_product_rule_terse_formula_
-        !! >>_first_law_of_differentiation_rewritten_
-        !! >>_rewrite_function_operation_definitions_in_different_style_
-        !! >>_from_second_derivative_
 
     |> In
         content=selection
@@ -197,36 +178,6 @@
 
 
 
-        
-        !! >>_ab_inequality_
-        !! >>_ab_inequality_relation_to_sine_cosine_
-        !! >>_cosx_plus_sinx_algebraic_upper_bounding_
-
-        !! >>_cosx_to_cos^2x_via_graph_
-        !! >>_sin2x_to_sinx_cosx_
-        !! >>_sinx_to_sinx_cosx_
-        !! >>_cosx_to_cosx_+_sinx_
-        !! >>_cosx_sinx_to_cos^2x_
-
-        !! >>_scalar_times_vector_definition_
-
-        !! >>_for_every_A1_A2_
-        !! >>_for_every_A1_A2_stupid_followup_
-
-        !! >>_proof_1_+_tan^2_eq_sec^2_
-        !! >>_proof_1_+_tan^2_eq_sec^2_backward_
-        !! >>_axes_intersections_60_degrees_
-        !! >>_blueprints_open_bomb_shelter_door_
-        !! >>_double_pre_processing_steps_
-        !! >>_double_post_processing_spteps_
-        !! >>_cos_of_x_+_0_point_1_
-        !! >>_map_cosx_to_cos_Bx+C_
-        !! >>_what_seq_sin_Bx+C_
-        !! >>_can_B1B2_be_rewritten_
-        !! >>_max_cosx_plus_sinx_new_ver_
-        !! >>_max_cosx_plus_sinx_
-        !! >>_periodicity_mod_2eta_
-
         !! ch5 exercise 'cycles':
         !!
         !! 1. guesstimations 
@@ -275,6 +226,78 @@
         content=selection
         chapter=>>chain
 
+        !! estimate: 40 exercises (that little ?)
+
     |> In
         content=selection
         chapter=>>esoteric
+
+    |> In
+        content=selection
+        chapter=>>exercise-graveyard
+
+    |> In
+        content=selection
+        chapter=>>exercise-graveyard
+
+        !! unused exercises from Chapter 3:
+        >>_true_or_false_composition_questions_
+
+        !! unused exercises from Chapter 4:
+        >>_sketch_middle_function_g_
+        >>_sketch_middle_function_h_
+        >>_pacman_1_
+        >>_pacman_2_
+        >>_associativity_of_function_addition_
+        >>_rat_fundraising_1_
+        >>_rat_fundraising_2_
+        >>_rat_fundraising_3_
+        >>_rat_fundraising_3_
+        >>_circular_motion_2_3_velocity_vector_sketch_
+        >>_circular_motion_2_3_acceleration_vector_sketch_
+        >>_circular_motion_3_2_all_sketch_
+        >>_circular_motion_r_v_all_sketch_
+        >>_circular_motion_3_3_four_particles_sketch_
+        >>_angular_velocity_dimensions_
+        >>_translational_differential_equation_
+        >>_circular_motion_amplitude_2_
+        >>_product_rule_terse_formula_
+        >>_first_law_of_differentiation_rewritten_
+        >>_rewrite_function_operation_definitions_in_different_style_
+        >>_from_second_derivative_
+
+        !! unused exercises from Chapter 5:
+        >>_ab_inequality_
+        >>_ab_inequality_relation_to_sine_cosine_
+        >>_cosx_plus_sinx_algebraic_upper_bounding_
+
+        >>_cosx_to_cos^2x_via_graph_
+        >>_sin2x_to_sinx_cosx_
+        >>_sinx_to_sinx_cosx_
+        >>_cosx_to_cosx_+_sinx_
+        >>_cosx_sinx_to_cos^2x_
+
+        >>_scalar_times_vector_definition_
+
+        >>_for_every_A1_A2_
+        >>_for_every_A1_A2_stupid_followup_
+
+        >>_proof_1_+_tan^2_eq_sec^2_
+        >>_proof_1_+_tan^2_eq_sec^2_backward_
+        >>_axes_intersections_60_degrees_
+        >>_blueprints_open_bomb_shelter_door_
+        >>_double_pre_processing_steps_
+        >>_double_post_processing_spteps_
+        >>_cos_of_x_+_0_point_1_
+        >>_map_cosx_to_cos_Bx+C_
+        >>_what_seq_sin_Bx+C_
+        >>_can_B1B2_be_rewritten_
+        >>_max_cosx_plus_sinx_new_ver_
+        >>_max_cosx_plus_sinx_
+        >>_periodicity_mod_2eta_
+
+
+    |> In
+        content=selection
+        chapter=>>classical-circle-theorems
+

@@ -22,7 +22,7 @@ export default function __Chapter5__() {
   return (
     <Article
       prevPage="/article/chapter4"
-      nextPage=""
+      nextPage="/article/appendixA"
       ref="rence"
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
@@ -4343,6 +4343,7 @@ const Rest = () => {
       <Pause />
       <Exercises
         at_end_of_page={true}
+        show_curlicue={true}
         id="_146_hgi_"
       >
         <Exercise number={1}>

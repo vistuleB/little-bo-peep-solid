@@ -1848,6 +1848,7 @@ const Rest = () => {
       <Pause />
       <Exercises
         at_end_of_page={true}
+        show_curlicue={true}
         id="_85_hgi_"
       >
         <Exercise number={1}>

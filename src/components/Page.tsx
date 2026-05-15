@@ -219,6 +219,14 @@ const Page = (props: ParentProps & PageProps) => {
       e.preventDefault();
       getPage("/article/bootcamp2");
     }
+    if (e.key === "a") {
+      e.preventDefault();
+      getPage("/article/appendixA");
+    }
+    if (e.key === "b") {
+      e.preventDefault();
+      getPage("/article/appendixB");
+    }
   };
 
   onMount(() => {

@@ -44,7 +44,7 @@ fn blame_us(message: String) -> Blame {
 fn our_splitter(
   root: VXML,
 ) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
-  let articles = infra.v_children_with_tags(root, ["Chapter", "Bootcamp"])
+  let articles = infra.v_children_with_tags(root, ["Chapter", "Bootcamp", "Appendix"])
   use toc_vxml <- on.error_ok(
     infra.v_unique_child_with_singleton_error(root, "TOC"),
     on_error: fn(error) {
@@ -123,7 +123,7 @@ fn article_emitter(
     fr.payload
     |> ei.uppercase_tags
     |> ei.imports_output_lines_for_symbols(imports_lookup),
-    on_error: fn(s) {Error(UnknownComponentError(s, ins(fr.classifier)))},
+    on_error: fn(s) {Error(UnknownComponentError(s, ins(fr.classifier) <> "pp"))},
   )
 
   let lines =

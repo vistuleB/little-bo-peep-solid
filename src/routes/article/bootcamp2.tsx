@@ -17,7 +17,7 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Bootcamp2__() {
   return (
     <Article
-      prevPage=""
+      prevPage="/article/bootcamp3"
       nextPage="/article/bootcamp1"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
@@ -2119,6 +2119,7 @@ const Rest = () => {
       <Pause />
       <Exercises
         at_end_of_page={true}
+        show_curlicue={true}
         id="_19_hgi_"
       >
         <Exercise number={1}>

@@ -21,6 +21,7 @@ import {
 type ExercisesProps = ParentProps &
   SharedProps & {
     at_end_of_page?: boolean;
+    show_curlicue?: boolean;
   };
 
 type ExerciseProps = ParentProps & {
@@ -31,19 +32,24 @@ export const Exercises = (props: ExercisesProps) => {
   const fallback_id = createUniqueId();
   const group_id = props.id ?? fallback_id;
   const at_end_of_page = props.at_end_of_page ?? false;
+  const show_curlicue = props.show_curlicue ?? false;
   let children_list = children(() => props.children);
 
   return (
     <ExercisesStoreProvider group_id={group_id} at_end_of_page={at_end_of_page}>
-      {at_end_of_page && (
+      {show_curlicue && (
         <Image
           id={`exo-${group_id}`}
           src="/non-build-img/separator.png"
           height="50px"
           class="mt-[15px] mb-[40px]"></Image>
       )}
-      <Switcher exercises={children_list.toArray()} group_id={group_id} />
-      <div class="h-[31px]"></div>
+      {children_list.toArray().length > 1 && (
+        <>
+          <Switcher exercises={children_list.toArray()} group_id={group_id} />
+          <div class="h-[31px]"></div>
+        </>
+      )}
       <ExercisesGroup {...props} />
     </ExercisesStoreProvider>
   );

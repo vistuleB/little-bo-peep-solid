@@ -53,6 +53,29 @@ const HamburgerPanelAuthorSuppliedContents = () => {
         >
           Powers of 10
         </HamburgerPanelItem>
+        <HamburgerPanelItem
+          article_type={3}
+          href="bootcamp3"
+        >
+          Components Playground
+        </HamburgerPanelItem>
+      </ul>
+    </div>
+    <div id="appendix">
+      <HamburgerPanelTitle label="Appendices" />
+      <ul>
+        <HamburgerPanelItem
+          article_type="A"
+          href="appendixA"
+        >
+          Exercise Graveyard
+        </HamburgerPanelItem>
+        <HamburgerPanelItem
+          article_type="B"
+          href="appendixB"
+        >
+          Classical Circle Theorems
+        </HamburgerPanelItem>
       </ul>
     </div>
   </>;

@@ -1,4 +1,4 @@
-import { useLocation, useSearchParams } from "@solidjs/router";
+import { useLocation } from "@solidjs/router";
 import { createEffect } from "solid-js";
 import { useLocalStorage } from "solidjs-hooks";
 import {
@@ -18,7 +18,8 @@ const useExercises = (length: number) => {
   const stored_solutions_open = () =>
     store.exercises.map((exo) => exo.solution_open);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  // const [searchParams, setSearchParams] = useSearchParams();
+
   const location = useLocation();
   const article = () => location.pathname.split("/").pop();
 
@@ -33,8 +34,9 @@ const useExercises = (length: number) => {
     }
   }
 
-  const selected_param = `${group_id}_selected`;
-  const opened_param = `${group_id}_opened`;
+  /// @deprecated
+  // const selected_param = `${group_id}_selected`;
+  // const opened_param = `${group_id}_opened`;
 
   const [selected_exo, set_selected_exo] = useLocalStorage(
     `${article()}_${group_id}_selected_exo`,
@@ -71,25 +73,27 @@ const useExercises = (length: number) => {
     }
   };
 
-  // set local stored values from search params if they exist
-  if (typeof searchParams[selected_param] === "string") {
-    set_selected_exo(searchParams[selected_param]);
-    set_store("selected_exo", Number(selected_exo()));
-  }
+  /// @deprecated
+  //  set local stored values from search params if they exist
+  // if (typeof searchParams[selected_param] === "string") {
+  //   set_selected_exo(searchParams[selected_param]);
+  //   set_store("selected_exo", Number(selected_exo()));
+  // }
 
-  if (typeof searchParams[opened_param] === "string") {
-    update_solution_open(
-      Number(selected_exo()),
-      searchParams[opened_param] === "true",
-    );
-  }
+  // if (typeof searchParams[opened_param] === "string") {
+  //   update_solution_open(
+  //     Number(selected_exo()),
+  //     searchParams[opened_param] === "true",
+  //   );
+  // }
 
   createEffect(() => {
     set_selected_exo(String(stored_selected_exo()));
-    setSearchParams({
-      [selected_param]: String(stored_selected_exo()),
-      [opened_param]: stored_solutions_open()[stored_selected_exo() - 1],
-    });
+    /// @deprecated
+    // setSearchParams({
+    //   [selected_param]: String(stored_selected_exo()),
+    //   [opened_param]: stored_solutions_open()[stored_selected_exo() - 1],
+    // });
   });
 
   createEffect(() => {
@@ -98,10 +102,11 @@ const useExercises = (length: number) => {
       stored_solutions_open()[stored_selected_exo() - 1],
       false,
     );
-    setSearchParams({
-      [opened_param]: stored_solutions_open()[stored_selected_exo() - 1],
-      [selected_param]: String(stored_selected_exo()),
-    });
+    /// @deprecated
+    // setSearchParams({
+    //   [opened_param]: stored_solutions_open()[stored_selected_exo() - 1],
+    //   [selected_param]: String(stored_selected_exo()),
+    // });
   });
 };
 

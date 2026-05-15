@@ -12,6 +12,7 @@ import SharedProps from "./types/SharedProps";
 import { TEXT_X_PADDING } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
+import styleJoin from "~/utils/styleJoin";
 
 type GridProps = ParentProps &
   SharedProps & {
@@ -85,12 +86,14 @@ const Grid = (_props: GridProps) => {
   return (
     <div
       class={`text-column ${props.class}`}
-      style={{
-        "margin-top": `${props.marginTop}px`,
-        "margin-bottom": `${props.marginBottom}px`,
-        "padding-inline": props.withPadding ? `${TEXT_X_PADDING}px` : "0",
-        ...props.style,
-      }}>
+      style={styleJoin(
+        {
+          marginTop: `${props.marginTop}px`,
+          marginBottom: `${props.marginBottom}px`,
+          paddingInline: props.withPadding ? `${TEXT_X_PADDING}px` : "0",
+        },
+        props.style,
+      )}>
       <div
         ref={parentSpan}
         class={`text-column !grid list-none`}
