@@ -22,7 +22,7 @@ export default function __Chapter5__() {
   return (
     <Article
       prevPage="/article/chapter4"
-      nextPage="/article/appendixA"
+      nextPage=""
       ref="rence"
       pageNecessaryMargin={1500}
       maxElementWidth={1000}

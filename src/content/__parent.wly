@@ -1,17 +1,22 @@
 |> Book
     |> ChapterSelection
         content=selection
+        !! bootcamps:
         >>sets         >>_bt2_start_  >>_bt2_exercises_
         >>powers       >>_bt1_start_
+        !! >>playground
+
+        !! chapters:
         >>refreshers   >>_ch1_start_  >>_ch1_exercises_
         >>slopes       >>_ch2_start_  >>_ch2_exercises_
         >>functions    >>_ch3_start_
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
-        >>exercise-graveyard
-        >>classical-circle-theorems
         !! >>chain        >>_ch6_start_
-        >>playground
+
+        !! appendices:
+        !! >>exercise-graveyard
+        !! >>classical-circle-theorems
 
     |> In
         content=selection
