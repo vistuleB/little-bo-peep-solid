@@ -505,6 +505,7 @@ table.first-line tr td:first-child {
   text-decoration: underline;
 }
 
+p a:hover,
 .in-chapter-link:hover,
 .out-chapter-link:hover {
   text-decoration: underline;
