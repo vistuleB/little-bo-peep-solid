@@ -11,29 +11,10 @@ export default function NotFound() {
   const { store, set_store } = useGlobalContext();
 
   const handleResize = () => {
-    let oldInnerWidth = store.innerWidth;
-    let oldScrollWidth = store.scrollWidth;
-
     set_store("innerWidth", window.innerWidth);
     set_store("innerHeight", window.innerHeight);
     set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
-
-    let _dummy =
-      store.scrollY +
-      store.innerHeight +
-      store.scrollHeight +
-      store.scrollWidth;
-
-    if (
-      oldInnerWidth != store.innerWidth ||
-      oldScrollWidth != store.scrollWidth
-    ) {
-      window.scroll({
-        left: (store.scrollWidth - store.innerWidth) / 2,
-        behavior: "instant",
-      });
-    }
   };
 
   const handleKeydown = (e: KeyboardEvent) => {
