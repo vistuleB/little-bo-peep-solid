@@ -188,8 +188,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
       ]),
       dl.detokenize_href_surroundings(),
-      // dl.wrap_adjacent_non_whitespace_text_with(#(["a"], "NoBreak")),
-      // dl.wrap_adjacent_non_whitespace_text_with(#(["InChapterLink"], "NoBreak")),
       dl.insert_word_joiner_into_adjacent_text_nodes(["a", "InChapterLink"]),
       dl.lbp_generate_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
       dl.lbp_generate_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
@@ -205,8 +203,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     case author_mode {
       True -> [
         dl.lbp_turn_lines_into_3003_spans("./src/content/", ["Math", "MathBlock"]),
-        // dl.lbp_adorn_with_3003_spans(#("./src/content/", "", ["MathBlock"])),
-        // dl.lbp_wrap_with_3003_spans(#("./src/content/", "", ["Math"])),
         dl.lbp_adorn_img_with_3003_spans(#("./", "")),
       ]
       False -> []
@@ -217,5 +213,4 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
   ]
   |> list.flatten
-  // |> infra.desugarers_2_pipeline()
 }

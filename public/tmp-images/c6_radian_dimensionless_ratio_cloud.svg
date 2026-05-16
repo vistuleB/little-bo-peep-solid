@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" id="svg1" inkscape:version="1.3.2 (091e20e, 2023-11-25)" sodipodi:docname="c6_radian_dimensionless_ratio_cloud.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="1.888" inkscape:cx="280.98517" inkscape:cy="242.58475" inkscape:window-width="1728" inkscape:window-height="1051" inkscape:window-x="0" inkscape:window-y="34" inkscape:window-maximized="0" inkscape:current-layer="layer1" showguides="true">
+        <sodipodi:guide position="559.54318,250" orientation="0,1" id="guide1" inkscape:locked="false" inkscape:label="" inkscape:color="rgb(0,134,229)" />
+    </sodipodi:namedview>
+    <defs id="defs1" />
+    <g inkscape:label="cloud" inkscape:groupmode="layer" id="layer1" sodipodi:insensitive="true">
+        <path style="display:inline;fill:#f5fbff;fill-opacity:1;stroke:#000000;stroke-width:0.700001;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0" d="m 442.99545,223.61904 c -7.47895,2.48213 -14.39915,7.55467 -19.02412,14.26123 -6.88335,9.98058 -6.86394,22.35402 -2.21296,31.36501 4.98174,9.65269 14.4562,16.47296 25.61419,18.49397 5.9206,1.07232 12.58944,0.30752 18.55315,-2.70261 9.96983,-5.03168 16.20295,-16.23339 16.53897,-26.36075 0.2408,-7.22421 -1.55235,-14.15776 -5.2693,-19.74453 -4.98003,-7.48523 -12.20576,-13.46283 -20.866,-16.68043 -1.56863,-0.58304 -3.23642,-0.96234 -4.85486,-1.44384" id="path4-00" sodipodi:nodetypes="csssssssc" />
+        <path style="fill:#f5fbff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:2;stroke-dasharray:none" d="m 385.59322,276.48305 -39.19491,58.79237 -65.67797,38.66526 -109.09014,-15.88983 -44.51156,-74.68221 20.65678,-85.80508 60.91102,-45.02119 81.03814,-32.83898 35.48728,27.54237 L 384.5339,179.5 Z" id="path4" />
+    </g>
+    <g inkscape:groupmode="layer" id="layer2" inkscape:label="content">
+        <g id="g1" transform="translate(-180.7193,-85.864776)">
+            <path class="axes-arrows" d="m 335.12283,189.12253 c 3.22075,0 8.05191,-5.81728 8.05191,-7.75627 0,1.93899 4.83115,7.75627 8.05192,7.75627" id="path31-5" style="display:inline;fill:none;stroke:#000000;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none" />
+            <path style="display:inline;fill:none;stroke:#000000;stroke-width:2.1;stroke-dasharray:none" d="m 334,220.7477 h 18.3495" id="path12-0" sodipodi:nodetypes="cc" />
+            <path style="display:inline;fill:none;stroke:#000000;stroke-width:1.5;stroke-dasharray:none" d="m 343.17474,183.43645 1e-5,37.09525" id="path17-1" sodipodi:nodetypes="cc" />
+            <path style="display:inline;fill:none;stroke:#000000;stroke-width:2.1;stroke-dasharray:none" d="m 334,180.04999 h 18.3495" id="path263" sodipodi:nodetypes="cc" />
+        </g>
+        <path style="fill:#ffe6d5;stroke:#000000;stroke-width:1;stroke-miterlimit:2;stroke-dasharray:none" d="m 177.9661,250 h 187.5" id="path1" />
+        <path style="fill:#ffe6d5;stroke:#000000;stroke-width:1;stroke-miterlimit:2;stroke-dasharray:none" d="m 271.7161,156.25 v 187.5" id="path2" />
+        <circle style="fill:none;stroke:#000000;stroke-width:1;stroke-miterlimit:2;stroke-dasharray:none" id="path3" cx="271.71609" cy="250" r="70" />
+    </g>
+</svg>

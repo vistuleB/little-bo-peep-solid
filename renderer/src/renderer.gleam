@@ -373,6 +373,7 @@ pub fn main() {
   let constant_paths = [
     output_dir <> "/routes/index.tsx",
     output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx",
+    output_dir <> "/components/HeaderBlob.tsx",
   ]
   |> list.filter(fn(f) { case simplifile.is_file(f) {
     Ok(value) -> value

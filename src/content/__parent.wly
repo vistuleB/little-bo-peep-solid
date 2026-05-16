@@ -252,20 +252,6 @@
 
     |> In
         content=selection
-        chapter=>>chain
-
-        !! estimate: 40 exercises (that little ?)
-
-    |> In
-        content=selection
-        chapter=>>esoteric
-
-    |> In
-        content=selection
-        chapter=>>exercise-graveyard
-
-    |> In
-        content=selection
         chapter=>>exercise-graveyard
 
         !! unused exercises from Chapter 3:
@@ -298,18 +284,14 @@
         >>_ab_inequality_
         >>_ab_inequality_relation_to_sine_cosine_
         >>_cosx_plus_sinx_algebraic_upper_bounding_
-
         >>_cosx_to_cos^2x_via_graph_
         >>_sin2x_to_sinx_cosx_
         >>_sinx_to_sinx_cosx_
         >>_cosx_to_cosx_+_sinx_
         >>_cosx_sinx_to_cos^2x_
-
         >>_scalar_times_vector_definition_
-
         >>_for_every_A1_A2_
         >>_for_every_A1_A2_stupid_followup_
-
         >>_proof_1_+_tan^2_eq_sec^2_
         >>_proof_1_+_tan^2_eq_sec^2_backward_
         >>_axes_intersections_60_degrees_
@@ -324,8 +306,6 @@
         >>_max_cosx_plus_sinx_
         >>_periodicity_mod_2eta_
 
-
     |> In
         content=selection
         chapter=>>classical-circle-theorems
-
