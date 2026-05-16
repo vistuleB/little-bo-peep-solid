@@ -38,8 +38,8 @@
         !! >>chain        >>_ch6_start_
 
         !! appendices:
-        !! >>exercise-graveyard
-        !! >>classical-circle-theorems
+        >>exercise-graveyard  >>exercise-graveyard-start
+        >>classical-circle-theorems
 
     |> In
         content=selection

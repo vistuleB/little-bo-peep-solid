@@ -64,6 +64,24 @@ export default function __Home__() {
           </TOCItem>
         </ul>
       </div>
+      <Spacer />
+      <div id="appendix">
+        <TOCTitle label="Appendices" />
+        <ul>
+          <TOCItem
+            article_type="A"
+            href="appendixA"
+          >
+            Supplementary Exercises
+          </TOCItem>
+          <TOCItem
+            article_type="B"
+            href="appendixB"
+          >
+            Classical Circle Theorems
+          </TOCItem>
+        </ul>
+      </div>
     </TOC>
   );
 };

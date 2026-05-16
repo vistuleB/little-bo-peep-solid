@@ -253,6 +253,10 @@ fn cli_usage_supplementary() {
   io.println(margin <> remove_unused_build_img_option)
   io.println(margin <> "  -> remove unused images from image-map and build-img directory")
   io.println("")
+  io.println(margin <> "--last-command")
+  io.println(margin <> "  -> run the same arguments as the previous command (from local")
+  io.println(margin <> "     .last-command file)")
+  io.println("")
 }
 
 pub fn main() {
