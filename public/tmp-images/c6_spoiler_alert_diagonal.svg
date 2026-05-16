@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg width="450" height="1530" viewBox="0 0 450 1530" version="1.1" id="svg1" inkscape:version="1.3.2 (091e20e, 2023-11-25)" sodipodi:docname="c6_spoiler_alert_diagonal.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.3337544" inkscape:cx="224.71614" inkscape:cy="647.18248" inkscape:window-width="1728" inkscape:window-height="1051" inkscape:window-x="0" inkscape:window-y="34" inkscape:window-maximized="0" inkscape:current-layer="layer2" showguides="false">
+        <sodipodi:guide position="559.54318,1250" orientation="0,1" id="guide1" inkscape:locked="false" inkscape:label="" inkscape:color="rgb(0,134,229)" />
+    </sodipodi:namedview>
+    <defs id="defs1" />
+    <g inkscape:label="cloud" inkscape:groupmode="layer" id="layer1">
+        <g transform="matrix(0.0274176,0,0,-0.0274176,275.04637,184.23783)" id="g22">
+            <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect20" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,262.49733,236.33127)" id="g34" />
+        <g transform="matrix(0.0274176,0,0,-0.0274176,291.90271,236.33127)" id="g36">
+            <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect34" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,323.57827,288.42471)" id="g57">
+            <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect55" />
+        </g>
+    </g>
+    <g inkscape:groupmode="layer" id="layer2" inkscape:label="content">
+        <path style="fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:2;stroke-dasharray:none" d="M 23.969721,26.965937 401.49283,404.48905 28.464044,777.51784 398.49662,1147.5504 49.43755,1496.6095" id="path18" />
+    </g>
+</svg>

@@ -157,11 +157,9 @@
     When we add two functions, the same input is passed
     to both functions:
 
-    $$
-    \Large (f + g)(x) = f(x) + g(x)
-    $$
     |> Image
         src=tmp-images/c6_equal_inputs.svg
+        style=margin-bottom:-1.3em
 
     This means that for the sum to make sense, $f$ and
     $g$ need to have the same units of input, i.e.,
@@ -196,9 +194,18 @@
     stomach the output units to be different since
     composite units such as “kilowatt-hour”, “worker-years”, etc,
     are a thing, and likewise when dividing.
-    The following table keeps a record of all similar restrictions imposed
-    _&_ results obtained by the different function operations (that you
-    should be able to check for yourself):
+    The following table 
+    summarizes the situation for all of the different
+    function operations
+    (sum/product/etc),
+    including not only the restrictions
+    imposed on the signatures of the “ingredient functions”
+    but also the signature of the final function that comes
+    baked out of the oven as a result (you should be able to
+    check the details of this table yourself):
+    !! keeps a record of all similar restrictions imposed
+    !! _&_ results obtained by the different function operations (that you
+    !! should be able to check for yourself):
 
     |> Image
         src=tmp-images/c6_flowers_here.svg
@@ -476,11 +483,6 @@
 
     which means that the sum rule “survives” the
     dimensional analysis: nothing untoward has been found!
-    !! it could just possibly be correct! 
-    !! which means that _the sum rule just possibly
-    !! could be correct_—specifically, a
-    !! “dimensional x-ray” of the sum rule fails 
-    !! to uncover anything untoward. (And it is, indeed, correct.)
 
     |> Example
         handle=_ms_x1_x2_example_
@@ -515,6 +517,16 @@
         \,x_1' + x_2' : [\te{s}] \ra [\te{m}/\te{s}] \up{1.35}
         \end{gathered}
         $$
+
+        !! $$
+        !! \Large
+        !! \begin{gathered}
+        !! f' : [\tA] \ra [\tB/\tA] \\
+        !! g' : [\tA] \ra [\tC/\tA] \up{1.35} \\
+        !! f'g' : [\tA] \ra [\tB\tC/\tA^2] \up{1.35} \\
+        !! !! (fg)' : [\tA] \ra [\tB\tC/\tA] \up{1.35} \\
+        !! \end{gathered}
+        !! $$
 
         and, in particular,
 
@@ -555,10 +567,10 @@
         __the velocity of a sum of two points
         is the sum of their velocities__
 
-        !! (etc).
         since in this case the “rate of change” is a velocity, etc.
 
     |> Example
+        handle=differentiability_sum_rule_counterexample
 
         If
 
@@ -582,7 +594,8 @@
         at $t = 0$ but $$\Large x_1' + x_2'$$ is not. One can best see this 
         directly from the graphs:
 
-        |> Pause
+        |> Image
+            src=tmp-images/c6_all_those_x1x2_graphs.svg
 
         Thus
 
@@ -642,12 +655,18 @@
     $$
     \Large (fg)' : [\tA] \ra [\tB\tC/\tA]
     $$
+    |> ImageLeft
+        src=tmp-images/c6_fg_prime_signature_cloud.svg
+        offset_x=5em
 
     whereas
 
     $$
     \Large f'g' : [\tA] \ra [\tB\tC/\tA^2]
     $$
+    |> ImageRight
+        src=tmp-images/c6_f_prime_g_prime_signature_cloud.svg
+        offset_x=5em
 
     as is easy to check, and
 
@@ -715,6 +734,8 @@
         by $3600^2$—so if by some fluke the early afternoon product rule
         held before this change it would certainly\* [\*assuming $(x_1x_2)' \ne 0$] not hold after,
         and therefore, the early afternoon product rule cannot hold in general!
+        |> ImageLeft
+            src=tmp-images/c6_x1x2_3600_cloud.svg
 
         |> Pause
 
@@ -875,7 +896,8 @@
     !! !! those who wish to try..................)
     !! those who wish to try.)
 
-    |> Pause
+    |> Image
+        src=tmp-images/c6_spoiler_alert_diagonal.svg
 
     Starting off,
 
