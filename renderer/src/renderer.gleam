@@ -352,6 +352,7 @@ pub fn main() {
     ds.RendererOptions(
       ..ds.vanilla_options(),
       verbose: False,
+      artifacts: True,
       profiling_table: None,
     )
     |> ds.amend_renderer_options_by_command_line_amendments(amendments)
