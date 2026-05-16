@@ -73,7 +73,6 @@ export default function NotFound() {
 
   onMount(() => {
     set_store("pageNecessaryMargin", 0);
-    set_store("maxElementWidth", 0);
 
     window.addEventListener("keydown", handleKeydown);
     window.addEventListener("resize", handleResize);
