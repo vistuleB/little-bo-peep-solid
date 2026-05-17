@@ -1,4 +1,4 @@
-import { createEffect, createSignal, onMount } from "solid-js";
+import { createEffect, createSignal, onCleanup, onMount } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
   DESKTOP_COLUMN_WIDTH,
@@ -25,8 +25,7 @@ const Nav = () => {
         )}
         onClick={(e) => {
           e.stopPropagation();
-        }}
-      >
+        }}>
         <div class="relative select-none border-[var(--nav-border)] border-b bg-bg z-40 w-full h-14 left-0">
           <Title />
         </div>
@@ -67,12 +66,14 @@ const Title = () => {
       }
       return TEXT_X_PADDING;
     };
-
-    const headerBlobHeight = blob.offsetHeight;
-    // we need to scale the header blob so it fits exactly 56px
-    const scale = 56 / headerBlobHeight;
-    blob.style.transform = `scale(${scale})`;
     blob.style.left = `${leftPos()}px`;
+
+    setTimeout(() => {
+      const headerBlobHeight = blob.offsetHeight;
+      // we need to scale the header blob so it fits exactly 56px
+      const scale = 56 / headerBlobHeight;
+      blob.style.transform = `scale(${scale})`;
+    }, 50);
   });
 
   return (
@@ -80,8 +81,7 @@ const Title = () => {
       class="block mr-auto absolute origin-top-left"
       ref={headerBlob}
       href="/"
-      onClick={() => getPage("/")}
-    >
+      onClick={() => getPage("/")}>
       <HeaderBlob />
     </a>
   );
