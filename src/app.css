@@ -38,10 +38,6 @@
     var(--nav-border-g),
     var(--nav-border-b)
   );
-  --hamburger-menu-height: 56px;
-  --desktop-text-column-width-with-padding: 488px;
-  --desktop-text-column-padding: 16px;
-  --mobile-max-width: 900px;
   --toc-label-stroke-color: oklch(97% 0.001 106.424); /* bg-stone-100 */
   /* exercises button & toggle styles: */
   /* --active-exercises-button-fill: #f8fee0; */
