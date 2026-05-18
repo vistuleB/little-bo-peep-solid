@@ -55,23 +55,6 @@ const HamburgerPanelAuthorSuppliedContents = () => {
         </HamburgerPanelItem>
       </ul>
     </div>
-    <div id="appendix">
-      <HamburgerPanelTitle label="Appendices" />
-      <ul>
-        <HamburgerPanelItem
-          article_type="A"
-          href="appendixA"
-        >
-          Supplementary Exercises
-        </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type="B"
-          href="appendixB"
-        >
-          Classical Circle Theorems
-        </HamburgerPanelItem>
-      </ul>
-    </div>
   </>;
 };
 

@@ -144,6 +144,7 @@
     particle!
 
 |> Section
+    handle=trigonometry-derivatives
 
     *Derivatives.*
     Continuing the last “chapter” in the
@@ -1740,6 +1741,12 @@
     which preserves north-south distances.)
 
 |> Section
+    try=this
+
+    *Hi.*
+
+|> Section
+    try=this
     work=ing
 
     *Note on calculators.*

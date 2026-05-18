@@ -35,11 +35,11 @@
         >>functions    >>_ch3_start_
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
-        !! >>chain        >>_ch6_start_
+        >>chain        >>_ch6_start_
 
         !! appendices:
-        >>exercise-graveyard  >>exercise-graveyard-start
-        >>classical-circle-theorems
+        !! >>exercise-graveyard  >>exercise-graveyard-start
+        !! >>classical-circle-theorems
 
     |> In
         content=selection

@@ -118,7 +118,7 @@ export default function __Bootcamp1__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          Also,
+          Or
         </OuterP>
         <Pause />
         <MathBlock>
@@ -135,29 +135,8 @@ export default function __Bootcamp1__() {
             </Math>
             ,
           </NoBreak>
-          {" "} while
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large\&#123;1, 3\&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is a set containing just the numbers {" "}
-          <Math>
-            $1$
-          </Math>
           {" "}
-          and {" "}
-          <NoBreak>
-            <Math>
-              $3$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} etc. Even,
+          while
         </OuterP>
         <Pause />
         <MathBlock>
@@ -221,7 +200,7 @@ const Rest = () => {
         <OuterP>
           to which {" "}
           <Math>
-            $\&#123;1, 3\&#125;$
+            $\&#123;1, 2, 3\&#125;$
           </Math>
           {" "} would answer “yes”, but
           {" "}
@@ -232,7 +211,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          do you contain 2?
+          do you contain 5?
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -242,15 +221,10 @@ const Rest = () => {
           </Math>
           {" "} and {" "}
           <Math>
-            $\&#123;1, 3\&#125;$
-          </Math>
-          {" "} would
-          both answer “no”, but {" "}
-          <Math>
             $\&#123;1, 2, 3\&#125;$
           </Math>
           {" "} would
-          answer “yes”.
+          both answer “no”.
         </OuterP>
         <OuterP class="indent-10">
           Notation-wise, the expression

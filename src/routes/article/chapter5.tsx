@@ -22,8 +22,7 @@ export default function __Chapter5__() {
   return (
     <Article
       prevPage="/article/chapter4"
-      nextPage="/article/appendixA"
-      ref="rence"
+      nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
       id="_147_hgi_"
@@ -145,10 +144,15 @@ export default function __Chapter5__() {
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-18">
           <InChapterLink href="?id=section-19">
-            note on calculators
+            hi
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-19">
+          <InChapterLink href="?id=section-20">
+            note on calculators
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-20">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -4294,8 +4298,20 @@ const Rest = () => {
       </Section>
       <Pause />
       <Section
-        work="ing"
+        try="this"
         id="section-19"
+      >
+        <OuterP>
+          <b>
+            Hi.
+          </b>
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section
+        try="this"
+        work="ing"
+        id="section-20"
       >
         <OuterP>
           <b>
@@ -7744,10 +7760,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={15}
-        >
+        <Exercise number={15}>
           <ExerciseStatement id="_102_hgi_">
             <OuterP>
               <b>
@@ -11410,7 +11423,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={32}>
+        <Exercise
+          work="ing"
+          number={32}
+        >
           <ExerciseStatement id="_119_hgi_">
             <OuterP>
               <b>
