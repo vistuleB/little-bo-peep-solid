@@ -324,7 +324,7 @@ pub fn main() {
 
   let exports_dict = ei.lbp_exports_dictionary()
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
-  let only = amendments.only_key_values != [] || amendments.only_paths != []
+  let only = amendments.only_key_vals != [] || amendments.only_paths != []
 
   let renderer =
     ds.Renderer(
@@ -358,11 +358,11 @@ pub fn main() {
     |> ds.amend_renderer_options_by_command_line_amendments(amendments)
 
   // safegard content=selection nodes:
-  let options = case options.only_key_values {
+  let options = case options.only_key_vals {
     [] -> options
     _ -> {
-      let only_key_values = [#("content", "selection"), ..options.only_key_values]
-      ds.RendererOptions(..options, only_key_values: only_key_values)
+      let only_key_vals = [#("content", "selection"), ..options.only_key_vals]
+      ds.RendererOptions(..options, only_key_vals: only_key_vals)
     }
   }
 
