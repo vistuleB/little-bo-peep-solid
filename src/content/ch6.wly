@@ -282,9 +282,10 @@
     !! -f : [\te{A}] \ra [\te{B}] \up{1.35} \\
     !! \end{gathered}
     !! $$
-    $$
-    f'
-    $$
+
+    !! $$
+    !! f'
+    !! $$
 
 |> Section
     *Differentiation and signatures.*
@@ -606,9 +607,7 @@
         are two differentiable functions that give 
         position measured in meters as a function of time 
         measured in seconds,
-        !! position-as-a-function-of-time-where-time-is-in-seconds-and-position-is-in-meters,
         i.e., two differentiable functions of the form
-        !! such that
 
         $$
         \Large x_1,\rt{0.2} x_2 : [\te{s}] \ra [\te{m}]
@@ -717,12 +716,32 @@
         differentiable, as they
         are not differentiable, specifically, at $t = 0$.
         (But this is why we say “for differentiable $f$, $g$”
-        when we present the sum rule, or other such rules.)
+        when we present the sum rule, or other such rules—it is
+        a necessary disclaimer to keep the statement accurate.)
+
+    |> Pause
+
+    |> div
+        handle=postscript-on-x_0
+    _Postscript._ Even if $f$ and $g$ are not
+    both differentiable it is still 
+    true, however, that
+
+    |> Boxed
+        $$
+        \Large (f + g)'(x_0) = f'(x_0) + g'(x_0)
+        $$
+
+    at all points $x_0 \in \rr$ _such that $f$ and $g$
+    are both differentiable at that specific $x_0$_—this gives
+    us a “point by point” version of the sum rule—more granular!
+    !! (But you can no longer claim that $(f + g)' = f' + g'$
+    !! because the boxed equation above may fail for _some_ [other] $x_0$.)
 
 |> Section
 
     *The early afteroon product rule.*
-    Gottfried Liebniz, co-inventor of calculus,
+    Gottfried Leibniz, co-inventor of calculus,
     initially guessed that 
 
     |> Boxed
@@ -730,6 +749,7 @@
         \Large(fg)' = f'g'
         $$
 
+    !! [disclaimer: “for $f$, $g$ differentiable”]
     which is incorrect, though Leibniz also had the
     distinction of making and correcting this
     guess 
@@ -784,23 +804,21 @@
     \Large [\tA] \ra [\tB\tC/\tA^2] \ne [\tA] \ra [\tB\tC/\tA]
     $$
 
-    so “the early afternoon product rule” 
-    cannot be correct.
-    !! is most definitely incorrect. 
-    Paraphrasing, 
-    !! dimensional analysis has shown that
+    so the rule
+    !! “the early afternoon product rule” 
+    cannot be correct—paraphrasing, “the units don't
+    even work out”.
+    !! Paraphrasing, 
+    !! !! dimensional analysis has shown that
 
-    __the units aren't even the same__ 
+    !! __the units aren't even the same__ 
 
-    on either side of the equation!
-    !! —which is, indeed, always the
-    !! point with dimensional analysis!
-    !! (Checking the units is always : the point, i.e..)
+    !! on either side of the equation!
 
     |> Example
         handle=_second_x1x2_example_
 
-        As in Example >>_ms_x1_x2_example_, 
+        As in Example >>_ms_x1_x2_example_
         let
 
         $$
@@ -880,7 +898,7 @@
         _does show up as a term_ in the “true”
         formula for $(x_1x_2)''$, so, in some sense,
         dimensional analysis is not _entirely_ wrong,
-        even in this case.
+        even in this case!
 
 |> Section
 
@@ -941,7 +959,9 @@
     so $f'g + fg'$ has the
     same signature as $(fg)'$, i.e., dimensional
     analysis gives its _imprimatur_ to this formula!
-    (Which is, indeed, the correct one.)
+    (It “passes the sniff test” of dimensional analysis, put
+    differently.)
+    !! (Which is, indeed, the correct one.)
 
 |> Section
     handle=chain_rule_discovery
@@ -1284,19 +1304,28 @@
             \Large (f \circ g)'(x) = f'(g(x))g'(x)
             $$
 
-        as previously seen with “$t_0$” in place of “$x$”.
-        This is a more granular version of the chain rule,
-        !! in which we can replace the condition 
-        !! “for $f$, $g : \rr \ra \rr$ differentiable”
-        !! by the more surgical condition
-        !! !! “for $g$ differentiable at $x$ and $f$ differentiable at $g(x)$”.
-        !! “for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
-        !! differentiable at $x$ and $f$ differentiable at $g(x)$”.
-        as the condition 
-        “for $f$, $g : \rr \ra \rr$ differentiable”
+        as previously seen with “$t_0$” in place of “$x$”. 
+        !! is a more granular version of the chain rule,
+        In this case the assumption 
+        
+        __for $f$, $g : \rr \ra \rr$ differentiable__
+        
         can be replaced by the more surgical
-        “for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
-        differentiable at $x$ and $f$ differentiable at $g(x)$”.
+
+        __for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
+        differentiable at $x$ and $f$ differentiable at $g(x)$__
+
+        similarly to the [Postscript after
+        Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
+        !! in relation to the sum rule.
+        !! instead of the 
+        !! !! This 
+        !! !! also allows the assumption to be replaced by 
+        !! !! as the condition 
+        !! !! “for $f$, $g : \rr \ra \rr$ differentiable”
+        !! !! can be replaced by the more surgical
+        !! !! “for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
+        !! !! differentiable at $x$ and $f$ differentiable at $g(x)$”.
         
         
         !! which is the previous boxed equation evaluated at an input
