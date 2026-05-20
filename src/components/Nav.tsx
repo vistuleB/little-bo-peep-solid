@@ -55,10 +55,9 @@ const Title = () => {
 
   createEffect(() => {
     if (!headerBlob || !imageLoaded()) return;
-
     const blob = headerBlob as HTMLAnchorElement;
-    const contWidth = containerWidth();
 
+    const contWidth = containerWidth();
     const leftPos = () => {
       if (store.innerWidth > MOBILE_MAX_WIDTH) {
         const realWidth = DESKTOP_COLUMN_WIDTH - TEXT_X_PADDING * 2;
@@ -67,18 +66,24 @@ const Title = () => {
       return TEXT_X_PADDING;
     };
     blob.style.left = `${leftPos()}px`;
+  });
+
+  createEffect(() => {
+    if (!headerBlob || !imageLoaded()) return;
+    const blob = headerBlob as HTMLAnchorElement;
 
     setTimeout(() => {
       const headerBlobHeight = blob.offsetHeight;
       // we need to scale the header blob so it fits exactly 56px
       const scale = 56 / headerBlobHeight;
       blob.style.transform = `scale(${scale})`;
-    }, 50);
+      blob.style.display = "block";
+    }, 10);
   });
 
   return (
     <a
-      class="block mr-auto absolute origin-top-left"
+      class="mr-auto absolute origin-top-left hidden"
       ref={headerBlob}
       href="/"
       onClick={() => getPage("/")}>
