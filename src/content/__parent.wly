@@ -5,16 +5,17 @@
         !! |> img
         !!     style=padding-top:0.65em;padding-bottom:0.4em;
         !!     src=public/header-blob.svg
-        !! TEST 2 : Wrapped Little Bo Peep SVGs
+        !! TEST 2 : Rabbit
         |> img
             src=non-build-img/loading_screen.png
+        !! TEST 3 : Wrapped Little Bo Peep SVGs
         !! |> img
         !!     style=padding-block:1em;
         !!     src=public/header-blob.svg
         !! |> img
         !!     style=padding-block:1em;
         !!     src=public/header-blob.svg
-        !! TEST 3 : Wrapped text
+        !! TEST 4 : Wrapped text
         !! |> p
         !!     Little Bo Peep
         !!     |> br 

@@ -41,7 +41,6 @@ const Title = () => {
   const [imageLoaded, setImageLoaded] = createSignal(false);
 
   onMount(() => {
-    // we need to make sure headerBlob svg image gets proper offsetHeight on initial load
     const img = headerBlob?.querySelector("img");
     if (!img) {
       setImageLoaded(true);
@@ -54,27 +53,29 @@ const Title = () => {
     }
   });
 
+  // Effect 1: Fixed tracking to recalculate position smoothly on resize
   createEffect(() => {
     if (!headerBlob || !imageLoaded()) return;
-    const blob = headerBlob as HTMLAnchorElement;
-    const contWidth = containerWidth();
-    const leftPos = () => {
-      if (store.innerWidth > MOBILE_MAX_WIDTH) {
-        const realWidth = DESKTOP_COLUMN_WIDTH - TEXT_X_PADDING * 2;
-        return (contWidth - realWidth) / 2;
-      }
-      return TEXT_X_PADDING;
-    };
-    blob.style.left = `${leftPos()}px`;
+
+    // 1. Explicitly invoke and pull reactive dependencies into the effect scope
+    const contWidth = containerWidth(); 
+    const innerWidth = store.innerWidth; 
+
+    // 2. Compute directly using the tracked variables instead of an untracked inner helper function
+    const leftPos = innerWidth > MOBILE_MAX_WIDTH
+      ? (contWidth - (DESKTOP_COLUMN_WIDTH - TEXT_X_PADDING * 2)) / 2
+      : TEXT_X_PADDING;
+
+    headerBlob.style.left = `${leftPos}px`;
   });
 
+  // Effect 2: Kept exactly as your working version to preserve flicker elimination
   createEffect(() => {
     if (!headerBlob || !imageLoaded()) return;
-    const blob = headerBlob as HTMLAnchorElement;
+    const blob = headerBlob;
 
     setTimeout(() => {
       const headerBlobHeight = blob.offsetHeight;
-      // we need to scale the header blob so it fits exactly 56px
       const scale = 56 / headerBlobHeight;
       blob.style.transform = `scale(${scale})`;
       blob.style.opacity = "1";
