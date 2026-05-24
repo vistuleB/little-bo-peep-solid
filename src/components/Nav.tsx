@@ -45,7 +45,10 @@ const Title = () => {
   onMount(() => {
     // we need to make sure headerBlob svg image gets proper offsetHeight on initial load
     const img = headerBlob?.querySelector("img");
-    if (!img) return;
+    if (!img) {
+      setImageLoaded(true);
+      return;
+    }
     if (img.complete) {
       setImageLoaded(true);
     } else {
@@ -77,13 +80,13 @@ const Title = () => {
       // we need to scale the header blob so it fits exactly 56px
       const scale = 56 / headerBlobHeight;
       blob.style.transform = `scale(${scale})`;
-      blob.style.display = "block";
-    }, 10);
+      blob.style.opacity = "1";
+    }, 20);
   });
 
   return (
     <a
-      class="mr-auto absolute origin-top-left hidden"
+      class="mr-auto absolute origin-top-left opacity-0"
       ref={headerBlob}
       href="/"
       onClick={() => getPage("/")}>
