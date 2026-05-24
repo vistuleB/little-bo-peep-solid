@@ -11,18 +11,24 @@
 
     To explain, the slope of a line is...
 
-    __the number of units the line goes up with each
-    unit to the right__
+    __the number of units the line goes up
+    |> br
+    with each unit to the right__
 
     ...assuming that numbers on the $y$-axis increase
     going up and that numbers on the $x$-axis increase
-    going right, as is usually the case. One can also
-    describe slope as...
+    going right, as is usually the case. 
+    Or one can say...
+    !! One can also
+    !! describe slope as...
 
-    __the amount of vertical change per unit of
-    horizontal change__
+    __the amount of vertical change per
+    |> br
+    unit of horizontal change__
 
-    ...more elegant!
+    !! ...more elegant!
+    ...which is an alternate, more elegant description
+    of the same concept.
 
     For example, the line below has slope 1, because
     it goes up by $1$ unit for each unit to the right:
@@ -37,7 +43,7 @@
     |> Image
         src=images/slope_0.5_example.svg
 
-    (Etc.)
+    ...and so on.
 
 
 |> Section
@@ -56,7 +62,7 @@
     horizontal change gives the per-horizontal-unit
     vertical change.
 
-    More precisely, if
+    To attach a formula to this idea, if
 
     $$ A = (x_1, y_1) $$
 

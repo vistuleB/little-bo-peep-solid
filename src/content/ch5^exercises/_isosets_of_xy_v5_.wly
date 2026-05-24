@@ -42,7 +42,7 @@
         ...have this general aspect...
 
         |> Image
-            src=tmp-images/svg_ch5_ex_max_xy_xy_isosets.svg
+            src=images/svg_ch5_ex_max_xy_xy_isosets.svg
             style=margin-bottom:0.5em;
 
         ...where you see the curve “$xy = 1$” among a

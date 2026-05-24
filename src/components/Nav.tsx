@@ -1,4 +1,4 @@
-import { createEffect, createSignal, onCleanup, onMount } from "solid-js";
+import { createEffect, createSignal, onMount } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
   DESKTOP_COLUMN_WIDTH,
@@ -9,7 +9,6 @@ import { twJoin } from "tailwind-merge";
 import useScrollX from "~/hooks/useScrollX";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import HeaderBlob from "./HeaderBlob";
-import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import containerWidth from "~/hooks/useContainerWidth";
 
 const Nav = () => {
@@ -36,10 +35,9 @@ const Nav = () => {
 };
 
 const Title = () => {
-  const [_, setRoute] = createSignal("/");
   const { getPage } = usePrevNextPage();
   const { store } = useGlobalContext();
-  let headerBlob!: HTMLAnchorElement;
+  let headerBlob: HTMLAnchorElement | undefined;
   const [imageLoaded, setImageLoaded] = createSignal(false);
 
   onMount(() => {
@@ -59,12 +57,11 @@ const Title = () => {
   createEffect(() => {
     if (!headerBlob || !imageLoaded()) return;
     const blob = headerBlob as HTMLAnchorElement;
-
     const contWidth = containerWidth();
     const leftPos = () => {
       if (store.innerWidth > MOBILE_MAX_WIDTH) {
         const realWidth = DESKTOP_COLUMN_WIDTH - TEXT_X_PADDING * 2;
-        return contWidth - realWidth - (contWidth - realWidth) / 2;
+        return (contWidth - realWidth) / 2;
       }
       return TEXT_X_PADDING;
     };

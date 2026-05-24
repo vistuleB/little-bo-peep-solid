@@ -2,24 +2,32 @@
     handle=_ch1_start_
     id=first-section
 
-    *Square Roots.*
-    You might remember that “minus times minus
-    is plus” and that “plus times plus is plus”.
-    (Why? The enemy of my enemy is my friend.)
-    So any nonzero number multiplied by itself
-    is positive. For example,
+    *The square root of a square.*
+    !! As “minus times minus
+    !! is plus” and “plus times plus is plus”
+    Due to the fact that “minus times minus is plus”
+    (the enemy of my enemy is my friend),
+    any nonzero number multiplied by itself
+    is positive.
+    For example,
+    !! You might remember that “minus times minus
+    !! is plus” and that “plus times plus is plus”.
+    !! (Why? The enemy of my enemy is my friend.)
+    !! So any nonzero number multiplied by itself
+    !! is positive. For example,
 
     $$
     (-2) \times (-2) = 4
     $$
 
-    _|and|_
+    !! (“minus times minus is plus”) 
+    is positive, and
 
     $$
     2 \times 2 = 4
     $$
 
-    are both positive. But $\sqrt{4}$
+    is positive as well. But $\sqrt{4}$
     is, by definition, the unique _nonnegative_
     solution to $x^2 = 4$.
     Hence,
@@ -47,7 +55,9 @@
     for every real number $x$, where $|x|$
     denotes the absolute value of $x$.
 
-    (Nb: If ever you want to indicate both
+    |> Pause
+
+    *Note.* If ever you want to indicate both
     solutions of the equation $x^2 = 4$ you
     can always use the notation “$\pm \sqrt{4}$”.
     This is what happens, for example, in the
@@ -57,17 +67,21 @@
     x = {-b \pm \sqrt{b^2 - 4ac} \over 2a}
     $$
 
-    for the solutions to the quadratic equation
-    $ax^2 + bx + c = 0$.)
+    for the solutions to the equation
+    $ax^2 + bx + c = 0$.
 
-    Next, we will ponder
+|> Section
+
+    *The square of a number between 0 and 1.*
+    !! Next, we will ponder
+    We will pause to ponder the value of
 
     $$
     \sqrt{0.5}
     $$
 
-    whose value is—by definition—the unique
-    nonnegative solution to
+    which value is, by definition, the unique
+    nonnegative solution $x$ to
 
     $$
     x^2 = 0.5.
@@ -163,20 +177,21 @@
         (answer: $25$, because it takes twenty-five
         $2$'s to make up $50$).
 
-    But $50/2$ is a ratio of integers, which makes
-    things particularly nice! For a ratio of
+    But $50/2$ is a ratio of integers, 
+    !! which makes things particularly nice! 
+    and for a ratio of
     decimals, such as, say,
 
     $$
-    {1 \over 0.01}
+    \,{1 \over 0.01},
     $$
 
     our possible points of view are going to be
-    more restricted. Thankfully, however, we can
-    still characterize this fraction as the
+    more restricted. Thankfully, we can
+    still characterize the latter fraction as the
     answer to the question “how many times does
     $0.01$ go into $1$?” as in the third option
-    above. And, indeed,
+    above—from which,
 
     $$
     {1 \over 0.01} \,=\,100
@@ -191,12 +206,18 @@
 
     by the same reasoning, which explains why
     dividing by smaller and smaller numbers produces
-    larger and larger results (and, by extension,
-    why dividing by $0$ is undefined).
+    larger and larger results.
+    !! and by extension why dividing by $0$ is undefined.
+    !! (No amount of
+    !! multiplying the ‘$0$’ will give you the numerator
+    !! of the fraction, unless the numerator is $0$, in
+    !! which case _any_ amount will give you the numerator,
+    !! which is also no good in terms of reaching a defined
+    !! value.)
 
     |> Pause
 
-    *Note.* In general, the ratio of two decimal
+    *Note.* In general the ratio of two decimal
     numbers can be turned into a ratio of integers
     by multiplying the ratio top and bottom by a
     suitable power of $10$. E.g.:
@@ -207,7 +228,8 @@
 
     This example was chosen randomly, and, if you
     allow, we would like to see how large $71/40$
-    really is (one second!):
+    really is
+    (one second):
 
     $$
     \begin{align}
@@ -263,7 +285,8 @@
     $$
 
     because multiplication takes precedence over
-    addition, by default.)
+    addition,
+    absent parentheses to clarify the order of operations.)
 
     A little more generally, one has such identities
     as
@@ -302,11 +325,11 @@
         One has
 
         $$
-        \begin{align}
-        (10 + 2)(10 + 4) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4\\
-        \,&=\, 100 \,+\, 40 \,+\, 20 \,+\, 8\\
-        \,&=\, 168
-        \end{align}
+        \begin{aligned}
+        (10 + 2)(10 + 4) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4 \\
+        \,&=\, 100 \,+\, 40 \,+\, 20 \,+\, 8 \up{1.1}\\
+        \,&=\, 168 \up{1.1}
+        \end{aligned}
         $$
 
         so $12 \times 14 = 168$.
@@ -318,8 +341,8 @@
         $$
         \begin{align}
         (10 + 3)(10 + 3) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
-        \,&=\, 100 \,+\, 30 \,+\, 30 \,+\, 9\\
-        \,&=\, 169
+        \,&=\, 100 \,+\, 30 \,+\, 30 \,+\, 9 \up{1.1}\\
+        \,&=\, 169 \up{1.1}
         \end{align}
         $$
 
@@ -348,7 +371,9 @@
     $$
 
     since $(a + b)(a + b) = (a + b)^2$, $aa = a^2$
-    and $bb = b^2$. (This is the _binomial expansion
+    and $bb = b^2$.
+    
+    (This is the _binomial expansion
     of degree two_, but such terminology is not very
     important at this stage.)
 
@@ -360,8 +385,8 @@
         $$
         \begin{align}
         \up{1} (10 + 3)^2 \,&=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
-        \up{1} \,&=\, 100 + 60 + 9 \\
-        \up{1} \,&=\, 169
+        \up{1} \,&=\, 100 + 60 + 9 \up{1.1}\\
+        \up{1} \,&=\, 169 \up{1.1}
         \end{align}
         $$
 
@@ -403,7 +428,7 @@
 
     whence _a difference of squares can always be
     factored_. (Factored as $(a + b)(a - b)$, that
-    is.) (PS: “Factored” means “written as a product”.)
+    is.) (NB: “Factored” means “written as a product”.)
 
     |> Example
 
@@ -419,7 +444,7 @@
 
     |> Example
 
-        The algebraic expression
+        The expression
 
         $$
         1 - x^2
@@ -497,8 +522,8 @@
     $$
     \begin{align}
     11\,\cdot\,13 &= 12^2 - 1\\
-    10\,\cdot\,12 &= 11^2 - 1\\
-    9\,\cdot\,11 &= 10^2 - 1
+    10\,\cdot\,12 &= 11^2 - 1 \up{1.1}\\
+    9\,\cdot\,11 &= 10^2 - 1 \up{1.1}
     \end{align}
     $$
 
@@ -539,5 +564,6 @@
     \sqrt{3} + \sqrt{2},\,\, \sqrt{3} - \sqrt{2}
     $$
 
-    and so on. (Generally speaking, conjugate pairs
-    are good things to multiply together.)
+    and so on.
+    !! (Generally speaking, conjugate pairs
+    !! are good things to multiply together.)

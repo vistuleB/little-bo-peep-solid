@@ -2,9 +2,11 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg width="400" height="137" viewBox="0 0 400 137" version="1.1" id="svg1" inkscape:version="1.3.2 (091e20e, 2023-11-25)" sodipodi:docname="c6_three_units_with_arrows.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
-    <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.6675088" inkscape:cx="624.71086" inkscape:cy="65.916734" inkscape:window-width="1728" inkscape:window-height="1051" inkscape:window-x="0" inkscape:window-y="34" inkscape:window-maximized="0" inkscape:current-layer="layer2" showguides="true">
-        <sodipodi:guide position="559.54318,-112" orientation="0,1" id="guide1" inkscape:locked="false" inkscape:label="" inkscape:color="rgb(0,134,229)" />
-        <sodipodi:guide position="37.605932,163.48305" orientation="1,0" id="guide59" inkscape:locked="false" />
+    <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="1.3350176" inkscape:cx="64.418626" inkscape:cy="49.437551" inkscape:window-width="1728" inkscape:window-height="1051" inkscape:window-x="0" inkscape:window-y="34" inkscape:window-maximized="0" inkscape:current-layer="layer2" showguides="true">
+        <sodipodi:guide position="559.54318,-110" orientation="0,1" id="guide1" inkscape:locked="false" inkscape:label="" inkscape:color="rgb(0,134,229)" />
+        <sodipodi:guide position="37.605932,165.48305" orientation="1,0" id="guide59" inkscape:locked="false" />
+        <sodipodi:guide position="191.67396,4.8943904" orientation="0,-1" id="guide2" inkscape:locked="false" />
+        <sodipodi:guide position="52.853047,0.45866" orientation="0,-1" id="guide3" inkscape:locked="false" />
     </sodipodi:namedview>
     <defs id="defs1">
         <marker style="overflow:visible" id="Triangle" refX="0" refY="0" orient="auto-start-reverse" inkscape:stockid="Triangle arrow" markerWidth="1.3" markerHeight="1.3" viewBox="0 0 1 1" inkscape:isstock="true" inkscape:collect="always" preserveAspectRatio="xMidYMid">
@@ -221,7 +223,7 @@
                 <path id="path64" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" style="stroke-width:1.43198" />
             </g>
         </g>
-        <g id="g74" transform="matrix(0.01329634,0,0,-0.01329634,118.92368,177.77083)" style="stroke-width:1.43198">
+        <g id="g74" transform="matrix(0.01329634,0,0,-0.01329634,118.92368,177.23456)" style="stroke-width:1.43198">
             <g transform="matrix(1.44,0,0,1.44,-4963.2818,3538.8706)" id="g67" style="stroke-width:1.43198">
                 <path id="path66" d="m 94,250 q 0,69 10,131 10,62 23,107 13,45 37,88 24,43 38,67 14,24 42,52 28,28 33,34 5,6 25,21 h 13 4 q 14,0 14,-9 0,-3 -17,-21 -17,-18 -41,-53 -24,-35 -49,-86 -25,-51 -42,-138 -17,-87 -17,-193 0,-106 17,-192 17,-86 41,-139 24,-53 49,-86 25,-33 42,-53 17,-20 17,-21 0,-9 -15,-9 h -3 -13 l -28,24 Q 180,-141 137,-14 94,113 94,250 Z" style="stroke-width:1.43198" />
             </g>

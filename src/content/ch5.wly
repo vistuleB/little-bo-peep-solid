@@ -1,7 +1,8 @@
 |> Section
+    work=ing
     handle=_ch5_start_
 
-    *Cos and Sin. (“Cosine” and “sine”.)* We've
+    *Cos and Sin. (“Cosine” and “sine”.)* We have
     already encountered the ‘cos’ function in 
     Exercise >>_cosine_of_1000x_ of Chapter >>functions,
     e.g.. It is the one that has this graph:
@@ -10,8 +11,8 @@
         src=images/svg_ch5_ch_cosine.svg
 
     It has a close cousin named ‘sin’. While $\cos(x)$
-    “tops off” at $x = 0$, $\sin(x)$ goes diagonally through
-    the point $(0, 0)$:
+    tops off at $x = 0$, $\sin(x)$ goes diagonally through
+    $(0, 0)$:
 
     |> Image
         src=images/svg_ch5_ch_cosine_and_sine.svg
@@ -26,14 +27,14 @@
     __$y$-coordinate__
 
     of a point $x$ units counterclockwise from
-    $(1, 0)$ on the unit circle. (Nb: “a”
+    $(1, 0)$ on the unit circle. (Note that “a”
 
     __unit circle__
 
     is a circle of radius $1$, while “the” unit
     circle is the circle of radius $1$ centered
     at $(0, 0)$.) For example, 
-    one can see from the graphs 
+    observe from the graphs 
     !! that $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
     that $\cos({1\over 2}) \approx 0.9$, $\sin({1\over 2}) \approx 0.5$:
 
@@ -45,8 +46,10 @@
     circle has coordinates $\approx 0.9$ in $x$
     and $\approx 0.5$ in $y$ (or actually 
     $0.87758...$ and $0.47942...$, 
-    it turns out, as we can know by
-    a calculator equipped with ‘sin’ and ‘cos’):
+    !! as one can know by
+    !! as per
+    which is what 
+    a calculator equipped with ‘sin’ and ‘cos’ will tell us):
 
     |> Image
         !! src=images/svg_ch5_ch_unit_circle_@0.333_smaller.svg
@@ -54,7 +57,7 @@
 
     As a second example, the graphs indicate that
     $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$
-    (or something very close to $-1$, in any case):
+    (or something very close to $-1$, at least):
 
     |> Image
         src=images/svg_ch5_ch_cosine_and_sine_@-3_v2.svg
@@ -64,7 +67,9 @@
     circle, starting from $(1, 0)$, brings us to a point
     with $y$- and $x$-coordinates of $\approx -0.2$
     and $\approx -0.99$ respectively (or $-0.1411...$
-    and $-0.989992...$, to be exact, it turns out):
+    and $-0.989992...$, 
+    per the calculator):
+    !! to be exact, it turns out):
 
     |> Image
         src=images/svg_ch5_ch_unit_circle_@-3_smaller.svg
@@ -141,14 +146,16 @@
     values of $\cos$. (“Lagging” when you read the
     graphs from left to right.) It's because the ‘sin’
     particle follows in the trail blazed by the ‘cos’
-    particle!
+    particle.
 
 |> Section
     handle=trigonometry-derivatives
 
     *Derivatives.*
-    Continuing the last “chapter” in the
-    definitions of $\sin$ and $\cos$, we can
+    !! Continuing the last “chapter” in the
+    !! definitions of $\sin$ and $\cos$, 
+    Continuing the last topic,
+    we can
     add two more particles to the diagram that
     defines ‘sin’ and ‘cos’ via $x$-coordinates.
     The two new particles are labeled “$-\!\sin$”
@@ -175,7 +182,7 @@
     !! just be seen as referring to this definition.)
 
     These labels are chosen because the $x$-coordinate
-    of the “$-\!\sin$” particle (e.g.) is
+    of the “$-\!\sin$” particle, e.g., is
 
     $$
     -\!\sin(x)
@@ -231,9 +238,9 @@
     particle's $x$-coordinate is the
     $x$-coordinate of the next particle
     in the order of rotation, as explained
-    in the solution to that problem.
-    (Clockwise vs. counterclockwise rotation
-    notwithstanding.)
+    in the solution to that problem,
+    clockwise vs. counterclockwise rotation
+    notwithstanding.
 
     One can also note that
     $$
@@ -651,8 +658,9 @@
     |> Pause
 
     _Note._
-    Another thing to know about radians 
-    is that the length of a circular
+    !! Another thing to know about radians is 
+    The definition of radians also implies
+    that the length of a circular
     arc subtended by an angle is its radian
     measure times the radius:
 
@@ -694,7 +702,8 @@
     45^\circ = 45 \cdot {\eta\over 90} = \eta/2,
     $$
 
-    per this definition.
+    !! per this definition.
+    and so on.
 
     In this way, in particular, we can write
 
@@ -716,7 +725,7 @@
     \cos(\eta) = 0
     $$
 
-    in case you had any doubt, by the way—an
+    in case you have any doubt, by the way—an
     angle of $\eta$ puts you at the tippy-top
     of the circle!)
 
@@ -746,12 +755,13 @@
     $$
 
     and so on. (If you're curious, points of this
-    family...
+    family look like this:)
 
     |> Image
         src=images/svg_ch5_ch_that_family.svg
 
-    ...look like this.) Vice-versa, every point
+    !! ...look like this.) 
+    Vice-versa, every point
     on the unit circle has the form (*) for some
     $0 \leq x \leq 1$ and some choice of the ‘$\pm$’
     signs.

@@ -1,13 +1,14 @@
 |> Section
     handle=_ch6_start_
 
-    *Definition.*
-    “Dimensional analysis” is the art of
-    checking the units on an equation or formula
-    and/or of guessing new formulas based on considerations
-    about the units and/or dimensions [see below].
+    !!     *Definition.*
+    !!     “Dimensional analysis” is the art of
+    !!     checking the units on an equation or
+    !!     formula and/or of guessing new formulas
+    !!     based on considerations about the
+    !!     units and/or dimensions [see below].
 
-|> Section
+    !! |> Section
     *Terminology: “dimension” vs. “dimensional”.*
     As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions_epilogue), the
     term
@@ -21,9 +22,18 @@
     __dimensional__
 
     means “that which relates to
-    dimensions _or_ units”—i.e., it doesn't just mean
-    “that which relates to dimensions”. 
-    (Lest you be fooled.)
+    dimensions or units”, not
+    “that which relates to dimensions”.
+    !! —i.e., it doesn't just mean
+    !! “that which relates to dimensions”. 
+    !! (Lest you be fooled.)
+
+|> Section
+    *What is dimensional analysis.* 
+    _Dimensional analysis_ is the art of 
+    checking the units and/or dimensions on an equation or
+    formula, or of guessing such formulas by
+    consideration thereof.
 
 |> Section
     *Function signatures.*
@@ -34,7 +44,7 @@
     \Large f : [\te{A}] \ra [\te{B}]
     $$
 
-    to indicates that inputs passed to $f$ have semantics
+    to indicate that inputs passed to $f$ have semantics
     of units A while outputs returned by $f$ have semantics
     of units B. 
     For example,
@@ -46,12 +56,10 @@
     indicates that $h$ is a function for which the inputs
     denote kilograms and for which the outputs denote degrees
     fahrenheit. We refer to the ordered pair $(\te{A}, \te{B})$ 
-    or to the notation 
-    
-    $$
-    \Large\te{“}[\te{A}] \ra [\te{B}]\te{”}
-    $$
-    
+    !! or to the notation 
+    !! $$
+    !! \Large\te{“}[\te{A}] \ra [\te{B}]\te{”}
+    !! $$
     as the
     _signature_
     of $f$.
@@ -93,6 +101,8 @@
 
     |> ImageLeft
         src=tmp-images/c6_radian_dimensionless_ratio_cloud.svg
+
+    |> Pause
 
     _*Note._ To be precise, these “lengths” are actually
     coordinate changes that may be negative—except for the
@@ -187,20 +197,19 @@
 !!     />
 !!   </svg>
 
-|> Section
+!! |> Section
+!!     *Default signature.*
+!!     For the sake of logical 
+!!     uniformity 
+!!     we assume that every function from $\rr$ to
+!!     $\rr$ has a signature, where we can revert to
+!!     ascribing the dimensionless signature 
 
-    *Default signature.*
-    For the sake of logical 
-    uniformity 
-    we assume that every function from $\rr$ to
-    $\rr$ has a signature, where we can revert to
-    ascribing the dimensionless signature 
+!!     $$
+!!     \Large [1] \ra [1]
+!!     $$
 
-    $$
-    \Large [1] \ra [1]
-    $$
-
-    for functions for which no other information is available.
+!!     for functions for which no other information is available.
 
 |> Section
     *Restrictions imposed on signatures by function
@@ -240,7 +249,7 @@
     end, 
     either, 
     with “$f(x) =$ apples” and “$g(x) =$ oranges” being
-    a combination to avoid. 
+    the dreaded combination. 
 
     By contrast, when multiplying two functions we can
     stomach the output units to be different since
@@ -307,7 +316,8 @@
     for any units A, B. 
     !! This also
     !! implies, 
-    To put it differently,
+    !! To put it differently,
+    Or,
 
     $$
     \Large f : [\tC] \ra \left[{\tC\tD}\right]
@@ -319,7 +329,7 @@
     \Large f' : [\tC] \ra [\tD]
     $$
     
-    for any units C, D.
+    for any units C, D, to put it differently.
     (I.e., to recover the
     signature of $f$ from the signature of $f'$ one
     needs to multiply the output units of $f'$ by the input units
@@ -756,8 +766,8 @@
     !! mistake 
     in the span 
     of a single day,
-    as we know from his notes.
-    (Whence this equation's moniker.)
+    as we know from his notes,
+    whence this equation's moniker.
 
     On the left-hand side,
 
@@ -777,7 +787,7 @@
 
     for some units A, B, C, per Table 1.1., which is also 
     the most general type of signature that is compatible with the right-hand side.
-    This is “so far so good”.
+    “So far so good.”
     !! the type of signature that the right-hand side requires—so far so good!
 
     However,
@@ -854,16 +864,22 @@
         \Large x_1'x_2' : [\te{s}] \ra [\te{m}^2/\te{s}^2]
         $$
 
-        so there is no way these two quantities could ever be
-        equal, in general. For example, changing from counting
-        time in seconds to counting it in hours, while correspondingly
-        modifying $x_1$ and $x_2$ to reflect this change, would
-        multiply $(x_1x_2)'$ by $3600$ but would multiply $x_1'x_2'$
-        by $3600^2$—so if by some fluke the early afternoon product rule
-        held before this change it would certainly\* [\*assuming $(x_1x_2)' \ne 0$] not hold after,
-        and therefore, the early afternoon product rule cannot hold in general!
+        so there is no way these two quantities could
+        ever be equal, in general. For example,
+        changing from counting time in seconds to
+        counting it in hours, while correspondingly
+        modifying $x_1$ and $x_2$ to reflect this
+        change, would multiply $(x_1x_2)'$ by $3600$ but
+        would multiply $x_1'x_2'$ by $3600^2$—so if by
+        some fluke the early afternoon product rule
+        held before this change it would certainly\*
+        [\*assuming $(x_1x_2)' \ne 0$] not hold after,
+        and therefore, the early afternoon product rule
+        cannot hold in general.
+
         |> ImageLeft
             src=tmp-images/c6_x1x2_3600_cloud.svg
+            offset_x=1em
 
         |> Pause
 
@@ -889,7 +905,7 @@
         from this observation, and one would be wrong—which is to
         show that dimensional analysis is quick to debunk an incorrect
         equation but, in the contravening case, 
-        cannot be trusted as a proof—however,
+        cannot be trusted as a proof!—however,
 
         $$
         \Large x_1'x_2'
@@ -902,8 +918,8 @@
 
 |> Section
 
-    *The “real” product rule.*
-    The real product rule, valid for differentiable functions $f$ and $g$, is
+    *The product rule.*
+    The real “product rule”, valid for differentiable functions $f$ and $g$, is
 
     |> Boxed
 
@@ -929,7 +945,7 @@
     \end{aligned}
     $$
 
-    on $f$ and $g$—so far so good. 
+    on $f$ and $g$. 
     From there,
     !! in which case
 
@@ -957,34 +973,34 @@
     $$
 
     so $f'g + fg'$ has the
-    same signature as $(fg)'$, i.e., dimensional
-    analysis gives its _imprimatur_ to this formula!
-    (It “passes the sniff test” of dimensional analysis, put
-    differently.)
-    !! (Which is, indeed, the correct one.)
+    same signature as $(fg)'$, i.e., 
+    this formula passes the “sniff test” of
+    dimensional analysis.
+    !! dimensional
+    !! analysis gives its _imprimatur_ to this formula!
+    !! (It “passes the sniff test” of dimensional analysis, put
+    !! differently.)
+    !! !! (Which is, indeed, the correct one.)
 
 |> Section
     handle=chain_rule_discovery
 
     *The chain rule.*
-    As we have formulas for
-
-    $$
-    \Large (f + g)'
-    $$
-
-    and
-
-    $$
-    \Large (fg)'
-    $$
-
-    so we would like a similar formula for
+    !! As we have formulas for
+    !! $$
+    !! \Large (f + g)'
+    !! $$
+    !! and
+    !! $$
+    !! \Large (fg)'
+    !! $$
+    We would we like a formula for
 
     $$
     \Large (f \circ g)'
     $$
 
+    similar to the sum rule or product rule,
     and we can try guessing such a formula using
     dimensional analysis, i.e., from the fact that the
     formula should be dimensionally consistent.
@@ -1018,16 +1034,16 @@
     on its right-hand side. These are the “lego pieces”
     from which we seek to assemble $(f \circ g)'$.
 
-    (Actually, this is kind of fun to do on one's own,
-    so we leave some vertical space as a “spoiler alert”, for
-    those who would wish to try.)
-    !! (Actually, this guessing process is kind of fun to do on one's own,
-    !! so we leave some vertical space as a “spoiler alert” here, for
-    !! !! those who wish to try..................)
-    !! those who wish to try.)
+    !! (Actually, this is kind of fun to do on one's own,
+    !! so we leave some vertical space as a “spoiler alert”, for
+    !! those who would wish to try.)
+    !! !! (Actually, this guessing process is kind of fun to do on one's own,
+    !! !! so we leave some vertical space as a “spoiler alert” here, for
+    !! !! !! those who wish to try..................)
+    !! !! those who wish to try.)
 
-    |> Image
-        src=tmp-images/c6_spoiler_alert_diagonal.svg
+    !! |> Image
+    !!     src=tmp-images/c6_spoiler_alert_diagonal.svg
 
     Starting off,
 
@@ -1069,7 +1085,6 @@
     schizophrenically put input tubes on the left, again):
 
     |> Image
-        some=thing
         src=tmp-images/c6_lego_pieces.svg
 
     From these pieces we seek to assemble a function
@@ -1088,6 +1103,7 @@
 
     we might multiply $f'$ and $g'$;
     and yet the product
+    !! except that the product
     $f'g'$
     _cannot be formed_ since $f'$ and $g'$ have different
     input units!; 
@@ -1100,6 +1116,7 @@
     \Large (f'\circ g)g'
     $$
 
+    !! instead of $f'g'$, 
     which makes sense since on the one hand
 
     $$
@@ -1124,9 +1141,16 @@
     \Large [\tA] \ra [\tC/\tA]
     $$
 
+    |> ImageRight
+        src=tmp-images/c6_chain_rule_units_cloud.svg
+        offset_x=3.1em
+
+    !! $$
+    !! \Large\left[{\tC\over\tB}\right]\cdot\left[{\tB\over\tA}\right] = \left[{\tC\over\tA}\right]
+    !! $$
+
     as desired! It turns out that this is the
     correct formula, i.e., 
-    !! 
     we truly do have..
 
     |> Boxed
@@ -1246,17 +1270,25 @@
 
         which is indeed $(f\circ g)'(t_0)$. Per:
 
-        !! $$
-        !! \Large (f\circ g)'(t_0) = f'(g(t_0))g'(t_0)
-        !! $$
-
         |> Image
             src=tmp-images/c6_explained_rat_equation.svg
 
         Also since
+
+        !! $$
+        !! \begin{gathered}
+        !! (k\circ \ell)(x) = k(\ell(x)) \\
+        !! k(\ell(x)) = (k\circ \ell)(x)
+        !! \end{gathered}
+        !! $$
+
         $$
         \Large f'(g(t_0)) = (f'\circ g)(t_0)
         $$
+        |> ImageRight
+            src=tmp-images/c6_composition_reminder_cloud.svg
+            offset_x=2em
+        
         we can write the same equation as
 
         $$
@@ -1271,9 +1303,11 @@
             $$
 
         which is the chain rule as originally stated
-        above—but to recapitulate 
-        the main point of this example, we have
-        three different units, and three rates of change:
+        above—but to recapitulate
+        the main point of this example, 
+        we have
+        !! three different units, and 
+        three rates of change...
 
         !! $$
         !! \Large f'\,g'\,(f \circ g)'
@@ -1284,8 +1318,10 @@
         |> Image
             src=tmp-images/c6_three_units_with_arrows.svg
 
-        ...and the point is that we can obtain the 
-        former rate of change ($\left[{\te{\$}}\over\te{s}\right]$)
+        ...and the point is that 
+        !! ...and 
+        we can obtain 
+        the former rate of change ($\left[{\te{\$}}\over\te{s}\right]$)
         by multiplying the latter two rates
         of change
         ($\left[{\te{\$}}\over\te{m}\right]$ and $\left[{\te{m}}\over\te{s}\right]$),
@@ -1293,6 +1329,15 @@
         at the right “place”—we don't want to feed
         $f'$ an amount of seconds when it is
         expecting an amount of meters!
+
+        !! $$
+        !! \Large f'(t_0) \ra f'(g(t_0))
+        !! $$
+
+        |> ImageRight
+            src=tmp-images/c6_forbidden_fprime_of_t0.svg
+            line=-3
+            offset_x=1em
 
         |> Pause
 
@@ -1310,69 +1355,64 @@
         
         __for $f$, $g : \rr \ra \rr$ differentiable__
         
-        can be replaced by the more surgical
+        can be replaced by the more granular
 
         __for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
         differentiable at $x$ and $f$ differentiable at $g(x)$__
 
-        similarly to the [Postscript after
+        !! similarly to the 
+        which is like we did for the sum rule in the [“Postscript” after
         Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
-        !! in relation to the sum rule.
-        !! instead of the 
-        !! !! This 
-        !! !! also allows the assumption to be replaced by 
-        !! !! as the condition 
-        !! !! “for $f$, $g : \rr \ra \rr$ differentiable”
-        !! !! can be replaced by the more surgical
-        !! !! “for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
-        !! !! differentiable at $x$ and $f$ differentiable at $g(x)$”.
-        
-        
-        !! which is the previous boxed equation evaluated at an input
-        !! $x$, while using $(f' \circ g)(x) = f'(g(x))$.
 
     |> Example
 
         We have
 
         $$
-        (\sin \circ \sin)' = (\cos \circ \sin)\cos
+        (\cos \circ \cos)' = ((-\sin) \circ \cos)(-\sin)
         $$
 
         by [the chain rule](>>chain_rule_discovery),
-        since $\sin' = \cos$, or
+        since $\cos' = -\sin$, or
 
         $$
-        (\sin \circ \sin)'(x) = (\cos \circ \sin)(x)\cos(x)
+        (\cos \circ \cos)'(x) = ((-\sin) \circ \cos)(x)\cdot(-\sin)(x)
         $$
 
         evaluating at an input $x$, an equation that can also be written
 
         $$
-        (\sin \circ \sin)'(x) = \cos(\sin(x))\cos(x)
+        (\cos \circ \cos)'(x) = (-\sin(\cos(x)))\cdot(-\sin(x))
         $$
 
-        matching the form of the last boxed equation
-        above—to be quite specific, e.g., 
+        —matching the form of the last boxed equation
+        above—or
+        
+        $$
+        \tag{1}
+        (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x)
+        $$
+
+        cancelling the minus signs; to be quite specific, e.g., 
 
         $$
-        (\sin \circ \sin)'(12.2)
+        (\cos \circ \cos)'(2.5)
         $$
         
         which is the slope of 
-        !! the rate of change of
 
         $$
-        y = \sin(\sin(x))
+        y = \cos(\cos(x))
         $$
 
-        at $x = 12.2$ is
+        at $x = 2.5$, is
 
         $$
-        \cos(\sin(12.2))\cos(12.2) = 0.874365...
+        \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
         $$
 
-        as a graph of $\sin(\sin(x))$ will sorta-kinda attest:
+        by (1), which a graph of $\cos(\cos(x))$ seems to
+        attest to, visually (well it's the correct value so no wonder):
 
         |> Image
             src=tmp-images/c6_sin_of_sin_graph.svg
@@ -1380,13 +1420,78 @@
         (Because
 
         $$
-        -1 \leq \sin(x) \leq 1
+        -1 \leq \cos(x) \leq 1
         $$
         
-        the values of $\sin(\sin(x))$ are stuck between
-        sine of $-1$ radian at the low end and sine of $+1$ radian
-        at the high end, which produces the graph above.)
+        the values of $\cos(\cos(x))$ are stuck between
 
+        $$
+        \cos(\pm 1) = \cos(\pm 57.29\ldots^\circ) \approx 0.54
+        $$
+
+        at the low end and $\cos(0) = 1$ at the high end,
+        which produces the graph above, that one can actually
+        think of as the $x$-coordinate of a certain horizontal
+        windshield-wiper whose angle at time $t$ is $\cos(t)$.)
+        (Producing limited oscillation of the windshield-wiper
+        between $-1\te{Rad}\approx -57.29^\circ$ and $+1\te{Rad} \approx +57.29^\circ$,
+        as opposed to full-circle oscillation covering all angles.)
+
+    !! |> Example
+
+    !!     We have
+
+    !!     $$
+    !!     (\sin \circ \sin)' = (\cos \circ \sin)\cos
+    !!     $$
+
+    !!     by [the chain rule](>>chain_rule_discovery),
+    !!     since $\sin' = \cos$, or
+
+    !!     $$
+    !!     (\sin \circ \sin)'(x) = (\cos \circ \sin)(x)\cos(x)
+    !!     $$
+
+    !!     evaluating at an input $x$, an equation that can also be written
+
+    !!     $$
+    !!     (\sin \circ \sin)'(x) = \cos(\sin(x))\cos(x)
+    !!     $$
+
+    !!     matching the form of the last boxed equation
+    !!     above—to be quite specific, e.g., 
+
+    !!     $$
+    !!     (\sin \circ \sin)'(12.2)
+    !!     $$
+        
+    !!     which is the slope of 
+
+    !!     $$
+    !!     y = \sin(\sin(x))
+    !!     $$
+
+    !!     at $x = 12.2$ is
+
+    !!     $$
+    !!     \cos(\sin(12.2))\cos(12.2) = 0.874365...
+    !!     $$
+
+    !!     which a graph of $\sin \circ \sin$ attests
+    !!     to, visually:
+
+    !!     |> Image
+    !!         src=tmp-images/c6_sin_of_sin_graph.svg
+
+    !!     (Because
+
+    !!     $$
+    !!     -1 \leq \sin(x) \leq 1
+    !!     $$
+        
+    !!     the values of $\sin(\sin(x))$ are stuck between
+    !!     sine of $-1$ radian at the low end and sine of $+1$ radian
+    !!     at the high end, which produces the graph above.)
 
 |> Section
     !! *Appendix: radians _&_ the dimensionless plane.*

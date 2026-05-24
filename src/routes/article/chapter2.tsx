@@ -101,8 +101,9 @@ export default function __Chapter2__() {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          the number of units the line goes up with each
-          unit to the right
+          the number of units the line goes up
+          <br />
+          with each unit to the right
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -122,17 +123,19 @@ export default function __Chapter2__() {
             -axis
           </NoBreak>
           {" "} increase
-          going right, as is usually the case. One can also
-          describe slope as...
+          going right, as is usually the case. 
+          Or one can say...
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          the amount of vertical change per unit of
-          horizontal change
+          the amount of vertical change per
+          <br />
+          unit of horizontal change
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          ...more elegant!
+          ...which is an alternate, more elegant description
+          of the same concept.
         </OuterP>
         <OuterP class="indent-10">
           For example, the line below has slope 1, because
@@ -169,7 +172,7 @@ export default function __Chapter2__() {
         <Image src="/build-img/svgo-svg/03l_.svg" />
         <Pause />
         <OuterP>
-          (Etc.)
+          ...and so on.
         </OuterP>
       </Section>
       <Rest />
@@ -218,7 +221,7 @@ const Rest = () => {
           vertical change.
         </OuterP>
         <OuterP class="indent-10">
-          More precisely, if
+          To attach a formula to this idea, if
         </OuterP>
         <Pause />
         <MathBlock>

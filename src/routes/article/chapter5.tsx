@@ -22,7 +22,7 @@ export default function __Chapter5__() {
   return (
     <Article
       prevPage="/article/chapter4"
-      nextPage=""
+      nextPage="/article/appendixA"
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
       id="_147_hgi_"
@@ -161,12 +161,15 @@ export default function __Chapter5__() {
       <ArticleTitle banner="Chapter 5:">
         The Trigonometric Functions
       </ArticleTitle>
-      <Section id="section-1">
+      <Section
+        work="ing"
+        id="section-1"
+      >
         <OuterP>
           <b>
             Cos and Sin. (“Cosine” and “sine”.)
           </b>
-          {" "} We've
+          {" "} We have
           already encountered the ‘cos’ function in 
           {" "}
           <a
@@ -187,7 +190,7 @@ export default function __Chapter5__() {
             $\cos(x)$
           </Math>
           {" "}
-          “tops off” at {" "}
+          tops off at {" "}
           <NoBreak>
             <Math>
               $x = 0$
@@ -199,7 +202,7 @@ export default function __Chapter5__() {
             $\sin(x)$
           </Math>
           {" "} goes diagonally through
-          the point {" "}
+          {" "}
           <NoBreak>
             <Math>
               $(0, 0)$
@@ -255,7 +258,7 @@ export default function __Chapter5__() {
           <Math>
             $(1, 0)$
           </Math>
-          {" "} on the unit circle. (Nb: “a”
+          {" "} on the unit circle. (Note that “a”
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -284,7 +287,7 @@ export default function __Chapter5__() {
             .)
           </NoBreak>
           {" "} For example, 
-          one can see from the graphs 
+          observe from the graphs 
           that {" "}
           <NoBreak>
             <Math>
@@ -340,8 +343,8 @@ export default function __Chapter5__() {
             ,
           </NoBreak>
           {" "} 
-          it turns out, as we can know by
-          a calculator equipped with ‘sin’ and ‘cos’):
+          which is what 
+          a calculator equipped with ‘sin’ and ‘cos’ will tell us):
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/SPMY.svg" />
@@ -367,7 +370,7 @@ export default function __Chapter5__() {
             </Math>
             ,
           </NoBreak>
-          {" "} in any case):
+          {" "} at least):
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/T8lW.svg" />
@@ -426,7 +429,8 @@ export default function __Chapter5__() {
             </Math>
             ,
           </NoBreak>
-          {" "} to be exact, it turns out):
+          {" "} 
+          per the calculator):
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/9Ygl.svg" />
@@ -681,7 +685,7 @@ export default function __Chapter5__() {
           {" "} (“Lagging” when you read the
           graphs from left to right.) It's because the ‘sin’
           particle follows in the trail blazed by the ‘cos’
-          particle!
+          particle.
         </OuterP>
       </Section>
       <Rest />
@@ -700,19 +704,8 @@ const Rest = () => {
             Derivatives.
           </b>
           {" "}
-          Continuing the last “chapter” in the
-          definitions of {" "}
-          <Math>
-            $\sin$
-          </Math>
-          {" "} and {" "}
-          <NoBreak>
-            <Math>
-              $\cos$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} we can
+          Continuing the last topic,
+          we can
           add two more particles to the diagram that
           defines ‘sin’ and ‘cos’ via {" "}
           <NoBreak>
@@ -760,7 +753,7 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "} particle (e.g.) is
+          {" "} particle, e.g., is
         </OuterP>
         <Pause />
         <MathBlock>
@@ -929,9 +922,9 @@ const Rest = () => {
           </NoBreak>
           {" "} of the next particle
           in the order of rotation, as explained
-          in the solution to that problem.
-          (Clockwise vs. counterclockwise rotation
-          notwithstanding.)
+          in the solution to that problem,
+          clockwise vs. counterclockwise rotation
+          notwithstanding.
         </OuterP>
         <OuterP class="indent-10">
           One can also note that
@@ -1802,8 +1795,8 @@ const Rest = () => {
             Note.
           </i>
           {" "}
-          Another thing to know about radians 
-          is that the length of a circular
+          The definition of radians also implies
+          that the length of a circular
           arc subtended by an angle is its radian
           measure times the radius:
         </OuterP>
@@ -1880,7 +1873,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          per this definition.
+          and so on.
         </OuterP>
         <OuterP class="indent-10">
           In this way, in particular, we can write
@@ -1916,7 +1909,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          in case you had any doubt, by the way—an
+          in case you have any doubt, by the way—an
           angle of {" "}
           <Math>
             $\eta$
@@ -2000,13 +1993,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           and so on. (If you're curious, points of this
-          family...
+          family look like this:)
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/Yhim.svg" />
         <Pause />
         <OuterP>
-          ...look like this.) Vice-versa, every point
+          Vice-versa, every point
           on the unit circle has the form (*) for some
           {" "}
           <Math>
@@ -7836,7 +7829,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/tmp-images/svg_ch5_ex_max_xy_xy_isosets.svg"
+              src="/build-img/svgo-svg/ME1k.svg"
               style="margin-bottom:0.5em;"
             />
             <Pause />

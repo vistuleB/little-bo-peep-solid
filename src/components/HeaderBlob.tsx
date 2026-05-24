@@ -1,10 +1,7 @@
 
 const HeaderBlob = () => {
   return <>
-    <img
-      style="padding-top:0.65em;padding-bottom:0.4em;"
-      src="/public/header-blob.svg"
-    />
+    <img src="/non-build-img/loading_screen.png" />
   </>;
 };
 

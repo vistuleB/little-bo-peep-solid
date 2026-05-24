@@ -211,6 +211,10 @@ const Page = (props: ParentProps & PageProps) => {
       e.preventDefault();
       getPage("/article/chapter5");
     }
+    if (e.key === "6") {
+      e.preventDefault();
+      getPage("/article/chapter6");
+    }
     if (e.key === "9") {
       e.preventDefault();
       getPage("/article/bootcamp1");

@@ -1,6 +1,6 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
-import { CentralDisplayItalic, CentralDisplay }  from "~/components/Delimiters";
+import { CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Grid  from "~/components/Grid";
 import InChapterLink  from "~/components/InChapterLink";
@@ -25,30 +25,35 @@ export default function __Chapter1__() {
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=first-section">
-            square roots
+            the square root of a square
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-1">
-            fractions and division
+            the square of a number between 0 and 1
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-2">
-            distributivity
+            fractions and division
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-3">
-            epilogue
+            distributivity
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-4">
-            vocabulary
+            epilogue
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
+          <InChapterLink href="?id=section-5">
+            vocabulary
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -60,14 +65,14 @@ export default function __Chapter1__() {
       <Section id="first-section">
         <OuterP>
           <b>
-            Square Roots.
+            The square root of a square.
           </b>
           {" "}
-          You might remember that “minus times minus
-          is plus” and that “plus times plus is plus”.
-          (Why? The enemy of my enemy is my friend.)
-          So any nonzero number multiplied by itself
-          is positive. For example,
+          Due to the fact that “minus times minus is plus”
+          (the enemy of my enemy is my friend),
+          any nonzero number multiplied by itself
+          is positive.
+          For example,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -76,9 +81,9 @@ export default function __Chapter1__() {
           $$
         </MathBlock>
         <Pause />
-        <CentralDisplay>
-          and
-        </CentralDisplay>
+        <OuterP>
+          is positive, and
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -87,7 +92,7 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          are both positive. But {" "}
+          is positive as well. But {" "}
           <Math>
             $\sqrt&#123;4&#125;$
           </Math>
@@ -171,8 +176,12 @@ export default function __Chapter1__() {
             .
           </NoBreak>
         </OuterP>
-        <OuterP class="indent-10">
-          (Nb: If ever you want to indicate both
+        <Pause />
+        <OuterP>
+          <b>
+            Note.
+          </b>
+          {" "} If ever you want to indicate both
           solutions of the equation {" "}
           <Math>
             $x^2 = 4$
@@ -198,17 +207,33 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          for the solutions to the quadratic equation
+          for the solutions to the equation
           {" "}
           <NoBreak>
             <Math>
               $ax^2 + bx + c = 0$
             </Math>
-            .)
+            .
           </NoBreak>
         </OuterP>
-        <OuterP class="indent-10">
-          Next, we will ponder
+      </Section>
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return <>
+    {showMore() && <>
+      <Pause />
+      <Section id="section-1">
+        <OuterP>
+          <b>
+            The square of a number between 0 and 1.
+          </b>
+          {" "}
+          We will pause to ponder the value of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -218,8 +243,12 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          whose value is—by definition—the unique
-          nonnegative solution to
+          which value is, by definition, the unique
+          nonnegative solution {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} to
         </OuterP>
         <Pause />
         <MathBlock>
@@ -517,17 +546,8 @@ export default function __Chapter1__() {
           </NoBreak>
         </OuterP>
       </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const showMore = useShowMore();
-  return <>
-    {showMore() && <>
       <Pause />
-      <Section id="section-1">
+      <Section id="section-2">
         <OuterP>
           <b>
             Fractions and Division.
@@ -616,21 +636,21 @@ const Rest = () => {
           <Math>
             $50/2$
           </Math>
-          {" "} is a ratio of integers, which makes
-          things particularly nice! For a ratio of
+          {" "} is a ratio of integers, 
+          and for a ratio of
           decimals, such as, say,
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          &#123;1 \over 0.01&#125;
+          \,&#123;1 \over 0.01&#125;,
           $$
         </MathBlock>
         <Pause />
         <OuterP>
           our possible points of view are going to be
-          more restricted. Thankfully, however, we can
-          still characterize this fraction as the
+          more restricted. Thankfully, we can
+          still characterize the latter fraction as the
           answer to the question “how many times does
           {" "}
           <Math>
@@ -644,7 +664,7 @@ const Rest = () => {
             ?”
           </NoBreak>
           {" "} as in the third option
-          above. And, indeed,
+          above—from which,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -682,19 +702,14 @@ const Rest = () => {
         <OuterP>
           by the same reasoning, which explains why
           dividing by smaller and smaller numbers produces
-          larger and larger results (and, by extension,
-          why dividing by {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} is undefined).
+          larger and larger results.
         </OuterP>
         <Pause />
         <OuterP>
           <b>
             Note.
           </b>
-          {" "} In general, the ratio of two decimal
+          {" "} In general the ratio of two decimal
           numbers can be turned into a ratio of integers
           by multiplying the ratio top and bottom by a
           suitable power of {" "}
@@ -720,7 +735,8 @@ const Rest = () => {
             $71/40$
           </Math>
           {" "}
-          really is (one second!):
+          really is
+          (one second):
         </OuterP>
         <Pause />
         <MathBlock>
@@ -754,7 +770,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-2">
+      <Section id="section-3">
         <OuterP>
           <b>
             Distributivity.
@@ -844,7 +860,8 @@ const Rest = () => {
         <Pause />
         <OuterP>
           because multiplication takes precedence over
-          addition, by default.)
+          addition,
+          absent parentheses to clarify the order of operations.)
         </OuterP>
         <OuterP class="indent-10">
           A little more generally, one has such identities
@@ -905,11 +922,11 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \begin&#123;align&#125;
-            (10 + 2)(10 + 4) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4\\
-            \,&amp;=\, 100 \,+\, 40 \,+\, 20 \,+\, 8\\
-            \,&amp;=\, 168
-            \end&#123;align&#125;
+            \begin&#123;aligned&#125;
+            (10 + 2)(10 + 4) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4 \\
+            \,&amp;=\, 100 \,+\, 40 \,+\, 20 \,+\, 8 \up&#123;1.1&#125;\\
+            \,&amp;=\, 168 \up&#123;1.1&#125;
+            \end&#123;aligned&#125;
             $$
           </MathBlock>
           <Pause />
@@ -937,8 +954,8 @@ const Rest = () => {
             $$
             \begin&#123;align&#125;
             (10 + 3)(10 + 3) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
-            \,&amp;=\, 100 \,+\, 30 \,+\, 30 \,+\, 9\\
-            \,&amp;=\, 169
+            \,&amp;=\, 100 \,+\, 30 \,+\, 30 \,+\, 9 \up&#123;1.1&#125;\\
+            \,&amp;=\, 169 \up&#123;1.1&#125;
             \end&#123;align&#125;
             $$
           </MathBlock>
@@ -1031,7 +1048,9 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "} (This is the {" "}
+        </OuterP>
+        <OuterP class="indent-10">
+          (This is the {" "}
           <i>
             binomial expansion
             of degree two
@@ -1054,8 +1073,8 @@ const Rest = () => {
             $$
             \begin&#123;align&#125;
             \up&#123;1&#125; (10 + 3)^2 \,&amp;=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
-            \up&#123;1&#125; \,&amp;=\, 100 + 60 + 9 \\
-            \up&#123;1&#125; \,&amp;=\, 169
+            \up&#123;1&#125; \,&amp;=\, 100 + 60 + 9 \up&#123;1.1&#125;\\
+            \up&#123;1&#125; \,&amp;=\, 169 \up&#123;1.1&#125;
             \end&#123;align&#125;
             $$
           </MathBlock>
@@ -1169,7 +1188,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} that
-          is.) (PS: “Factored” means “written as a product”.)
+          is.) (NB: “Factored” means “written as a product”.)
         </OuterP>
         <Pause />
         <Example>
@@ -1208,7 +1227,7 @@ const Rest = () => {
               Example 5.
             </b>
             {" "}
-            The algebraic expression
+            The expression
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1336,7 +1355,7 @@ const Rest = () => {
       <Pause />
       <Section
         divider={false}
-        id="section-3"
+        id="section-4"
       >
         <OuterP>
           <b>
@@ -1369,8 +1388,8 @@ const Rest = () => {
           $$
           \begin&#123;align&#125;
           11\,\cdot\,13 &amp;= 12^2 - 1\\
-          10\,\cdot\,12 &amp;= 11^2 - 1\\
-          9\,\cdot\,11 &amp;= 10^2 - 1
+          10\,\cdot\,12 &amp;= 11^2 - 1 \up&#123;1.1&#125;\\
+          9\,\cdot\,11 &amp;= 10^2 - 1 \up&#123;1.1&#125;
           \end&#123;align&#125;
           $$
         </MathBlock>
@@ -1410,7 +1429,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-4">
+      <Section id="section-5">
         <OuterP>
           <b>
             Vocabulary.
@@ -1450,8 +1469,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          and so on. (Generally speaking, conjugate pairs
-          are good things to multiply together.)
+          and so on.
         </OuterP>
       </Section>
       <Pause />

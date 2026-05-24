@@ -2,10 +2,12 @@
 
     |> HeaderBlob
         !! TEST 1 : Little Bo Peep SVG
-        |> img
-            style=padding-top:0.65em;padding-bottom:0.4em;
-            src=public/header-blob.svg
+        !! |> img
+        !!     style=padding-top:0.65em;padding-bottom:0.4em;
+        !!     src=public/header-blob.svg
         !! TEST 2 : Wrapped Little Bo Peep SVGs
+        |> img
+            src=non-build-img/loading_screen.png
         !! |> img
         !!     style=padding-block:1em;
         !!     src=public/header-blob.svg
@@ -38,7 +40,7 @@
         >>chain        >>_ch6_start_
 
         !! appendices:
-        !! >>exercise-graveyard  >>exercise-graveyard-start
+        >>exercise-graveyard  >>exercise-graveyard-start
         !! >>classical-circle-theorems
 
     |> In
