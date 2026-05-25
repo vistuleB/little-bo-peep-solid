@@ -53,33 +53,28 @@ const Title = () => {
     }
   });
 
-  // Effect 1: Fixed tracking to recalculate position smoothly on resize
   createEffect(() => {
     if (!headerBlob || !imageLoaded()) return;
-
-    // 1. Explicitly invoke and pull reactive dependencies into the effect scope
     const contWidth = containerWidth(); 
     const innerWidth = store.innerWidth; 
-
-    // 2. Compute directly using the tracked variables instead of an untracked inner helper function
     const leftPos = innerWidth > MOBILE_MAX_WIDTH
       ? (contWidth - (DESKTOP_COLUMN_WIDTH - TEXT_X_PADDING * 2)) / 2
       : TEXT_X_PADDING;
-
     headerBlob.style.left = `${leftPos}px`;
   });
 
-  // Effect 2: Kept exactly as your working version to preserve flicker elimination
   createEffect(() => {
     if (!headerBlob || !imageLoaded()) return;
-    const blob = headerBlob;
-
-    setTimeout(() => {
-      const headerBlobHeight = blob.offsetHeight;
+    requestAnimationFrame(() => {
+      // ur not necessarily on the same page anymore
+      // because of the requestAnimationFrame (0.001% chance):
+      if (!headerBlob) return;
+      const headerBlobHeight = headerBlob.offsetHeight;
+      if (headerBlobHeight <= 0) return;
       const scale = 56 / headerBlobHeight;
-      blob.style.transform = `scale(${scale})`;
-      blob.style.opacity = "1";
-    }, 20);
+      headerBlob.style.transform = `scale(${scale})`;
+      headerBlob.style.opacity = "1";
+    });
   });
 
   return (

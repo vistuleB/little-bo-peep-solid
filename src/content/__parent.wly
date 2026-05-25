@@ -6,8 +6,8 @@
         !!     style=padding-top:0.65em;padding-bottom:0.4em;
         !!     src=public/header-blob.svg
         !! TEST 2 : Rabbit
-        |> img
-            src=non-build-img/loading_screen.png
+        !! |> img
+        !!     src=non-build-img/loading_screen.png
         !! TEST 3 : Wrapped Little Bo Peep SVGs
         !! |> img
         !!     style=padding-block:1em;
@@ -16,14 +16,14 @@
         !!     style=padding-block:1em;
         !!     src=public/header-blob.svg
         !! TEST 4 : Wrapped text
-        !! |> p
-        !!     Little Bo Peep
-        !!     |> br 
-        !!     Little Bo Peep
-        !!     |> br
-        !!     Little Bo Peep
-        !!     |> br
-        !!     Little Bo Peep
+        |> p
+            Little Bo Peep
+            |> br 
+            Little Bo Peep
+            |> br
+            Little Bo Peep
+            |> br
+            Little Bo Peep
 
     |> ChapterSelection
         content=selection
