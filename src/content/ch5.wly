@@ -672,8 +672,12 @@
 
 |> Section
 
-    *Auto-converting degrees to radians.*
-    We will consider the degree notation
+    !! *Auto-converting degrees to radians.*
+    !! We will consider the degree notation
+    !! “$^\circ$” to be pig lipstick on top of
+    !! radians by defining
+    *The degree “°” notation.*
+    We consider the degree notation
     “$^\circ$” to be pig lipstick on top of
     radians by defining
 
@@ -702,32 +706,41 @@
     45^\circ = 45 \cdot {\eta\over 90} = \eta/2,
     $$
 
-    !! per this definition.
     and so on.
 
-    In this way, in particular, we can write
+    Thus, for example,
 
     $$
-    \cos(90^\circ\hlfbk)
+    \cos(90^\circ\hlfbk) = \cos(\eta)
     $$
 
-    as a stand-in for
+    not because of anything to do with ‘cos’ or
+    by some sort of convention, etc, but because
+    $90^\circ$ and $\eta$ _are the same real number_.
 
-    $$
-    \cos(\eta)
-    $$
+    !! In this way, in particular, we can write
 
-    ...without committing any informality.
+    !! $$
+    !! \cos(90^\circ\hlfbk)
+    !! $$
 
-    (Note that
+    !! as a stand-in for
 
-    $$
-    \cos(\eta) = 0
-    $$
+    !! $$
+    !! \cos(\eta)
+    !! $$
 
-    in case you have any doubt, by the way—an
-    angle of $\eta$ puts you at the tippy-top
-    of the circle!)
+    !! ...without committing any informality.
+
+    !! (Note that
+
+    !! $$
+    !! \cos(\eta) = 0
+    !! $$
+
+    !! in case you have any doubt, by the way—an
+    !! angle of $\eta$ puts you at the tippy-top
+    !! of the circle!)
 
 |> Section
 
@@ -954,7 +967,7 @@
 
     *Scaling the circle.*
     In the following diagram, the coordinates
-    of the point $P$ are obviously $(\cos(\theta), \sin(\theta))$,
+    of the point $P$ are obviously $(\cos \theta, \sin\theta)$,
     because that is the definition of sin and cos:
 
     |> Image
@@ -971,16 +984,17 @@
     The coordinates are obviously the old coordinates
     scaled up/down by $r$, i.e.,
     $$
-    Q = (r\cos(\theta), r\sin(\theta))
+    Q = (r\cos\theta, r\sin\theta)
     $$
-    or, in individual formulas,
+    or
     $$
-    Q_x = r\cdot\cos(\theta)
+    \begin{aligned}
+    Q_x &= r\cdot\cos(\theta), \\
+    Q_y &= r\cdot\sin(\theta) \up{1.4}
+    \end{aligned}
     $$
-    $$
-    Q_y = r\cdot\sin(\theta)
-    $$
-    ...where $Q_x$, $Q_y$ are the $x$- and $y$- coordinates of $Q$.
+    where $(Q_x, Q_y) = Q$.
+    !! ...where $Q_x$, $Q_y$ are the $x$- and $y$- coordinates of $Q$.
 
 |> Section
 
@@ -1029,7 +1043,7 @@
     the equation
 
     $$
-    P = (0\cdot \cos(\theta), 0\cdot \sin(\theta))
+    P = (0\cdot \cos\theta, 0\cdot \sin\theta)
     $$
 
     namely.)
@@ -1751,14 +1765,6 @@
     which preserves north-south distances.)
 
 |> Section
-    try=this
-
-    *Hi.*
-
-|> Section
-    try=this
-    work=ing
-
     *Note on calculators.*
     Your calculator has “degree mode” and
     “radian mode”. If your calculator tells

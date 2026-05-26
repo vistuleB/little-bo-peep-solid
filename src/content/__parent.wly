@@ -1,32 +1,43 @@
 |> Book
-
     |> HeaderBlob
-        !! TEST 1 : Little Bo Peep SVG
+        !! TEST 1 : 'Little Bo Peep' SVG
         !! |> img
         !!     style=padding-top:0.65em;padding-bottom:0.4em;
         !!     src=public/header-blob.svg
-        !! TEST 2 : Rabbit
-        !! |> img
-        !!     src=non-build-img/loading_screen.png
-        !! TEST 3 : Wrapped Little Bo Peep SVGs
+
+        !! TEST 2: two vertically stacked 'Little Bo Peep' SVGs
         !! |> img
         !!     style=padding-block:1em;
         !!     src=public/header-blob.svg
         !! |> img
         !!     style=padding-block:1em;
         !!     src=public/header-blob.svg
-        !! TEST 4 : Wrapped text
-        |> p
-            Little Bo Peep
-            |> br 
-            Little Bo Peep
-            |> br
-            Little Bo Peep
-            |> br
-            Little Bo Peep
+
+        !! TEST 3: one <p> w/ many <br>
+        !! |> p
+        !!     Little Bo Peep
+        !!     |> br 
+        !!     Little Bo Peep
+        !!     |> br
+        !!     Little Bo Peep
+        !!     |> br
+        !!     Little Bo Peep
+
+        !! TEST 4: several <p>
+        !! |> p
+        !!     Little Bo Peep
+        !! |> p 
+        !!     Little Bo Peep
+        !! |> p
+        !!     Little Bo Peep
+        !! |> p
+        !!     Little Bo Peep
+
+        !! TEST 5: Loading Image
+        |> img
+            src=non-build-img/loading_screen.png
 
     |> ChapterSelection
-        content=selection
         !! bootcamps:
         >>sets         >>_bt2_start_  >>_bt2_exercises_
         >>powers       >>_bt1_start_
@@ -41,17 +52,14 @@
         >>chain        >>_ch6_start_
 
         !! appendices:
-        >>exercise-graveyard  >>exercise-graveyard-start
-        !! >>classical-circle-theorems
+        !! >>exercise-graveyard  >>exercise-graveyard-start
 
     |> In
-        content=selection
         chapter=>>playground
         >>grid-component
         >>table-component
 
     |> In
-        content=selection
         chapter=>>powers
         >>_2^-1_and_2^-3_and_2^-4_by_hand_
         >>_100_over_16_by_hand_
@@ -70,17 +78,14 @@
         >>_solve_for_a_b_c_
 
     |> In
-        content=selection
         chapter=>>sets
 
     |> In
-        content=selection
         chapter=>>refreshers
         >>_true_false_
         >>_approximate_1_over_n_minus_1_over_n+1_
 
     |> In
-        content=selection
         chapter=>>slopes
         >>_lines_of_slope_1_over_2_
         >>_x0_y0_slope_p_general_equation_
@@ -88,7 +93,6 @@
         >>_y0-px_0_intercept_explanation_
 
     |> In
-        content=selection
         chapter=>>functions
         >>_define_abs_val_by_cases_
         >>_define_abs_val_by_algebraic_formula_
@@ -112,7 +116,6 @@
         >>_summon_the_currying_
 
     |> In
-        content=selection
         chapter=>>derivatives
         >>_see_saw_
         >>_derivative_of_1_over_x_near_0_
@@ -128,7 +131,7 @@
         >>_four_particles_
         >>_sum_rule_summary_
         >>_difference_quotient_illustration_
-        >>_difference_quotient_nutshell_
+        !! >>_difference_quotient_nutshell_
         >>_verbal_to_arithmetic_A_change_
         >>_verbal_to_arithmetic_A_change_pt2_
         >>_change_in_f_
@@ -144,7 +147,6 @@
         >>_f_equals_f_17_
 
     |> In
-        content=selection
         chapter=>>trigonometry
         >>_guesstimate_cos_10x_linear_
         >>_guesstimate_cos_10x_parabolic_
@@ -310,5 +312,4 @@
         >>_periodicity_mod_2eta_
 
     |> In
-        content=selection
         chapter=>>classical-circle-theorems

@@ -1,4 +1,3 @@
-import { MOBILE_MAX_WIDTH } from "~/constants";
 import {
   createContext,
   onCleanup,
@@ -52,7 +51,7 @@ export const ExercisesStoreProvider: ParentComponent<{
   const [exercises_store, set_exercises_store] = createStore<Store>({
     selected_exo: 0,
     exercises: [],
-    list_view: false,
+    list_view: true,
   });
 
   const digit = props.group_id.replace(/\D/g, "");

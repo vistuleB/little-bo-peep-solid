@@ -54,10 +54,22 @@
 
     for every real number $x$, where $|x|$
     denotes the absolute value of $x$.
+    In words,
 
-    |> Pause
+    __the magnitude of a number is the
+    square root of its square__
 
-    *Note.* If ever you want to indicate both
+    where “magnitude” is a synonym of “absolute
+    value”. This fact is the “$1$-dimensional pythagorean
+    theorem”.
+    !! And we should emphasize that this
+    !! fact is not a mere algebraic curiosity, or
+    !! accident, it is a 1-dimensional form of the
+    !! Pythagorean theorem!
+
+    |> StarDivider
+
+    _Nota Bene._ If ever you want to indicate both
     solutions of the equation $x^2 = 4$ you
     can always use the notation “$\pm \sqrt{4}$”.
     This is what happens, for example, in the
@@ -67,14 +79,15 @@
     x = {-b \pm \sqrt{b^2 - 4ac} \over 2a}
     $$
 
-    for the solutions to the equation
-    $ax^2 + bx + c = 0$.
+    for the solutions to $x$ to $ax^2 + bx + c = 0$.
 
 |> Section
 
     *The square of a number between 0 and 1.*
     !! Next, we will ponder
-    We will pause to ponder the value of
+    !! We will 
+    One can
+    pause to ponder the value of
 
     $$
     \sqrt{0.5}
@@ -206,7 +219,7 @@
 
     by the same reasoning, which explains why
     dividing by smaller and smaller numbers produces
-    larger and larger results.
+    larger and larger results. (Also, why dividing by $0$ is undefined.)
     !! and by extension why dividing by $0$ is undefined.
     !! (No amount of
     !! multiplying the ‘$0$’ will give you the numerator
@@ -404,7 +417,7 @@
     (a + b)(a + (-b)) = aa + a(-b) + ba + b(-b)
     $$
 
-    or, less pedantically,
+    or
 
     $$
     (a + b)(a - b) = aa - ab + ba - bb
@@ -490,8 +503,8 @@
     $$
     \begin{align}
     (-1)(a - b) \,&=\, (-1)(a + (-b)) \\
-    \,&=\, (-1)a + (-1)(-b) \\
-    \,&=\, -a + b
+    \,&=\, (-1)a + (-1)(-b) \up{1.1} \\
+    \,&=\, -a + b \up{1.1}
     \end{align}
     $$
 
@@ -502,8 +515,9 @@
         We have $-(10 - 3) = 3 - 10$.
         (Because $-7 = -7$, as it would be, haha.)
 
+    |> StarDivider
+
 |> Section
-    divider=false
 
     *Epilogue.* Do you remember the near miss between
 

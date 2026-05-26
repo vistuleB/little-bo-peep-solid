@@ -134,8 +134,7 @@ export default function __Chapter2__() {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          ...which is an alternate, more elegant description
-          of the same concept.
+          ...which is an alternate, more elegant description.
         </OuterP>
         <OuterP class="indent-10">
           For example, the line below has slope 1, because
@@ -293,7 +292,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          more succinctly. We call this the {" "}
+          more succinctly. We call this equation the {" "}
           <i>
             slope formula
           </i>
@@ -899,7 +898,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          or “run equals rise over slope”. Thus:
+          or “run equals rise over slope”. Or:
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/2sTW.svg" />
@@ -1464,8 +1463,8 @@ const Rest = () => {
           </NoBreak>
           {" "} By extension, taking all
           three permutations of the slope formula into account
-          gives us this alternate flowerbed, commonly useful
-          in “applied” problems:
+          gives us this alternate triptyc of equations, expressing
+          the same idea(s) in “applied” language:
         </OuterP>
         <Pause />
         <Image src="/build-img/svgo-svg/lT_G.svg" />

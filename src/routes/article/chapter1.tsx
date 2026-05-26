@@ -10,6 +10,7 @@ import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageLeft, ImageRight }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
+import { StarDivider }  from "~/components/StarDivider";
 import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
@@ -175,12 +176,35 @@ export default function __Chapter1__() {
             </Math>
             .
           </NoBreak>
+          {" "}
+          In words,
         </OuterP>
         <Pause />
+        <CentralDisplayItalic>
+          the magnitude of a number is the
+          square root of its square
+        </CentralDisplayItalic>
+        <Pause />
         <OuterP>
-          <b>
-            Note.
-          </b>
+          where “magnitude” is a synonym of “absolute
+          value”. This fact is the {" "}
+          <NoBreak>
+            “
+            <Math>
+              $1$
+            </Math>
+            -dimensional
+          </NoBreak>
+          {" "} pythagorean
+          theorem”.
+        </OuterP>
+        <Pause />
+        <StarDivider />
+        <Pause />
+        <OuterP>
+          <i>
+            Nota Bene.
+          </i>
           {" "} If ever you want to indicate both
           solutions of the equation {" "}
           <Math>
@@ -207,8 +231,11 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          for the solutions to the equation
-          {" "}
+          for the solutions to {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} to {" "}
           <NoBreak>
             <Math>
               $ax^2 + bx + c = 0$
@@ -233,7 +260,8 @@ const Rest = () => {
             The square of a number between 0 and 1.
           </b>
           {" "}
-          We will pause to ponder the value of
+          One can
+          pause to ponder the value of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -702,7 +730,11 @@ const Rest = () => {
         <OuterP>
           by the same reasoning, which explains why
           dividing by smaller and smaller numbers produces
-          larger and larger results.
+          larger and larger results. (Also, why dividing by {" "}
+          <Math>
+            $0$
+          </Math>
+          {" "} is undefined.)
         </OuterP>
         <Pause />
         <OuterP>
@@ -1116,7 +1148,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          or, less pedantically,
+          or
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1317,8 +1349,8 @@ const Rest = () => {
           $$
           \begin&#123;align&#125;
           (-1)(a - b) \,&amp;=\, (-1)(a + (-b)) \\
-          \,&amp;=\, (-1)a + (-1)(-b) \\
-          \,&amp;=\, -a + b
+          \,&amp;=\, (-1)a + (-1)(-b) \up&#123;1.1&#125; \\
+          \,&amp;=\, -a + b \up&#123;1.1&#125;
           \end&#123;align&#125;
           $$
         </MathBlock>
@@ -1351,12 +1383,11 @@ const Rest = () => {
             {" "} as it would be, haha.)
           </OuterP>
         </Example>
+        <Pause />
+        <StarDivider />
       </Section>
       <Pause />
-      <Section
-        divider={false}
-        id="section-4"
-      >
+      <Section id="section-4">
         <OuterP>
           <b>
             Epilogue.

@@ -36,6 +36,12 @@ const HamburgerPanelAuthorSuppliedContents = () => {
         >
           The Trigonometric Functions
         </HamburgerPanelItem>
+        <HamburgerPanelItem
+          article_type={6}
+          href="chapter6"
+        >
+          Dimensional Analysis
+        </HamburgerPanelItem>
       </ul>
     </div>
     <div id="bootcamp">
@@ -52,17 +58,6 @@ const HamburgerPanelAuthorSuppliedContents = () => {
           href="bootcamp2"
         >
           Powers of 10
-        </HamburgerPanelItem>
-      </ul>
-    </div>
-    <div id="appendix">
-      <HamburgerPanelTitle label="Appendices" />
-      <ul>
-        <HamburgerPanelItem
-          article_type="A"
-          href="appendixA"
-        >
-          Cutting Room Floor Exercises
         </HamburgerPanelItem>
       </ul>
     </div>

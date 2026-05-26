@@ -27,8 +27,7 @@
     unit of horizontal change__
 
     !! ...more elegant!
-    ...which is an alternate, more elegant description
-    of the same concept.
+    ...which is an alternate, more elegant description.
 
     For example, the line below has slope 1, because
     it goes up by $1$ unit for each unit to the right:
@@ -90,7 +89,7 @@
         offset_y=-0.7em
         offset_x=3em
 
-    more succinctly. We call this the _slope formula_.
+    more succinctly. We call this equation the _slope formula_.
 
     |> Example
 
@@ -392,7 +391,9 @@
     \te{run} = {\te{rise} \over \te{slope}}
     $$
 
-    or “run equals rise over slope”. Thus:
+    or “run equals rise over slope”. Or:
+    !! This gives us a triptic of equations:
+    !! Thus, we have a triptych:
 
     |> Image
         src=images/48.svg
@@ -571,8 +572,10 @@
     where “amount of change” is short for “amount of
     change on the $y$-axis”. By extension, taking all
     three permutations of the slope formula into account
-    gives us this alternate flowerbed, commonly useful
-    in “applied” problems:
+    gives us this alternate triptyc of equations, expressing
+    the same idea(s) in “applied” language:
+    !! flowerbed, 
+    !! commonly useful in “applied” problems:
 
     |> Image
         src=images/53.svg

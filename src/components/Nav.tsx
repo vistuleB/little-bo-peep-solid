@@ -55,11 +55,10 @@ const Title = () => {
 
   createEffect(() => {
     if (!headerBlob || !imageLoaded()) return;
-    const contWidth = containerWidth(); 
-    const innerWidth = store.innerWidth; 
-    const leftPos = innerWidth > MOBILE_MAX_WIDTH
-      ? (contWidth - (DESKTOP_COLUMN_WIDTH - TEXT_X_PADDING * 2)) / 2
-      : TEXT_X_PADDING;
+    const columnLeft = store.innerWidth > MOBILE_MAX_WIDTH
+      ? (containerWidth() - DESKTOP_COLUMN_WIDTH) / 2
+      : 0;
+    const leftPos = columnLeft + TEXT_X_PADDING;
     headerBlob.style.left = `${leftPos}px`;
   });
 

@@ -22,8 +22,10 @@
     __dimensional__
 
     means “that which relates to
-    dimensions or units”, not
-    “that which relates to dimensions”.
+    dimensions _or_ units”, 
+    i.e., there is no standalone term for
+    “that which relates to units”, so we have this catch-all instead.
+    !! not “that which relates to dimensions”.
     !! —i.e., it doesn't just mean
     !! “that which relates to dimensions”. 
     !! (Lest you be fooled.)
@@ -33,7 +35,7 @@
     _Dimensional analysis_ is the art of 
     checking the units and/or dimensions on an equation or
     formula, or of guessing such formulas by
-    consideration thereof.
+    consideration thereof!
 
 |> Section
     *Function signatures.*
@@ -60,6 +62,7 @@
     !! $$
     !! \Large\te{“}[\te{A}] \ra [\te{B}]\te{”}
     !! $$
+    or to the notation “$[\tA] \ra [\tB]$”
     as the
     _signature_
     of $f$.
@@ -130,7 +133,8 @@
     |> Image
         src=tmp-images/c6_true_counterclockwiseness_2.svg
 
-    (This actually happens inside of SVG, the web-based
+    (Not that anyone cares,
+    but this actually happens inside of SVG, the web-based
     standard for so-called “vector graphics”, in which the $y$
     axis points downwards; in an SVG file, 
     |> span
@@ -234,7 +238,7 @@
 
     would be the most general signature 
     that one could hope for, in order for the sum to not
-    be nonsencial; but even this is too optimistic,
+    be nonsencial; but this is still too optimistic,
     since we actually need
 
     $$
@@ -247,9 +251,10 @@
 
     in order not to add apples to oranges at the output
     end, 
-    either, 
-    with “$f(x) =$ apples” and “$g(x) =$ oranges” being
-    the dreaded combination. 
+    either, i.e., to avoid 
+    “$f(x) =$ apples”, “$g(x) =$ oranges”.
+    !! with “$f(x) =$ apples” and “$g(x) =$ oranges” being
+    !! a forbidden combination. 
 
     By contrast, when multiplying two functions we can
     stomach the output units to be different since
@@ -301,39 +306,66 @@
     As reviewed in [Chapter >>derivatives#decoy:4](>>units_of_the_derivative)
     (see also Exercise >>_complete_the_missing_units_#decoy:6 of Chapter >>derivatives#decoy:4),
     differentiation divides the units of the output
-    by the units of the input. In terms of signatures, we have
-
-    $$
-    \Large f' : [\tA] \ra [\tB/\tA]
-    $$
-
-    if and only if
-
+    by the units of the input. 
+    In terms of signatures,
     $$
     \Large f : [\tA] \ra [\tB]
     $$
-    
-    for any units A, B. 
-    !! This also
-    !! implies, 
-    !! To put it differently,
-    Or,
-
-    $$
-    \Large f : [\tC] \ra \left[{\tC\tD}\right]
-    $$
-
     if and only if
-
+    $$
+    \Large f' : [\tA] \ra [\tB/\tA]
+    $$
+    for any units A, B.
+    By the same token, the “if and only if”-ness
+    implies that
+    !! and vice-versa—for the “vice-versa” part, what
+    !! we mean more exactly is that
     $$
     \Large f' : [\tC] \ra [\tD]
     $$
+    if and only if
+    $$
+    \Large f : [\tC] \ra [\tC\tD]
+    $$
+    for any units C, D. (Think that C is playing the
+    role of A, while D plays the role of B/A.)
+    !! (Again: and vice-versa, or
+    !! we could have said “if and only if” instead of “implies”.)
+
     
-    for any units C, D, to put it differently.
-    (I.e., to recover the
-    signature of $f$ from the signature of $f'$ one
-    needs to multiply the output units of $f'$ by the input units
-    of $f'$, while keeping the input units the same.)
+    !! In terms of signatures, we have
+
+    !! $$
+    !! \Large f' : [\tA] \ra [\tB/\tA]
+    !! $$
+
+    !! if and only if
+
+    !! $$
+    !! \Large f : [\tA] \ra [\tB]
+    !! $$
+    
+    !! for any units A, B. 
+    !! This also
+    !! implies, 
+    !! To put it differently,
+    !! Or,
+
+    !! $$
+    !! \Large f : [\tC] \ra \left[{\tC\tD}\right]
+    !! $$
+
+    !! if and only if
+
+    !! $$
+    !! \Large f' : [\tC] \ra [\tD]
+    !! $$
+    
+    !! for any units C, D, to put it differently.
+    !! (I.e., to recover the
+    !! signature of $f$ from the signature of $f'$ one
+    !! needs to multiply the output units of $f'$ by the input units
+    !! of $f'$, while keeping the input units the same.)
 
 |> Section
     *The differentation “operator”.*
@@ -750,7 +782,7 @@
 
 |> Section
 
-    *The early afteroon product rule.*
+    *The “early afteroon product rule”.*
     Gottfried Leibniz, co-inventor of calculus,
     initially guessed that 
 
@@ -1045,7 +1077,7 @@
     !! |> Image
     !!     src=tmp-images/c6_spoiler_alert_diagonal.svg
 
-    Starting off,
+    To begin with,
 
     $$
     \Large (f\circ g)'
@@ -1117,6 +1149,7 @@
     $$
 
     !! instead of $f'g'$, 
+    (a product of functions),
     which makes sense since on the one hand
 
     $$
@@ -1385,21 +1418,22 @@
         (\cos \circ \cos)'(x) = (-\sin(\cos(x)))\cdot(-\sin(x))
         $$
 
-        —matching the form of the last boxed equation
-        above—or
+        !! —matching the form of the last boxed equation
+        !! above—
+        or
         
         $$
         \tag{1}
         (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x)
         $$
 
-        cancelling the minus signs; to be quite specific, e.g., 
+        cancelling the minus signs; for example,
 
         $$
         (\cos \circ \cos)'(2.5)
         $$
         
-        which is the slope of 
+        which to be clear is the slope of 
 
         $$
         y = \cos(\cos(x))
@@ -1411,8 +1445,8 @@
         \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
         $$
 
-        by (1), which a graph of $\cos(\cos(x))$ seems to
-        attest to, visually (well it's the correct value so no wonder):
+        by (1), which a graph of $\cos(\cos(x))$ seems to attest
+        to, visually from afar at least:
 
         |> Image
             src=tmp-images/c6_sin_of_sin_graph.svg
@@ -1423,19 +1457,19 @@
         -1 \leq \cos(x) \leq 1
         $$
         
-        the values of $\cos(\cos(x))$ are stuck between
+        the values of $\cos(\cos(x))$ remain stuck between
 
         $$
         \cos(\pm 1) = \cos(\pm 57.29\ldots^\circ) \approx 0.54
         $$
 
-        at the low end and $\cos(0) = 1$ at the high end,
+        and $\cos(0) = 1$
         which produces the graph above, that one can actually
         think of as the $x$-coordinate of a certain horizontal
         windshield-wiper whose angle at time $t$ is $\cos(t)$.)
-        (Producing limited oscillation of the windshield-wiper
-        between $-1\te{Rad}\approx -57.29^\circ$ and $+1\te{Rad} \approx +57.29^\circ$,
-        as opposed to full-circle oscillation covering all angles.)
+        !! (Producing limited oscillation of the windshield-wiper
+        !! between $-1\te{Rad}\approx -57.29^\circ$ and $+1\te{Rad} \approx +57.29^\circ$,
+        !! as opposed to full-circle oscillation covering all angles.)
 
     !! |> Example
 
@@ -1527,10 +1561,19 @@
     Relatedly to this idea of the original “vanilla”
     $xy$-plane having dimensionless axes, you may
     have seen people label axes this way, writing
-    “time/s” instead of “time $[\te{s}]$”:
+    “time/s” instead of “time $[\te{s}]$”, e.g.:
+
+    !! |> Image
+    !!     src=tmp-images/c6_dimensionless_plane_1_v3.svg
+    !!     style=margin-top:-1.4em
+
+    !! |> Image
+    !!     src=tmp-images/c6_dimensionless_plane_1_v2.svg
+    !!     style=margin-top:-1.4em
 
     |> Image
-        src=tmp-images/c6_dimensionless_plane_1.svg
+        src=tmp-images/c6_dimensionless_plane_1_v1.svg
+        style=margin-top:-1.4em
 
     The idea behind this notation is that the plane
     itself is a dimensionless object, so by doing
@@ -1539,29 +1582,33 @@
     \Large {\te{time}\over\te{s}}
     $$
 
-    where “time” is a time measurements in seconds,
+    where “time” is a time measurement in seconds,
     we have “taken the units out of the measurement”
     and obtained a “pure number” that “fits” inside
     the plane; (!); for example, this ‘$3$’ here...
 
     |> Image
-        src=tmp-images/c6_dimensionless_plane_2.svg
+        src=tmp-images/c6_dimensionless_plane_1_v1_circled.svg
 
-    ...is really a “$3$ without any units” because
-    the entire plane is dimensionless, but if we
-    follow the semantics of the axis label, we find...
+    ...is really a $3$ without any units—the “pure” $3$—because
+    the entire plane is dimensionless, but 
+    !! following the axis label, we find...
+    !! if we take the axis label at its word, we have...
+    !! follow the semantics of the axis label, we find...
 
     $$
     \Large 3 = {\te{time}\over \te{s}}
     $$
 
-    ...which implies...
+    !! ...which implies...
+    !! which turns into
+    with a “pure $3$” on the left implies
 
     $$
     \Large 3\te{s} = \te{time}
     $$
 
-    ...or “time equals $3$ seconds”, i.e., that vertical
+    or “time equals $3$ seconds”, i.e., that vertical
     slice of the plane corresponds to the moment when
     the “time” variable—which _does_ have units—equals
     $3$ _seconds_, not just ‘$3$’, the pure number!

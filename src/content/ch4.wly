@@ -77,8 +77,8 @@
     |> Image
         src=images/svg_ch4_ch_one_sided_tangent.svg
 
-    (In other words, what one might describe as
-    “half-tangents” do not actually count as tangents.)
+    In other words, what one might describe as
+    “half-tangents” do not actually count as tangents!
 
 |> Section
     *Vocabulary.*
@@ -168,7 +168,7 @@
         offset_x= 8em
 
     because at each $x$-value you find a slope of
-    $0$, when you look up (down?) at the graph.
+    $0$, when you look up or down at the graph.
 
     If we refer to
     $$
@@ -222,12 +222,13 @@
     __~ the derivative of the affine function
     $y = ax + b$ is the constant function $y = a$ ~__
 
-    Or, flexing our linguistic prowess a tad more:
+    !! Or, flexing our linguistic prowess a tad more:
+    Or:
 
     __~ the derivative of an affine function is
     the coefficient of its linear term ~__
 
-    (The “linear term” of $y = ax + b$ is $ax$,
+    (The “linear term” of $y = ax + b$ is “$ax$”,
     of coefficient $a$.)
 
     |> Example
@@ -561,7 +562,7 @@
 
     __acceleration__
 
-    as a function of time.
+    (!) as a function of time.
 
     Note that the units on the $y$ axis of the
     second derivative are given by
@@ -683,7 +684,8 @@
 
     __meters per second, per second, per second__
 
-    which is mildly amusing. Basically, the
+    !! which might sound mildly amusing, but, basically, 
+    which is to say that the
     jerk specifies how many _meters per second,
     per second_ (a measure of acceleration!)
     is being gained or lost _per second_.

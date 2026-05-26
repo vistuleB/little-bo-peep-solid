@@ -58,21 +58,28 @@
             $$
             h = 0.001
             $$
-            above; what this underscores is that this diagram...
+            above; what this underscores is that this diagram
+            can be completed in either of two ways to illustrate
+            a difference quotient, shown by the two diagrams
+            immediately below:
 
             |> Image
                 src=images/_e5_verbal_to_arithmetic_note1.svg
 
-            ...can either be completed to illustrate
-            a difference quotient like this...
+            !! ...can either be completed to illustrate
+            !! a difference quotient like this...
 
             |> Image
                 src=images/svg_ch4_newton_quotient_finished.svg
 
-            ...or else like this...
+            !! ...or else like this...
 
             |> Image
                 src=images/_e5_verbal_to_arithmetic_note3.svg
 
-            ...with $x$ and $x + h$ interchanged, and with a sign
-            change in $h$, computing the same slope of the same secant!
+            !! ...with $x$ and $x + h$ interchanged, and with a sign
+            !! change in $h$, computing the same slope of the same secant!
+            In the last diagram $x$ and $x + h$
+            are interchanged, and $h$ has changed signs,
+            but the difference quotient gives
+            the same slope of the same secant!

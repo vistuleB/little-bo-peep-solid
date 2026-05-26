@@ -1,15 +1,7 @@
 
 const HeaderBlob = () => {
   return <>
-    <p>
-      Little Bo Peep
-      <br />
-      Little Bo Peep
-      <br />
-      Little Bo Peep
-      <br />
-      Little Bo Peep
-    </p>
+    <img src="/non-build-img/loading_screen.png" />
   </>;
 };
 

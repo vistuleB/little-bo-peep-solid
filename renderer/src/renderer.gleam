@@ -325,20 +325,10 @@ pub fn main() {
   let exports_dict = ei.lbp_exports_dictionary()
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
   let only = amendments.only_key_vals != [] || amendments.only_paths != []
-
-  let renderer =
-    ds.Renderer(
-      assembler: ds.default_writerly_assembler(_, amendments.only_paths),
-      parser: ds.default_writerly_parser,
-      pipeline: our_pipeline(only, dict.has_key(amendments.user_args, remove_unused_build_img_option), dict.has_key(amendments.user_args, author_mode)),
-      splitter: our_splitter,
-      emitter: our_emitter(_, imports_lookup),
-      writer: ds.default_writer,
-      prettifier: ds.default_prettier_prettifier,
-    )
-    |> ds.amend_renderer_by_command_line_amendments(amendments)
-
   let output_dir = "../src"
+
+  let _ = Some(1)
+  let _ = None
 
   let parameters =
     ds.RendererParameters(
@@ -357,17 +347,18 @@ pub fn main() {
     )
     |> ds.amend_renderer_options_by_command_line_amendments(amendments)
 
-  // safegard content=selection nodes:
-  let options = case options.only_key_vals {
-    [] -> options
-    _ -> {
-      let only_key_vals = [#("content", "selection"), ..options.only_key_vals]
-      ds.RendererOptions(..options, only_key_vals: only_key_vals)
-    }
-  }
-
-  let _ = Some(1)
-  let _ = None
+  let renderer =
+    ds.Renderer(
+      assembler: ds.default_writerly_assembler(_, options),
+      parser: ds.default_writerly_parser,
+      filterer: ds.default_filterer(_, options, ["In", "HeaderBlob", "ChapterSelection"]),
+      pipeline: our_pipeline(only, dict.has_key(amendments.user_args, remove_unused_build_img_option), dict.has_key(amendments.user_args, author_mode)),
+      splitter: our_splitter,
+      emitter: our_emitter(_, imports_lookup),
+      writer: ds.default_writer,
+      prettifier: ds.default_prettier_prettifier,
+    )
+    |> ds.amend_renderer_by_command_line_amendments(amendments)
 
   // computation of 'existing_artifacts'
   let article_dir = output_dir <> "/routes/article"

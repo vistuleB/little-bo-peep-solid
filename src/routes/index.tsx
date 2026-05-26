@@ -44,6 +44,12 @@ export default function __Home__() {
           >
             The Trigonometric Functions
           </TOCItem>
+          <TOCItem
+            article_type={6}
+            href="chapter6"
+          >
+            Dimensional Analysis
+          </TOCItem>
         </ul>
       </div>
       <Spacer />
@@ -61,18 +67,6 @@ export default function __Home__() {
             href="bootcamp2"
           >
             Powers of 10
-          </TOCItem>
-        </ul>
-      </div>
-      <Spacer />
-      <div id="appendix">
-        <TOCTitle label="Appendices" />
-        <ul>
-          <TOCItem
-            article_type="A"
-            href="appendixA"
-          >
-            Cutting Room Floor Exercises
           </TOCItem>
         </ul>
       </div>
