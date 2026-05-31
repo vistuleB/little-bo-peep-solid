@@ -21,17 +21,17 @@ export default function __Chapter1__() {
       nextPage="/article/chapter2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_24_hgi_"
+      id="_25_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=first-section">
-            the square root of a square
+            square roots
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-1">
-            the square of a number between 0 and 1
+            square roots (bis)
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
@@ -66,14 +66,14 @@ export default function __Chapter1__() {
       <Section id="first-section">
         <OuterP>
           <b>
-            The square root of a square.
+            Square roots.
           </b>
           {" "}
           Due to the fact that “minus times minus is plus”
-          (the enemy of my enemy is my friend),
+          (the enemy of my enemy is my friend)
+          and that “plus times plus is plus”,
           any nonzero number multiplied by itself
-          is positive.
-          For example,
+          is positive. For example,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -83,7 +83,8 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          is positive, and
+          is positive, 
+          while, of course,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -93,7 +94,8 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          is positive as well. But {" "}
+          is positive as well. 
+          But {" "}
           <Math>
             $\sqrt&#123;4&#125;$
           </Math>
@@ -176,36 +178,9 @@ export default function __Chapter1__() {
             </Math>
             .
           </NoBreak>
-          {" "}
-          In words,
         </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          the magnitude of a number is the
-          square root of its square
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          where “magnitude” is a synonym of “absolute
-          value”. This fact is the {" "}
-          <NoBreak>
-            “
-            <Math>
-              $1$
-            </Math>
-            -dimensional
-          </NoBreak>
-          {" "} pythagorean
-          theorem”.
-        </OuterP>
-        <Pause />
-        <StarDivider />
-        <Pause />
-        <OuterP>
-          <i>
-            Nota Bene.
-          </i>
-          {" "} If ever you want to indicate both
+        <OuterP class="indent-10">
+          (NB: If ever you want to indicate both
           solutions of the equation {" "}
           <Math>
             $x^2 = 4$
@@ -240,7 +215,7 @@ export default function __Chapter1__() {
             <Math>
               $ax^2 + bx + c = 0$
             </Math>
-            .
+            .)
           </NoBreak>
         </OuterP>
       </Section>
@@ -257,11 +232,10 @@ const Rest = () => {
       <Section id="section-1">
         <OuterP>
           <b>
-            The square of a number between 0 and 1.
+            Square roots (bis).
           </b>
           {" "}
-          One can
-          pause to ponder the value of
+          We next ponder the value of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -271,7 +245,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          which value is, by definition, the unique
+          which is, by definition, the unique
           nonnegative solution {" "}
           <Math>
             $x$
@@ -677,8 +651,8 @@ const Rest = () => {
         <Pause />
         <OuterP>
           our possible points of view are going to be
-          more restricted. Thankfully, we can
-          still characterize the latter fraction as the
+          more restricted. Thankfully, though, we can
+          still characterize this fraction as the
           answer to the question “how many times does
           {" "}
           <Math>
@@ -689,7 +663,7 @@ const Rest = () => {
             <Math>
               $1$
             </Math>
-            ?”
+            ?”,
           </NoBreak>
           {" "} as in the third option
           above—from which,
@@ -741,7 +715,7 @@ const Rest = () => {
           <b>
             Note.
           </b>
-          {" "} In general the ratio of two decimal
+          {" "} In general, the ratio of two decimal
           numbers can be turned into a ratio of integers
           by multiplying the ratio top and bottom by a
           suitable power of {" "}
@@ -768,7 +742,7 @@ const Rest = () => {
           </Math>
           {" "}
           really is
-          (one second):
+          (one second!):
         </OuterP>
         <Pause />
         <MathBlock>
@@ -798,7 +772,22 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "} (Interesting, no?)
+          {" "}
+          (Check yourself: {" "}
+          <Math>
+            $70$
+          </Math>
+          {" "} is {" "}
+          <Math>
+            $75\%$
+          </Math>
+          {" "} greater than {" "}
+          <NoBreak>
+            <Math>
+              $40$
+            </Math>
+            .)
+          </NoBreak>
         </OuterP>
       </Section>
       <Pause />
@@ -808,7 +797,7 @@ const Rest = () => {
             Distributivity.
           </b>
           {" "}
-          As you might already know, a number that
+          As you might already know a number that
           multiplies a sum can be brought “inside” the
           sum. For example,
         </OuterP>
@@ -843,7 +832,7 @@ const Rest = () => {
           {" "} for short.
         </OuterP>
         <OuterP class="indent-10">
-          (We might finally clarify that {" "}
+          (We might clarify that {" "}
           <NoBreak>
             ‘
             <Math>
@@ -892,8 +881,7 @@ const Rest = () => {
         <Pause />
         <OuterP>
           because multiplication takes precedence over
-          addition,
-          absent parentheses to clarify the order of operations.)
+          addition, absent parentheses.)
         </OuterP>
         <OuterP class="indent-10">
           A little more generally, one has such identities
@@ -973,7 +961,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example>
+        <Example id="_21_hgi_">
           <OuterP>
             <b>
               Example 2.
@@ -1112,7 +1100,14 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            which agrees with Example 2.
+            obtaining the same result as {" "}
+            <InChapterLink
+              href="/article/chapter1#_21_hgi_"
+              class="in-chapter-link"
+            >
+              Example 2
+            </InChapterLink>
+            &#8288;.
           </OuterP>
         </Example>
         <Pause />
@@ -1507,10 +1502,10 @@ const Rest = () => {
       <Exercises
         at_end_of_page={true}
         show_curlicue={true}
-        id="_23_hgi_"
+        id="_24_hgi_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_21_hgi_">
+          <ExerciseStatement id="_22_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2670,7 +2665,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_22_hgi_">
+          <ExerciseStatement id="_23_hgi_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2678,7 +2673,7 @@ const Rest = () => {
               {" "}
               In the solution to {" "}
               <InChapterLink
-                href="/article/chapter1#_21_hgi_"
+                href="/article/chapter1#_22_hgi_"
                 class="in-chapter-link"
               >
                 Exercise 1

@@ -2,14 +2,15 @@
     handle=_ch1_start_
     id=first-section
 
-    *The square root of a square.*
+    *Square roots.*
     !! As “minus times minus
     !! is plus” and “plus times plus is plus”
     Due to the fact that “minus times minus is plus”
-    (the enemy of my enemy is my friend),
+    (the enemy of my enemy is my friend)
+    and that “plus times plus is plus”,
+    !! (the enemy of my enemy is my friend),
     any nonzero number multiplied by itself
-    is positive.
-    For example,
+    is positive. For example,
     !! You might remember that “minus times minus
     !! is plus” and that “plus times plus is plus”.
     !! (Why? The enemy of my enemy is my friend.)
@@ -21,13 +22,14 @@
     $$
 
     !! (“minus times minus is plus”) 
-    is positive, and
-
+    is positive, 
+    !! as is $2 \times 2 = 4$.
+    while, of course,
     $$
     2 \times 2 = 4
     $$
-
-    is positive as well. But $\sqrt{4}$
+    is positive as well. 
+    But $\sqrt{4}$
     is, by definition, the unique _nonnegative_
     solution to $x^2 = 4$.
     Hence,
@@ -54,22 +56,22 @@
 
     for every real number $x$, where $|x|$
     denotes the absolute value of $x$.
-    In words,
+    !! In words,
 
-    __the magnitude of a number is the
-    square root of its square__
+    !! __the magnitude of a number is the
+    !! square root of its square__
 
-    where “magnitude” is a synonym of “absolute
-    value”. This fact is the “$1$-dimensional pythagorean
-    theorem”.
-    !! And we should emphasize that this
-    !! fact is not a mere algebraic curiosity, or
-    !! accident, it is a 1-dimensional form of the
-    !! Pythagorean theorem!
+    !! where “magnitude” is a synonym of “absolute
+    !! value”. This fact is the “$1$-dimensional pythagorean
+    !! theorem”.
+    !! !! And we should emphasize that this
+    !! !! fact is not a mere algebraic curiosity, or
+    !! !! accident, it is a 1-dimensional form of the
+    !! !! Pythagorean theorem!
 
-    |> StarDivider
+    !! |> StarDivider
 
-    _Nota Bene._ If ever you want to indicate both
+    (NB: If ever you want to indicate both
     solutions of the equation $x^2 = 4$ you
     can always use the notation “$\pm \sqrt{4}$”.
     This is what happens, for example, in the
@@ -79,21 +81,24 @@
     x = {-b \pm \sqrt{b^2 - 4ac} \over 2a}
     $$
 
-    for the solutions to $x$ to $ax^2 + bx + c = 0$.
+    for the solutions to $x$ to $ax^2 + bx + c = 0$.)
 
-|> Section
-
-    *The square of a number between 0 and 1.*
+    !! |> Section
+    !!     *The square root of a number between 0 and 1.*
     !! Next, we will ponder
     !! We will 
-    One can
-    pause to ponder the value of
+    !! One can ponder the value of
+
+|> Section
+    *Square roots (bis).*
+    !! *Square root of a number between 0 and 1.*
+    We next ponder the value of
 
     $$
     \sqrt{0.5}
     $$
 
-    which value is, by definition, the unique
+    which is, by definition, the unique
     nonnegative solution $x$ to
 
     $$
@@ -200,10 +205,10 @@
     $$
 
     our possible points of view are going to be
-    more restricted. Thankfully, we can
-    still characterize the latter fraction as the
+    more restricted. Thankfully, though, we can
+    still characterize this fraction as the
     answer to the question “how many times does
-    $0.01$ go into $1$?” as in the third option
+    $0.01$ go into $1$?”, as in the third option
     above—from which,
 
     $$
@@ -230,7 +235,7 @@
 
     |> Pause
 
-    *Note.* In general the ratio of two decimal
+    *Note.* In general, the ratio of two decimal
     numbers can be turned into a ratio of integers
     by multiplying the ratio top and bottom by a
     suitable power of $10$. E.g.:
@@ -242,7 +247,7 @@
     This example was chosen randomly, and, if you
     allow, we would like to see how large $71/40$
     really is
-    (one second):
+    (one second!):
 
     $$
     \begin{align}
@@ -253,13 +258,15 @@
     $$
 
     ...so we find, among others, that $71$ is exactly
-    $77.5\%$ greater than $40$. (Interesting, no?)
+    $77.5\%$ greater than $40$.
+    (Check yourself: $70$ is $75\%$ greater than $40$.)
+    !! (Interesting, no?)
 
 
 |> Section
 
     *Distributivity.*
-    As you might already know, a number that
+    As you might already know a number that
     multiplies a sum can be brought “inside” the
     sum. For example,
 
@@ -277,7 +284,7 @@
     _distributivity of multiplication over addition_,
     or _distributivity_ for short.
 
-    (We might finally clarify that ‘$\cdot$’ means
+    (We might clarify that ‘$\cdot$’ means
     “times”, i.e., the same as ‘$\times$’. Moreover,
     when we write
 
@@ -298,8 +305,7 @@
     $$
 
     because multiplication takes precedence over
-    addition,
-    absent parentheses to clarify the order of operations.)
+    addition, absent parentheses.)
 
     A little more generally, one has such identities
     as
@@ -348,6 +354,7 @@
         so $12 \times 14 = 168$.
 
     |> Example
+        handle=10_plus_3_squared
 
         One has
 
@@ -403,7 +410,8 @@
         \end{align}
         $$
 
-        which agrees with Example 2.
+        !! which agrees with Example 2.
+        obtaining the same result as Example >>10_plus_3_squared.
 
     On the other hand, setting $C = a$, $D = -b$ in
 

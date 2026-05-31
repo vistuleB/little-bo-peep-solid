@@ -8,6 +8,7 @@ import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
+import { StarDivider }  from "~/components/StarDivider";
 import TextParent  from "~/components/TextParent";
 import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
@@ -19,67 +20,57 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_151_hgi_"
+      id="_156_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            terminology: “dimension” vs. “dimensional”
+            function signatures
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            what is dimensional analysis
+            dimensionless units
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
-            function signatures
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
-            dimensionless units
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">
             restrictions imposed on signatures by function
             operations
           </InChapterLink>
         </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            the unary function operations
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-4">
+          <InChapterLink href="?id=section-5">
+            differentiation
+          </InChapterLink>
+        </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
-            differentiation and signatures
+            operators
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
-            the differentation “operator”
+            the sum rule
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
-            the sum rule
+            the “early afteroon product rule”
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
-            the “early afteroon product rule”
+            the chain rule
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=section-10">
-            the product rule
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-10">
-          <InChapterLink href="?id=section-11">
-            the chain rule
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-11">
-          <InChapterLink href="?id=section-12">
             epilogue: the dimensionless plane
           </InChapterLink>
         </BreadcrumbItem>
@@ -88,82 +79,6 @@ export default function __Chapter6__() {
         Dimensional Analysis
       </ArticleTitle>
       <Section id="section-1">
-        <OuterP>
-          <b>
-            Terminology: “dimension” vs. “dimensional”.
-          </b>
-          {" "}
-          As explained in the {" "}
-          <a
-            class="out-chapter-link"
-            href="/article/chapter2#section-9"
-          >
-            Postcript to Chapter 2
-          </a>
-          &#8288;, the
-          term
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          dimension
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          can mean a qualitative category of units, such as
-          in the phrase {" "}
-          <NoBreak>
-            “
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
-          {" "} has dimensions of time”.
-          On the other hand,
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          dimensional
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          means “that which relates to
-          dimensions {" "}
-          <i>
-            or
-          </i>
-          {" "} units”, 
-          i.e., there is no standalone term for
-          “that which relates to units”, so we have this catch-all instead.
-        </OuterP>
-      </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const showMore = useShowMore();
-  return <>
-    {showMore() && <>
-      <Pause />
-      <Section id="section-2">
-        <OuterP>
-          <b>
-            What is dimensional analysis.
-          </b>
-          {" "} 
-          {" "}
-          <i>
-            Dimensional analysis
-          </i>
-          {" "} is the art of 
-          checking the units and/or dimensions on an equation or
-          formula, or of guessing such formulas by
-          consideration thereof!
-        </OuterP>
-      </Section>
-      <Pause />
-      <Section id="section-3">
         <OuterP>
           <b>
             Function signatures.
@@ -224,21 +139,14 @@ const Rest = () => {
             $(\te&#123;A&#125;, \te&#123;B&#125;)$
           </Math>
           {" "} 
-          or to the notation {" "}
-          <NoBreak>
-            “
-            <Math>
-              $[\tA] \ra [\tB]$
-            </Math>
-            ”
-          </NoBreak>
-          {" "}
           as the
-          {" "}
-          <i>
-            signature
-          </i>
-          {" "}
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          signature
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
           of {" "}
           <NoBreak>
             <Math>
@@ -247,9 +155,52 @@ const Rest = () => {
             .
           </NoBreak>
         </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 1.
+            </b>
+            {" "}
+            If
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \Large z : [\te&#123;m&#125;/\te&#123;s&#125;^2] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            then
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \Large z : \rr \ra \rr
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            is a function
+            whose inputs denote meters per seconds squared
+            (a measure of acceleration)
+            and whose outputs denote British pounds,
+            or “pounds sterling”.
+          </OuterP>
+        </Example>
       </Section>
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return <>
+    {showMore() && <>
       <Pause />
-      <Section id="section-4">
+      <Section id="section-2">
         <OuterP>
           <b>
             Dimensionless units.
@@ -339,13 +290,13 @@ const Rest = () => {
           </i>
           {" "} To be precise, these “lengths” are actually
           coordinate changes that may be negative—except for the
-          hypotenuse, which is always positive—so they
+          hypotenuse-a.k.a.-radius, which is always positive—so they
           are “signed lengths”, or {" "}
           <i>
             displacements
           </i>
           , more accurately. 
-          Also the radian carries a sign—the radian says “rotate by
+          Likewise the radian carries a sign—the radian says “rotate by
           this multiple of the radius, with {" "}
           <NoBreak>
             ‘
@@ -363,7 +314,7 @@ const Rest = () => {
             ’
           </NoBreak>
           {" "}
-          for clockwise**”!
+          for clockwise**”.
         </OuterP>
         <Pause />
         <OuterP>
@@ -408,8 +359,7 @@ const Rest = () => {
         <Image src="/tmp-images/c6_true_counterclockwiseness_2.svg" />
         <Pause />
         <OuterP>
-          (Not that anyone cares,
-          but this actually happens inside of SVG, the web-based
+          (This actually happens inside of SVG, the web-based
           standard for so-called “vector graphics”, in which the {" "}
           <Math>
             $y$
@@ -419,7 +369,7 @@ const Rest = () => {
           <span class="code-cartouche">
             rotate(10)
           </span>
-          {" "} will rotate an object by {" "}
+          {" "} rotates objects by {" "}
           <NoBreak>
             10
             <Math>
@@ -430,12 +380,12 @@ const Rest = () => {
           <i>
             clockwise
           </i>
-          !)
+          .)
           <ImageRight src="/tmp-images/c6_SVG_cloud.svg" />
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-5">
+      <Section id="section-3">
         <OuterP>
           <b>
             Restrictions imposed on signatures by function
@@ -477,7 +427,7 @@ const Rest = () => {
         <OuterP>
           would be the most general signature 
           that one could hope for, in order for the sum to not
-          be nonsencial; but this is still too optimistic,
+          be nonsencial; but this is not stringent enough yet,
           since we actually need
         </OuterP>
         <Pause />
@@ -492,9 +442,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          in order not to add apples to oranges at the output
-          end, 
-          either, i.e., to avoid 
+          in order not to add apples to oranges, 
+          at the output end, either, i.e., to avoid 
           {" "}
           <NoBreak>
             “
@@ -513,28 +462,77 @@ const Rest = () => {
         </OuterP>
         <OuterP class="indent-10">
           By contrast, when multiplying two functions we can
-          stomach the output units to be different since
+          stomach 
+          the output units to be different since
           composite units such as “kilowatt-hour”, “worker-years”, etc,
           exist,
-          and likewise when dividing.
-          The following table 
-          summarizes the situation for all of the different
-          function operations
-          (sum/product/etc),
-          including not only the restrictions
-          imposed on the signatures of the “ingredient functions”
-          but also the signature of the final function that comes
-          baked out of the oven as a result (you should be able to
-          check the details of this table yourself!):
+          and likewise when dividing. We have:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_flowers_here.svg" />
+        <Image
+          src="/tmp-images/c6_flowers_here_v2.svg"
+          id="_150_hgi_"
+        />
+        <Pause />
+        <OuterP>
+          ...summarizing the constraints that appear at the
+          input (“component signatures”) and output (“resultant
+          signature”) ends, for the five main function operations.
+        </OuterP>
       </Section>
       <Pause />
-      <Section id="section-6">
+      <Section id="section-4">
         <OuterP>
           <b>
-            Differentiation and signatures.
+            The unary function operations.
+          </b>
+          {" "}
+          We will add two more not-yet-discussed—or {" "}
+          <i>
+            hardly
+          </i>
+          * discussed—
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          unary
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          function operations to our list of officially
+          considered function operations, being {" "}
+          <i>
+            negation
+          </i>
+          {" "}
+          and {" "}
+          <i>
+            reciprocal
+          </i>
+          , defined by formulas here:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/tmp-images/c6_flowers_here_two_more.svg"
+          id="_151_hgi_"
+        />
+        <Pause />
+        <OuterP>
+          [*See {" "}
+          <a
+            class="out-chapter-link"
+            href="/article/chapter5#_88_hgi_"
+          >
+            Chapter 5
+          </a>
+          &#8288;.]
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-5">
+        <OuterP>
+          <b>
+            Differentiation.
           </b>
           {" "}
           As reviewed in {" "}
@@ -547,7 +545,7 @@ const Rest = () => {
           {" "}
           (see also {" "}
           <a
-            href="/article/chapter4#_60_hgi_"
+            href="/article/chapter4#_62_hgi_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -597,15 +595,49 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          for any units C, D. (Think that C is playing the
-          role of A, while D plays the role of B/A.)
+          for any units C, D. 
+          (Think of the fact, as in part {" "}
+          <NoBreak>
+            “
+            <Math>
+              $g$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} of
+          {" "}
+          <a
+            href="/article/chapter4#_62_hgi_"
+            class="out-chapter-link"
+          >
+            Exercise 6 of Chapter 4
+          </a>
+          &#8288;, that one needs to
+          multiply the output units of {" "}
+          <Math>
+            $g''$
+          </Math>
+          {" "} by the
+          units of input units of {" "}
+          <Math>
+            $g''$
+          </Math>
+          {" "} in order to recover the output
+          units of {" "}
+          <NoBreak>
+            <Math>
+              $g'$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} etc.)
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-7">
+      <Section id="section-6">
         <OuterP>
           <b>
-            The differentation “operator”.
+            Operators.
           </b>
           {" "}
           On a conceptual note,
@@ -635,41 +667,25 @@ const Rest = () => {
         <Image src="/tmp-images/c6_differentiation_operator_intro.svg" />
         <Pause />
         <OuterP>
-          Note that the addition operation
+          Though similarly, the
+          unary function
+          operations from {" "}
+          <InChapterLink
+            class="in-chapter-link"
+            href="#_151_hgi_"
+          >
+            Table 1.2
+          </InChapterLink>
+          {" "} 
+          can be viewed as operators, taking one function
+          as input and producing one function as output:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_big_plus_symbol.svg" />
+        <Image src="/tmp-images/c6_negation_operator.svg" />
         <Pause />
         <OuterP>
-          on functions can also be understood as a kind of operator,
-          albeit one with two inputs, since the inputs to the 
-          operat
-          <del>
-            ion
-          </del>
-          or are functions:
-        </OuterP>
-        <Pause />
-        <Image src="/tmp-images/c6_addition_operator_standalone.svg" />
-        <Pause />
-        <OuterP>
-          In this manner,
-          all 
-          operators that we have encountered so far in one form or another would include:
-        </OuterP>
-        <Pause />
-        <Image src="/tmp-images/c6_all_our_operators.svg" />
-        <Pause />
-        <OuterP>
-          Note that {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $-$
-            </Math>
-            ’
-          </NoBreak>
-          {" "} appears twice, once as a
+          The other function operations from Table 1.1
+          are also operators, albeit
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -677,20 +693,24 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          operator and once as a
+          operators since they take two instead of one
+          functions as input. For example, function addition
+          can be depicted as a two-input-tube-flying-saucer:
         </OuterP>
         <Pause />
-        <CentralDisplayItalic>
-          unary
-        </CentralDisplayItalic>
+        <Image src="/tmp-images/c6_addition_operator_standalone.svg" />
         <Pause />
         <OuterP>
-          operator, meaning once as an operator that
-          takes two inputs and once as an operator
-          that takes one input, but these are really
-          two different operators, that happen to share
-          a symbol! (Same thing happens for the real
-          numbers: there is a binary {" "}
+          In this fashion, the complete list of all
+          operators that we have dealt with so far, similarly
+          presented by order of appearance in this chapter, would be
+          the following:
+        </OuterP>
+        <Pause />
+        <Image src="/tmp-images/c6_all_our_operators_v2.svg" />
+        <Pause />
+        <OuterP>
+          (We recycle {" "}
           <NoBreak>
             ‘
             <Math>
@@ -698,65 +718,44 @@ const Rest = () => {
             </Math>
             ’
           </NoBreak>
-          {" "} that you apply
-          to an ordered pair of real numbers, and a
-          unary {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $-$
-            </Math>
-            ’
-          </NoBreak>
-          {" "} that is applied to a single real
-          number.) Likewise the differentation operator
-          is
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          unary
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          since it takes only one function as input. 
-          The effect of these operators on function signatures can
-          also be given in pictorial form:
-        </OuterP>
-        <Pause />
-        <Image src="/tmp-images/c6_operators_acting_on_signatures.svg" />
-        <Pause />
-        <OuterP>
-          This connects back to Table 1.1,
-          though but with the unary minus operator
-          as well as the differentation
-          operator added to the list. 
-          (By the way, note for context that the
-          unary
-          minus operator was first mentioned in the
+          {" "} for two
+          different operators—a unary one and a binary one.)
+          (Or, as computer scientists would say, we have
           {" "}
-          <a
-            class="out-chapter-link"
-            href="/article/chapter5#section-2"
-          >
-            “Derivatives” section
-            of Chapter 5
-          </a>
-          &#8288;.)
+          <i>
+            overloaded
+          </i>
+          {" "} {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $-$
+            </Math>
+            ’.)
+          </NoBreak>
         </OuterP>
+        <OuterP class="indent-10">
+          The following figure summarizes the interaction
+          between the various operators and function signatures,
+          in a similar vein of diagram:
+        </OuterP>
+        <Pause />
+        <Image src="/tmp-images/c6_operators_acting_on_signatures_v2.svg" />
+        <Pause />
+        <StarDivider style="margin-top:-0.3em" />
       </Section>
       <Pause />
-      <Section id="section-8">
+      <Section id="section-7">
         <OuterP>
           <b>
             The sum rule.
           </b>
           {" "}
-          We can apply dimensional analysis to the 
-          so-called {" "}
+          The {" "}
           <i>
             sum rule
           </i>
-          , which is the identity
+          {" "} states that
         </OuterP>
         <Boxed>
           <MathBlock>
@@ -766,7 +765,7 @@ const Rest = () => {
           </MathBlock>
         </Boxed>
         <OuterP>
-          that holds for differentiable functions {" "}
+          for all differentiable functions {" "}
           <NoBreak>
             <Math>
               $f$
@@ -776,59 +775,26 @@ const Rest = () => {
           {" "} {" "}
           <NoBreak>
             <Math>
-              $g$
+              $g : \rr \ra \rr$
             </Math>
             .
           </NoBreak>
           {" "}
-          {" "}
-          <a
-            href="/article/chapter4#_67_hgi_"
-            class="out-chapter-link"
-          >
-            (Exercise 13
-          </a>
-          &#8288;, {" "}
-          <a
-            href="/article/chapter4#_85_hgi_"
-            class="out-chapter-link"
-          >
-            Chapter 4
-          </a>
-          &#8288;.)
-        </OuterP>
-        <OuterP class="indent-10">
-          We apply a two-step process, first checking that
+          We can apply
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          the same constraints 
-          on the signatures of {" "}
-          <Math>
-            $f$
-          </Math>
-          {" "} and {" "}
-          <Math>
-            $g$
-          </Math>
-          {" "} are imposed
-          by either side of the equation
+          dimensional analysis
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          and then checking that, 
-          for {" "}
-          <Math>
-            $f$
-          </Math>
-          {" "} and {" "}
-          <Math>
-            $g$
-          </Math>
-          {" "} meeting those constraints, 
-          the two sides of the equation come out to the
-          same units. We seek perfect agreement between both
-          sides of the equation in any and all matters units-related!
+          to the sum rule, which is to say that we would
+          like to “check the units” on the rule, which is to
+          say that for two functions with signatures for which
+          the left-hand side makes sense, the right-hand side should
+          also make sense and vice-versa,
+          and the right-hand side should also yield the same
+          final signature as the left-hand side.
         </OuterP>
         <OuterP class="indent-10">
           On the left-hand side,
@@ -855,14 +821,21 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          as listed in Table 1.1,
+          as listed in {" "}
+          <InChapterLink
+            class="in-chapter-link"
+            href="#_150_hgi_"
+          >
+            Table 1.1
+          </InChapterLink>
+          &#8288;,
           while the subsequent taking of a derivative doesn't
           impose any new constraints.
         </OuterP>
         <OuterP class="indent-10">
           On
           the right-hand side,
-          start by adopting the agnostic viewpoint that
+          we start by adopting the agnostic point of view that
         </OuterP>
         <Pause />
         <MathBlock>
@@ -962,8 +935,7 @@ const Rest = () => {
           exist on the left-hand side!
         </OuterP>
         <OuterP class="indent-10">
-          Having completed the first part of the two-step process, 
-          assume now that {" "}
+          Assuming now that {" "}
           <Math>
             $f$
           </Math>
@@ -986,8 +958,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          as required by either side of the sum rule; 
-          then we have, one by one in order, that
+          as required by either side of the equation,
+          we have
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1026,14 +998,14 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          which means that the sum rule “survives” the
-          dimensional analysis: nothing untoward has been found!
+          which indicates that the sum “checks out” insofar
+          as units are concerned: nothing untoward has been found!
         </OuterP>
         <Pause />
-        <Example id="_147_hgi_">
+        <Example id="_152_hgi_">
           <OuterP>
             <b>
-              Example 1.
+              Example 2.
             </b>
             {" "}
             If
@@ -1105,20 +1077,20 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_147_hgi_"
+                href="/article/chapter6#_152_hgi_"
                 class="in-chapter-link"
               >
-                Example 1
+                Example 2
               </InChapterLink>
               &#8288;.
             </i>
             {" "}
             In the case of {" "}
             <InChapterLink
-              href="/article/chapter6#_147_hgi_"
+              href="/article/chapter6#_152_hgi_"
               class="in-chapter-link"
             >
-              Example 1
+              Example 2
             </InChapterLink>
             &#8288;, the sum rule,
             which now reads
@@ -1149,14 +1121,14 @@ const Rest = () => {
           </CentralDisplayItalic>
           <Pause />
           <OuterP>
-            since in this case the “rate of change” is a velocity, etc.
+            since in this case the “rate of change” is a velocity.
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_148_hgi_">
+        <Example id="_153_hgi_">
           <OuterP>
             <b>
-              Example 2.
+              Example 3.
             </b>
             {" "}
             If
@@ -1275,12 +1247,10 @@ const Rest = () => {
               ”
             </NoBreak>
             {" "}
-            when we present the sum rule, or other such rules—it is
-            a necessary disclaimer to keep the statement accurate.)
+            when we present the sum rule, or other such rules.)
           </OuterP>
         </Example>
         <Pause />
-        <div id="_149_hgi_" />
         <OuterP>
           <i>
             Postscript.
@@ -1297,7 +1267,7 @@ const Rest = () => {
           both differentiable it is still 
           true, however, that
         </OuterP>
-        <Boxed>
+        <Boxed id="_154_hgi_">
           <MathBlock>
             $$
             \Large (f + g)'(x_0) = f'(x_0) + g'(x_0)
@@ -1330,7 +1300,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-9">
+      <Section id="section-8">
         <OuterP>
           <b>
             The “early afteroon product rule”.
@@ -1356,7 +1326,8 @@ const Rest = () => {
           whence this equation's moniker.
         </OuterP>
         <OuterP class="indent-10">
-          On the left-hand side,
+          For a dimensional analysis of this equation, note
+          that on the left-hand side,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1390,7 +1361,7 @@ const Rest = () => {
         <OuterP>
           for some units A, B, C, per Table 1.1., which is also 
           the most general type of signature that is compatible with the right-hand side.
-          “So far so good.”
+          This is “so far so good”!
         </OuterP>
         <OuterP class="indent-10">
           However,
@@ -1401,7 +1372,7 @@ const Rest = () => {
           \Large (fg)' : [\tA] \ra [\tB\tC/\tA]
           $$
           <ImageLeft
-            src="/tmp-images/c6_fg_prime_signature_cloud.svg"
+            src="/tmp-images/c6_fg_prime_signature_cloud_v2.svg"
             offset_x="5em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -1416,7 +1387,7 @@ const Rest = () => {
           \Large f'g' : [\tA] \ra [\tB\tC/\tA^2]
           $$
           <ImageRight
-            src="/tmp-images/c6_f_prime_g_prime_signature_cloud.svg"
+            src="/tmp-images/c6_f_prime_g_prime_signature_cloud_v2.svg"
             offset_x="5em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -1434,22 +1405,33 @@ const Rest = () => {
         <Pause />
         <OuterP>
           so the rule
-          cannot be correct—paraphrasing, “the units don't
-          even work out”.
+          cannot be correct: different units are produced
+          by either side of the equation, for the same
+          functions {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            .
+          </NoBreak>
         </OuterP>
         <Pause />
-        <Example id="_150_hgi_">
+        <Example id="_155_hgi_">
           <OuterP>
             <b>
-              Example 3.
+              Example 4.
             </b>
             {" "}
             As in {" "}
             <InChapterLink
-              href="/article/chapter6#_147_hgi_"
+              href="/article/chapter6#_152_hgi_"
               class="in-chapter-link"
             >
-              Example 1
+              Example 2
             </InChapterLink>
             {" "}
             let
@@ -1516,7 +1498,7 @@ const Rest = () => {
           <Pause />
           <OuterP>
             so there is no way these two quantities could
-            ever be equal, in general. For example,
+            ever be equal, in general. (For example,
             changing from counting time in seconds to
             counting it in hours, while correspondingly
             modifying {" "}
@@ -1560,7 +1542,7 @@ const Rest = () => {
             </NoBreak>
             {" "} not hold after,
             and therefore, the early afternoon product rule
-            cannot hold in general.
+            cannot hold in general.)
             <ImageLeft
               src="/tmp-images/c6_x1x2_3600_cloud.svg"
               offset_x="1em"
@@ -1571,10 +1553,10 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_150_hgi_"
+                href="/article/chapter6#_155_hgi_"
                 class="in-chapter-link"
               >
-                Example 3
+                Example 4
               </InChapterLink>
               &#8288;.
             </i>
@@ -1601,10 +1583,10 @@ const Rest = () => {
           <OuterP>
             in {" "}
             <InChapterLink
-              href="/article/chapter6#_150_hgi_"
+              href="/article/chapter6#_155_hgi_"
               class="in-chapter-link"
             >
-              Example 3
+              Example 4
             </InChapterLink>
             &#8288;—one might conjecture that
           </OuterP>
@@ -1619,7 +1601,7 @@ const Rest = () => {
             from this observation, and one would be wrong—which is to
             show that dimensional analysis is quick to debunk an incorrect
             equation but, in the contravening case, 
-            cannot be trusted as a proof!—however,
+            cannot be trusted as a proof—nonetheless,
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1651,122 +1633,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section id="section-10">
-        <OuterP>
-          <b>
-            The product rule.
-          </b>
-          {" "}
-          The real “product rule”, valid for differentiable functions {" "}
-          <Math>
-            $f$
-          </Math>
-          {" "} and {" "}
-          <NoBreak>
-            <Math>
-              $g$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} is
-        </OuterP>
-        <Boxed>
-          <MathBlock>
-            $$
-            \Large (fg)' = f'g + fg'
-            $$
-          </MathBlock>
-        </Boxed>
-        <OuterP>
-          as covered in {" "}
-          <a
-            href="/article/chapter4#_73_hgi_"
-            class="out-chapter-link"
-          >
-            Exercise 18 of Chapter 4
-          </a>
-          &#8288;.
-          To start the dimensional analysis, we can
-          easily see that both sides of the equation
-          impose signatures of the form
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large
-          \begin&#123;aligned&#125;
-          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
-          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
-          \end&#123;aligned&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          on {" "}
-          <Math>
-            $f$
-          </Math>
-          {" "} and {" "}
-          <NoBreak>
-            <Math>
-              $g$
-            </Math>
-            .
-          </NoBreak>
-          {" "} 
-          From there,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large (fg)' : [\tA] \ra [\tB\tC/\tA]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          while
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large
-          \begin&#123;gathered&#125;
-          f'g :  [\te&#123;A&#125;] \ra [\tB\tC/\tA] \\
-          fg' :  [\te&#123;A&#125;] \ra [\tB\tC/\tA] \up&#123;1.35&#125;
-          \end&#123;gathered&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large f'g + fg' :  [\te&#123;A&#125;] \ra [\tB\tC/\tA] \up&#123;1.35&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          so {" "}
-          <Math>
-            $f'g + fg'$
-          </Math>
-          {" "} has the
-          same signature as {" "}
-          <NoBreak>
-            <Math>
-              $(fg)'$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} i.e., 
-          this formula passes the “sniff test” of
-          dimensional analysis.
-        </OuterP>
-      </Section>
-      <Pause />
-      <Section id="section-11">
+      <Section id="section-9">
         <OuterP>
           <b>
             The chain rule.
@@ -1782,7 +1649,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          similar to the sum rule or product rule,
+          similar to the sum rule,
           and we can try guessing such a formula using
           dimensional analysis, i.e., from the fact that the
           formula should be dimensionally consistent.
@@ -2047,7 +1914,7 @@ const Rest = () => {
         <Example>
           <OuterP>
             <b>
-              Example 4.
+              Example 5.
             </b>
             {" "}
             Say that a cute
@@ -2282,7 +2149,7 @@ const Rest = () => {
             {" "} an amount of seconds when it is
             expecting an amount of meters!
             <ImageRight
-              src="/tmp-images/c6_forbidden_fprime_of_t0.svg"
+              src="/tmp-images/c6_forbidden_fprime_of_t0_v2.svg"
               line={-3}
               offset_x="1em"
             />
@@ -2373,22 +2240,22 @@ const Rest = () => {
           </CentralDisplayItalic>
           <Pause />
           <OuterP>
-            which is like we did for the sum rule in the {" "}
+            similarly to the sum rule. (Cf. the 
+            {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#_149_hgi_"
+              href="#_154_hgi_"
             >
-              “Postscript” after
-              Example 2
+              note after Example 3
             </InChapterLink>
-            &#8288;.
+            &#8288;.)
           </OuterP>
         </Example>
         <Pause />
         <Example>
           <OuterP>
             <b>
-              Example 5.
+              Example 6.
             </b>
             {" "}
             We have
@@ -2404,7 +2271,7 @@ const Rest = () => {
             by {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#section-11"
+              href="#section-9"
             >
               the chain rule
             </InChapterLink>
@@ -2557,7 +2424,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section id="section-12">
+      <Section id="section-10">
         <OuterP>
           <b>
             Epilogue: the dimensionless plane.
@@ -2690,14 +2557,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          with a “pure {" "}
-          <NoBreak>
-            <Math>
-              $3$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} on the left implies
+          with no (i.e., dimensionless) units
+          on the left implies
         </OuterP>
         <Pause />
         <MathBlock>

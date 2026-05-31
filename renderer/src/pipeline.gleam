@@ -143,12 +143,12 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.append_attribute_to_second_of_kind__outside(#("p", "class", "indent-10"), ["CentralDisplay", "CentralDisplayItalic"]),
       dl.add_between_all_pairs_2(#(
         [
-          "MathBlock", "Example", "Note", "SolutionNote", "Image", "table", 
+          "MathBlock", "Example", "Note", "SolutionNote", "Image", "table", "Table",
           "Grid", "CentralDisplayItalic", "CentralDisplay", "List", "StarDivider", "TildeDivider",
         ], ["p"], "Pause"
       )),
       dl.rename_if_child_of_one_of(#("p", "OuterP", ["Section", "ExerciseStatement", "Solution", "Example", "Chapter", "Bootcamp", "Appendix", "SolutionNote"])),
-      dl.add_between_tag_and_text_node(#("MathBlock", "Pause")),
+      // dl.add_between_tag_and_text_node(#("MathBlock", "Pause")),
       dl.add_before_but_not_before_first_child__batch([
         #("Exercises", "Pause"),
         #("Example", "Pause"),

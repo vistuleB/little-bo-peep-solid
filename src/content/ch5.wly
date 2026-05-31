@@ -4,7 +4,7 @@
 
     *Cos and Sin. (“Cosine” and “sine”.)* We have
     already encountered the ‘cos’ function in 
-    Exercise >>_cosine_of_1000x_ of Chapter >>functions,
+    Exercise >>_cosine_of_1000x_#decoy:14 of Chapter >>functions#decoy:3,
     e.g.. It is the one that has this graph:
 
     |> Image
@@ -94,7 +94,7 @@
     \approx {11\over 7} = 1.\overline{571428}
     $$
 
-    in Exercise >>_eta_approximation_from_cosine_graph_ 
+    in Exercise >>_eta_approximation_from_cosine_graph_#decoy:26 
     of Chapter >>functions (by direct inspection
     of the graph $y = \cos(x)$, for that matter,
     which may or may not be cheating), which agrees
@@ -199,6 +199,9 @@
 
     _|“$-\!\sin$”|_
 
+    |> div
+        handle=negation-of-a-function-first-mention
+
     by the general definition that
     $$
     -f = (x \ra -f(x))
@@ -247,8 +250,8 @@
     (-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'
     $$
     in general for any $f : \rr \ra \rr$
-    (cf. Exercise >>_first_law_of_differentiation_
-    and Exercise >>_define_product_of_constant_and_function_
+    (cf. Exercise >>_first_law_of_differentiation_#decoy:10
+    and Exercise >>_define_product_of_constant_and_function_#decoy:11
     of Chapter >>derivatives),
     which implies that 
     !! the second two equations mechanically follow from

@@ -10,16 +10,16 @@
         pair of lines:
 
         |> Image
-            src=images/55.svg
+            src=tmp-images/c2_slope_two_and_minus_one_half.svg
             class=relative w-fit
 
         |> ImageRight
-            src=images/56.svg
+            src=tmp-images/c2_slope_two_and_minus_one_half_cloud_right.svg
             offset_y=20%
             offset_x=-5%
 
         |> ImageLeft
-            src=images/57.svg
+            src=tmp-images/c2_slope_two_and_minus_one_half_cloud_left.svg
             offset_x=-25%
             offset_y=47%
 
@@ -34,16 +34,16 @@
             all $p \ne 0$. By a similar drawing:
 
             |> Image
-                src=images/58.svg
+                src=tmp-images/c2_slope_p_minus_one_over_p.svg
                 class=relative w-fit
 
                 |> ImageRight
-                    src=images/59.svg
+                    src=tmp-images/c2_slope_p_minus_one_over_p_cloud_right.svg
                     offset_y=28%
                     offset_x=-5%
 
                 |> ImageLeft
-                    src=images/60.svg
+                    src=tmp-images/c2_slope_p_minus_one_over_p_cloud_left.svg
                     offset_x=-18%
                     offset_y=44%
 

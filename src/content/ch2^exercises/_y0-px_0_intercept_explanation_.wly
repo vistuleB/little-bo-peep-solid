@@ -17,7 +17,7 @@
         E.g.:
 
         |> Image
-            src=images/66.svg
+            src=images/c2_y_intercept_explanation.svg
 
         The rise from the $y$-intercept to $(x_0, y_0)$
         is $px_0$, as found by “rise equals slope times

@@ -1,43 +1,42 @@
+!! |> Section
+!!     *Definition.*
+!!     “Dimensional analysis” is the art of
+!!     checking the units on an equation or
+!!     formula and/or of guessing new formulas
+!!     based on considerations about the
+!!     units and/or dimensions [see below].
+
+!! |> Section
+!!     *Terminology: “dimension” vs. “dimensional”.*
+!!     As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions_epilogue), the
+!!     term
+
+!!     __dimension__
+
+!!     can mean a qualitative category of units, such as
+!!     in the phrase “$x$ has dimensions of time”.
+!!     On the other hand,
+
+!!     __dimensional__
+
+!!     means “that which relates to
+!!     dimensions _or_ units”, 
+!!     i.e., there is no standalone term for
+!!     “that which relates to units”, so we have this catch-all instead.
+!!     !! not “that which relates to dimensions”.
+!!     !! —i.e., it doesn't just mean
+!!     !! “that which relates to dimensions”. 
+!!     !! (Lest you be fooled.)
+
+!! |> Section
+!!     *What is dimensional analysis.* 
+!!     _Dimensional analysis_ is the art of 
+!!     checking the units and/or dimensions on an equation or
+!!     formula, or of guessing such formulas by
+!!     consideration thereof!
+
 |> Section
     handle=_ch6_start_
-
-    !!     *Definition.*
-    !!     “Dimensional analysis” is the art of
-    !!     checking the units on an equation or
-    !!     formula and/or of guessing new formulas
-    !!     based on considerations about the
-    !!     units and/or dimensions [see below].
-
-    !! |> Section
-    *Terminology: “dimension” vs. “dimensional”.*
-    As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions_epilogue), the
-    term
-
-    __dimension__
-
-    can mean a qualitative category of units, such as
-    in the phrase “$x$ has dimensions of time”.
-    On the other hand,
-
-    __dimensional__
-
-    means “that which relates to
-    dimensions _or_ units”, 
-    i.e., there is no standalone term for
-    “that which relates to units”, so we have this catch-all instead.
-    !! not “that which relates to dimensions”.
-    !! —i.e., it doesn't just mean
-    !! “that which relates to dimensions”. 
-    !! (Lest you be fooled.)
-
-|> Section
-    *What is dimensional analysis.* 
-    _Dimensional analysis_ is the art of 
-    checking the units and/or dimensions on an equation or
-    formula, or of guessing such formulas by
-    consideration thereof!
-
-|> Section
     *Function signatures.*
     If $f$ is a function from $\rr$ to $\rr$
     we write
@@ -62,10 +61,30 @@
     !! $$
     !! \Large\te{“}[\te{A}] \ra [\te{B}]\te{”}
     !! $$
-    or to the notation “$[\tA] \ra [\tB]$”
+    !! or to the notation “$[\tA] \ra [\tB]$”
     as the
-    _signature_
+    __signature__
     of $f$.
+
+    |> Example
+
+        !! By writing
+        If
+
+        $$
+        \Large z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{£}\rt{0.1}]
+        $$
+
+        !! we indicate that
+        then
+        
+        $$\Large z : \rr \ra \rr$$
+        
+        is a function
+        whose inputs denote meters per seconds squared
+        (a measure of acceleration)
+        and whose outputs denote British pounds,
+        or “pounds sterling”.
 
 |> Section
     *Dimensionless units.*
@@ -107,13 +126,18 @@
 
     |> Pause
 
+    !! $$
+    !! \te{*}[1] = \te{rad}\qquad
+    !! \te{*}[1] = \cos(\te{rad})\\
+    !! $$
+
     _*Note._ To be precise, these “lengths” are actually
     coordinate changes that may be negative—except for the
-    hypotenuse, which is always positive—so they
+    hypotenuse-a.k.a.-radius, which is always positive—so they
     are “signed lengths”, or _displacements_, more accurately. 
-    Also the radian carries a sign—the radian says “rotate by
+    Likewise the radian carries a sign—the radian says “rotate by
     this multiple of the radius, with ‘$+$’ for counterclockwise and ‘$-$’
-    for clockwise\*\*”!
+    for clockwise\*\*”.
 
     |> Pause
 
@@ -133,14 +157,15 @@
     |> Image
         src=tmp-images/c6_true_counterclockwiseness_2.svg
 
-    (Not that anyone cares,
-    but this actually happens inside of SVG, the web-based
+    !! (Not that anyone cares,.
+    (This actually happens inside of SVG, the web-based
     standard for so-called “vector graphics”, in which the $y$
     axis points downwards; in an SVG file, 
     |> span
         class=code-cartouche
         rotate(10)
-    \ will rotate an object by 10$^\circ$ _clockwise_!)
+    !! \ will rotate an object by 10$^\circ$ _clockwise_!)
+    \ rotates objects by 10$^\circ$ _clockwise_.)
 
     |> ImageRight
         src=tmp-images/c6_SVG_cloud.svg
@@ -238,7 +263,7 @@
 
     would be the most general signature 
     that one could hope for, in order for the sum to not
-    be nonsencial; but this is still too optimistic,
+    be nonsencial; but this is not stringent enough yet,
     since we actually need
 
     $$
@@ -249,31 +274,59 @@
     \end{aligned}
     $$
 
-    in order not to add apples to oranges at the output
-    end, 
-    either, i.e., to avoid 
+    in order not to add apples to oranges, 
+    at the output end, either, i.e., to avoid 
     “$f(x) =$ apples”, “$g(x) =$ oranges”.
     !! with “$f(x) =$ apples” and “$g(x) =$ oranges” being
-    !! a forbidden combination. 
+    !! the combination to avoid.
 
     By contrast, when multiplying two functions we can
-    stomach the output units to be different since
+    stomach 
+    the output units to be different since
     composite units such as “kilowatt-hour”, “worker-years”, etc,
-    !! are a thing, 
     exist,
-    and likewise when dividing.
-    The following table 
-    summarizes the situation for all of the different
-    function operations
-    (sum/product/etc),
-    including not only the restrictions
-    imposed on the signatures of the “ingredient functions”
-    but also the signature of the final function that comes
-    baked out of the oven as a result (you should be able to
-    check the details of this table yourself!):
+    and likewise when dividing. We have:
+    !! The following table 
+    !! summarizes the situation for all of the different
+    !! function operations
+    !! (sum/product/etc),
+    !! including not only the restrictions
+    !! imposed on the signatures of the “ingredient functions”
+    !! but also the signature of the final function that comes
+    !! baked out of the oven as a result:
+    !! (you should be able to
+    !! check the details of this table yourself!):
 
     |> Image
-        src=tmp-images/c6_flowers_here.svg
+        handle=table_1_1
+        src=tmp-images/c6_flowers_here_v2.svg
+
+    !! ...for the five main function operations.
+    ...summarizing the constraints that appear at the
+    input (“component signatures”) and output (“resultant
+    signature”) ends, for the five main function operations.
+
+|> Section
+
+    *The unary function operations.*
+    We will add two more not-yet-discussed—or _hardly_* discussed—
+
+    __unary__
+
+    !! [*see [Chapter >>trigonometry#decoy:5](>>negation-of-a-function-first-mention)]
+    function operations to our list of officially
+    considered function operations, being _negation_
+    and _reciprocal_, defined by formulas here:
+    !! in this table:
+
+    |> Image
+        handle=table_1_2
+        src=tmp-images/c6_flowers_here_two_more.svg
+
+    !! |> StarDivider
+    !!     style=margin-top:-0.5em
+
+    [*See [Chapter >>trigonometry#decoy:5](>>negation-of-a-function-first-mention).]
 
     !! $$
     !! \Large
@@ -286,23 +339,25 @@
     !! f - g : [\te{A}] \ra [\te{B}] \up{1.35} \\
     !! (f + g)' : [\te{A}] \ra [\tB/\tA] \up{1.35} \\
     !! (fg)(x) = f(x)g(x) \up{1.35} \\
+    !! fg : [\te{A}] \ra [\te{B}\te{C}] \up{1.35} \\
     !! g : [\te{A}] \ra [\te{C}] \up{1.35} \\
     !! (f/g)(x) = f(x)/g(x) \up{1.35} \\
     !! \left({f\over g}\right)(x) = {f(x)\over g(x)} \up{1.35} \\
+    !! f/g : [\te{A}] \ra [\te{B}/\te{C}] \up{1.35} \\
     !! (f \circ g)(x) = f(g(x)) \up{1.35} \\
     !! f : [\te{B}] \ra [\te{C}] \up{1.35} \\
     !! g : [\te{A}] \ra [\te{B}] \up{1.35} \\
-    !! (-f)(x) : -(f(x)) \up{1.35} \\
+    !! f \circ g : [\te{A}] \ra [\te{C}] \up{1.35} \\
+    !! (-f)(x) = -(f(x)) \up{1.35} \\
     !! -f : [\te{A}] \ra [\te{B}] \up{1.35} \\
+    !! (1/f)(x) = 1/(f(x)) \up{1.35} \\
+    !! 1/f : [\te{A}] \ra [1/\te{B}] \up{1.35} \\
     !! \end{gathered}
     !! $$
 
-    !! $$
-    !! f'
-    !! $$
-
 |> Section
-    *Differentiation and signatures.*
+    handle=differentiation_and_signatures
+    *Differentiation.*
     As reviewed in [Chapter >>derivatives#decoy:4](>>units_of_the_derivative)
     (see also Exercise >>_complete_the_missing_units_#decoy:6 of Chapter >>derivatives#decoy:4),
     differentiation divides the units of the output
@@ -318,8 +373,6 @@
     for any units A, B.
     By the same token, the “if and only if”-ness
     implies that
-    !! and vice-versa—for the “vice-versa” part, what
-    !! we mean more exactly is that
     $$
     \Large f' : [\tC] \ra [\tD]
     $$
@@ -327,50 +380,19 @@
     $$
     \Large f : [\tC] \ra [\tC\tD]
     $$
-    for any units C, D. (Think that C is playing the
-    role of A, while D plays the role of B/A.)
-    !! (Again: and vice-versa, or
-    !! we could have said “if and only if” instead of “implies”.)
-
+    for any units C, D. 
+    !! (Think that C is playing the
+    !! role of A, while D plays the role of B/A.)
+    (Think of the fact, as in part “$g$” of
+    Exercise >>_complete_the_missing_units_#decoy:6
+    of Chapter >>derivatives#decoy:4, that one needs to
+    multiply the output units of $g''$ by the
+    units of input units of $g''$ in order to recover the output
+    units of $g'$, etc.)
     
-    !! In terms of signatures, we have
-
-    !! $$
-    !! \Large f' : [\tA] \ra [\tB/\tA]
-    !! $$
-
-    !! if and only if
-
-    !! $$
-    !! \Large f : [\tA] \ra [\tB]
-    !! $$
-    
-    !! for any units A, B. 
-    !! This also
-    !! implies, 
-    !! To put it differently,
-    !! Or,
-
-    !! $$
-    !! \Large f : [\tC] \ra \left[{\tC\tD}\right]
-    !! $$
-
-    !! if and only if
-
-    !! $$
-    !! \Large f' : [\tC] \ra [\tD]
-    !! $$
-    
-    !! for any units C, D, to put it differently.
-    !! (I.e., to recover the
-    !! signature of $f$ from the signature of $f'$ one
-    !! needs to multiply the output units of $f'$ by the input units
-    !! of $f'$, while keeping the input units the same.)
-
 |> Section
-    *The differentation “operator”.*
+    *Operators.*
     On a conceptual note,
-    !! —now is as good or as bad a time as any to discuss this—
     we can view differentiation
     as a function-that-takes-functions-and-outputs-functions,
     the “bigger fish” of the function world. As mathematicians
@@ -383,131 +405,270 @@
 
     __differentiation operator__
 
-    !! depicted here as a flying saucer, 
     depicted here as an eye-of-Godzilla flying saucer: 
 
     |> Image
         src=tmp-images/c6_differentiation_operator_intro.svg
 
-    !! (Generally speaking, will use such round-shaped function
-    !! boxes to depict operators.) 
-    !! (NB: We put the input tube of
-    !! the differentiation operator on the left for no good reason,
-    !! and will surely change our mind before long!)
+    Though similarly, the
+    unary function
+    operations from [Table 1.2](>>table_1_2) 
+    can be viewed as operators, taking one function
+    as input and producing one function as output:
+    !! that take one
+    !! function and produce one function as output,
+    !! per the following figure:
+    !! take 
+    !! one function as input and produce one
+    !! function as output; 
+    !! we can 
+    !! conceptualize 
+    !! name
+    !! these are _operators_, just as well:
+    !! we can describe these as _operators_, as well:
+    !! describe these function operations as being _operators_, as well:
+    !! refer to them as _operators_ as well:
+    !! they are _operators_ as well:
+    !! we can view these as operators as well, per the
+    !! following figure:
 
-    Note that the addition operation
-
-    !! $$
-    !! \Huge +
-    !! $$
     |> Image
-        src=tmp-images/c6_big_plus_symbol.svg
+        src=tmp-images/c6_negation_operator.svg
 
-    on functions can also be understood as a kind of operator,
-    albeit one with two inputs, since the inputs to the 
-    operat
-    |> del
-        ion
-    or are functions:
+    !! For that matter t
+    The other function operations from Table 1.1
+    are also operators, albeit
+
+    __binary__
+
+    operators since they take two instead of one
+    functions as input. For example, function addition
+    can be depicted as a two-input-tube-flying-saucer:
 
     |> Image
         src=tmp-images/c6_addition_operator_standalone.svg
 
-    In this manner,
-    all 
-    operators that we have encountered so far in one form or another would include:
+    !! ...can be depicted as a two-input-tube flying
+    !! saucer. Listing
+    !! !! one of these flying saucers,
+    !! !! albeit a two-input-tube one; 
+    !! !! listing 
+    !! all operators encountered so far in this
+    !! chapter, by same order of appearance:
+    In this fashion, the complete list of all
+    operators that we have dealt with so far, similarly
+    presented by order of appearance in this chapter, would be
+    the following:
 
     |> Image
-        src=tmp-images/c6_all_our_operators.svg
+        src=tmp-images/c6_all_our_operators_v2.svg
 
-    Note that ‘$-$’ appears twice, once as a
+    !! (We recycle ‘$-$’ for two
+    !! different operators—after all for the real numbers,
+    !! as well, there is a binary ‘$-$’ that operates
+    !! on a pair of real numbers, and a unary ‘$-$’
+    !! that operates on just one real number.)
+    (We recycle ‘$-$’ for two
+    different operators—a unary one and a binary one.)
+    (Or, as computer scientists would say, we have
+    _overloaded_ ‘$-$’.)
 
-    __binary__
+    !! Circling back to the main topic of the chapter,
+    The following figure summarizes the interaction
+    between the various operators and function signatures,
+    in a similar vein of diagram:
 
-    operator and once as a
-
-    __unary__
-
-    operator, meaning once as an operator that
-    takes two inputs and once as an operator
-    that takes one input, but these are really
-    two different operators, that happen to share
-    a symbol! (Same thing happens for the real
-    numbers: there is a binary ‘$-$’ that you apply
-    to an ordered pair of real numbers, and a
-    unary ‘$-$’ that is applied to a single real
-    number.) Likewise the differentation operator
-    is
-
-    __unary__
-
-    since it takes only one function as input. 
-    The effect of these operators on function signatures can
-    also be given in pictorial form:
-    
     |> Image
-        src=tmp-images/c6_operators_acting_on_signatures.svg
+        src=tmp-images/c6_operators_acting_on_signatures_v2.svg
+
+    |> StarDivider
+        style=margin-top:-0.3em
+
+    !! (See [Table 1.1](>>table_1_1), [Table 1.2](>>table_1_2),
+    !! and the [discussion of differentiation](>>differentiation_and_signatures).)
+
+
+    !! (For example, the differentiation operator produces
+    !! a function of signature
+
+    !! $$
+    !! \Large [\tA] \ra [\tB/\tA]
+    !! $$
+
+    !! when you pass it a function of signature
+
+    !! $$
+    !! \Large [\tA] \ra [\tB]
+    !! $$
+
+    !! and so on for the other operators.)
+
+
+!! |> Section
+!!     *The differentation “operator”.*
+!!     On a conceptual note,
+!!     we can view differentiation
+!!     as a function-that-takes-functions-and-outputs-functions,
+!!     the “bigger fish” of the function world. As mathematicians
+!!     use the term
+
+!!     __operator__
+
+!!     to denote a function that takes other functions as inputs,
+!!     we therefore speak of the
+
+!!     __differentiation operator__
+
+!!     depicted here as an eye-of-Godzilla flying saucer: 
+
+!!     |> Image
+!!         src=tmp-images/c6_differentiation_operator_intro.svg
+
+!!     !! (Generally speaking, will use such round-shaped function
+!!     !! boxes to depict operators.) 
+!!     !! (NB: We put the input tube of
+!!     !! the differentiation operator on the left for no good reason,
+!!     !! and will surely change our mind before long!)
+
+!!     Note that the addition operation
+
+!!     !! $$
+!!     !! \Huge +
+!!     !! $$
+!!     |> Image
+!!         src=tmp-images/c6_big_plus_symbol.svg
+
+!!     on functions can also be understood as a kind of operator,
+!!     albeit one with two inputs, since the inputs to the 
+!!     operat
+!!     |> del
+!!         ion
+!!     or are functions:
+
+!!     |> Image
+!!         src=tmp-images/c6_addition_operator_standalone.svg
+
+!!     In this manner,
+!!     all 
+!!     operators that we have encountered so far in one form or another would include:
+
+!!     |> Image
+!!         src=tmp-images/c6_all_our_operators.svg
+
+!!     Note that ‘$-$’ appears twice, once as a
+
+!!     __binary__
+
+!!     operator and once as a
+
+!!     __unary__
+
+!!     operator, meaning once as an operator that
+!!     takes two inputs and once as an operator
+!!     that takes one input, but these are really
+!!     two different operators, that happen to share
+!!     a symbol! (Same thing happens for the real
+!!     numbers: there is a binary ‘$-$’ that you apply
+!!     to an ordered pair of real numbers, and a
+!!     unary ‘$-$’ that is applied to a single real
+!!     number.) Likewise the differentation operator
+!!     is
+
+!!     __unary__
+
+!!     since it takes only one function as input. 
+!!     The effect of these operators on function signatures can
+!!     also be given in pictorial form:
     
-    This connects back to Table 1.1,
-    though but with the unary minus operator
-    as well as the differentation
-    operator added to the list. 
-    !! __unary__
-    !! (did we mention this word yet?) minus
-    !! operator, as well as the differentiation
-    !! operator. 
-    (By the way, note for context that the
-    unary
-    !! __unary__
-    minus operator was first mentioned in the
-    [“Derivatives” section
-    of Chapter >>trigonometry#decoy:5](>>trigonometry-derivatives).)
+!!     |> Image
+!!         src=tmp-images/c6_operators_acting_on_signatures.svg
+    
+!!     This connects back to Table 1.1,
+!!     though but with the unary minus operator
+!!     as well as the differentation
+!!     operator added to the list. 
+!!     !! __unary__
+!!     !! (did we mention this word yet?) minus
+!!     !! operator, as well as the differentiation
+!!     !! operator. 
+!!     (By the way, note for context that the
+!!     unary
+!!     !! __unary__
+!!     minus operator was first mentioned in the
+!!     [“Derivatives” section
+!!     of Chapter >>trigonometry#decoy:5](>>trigonometry-derivatives).)
 
 
-    !! $$
-    !! \begin{aligned}
-    !! & f : [\tA] \ra [\tB] \\
-    !! & f : [\tA] \ra [\tC] \\
-    !! & f : [\tA] \ra [\tB/\tA] \\
-    !! & f : [\tA] \ra [\tB/\tC] \\
-    !! & f : [\tA] \ra [\tB\tC] \\
-    !! & f : [\tB] \ra [\tC] \\
-    !! & g : [\tA] \ra [\tB] \\
-    !! & g : [\tA] \ra [\tC] \\
-    !! & g : [\tA] \ra [\tB/\tA] \\
-    !! & g : [\tA] \ra [\tB/\tC] \\
-    !! & g : [\tA] \ra [\tB\tC] \\
-    !! & g : [\tB] \ra [\tC] \\
-    !! \end{aligned}
-    !! $$
+!!     !! $$
+!!     !! \begin{aligned}
+!!     !! & f : [\tA] \ra [\tB] \\
+!!     !! & f : [\tA] \ra [\tC] \\
+!!     !! & f : [\tA] \ra [\tB/\tA] \\
+!!     !! & f : [\tA] \ra [\tB/\tC] \\
+!!     !! & f : [\tA] \ra [\tB\tC] \\
+!!     !! & f : [\tB] \ra [\tC] \\
+!!     !! & g : [\tA] \ra [\tB] \\
+!!     !! & g : [\tA] \ra [\tC] \\
+!!     !! & g : [\tA] \ra [\tB/\tA] \\
+!!     !! & g : [\tA] \ra [\tB/\tC] \\
+!!     !! & g : [\tA] \ra [\tB\tC] \\
+!!     !! & g : [\tB] \ra [\tC] \\
+!!     !! \end{aligned}
+!!     !! $$
 
 |> Section
     *The sum rule.*
-    We can apply dimensional analysis to the 
-    so-called _sum rule_, which is the identity
+    The _sum rule_ states that
 
     |> Boxed
         $$
         \Large (f + g)' = f' + g'
         $$
 
-    that holds for differentiable functions $f$, $g$.
-    !! the _sum rule_. 
-    (Exercise >>_sum_rule_summary_#decoy:14, Chapter >>derivatives#decoy:4.)
-    !! I.e., “check the units” on this equation.
+    for all differentiable functions $f$, $g : \rr \ra \rr$.
+    We can apply
 
-    !! This is a two-step process: we first check that
-    We apply a two-step process, first checking that
+    __dimensional analysis__
 
-    __the same constraints 
-    on the signatures of $f$ and $g$ are imposed
-    by either side of the equation__
+    to the sum rule, which is to say that we would
+    like to “check the units” on the rule, which is to
+    say that for two functions with signatures for which
+    the left-hand side makes sense, the right-hand side should
+    also make sense and vice-versa,
+    and the right-hand side should also yield the same
+    final signature as the left-hand side.
+    !! in all cases.
+    !! and yield the same final signature.
 
-    and then checking that, 
-    for $f$ and $g$ meeting those constraints, 
-    the two sides of the equation come out to the
-    same units. We seek perfect agreement between both
-    sides of the equation in any and all matters units-related!
+
+
+    !! |> Section
+    !!     *The sum rule.*
+    !!     We can apply dimensional analysis to the 
+    !!     so-called _sum rule_, which is the identity
+
+    !!     |> Boxed
+    !!         $$
+    !!         \Large (f + g)' = f' + g'
+    !!         $$
+
+    !!     that holds for differentiable functions $f$, $g$.
+    !!     !! the _sum rule_. 
+    !!     (Exercise >>_sum_rule_summary_#decoy:14, Chapter >>derivatives#decoy:4.)
+    !!     !! I.e., “check the units” on this equation.
+
+    !!     !! This is a two-step process: we first check that
+    !!     We apply a two-step process, first checking that
+
+    !!     __the same constraints 
+    !!     on the signatures of $f$ and $g$ are imposed
+    !!     by either side of the equation__
+
+    !!     and then checking that, 
+    !!     for $f$ and $g$ meeting those constraints, 
+    !!     the two sides of the equation come out to the
+    !!     same units. We seek perfect agreement between both
+    !!     sides of the equation in any and all matters units-related!
 
     On the left-hand side,
 
@@ -525,7 +686,7 @@
     \end{aligned}
     $$
 
-    as listed in Table 1.1,
+    as listed in [Table 1.1](>>table_1_1),
     while the subsequent taking of a derivative doesn't
     impose any new constraints. 
     !! This is the sole
@@ -538,7 +699,7 @@
     !! To analyze 
     On
     the right-hand side,
-    start by adopting the agnostic viewpoint that
+    we start by adopting the agnostic point of view that
 
     $$
     \Large
@@ -591,8 +752,9 @@
     exist on the left-hand side!
 
     !! Having completed the first step, 
-    Having completed the first part of the two-step process, 
-    assume now that $f$
+    !! Having completed the first part of the two-step process, 
+
+    Assuming now that $f$
     and $g$ have the form
 
     $$
@@ -603,8 +765,9 @@
     \end{aligned}
     $$
 
-    as required by either side of the sum rule; 
-    then we have, one by one in order, that
+    as required by either side of the equation,
+    we have
+    !! then we have, one by one in order, that
 
     $$
     \Large
@@ -634,8 +797,10 @@
     \Large f' + g'
     $$
 
-    which means that the sum rule “survives” the
-    dimensional analysis: nothing untoward has been found!
+    which indicates that the sum “checks out” insofar
+    as units are concerned: nothing untoward has been found!
+    !! which means that the sum rule “survives” the
+    !! dimensional analysis: nothing untoward has been found!
 
     |> Example
         handle=_ms_x1_x2_example_
@@ -718,7 +883,7 @@
         __the velocity of a sum of two points
         is the sum of their velocities__
 
-        since in this case the “rate of change” is a velocity, etc.
+        since in this case the “rate of change” is a velocity.
 
     |> Example
         handle=differentiability_sum_rule_counterexample
@@ -758,18 +923,18 @@
         differentiable, as they
         are not differentiable, specifically, at $t = 0$.
         (But this is why we say “for differentiable $f$, $g$”
-        when we present the sum rule, or other such rules—it is
-        a necessary disclaimer to keep the statement accurate.)
+        when we present the sum rule, or other such rules.)
+        !! —it is
+        !! a necessary disclaimer to keep the statement accurate.)
 
     |> Pause
 
-    |> div
-        handle=postscript-on-x_0
     _Postscript._ Even if $f$ and $g$ are not
     both differentiable it is still 
     true, however, that
 
     |> Boxed
+        handle=postscript-on-x_0
         $$
         \Large (f + g)'(x_0) = f'(x_0) + g'(x_0)
         $$
@@ -801,7 +966,8 @@
     as we know from his notes,
     whence this equation's moniker.
 
-    On the left-hand side,
+    For a dimensional analysis of this equation, note
+    that on the left-hand side,
 
     $$
     \Large fg
@@ -819,7 +985,7 @@
 
     for some units A, B, C, per Table 1.1., which is also 
     the most general type of signature that is compatible with the right-hand side.
-    “So far so good.”
+    This is “so far so good”!
     !! the type of signature that the right-hand side requires—so far so good!
 
     However,
@@ -828,7 +994,7 @@
     \Large (fg)' : [\tA] \ra [\tB\tC/\tA]
     $$
     |> ImageLeft
-        src=tmp-images/c6_fg_prime_signature_cloud.svg
+        src=tmp-images/c6_fg_prime_signature_cloud_v2.svg
         offset_x=5em
 
     whereas
@@ -837,7 +1003,7 @@
     \Large f'g' : [\tA] \ra [\tB\tC/\tA^2]
     $$
     |> ImageRight
-        src=tmp-images/c6_f_prime_g_prime_signature_cloud.svg
+        src=tmp-images/c6_f_prime_g_prime_signature_cloud_v2.svg
         offset_x=5em
 
     as is easy to check, and
@@ -848,8 +1014,11 @@
 
     so the rule
     !! “the early afternoon product rule” 
-    cannot be correct—paraphrasing, “the units don't
-    even work out”.
+    cannot be correct: different units are produced
+    by either side of the equation, for the same
+    functions $f$ and $g$.
+    !! —paraphrasing, “the units don't
+    !! even work out”.
     !! Paraphrasing, 
     !! !! dimensional analysis has shown that
 
@@ -897,7 +1066,7 @@
         $$
 
         so there is no way these two quantities could
-        ever be equal, in general. For example,
+        ever be equal, in general. (For example,
         changing from counting time in seconds to
         counting it in hours, while correspondingly
         modifying $x_1$ and $x_2$ to reflect this
@@ -907,7 +1076,7 @@
         held before this change it would certainly\*
         [\*assuming $(x_1x_2)' \ne 0$] not hold after,
         and therefore, the early afternoon product rule
-        cannot hold in general.
+        cannot hold in general.)
 
         |> ImageLeft
             src=tmp-images/c6_x1x2_3600_cloud.svg
@@ -937,7 +1106,7 @@
         from this observation, and one would be wrong—which is to
         show that dimensional analysis is quick to debunk an incorrect
         equation but, in the contravening case, 
-        cannot be trusted as a proof!—however,
+        cannot be trusted as a proof—nonetheless,
 
         $$
         \Large x_1'x_2'
@@ -948,71 +1117,70 @@
         dimensional analysis is not _entirely_ wrong,
         even in this case!
 
-|> Section
+!! |> Section
+!!     *The product rule.*
+!!     The real “product rule”, valid for differentiable functions $f$ and $g$, is
 
-    *The product rule.*
-    The real “product rule”, valid for differentiable functions $f$ and $g$, is
+!!     |> Boxed
 
-    |> Boxed
+!!         $$
+!!         \Large (fg)' = f'g + fg'
+!!         $$
 
-        $$
-        \Large (fg)' = f'g + fg'
-        $$
+!!     as covered in Exercise >>_product_rule_#decoy:19 of Chapter >>derivatives#decoy:4.
+!!     To start the dimensional analysis, we can
+!!     easily see that both sides of the equation
+!!     !! impose the constraint
+!!     !! have sound units
+!!     !! if and only if 
+!!     !! $f$, $g$ have signatures
+!!     !! of the form
+!!     impose signatures of the form
 
-    as covered in Exercise >>_product_rule_#decoy:19 of Chapter >>derivatives#decoy:4.
-    To start the dimensional analysis, we can
-    easily see that both sides of the equation
-    !! impose the constraint
-    !! have sound units
-    !! if and only if 
-    !! $f$, $g$ have signatures
-    !! of the form
-    impose signatures of the form
+!!     $$
+!!     \Large
+!!     \begin{aligned}
+!!     f : [\te{A}] &\ra [\te{B}] \\
+!!     g : [\te{A}] &\ra [\te{C}] \up{1.35}
+!!     \end{aligned}
+!!     $$
 
-    $$
-    \Large
-    \begin{aligned}
-    f : [\te{A}] &\ra [\te{B}] \\
-    g : [\te{A}] &\ra [\te{C}] \up{1.35}
-    \end{aligned}
-    $$
+!!     on $f$ and $g$. 
+!!     From there,
+!!     !! in which case
 
-    on $f$ and $g$. 
-    From there,
-    !! in which case
+!!     $$
+!!     \Large (fg)' : [\tA] \ra [\tB\tC/\tA]
+!!     $$
 
-    $$
-    \Large (fg)' : [\tA] \ra [\tB\tC/\tA]
-    $$
+!!     while
 
-    while
+!!     $$
+!!     \Large
+!!     \begin{gathered}
+!!     !! f': [\te{A}] \ra [\tB/\tA] \\
+!!     !! g' : [\te{A}] \ra [\tC/\tA] \up{1.35} \\
+!!     f'g :  [\te{A}] \ra [\tB\tC/\tA] \\
+!!     fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
+!!     !! f'g + fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
+!!     \end{gathered}
+!!     $$
 
-    $$
-    \Large
-    \begin{gathered}
-    !! f': [\te{A}] \ra [\tB/\tA] \\
-    !! g' : [\te{A}] \ra [\tC/\tA] \up{1.35} \\
-    f'g :  [\te{A}] \ra [\tB\tC/\tA] \\
-    fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
-    !! f'g + fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
-    \end{gathered}
-    $$
+!!     and
 
-    and
+!!     $$
+!!     \Large f'g + fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
+!!     $$
 
-    $$
-    \Large f'g + fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
-    $$
-
-    so $f'g + fg'$ has the
-    same signature as $(fg)'$, i.e., 
-    this formula passes the “sniff test” of
-    dimensional analysis.
-    !! dimensional
-    !! analysis gives its _imprimatur_ to this formula!
-    !! (It “passes the sniff test” of dimensional analysis, put
-    !! differently.)
-    !! !! (Which is, indeed, the correct one.)
+!!     so $f'g + fg'$ has the
+!!     same signature as $(fg)'$, i.e., 
+!!     this formula passes the “sniff test” of
+!!     dimensional analysis.
+!!     !! dimensional
+!!     !! analysis gives its _imprimatur_ to this formula!
+!!     !! (It “passes the sniff test” of dimensional analysis, put
+!!     !! differently.)
+!!     !! !! (Which is, indeed, the correct one.)
 
 |> Section
     handle=chain_rule_discovery
@@ -1032,7 +1200,8 @@
     \Large (f \circ g)'
     $$
 
-    similar to the sum rule or product rule,
+    similar to the sum rule,
+    !! or product rule,
     and we can try guessing such a formula using
     dimensional analysis, i.e., from the fact that the
     formula should be dimensionally consistent.
@@ -1368,7 +1537,7 @@
         !! $$
 
         |> ImageRight
-            src=tmp-images/c6_forbidden_fprime_of_t0.svg
+            src=tmp-images/c6_forbidden_fprime_of_t0_v2.svg
             line=-3
             offset_x=1em
 
@@ -1393,9 +1562,15 @@
         __for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
         differentiable at $x$ and $f$ differentiable at $g(x)$__
 
+        similarly to the sum rule. (Cf. the 
+        [note after Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).)
+        !! to the more granular version of the
+        !! sum rule, [given after Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
+
         !! similarly to the 
-        which is like we did for the sum rule in the [“Postscript” after
-        Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
+        !! !! which is like we did for the sum rule in the 
+        !! [“Postscript” after
+        !! Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
 
     |> Example
 
@@ -1602,7 +1777,9 @@
 
     !! ...which implies...
     !! which turns into
-    with a “pure $3$” on the left implies
+    !! with a “pure $3$” 
+    with no (i.e., dimensionless) units
+    on the left implies
 
     $$
     \Large 3\te{s} = \te{time}

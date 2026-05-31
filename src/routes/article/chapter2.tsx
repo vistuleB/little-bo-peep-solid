@@ -22,7 +22,7 @@ export default function __Chapter2__() {
       nextPage="/article/chapter3"
       pageNecessaryMargin={650}
       maxElementWidth={900}
-      id="_30_hgi_"
+      id="_32_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -94,7 +94,7 @@ export default function __Chapter2__() {
           the values, see below):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/9z9J.svg" />
+        <Image src="/tmp-images/c2_slope_examples.svg" />
         <Pause />
         <OuterP>
           To explain, the slope of a line is...
@@ -124,7 +124,7 @@ export default function __Chapter2__() {
           </NoBreak>
           {" "} increase
           going right, as is usually the case. 
-          Or one can say...
+          Or...
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -134,7 +134,7 @@ export default function __Chapter2__() {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          ...which is an alternate, more elegant description.
+          ...is a different way of expressing the same idea.
         </OuterP>
         <OuterP class="indent-10">
           For example, the line below has slope 1, because
@@ -145,7 +145,7 @@ export default function __Chapter2__() {
           {" "} unit for each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/JbBo.svg" />
+        <Image src="/tmp-images/c2_slope_1_example.svg" />
         <Pause />
         <OuterP>
           On the other hand, the line below has slope
@@ -168,7 +168,7 @@ export default function __Chapter2__() {
           with each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/03l_.svg" />
+        <Image src="/tmp-images/c2_slope_minus_0.5_example.svg" />
         <Pause />
         <OuterP>
           ...and so on.
@@ -206,7 +206,7 @@ const Rest = () => {
           {" "} on the line:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/J9Ud.svg" />
+        <Image src="/tmp-images/c2_vertical_change_over_horizontal_change_grey_cloud.svg" />
         <Pause />
         <MathBlock>
           $$
@@ -260,11 +260,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          are the horizontal {" "}
-          <i>
-            &amp;
-          </i>
-          {" "} the vertical change,
+          are the horizontal and the vertical change,
           respectively, from {" "}
           <Math>
             $A$
@@ -284,7 +280,7 @@ const Rest = () => {
           \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
           $$
           <ImageRight
-            src="/build-img/svgo-svg/hv76.svg"
+            src="/tmp-images/c2_slope_formula_cloud.svg"
             offset_y="-0.7em"
             offset_x="3em"
             compensate_offset_x_for_large_text_columns={true}
@@ -299,7 +295,7 @@ const Rest = () => {
           .
         </OuterP>
         <Pause />
-        <Example>
+        <Example id="_26_hgi_">
           <OuterP>
             <b>
               Example 1.
@@ -338,7 +334,14 @@ const Rest = () => {
         <StarDivider />
         <Pause />
         <OuterP>
-          (The main thing to understand about Example 1 is that
+          (In {" "}
+          <InChapterLink
+            href="/article/chapter2#_26_hgi_"
+            class="in-chapter-link"
+          >
+            Example 1
+          </InChapterLink>
+          &#8288;, understand that
         </OuterP>
         <Pause />
         <MathBlock>
@@ -443,8 +446,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          can be positive or negative or zero (more on
-          zero below), the following sign combinations
+          can be positive or negative or zero—more on
+          zero below—the following sign combinations
           arise (lines of slope zero not included):
         </OuterP>
         <Pause />
@@ -472,7 +475,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svg/Mj3v.svg"
+                  src="/tmp-images/c2_image_icon.svg"
                   width={50}
                   style="padding-top:7px;padding-bottom:7px;"
                 />
@@ -498,7 +501,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/QvK-.svg"
+                  src="/tmp-images/c2_plus_plus_slope.svg"
                   style="margin-top:7px;margin-bottom:7px;width:105px;"
                 />
               </td>
@@ -523,7 +526,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/vebo.svg"
+                  src="/tmp-images/c2_minus_minus_slope.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
                 />
@@ -549,7 +552,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/QIqm.svg"
+                  src="/tmp-images/c2_plus_minus_slope.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
                 />
@@ -575,7 +578,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/yqVM.svg"
+                  src="/tmp-images/c2_minus_minus_slope.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
                 />
@@ -590,6 +593,7 @@ const Rest = () => {
             </tr>
           </tbody>
         </Table>
+        <Pause />
         <OuterP>
           In fact, we {" "}
           <i>
@@ -608,7 +612,7 @@ const Rest = () => {
           {" "} swap
           places, or, namely, to show that the fractions
           <ImageRight
-            src="/build-img/svgo-svg/j7nd.svg"
+            src="/tmp-images/c2_swap_cloud.svg"
             line={3}
             offset_x="-0.5em"
           />
@@ -629,7 +633,7 @@ const Rest = () => {
           &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125;
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/cWp0.svg"
+            src="/tmp-images/c2_a_b_fraction_cloud.svg"
             offset_x="2.5em"
             offset_y="-60px"
             compensate_offset_x_for_large_text_columns={true}
@@ -674,7 +678,7 @@ const Rest = () => {
           line:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/H3CJ.svg" />
+        <Image src="/tmp-images/c2_vertical_line.svg" />
         <Pause />
         <OuterP>
           Indeed, vertical lines have {" "}
@@ -743,7 +747,7 @@ const Rest = () => {
           </NoBreak>
           <span class="nobreak">
             <InlineImage
-              src="/build-img/svgo-svg/f8wM.svg"
+              src="/tmp-images/c2_inline_rise_over_run.svg"
               width="28px"
             />
             ”),
@@ -751,7 +755,7 @@ const Rest = () => {
           {" "} following such a picture:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/Yc3l.svg" />
+        <Image src="/tmp-images/c2_rise_over_run_1st_figure.svg" />
         <Pause />
         <OuterP>
           In this context, note that, in physics, a
@@ -790,7 +794,7 @@ const Rest = () => {
           also include this picture:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/6vhm.svg" />
+        <Image src="/tmp-images/c2_rise_over_run_2nd_figure.svg" />
         <Pause />
         <OuterP>
           Then “rise” and “run” have their signs flipped,
@@ -901,7 +905,7 @@ const Rest = () => {
           or “run equals rise over slope”. Or:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/2sTW.svg" />
+        <Image src="/tmp-images/c2_flower_bed_1.svg" />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
       </Section>
@@ -934,7 +938,7 @@ const Rest = () => {
           the Cartesian plane. E.g.:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/IyJL.svg" />
+        <Image src="/tmp-images/c2_line_equation_examples.svg" />
         <Pause />
         <OuterP>
           Note that, assuming said {" "}
@@ -1111,7 +1115,7 @@ const Rest = () => {
             <Math>
               $y = ax + b$
             </Math>
-            .
+            !
           </NoBreak>
         </OuterP>
         <Pause />
@@ -1335,7 +1339,7 @@ const Rest = () => {
           in seconds:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/Jiyb.svg" />
+        <Image src="/tmp-images/c2_meters_over_seconds_balloon.svg" />
         <Pause />
         <OuterP>
           The slope of the graph is {" "}
@@ -1463,11 +1467,13 @@ const Rest = () => {
           </NoBreak>
           {" "} By extension, taking all
           three permutations of the slope formula into account
-          gives us this alternate triptyc of equations, expressing
+          gives us this alternate triptych of equations, expressing
           the same idea(s) in “applied” language:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/lT_G.svg" />
+        <Image src="/tmp-images/c2_flower_bed_2.svg" />
+        <Pause />
+        <StarDivider style="margin-top:-0.3em" />
         <Pause />
         <Example>
           <OuterP>
@@ -1541,8 +1547,7 @@ const Rest = () => {
             \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
             $$
             <ImageRight
-              src="/build-img/svgo-svg/9BAj.svg"
-              offset_x="0rem"
+              src="/tmp-images/c2_units_cloud.svg"
               compensate_offset_x_for_large_text_columns={true}
             />
           </MathBlock>
@@ -1662,10 +1667,10 @@ const Rest = () => {
       <Exercises
         at_end_of_page={true}
         show_curlicue={true}
-        id="_29_hgi_"
+        id="_31_hgi_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_25_hgi_">
+          <ExerciseStatement id="_27_hgi_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1692,16 +1697,16 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/build-img/svgo-svg/hxH2.svg"
+              src="/tmp-images/c2_slope_two_and_minus_one_half.svg"
               class="relative w-fit"
             >
               <ImageRight
-                src="/build-img/svgo-svg/KI3-.svg"
+                src="/tmp-images/c2_slope_two_and_minus_one_half_cloud_right.svg"
                 offset_y="20%"
                 offset_x="-5%"
               />
               <ImageLeft
-                src="/build-img/svgo-svg/fi0W.svg"
+                src="/tmp-images/c2_slope_two_and_minus_one_half_cloud_left.svg"
                 offset_x="-25%"
                 offset_y="47%"
               />
@@ -1747,16 +1752,16 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/build-img/svgo-svg/t5sl.svg"
+                src="/tmp-images/c2_slope_p_minus_one_over_p.svg"
                 class="relative w-fit"
               >
                 <ImageRight
-                  src="/build-img/svgo-svg/7UPg.svg"
+                  src="/tmp-images/c2_slope_p_minus_one_over_p_cloud_right.svg"
                   offset_y="28%"
                   offset_x="-5%"
                 />
                 <ImageLeft
-                  src="/build-img/svgo-svg/qCes.svg"
+                  src="/tmp-images/c2_slope_p_minus_one_over_p_cloud_left.svg"
                   offset_x="-18%"
                   offset_y="44%"
                 />
@@ -1767,7 +1772,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_26_hgi_">
+          <ExerciseStatement id="_28_hgi_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2035,7 +2040,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_27_hgi_">
+          <ExerciseStatement id="_29_hgi_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -2110,16 +2115,7 @@ const Rest = () => {
               <i>
                 Note 1.
               </i>
-              {" "}
-              As explained in {" "}
-              <a
-                href="/article/chapter3#_53_hgi_"
-                class="out-chapter-link"
-              >
-                Chapter 3
-              </a>
-              &#8288;, an empty circle of
-              this type
+              {" "} An empty circle
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/Jp8B.svg" />
@@ -2218,7 +2214,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_28_hgi_">
+          <ExerciseStatement id="_30_hgi_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2227,7 +2223,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2#_26_hgi_"
+                href="/article/chapter2#_28_hgi_"
                 class="in-chapter-link"
               >
                 Exercise 2
@@ -2267,7 +2263,7 @@ const Rest = () => {
               E.g.:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/zUas.svg" />
+            <Image src="/build-img/svgo-svg/gR1_.svg" />
             <Pause />
             <OuterP>
               The rise from the {" "}

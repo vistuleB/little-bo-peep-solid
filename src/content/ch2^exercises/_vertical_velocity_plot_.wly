@@ -35,9 +35,9 @@
 
         |> Pause
 
-        _Note 1._
-        As explained in Chapter >>functions, an empty circle of
-        this type
+        _Note 1._ An empty circle
+        !! As explained in Chapter >>functions, an empty circle of
+        !! this type
 
         |> Image
             src=images/svg_empty_circle_alone.svg

@@ -136,7 +136,29 @@ export default function __Bootcamp1__() {
             ,
           </NoBreak>
           {" "}
-          while
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\&#123;1, 3\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a set containing just the numbers {" "}
+          <Math>
+            $1$
+          </Math>
+          {" "}
+          and {" "}
+          <NoBreak>
+            <Math>
+              $3$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} even
         </OuterP>
         <Pause />
         <MathBlock>

@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg width="1300" height="500" viewBox="0 0 1300 500" version="1.1" id="svg1" inkscape:version="1.3.2 (091e20e, 2023-11-25)" sodipodi:docname="c6_f_prime_g_prime_signature_cloud_v2.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+    <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25" inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1" inkscape:zoom="0.944" inkscape:cx="175.84746" inkscape:cy="277.54237" inkscape:window-width="1728" inkscape:window-height="1051" inkscape:window-x="0" inkscape:window-y="34" inkscape:window-maximized="0" inkscape:current-layer="layer1" showguides="true">
+        <sodipodi:guide position="737.83796,253.87191" orientation="0,1" id="guide1" inkscape:locked="false" inkscape:label="" inkscape:color="rgb(0,134,229)" />
+        <sodipodi:guide position="737.83796,210.74795" orientation="0,-1" id="guide2" inkscape:locked="false" />
+        <sodipodi:guide position="533.78554,197.01845" orientation="1,0" id="guide3" inkscape:locked="false" />
+        <sodipodi:guide position="276.7132,253.87191" orientation="1,0" id="guide4" inkscape:locked="false" />
+        <sodipodi:guide position="256.3115,253.87191" orientation="1,0" id="guide5" inkscape:locked="false" />
+        <sodipodi:guide position="477.14727,276.40744" orientation="1,0" id="guide6" inkscape:locked="false" />
+        <sodipodi:guide position="504.1132,253.87191" orientation="1,0" id="guide7" inkscape:locked="false" />
+        <sodipodi:guide position="447.10579,291.67115" orientation="0,-1" id="guide8" inkscape:locked="false" />
+        <sodipodi:guide position="448.16511,176.28033" orientation="0,-1" id="guide9" inkscape:locked="false" />
+        <sodipodi:guide position="462.3103,333.61919" orientation="1,0" id="guide10" inkscape:locked="false" />
+    </sodipodi:namedview>
+    <defs id="defs1" />
+    <g inkscape:label="cloud" inkscape:groupmode="layer" id="layer1" style="display:inline">
+        <path style="display:inline;fill:#f5fbff;fill-opacity:1;stroke:#000000;stroke-width:0.8;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0" d="m 27.794222,232.47324 c -4.101801,1.36101 -7.897158,4.14239 -10.433705,7.81976 -3.775147,5.47255 -3.764501,12.25719 -1.21369,17.1981 2.732217,5.29279 7.928447,9.03249 14.048005,10.14067 3.247131,0.58796 6.904629,0.16861 10.175403,-1.48192 5.467915,-2.75897 8.886445,-8.90112 9.070734,-14.45417 0.132066,-3.96119 -0.851379,-7.76301 -2.889928,-10.82637 -2.731278,-4.10431 -6.694201,-7.38195 -11.443877,-9.14624 -0.86031,-0.31968 -1.775002,-0.52766 -2.662629,-0.79168" id="path4-00" sodipodi:nodetypes="csssssssc" />
+        <path style="fill:#f5fbff;fill-opacity:1;stroke:#000000;stroke-width:0.799999;stroke-miterlimit:2;stroke-dasharray:none" d="m 371.77152,347.84215 -72.88234,19.34134 -136.15167,0.23015 -65.992444,-15.85853 -34.072168,-55.92246 0.112661,-85.9468 17.259721,-57.05931 65.8502,-18.29295 124.54672,-3.70709 84.53546,5.49914 43.18358,51.31147 5.62501,95.14008 z" id="path4" sodipodi:nodetypes="ccccccccccccc" />
+        <g transform="matrix(0.0274176,0,0,-0.0274176,275.04637,184.23783)" id="g22">
+            <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect20" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,262.49733,236.33127)" id="g34" />
+        <g transform="matrix(0.0274176,0,0,-0.0274176,291.90271,236.33127)" id="g36">
+            <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect34" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,323.57827,288.42471)" id="g57">
+            <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect55" />
+        </g>
+    </g>
+    <g inkscape:groupmode="layer" id="layer2" inkscape:label="content">
+        <g id="g2" transform="matrix(0.0274176,0,0,-0.0274176,-347.33791,132.14439)">
+            <path id="use1" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-324.64162,132.14439)" id="g3">
+            <path id="use2" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-309.40292,132.14439)" id="g4">
+            <path id="use3" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,-301.78083,132.14439)" id="g5">
+            <text transform="scale(1,-1)" font-size="1105px" id="text3"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan1">A</tspan></text>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-281.07231,132.14439)" id="g6">
+            <path id="use4" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-265.83635,132.14439)" id="g7">
+            <path id="use5" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-230.80214,132.14439)" id="g8">
+            <path id="use6" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,-223.18005,132.14439)" id="g9">
+            <text transform="scale(1,-1)" font-size="1105px" id="text7"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan2">B</tspan></text>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-204.54979,132.14439)" id="g10">
+            <path id="use8" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+        </g>
+        <g id="g13" transform="matrix(0.0274176,0,0,-0.0274176,-347.91368,184.23783)">
+            <path id="use11" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-327.21888,184.23783)" id="g14">
+            <path id="use12" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-311.98017,184.23783)" id="g15">
+            <path id="use13" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,-304.35808,184.23783)" id="g16">
+            <text transform="scale(1,-1)" font-size="1105px" id="text14"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan3">A</tspan></text>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-283.64957,184.23783)" id="g17">
+            <path id="use15" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-268.41361,184.23783)" id="g18">
+            <path id="use16" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-233.3794,184.23783)" id="g19">
+            <path id="use17" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,-225.7573,184.23783)" id="g20">
+            <text transform="scale(1,-1)" font-size="1105px" id="text18"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan4">C</tspan></text>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-203.97402,184.23783)" id="g21">
+            <path id="use19" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+        </g>
+        <g id="g25" transform="matrix(0.0274176,0,0,-0.0274176,-364.76728,236.33127)">
+            <path id="use23" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-349.6876,236.33127)" id="g26">
+            <path id="use24" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-328.9928,236.33127)" id="g27">
+            <path id="use25" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-313.75409,236.33127)" id="g28">
+            <path id="use26" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,-306.132,236.33127)" id="g29">
+            <text transform="scale(1,-1)" font-size="1105px" id="text27"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan5">A</tspan></text>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-285.42349,236.33127)" id="g30">
+            <path id="use28" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-270.18753,236.33127)" id="g31">
+            <path id="use29" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-235.15332,236.33127)" id="g32">
+            <path id="use30" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,-227.53122,236.33127)" id="g33">
+            <text transform="scale(1,-1)" font-size="1105px" id="text31"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan6">BC</tspan></text>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-187.11768,236.33127)" id="g35">
+            <path id="use33" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+        </g>
+        <g id="g39" transform="matrix(0.0274176,0,0,-0.0274176,-396.44558,288.42471)">
+            <path id="use37" d="m 94,250 q 0,69 10,131 10,62 23,107 13,45 37,88 24,43 38,67 14,24 42,52 28,28 33,34 5,6 25,21 h 13 4 q 14,0 14,-9 0,-3 -17,-21 -17,-18 -41,-53 -24,-35 -49,-86 -25,-51 -42,-138 -17,-87 -17,-193 0,-106 17,-192 17,-86 41,-139 24,-53 49,-86 25,-33 42,-53 17,-20 17,-21 0,-9 -15,-9 h -3 -13 l -28,24 Q 180,-141 137,-14 94,113 94,250 Z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-385.78013,288.42471)" id="g40">
+            <path id="use38" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-370.70045,288.42471)" id="g41">
+            <path id="use39" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-357.62225,288.42471)" id="g44">
+            <g id="g42">
+                <path id="use40" d="m 60,749 4,1 q 5,0 10,0 h 12 l 28,-24 q 94,-85 137,-212 43,-127 43,-264 0,-68 -10,-131 -10,-63 -23,-107 -13,-44 -37,-88 -24,-44 -38,-67 -14,-23 -41,-51 -27,-28 -32,-33 -5,-5 -23,-19 -3,-3 -4,-4 H 74 q -8,0 -11,0 -3,0 -5,3 -2,3 -3,9 1,1 11,13 155,161 155,475 0,314 -155,475 -10,12 -11,13 0,8 5,11 z" />
+            </g>
+            <g transform="matrix(0.707,0,0,0.707,422,413)" id="g43">
+                <path id="use41" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" />
+            </g>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-331.73455,288.42471)" id="g45">
+            <path id="use43" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-316.49585,288.42471)" id="g46">
+            <path id="use44" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,-308.87376,288.42471)" id="g47">
+            <text transform="scale(1,-1)" font-size="1105px" id="text45"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan7">A</tspan></text>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-288.16525,288.42471)" id="g48">
+            <path id="use46" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-272.92654,288.42471)" id="g49">
+            <path id="use47" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-237.89233,288.42471)" id="g50">
+            <path id="use48" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,-230.27024,288.42471)" id="g51">
+            <text transform="scale(1,-1)" font-size="1105px" id="text49"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan8">BC</tspan></text>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-189.85944,288.42471)" id="g54">
+            <g id="g53">
+                <path id="use51" d="m 423,750 q 9,0 15,-6 6,-6 6,-14 0,-5 -173,-482 -173,-477 -179,-488 -7,-10 -17,-10 -7,0 -13,5 -6,5 -6,14 0,10 174,488 174,478 177,483 4,10 16,10 z" />
+            </g>
+        </g>
+        <g style="font-family:Regular" transform="matrix(0.0274176,0,0,-0.0274176,-176.15064,288.42471)" id="g55">
+            <text transform="scale(1,-1)" font-size="1105px" id="text53"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan9">A</tspan></text>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,-155.44213,288.42471)" id="g56">
+            <path id="use54" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+        </g>
+        <g transform="matrix(0.01758504,0,0,-0.01757615,69.691979,261.84749)" id="g17-1" style="stroke-width:1.55954">
+            <g transform="translate(992.8)" id="g16-7" style="stroke-width:1.55954">
+                <g id="g4-9" style="stroke-width:1.55954">
+                    <g id="g2-2" style="stroke-width:1.55954">
+                        <path id="use1-4" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" style="stroke-width:1.55954" />
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,636,413)" id="g3-8" style="stroke-width:1.55954">
+                        <path id="use2-3" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" style="stroke-width:1.55954" />
+                    </g>
+                </g>
+                <g transform="translate(1158.2)" id="g5-9" style="stroke-width:1.55954">
+                    <path id="use3-6" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(1714)" id="g6-4" style="stroke-width:1.55954">
+                    <path id="use4-7" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+                </g>
+                <g style="font-family:Regular;stroke-width:1.55954" transform="translate(1992)" id="g7-7">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text5" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan10">A</tspan></text>
+                </g>
+                <g transform="translate(2747.3)" id="g8-3" style="stroke-width:1.55954">
+                    <path id="use6-1" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(3303.1)" id="g9-7" style="stroke-width:1.55954">
+                    <path id="use7" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(4580.9)" id="g10-4" style="stroke-width:1.55954">
+                    <path id="use8-9" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+                </g>
+                <g style="font-family:Regular;stroke-width:1.55954" transform="translate(4858.9)" id="g11">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text9" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan11">B</tspan></text>
+                </g>
+                <g transform="translate(5538.3)" id="g13-6" style="stroke-width:1.55954">
+                    <g id="g12" style="stroke-width:1.55954">
+                        <path id="use10" d="m 423,750 q 9,0 15,-6 6,-6 6,-14 0,-5 -173,-482 -173,-477 -179,-488 -7,-10 -17,-10 -7,0 -13,5 -6,5 -6,14 0,10 174,488 174,478 177,483 4,10 16,10 z" style="stroke-width:1.55954" />
+                    </g>
+                </g>
+                <g style="font-family:Regular;stroke-width:1.55954" transform="translate(6038.3)" id="g14-9">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text12" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan12">A</tspan></text>
+                </g>
+                <g transform="translate(6793.6)" id="g15-8" style="stroke-width:1.55954">
+                    <path id="use13-0" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(0.01758504,0,0,-0.01757615,244.85353,261.66201)" id="g34-3" style="stroke-width:1.55954">
+            <g transform="translate(998.2)" id="g33-6" style="stroke-width:1.55954">
+                <g id="g20-6" style="stroke-width:1.55954">
+                    <g id="g18-5" style="stroke-width:1.55954">
+                        <path id="use16-4" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" style="stroke-width:1.55954" />
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,510,413)" id="g19-2" style="stroke-width:1.55954">
+                        <path id="use17-3" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" style="stroke-width:1.55954" />
+                    </g>
+                </g>
+                <g transform="translate(1032.2)" id="g21-1" style="stroke-width:1.55954">
+                    <path id="use19-2" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(1588)" id="g22-1" style="stroke-width:1.55954">
+                    <path id="use20" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+                </g>
+                <g style="font-family:Regular;stroke-width:1.55954" transform="translate(1866)" id="g23">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text21" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan13">A</tspan></text>
+                </g>
+                <g transform="translate(2621.3)" id="g24" style="stroke-width:1.55954">
+                    <path id="use22" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(3177.1)" id="g25-2" style="stroke-width:1.55954">
+                    <path id="use23-5" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(4454.9)" id="g26-6" style="stroke-width:1.55954">
+                    <path id="use24-4" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+                </g>
+                <g style="font-family:Regular;stroke-width:1.55954" transform="translate(4732.9)" id="g27-8">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text25" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan15">C</tspan></text>
+                </g>
+                <g transform="translate(5527.4)" id="g29-0" style="stroke-width:1.55954">
+                    <g id="g28-1" style="stroke-width:1.55954">
+                        <path id="use26-0" d="m 423,750 q 9,0 15,-6 6,-6 6,-14 0,-5 -173,-482 -173,-477 -179,-488 -7,-10 -17,-10 -7,0 -13,5 -6,5 -6,14 0,10 174,488 174,478 177,483 4,10 16,10 z" style="stroke-width:1.55954" />
+                    </g>
+                </g>
+                <g style="font-family:Regular;stroke-width:1.55954" transform="translate(6027.4)" id="g30-5">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text28" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan18">A</tspan></text>
+                </g>
+                <g transform="translate(6782.7)" id="g31-4" style="stroke-width:1.55954">
+                    <path id="use29-2" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(7060.7)" id="g32-6" style="stroke-width:1.55954">
+                    <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect30" style="stroke-width:1.55954" />
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(0.01758504,0,0,-0.01757615,160.20742,333.92589)" id="g57-7" style="stroke-width:1.55954">
+            <g id="g56-9" style="stroke-width:1.55954">
+                <g id="g37" style="stroke-width:1.55954">
+                    <g id="g35-5" style="stroke-width:1.55954">
+                        <path id="use33-9" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" style="stroke-width:1.55954" />
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,636,413)" id="g36-1" style="stroke-width:1.55954">
+                        <path id="use34" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" style="stroke-width:1.55954" />
+                    </g>
+                </g>
+                <g transform="translate(880.5)" id="g40-0" style="stroke-width:1.55954">
+                    <g id="g38" style="stroke-width:1.55954">
+                        <path id="use36" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" style="stroke-width:1.55954" />
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,510,413)" id="g39-8" style="stroke-width:1.55954">
+                        <path id="use37-9" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" style="stroke-width:1.55954" />
+                    </g>
+                </g>
+                <g transform="translate(1912.7)" id="g41-9" style="stroke-width:1.55954">
+                    <path id="use39-7" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(2468.5)" id="g42-9" style="stroke-width:1.55954">
+                    <path id="use40-6" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+                </g>
+                <g style="font-family:Regular;stroke-width:1.55954" transform="translate(2746.5)" id="g43-9">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text41" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan14">A</tspan></text>
+                </g>
+                <g transform="translate(3501.8)" id="g44-0" style="stroke-width:1.55954">
+                    <path id="use42" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(4057.5)" id="g45-5" style="stroke-width:1.55954">
+                    <path id="use43-7" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(5335.3)" id="g46-2" style="stroke-width:1.55954">
+                    <path id="use44-2" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+                </g>
+                <g style="font-family:Regular;stroke-width:1.55954" transform="translate(5613.3)" id="g47-0">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text45-1" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan16">BC</tspan></text>
+                </g>
+                <g style="font-family:Regular;stroke-width:1.55954" transform="translate(6292.8)" id="g48-5" />
+                <g transform="translate(7087.3)" id="g50-0" style="stroke-width:1.55954">
+                    <g id="g49-5" style="stroke-width:1.55954">
+                        <path id="use47-6" d="m 423,750 q 9,0 15,-6 6,-6 6,-14 0,-5 -173,-482 -173,-477 -179,-488 -7,-10 -17,-10 -7,0 -13,5 -6,5 -6,14 0,10 174,488 174,478 177,483 4,10 16,10 z" style="stroke-width:1.55954" />
+                    </g>
+                </g>
+                <g transform="translate(7587.3)" id="g53-4" style="stroke-width:1.55954">
+                    <g style="font-family:Regular;stroke-width:1.55954" id="g51-5">
+                        <text transform="scale(1,-1)" font-size="1105px" id="text49-2" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan17">A</tspan></text>
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,788.3,477.1)" id="g52" style="stroke-width:1.55954">
+                        <path id="use50" d="m 109,429 q -27,0 -43,18 -16,18 -16,44 0,71 53,123 53,52 132,52 91,0 152,-56 61,-56 62,-145 0,-43 -20,-82 -20,-39 -48,-68 -28,-29 -80,-74 -36,-31 -100,-92 l -59,-56 76,-1 q 157,0 167,5 7,2 24,89 v 3 h 40 v -3 Q 448,183 436,95 424,7 421,3 V 0 H 50 v 19 12 q 0,7 6,15 6,8 30,35 29,32 50,56 9,10 34,37 25,27 34,37 9,10 29,33 20,23 28,34 8,11 23,30 15,19 21,32 6,13 15,29 9,16 13,32 4,16 7,30 3,14 3,33 0,63 -34,109 -34,46 -97,46 -33,0 -58,-17 -25,-17 -35,-33 -10,-16 -10,-19 0,-1 5,-1 18,0 37,-14 19,-14 19,-46 0,-25 -16,-42 -16,-17 -45,-18 z" style="stroke-width:1.55954" />
+                    </g>
+                </g>
+                <g transform="translate(8779.2)" id="g54-3" style="stroke-width:1.55954">
+                    <path id="use52" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+                </g>
+                <g transform="translate(9057.2)" id="g55-0" style="stroke-width:1.55954">
+                    <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect53" style="stroke-width:1.55954" />
+                </g>
+            </g>
+        </g>
+        <g id="g132" transform="matrix(0.64137739,0,0,0.64105355,-18.174836,36.807311)" style="stroke-width:1.55954">
+            <g id="g24-6" transform="matrix(0.0274176,0,0,-0.0274176,180.71936,236.39092)" style="display:inline;stroke-width:1.55954">
+                <path id="path23" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" style="stroke-width:1.55954" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,203.41565,236.39092)" id="g37-8" style="display:inline;stroke-width:1.55954">
+                <path id="path24" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" style="stroke-width:1.55954" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,218.65435,236.39092)" id="g38-3" style="display:inline;stroke-width:1.55954">
+                <path id="path38" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+            </g>
+            <g style="font-family:Regular;display:inline;stroke-width:1.55954" transform="matrix(0.0274176,0,0,-0.0274176,226.27644,236.39092)" id="g52-6">
+                <text transform="scale(1,-1)" font-size="1105px" id="text38" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan38">A</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,246.98496,236.39092)" id="g58-8" style="display:inline;stroke-width:1.55954">
+                <path id="path55" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,259.99435,236.39092)" id="g59-6" style="display:inline;stroke-width:1.55954">
+                <path id="path58" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" style="stroke-width:1.55954" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,292.80199,236.39092)" id="g60-2" style="display:inline;stroke-width:1.55954">
+                <path id="path59" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+            </g>
+            <g style="font-family:Regular;display:inline;stroke-width:1.55954" transform="matrix(0.0274176,0,0,-0.0274176,300.42408,236.39092)" id="g61-3">
+                <text transform="scale(1,-1)" font-size="1105px" id="text60" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan60">B</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,319.05434,236.39092)" id="g62" style="display:inline;stroke-width:1.55954">
+                <path id="path61" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+            </g>
+        </g>
+        <g id="g133" transform="matrix(0.64137739,0,0,0.64105355,153.33731,7.5560948)" style="stroke-width:1.55954">
+            <g id="g64" transform="matrix(0.0274176,0,0,-0.0274176,179.56782,279.51489)" style="display:inline;stroke-width:1.55954">
+                <path id="path63" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" style="stroke-width:1.55954" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,200.26262,279.51489)" id="g65" style="display:inline;stroke-width:1.55954">
+                <path id="path64" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" style="stroke-width:1.55954" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,215.50133,279.51489)" id="g66" style="display:inline;stroke-width:1.55954">
+                <path id="path65" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+            </g>
+            <g style="font-family:Regular;display:inline;stroke-width:1.55954" transform="matrix(0.0274176,0,0,-0.0274176,223.12342,279.51489)" id="g67">
+                <text transform="scale(1,-1)" font-size="1105px" id="text66" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan66">A</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,243.83193,279.51489)" id="g68" style="display:inline;stroke-width:1.55954">
+                <path id="path67" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,256.84132,279.51489)" id="g69" style="display:inline;stroke-width:1.55954">
+                <path id="path68" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" style="stroke-width:1.55954" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,289.64896,279.51489)" id="g70" style="display:inline;stroke-width:1.55954">
+                <path id="path69" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" style="stroke-width:1.55954" />
+            </g>
+            <g style="font-family:Regular;display:inline;stroke-width:1.55954" transform="matrix(0.0274176,0,0,-0.0274176,297.27106,279.51489)" id="g71">
+                <text transform="scale(1,-1)" font-size="1105px" id="text70" style="stroke-width:1.55954"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville;stroke-width:1.55954" id="tspan70">C</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,319.05434,279.51489)" id="g72" style="display:inline;stroke-width:1.55954">
+                <path id="path71" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" style="stroke-width:1.55954" />
+            </g>
+        </g>
+        <g id="g134" transform="translate(13.518686,-320.27285)">
+            <g id="g102" transform="matrix(0.0274176,0,0,-0.0274176,565.4958,256.8544)" style="display:inline">
+                <path id="path101" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,580.57548,256.8544)" id="g103" style="display:inline">
+                <path id="path102" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,601.27028,256.8544)" id="g104" style="display:inline">
+                <path id="path103" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,616.50899,256.8544)" id="g105" style="display:inline">
+                <path id="path104" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+            </g>
+            <g style="font-family:Regular;display:inline" transform="matrix(0.0274176,0,0,-0.0274176,624.13108,256.8544)" id="g106">
+                <text transform="scale(1,-1)" font-size="1105px" id="text105"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan105">A</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,644.83959,256.8544)" id="g108" style="display:inline">
+                <path id="path106" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,657.84898,256.8544)" id="g109" style="display:inline">
+                <path id="path108" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,690.65662,256.8544)" id="g110" style="display:inline">
+                <path id="path109" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+            </g>
+            <g style="font-family:Regular;display:inline" transform="matrix(0.0274176,0,0,-0.0274176,698.27872,256.8544)" id="g111">
+                <text transform="scale(1,-1)" font-size="1105px" id="text110"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan110">BC</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,738.69226,256.8544)" id="g112" style="display:inline">
+                <path id="path111" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+            </g>
+        </g>
+        <g id="g135" transform="translate(-106.1847,-321.33216)">
+            <g id="g114" transform="matrix(0.0274176,0,0,-0.0274176,979.32451,256.805)" style="display:inline">
+                <path id="path113" d="m 94,250 q 0,69 10,131 10,62 23,107 13,45 37,88 24,43 38,67 14,24 42,52 28,28 33,34 5,6 25,21 h 13 4 q 14,0 14,-9 0,-3 -17,-21 -17,-18 -41,-53 -24,-35 -49,-86 -25,-51 -42,-138 -17,-87 -17,-193 0,-106 17,-192 17,-86 41,-139 24,-53 49,-86 25,-33 42,-53 17,-20 17,-21 0,-9 -15,-9 h -3 -13 l -28,24 Q 180,-141 137,-14 94,113 94,250 Z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,989.98995,256.805)" id="g115" style="display:inline">
+                <path id="path114" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,1005.0697,256.805)" id="g116" style="display:inline">
+                <path id="path115" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,1018.1479,256.805)" id="g119" style="display:inline">
+                <g id="g117">
+                    <path id="path116" d="m 60,749 4,1 q 5,0 10,0 h 12 l 28,-24 q 94,-85 137,-212 43,-127 43,-264 0,-68 -10,-131 -10,-63 -23,-107 -13,-44 -37,-88 -24,-44 -38,-67 -14,-23 -41,-51 -27,-28 -32,-33 -5,-5 -23,-19 -3,-3 -4,-4 H 74 q -8,0 -11,0 -3,0 -5,3 -2,3 -3,9 1,1 11,13 155,161 155,475 0,314 -155,475 -10,12 -11,13 0,8 5,11 z" />
+                </g>
+                <g transform="matrix(0.707,0,0,0.707,422,413)" id="g118">
+                    <path id="path117" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" />
+                </g>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,1044.0356,256.805)" id="g120" style="display:inline">
+                <path id="path119" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,1059.2743,256.805)" id="g121" style="display:inline">
+                <path id="path120" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+            </g>
+            <g style="font-family:Regular;display:inline" transform="matrix(0.0274176,0,0,-0.0274176,1066.8964,256.805)" id="g122">
+                <text transform="scale(1,-1)" font-size="1105px" id="text121"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan121">A</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,1087.6049,256.805)" id="g123" style="display:inline">
+                <path id="path122" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,1100.617,256.805)" id="g124" style="display:inline">
+                <path id="path123" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,1133.4246,256.805)" id="g125" style="display:inline">
+                <path id="path124" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+            </g>
+            <g style="font-family:Regular;display:inline" transform="matrix(0.0274176,0,0,-0.0274176,1141.0467,256.805)" id="g126">
+                <text transform="scale(1,-1)" font-size="1105px" id="text125"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan125">BC</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,1181.4575,256.805)" id="g128" style="display:inline">
+                <g id="g127">
+                    <path id="path126" d="m 423,750 q 9,0 15,-6 6,-6 6,-14 0,-5 -173,-482 -173,-477 -179,-488 -7,-10 -17,-10 -7,0 -13,5 -6,5 -6,14 0,10 174,488 174,478 177,483 4,10 16,10 z" />
+                </g>
+            </g>
+            <g style="font-family:Regular;display:inline" transform="matrix(0.0274176,0,0,-0.0274176,1195.1663,256.805)" id="g129">
+                <text transform="scale(1,-1)" font-size="1105px" id="text128"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan128">A</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,1215.8748,256.805)" id="g130" style="display:inline">
+                <path id="path129" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+            </g>
+        </g>
+        <path style="fill:#f5fbff;stroke:#000000;stroke-width:0.899999;stroke-miterlimit:2" d="m 326.31511,198.63124 v 43.69671" id="path2" sodipodi:nodetypes="cc" />
+        <path style="fill:#f5fbff;stroke:#000000;stroke-width:0.899999;stroke-miterlimit:2" d="m 150.63088,271.89044 63.17208,40.02999" id="path3" sodipodi:nodetypes="cc" />
+        <path style="fill:#f5fbff;stroke:#000000;stroke-width:0.899999;stroke-miterlimit:2" d="m 326.31511,271.64679 -63.50869,40.27364" id="path5" sodipodi:nodetypes="cc" />
+        <path style="fill:#f5fbff;stroke:#000000;stroke-width:0.899999;stroke-miterlimit:2" d="m 150.34226,198.63124 v 43.69671" id="path10" sodipodi:nodetypes="cc" />
+        <g transform="matrix(0.0274176,0,0,-0.0274176,62.197759,714.67607)" id="g84">
+            <g transform="translate(992.8)" id="g83">
+                <g id="g61">
+                    <g id="g58">
+                        <path id="path11" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" />
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,636,413)" id="g60">
+                        <path id="path60" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" />
+                    </g>
+                </g>
+                <g transform="translate(1158.2)" id="g63">
+                    <path id="path62" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+                </g>
+                <g transform="translate(1714)" id="g73">
+                    <path id="path66" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+                </g>
+                <g style="font-family:Regular" transform="translate(1992)" id="g74">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text73"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan73">A</tspan></text>
+                </g>
+                <g transform="translate(2747.3)" id="g75">
+                    <path id="path74" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+                </g>
+                <g transform="translate(3303.1)" id="g76">
+                    <path id="path75" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+                </g>
+                <g transform="translate(4580.9)" id="g77">
+                    <path id="path76" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+                </g>
+                <g style="font-family:Regular" transform="translate(4858.9)" id="g78">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text77"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan77">B</tspan></text>
+                </g>
+                <g transform="translate(5538.3)" id="g80">
+                    <g id="g79">
+                        <path id="path78" d="m 423,750 q 9,0 15,-6 6,-6 6,-14 0,-5 -173,-482 -173,-477 -179,-488 -7,-10 -17,-10 -7,0 -13,5 -6,5 -6,14 0,10 174,488 174,478 177,483 4,10 16,10 z" />
+                    </g>
+                </g>
+                <g style="font-family:Regular" transform="translate(6038.3)" id="g81">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text80"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan80">A</tspan></text>
+                </g>
+                <g transform="translate(6793.6)" id="g82">
+                    <path id="path81" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,335.29993,714.38673)" id="g101">
+            <g transform="translate(998.2)" id="g100">
+                <g id="g87">
+                    <g id="g85">
+                        <path id="path84" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" />
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,510,413)" id="g86">
+                        <path id="path85" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" />
+                    </g>
+                </g>
+                <g transform="translate(1032.2)" id="g88">
+                    <path id="path87" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+                </g>
+                <g transform="translate(1588)" id="g89">
+                    <path id="path88" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+                </g>
+                <g style="font-family:Regular" transform="translate(1866)" id="g90">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text89"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan89">A</tspan></text>
+                </g>
+                <g transform="translate(2621.3)" id="g91">
+                    <path id="path90" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+                </g>
+                <g transform="translate(3177.1)" id="g92">
+                    <path id="path91" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+                </g>
+                <g transform="translate(4454.9)" id="g93">
+                    <path id="path92" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+                </g>
+                <g style="font-family:Regular" transform="translate(4732.9)" id="g94">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text93"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan93">C</tspan></text>
+                </g>
+                <g transform="translate(5527.4)" id="g96">
+                    <g id="g95">
+                        <path id="path94" d="m 423,750 q 9,0 15,-6 6,-6 6,-14 0,-5 -173,-482 -173,-477 -179,-488 -7,-10 -17,-10 -7,0 -13,5 -6,5 -6,14 0,10 174,488 174,478 177,483 4,10 16,10 z" />
+                    </g>
+                </g>
+                <g style="font-family:Regular" transform="translate(6027.4)" id="g97">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text96"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan96">A</tspan></text>
+                </g>
+                <g transform="translate(6782.7)" id="g98">
+                    <path id="path97" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+                </g>
+                <g transform="translate(7060.7)" id="g99">
+                    <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect98" />
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(0.0274176,0,0,-0.0274176,203.32439,827.11347)" id="g155">
+            <g id="g154">
+                <g id="g131">
+                    <g id="g107">
+                        <path id="path105" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" />
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,636,413)" id="g113">
+                        <path id="path107" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" />
+                    </g>
+                </g>
+                <g transform="translate(880.5)" id="g138">
+                    <g id="g136">
+                        <path id="path131" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" />
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,510,413)" id="g137">
+                        <path id="path136" d="m 79,43 q -6,0 -27,6 -21,6 -22,12 0,7 55,232 55,225 61,235 15,32 52,32 20,0 42,-15 22,-15 22,-44 0,-5 -2,-15 -1,-7 -87,-223 Q 87,47 84,45 81,43 79,43 Z" />
+                    </g>
+                </g>
+                <g transform="translate(1912.7)" id="g139">
+                    <path id="path138" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+                </g>
+                <g transform="translate(2468.5)" id="g140">
+                    <path id="path139" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+                </g>
+                <g style="font-family:Regular" transform="translate(2746.5)" id="g141">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text140"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan140">A</tspan></text>
+                </g>
+                <g transform="translate(3501.8)" id="g142">
+                    <path id="path141" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+                </g>
+                <g transform="translate(4057.5)" id="g143">
+                    <path id="path142" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+                </g>
+                <g transform="translate(5335.3)" id="g144">
+                    <path id="path143" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+                </g>
+                <g style="font-family:Regular" transform="translate(5613.3)" id="g145">
+                    <text transform="scale(1,-1)" font-size="1105px" id="text144"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan144">BC</tspan></text>
+                </g>
+                <g style="font-family:Regular" transform="translate(6292.8)" id="g146" />
+                <g transform="translate(7087.3)" id="g148">
+                    <g id="g147">
+                        <path id="path146" d="m 423,750 q 9,0 15,-6 6,-6 6,-14 0,-5 -173,-482 -173,-477 -179,-488 -7,-10 -17,-10 -7,0 -13,5 -6,5 -6,14 0,10 174,488 174,478 177,483 4,10 16,10 z" />
+                    </g>
+                </g>
+                <g transform="translate(7587.3)" id="g151">
+                    <g style="font-family:Regular" id="g149">
+                        <text transform="scale(1,-1)" font-size="1105px" id="text148"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan148">A</tspan></text>
+                    </g>
+                    <g transform="matrix(0.707,0,0,0.707,788.3,477.1)" id="g150">
+                        <path id="path149" d="m 109,429 q -27,0 -43,18 -16,18 -16,44 0,71 53,123 53,52 132,52 91,0 152,-56 61,-56 62,-145 0,-43 -20,-82 -20,-39 -48,-68 -28,-29 -80,-74 -36,-31 -100,-92 l -59,-56 76,-1 q 157,0 167,5 7,2 24,89 v 3 h 40 v -3 Q 448,183 436,95 424,7 421,3 V 0 H 50 v 19 12 q 0,7 6,15 6,8 30,35 29,32 50,56 9,10 34,37 25,27 34,37 9,10 29,33 20,23 28,34 8,11 23,30 15,19 21,32 6,13 15,29 9,16 13,32 4,16 7,30 3,14 3,33 0,63 -34,109 -34,46 -97,46 -33,0 -58,-17 -25,-17 -35,-33 -10,-16 -10,-19 0,-1 5,-1 18,0 37,-14 19,-14 19,-46 0,-25 -16,-42 -16,-17 -45,-18 z" />
+                    </g>
+                </g>
+                <g transform="translate(8779.2)" id="g152">
+                    <path id="path151" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+                </g>
+                <g transform="translate(9057.2)" id="g153">
+                    <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect152" />
+                </g>
+            </g>
+        </g>
+        <g id="g165" transform="translate(-74.799298,363.62867)">
+            <g id="g156" transform="matrix(0.0274176,0,0,-0.0274176,180.71936,236.39092)" style="display:inline">
+                <path id="path155" d="m 118,-162 q 2,0 6,-2 4,-2 11,-3 7,-1 12,-1 13,0 24,13 11,13 16,29 10,27 34,153 24,126 46,240 22,114 22,115 v 3 h -47 q -47,0 -50,2 -4,3 -4,10 l 7,28 q 2,5 8,5 6,0 47,1 48,0 48,1 0,2 9,50 9,48 12,58 37,165 146,165 37,-2 61,-22 24,-20 24,-53 0,-36 -21,-52 -21,-16 -42,-17 -44,0 -44,42 0,19 11,33 11,14 24,21 l 9,5 q -16,6 -30,6 -12,0 -23,-10 -11,-10 -15,-28 -7,-29 -16,-78 -9,-49 -16,-83 -7,-34 -7,-36 0,-2 55,-2 45,0 52,-1 7,-1 11,-6 1,-4 -2,-17 -3,-13 -5,-16 -2,-5 -9,-5 -7,0 -54,-1 H 372 L 349,263 Q 301,15 282,-47 q -27,-85 -70,-126 -37,-32 -73,-32 -32,0 -58,19 -26,19 -26,54 0,37 21,54 21,17 42,17 44,0 44,-42 0,-19 -11,-33 -11,-14 -24,-21 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,203.41565,236.39092)" id="g157" style="display:inline">
+                <path id="path156" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,218.65435,236.39092)" id="g158" style="display:inline">
+                <path id="path157" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+            </g>
+            <g style="font-family:Regular;display:inline" transform="matrix(0.0274176,0,0,-0.0274176,226.27644,236.39092)" id="g159">
+                <text transform="scale(1,-1)" font-size="1105px" id="text158"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan158">A</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,246.98496,236.39092)" id="g160" style="display:inline">
+                <path id="path159" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,259.99435,236.39092)" id="g161" style="display:inline">
+                <path id="path160" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,292.80199,236.39092)" id="g162" style="display:inline">
+                <path id="path161" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+            </g>
+            <g style="font-family:Regular;display:inline" transform="matrix(0.0274176,0,0,-0.0274176,300.42408,236.39092)" id="g163">
+                <text transform="scale(1,-1)" font-size="1105px" id="text162"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan162">B</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,319.05434,236.39092)" id="g164" style="display:inline">
+                <path id="path163" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+            </g>
+        </g>
+        <g id="g175" transform="translate(192.61291,317.99876)">
+            <g id="g166" transform="matrix(0.0274176,0,0,-0.0274176,179.56782,279.51489)" style="display:inline">
+                <path id="path165" d="M 311,43 Q 296,30 267,15 238,0 206,0 143,0 105,45 67,90 66,160 q 0,105 77,193 77,88 171,89 47,0 87,-48 l 3,4 q 2,3 5,6 3,3 9,8 6,5 13,7 7,2 16,3 14,0 23,-9 9,-9 10,-19 0,-15 -57,-242 -57,-227 -60,-232 -18,-54 -77,-89 -59,-35 -135,-36 -141,0 -141,68 0,26 18,46 18,20 46,20 15,0 28,-9 13,-9 14,-31 0,-10 -2,-19 -2,-9 -7,-14 -5,-5 -8,-10 -3,-5 -7,-8 l -2,-2 h 1 q 10,-3 60,-3 38,0 60,12 23,11 43,33 20,22 28,47 6,19 16,62 13,48 13,56 z m 73,285 -4,11 q -3,11 -5,15 -2,4 -6,14 -4,10 -10,14 -6,4 -13,11 -7,7 -18,9 -11,2 -22,3 -44,0 -85,-53 -30,-39 -50,-119 -20,-80 -20,-116 0,-79 62,-79 56,0 110,70 l 8,10 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,200.26262,279.51489)" id="g167" style="display:inline">
+                <path id="path166" d="m 78,370 q 0,24 17,42 17,18 43,18 24,0 42,-16 18,-16 19,-43 0,-25 -17,-43 -17,-18 -43,-18 -26,0 -43,17 -17,17 -18,43 z M 78,60 q 0,24 17,42 17,18 43,18 24,0 42,-16 Q 198,88 199,61 199,36 182,18 165,0 139,0 113,0 96,17 79,34 78,60 Z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,215.50133,279.51489)" id="g168" style="display:inline">
+                <path id="path167" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+            </g>
+            <g style="font-family:Regular;display:inline" transform="matrix(0.0274176,0,0,-0.0274176,223.12342,279.51489)" id="g169">
+                <text transform="scale(1,-1)" font-size="1105px" id="text168"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan168">A</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,243.83193,279.51489)" id="g170" style="display:inline">
+                <path id="path169" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,256.84132,279.51489)" id="g171" style="display:inline">
+                <path id="path170" d="m 56,237 q 0,0 0,13 0,13 14,20 h 765 q -116,87 -143,223 0,1 0,3 0,2 -1,3 0,12 17,12 h 3 q 9,0 12,-1 3,-1 6,-4 3,-3 3,-9 0,-6 3,-16 3,-10 8,-25 22,-67 73,-120 51,-53 119,-75 9,-3 9,-11 0,-6 -5,-9 -5,-3 -24,-10 -19,-7 -38,-19 -41,-26 -71,-60 -30,-34 -45,-67 -15,-33 -21,-50 -6,-17 -8,-31 -2,-10 -5,-12 -3,-2 -16,-3 -20,0 -20,11 0,7 5,25 32,126 139,205 H 70 q -14,7 -14,20 z" />
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,289.64896,279.51489)" id="g172" style="display:inline">
+                <path id="path171" d="M 118,-250 V 750 h 137 v -40 h -97 v -920 h 97 v -40 z" />
+            </g>
+            <g style="font-family:Regular;display:inline" transform="matrix(0.0274176,0,0,-0.0274176,297.27106,279.51489)" id="g173">
+                <text transform="scale(1,-1)" font-size="1105px" id="text172"><tspan style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Baskerville;-inkscape-font-specification:Baskerville" id="tspan172">C</tspan></text>
+            </g>
+            <g transform="matrix(0.0274176,0,0,-0.0274176,319.05434,279.51489)" id="g174" style="display:inline">
+                <path id="path173" d="m 22,710 v 40 H 159 V -250 H 22 v 40 h 97 v 920 z" />
+            </g>
+        </g>
+        <path style="fill:#f5fbff;stroke:#000000;stroke-width:0.9;stroke-miterlimit:2" d="m 462.3103,616.06302 v 68.1639" id="path175" sodipodi:nodetypes="cc" />
+        <path style="fill:#f5fbff;stroke:#000000;stroke-width:0.9;stroke-miterlimit:2" d="m 188.39322,730.34239 98.49439,62.44409" id="path176" sodipodi:nodetypes="cc" />
+        <path style="fill:#f5fbff;stroke:#000000;stroke-width:0.9;stroke-miterlimit:2" d="m 462.3103,729.96233 -99.01921,62.82415" id="path177" sodipodi:nodetypes="cc" />
+        <path style="fill:#f5fbff;stroke:#000000;stroke-width:0.9;stroke-miterlimit:2" d="m 187.94322,616.06302 v 68.1639" id="path178" sodipodi:nodetypes="cc" />
+    </g>
+</svg>
