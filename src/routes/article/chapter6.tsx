@@ -9,7 +9,6 @@ import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import { StarDivider }  from "~/components/StarDivider";
-import TextParent  from "~/components/TextParent";
 import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
@@ -20,7 +19,7 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_156_hgi_"
+      id="_157_hgi_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -102,7 +101,7 @@ export default function __Chapter6__() {
         <Pause />
         <MathBlock>
           $$
-          \Large f : [\te&#123;A&#125;] \ra [\te&#123;B&#125;]
+          f : [\te&#123;A&#125;] \ra [\te&#123;B&#125;]
           $$
         </MathBlock>
         <Pause />
@@ -123,7 +122,7 @@ export default function __Chapter6__() {
         <Pause />
         <MathBlock>
           $$
-          \Large h : [\te&#123;kg&#125;] \ra [^\circ\te&#123;F&#125;]
+          h : [\te&#123;kg&#125;] \ra [^\circ\te&#123;F&#125;]
           $$
         </MathBlock>
         <Pause />
@@ -167,7 +166,7 @@ export default function __Chapter6__() {
           <Pause />
           <MathBlock>
             $$
-            \Large z : [\te&#123;m&#125;/\te&#123;s&#125;^2] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
+            z : [\te&#123;m&#125;/\te&#123;s&#125;^2] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
             $$
           </MathBlock>
           <Pause />
@@ -177,7 +176,7 @@ export default function __Chapter6__() {
           <Pause />
           <MathBlock>
             $$
-            \Large z : \rr \ra \rr
+            z : \rr \ra \rr
             $$
           </MathBlock>
           <Pause />
@@ -185,8 +184,7 @@ export default function __Chapter6__() {
             is a function
             whose inputs denote meters per seconds squared
             (a measure of acceleration)
-            and whose outputs denote British pounds,
-            or “pounds sterling”.
+            and whose outputs denote British pounds.
           </OuterP>
         </Example>
       </Section>
@@ -253,7 +251,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large \cos : [1] \ra [1]
+          \cos : [1] \ra [1]
           $$
         </MathBlock>
         <Pause />
@@ -416,7 +414,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
           g : [\te&#123;A&#125;] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
@@ -433,7 +430,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
           g : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \up&#123;1.35&#125;
@@ -558,7 +554,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large f : [\tA] \ra [\tB]
+          f : [\tA] \ra [\tB]
           $$
         </MathBlock>
         <Pause />
@@ -568,7 +564,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large f' : [\tA] \ra [\tB/\tA]
+          f' : [\tA] \ra [\tB/\tA]
           $$
         </MathBlock>
         <Pause />
@@ -580,7 +576,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large f' : [\tC] \ra [\tD]
+          f' : [\tC] \ra [\tD]
           $$
         </MathBlock>
         <Pause />
@@ -590,7 +586,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large f : [\tC] \ra [\tC\tD]
+          f : [\tC] \ra [\tC\tD]
           $$
         </MathBlock>
         <Pause />
@@ -760,7 +756,7 @@ const Rest = () => {
         <Boxed>
           <MathBlock>
             $$
-            \Large (f + g)' = f' + g'
+            (f + g)' = f' + g'
             $$
           </MathBlock>
         </Boxed>
@@ -802,7 +798,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large f + g
+          f + g
           $$
         </MathBlock>
         <Pause />
@@ -812,7 +808,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
           g : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \up&#123;1.35&#125;
@@ -840,7 +835,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
           g : [\te&#123;C&#125;] &amp;\ra [\te&#123;D&#125;] \up&#123;1.35&#125;
@@ -854,7 +848,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           f' : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;/\tA] \\
           g' : [\te&#123;C&#125;] &amp;\ra [\te&#123;D&#125;/\tC] \up&#123;1.35&#125;
@@ -868,7 +861,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large f' + g'
+          f' + g'
           $$
         </MathBlock>
         <Pause />
@@ -878,7 +871,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           \tA &amp;= \tC \\
           \tB/\tA &amp;= \tD/\tC \up&#123;1.35&#125;
@@ -914,7 +906,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           \tA &amp;= \tC \\
           \tB &amp;= \tD \up&#123;1.35&#125;
@@ -949,7 +940,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
           g : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \up&#123;1.35&#125;
@@ -964,7 +954,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;gathered&#125;
           f + g : [\te&#123;A&#125;] \ra [\te&#123;B&#125;] \\
           (f + g)' : [\te&#123;A&#125;] \ra [\tB/\tA] \up&#123;1.35&#125; \\
@@ -983,7 +972,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large (f + g)'
+          (f + g)'
           $$
         </MathBlock>
         <Pause />
@@ -993,7 +982,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large f' + g'
+          f' + g'
           $$
         </MathBlock>
         <Pause />
@@ -1013,7 +1002,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1, x_2 : \rr \ra \rr
+            x_1, x_2 : \rr \ra \rr
             $$
           </MathBlock>
           <Pause />
@@ -1026,7 +1015,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1,\rt&#123;0.2&#125; x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]
+            x_1,\rt&#123;0.2&#125; x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]
             $$
           </MathBlock>
           <Pause />
@@ -1037,7 +1026,6 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large
             \begin&#123;gathered&#125;
             \,x_1 + x_2   : [\te&#123;s&#125;] \ra [\te&#123;m&#125;] \\
             \,(x_1 + x_2)' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;]\up&#123;1.35&#125; \\
@@ -1054,7 +1042,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large (x_1 + x_2)'
+            (x_1 + x_2)'
             $$
           </MathBlock>
           <Pause />
@@ -1064,7 +1052,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1' + x_2'
+            x_1' + x_2'
             $$
           </MathBlock>
           <Pause />
@@ -1098,7 +1086,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large \,(x_1 + x_2)' = x_1' + x_2',
+            \,(x_1 + x_2)' = x_1' + x_2',
             $$
           </MathBlock>
           <Pause />
@@ -1136,7 +1124,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1, x_2 : \rr \ra \rr
+            x_1, x_2 : \rr \ra \rr
             $$
           </MathBlock>
           <Pause />
@@ -1146,7 +1134,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1(t) = |t| = -x_2(t)
+            x_1(t) = |t| = -x_2(t)
             $$
           </MathBlock>
           <Pause />
@@ -1160,7 +1148,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_2(t) = -|t|
+            x_2(t) = -|t|
             $$
           </MathBlock>
           <Pause />
@@ -1177,7 +1165,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large (x_1 + x_2)'
+            (x_1 + x_2)'
             $$
           </MathBlock>
           <Pause />
@@ -1192,13 +1180,42 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1' + x_2'
+            x_1' + x_2'
             $$
           </MathBlock>
           <Pause />
           <OuterP>
             is not. One can best see this 
-            directly from the graphs:
+            directly from the graphs of
+            {" "}
+            <NoBreak>
+              <Math>
+                $x_1$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} {" "}
+            <NoBreak>
+              <Math>
+                $x_2$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} {" "}
+            <NoBreak>
+              <Math>
+                $x_1'$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} {" "}
+            <NoBreak>
+              <Math>
+                $x_2'$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} etc:
           </OuterP>
           <Pause />
           <Image src="/tmp-images/c6_all_those_x1x2_graphs.svg" />
@@ -1209,7 +1226,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large (x_1 + x_2)' \ne x_1' + x_2'
+            (x_1 + x_2)' \ne x_1' + x_2'
             $$
           </MathBlock>
           <Pause />
@@ -1270,7 +1287,7 @@ const Rest = () => {
         <Boxed id="_154_hgi_">
           <MathBlock>
             $$
-            \Large (f + g)'(x_0) = f'(x_0) + g'(x_0)
+            (f + g)'(x_0) = f'(x_0) + g'(x_0)
             $$
           </MathBlock>
         </Boxed>
@@ -1312,7 +1329,7 @@ const Rest = () => {
         <Boxed>
           <MathBlock>
             $$
-            \Large(fg)' = f'g'
+            (fg)' = f'g'
             $$
           </MathBlock>
         </Boxed>
@@ -1327,12 +1344,12 @@ const Rest = () => {
         </OuterP>
         <OuterP class="indent-10">
           For a dimensional analysis of this equation, note
-          that on the left-hand side,
+          that on the left-hand side
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large fg
+          fg
           $$
         </MathBlock>
         <Pause />
@@ -1350,7 +1367,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
           g : [\te&#123;A&#125;] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
@@ -1369,7 +1385,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large (fg)' : [\tA] \ra [\tB\tC/\tA]
+          (fg)' : [\tA] \ra [\tB\tC/\tA]
           $$
           <ImageLeft
             src="/tmp-images/c6_fg_prime_signature_cloud_v2.svg"
@@ -1384,7 +1400,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large f'g' : [\tA] \ra [\tB\tC/\tA^2]
+          f'g' : [\tA] \ra [\tB\tC/\tA^2]
           $$
           <ImageRight
             src="/tmp-images/c6_f_prime_g_prime_signature_cloud_v2.svg"
@@ -1399,7 +1415,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large [\tA] \ra [\tB\tC/\tA^2] \ne [\tA] \ra [\tB\tC/\tA]
+          [\tA] \ra [\tB\tC/\tA^2] \ne [\tA] \ra [\tB\tC/\tA]
           $$
         </MathBlock>
         <Pause />
@@ -1439,7 +1455,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1,\rt&#123;0.1&#125; x_2 : \rr \ra \rr
+            x_1,\rt&#123;0.1&#125; x_2 : \rr \ra \rr
             $$
           </MathBlock>
           <Pause />
@@ -1449,7 +1465,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \,\Large x_1,\rt&#123;0.1&#125; x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]
+            \,x_1,\rt&#123;0.1&#125; x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]
             $$
           </MathBlock>
           <Pause />
@@ -1472,7 +1488,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2]
+            x_1x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2]
             $$
           </MathBlock>
           <Pause />
@@ -1482,7 +1498,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large (x_1x_2)' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2/\te&#123;s&#125;]
+            (x_1x_2)' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2/\te&#123;s&#125;]
             $$
           </MathBlock>
           <Pause />
@@ -1492,7 +1508,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1'x_2' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2/\te&#123;s&#125;^2]
+            x_1'x_2' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2/\te&#123;s&#125;^2]
             $$
           </MathBlock>
           <Pause />
@@ -1566,7 +1582,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1'x_2'
+            x_1'x_2'
             $$
           </MathBlock>
           <Pause />
@@ -1576,7 +1592,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large (x_1x_2)''
+            (x_1x_2)''
             $$
           </MathBlock>
           <Pause />
@@ -1593,7 +1609,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large (x_1x_2)'' = x_1'x_2'
+            (x_1x_2)'' = x_1'x_2'
             $$
           </MathBlock>
           <Pause />
@@ -1606,7 +1622,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large x_1'x_2'
+            x_1'x_2'
             $$
           </MathBlock>
           <Pause />
@@ -1644,7 +1660,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large (f \circ g)'
+          (f \circ g)'
           $$
         </MathBlock>
         <Pause />
@@ -1661,7 +1677,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large f,\,g,\,f',\,g'
+          f,\,g,\,f',\,g'
           $$
         </MathBlock>
         <Pause />
@@ -1681,7 +1697,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large (f\circ g)'
+          (f\circ g)'
           $$
         </MathBlock>
         <Pause />
@@ -1699,7 +1715,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;aligned&#125;
           f &amp;: [\tB] \ra [\tC] \\
           g &amp;: [\tA] \ra [\tB] \up&#123;1.35&#125;
@@ -1728,7 +1743,6 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large
           \begin&#123;gathered&#125;
           f            :  [\tB] \ra [\tC] \\
           g            :  [\tA] \ra [\tB] \up&#123;1.35&#125; \\
@@ -1752,7 +1766,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large [\tA] \ra [\tC/\tA]
+          [\tA] \ra [\tC/\tA]
           $$
         </MathBlock>
         <Pause />
@@ -1763,7 +1777,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large [\tC/\tA] = [\tC/\tB]\cdot[\tB/\tA]
+          [\tC/\tA] = \left[&#123;\tC\over \tB&#125;\right]\cdot\left[&#123;\tB\over\tA&#125;\right]
           $$
         </MathBlock>
         <Pause />
@@ -1817,7 +1831,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large (f'\circ g)g'
+          (f'\circ g)g'
           $$
         </MathBlock>
         <Pause />
@@ -1828,7 +1842,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large (f'\circ g)
+          (f'\circ g)
           $$
         </MathBlock>
         <Pause />
@@ -1838,7 +1852,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large [\tA] \ra [\tC/\tB]
+          [\tA] \ra [\tC/\tB]
           $$
         </MathBlock>
         <Pause />
@@ -1852,7 +1866,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large [\tA] \ra [\tB/\tA]
+          [\tA] \ra [\tB/\tA]
           $$
         </MathBlock>
         <Pause />
@@ -1862,7 +1876,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large [\tA] \ra [\tC/\tA]
+          [\tA] \ra [\tC/\tA]
           $$
           <ImageRight
             src="/tmp-images/c6_chain_rule_units_cloud.svg"
@@ -1879,7 +1893,7 @@ const Rest = () => {
         <Boxed>
           <MathBlock>
             $$
-            \Large (f \circ g)' = (f'\circ g)g'
+            (f \circ g)' = (f'\circ g)g'
             $$
           </MathBlock>
         </Boxed>
@@ -1928,7 +1942,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large f : \rr \ra \rr
+            f : \rr \ra \rr
             $$
           </MathBlock>
           <Pause />
@@ -1941,7 +1955,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large g : \rr \ra \rr
+            g : \rr \ra \rr
             $$
           </MathBlock>
           <Pause />
@@ -1954,7 +1968,6 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large
             \begin&#123;gathered&#125;
             f : [\te&#123;m&#125;] \ra [\te&#123;\$&#125;] \\
             g : [\te&#123;s&#125;] \ra [\te&#123;m&#125;] \up&#123;1.35&#125; 
@@ -1968,7 +1981,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large f\circ g : [\te&#123;s&#125;] \ra [\te&#123;\$&#125;]
+            f\circ g : [\te&#123;s&#125;] \ra [\te&#123;\$&#125;]
             $$
           </MathBlock>
           <Pause />
@@ -1980,12 +1993,12 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large (f\circ g)': [\te&#123;s&#125;] \ra [\te&#123;\$&#125;/\te&#123;s&#125;]
+            (f\circ g)': [\te&#123;s&#125;] \ra [\te&#123;\$&#125;/\te&#123;s&#125;]
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            gives the fundraising-rate-in-dollars-per-second
+            gives the fundraising rate, in dollars per second,
             as a function of time in seconds.
           </OuterP>
           <OuterP class="indent-10">
@@ -1994,14 +2007,14 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large f' : [\te&#123;m&#125;] \ra [\te&#123;\$&#125;/\te&#123;m&#125;]
+            f' : [\te&#123;m&#125;] \ra [\te&#123;\$&#125;/\te&#123;m&#125;]
             $$
           </MathBlock>
           <Pause />
           <OuterP>
             gives the
-            fundraising-rate-in-dollars-per-meter as a function
-            of the position in meters.
+            fundraising rate in dollars per meter as a function
+            of the position, in meters.
           </OuterP>
           <OuterP class="indent-10">
             Then, at {" "}
@@ -2013,7 +2026,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large f'(g(t_0))
+            f'(g(t_0))
             $$
           </MathBlock>
           <Pause />
@@ -2034,13 +2047,12 @@ const Rest = () => {
           </OuterP>
           <OuterP class="indent-10">
             As for the dollars-per-second rate, one can obtain
-            that by multiplying the dollars-per-meter rate by the
+            that by multiplying the dollars per meter rate by the
             rat's meters-per-second velocity, i.e., by taking the product
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            \Large 
             f'(g(t_0))g'(t_0)
             $$
           </MathBlock>
@@ -2053,10 +2065,13 @@ const Rest = () => {
               </Math>
               .
             </NoBreak>
-            {" "} Per:
+            {" "} That is:
           </OuterP>
           <Pause />
-          <Image src="/tmp-images/c6_explained_rat_equation.svg" />
+          <Image
+            width="530px"
+            src="/tmp-images/c6_explained_rat_equation.svg"
+          />
           <Pause />
           <OuterP>
             Also since
@@ -2064,7 +2079,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large f'(g(t_0)) = (f'\circ g)(t_0)
+            f'(g(t_0)) = (f'\circ g)(t_0)
             $$
             <ImageRight
               src="/tmp-images/c6_composition_reminder_cloud.svg"
@@ -2079,7 +2094,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \Large (f \circ g)'(t_0) = (f'\circ g)(t_0)g'(t_0)
+            (f \circ g)'(t_0) = (f'\circ g)(t_0)g'(t_0)
             $$
           </MathBlock>
           <Pause />
@@ -2093,7 +2108,7 @@ const Rest = () => {
           <Boxed>
             <MathBlock>
               $$
-              \Large (f \circ g)' = (f'\circ g)g'
+              (f \circ g)' = (f'\circ g)g'
               $$
             </MathBlock>
           </Boxed>
@@ -2164,7 +2179,7 @@ const Rest = () => {
           <Boxed>
             <MathBlock>
               $$
-              \Large (f \circ g)'(x) = f'(g(x))g'(x)
+              (f \circ g)'(x) = f'(g(x))g'(x)
               $$
             </MathBlock>
           </Boxed>
@@ -2240,19 +2255,26 @@ const Rest = () => {
           </CentralDisplayItalic>
           <Pause />
           <OuterP>
-            similarly to the sum rule. (Cf. the 
-            {" "}
+            similarly to the {" "}
             <InChapterLink
               class="in-chapter-link"
               href="#_154_hgi_"
             >
-              note after Example 3
+              postscript
             </InChapterLink>
-            &#8288;.)
+            {" "} following {" "}
+            <InChapterLink
+              href="/article/chapter6#_153_hgi_"
+              class="in-chapter-link"
+            >
+              Example 3
+            </InChapterLink>
+            &#8288;,
+            relative to the sum rule.
           </OuterP>
         </Example>
         <Pause />
-        <Example>
+        <Example id="_156_hgi_">
           <OuterP>
             <b>
               Example 6.
@@ -2300,72 +2322,76 @@ const Rest = () => {
               </Math>
               ,
             </NoBreak>
-            {" "} an equation that can also be written
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            (\cos \circ \cos)'(x) = (-\sin(\cos(x)))\cdot(-\sin(x))
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
+            {" "} 
             or
           </OuterP>
           <Pause />
-          <TextParent>
-            <MathBlock>
-              $$
-              \tag&#123;1&#125;
-              (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x)
-              $$
-            </MathBlock>
-          </TextParent>
-          <Pause />
-          <OuterP>
-            cancelling the minus signs; for example,
-          </OuterP>
-          <Pause />
           <MathBlock>
             $$
-            (\cos \circ \cos)'(2.5)
+            (\cos \circ \cos)'(x) = \sin(\cos x)\sin(x)
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            which to be clear is the slope of
+            when evaluating the {" "}
+            <NoBreak>
+              ‘
+              <Math>
+                $\circ$
+              </Math>
+              ’
+            </NoBreak>
+            {" "} and cancelling the minus signs.
+          </OuterP>
+        </Example>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 7.
+            </b>
+            {" "}
+            We have
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            y = \cos(\cos(x))
+            (\cos \circ \cos)'(2.5) = \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            at {" "}
+            by {" "}
+            <InChapterLink
+              href="/article/chapter6#_156_hgi_"
+              class="in-chapter-link"
+            >
+              Example 6
+            </InChapterLink>
+            &#8288;,
+            which looks visually compatible with the graph of
+            {" "}
+            <Math>
+              $\cos(\cos x)$
+            </Math>
+            {" "}
+            since
+            {" "}
+            <Math>
+              $(\cos \circ \cos)'(2.5)$
+            </Math>
+            {" "} is supposed to be the slope
+            of {" "}
+            <Math>
+              $y = \cos(\cos x)$
+            </Math>
+            {" "} at {" "}
             <NoBreak>
               <Math>
                 $x = 2.5$
               </Math>
-              ,
+              :
             </NoBreak>
-            {" "} is
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            by (1), which a graph of {" "}
-            <Math>
-              $\cos(\cos(x))$
-            </Math>
-            {" "} seems to attest
-            to, visually from afar at least:
           </OuterP>
           <Pause />
           <Image src="/tmp-images/c6_sin_of_sin_graph.svg" />
@@ -2513,7 +2539,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large &#123;\te&#123;time&#125;\over\te&#123;s&#125;&#125;
+          &#123;\te&#123;time&#125;\over\te&#123;s&#125;&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2552,7 +2578,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 3 = &#123;\te&#123;time&#125;\over \te&#123;s&#125;&#125;
+          3 = &#123;\te&#123;time&#125;\over \te&#123;s&#125;&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2563,7 +2589,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large 3\te&#123;s&#125; = \te&#123;time&#125;
+          3\te&#123;s&#125; = \te&#123;time&#125;
           $$
         </MathBlock>
         <Pause />

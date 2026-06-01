@@ -42,7 +42,7 @@
     we write
 
     $$
-    \Large f : [\te{A}] \ra [\te{B}]
+    f : [\te{A}] \ra [\te{B}]
     $$
 
     to indicate that inputs passed to $f$ have semantics
@@ -51,7 +51,7 @@
     For example,
 
     $$
-    \Large h : [\te{kg}] \ra [^\circ\te{F}]
+    h : [\te{kg}] \ra [^\circ\te{F}]
     $$
 
     indicates that $h$ is a function for which the inputs
@@ -72,19 +72,20 @@
         If
 
         $$
-        \Large z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{£}\rt{0.1}]
+        z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{£}\rt{0.1}]
         $$
 
         !! we indicate that
         then
         
-        $$\Large z : \rr \ra \rr$$
+        $$z : \rr \ra \rr$$
         
         is a function
         whose inputs denote meters per seconds squared
         (a measure of acceleration)
-        and whose outputs denote British pounds,
-        or “pounds sterling”.
+        and whose outputs denote British pounds. 
+        !! pounds,
+        !! or “pounds sterling”.
 
 |> Section
     *Dimensionless units.*
@@ -110,7 +111,7 @@
     Thus
 
     $$
-    \Large \cos : [1] \ra [1]
+    \cos : [1] \ra [1]
     $$
 
     where the first ‘$[1]$’ 
@@ -235,7 +236,7 @@
 !!     ascribing the dimensionless signature 
 
 !!     $$
-!!     \Large [1] \ra [1]
+!!     [1] \ra [1]
 !!     $$
 
 !!     for functions for which no other information is available.
@@ -254,7 +255,6 @@
     $g$ need to have the same units of input, i.e.,
 
     $$
-    \Large
     \begin{aligned}
     f : [\te{A}] &\ra [\te{B}] \\
     g : [\te{A}] &\ra [\te{C}] \up{1.35}
@@ -267,7 +267,6 @@
     since we actually need
 
     $$
-    \Large
     \begin{aligned}
     f : [\te{A}] &\ra [\te{B}] \\
     g : [\te{A}] &\ra [\te{B}] \up{1.35}
@@ -364,21 +363,21 @@
     by the units of the input. 
     In terms of signatures,
     $$
-    \Large f : [\tA] \ra [\tB]
+    f : [\tA] \ra [\tB]
     $$
     if and only if
     $$
-    \Large f' : [\tA] \ra [\tB/\tA]
+    f' : [\tA] \ra [\tB/\tA]
     $$
     for any units A, B.
     By the same token, the “if and only if”-ness
     implies that
     $$
-    \Large f' : [\tC] \ra [\tD]
+    f' : [\tC] \ra [\tD]
     $$
     if and only if
     $$
-    \Large f : [\tC] \ra [\tC\tD]
+    f : [\tC] \ra [\tC\tD]
     $$
     for any units C, D. 
     !! (Think that C is playing the
@@ -492,13 +491,13 @@
     !! a function of signature
 
     !! $$
-    !! \Large [\tA] \ra [\tB/\tA]
+    !! [\tA] \ra [\tB/\tA]
     !! $$
 
     !! when you pass it a function of signature
 
     !! $$
-    !! \Large [\tA] \ra [\tB]
+    !! [\tA] \ra [\tB]
     !! $$
 
     !! and so on for the other operators.)
@@ -622,7 +621,7 @@
 
     |> Boxed
         $$
-        \Large (f + g)' = f' + g'
+        (f + g)' = f' + g'
         $$
 
     for all differentiable functions $f$, $g : \rr \ra \rr$.
@@ -649,7 +648,7 @@
 
     !!     |> Boxed
     !!         $$
-    !!         \Large (f + g)' = f' + g'
+    !!         (f + g)' = f' + g'
     !!         $$
 
     !!     that holds for differentiable functions $f$, $g$.
@@ -673,13 +672,12 @@
     On the left-hand side,
 
     $$
-    \Large f + g
+    f + g
     $$
 
     imposes signatures of the form
 
     $$
-    \Large
     \begin{aligned}
     f : [\te{A}] &\ra [\te{B}] \\
     g : [\te{A}] &\ra [\te{B}] \up{1.35}
@@ -702,7 +700,6 @@
     we start by adopting the agnostic point of view that
 
     $$
-    \Large
     \begin{aligned}
     f : [\te{A}] &\ra [\te{B}] \\
     g : [\te{C}] &\ra [\te{D}] \up{1.35}
@@ -712,7 +709,6 @@
     for some arbitrary units A, B, C, D; then
 
     $$
-    \Large
     \begin{aligned}
     f' : [\te{A}] &\ra [\te{B}/\tA] \\
     g' : [\te{C}] &\ra [\te{D}/\tC] \up{1.35}
@@ -722,13 +718,12 @@
     and the fact that we are taking the sum
 
     $$
-    \Large f' + g'
+    f' + g'
     $$
 
     implies 
 
     $$
-    \Large
     \begin{aligned}
     \tA &= \tC \\
     \tB/\tA &= \tD/\tC \up{1.35}
@@ -741,7 +736,6 @@
     by Table 1.1 again, which, together, imply 
 
     $$
-    \Large
     \begin{aligned}
     \tA &= \tC \\
     \tB &= \tD \up{1.35}
@@ -758,7 +752,6 @@
     and $g$ have the form
 
     $$
-    \Large
     \begin{aligned}
     f : [\te{A}] &\ra [\te{B}] \\
     g : [\te{A}] &\ra [\te{B}] \up{1.35}
@@ -770,7 +763,6 @@
     !! then we have, one by one in order, that
 
     $$
-    \Large
     \begin{gathered}
     f + g : [\te{A}] \ra [\te{B}] \\
     (f + g)' : [\te{A}] \ra [\tB/\tA] \up{1.35} \\
@@ -788,13 +780,13 @@
     !! but in particular
 
     $$
-    \Large (f + g)'
+    (f + g)'
     $$
 
     is found to have the same signature as
 
     $$
-    \Large f' + g'
+    f' + g'
     $$
 
     which indicates that the sum “checks out” insofar
@@ -808,7 +800,7 @@
         If 
 
         $$
-        \Large x_1, x_2 : \rr \ra \rr
+        x_1, x_2 : \rr \ra \rr
         $$
 
         are two differentiable functions that give 
@@ -817,14 +809,13 @@
         i.e., two differentiable functions of the form
 
         $$
-        \Large x_1,\rt{0.2} x_2 : [\te{s}] \ra [\te{m}]
+        x_1,\rt{0.2} x_2 : [\te{s}] \ra [\te{m}]
         $$
 
         where ‘s’ is seconds and ‘m’ is meters as usual,
         then
 
         $$
-        \Large
         \begin{gathered}
         \,x_1 + x_2   : [\te{s}] \ra [\te{m}] \\
         \,(x_1 + x_2)' : [\te{s}] \ra [\te{m}/\te{s}]\up{1.35} \\
@@ -847,16 +838,16 @@
         and, in particular,
 
         $$
-        !! \Large (x_1 + x_2)' : [\te{s}] \ra [\te{m}/\te{s}]
-        \Large (x_1 + x_2)'
+        !! (x_1 + x_2)' : [\te{s}] \ra [\te{m}/\te{s}]
+        (x_1 + x_2)'
         $$
 
         has the same signature as
         !! matches the signature of
 
         $$
-        !! \Large x_1' + x_2' : [\te{s}] \ra [\te{m}/\te{s}]
-        \Large x_1' + x_2'
+        !! x_1' + x_2' : [\te{s}] \ra [\te{m}/\te{s}]
+        x_1' + x_2'
         $$
 
         as in the general analysis of the sum rule with arbitrary
@@ -869,7 +860,7 @@
         which now reads
 
         $$
-        \Large \,(x_1 + x_2)' = x_1' + x_2',
+        \,(x_1 + x_2)' = x_1' + x_2',
         $$
 
         !! in that case, 
@@ -891,24 +882,25 @@
         If
 
         $$
-        \Large x_1, x_2 : \rr \ra \rr
+        x_1, x_2 : \rr \ra \rr
         $$
 
         are given by
 
         $$
-        \Large x_1(t) = |t| = -x_2(t)
+        x_1(t) = |t| = -x_2(t)
         $$
 
         for all $t \in \rr$ (meaning that
 
         $$
-        \Large x_2(t) = -|t|
+        x_2(t) = -|t|
         $$
 
-        in the case of $x_2$) then $$\Large (x_1 + x_2)'$$ is defined
-        at $t = 0$ but $$\Large x_1' + x_2'$$ is not. One can best see this 
-        directly from the graphs:
+        in the case of $x_2$) then $$(x_1 + x_2)'$$ is defined
+        at $t = 0$ but $$x_1' + x_2'$$ is not. One can best see this 
+        directly from the graphs of
+        $x_1$, $x_2$, $x_1'$, $x_2'$, etc:
 
         |> Image
             src=tmp-images/c6_all_those_x1x2_graphs.svg
@@ -916,7 +908,7 @@
         Thus
 
         $$
-        \Large (x_1 + x_2)' \ne x_1' + x_2'
+        (x_1 + x_2)' \ne x_1' + x_2'
         $$
 
         but the “reason”, precisely, is that $x_1$ and $x_2$ are not
@@ -936,7 +928,7 @@
     |> Boxed
         handle=postscript-on-x_0
         $$
-        \Large (f + g)'(x_0) = f'(x_0) + g'(x_0)
+        (f + g)'(x_0) = f'(x_0) + g'(x_0)
         $$
 
     at all points $x_0 \in \rr$ _such that $f$ and $g$
@@ -953,7 +945,7 @@
 
     |> Boxed
         $$
-        \Large(fg)' = f'g'
+        (fg)' = f'g'
         $$
 
     !! [disclaimer: “for $f$, $g$ differentiable”]
@@ -967,16 +959,15 @@
     whence this equation's moniker.
 
     For a dimensional analysis of this equation, note
-    that on the left-hand side,
+    that on the left-hand side
 
     $$
-    \Large fg
+    fg
     $$
 
     restricts $f$ and $g$ to signatures of the form
 
     $$
-    \Large
     \begin{aligned}
     f : [\te{A}] &\ra [\te{B}] \\
     g : [\te{A}] &\ra [\te{C}] \up{1.35}
@@ -991,7 +982,7 @@
     However,
 
     $$
-    \Large (fg)' : [\tA] \ra [\tB\tC/\tA]
+    (fg)' : [\tA] \ra [\tB\tC/\tA]
     $$
     |> ImageLeft
         src=tmp-images/c6_fg_prime_signature_cloud_v2.svg
@@ -1000,7 +991,7 @@
     whereas
 
     $$
-    \Large f'g' : [\tA] \ra [\tB\tC/\tA^2]
+    f'g' : [\tA] \ra [\tB\tC/\tA^2]
     $$
     |> ImageRight
         src=tmp-images/c6_f_prime_g_prime_signature_cloud_v2.svg
@@ -1009,7 +1000,7 @@
     as is easy to check, and
 
     $$
-    \Large [\tA] \ra [\tB\tC/\tA^2] \ne [\tA] \ra [\tB\tC/\tA]
+    [\tA] \ra [\tB\tC/\tA^2] \ne [\tA] \ra [\tB\tC/\tA]
     $$
 
     so the rule
@@ -1033,13 +1024,13 @@
         let
 
         $$
-        \Large x_1,\rt{0.1} x_2 : \rr \ra \rr
+        x_1,\rt{0.1} x_2 : \rr \ra \rr
         $$
 
         have signature
 
         $$
-        \,\Large x_1,\rt{0.1} x_2 : [\te{s}] \ra [\te{m}]
+        \,x_1,\rt{0.1} x_2 : [\te{s}] \ra [\te{m}]
         $$
 
         !! be two functions that 
@@ -1048,7 +1039,7 @@
         Then
 
         $$
-        \Large x_1x_2 : [\te{s}] \ra [\te{m}^2]
+        x_1x_2 : [\te{s}] \ra [\te{m}^2]
         $$
         !! be two differentiable functions; 
 
@@ -1056,13 +1047,13 @@
         and
 
         $$
-        \Large (x_1x_2)' : [\te{s}] \ra [\te{m}^2/\te{s}]
+        (x_1x_2)' : [\te{s}] \ra [\te{m}^2/\te{s}]
         $$
         
         whereas
 
         $$
-        \Large x_1'x_2' : [\te{s}] \ra [\te{m}^2/\te{s}^2]
+        x_1'x_2' : [\te{s}] \ra [\te{m}^2/\te{s}^2]
         $$
 
         so there is no way these two quantities could
@@ -1088,19 +1079,19 @@
         It might be observed that
         
         $$
-        \Large x_1'x_2'
+        x_1'x_2'
         $$
 
         has the same dimensions (signature) as
 
         $$
-        \Large (x_1x_2)''
+        (x_1x_2)''
         $$
 
         in Example >>_second_x1x2_example_—one might conjecture that
 
         $$
-        \Large (x_1x_2)'' = x_1'x_2'
+        (x_1x_2)'' = x_1'x_2'
         $$
 
         from this observation, and one would be wrong—which is to
@@ -1109,7 +1100,7 @@
         cannot be trusted as a proof—nonetheless,
 
         $$
-        \Large x_1'x_2'
+        x_1'x_2'
         $$
 
         _does show up as a term_ in the “true”
@@ -1124,7 +1115,7 @@
 !!     |> Boxed
 
 !!         $$
-!!         \Large (fg)' = f'g + fg'
+!!         (fg)' = f'g + fg'
 !!         $$
 
 !!     as covered in Exercise >>_product_rule_#decoy:19 of Chapter >>derivatives#decoy:4.
@@ -1150,7 +1141,7 @@
 !!     !! in which case
 
 !!     $$
-!!     \Large (fg)' : [\tA] \ra [\tB\tC/\tA]
+!!     (fg)' : [\tA] \ra [\tB\tC/\tA]
 !!     $$
 
 !!     while
@@ -1169,7 +1160,7 @@
 !!     and
 
 !!     $$
-!!     \Large f'g + fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
+!!     f'g + fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
 !!     $$
 
 !!     so $f'g + fg'$ has the
@@ -1188,16 +1179,16 @@
     *The chain rule.*
     !! As we have formulas for
     !! $$
-    !! \Large (f + g)'
+    !! (f + g)'
     !! $$
     !! and
     !! $$
-    !! \Large (fg)'
+    !! (fg)'
     !! $$
     We would we like a formula for
 
     $$
-    \Large (f \circ g)'
+    (f \circ g)'
     $$
 
     similar to the sum rule,
@@ -1220,7 +1211,7 @@
     !! analysis to guess a formula for
 
     !! $$
-    !! \Large (f \circ g)'
+    !! (f \circ g)'
     !! $$
 
     !! where $f$, $g$ are differentiable functions.
@@ -1229,7 +1220,7 @@
     “atomic components”
 
     $$
-    \Large f,\,g,\,f',\,g'
+    f,\,g,\,f',\,g'
     $$
 
     on its right-hand side. These are the “lego pieces”
@@ -1249,14 +1240,13 @@
     To begin with,
 
     $$
-    \Large (f\circ g)'
+    (f\circ g)'
     $$
 
     !! only makes sense, as mentioned in Table 1.1, for 
     requires $f$ and $g$ of the form
 
     $$
-    \Large
     \begin{aligned}
     f &: [\tB] \ra [\tC] \\
     g &: [\tA] \ra [\tB] \up{1.35}
@@ -1272,7 +1262,6 @@
     !! for some units A, B, C, in which case
 
     $$
-    \Large
     \begin{gathered}
     f            :  [\tB] \ra [\tC] \\
     g            :  [\tA] \ra [\tB] \up{1.35} \\
@@ -1292,14 +1281,15 @@
     of signature
 
     $$
-    \Large [\tA] \ra [\tC/\tA]
+    [\tA] \ra [\tC/\tA]
     $$
 
     which is not a signature of any of the lego pieces;
     but since
 
     $$
-    \Large [\tC/\tA] = [\tC/\tB]\cdot[\tB/\tA]
+    !! [\tC/\tA] = [\tC/\tB]\cdot[\tB/\tA]
+    [\tC/\tA] = \left[{\tC\over \tB}\right]\cdot\left[{\tB\over\tA}\right]
     $$
 
     we might multiply $f'$ and $g'$;
@@ -1314,7 +1304,7 @@
     i.e., take
  
     $$
-    \Large (f'\circ g)g'
+    (f'\circ g)g'
     $$
 
     !! instead of $f'g'$, 
@@ -1322,25 +1312,25 @@
     which makes sense since on the one hand
 
     $$
-    \Large (f'\circ g)
+    (f'\circ g)
     $$
 
     is a well-formed composition of signature
 
     $$
-    \Large [\tA] \ra [\tC/\tB]
+    [\tA] \ra [\tC/\tB]
     $$
 
     whereas $g'$ has signature
 
     $$
-    \Large [\tA] \ra [\tB/\tA]
+    [\tA] \ra [\tB/\tA]
     $$
 
     so that the product of the two has signature
 
     $$
-    \Large [\tA] \ra [\tC/\tA]
+    [\tA] \ra [\tC/\tA]
     $$
 
     |> ImageRight
@@ -1357,7 +1347,7 @@
 
     |> Boxed
         $$
-        \Large (f \circ g)' = (f'\circ g)g'
+        (f \circ g)' = (f'\circ g)g'
         $$
 
     ...for all differentiable functions $f$, $g : \rr \ra \rr$,
@@ -1372,7 +1362,7 @@
         is running a fundraising race where one function
 
         $$
-        \Large f : \rr \ra \rr
+        f : \rr \ra \rr
         $$
 
         gives the amount of money raised in dollars as a function
@@ -1381,7 +1371,7 @@
         another function
 
         $$
-        \Large g : \rr \ra \rr
+        g : \rr \ra \rr
         $$
 
         !! gives position-reached-in-meters-as-function-of-time-elapsed-in-seconds,
@@ -1397,7 +1387,6 @@
         I.e.,
 
         $$
-        \Large
         \begin{gathered}
         f : [\te{m}] \ra [\te{\$}] \\
         g : [\te{s}] \ra [\te{m}] \up{1.35} 
@@ -1405,19 +1394,19 @@
         $$
 
         !! $$
-        !! \Large f : [\te{m}] \ra [\te{\$}]
+        !! f : [\te{m}] \ra [\te{\$}]
         !! $$
 
         !! and
 
         !! $$
-        !! \Large g : [\te{s}] \ra [\te{m}]
+        !! g : [\te{s}] \ra [\te{m}]
         !! $$
 
         and
 
         $$
-        \Large f\circ g : [\te{s}] \ra [\te{\$}]
+        f\circ g : [\te{s}] \ra [\te{\$}]
         $$
 
         !! gives money-raised-dollars-as-a-function-of-time-elapsed-in-seconds.
@@ -1426,24 +1415,24 @@
         Perforce,
 
         $$
-        \Large (f\circ g)': [\te{s}] \ra [\te{\$}/\te{s}]
+        (f\circ g)': [\te{s}] \ra [\te{\$}/\te{s}]
         $$
 
         !! gives the fundraising-rate-in-dollars-per-second-as-a-function-of-time-elapsed-in-seconds.
         !! Also note that
-        gives the fundraising-rate-in-dollars-per-second
+        gives the fundraising rate, in dollars per second,
         !! as a function of time elapsed, measured in seconds, whereas
         as a function of time in seconds.
 
         Also note that
 
         $$
-        \Large f' : [\te{m}] \ra [\te{\$}/\te{m}]
+        f' : [\te{m}] \ra [\te{\$}/\te{m}]
         $$
 
         gives the
-        fundraising-rate-in-dollars-per-meter as a function
-        of the position in meters.
+        fundraising rate in dollars per meter as a function
+        of the position, in meters.
         !! (This could
         !! vary by position: some parts of the course may be “worth”
         !! more than others.)
@@ -1453,7 +1442,7 @@
         Then, at $t_0$ seconds after the start of the race,
 
         $$
-        \Large f'(g(t_0))
+        f'(g(t_0))
         $$
 
         is the dollars-per-meter rate at which the rat is
@@ -1461,18 +1450,17 @@
         $f'$.
 
         As for the dollars-per-second rate, one can obtain
-        that by multiplying the dollars-per-meter rate by the
+        that by multiplying the dollars per meter rate by the
         rat's meters-per-second velocity, i.e., by taking the product
 
         $$
-        \Large 
-        !! (f \circ g)'(t_0) = 
         f'(g(t_0))g'(t_0)
         $$
 
-        which is indeed $(f\circ g)'(t_0)$. Per:
+        which is indeed $(f\circ g)'(t_0)$. That is:
 
         |> Image
+            width=530px
             src=tmp-images/c6_explained_rat_equation.svg
 
         Also since
@@ -1485,7 +1473,7 @@
         !! $$
 
         $$
-        \Large f'(g(t_0)) = (f'\circ g)(t_0)
+        f'(g(t_0)) = (f'\circ g)(t_0)
         $$
         |> ImageRight
             src=tmp-images/c6_composition_reminder_cloud.svg
@@ -1494,14 +1482,14 @@
         we can write the same equation as
 
         $$
-        \Large (f \circ g)'(t_0) = (f'\circ g)(t_0)g'(t_0)
+        (f \circ g)'(t_0) = (f'\circ g)(t_0)g'(t_0)
         $$
 
         or, abstracting the input $t_0$ away, as
 
         |> Boxed
             $$
-            \Large (f \circ g)' = (f'\circ g)g'
+            (f \circ g)' = (f'\circ g)g'
             $$
 
         which is the chain rule as originally stated
@@ -1512,10 +1500,10 @@
         three rates of change...
 
         !! $$
-        !! \Large f'\,g'\,(f \circ g)'
+        !! f'\,g'\,(f \circ g)'
         !! $$
         !! $$
-        !! \Large \left[{\te{\$}\over \te{s}}\right]\qquad\left[{\te{\$}\over \te{m}}\right]\qquad\left[{\te{m}\over \te{s}}\right]
+        !! \left[{\te{\$}\over \te{s}}\right]\qquad\left[{\te{\$}\over \te{m}}\right]\qquad\left[{\te{m}\over \te{s}}\right]
         !! $$
         |> Image
             src=tmp-images/c6_three_units_with_arrows.svg
@@ -1533,7 +1521,7 @@
         expecting an amount of meters!
 
         !! $$
-        !! \Large f'(t_0) \ra f'(g(t_0))
+        !! f'(t_0) \ra f'(g(t_0))
         !! $$
 
         |> ImageRight
@@ -1548,7 +1536,7 @@
         |> Boxed
 
             $$
-            \Large (f \circ g)'(x) = f'(g(x))g'(x)
+            (f \circ g)'(x) = f'(g(x))g'(x)
             $$
 
         as previously seen with “$t_0$” in place of “$x$”. 
@@ -1562,8 +1550,10 @@
         __for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
         differentiable at $x$ and $f$ differentiable at $g(x)$__
 
-        similarly to the sum rule. (Cf. the 
-        [note after Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).)
+        similarly to the [postscript](>>postscript-on-x_0) following Example >>differentiability_sum_rule_counterexample,
+        relative to the sum rule.
+        !! similarly to the sum rule. (Cf. the 
+        !! [note after Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).)
         !! to the more granular version of the
         !! sum rule, [given after Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
 
@@ -1573,6 +1563,7 @@
         !! Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
 
     |> Example
+        handle=cos_cos_chain_rule
 
         We have
 
@@ -1587,41 +1578,59 @@
         (\cos \circ \cos)'(x) = ((-\sin) \circ \cos)(x)\cdot(-\sin)(x)
         $$
 
-        evaluating at an input $x$, an equation that can also be written
-
-        $$
-        (\cos \circ \cos)'(x) = (-\sin(\cos(x)))\cdot(-\sin(x))
-        $$
-
+        evaluating at an input $x$, 
+        !! an equation that can also be written
+        !! $$
+        !! (\cos \circ \cos)'(x) = (-\sin(\cos x))\cdot(-\sin(x))
+        !! $$
         !! —matching the form of the last boxed equation
         !! above—
         or
         
         $$
-        \tag{1}
-        (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x)
+        !! \tag{1}
+        (\cos \circ \cos)'(x) = \sin(\cos x)\sin(x)
         $$
 
-        cancelling the minus signs; for example,
-
-        $$
-        (\cos \circ \cos)'(2.5)
-        $$
+        when evaluating the ‘$\circ$’ and cancelling the minus signs. 
         
-        which to be clear is the slope of 
+    |> Example
+        We have
+        !! Keeping with Example >>cos_cos_chain_rule, we would
+        !! for example have
 
         $$
-        y = \cos(\cos(x))
+        (\cos \circ \cos)'(2.5) = \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
         $$
 
-        at $x = 2.5$, is
+        !! $$
+        !! (\cos \circ \cos)'(2.5)
+        !! $$
+        
+        !! which to be clear is the slope of 
 
-        $$
-        \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
-        $$
+        !! $$
+        !! y = \cos(\cos(x))
+        !! $$
 
-        by (1), which a graph of $\cos(\cos(x))$ seems to attest
-        to, visually from afar at least:
+        !! at $x = 2.5$, is
+
+        !! $$
+        !! \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
+        !! $$
+
+        !! by (1), 
+        by Example >>cos_cos_chain_rule,
+        which looks visually compatible with the graph of
+        $\cos(\cos x)$
+        !! $\cos \circ \cos = (x \ra \cos(\cos x))$ 
+        since
+        $(\cos \circ \cos)'(2.5)$ is supposed to be the slope
+        of $y = \cos(\cos x)$ at $x = 2.5$:
+        !! (the deriative should be the slope
+        !! of the tangent, if computed correctly—looks so!):
+        !! which a graph of $\cos(\cos(x))$ seems to attest to,
+        !! visually from afar at least:
 
         |> Image
             src=tmp-images/c6_sin_of_sin_graph.svg
@@ -1754,7 +1763,7 @@
     itself is a dimensionless object, so by doing
 
     $$
-    \Large {\te{time}\over\te{s}}
+    {\te{time}\over\te{s}}
     $$
 
     where “time” is a time measurement in seconds,
@@ -1772,7 +1781,7 @@
     !! follow the semantics of the axis label, we find...
 
     $$
-    \Large 3 = {\te{time}\over \te{s}}
+    3 = {\te{time}\over \te{s}}
     $$
 
     !! ...which implies...
@@ -1782,7 +1791,7 @@
     on the left implies
 
     $$
-    \Large 3\te{s} = \te{time}
+    3\te{s} = \te{time}
     $$
 
     or “time equals $3$ seconds”, i.e., that vertical

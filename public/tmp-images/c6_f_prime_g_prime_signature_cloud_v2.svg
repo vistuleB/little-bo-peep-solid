@@ -17,7 +17,7 @@
     <defs id="defs1" />
     <g inkscape:label="cloud" inkscape:groupmode="layer" id="layer1" style="display:inline">
         <path style="display:inline;fill:#f5fbff;fill-opacity:1;stroke:#000000;stroke-width:0.8;stroke-miterlimit:2;stroke-dasharray:none;stroke-dashoffset:0" d="m 27.794222,232.47324 c -4.101801,1.36101 -7.897158,4.14239 -10.433705,7.81976 -3.775147,5.47255 -3.764501,12.25719 -1.21369,17.1981 2.732217,5.29279 7.928447,9.03249 14.048005,10.14067 3.247131,0.58796 6.904629,0.16861 10.175403,-1.48192 5.467915,-2.75897 8.886445,-8.90112 9.070734,-14.45417 0.132066,-3.96119 -0.851379,-7.76301 -2.889928,-10.82637 -2.731278,-4.10431 -6.694201,-7.38195 -11.443877,-9.14624 -0.86031,-0.31968 -1.775002,-0.52766 -2.662629,-0.79168" id="path4-00" sodipodi:nodetypes="csssssssc" />
-        <path style="fill:#f5fbff;fill-opacity:1;stroke:#000000;stroke-width:0.799999;stroke-miterlimit:2;stroke-dasharray:none" d="m 371.77152,347.84215 -72.88234,19.34134 -136.15167,0.23015 -65.992444,-15.85853 -34.072168,-55.92246 0.112661,-85.9468 17.259721,-57.05931 65.8502,-18.29295 124.54672,-3.70709 84.53546,5.49914 43.18358,51.31147 5.62501,95.14008 z" id="path4" sodipodi:nodetypes="ccccccccccccc" />
+        <path style="fill:#f5fbff;fill-opacity:1;stroke:#000000;stroke-width:0.799999;stroke-miterlimit:2;stroke-dasharray:none" d="m 371.77152,347.84215 -72.88234,19.34134 -136.15167,0.23015 -100.064612,-71.78099 0.112661,-125.14172 83.109921,-36.15734 124.54672,-3.70709 84.53546,5.49914 43.18358,51.31147 5.62501,95.14008 z" id="path4" sodipodi:nodetypes="ccccccccccc" />
         <g transform="matrix(0.0274176,0,0,-0.0274176,275.04637,184.23783)" id="g22">
             <rect fill="#000000" x="0" y="0" width="0" height="1350" id="rect20" />
         </g>
