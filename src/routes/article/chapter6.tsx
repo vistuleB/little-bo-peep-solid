@@ -19,7 +19,7 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_157_hgi_"
+      id="_158_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -77,7 +77,10 @@ export default function __Chapter6__() {
       <ArticleTitle banner="Chapter 6:">
         Dimensional Analysis
       </ArticleTitle>
-      <Section id="section-1">
+      <Section
+        and="sth_else"
+        id="section-1"
+      >
         <OuterP>
           <b>
             Function signatures.
@@ -155,7 +158,7 @@ export default function __Chapter6__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example>
+        <Example id="_150_h.a.i_">
           <OuterP>
             <b>
               Example 1.
@@ -467,7 +470,7 @@ const Rest = () => {
         <Pause />
         <Image
           src="/tmp-images/c6_flowers_here_v2.svg"
-          id="_150_hgi_"
+          id="_151_h.a.i_"
         />
         <Pause />
         <OuterP>
@@ -510,14 +513,14 @@ const Rest = () => {
         <Pause />
         <Image
           src="/tmp-images/c6_flowers_here_two_more.svg"
-          id="_151_hgi_"
+          id="_152_h.a.i_"
         />
         <Pause />
         <OuterP>
           [*See {" "}
           <a
             class="out-chapter-link"
-            href="/article/chapter5#_88_hgi_"
+            href="/article/chapter5#_88_h.a.i_"
           >
             Chapter 5
           </a>
@@ -541,7 +544,7 @@ const Rest = () => {
           {" "}
           (see also {" "}
           <a
-            href="/article/chapter4#_62_hgi_"
+            href="/article/chapter4#_62_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -603,7 +606,7 @@ const Rest = () => {
           {" "} of
           {" "}
           <a
-            href="/article/chapter4#_62_hgi_"
+            href="/article/chapter4#_62_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -668,7 +671,7 @@ const Rest = () => {
           operations from {" "}
           <InChapterLink
             class="in-chapter-link"
-            href="#_151_hgi_"
+            href="#_152_h.a.i_"
           >
             Table 1.2
           </InChapterLink>
@@ -819,7 +822,7 @@ const Rest = () => {
           as listed in {" "}
           <InChapterLink
             class="in-chapter-link"
-            href="#_150_hgi_"
+            href="#_151_h.a.i_"
           >
             Table 1.1
           </InChapterLink>
@@ -843,7 +846,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          for some arbitrary units A, B, C, D; then
+          for some arbitrary units A, B, C, D; then,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -991,7 +994,7 @@ const Rest = () => {
           as units are concerned: nothing untoward has been found!
         </OuterP>
         <Pause />
-        <Example id="_152_hgi_">
+        <Example id="_153_h.a.i_">
           <OuterP>
             <b>
               Example 2.
@@ -1065,7 +1068,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_152_hgi_"
+                href="/article/chapter6#_153_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 2
@@ -1075,7 +1078,7 @@ const Rest = () => {
             {" "}
             In the case of {" "}
             <InChapterLink
-              href="/article/chapter6#_152_hgi_"
+              href="/article/chapter6#_153_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1113,7 +1116,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_153_hgi_">
+        <Example id="_154_h.a.i_">
           <OuterP>
             <b>
               Example 3.
@@ -1284,7 +1287,7 @@ const Rest = () => {
           both differentiable it is still 
           true, however, that
         </OuterP>
-        <Boxed id="_154_hgi_">
+        <Boxed id="_155_h.a.i_">
           <MathBlock>
             $$
             (f + g)'(x_0) = f'(x_0) + g'(x_0)
@@ -1343,8 +1346,8 @@ const Rest = () => {
           whence this equation's moniker.
         </OuterP>
         <OuterP class="indent-10">
-          For a dimensional analysis of this equation, note
-          that on the left-hand side
+          For a dimensional analysis of this equation, 
+          note that, on the left-hand side,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1436,7 +1439,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example id="_155_hgi_">
+        <Example id="_156_h.a.i_">
           <OuterP>
             <b>
               Example 4.
@@ -1444,7 +1447,7 @@ const Rest = () => {
             {" "}
             As in {" "}
             <InChapterLink
-              href="/article/chapter6#_152_hgi_"
+              href="/article/chapter6#_153_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1569,7 +1572,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_155_hgi_"
+                href="/article/chapter6#_156_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 4
@@ -1599,7 +1602,7 @@ const Rest = () => {
           <OuterP>
             in {" "}
             <InChapterLink
-              href="/article/chapter6#_155_hgi_"
+              href="/article/chapter6#_156_h.a.i_"
               class="in-chapter-link"
             >
               Example 4
@@ -1644,7 +1647,7 @@ const Rest = () => {
               entirely
             </i>
             {" "} wrong,
-            even in this case!
+            even here!
           </OuterP>
         </Example>
       </Section>
@@ -1999,7 +2002,7 @@ const Rest = () => {
           <Pause />
           <OuterP>
             gives the fundraising rate, in dollars per second,
-            as a function of time in seconds.
+            as a function of time, in seconds.
           </OuterP>
           <OuterP class="indent-10">
             Also note that
@@ -2047,7 +2050,7 @@ const Rest = () => {
           </OuterP>
           <OuterP class="indent-10">
             As for the dollars-per-second rate, one can obtain
-            that by multiplying the dollars per meter rate by the
+            that by multiplying the dollars-per-meter rate by the
             rat's meters-per-second velocity, i.e., by taking the product
           </OuterP>
           <Pause />
@@ -2114,60 +2117,7 @@ const Rest = () => {
           </Boxed>
           <OuterP>
             which is the chain rule as originally stated
-            above—but to recapitulate
-            the main point of this example, 
-            we have
-            three rates of change...
-          </OuterP>
-          <Pause />
-          <Image src="/tmp-images/c6_three_units_with_arrows.svg" />
-          <Pause />
-          <OuterP>
-            ...and the point is that 
-            we can obtain 
-            the former rate of change {" "}
-            <NoBreak>
-              (
-              <Math>
-                \(\left[&#123;\te&#123;\$&#125;&#125;\over\te&#123;s&#125;\right]\)
-              </Math>
-              )
-            </NoBreak>
-            {" "}
-            by multiplying the latter two rates
-            of change
-            {" "}
-            <NoBreak>
-              (
-              <Math>
-                \(\left[&#123;\te&#123;\$&#125;&#125;\over\te&#123;m&#125;\right]\)
-              </Math>
-            </NoBreak>
-            {" "} and {" "}
-            <NoBreak>
-              <Math>
-                $\left[&#123;\te&#123;m&#125;&#125;\over\te&#123;s&#125;\right]$
-              </Math>
-              ),
-            </NoBreak>
-            {" "}
-            we just have to be careful to evaluate {" "}
-            <Math>
-              $f'$
-            </Math>
-            {" "}
-            at the right “place”—we don't want to feed
-            {" "}
-            <Math>
-              $f'$
-            </Math>
-            {" "} an amount of seconds when it is
-            expecting an amount of meters!
-            <ImageRight
-              src="/tmp-images/c6_forbidden_fprime_of_t0_v2.svg"
-              line={-3}
-              offset_x="1em"
-            />
+            above.
           </OuterP>
           <Pause />
           <OuterP>
@@ -2258,13 +2208,13 @@ const Rest = () => {
             similarly to the {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#_154_hgi_"
+              href="#_155_h.a.i_"
             >
               postscript
             </InChapterLink>
             {" "} following {" "}
             <InChapterLink
-              href="/article/chapter6#_153_hgi_"
+              href="/article/chapter6#_154_h.a.i_"
               class="in-chapter-link"
             >
               Example 3
@@ -2274,7 +2224,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_156_hgi_">
+        <Example id="_157_h.a.i_">
           <OuterP>
             <b>
               Example 6.
@@ -2363,7 +2313,7 @@ const Rest = () => {
           <OuterP>
             by {" "}
             <InChapterLink
-              href="/article/chapter6#_156_hgi_"
+              href="/article/chapter6#_157_h.a.i_"
               class="in-chapter-link"
             >
               Example 6
@@ -2386,12 +2336,10 @@ const Rest = () => {
               $y = \cos(\cos x)$
             </Math>
             {" "} at {" "}
-            <NoBreak>
-              <Math>
-                $x = 2.5$
-              </Math>
-              :
-            </NoBreak>
+            <Math>
+              $x = 2.5$
+            </Math>
+            {" "} (after all):
           </OuterP>
           <Pause />
           <Image src="/tmp-images/c6_sin_of_sin_graph.svg" />
@@ -2621,7 +2569,7 @@ const Rest = () => {
             </Math>
             ’,
           </NoBreak>
-          {" "} the pure number!
+          {" "} the pure number!!
         </OuterP>
       </Section>
     </>}

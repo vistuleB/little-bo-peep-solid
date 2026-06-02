@@ -21,7 +21,7 @@ export default function __Bootcamp2__() {
       nextPage="/article/bootcamp1"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
-      id="_20_hgi_"
+      id="_20_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -305,7 +305,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <TextParent>
-          <MathBlock id="_2_hgi_">
+          <MathBlock id="_2_h.a.i_">
             $$
             \Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;
             $$
@@ -330,7 +330,7 @@ const Rest = () => {
           {" "}
           Moreover, (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
+            href="/article/bootcamp2#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
@@ -353,7 +353,7 @@ const Rest = () => {
           {" "} which is mildly important. In more
           detail, (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
+            href="/article/bootcamp2#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
@@ -364,7 +364,7 @@ const Rest = () => {
           </Math>
           {" "} by inspection, and (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
+            href="/article/bootcamp2#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
@@ -378,7 +378,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <TextParent>
-          <MathBlock id="_3_hgi_">
+          <MathBlock id="_3_h.a.i_">
             $$
             \Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;
             $$
@@ -417,14 +417,14 @@ const Rest = () => {
           {" "}
           in (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_3_hgi_"
+            href="/article/bootcamp2#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
           &#8288;) lands you right back on (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_3_hgi_"
+            href="/article/bootcamp2#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
@@ -439,7 +439,7 @@ const Rest = () => {
           </NoBreak>
           {" "} (So, namely, if (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_3_hgi_"
+            href="/article/bootcamp2#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
@@ -512,14 +512,14 @@ const Rest = () => {
           ...and any one of these equations implies the other two.
           Thus, either of (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_2_hgi_"
+            href="/article/bootcamp2#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
           &#8288;) and (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_3_hgi_"
+            href="/article/bootcamp2#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
@@ -2121,10 +2121,10 @@ const Rest = () => {
       <Exercises
         at_end_of_page={true}
         show_curlicue={true}
-        id="_19_hgi_"
+        id="_19_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_4_hgi_">
+          <ExerciseStatement id="_4_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2234,7 +2234,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_5_hgi_">
+          <ExerciseStatement id="_5_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2293,7 +2293,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_6_hgi_">
+          <ExerciseStatement id="_6_h.a.i_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -2391,7 +2391,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_7_hgi_">
+          <ExerciseStatement id="_7_h.a.i_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2456,7 +2456,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_8_hgi_">
+          <ExerciseStatement id="_8_h.a.i_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -2503,7 +2503,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={6}>
-          <ExerciseStatement id="_9_hgi_">
+          <ExerciseStatement id="_9_h.a.i_">
             <OuterP>
               <b>
                 Exercise 6.
@@ -2563,7 +2563,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={7}>
-          <ExerciseStatement id="_10_hgi_">
+          <ExerciseStatement id="_10_h.a.i_">
             <OuterP>
               <b>
                 Exercise 7.
@@ -2595,7 +2595,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_11_hgi_">
+          <ExerciseStatement id="_11_h.a.i_">
             <OuterP>
               <b>
                 Exercise 8.
@@ -2633,7 +2633,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={9}>
-          <ExerciseStatement id="_12_hgi_">
+          <ExerciseStatement id="_12_h.a.i_">
             <OuterP>
               <b>
                 Exercise 9.
@@ -2680,7 +2680,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_13_hgi_">
+          <ExerciseStatement id="_13_h.a.i_">
             <OuterP>
               <b>
                 Exercise 10.
@@ -2738,7 +2738,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={11}>
-          <ExerciseStatement id="_14_hgi_">
+          <ExerciseStatement id="_14_h.a.i_">
             <OuterP>
               <b>
                 Exercise 11.
@@ -2792,7 +2792,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={12}>
-          <ExerciseStatement id="_15_hgi_">
+          <ExerciseStatement id="_15_h.a.i_">
             <OuterP>
               <b>
                 Exercise 12.
@@ -2880,7 +2880,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={13}>
-          <ExerciseStatement id="_16_hgi_">
+          <ExerciseStatement id="_16_h.a.i_">
             <OuterP>
               <b>
                 Exercise 13.
@@ -2936,7 +2936,7 @@ const Rest = () => {
             <OuterP>
               stated earlier in the chapter as (&#8288;
               <InChapterLink
-                href="/article/bootcamp2#_2_hgi_"
+                href="/article/bootcamp2#_2_h.a.i_"
                 class="in-chapter-link"
               >
                 A
@@ -3001,7 +3001,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_17_hgi_">
+          <ExerciseStatement id="_17_h.a.i_">
             <OuterP>
               <b>
                 Exercise 14.
@@ -3152,7 +3152,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={15}>
-          <ExerciseStatement id="_18_hgi_">
+          <ExerciseStatement id="_18_h.a.i_">
             <OuterP>
               <b>
                 Exercise 15.
@@ -3285,7 +3285,7 @@ const Rest = () => {
               </Math>
               {" "} (as in {" "}
               <InChapterLink
-                href="/article/bootcamp2#_17_hgi_"
+                href="/article/bootcamp2#_17_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14

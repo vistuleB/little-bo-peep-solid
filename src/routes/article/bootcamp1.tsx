@@ -16,7 +16,7 @@ export default function __Bootcamp1__() {
       nextPage="/"
       pageNecessaryMargin={160}
       maxElementWidth={800}
-      id="_1_hgi_"
+      id="_1_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">

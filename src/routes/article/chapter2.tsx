@@ -22,7 +22,7 @@ export default function __Chapter2__() {
       nextPage="/article/chapter3"
       pageNecessaryMargin={650}
       maxElementWidth={900}
-      id="_32_hgi_"
+      id="_32_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -295,7 +295,7 @@ const Rest = () => {
           .
         </OuterP>
         <Pause />
-        <Example id="_26_hgi_">
+        <Example id="_26_h.a.i_">
           <OuterP>
             <b>
               Example 1.
@@ -336,7 +336,7 @@ const Rest = () => {
         <OuterP>
           (In {" "}
           <InChapterLink
-            href="/article/chapter2#_26_hgi_"
+            href="/article/chapter2#_26_h.a.i_"
             class="in-chapter-link"
           >
             Example 1
@@ -1667,10 +1667,10 @@ const Rest = () => {
       <Exercises
         at_end_of_page={true}
         show_curlicue={true}
-        id="_31_hgi_"
+        id="_31_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_27_hgi_">
+          <ExerciseStatement id="_27_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1772,7 +1772,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_28_hgi_">
+          <ExerciseStatement id="_28_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2040,7 +2040,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_29_hgi_">
+          <ExerciseStatement id="_29_h.a.i_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -2214,7 +2214,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_30_hgi_">
+          <ExerciseStatement id="_30_h.a.i_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2223,7 +2223,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2#_28_hgi_"
+                href="/article/chapter2#_28_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 2

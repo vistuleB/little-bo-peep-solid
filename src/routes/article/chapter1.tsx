@@ -21,7 +21,7 @@ export default function __Chapter1__() {
       nextPage="/article/chapter2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_25_hgi_"
+      id="_25_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -961,7 +961,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_21_hgi_">
+        <Example id="_21_h.a.i_">
           <OuterP>
             <b>
               Example 2.
@@ -1102,7 +1102,7 @@ const Rest = () => {
           <OuterP>
             obtaining the same result as {" "}
             <InChapterLink
-              href="/article/chapter1#_21_hgi_"
+              href="/article/chapter1#_21_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1502,10 +1502,10 @@ const Rest = () => {
       <Exercises
         at_end_of_page={true}
         show_curlicue={true}
-        id="_24_hgi_"
+        id="_24_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_22_hgi_">
+          <ExerciseStatement id="_22_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2665,7 +2665,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_23_hgi_">
+          <ExerciseStatement id="_23_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2673,7 +2673,7 @@ const Rest = () => {
               {" "}
               In the solution to {" "}
               <InChapterLink
-                href="/article/chapter1#_22_hgi_"
+                href="/article/chapter1#_22_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1

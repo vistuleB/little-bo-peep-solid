@@ -37,6 +37,7 @@
 
 |> Section
     handle=_ch6_start_
+    and=sth_else
     *Function signatures.*
     If $f$ is a function from $\rr$ to $\rr$
     we write
@@ -67,6 +68,7 @@
     of $f$.
 
     |> Example
+        handle=pounds_sterling.example
 
         !! By writing
         If
@@ -706,7 +708,7 @@
     \end{aligned}
     $$
 
-    for some arbitrary units A, B, C, D; then
+    for some arbitrary units A, B, C, D; then,
 
     $$
     \begin{aligned}
@@ -958,8 +960,8 @@
     as we know from his notes,
     whence this equation's moniker.
 
-    For a dimensional analysis of this equation, note
-    that on the left-hand side
+    For a dimensional analysis of this equation, 
+    note that, on the left-hand side,
 
     $$
     fg
@@ -1106,7 +1108,7 @@
         _does show up as a term_ in the “true”
         formula for $(x_1x_2)''$, so, in some sense,
         dimensional analysis is not _entirely_ wrong,
-        even in this case!
+        even here!
 
 !! |> Section
 !!     *The product rule.*
@@ -1422,7 +1424,7 @@
         !! Also note that
         gives the fundraising rate, in dollars per second,
         !! as a function of time elapsed, measured in seconds, whereas
-        as a function of time in seconds.
+        as a function of time, in seconds.
 
         Also note that
 
@@ -1450,7 +1452,7 @@
         $f'$.
 
         As for the dollars-per-second rate, one can obtain
-        that by multiplying the dollars per meter rate by the
+        that by multiplying the dollars-per-meter rate by the
         rat's meters-per-second velocity, i.e., by taking the product
 
         $$
@@ -1493,41 +1495,30 @@
             $$
 
         which is the chain rule as originally stated
-        above—but to recapitulate
-        the main point of this example, 
-        we have
-        !! three different units, and 
-        three rates of change...
+        above.
+        !! —but to quickly recapitulate
+        !! the main point of this example, 
+        !! we have
+        !! three rates of change...
 
-        !! $$
-        !! f'\,g'\,(f \circ g)'
-        !! $$
-        !! $$
-        !! \left[{\te{\$}\over \te{s}}\right]\qquad\left[{\te{\$}\over \te{m}}\right]\qquad\left[{\te{m}\over \te{s}}\right]
-        !! $$
-        |> Image
-            src=tmp-images/c6_three_units_with_arrows.svg
+        !! |> Image
+        !!     src=tmp-images/c6_three_units_with_arrows.svg
 
-        ...and the point is that 
-        !! ...and 
-        we can obtain 
-        the former rate of change ($\left[{\te{\$}}\over\te{s}\right]$)
-        by multiplying the latter two rates
-        of change
-        ($\left[{\te{\$}}\over\te{m}\right]$ and $\left[{\te{m}}\over\te{s}\right]$),
-        we just have to be careful to evaluate $f'$
-        at the right “place”—we don't want to feed
-        $f'$ an amount of seconds when it is
-        expecting an amount of meters!
+        !! ...and the point is that 
+        !! we can obtain 
+        !! the former rate of change ($\left[{\te{\$}}\over\te{s}\right]$)
+        !! by multiplying the latter two rates
+        !! of change
+        !! ($\left[{\te{\$}}\over\te{m}\right]$ and $\left[{\te{m}}\over\te{s}\right]$),
+        !! we just have to be careful to evaluate $f'$
+        !! at the right “place”—we don't want to feed
+        !! $f'$ an amount of seconds when it is
+        !! expecting an amount of meters!
 
-        !! $$
-        !! f'(t_0) \ra f'(g(t_0))
-        !! $$
-
-        |> ImageRight
-            src=tmp-images/c6_forbidden_fprime_of_t0_v2.svg
-            line=-3
-            offset_x=1em
+        !! |> ImageRight
+        !!     src=tmp-images/c6_forbidden_fprime_of_t0_v2.svg
+        !!     line=-3
+        !!     offset_x=1em
 
         |> Pause
 
@@ -1626,7 +1617,7 @@
         !! $\cos \circ \cos = (x \ra \cos(\cos x))$ 
         since
         $(\cos \circ \cos)'(2.5)$ is supposed to be the slope
-        of $y = \cos(\cos x)$ at $x = 2.5$:
+        of $y = \cos(\cos x)$ at $x = 2.5$ (after all):
         !! (the deriative should be the slope
         !! of the tangent, if computed correctly—looks so!):
         !! which a graph of $\cos(\cos(x))$ seems to attest to,
@@ -1797,4 +1788,4 @@
     or “time equals $3$ seconds”, i.e., that vertical
     slice of the plane corresponds to the moment when
     the “time” variable—which _does_ have units—equals
-    $3$ _seconds_, not just ‘$3$’, the pure number!
+    $3$ _seconds_, not just ‘$3$’, the pure number!!
