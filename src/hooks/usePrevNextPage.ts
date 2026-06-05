@@ -11,13 +11,14 @@ const usePrevNextPage = () => {
   const getPrevPage = () => getPage(store.prevPage);
   const getNextPage = () => getPage(store.nextPage);
   const getPage = (page: string) => {
-    if (page === "" || location.pathname === page) return;
-    // note: if a value of 'page' is given such that location.pathname != page
-    // but such that the router still resolves 'page' to the current page
-    // we will get an infinite rabbit, because 'onMount' is never called and
-    // the rabbit is never cleared; so you always need to call getPage with carefully
-    // normalized, 'correct' paths!!! (or with paths that certifiably point to a
-    // different page)
+    if (page === "") return;
+    // 'page' may include a hash and/or query (e.g. "/article/chapter6#sec2"),
+    // so compare only the pathname against the current pathname. If they match,
+    // the router resolves 'page' to the page we're already on: it will NOT
+    // remount, so 'onMount' (which clears loading) never fires. Setting loading
+    // here would leave us stuck at loading=true forever (the "infinite rabbit").
+    const targetPathname = page.split(/[?#]/)[0];
+    if (targetPathname === location.pathname) return;
     clearCurrentPage();
     if (store.navigation_delays) {
       setTimeout(

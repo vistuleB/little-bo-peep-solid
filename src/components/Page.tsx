@@ -104,23 +104,38 @@ const Page = (props: ParentProps & PageProps) => {
   // *********************
 
   const handleClick = (e: MouseEvent) => {
-    const targetIsAnchor = (element: Element) => {
+    const closestAnchor = (element: Element | null) => {
       let currentElement = element;
       while (
         currentElement !== null &&
         currentElement !== document.documentElement
       ) {
         if (currentElement.tagName === "A") {
-          return true;
+          return currentElement as HTMLAnchorElement;
         }
-        currentElement = currentElement.parentElement as Element;
+        currentElement = currentElement.parentElement;
       }
-      return false;
+      return null;
     };
 
-    if (targetIsAnchor(e.target as Element)) {
+    const anchor = closestAnchor(e.target as Element);
+    if (anchor) {
+      const href = anchor.href;
+      if (!href) return;
+      const hrefUrl = new URL(href);
+      const currentUrl = new URL(window.location.href);
+      if (hrefUrl.origin !== currentUrl.origin) return; // external website link
+      e.preventDefault();
+      getPage(hrefUrl.pathname + hrefUrl.hash);
       return;
     }
+
+    // Let interactive controls handle their own clicks. This handler runs in the
+    // capture phase (so it can preventDefault anchor clicks before the router),
+    // which means without this guard it would intercept e.g. the header prev/next
+    // arrows and scroll buttons before their onClick fires — the edge-tap
+    // navigation below would turn every top-right button click into getNextPage.
+    if ((e.target as Element)?.closest?.("button")) return;
 
     if (store.margin_mode) {
       window.scroll({
@@ -236,7 +251,6 @@ const Page = (props: ParentProps & PageProps) => {
   onMount(() => {
     handleScroll();
     handleResize();
-    set_store("loading", false);
     if (location.pathname !== "/") {
       set_store("have_been_outside_home", true);
     }
@@ -245,17 +259,16 @@ const Page = (props: ParentProps & PageProps) => {
     window.addEventListener("resize", handleResize);
     document.addEventListener("scrollend", handleScrollendAndTouchend);
     document.addEventListener("touchend", handleScrollendAndTouchend);
-    window.addEventListener("click", handleClick);
+    window.addEventListener("click", handleClick, true);
     window.addEventListener("keydown", handleKeydown);
-
-    onCleanup(() => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-      document.removeEventListener("scrollend", handleScrollendAndTouchend);
-      document.removeEventListener("touchend", handleScrollendAndTouchend);
-      window.removeEventListener("click", handleClick);
-      window.removeEventListener("keydown", handleKeydown);
-    });
+  });
+  onCleanup(() => {
+    window.removeEventListener("scroll", handleScroll);
+    window.removeEventListener("resize", handleResize);
+    document.removeEventListener("scrollend", handleScrollendAndTouchend);
+    document.removeEventListener("touchend", handleScrollendAndTouchend);
+    window.removeEventListener("click", handleClick, true);
+    window.removeEventListener("keydown", handleKeydown);
   });
 
   return <>{props.children}</>;

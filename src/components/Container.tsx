@@ -51,7 +51,6 @@ const Container = (props: ParentProps) => {
         {store.show_areas && midLineDiv()}
         <Nav />
         {props.children}
-        {store.loading && <LoadingGraphic />}
         {/* </div> */}
         <div
           class="h-14"

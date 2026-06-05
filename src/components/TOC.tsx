@@ -1,6 +1,7 @@
-import { ParentProps } from "solid-js";
+import { onMount, ParentProps } from "solid-js";
 import SectionsBreadcrumbs from "./SectionsBreadcrumbs";
 import Page from "./Page";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 const TOC = (
   props: ParentProps & {
@@ -8,6 +9,10 @@ const TOC = (
     prevPage?: string;
   },
 ) => {
+  const { set_store } = useGlobalContext();
+  onMount(() => {
+    set_store("loading", false);
+  });
   return (
     <Page nextPage={props.nextPage} prevPage={props.prevPage}>
       <div>
