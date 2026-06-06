@@ -3832,10 +3832,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={15}
-        >
+        <Exercise number={15}>
           <ExerciseStatement id="_73_h.a.i_">
             <OuterP>
               <b>
@@ -3927,10 +3924,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={16}
-        >
+        <Exercise number={16}>
           <ExerciseStatement id="_74_h.a.i_">
             <OuterP>
               <b>
@@ -4245,10 +4239,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={18}
-        >
+        <Exercise number={18}>
           <ExerciseStatement id="_76_h.a.i_">
             <OuterP>
               <b>

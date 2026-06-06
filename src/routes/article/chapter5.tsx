@@ -30,12 +30,12 @@ export default function __Chapter5__() {
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            cos and sin. (“cosine” and “sine”.)
+            §1. cos and sin. (“cosine” and “sine”.)
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            derivatives
+            §2. derivatives
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
@@ -162,7 +162,7 @@ export default function __Chapter5__() {
       >
         <OuterP>
           <b>
-            Cos and Sin. (“Cosine” and “sine”.)
+            §1. Cos and sin. (“Cosine” and “sine”.)
           </b>
           {" "} We have
           already encountered the ‘cos’ function in 
@@ -696,7 +696,7 @@ const Rest = () => {
       <Section id="section-2">
         <OuterP>
           <b>
-            Derivatives.
+            §2. Derivatives.
           </b>
           {" "}
           Continuing the last topic,
@@ -4242,7 +4242,10 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-19">
+      <Section
+        work="ing"
+        id="section-19"
+      >
         <OuterP>
           <b>
             Note on calculators.
@@ -5617,9 +5620,7 @@ const Rest = () => {
                 src="/build-img/svgo-svg/0sAj.svg"
               />
               <Pause />
-              <OuterP>
-                (&#8201;Joking.)
-              </OuterP>
+              <StarDivider />
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -11363,10 +11364,7 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={32}
-        >
+        <Exercise number={32}>
           <ExerciseStatement id="_122_h.a.i_">
             <OuterP>
               <b>
@@ -12559,10 +12557,7 @@ const Rest = () => {
             <StarDivider />
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={36}
-        >
+        <Exercise number={36}>
           <ExerciseStatement id="_126_h.a.i_">
             <OuterP>
               <b>
@@ -12650,10 +12645,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={37}
-        >
+        <Exercise number={37}>
           <ExerciseStatement id="_127_h.a.i_">
             <OuterP>
               <b>
@@ -12738,10 +12730,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={38}
-        >
+        <Exercise number={38}>
           <ExerciseStatement id="_128_h.a.i_">
             <OuterP>
               <b>
@@ -12878,10 +12867,7 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={39}
-        >
+        <Exercise number={39}>
           <ExerciseStatement id="_129_h.a.i_">
             <OuterP>
               <b>
@@ -16268,7 +16254,10 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={49}>
+        <Exercise
+          work="ing"
+          number={49}
+        >
           <ExerciseStatement id="_139_h.a.i_">
             <OuterP>
               <b>
@@ -16522,26 +16511,32 @@ const Rest = () => {
                 functions:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/7rKp.svg" />
-              <Pause />
-              <Pause />
-              <Image src="/build-img/svgo-svg/27CP.svg" />
+              <Image
+                src="/tmp-images/e5_project_i_and_j_note1_v2.svg"
+                style="margin:0.3em 0"
+              />
               <Pause />
               <OuterP>
-                By contrast, this exercise shows that we can also view
-                sin and cos as the projections of two different fixed points onto
-                a single ruler, which is the rotating object:
+                However, by the result of this exercise, sin and cos can
+                also be understood as the projection of two fixed points onto a
+                single rotating ruler:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/mOAf.svg" />
+              <Image
+                src="/tmp-images/e5_project_i_and_j_note2_v2.svg"
+                style="margin:0.3em 0"
+              />
               <Pause />
-              <Image src="/build-img/svgo-svg/OGM8.svg" />
-              <Pause />
-              <StarDivider />
+              <OuterP>
+                (This is like a “dual” definition.)
+              </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={50}>
+        <Exercise
+          work="ing"
+          number={50}
+        >
           <ExerciseStatement id="_140_h.a.i_">
             <OuterP>
               <b>
