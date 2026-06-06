@@ -2,12 +2,14 @@ import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
 import Boxed  from "~/components/Boxed";
 import { CentralDisplayItalic }  from "~/components/Delimiters";
+import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
+import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
@@ -19,7 +21,7 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_158_h.a.i_"
+      id="_159_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -71,6 +73,11 @@ export default function __Chapter6__() {
         <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=section-10">
             epilogue: the dimensionless plane
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-10">
+          <InChapterLink href="?id=exercises">
+            exercises
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
@@ -158,7 +165,7 @@ export default function __Chapter6__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example id="_150_h.a.i_">
+        <Example>
           <OuterP>
             <b>
               Example 1.
@@ -520,7 +527,7 @@ const Rest = () => {
           [*See {" "}
           <a
             class="out-chapter-link"
-            href="/article/chapter5#_88_h.a.i_"
+            href="/article/chapter5#_89_h.a.i_"
           >
             Chapter 5
           </a>
@@ -544,7 +551,7 @@ const Rest = () => {
           {" "}
           (see also {" "}
           <a
-            href="/article/chapter4#_62_h.a.i_"
+            href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -606,7 +613,7 @@ const Rest = () => {
           {" "} of
           {" "}
           <a
-            href="/article/chapter4#_62_h.a.i_"
+            href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -2237,6 +2244,11 @@ const Rest = () => {
             $$
             (\cos \circ \cos)' = ((-\sin) \circ \cos)(-\sin)
             $$
+            <ImageLeft
+              src="/tmp-images/c6_chain_rule_reminder_cloud.svg"
+              offset_x="2em"
+              compensate_offset_x_for_large_text_columns={true}
+            />
           </MathBlock>
           <Pause />
           <OuterP>
@@ -2295,7 +2307,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example>
+        <Example id="_158_h.a.i_">
           <OuterP>
             <b>
               Example 7.
@@ -2344,8 +2356,19 @@ const Rest = () => {
           <Pause />
           <Image src="/tmp-images/c6_sin_of_sin_graph.svg" />
           <Pause />
+          <StarDivider />
+          <Pause />
           <OuterP>
-            (Because
+            <i>
+              Note on {" "}
+              <InChapterLink
+                href="/article/chapter6#_158_h.a.i_"
+                class="in-chapter-link"
+              >
+                Example 7
+              </InChapterLink>
+            </i>
+            . Because
           </OuterP>
           <Pause />
           <MathBlock>
@@ -2392,9 +2415,11 @@ const Rest = () => {
               <Math>
                 $\cos(t)$
               </Math>
-              .)
+              :
             </NoBreak>
           </OuterP>
+          <Pause />
+          <Image src="/tmp-images/c6_windshield_wiper.svg" />
         </Example>
       </Section>
       <Pause />
@@ -2572,6 +2597,50 @@ const Rest = () => {
           {" "} the pure number!!
         </OuterP>
       </Section>
+      <Pause />
+      <Exercises
+        at_end_of_page={true}
+        show_curlicue={true}
+      >
+        <Exercise number={1}>
+          <ExerciseStatement>
+            <OuterP>
+              <b>
+                Exercise 1.
+              </b>
+              {" "}
+              Give a dimensional analysis of the (real,
+              “late afternoon”) product rule {" "}
+              <NoBreak>
+                (cf
+                <Math>
+                  $.$
+                </Math>
+              </NoBreak>
+              {" "} {" "}
+              <a
+                href="/article/chapter4#_76_h.a.i_"
+                class="out-chapter-link"
+              >
+                Chapter 4, Exercise 18
+              </a>
+              &#8288;):
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \Large (fg)' = f'g + fg'
+                $$
+              </MathBlock>
+            </Boxed>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Hello.
+            </OuterP>
+          </Solution>
+        </Exercise>
+      </Exercises>
     </>}
   </>;
 };
