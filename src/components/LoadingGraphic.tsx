@@ -1,4 +1,5 @@
 import { onCleanup, createSignal, ParentProps, createEffect } from "solid-js";
+import { HAMBURGER_MENU_HEIGHT } from "~/constants";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import { useGlobalContext } from "~/store/StoreProvider";
 
@@ -44,7 +45,11 @@ const LoadingGraphic = (props: { show: boolean }) => {
 
   return (
     <div style={props.show ? undefined : "display:none;"}>
-      <div class="fixed top-0 left-0 w-full h-full bg-[var(--background-rgb)] z-50"></div>
+      <div
+        style={{
+          top: `${HAMBURGER_MENU_HEIGHT}px`,
+        }}
+        class="fixed left-0 w-full h-full bg-[var(--background-rgb)] z-50"></div>
       <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
         <img
           src="/non-build-img/loading_screen.png"
