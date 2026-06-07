@@ -2199,6 +2199,17 @@
     "used-last-build": true,
     "3chars": ["ch3"]
   },
+  "e5_project_i_and_j_note1_v2.svg": {
+    "build-version": "svg/HbFF.svg",
+    "build-version-created-on": 1780739056,
+    "build-method": "cp",
+    "build-version-size": 1441829,
+    "original-size": 1441829,
+    "compressed-size": 1441829,
+    "compression": "0.0%",
+    "used-last-build": false,
+    "3chars": []
+  },
   "svg_ch5_ex_horizontal_projection_sphere_statement.svg": {
     "build-version": "svgo-svg/dKeI.svg",
     "build-version-created-on": 1776435603,
@@ -4220,8 +4231,8 @@
     "original-size": 1392764,
     "compressed-size": 562843,
     "compression": "59.59%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e5_more_closely_related_to_sin2x_or_left_2eta_cloud.svg": {
     "build-version": "svgo-svg/hCre.svg",
@@ -5144,8 +5155,8 @@
     "original-size": 1301464,
     "compressed-size": 565768,
     "compression": "56.53%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_one_long_line_connector_curve_lower_bound.svg": {
     "build-version": "svgo-svg/VC1t.svg",
@@ -7810,15 +7821,15 @@
     "3chars": ["ch5"]
   },
   "e5_project_i_and_j_note1_sin_v2.svg": {
-    "build-version": "svgo-svg/27CP.svg",
-    "build-version-created-on": 1776435957,
-    "build-method": "svgo",
-    "build-version-size": 555207,
-    "original-size": 1397016,
-    "compressed-size": 555207,
-    "compression": "60.26%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "build-version": "svg/27CP.svg",
+    "build-version-created-on": 1780745793,
+    "build-method": "cp",
+    "build-version-size": 1396771,
+    "original-size": 1396771,
+    "compressed-size": 1396771,
+    "compression": "0.0%",
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_big_division_big_subtraction_k.svg": {
     "build-version": "svgo-svg/_sJ5.svg",
@@ -9093,8 +9104,8 @@
     "original-size": 1423924,
     "compressed-size": 567667,
     "compression": "60.13%",
-    "used-last-build": true,
-    "3chars": ["ch5"]
+    "used-last-build": false,
+    "3chars": []
   },
   "_e5_max_cosx_sinx_one_over_x_graph.svg": {
     "build-version": "svgo-svg/HPwG.svg",

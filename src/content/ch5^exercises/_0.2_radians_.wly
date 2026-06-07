@@ -38,5 +38,6 @@
                 style=margin-top:0.8em;margin-bottom:0em;
                 src=images/svg_ch5_ex_0_2_radians_guess_joke_v1.svg
 
-            (&#8201;Joking.)
+            |> StarDivider
+            !! (&#8201;Joking.)
 

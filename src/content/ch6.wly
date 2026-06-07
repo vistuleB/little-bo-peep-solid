@@ -68,16 +68,13 @@
     of $f$.
 
     |> Example
-        handle=pounds_sterling.example
 
-        !! By writing
         If
 
         $$
         z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{£}\rt{0.1}]
         $$
 
-        !! we indicate that
         then
         
         $$z : \rr \ra \rr$$
@@ -86,8 +83,6 @@
         whose inputs denote meters per seconds squared
         (a measure of acceleration)
         and whose outputs denote British pounds. 
-        !! pounds,
-        !! or “pounds sterling”.
 
 |> Section
     *Dimensionless units.*
@@ -1561,6 +1556,9 @@
         $$
         (\cos \circ \cos)' = ((-\sin) \circ \cos)(-\sin)
         $$
+        |> ImageLeft
+            src=tmp-images/c6_chain_rule_reminder_cloud.svg
+            offset_x=2em
 
         by [the chain rule](>>chain_rule_discovery),
         since $\cos' = -\sin$, or
@@ -1570,63 +1568,35 @@
         $$
 
         evaluating at an input $x$, 
-        !! an equation that can also be written
-        !! $$
-        !! (\cos \circ \cos)'(x) = (-\sin(\cos x))\cdot(-\sin(x))
-        !! $$
-        !! —matching the form of the last boxed equation
-        !! above—
         or
         
         $$
-        !! \tag{1}
         (\cos \circ \cos)'(x) = \sin(\cos x)\sin(x)
         $$
 
         when evaluating the ‘$\circ$’ and cancelling the minus signs. 
         
     |> Example
+        handle=cos_cos_chain_rule_continued
         We have
-        !! Keeping with Example >>cos_cos_chain_rule, we would
-        !! for example have
 
         $$
         (\cos \circ \cos)'(2.5) = \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
         $$
 
-        !! $$
-        !! (\cos \circ \cos)'(2.5)
-        !! $$
-        
-        !! which to be clear is the slope of 
-
-        !! $$
-        !! y = \cos(\cos(x))
-        !! $$
-
-        !! at $x = 2.5$, is
-
-        !! $$
-        !! \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
-        !! $$
-
-        !! by (1), 
         by Example >>cos_cos_chain_rule,
         which looks visually compatible with the graph of
         $\cos(\cos x)$
-        !! $\cos \circ \cos = (x \ra \cos(\cos x))$ 
         since
         $(\cos \circ \cos)'(2.5)$ is supposed to be the slope
         of $y = \cos(\cos x)$ at $x = 2.5$ (after all):
-        !! (the deriative should be the slope
-        !! of the tangent, if computed correctly—looks so!):
-        !! which a graph of $\cos(\cos(x))$ seems to attest to,
-        !! visually from afar at least:
 
         |> Image
             src=tmp-images/c6_sin_of_sin_graph.svg
 
-        (Because
+        |> StarDivider
+
+        _Note on Example >>cos_cos_chain_rule_continued##_. Because
 
         $$
         -1 \leq \cos(x) \leq 1
@@ -1641,66 +1611,15 @@
         and $\cos(0) = 1$
         which produces the graph above, that one can actually
         think of as the $x$-coordinate of a certain horizontal
-        windshield-wiper whose angle at time $t$ is $\cos(t)$.)
-        !! (Producing limited oscillation of the windshield-wiper
-        !! between $-1\te{Rad}\approx -57.29^\circ$ and $+1\te{Rad} \approx +57.29^\circ$,
-        !! as opposed to full-circle oscillation covering all angles.)
+        windshield-wiper whose angle at time $t$ is $\cos(t)$:
 
-    !! |> Example
+        |> Image
+            src=tmp-images/c6_windshield_wiper.svg
 
-    !!     We have
-
-    !!     $$
-    !!     (\sin \circ \sin)' = (\cos \circ \sin)\cos
-    !!     $$
-
-    !!     by [the chain rule](>>chain_rule_discovery),
-    !!     since $\sin' = \cos$, or
-
-    !!     $$
-    !!     (\sin \circ \sin)'(x) = (\cos \circ \sin)(x)\cos(x)
-    !!     $$
-
-    !!     evaluating at an input $x$, an equation that can also be written
-
-    !!     $$
-    !!     (\sin \circ \sin)'(x) = \cos(\sin(x))\cos(x)
-    !!     $$
-
-    !!     matching the form of the last boxed equation
-    !!     above—to be quite specific, e.g., 
-
-    !!     $$
-    !!     (\sin \circ \sin)'(12.2)
-    !!     $$
-        
-    !!     which is the slope of 
-
-    !!     $$
-    !!     y = \sin(\sin(x))
-    !!     $$
-
-    !!     at $x = 12.2$ is
-
-    !!     $$
-    !!     \cos(\sin(12.2))\cos(12.2) = 0.874365...
-    !!     $$
-
-    !!     which a graph of $\sin \circ \sin$ attests
-    !!     to, visually:
-
-    !!     |> Image
-    !!         src=tmp-images/c6_sin_of_sin_graph.svg
-
-    !!     (Because
-
-    !!     $$
-    !!     -1 \leq \sin(x) \leq 1
-    !!     $$
-        
-    !!     the values of $\sin(\sin(x))$ are stuck between
-    !!     sine of $-1$ radian at the low end and sine of $+1$ radian
-    !!     at the high end, which produces the graph above.)
+        !! $$
+        !! \cos(\cos(t))
+        !! \cos(\cos t)
+        !! $$
 
 |> Section
     !! *Appendix: radians _&_ the dimensionless plane.*
@@ -1789,3 +1708,17 @@
     slice of the plane corresponds to the moment when
     the “time” variable—which _does_ have units—equals
     $3$ _seconds_, not just ‘$3$’, the pure number!!
+
+|> Exercises
+    |> Exercise
+        Give a dimensional analysis of the (real,
+        “late afternoon”) product rule (cf$.$ Chapter >>derivatives#decoy:4, Exercise >>_product_rule_#decoy:16):
+
+        |> Boxed
+            $$
+            \Large (fg)' = f'g + fg'
+            $$
+
+        |> Solution
+            Hello.
+        
