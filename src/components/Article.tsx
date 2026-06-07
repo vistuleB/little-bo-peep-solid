@@ -1,5 +1,6 @@
 import { ParentProps } from "solid-js";
 import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
+import useInChapterScrollHistory from "~/hooks/useInChapterScrollHistory";
 import { ExerciseGroupRegistryProvider } from "~/store/ExerciseGroupRegistryProvider";
 import PageTopBottomArrows from "./PageTopBottomArrows";
 import Page from "./Page";
@@ -32,6 +33,7 @@ const Article = (props: ParentProps & ArticleProps) => {
 
 const ArticleScrollCoordinator = (props: ParentProps) => {
   useCheckedSavedScroll();
+  useInChapterScrollHistory();
   return <>{props.children}</>;
 };
 
