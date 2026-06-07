@@ -2029,6 +2029,7 @@ const Rest = () => {
       <Pause />
       <Exercises
         at_end_of_page={true}
+        mode="dual"
         show_curlicue={true}
         id="_55_h.a.i_"
       >
@@ -2931,7 +2932,7 @@ const Rest = () => {
               >
                 Exercise 5
               </InChapterLink>
-              &#8288;'s formula by {" "}
+              &#8288;##'s formula by {" "}
               <NoBreak>
                 <Math>
                   $2$

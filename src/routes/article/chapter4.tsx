@@ -1712,7 +1712,7 @@ const Rest = () => {
           >
             Chapter 3
           </a>
-          &#8288;-related
+          &#8288;##-related
           matters, if
         </OuterP>
         <Pause />
@@ -1849,6 +1849,7 @@ const Rest = () => {
       <Pause />
       <Exercises
         at_end_of_page={true}
+        mode="dual"
         show_curlicue={true}
         id="_87_h.a.i_"
       >
