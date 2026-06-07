@@ -75,10 +75,10 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.append_attribute(#("Solution", "counter", "SolutionNoteCounter", infra.GoBack)),
       dl.append_attribute_if(#("Section", fn(section) { !infra.v_has_attr_with_key(section, "id") }, "id", "section-::++SectionCounter", infra.Continue)),
       dl.append_attribute_if_fancy(#("Exercises", fn(_, _, _, _, following_siblings) { list.is_empty(following_siblings) }, "at_end_of_page", "true", infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(_, _, _, _, following_siblings) { list.is_empty(following_siblings) }, "mode", end_of_chapter_exercises_switcher_type, infra.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, _, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.v_has_attr_with_key(exercises, "mode") }, "mode", end_of_chapter_exercises_switcher_type, infra.GoBack)),
       dl.append_attribute_if_fancy(#("Exercise", fn(_, ancestors, _, _, _) { infra.first_is(ancestors, "Exercises") }, "number", "::øøExerciseCounter", infra.GoBack)),
       dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.contains(ancestors, "Appendix") }, "show_curlicue", "true", infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, _) { infra.contains(ancestors, "Appendix") }, "mode", exercise_graveyard_switcher_type, infra.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, _) { infra.contains(ancestors, "Appendix") && !infra.v_has_attr_with_key(exercises, "mode") }, "mode", exercise_graveyard_switcher_type, infra.GoBack)),
 
       dl.prepend_counter_incrementing_attribute__outside(#("Chapter", "ChapterCounter", infra.GoBack), ["Bootcamp", "Appendix"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Bootcamp", "BootcampCounter", infra.GoBack), ["Chapter", "Appendix"]),

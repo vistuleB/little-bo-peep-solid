@@ -5016,7 +5016,6 @@ export default function __AppendixA__() {
           chapter="&gt;&gt;trigonometry"
           at_end_of_page={true}
           mode="dual"
-          mode="dual"
         >
           <Exercise number={1}>
             <ExerciseStatement id="_185_h.a.i_">
