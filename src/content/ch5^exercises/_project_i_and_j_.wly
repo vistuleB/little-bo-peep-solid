@@ -103,7 +103,7 @@
             functions:
 
             |> Image
-                src=tmp-images/e5_project_i_and_j_note1_v2.svg
+                src=images/e5_project_i_and_j_note1_v2.svg
                 style=margin:0.3em 0
 
             However, by the result of this exercise, sin and cos can
@@ -111,7 +111,7 @@
             single rotating ruler:
 
             |> Image
-                src=tmp-images/e5_project_i_and_j_note2_v2.svg
+                src=images/e5_project_i_and_j_note2_v2.svg
                 style=margin:0.3em 0
 
             (This is like a “dual” definition.)

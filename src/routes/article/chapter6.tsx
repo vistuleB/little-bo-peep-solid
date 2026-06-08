@@ -289,7 +289,7 @@ const Rest = () => {
           of one straight length by another*—the afore-mentioned
           “opposite over adjacent”. (Or “adjacent over hypotenuse”,
           in the case of cosine!)
-          <ImageLeft src="/tmp-images/c6_radian_dimensionless_ratio_cloud.svg" />
+          <ImageLeft src="/build-img/svgo-svg/0z4q.svg" />
         </OuterP>
         <Pause />
         <OuterP>
@@ -347,7 +347,7 @@ const Rest = () => {
           :
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_true_counterclockwiseness_1.svg" />
+        <Image src="/build-img/svgo-svg/edTN.svg" />
         <Pause />
         <OuterP>
           What we mean is that if it was our custom to draw the
@@ -364,7 +364,7 @@ const Rest = () => {
           would be clockwise, not counterclockwise:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_true_counterclockwiseness_2.svg" />
+        <Image src="/build-img/svgo-svg/0QSx.svg" />
         <Pause />
         <OuterP>
           (This actually happens inside of SVG, the web-based
@@ -389,7 +389,7 @@ const Rest = () => {
             clockwise
           </i>
           .)
-          <ImageRight src="/tmp-images/c6_SVG_cloud.svg" />
+          <ImageRight src="/build-img/svgo-svg/BYVX.svg" />
         </OuterP>
       </Section>
       <Pause />
@@ -405,7 +405,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_equal_inputs.svg"
+          src="/build-img/svgo-svg/hJfJ.svg"
           style="margin-bottom:-1.3em"
         />
         <Pause />
@@ -476,7 +476,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_v2.svg"
+          src="/build-img/svgo-svg/qdyx.svg"
           id="_151_h.a.i_"
         />
         <Pause />
@@ -519,7 +519,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_two_more.svg"
+          src="/build-img/svgo-svg/lyKL.svg"
           id="_152_h.a.i_"
         />
         <Pause />
@@ -670,7 +670,7 @@ const Rest = () => {
           depicted here as an eye-of-Godzilla flying saucer:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_differentiation_operator_intro.svg" />
+        <Image src="/build-img/svgo-svg/vx7K.svg" />
         <Pause />
         <OuterP>
           Though similarly, the
@@ -687,7 +687,7 @@ const Rest = () => {
           as input and producing one function as output:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_negation_operator.svg" />
+        <Image src="/build-img/svgo-svg/119H.svg" />
         <Pause />
         <OuterP>
           The other function operations from Table 1.1
@@ -704,7 +704,7 @@ const Rest = () => {
           can be depicted as a two-input-tube-flying-saucer:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_addition_operator_standalone.svg" />
+        <Image src="/build-img/svgo-svg/Zh1r.svg" />
         <Pause />
         <OuterP>
           In this fashion, the complete list of all
@@ -713,7 +713,7 @@ const Rest = () => {
           the following:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_all_our_operators_v2.svg" />
+        <Image src="/build-img/svgo-svg/Mq0V.svg" />
         <Pause />
         <OuterP>
           (We recycle {" "}
@@ -746,7 +746,7 @@ const Rest = () => {
           in a similar vein of diagram:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_operators_acting_on_signatures_v2.svg" />
+        <Image src="/build-img/svgo-svg/VuM1.svg" />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
       </Section>
@@ -1228,7 +1228,7 @@ const Rest = () => {
             {" "} etc:
           </OuterP>
           <Pause />
-          <Image src="/tmp-images/c6_all_those_x1x2_graphs.svg" />
+          <Image src="/build-img/svgo-svg/aASR.svg" />
           <Pause />
           <OuterP>
             Thus
@@ -1398,7 +1398,7 @@ const Rest = () => {
           (fg)' : [\tA] \ra [\tB\tC/\tA]
           $$
           <ImageLeft
-            src="/tmp-images/c6_fg_prime_signature_cloud_v2.svg"
+            src="/build-img/svgo-svg/jPk2.svg"
             offset_x="5em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -1413,7 +1413,7 @@ const Rest = () => {
           f'g' : [\tA] \ra [\tB\tC/\tA^2]
           $$
           <ImageRight
-            src="/tmp-images/c6_f_prime_g_prime_signature_cloud_v2.svg"
+            src="/build-img/svgo-svg/qX4a.svg"
             offset_x="5em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -1570,7 +1570,7 @@ const Rest = () => {
             and therefore, the early afternoon product rule
             cannot hold in general.)
             <ImageLeft
-              src="/tmp-images/c6_x1x2_3600_cloud.svg"
+              src="/build-img/svgo-svg/U86u.svg"
               offset_x="1em"
             />
           </OuterP>
@@ -1767,7 +1767,7 @@ const Rest = () => {
           schizophrenically put input tubes on the left, again):
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_lego_pieces.svg" />
+        <Image src="/build-img/svgo-svg/YZvS.svg" />
         <Pause />
         <OuterP>
           From these pieces we seek to assemble a function
@@ -1889,7 +1889,7 @@ const Rest = () => {
           [\tA] \ra [\tC/\tA]
           $$
           <ImageRight
-            src="/tmp-images/c6_chain_rule_units_cloud.svg"
+            src="/build-img/svgo-svg/zysM.svg"
             offset_x="3.1em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -1944,7 +1944,7 @@ const Rest = () => {
             Say that a cute
           </OuterP>
           <Pause />
-          <Image src="/tmp-images/c6_solo_RAT.svg" />
+          <Image src="/build-img/svgo-svg/kL1E.svg" />
           <Pause />
           <OuterP>
             is running a fundraising race where one function
@@ -2080,7 +2080,7 @@ const Rest = () => {
           <Pause />
           <Image
             width="530px"
-            src="/tmp-images/c6_explained_rat_equation.svg"
+            src="/build-img/svgo-svg/un6E.svg"
           />
           <Pause />
           <OuterP>
@@ -2092,7 +2092,7 @@ const Rest = () => {
             f'(g(t_0)) = (f'\circ g)(t_0)
             $$
             <ImageRight
-              src="/tmp-images/c6_composition_reminder_cloud.svg"
+              src="/build-img/svgo-svg/g4I6.svg"
               offset_x="2em"
               compensate_offset_x_for_large_text_columns={true}
             />
@@ -2245,7 +2245,7 @@ const Rest = () => {
             (\cos \circ \cos)' = ((-\sin) \circ \cos)(-\sin)
             $$
             <ImageLeft
-              src="/tmp-images/c6_chain_rule_reminder_cloud.svg"
+              src="/build-img/svgo-svg/_iNd.svg"
               offset_x="2em"
               compensate_offset_x_for_large_text_columns={true}
             />
@@ -2354,7 +2354,7 @@ const Rest = () => {
             {" "} (after all):
           </OuterP>
           <Pause />
-          <Image src="/tmp-images/c6_sin_of_sin_graph.svg" />
+          <Image src="/build-img/svgo-svg/0dwB.svg" />
           <Pause />
           <StarDivider />
           <Pause />
@@ -2419,7 +2419,7 @@ const Rest = () => {
             </NoBreak>
           </OuterP>
           <Pause />
-          <Image src="/tmp-images/c6_windshield_wiper.svg" />
+          <Image src="/build-img/svgo-svg/khDb.svg" />
         </Example>
       </Section>
       <Pause />
@@ -2501,7 +2501,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_dimensionless_plane_1_v1.svg"
+          src="/build-img/svgo-svg/oqAL.svg"
           style="margin-top:-1.4em"
         />
         <Pause />
@@ -2531,7 +2531,7 @@ const Rest = () => {
           {" "} here...
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_dimensionless_plane_1_v1_circled.svg" />
+        <Image src="/build-img/svgo-svg/_SJ0.svg" />
         <Pause />
         <OuterP>
           ...is really a {" "}
