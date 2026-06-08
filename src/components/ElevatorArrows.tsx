@@ -10,7 +10,7 @@ import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
-const PageTopBottomArrows = () => {
+const ElevatorArrows = () => {
   const { store } = useGlobalContext();
   const { exercises_store } = useExercisesContext();
   const [opacity, set_opacity] = createSignal(1);
@@ -170,4 +170,4 @@ const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
   );
 };
 
-export default PageTopBottomArrows;
+export default ElevatorArrows;

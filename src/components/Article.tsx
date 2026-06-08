@@ -1,7 +1,7 @@
 import { ParentProps } from "solid-js";
 import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
 import { ExerciseGroupRegistryProvider } from "~/store/ExerciseGroupRegistryProvider";
-import PageTopBottomArrows from "./PageTopBottomArrows";
+import ElevatorArrows from "./ElevatorArrows";
 import Page from "./Page";
 import PageUpDownArrows from "./PageUpDownArrows";
 
@@ -23,7 +23,7 @@ const Article = (props: ParentProps & ArticleProps) => {
       <ExerciseGroupRegistryProvider>
         <span id={props.id} class="id_span"></span>
         <ArticleScrollCoordinator>{props.children}</ArticleScrollCoordinator>
-        <PageTopBottomArrows />
+        <ElevatorArrows />
         <PageUpDownArrows />
       </ExerciseGroupRegistryProvider>
     </Page>

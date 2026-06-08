@@ -1,5 +1,6 @@
 import {
   createContext,
+  createEffect,
   onCleanup,
   onMount,
   ParentComponent,
@@ -31,7 +32,7 @@ type StoreContextType = {
 const [default_store, default_set_store] = createStore<Store>({
   selected_exo: 0,
   exercises: [],
-  list_view: false,
+  list_view: true,
 });
 
 export const StoreContext = createContext<StoreContextType>({
@@ -69,6 +70,12 @@ export const ExercisesStoreProvider: ParentComponent<{
       set_exercises_store,
     }),
   );
+
+  createEffect(() => {
+    default_set_store("list_view", exercises_store.list_view);
+    default_set_store("selected_exo", exercises_store.selected_exo);
+  });
+
   onCleanup(() => registry?.unregister(niceId));
 
   return (
