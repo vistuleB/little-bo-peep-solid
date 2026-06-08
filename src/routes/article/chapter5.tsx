@@ -16512,7 +16512,7 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/tmp-images/e5_project_i_and_j_note1_v2.svg"
+                src="/build-img/svgo-svg/HbFF.svg"
                 style="margin:0.3em 0"
               />
               <Pause />
@@ -16523,7 +16523,7 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/tmp-images/e5_project_i_and_j_note2_v2.svg"
+                src="/build-img/svgo-svg/R1PW.svg"
                 style="margin:0.3em 0"
               />
               <Pause />

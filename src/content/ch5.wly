@@ -52,8 +52,13 @@
     a calculator equipped with ‘sin’ and ‘cos’ will tell us):
 
     |> Image
-        !! src=images/svg_ch5_ch_unit_circle_@0.333_smaller.svg
         src=images/svg_ch5_ch_unit_circle_@0.5_smaller_v2.svg
+
+    !! |> Image
+    !!     src=images/svg_ch5_ch_unit_circle_@0.5_smaller.svg
+
+    !! |> Image
+    !!     src=images/svg_ch5_ch_unit_circle_@0.333_smaller.svg
 
     As a second example, the graphs indicate that
     $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$
