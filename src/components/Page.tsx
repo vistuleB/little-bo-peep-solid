@@ -254,6 +254,7 @@ const Page = (props: ParentProps & PageProps) => {
     if (location.pathname !== "/") {
       set_store("have_been_outside_home", true);
     }
+    set_store("loading", false);
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);

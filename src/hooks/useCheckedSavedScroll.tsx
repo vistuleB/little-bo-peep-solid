@@ -21,7 +21,6 @@ const useCheckedSavedScroll = () => {
       setTimeout(async () => {
         await scrollToInChapter(anchorId as string);
         set_store("saved_scroll_finished", true);
-        set_store("loading", false);
       }, 300);
     });
 
@@ -45,7 +44,6 @@ const useCheckedSavedScroll = () => {
         );
       }
       set_store("saved_scroll_finished", true);
-      set_store("loading", false);
 
       window.addEventListener("scroll", update);
     }, 100);
