@@ -58,7 +58,7 @@ const [store, set_store] = createStore<Store>({
   maxElementWidth: 0,
   nextPage: "",
   prevPage: "",
-  loading: false,
+  loading: true,
   have_been_outside_home: false,
   last_page_load_ms: 0,
   total_page_load_ms: 0,
