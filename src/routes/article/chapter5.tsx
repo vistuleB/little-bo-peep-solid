@@ -15,7 +15,7 @@ import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import TextParent  from "~/components/TextParent";
 import { TildeDivider }  from "~/components/TildeDivider";
-import { SolutionNote, Example, Pause, Section, NoBreak }  from "~/components/Wrappers";
+import { InTextWarning, SolutionNote, Example, Pause, Section, NoBreak }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter5__() {
@@ -15936,14 +15936,15 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/Usrx.svg" />
             <Pause />
             <OuterP>
-              As seen in {" "}
-              <InChapterLink
-                href="/article/chapter5#_113_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 23
-              </InChapterLink>
-              &#8288;,
+              As seen in Exercise {" "}
+              <InTextWarning>
+                undefined handle at ch5^exercises/_sqrt_xy_construction_.wly:93:9: _ratio_A_over_B_1_
+              </InTextWarning>
+              +
+              <i>
+                tan^2
+              </i>
+              ,
               however, we have
             </OuterP>
             <Pause />
