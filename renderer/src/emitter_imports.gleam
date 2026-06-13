@@ -33,6 +33,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("InlineImage", ExportedByFile(Some("InlineImage"), [])),
     #("List", ExportedByFile(None, ["List", "Item"])),
     #("Math", ExportedByFile(None, ["Math", "MathBlock"])),
+    #("NewImage", ExportedByFile(None, ["NewImage"])),
     #("SectionDivider", ExportedByFile(None, ["SectionDivider"])),
     #("SectionsBreadcrumbs", ExportedByFile(Some("SectionsBreadcrumbs"), ["BreadcrumbItem"])),
     #("SideImage", ExportedByFile(None, ["ImageRight", "ImageLeft"])),

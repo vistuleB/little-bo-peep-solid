@@ -41,7 +41,7 @@
         !! bootcamps:
         >>sets         >>_bt2_start_  >>_bt2_exercises_
         >>powers       >>_bt1_start_
-        !! >>playground
+        >>playground
 
         !! chapters:
         >>refreshers   >>_ch1_start_  >>_ch1_exercises_
@@ -57,6 +57,7 @@
     |> In
         chapter=>>playground
         >>grid-component
+        >>image-component
         >>table-component
 
     |> In
