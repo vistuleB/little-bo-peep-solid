@@ -3,7 +3,7 @@ import ArticleTitle from "~/components/ArticleTitle";
 import { CentralDisplayItalic } from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises } from "~/components/Exercises";
 import Image from "~/components/Image";
-import InChapterLink from "~/components/InChapterLink";
+import ThisPageLink from "~/components/ThisPageLink";
 import { MathBlock, Math } from "~/components/Math";
 import OuterP from "~/components/OuterP";
 import SectionsBreadcrumbs, {
@@ -29,50 +29,45 @@ export default function __Bootcamp2__() {
       nextPage="/article/bootcamp1"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
-      id="_20_h.a.i_"
-    >
+      id="_20_h.a.i_">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">terminology</InChapterLink>
+          <ThisPageLink href="?id=section-1">terminology</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">
-            integer powers of 10
-          </InChapterLink>
+          <ThisPageLink href="?id=section-2">integer powers of 10</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">other bases</InChapterLink>
+          <ThisPageLink href="?id=section-3">other bases</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
+          <ThisPageLink href="?id=section-4">
             additivity of exponents
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">
+          <ThisPageLink href="?id=section-5">
             the third law of exponents
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">
-            famous powers of 10
-          </InChapterLink>
+          <ThisPageLink href="?id=section-6">famous powers of 10</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=section-7">
+          <ThisPageLink href="?id=section-7">
             negative exponent prefixes
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
-          <InChapterLink href="?id=section-8">
+          <ThisPageLink href="?id=section-8">
             positive exponent prefixes
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=section-9">logarithms base 10</InChapterLink>
+          <ThisPageLink href="?id=section-9">logarithms base 10</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
-          <InChapterLink href="?id=exercises">exercises</InChapterLink>
+          <ThisPageLink href="?id=exercises">exercises</ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Bootcamp 2:">Powers of 10</ArticleTitle>
@@ -208,12 +203,11 @@ const Rest = () => {
                 <Math>$10^&#123;-n&#125;$</Math>.
               </NoBreak>{" "}
               Moreover, (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_2_h.a.i_"
-                class="in-chapter-link"
-              >
+                class="in-chapter-link">
                 A
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;) actually holds for
             </OuterP>
             <Pause />
@@ -225,20 +219,18 @@ const Rest = () => {
                 <Math>$n$</Math>,
               </NoBreak>{" "}
               which is mildly important. In more detail, (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_2_h.a.i_"
-                class="in-chapter-link"
-              >
+                class="in-chapter-link">
                 A
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;) holds for <Math>$n = 0$</Math> by inspection, and
               (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_2_h.a.i_"
-                class="in-chapter-link"
-              >
+                class="in-chapter-link">
                 A
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;) is equivalent to the identity
               <ImageLeft src="/build-img/svgo-svg/rdZz.svg" line={2} />
             </OuterP>
@@ -263,31 +255,28 @@ const Rest = () => {
                 “<Math>$-n$</Math>”
               </NoBreak>{" "}
               in (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_3_h.a.i_"
-                class="in-chapter-link"
-              >
+                class="in-chapter-link">
                 AA
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;) lands you right back on (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_3_h.a.i_"
-                class="in-chapter-link"
-              >
+                class="in-chapter-link">
                 AA
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;), due to the fact that{" "}
               <NoBreak>
                 <Math>$-&#123;(-n)&#125; = n$</Math>
                 .)
               </NoBreak>{" "}
               (So, namely, if (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_3_h.a.i_"
-                class="in-chapter-link"
-              >
+                class="in-chapter-link">
                 AA
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;) holds for all positive values of{" "}
               <NoBreak>
                 <Math>$\hspace&#123;0.05em&#125;n$</Math>,
@@ -319,19 +308,17 @@ const Rest = () => {
             <OuterP>
               ...and any one of these equations implies the other two. Thus,
               either of (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_2_h.a.i_"
-                class="in-chapter-link"
-              >
+                class="in-chapter-link">
                 A
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;) and (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_3_h.a.i_"
-                class="in-chapter-link"
-              >
+                class="in-chapter-link">
                 AA
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;) expresses the
             </OuterP>
             <Pause />
@@ -1746,12 +1733,11 @@ const Rest = () => {
                 <Pause />
                 <OuterP>
                   stated earlier in the chapter as (&#8288;
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/bootcamp2#_2_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     A
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;), while the third equality uses additivity of
                   exponents, also stated earlier. (So: We are only using “known”
                   facts, alongside some ordinary arithmetic.)
@@ -1949,12 +1935,11 @@ const Rest = () => {
                     <Math>$y$</Math>,
                   </NoBreak>{" "}
                   <Math>$z$</Math> (as in{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/bootcamp2#_17_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 14
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;):
                 </OuterP>
                 <Pause />

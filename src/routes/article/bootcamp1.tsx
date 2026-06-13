@@ -1,7 +1,7 @@
 import Article from "~/components/Article";
 import ArticleTitle from "~/components/ArticleTitle";
 import { CentralDisplayItalic } from "~/components/Delimiters";
-import InChapterLink from "~/components/InChapterLink";
+import ThisPageLink from "~/components/ThisPageLink";
 import { MathBlock, Math } from "~/components/Math";
 import OuterP from "~/components/OuterP";
 import SectionsBreadcrumbs, {
@@ -18,40 +18,39 @@ export default function __Bootcamp1__() {
       nextPage="/"
       pageNecessaryMargin={160}
       maxElementWidth={800}
-      id="_1_h.a.i_"
-    >
+      id="_1_h.a.i_">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">notation</InChapterLink>
+          <ThisPageLink href="?id=section-1">notation</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">what it does</InChapterLink>
+          <ThisPageLink href="?id=section-2">what it does</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">set equality</InChapterLink>
+          <ThisPageLink href="?id=section-3">set equality</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
+          <ThisPageLink href="?id=section-4">
             second notation for the empty set
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">sets within sets</InChapterLink>
+          <ThisPageLink href="?id=section-5">sets within sets</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">
+          <ThisPageLink href="?id=section-6">
             set union and set intersection
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=section-7">
+          <ThisPageLink href="?id=section-7">
             sets encountered in calculus
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
-          <InChapterLink href="?id=section-8">
+          <ThisPageLink href="?id=section-8">
             sets not encountered in calculus
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Bootcamp 1:">Sets</ArticleTitle>

@@ -3,7 +3,7 @@ import ArticleTitle from "~/components/ArticleTitle";
 import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises } from "~/components/Exercises";
 import Image from "~/components/Image";
-import InChapterLink from "~/components/InChapterLink";
+import ThisPageLink from "~/components/ThisPageLink";
 import InlineImage from "~/components/InlineImage";
 import { MathBlock, Math } from "~/components/Math";
 import OuterP from "~/components/OuterP";
@@ -30,44 +30,43 @@ export default function __Chapter2__() {
       nextPage="/article/chapter3"
       pageNecessaryMargin={650}
       maxElementWidth={900}
-      id="_32_h.a.i_"
-    >
+      id="_32_h.a.i_">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">definition</InChapterLink>
+          <ThisPageLink href="?id=section-1">definition</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">measuring slope</InChapterLink>
+          <ThisPageLink href="?id=section-2">measuring slope</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">sign combinations</InChapterLink>
+          <ThisPageLink href="?id=section-3">sign combinations</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">pathological cases</InChapterLink>
+          <ThisPageLink href="?id=section-4">pathological cases</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">“rise over run”</InChapterLink>
+          <ThisPageLink href="?id=section-5">“rise over run”</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">
+          <ThisPageLink href="?id=section-6">
             solving for “rise” and “run”
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=section-7">
+          <ThisPageLink href="?id=section-7">
             slopes and line equations
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
-          <InChapterLink href="?id=section-8">slopes and units</InChapterLink>
+          <ThisPageLink href="?id=section-8">slopes and units</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=section-9">
+          <ThisPageLink href="?id=section-9">
             postscript: units vs dimensions
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
-          <InChapterLink href="?id=exercises">exercises</InChapterLink>
+          <ThisPageLink href="?id=exercises">exercises</ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 2:">Slopes</ArticleTitle>
@@ -228,12 +227,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               (In{" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter2#_26_h.a.i_"
-                class="in-chapter-link"
-              >
+                class="in-chapter-link">
                 Example 1
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;, understand that
             </OuterP>
             <Pause />
@@ -1051,8 +1049,7 @@ const Rest = () => {
                 <Pause />
                 <Image
                   src="/tmp-images/c2_slope_two_and_minus_one_half.svg"
-                  class="relative w-fit"
-                >
+                  class="relative w-fit">
                   <ImageRight
                     src="/tmp-images/c2_slope_two_and_minus_one_half_cloud_right.svg"
                     offset_y="20%"
@@ -1087,8 +1084,7 @@ const Rest = () => {
                   <Pause />
                   <Image
                     src="/tmp-images/c2_slope_p_minus_one_over_p.svg"
-                    class="relative w-fit"
-                  >
+                    class="relative w-fit">
                     <ImageRight
                       src="/tmp-images/c2_slope_p_minus_one_over_p_cloud_right.svg"
                       offset_y="28%"
@@ -1365,12 +1361,11 @@ const Rest = () => {
                 <OuterP>
                   <b>Exercise 4.</b> Digressing on the second-to-last equation
                   in the solution to{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter2#_28_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 2
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;, explain why
                 </OuterP>
                 <Pause />

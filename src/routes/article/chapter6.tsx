@@ -3,7 +3,7 @@ import ArticleTitle from "~/components/ArticleTitle";
 import Boxed from "~/components/Boxed";
 import { CentralDisplayItalic } from "~/components/Delimiters";
 import Image from "~/components/Image";
-import InChapterLink from "~/components/InChapterLink";
+import ThisPageLink from "~/components/ThisPageLink";
 import { MathBlock, Math } from "~/components/Math";
 import OuterP from "~/components/OuterP";
 import SectionsBreadcrumbs, {
@@ -21,50 +21,45 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_158_h.a.i_"
-    >
+      id="_158_h.a.i_">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">
-            function signatures
-          </InChapterLink>
+          <ThisPageLink href="?id=section-1">function signatures</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">
-            dimensionless units
-          </InChapterLink>
+          <ThisPageLink href="?id=section-2">dimensionless units</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">
+          <ThisPageLink href="?id=section-3">
             restrictions imposed on signatures by function operations
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
+          <ThisPageLink href="?id=section-4">
             the unary function operations
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">differentiation</InChapterLink>
+          <ThisPageLink href="?id=section-5">differentiation</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">operators</InChapterLink>
+          <ThisPageLink href="?id=section-6">operators</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=section-7">the sum rule</InChapterLink>
+          <ThisPageLink href="?id=section-7">the sum rule</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
-          <InChapterLink href="?id=section-8">
+          <ThisPageLink href="?id=section-8">
             the “early afteroon product rule”
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=section-9">the chain rule</InChapterLink>
+          <ThisPageLink href="?id=section-9">the chain rule</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
-          <InChapterLink href="?id=section-10">
+          <ThisPageLink href="?id=section-10">
             epilogue: the dimensionless plane
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 6:">Dimensional Analysis</ArticleTitle>
@@ -406,9 +401,9 @@ const Rest = () => {
             <Pause />
             <OuterP>
               Though similarly, the unary function operations from{" "}
-              <InChapterLink class="in-chapter-link" href="#_152_h.a.i_">
+              <ThisPageLink class="in-chapter-link" href="#_152_h.a.i_">
                 Table 1.2
-              </InChapterLink>{" "}
+              </ThisPageLink>{" "}
               can be viewed as operators, taking one function as input and
               producing one function as output:
             </OuterP>
@@ -503,9 +498,9 @@ const Rest = () => {
             <Pause />
             <OuterP>
               as listed in{" "}
-              <InChapterLink class="in-chapter-link" href="#_151_h.a.i_">
+              <ThisPageLink class="in-chapter-link" href="#_151_h.a.i_">
                 Table 1.1
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;, while the subsequent taking of a derivative doesn't
               impose any new constraints.
             </OuterP>
@@ -649,21 +644,19 @@ const Rest = () => {
               <OuterP>
                 <i>
                   Note on{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter6#_153_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Example 2
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;.
                 </i>{" "}
                 In the case of{" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter6#_153_h.a.i_"
-                  class="in-chapter-link"
-                >
+                  class="in-chapter-link">
                   Example 2
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;, the sum rule, which now reads
               </OuterP>
               <Pause />
@@ -856,12 +849,11 @@ const Rest = () => {
             <Example id="_156_h.a.i_">
               <OuterP>
                 <b>Example 4.</b> As in{" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter6#_153_h.a.i_"
-                  class="in-chapter-link"
-                >
+                  class="in-chapter-link">
                   Example 2
-                </InChapterLink>{" "}
+                </ThisPageLink>{" "}
                 let
               </OuterP>
               <Pause />
@@ -931,12 +923,11 @@ const Rest = () => {
               <OuterP>
                 <i>
                   Note on{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter6#_156_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Example 4
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;.
                 </i>{" "}
                 It might be observed that
@@ -950,12 +941,11 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 in{" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter6#_156_h.a.i_"
-                  class="in-chapter-link"
-                >
+                  class="in-chapter-link">
                   Example 4
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;—one might conjecture that
               </OuterP>
               <Pause />
@@ -1287,16 +1277,15 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 similarly to the{" "}
-                <InChapterLink class="in-chapter-link" href="#_155_h.a.i_">
+                <ThisPageLink class="in-chapter-link" href="#_155_h.a.i_">
                   postscript
-                </InChapterLink>{" "}
+                </ThisPageLink>{" "}
                 following{" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter6#_154_h.a.i_"
-                  class="in-chapter-link"
-                >
+                  class="in-chapter-link">
                   Example 3
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;, relative to the sum rule.
               </OuterP>
             </Example>
@@ -1312,9 +1301,9 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 by{" "}
-                <InChapterLink class="in-chapter-link" href="#section-9">
+                <ThisPageLink class="in-chapter-link" href="#section-9">
                   the chain rule
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;, since{" "}
                 <NoBreak>
                   <Math>$\cos' = -\sin$</Math>,
@@ -1360,12 +1349,11 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 by{" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter6#_157_h.a.i_"
-                  class="in-chapter-link"
-                >
+                  class="in-chapter-link">
                   Example 6
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;, which looks visually compatible with the graph of{" "}
                 <Math>$\cos(\cos x)$</Math> since{" "}
                 <Math>$(\cos \circ \cos)'(2.5)$</Math> is supposed to be the

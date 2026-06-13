@@ -3,7 +3,7 @@ import ArticleTitle from "~/components/ArticleTitle";
 import { CentralDisplayItalic } from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises } from "~/components/Exercises";
 import Grid from "~/components/Grid";
-import InChapterLink from "~/components/InChapterLink";
+import ThisPageLink from "~/components/ThisPageLink";
 import { Item, List } from "~/components/List";
 import { Math, MathBlock } from "~/components/Math";
 import OuterP from "~/components/OuterP";
@@ -23,28 +23,27 @@ export default function __Chapter1__() {
       nextPage="/article/chapter2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_25_h.a.i_"
-    >
+      id="_25_h.a.i_">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=first-section">square roots</InChapterLink>
+          <ThisPageLink href="?id=first-section">square roots</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-1">
+          <ThisPageLink href="?id=section-1">
             fractions and division
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-2">distributivity</InChapterLink>
+          <ThisPageLink href="?id=section-2">distributivity</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-3">epilogue</InChapterLink>
+          <ThisPageLink href="?id=section-3">epilogue</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-4">vocabulary</InChapterLink>
+          <ThisPageLink href="?id=section-4">vocabulary</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=exercises">exercises</InChapterLink>
+          <ThisPageLink href="?id=exercises">exercises</ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 1:">A Few Refreshers</ArticleTitle>
@@ -609,12 +608,11 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 obtaining the same result as{" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter1#_21_h.a.i_"
-                  class="in-chapter-link"
-                >
+                  class="in-chapter-link">
                   Example 2
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;.
               </OuterP>
             </Example>
@@ -823,8 +821,7 @@ const Rest = () => {
                   cols={3}
                   mobileCols={2}
                   mobileCutoff={520}
-                  centerOnOverflow={true}
-                >
+                  centerOnOverflow={true}>
                   <Item>
                     a. <Math>$0.9^2 &lt; 0.9$</Math>
                   </Item>
@@ -1632,12 +1629,11 @@ const Rest = () => {
               <ExerciseStatement id="_23_h.a.i_">
                 <OuterP>
                   <b>Exercise 2.</b> In the solution to{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter1#_22_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 1
-                  </InChapterLink>{" "}
+                  </ThisPageLink>{" "}
                   it is observed that the difference
                 </OuterP>
                 <Pause />

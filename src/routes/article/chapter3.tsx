@@ -5,7 +5,7 @@ import { CentralDisplay, CentralDisplayItalic } from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises } from "~/components/Exercises";
 import Grid from "~/components/Grid";
 import Image from "~/components/Image";
-import InChapterLink from "~/components/InChapterLink";
+import ThisPageLink from "~/components/ThisPageLink";
 import InlineImage from "~/components/InlineImage";
 import { Item } from "~/components/List";
 import { MathBlock, Math } from "~/components/Math";
@@ -32,44 +32,41 @@ export default function __Chapter3__() {
       nextPage="/article/chapter4"
       pageNecessaryMargin={700}
       maxElementWidth={1500}
-      id="_55_h.a.i_"
-    >
+      id="_55_h.a.i_">
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">syntax</InChapterLink>
+          <ThisPageLink href="?id=section-1">syntax</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">lambda functions</InChapterLink>
+          <ThisPageLink href="?id=section-2">lambda functions</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">
-            definition by cases
-          </InChapterLink>
+          <ThisPageLink href="?id=section-3">definition by cases</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">on arbitrariness</InChapterLink>
+          <ThisPageLink href="?id=section-4">on arbitrariness</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">graphs</InChapterLink>
+          <ThisPageLink href="?id=section-5">graphs</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">domains</InChapterLink>
+          <ThisPageLink href="?id=section-6">domains</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=section-7">“from/to” notation</InChapterLink>
+          <ThisPageLink href="?id=section-7">“from/to” notation</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
-          <InChapterLink href="?id=section-8">
+          <ThisPageLink href="?id=section-8">
             the vertical line test
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=section-9">
+          <ThisPageLink href="?id=section-9">
             a famous discontinuity
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
-          <InChapterLink href="?id=section-10">
+          <ThisPageLink href="?id=section-10">
             distinguishing{" "}
             <NoBreak>
               “<Math>$f$</Math>”
@@ -78,10 +75,10 @@ export default function __Chapter3__() {
             <NoBreak>
               “<Math>$f(x)$</Math>”
             </NoBreak>
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-10">
-          <InChapterLink href="?id=section-11">
+          <ThisPageLink href="?id=section-11">
             distinguishing{" "}
             <NoBreak>
               “<Math>$x^3$</Math>”
@@ -90,18 +87,18 @@ export default function __Chapter3__() {
             <NoBreak>
               “<Math>$x \ra x^3$</Math>”
             </NoBreak>
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-11">
-          <InChapterLink href="?id=section-12">polynomials</InChapterLink>
+          <ThisPageLink href="?id=section-12">polynomials</ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-12">
-          <InChapterLink href="?id=section-13">
+          <ThisPageLink href="?id=section-13">
             quadratic, linear, and constant terms
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-13">
-          <InChapterLink href="?id=exercises">exercises</InChapterLink>
+          <ThisPageLink href="?id=exercises">exercises</ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 3:">Functions</ArticleTitle>
@@ -1256,8 +1253,7 @@ const Rest = () => {
                   mobileCols={1}
                   placeItems="start"
                   withPadding={false}
-                  columnFirst={true}
-                >
+                  columnFirst={true}>
                   <Item>
                     i. <Math>$(\lambda u.u^3)(0.5)$</Math>
                   </Item>
@@ -1283,8 +1279,7 @@ const Rest = () => {
                   mobileCols={1}
                   placeItems="start"
                   withPadding={false}
-                  columnFirst={true}
-                >
+                  columnFirst={true}>
                   <Item>
                     i. <Math>$0.5^3 = 0.125$</Math>
                   </Item>
@@ -1432,12 +1427,11 @@ const Rest = () => {
                     <Math>$2$</Math>,
                   </NoBreak>{" "}
                   apply the function from{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_36_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 4
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;):
                 </OuterP>
                 <Pause />
@@ -1469,12 +1463,11 @@ const Rest = () => {
                     “<Math>$\,x - \lfloor x \rfloor$</Math>”
                   </NoBreak>{" "}
                   (the formula for the function from{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_36_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 4
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;).
                 </OuterP>
                 <Pause />
@@ -1690,12 +1683,11 @@ const Rest = () => {
                 <Pause />
                 <OuterP>
                   because all we have to do is to multiply{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_37_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 5
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;'s formula by{" "}
                   <NoBreak>
                     <Math>$2$</Math>.
@@ -1709,12 +1701,11 @@ const Rest = () => {
                 <Pause />
                 <OuterP>
                   because the problem is similar to{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_37_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 5
-                  </InChapterLink>{" "}
+                  </ThisPageLink>{" "}
                   except with a factor <Math>$3$</Math> horizontal dilation.
                 </OuterP>
                 <OuterP class="indent-10">
@@ -1970,12 +1961,11 @@ const Rest = () => {
               <ExerciseStatement id="_42_h.a.i_">
                 <OuterP>
                   <b>Exercise 9.</b> Same question as{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_40_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 8
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;, but for{" "}
                   <NoBreak>
                     “<Math>$f \circ (g \circ h)$</Math>”
@@ -2420,12 +2410,11 @@ const Rest = () => {
               <ExerciseStatement id="_44_h.a.i_">
                 <OuterP>
                   <b>Exercise 11.</b> Solve{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_43_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 10
-                  </InChapterLink>{" "}
+                  </ThisPageLink>{" "}
                   using algebra <i>&amp;</i> variables.
                 </OuterP>
               </ExerciseStatement>
@@ -2552,12 +2541,11 @@ const Rest = () => {
                     (cf
                     <Math>$.$</Math>
                   </NoBreak>{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_43_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 10
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;) has no solutions{" "}
                   <NoBreak>
                     <Math>$x \in \rr$</Math>.
@@ -2571,12 +2559,11 @@ const Rest = () => {
                 <Pause />
                 <OuterP>
                   by{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_43_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 10
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;, but this implies
                 </OuterP>
                 <Pause />
@@ -3093,12 +3080,11 @@ const Rest = () => {
                   will use the fact that <Math>$y = Ax^2 + Bx$</Math> is
                   obtained from <Math>$y = x^2$</Math> by the following sequence
                   of transformations (cf.{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_47_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 14
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;):
                 </OuterP>
                 <Pause />
@@ -3118,12 +3104,11 @@ const Rest = () => {
                 <Pause />
                 <OuterP>
                   (We put the vertical translation first.) By{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_48_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 15
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;, the roots of <Math>$y = Ax^2 + Bx$</Math> are thus at
                 </OuterP>
                 <Pause />
@@ -3353,12 +3338,11 @@ const Rest = () => {
                 <Pause />
                 <OuterP>
                   and, similarly to{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_47_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 14
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;, write
                 </OuterP>
                 <Pause />
@@ -3396,22 +3380,20 @@ const Rest = () => {
                     “<Math>$-&#123;B^2\over 4A&#125;$</Math>”
                   </NoBreak>{" "}
                   of{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_47_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 14
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;, that also has a minus sign out front.)
                 </OuterP>
                 <OuterP class="indent-10">
                   By direct analogy with{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_47_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 14
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;, the three transformations are thus...
                 </OuterP>
                 <Pause />
@@ -3535,12 +3517,11 @@ const Rest = () => {
                 <Pause />
                 <OuterP>
                   by{" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter3#_48_h.a.i_"
-                    class="in-chapter-link"
-                  >
+                    class="in-chapter-link">
                     Exercise 15
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;. <Math>$\rightarrow$</Math> ~The End~{" "}
                   <Math>$\leftarrow$</Math>
                 </OuterP>
@@ -3593,8 +3574,7 @@ const Rest = () => {
                     as briefly flashed by, e.g., in{" "}
                     <a
                       href="/article/chapter1#_25_h.a.i_"
-                      class="out-chapter-link"
-                    >
+                      class="out-chapter-link">
                       Chapter 1
                     </a>
                     &#8288;.
