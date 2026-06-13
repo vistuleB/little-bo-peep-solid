@@ -4,6 +4,7 @@ import { ExerciseGroupRegistryProvider } from "~/store/ExerciseGroupRegistryProv
 import PageTopBottomArrows from "./PageTopBottomArrows";
 import Page from "./Page";
 import PageUpDownArrows from "./PageUpDownArrows";
+import usePageScrollHistory from "~/hooks/usePageScrollHistory";
 
 type ArticleProps = {
   id?: string;
@@ -32,6 +33,7 @@ const Article = (props: ParentProps & ArticleProps) => {
 
 const ArticleScrollCoordinator = (props: ParentProps) => {
   useCheckedSavedScroll();
+  usePageScrollHistory();
   return <>{props.children}</>;
 };
 
