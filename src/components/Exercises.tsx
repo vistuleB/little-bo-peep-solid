@@ -18,10 +18,13 @@ import {
   PREV_NEXT_EXERCISE_BUTTON_W,
 } from "~/constants";
 
+export type ExercisesMode = "list-only" | "switcher-only" | "dual";
+
 type ExercisesProps = ParentProps &
   SharedProps & {
     at_end_of_page?: boolean;
     show_curlicue?: boolean;
+    mode?: ExercisesMode;
   };
 
 type ExerciseProps = ParentProps & {
@@ -33,10 +36,14 @@ export const Exercises = (props: ExercisesProps) => {
   const group_id = props.id ?? fallback_id;
   const at_end_of_page = props.at_end_of_page ?? false;
   const show_curlicue = props.show_curlicue ?? false;
+  const mode: ExercisesMode = props.mode ?? "dual";
   let children_list = children(() => props.children);
 
   return (
-    <ExercisesStoreProvider group_id={group_id} at_end_of_page={at_end_of_page}>
+    <ExercisesStoreProvider
+      group_id={group_id}
+      at_end_of_page={at_end_of_page}
+      mode={mode}>
       {show_curlicue && (
         <Image
           id={`exo-${group_id}`}
@@ -44,9 +51,13 @@ export const Exercises = (props: ExercisesProps) => {
           height="50px"
           class="mt-[15px] mb-[40px]"></Image>
       )}
-      {children_list.toArray().length > 1 && (
+      {mode !== "list-only" && children_list.toArray().length > 1 && (
         <>
-          <Switcher exercises={children_list.toArray()} group_id={group_id} />
+          <Switcher
+            exercises={children_list.toArray()}
+            group_id={group_id}
+            show_toggle={mode === "dual"}
+          />
           <div class="h-[31px]"></div>
         </>
       )}
@@ -103,6 +114,7 @@ const ExercisesGroup = (props: ExercisesGroupProps) => {
 type SwitcherProps = {
   exercises: JSX.Element[];
   group_id: string;
+  show_toggle: boolean;
 };
 
 const Switcher = (props: SwitcherProps) => {
@@ -223,27 +235,28 @@ const Switcher = (props: SwitcherProps) => {
               )}
               d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}></path>
           </svg>
-          <svg
-            class={twJoin(
-              "toggle absolute cursor-pointer",
-              store.list_view ? "disabled" : "",
-            )}
-            style={`left:${w + toggle_gap}px;top:0px;`}
-            width={`${c2c + 2 * r1 + 2}`}
-            height={`${2 + w}`}
-            viewBox={`0 0 ${c2c + 2 * r1 + 2} ${2 + w}`}
-            xmlns="http://www.w3.org/2000/svg"
-            onClick={(e) => {
-              e.stopPropagation();
-              const new_list_view = !store.list_view;
-              set_store("list_view", new_list_view);
-              if (store.list_view && close_solutions_on_entering_list_view)
-                closeAllSolutions(set_store);
-              if (!store.list_view && close_solutions_on_exiting_list_view)
-                closeAllSolutions(set_store);
-            }}>
-            <path
-              d={`
+          {props.show_toggle && (
+            <svg
+              class={twJoin(
+                "toggle absolute cursor-pointer",
+                store.list_view ? "disabled" : "",
+              )}
+              style={`left:${w + toggle_gap}px;top:0px;`}
+              width={`${c2c + 2 * r1 + 2}`}
+              height={`${2 + w}`}
+              viewBox={`0 0 ${c2c + 2 * r1 + 2} ${2 + w}`}
+              xmlns="http://www.w3.org/2000/svg"
+              onClick={(e) => {
+                e.stopPropagation();
+                const new_list_view = !store.list_view;
+                set_store("list_view", new_list_view);
+                if (store.list_view && close_solutions_on_entering_list_view)
+                  closeAllSolutions(set_store);
+                if (!store.list_view && close_solutions_on_exiting_list_view)
+                  closeAllSolutions(set_store);
+              }}>
+              <path
+                d={`
                 M ${1 + r1 + c2c} ${w / 2 - r1}
                 a ${r1} ${r1} 0 0 1 ${r1} ${r1}
                 a ${r1} ${r1} 0 0 1 ${-r1} ${r1}
@@ -252,21 +265,22 @@ const Switcher = (props: SwitcherProps) => {
                 a ${r1} ${r1} 0 0 1 ${r1} ${-r1}
                 z
               `}
-              class={twJoin(
-                store.list_view
-                  ? "inactive_exercises_button"
-                  : "active_exercises_button_toggle",
-              )}></path>
-            <circle
-              cx={`${toggle_cx()}`}
-              cy={`${w / 2}`}
-              r={`${r2}`}
-              class={twJoin(
-                store.list_view
-                  ? "inactive_exercises_toggle_circle"
-                  : "active_exercises_toggle_circle",
-              )}></circle>
-          </svg>
+                class={twJoin(
+                  store.list_view
+                    ? "inactive_exercises_button"
+                    : "active_exercises_button_toggle",
+                )}></path>
+              <circle
+                cx={`${toggle_cx()}`}
+                cy={`${w / 2}`}
+                r={`${r2}`}
+                class={twJoin(
+                  store.list_view
+                    ? "inactive_exercises_toggle_circle"
+                    : "active_exercises_toggle_circle",
+                )}></circle>
+            </svg>
+          )}
         </div>
       </div>
     </div>
