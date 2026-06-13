@@ -68,16 +68,13 @@
     of $f$.
 
     |> Example
-        handle=pounds_sterling.example
 
-        !! By writing
         If
 
         $$
         z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{£}\rt{0.1}]
         $$
 
-        !! we indicate that
         then
         
         $$z : \rr \ra \rr$$
@@ -86,8 +83,6 @@
         whose inputs denote meters per seconds squared
         (a measure of acceleration)
         and whose outputs denote British pounds. 
-        !! pounds,
-        !! or “pounds sterling”.
 
 |> Section
     *Dimensionless units.*
@@ -125,7 +120,7 @@
     in the case of cosine!)
 
     |> ImageLeft
-        src=tmp-images/c6_radian_dimensionless_ratio_cloud.svg
+        src=images/c6_radian_dimensionless_ratio_cloud.svg
 
     |> Pause
 
@@ -150,7 +145,7 @@
     axis to the positive $y$ axis_:
 
     |> Image
-        src=tmp-images/c6_true_counterclockwiseness_1.svg
+        src=images/c6_true_counterclockwiseness_1.svg
 
     What we mean is that if it was our custom to draw the
     $y$ axis pointing downwards, but still draw the $x$ axis
@@ -158,7 +153,7 @@
     would be clockwise, not counterclockwise:
 
     |> Image
-        src=tmp-images/c6_true_counterclockwiseness_2.svg
+        src=images/c6_true_counterclockwiseness_2.svg
 
     !! (Not that anyone cares,.
     (This actually happens inside of SVG, the web-based
@@ -171,7 +166,7 @@
     \ rotates objects by 10$^\circ$ _clockwise_.)
 
     |> ImageRight
-        src=tmp-images/c6_SVG_cloud.svg
+        src=images/c6_SVG_cloud.svg
 
     !! |> CentralDisplay
     !!     |> svg
@@ -250,7 +245,7 @@
     to both functions:
 
     |> Image
-        src=tmp-images/c6_equal_inputs.svg
+        src=images/c6_equal_inputs.svg
         style=margin-bottom:-1.3em
 
     This means that for the sum to make sense, $f$ and
@@ -300,7 +295,7 @@
 
     |> Image
         handle=table_1_1
-        src=tmp-images/c6_flowers_here_v2.svg
+        src=images/c6_flowers_here_v2.svg
 
     !! ...for the five main function operations.
     ...summarizing the constraints that appear at the
@@ -322,7 +317,7 @@
 
     |> Image
         handle=table_1_2
-        src=tmp-images/c6_flowers_here_two_more.svg
+        src=images/c6_flowers_here_two_more.svg
 
     !! |> StarDivider
     !!     style=margin-top:-0.5em
@@ -409,7 +404,7 @@
     depicted here as an eye-of-Godzilla flying saucer: 
 
     |> Image
-        src=tmp-images/c6_differentiation_operator_intro.svg
+        src=images/c6_differentiation_operator_intro.svg
 
     Though similarly, the
     unary function
@@ -434,7 +429,7 @@
     !! following figure:
 
     |> Image
-        src=tmp-images/c6_negation_operator.svg
+        src=images/c6_negation_operator.svg
 
     !! For that matter t
     The other function operations from Table 1.1
@@ -447,7 +442,7 @@
     can be depicted as a two-input-tube-flying-saucer:
 
     |> Image
-        src=tmp-images/c6_addition_operator_standalone.svg
+        src=images/c6_addition_operator_standalone.svg
 
     !! ...can be depicted as a two-input-tube flying
     !! saucer. Listing
@@ -462,7 +457,7 @@
     the following:
 
     |> Image
-        src=tmp-images/c6_all_our_operators_v2.svg
+        src=images/c6_all_our_operators_v2.svg
 
     !! (We recycle ‘$-$’ for two
     !! different operators—after all for the real numbers,
@@ -480,7 +475,7 @@
     in a similar vein of diagram:
 
     |> Image
-        src=tmp-images/c6_operators_acting_on_signatures_v2.svg
+        src=images/c6_operators_acting_on_signatures_v2.svg
 
     |> StarDivider
         style=margin-top:-0.3em
@@ -523,7 +518,7 @@
 !!     depicted here as an eye-of-Godzilla flying saucer: 
 
 !!     |> Image
-!!         src=tmp-images/c6_differentiation_operator_intro.svg
+!!         src=images/c6_differentiation_operator_intro.svg
 
 !!     !! (Generally speaking, will use such round-shaped function
 !!     !! boxes to depict operators.) 
@@ -537,7 +532,7 @@
 !!     !! \Huge +
 !!     !! $$
 !!     |> Image
-!!         src=tmp-images/c6_big_plus_symbol.svg
+!!         src=images/c6_big_plus_symbol.svg
 
 !!     on functions can also be understood as a kind of operator,
 !!     albeit one with two inputs, since the inputs to the 
@@ -547,14 +542,14 @@
 !!     or are functions:
 
 !!     |> Image
-!!         src=tmp-images/c6_addition_operator_standalone.svg
+!!         src=images/c6_addition_operator_standalone.svg
 
 !!     In this manner,
 !!     all 
 !!     operators that we have encountered so far in one form or another would include:
 
 !!     |> Image
-!!         src=tmp-images/c6_all_our_operators.svg
+!!         src=images/c6_all_our_operators.svg
 
 !!     Note that ‘$-$’ appears twice, once as a
 
@@ -582,7 +577,7 @@
 !!     also be given in pictorial form:
     
 !!     |> Image
-!!         src=tmp-images/c6_operators_acting_on_signatures.svg
+!!         src=images/c6_operators_acting_on_signatures.svg
     
 !!     This connects back to Table 1.1,
 !!     though but with the unary minus operator
@@ -905,7 +900,7 @@
         $x_1$, $x_2$, $x_1'$, $x_2'$, etc:
 
         |> Image
-            src=tmp-images/c6_all_those_x1x2_graphs.svg
+            src=images/c6_all_those_x1x2_graphs.svg
 
         Thus
 
@@ -987,7 +982,7 @@
     (fg)' : [\tA] \ra [\tB\tC/\tA]
     $$
     |> ImageLeft
-        src=tmp-images/c6_fg_prime_signature_cloud_v2.svg
+        src=images/c6_fg_prime_signature_cloud_v2.svg
         offset_x=5em
 
     whereas
@@ -996,7 +991,7 @@
     f'g' : [\tA] \ra [\tB\tC/\tA^2]
     $$
     |> ImageRight
-        src=tmp-images/c6_f_prime_g_prime_signature_cloud_v2.svg
+        src=images/c6_f_prime_g_prime_signature_cloud_v2.svg
         offset_x=5em
 
     as is easy to check, and
@@ -1072,7 +1067,7 @@
         cannot hold in general.)
 
         |> ImageLeft
-            src=tmp-images/c6_x1x2_3600_cloud.svg
+            src=images/c6_x1x2_3600_cloud.svg
             offset_x=1em
 
         |> Pause
@@ -1237,7 +1232,7 @@
     !! !! those who wish to try.)
 
     !! |> Image
-    !!     src=tmp-images/c6_spoiler_alert_diagonal.svg
+    !!     src=images/c6_spoiler_alert_diagonal.svg
 
     To begin with,
 
@@ -1277,7 +1272,7 @@
     schizophrenically put input tubes on the left, again):
 
     |> Image
-        src=tmp-images/c6_lego_pieces.svg
+        src=images/c6_lego_pieces.svg
 
     From these pieces we seek to assemble a function
     of signature
@@ -1336,7 +1331,7 @@
     $$
 
     |> ImageRight
-        src=tmp-images/c6_chain_rule_units_cloud.svg
+        src=images/c6_chain_rule_units_cloud.svg
         offset_x=3.1em
 
     !! $$
@@ -1359,7 +1354,7 @@
         Say that a cute
 
         |> Image
-            src=tmp-images/c6_solo_RAT.svg
+            src=images/c6_solo_RAT.svg
 
         is running a fundraising race where one function
 
@@ -1463,7 +1458,7 @@
 
         |> Image
             width=530px
-            src=tmp-images/c6_explained_rat_equation.svg
+            src=images/c6_explained_rat_equation.svg
 
         Also since
 
@@ -1478,7 +1473,7 @@
         f'(g(t_0)) = (f'\circ g)(t_0)
         $$
         |> ImageRight
-            src=tmp-images/c6_composition_reminder_cloud.svg
+            src=images/c6_composition_reminder_cloud.svg
             offset_x=2em
         
         we can write the same equation as
@@ -1502,7 +1497,7 @@
         !! three rates of change...
 
         !! |> Image
-        !!     src=tmp-images/c6_three_units_with_arrows.svg
+        !!     src=images/c6_three_units_with_arrows.svg
 
         !! ...and the point is that 
         !! we can obtain 
@@ -1516,7 +1511,7 @@
         !! expecting an amount of meters!
 
         !! |> ImageRight
-        !!     src=tmp-images/c6_forbidden_fprime_of_t0_v2.svg
+        !!     src=images/c6_forbidden_fprime_of_t0_v2.svg
         !!     line=-3
         !!     offset_x=1em
 
@@ -1561,6 +1556,9 @@
         $$
         (\cos \circ \cos)' = ((-\sin) \circ \cos)(-\sin)
         $$
+        |> ImageLeft
+            src=images/c6_chain_rule_reminder_cloud.svg
+            offset_x=2em
 
         by [the chain rule](>>chain_rule_discovery),
         since $\cos' = -\sin$, or
@@ -1570,63 +1568,35 @@
         $$
 
         evaluating at an input $x$, 
-        !! an equation that can also be written
-        !! $$
-        !! (\cos \circ \cos)'(x) = (-\sin(\cos x))\cdot(-\sin(x))
-        !! $$
-        !! —matching the form of the last boxed equation
-        !! above—
         or
         
         $$
-        !! \tag{1}
         (\cos \circ \cos)'(x) = \sin(\cos x)\sin(x)
         $$
 
         when evaluating the ‘$\circ$’ and cancelling the minus signs. 
         
     |> Example
+        handle=cos_cos_chain_rule_continued
         We have
-        !! Keeping with Example >>cos_cos_chain_rule, we would
-        !! for example have
 
         $$
         (\cos \circ \cos)'(2.5) = \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
         $$
 
-        !! $$
-        !! (\cos \circ \cos)'(2.5)
-        !! $$
-        
-        !! which to be clear is the slope of 
-
-        !! $$
-        !! y = \cos(\cos(x))
-        !! $$
-
-        !! at $x = 2.5$, is
-
-        !! $$
-        !! \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
-        !! $$
-
-        !! by (1), 
         by Example >>cos_cos_chain_rule,
         which looks visually compatible with the graph of
         $\cos(\cos x)$
-        !! $\cos \circ \cos = (x \ra \cos(\cos x))$ 
         since
         $(\cos \circ \cos)'(2.5)$ is supposed to be the slope
         of $y = \cos(\cos x)$ at $x = 2.5$ (after all):
-        !! (the deriative should be the slope
-        !! of the tangent, if computed correctly—looks so!):
-        !! which a graph of $\cos(\cos(x))$ seems to attest to,
-        !! visually from afar at least:
 
         |> Image
-            src=tmp-images/c6_sin_of_sin_graph.svg
+            src=images/c6_sin_of_sin_graph.svg
 
-        (Because
+        |> StarDivider
+
+        _Note on Example >>cos_cos_chain_rule_continued##_. Because
 
         $$
         -1 \leq \cos(x) \leq 1
@@ -1641,66 +1611,15 @@
         and $\cos(0) = 1$
         which produces the graph above, that one can actually
         think of as the $x$-coordinate of a certain horizontal
-        windshield-wiper whose angle at time $t$ is $\cos(t)$.)
-        !! (Producing limited oscillation of the windshield-wiper
-        !! between $-1\te{Rad}\approx -57.29^\circ$ and $+1\te{Rad} \approx +57.29^\circ$,
-        !! as opposed to full-circle oscillation covering all angles.)
+        windshield-wiper whose angle at time $t$ is $\cos(t)$:
 
-    !! |> Example
+        |> Image
+            src=images/c6_windshield_wiper.svg
 
-    !!     We have
-
-    !!     $$
-    !!     (\sin \circ \sin)' = (\cos \circ \sin)\cos
-    !!     $$
-
-    !!     by [the chain rule](>>chain_rule_discovery),
-    !!     since $\sin' = \cos$, or
-
-    !!     $$
-    !!     (\sin \circ \sin)'(x) = (\cos \circ \sin)(x)\cos(x)
-    !!     $$
-
-    !!     evaluating at an input $x$, an equation that can also be written
-
-    !!     $$
-    !!     (\sin \circ \sin)'(x) = \cos(\sin(x))\cos(x)
-    !!     $$
-
-    !!     matching the form of the last boxed equation
-    !!     above—to be quite specific, e.g., 
-
-    !!     $$
-    !!     (\sin \circ \sin)'(12.2)
-    !!     $$
-        
-    !!     which is the slope of 
-
-    !!     $$
-    !!     y = \sin(\sin(x))
-    !!     $$
-
-    !!     at $x = 12.2$ is
-
-    !!     $$
-    !!     \cos(\sin(12.2))\cos(12.2) = 0.874365...
-    !!     $$
-
-    !!     which a graph of $\sin \circ \sin$ attests
-    !!     to, visually:
-
-    !!     |> Image
-    !!         src=tmp-images/c6_sin_of_sin_graph.svg
-
-    !!     (Because
-
-    !!     $$
-    !!     -1 \leq \sin(x) \leq 1
-    !!     $$
-        
-    !!     the values of $\sin(\sin(x))$ are stuck between
-    !!     sine of $-1$ radian at the low end and sine of $+1$ radian
-    !!     at the high end, which produces the graph above.)
+        !! $$
+        !! \cos(\cos(t))
+        !! \cos(\cos t)
+        !! $$
 
 |> Section
     !! *Appendix: radians _&_ the dimensionless plane.*
@@ -1739,15 +1658,15 @@
     “time/s” instead of “time $[\te{s}]$”, e.g.:
 
     !! |> Image
-    !!     src=tmp-images/c6_dimensionless_plane_1_v3.svg
+    !!     src=images/c6_dimensionless_plane_1_v3.svg
     !!     style=margin-top:-1.4em
 
     !! |> Image
-    !!     src=tmp-images/c6_dimensionless_plane_1_v2.svg
+    !!     src=images/c6_dimensionless_plane_1_v2.svg
     !!     style=margin-top:-1.4em
 
     |> Image
-        src=tmp-images/c6_dimensionless_plane_1_v1.svg
+        src=images/c6_dimensionless_plane_1_v1.svg
         style=margin-top:-1.4em
 
     The idea behind this notation is that the plane
@@ -1763,7 +1682,7 @@
     the plane; (!); for example, this ‘$3$’ here...
 
     |> Image
-        src=tmp-images/c6_dimensionless_plane_1_v1_circled.svg
+        src=images/c6_dimensionless_plane_1_v1_circled.svg
 
     ...is really a $3$ without any units—the “pure” $3$—because
     the entire plane is dimensionless, but 
@@ -1789,3 +1708,17 @@
     slice of the plane corresponds to the moment when
     the “time” variable—which _does_ have units—equals
     $3$ _seconds_, not just ‘$3$’, the pure number!!
+
+|> Exercises
+    |> Exercise
+        Give a dimensional analysis of the (real,
+        “late afternoon”) product rule (cf$.$ Chapter >>derivatives#decoy:4, Exercise >>_product_rule_#decoy:16):
+
+        |> Boxed
+            $$
+            \Large (fg)' = f'g + fg'
+            $$
+
+        |> Solution
+            Hello.
+        

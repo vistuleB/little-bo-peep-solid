@@ -7,7 +7,7 @@
     the values, see below):
 
     |> Image
-        src=tmp-images/c2_slope_examples.svg
+        src=images/c2_slope_examples.svg
 
     To explain, the slope of a line is...
 
@@ -35,14 +35,14 @@
     it goes up by $1$ unit for each unit to the right:
 
     |> Image
-        src=tmp-images/c2_slope_1_example.svg
+        src=images/c2_slope_1_example.svg
 
     On the other hand, the line below has slope
     $-0.5$, because it goes up by _minus_ $0.5$ units
     with each unit to the right:
 
     |> Image
-        src=tmp-images/c2_slope_minus_0.5_example.svg
+        src=images/c2_slope_minus_0.5_example.svg
 
     ...and so on.
 
@@ -55,7 +55,7 @@
     distinct points $A$, $B$ on the line:
 
     |> Image
-        src=tmp-images/c2_vertical_change_over_horizontal_change_grey_cloud.svg
+        src=images/c2_vertical_change_over_horizontal_change_grey_cloud.svg
 
     $$ \te{slope} = {\te{vertical change from A to B} \over \te{horizontal change from A to B}} $$
 
@@ -87,7 +87,7 @@
     $$
 
     |> ImageRight
-        src=tmp-images/c2_slope_formula_cloud.svg
+        src=images/c2_slope_formula_cloud.svg
         offset_y=-0.7em
         offset_x=3em
 
@@ -122,8 +122,6 @@
     is the horizontal change from $A$ to $B$.)
 
 |> Section
-    handle=table
-
     *Sign Combinations.*
     Technically, quantities such as
 
@@ -172,7 +170,7 @@
 
                 |> td
                     |> img
-                        src=tmp-images/c2_image_icon.svg
+                        src=images/c2_image_icon.svg
                         svgo=false
                         width=50
                         style=padding-top:7px;padding-bottom:7px;
@@ -191,7 +189,7 @@
 
                 |> td
                     |> img
-                        src=tmp-images/c2_plus_plus_slope.svg
+                        src=images/c2_plus_plus_slope.svg
                         style=margin-top:7px;margin-bottom:7px;width:105px;
 
                 |> td
@@ -208,7 +206,7 @@
 
                 |> td
                     |> img
-                        src=tmp-images/c2_minus_minus_slope.svg
+                        src=images/c2_minus_minus_slope.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
@@ -226,7 +224,7 @@
 
                 |> td
                     |> img
-                        src=tmp-images/c2_plus_minus_slope.svg
+                        src=images/c2_plus_minus_slope.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
@@ -244,7 +242,7 @@
 
                 |> td
                     |> img
-                        src=tmp-images/c2_minus_minus_slope.svg
+                        src=images/c2_minus_minus_slope.svg
                         width=105
                         style=margin-top:7px;margin-bottom:7px;
 
@@ -259,7 +257,7 @@
     places, or, namely, to show that the fractions
 
     |> ImageRight
-        src=tmp-images/c2_swap_cloud.svg
+        src=images/c2_swap_cloud.svg
         line=3
         offset_x=-0.5em
 
@@ -270,7 +268,7 @@
     $$ {y_2 - y_1 \over x_2 - x_1} = {-(y_2 - y_1) \over -(x_2 - x_1)} = {y_1 - y_2 \over x_1 - x_2} $$
 
     |> ImageLeft
-        src=tmp-images/c2_a_b_fraction_cloud.svg
+        src=images/c2_a_b_fraction_cloud.svg
         offset_x= 2.5em
         offset_y=-60px
 
@@ -295,7 +293,7 @@
     line:
 
     |> Image
-        src=tmp-images/c2_vertical_line.svg
+        src=images/c2_vertical_line.svg
 
     Indeed, vertical lines have _undefined_ slope.
     Moreover the bad case
@@ -321,13 +319,13 @@
     |> span
         class=nobreak
         |> InlineImage
-            src=tmp-images/c2_inline_rise_over_run.svg
+            src=images/c2_inline_rise_over_run.svg
             width=28px
         ”),
     \ following such a picture:
 
     |> Image
-        src=tmp-images/c2_rise_over_run_1st_figure.svg
+        src=images/c2_rise_over_run_1st_figure.svg
 
     In this context, note that, in physics, a
     one-dimensional displacement is measured as
@@ -344,7 +342,7 @@
     also include this picture:
 
     |> Image
-        src=tmp-images/c2_rise_over_run_2nd_figure.svg
+        src=images/c2_rise_over_run_2nd_figure.svg
 
     Then “rise” and “run” have their signs flipped,
     but the ratio rise-over-run is the same, as
@@ -391,7 +389,7 @@
     !! Thus, we have a triptych:
 
     |> Image
-        src=tmp-images/c2_flower_bed_1.svg
+        src=images/c2_flower_bed_1.svg
 
     |> StarDivider
         style=margin-top:-0.3em
@@ -409,7 +407,7 @@
     the Cartesian plane. E.g.:
 
     |> Image
-        src=tmp-images/c2_line_equation_examples.svg
+        src=images/c2_line_equation_examples.svg
 
     Note that, assuming said $y = ax + b$, one has
 
@@ -519,7 +517,7 @@
     in seconds:
 
     |> Image
-        src=tmp-images/c2_meters_over_seconds_balloon.svg
+        src=images/c2_meters_over_seconds_balloon.svg
 
     The slope of the graph is $0.75$ _meters per
     second_ because the balloon's height increases by
@@ -571,7 +569,7 @@
     the same idea(s) in “applied” language:
 
     |> Image
-        src=tmp-images/c2_flower_bed_2.svg
+        src=images/c2_flower_bed_2.svg
 
     |> StarDivider
         style=margin-top:-0.3em
@@ -609,7 +607,7 @@
         $$
 
         |> ImageRight
-            src=tmp-images/c2_units_cloud.svg
+            src=images/c2_units_cloud.svg
 
         following the template
 

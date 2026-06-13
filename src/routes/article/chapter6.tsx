@@ -2,12 +2,14 @@ import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
 import Boxed  from "~/components/Boxed";
 import { CentralDisplayItalic }  from "~/components/Delimiters";
+import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
 import { MathBlock, Math }  from "~/components/Math";
 import OtherPageLink  from "~/components/OtherPageLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
+import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import ThisPageLink  from "~/components/ThisPageLink";
 import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
@@ -17,10 +19,10 @@ export default function __Chapter6__() {
   return (
     <Article
       prevPage="/article/chapter5"
-      nextPage=""
+      nextPage="/article/appendixA"
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_158_h.a.i_"
+      id="_159_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -72,6 +74,11 @@ export default function __Chapter6__() {
         <BreadcrumbItem id="breadcrumb-9">
           <ThisPageLink href="?id=section-10">
             epilogue: the dimensionless plane
+          </ThisPageLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-10">
+          <ThisPageLink href="?id=exercises">
+            exercises
           </ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
@@ -159,7 +166,7 @@ export default function __Chapter6__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example id="_150_h.a.i_">
+        <Example>
           <OuterP>
             <b>
               Example 1.
@@ -283,7 +290,7 @@ const Rest = () => {
           of one straight length by another*—the afore-mentioned
           “opposite over adjacent”. (Or “adjacent over hypotenuse”,
           in the case of cosine!)
-          <ImageLeft src="/tmp-images/c6_radian_dimensionless_ratio_cloud.svg" />
+          <ImageLeft src="/build-img/svgo-svg/0z4q.svg" />
         </OuterP>
         <Pause />
         <OuterP>
@@ -341,7 +348,7 @@ const Rest = () => {
           :
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_true_counterclockwiseness_1.svg" />
+        <Image src="/build-img/svgo-svg/edTN.svg" />
         <Pause />
         <OuterP>
           What we mean is that if it was our custom to draw the
@@ -358,7 +365,7 @@ const Rest = () => {
           would be clockwise, not counterclockwise:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_true_counterclockwiseness_2.svg" />
+        <Image src="/build-img/svgo-svg/0QSx.svg" />
         <Pause />
         <OuterP>
           (This actually happens inside of SVG, the web-based
@@ -383,7 +390,7 @@ const Rest = () => {
             clockwise
           </i>
           .)
-          <ImageRight src="/tmp-images/c6_SVG_cloud.svg" />
+          <ImageRight src="/build-img/svgo-svg/BYVX.svg" />
         </OuterP>
       </Section>
       <Pause />
@@ -399,7 +406,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_equal_inputs.svg"
+          src="/build-img/svgo-svg/hJfJ.svg"
           style="margin-bottom:-1.3em"
         />
         <Pause />
@@ -470,7 +477,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_v2.svg"
+          src="/build-img/svgo-svg/qdyx.svg"
           id="_151_h.a.i_"
         />
         <Pause />
@@ -513,7 +520,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_two_more.svg"
+          src="/build-img/svgo-svg/lyKL.svg"
           id="_152_h.a.i_"
         />
         <Pause />
@@ -521,7 +528,7 @@ const Rest = () => {
           [*See {" "}
           <OtherPageLink
             class="out-chapter-link"
-            href="/article/chapter5#_88_h.a.i_"
+            href="/article/chapter5#_89_h.a.i_"
           >
             Chapter 5
           </OtherPageLink>
@@ -545,7 +552,7 @@ const Rest = () => {
           {" "}
           (see also {" "}
           <OtherPageLink
-            href="/article/chapter4#_62_h.a.i_"
+            href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -607,7 +614,7 @@ const Rest = () => {
           {" "} of
           {" "}
           <OtherPageLink
-            href="/article/chapter4#_62_h.a.i_"
+            href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -664,7 +671,7 @@ const Rest = () => {
           depicted here as an eye-of-Godzilla flying saucer:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_differentiation_operator_intro.svg" />
+        <Image src="/build-img/svgo-svg/vx7K.svg" />
         <Pause />
         <OuterP>
           Though similarly, the
@@ -681,7 +688,7 @@ const Rest = () => {
           as input and producing one function as output:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_negation_operator.svg" />
+        <Image src="/build-img/svgo-svg/119H.svg" />
         <Pause />
         <OuterP>
           The other function operations from Table 1.1
@@ -698,7 +705,7 @@ const Rest = () => {
           can be depicted as a two-input-tube-flying-saucer:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_addition_operator_standalone.svg" />
+        <Image src="/build-img/svgo-svg/Zh1r.svg" />
         <Pause />
         <OuterP>
           In this fashion, the complete list of all
@@ -707,7 +714,7 @@ const Rest = () => {
           the following:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_all_our_operators_v2.svg" />
+        <Image src="/build-img/svgo-svg/Mq0V.svg" />
         <Pause />
         <OuterP>
           (We recycle {" "}
@@ -740,7 +747,7 @@ const Rest = () => {
           in a similar vein of diagram:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_operators_acting_on_signatures_v2.svg" />
+        <Image src="/build-img/svgo-svg/VuM1.svg" />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
       </Section>
@@ -1222,7 +1229,7 @@ const Rest = () => {
             {" "} etc:
           </OuterP>
           <Pause />
-          <Image src="/tmp-images/c6_all_those_x1x2_graphs.svg" />
+          <Image src="/build-img/svgo-svg/aASR.svg" />
           <Pause />
           <OuterP>
             Thus
@@ -1392,7 +1399,7 @@ const Rest = () => {
           (fg)' : [\tA] \ra [\tB\tC/\tA]
           $$
           <ImageLeft
-            src="/tmp-images/c6_fg_prime_signature_cloud_v2.svg"
+            src="/build-img/svgo-svg/jPk2.svg"
             offset_x="5em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -1407,7 +1414,7 @@ const Rest = () => {
           f'g' : [\tA] \ra [\tB\tC/\tA^2]
           $$
           <ImageRight
-            src="/tmp-images/c6_f_prime_g_prime_signature_cloud_v2.svg"
+            src="/build-img/svgo-svg/qX4a.svg"
             offset_x="5em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -1564,7 +1571,7 @@ const Rest = () => {
             and therefore, the early afternoon product rule
             cannot hold in general.)
             <ImageLeft
-              src="/tmp-images/c6_x1x2_3600_cloud.svg"
+              src="/build-img/svgo-svg/U86u.svg"
               offset_x="1em"
             />
           </OuterP>
@@ -1761,7 +1768,7 @@ const Rest = () => {
           schizophrenically put input tubes on the left, again):
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_lego_pieces.svg" />
+        <Image src="/build-img/svgo-svg/YZvS.svg" />
         <Pause />
         <OuterP>
           From these pieces we seek to assemble a function
@@ -1883,7 +1890,7 @@ const Rest = () => {
           [\tA] \ra [\tC/\tA]
           $$
           <ImageRight
-            src="/tmp-images/c6_chain_rule_units_cloud.svg"
+            src="/build-img/svgo-svg/zysM.svg"
             offset_x="3.1em"
             compensate_offset_x_for_large_text_columns={true}
           />
@@ -1938,7 +1945,7 @@ const Rest = () => {
             Say that a cute
           </OuterP>
           <Pause />
-          <Image src="/tmp-images/c6_solo_RAT.svg" />
+          <Image src="/build-img/svgo-svg/kL1E.svg" />
           <Pause />
           <OuterP>
             is running a fundraising race where one function
@@ -2074,7 +2081,7 @@ const Rest = () => {
           <Pause />
           <Image
             width="530px"
-            src="/tmp-images/c6_explained_rat_equation.svg"
+            src="/build-img/svgo-svg/un6E.svg"
           />
           <Pause />
           <OuterP>
@@ -2086,7 +2093,7 @@ const Rest = () => {
             f'(g(t_0)) = (f'\circ g)(t_0)
             $$
             <ImageRight
-              src="/tmp-images/c6_composition_reminder_cloud.svg"
+              src="/build-img/svgo-svg/g4I6.svg"
               offset_x="2em"
               compensate_offset_x_for_large_text_columns={true}
             />
@@ -2238,6 +2245,11 @@ const Rest = () => {
             $$
             (\cos \circ \cos)' = ((-\sin) \circ \cos)(-\sin)
             $$
+            <ImageLeft
+              src="/build-img/svgo-svg/_iNd.svg"
+              offset_x="2em"
+              compensate_offset_x_for_large_text_columns={true}
+            />
           </MathBlock>
           <Pause />
           <OuterP>
@@ -2296,7 +2308,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example>
+        <Example id="_158_h.a.i_">
           <OuterP>
             <b>
               Example 7.
@@ -2343,10 +2355,22 @@ const Rest = () => {
             {" "} (after all):
           </OuterP>
           <Pause />
-          <Image src="/tmp-images/c6_sin_of_sin_graph.svg" />
+          <Image src="/build-img/svgo-svg/0dwB.svg" />
+          <Pause />
+          <StarDivider />
           <Pause />
           <OuterP>
-            (Because
+            <i>
+              Note on {" "}
+              <ThisPageLink
+                href="/article/chapter6#_158_h.a.i_"
+                class="in-chapter-link"
+              >
+                Example 7
+              </ThisPageLink>
+              &#8288;##
+            </i>
+            . Because
           </OuterP>
           <Pause />
           <MathBlock>
@@ -2393,9 +2417,11 @@ const Rest = () => {
               <Math>
                 $\cos(t)$
               </Math>
-              .)
+              :
             </NoBreak>
           </OuterP>
+          <Pause />
+          <Image src="/build-img/svgo-svg/khDb.svg" />
         </Example>
       </Section>
       <Pause />
@@ -2477,7 +2503,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_dimensionless_plane_1_v1.svg"
+          src="/build-img/svgo-svg/oqAL.svg"
           style="margin-top:-1.4em"
         />
         <Pause />
@@ -2507,7 +2533,7 @@ const Rest = () => {
           {" "} here...
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_dimensionless_plane_1_v1_circled.svg" />
+        <Image src="/build-img/svgo-svg/_SJ0.svg" />
         <Pause />
         <OuterP>
           ...is really a {" "}
@@ -2573,6 +2599,51 @@ const Rest = () => {
           {" "} the pure number!!
         </OuterP>
       </Section>
+      <Pause />
+      <Exercises
+        at_end_of_page={true}
+        mode="dual"
+        show_curlicue={true}
+      >
+        <Exercise number={1}>
+          <ExerciseStatement>
+            <OuterP>
+              <b>
+                Exercise 1.
+              </b>
+              {" "}
+              Give a dimensional analysis of the (real,
+              “late afternoon”) product rule {" "}
+              <NoBreak>
+                (cf
+                <Math>
+                  $.$
+                </Math>
+              </NoBreak>
+              {" "} {" "}
+              <OtherPageLink
+                href="/article/chapter4#_76_h.a.i_"
+                class="out-chapter-link"
+              >
+                Chapter 4, Exercise 18
+              </OtherPageLink>
+              &#8288;):
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \Large (fg)' = f'g + fg'
+                $$
+              </MathBlock>
+            </Boxed>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Hello.
+            </OuterP>
+          </Solution>
+        </Exercise>
+      </Exercises>
     </>}
   </>;
 };

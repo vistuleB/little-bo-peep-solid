@@ -94,7 +94,7 @@ export default function __Chapter2__() {
           the values, see below):
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_slope_examples.svg" />
+        <Image src="/build-img/svgo-svg/2--j.svg" />
         <Pause />
         <OuterP>
           To explain, the slope of a line is...
@@ -145,7 +145,7 @@ export default function __Chapter2__() {
           {" "} unit for each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_slope_1_example.svg" />
+        <Image src="/build-img/svgo-svg/P_gw.svg" />
         <Pause />
         <OuterP>
           On the other hand, the line below has slope
@@ -168,7 +168,7 @@ export default function __Chapter2__() {
           with each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_slope_minus_0.5_example.svg" />
+        <Image src="/build-img/svgo-svg/0j6M.svg" />
         <Pause />
         <OuterP>
           ...and so on.
@@ -206,7 +206,7 @@ const Rest = () => {
           {" "} on the line:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_vertical_change_over_horizontal_change_grey_cloud.svg" />
+        <Image src="/build-img/svgo-svg/v-HV.svg" />
         <Pause />
         <MathBlock>
           $$
@@ -280,7 +280,7 @@ const Rest = () => {
           \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
           $$
           <ImageRight
-            src="/tmp-images/c2_slope_formula_cloud.svg"
+            src="/build-img/svgo-svg/EgBm.svg"
             offset_y="-0.7em"
             offset_x="3em"
             compensate_offset_x_for_large_text_columns={true}
@@ -475,7 +475,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/tmp-images/c2_image_icon.svg"
+                  src="/build-img/svg/za9i.svg"
                   width={50}
                   style="padding-top:7px;padding-bottom:7px;"
                 />
@@ -501,7 +501,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/tmp-images/c2_plus_plus_slope.svg"
+                  src="/build-img/svgo-svg/a4fG.svg"
                   style="margin-top:7px;margin-bottom:7px;width:105px;"
                 />
               </td>
@@ -526,7 +526,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/tmp-images/c2_minus_minus_slope.svg"
+                  src="/build-img/svgo-svg/dHNp.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
                 />
@@ -552,7 +552,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/tmp-images/c2_plus_minus_slope.svg"
+                  src="/build-img/svgo-svg/st9S.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
                 />
@@ -578,7 +578,7 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/tmp-images/c2_minus_minus_slope.svg"
+                  src="/build-img/svgo-svg/dHNp.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
                 />
@@ -612,7 +612,7 @@ const Rest = () => {
           {" "} swap
           places, or, namely, to show that the fractions
           <ImageRight
-            src="/tmp-images/c2_swap_cloud.svg"
+            src="/build-img/svgo-svg/9GPK.svg"
             line={3}
             offset_x="-0.5em"
           />
@@ -633,7 +633,7 @@ const Rest = () => {
           &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125;
           $$
           <ImageLeft
-            src="/tmp-images/c2_a_b_fraction_cloud.svg"
+            src="/build-img/svgo-svg/kzAf.svg"
             offset_x="2.5em"
             offset_y="-60px"
             compensate_offset_x_for_large_text_columns={true}
@@ -678,7 +678,7 @@ const Rest = () => {
           line:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_vertical_line.svg" />
+        <Image src="/build-img/svgo-svg/o4Yb.svg" />
         <Pause />
         <OuterP>
           Indeed, vertical lines have {" "}
@@ -747,7 +747,7 @@ const Rest = () => {
           </NoBreak>
           <span class="nobreak">
             <InlineImage
-              src="/tmp-images/c2_inline_rise_over_run.svg"
+              src="/build-img/svgo-svg/OonE.svg"
               width="28px"
             />
             ”),
@@ -755,7 +755,7 @@ const Rest = () => {
           {" "} following such a picture:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_rise_over_run_1st_figure.svg" />
+        <Image src="/build-img/svgo-svg/nL2k.svg" />
         <Pause />
         <OuterP>
           In this context, note that, in physics, a
@@ -794,7 +794,7 @@ const Rest = () => {
           also include this picture:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_rise_over_run_2nd_figure.svg" />
+        <Image src="/build-img/svgo-svg/x7mx.svg" />
         <Pause />
         <OuterP>
           Then “rise” and “run” have their signs flipped,
@@ -905,7 +905,7 @@ const Rest = () => {
           or “run equals rise over slope”. Or:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_flower_bed_1.svg" />
+        <Image src="/build-img/svgo-svg/DoAv.svg" />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
       </Section>
@@ -938,7 +938,7 @@ const Rest = () => {
           the Cartesian plane. E.g.:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_line_equation_examples.svg" />
+        <Image src="/build-img/svgo-svg/LVCC.svg" />
         <Pause />
         <OuterP>
           Note that, assuming said {" "}
@@ -1339,7 +1339,7 @@ const Rest = () => {
           in seconds:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_meters_over_seconds_balloon.svg" />
+        <Image src="/build-img/svgo-svg/88nB.svg" />
         <Pause />
         <OuterP>
           The slope of the graph is {" "}
@@ -1471,7 +1471,7 @@ const Rest = () => {
           the same idea(s) in “applied” language:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c2_flower_bed_2.svg" />
+        <Image src="/build-img/svgo-svg/s_jj.svg" />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
         <Pause />
@@ -1547,7 +1547,7 @@ const Rest = () => {
             \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
             $$
             <ImageRight
-              src="/tmp-images/c2_units_cloud.svg"
+              src="/build-img/svgo-svg/mtGc.svg"
               compensate_offset_x_for_large_text_columns={true}
             />
           </MathBlock>
@@ -1666,6 +1666,7 @@ const Rest = () => {
       <Pause />
       <Exercises
         at_end_of_page={true}
+        mode="dual"
         show_curlicue={true}
         id="_31_h.a.i_"
       >
@@ -1697,16 +1698,16 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/tmp-images/c2_slope_two_and_minus_one_half.svg"
+              src="/build-img/svgo-svg/t-Sk.svg"
               class="relative w-fit"
             >
               <ImageRight
-                src="/tmp-images/c2_slope_two_and_minus_one_half_cloud_right.svg"
+                src="/build-img/svgo-svg/Y5Cw.svg"
                 offset_y="20%"
                 offset_x="-5%"
               />
               <ImageLeft
-                src="/tmp-images/c2_slope_two_and_minus_one_half_cloud_left.svg"
+                src="/build-img/svgo-svg/P0MQ.svg"
                 offset_x="-25%"
                 offset_y="47%"
               />
@@ -1752,16 +1753,16 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/tmp-images/c2_slope_p_minus_one_over_p.svg"
+                src="/build-img/svgo-svg/_wle.svg"
                 class="relative w-fit"
               >
                 <ImageRight
-                  src="/tmp-images/c2_slope_p_minus_one_over_p_cloud_right.svg"
+                  src="/images/c2_slope_p_minus_one_over_p_cloud_right.svg"
                   offset_y="28%"
                   offset_x="-5%"
                 />
                 <ImageLeft
-                  src="/tmp-images/c2_slope_p_minus_one_over_p_cloud_left.svg"
+                  src="/images/c2_slope_p_minus_one_over_p_cloud_left.svg"
                   offset_x="-18%"
                   offset_y="44%"
                 />

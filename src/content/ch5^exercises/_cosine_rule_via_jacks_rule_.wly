@@ -1,9 +1,7 @@
 |> Exercise
-    !! work=ing
     handle=_cosine_rule_via_jacks_rule_
 
     Keeping a triangle with sides $a$, $b$, $c$
-    !! opposite to which are angles 
     with opposing angles
     $\theta_{bc}$, $\theta_{ac}$, $\theta_{ab}$
     respectively, prove _Jack's rule_, which is the triplet of equations...

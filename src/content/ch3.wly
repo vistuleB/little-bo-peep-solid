@@ -717,18 +717,20 @@
     special names, as inventoried in the following
     table:
 
-    $$
-    \begin{array}{c|c|c}
-    \,\,\,\,\te{degree}\,\,\,\, & \te{name} & \,\,\,\,\te{example}\,\,\,\,\Rule{0pt}{0.8em}{0.5em} \\ \hline
-    -\infty & \te{zero} & 0\Rule{0pt}{1.1em}{0.0em}\\
-    \te{0} & \te{constant} & 1 + \sqrt{5}\\
-    \te{1} & \te{affine} & 10x - 1\\
-    \te{2} & \,\,\,\,\te{quadratic}\,\,\,\, & x^2 - 1\\
-    \te{3} & \te{cubic} & x^3 - 1\\
-    \te{4} & \te{quartic} & 1 - x^4\\
-    \te{5} & \te{quintic} & x^5
-    \end{array}
-    $$
+    |> MathBlock
+        handle=linear_vs_affine
+        $$
+        \begin{array}{c|c|c}
+        \,\,\,\,\te{degree}\,\,\,\, & \te{name} & \,\,\,\,\te{example}\,\,\,\,\Rule{0pt}{0.8em}{0.5em} \\ \hline
+        -\infty & \te{zero} & 0\Rule{0pt}{1.1em}{0.0em}\\
+        \te{0} & \te{constant} & 1 + \sqrt{5}\\
+        \te{1} & \te{affine} & 10x - 1\\
+        \te{2} & \,\,\,\,\te{quadratic}\,\,\,\, & x^2 - 1\\
+        \te{3} & \te{cubic} & x^3 - 1\\
+        \te{4} & \te{quartic} & 1 - x^4\\
+        \te{5} & \te{quintic} & x^5
+        \end{array}
+        $$
 
     There is some confusion about the term
 

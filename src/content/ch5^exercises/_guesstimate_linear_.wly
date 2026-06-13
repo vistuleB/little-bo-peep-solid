@@ -25,8 +25,8 @@
         $$
         y = {1\over 4}x
         $$
-        making it a true _linear_ function (as opposed
-        to _affine_, cf. Chapter >>functions).
+        making it a true [_linear_](>>linear_vs_affine) function (as opposed
+        to [_affine_](>>linear_vs_affine), cf. [Chapter >>functions](>>linear_vs_affine)).
 
         As for the “something”—the bumpy one—it appears
         to just be a “sped up cosine”, and note that
