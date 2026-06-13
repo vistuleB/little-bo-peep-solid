@@ -2367,7 +2367,6 @@ const Rest = () => {
               >
                 Example 7
               </InChapterLink>
-              &#8288;##
             </i>
             . Because
           </OuterP>

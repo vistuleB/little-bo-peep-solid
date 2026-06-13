@@ -16,7 +16,7 @@ import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import { TildeDivider }  from "~/components/TildeDivider";
-import { SolutionNote, NoBreak, Pause, Section }  from "~/components/Wrappers";
+import { InTextWarning, SolutionNote, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __AppendixA__() {
@@ -47,7 +47,7 @@ export default function __AppendixA__() {
         <Pause />
         <Exercises
           chapter="&gt;&gt;functions"
-          mode="dual"
+          mode="switcher-only"
         >
           <Exercise number={1}>
             <ExerciseStatement id="_160_h.a.i_">
@@ -146,7 +146,7 @@ export default function __AppendixA__() {
         <Pause />
         <Exercises
           chapter="&gt;&gt;derivatives"
-          mode="dual"
+          mode="switcher-only"
         >
           <Exercise number={1}>
             <ExerciseStatement id="_161_h.a.i_">
@@ -5015,7 +5015,7 @@ export default function __AppendixA__() {
         <Exercises
           chapter="&gt;&gt;trigonometry"
           at_end_of_page={true}
-          mode="dual"
+          mode="switcher-only"
         >
           <Exercise number={1}>
             <ExerciseStatement id="_185_h.a.i_">
@@ -7514,14 +7514,15 @@ export default function __AppendixA__() {
                 </Boxed>
                 <OuterP>
                   ...was painstakingly uncovered
-                  in {" "}
-                  <InChapterLink
-                    href="/article/appendixA#_192_h.a.i_"
-                    class="in-chapter-link"
-                  >
-                    Exercise 7
-                  </InChapterLink>
-                  &#8288;, if you recall.)
+                  in Exercise {" "}
+                  <InTextWarning>
+                    undefined handle at ch5^exercises/_for_every_A1_A2_.wly:157:13: _cosx_to_cosx_
+                  </InTextWarning>
+                  +
+                  <i>
+                    sinx
+                  </i>
+                  , if you recall.)
                 </OuterP>
               </SolutionNote>
             </Solution>

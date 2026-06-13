@@ -1712,7 +1712,7 @@ const Rest = () => {
           >
             Chapter 3
           </a>
-          &#8288;##-related
+          &#8288;-related
           matters, if
         </OuterP>
         <Pause />
