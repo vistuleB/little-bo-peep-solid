@@ -120,13 +120,6 @@ const Page = (props: ParentProps & PageProps) => {
 
     const anchor = closestAnchor(e.target as Element);
     if (anchor) {
-      const href = anchor.href;
-      if (!href) return;
-      const hrefUrl = new URL(href);
-      const currentUrl = new URL(window.location.href);
-      if (hrefUrl.origin !== currentUrl.origin) return; // external website link
-      e.preventDefault();
-      getPage(hrefUrl.pathname + hrefUrl.hash);
       return;
     }
 
