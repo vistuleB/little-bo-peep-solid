@@ -38,7 +38,7 @@ const Container = (props: ParentProps) => {
     <>
       <div
         id="Container"
-        class="relative overflow-hidden"
+        class="-z-10 relative overflow-hidden"
         style={{
           width: containerWidth() + "px",
           opacity: store.saved_scroll_finished || store.scroll_is_at_0 ? 1 : 0,
