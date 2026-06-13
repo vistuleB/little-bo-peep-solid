@@ -8,6 +8,7 @@ import {
 } from "solid-js";
 import { SetStoreFunction, createStore } from "solid-js/store";
 import { useExerciseGroupRegistry } from "./ExerciseGroupRegistryProvider";
+import { ExercisesMode } from "~/components/Exercises";
 
 type ExerciseState = {
   solution_open: boolean;
@@ -48,11 +49,15 @@ export const useExercisesContext = () => useContext(StoreContext);
 export const ExercisesStoreProvider: ParentComponent<{
   group_id: string;
   at_end_of_page: boolean;
+  mode?: ExercisesMode;
 }> = (props) => {
+  // switcher-only is a forever-carousel: start out of list view (and there is
+  // no toggle to leave it). list-only and dual default to list view.
+  const initial_list_view = (props.mode ?? "dual") !== "switcher-only";
   const [exercises_store, set_exercises_store] = createStore<Store>({
     selected_exo: 0,
     exercises: [],
-    list_view: true,
+    list_view: initial_list_view,
   });
 
   const digit = props.group_id.replace(/\D/g, "");

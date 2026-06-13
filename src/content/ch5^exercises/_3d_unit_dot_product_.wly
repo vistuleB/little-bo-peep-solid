@@ -1,0 +1,12 @@
+|> Exercise
+    work=ing
+    handle=_3d_unit_dot_product_
+
+    Hello. $(x_1, y_1, z_1)$
+
+    |> Image
+        src=tmp-images/c5_3d_ruler_1.svg
+
+    |> Solution
+
+        Hello.

@@ -52,7 +52,7 @@
         >>chain        >>_ch6_start_
 
         !! appendices:
-        !! >>exercise-graveyard  >>exercise-graveyard-start
+        >>exercise-graveyard  >>exercise-graveyard-start
 
     |> In
         chapter=>>playground
