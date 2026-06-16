@@ -50,7 +50,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
       dl.append_attribute(#("Book", "counter", "ChapterCounter", infra.GoBack)),
       dl.append_attribute(#("Book", "counter", "BootcampCounter", infra.GoBack)),
-      dl.append_attribute(#("Book", "alphabetic-counter", "AppendixCounter", infra.GoBack)),
+      dl.append_attribute(#("Book", "counter-uppercase", "AppendixCounter", infra.GoBack)),
       dl.append_attribute__outside(#("Chapter", "counter", "ExampleCounter"), ["Bootcamp"]),
       dl.append_attribute__outside(#("Chapter", "counter", "NoteCounter"), ["Bootcamp"]),
       dl.append_attribute__outside(#("Chapter", "counter", "SectionCounter"), ["Bootcamp"]),
