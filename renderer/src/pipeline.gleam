@@ -43,9 +43,9 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Chapter", "ArticleTitle", "title"), ["Bootcamp"]),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Appendix", "ArticleTitle", "title"), ["Chapter", "Bootcamp"]),
     ],
-    pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar),
-    pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis),
-    pp.markdown_link_splitting(["MathBlock", "Math"]),
+    [dl.table_section_header("pp.create_mathblock_elements"), ..pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar)],
+    [dl.table_section_header("pp.create_math_elements"), ..pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis)],
+    [dl.table_section_header("pp.markdown_link_splitting"), ..pp.markdown_link_splitting(["MathBlock", "Math"])],
     [
       dl.table_marker(),
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
@@ -117,14 +117,14 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.delete_if_empty("p"),
       // (end cleaning)
     ],
-    pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
-    pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
+    [dl.table_section_header("pp.barbaric_symmetric_delim_splitting __"), ..pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"])],
+    [dl.table_section_header("pp.asymmetric_delim_splitting"), ..pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"])],
     [
       dl.free_children(#("CentralDisplay", "p")),
       dl.free_children(#("CentralDisplayItalic", "p")),
     ],
-    pp.barbaric_symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math", "InTextWarning"]),
-    pp.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
+    [dl.table_section_header("pp.barbaric_symmetric_delim_splitting _"), ..pp.barbaric_symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math", "InTextWarning"])],
+    [dl.table_section_header("pp.barbaric_symmetric_delim_splitting *"), ..pp.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"])],
     [
       dl.find_replace__outside(#("\\*", "*"), ["MathBlock", "Math"]),
       dl.find_replace__outside(#("\\_", "_"), ["MathBlock", "Math"]),
