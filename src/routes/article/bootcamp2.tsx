@@ -138,10 +138,7 @@ const Rest = () => {
   return <>
     {showMore() && <>
       <Pause />
-      <Section
-        unaryCounter="bob A"
-        id="section-2"
-      >
+      <Section id="section-2">
         <OuterP>
           <b>
             Integer powers of 10.
