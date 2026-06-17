@@ -47,6 +47,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     [dl.table_section_header("pp.create_math_elements"), ..pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis)],
     [dl.table_section_header("pp.markdown_link_splitting"), ..pp.markdown_link_splitting(["MathBlock", "Math"])],
     [
+      dl.table_marker(),
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
       dl.append_attribute(#("Book", "counter", "ChapterCounter", infra.GoBack)),
       dl.append_attribute(#("Book", "counter", "BootcampCounter", infra.GoBack)),
@@ -79,7 +80,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.append_attribute_if_fancy(#("Exercise", fn(_, ancestors, _, _, _) { infra.first_is(ancestors, "Exercises") }, "number", "::øøExerciseCounter", infra.GoBack)),
       dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.contains(ancestors, "Appendix") }, "show_curlicue", "true", infra.GoBack)),
       dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, _) { infra.contains(ancestors, "Appendix") && !infra.v_has_attr_with_key(exercises, "mode") }, "mode", exercise_graveyard_switcher_type, infra.GoBack)),
-
       dl.prepend_counter_incrementing_attribute__outside(#("Chapter", "ChapterCounter", infra.GoBack), ["Bootcamp", "Appendix"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Bootcamp", "BootcampCounter", infra.GoBack), ["Chapter", "Appendix"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Appendix", "AppendixCounter", infra.GoBack), ["Chapter", "Bootcamp"]),
@@ -103,7 +103,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.handles_add_ids(),
       dl.handles_generate_dictionary_and_id_list("path"),
       dl.handles_substitute_and_fix_nonlocal_id_links(#("path", "InChapterLink", "a", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"])),
-      dl.table_marker(),
       dl.unwrap("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Bootcamp", "ArticleTitle", "banner"), ["Chapter"]),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Chapter", "ArticleTitle", "banner"), ["Bootcamp"]),
