@@ -5,11 +5,11 @@ import Grid  from "~/components/Grid";
 import InChapterLink  from "~/components/InChapterLink";
 import { List, Item }  from "~/components/List";
 import { Math }  from "~/components/Math";
-import { NewImage }  from "~/components/NewImage";
+import NewImage  from "~/components/NewImage";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import Solution  from "~/components/Solution";
-import { InTextWarning, Pause }  from "~/components/Wrappers";
+import { Pause }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Bootcamp3__() {
@@ -34,6 +34,7 @@ export default function __Bootcamp3__() {
       <Pause />
       <Exercises
         at_end_of_page={true}
+        mode="dual"
         show_curlicue={true}
         id="_24_h.a.i_"
       >
@@ -774,10 +775,13 @@ export default function __Bootcamp3__() {
                 </b>
               </i>
               {" "} 2 cols, 1 on mobile, center-on-overflow=true, place-items=start, with-padding=false, column-first=true (from {" "}
-              <InTextWarning>
-                undefined handle at playground.wly:396:17: _true_or_false_composition_questions_
-              </InTextWarning>
-              )
+              <a
+                href="/article/appendixA#_165_h.a.i_"
+                class="out-chapter-link"
+              >
+                1
+              </a>
+              &#8288;)
             </OuterP>
             <Pause />
             <Grid

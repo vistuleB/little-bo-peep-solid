@@ -1849,6 +1849,7 @@ const Rest = () => {
       <Pause />
       <Exercises
         at_end_of_page={true}
+        mode="dual"
         show_curlicue={true}
         id="_92_h.a.i_"
       >
@@ -5145,12 +5146,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} per which
-              {" "}
+              (&#8288;
               <InChapterLink
                 href="/article/chapter4#_77_h.a.i_"
                 class="in-chapter-link"
               >
-                (Exercise 14
+                Exercise 14
               </InChapterLink>
               {" "} Note 3), the fraction approaches
             </OuterP>

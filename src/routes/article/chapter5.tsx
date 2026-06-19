@@ -1099,7 +1099,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} in some
-          cases—but in case something goes wrong, here
+          —casesbut in case something goes wrong, here
           is a cheat sheet that does some of the thinking
           for you
           (or help you compare your way of seeing
@@ -4134,12 +4134,12 @@ const Rest = () => {
           />
           <Pause />
           <OuterP>
-            [Example {" "}
+            [&#8288;
             <InChapterLink
               href="/article/chapter5#_95_h.a.i_"
               class="in-chapter-link"
             >
-              6
+              Example 6
             </InChapterLink>
             {" "} continued.] In particular, this means that 
             in any cylindrical
@@ -4292,6 +4292,7 @@ const Rest = () => {
       <Pause />
       <Exercises
         at_end_of_page={true}
+        mode="dual"
         show_curlicue={true}
         id="_154_h.a.i_"
       >
@@ -16047,8 +16048,8 @@ const Rest = () => {
               <Math>
                 $\theta$
               </Math>
-              {" "} at lower left—if we label it
-              such—is also repeated middle top right (this is
+              {" "} at lower —leftif we label it
+              —suchis also repeated middle top right (this is
               the content of {" "}
               <InChapterLink
                 href="/article/chapter5#_115_h.a.i_"
@@ -18485,7 +18486,7 @@ const Rest = () => {
               <Image src="/build-img/svgo-svg/4t6F.svg" />
               <Pause />
               <OuterP>
-                ...(cf. {" "}
+                (...cf. {" "}
                 <InChapterLink
                   href="/article/chapter5#_128_h.a.i_"
                   class="in-chapter-link"

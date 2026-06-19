@@ -1,4 +1,10 @@
-import { ParentProps, createSignal, mergeProps, onCleanup, onMount } from "solid-js";
+import {
+  ParentProps,
+  createSignal,
+  mergeProps,
+  onCleanup,
+  onMount,
+} from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
@@ -67,7 +73,7 @@ const NewImage = (props: NewImageProps) => {
     set_scale({
       scale,
       name: props.src,
-      after_first_click: after_first_click()
+      after_first_click: after_first_click(),
     });
   };
 
@@ -78,21 +84,20 @@ const NewImage = (props: NewImageProps) => {
   const debugBackground = () => {
     const s = scale().scale;
     const c = constrained();
-    if (c && s < 0.999) return "#8b0000";   // dark red
-    if (!c && s < 0.999) return "#12b886";  // green  (should be impossible)
-    if (c) return "#ffb3b3";                // light red  (constrained, scale == 1)
-    return "#a5d8ff";                        // light blue (unconstrained, scale == 1)
+    if (c && s < 0.999) return "#8b0000"; // dark red
+    if (!c && s < 0.999) return "#12b886"; // green  (should be impossible)
+    if (c) return "#ffb3b3"; // light red  (constrained, scale == 1)
+    return "#a5d8ff"; // light blue (unconstrained, scale == 1)
   };
 
   // -- Event Handlers
-  const handleClick =
-    (event: any) => {
-      event.stopPropagation();
-      if (window.innerWidth <= intrinsic_image_width) {
-        toggleConstrained();
-      }
-      set_after_first_click(true);
-    };
+  const handleClick = (event: any) => {
+    event.stopPropagation();
+    if (window.innerWidth <= intrinsic_image_width) {
+      toggleConstrained();
+    }
+    set_after_first_click(true);
+  };
 
   const handleTransitionEnd = () => {
     updateImageScale();
@@ -105,7 +110,8 @@ const NewImage = (props: NewImageProps) => {
 
   const handleImageLoad = () => {
     requestAnimationFrame(() => {
-      intrinsic_image_width = parseInt(merged.width) || image_element.naturalWidth;
+      intrinsic_image_width =
+        parseInt(merged.width) || image_element.naturalWidth;
       updateImageScale();
     });
   };
@@ -125,28 +131,21 @@ const NewImage = (props: NewImageProps) => {
     <ScaleProvider scale={scale}>
       <div id={merged.id} class="w-full flex items-center justify-center">
         <div
-          class={twJoin(
-            "flex items-center justify-center",
-            "w-full",
-          )}
-          style={`max-width:${merged.width};max-height:${merged.height};${merged.style}`}
-        >
+          class={twJoin("flex items-center justify-center", "w-full")}
+          style={`max-width:${merged.width};max-height:${merged.height};${merged.style}`}>
           <ImageOrSideImage
             ref={image_element}
             src={merged.src}
-
             onLoad={handleImageLoad}
             onClick={handleClick}
             onTransitionEnd={handleTransitionEnd}
-
             style={`background-color:${debugBackground()}`}
-
             class={twJoin(
               "transition-[height,width,max-width,padding]",
               "duration-500",
               "ease-[cubic-bezier(0.4, 0, 0.2, 1)]",
               transitionsEnabled() ? "" : "transition-none",
-              constrained() ? "img-screen max-[900px]:px-[16px]" : "img-full"
+              constrained() ? "img-screen max-[900px]:px-[16px]" : "img-full",
             )}
           />
           {merged.children}
@@ -154,7 +153,6 @@ const NewImage = (props: NewImageProps) => {
       </div>
     </ScaleProvider>
   );
-
 };
 
 export default NewImage;

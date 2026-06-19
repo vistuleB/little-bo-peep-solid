@@ -76,6 +76,18 @@ export default function __Home__() {
           </TOCItem>
         </ul>
       </div>
+      <Spacer />
+      <div id="appendix">
+        <TOCTitle label="Appendices" />
+        <ul>
+          <TOCItem
+            article_type="A"
+            href="appendixA"
+          >
+            Cutting Room Floor Exercises
+          </TOCItem>
+        </ul>
+      </div>
     </TOC>
   );
 };

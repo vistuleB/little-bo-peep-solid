@@ -201,6 +201,14 @@ span .MathJax_SVG {
   transition-duration: 500ms;
 }
 
+/* NewImage width modes (constrained = fit screen, capped by container max-width) */
+.img-screen {
+  width: 100vw;
+}
+.img-full {
+  width: 100%;
+}
+
 /* solution svg css */
 
 .pointing_finger_backhand {
