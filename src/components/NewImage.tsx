@@ -49,7 +49,16 @@ const NewImage = (props: NewImageProps) => {
   // Functions
   // -- Helpers
   const toggleConstrained = () => {
-    setConstrained((c) => !c);
+    setConstrained((beforeToggle) => {
+      if (beforeToggle === true) {
+        set_scale({
+          scale: 1.0,
+          name: props.src,
+          after_first_click: after_first_click(),
+        });
+      }
+      return !beforeToggle;
+    });
   };
 
   const disableTransitionsDuringWindowResizes = () => {
