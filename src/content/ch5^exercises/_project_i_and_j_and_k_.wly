@@ -1,0 +1,31 @@
+|> Exercise
+    work=ing
+    handle=_project_i_and_j_and_k_
+
+    A unit vector 
+
+    $$
+    (x_2, y_2, z_2) \in \rr^3
+    $$
+
+    [meaning: $x_2^2 + y_2^2 + z_2^2 = 1$] is projected onto a ruler
+    whose ‘$0$’ is at $(0, 0, 0)$ and whose ‘$1$’ is at
+    $(x_1, y_1, z_1)$, which is another point on the unit sphere:
+
+    |> Image
+        src=tmp-images/e5_ruler_sphere_1_v2.svg
+
+    (By “is projected onto the ruler” we mean that we drop a
+    plumb straight from the tip of the vector onto the ruler, meeting
+    the edge of the ruler at $90°$.)
+    Find the value of the projection—the place we land on the
+    ruler—as a
+    !! marked by the purple square above—a.k.a., “the projection of the vector onto the ruler”—as a
+    function of $x_1$, $y_1$, $z_1$, $x_2$, $y_2$ and $z_2$.
+    !! (I.e., find the ruler-readings
+    !! marked ‘1’ and ‘2’ above
+    !! as a function of the angle $\theta$.)
+
+    |> Solution
+
+        Hello.

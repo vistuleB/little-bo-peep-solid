@@ -25,7 +25,7 @@ export default function __Chapter5__() {
       nextPage="/article/chapter6"
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_150_h.a.i_"
+      id="_151_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -4294,7 +4294,7 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_149_h.a.i_"
+        id="_150_h.a.i_"
       >
         <Exercise number={1}>
           <ExerciseStatement id="_91_h.a.i_">
@@ -16545,6 +16545,127 @@ const Rest = () => {
                 Exercise 50.
               </b>
               {" "}
+              A unit vector
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x_2, y_2, z_2) \in \rr^3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              [meaning: {" "}
+              <NoBreak>
+                <Math>
+                  $x_2^2 + y_2^2 + z_2^2 = 1$
+                </Math>
+                ]
+              </NoBreak>
+              {" "} is projected onto a ruler
+              whose {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $0$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} is at {" "}
+              <Math>
+                $(0, 0, 0)$
+              </Math>
+              {" "} and whose {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} is at
+              {" "}
+              <NoBreak>
+                <Math>
+                  $(x_1, y_1, z_1)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which is another point on the unit sphere:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ruler_sphere_1_v2.svg" />
+            <Pause />
+            <OuterP>
+              (By “is projected onto the ruler” we mean that we drop a
+              plumb straight from the tip of the vector onto the ruler, meeting
+              the edge of the ruler at {" "}
+              <NoBreak>
+                <Math>
+                  $90°$
+                </Math>
+                .)
+              </NoBreak>
+              {" "}
+              Find the value of the projection—the place we land on the
+              ruler—as a
+              function of {" "}
+              <NoBreak>
+                <Math>
+                  $x_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $x_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $y_2$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $z_2$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Hello.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={51}
+        >
+          <ExerciseStatement id="_141_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 51.
+              </b>
+              {" "}
               Show that
             </OuterP>
             <Pause />
@@ -16784,11 +16905,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={51}>
-          <ExerciseStatement id="_141_h.a.i_">
+        <Exercise number={52}>
+          <ExerciseStatement id="_142_h.a.i_">
             <OuterP>
               <b>
-                Exercise 51.
+                Exercise 52.
               </b>
               {" "}
               Which function is most plausibly associated to
@@ -17019,11 +17140,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={52}>
-          <ExerciseStatement id="_142_h.a.i_">
+        <Exercise number={53}>
+          <ExerciseStatement id="_143_h.a.i_">
             <OuterP>
               <b>
-                Exercise 52.
+                Exercise 53.
               </b>
               {" "}
               Where or how, if at all, is the
@@ -17036,10 +17157,10 @@ const Rest = () => {
             <OuterP>
               apparent in the four graphs of {" "}
               <InChapterLink
-                href="/article/chapter5#_141_h.a.i_"
+                href="/article/chapter5#_142_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 51
+                Exercise 52
               </InChapterLink>
               &#8288;?
             </OuterP>
@@ -17123,19 +17244,19 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={53}>
-          <ExerciseStatement id="_143_h.a.i_">
+        <Exercise number={54}>
+          <ExerciseStatement id="_144_h.a.i_">
             <OuterP>
               <b>
-                Exercise 53.
+                Exercise 54.
               </b>
               {" "}
               Based on the graphs of {" "}
               <InChapterLink
-                href="/article/chapter5#_141_h.a.i_"
+                href="/article/chapter5#_142_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 51
+                Exercise 52
               </InChapterLink>
               &#8288;,
               or some other logic,
@@ -17382,11 +17503,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={54}>
-          <ExerciseStatement id="_144_h.a.i_">
+        <Exercise number={55}>
+          <ExerciseStatement id="_145_h.a.i_">
             <OuterP>
               <b>
-                Exercise 54.
+                Exercise 55.
               </b>
               {" "}
               For each of {" "}
@@ -17822,11 +17943,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={55}>
-          <ExerciseStatement id="_145_h.a.i_">
+        <Exercise number={56}>
+          <ExerciseStatement id="_146_h.a.i_">
             <OuterP>
               <b>
-                Exercise 55.
+                Exercise 56.
               </b>
               {" "}
               The graph {" "}
@@ -17835,10 +17956,10 @@ const Rest = () => {
               </Math>
               {" "} from {" "}
               <InChapterLink
-                href="/article/chapter5#_141_h.a.i_"
+                href="/article/chapter5#_142_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 51
+                Exercise 52
               </InChapterLink>
               {" "} has a maximum value greater than {" "}
               <NoBreak>
@@ -18098,11 +18219,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={56}>
-          <ExerciseStatement id="_146_h.a.i_">
+        <Exercise number={57}>
+          <ExerciseStatement id="_147_h.a.i_">
             <OuterP>
               <b>
-                Exercise 56.
+                Exercise 57.
               </b>
               {" "}
               A geometric interpretation of
@@ -18112,10 +18233,10 @@ const Rest = () => {
               </Math>
               {" "} is given in {" "}
               <InChapterLink
-                href="/article/chapter5#_145_h.a.i_"
+                href="/article/chapter5#_146_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 55
+                Exercise 56
               </InChapterLink>
               {" "}
               that, to recap, involves “raining down at {" "}
@@ -18230,10 +18351,10 @@ const Rest = () => {
               </NoBreak>
               {" "} as covered in {" "}
               <InChapterLink
-                href="/article/chapter5#_145_h.a.i_"
+                href="/article/chapter5#_146_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 55
+                Exercise 56
               </InChapterLink>
               &#8288;.)
               Alternately, we could read values off of a ruler placed
@@ -18531,10 +18652,10 @@ const Rest = () => {
                 {" "}
                 (cf. {" "}
                 <InChapterLink
-                  href="/article/chapter5#_145_h.a.i_"
+                  href="/article/chapter5#_146_h.a.i_"
                   class="in-chapter-link"
                 >
-                  Exercise 55
+                  Exercise 56
                 </InChapterLink>
                 &#8288;)...
               </OuterP>
@@ -18589,11 +18710,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={57}>
-          <ExerciseStatement id="_147_h.a.i_">
+        <Exercise number={58}>
+          <ExerciseStatement id="_148_h.a.i_">
             <OuterP>
               <b>
-                Exercise 57.
+                Exercise 58.
               </b>
               {" "}
               Show that for all {" "}
@@ -18645,10 +18766,10 @@ const Rest = () => {
             <OuterP>
               by the “angle-difference formula” (cf. {" "}
               <InChapterLink
-                href="/article/chapter5#_140_h.a.i_"
+                href="/article/chapter5#_141_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 50
+                Exercise 51
               </InChapterLink>
               &#8288;) so
             </OuterP>
@@ -18740,26 +18861,26 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={58}>
-          <ExerciseStatement id="_148_h.a.i_">
+        <Exercise number={59}>
+          <ExerciseStatement id="_149_h.a.i_">
             <OuterP>
               <b>
-                Exercise 58.
+                Exercise 59.
               </b>
               {" "}
               Relate {" "}
-              <InChapterLink
-                href="/article/chapter5#_146_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 56
-              </InChapterLink>
-              {" "} to {" "}
               <InChapterLink
                 href="/article/chapter5#_147_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 57
+              </InChapterLink>
+              {" "} to {" "}
+              <InChapterLink
+                href="/article/chapter5#_148_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 58
               </InChapterLink>
               &#8288;.
             </OuterP>
@@ -18768,10 +18889,10 @@ const Rest = () => {
             <OuterP>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter5#_146_h.a.i_"
+                href="/article/chapter5#_147_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 56
+                Exercise 57
               </InChapterLink>
               {" "}
               establishes that
@@ -18797,10 +18918,10 @@ const Rest = () => {
               of
               {" "}
               <InChapterLink
-                href="/article/chapter5#_147_h.a.i_"
+                href="/article/chapter5#_148_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 57
+                Exercise 58
               </InChapterLink>
               {" "} since
             </OuterP>
