@@ -22,20 +22,6 @@
   src: url("/fonts/Baskerville-Italic.ttf");
 }
 
-::-webkit-scrollbar {
-  display: none;
-}
-
-/* Firefox */
-html {
-  scrollbar-width: none;
-}
-
-/* IE/Edge legacy */
-body {
-  -ms-overflow-style: none;
-}
-
 :root {
   zoom: 100%;
   /* --background-rgb: rgb(255, 249, 249); */
@@ -213,14 +199,6 @@ span .MathJax_SVG {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-}
-
-/* NewImage width modes (constrained = fit screen, capped by container max-width) */
-.img-screen {
-  width: 100vw;
-}
-.img-full {
-  width: 100%;
 }
 
 /* solution svg css */
