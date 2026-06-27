@@ -154,7 +154,7 @@ const NewImage = (props: NewImageProps) => {
               "duration-500",
               "ease-[cubic-bezier(0.4, 0, 0.2, 1)]",
               transitionsEnabled() ? "" : "transition-none",
-              constrained() ? "img-screen max-[900px]:px-[16px]" : "img-full",
+              constrained() ? "img-screen px-[16px]" : "img-full",
             )}
           />
           {merged.children}

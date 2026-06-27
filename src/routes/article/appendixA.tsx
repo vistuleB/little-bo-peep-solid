@@ -26,7 +26,7 @@ export default function __AppendixA__() {
       nextPage=""
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_215_h.a.i_"
+      id="_214_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -50,7 +50,7 @@ export default function __AppendixA__() {
           mode="switcher-only"
         >
           <Exercise number={1}>
-            <ExerciseStatement id="_165_h.a.i_">
+            <ExerciseStatement id="_164_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -149,7 +149,7 @@ export default function __AppendixA__() {
           mode="switcher-only"
         >
           <Exercise number={1}>
-            <ExerciseStatement id="_166_h.a.i_">
+            <ExerciseStatement id="_165_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -309,7 +309,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement id="_167_h.a.i_">
+            <ExerciseStatement id="_166_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 2.
@@ -331,7 +331,7 @@ export default function __AppendixA__() {
                 {" "} analogously to
                 {" "}
                 <InChapterLink
-                  href="/article/appendixA#_166_h.a.i_"
+                  href="/article/appendixA#_165_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 1
@@ -602,7 +602,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={3}>
-            <ExerciseStatement id="_168_h.a.i_">
+            <ExerciseStatement id="_167_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 3.
@@ -1205,7 +1205,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={4}>
-            <ExerciseStatement id="_169_h.a.i_">
+            <ExerciseStatement id="_168_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 4.
@@ -1292,7 +1292,7 @@ export default function __AppendixA__() {
               <OuterP>
                 The velocity vector (cf. {" "}
                 <a
-                  href="/article/chapter4#_74_h.a.i_"
+                  href="/article/chapter4#_73_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 12
@@ -1322,7 +1322,7 @@ export default function __AppendixA__() {
                 and the speed, being the length of the velocity
                 vector (cf. {" "}
                 <a
-                  href="/article/chapter4#_74_h.a.i_"
+                  href="/article/chapter4#_73_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 12
@@ -1595,7 +1595,7 @@ export default function __AppendixA__() {
                 </NoBreak>
                 {" "} {" "}
                 <a
-                  href="/article/chapter4#_89_h.a.i_"
+                  href="/article/chapter4#_88_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 25
@@ -1896,7 +1896,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={5}>
-            <ExerciseStatement id="_170_h.a.i_">
+            <ExerciseStatement id="_169_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 5.
@@ -2144,7 +2144,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={6}>
-            <ExerciseStatement id="_172_h.a.i_">
+            <ExerciseStatement id="_171_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 6.
@@ -2318,7 +2318,7 @@ export default function __AppendixA__() {
                 <Image src="/build-img/svgo-svg/96sV.svg" />
               </SolutionNote>
               <Pause />
-              <SolutionNote id="_171_h.a.i_">
+              <SolutionNote id="_170_h.a.i_">
                 <OuterP>
                   <i>
                     Note 3.
@@ -2396,7 +2396,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={7}>
-            <ExerciseStatement id="_173_h.a.i_">
+            <ExerciseStatement id="_172_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 7.
@@ -2469,7 +2469,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={8}>
-            <ExerciseStatement id="_174_h.a.i_">
+            <ExerciseStatement id="_173_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 8.
@@ -2681,7 +2681,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={9}>
-            <ExerciseStatement id="_175_h.a.i_">
+            <ExerciseStatement id="_174_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 9.
@@ -2800,7 +2800,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={10}>
-            <ExerciseStatement id="_176_h.a.i_">
+            <ExerciseStatement id="_175_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 10.
@@ -2886,7 +2886,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={11}>
-            <ExerciseStatement id="_178_h.a.i_">
+            <ExerciseStatement id="_177_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 11.
@@ -3011,7 +3011,7 @@ export default function __AppendixA__() {
               <Pause />
               <StarDivider />
               <Pause />
-              <SolutionNote id="_177_h.a.i_">
+              <SolutionNote id="_176_h.a.i_">
                 <OuterP>
                   <i>
                     Note 1.
@@ -3039,7 +3039,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={12}>
-            <ExerciseStatement id="_180_h.a.i_">
+            <ExerciseStatement id="_179_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 12.
@@ -3365,7 +3365,7 @@ export default function __AppendixA__() {
               <Pause />
               <StarDivider />
               <Pause />
-              <SolutionNote id="_179_h.a.i_">
+              <SolutionNote id="_178_h.a.i_">
                 <OuterP>
                   <i>
                     Note 1.
@@ -3535,7 +3535,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={13}>
-            <ExerciseStatement id="_181_h.a.i_">
+            <ExerciseStatement id="_180_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 13.
@@ -3643,7 +3643,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={14}>
-            <ExerciseStatement id="_182_h.a.i_">
+            <ExerciseStatement id="_181_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 14.
@@ -3725,7 +3725,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={15}>
-            <ExerciseStatement id="_183_h.a.i_">
+            <ExerciseStatement id="_182_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 15.
@@ -3763,7 +3763,7 @@ export default function __AppendixA__() {
               <OuterP>
                 Recall the curves from {" "}
                 <a
-                  href="/article/chapter4#_74_h.a.i_"
+                  href="/article/chapter4#_73_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 12
@@ -3849,7 +3849,7 @@ export default function __AppendixA__() {
                 {" "} as discussed
                 in Exercise 14 of {" "}
                 <a
-                  href="/article/chapter3#_61_h.a.i_"
+                  href="/article/chapter3#_60_h.a.i_"
                   class="out-chapter-link"
                 >
                   Chapter 3
@@ -3860,7 +3860,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={16}>
-            <ExerciseStatement id="_184_h.a.i_">
+            <ExerciseStatement id="_183_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 16.
@@ -3890,7 +3890,7 @@ export default function __AppendixA__() {
                 x”] vertical dilation of the graph in 
                 {" "}
                 <a
-                  href="/article/chapter4#_74_h.a.i_"
+                  href="/article/chapter4#_73_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 12
@@ -3934,7 +3934,7 @@ export default function __AppendixA__() {
                 amount of time as the particles of
                 {" "}
                 <a
-                  href="/article/chapter4#_74_h.a.i_"
+                  href="/article/chapter4#_73_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 12
@@ -3945,7 +3945,7 @@ export default function __AppendixA__() {
                 (I.e.: speed 2, since the particles of
                 {" "}
                 <a
-                  href="/article/chapter4#_74_h.a.i_"
+                  href="/article/chapter4#_73_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 12
@@ -3978,7 +3978,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={17}>
-            <ExerciseStatement id="_185_h.a.i_">
+            <ExerciseStatement id="_184_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 17.
@@ -4124,7 +4124,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={18}>
-            <ExerciseStatement id="_187_h.a.i_">
+            <ExerciseStatement id="_186_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 18.
@@ -4209,7 +4209,7 @@ export default function __AppendixA__() {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <SolutionNote id="_186_h.a.i_">
+              <SolutionNote id="_185_h.a.i_">
                 <OuterP>
                   <i>
                     Note 1.
@@ -4255,7 +4255,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={19}>
-            <ExerciseStatement id="_188_h.a.i_">
+            <ExerciseStatement id="_187_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 19.
@@ -4388,7 +4388,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={20}>
-            <ExerciseStatement id="_189_h.a.i_">
+            <ExerciseStatement id="_188_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 20.
@@ -5018,7 +5018,7 @@ export default function __AppendixA__() {
           mode="switcher-only"
         >
           <Exercise number={1}>
-            <ExerciseStatement id="_190_h.a.i_">
+            <ExerciseStatement id="_189_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -5137,7 +5137,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement id="_192_h.a.i_">
+            <ExerciseStatement id="_191_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 2.
@@ -5146,7 +5146,7 @@ export default function __AppendixA__() {
                 What might
                 {" "}
                 <InChapterLink
-                  href="/article/appendixA#_190_h.a.i_"
+                  href="/article/appendixA#_189_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 1
@@ -5241,7 +5241,7 @@ export default function __AppendixA__() {
                 </MathBlock>
               </SolutionNote>
               <Pause />
-              <SolutionNote id="_191_h.a.i_">
+              <SolutionNote id="_190_h.a.i_">
                 <OuterP>
                   <i>
                     Note 2.
@@ -5289,7 +5289,7 @@ export default function __AppendixA__() {
                   {" "}
                   since, as observed in Note 1 of {" "}
                   <InChapterLink
-                    href="/article/appendixA#_190_h.a.i_"
+                    href="/article/appendixA#_189_h.a.i_"
                     class="in-chapter-link"
                   >
                     Exercise 1
@@ -5360,7 +5360,7 @@ export default function __AppendixA__() {
                   angle-sum formula for sin also gives us
                   the final conclusion of {" "}
                   <InChapterLink
-                    href="/article/appendixA#_191_h.a.i_"
+                    href="/article/appendixA#_190_h.a.i_"
                     class="in-chapter-link"
                   >
                     Note 2
@@ -5403,7 +5403,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={3}>
-            <ExerciseStatement id="_193_h.a.i_">
+            <ExerciseStatement id="_192_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 3.
@@ -5468,7 +5468,7 @@ export default function __AppendixA__() {
                 the next-to-last inequality) to be true by
                 {" "}
                 <InChapterLink
-                  href="/article/appendixA#_192_h.a.i_"
+                  href="/article/appendixA#_191_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 2
@@ -5513,7 +5513,7 @@ export default function __AppendixA__() {
               <OuterP>
                 which, as covered in {" "}
                 <InChapterLink
-                  href="/article/appendixA#_191_h.a.i_"
+                  href="/article/appendixA#_190_h.a.i_"
                   class="in-chapter-link"
                 >
                   Note 2 of Exercise 2
@@ -5538,7 +5538,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={4}>
-            <ExerciseStatement id="_194_h.a.i_">
+            <ExerciseStatement id="_193_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 4.
@@ -5926,7 +5926,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={5}>
-            <ExerciseStatement id="_195_h.a.i_">
+            <ExerciseStatement id="_194_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 5.
@@ -6002,7 +6002,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={6}>
-            <ExerciseStatement id="_196_h.a.i_">
+            <ExerciseStatement id="_195_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 6.
@@ -6085,7 +6085,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={7}>
-            <ExerciseStatement id="_197_h.a.i_">
+            <ExerciseStatement id="_196_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 7.
@@ -6114,7 +6114,7 @@ export default function __AppendixA__() {
               <OuterP>
                 and prove your answer. (Comparison: {" "}
                 <a
-                  href="/article/chapter5#_150_h.a.i_"
+                  href="/article/chapter5#_149_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 55
@@ -6175,7 +6175,7 @@ export default function __AppendixA__() {
                 </NoBreak>
                 {" "} as uncovered in {" "}
                 <a
-                  href="/article/chapter5#_150_h.a.i_"
+                  href="/article/chapter5#_149_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 55
@@ -6257,7 +6257,7 @@ export default function __AppendixA__() {
                 Now you might recall from previous discussions
                 (cf. {" "}
                 <a
-                  href="/article/chapter3#_53_h.a.i_"
+                  href="/article/chapter3#_52_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 14 of Chapter 3
@@ -6265,7 +6265,7 @@ export default function __AppendixA__() {
                 &#8288;,
                 part 1 of {" "}
                 <a
-                  href="/article/chapter5#_128_h.a.i_"
+                  href="/article/chapter5#_127_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 33
@@ -6404,7 +6404,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={8}>
-            <ExerciseStatement id="_198_h.a.i_">
+            <ExerciseStatement id="_197_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 8.
@@ -6834,7 +6834,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={9}>
-            <ExerciseStatement id="_199_h.a.i_">
+            <ExerciseStatement id="_198_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 9.
@@ -6978,7 +6978,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={10}>
-            <ExerciseStatement id="_200_h.a.i_">
+            <ExerciseStatement id="_199_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 10.
@@ -7528,7 +7528,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={11}>
-            <ExerciseStatement id="_201_h.a.i_">
+            <ExerciseStatement id="_200_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 11.
@@ -7748,7 +7748,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={12}>
-            <ExerciseStatement id="_202_h.a.i_">
+            <ExerciseStatement id="_201_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 12.
@@ -7875,7 +7875,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={13}>
-            <ExerciseStatement id="_203_h.a.i_">
+            <ExerciseStatement id="_202_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 13.
@@ -7949,7 +7949,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={14}>
-            <ExerciseStatement id="_204_h.a.i_">
+            <ExerciseStatement id="_203_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 14.
@@ -8043,7 +8043,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={15}>
-            <ExerciseStatement id="_205_h.a.i_">
+            <ExerciseStatement id="_204_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 15.
@@ -8343,7 +8343,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={16}>
-            <ExerciseStatement id="_206_h.a.i_">
+            <ExerciseStatement id="_205_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 16.
@@ -8562,7 +8562,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={17}>
-            <ExerciseStatement id="_207_h.a.i_">
+            <ExerciseStatement id="_206_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 17.
@@ -8746,7 +8746,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={18}>
-            <ExerciseStatement id="_208_h.a.i_">
+            <ExerciseStatement id="_207_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 18.
@@ -8845,7 +8845,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={19}>
-            <ExerciseStatement id="_209_h.a.i_">
+            <ExerciseStatement id="_208_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 19.
@@ -9117,7 +9117,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={20}>
-            <ExerciseStatement id="_210_h.a.i_">
+            <ExerciseStatement id="_209_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 20.
@@ -9154,7 +9154,7 @@ export default function __AppendixA__() {
               <OuterP class="indent-10">
                 As discussed in {" "}
                 <a
-                  href="/article/chapter4#_74_h.a.i_"
+                  href="/article/chapter4#_73_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 12
@@ -9509,7 +9509,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={21}>
-            <ExerciseStatement id="_211_h.a.i_">
+            <ExerciseStatement id="_210_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 21.
@@ -9629,7 +9629,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={22}>
-            <ExerciseStatement id="_212_h.a.i_">
+            <ExerciseStatement id="_211_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 22.
@@ -9641,7 +9641,7 @@ export default function __AppendixA__() {
                 </Math>
                 {" "} from {" "}
                 <a
-                  href="/article/chapter5#_146_h.a.i_"
+                  href="/article/chapter5#_145_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 51
@@ -10053,7 +10053,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={23}>
-            <ExerciseStatement id="_213_h.a.i_">
+            <ExerciseStatement id="_212_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 23.
@@ -10065,7 +10065,7 @@ export default function __AppendixA__() {
                 </Math>
                 {" "} from {" "}
                 <a
-                  href="/article/chapter5#_146_h.a.i_"
+                  href="/article/chapter5#_145_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 51
@@ -10513,7 +10513,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={24}>
-            <ExerciseStatement id="_214_h.a.i_">
+            <ExerciseStatement id="_213_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 24.

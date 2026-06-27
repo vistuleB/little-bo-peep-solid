@@ -22,6 +22,20 @@
   src: url("/fonts/Baskerville-Italic.ttf");
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* IE/Edge legacy */
+body {
+  -ms-overflow-style: none;
+}
+
 :root {
   zoom: 100%;
   /* --background-rgb: rgb(255, 249, 249); */

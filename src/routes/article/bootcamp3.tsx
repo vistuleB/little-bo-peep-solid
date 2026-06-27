@@ -19,7 +19,7 @@ export default function __Bootcamp3__() {
       nextPage="/article/bootcamp2"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
-      id="_25_h.a.i_"
+      id="_24_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -32,12 +32,7 @@ export default function __Bootcamp3__() {
         Components Playground
       </ArticleTitle>
       <Pause />
-      <Exercises
-        at_end_of_page={true}
-        mode="dual"
-        show_curlicue={true}
-        id="_24_h.a.i_"
-      >
+      <Exercises id="_23_h.a.i_">
         <Exercise number={1}>
           <ExerciseStatement id="_21_h.a.i_">
             <OuterP>
@@ -503,7 +498,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 3 cols, 2 on mobile, mobile-cutoff=520, center-on-overflow=true (from {" "}
               <a
-                href="/article/chapter1#_27_h.a.i_"
+                href="/article/chapter1#_26_h.a.i_"
                 class="out-chapter-link"
               >
                 1
@@ -581,7 +576,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 3 cols, place-items=end (from {" "}
               <a
-                href="/article/chapter1#_27_h.a.i_"
+                href="/article/chapter1#_26_h.a.i_"
                 class="out-chapter-link"
               >
                 1
@@ -678,7 +673,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 2 cols, 1 on mobile, place-items=start, with-padding=false, column-first=true (from {" "}
               <a
-                href="/article/chapter3#_41_h.a.i_"
+                href="/article/chapter3#_40_h.a.i_"
                 class="out-chapter-link"
               >
                 3
@@ -727,7 +722,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} same as Case 16, 4 items only (from {" "}
               <a
-                href="/article/chapter3#_41_h.a.i_"
+                href="/article/chapter3#_40_h.a.i_"
                 class="out-chapter-link"
               >
                 3
@@ -776,7 +771,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 2 cols, 1 on mobile, center-on-overflow=true, place-items=start, with-padding=false, column-first=true (from {" "}
               <a
-                href="/article/appendixA#_165_h.a.i_"
+                href="/article/appendixA#_164_h.a.i_"
                 class="out-chapter-link"
               >
                 1
@@ -826,124 +821,110 @@ export default function __Bootcamp3__() {
                 Exercise 2.
               </b>
               <ExerciseStatement>
-                What is the Image component ?
-              </ExerciseStatement>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              <i>
-                <b>
-                  Image
-                </b>
-              </i>
-              {" "} renders an image centered in the main text column. On load it should be {" "}
-              <i>
-                constrained
-              </i>
-              {" "} (fits the screen width, padded), and its {" "}
-              <i>
-                scale
-              </i>
-              {" "} (current width ÷ original width) must be known {" "}
-              <i>
-                immediately on load
-              </i>
-              .
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                <b>
-                  Debug colors
-                </b>
-              </i>
-              {" "} (background shows through the alpha test images):
-            </OuterP>
-            <Pause />
-            <List>
-              <Item>
-                <Item>
-                  dark red = constrained &amp;&amp; scale &lt; 1
-                </Item>
-                <Item>
-                  light red = constrained &amp;&amp; scale == 1
-                </Item>
-                <Item>
-                  light blue = not constrained &amp;&amp; scale == 1
-                </Item>
-                <Item>
-                  green = not constrained &amp;&amp; scale &lt; 1 (should be impossible)
-                </Item>
-              </Item>
-            </List>
-            <Pause />
-            <OuterP>
-              <i>
-                <b>
-                  Case 1:
-                </b>
-              </i>
-              {" "} set width=1000px, native 350px
-            </OuterP>
-            <NewImage
-              src="/images/test_native_350.svg"
-              width="1000px"
-            />
-            <Pause />
-            <OuterP>
-              <i>
-                <b>
-                  Case 2:
-                </b>
-              </i>
-              {" "} set width=1000px, native 1000px
-            </OuterP>
-            <NewImage
-              src="/images/test_native_1000.svg"
-              width="1000px"
-            />
-            <Pause />
-            <OuterP>
-              <i>
-                <b>
-                  Case 3:
-                </b>
-              </i>
-              {" "} set width=350px, native 1000px
-            </OuterP>
-            <NewImage
-              src="/images/test_native_1000.svg"
-              width="350px"
-            />
-            <Pause />
-            <OuterP>
-              <i>
-                <b>
-                  Case 4:
-                </b>
-              </i>
-              {" "} set width=350px, native 350px
-            </OuterP>
-            <NewImage
-              src="/images/test_native_350.svg"
-              width="350px"
-            />
-          </Solution>
-        </Exercise>
-        <Exercise number={3}>
-          <ExerciseStatement id="_23_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 3.
-              </b>
-              <ExerciseStatement>
                 What is the Table component ?
               </ExerciseStatement>
             </OuterP>
           </ExerciseStatement>
         </Exercise>
       </Exercises>
+      <OuterP>
+        <i>
+          <b>
+            Image
+          </b>
+        </i>
+        {" "} renders an image centered in the main text column. On load it should be {" "}
+        <i>
+          constrained
+        </i>
+        {" "} (fits the screen width, padded), and its {" "}
+        <i>
+          scale
+        </i>
+        {" "} (current width ÷ original width) must be known {" "}
+        <i>
+          immediately on load
+        </i>
+        .
+      </OuterP>
+      <Pause />
+      <OuterP>
+        <i>
+          <b>
+            Debug colors
+          </b>
+        </i>
+        {" "} (background shows through the alpha test images):
+      </OuterP>
+      <Pause />
+      <List>
+        <Item>
+          <Item>
+            dark red = constrained &amp;&amp; scale &lt; 1
+          </Item>
+          <Item>
+            light red = constrained &amp;&amp; scale == 1
+          </Item>
+          <Item>
+            light blue = not constrained &amp;&amp; scale == 1
+          </Item>
+          <Item>
+            green = not constrained &amp;&amp; scale &lt; 1 (should be impossible)
+          </Item>
+        </Item>
+      </List>
+      <Pause />
+      <OuterP>
+        <i>
+          <b>
+            Case 1:
+          </b>
+        </i>
+        {" "} set width=1000px, native 350px
+      </OuterP>
+      <NewImage
+        src="/images/test_native_350.svg"
+        width="1000px"
+      />
+      <Pause />
+      <OuterP>
+        <i>
+          <b>
+            Case 2:
+          </b>
+        </i>
+        {" "} set width=1000px, native 1000px
+      </OuterP>
+      <NewImage
+        src="/images/test_native_1000.svg"
+        width="1000px"
+      />
+      <Pause />
+      <OuterP>
+        <i>
+          <b>
+            Case 3:
+          </b>
+        </i>
+        {" "} set width=350px, native 1000px
+      </OuterP>
+      <NewImage
+        src="/images/test_native_1000.svg"
+        width="350px"
+      />
+      <Pause />
+      <OuterP>
+        <i>
+          <b>
+            Case 4:
+          </b>
+        </i>
+        {" "} set width=350px, native 350px
+      </OuterP>
+      <NewImage
+        src="/images/test_native_350.svg"
+        width="350px"
+      />
       <Rest />
     </Article>
   );
