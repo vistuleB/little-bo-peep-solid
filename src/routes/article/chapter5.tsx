@@ -1099,7 +1099,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} in some
-          cases—but in case something goes wrong, here
+          —casesbut in case something goes wrong, here
           is a cheat sheet that does some of the thinking
           for you
           (or help you compare your way of seeing
@@ -4134,12 +4134,12 @@ const Rest = () => {
           />
           <Pause />
           <OuterP>
-            [Example {" "}
+            [&#8288;
             <InChapterLink
               href="/article/chapter5#_90_h.a.i_"
               class="in-chapter-link"
             >
-              6
+              Example 6
             </InChapterLink>
             {" "} continued.] In particular, this means that 
             in any cylindrical
@@ -16048,8 +16048,8 @@ const Rest = () => {
               <Math>
                 $\theta$
               </Math>
-              {" "} at lower left—if we label it
-              such—is also repeated middle top right (this is
+              {" "} at lower —leftif we label it
+              —suchis also repeated middle top right (this is
               the content of {" "}
               <InChapterLink
                 href="/article/chapter5#_110_h.a.i_"
@@ -16402,7 +16402,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/9QAk.svg" />
             <Pause />
             <OuterP>
-              Now comparing this set of definitions to
+              Now comparing these definitions to
               this figure...
             </OuterP>
             <Pause />
@@ -16519,9 +16519,9 @@ const Rest = () => {
               />
               <Pause />
               <OuterP>
-                However, by the result of this exercise, sin and cos can
-                also be understood as the projection of two fixed points onto a
-                single rotating ruler:
+                By the result of this exercise, sin and cos can also be
+                conceptualized in a dual fashion, via fixed points projected
+                onto a rotating ruler:
               </OuterP>
               <Pause />
               <Image
@@ -16530,7 +16530,18 @@ const Rest = () => {
               />
               <Pause />
               <OuterP>
-                (This is like a “dual” definition.)
+                (E.g.,
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the positive part of the ruler goes
+                to meet the point
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                if you think about how the sine function starts out, instead
+                the point being the one to travel towards the positive part
+                of the ruler [onto which it is projected].)
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -16550,7 +16561,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              (x_2, y_2, z_2) \in \rr^3
+              (x_1, y_1, z_1) \in \rr^3
               $$
             </MathBlock>
             <Pause />
@@ -16558,7 +16569,7 @@ const Rest = () => {
               [meaning: {" "}
               <NoBreak>
                 <Math>
-                  $x_2^2 + y_2^2 + z_2^2 = 1$
+                  $x_1^2 + y_1^2 + z_1^2 = 1$
                 </Math>
                 ]
               </NoBreak>
@@ -16587,28 +16598,25 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <Math>
-                  $(x_1, y_1, z_1)$
+                  $(x_2, y_2, z_2)$
                 </Math>
                 ,
               </NoBreak>
-              {" "} which is another point on the unit sphere:
+              {" "} another point on the unit sphere:
             </OuterP>
             <Pause />
             <Image src="/tmp-images/e5_ruler_sphere_1_v2.svg" />
             <Pause />
             <OuterP>
-              (By “is projected onto the ruler” we mean that we drop a
-              plumb straight from the tip of the vector onto the ruler, meeting
-              the edge of the ruler at {" "}
+              Find the value of the projection—the place we land on the
+              ruler, at {" "}
               <NoBreak>
                 <Math>
-                  $90°$
+                  $90^\circ$
                 </Math>
-                .)
+                —as
               </NoBreak>
-              {" "}
-              Find the value of the projection—the place we land on the
-              ruler—as a
+              {" "} a
               function of {" "}
               <NoBreak>
                 <Math>
@@ -16638,10 +16646,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <Math>
-                $y_2$
-              </Math>
-              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
               <NoBreak>
                 <Math>
                   $z_2$
@@ -16652,7 +16663,301 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Hello.
+              Putting
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \vi = (1,\, 0,\, 0),         \\
+              \vj = (0,\, 1,\, 0),\up&#123;1.2&#125; \\
+              \vk = (0,\, 0,\, 1)\,\up&#123;1.2&#125;
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              x_1\cdot\vi = (x_1, \,0,   \,0),         \\
+              y_1\cdot\vj = (0,   \,y_1, \,0)\up&#123;1.2&#125;, \\
+              z_1\cdot\vk = (0,   \,0,   \,z_1)\up&#123;1.2&#125;\, 
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              giving
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x_1, y_1, z_1) = x_1\!\cdot\vi + y_1\!\cdot\vj + z_1\!\cdot\vk
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because vectors are added component-wise. 
+              This sum can be illustrated:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ruler_sphere_decomp.svg" />
+            <Pause />
+            <OuterP>
+              As discussed in Note 1 of Exercise 11 we can
+              translate vectors to anywhere in space while
+              preserving their 
+              projection onto the ruler. 
+              In particular, keeping the same positioning in space of the
+              vectors as above shows that the projection of
+              {" "}
+              <Math>
+                $(x_1, y_1, z_1)$
+              </Math>
+              {" "} is the sum of the three separate projections 
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $x_1\vi$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_1\rt&#123;0.1&#125;\vj$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}  {" "}
+              <NoBreak>
+                <Math>
+                  $z_1\vk$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ruler_sphere_decomp3.svg" />
+            <Pause />
+            <OuterP>
+              However, the projection of {" "}
+              <Math>
+                $z_1\vk$
+              </Math>
+              {" "} is just 
+              {" "}
+              <Math>
+                $z_1$
+              </Math>
+              {" "} times the projection of {" "}
+              <NoBreak>
+                <Math>
+                  $\vk$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as illustrated
+              below, so it suffices to find the projection of {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "}
+              to find the projection of {" "}
+              <NoBreak>
+                <Math>
+                  $z_1\vk$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ruler_sphere_z_scale.svg" />
+            <Pause />
+            <OuterP>
+              The projection of {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "} 
+              is the same as the projection of {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "} onto
+              a ruler with ‘0’ at the origin and ‘1’ at {" "}
+              <NoBreak>
+                <Math>
+                  $\vk$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              because when one unit vector is projected onto another
+              the situation is symmetric, and we can always switch 
+              the role
+              of which vector carries the ruler, and which is being
+              projected onto that ruler (cf. Solution 3 of Exercise 0):
+            </OuterP>
+            <Pause />
+            <OuterP>
+              But the 
+              projection 
+              of {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "} onto {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "}
+              equals simply
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the fact that 
+              we are projecting onto the {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} axis,
+              so the projection of {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "} onto {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "}
+              is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as well,
+              and the projection of {" "}
+              <Math>
+                $z_1\vk$
+              </Math>
+              {" "} onto {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "} is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z_1z_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by scaling.
+            </OuterP>
+            <OuterP class="indent-10">
+              Likewise, we find that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y_1y_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the projection of {" "}
+              <Math>
+                $y_1\rt&#123;0.1&#125;\vj$
+              </Math>
+              {" "} onto {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1x_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the projection of {" "}
+              <Math>
+                $x_1\vi$
+              </Math>
+              {" "} onto {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                x_1x_2 + y_1y_2 + z_1z_2
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              is the projection of {" "}
+              <Math>
+                $(x_1, y_1, z_1)$
+              </Math>
+              {" "} onto {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              summing the projections of {" "}
+              <NoBreak>
+                <Math>
+                  $x_1\vi$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_1\vj$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <Math>
+                $z_1\vk$
+              </Math>
+              {" "}
+              together.
             </OuterP>
           </Solution>
         </Exercise>
@@ -18607,7 +18912,7 @@ const Rest = () => {
               <Image src="/build-img/svgo-svg/4t6F.svg" />
               <Pause />
               <OuterP>
-                ...(cf. {" "}
+                (...cf. {" "}
                 <InChapterLink
                   href="/article/chapter5#_123_h.a.i_"
                   class="in-chapter-link"

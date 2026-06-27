@@ -118,12 +118,12 @@ export default function __Chapter4__() {
           {" "} of a function
         </OuterP>
         <OuterP class="indent-10">
-          (Note {" "}
+          (&#8288;
           <InChapterLink
             href="/article/chapter4#_69_h.a.i_"
             class="in-chapter-link"
           >
-            12
+            Note 12
           </InChapterLink>
           {" "} of {" "}
           <InChapterLink
@@ -5163,12 +5163,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} per which
-              {" "}
+              (&#8288;
               <InChapterLink
                 href="/article/chapter4#_72_h.a.i_"
                 class="in-chapter-link"
               >
-                (Exercise 14
+                Exercise 14
               </InChapterLink>
               {" "} Note 3), the fraction approaches
             </OuterP>
