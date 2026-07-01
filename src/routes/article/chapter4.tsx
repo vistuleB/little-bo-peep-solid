@@ -117,6 +117,23 @@ export default function __Chapter4__() {
           </i>
           {" "} of a function
         </OuterP>
+        <OuterP class="indent-10">
+          (&#8288;
+          <InChapterLink
+            href="/article/chapter4#_73_h.a.i_"
+            class="in-chapter-link"
+          >
+            Note 12
+          </InChapterLink>
+          {" "} of {" "}
+          <InChapterLink
+            href="/article/chapter4#_92_h.a.i_"
+            class="in-chapter-link"
+          >
+            Chapter 4
+          </InChapterLink>
+          &#8288;.)
+        </OuterP>
         <Pause />
         <MathBlock>
           $$

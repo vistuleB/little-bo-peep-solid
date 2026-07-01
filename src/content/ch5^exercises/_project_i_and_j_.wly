@@ -54,7 +54,7 @@
         |> Image
             src=images/e5_project_i_and_j_sol2.svg
 
-        Now comparing this set of definitions to
+        Now comparing these definitions to
         this figure...
 
         |> Image
@@ -106,14 +106,27 @@
                 src=images/e5_project_i_and_j_note1_v2.svg
                 style=margin:0.3em 0
 
-            However, by the result of this exercise, sin and cos can
-            also be understood as the projection of two fixed points onto a
-            single rotating ruler:
+            !! However, by the result of this exercise, sin and cos can
+            !! also be understood as the projection of two fixed points onto a
+            !! single rotating ruler:
+            By the result of this exercise, sin and cos can also be
+            conceptualized in a dual fashion, via fixed points projected
+            onto a rotating ruler:
 
             |> Image
                 src=images/e5_project_i_and_j_note2_v2.svg
                 style=margin:0.3em 0
 
-            (This is like a “dual” definition.)
+            (E.g.,
+
+            __the positive part of the ruler goes
+            to meet the point__
+
+            if you think about how the sine function starts out, instead
+            the point being the one to travel towards the positive part
+            of the ruler [onto which it is projected].)
+
+            !! (This is like a “dual” definition.)
             !! |> StarDivider
+
 

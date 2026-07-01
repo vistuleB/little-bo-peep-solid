@@ -771,7 +771,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 2 cols, 1 on mobile, center-on-overflow=true, place-items=start, with-padding=false, column-first=true (from {" "}
               <a
-                href="/article/appendixA#_164_h.a.i_"
+                href="/article/appendixA#_165_h.a.i_"
                 class="out-chapter-link"
               >
                 1

@@ -25,7 +25,7 @@ export default function __Chapter5__() {
       nextPage="/article/chapter6"
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_154_h.a.i_"
+      id="_155_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -4294,7 +4294,7 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_153_h.a.i_"
+        id="_154_h.a.i_"
       >
         <Exercise number={1}>
           <ExerciseStatement id="_95_h.a.i_">
@@ -16402,7 +16402,7 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/9QAk.svg" />
             <Pause />
             <OuterP>
-              Now comparing this set of definitions to
+              Now comparing these definitions to
               this figure...
             </OuterP>
             <Pause />
@@ -16519,9 +16519,9 @@ const Rest = () => {
               />
               <Pause />
               <OuterP>
-                However, by the result of this exercise, sin and cos can
-                also be understood as the projection of two fixed points onto a
-                single rotating ruler:
+                By the result of this exercise, sin and cos can also be
+                conceptualized in a dual fashion, via fixed points projected
+                onto a rotating ruler:
               </OuterP>
               <Pause />
               <Image
@@ -16530,7 +16530,18 @@ const Rest = () => {
               />
               <Pause />
               <OuterP>
-                (This is like a “dual” definition.)
+                (E.g.,
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                the positive part of the ruler goes
+                to meet the point
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                if you think about how the sine function starts out, instead
+                the point being the one to travel towards the positive part
+                of the ruler [onto which it is projected].)
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -16543,6 +16554,421 @@ const Rest = () => {
             <OuterP>
               <b>
                 Exercise 50.
+              </b>
+              {" "}
+              A unit vector
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x_1, y_1, z_1) \in \rr^3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              [meaning: {" "}
+              <NoBreak>
+                <Math>
+                  $x_1^2 + y_1^2 + z_1^2 = 1$
+                </Math>
+                ]
+              </NoBreak>
+              {" "} is projected onto a ruler
+              whose {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $0$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} is at {" "}
+              <Math>
+                $(0, 0, 0)$
+              </Math>
+              {" "} and whose {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} is at
+              {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} another point on the unit sphere:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ruler_sphere_1_v2.svg" />
+            <Pause />
+            <OuterP>
+              Find the value of the projection—the place we land on the
+              ruler, at {" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                —as
+              </NoBreak>
+              {" "} a
+              function of {" "}
+              <NoBreak>
+                <Math>
+                  $x_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $x_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z_2$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Putting
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \vi = (1,\, 0,\, 0),         \\
+              \vj = (0,\, 1,\, 0),\up&#123;1.2&#125; \\
+              \vk = (0,\, 0,\, 1)\,\up&#123;1.2&#125;
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              x_1\cdot\vi = (x_1, \,0,   \,0),         \\
+              y_1\cdot\vj = (0,   \,y_1, \,0)\up&#123;1.2&#125;, \\
+              z_1\cdot\vk = (0,   \,0,   \,z_1)\up&#123;1.2&#125;\, 
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              giving
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x_1, y_1, z_1) = x_1\!\cdot\vi + y_1\!\cdot\vj + z_1\!\cdot\vk
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because vectors are added component-wise. 
+              This sum can be illustrated:
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ruler_sphere_decomp.svg" />
+            <Pause />
+            <OuterP>
+              As discussed in Note 1 of Exercise 11 we can
+              translate vectors to anywhere in space while
+              preserving their 
+              projection onto the ruler. 
+              In particular, keeping the same positioning in space of the
+              vectors as above shows that the projection of
+              {" "}
+              <Math>
+                $(x_1, y_1, z_1)$
+              </Math>
+              {" "} is the sum of the three separate projections 
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $x_1\vi$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_1\rt&#123;0.1&#125;\vj$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}  {" "}
+              <NoBreak>
+                <Math>
+                  $z_1\vk$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ruler_sphere_decomp3.svg" />
+            <Pause />
+            <OuterP>
+              However, the projection of {" "}
+              <Math>
+                $z_1\vk$
+              </Math>
+              {" "} is just 
+              {" "}
+              <Math>
+                $z_1$
+              </Math>
+              {" "} times the projection of {" "}
+              <NoBreak>
+                <Math>
+                  $\vk$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as illustrated
+              below, so it suffices to find the projection of {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "}
+              to find the projection of {" "}
+              <NoBreak>
+                <Math>
+                  $z_1\vk$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e5_ruler_sphere_z_scale.svg" />
+            <Pause />
+            <OuterP>
+              The projection of {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "} 
+              is the same as the projection of {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "} onto
+              a ruler with ‘0’ at the origin and ‘1’ at {" "}
+              <NoBreak>
+                <Math>
+                  $\vk$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              because when one unit vector is projected onto another
+              the situation is symmetric, and we can always switch 
+              the role
+              of which vector carries the ruler, and which is being
+              projected onto that ruler (cf. Solution 3 of Exercise 0):
+            </OuterP>
+            <Pause />
+            <OuterP>
+              But the 
+              projection 
+              of {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "} onto {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "}
+              equals simply
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by the fact that 
+              we are projecting onto the {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} axis,
+              so the projection of {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "} onto {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "}
+              is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as well,
+              and the projection of {" "}
+              <Math>
+                $z_1\vk$
+              </Math>
+              {" "} onto {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "} is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z_1z_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by scaling.
+            </OuterP>
+            <OuterP class="indent-10">
+              Likewise, we find that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y_1y_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the projection of {" "}
+              <Math>
+                $y_1\rt&#123;0.1&#125;\vj$
+              </Math>
+              {" "} onto {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1x_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is the projection of {" "}
+              <Math>
+                $x_1\vi$
+              </Math>
+              {" "} onto {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                x_1x_2 + y_1y_2 + z_1z_2
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              is the projection of {" "}
+              <Math>
+                $(x_1, y_1, z_1)$
+              </Math>
+              {" "} onto {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              summing the projections of {" "}
+              <NoBreak>
+                <Math>
+                  $x_1\vi$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_1\vj$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <Math>
+                $z_1\vk$
+              </Math>
+              {" "}
+              together.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={51}
+        >
+          <ExerciseStatement id="_145_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 51.
               </b>
               {" "}
               Show that
@@ -16784,11 +17210,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={51}>
-          <ExerciseStatement id="_145_h.a.i_">
+        <Exercise number={52}>
+          <ExerciseStatement id="_146_h.a.i_">
             <OuterP>
               <b>
-                Exercise 51.
+                Exercise 52.
               </b>
               {" "}
               Which function is most plausibly associated to
@@ -17019,11 +17445,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={52}>
-          <ExerciseStatement id="_146_h.a.i_">
+        <Exercise number={53}>
+          <ExerciseStatement id="_147_h.a.i_">
             <OuterP>
               <b>
-                Exercise 52.
+                Exercise 53.
               </b>
               {" "}
               Where or how, if at all, is the
@@ -17036,10 +17462,10 @@ const Rest = () => {
             <OuterP>
               apparent in the four graphs of {" "}
               <InChapterLink
-                href="/article/chapter5#_145_h.a.i_"
+                href="/article/chapter5#_146_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 51
+                Exercise 52
               </InChapterLink>
               &#8288;?
             </OuterP>
@@ -17123,19 +17549,19 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={53}>
-          <ExerciseStatement id="_147_h.a.i_">
+        <Exercise number={54}>
+          <ExerciseStatement id="_148_h.a.i_">
             <OuterP>
               <b>
-                Exercise 53.
+                Exercise 54.
               </b>
               {" "}
               Based on the graphs of {" "}
               <InChapterLink
-                href="/article/chapter5#_145_h.a.i_"
+                href="/article/chapter5#_146_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 51
+                Exercise 52
               </InChapterLink>
               &#8288;,
               or some other logic,
@@ -17382,11 +17808,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={54}>
-          <ExerciseStatement id="_148_h.a.i_">
+        <Exercise number={55}>
+          <ExerciseStatement id="_149_h.a.i_">
             <OuterP>
               <b>
-                Exercise 54.
+                Exercise 55.
               </b>
               {" "}
               For each of {" "}
@@ -17822,11 +18248,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={55}>
-          <ExerciseStatement id="_149_h.a.i_">
+        <Exercise number={56}>
+          <ExerciseStatement id="_150_h.a.i_">
             <OuterP>
               <b>
-                Exercise 55.
+                Exercise 56.
               </b>
               {" "}
               The graph {" "}
@@ -17835,10 +18261,10 @@ const Rest = () => {
               </Math>
               {" "} from {" "}
               <InChapterLink
-                href="/article/chapter5#_145_h.a.i_"
+                href="/article/chapter5#_146_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 51
+                Exercise 52
               </InChapterLink>
               {" "} has a maximum value greater than {" "}
               <NoBreak>
@@ -18098,11 +18524,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={56}>
-          <ExerciseStatement id="_150_h.a.i_">
+        <Exercise number={57}>
+          <ExerciseStatement id="_151_h.a.i_">
             <OuterP>
               <b>
-                Exercise 56.
+                Exercise 57.
               </b>
               {" "}
               A geometric interpretation of
@@ -18112,10 +18538,10 @@ const Rest = () => {
               </Math>
               {" "} is given in {" "}
               <InChapterLink
-                href="/article/chapter5#_149_h.a.i_"
+                href="/article/chapter5#_150_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 55
+                Exercise 56
               </InChapterLink>
               {" "}
               that, to recap, involves “raining down at {" "}
@@ -18230,10 +18656,10 @@ const Rest = () => {
               </NoBreak>
               {" "} as covered in {" "}
               <InChapterLink
-                href="/article/chapter5#_149_h.a.i_"
+                href="/article/chapter5#_150_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 55
+                Exercise 56
               </InChapterLink>
               &#8288;.)
               Alternately, we could read values off of a ruler placed
@@ -18531,10 +18957,10 @@ const Rest = () => {
                 {" "}
                 (cf. {" "}
                 <InChapterLink
-                  href="/article/chapter5#_149_h.a.i_"
+                  href="/article/chapter5#_150_h.a.i_"
                   class="in-chapter-link"
                 >
-                  Exercise 55
+                  Exercise 56
                 </InChapterLink>
                 &#8288;)...
               </OuterP>
@@ -18589,11 +19015,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={57}>
-          <ExerciseStatement id="_151_h.a.i_">
+        <Exercise number={58}>
+          <ExerciseStatement id="_152_h.a.i_">
             <OuterP>
               <b>
-                Exercise 57.
+                Exercise 58.
               </b>
               {" "}
               Show that for all {" "}
@@ -18645,10 +19071,10 @@ const Rest = () => {
             <OuterP>
               by the “angle-difference formula” (cf. {" "}
               <InChapterLink
-                href="/article/chapter5#_144_h.a.i_"
+                href="/article/chapter5#_145_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 50
+                Exercise 51
               </InChapterLink>
               &#8288;) so
             </OuterP>
@@ -18740,26 +19166,26 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={58}>
-          <ExerciseStatement id="_152_h.a.i_">
+        <Exercise number={59}>
+          <ExerciseStatement id="_153_h.a.i_">
             <OuterP>
               <b>
-                Exercise 58.
+                Exercise 59.
               </b>
               {" "}
               Relate {" "}
-              <InChapterLink
-                href="/article/chapter5#_150_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 56
-              </InChapterLink>
-              {" "} to {" "}
               <InChapterLink
                 href="/article/chapter5#_151_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 57
+              </InChapterLink>
+              {" "} to {" "}
+              <InChapterLink
+                href="/article/chapter5#_152_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 58
               </InChapterLink>
               &#8288;.
             </OuterP>
@@ -18768,10 +19194,10 @@ const Rest = () => {
             <OuterP>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter5#_150_h.a.i_"
+                href="/article/chapter5#_151_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 56
+                Exercise 57
               </InChapterLink>
               {" "}
               establishes that
@@ -18797,10 +19223,10 @@ const Rest = () => {
               of
               {" "}
               <InChapterLink
-                href="/article/chapter5#_151_h.a.i_"
+                href="/article/chapter5#_152_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 57
+                Exercise 58
               </InChapterLink>
               {" "} since
             </OuterP>

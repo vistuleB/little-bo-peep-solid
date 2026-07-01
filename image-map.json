@@ -639,7 +639,7 @@
   },
   "svg_ch5_ch_x_displacement_and_x_radians.svg": {
     "build-version": "svgo-svg/KPHA.svg",
-    "build-version-created-on": 1776435569,
+    "build-version-created-on": 1776436207,
     "build-method": "svgo",
     "build-version-size": 19384,
     "original-size": 81807,
@@ -4689,10 +4689,10 @@
     "build-version": "svgo-svg/PhlK.svg",
     "build-version-created-on": 1776435569,
     "build-method": "svgo",
-    "build-version-size": 5390,
-    "original-size": 17604,
-    "compressed-size": 5390,
-    "compression": "69.38%",
+    "build-version-size": 19384,
+    "original-size": 81807,
+    "compressed-size": 19384,
+    "compression": "76.31%",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -9263,7 +9263,7 @@
   },
   "svg_ch4_f_g_composition_units.svg": {
     "build-version": "svgo-svg/96sV.svg",
-    "build-version-created-on": 1781886336,
+    "build-version-created-on": 1782898569,
     "build-method": "svgo",
     "build-version-size": 2684077,
     "original-size": 7622693,
