@@ -2933,7 +2933,7 @@ const Rest = () => {
               >
                 Exercise 5
               </ThisPageLink>
-              &#8288;##'s formula by {" "}
+              &#8288;'s formula by {" "}
               <NoBreak>
                 <Math>
                   $2$

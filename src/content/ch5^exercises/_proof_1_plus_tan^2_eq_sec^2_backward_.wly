@@ -1,11 +1,13 @@
 |> Exercise
-    handle=_proof_1_+_tan^2_eq_sec^2_backward_
+    handle=_proof_1_plus_tan^2_eq_sec^2_backward_
 
     Run the computation of the
     previous exercise backwards, starting with
+
     $$
     \sec^2(\theta)
     $$
+
     at the near end, and ending with $$1 + \tan^2(\theta)$$
     at the far end. (No peeking back at the solution of
     that exercise.)

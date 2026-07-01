@@ -118,6 +118,23 @@ export default function __Chapter4__() {
           </i>
           {" "} of a function
         </OuterP>
+        <OuterP class="indent-10">
+          (&#8288;
+          <ThisPageLink
+            href="/article/chapter4#_69_h.a.i_"
+            class="in-chapter-link"
+          >
+            Note 12
+          </ThisPageLink>
+          {" "} of {" "}
+          <ThisPageLink
+            href="/article/chapter4#_88_h.a.i_"
+            class="in-chapter-link"
+          >
+            Chapter 4
+          </ThisPageLink>
+          &#8288;.)
+        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -1713,7 +1730,7 @@ const Rest = () => {
           >
             Chapter 3
           </OtherPageLink>
-          &#8288;##-related
+          &#8288;-related
           matters, if
         </OuterP>
         <Pause />
@@ -5147,12 +5164,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} per which
-              {" "}
+              (&#8288;
               <ThisPageLink
                 href="/article/chapter4#_72_h.a.i_"
                 class="in-chapter-link"
               >
-                (Exercise 14
+                Exercise 14
               </ThisPageLink>
               {" "} Note 3), the fraction approaches
             </OuterP>

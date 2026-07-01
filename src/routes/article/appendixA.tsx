@@ -17,7 +17,7 @@ import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import ThisPageLink  from "~/components/ThisPageLink";
 import { TildeDivider }  from "~/components/TildeDivider";
-import { SolutionNote, NoBreak, Pause, Section }  from "~/components/Wrappers";
+import { InTextWarning, SolutionNote, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __AppendixA__() {
@@ -51,7 +51,7 @@ export default function __AppendixA__() {
           mode="switcher-only"
         >
           <Exercise number={1}>
-            <ExerciseStatement id="_160_h.a.i_">
+            <ExerciseStatement id="_161_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -150,7 +150,7 @@ export default function __AppendixA__() {
           mode="switcher-only"
         >
           <Exercise number={1}>
-            <ExerciseStatement id="_161_h.a.i_">
+            <ExerciseStatement id="_162_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -310,7 +310,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement id="_162_h.a.i_">
+            <ExerciseStatement id="_163_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 2.
@@ -332,7 +332,7 @@ export default function __AppendixA__() {
                 {" "} analogously to
                 {" "}
                 <ThisPageLink
-                  href="/article/appendixA#_161_h.a.i_"
+                  href="/article/appendixA#_162_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 1
@@ -603,7 +603,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={3}>
-            <ExerciseStatement id="_163_h.a.i_">
+            <ExerciseStatement id="_164_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 3.
@@ -1206,7 +1206,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={4}>
-            <ExerciseStatement id="_164_h.a.i_">
+            <ExerciseStatement id="_165_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 4.
@@ -1897,7 +1897,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={5}>
-            <ExerciseStatement id="_165_h.a.i_">
+            <ExerciseStatement id="_166_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 5.
@@ -2145,7 +2145,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={6}>
-            <ExerciseStatement id="_167_h.a.i_">
+            <ExerciseStatement id="_168_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 6.
@@ -2319,7 +2319,7 @@ export default function __AppendixA__() {
                 <Image src="/build-img/svgo-svg/96sV.svg" />
               </SolutionNote>
               <Pause />
-              <SolutionNote id="_166_h.a.i_">
+              <SolutionNote id="_167_h.a.i_">
                 <OuterP>
                   <i>
                     Note 3.
@@ -2397,7 +2397,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={7}>
-            <ExerciseStatement id="_168_h.a.i_">
+            <ExerciseStatement id="_169_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 7.
@@ -2470,7 +2470,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={8}>
-            <ExerciseStatement id="_169_h.a.i_">
+            <ExerciseStatement id="_170_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 8.
@@ -2682,7 +2682,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={9}>
-            <ExerciseStatement id="_170_h.a.i_">
+            <ExerciseStatement id="_171_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 9.
@@ -2801,7 +2801,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={10}>
-            <ExerciseStatement id="_171_h.a.i_">
+            <ExerciseStatement id="_172_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 10.
@@ -2887,7 +2887,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={11}>
-            <ExerciseStatement id="_173_h.a.i_">
+            <ExerciseStatement id="_174_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 11.
@@ -3012,7 +3012,7 @@ export default function __AppendixA__() {
               <Pause />
               <StarDivider />
               <Pause />
-              <SolutionNote id="_172_h.a.i_">
+              <SolutionNote id="_173_h.a.i_">
                 <OuterP>
                   <i>
                     Note 1.
@@ -3040,7 +3040,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={12}>
-            <ExerciseStatement id="_175_h.a.i_">
+            <ExerciseStatement id="_176_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 12.
@@ -3366,7 +3366,7 @@ export default function __AppendixA__() {
               <Pause />
               <StarDivider />
               <Pause />
-              <SolutionNote id="_174_h.a.i_">
+              <SolutionNote id="_175_h.a.i_">
                 <OuterP>
                   <i>
                     Note 1.
@@ -3536,7 +3536,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={13}>
-            <ExerciseStatement id="_176_h.a.i_">
+            <ExerciseStatement id="_177_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 13.
@@ -3644,7 +3644,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={14}>
-            <ExerciseStatement id="_177_h.a.i_">
+            <ExerciseStatement id="_178_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 14.
@@ -3726,7 +3726,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={15}>
-            <ExerciseStatement id="_178_h.a.i_">
+            <ExerciseStatement id="_179_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 15.
@@ -3861,7 +3861,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={16}>
-            <ExerciseStatement id="_179_h.a.i_">
+            <ExerciseStatement id="_180_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 16.
@@ -3979,7 +3979,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={17}>
-            <ExerciseStatement id="_180_h.a.i_">
+            <ExerciseStatement id="_181_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 17.
@@ -4125,7 +4125,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={18}>
-            <ExerciseStatement id="_182_h.a.i_">
+            <ExerciseStatement id="_183_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 18.
@@ -4210,7 +4210,7 @@ export default function __AppendixA__() {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <SolutionNote id="_181_h.a.i_">
+              <SolutionNote id="_182_h.a.i_">
                 <OuterP>
                   <i>
                     Note 1.
@@ -4256,7 +4256,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={19}>
-            <ExerciseStatement id="_183_h.a.i_">
+            <ExerciseStatement id="_184_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 19.
@@ -4389,7 +4389,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={20}>
-            <ExerciseStatement id="_184_h.a.i_">
+            <ExerciseStatement id="_185_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 20.
@@ -5019,7 +5019,7 @@ export default function __AppendixA__() {
           mode="switcher-only"
         >
           <Exercise number={1}>
-            <ExerciseStatement id="_185_h.a.i_">
+            <ExerciseStatement id="_186_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 1.
@@ -5138,7 +5138,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={2}>
-            <ExerciseStatement id="_187_h.a.i_">
+            <ExerciseStatement id="_188_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 2.
@@ -5147,7 +5147,7 @@ export default function __AppendixA__() {
                 What might
                 {" "}
                 <ThisPageLink
-                  href="/article/appendixA#_185_h.a.i_"
+                  href="/article/appendixA#_186_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 1
@@ -5242,7 +5242,7 @@ export default function __AppendixA__() {
                 </MathBlock>
               </SolutionNote>
               <Pause />
-              <SolutionNote id="_186_h.a.i_">
+              <SolutionNote id="_187_h.a.i_">
                 <OuterP>
                   <i>
                     Note 2.
@@ -5290,7 +5290,7 @@ export default function __AppendixA__() {
                   {" "}
                   since, as observed in Note 1 of {" "}
                   <ThisPageLink
-                    href="/article/appendixA#_185_h.a.i_"
+                    href="/article/appendixA#_186_h.a.i_"
                     class="in-chapter-link"
                   >
                     Exercise 1
@@ -5361,7 +5361,7 @@ export default function __AppendixA__() {
                   angle-sum formula for sin also gives us
                   the final conclusion of {" "}
                   <ThisPageLink
-                    href="/article/appendixA#_186_h.a.i_"
+                    href="/article/appendixA#_187_h.a.i_"
                     class="in-chapter-link"
                   >
                     Note 2
@@ -5404,7 +5404,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={3}>
-            <ExerciseStatement id="_188_h.a.i_">
+            <ExerciseStatement id="_189_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 3.
@@ -5469,7 +5469,7 @@ export default function __AppendixA__() {
                 the next-to-last inequality) to be true by
                 {" "}
                 <ThisPageLink
-                  href="/article/appendixA#_187_h.a.i_"
+                  href="/article/appendixA#_188_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 2
@@ -5514,7 +5514,7 @@ export default function __AppendixA__() {
               <OuterP>
                 which, as covered in {" "}
                 <ThisPageLink
-                  href="/article/appendixA#_186_h.a.i_"
+                  href="/article/appendixA#_187_h.a.i_"
                   class="in-chapter-link"
                 >
                   Note 2 of Exercise 2
@@ -5539,7 +5539,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={4}>
-            <ExerciseStatement id="_189_h.a.i_">
+            <ExerciseStatement id="_190_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 4.
@@ -5927,7 +5927,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={5}>
-            <ExerciseStatement id="_190_h.a.i_">
+            <ExerciseStatement id="_191_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 5.
@@ -6003,7 +6003,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={6}>
-            <ExerciseStatement id="_191_h.a.i_">
+            <ExerciseStatement id="_192_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 6.
@@ -6086,7 +6086,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={7}>
-            <ExerciseStatement id="_192_h.a.i_">
+            <ExerciseStatement id="_193_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 7.
@@ -6115,10 +6115,10 @@ export default function __AppendixA__() {
               <OuterP>
                 and prove your answer. (Comparison: {" "}
                 <OtherPageLink
-                  href="/article/chapter5#_145_h.a.i_"
+                  href="/article/chapter5#_146_h.a.i_"
                   class="out-chapter-link"
                 >
-                  Exercise 55
+                  Exercise 56
                 </OtherPageLink>
                 &#8288;.)
               </OuterP>
@@ -6176,10 +6176,10 @@ export default function __AppendixA__() {
                 </NoBreak>
                 {" "} as uncovered in {" "}
                 <OtherPageLink
-                  href="/article/chapter5#_145_h.a.i_"
+                  href="/article/chapter5#_146_h.a.i_"
                   class="out-chapter-link"
                 >
-                  Exercise 55
+                  Exercise 56
                 </OtherPageLink>
                 &#8288;,
                 from which the following graphic is recovered:
@@ -6405,7 +6405,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={8}>
-            <ExerciseStatement id="_193_h.a.i_">
+            <ExerciseStatement id="_194_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 8.
@@ -6835,7 +6835,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={9}>
-            <ExerciseStatement id="_194_h.a.i_">
+            <ExerciseStatement id="_195_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 9.
@@ -6979,7 +6979,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={10}>
-            <ExerciseStatement id="_195_h.a.i_">
+            <ExerciseStatement id="_196_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 10.
@@ -7515,20 +7515,21 @@ export default function __AppendixA__() {
                 </Boxed>
                 <OuterP>
                   ...was painstakingly uncovered
-                  in {" "}
-                  <ThisPageLink
-                    href="/article/appendixA#_192_h.a.i_"
-                    class="in-chapter-link"
-                  >
-                    Exercise 7
-                  </ThisPageLink>
-                  &#8288;, if you recall.)
+                  in Exercise {" "}
+                  <InTextWarning>
+                    undefined handle at ch5^exercises/_for_every_A1_A2_.wly:157:13: _cosx_to_cosx_
+                  </InTextWarning>
+                  +
+                  <i>
+                    sinx
+                  </i>
+                  , if you recall.)
                 </OuterP>
               </SolutionNote>
             </Solution>
           </Exercise>
           <Exercise number={11}>
-            <ExerciseStatement id="_196_h.a.i_">
+            <ExerciseStatement id="_197_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 11.
@@ -7748,7 +7749,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={12}>
-            <ExerciseStatement id="_197_h.a.i_">
+            <ExerciseStatement id="_198_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 12.
@@ -7875,7 +7876,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={13}>
-            <ExerciseStatement id="_198_h.a.i_">
+            <ExerciseStatement id="_199_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 13.
@@ -7949,7 +7950,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={14}>
-            <ExerciseStatement id="_199_h.a.i_">
+            <ExerciseStatement id="_200_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 14.
@@ -8043,7 +8044,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={15}>
-            <ExerciseStatement id="_200_h.a.i_">
+            <ExerciseStatement id="_201_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 15.
@@ -8343,7 +8344,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={16}>
-            <ExerciseStatement id="_201_h.a.i_">
+            <ExerciseStatement id="_202_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 16.
@@ -8562,7 +8563,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={17}>
-            <ExerciseStatement id="_202_h.a.i_">
+            <ExerciseStatement id="_203_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 17.
@@ -8746,7 +8747,7 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={18}>
-            <ExerciseStatement id="_203_h.a.i_">
+            <ExerciseStatement id="_204_h.a.i_">
               <OuterP>
                 <b>
                   Exercise 18.
@@ -8845,282 +8846,10 @@ export default function __AppendixA__() {
             </Solution>
           </Exercise>
           <Exercise number={19}>
-            <ExerciseStatement id="_204_h.a.i_">
-              <OuterP>
-                <b>
-                  Exercise 19.
-                </b>
-                {" "}
-                More generally, how is the graph of
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                x \ra \cos(Bx + C)
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                related to the graph of {" "}
-                <NoBreak>
-                  <Math>
-                    $\cos$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} for constants
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $B$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} {" "}
-                <NoBreak>
-                  <Math>
-                    $C \in \rr$
-                  </Math>
-                  ?
-                </NoBreak>
-              </OuterP>
-            </ExerciseStatement>
-            <Solution>
-              <OuterP>
-                As in the solution to Exercise 37 place
-                {" "}
-                <Math>
-                  $\cos(x + C)$
-                </Math>
-                {" "} as an intermediate function between
-                {" "}
-                <Math>
-                  $\cos(x)$
-                </Math>
-                {" "} and {" "}
-                <NoBreak>
-                  <Math>
-                    $\cos(Bx + C)$
-                  </Math>
-                  :
-                </NoBreak>
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                \cos(x)
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                \downarrow
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                \cos(x + C)
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                \downarrow
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                \cos(Bx + C)
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                The first step effects a tranlation to the left by {" "}
-                <NoBreak>
-                  <Math>
-                    $C$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "}
-                the second step (since it replaces {" "}
-                <Math>
-                  $x$
-                </Math>
-                {" "} by {" "}
-                <NoBreak>
-                  <Math>
-                    $Bx$
-                  </Math>
-                  )
-                </NoBreak>
-                {" "} effects
-                a horizontal compression by a factor {" "}
-                <Math>
-                  $B$
-                </Math>
-                {" "} (speed-up by
-                factor {" "}
-                <NoBreak>
-                  <Math>
-                    $B$
-                  </Math>
-                  ),
-                </NoBreak>
-                {" "} so the following pair of steps, in order,
-                takes the graph {" "}
-                <Math>
-                  $y = \cos(x)$
-                </Math>
-                {" "} to the graph {" "}
-                <NoBreak>
-                  <Math>
-                    $y = \cos(Bx + C)$
-                  </Math>
-                  :
-                </NoBreak>
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                1. horizontal translation by {" "}
-                <Math>
-                  $-C$
-                </Math>
-              </CentralDisplayItalic>
-              <Pause />
-              <CentralDisplayItalic>
-                2. horizontal scaling by {" "}
-                <Math>
-                  $1/B$
-                </Math>
-              </CentralDisplayItalic>
-              <Pause />
-              <StarDivider />
-              <Pause />
-              <SolutionNote>
-                <OuterP>
-                  <i>
-                    Note 1.
-                  </i>
-                  {" "}
-                  Alternately, like Note 1 of Exercise 37, we can
-                  stop at {" "}
-                  <Math>
-                    $\cos(Bx)$
-                  </Math>
-                  {" "} as an intermediate point:
-                </OuterP>
-                <Pause />
-                <MathBlock>
-                  $$
-                  \cos(x)
-                  $$
-                </MathBlock>
-                <Pause />
-                <MathBlock>
-                  $$
-                  \downarrow
-                  $$
-                </MathBlock>
-                <Pause />
-                <MathBlock>
-                  $$
-                  \cos(Bx)
-                  $$
-                </MathBlock>
-                <Pause />
-                <MathBlock>
-                  $$
-                  \downarrow
-                  $$
-                </MathBlock>
-                <Pause />
-                <MathBlock>
-                  $$
-                  \cos(B(x + C/B)) = \cos(Bx + C)
-                  $$
-                </MathBlock>
-                <Pause />
-                <OuterP>
-                  This gives us the following alternate sequence:
-                </OuterP>
-                <Pause />
-                <CentralDisplayItalic>
-                  1. horizontal scaling by {" "}
-                  <Math>
-                    $1/B$
-                  </Math>
-                </CentralDisplayItalic>
-                <Pause />
-                <CentralDisplayItalic>
-                  2. horizontal translation by {" "}
-                  <Math>
-                    $-C/B$
-                  </Math>
-                </CentralDisplayItalic>
-                <Pause />
-                <OuterP>
-                  ...which is different-but-equivalent, but
-                  generally considered inferior
-                  by virtue of involving the more complicated translation
-                  term, {" "}
-                  <NoBreak>
-                    <Math>
-                      $-C/B$
-                    </Math>
-                    !
-                  </NoBreak>
-                </OuterP>
-              </SolutionNote>
-              <Pause />
-              <SolutionNote>
-                <OuterP>
-                  <i>
-                    Note 2.
-                  </i>
-                  {" "}
-                  One says that translation and scaling  are
-                </OuterP>
-                <Pause />
-                <CentralDisplayItalic>
-                  non-commutative
-                </CentralDisplayItalic>
-                <Pause />
-                <OuterP>
-                  because it matters which of the two operations is performed
-                  first. If it didn't matter,
-                  then both of our solutions would involve the
-                  same amount of translation, but they don't!
-                </OuterP>
-                <OuterP class="indent-10">
-                  (Also:
-                </OuterP>
-                <Pause />
-                <CentralDisplayItalic>
-                  translation and scaling don't commute
-                </CentralDisplayItalic>
-                <Pause />
-                <OuterP>
-                  or
-                </OuterP>
-                <Pause />
-                <CentralDisplayItalic>
-                  transation doesn't commute with scaling
-                </CentralDisplayItalic>
-                <Pause />
-                <OuterP>
-                  ...all good sentences to use in the wild!)
-                </OuterP>
-              </SolutionNote>
-            </Solution>
-          </Exercise>
-          <Exercise number={20}>
             <ExerciseStatement id="_205_h.a.i_">
               <OuterP>
                 <b>
-                  Exercise 20.
+                  Exercise 19.
                 </b>
                 {" "}
                 What sequence of transformations of the plane
@@ -9508,11 +9237,11 @@ export default function __AppendixA__() {
               </SolutionNote>
             </Solution>
           </Exercise>
-          <Exercise number={21}>
+          <Exercise number={20}>
             <ExerciseStatement id="_206_h.a.i_">
               <OuterP>
                 <b>
-                  Exercise 21.
+                  Exercise 20.
                 </b>
                 {" "}
                 True or false: 
@@ -9628,11 +9357,11 @@ export default function __AppendixA__() {
               </OuterP>
             </Solution>
           </Exercise>
-          <Exercise number={22}>
+          <Exercise number={21}>
             <ExerciseStatement id="_207_h.a.i_">
               <OuterP>
                 <b>
-                  Exercise 22.
+                  Exercise 21.
                 </b>
                 {" "}
                 The graph {" "}
@@ -9641,10 +9370,10 @@ export default function __AppendixA__() {
                 </Math>
                 {" "} from {" "}
                 <OtherPageLink
-                  href="/article/chapter5#_141_h.a.i_"
+                  href="/article/chapter5#_142_h.a.i_"
                   class="out-chapter-link"
                 >
-                  Exercise 51
+                  Exercise 52
                 </OtherPageLink>
                 {" "} has a maximum value greater than {" "}
                 <NoBreak>
@@ -10052,11 +9781,11 @@ export default function __AppendixA__() {
               </SolutionNote>
             </Solution>
           </Exercise>
-          <Exercise number={23}>
+          <Exercise number={22}>
             <ExerciseStatement id="_208_h.a.i_">
               <OuterP>
                 <b>
-                  Exercise 23.
+                  Exercise 22.
                 </b>
                 {" "}
                 The graph {" "}
@@ -10065,10 +9794,10 @@ export default function __AppendixA__() {
                 </Math>
                 {" "} from {" "}
                 <OtherPageLink
-                  href="/article/chapter5#_141_h.a.i_"
+                  href="/article/chapter5#_142_h.a.i_"
                   class="out-chapter-link"
                 >
-                  Exercise 51
+                  Exercise 52
                 </OtherPageLink>
                 {" "} has a maximum value greater than {" "}
                 <NoBreak>
@@ -10512,11 +10241,11 @@ export default function __AppendixA__() {
               </SolutionNote>
             </Solution>
           </Exercise>
-          <Exercise number={24}>
+          <Exercise number={23}>
             <ExerciseStatement id="_209_h.a.i_">
               <OuterP>
                 <b>
-                  Exercise 24.
+                  Exercise 23.
                 </b>
                 {" "}
                 Prove that {" "}

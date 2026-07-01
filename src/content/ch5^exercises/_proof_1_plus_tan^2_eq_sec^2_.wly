@@ -1,5 +1,5 @@
 |> Exercise
-    handle=_proof_1_+_tan^2_eq_sec^2_
+    handle=_proof_1_plus_tan^2_eq_sec^2_
 
     In general, $\sec(\theta)$ and $\tan(\theta)$
     are defined for all $\theta$ such that
