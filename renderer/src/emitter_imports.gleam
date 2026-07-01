@@ -29,7 +29,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("HamburgerPanelItem", ExportedByFile(Some("HamburgerPanelItem"), [])),
     #("HamburgerPanelTitle", ExportedByFile(Some("HamburgerPanelTitle"), [])),
     #("Image", ExportedByFile(Some("Image"), [])),
-    #("InChapterLink", ExportedByFile(Some("InChapterLink"), [])),
+    #("ThisPageLink", ExportedByFile(Some("ThisPageLink"), [])),
     #("InlineImage", ExportedByFile(Some("InlineImage"), [])),
     #("List", ExportedByFile(None, ["List", "Item"])),
     #("Math", ExportedByFile(None, ["Math", "MathBlock"])),
@@ -47,6 +47,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("TOCTitle", ExportedByFile(Some("TOCTitle"), [])),
     #("OuterP", ExportedByFile(Some("OuterP"), [])),
     #("Wrappers", ExportedByFile(None, ["Section", "Note", "SolutionNote", "Example", "NoBreak", "InTextWarning", "Pause", "WriterlyBlankLine"])),
+    #("OtherPageLink", ExportedByFile(Some("OtherPageLink"), [])),
   ])
 }
 

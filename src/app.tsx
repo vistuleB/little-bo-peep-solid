@@ -7,6 +7,7 @@ import Container from "~/components/Container";
 import { Suspense } from "solid-js";
 import "./app.css";
 import { setContentsAsCssVars } from "./constants";
+import LoadingGraphicWrapper from "./components/LoadingGraphic";
 
 export default function App() {
   setContentsAsCssVars();
@@ -14,6 +15,7 @@ export default function App() {
     <MetaProvider>
       <Meta property="og:image" content="images/lbp_preview.png"></Meta>
       <StoreProvider>
+        <LoadingGraphicWrapper />
         <Router
           root={(props) => (
             <>

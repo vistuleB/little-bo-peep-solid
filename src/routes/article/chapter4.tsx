@@ -4,16 +4,17 @@ import Boxed  from "~/components/Boxed";
 import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
-import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
 import { Item, List }  from "~/components/List";
 import { Math, MathBlock }  from "~/components/Math";
+import OtherPageLink  from "~/components/OtherPageLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageLeft, ImageRight }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import TextParent  from "~/components/TextParent";
+import ThisPageLink  from "~/components/ThisPageLink";
 import { SolutionNote, Example, NoBreak, Section, Pause }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
@@ -28,64 +29,64 @@ export default function __Chapter4__() {
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">
+          <ThisPageLink href="?id=section-1">
             definitions
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">
+          <ThisPageLink href="?id=section-2">
             vocabulary
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">
+          <ThisPageLink href="?id=section-3">
             sketching a derivative
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
+          <ThisPageLink href="?id=section-4">
             derivative of a constant function
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">
+          <ThisPageLink href="?id=section-5">
             derivative of an affine function
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">
+          <ThisPageLink href="?id=section-6">
             units of the derivative
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=section-7">
+          <ThisPageLink href="?id=section-7">
             the second derivative
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
-          <InChapterLink href="?id=section-8">
+          <ThisPageLink href="?id=section-8">
             geometric interpretation of the second derivative
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=section-9">
+          <ThisPageLink href="?id=section-9">
             vocabulary #1
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
-          <InChapterLink href="?id=section-10">
+          <ThisPageLink href="?id=section-10">
             the second derivative of position
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-10">
-          <InChapterLink href="?id=section-11">
+          <ThisPageLink href="?id=section-11">
             the jerk
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-11">
-          <InChapterLink href="?id=exercises">
+          <ThisPageLink href="?id=exercises">
             exercises
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 4:">
@@ -119,19 +120,19 @@ export default function __Chapter4__() {
         </OuterP>
         <OuterP class="indent-10">
           (&#8288;
-          <InChapterLink
+          <ThisPageLink
             href="/article/chapter4#_69_h.a.i_"
             class="in-chapter-link"
           >
             Note 12
-          </InChapterLink>
+          </ThisPageLink>
           {" "} of {" "}
-          <InChapterLink
+          <ThisPageLink
             href="/article/chapter4#_88_h.a.i_"
             class="in-chapter-link"
           >
             Chapter 4
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;.)
         </OuterP>
         <Pause />
@@ -1640,14 +1641,14 @@ const Rest = () => {
         <OuterP>
           in physics. The units of jerk (or “the”
           units of jerk, since any units of same {" "}
-          <a
+          <OtherPageLink
             href="chapter2#section-9"
             class="underline-on-hover"
           >
             <i>
               dimension
             </i>
-          </a>
+          </OtherPageLink>
           {" "} would do as well) are
         </OuterP>
         <Pause />
@@ -1723,12 +1724,12 @@ const Rest = () => {
           </b>
           {" "}
           Coming briefly back to {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter3#_56_h.a.i_"
             class="out-chapter-link"
           >
             Chapter 3
-          </a>
+          </OtherPageLink>
           &#8288;-related
           matters, if
         </OuterP>
@@ -1791,12 +1792,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           goes back to {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter3#_38_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 5 of Chapter 3
-          </a>
+          </OtherPageLink>
           &#8288;, with
           the little circle {" "}
           <NoBreak>
@@ -1832,12 +1833,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           of functions already appear in {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter3#_51_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 17 of Chapter 3
-          </a>
+          </OtherPageLink>
           &#8288;, also. (On the other hand, the
           quotient (i.e. {" "}
           <NoBreak>
@@ -1998,12 +1999,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               derivative of the graph in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_58_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.
             </OuterP>
           </ExerciseStatement>
@@ -2048,12 +2049,12 @@ const Rest = () => {
               </b>
               {" "}
               If we pretend that the graph of {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_58_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1
-              </InChapterLink>
+              </ThisPageLink>
               {" "}
               depicts the {" "}
               <del>
@@ -3950,21 +3951,21 @@ const Rest = () => {
               </b>
               {" "}
               By what should the change mentioned in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_73_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 15
-              </InChapterLink>
+              </ThisPageLink>
               {" "}
               be divided by in order 
               to obtain a difference quotient (cf. {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_72_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;)?
             </OuterP>
           </ExerciseStatement>
@@ -4151,12 +4152,12 @@ const Rest = () => {
                 $A$
               </Math>
               {" "} as in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_73_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 15
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               and assuming that {" "}
               <Math>
@@ -4229,12 +4230,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} per {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_71_h.a.i_"
                 class="in-chapter-link"
               >
                 Note 1 of Exercise 14
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;. (This is a
               difference quotient, notwitstanding the renaming of {" "}
               <NoBreak>
@@ -4611,12 +4612,12 @@ const Rest = () => {
                 .
               </NoBreak>
               {" "} (Cf. {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_71_h.a.i_"
                 class="in-chapter-link"
               >
                 Note 1 of Exercise 14
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.)
               (Nb: We assume differentiability, otherwise
               there is no conclusion to draw.)
@@ -4704,12 +4705,12 @@ const Rest = () => {
               {" "} being a difference 
               quotient 
               (cf. {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_71_h.a.i_"
                 class="in-chapter-link"
               >
                 Note 1 of Exercise 14
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;),
               so the whole term approaches
             </OuterP>
@@ -5132,12 +5133,12 @@ const Rest = () => {
             <OuterP>
               This is seen to be a Newton quotient
               (cf. {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_72_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;)
             </OuterP>
             <Pause />
@@ -5164,12 +5165,12 @@ const Rest = () => {
               </NoBreak>
               {" "} per which
               (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_72_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
-              </InChapterLink>
+              </ThisPageLink>
               {" "} Note 3), the fraction approaches
             </OuterP>
             <Pause />
@@ -5709,12 +5710,12 @@ const Rest = () => {
                 of function addition, but it is easy to prove!
                 (For other proofs see Exercise 32, Exercise 33, as
                 well as Exercise 9, {" "}
-                <a
+                <OtherPageLink
                   href="/article/chapter3#_56_h.a.i_"
                   class="out-chapter-link"
                 >
                   Chapter 3
-                </a>
+                </OtherPageLink>
                 &#8288;.)
               </OuterP>
             </SolutionNote>
@@ -5867,12 +5868,12 @@ const Rest = () => {
               based on input-output behavior: two functions are
               equal if and only if every input is mapped to the
               same output under either function. See {" "}
-              <a
+              <OtherPageLink
                 href="/article/chapter3#_42_h.a.i_"
                 class="out-chapter-link"
               >
                 Note 6, Exercise 9, Chapter 3
-              </a>
+              </OtherPageLink>
               &#8288;.)
             </OuterP>
             <OuterP class="indent-10">
@@ -6006,12 +6007,12 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 (if you recall that one) in {" "}
-                <a
+                <OtherPageLink
                   href="/article/chapter3#_43_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 9 of Chapter 3
-                </a>
+                </OtherPageLink>
                 &#8288;.
               </OuterP>
             </SolutionNote>
@@ -6096,12 +6097,12 @@ const Rest = () => {
               Going back in time, examine how long it would take
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_80_h.a.i_"
                 class="in-chapter-link"
               >
                 Note 1
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;):
             </OuterP>
             <Pause />
@@ -6539,12 +6540,12 @@ const Rest = () => {
                 </Math>
                 {" "} axis of the graph of the 
                 particle of {" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter4#_81_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 22
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;, whose
                 velocity is equal to its position and whose
                 position is {" "}
@@ -6819,12 +6820,12 @@ const Rest = () => {
               {" "} centered at the origin, just like
               the particles discussed in the solution to
               {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_69_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 12
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;, that obey a similar set of
               constraints
               (albeit with a different set of colors).
@@ -6926,22 +6927,22 @@ const Rest = () => {
               The behavior of such a particle is
               identical to the behavior of the red
               particle from {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_81_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 22
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               except that the current
               “UNO particle” has a slight head-start over the
               red particle from {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_81_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 22
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;, being
               at position {" "}
               <Math>
@@ -8641,12 +8642,12 @@ const Rest = () => {
                 {" "}
                 As half-mentioned in
                 the solution to {" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter4#_69_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 12
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;,
                 but might be worth emphasizing,
               </OuterP>
@@ -8705,12 +8706,12 @@ const Rest = () => {
               {" "}
               The function below is also the blue
               curve from {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_69_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 12
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;, known as the
               {" "}
               <i>
@@ -8718,12 +8719,12 @@ const Rest = () => {
               </i>
               {" "} (already encountered
               in {" "}
-              <a
+              <OtherPageLink
                 href="/article/chapter3#_40_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 3, Exercise 7
-              </a>
+              </OtherPageLink>
               &#8288;).
               Knowing that this function is the {" "}
               <NoBreak>
@@ -8966,12 +8967,12 @@ const Rest = () => {
               </b>
               {" "}
               {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_69_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 12
-              </InChapterLink>
+              </ThisPageLink>
               {" "} exhibits a function {" "}
               <NoBreak>
                 <Math>
@@ -9080,12 +9081,12 @@ const Rest = () => {
             <OuterP>
               We can naïvely try to imitiate how the
               curves of {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter4#_72_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
-              </InChapterLink>
+              </ThisPageLink>
               {" "} are generated by
               placing five equally spaced particles
               around the unit circle (“the” unit circle

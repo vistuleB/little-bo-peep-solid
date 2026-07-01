@@ -3,7 +3,6 @@ import ArticleTitle  from "~/components/ArticleTitle";
 import { CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
-import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
@@ -11,6 +10,7 @@ import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import Table  from "~/components/Table";
 import TextParent  from "~/components/TextParent";
+import ThisPageLink  from "~/components/ThisPageLink";
 import { SolutionNote, Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
@@ -25,54 +25,54 @@ export default function __Bootcamp2__() {
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">
+          <ThisPageLink href="?id=section-1">
             terminology
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">
+          <ThisPageLink href="?id=section-2">
             integer powers of 10
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">
+          <ThisPageLink href="?id=section-3">
             other bases
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
+          <ThisPageLink href="?id=section-4">
             additivity of exponents
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">
+          <ThisPageLink href="?id=section-5">
             the third law of exponents
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">
+          <ThisPageLink href="?id=section-6">
             famous powers of 10
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=section-7">
+          <ThisPageLink href="?id=section-7">
             negative exponent prefixes
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
-          <InChapterLink href="?id=section-8">
+          <ThisPageLink href="?id=section-8">
             positive exponent prefixes
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=section-9">
+          <ThisPageLink href="?id=section-9">
             logarithms base 10
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
-          <InChapterLink href="?id=exercises">
+          <ThisPageLink href="?id=exercises">
             exercises
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Bootcamp 2:">
@@ -329,12 +329,12 @@ const Rest = () => {
           </NoBreak>
           {" "}
           Moreover, (&#8288;
-          <InChapterLink
+          <ThisPageLink
             href="/article/bootcamp2#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;) actually holds for
         </OuterP>
         <Pause />
@@ -352,23 +352,23 @@ const Rest = () => {
           </NoBreak>
           {" "} which is mildly important. In more
           detail, (&#8288;
-          <InChapterLink
+          <ThisPageLink
             href="/article/bootcamp2#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;) holds for {" "}
           <Math>
             $n = 0$
           </Math>
           {" "} by inspection, and (&#8288;
-          <InChapterLink
+          <ThisPageLink
             href="/article/bootcamp2#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;)
           is equivalent to the identity
           <ImageLeft
@@ -416,19 +416,19 @@ const Rest = () => {
           </NoBreak>
           {" "}
           in (&#8288;
-          <InChapterLink
+          <ThisPageLink
             href="/article/bootcamp2#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;) lands you right back on (&#8288;
-          <InChapterLink
+          <ThisPageLink
             href="/article/bootcamp2#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;), due to the fact
           that {" "}
           <NoBreak>
@@ -438,12 +438,12 @@ const Rest = () => {
             .)
           </NoBreak>
           {" "} (So, namely, if (&#8288;
-          <InChapterLink
+          <ThisPageLink
             href="/article/bootcamp2#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;) holds for all
           positive values of {" "}
           <NoBreak>
@@ -511,19 +511,19 @@ const Rest = () => {
         <OuterP>
           ...and any one of these equations implies the other two.
           Thus, either of (&#8288;
-          <InChapterLink
+          <ThisPageLink
             href="/article/bootcamp2#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;) and (&#8288;
-          <InChapterLink
+          <ThisPageLink
             href="/article/bootcamp2#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;)
           expresses the
         </OuterP>
@@ -2936,12 +2936,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               stated earlier in the chapter as (&#8288;
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_2_h.a.i_"
                 class="in-chapter-link"
               >
                 A
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;),
               while the third equality uses additivity of exponents,
               also stated earlier. (So: We are only using “known”
@@ -3285,12 +3285,12 @@ const Rest = () => {
                 $z$
               </Math>
               {" "} (as in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/bootcamp2#_17_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;):
             </OuterP>
             <Pause />

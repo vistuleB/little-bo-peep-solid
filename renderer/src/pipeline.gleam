@@ -113,7 +113,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.substitute_counters(),
       dl.handles_add_ids(),
       dl.handles_generate_dictionary_and_id_list("path"),
-      dl.handles_substitute_and_fix_nonlocal_id_links(#("path", "InChapterLink", "a", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"])),
+      dl.handles_substitute_and_fix_nonlocal_id_links(#("path", "ThisPageLink", "a", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"])),
       dl.unwrap("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Bootcamp", "ArticleTitle", "banner"), ["Chapter"]),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Chapter", "ArticleTitle", "banner"), ["Bootcamp"]),
@@ -160,7 +160,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.trim("p"),
       dl.delete_if_empty("p"),
       // (end cleaning)
-      dl.unwrap_if_no_child_meets_condition(#("p", infra.is_t_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink", "InlineImage", "Math"]))),
+      dl.unwrap_if_no_child_meets_condition(#("p", infra.is_t_or_is_one_of(_, ["b", "i", "a", "span", "ThisPageLink", "InlineImage", "Math"]))),
       dl.unwrap_if_descendant_of(#("p", ["td", "li"])),
       dl.rename_if_child_of(#("p", "Item", "Grid")),
       dl.wrap_children_up_to(#("Exercise", "Solution", "ExerciseStatement", infra.GoBack)),
@@ -215,7 +215,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
       ]),
       dl.detokenize_href_surroundings(),
-      dl.insert_word_joiner_into_adjacent_text_nodes(["a", "InChapterLink"]),
+      dl.insert_word_joiner_into_adjacent_text_nodes(["a", "ThisPageLink"]),
       dl.lbp_generate_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
       dl.lbp_generate_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
       dl.lbp_generate_prev_next_attributes(),
@@ -226,6 +226,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.delete_attribute__outside("type", ["List"]),
       dl.delete_attribute__batch(["counter", "handle", "t", "_", "title", "test"]),
       dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
+      dl.rename(#("a", "OtherPageLink")),
     ],
     case author_mode {
       True -> [

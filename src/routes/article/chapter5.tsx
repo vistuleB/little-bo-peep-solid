@@ -4,18 +4,19 @@ import Boxed  from "~/components/Boxed";
 import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
-import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
 import { Item, List }  from "~/components/List";
 import { MathBlock, Math }  from "~/components/Math";
+import OtherPageLink  from "~/components/OtherPageLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
 import TextParent  from "~/components/TextParent";
+import ThisPageLink  from "~/components/ThisPageLink";
 import { TildeDivider }  from "~/components/TildeDivider";
-import { InTextWarning, SolutionNote, Example, Pause, Section, NoBreak }  from "~/components/Wrappers";
+import { SolutionNote, Example, Pause, Section, NoBreak }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter5__() {
@@ -29,17 +30,17 @@ export default function __Chapter5__() {
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">
+          <ThisPageLink href="?id=section-1">
             §1. cos and sin. (“cosine” and “sine”.)
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">
+          <ThisPageLink href="?id=section-2">
             §2. derivatives
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">
+          <ThisPageLink href="?id=section-3">
             even/odd identities, and identities with {" "}
             <NoBreak>
               “
@@ -48,35 +49,35 @@ export default function __Chapter5__() {
               </Math>
               ”
             </NoBreak>
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
+          <ThisPageLink href="?id=section-4">
             relation to derivatives
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">
+          <ThisPageLink href="?id=section-5">
             parenthetization and powers
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">
+          <ThisPageLink href="?id=section-6">
             the pythagorean identity
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=section-7">
+          <ThisPageLink href="?id=section-7">
             inputs as radians
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
-          <InChapterLink href="?id=section-8">
+          <ThisPageLink href="?id=section-8">
             the degree “°” notation
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=section-9">
+          <ThisPageLink href="?id=section-9">
             sines and cosines of {" "}
             <NoBreak>
               <Math>
@@ -95,62 +96,62 @@ export default function __Chapter5__() {
                 $\mathbf&#123;60^\circ&#125;$
               </Math>
             </NoBreak>
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
-          <InChapterLink href="?id=section-10">
+          <ThisPageLink href="?id=section-10">
             scaling the circle
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-10">
-          <InChapterLink href="?id=section-11">
+          <ThisPageLink href="?id=section-11">
             polar coordinates
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-11">
-          <InChapterLink href="?id=section-12">
+          <ThisPageLink href="?id=section-12">
             change-of-coordinate formulas
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-12">
-          <InChapterLink href="?id=section-13">
+          <ThisPageLink href="?id=section-13">
             right triangles
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-13">
-          <InChapterLink href="?id=section-14">
+          <ThisPageLink href="?id=section-14">
             a famous diagram
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-14">
-          <InChapterLink href="?id=section-15">
+          <ThisPageLink href="?id=section-15">
             the abercrombie inequality
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-15">
-          <InChapterLink href="?id=section-16">
+          <ThisPageLink href="?id=section-16">
             the gregorinovich sandwich
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-16">
-          <InChapterLink href="?id=section-17">
+          <ThisPageLink href="?id=section-17">
             the angle-sum formulas
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-17">
-          <InChapterLink href="?id=section-18">
+          <ThisPageLink href="?id=section-18">
             the missing arrows
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-18">
-          <InChapterLink href="?id=section-19">
+          <ThisPageLink href="?id=section-19">
             note on calculators
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-19">
-          <InChapterLink href="?id=exercises">
+          <ThisPageLink href="?id=exercises">
             exercises
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 5:">
@@ -167,12 +168,12 @@ export default function __Chapter5__() {
           {" "} We have
           already encountered the ‘cos’ function in 
           {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter3#_40_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 7 of Chapter 3
-          </a>
+          </OtherPageLink>
           &#8288;,
           e.g.. It is the one that has this graph:
         </OuterP>
@@ -500,12 +501,12 @@ export default function __Chapter5__() {
         <Pause />
         <OuterP>
           in {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter4#_84_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 25 of Chapter 3
-          </a>
+          </OtherPageLink>
           {" "} (by direct inspection
           of the graph {" "}
           <NoBreak>
@@ -864,12 +865,12 @@ const Rest = () => {
         <OuterP>
           These are the same four curves that
           appear in {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter4#_69_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 12 of Chapter 4
-          </a>
+          </OtherPageLink>
           &#8288;.
           In particular,
         </OuterP>
@@ -938,20 +939,20 @@ const Rest = () => {
           </Math>
           {" "}
           (cf. {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter4#_67_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 10
-          </a>
+          </OtherPageLink>
           {" "}
           and {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter4#_68_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 11 of Chapter 4
-          </a>
+          </OtherPageLink>
           &#8288;),
           which implies that
         </OuterP>
@@ -1060,19 +1061,19 @@ const Rest = () => {
           </NoBreak>
           {" "}
           (Cf. {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter4#_84_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 25
-          </a>
+          </OtherPageLink>
           &#8288;, {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter4#_88_h.a.i_"
             class="out-chapter-link"
           >
             Chapter 4
-          </a>
+          </OtherPageLink>
           &#8288;.) You should
           be able to verify each of these identities
           just by looking at them and thinking of the
@@ -4135,12 +4136,12 @@ const Rest = () => {
           <Pause />
           <OuterP>
             [&#8288;
-            <InChapterLink
+            <ThisPageLink
               href="/article/chapter5#_90_h.a.i_"
               class="in-chapter-link"
             >
               Example 6
-            </InChapterLink>
+            </ThisPageLink>
             {" "} continued.] In particular, this means that 
             in any cylindrical
             projection** of the Earth, such as the
@@ -4334,31 +4335,31 @@ const Rest = () => {
             <Pause />
             <OuterP>
               making it a true {" "}
-              <a
+              <OtherPageLink
                 class="out-chapter-link"
                 href="/article/chapter3#_33_h.a.i_"
               >
                 <i>
                   linear
                 </i>
-              </a>
+              </OtherPageLink>
               {" "} function (as opposed
               to {" "}
-              <a
+              <OtherPageLink
                 class="out-chapter-link"
                 href="/article/chapter3#_33_h.a.i_"
               >
                 <i>
                   affine
                 </i>
-              </a>
+              </OtherPageLink>
               &#8288;, cf. {" "}
-              <a
+              <OtherPageLink
                 class="out-chapter-link"
                 href="/article/chapter3#_33_h.a.i_"
               >
                 Chapter 3
-              </a>
+              </OtherPageLink>
               &#8288;).
             </OuterP>
             <OuterP class="indent-10">
@@ -4540,12 +4541,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} cf. {" "}
-              <a
+              <OtherPageLink
                 href="/article/chapter3#_56_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 3
-              </a>
+              </OtherPageLink>
               &#8288;.]
             </OuterP>
             <OuterP class="indent-10">
@@ -5191,12 +5192,12 @@ const Rest = () => {
               {" "}
               and since, like the small-scale oscillation from
               {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_92_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 2
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;, it has
               an amplitude of {" "}
               <NoBreak>
@@ -6956,12 +6957,12 @@ const Rest = () => {
               {" "}
               If, 
               in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_100_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               we modify the definition of the angle {" "}
               <Math>
@@ -7057,12 +7058,12 @@ const Rest = () => {
               </Math>
               {" "} being that
               length in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_100_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               while on the other the other hand,
             </OuterP>
@@ -7087,12 +7088,12 @@ const Rest = () => {
                 $R\cos(\phi)$
               </Math>
               {" "} in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_100_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;:
             </OuterP>
             <Pause />
@@ -7118,12 +7119,12 @@ const Rest = () => {
                 ”
               </NoBreak>
               {" "} in the formulas of {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_100_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               giving us:
             </OuterP>
@@ -9919,12 +9920,12 @@ const Rest = () => {
               {" "} in the
               Lambert projection of a sphere onto a cylinder?
               (Cf. {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_90_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 6
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.)
               For reference, a profile view of the Lambert projection
               is also given below.
@@ -9955,12 +9956,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               as covered in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_90_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 6
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               whereas longitudes (the other
               ones, perpendicular to latitudes) are locally stretched
@@ -11591,12 +11592,12 @@ const Rest = () => {
               {" "}
               How would the graphs of the four compositions
               in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_122_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 32
-              </InChapterLink>
+              </ThisPageLink>
               {" "} 
               compare to the graph of the generic function {" "}
               <NoBreak>
@@ -11704,20 +11705,20 @@ const Rest = () => {
             <Pause />
             <OuterP>
               (Cf. {" "}
-              <a
+              <OtherPageLink
                 href="/article/chapter3#_40_h.a.i_"
                 class="out-chapter-link"
               >
                 Exercise 7 of Chapter 3
-              </a>
+              </OtherPageLink>
               &#8288;, 
               {" "}
-              <a
+              <OtherPageLink
                 href="/article/chapter3#_48_h.a.i_"
                 class="out-chapter-link"
               >
                 Exercise 14 of Chapter 3
-              </a>
+              </OtherPageLink>
               &#8288;.)
             </OuterP>
           </Solution>
@@ -11917,12 +11918,12 @@ const Rest = () => {
               {" "} Reasoning by the analogy of
               a particle going around a circle at uniform
               speed (cf. {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_99_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 9
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;):
             </OuterP>
             <Pause />
@@ -12155,12 +12156,12 @@ const Rest = () => {
               </NoBreak>
               {" "} as discussed
               in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_123_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 33
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.
               The second step in which {" "}
               <Math>
@@ -12202,12 +12203,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} also as discussed in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_123_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 33
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;;
               step 3 brings the box immediately to the
               left of sin online...
@@ -12225,12 +12226,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} as discussed in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_123_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 33
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               and finally step 4 brings the leftmost box online...
             </OuterP>
@@ -12245,12 +12246,12 @@ const Rest = () => {
               </Math>
               {" "} units up, as again discussed
               in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_123_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 33
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.
             </OuterP>
             <Pause />
@@ -12654,12 +12655,12 @@ const Rest = () => {
               </b>
               {" "}
               Keeping the diagram of {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_126_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 36
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               find a formula for {" "}
               <Math>
@@ -12689,12 +12690,12 @@ const Rest = () => {
           <Solution>
             <OuterP>
               By {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_126_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 36
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               these rectangles have the same area:
             </OuterP>
@@ -12858,12 +12859,12 @@ const Rest = () => {
             </OuterP>
             <OuterP class="indent-10">
               So we obtain the same formula as in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_127_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 37
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;!
             </OuterP>
           </Solution>
@@ -12924,27 +12925,27 @@ const Rest = () => {
               </NoBreak>
               {" "}
               similarly to exercises {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_126_h.a.i_"
                 class="in-chapter-link"
               >
                 36
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_127_h.a.i_"
                 class="in-chapter-link"
               >
                 37
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;, and {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_128_h.a.i_"
                 class="in-chapter-link"
               >
                 38
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;:
             </OuterP>
             <Pause />
@@ -12998,19 +12999,19 @@ const Rest = () => {
             </Boxed>
             <OuterP>
               ...as in exercises {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_127_h.a.i_"
                 class="in-chapter-link"
               >
                 37
-              </InChapterLink>
+              </ThisPageLink>
               {" "} and {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_128_h.a.i_"
                 class="in-chapter-link"
               >
                 38
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.
             </OuterP>
           </Solution>
@@ -13890,12 +13891,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               of {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_131_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 41
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               the answer is
             </OuterP>
@@ -13938,12 +13939,12 @@ const Rest = () => {
                 </i>
                 .
                 Like the “polar distance” formula from {" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter5#_131_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 41
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;,
                 to which it is equivalent, it is a generalization
                 of the Pythagorean theorem. This becomes extra clear if we rewrite it
@@ -14060,12 +14061,12 @@ const Rest = () => {
               entirely the same as 
               the solution technique of
               {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_94_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 4
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;):
             </OuterP>
             <Pause />
@@ -14365,20 +14366,20 @@ const Rest = () => {
                   </NoBreak>
                   {" "} as well
                   (cf. {" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter5#_109_h.a.i_"
                     class="in-chapter-link"
                   >
                     Exercise 19
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;,
                   {" "}
-                  <InChapterLink
+                  <ThisPageLink
                     href="/article/chapter5#_110_h.a.i_"
                     class="in-chapter-link"
                   >
                     Exercise 20
-                  </InChapterLink>
+                  </ThisPageLink>
                   &#8288;).
                 </p>
               </Item>
@@ -14881,12 +14882,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               (Cf. {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_134_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 44
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.)
               We now proceed with
               step-by-step
@@ -15158,20 +15159,20 @@ const Rest = () => {
             <OuterP>
               can be
               found here and here, by {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_135_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 45
-              </InChapterLink>
+              </ThisPageLink>
               {" "}
               (this figure is just a recap of {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_135_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 45
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;):
             </OuterP>
             <Pause />
@@ -15937,15 +15938,14 @@ const Rest = () => {
             <Image src="/build-img/svgo-svg/Usrx.svg" />
             <Pause />
             <OuterP>
-              As seen in Exercise {" "}
-              <InTextWarning>
-                undefined handle at ch5^exercises/_sqrt_xy_construction_.wly:93:9: _ratio_A_over_B_1_
-              </InTextWarning>
-              +
-              <i>
-                tan^2
-              </i>
-              ,
+              As seen in {" "}
+              <ThisPageLink
+                href="/article/chapter5#_113_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 23
+              </ThisPageLink>
+              &#8288;,
               however, we have
             </OuterP>
             <Pause />
@@ -16051,12 +16051,12 @@ const Rest = () => {
               {" "} at lower —leftif we label it
               —suchis also repeated middle top right (this is
               the content of {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_110_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 20
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;):
             </OuterP>
             <Pause />
@@ -16238,19 +16238,19 @@ const Rest = () => {
                 that is not the first or the last is the
                 arithematic mean of the two terms on either side.
                 (Cf. {" "}
-                <a
+                <OtherPageLink
                   href="/article/chapter4#_80_h.a.i_"
                   class="out-chapter-link"
                 >
                   Note 1
-                </a>
+                </OtherPageLink>
                 {" "} in {" "}
-                <a
+                <OtherPageLink
                   href="/article/chapter4#_81_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 22 of Chapter 4
-                </a>
+                </OtherPageLink>
                 &#8288;.)
               </OuterP>
             </SolutionNote>
@@ -17064,12 +17064,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               As established in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_139_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 49
-              </InChapterLink>
+              </ThisPageLink>
               {" "}
               {" "}
               <Math>
@@ -17461,12 +17461,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               apparent in the four graphs of {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_142_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 52
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;?
             </OuterP>
           </ExerciseStatement>
@@ -17557,12 +17557,12 @@ const Rest = () => {
               </b>
               {" "}
               Based on the graphs of {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_142_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 52
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;,
               or some other logic,
               does it seem more likely that 
@@ -18260,12 +18260,12 @@ const Rest = () => {
                 $y = \cos x + \sin x$
               </Math>
               {" "} from {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_142_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 52
-              </InChapterLink>
+              </ThisPageLink>
               {" "} has a maximum value greater than {" "}
               <NoBreak>
                 <Math>
@@ -18537,12 +18537,12 @@ const Rest = () => {
                 $\cos x + \sin x$
               </Math>
               {" "} is given in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_146_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 56
-              </InChapterLink>
+              </ThisPageLink>
               {" "}
               that, to recap, involves “raining down at {" "}
               <NoBreak>
@@ -18655,12 +18655,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} as covered in {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_146_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 56
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.)
               Alternately, we could read values off of a ruler placed
               at {" "}
@@ -18913,12 +18913,12 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 (...cf. {" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter5#_123_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 33
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;) 
                 can be obtained from...
               </OuterP>
@@ -18956,12 +18956,12 @@ const Rest = () => {
                 </Math>
                 {" "}
                 (cf. {" "}
-                <InChapterLink
+                <ThisPageLink
                   href="/article/chapter5#_146_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 56
-                </InChapterLink>
+                </ThisPageLink>
                 &#8288;)...
               </OuterP>
               <Pause />
@@ -19070,12 +19070,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by the “angle-difference formula” (cf. {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_141_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 51
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;) so
             </OuterP>
             <Pause />
@@ -19174,31 +19174,31 @@ const Rest = () => {
               </b>
               {" "}
               Relate {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_147_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 57
-              </InChapterLink>
+              </ThisPageLink>
               {" "} to {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_148_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 58
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
               {" "}{" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_147_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 57
-              </InChapterLink>
+              </ThisPageLink>
               {" "}
               establishes that
             </OuterP>
@@ -19222,12 +19222,12 @@ const Rest = () => {
             <OuterP>
               of
               {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter5#_148_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 58
-              </InChapterLink>
+              </ThisPageLink>
               {" "} since
             </OuterP>
             <Pause />

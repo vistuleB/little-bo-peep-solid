@@ -3,7 +3,6 @@ import ArticleTitle  from "~/components/ArticleTitle";
 import { CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Grid  from "~/components/Grid";
-import InChapterLink  from "~/components/InChapterLink";
 import { Item, List }  from "~/components/List";
 import { Math, MathBlock }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
@@ -11,6 +10,7 @@ import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBrea
 import { ImageLeft, ImageRight }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
+import ThisPageLink  from "~/components/ThisPageLink";
 import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
@@ -25,39 +25,34 @@ export default function __Chapter1__() {
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=first-section">
+          <ThisPageLink href="?id=first-section">
             square roots
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-1">
-            square roots (bis)
-          </InChapterLink>
+          <ThisPageLink href="?id=section-1">
+            fractions and division
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-2">
-            fractions and division
-          </InChapterLink>
+          <ThisPageLink href="?id=section-2">
+            distributivity
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-3">
-            distributivity
-          </InChapterLink>
+          <ThisPageLink href="?id=section-3">
+            epilogue
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-4">
-            epilogue
-          </InChapterLink>
+          <ThisPageLink href="?id=section-4">
+            vocabulary
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-5">
-            vocabulary
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=exercises">
+          <ThisPageLink href="?id=exercises">
             exercises
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 1:">
@@ -218,24 +213,8 @@ export default function __Chapter1__() {
             .)
           </NoBreak>
         </OuterP>
-      </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const showMore = useShowMore();
-  return <>
-    {showMore() && <>
-      <Pause />
-      <Section id="section-1">
-        <OuterP>
-          <b>
-            Square roots (bis).
-          </b>
-          {" "}
-          We next ponder the value of
+        <OuterP class="indent-10">
+          We will next ponder the value of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -548,8 +527,17 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return <>
+    {showMore() && <>
       <Pause />
-      <Section id="section-2">
+      <Section id="section-1">
         <OuterP>
           <b>
             Fractions and Division.
@@ -791,7 +779,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-3">
+      <Section id="section-2">
         <OuterP>
           <b>
             Distributivity.
@@ -1101,12 +1089,12 @@ const Rest = () => {
           <Pause />
           <OuterP>
             obtaining the same result as {" "}
-            <InChapterLink
+            <ThisPageLink
               href="/article/chapter1#_21_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
-            </InChapterLink>
+            </ThisPageLink>
             &#8288;.
           </OuterP>
         </Example>
@@ -1382,7 +1370,7 @@ const Rest = () => {
         <StarDivider />
       </Section>
       <Pause />
-      <Section id="section-4">
+      <Section id="section-3">
         <OuterP>
           <b>
             Epilogue.
@@ -1455,7 +1443,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-5">
+      <Section id="section-4">
         <OuterP>
           <b>
             Vocabulary.
@@ -2673,12 +2661,12 @@ const Rest = () => {
               </b>
               {" "}
               In the solution to {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter1#_22_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1
-              </InChapterLink>
+              </ThisPageLink>
               {" "} it
               is observed that the difference
             </OuterP>

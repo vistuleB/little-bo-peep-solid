@@ -4,13 +4,14 @@ import Boxed  from "~/components/Boxed";
 import { CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
-import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
+import OtherPageLink  from "~/components/OtherPageLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
+import ThisPageLink  from "~/components/ThisPageLink";
 import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
@@ -25,60 +26,60 @@ export default function __Chapter6__() {
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=section-1">
+          <ThisPageLink href="?id=section-1">
             function signatures
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-2">
+          <ThisPageLink href="?id=section-2">
             dimensionless units
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
-          <InChapterLink href="?id=section-3">
+          <ThisPageLink href="?id=section-3">
             restrictions imposed on signatures by function
             operations
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
+          <ThisPageLink href="?id=section-4">
             the unary function operations
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
-          <InChapterLink href="?id=section-5">
+          <ThisPageLink href="?id=section-5">
             differentiation
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
-          <InChapterLink href="?id=section-6">
+          <ThisPageLink href="?id=section-6">
             operators
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
-          <InChapterLink href="?id=section-7">
+          <ThisPageLink href="?id=section-7">
             the sum rule
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
-          <InChapterLink href="?id=section-8">
+          <ThisPageLink href="?id=section-8">
             the “early afteroon product rule”
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
-          <InChapterLink href="?id=section-9">
+          <ThisPageLink href="?id=section-9">
             the chain rule
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
-          <InChapterLink href="?id=section-10">
+          <ThisPageLink href="?id=section-10">
             epilogue: the dimensionless plane
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-10">
-          <InChapterLink href="?id=exercises">
+          <ThisPageLink href="?id=exercises">
             exercises
-          </InChapterLink>
+          </ThisPageLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 6:">
@@ -525,12 +526,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           [*See {" "}
-          <a
+          <OtherPageLink
             class="out-chapter-link"
             href="/article/chapter5#_89_h.a.i_"
           >
             Chapter 5
-          </a>
+          </OtherPageLink>
           &#8288;.]
         </OuterP>
       </Section>
@@ -542,20 +543,20 @@ const Rest = () => {
           </b>
           {" "}
           As reviewed in {" "}
-          <a
+          <OtherPageLink
             class="out-chapter-link"
             href="/article/chapter4#section-6"
           >
             Chapter 4
-          </a>
+          </OtherPageLink>
           {" "}
           (see also {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
-          </a>
+          </OtherPageLink>
           &#8288;),
           differentiation divides the units of the output
           by the units of the input. 
@@ -612,12 +613,12 @@ const Rest = () => {
           </NoBreak>
           {" "} of
           {" "}
-          <a
+          <OtherPageLink
             href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
-          </a>
+          </OtherPageLink>
           &#8288;, that one needs to
           multiply the output units of {" "}
           <Math>
@@ -676,12 +677,12 @@ const Rest = () => {
           Though similarly, the
           unary function
           operations from {" "}
-          <InChapterLink
+          <ThisPageLink
             class="in-chapter-link"
             href="#_153_h.a.i_"
           >
             Table 1.2
-          </InChapterLink>
+          </ThisPageLink>
           {" "} 
           can be viewed as operators, taking one function
           as input and producing one function as output:
@@ -827,12 +828,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           as listed in {" "}
-          <InChapterLink
+          <ThisPageLink
             class="in-chapter-link"
             href="#_152_h.a.i_"
           >
             Table 1.1
-          </InChapterLink>
+          </ThisPageLink>
           &#8288;,
           while the subsequent taking of a derivative doesn't
           impose any new constraints.
@@ -1074,22 +1075,22 @@ const Rest = () => {
           <OuterP>
             <i>
               Note on {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter6#_154_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 2
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.
             </i>
             {" "}
             In the case of {" "}
-            <InChapterLink
+            <ThisPageLink
               href="/article/chapter6#_154_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
-            </InChapterLink>
+            </ThisPageLink>
             &#8288;, the sum rule,
             which now reads
           </OuterP>
@@ -1453,12 +1454,12 @@ const Rest = () => {
             </b>
             {" "}
             As in {" "}
-            <InChapterLink
+            <ThisPageLink
               href="/article/chapter6#_154_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
-            </InChapterLink>
+            </ThisPageLink>
             {" "}
             let
           </OuterP>
@@ -1578,12 +1579,12 @@ const Rest = () => {
           <OuterP>
             <i>
               Note on {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter6#_157_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 4
-              </InChapterLink>
+              </ThisPageLink>
               &#8288;.
             </i>
             {" "}
@@ -1608,12 +1609,12 @@ const Rest = () => {
           <Pause />
           <OuterP>
             in {" "}
-            <InChapterLink
+            <ThisPageLink
               href="/article/chapter6#_157_h.a.i_"
               class="in-chapter-link"
             >
               Example 4
-            </InChapterLink>
+            </ThisPageLink>
             &#8288;—one might conjecture that
           </OuterP>
           <Pause />
@@ -2213,19 +2214,19 @@ const Rest = () => {
           <Pause />
           <OuterP>
             similarly to the {" "}
-            <InChapterLink
+            <ThisPageLink
               class="in-chapter-link"
               href="#_156_h.a.i_"
             >
               postscript
-            </InChapterLink>
+            </ThisPageLink>
             {" "} following {" "}
-            <InChapterLink
+            <ThisPageLink
               href="/article/chapter6#_155_h.a.i_"
               class="in-chapter-link"
             >
               Example 3
-            </InChapterLink>
+            </ThisPageLink>
             &#8288;,
             relative to the sum rule.
           </OuterP>
@@ -2253,12 +2254,12 @@ const Rest = () => {
           <Pause />
           <OuterP>
             by {" "}
-            <InChapterLink
+            <ThisPageLink
               class="in-chapter-link"
               href="#section-9"
             >
               the chain rule
-            </InChapterLink>
+            </ThisPageLink>
             &#8288;,
             since {" "}
             <NoBreak>
@@ -2324,12 +2325,12 @@ const Rest = () => {
           <Pause />
           <OuterP>
             by {" "}
-            <InChapterLink
+            <ThisPageLink
               href="/article/chapter6#_158_h.a.i_"
               class="in-chapter-link"
             >
               Example 6
-            </InChapterLink>
+            </ThisPageLink>
             &#8288;,
             which looks visually compatible with the graph of
             {" "}
@@ -2361,12 +2362,12 @@ const Rest = () => {
           <OuterP>
             <i>
               Note on {" "}
-              <InChapterLink
+              <ThisPageLink
                 href="/article/chapter6#_159_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 7
-              </InChapterLink>
+              </ThisPageLink>
             </i>
             . Because
           </OuterP>
@@ -2619,12 +2620,12 @@ const Rest = () => {
                 </Math>
               </NoBreak>
               {" "} {" "}
-              <a
+              <OtherPageLink
                 href="/article/chapter4#_76_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 4, Exercise 18
-              </a>
+              </OtherPageLink>
               &#8288;):
             </OuterP>
             <Boxed>

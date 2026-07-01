@@ -54,7 +54,6 @@ const Image = (props: ImageProps) => {
     if (!comp && image_ref) {
       comp = parseFloat(window.getComputedStyle(image_ref).width);
     }
-    console.log("toReturn: ", toReturn, "comp:", comp);
     return toReturn;
   };
   const scaled_down_scale = () =>

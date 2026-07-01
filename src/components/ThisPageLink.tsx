@@ -2,7 +2,7 @@ import { ParentProps } from "solid-js";
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { twJoin } from "tailwind-merge";
 
-const InChapterLink = (
+const ThisPageLink = (
   props: ParentProps & { href: string; class?: string },
 ) => {
   const { scrollToInChapter } = useScrollToInChapter();
@@ -11,6 +11,15 @@ const InChapterLink = (
     e.preventDefault();
     const url = new URL((e.currentTarget as HTMLAnchorElement).href);
     let id = url.searchParams.get("id") || url.hash.slice(1) || "";
+    window.history.replaceState(
+      { ...window.history.state, llpScroll: window.scrollY },
+      "",
+    );
+    window.history.pushState(null, "", props.href);
+    window.history.replaceState(
+      { ...window.history.state, _depth: window.history.length - 1 },
+      "",
+    );
     scrollToInChapter(id, 200);
   };
 
@@ -24,4 +33,4 @@ const InChapterLink = (
   );
 };
 
-export default InChapterLink;
+export default ThisPageLink;

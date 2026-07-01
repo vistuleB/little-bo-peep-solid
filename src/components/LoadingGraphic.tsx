@@ -1,29 +1,55 @@
-import { onMount, createSignal, onCleanup } from "solid-js";
+import { onCleanup, createSignal, ParentProps, createEffect } from "solid-js";
+import { HAMBURGER_MENU_HEIGHT } from "~/constants";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import { useGlobalContext } from "~/store/StoreProvider";
 
-const LoadingGraphic = () => {
+const LoadingGraphicWrapper = (props: ParentProps) => {
+  const { store } = useGlobalContext();
+  return <LoadingGraphic show={store.loading} />;
+};
+
+const LoadingGraphic = (props: { show: boolean }) => {
   const { store, set_store } = useGlobalContext();
   const [ms, setMs] = createSignal(0);
-  const [_interval, _setInterval] = createSignal<NodeJS.Timeout | null>(null);
-  const startTime = performance.now();
 
-  onMount(() => {
-    let interval = setInterval(() => { setMs(performance.now() - startTime); }, 63);
-    _setInterval(interval);
-  });
+  let startTime = 0;
+  let interval: NodeJS.Timeout | null = null;
 
-  onCleanup(() => {
-    let delta = performance.now() - startTime;
+  const startTracking = () => {
+    startTime = performance.now();
+    setMs(0);
+    interval = setInterval(() => setMs(performance.now() - startTime), 63);
+  };
+
+  const stopTracking = () => {
+    if (interval === null) return;
+    clearInterval(interval);
+    interval = null;
+    const delta = performance.now() - startTime;
     set_store("last_page_load_ms", delta);
     set_store("total_page_load_ms", store.total_page_load_ms + delta);
     set_store("num_page_loads", store.num_page_loads + 1);
-    clearInterval(_interval()!);
+  };
+
+  createEffect(() => {
+    if (props.show) {
+      startTracking();
+    } else {
+      stopTracking();
+    }
+  });
+
+  onCleanup(() => {
+    stopTracking();
   });
 
   return (
-    <>
-      <div class="fixed top-0 left-0 w-full h-full bg-[var(--background-rgb)] z-50"></div>
+    <div style={props.show ? undefined : "display:none;"}>
+      <div
+        style={{
+          top: `${HAMBURGER_MENU_HEIGHT}px`,
+        }}
+        class="fixed left-0 w-full h-full bg-[var(--background-rgb)] z-50"></div>
       <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50">
         <img
           src="/non-build-img/loading_screen.png"
@@ -33,8 +59,8 @@ const LoadingGraphic = () => {
           <div>{(ms() / 1000).toFixed(2)}s&thinsp;</div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default LoadingGraphic;
+export default LoadingGraphicWrapper;
