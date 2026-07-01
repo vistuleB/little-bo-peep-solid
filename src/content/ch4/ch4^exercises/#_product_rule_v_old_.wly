@@ -7,7 +7,7 @@
     standard notation for a small amount of
     time):
 
-    |> Image\
+    |> Image
         src=images/svg_ch4_RATS_timeline.svg
 
     We also consider quantities $A$ and $B$

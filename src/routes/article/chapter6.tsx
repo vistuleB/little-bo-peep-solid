@@ -21,61 +21,66 @@ export default function __Chapter6__() {
       nextPage="/article/appendixA"
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_160_h.a.i_"
+      id="_163_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            function signatures
+            terminology: “dimension” vs. “dimensional”
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            dimensionless units
+            function signatures
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
-            restrictions imposed on signatures by function
-            operations
+            dimensionless units
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
-            the unary function operations
+            restrictions imposed on signatures by function
+            operations
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
-            differentiation
+            the unary function operations
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
-            operators
+            differentiation
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
-            the sum rule
+            operators
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
-            the “early afteroon product rule”
+            the sum rule
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
-            the chain rule
+            the “early afteroon product rule”
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=section-10">
-            epilogue: the dimensionless plane
+            the chain rule
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-10">
+          <InChapterLink href="?id=section-11">
+            epilogue: the dimensionless plane
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-11">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -84,9 +89,73 @@ export default function __Chapter6__() {
       <ArticleTitle banner="Chapter 6:">
         Dimensional Analysis
       </ArticleTitle>
+      <Section id="section-1">
+        <OuterP>
+          <b>
+            Terminology: “dimension” vs. “dimensional”.
+          </b>
+          {" "}
+          As explained in the {" "}
+          <a
+            class="out-chapter-link"
+            href="/article/chapter2#section-9"
+          >
+            Postcript to Chapter 2
+          </a>
+          &#8288;, the
+          term
+          {" "}
+          <a
+            href="/article/chapter4#section-6"
+            class="out-chapter-link"
+          />
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          dimension
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          can mean a qualitative category of units, such as
+          in the phrase {" "}
+          <NoBreak>
+            “
+            <Math>
+              $x$
+            </Math>
+          </NoBreak>
+          {" "} has dimensions of time”.
+          On the other hand,
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          dimensional
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          means “that which relates to
+          dimensions {" "}
+          <i>
+            or
+          </i>
+          {" "} units”, 
+          i.e., there is no standalone term for
+          “that which relates to units”, so we have this catch-all instead.
+        </OuterP>
+      </Section>
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return <>
+    {showMore() && <>
+      <Pause />
       <Section
         and="sth_else"
-        id="section-1"
+        id="section-2"
       >
         <OuterP>
           <b>
@@ -198,17 +267,8 @@ export default function __Chapter6__() {
           </OuterP>
         </Example>
       </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const showMore = useShowMore();
-  return <>
-    {showMore() && <>
       <Pause />
-      <Section id="section-2">
+      <Section id="section-3">
         <OuterP>
           <b>
             Dimensionless units.
@@ -393,7 +453,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-3">
+      <Section id="section-4">
         <OuterP>
           <b>
             Restrictions imposed on signatures by function
@@ -477,7 +537,7 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/qdyx.svg"
-          id="_152_h.a.i_"
+          id="_153_h.a.i_"
         />
         <Pause />
         <OuterP>
@@ -487,7 +547,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-4">
+      <Section id="section-5">
         <OuterP>
           <b>
             The unary function operations.
@@ -520,14 +580,14 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/lyKL.svg"
-          id="_153_h.a.i_"
+          id="_154_h.a.i_"
         />
         <Pause />
         <OuterP>
           [*See {" "}
           <a
             class="out-chapter-link"
-            href="/article/chapter5#_89_h.a.i_"
+            href="/article/chapter5#_90_h.a.i_"
           >
             Chapter 5
           </a>
@@ -535,20 +595,26 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-5">
+      <Section
+        _handle="differentiation_and_signatures"
+        id="section-6"
+      >
         <OuterP>
           <b>
             Differentiation.
           </b>
           {" "}
           As reviewed in {" "}
-          <a href="&gt;&gt;units_of_the_derivative">
+          <a
+            class="out-chapter-link"
+            href="/article/chapter4#section-6"
+          >
             Chapter 4
           </a>
           {" "}
           (see also {" "}
           <a
-            href="/article/chapter4#_62_h.a.i_"
+            href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -610,7 +676,7 @@ const Rest = () => {
           {" "} of
           {" "}
           <a
-            href="/article/chapter4#_62_h.a.i_"
+            href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -637,7 +703,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-6">
+      <Section id="section-7">
         <OuterP>
           <b>
             Operators.
@@ -675,7 +741,7 @@ const Rest = () => {
           operations from {" "}
           <InChapterLink
             class="in-chapter-link"
-            href="#_153_h.a.i_"
+            href="#_154_h.a.i_"
           >
             Table 1.2
           </InChapterLink>
@@ -748,7 +814,7 @@ const Rest = () => {
         <StarDivider style="margin-top:-0.3em" />
       </Section>
       <Pause />
-      <Section id="section-7">
+      <Section id="section-8">
         <OuterP>
           <b>
             The sum rule.
@@ -826,7 +892,7 @@ const Rest = () => {
           as listed in {" "}
           <InChapterLink
             class="in-chapter-link"
-            href="#_152_h.a.i_"
+            href="#_153_h.a.i_"
           >
             Table 1.1
           </InChapterLink>
@@ -998,7 +1064,7 @@ const Rest = () => {
           as units are concerned: nothing untoward has been found!
         </OuterP>
         <Pause />
-        <Example id="_154_h.a.i_">
+        <Example id="_155_h.a.i_">
           <OuterP>
             <b>
               Example 2.
@@ -1072,7 +1138,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_154_h.a.i_"
+                href="/article/chapter6#_155_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 2
@@ -1082,7 +1148,7 @@ const Rest = () => {
             {" "}
             In the case of {" "}
             <InChapterLink
-              href="/article/chapter6#_154_h.a.i_"
+              href="/article/chapter6#_155_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1120,7 +1186,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_155_h.a.i_">
+        <Example id="_156_h.a.i_">
           <OuterP>
             <b>
               Example 3.
@@ -1291,7 +1357,7 @@ const Rest = () => {
           both differentiable it is still 
           true, however, that
         </OuterP>
-        <Boxed id="_156_h.a.i_">
+        <Boxed id="_157_h.a.i_">
           <MathBlock>
             $$
             (f + g)'(x_0) = f'(x_0) + g'(x_0)
@@ -1324,7 +1390,7 @@ const Rest = () => {
         </OuterP>
       </Section>
       <Pause />
-      <Section id="section-8">
+      <Section id="section-9">
         <OuterP>
           <b>
             The “early afteroon product rule”.
@@ -1443,7 +1509,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example id="_157_h.a.i_">
+        <Example id="_158_h.a.i_">
           <OuterP>
             <b>
               Example 4.
@@ -1451,7 +1517,7 @@ const Rest = () => {
             {" "}
             As in {" "}
             <InChapterLink
-              href="/article/chapter6#_154_h.a.i_"
+              href="/article/chapter6#_155_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1576,7 +1642,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_157_h.a.i_"
+                href="/article/chapter6#_158_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 4
@@ -1606,7 +1672,7 @@ const Rest = () => {
           <OuterP>
             in {" "}
             <InChapterLink
-              href="/article/chapter6#_157_h.a.i_"
+              href="/article/chapter6#_158_h.a.i_"
               class="in-chapter-link"
             >
               Example 4
@@ -1656,7 +1722,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section id="section-9">
+      <Section id="section-10">
         <OuterP>
           <b>
             The chain rule.
@@ -2212,13 +2278,13 @@ const Rest = () => {
             similarly to the {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#_156_h.a.i_"
+              href="#_157_h.a.i_"
             >
               postscript
             </InChapterLink>
             {" "} following {" "}
             <InChapterLink
-              href="/article/chapter6#_155_h.a.i_"
+              href="/article/chapter6#_156_h.a.i_"
               class="in-chapter-link"
             >
               Example 3
@@ -2228,7 +2294,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_158_h.a.i_">
+        <Example id="_159_h.a.i_">
           <OuterP>
             <b>
               Example 6.
@@ -2252,7 +2318,7 @@ const Rest = () => {
             by {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#section-9"
+              href="#section-10"
             >
               the chain rule
             </InChapterLink>
@@ -2304,7 +2370,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_159_h.a.i_">
+        <Example id="_160_h.a.i_">
           <OuterP>
             <b>
               Example 7.
@@ -2322,7 +2388,7 @@ const Rest = () => {
           <OuterP>
             by {" "}
             <InChapterLink
-              href="/article/chapter6#_158_h.a.i_"
+              href="/article/chapter6#_159_h.a.i_"
               class="in-chapter-link"
             >
               Example 6
@@ -2359,7 +2425,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_159_h.a.i_"
+                href="/article/chapter6#_160_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 7
@@ -2420,7 +2486,7 @@ const Rest = () => {
         </Example>
       </Section>
       <Pause />
-      <Section id="section-10">
+      <Section id="section-11">
         <OuterP>
           <b>
             Epilogue: the dimensionless plane.
@@ -2599,9 +2665,10 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
+        id="_162_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement>
+          <ExerciseStatement id="_161_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2617,7 +2684,7 @@ const Rest = () => {
               </NoBreak>
               {" "} {" "}
               <a
-                href="/article/chapter4#_76_h.a.i_"
+                href="/article/chapter4#_77_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 4, Exercise 19

@@ -63,7 +63,6 @@
                 src=images/svg_ch4_f_g_composition_units.svg
 
         |> SolutionNote
-            handle=TotalEarnings
             To emphasize, $f(x)$ is the
 
             __~ total ~__

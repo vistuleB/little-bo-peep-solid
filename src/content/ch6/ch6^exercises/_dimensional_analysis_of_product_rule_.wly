@@ -1,0 +1,12 @@
+|> Exercise
+    handle=_dimensional_analysis_of_product_rule_
+    Give a dimensional analysis of the (real,
+    “late afternoon”) product rule (cf$.$ Chapter >>derivatives#decoy:4, Exercise >>_product_rule_#decoy:16):
+
+    |> Boxed
+        $$
+        \Large (fg)' = f'g + fg'
+        $$
+
+    |> Solution
+        Hello.

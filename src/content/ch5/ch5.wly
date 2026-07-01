@@ -154,11 +154,9 @@
     particle.
 
 |> Section
-    handle=trigonometry-derivatives
+    _handle=trigonometry-derivatives
 
     *§2. Derivatives.*
-    !! Continuing the last “chapter” in the
-    !! definitions of $\sin$ and $\cos$, 
     Continuing the last topic,
     we can
     add two more particles to the diagram that

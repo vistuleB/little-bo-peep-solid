@@ -6,8 +6,7 @@
 
 
     |> Exercises
-        handle=playground-exercises
-
+        _handle=playground-exercises
 
         |> Exercise
             handle=grid-component

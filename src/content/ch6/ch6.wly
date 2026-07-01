@@ -6,27 +6,26 @@
 !!     based on considerations about the
 !!     units and/or dimensions [see below].
 
-!! |> Section
-!!     *Terminology: “dimension” vs. “dimensional”.*
-!!     As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions_epilogue), the
-!!     term
 
-!!     __dimension__
 
-!!     can mean a qualitative category of units, such as
-!!     in the phrase “$x$ has dimensions of time”.
-!!     On the other hand,
+|> Section
+    *Terminology: “dimension” vs. “dimensional”.*
+    As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions), the
+    term
+    >>units_of_the_derivative
 
-!!     __dimensional__
+    __dimension__
 
-!!     means “that which relates to
-!!     dimensions _or_ units”, 
-!!     i.e., there is no standalone term for
-!!     “that which relates to units”, so we have this catch-all instead.
-!!     !! not “that which relates to dimensions”.
-!!     !! —i.e., it doesn't just mean
-!!     !! “that which relates to dimensions”. 
-!!     !! (Lest you be fooled.)
+    can mean a qualitative category of units, such as
+    in the phrase “$x$ has dimensions of time”.
+    On the other hand,
+
+    __dimensional__
+
+    means “that which relates to
+    dimensions _or_ units”, 
+    i.e., there is no standalone term for
+    “that which relates to units”, so we have this catch-all instead.
 
 !! |> Section
 !!     *What is dimensional analysis.* 
@@ -352,7 +351,7 @@
     !! $$
 
 |> Section
-    handle=differentiation_and_signatures
+    _handle=differentiation_and_signatures
     *Differentiation.*
     As reviewed in [Chapter >>derivatives#decoy:4](>>units_of_the_derivative)
     (see also Exercise >>_complete_the_missing_units_#decoy:6 of Chapter >>derivatives#decoy:4),
@@ -1708,17 +1707,4 @@
     slice of the plane corresponds to the moment when
     the “time” variable—which _does_ have units—equals
     $3$ _seconds_, not just ‘$3$’, the pure number!!
-
-|> Exercises
-    |> Exercise
-        Give a dimensional analysis of the (real,
-        “late afternoon”) product rule (cf$.$ Chapter >>derivatives#decoy:4, Exercise >>_product_rule_#decoy:16):
-
-        |> Boxed
-            $$
-            \Large (fg)' = f'g + fg'
-            $$
-
-        |> Solution
-            Hello.
         

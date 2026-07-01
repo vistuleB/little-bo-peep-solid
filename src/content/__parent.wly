@@ -1,42 +1,4 @@
 |> Book
-    |> HeaderBlob
-        !! TEST 1 : 'Little Bo Peep' SVG
-        !! |> img
-        !!     style=padding-top:0.65em;padding-bottom:0.4em;
-        !!     src=public/header-blob.svg
-
-        !! TEST 2: two vertically stacked 'Little Bo Peep' SVGs
-        !! |> img
-        !!     style=padding-block:1em;
-        !!     src=public/header-blob.svg
-        !! |> img
-        !!     style=padding-block:1em;
-        !!     src=public/header-blob.svg
-
-        !! TEST 3: one <p> w/ many <br>
-        !! |> p
-        !!     Little Bo Peep
-        !!     |> br 
-        !!     Little Bo Peep
-        !!     |> br
-        !!     Little Bo Peep
-        !!     |> br
-        !!     Little Bo Peep
-
-        !! TEST 4: several <p>
-        !! |> p
-        !!     Little Bo Peep
-        !! |> p 
-        !!     Little Bo Peep
-        !! |> p
-        !!     Little Bo Peep
-        !! |> p
-        !!     Little Bo Peep
-
-        !! TEST 5: Loading Image
-        |> img
-            src=non-build-img/loading_screen.png
-
     |> ChapterSelection
         !! bootcamps:
         >>sets         >>_bt2_start_  >>_bt2_exercises_
@@ -46,10 +8,10 @@
         !! chapters:
         >>refreshers   >>_ch1_start_  >>_ch1_exercises_
         >>slopes       >>_ch2_start_  >>_ch2_exercises_
-        >>functions    >>_ch3_start_
+        >>functions    >>_ch3_start_  >>_ch3_exercises_
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
-        >>chain        >>_ch6_start_
+        >>chain        >>_ch6_start_  >>_ch6_exercises_
 
         !! appendices:
         >>exercise-graveyard  >>exercise-graveyard-start
@@ -83,7 +45,7 @@
     |> In
         chapter=>>refreshers
         >>_true_false_
-        >>_approximate_1_over_n_minus_1_over_n+1_
+        >>_approximate_1_over_n_minus_1_over_n_plus_1_
 
     |> In
         chapter=>>slopes
@@ -163,7 +125,7 @@
         >>_blueprints_top_and_side_
         >>_blueprints_open_thin_door_
         >>_powers_of_secant_
-        >>_isosets_of_xy_v5_
+        >>_isosets_of_xy_
         >>_long_division_11_over_7_
         >>_long_division_22_over_7_
         >>_long_division_15542486476949_777_
@@ -194,7 +156,7 @@
         >>_sine_rule_
         >>_secant_cosecant_intersections_
         >>_tan_cot_on_unit_circle_
-        >>_geometric_construction_of_1_over_A_new_ver_
+        >>_geometric_construction_of_1_over_A_
         >>_x_square_x_cube_construction_
         >>_sqrt_xy_construction_
         >>_project_i_and_j_
@@ -209,8 +171,9 @@
         >>_Acosx_plus_Bsinx_as_sinusoid_
         >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
 
-
-
+    |> In
+        chapter=>>chain
+        >>_dimensional_analysis_of_product_rule_
 
 
         !! ch5 exercise 'cycles':
@@ -270,10 +233,10 @@
         >>_pacman_1_
         >>_pacman_2_
         >>_associativity_of_function_addition_
-        >>_rat_fundraising_1_
-        >>_rat_fundraising_2_
-        >>_rat_fundraising_3_
-        >>_rat_fundraising_3_
+        !! >>_rat_fundraising_1_
+        !! >>_rat_fundraising_2_
+        !! >>_rat_fundraising_3_
+        !! >>_rat_fundraising_3_
         >>_circular_motion_2_3_velocity_vector_sketch_
         >>_circular_motion_2_3_acceleration_vector_sketch_
         >>_circular_motion_3_2_all_sketch_
@@ -315,3 +278,41 @@
 
     |> In
         chapter=>>classical-circle-theorems
+
+    |> HeaderBlob
+        !! TEST 1 : 'Little Bo Peep' SVG
+        !! |> img
+        !!     style=padding-top:0.65em;padding-bottom:0.4em;
+        !!     src=public/header-blob.svg
+
+        !! TEST 2: two vertically stacked 'Little Bo Peep' SVGs
+        !! |> img
+        !!     style=padding-block:1em;
+        !!     src=public/header-blob.svg
+        !! |> img
+        !!     style=padding-block:1em;
+        !!     src=public/header-blob.svg
+
+        !! TEST 3: one <p> w/ many <br>
+        !! |> p
+        !!     Little Bo Peep
+        !!     |> br 
+        !!     Little Bo Peep
+        !!     |> br
+        !!     Little Bo Peep
+        !!     |> br
+        !!     Little Bo Peep
+
+        !! TEST 4: several <p>
+        !! |> p
+        !!     Little Bo Peep
+        !! |> p 
+        !!     Little Bo Peep
+        !! |> p
+        !!     Little Bo Peep
+        !! |> p
+        !!     Little Bo Peep
+
+        !! TEST 5: Loading Image
+        |> img
+            src=non-build-img/loading_screen.png

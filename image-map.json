@@ -1591,8 +1591,8 @@
     "original-size": 54858,
     "compressed-size": 54287,
     "compression": "1.04%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e5_x_square_x_cube_construction_11.svg": {
     "build-version": "svgo-svg/9C_S.svg",
@@ -1767,8 +1767,8 @@
     "original-size": 38575,
     "compressed-size": 37069,
     "compression": "3.9%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_opening_door.svg": {
     "build-version": "svgo-svg/fgGT.svg",
@@ -2922,8 +2922,8 @@
     "original-size": 70191,
     "compressed-size": 67790,
     "compression": "3.42%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch3_composition_icon_die_3.svg": {
     "build-version": "svgo-svg/5zgu.svg",
@@ -3593,8 +3593,8 @@
     "original-size": 16634,
     "compressed-size": 14015,
     "compression": "15.74%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch1"]
   },
   "svg_ch4_pacman1_maze_two_possibilities.svg": {
     "build-version": "svgo-svg/tzR7.svg",
@@ -3934,8 +3934,8 @@
     "original-size": 91904,
     "compressed-size": 88684,
     "compression": "3.5%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e5_unit_dot_product_sol3_v2.svg": {
     "build-version": "svgo-svg/rAlI.svg",
@@ -4231,8 +4231,8 @@
     "original-size": 7622693,
     "compressed-size": 2684454,
     "compression": "64.78%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_ch_position_by_time_der_der.svg": {
     "build-version": "svgo-svg/cBcm.svg",
@@ -4594,8 +4594,8 @@
     "original-size": 199929,
     "compressed-size": 38376,
     "compression": "80.81%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch1"]
   },
   "svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg": {
     "build-version": "svgo-svg/Wk9W.svg",
@@ -6156,8 +6156,8 @@
     "original-size": 31091,
     "compressed-size": 30035,
     "compression": "3.4%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e5_unit_dot_product_sol6_v2.svg": {
     "build-version": "svgo-svg/vjt3.svg",
@@ -6442,8 +6442,8 @@
     "original-size": 62917,
     "compressed-size": 60298,
     "compression": "4.16%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch3_vx1178A.svg": {
     "build-version": "svgo-svg/46Oh.svg",
@@ -6761,8 +6761,8 @@
     "original-size": 18026,
     "compressed-size": 17426,
     "compression": "3.33%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_laws_exp.svg": {
     "build-version": "svgo-svg/5e0k.svg",
@@ -7047,8 +7047,8 @@
     "original-size": 25283,
     "compressed-size": 24371,
     "compression": "3.61%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_sketch_the_middle_b_sol7.svg": {
     "build-version": "svgo-svg/-wEN.svg",
@@ -7553,8 +7553,8 @@
     "original-size": 15582,
     "compressed-size": 12352,
     "compression": "20.73%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch1"]
   },
   "svg_ch5_ch_triangle_sequence_1.svg": {
     "build-version": "svgo-svg/xqXh.svg",
