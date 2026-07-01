@@ -5,27 +5,264 @@
     A unit vector 
 
     $$
-    (x_2, y_2, z_2) \in \rr^3
+    !! (x_2, y_2, z_2) \in \rr^3
+    (x_1, y_1, z_1) \in \rr^3
     $$
 
-    [meaning: $x_2^2 + y_2^2 + z_2^2 = 1$] is projected onto a ruler
+    [meaning: $x_1^2 + y_1^2 + z_1^2 = 1$] is projected onto a ruler
     whose ‘$0$’ is at $(0, 0, 0)$ and whose ‘$1$’ is at
-    $(x_1, y_1, z_1)$, which is another point on the unit sphere:
+    $(x_2, y_2, z_2)$, another point on the unit sphere:
 
     |> Image
         src=tmp-images/e5_ruler_sphere_1_v2.svg
 
-    (By “is projected onto the ruler” we mean that we drop a
-    plumb straight from the tip of the vector onto the ruler, meeting
-    the edge of the ruler at $90°$.)
+    !! (By “is projected onto the ruler” we mean that we drop a
+    !! plumb line from the tip of the vector onto the ruler, meeting
+    !! the edge of the ruler at $90°$.)
     Find the value of the projection—the place we land on the
-    ruler—as a
-    !! marked by the purple square above—a.k.a., “the projection of the vector onto the ruler”—as a
-    function of $x_1$, $y_1$, $z_1$, $x_2$, $y_2$ and $z_2$.
-    !! (I.e., find the ruler-readings
-    !! marked ‘1’ and ‘2’ above
-    !! as a function of the angle $\theta$.)
+    ruler, at $90^\circ$—as a
+    function of $x_1$, $y_1$, $z_1$, $x_2$, $y_2$, $z_2$.
 
     |> Solution
 
-        Hello.
+        Putting
+
+        $$
+        \begin{gathered}
+        \vi = (1,\, 0,\, 0),         \\
+        \vj = (0,\, 1,\, 0),\up{1.2} \\
+        \vk = (0,\, 0,\, 1)\,\up{1.2}
+        \end{gathered}
+        $$
+        
+        !! —the so-called “standard basis”—
+        we have
+
+        $$
+        \begin{gathered}
+        x_1\cdot\vi = (x_1, \,0,   \,0),         \\
+        y_1\cdot\vj = (0,   \,y_1, \,0)\up{1.2}, \\
+        z_1\cdot\vk = (0,   \,0,   \,z_1)\up{1.2}\, 
+        \end{gathered}
+        $$
+
+        giving
+
+        $$
+        (x_1, y_1, z_1) = x_1\!\cdot\vi + y_1\!\cdot\vj + z_1\!\cdot\vk
+        $$
+
+        because vectors are added component-wise. 
+        This sum can be illustrated:
+        !! can be effected by placing the vectors head-to-tail, as
+        !! illustrated here:
+
+        !! where
+        !! $$
+        !! x_1\!\cdot\vi,\qquad y_1\!\cdot\vj,\qquad z_1\!\cdot\vk
+        !! $$
+        !! are also the so-called
+        !! __components__
+        !! of $(x_1, y_1, z_1)$ along the $x$, $y$ and $z$ axes:
+
+        |> Image
+            src=tmp-images/e5_ruler_sphere_decomp.svg
+
+        !! where $\vi = (1, 0, 0)$,
+        !! $\vj = (0, 1, 0)$,
+        !! $\vk = (0, 1, 0)$, gives this figure:
+        !! and note that the sum-of-the-projections is the sum-of-the-projections,
+        !! as in this figure:
+
+        !! As per Note 1 of Exercise 11,
+        !! we may speak of
+        !! __the projection__
+        !! (emphasis on “the”, uniqueness) of a vector onto the
+        !! ruler while translating the vector to any point in space. The
+        !! projection, defined as the difference in coordinates between
+        !! the projections of the head and tail of the 
+        !! [representation of the]
+        !! vector
+        !! individually, is invariant.
+        !! For example, here is a projection of $y_1\!\cdot\vj$
+
+        As discussed in Note 1 of Exercise 11 we can
+        translate vectors to anywhere in space while
+        preserving their 
+        projection onto the ruler. 
+        !! “shadow”—the difference of
+        !! coordinates, also what we simply call the _projection_ of
+        !! the vector—on
+        !! the ruler. 
+        !! Keeping the same positioning in space of the
+        !! vectors as above, one can see that the projection of
+        !! $(x_1, y_1, z_1)$ is the sum of the separate projections 
+        !! of $x_1\vi$, $y_1\rt{0.1}\vj$,  $z_1\vk$:
+        In particular, keeping the same positioning in space of the
+        vectors as above shows that the projection of
+        $(x_1, y_1, z_1)$ is the sum of the three separate projections 
+        of $x_1\vi$, $y_1\rt{0.1}\vj$,  $z_1\vk$:
+
+        !! Moreover, the projection-of-the-sum is the
+        !! sum-of-the-projections:
+
+        !! Note that the projection-of-the-sum is the
+        !! sum-of-the-projections:
+
+        |> Image
+            src=tmp-images/e5_ruler_sphere_decomp3.svg
+
+        !! (Or more precisely, we can translate vectors to
+        !! anywhere in space without affecting their 
+        !! |> del
+        !!     “shadow”
+        !! \ projection
+        !! on the ruler, and if we translate them to the positions
+        !! shown above then it becomes particularly obvious that the
+        !! sum of the three 
+        !! |> del
+        !!     shadows
+        !! \ projections is the projection of the original vector—this
+        !! is the same topic of discussion as Note 1 of Exercise 14.)
+
+        !! It therefore suffices to find the projections of
+        !! $x_1\! \cdot\vi$, $y_1\! \cdot\vj$, and $z_1\! \cdot\vk$
+
+
+        !! (Basically, as you move through space, you
+        !! can check however often to look back at your “progress”
+        !! on the ruler, and the sum the progresses over
+        !! individual steps adds up to the total start-to-end progress.)
+
+        !! (Basically, as you move through space, you
+        !! can check however often to look back at your “progress”
+        !! on the ruler, and the sum the progresses over
+        !! individual steps adds up to the total start-to-end progress—and 
+        !! we should clarify that the same vector can be projected
+        !! onto the ruler from any point in
+        !! space, the projection, as “progress” or difference in coordinates,
+        !! is the same:)
+
+        !! Note that we are allowed to speak of “the projection
+        !! of a vector” while drawing the vector at any point in
+        !! space because the difference between the projection of the
+        !! head and tail of the (translated) vector remains constant,
+        !! no matter where we drag the vector. E.g., here, the vector
+        !! $z_1\!\cdot \vk$ is projected from three different places in
+        !! space, but the projections, interpreted as a difference of
+        !! ruler measurements from “start” to “end”, are the same:)
+
+
+        !! ...though a crucial distinction,
+        !! initially swept under the rug in Exercise 10,
+        !! is that we can
+        !! translate vectors to anywhere in space without
+        !! affecting the length of their shadow (a.k.a., their
+        !! projection) on the ruler—otherwise, we couldn't
+        !! speak e.g. of “the projection of $z_1\!\cdot \vk$”
+        !! to begin with
+        !! as if it was some unique thing, while translating the
+        !! vector anywhere in space. (But it _is_ a unique thing,
+        !! and we _can_ translate the vector to anywhere in
+        !! space before taking its projection!)
+
+
+        !! Therefore, it suffices to find the projections of
+        !! $x_1\vi$, $y_1\rt{0.1}\vj$, and $z_1\vk$
+        !! separately in order to find the projection of $(x_1, y_1, z_1)$.
+
+        !! Focusing on the case of $z_1\vk$, it
+        !! suffices to find the projection of $\vk$ itself to
+        !! find the projection of $z_1\vk$, as the projection
+        !! of $z_1\vk$ is the projection of $\vk$ scaled by a
+        !! factor $z_1$ (just like $z_1\vk$ is $\vk$ scaled by
+        !! a factor $z_1$):
+
+        !! Moreover, we can find the projections of
+        !! $x_1\vi$, $\rt{0.1}y_1\rt{0.1}\vj\rt{0.1}$ and $z_1\vk\rt{0.1}$ if we can
+        !! find the projections of $\vi$, $\rt{0.1}\vj\rt{0.1}$ and $\rt{0.1}\vk\rt{0.1}$ since
+        !! the projection of $x_1\vi\rt{0.1}$ will just be the projection
+        !! of $\vi$ multiplied by $x_1$, etc.
+        !! !! The idea is illustrated 
+        !! This is illustrated here with the
+        !! case of $\vk$ and $z_1\vk\rt{0.1}$:
+        !! !! that we have now translated back to the origin:
+
+        !! But the projection of $z_1\vk$ is $z_1$ times
+        !! the projection of $\vk$:
+        !! because $z_1\vk$ is the vector $\vk$
+        !! scaled by a factor $z_1$,
+        !! their projections are likewise related):
+
+        However, the projection of $z_1\vk$ is just 
+        $z_1$ times the projection of $\vk$, as illustrated
+        below, so it suffices to find the projection of $\vk$
+        to find the projection of $z_1\vk$:
+        !! $$
+        !! z_1\vk
+        !! $$
+
+        |> Image
+            src=tmp-images/e5_ruler_sphere_z_scale.svg
+
+        The projection of $\vk$ 
+        is the same as the projection of $(x_2, y_2, z_2)$ onto
+        a ruler with ‘0’ at the origin and ‘1’ at $\vk$,
+        because when one unit vector is projected onto another
+        the situation is symmetric, and we can always switch 
+        the role
+        of which vector carries the ruler, and which is being
+        projected onto that ruler (cf. Solution 3 of Exercise 0):
+
+        |> Pause
+
+        But the 
+        projection 
+        of $(x_2, y_2, z_2)$ onto $\vk$
+        equals simply
+
+        $$
+        z_2
+        $$
+
+        by the fact that 
+        we are projecting onto the $z$ axis,
+        so the projection of $\vk$ onto $(x_2, y_2, z_2)$
+        is
+
+        $$
+        z_2
+        $$
+
+        as well,
+        and the projection of $z_1\vk$ onto $(x_2, y_2, z_2)$ is
+
+        $$
+        z_1z_2
+        $$
+
+        by scaling.
+        
+        Likewise, we find that
+
+        $$
+        y_1y_2
+        $$
+
+        is the projection of $y_1\rt{0.1}\vj$ onto $(x_2, y_2, z_2)$,
+        and that
+
+        $$
+        x_1x_2
+        $$
+
+        is the projection of $x_1\vi$ onto $(x_2, y_2, z_2)$, so
+
+        |> Boxed
+            $$
+            x_1x_2 + y_1y_2 + z_1z_2
+            $$
+        
+        is the projection of $(x_1, y_1, z_1)$ onto $(x_2, y_2, z_2)$,
+        summing the projections of $x_1\vi$, $y_1\vj$, and $z_1\vk$
+        together.
