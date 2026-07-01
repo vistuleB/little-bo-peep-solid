@@ -211,10 +211,11 @@
         because when one unit vector is projected onto another
         the situation is symmetric, and we can always switch 
         the role
-        of which vector carries the ruler, and which is being
-        projected onto that ruler (cf. Solution 3 of Exercise 0):
+        of which vector is the ruler, and which is being
+        projected (cf. Solution 3 of Exercise 0):
 
-        |> Pause
+        |> Image
+            src=tmp-images/e5_ruler_sphere_z_switched_combined.svg
 
         But the 
         projection 

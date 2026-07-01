@@ -1,30 +1,32 @@
 |> Exercise
     work=ing
-    handle=_how_many_bumps_
+    handle=_how_many_up_and_down_bumps_
 
-    If the graph below has three “bumps” (two up,
-    one down), then how many “bumps” does its derivative
-    have?
+    How many “up bumps” and “down bumps”, respectively,
+    does the derivative of the function below have?
 
     |> Image
-        src=images/how_many_bumps_statement.svg
+        !! src=tmp-images/how_many_up_and_down_bumps_statement.svg
+        src=tmp-images/from_yaml__many_bumps.svg
         style=padding-bottom:1rem
 
     |> Solution
+
+        There is 1 up-bump 
 
         The derivative has a bump wherever the slope
         has a local maximum or local minimum, which happens
         at four places, per appearances:
 
         |> Image
-            src=tmp-images/how_many_bumps_highlights_v2.svg
+            src=images/how_many_bumps_highlights.svg
 
         The derivative will therefore have four
         bumps—at least, four _large scale_ bumps—if you're 
         curious, it looks like this:
 
         |> Image
-            src=tmp-images/how_many_bumps_derivative_v2.svg
+            src=tmp-images/how_many_bumps_derivative.svg
 
         But nothing prevents the graph from
         having small wobbles near the zones of maximum or

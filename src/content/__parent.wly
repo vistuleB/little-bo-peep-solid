@@ -124,6 +124,7 @@
         >>_correct_incorrect_or_nonsensical_
         >>_complete_the_missing_units_
         >>_how_many_bumps_
+        >>_how_many_up_and_down_bumps_
         >>_reorder_derivatives_
         >>_narrow_and_less_narrow_bends_
         >>_first_law_of_differentiation_
@@ -197,8 +198,8 @@
         >>_x_square_x_cube_construction_
         >>_sqrt_xy_construction_
         >>_project_i_and_j_
-        >>_project_i_and_j_and_k_
         >>_unit_dot_product_geometric_interpretation_
+        >>_project_i_and_j_and_k_
         >>_four_graphs_
         >>_where_is_the_pythagorean_identity_
         >>_more_closely_related_to_sin2x_or_
@@ -304,9 +305,9 @@
         >>_blueprints_open_bomb_shelter_door_
         >>_double_pre_processing_steps_
         >>_double_post_processing_spteps_
-        >>_cos_of_x_+_0_point_1_
-        >>_map_cosx_to_cos_Bx+C_
-        >>_what_seq_sin_Bx+C_
+        >>_cos_of_x_plus_0_point_1_
+        >>_map_cosx_to_cos_Bx_plus_C_
+        >>_what_seq_sin_Bx_plus_C_
         >>_can_B1B2_be_rewritten_
         >>_max_cosx_plus_sinx_new_ver_
         >>_max_cosx_plus_sinx_

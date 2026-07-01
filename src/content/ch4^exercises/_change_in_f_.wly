@@ -2,7 +2,7 @@
     work=ing
     handle=_change_in_f_
 
-    Keeping $A$ as in Exercise >>_verbal_to_arithmetic_A_change_,
+    Keeping $A$ as in Exercise >>_verbal_to_arithmetic_A_change_#decoy:55,
     and assuming that $A$ is differentiable at the point $t_0 \in \rr$, 
     how is
 
@@ -30,7 +30,7 @@
             A'(t_0)
             $$
 
-        as $r$ approaches $0$, per Note >>_difference_quotient_limit_
-        of Exercise >>_difference_quotient_illustration_. (This is a
+        as $r$ approaches $0$, per Note >>_difference_quotient_limit_#decoy:2
+        of Exercise >>_difference_quotient_illustration_#decoy:20. (This is a
         difference quotient, notwitstanding the renaming of “$h$” to “$r$”,
         which makes no difference\*.) (\*No pun intended.)
