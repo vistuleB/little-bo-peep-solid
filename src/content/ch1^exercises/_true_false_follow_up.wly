@@ -1,5 +1,5 @@
 |> Exercise
-    handle=_approximate_1_over_n_minus_1_over_n+1_
+    handle=_approximate_1_over_n_minus_1_over_n_plus_1_
 
     In the solution to Exercise >>_true_false_ it
     is observed that the difference

@@ -620,8 +620,6 @@
         found in the third line of the table.
 
 |> Section
-    handle=units_vs_dimensions_epilogue
-
     *Postscript: units vs dimensions.*
     Comparing
 

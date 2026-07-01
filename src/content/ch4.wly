@@ -258,7 +258,7 @@
         with $A = -1$, $B = 12$.
 
 |> Section
-    handle=units_of_the_derivative
+    _handle=units_of_the_derivative
 
     *Units of the Derivative.*
     If units are present, we have

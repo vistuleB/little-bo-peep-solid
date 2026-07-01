@@ -131,8 +131,6 @@
         |> StarDivider
 
         |> SolutionNote
-            handle=AngularVelocity
-
             The ratio
             $$
             {\Large {v \over r}}

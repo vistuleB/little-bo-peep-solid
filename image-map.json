@@ -3593,8 +3593,8 @@
     "original-size": 16634,
     "compressed-size": 14015,
     "compression": "15.74%",
-    "used-last-build": true,
-    "3chars": ["ch1"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_pacman1_maze_two_possibilities.svg": {
     "build-version": "svgo-svg/tzR7.svg",
@@ -4225,7 +4225,7 @@
   },
   "svg_ch4_f_g_composition_units.svg": {
     "build-version": "svgo-svg/96sV.svg",
-    "build-version-created-on": 1782672601,
+    "build-version-created-on": 1782903045,
     "build-method": "svgo",
     "build-version-size": 2684454,
     "original-size": 7622693,
@@ -4594,8 +4594,8 @@
     "original-size": 199929,
     "compressed-size": 38376,
     "compression": "80.81%",
-    "used-last-build": true,
-    "3chars": ["ch1"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg": {
     "build-version": "svgo-svg/Wk9W.svg",
@@ -7553,8 +7553,8 @@
     "original-size": 15582,
     "compressed-size": 12352,
     "compression": "20.73%",
-    "used-last-build": true,
-    "3chars": ["ch1"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_triangle_sequence_1.svg": {
     "build-version": "svgo-svg/xqXh.svg",

@@ -61,12 +61,11 @@
         |> StarDivider
 
         |> SolutionNote
-            handle=CircleRadiiPattern
             If the particle's original path is centered at
             $(0, 0)$ then that path constitutes a fourth
             circle obeying the same pattern
             of $2/3$-ratios between the successive radii:
 
-        |> Image
-            src=images/svg_ch4_velocity_vector_radius_3_speed_2_with_position.svg
+            |> Image
+                src=images/svg_ch4_velocity_vector_radius_3_speed_2_with_position.svg
 
