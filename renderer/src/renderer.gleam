@@ -40,7 +40,7 @@ type LBPEmitterError {
 }
 
 fn blame_us(message: String) -> Blame {
-  Src([], message, -1, -1, False)
+  Src([], message, -1, -1, blame.Anchored)
 }
 
 fn our_splitter(
