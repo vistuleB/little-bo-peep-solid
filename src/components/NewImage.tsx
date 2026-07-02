@@ -141,7 +141,7 @@ const NewImage = (props: NewImageProps) => {
       <div id={merged.id} class="w-full flex items-center justify-center">
         <div
           class={twJoin("flex items-center justify-center", "w-full")}
-          style={`max-width:${merged.width};max-height:${merged.height};${merged.style}`}>
+          style={`max-width:${constrained() && merged.width ? `calc(${merged.width} + 32px)` : merged.width};max-height:${merged.height};${merged.style}`}>
           <ImageOrSideImage
             ref={image_element}
             src={merged.src}
@@ -154,7 +154,7 @@ const NewImage = (props: NewImageProps) => {
               "duration-500",
               "ease-[cubic-bezier(0.4, 0, 0.2, 1)]",
               transitionsEnabled() ? "" : "transition-none",
-              constrained() ? "img-screen px-[16px]" : "img-full",
+              constrained() ? "w-screen px-[16px]" : "w-full",
             )}
           />
           {merged.children}

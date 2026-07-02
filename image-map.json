@@ -3750,6 +3750,17 @@
     "used-last-build": true,
     "3chars": ["ch4"]
   },
+  "test_old_1000.svg": {
+    "build-version": "svgo-svg/Fvf1.svg",
+    "build-version-created-on": 1783010918,
+    "build-method": "svgo",
+    "build-version-size": 374,
+    "original-size": 495,
+    "compressed-size": 374,
+    "compression": "24.44%",
+    "used-last-build": true,
+    "3chars": ["pla","pla"]
+  },
   "svg_ch5_ch_abercrombie_s1s2p1p2.svg": {
     "build-version": "svgo-svg/onjp.svg",
     "build-version-created-on": 1776435575,
@@ -7214,6 +7225,17 @@
     "compression": "37.4%",
     "used-last-build": true,
     "3chars": ["ch6"]
+  },
+  "test_old_350.svg": {
+    "build-version": "svgo-svg/jSPx.svg",
+    "build-version-created-on": 1783010917,
+    "build-method": "svgo",
+    "build-version-size": 371,
+    "original-size": 492,
+    "compressed-size": 371,
+    "compression": "24.59%",
+    "used-last-build": true,
+    "3chars": ["pla","pla"]
   },
   "svg_ch4_cosine_curves_two_dimensional_vel.svg": {
     "build-version": "svgo-svg/eSj9.svg",

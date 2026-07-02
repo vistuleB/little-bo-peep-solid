@@ -771,11 +771,3 @@ ul.toc_ul {
   border-radius: 0.4em;
   padding: 0.1em 0.3em;
 }
-
-/* NewImage width modes (constrained = fit screen, capped by container max-width) */
-.img-screen {
-  width: 100vw;
-}
-.img-full {
-  width: 100%;
-}

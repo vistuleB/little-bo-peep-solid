@@ -2,6 +2,7 @@ import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Grid  from "~/components/Grid";
+import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { List, Item }  from "~/components/List";
 import { Math }  from "~/components/Math";
@@ -887,6 +888,11 @@ export default function __Bootcamp3__() {
         width="1000px"
       />
       <Pause />
+      <Image
+        src="/build-img/svgo-svg/jSPx.svg"
+        width="1000px"
+      />
+      <Pause />
       <OuterP>
         <i>
           <b>
@@ -897,6 +903,11 @@ export default function __Bootcamp3__() {
       </OuterP>
       <NewImage
         src="/images/test_native_1000.svg"
+        width="1000px"
+      />
+      <Pause />
+      <Image
+        src="/build-img/svgo-svg/Fvf1.svg"
         width="1000px"
       />
       <Pause />
@@ -913,6 +924,11 @@ export default function __Bootcamp3__() {
         width="350px"
       />
       <Pause />
+      <Image
+        src="/build-img/svgo-svg/Fvf1.svg"
+        width="350px"
+      />
+      <Pause />
       <OuterP>
         <i>
           <b>
@@ -923,6 +939,11 @@ export default function __Bootcamp3__() {
       </OuterP>
       <NewImage
         src="/images/test_native_350.svg"
+        width="350px"
+      />
+      <Pause />
+      <Image
+        src="/build-img/svgo-svg/jSPx.svg"
         width="350px"
       />
       <Rest />

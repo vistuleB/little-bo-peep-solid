@@ -444,12 +444,22 @@
         src=images/test_native_350.svg
         width=1000px
 
+
+    |> Image
+        src=images/test_old_350.svg
+        width=1000px
+
     |> Pause
 
     _*Case 2:*_ set width=1000px, native 1000px
 
     |> NewImage
         src=images/test_native_1000.svg
+        width=1000px
+
+
+    |> Image
+        src=images/test_old_1000.svg
         width=1000px
 
     |> Pause
@@ -460,10 +470,20 @@
         src=images/test_native_1000.svg
         width=350px
 
+
+    |> Image
+        src=images/test_old_1000.svg
+        width=350px
+
     |> Pause
 
     _*Case 4:*_ set width=350px, native 350px
 
     |> NewImage
         src=images/test_native_350.svg
+        width=350px
+
+
+    |> Image
+        src=images/test_old_350.svg
         width=350px
