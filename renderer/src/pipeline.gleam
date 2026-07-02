@@ -112,7 +112,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise*", fn(_, ancestors, _, _, _) { !infra.first_is(ancestors, "Exercises") })),
       dl.substitute_counters(),
       dl.handles_add_ids(),
-      dl.handles_generate_dictionary_and_id_list("path"),
+      dl.handles_generate_dictionary("path"),
       dl.handles_substitute(#("path", "InChapterLink", "a", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"])),
       dl.unwrap("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Bootcamp", "ArticleTitle", "banner"), ["Chapter"]),
