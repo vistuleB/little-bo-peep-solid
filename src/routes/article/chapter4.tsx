@@ -2322,7 +2322,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={6}>
+        <Exercise
+          work="ing"
+          number={6}
+        >
           <ExerciseStatement id="_63_h.a.i_">
             <OuterP>
               <b>
@@ -2504,7 +2507,7 @@ const Rest = () => {
               at four places, per appearances:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/how_many_bumps_highlights_v2.svg" />
+            <Image src="/build-img/svgo-svg/NfeV.svg" />
             <Pause />
             <OuterP>
               The derivative will therefore have four
@@ -2516,7 +2519,7 @@ const Rest = () => {
               curious, it looks like this:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/how_many_bumps_derivative_v2.svg" />
+            <Image src="/build-img/svgo-svg/4xlL.svg" />
             <Pause />
             <OuterP>
               But nothing prevents the graph from
@@ -2543,7 +2546,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/tmp-images/from_yaml__many_bumps_statement.svg"
+              src="/build-img/svgo-svg/cRZH.svg"
               style="padding-bottom:1rem"
             />
           </ExerciseStatement>
@@ -2560,7 +2563,7 @@ const Rest = () => {
               reasoning symmetrically, five “down bumps”:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/from_yaml__many_bumps_soln1.svg" />
+            <Image src="/build-img/svgo-svg/ArpL.svg" />
             <Pause />
             <OuterP>
               (So the answer is: {" "}

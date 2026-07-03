@@ -9,7 +9,7 @@
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
         >>chain        >>_ch6_start_  >>_ch6_exercises_
-        >>exercise-graveyard  >>exercise-graveyard-start
+        !! >>exercise-graveyard  >>exercise-graveyard-start
 
     |> In
         chapter=>>playground

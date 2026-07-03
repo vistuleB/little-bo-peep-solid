@@ -61,17 +61,6 @@ const HamburgerPanelAuthorSuppliedContents = () => {
         </HamburgerPanelItem>
       </ul>
     </div>
-    <div id="appendix">
-      <HamburgerPanelTitle label="Appendices" />
-      <ul>
-        <HamburgerPanelItem
-          article_type="A"
-          href="appendixA"
-        >
-          Cutting Room Floor Exercises
-        </HamburgerPanelItem>
-      </ul>
-    </div>
   </>;
 };
 

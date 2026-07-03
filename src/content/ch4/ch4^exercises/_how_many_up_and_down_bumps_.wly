@@ -6,7 +6,7 @@
     does the derivative of the function below have?
 
     |> Image
-        src=tmp-images/from_yaml__many_bumps_statement.svg
+        src=images/from_yaml__many_bumps_statement.svg
         style=padding-bottom:1rem
 
     |> Solution
@@ -22,6 +22,6 @@
         reasoning symmetrically, five “down bumps”:
 
         |> Image
-            src=tmp-images/from_yaml__many_bumps_soln1.svg
+            src=images/from_yaml__many_bumps_soln1.svg
 
         (So the answer is: $6$ and $5$, respectively.)

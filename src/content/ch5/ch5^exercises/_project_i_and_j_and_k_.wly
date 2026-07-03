@@ -14,7 +14,7 @@
     $(x_2, y_2, z_2)$, another point on the unit sphere:
 
     |> Image
-        src=tmp-images/e5_ruler_sphere_1_v2.svg
+        src=images/e5_ruler_sphere_1_v2.svg
 
     !! (By “is projected onto the ruler” we mean that we drop a
     !! plumb line from the tip of the vector onto the ruler, meeting
@@ -66,7 +66,7 @@
         !! of $(x_1, y_1, z_1)$ along the $x$, $y$ and $z$ axes:
 
         |> Image
-            src=tmp-images/e5_ruler_sphere_decomp.svg
+            src=images/e5_ruler_sphere_decomp.svg
 
         !! where $\vi = (1, 0, 0)$,
         !! $\vj = (0, 1, 0)$,
@@ -110,7 +110,7 @@
         !! sum-of-the-projections:
 
         |> Image
-            src=tmp-images/e5_ruler_sphere_decomp3.svg
+            src=images/e5_ruler_sphere_decomp3.svg
 
         !! (Or more precisely, we can translate vectors to
         !! anywhere in space without affecting their 
@@ -203,7 +203,7 @@
         !! $$
 
         |> Image
-            src=tmp-images/e5_ruler_sphere_z_scale.svg
+            src=images/e5_ruler_sphere_z_scale.svg
 
         The projection of $\vk$ 
         is the same as the projection of $(x_2, y_2, z_2)$ onto
@@ -215,7 +215,7 @@
         projected (cf. Solution 3 of Exercise 0):
 
         |> Image
-            src=tmp-images/e5_ruler_sphere_z_switched_combined.svg
+            src=images/e5_ruler_sphere_z_switched_combined.svg
 
         But the 
         projection 

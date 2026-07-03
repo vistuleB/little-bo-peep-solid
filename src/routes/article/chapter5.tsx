@@ -16856,7 +16856,7 @@ const Rest = () => {
               {" "} another point on the unit sphere:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ruler_sphere_1_v2.svg" />
+            <Image src="/build-img/svgo-svg/jyl2.svg" />
             <Pause />
             <OuterP>
               Find the value of the projection—the place we land on the
@@ -16956,7 +16956,7 @@ const Rest = () => {
               This sum can be illustrated:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ruler_sphere_decomp.svg" />
+            <Image src="/build-img/svgo-svg/w_-r.svg" />
             <Pause />
             <OuterP>
               As discussed in Note 1 of Exercise 11 we can
@@ -16993,7 +16993,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ruler_sphere_decomp3.svg" />
+            <Image src="/build-img/svgo-svg/vsD9.svg" />
             <Pause />
             <OuterP>
               However, the projection of {" "}
@@ -17027,7 +17027,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ruler_sphere_z_scale.svg" />
+            <Image src="/build-img/svgo-svg/-iIq.svg" />
             <Pause />
             <OuterP>
               The projection of {" "}
@@ -17055,7 +17055,7 @@ const Rest = () => {
               projected (cf. Solution 3 of Exercise 0):
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ruler_sphere_z_switched_combined.svg" />
+            <Image src="/build-img/svgo-svg/k0fx.svg" />
             <Pause />
             <OuterP>
               But the 

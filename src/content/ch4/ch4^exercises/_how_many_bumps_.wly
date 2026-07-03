@@ -17,14 +17,14 @@
         at four places, per appearances:
 
         |> Image
-            src=tmp-images/how_many_bumps_highlights_v2.svg
+            src=images/how_many_bumps_highlights_v2.svg
 
         The derivative will therefore have four
         bumps—at least, four _large scale_ bumps—if you're 
         curious, it looks like this:
 
         |> Image
-            src=tmp-images/how_many_bumps_derivative_v2.svg
+            src=images/how_many_bumps_derivative_v2.svg
 
         But nothing prevents the graph from
         having small wobbles near the zones of maximum or
