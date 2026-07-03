@@ -2543,41 +2543,38 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/tmp-images/from_yaml__many_bumps.svg"
+              src="/tmp-images/from_yaml__many_bumps_statement.svg"
               style="padding-bottom:1rem"
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              There are 1 up-bump
-            </OuterP>
-            <OuterP class="indent-10">
-              The derivative has a bump wherever the slope
-              has a local maximum or local minimum, which happens
-              at four places, per appearances:
+              The derivative crests each time the
+              slope of the original function reaches a
+              steepest point before de-sloping again, 
+              giving us—at the macro level from what
+              our eyes can see, barring mini-variations
+              of the slope that would give mini-bumps
+              atop each bump—six “up bumps” for
+              the derivative and,
+              reasoning symmetrically, five “down bumps”:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/yAV_.svg" />
+            <Image src="/tmp-images/from_yaml__many_bumps_soln1.svg" />
             <Pause />
             <OuterP>
-              The derivative will therefore have four
-              bumps—at least, four {" "}
-              <i>
-                large scale
-              </i>
-              {" "} bumps—if you're 
-              curious, it looks like this:
-            </OuterP>
-            <Pause />
-            <Image src="/tmp-images/how_many_bumps_derivative.svg" />
-            <Pause />
-            <OuterP>
-              But nothing prevents the graph from
-              having small wobbles near the zones of maximum or
-              minimum slope out of the range of our eyesight,
-              meaning that each bump of the derivative contains
-              micro-bumps, like small ripples atop a big wave!
-              (Still, “four” is a good bet to achieve full marks.)
+              (So the answer is: {" "}
+              <Math>
+                $6$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} respectively.)
             </OuterP>
           </Solution>
         </Exercise>
@@ -4252,8 +4249,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The “pure math” rendition (rendering?) of the fraction
-              is
+              The “pure math” version is
             </OuterP>
             <Boxed>
               <MathBlock>

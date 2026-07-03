@@ -766,8 +766,8 @@
     "original-size": 122694,
     "compressed-size": 27390,
     "compression": "77.68%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_costan_powers_sin_snail_other_way.svg": {
     "build-version": "svg/m4nl.svg",
