@@ -4,13 +4,12 @@ import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises"
 import Grid  from "~/components/Grid";
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
-import { List, Item }  from "~/components/List";
+import { Item }  from "~/components/List";
 import { Math }  from "~/components/Math";
-import NewImage  from "~/components/NewImage";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import Solution  from "~/components/Solution";
-import { Pause }  from "~/components/Wrappers";
+import { InTextWarning, Pause }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Bootcamp3__() {
@@ -771,13 +770,10 @@ export default function __Bootcamp3__() {
                 </b>
               </i>
               {" "} 2 cols, 1 on mobile, center-on-overflow=true, place-items=start, with-padding=false, column-first=true (from {" "}
-              <a
-                href="/article/appendixA#_165_h.a.i_"
-                class="out-chapter-link"
-              >
-                1
-              </a>
-              &#8288;)
+              <InTextWarning>
+                undefined handle at playground/playground.wly:396:17: _true_or_false_composition_questions_
+              </InTextWarning>
+              )
             </OuterP>
             <Pause />
             <Grid
@@ -852,44 +848,14 @@ export default function __Bootcamp3__() {
       <OuterP>
         <i>
           <b>
-            Debug colors
-          </b>
-        </i>
-        {" "} (background shows through the alpha test images):
-      </OuterP>
-      <Pause />
-      <List>
-        <Item>
-          <Item>
-            dark red = constrained &amp;&amp; scale &lt; 1
-          </Item>
-          <Item>
-            light red = constrained &amp;&amp; scale == 1
-          </Item>
-          <Item>
-            light blue = not constrained &amp;&amp; scale == 1
-          </Item>
-          <Item>
-            green = not constrained &amp;&amp; scale &lt; 1 (should be impossible)
-          </Item>
-        </Item>
-      </List>
-      <Pause />
-      <OuterP>
-        <i>
-          <b>
             Case 1:
           </b>
         </i>
         {" "} set width=1000px, native 350px
       </OuterP>
-      <NewImage
-        src="/images/test_native_350.svg"
-        width="1000px"
-      />
       <Pause />
       <Image
-        src="/build-img/svgo-svg/jSPx.svg"
+        src="/build-img/svgo-svg/6BLF.svg"
         width="1000px"
       />
       <Pause />
@@ -901,13 +867,9 @@ export default function __Bootcamp3__() {
         </i>
         {" "} set width=1000px, native 1000px
       </OuterP>
-      <NewImage
-        src="/images/test_native_1000.svg"
-        width="1000px"
-      />
       <Pause />
       <Image
-        src="/build-img/svgo-svg/Fvf1.svg"
+        src="/build-img/svgo-svg/S-T0.svg"
         width="1000px"
       />
       <Pause />
@@ -919,13 +881,9 @@ export default function __Bootcamp3__() {
         </i>
         {" "} set width=350px, native 1000px
       </OuterP>
-      <NewImage
-        src="/images/test_native_1000.svg"
-        width="350px"
-      />
       <Pause />
       <Image
-        src="/build-img/svgo-svg/Fvf1.svg"
+        src="/build-img/svgo-svg/S-T0.svg"
         width="350px"
       />
       <Pause />
@@ -937,13 +895,9 @@ export default function __Bootcamp3__() {
         </i>
         {" "} set width=350px, native 350px
       </OuterP>
-      <NewImage
-        src="/images/test_native_350.svg"
-        width="350px"
-      />
       <Pause />
       <Image
-        src="/build-img/svgo-svg/jSPx.svg"
+        src="/build-img/svgo-svg/6BLF.svg"
         width="350px"
       />
       <Rest />

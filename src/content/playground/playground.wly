@@ -6,7 +6,8 @@
 
 
     |> Exercises
-        _handle=playground-exercises
+        handle=playground-exercises
+
 
         |> Exercise
             handle=grid-component
@@ -411,78 +412,36 @@
                     iv. $g \circ f = (x \ra g(f(x)))$
 
                 
-
-        |> Exercise
-            handle=table-component
-
-            |> ExerciseStatement
-                What is the Table component ?
-                    
-    
     _*Image*_ renders an image centered in the main text column. On load it should be _constrained_ (fits the screen width, padded), and its _scale_ (current width ÷ original width) must be known _immediately on load_.
-
-    |> Pause
-
-    _*Debug colors*_ (background shows through the alpha test images):
-
-    |> List
-        |> Item
-            dark red = constrained && scale &lt; 1
-        |> Item
-            light red = constrained && scale == 1
-        |> Item
-            light blue = not constrained && scale == 1
-        |> Item
-            green = not constrained && scale &lt; 1 (should be impossible)
 
     |> Pause
 
     _*Case 1:*_ set width=1000px, native 350px
 
-    |> NewImage
-        src=images/test_native_350.svg
-        width=1000px
-
-
     |> Image
-        src=images/test_old_350.svg
+        src=images/test_native_350.svg
         width=1000px
 
     |> Pause
 
     _*Case 2:*_ set width=1000px, native 1000px
 
-    |> NewImage
-        src=images/test_native_1000.svg
-        width=1000px
-
-
     |> Image
-        src=images/test_old_1000.svg
+        src=images/test_native_1000.svg
         width=1000px
 
     |> Pause
 
     _*Case 3:*_ set width=350px, native 1000px
 
-    |> NewImage
-        src=images/test_native_1000.svg
-        width=350px
-
-
     |> Image
-        src=images/test_old_1000.svg
+        src=images/test_native_1000.svg
         width=350px
 
     |> Pause
 
     _*Case 4:*_ set width=350px, native 350px
 
-    |> NewImage
-        src=images/test_native_350.svg
-        width=350px
-
-
     |> Image
-        src=images/test_old_350.svg
+        src=images/test_native_350.svg
         width=350px
