@@ -12,6 +12,8 @@ import ImageOrSideImage from "./ImageOrSideImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
 import { TEXT_X_PADDING } from "~/constants";
 
+const SHOW_DEBUG_COLORS = false;
+
 type ImageProps = ParentProps &
   SharedProps & {
     src: string;
@@ -133,7 +135,11 @@ const Image = (props: ImageProps) => {
       : styleWidth || "auto";
     const padding = constrained() ? `padding:0 ${TEXT_X_PADDING}px;` : "";
 
-    return `background-color:${debugBackground()};width:${width};max-width:none;box-sizing:border-box;max-height:${merged.height};${padding}${merged.style}`;
+    const debugColor = SHOW_DEBUG_COLORS
+      ? `background-color:${debugBackground()};`
+      : "";
+
+    return `${debugColor}width:${width};max-width:none;box-sizing:border-box;max-height:${merged.height};${padding}${merged.style}`;
   };
 
   onMount(() => {
