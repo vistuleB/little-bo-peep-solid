@@ -1894,13 +1894,13 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              That would be:
+              It is:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/KPKF.svg" />
             <Pause />
             <OuterP>
-              (The derivative is {" "}
+              (I.e., the derivative is {" "}
               <Math>
                 $1/2$
               </Math>
@@ -1912,7 +1912,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              is {" "}
+              {" "}
               <Math>
                 $-1/2$
               </Math>
@@ -1923,8 +1923,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} and is
-              undefined at the corners.)
+              {" "} and undefined at the corners.)
             </OuterP>
           </Solution>
         </Exercise>
@@ -2307,25 +2306,28 @@ const Rest = () => {
                 </Math>
                 's:
               </NoBreak>
-              {" "} the {" "}
+              {" "}
+              the {" "}
               <Math>
                 $x$
               </Math>
-              {" "} that
-              denotes the input, and the {" "}
+              {" "} that is used as a placeholder to describe 
+              what the first function does, and the {" "}
               <Math>
                 $x$
               </Math>
-              {" "} that is used as
-              a placeholder to describe how the first function
-              acts.
+              {" "} that denotes
+              the “outermost” input to the sum of the two functions. (These are
+              really separate, and the “placeholder” {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} could be
+              any symbol.)
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={6}
-        >
+        <Exercise number={6}>
           <ExerciseStatement id="_63_h.a.i_">
             <OuterP>
               <b>
@@ -2336,7 +2338,7 @@ const Rest = () => {
               below, based on those units that are given:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/xp2w.svg" />
+            <Image src="/tmp-images/svg_ch4_missing_units_v4.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2359,7 +2361,7 @@ const Rest = () => {
               axis. This gives the unique solutions:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/CZUY.svg" />
+            <Image src="/tmp-images/svg_ch4_missing_units_solution_v4.svg" />
             <Pause />
             <OuterP>
               ...where we find units of
@@ -2581,7 +2583,10 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={9}>
+        <Exercise
+          work="ing"
+          number={9}
+        >
           <ExerciseStatement id="_66_h.a.i_">
             <OuterP>
               <b>
@@ -2647,7 +2652,7 @@ const Rest = () => {
               starts and ends:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/gqxn.svg" />
+            <Image src="/build-img/svgo-svg/-86e.svg" />
             <Pause />
             <OuterP>
               Likewise, the second graph has slope
@@ -2672,7 +2677,7 @@ const Rest = () => {
               {" "} of the third graph:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/4Efs.svg" />
+            <Image src="/build-img/svgo-svg/m_fp.svg" />
             <Pause />
             <OuterP>
               ...and none of this coincidentally, since the
@@ -2837,7 +2842,7 @@ const Rest = () => {
                 $y$
               </Math>
               {" "} axis has
-              been doubled. (Hehe.) This means that the ratio
+              been doubled. This means that the ratio
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2856,7 +2861,7 @@ const Rest = () => {
                 -coordinate
               </NoBreak>
               {" "}
-              is twice as large!), whereas “run” stays
+              is twice as large), whereas “run” stays
               the same. (So the slope of the tangent has
               doubled, so the derivative is doubled.)
             </OuterP>

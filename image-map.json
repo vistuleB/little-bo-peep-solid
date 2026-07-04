@@ -683,12 +683,12 @@
   },
   "how_many_bumps_derivative_v2.svg": {
     "build-version": "svgo-svg/4xlL.svg",
-    "build-version-created-on": 1783081065,
+    "build-version-created-on": 1783081482,
     "build-method": "svgo",
-    "build-version-size": 37807,
-    "original-size": 91845,
-    "compressed-size": 37807,
-    "compression": "58.84%",
+    "build-version-size": 11584,
+    "original-size": 91952,
+    "compressed-size": 11584,
+    "compression": "87.4%",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2190,12 +2190,12 @@
   },
   "from_yaml__many_bumps_soln1.svg": {
     "build-version": "svgo-svg/ArpL.svg",
-    "build-version-created-on": 1783081065,
+    "build-version-created-on": 1783081482,
     "build-method": "svgo",
-    "build-version-size": 32327,
-    "original-size": 42074,
-    "compressed-size": 32327,
-    "compression": "23.17%",
+    "build-version-size": 29716,
+    "original-size": 42182,
+    "compressed-size": 29716,
+    "compression": "29.55%",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2559,8 +2559,8 @@
     "original-size": 53050,
     "compressed-size": 23591,
     "compression": "55.53%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg": {
     "build-version": "svgo-svg/OG7m.svg",
@@ -3188,6 +3188,17 @@
     "compression": "3.42%",
     "used-last-build": true,
     "3chars": ["ch3"]
+  },
+  "svg_ch4_ex_position_by_time_find_the_order_second_pair_v2.svg": {
+    "build-version": "svgo-svg/m_fp.svg",
+    "build-version-created-on": 1783110729,
+    "build-method": "svgo",
+    "build-version-size": 22526,
+    "original-size": 40868,
+    "compressed-size": 22526,
+    "compression": "44.88%",
+    "used-last-build": true,
+    "3chars": ["ch4"]
   },
   "svg_ch5_ex_60_tangent_sec_cloud.svg": {
     "build-version": "svgo-svg/Aloh.svg",
@@ -5125,6 +5136,17 @@
     "used-last-build": false,
     "3chars": []
   },
+  "svg_ch4_ex_position_by_time_find_the_order_first_pair_v2.svg": {
+    "build-version": "svgo-svg/-86e.svg",
+    "build-version-created-on": 1783110729,
+    "build-method": "svgo",
+    "build-version-size": 17374,
+    "original-size": 53971,
+    "compressed-size": 17374,
+    "compression": "67.81%",
+    "used-last-build": true,
+    "3chars": ["ch4"]
+  },
   "svg_ch4_circle_at_2_4_p1black_inline.svg": {
     "build-version": "svgo-svg/d2g_.svg",
     "build-version-created-on": 1776435557,
@@ -5155,8 +5177,8 @@
     "original-size": 39918,
     "compressed-size": 28834,
     "compression": "27.77%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_four_compositions.svg": {
     "build-version": "svgo-svg/hzK8.svg",
@@ -5727,8 +5749,8 @@
     "original-size": 231270,
     "compressed-size": 114154,
     "compression": "50.64%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "used-last-build": false,
+    "3chars": []
   },
   "36.svg": {
     "build-version": "svgo-svg/QIqm.svg",
@@ -5952,12 +5974,12 @@
   },
   "how_many_bumps_highlights_v2.svg": {
     "build-version": "svgo-svg/NfeV.svg",
-    "build-version-created-on": 1783081065,
+    "build-version-created-on": 1783110729,
     "build-method": "svgo",
-    "build-version-size": 37008,
-    "original-size": 139551,
-    "compressed-size": 37008,
-    "compression": "73.48%",
+    "build-version-size": 64500,
+    "original-size": 190039,
+    "compressed-size": 64500,
+    "compression": "66.06%",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6754,15 +6776,15 @@
     "3chars": ["ch5"]
   },
   "svg_ch4_missing_units_v2.svg": {
-    "build-version": "svgo-svg/xp2w.svg",
-    "build-version-created-on": 1776435546,
-    "build-method": "svgo",
-    "build-version-size": 73413,
-    "original-size": 154305,
-    "compressed-size": 73413,
-    "compression": "52.42%",
-    "used-last-build": true,
-    "3chars": ["ch4"]
+    "build-version": "svg/xp2w.svg",
+    "build-version-created-on": 1783082152,
+    "build-method": "cp",
+    "build-version-size": 158257,
+    "original-size": 158257,
+    "compressed-size": 158257,
+    "compression": "0.0%",
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_abercrombie_statement.svg": {
     "build-version": "svgo-svg/dXdk.svg",
@@ -9241,12 +9263,12 @@
   },
   "svg_ch4_scaling_figure.svg": {
     "build-version": "svgo-svg/lJqH.svg",
-    "build-version-created-on": 1776436243,
+    "build-version-created-on": 1783100685,
     "build-method": "svgo",
-    "build-version-size": 54990,
-    "original-size": 134193,
-    "compressed-size": 54990,
-    "compression": "59.02%",
+    "build-version-size": 55831,
+    "original-size": 146689,
+    "compressed-size": 55831,
+    "compression": "61.94%",
     "used-last-build": true,
     "3chars": ["ch4"]
   },

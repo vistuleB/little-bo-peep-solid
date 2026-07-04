@@ -309,5 +309,7 @@
         !!     Little Bo Peep
 
         !! TEST 5: Loading Image
+        !! |> div
+        !!     style=height:54px;width:200px;background-color:#333
         |> img
             src=non-build-img/loading_screen.png

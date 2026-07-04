@@ -20,7 +20,7 @@
         The second graph truly is the first
         graph vertically scaled by a factor $2$
         because the scale on the $y$ axis has
-        been doubled. (Hehe.) This means that the ratio
+        been doubled. This means that the ratio
 
         $$
         {\te{rise}\over \te{run}}
@@ -28,6 +28,6 @@
 
         has doubled in the second graph, because
         “rise” has doubled (each $y$-coordinate
-        is twice as large!), whereas “run” stays
+        is twice as large), whereas “run” stays
         the same. (So the slope of the tangent has
         doubled, so the derivative is doubled.)

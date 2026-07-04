@@ -81,7 +81,13 @@
         \end{align}
         $$
 
-        Here we have two different $x$'s: the $x$ that
-        denotes the input, and the $x$ that is used as
-        a placeholder to describe how the first function
-        acts.
+        Here we have two different $x$'s:
+        the $x$ that is used as a placeholder to describe 
+        what the first function does, and the $x$ that denotes
+        the “outermost” input to the sum of the two functions. (These are
+        really separate, and the “placeholder” $x$ could be
+        any symbol.)
+        !! the $x$ that
+        !! denotes the input, and the $x$ that is used as
+        !! a placeholder to describe how the first function
+        !! acts.

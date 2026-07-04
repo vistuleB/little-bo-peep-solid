@@ -1,12 +1,14 @@
 |> Exercise
-    work=ing
     handle=_complete_the_missing_units_
 
     Complete the missing units for each strip
     below, based on those units that are given:
 
     |> Image
-        src=images/svg_ch4_missing_units_v2.svg
+        src=tmp-images/svg_ch4_missing_units_v4.svg
+
+    !! |> Image
+    !!     src=tmp-images/svg_ch4_missing_units_v3.svg
 
     |> Solution
 
@@ -17,9 +19,11 @@
         axis. This gives the unique solutions:
 
         |> Image
-            src=images/svg_ch4_missing_units_solution_v2.svg
+            !! src=tmp-images/svg_ch4_missing_units_solution_v3.svg
+            src=tmp-images/svg_ch4_missing_units_solution_v4.svg
 
         ...where we find units of
+
         $$
         \Huge \te{s}^{1\over 2}
         $$

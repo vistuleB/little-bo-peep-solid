@@ -11,6 +11,16 @@
 
     |> Solution
 
+        !! The answer is $6$ and $5$, respectively (or to
+        !! the answer that we can be expected to see by the
+        !! naked eye):
+
+        !! |> Image
+        !!     style=margin-bottom:-0.5em
+        !!     src=images/from_yaml__many_bumps_soln1.svg
+
+        !! |> StarDivider
+
         The derivative crests each time the
         slope of the original function reaches a
         steepest point before de-sloping again, 
