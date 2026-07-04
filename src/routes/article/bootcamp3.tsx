@@ -19,7 +19,7 @@ export default function __Bootcamp3__() {
       nextPage="/article/bootcamp2"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
-      id="_24_h.a.i_"
+      id="_23_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -32,7 +32,7 @@ export default function __Bootcamp3__() {
         Components Playground
       </ArticleTitle>
       <Pause />
-      <Exercises id="_23_h.a.i_">
+      <Exercises id="_22_h.a.i_">
         <Exercise number={1}>
           <ExerciseStatement id="_21_h.a.i_">
             <OuterP>
@@ -498,7 +498,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 3 cols, 2 on mobile, mobile-cutoff=520, center-on-overflow=true (from {" "}
               <a
-                href="/article/chapter1#_26_h.a.i_"
+                href="/article/chapter1#_25_h.a.i_"
                 class="out-chapter-link"
               >
                 1
@@ -576,7 +576,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 3 cols, place-items=end (from {" "}
               <a
-                href="/article/chapter1#_26_h.a.i_"
+                href="/article/chapter1#_25_h.a.i_"
                 class="out-chapter-link"
               >
                 1
@@ -673,7 +673,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 2 cols, 1 on mobile, place-items=start, with-padding=false, column-first=true (from {" "}
               <a
-                href="/article/chapter3#_40_h.a.i_"
+                href="/article/chapter3#_39_h.a.i_"
                 class="out-chapter-link"
               >
                 3
@@ -722,7 +722,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} same as Case 16, 4 items only (from {" "}
               <a
-                href="/article/chapter3#_40_h.a.i_"
+                href="/article/chapter3#_39_h.a.i_"
                 class="out-chapter-link"
               >
                 3
@@ -810,18 +810,6 @@ export default function __Bootcamp3__() {
               </Item>
             </Grid>
           </Solution>
-        </Exercise>
-        <Exercise number={2}>
-          <ExerciseStatement id="_22_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 2.
-              </b>
-              <ExerciseStatement>
-                What is the Table component ?
-              </ExerciseStatement>
-            </OuterP>
-          </ExerciseStatement>
         </Exercise>
       </Exercises>
       <OuterP>
