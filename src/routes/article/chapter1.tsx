@@ -30,31 +30,26 @@ export default function __Chapter1__() {
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-1">
-            square roots (bis)
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-2">
             fractions and division
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             distributivity
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             epilogue
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             vocabulary
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -218,24 +213,8 @@ export default function __Chapter1__() {
             .)
           </NoBreak>
         </OuterP>
-      </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const showMore = useShowMore();
-  return <>
-    {showMore() && <>
-      <Pause />
-      <Section id="section-1">
-        <OuterP>
-          <b>
-            Square roots (bis).
-          </b>
-          {" "}
-          We next ponder the value of
+        <OuterP class="indent-10">
+          Next, we will ponder
         </OuterP>
         <Pause />
         <MathBlock>
@@ -548,6 +527,15 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <OuterP>

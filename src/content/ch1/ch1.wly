@@ -89,10 +89,10 @@
     !! We will 
     !! One can ponder the value of
 
-|> Section
-    *Square roots (bis).*
+    !! |> Section
+    !!     *Square roots (bis).*
     !! *Square root of a number between 0 and 1.*
-    We next ponder the value of
+    Next, we will ponder
 
     $$
     \sqrt{0.5}

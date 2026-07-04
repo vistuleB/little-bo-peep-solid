@@ -1,8 +1,7 @@
 |> Section
-    work=ing
     handle=_ch5_start_
 
-    *§1. Cos and sin. (“Cosine” and “sine”.)* We have
+    *Cos and sin. (“Cosine” and “sine”.)* We have
     already encountered the ‘cos’ function in 
     Exercise >>_cosine_of_1000x_#decoy:14 of Chapter >>functions#decoy:3,
     e.g.. It is the one that has this graph:
@@ -154,9 +153,9 @@
     particle.
 
 |> Section
-    _handle=trigonometry-derivatives
+    handle=trigonometry-derivatives
 
-    *§2. Derivatives.*
+    *Derivatives.*
     Continuing the last topic,
     we can
     add two more particles to the diagram that
@@ -166,23 +165,6 @@
 
     |> Image
         src=images/svg_ch5_ch_unit_circle_with_four_particles.svg
-
-    !! These labels are chosen because
-    !! the
-    !! “$-\!\sin$”
-    !! particle
-    !! defines the function
-    !! $$
-    !! x \ra -\!\sin(x)
-    !! $$
-    !! which couldn't be more logical,
-    !! and which also accords with the fact that 
-    !! we more generally define
-    !! $$
-    !! -f = (x \ra -f(x))
-    !! $$
-    !! for all $f : \rr \ra \rr$! (So these labels can
-    !! just be seen as referring to this definition.)
 
     These labels are chosen because the $x$-coordinate
     of the “$-\!\sin$” particle, e.g., is
@@ -200,18 +182,13 @@
 
     which is also known simply as
 
-    _|“$-\!\sin$”|_
-
-    |> div
-        handle=negation-of-a-function-first-mention
+    _|“$-\!\sin$”#negation-of-a-function-first-mention##<<|_
 
     by the general definition that
     $$
     -f = (x \ra -f(x))
     $$
     for all $f : \rr \ra \rr$.
-    !! and similarly for $\cos$ and $-\!\cos$.
-    !! and where the same logic applies to $-\!\cos$.
 
     Adding the curves for $-\!\sin$ and $-\!\cos$
     to the graphs fills the “gap” between $y = \sin(x)$

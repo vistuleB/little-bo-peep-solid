@@ -1,18 +1,10 @@
-!! |> Section
-!!     *Definition.*
-!!     “Dimensional analysis” is the art of
-!!     checking the units on an equation or
-!!     formula and/or of guessing new formulas
-!!     based on considerations about the
-!!     units and/or dimensions [see below].
-
-
-
 |> Section
+    handle=_ch6_start_
+
     *Terminology: “dimension” vs. “dimensional”.*
     As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions), the
     term
-    >>units_of_the_derivative
+    >>units_of_the_derivative#decoy:4
 
     __dimension__
 
@@ -27,16 +19,7 @@
     i.e., there is no standalone term for
     “that which relates to units”, so we have this catch-all instead.
 
-!! |> Section
-!!     *What is dimensional analysis.* 
-!!     _Dimensional analysis_ is the art of 
-!!     checking the units and/or dimensions on an equation or
-!!     formula, or of guessing such formulas by
-!!     consideration thereof!
-
 |> Section
-    handle=_ch6_start_
-    and=sth_else
     *Function signatures.*
     If $f$ is a function from $\rr$ to $\rr$
     we write
@@ -57,11 +40,6 @@
     indicates that $h$ is a function for which the inputs
     denote kilograms and for which the outputs denote degrees
     fahrenheit. We refer to the ordered pair $(\te{A}, \te{B})$ 
-    !! or to the notation 
-    !! $$
-    !! \Large\te{“}[\te{A}] \ra [\te{B}]\te{”}
-    !! $$
-    !! or to the notation “$[\tA] \ra [\tB]$”
     as the
     __signature__
     of $f$.
@@ -123,11 +101,6 @@
 
     |> Pause
 
-    !! $$
-    !! \te{*}[1] = \te{rad}\qquad
-    !! \te{*}[1] = \cos(\te{rad})\\
-    !! $$
-
     _*Note._ To be precise, these “lengths” are actually
     coordinate changes that may be negative—except for the
     hypotenuse-a.k.a.-radius, which is always positive—so they
@@ -154,88 +127,16 @@
     |> Image
         src=images/c6_true_counterclockwiseness_2.svg
 
-    !! (Not that anyone cares,.
     (This actually happens inside of SVG, the web-based
     standard for so-called “vector graphics”, in which the $y$
     axis points downwards; in an SVG file, 
     |> span
         class=code-cartouche
         rotate(10)
-    !! \ will rotate an object by 10$^\circ$ _clockwise_!)
     \ rotates objects by 10$^\circ$ _clockwise_.)
 
     |> ImageRight
         src=images/c6_SVG_cloud.svg
-
-    !! |> CentralDisplay
-    !!     |> svg
-    !!         width=200
-    !!         height=400
-    !!         viewBox=0 0 200 400
-    !!         xmlns=http://w3.org
-    !!         style=margin:auto
-    !!         |> rect
-    !!             width=100
-    !!             height=200
-    !!             fill=cornsilk
-    !!         |> rect
-    !!             x=100
-    !!             width=100
-    !!             height=200
-    !!             fill=sandybrown
-    !!         |> rect
-    !!             x=100
-    !!             y=200
-    !!             width=100
-    !!             height=200
-    !!             fill=khaki
-    !!         |> rect
-    !!             y=200
-    !!             width=100
-    !!             height=200
-    !!             fill=plum
-    !!         |> line
-    !!             x1=10
-    !!             y1=10
-    !!             x2=190
-    !!             y2=10
-    !!             stroke=black
-    !!             style=stroke-width:4
-    !!         |> line
-    !!             x1=10
-    !!             y1=10
-    !!             x2=190
-    !!             y2=10
-    !!             stroke=red
-    !!             style=stroke-width:4
-    !!             transform=rotate(10)
-
-!! <svg width="100" height="200" viewBox="0 0 100 200" xmlns="http://w3.org">
-!!     <rect 
-!!       x="10" 
-!!       y="10" 
-!!       width="80" 
-!!       height="180" 
-!!       rx="8" 
-!!       fill="#4a90e2" 
-!!       stroke="#357abd" 
-!!       stroke-width="2" 
-!!     />
-!!   </svg>
-
-!! |> Section
-!!     *Default signature.*
-!!     For the sake of logical 
-!!     uniformity 
-!!     we assume that every function from $\rr$ to
-!!     $\rr$ has a signature, where we can revert to
-!!     ascribing the dimensionless signature 
-
-!!     $$
-!!     [1] \ra [1]
-!!     $$
-
-!!     for functions for which no other information is available.
 
 |> Section
     *Restrictions imposed on signatures by function
@@ -272,31 +173,16 @@
     in order not to add apples to oranges, 
     at the output end, either, i.e., to avoid 
     “$f(x) =$ apples”, “$g(x) =$ oranges”.
-    !! with “$f(x) =$ apples” and “$g(x) =$ oranges” being
-    !! the combination to avoid.
 
     By contrast, when multiplying two functions we can
-    stomach 
-    the output units to be different since
+    stomach the output units to be different since
     composite units such as “kilowatt-hour”, “worker-years”, etc,
-    exist,
-    and likewise when dividing. We have:
-    !! The following table 
-    !! summarizes the situation for all of the different
-    !! function operations
-    !! (sum/product/etc),
-    !! including not only the restrictions
-    !! imposed on the signatures of the “ingredient functions”
-    !! but also the signature of the final function that comes
-    !! baked out of the oven as a result:
-    !! (you should be able to
-    !! check the details of this table yourself!):
+    exist, and likewise when dividing. We have:
 
     |> Image
         handle=table_1_1
-        src=images/c6_flowers_here_v2.svg
+        src=tmp-images/c6_flowers_here_v3.svg
 
-    !! ...for the five main function operations.
     ...summarizing the constraints that appear at the
     input (“component signatures”) and output (“resultant
     signature”) ends, for the five main function operations.
@@ -308,47 +194,15 @@
 
     __unary__
 
-    !! [*see [Chapter >>trigonometry#decoy:5](>>negation-of-a-function-first-mention)]
     function operations to our list of officially
     considered function operations, being _negation_
     and _reciprocal_, defined by formulas here:
-    !! in this table:
 
     |> Image
         handle=table_1_2
-        src=images/c6_flowers_here_two_more.svg
+        src=tmp-images/c6_flowers_here_two_more_v2.svg
 
-    !! |> StarDivider
-    !!     style=margin-top:-0.5em
-
-    [*See [Chapter >>trigonometry#decoy:5](>>negation-of-a-function-first-mention).]
-
-    !! $$
-    !! \Large
-    !! \begin{gathered}
-    !! (f + g)(x) = f(x) + g(x) \up{1.35} \\
-    !! f : [\te{A}] \ra [\te{B}] \up{1.35} \\
-    !! g : [\te{A}] \ra [\te{B}] \up{1.35} \\
-    !! f + g : [\te{A}] \ra [\te{B}] \up{1.35} \\
-    !! (f - g)(x) = f(x) + g(x) \up{1.35} \\
-    !! f - g : [\te{A}] \ra [\te{B}] \up{1.35} \\
-    !! (f + g)' : [\te{A}] \ra [\tB/\tA] \up{1.35} \\
-    !! (fg)(x) = f(x)g(x) \up{1.35} \\
-    !! fg : [\te{A}] \ra [\te{B}\te{C}] \up{1.35} \\
-    !! g : [\te{A}] \ra [\te{C}] \up{1.35} \\
-    !! (f/g)(x) = f(x)/g(x) \up{1.35} \\
-    !! \left({f\over g}\right)(x) = {f(x)\over g(x)} \up{1.35} \\
-    !! f/g : [\te{A}] \ra [\te{B}/\te{C}] \up{1.35} \\
-    !! (f \circ g)(x) = f(g(x)) \up{1.35} \\
-    !! f : [\te{B}] \ra [\te{C}] \up{1.35} \\
-    !! g : [\te{A}] \ra [\te{B}] \up{1.35} \\
-    !! f \circ g : [\te{A}] \ra [\te{C}] \up{1.35} \\
-    !! (-f)(x) = -(f(x)) \up{1.35} \\
-    !! -f : [\te{A}] \ra [\te{B}] \up{1.35} \\
-    !! (1/f)(x) = 1/(f(x)) \up{1.35} \\
-    !! 1/f : [\te{A}] \ra [1/\te{B}] \up{1.35} \\
-    !! \end{gathered}
-    !! $$
+    [*See [Chapter >>trigonometry#decoy:5 §>>trigonometry-derivatives#decoy:2](>>negation-of-a-function-first-mention).]
 
 |> Section
     _handle=differentiation_and_signatures
@@ -403,34 +257,17 @@
     depicted here as an eye-of-Godzilla flying saucer: 
 
     |> Image
-        src=images/c6_differentiation_operator_intro.svg
+        src=tmp-images/c6_differentiation_operator_intro_v2.svg
 
     Though similarly, the
     unary function
     operations from [Table 1.2](>>table_1_2) 
     can be viewed as operators, taking one function
     as input and producing one function as output:
-    !! that take one
-    !! function and produce one function as output,
-    !! per the following figure:
-    !! take 
-    !! one function as input and produce one
-    !! function as output; 
-    !! we can 
-    !! conceptualize 
-    !! name
-    !! these are _operators_, just as well:
-    !! we can describe these as _operators_, as well:
-    !! describe these function operations as being _operators_, as well:
-    !! refer to them as _operators_ as well:
-    !! they are _operators_ as well:
-    !! we can view these as operators as well, per the
-    !! following figure:
 
     |> Image
-        src=images/c6_negation_operator.svg
+        src=tmp-images/c6_negation_operator_v2.svg
 
-    !! For that matter t
     The other function operations from Table 1.1
     are also operators, albeit
 
@@ -441,15 +278,9 @@
     can be depicted as a two-input-tube-flying-saucer:
 
     |> Image
-        src=images/c6_addition_operator_standalone.svg
+        !! src=tmp-images/c6_addition_operator_standalone.svg
+        src=tmp-images/c6_addition_operator_standalone_v2.svg
 
-    !! ...can be depicted as a two-input-tube flying
-    !! saucer. Listing
-    !! !! one of these flying saucers,
-    !! !! albeit a two-input-tube one; 
-    !! !! listing 
-    !! all operators encountered so far in this
-    !! chapter, by same order of appearance:
     In this fashion, the complete list of all
     operators that we have dealt with so far, similarly
     presented by order of appearance in this chapter, would be
@@ -458,17 +289,11 @@
     |> Image
         src=images/c6_all_our_operators_v2.svg
 
-    !! (We recycle ‘$-$’ for two
-    !! different operators—after all for the real numbers,
-    !! as well, there is a binary ‘$-$’ that operates
-    !! on a pair of real numbers, and a unary ‘$-$’
-    !! that operates on just one real number.)
     (We recycle ‘$-$’ for two
     different operators—a unary one and a binary one.)
     (Or, as computer scientists would say, we have
     _overloaded_ ‘$-$’.)
 
-    !! Circling back to the main topic of the chapter,
     The following figure summarizes the interaction
     between the various operators and function signatures,
     in a similar vein of diagram:
@@ -478,138 +303,6 @@
 
     |> StarDivider
         style=margin-top:-0.3em
-
-    !! (See [Table 1.1](>>table_1_1), [Table 1.2](>>table_1_2),
-    !! and the [discussion of differentiation](>>differentiation_and_signatures).)
-
-
-    !! (For example, the differentiation operator produces
-    !! a function of signature
-
-    !! $$
-    !! [\tA] \ra [\tB/\tA]
-    !! $$
-
-    !! when you pass it a function of signature
-
-    !! $$
-    !! [\tA] \ra [\tB]
-    !! $$
-
-    !! and so on for the other operators.)
-
-
-!! |> Section
-!!     *The differentation “operator”.*
-!!     On a conceptual note,
-!!     we can view differentiation
-!!     as a function-that-takes-functions-and-outputs-functions,
-!!     the “bigger fish” of the function world. As mathematicians
-!!     use the term
-
-!!     __operator__
-
-!!     to denote a function that takes other functions as inputs,
-!!     we therefore speak of the
-
-!!     __differentiation operator__
-
-!!     depicted here as an eye-of-Godzilla flying saucer: 
-
-!!     |> Image
-!!         src=images/c6_differentiation_operator_intro.svg
-
-!!     !! (Generally speaking, will use such round-shaped function
-!!     !! boxes to depict operators.) 
-!!     !! (NB: We put the input tube of
-!!     !! the differentiation operator on the left for no good reason,
-!!     !! and will surely change our mind before long!)
-
-!!     Note that the addition operation
-
-!!     !! $$
-!!     !! \Huge +
-!!     !! $$
-!!     |> Image
-!!         src=images/c6_big_plus_symbol.svg
-
-!!     on functions can also be understood as a kind of operator,
-!!     albeit one with two inputs, since the inputs to the 
-!!     operat
-!!     |> del
-!!         ion
-!!     or are functions:
-
-!!     |> Image
-!!         src=images/c6_addition_operator_standalone.svg
-
-!!     In this manner,
-!!     all 
-!!     operators that we have encountered so far in one form or another would include:
-
-!!     |> Image
-!!         src=images/c6_all_our_operators.svg
-
-!!     Note that ‘$-$’ appears twice, once as a
-
-!!     __binary__
-
-!!     operator and once as a
-
-!!     __unary__
-
-!!     operator, meaning once as an operator that
-!!     takes two inputs and once as an operator
-!!     that takes one input, but these are really
-!!     two different operators, that happen to share
-!!     a symbol! (Same thing happens for the real
-!!     numbers: there is a binary ‘$-$’ that you apply
-!!     to an ordered pair of real numbers, and a
-!!     unary ‘$-$’ that is applied to a single real
-!!     number.) Likewise the differentation operator
-!!     is
-
-!!     __unary__
-
-!!     since it takes only one function as input. 
-!!     The effect of these operators on function signatures can
-!!     also be given in pictorial form:
-    
-!!     |> Image
-!!         src=images/c6_operators_acting_on_signatures.svg
-    
-!!     This connects back to Table 1.1,
-!!     though but with the unary minus operator
-!!     as well as the differentation
-!!     operator added to the list. 
-!!     !! __unary__
-!!     !! (did we mention this word yet?) minus
-!!     !! operator, as well as the differentiation
-!!     !! operator. 
-!!     (By the way, note for context that the
-!!     unary
-!!     !! __unary__
-!!     minus operator was first mentioned in the
-!!     [“Derivatives” section
-!!     of Chapter >>trigonometry#decoy:5](>>trigonometry-derivatives).)
-
-
-!!     !! $$
-!!     !! \begin{aligned}
-!!     !! & f : [\tA] \ra [\tB] \\
-!!     !! & f : [\tA] \ra [\tC] \\
-!!     !! & f : [\tA] \ra [\tB/\tA] \\
-!!     !! & f : [\tA] \ra [\tB/\tC] \\
-!!     !! & f : [\tA] \ra [\tB\tC] \\
-!!     !! & f : [\tB] \ra [\tC] \\
-!!     !! & g : [\tA] \ra [\tB] \\
-!!     !! & g : [\tA] \ra [\tC] \\
-!!     !! & g : [\tA] \ra [\tB/\tA] \\
-!!     !! & g : [\tA] \ra [\tB/\tC] \\
-!!     !! & g : [\tA] \ra [\tB\tC] \\
-!!     !! & g : [\tB] \ra [\tC] \\
-!!     !! \end{aligned}
-!!     !! $$
 
 |> Section
     *The sum rule.*
