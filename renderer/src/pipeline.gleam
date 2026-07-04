@@ -25,7 +25,7 @@ const cannot_contain_p = [
 
 // dual | switcher-only | list-only
 const end_of_chapter_exercises_switcher_type = "dual"
-const exercise_graveyard_switcher_type = "switcher-only"
+const exercise_graveyard_switcher_type = "list-only"
 
 pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipeline {
   [
