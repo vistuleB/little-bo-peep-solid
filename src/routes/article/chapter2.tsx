@@ -1755,18 +1755,7 @@ const Rest = () => {
               <Image
                 src="/build-img/svgo-svg/_wle.svg"
                 class="relative w-fit"
-              >
-                <ImageRight
-                  src="/images/c2_slope_p_minus_one_over_p_cloud_right.svg"
-                  offset_y="28%"
-                  offset_x="-5%"
-                />
-                <ImageLeft
-                  src="/images/c2_slope_p_minus_one_over_p_cloud_left.svg"
-                  offset_x="-18%"
-                  offset_y="44%"
-                />
-              </Image>
+              />
               <Pause />
               <StarDivider />
             </SolutionNote>

@@ -1,0 +1,213 @@
+|> Exercise
+    handle=_geometric_construction_of_1_over_A_
+
+    If $0$, $1$, and a value $A > 1$ are marked
+    on a line...
+
+    |> Image
+        style=margin-top:0.8em;margin-bottom:0.8em;
+        src=images/e5_line_with_0_1_and_A.svg
+
+    ...how can we find the placement of...
+
+    $$
+    1 / A
+    $$
+    
+    ...on the same line by a purely geometric construction?
+    What about if $0 < A < 1$, $-1 < A < 0$, etc?
+
+    |> Solution
+
+        _Solution 1._
+        The basic idea of this solution is to find
+        an angle $\theta$ such that $A = \sec(\theta)$,
+        if $|A| > 1$,
+        or symmetrically, such that $A = \cos(\theta)$, if $|A| < 1$:
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_and_secant.svg
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_and_cos.svg
+
+        (Cf. Exercise >>_secant_cosecant_intersections_.)
+        We now proceed with
+        step-by-step
+        compass-and-ruler 
+        instructions for the two cases:
+
+        __~ ~ case $|A| > 1$ ~ ~__
+
+        _Step 1._ Find the midpoint between $0$ and $A$; for
+        this, the procedure is to use two circles of equal radius:
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_Agt1_step1.svg
+
+        _Step 2._ Draw a semicircle of radius $A/2$ whose
+        center is that midpoint:
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_Agt1_step2.svg
+
+        _Step 3._ Draw a circle of radius $1$ whose center
+        is $(0, 0)$:
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_Agt1_step3.svg
+
+        _Step 4._ Draw a line through the intersections
+        of the two circles to find the position of $1/A$:
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_Agt1_step4.svg
+
+        (The reason that the whole procedure works is that
+        this triangle...
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg
+
+        ...is actually right-angled at its upper corner
+        by 
+        the Peloponnesian circle theorem.
+        This implies that the line from $(A, 0)$ to that
+        corner is tangent to the circle of radius $1$, which is
+        what we want/need.)
+
+        $$
+        \begin{gathered}
+        x = 1 \\
+        y = 1
+        \end{gathered}
+        $$
+
+        __~ ~ case $|A| < 1$ ~ ~__
+
+        _Step 1._ 
+        With $|A| < 1$, start by
+        marking points at equal distance to $A$ 
+        by drawing a circle 
+        centered at $A$,
+        of any radius:
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg
+
+        _Step 2._ Use these points to draw a perpendicular 
+        through $A$, similarly to the first step of
+        the case $|A| > 1$:
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg
+
+        _Step 3._ 
+        Draw a circle of radius $1$ centered at $(0, 0)$,
+        and draw a line through $(0, 0)$ and the upper
+        intersection of the circle with the perpendicular:
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg
+
+        _Step 4._ 
+        Construct a perpendicular to this line
+        at the point of intersection by repeating the
+        process of the first two steps; 
+        the intersection of that line with the
+        main axis is $1/A$:
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg
+
+        |> StarDivider
+
+        _Solution 2._ Note that for an angle
+
+        $$
+        \theta
+        $$
+
+        the values $$\tan\theta$$ and $$\cot\theta$$ can be
+        found here and here, by Exercise >>_tan_cot_on_unit_circle_
+        (this figure is just a recap of Exercise >>_tan_cot_on_unit_circle_):
+        
+        |> Image
+            src=images/e5_line_with_0_1_and_A_tancot_without_A.svg
+
+        However,
+
+        $$
+        \,\cot\theta = 1/\tan\theta,
+        $$
+
+        so if $\tan\theta = A$ then $\cot\theta = 1/A$, which
+        gives rise to the following idea for a geometric construction
+        of $1/A$, shown here for $0 < A < 1$ (though it works for all $A \in \rr$):
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_tancot_idea.svg
+
+        Or, symmetrically, we can treat $A$ as $\cot\theta$, from
+        which $\tan\theta$ becomes $1/A$:
+
+        !! In this solution we use the fact
+        !! that
+        !! $$
+        !! \tan\theta = 1/\cot\theta
+        !! $$
+        !! as well as geometric interpretations of
+        !! tangent and cotangent
+        !! elaborated in Exercise >>_tan_cot_on_unit_circle_,
+        !! namely, that
+
+        !! __$\tan\theta$ is the $y$-coordinate of the
+        !! intersection of the line through $(0, 0)$
+        !! and $(\cos\theta, \sin\theta)$ with the
+        !! line $x = 1$__
+
+        !! and
+
+        !! __$\cot\theta$ is the $x$-coordinate of the
+        !! intersection of the line through $(0, 0)$
+        !! and $(\cos\theta, \sin\theta)$ with the
+        !! line $y = 1$__
+
+        !! which gives us (basic idea):
+
+        !! |> Image
+        !!     src=images/e5_line_with_0_1_and_A_tancot_idea.svg
+        !!     style=margin-bottom:-1em;
+
+        !! Or (symmetric basic idea):
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_tancot_idea_symmetric.svg
+
+        !! (By the way this second construction 
+        The second diagram
+        can also
+        be understood in terms of “materializing” the slope
+        of a line of slope $1/A$ by scaling a “rise over run”
+        triangle until the run hits $1$...
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_tancot_idea_symmetric_slope_explained.svg
+
+        ...like so; 
+        !! symmetrically, speaking of which, the first construction can
+        and symmetrically, the first diagram can 
+        be understood in terms of scaling a “rise over run”
+        triangle until the _rise_ hits $1$...
+
+        |> Image
+            src=images/e5_line_with_0_1_and_A_tancot_idea_slope_explained.svg
+
+        ...like so, since “$\te{run} = {\te{rise}\over \te{slope}}$”
+        implies “$\te{run} = {1\over \te{slope}}$” by the
+        time ‘rise’ hits $1$, implying “$\te{run} = {1\over A}$”, since the 
+        slope is $A$.
+
+        Complete compass-and-ruler constructions can
+        easily be reconstituted from the above diagrams,
+        and we hereby declare the second solution finished!!
