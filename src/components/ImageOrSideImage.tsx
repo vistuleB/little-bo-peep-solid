@@ -20,6 +20,7 @@ function ImageOrSideImage(
       ref={props.ref}
       onLoad={props.onLoad}
       onClick={props.onClick}
+      onTransitionEnd={props.onTransitionEnd}
       src={props.src}
       alt={props.alt || ""}
       class={twJoin(

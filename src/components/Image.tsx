@@ -22,7 +22,6 @@ type ImageProps = ParentProps &
   };
 
 const Image = (props: ImageProps) => {
-  // Props
   const merged = mergeProps(
     {
       height: "",
@@ -32,15 +31,14 @@ const Image = (props: ImageProps) => {
     props,
   );
 
-  // Variables
   let image_element!: HTMLImageElement;
   let transitionTimeout: number | undefined;
+
   const currentViewportWidth = () =>
     typeof window === "undefined" ? 0 : window.innerWidth;
-  let intrinsic_image_width = 0;
 
-  // Signals
   const [after_first_click, set_after_first_click] = createSignal(false);
+  const [intrinsicImageWidth, setIntrinsicImageWidth] = createSignal(0);
   const [scale, set_scale] = createSignal({
     scale: 1.0,
     name: props.src,
@@ -52,18 +50,37 @@ const Image = (props: ImageProps) => {
     currentViewportWidth(),
   );
 
-  // Functions
-  // -- Helpers
+  const imageIntrinsicWidth = () => {
+    const authorWidth = parseInt(merged.width);
+    if (Number.isInteger(authorWidth) && authorWidth > 0) return authorWidth;
+    return image_element?.naturalWidth || 0;
+  };
+
+  const imageStyleWidth = () => {
+    if (merged.width) return merged.width;
+    const intrinsicWidth = intrinsicImageWidth();
+    return intrinsicWidth ? `${intrinsicWidth}px` : "";
+  };
+
+  const scaleForConstrainedState = (isConstrained: boolean) => {
+    const intrinsicWidth = imageIntrinsicWidth();
+    if (!intrinsicWidth || !isConstrained) return 1;
+    return Math.min(1, viewportWidth() / intrinsicWidth);
+  };
+
+  const setScaleForConstrainedState = (isConstrained = constrained()) => {
+    set_scale({
+      scale: scaleForConstrainedState(isConstrained),
+      name: props.src,
+      after_first_click: after_first_click(),
+    });
+  };
+
   const toggleConstrained = () => {
     setConstrained((beforeToggle) => {
-      if (beforeToggle === true) {
-        set_scale({
-          scale: 1.0,
-          name: props.src,
-          after_first_click: after_first_click(),
-        });
-      }
-      return !beforeToggle;
+      const afterToggle = !beforeToggle;
+      setScaleForConstrainedState(afterToggle);
+      return afterToggle;
     });
   };
 
@@ -76,18 +93,17 @@ const Image = (props: ImageProps) => {
     clearTimeout(transitionTimeout);
     setTransitionsEnabled(true);
     transitionTimeout = window.setTimeout(() => {
+      updateImageScale();
       setTransitionsEnabled(false);
     }, 600);
   };
 
-  const updateImageScale = () => {
-    // scale = current rendered width / original (intrinsic) width.
-    // Denominator is the ORIGINAL width (author width attr, else natural
-    // width), NOT the load-time rendered width — otherwise scale is always
-    // 1 on load (the bug the old <Image> component never recovered from).
-    let scale = intrinsic_image_width
-      ? image_element.offsetWidth / intrinsic_image_width
-      : 1;
+  const updateImageScale = (width = intrinsicImageWidth()) => {
+    const scale = constrained()
+      ? scaleForConstrainedState(true)
+      : width
+        ? Math.max(1, image_element.offsetWidth / width)
+        : 1;
     set_scale({
       scale,
       name: props.src,
@@ -95,13 +111,24 @@ const Image = (props: ImageProps) => {
     });
   };
 
-  // -- Event Handlers
-  const handleClick = (event: any) => {
+  const debugBackground = () => {
+    const currentScale = scale().scale;
+    const isConstrained = constrained();
+    if (isConstrained && currentScale < 1) return "#8b0000";
+    if (isConstrained) return "#ffb3b3";
+    if (currentScale < 1) return "#12b886";
+    return "#a5d8ff";
+  };
+
+  const handleClick = (event: MouseEvent) => {
     event.stopPropagation();
-    if (window.innerWidth <= intrinsic_image_width) {
+
+    const width = intrinsicImageWidth();
+    if (window.innerWidth <= width) {
       enableTransitionForToggle();
       requestAnimationFrame(toggleConstrained);
     }
+
     set_after_first_click(true);
   };
 
@@ -114,30 +141,34 @@ const Image = (props: ImageProps) => {
   const handleWindowResize = () => {
     disableTransitionsDuringWindowResizes();
     setViewportWidth(currentViewportWidth());
-    requestAnimationFrame(updateImageScale);
+    requestAnimationFrame(() => updateImageScale());
   };
 
   const handleImageLoad = () => {
     requestAnimationFrame(() => {
-      intrinsic_image_width =
-        parseInt(merged.width) || image_element.naturalWidth;
-      updateImageScale();
+      const width = imageIntrinsicWidth();
+      setIntrinsicImageWidth(width);
+      updateImageScale(width);
     });
   };
 
   const imageStyle = () => {
+    const styleWidth = imageStyleWidth();
+
     const constrainedWidth =
-      merged.width &&
-      `min(${viewportWidth()}px, calc(${merged.width} + ${TEXT_X_PADDING * 2}px))`;
+      styleWidth &&
+      `min(${viewportWidth()}px, calc(${styleWidth} + ${TEXT_X_PADDING * 2}px))`;
+
     const width = constrained()
-      ? constrainedWidth || `${viewportWidth()}px`
-      : merged.width || "100%";
+      ? constrainedWidth || "auto"
+      : styleWidth
+        ? styleWidth
+        : "auto";
+
     const padding = constrained() ? `padding:0 ${TEXT_X_PADDING}px;` : "";
 
-    return `width:${width};max-width:none;box-sizing:border-box;max-height:${merged.height};${padding}${merged.style}`;
+    return `background-color:${debugBackground()};width:${width};max-width:none;box-sizing:border-box;max-height:${merged.height};${padding}${merged.style}`;
   };
-
-  // Lifecycle Events
 
   onMount(() => {
     setViewportWidth(currentViewportWidth());
@@ -149,7 +180,6 @@ const Image = (props: ImageProps) => {
     window.removeEventListener("resize", handleWindowResize);
   });
 
-  // Component
   return (
     <ScaleProvider scale={scale}>
       <div id={merged.id} class="w-full flex items-center justify-center">
