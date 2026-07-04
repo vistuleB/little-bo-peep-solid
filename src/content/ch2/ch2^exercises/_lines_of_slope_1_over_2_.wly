@@ -1,0 +1,56 @@
+|> Exercise
+    handle=_lines_of_slope_1_over_2_
+
+    True or false: Lines of slope $-{1 \over 2}$
+    are perpendicular to lines of slope $2$.
+
+    |> Solution
+
+        This is true, as illustrated by the following
+        pair of lines:
+
+        |> Image
+            src=images/c2_slope_two_and_minus_one_half.svg
+            class=relative w-fit
+
+        |> ImageRight
+            src=images/c2_slope_two_and_minus_one_half_cloud_right.svg
+            offset_y=20%
+            offset_x=-5%
+
+        |> ImageLeft
+            src=images/c2_slope_two_and_minus_one_half_cloud_left.svg
+            offset_x=-25%
+            offset_y=47%
+
+        In more detail, the two triangles are related
+        by a $90^\circ$ rotation and so, likewise,
+        are the lines defined by their hypotenuses!
+
+        |> SolutionNote
+
+            More generally, a line of slope $p$ is
+            perpendicular to a line of slope $-1/p$, for
+            all $p \ne 0$. By a similar drawing:
+
+            |> Image
+                src=images/c2_slope_p_minus_one_over_p.svg
+                class=relative w-fit
+
+                !! |> ImageRight
+                !!     src=images/c2_slope_p_minus_one_over_p_cloud_right.svg
+                !!     offset_y=28%
+                !!     offset_x=-5%
+
+                !! |> ImageLeft
+                !!     src=images/c2_slope_p_minus_one_over_p_cloud_left.svg
+                !!     offset_x=-18%
+                !!     offset_y=44%
+
+            |> StarDivider
+
+        !! (If the axes are oriented the usual way then
+        !! the above drawing covers all the cases $p > 0$,
+        !! whereas if we flip the two number axes to point
+        !! down/left the above drawing covers all the cases
+        !! $p < 0$—magic!)

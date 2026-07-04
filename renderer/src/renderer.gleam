@@ -1,5 +1,5 @@
 import argv
-import blame.{type Blame, Src}
+import blame.{type Blame, Src, Anchored}
 import desugaring as ds
 import emitter_imports as ei
 import gleam/dict.{type Dict}
@@ -40,7 +40,7 @@ type LBPEmitterError {
 }
 
 fn blame_us(message: String) -> Blame {
-  Src([], message, -1, -1, blame.Anchored)
+  Src([], message, -1, -1, Anchored)
 }
 
 fn our_splitter(

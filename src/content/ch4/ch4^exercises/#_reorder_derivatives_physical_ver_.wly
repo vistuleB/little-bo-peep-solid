@@ -1,0 +1,177 @@
+|> Exercise
+    work=ing
+    handle=_reorder_derivatives_
+    If the functions below denote the
+    position, velocity, and acceleration
+    of an object, which would be which?
+    And if they denote the velocity,
+    acceleration, and jerk of an 
+    object, which would be which?
+
+    !! Among the functions below, which 
+    !! could 
+    !! is the
+    !! zeroth, first, and second derivative?
+    !! (I.e., which is $f$, $f'$, and $f''$,
+    !! assuming that relationship exists.)
+
+    |> Image
+        src=images/svg_ch4_ex_position_by_time_find_the_order.svg
+
+    |> Solution
+
+        The answer is “third graph, first graph, second graph” 
+        for either question, because
+        the functions form a triple $f$/$f'$/$f''$ in
+        that order, as hereby visually verified:
+
+        !! The first graph appears to be the derivative
+        !! of the third graph, and the second graph
+        !! appears to be the derivative of the first graph,
+        !! thus seemingly forming a triple $f$/$f'$/$f''$ in the third/first/second
+        !! order:
+
+        |> Image
+            src=images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg
+
+        |> Image
+            src=images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg
+
+        Moreover, velocity is the derivative of position,
+        acceleration is the derivative of velocity, and
+        jerk is the derivative of acceleration,
+        making a triple of the form “$f$/$f'$/$f''$” a match
+        for either “position, velocity, accleration”
+        or “velocity”, “acceleration”, “jerk” in that order.
+
+        !! With no other ordering of the graphs statisfying a
+        !! similar relationship the answer is
+        !! therefore “third/second/first”, since either version
+        !! of the question is asking for an ordering in which
+        !! each subsequent graph is the rate of change of the
+        !! previous.
+
+        !! (Hum.)
+
+        !! The only ordering that makes sense is
+
+        !! $$
+        !! \begin{gathered}
+        !! 1.\,\, \te{third graph}\\
+        !! 2.\,\, \te{first graph}\up{1.3} \\
+        !! 3.\,\, \te{second graph}\up{1.3}
+        !! \end{gathered}
+        !! $$
+
+        !! in the order position/velocity/acceleration 
+        !! or velocity/acceleration/jerk, because
+        !! that is the only order for which each next
+        !! graph seems to compute the rate of change of
+        !! the previous.
+        !! In more detail...
+        !! !! For that order, it is easy to inspect that
+        !! !! slope of each graph is the value of the next
+        !! !! (or is not visibly _not so_, at least):
+        !! !! as one can see by inspecting the
+        !! !! slope of each graph, and comparing to the value
+        !! !! of the next graph, in this order:
+
+        !! !! |> Image
+        !! !!     style=margin-bottom:-0.5em
+        !! !!     src=images/svg_ch4_ex_position_by_time_find_the_order_answer.svg
+
+        !! !! |> StarDivider
+
+        !! !! (Ok, in full full detail...
+
+        !! |> Image
+        !!     src=images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg
+
+        !! |> Image
+        !!     src=images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg
+
+
+        !! ...we have these slope-value relationships,
+        !! implying...
+
+
+        !! |> Image
+        !!     src=images/svg_ch4_ex_position_by_time_find_the_order_answer.svg
+        
+        !! ...this $f$/$f'$/$f''$ relationship, that can 
+        !! match onto 
+        
+
+
+
+        !! !! ...matching slopes against values.
+
+        !! !! The two questions are the same,
+        !! !! asking which function is the rate of
+        !! !! change of which other. Inspection reveals
+        !! !! that the second is the derivative of the
+        !! !! first, whic is the derivative of the third:
+
+        !! !! |> Image
+        !! !!     src=images/svg_ch4_ex_position_by_time_find_the_order_answer.svg
+
+        !! !! (Matching slopes against values is the way
+        !! !! to convince oneself, if in doubt:)
+
+        !! !! |> Image
+        !! !!     src=images/svg_ch4_ex_position_by_time_find_the_order_first_pair.svg
+
+        !! !! |> Image
+        !! !!     src=images/svg_ch4_ex_position_by_time_find_the_order_second_pair.svg
+
+        !! !! The ordering is therefore
+
+        !! !! $$
+        !! !! \begin{gathered}
+        !! !! 1. \te{third $(f)$}\\
+        !! !! 2. \te{first ($f'$)}\up{1.3} \\
+        !! !! 3. \te{second ($f''$)}\up{1.3}
+        !! !! \end{gathered}
+        !! !! $$
+
+        !! !! in either case.
+
+        !! !! As no other ordering of the three
+        !! !! functions works similarly, the correspondence is therefore
+
+        !! !! $$
+        !! !! \begin{gathered}
+        !! !! \te{position} = \te{third $(f)$}\\
+        !! !! \te{velocity} = \te{first ($f'$)}\up{1.3} \\
+        !! !! \te{acceleration} = \te{second ($f''$)}\up{1.3}
+        !! !! \end{gathered}
+        !! !! $$
+
+        !! !! or
+
+        !! !! $$
+        !! !! \begin{gathered}
+        !! !! \te{velocity} = \te{third $(f)$}\\
+        !! !! \te{acceleration} = \te{first ($f'$)}\up{1.3} \\
+        !! !! \te{jerk} = \te{second ($f''$)}\up{1.3}
+        !! !! \end{gathered}
+        !! !! $$
+
+        !! !! in either case.
+        !! !! !! (in the same order) for the second version of the question.
+        !! !! !! in the same order
+        !! !! !! depending on which version of the question.
+        !! !! !! for the second question.
+
+
+        !! !! !! _|position = third|_
+        !! !! !! _|velocity = first|_
+        !! !! !! _|acceleration = third|_
+
+        !! !! !! Therefore the third (“$f$”), first
+        !! !! !! (“$f'$”) and second (“$f''$”) functions
+        !! !! !! could respectively be the position/velocity/acceleration
+        !! !! !! of an object (assuming units were added), 
+        !! !! !! or else the velocity/acceleration/jerk of an object
+        !! !! !! (assuming units were added).
+

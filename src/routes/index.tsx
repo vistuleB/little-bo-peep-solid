@@ -68,24 +68,6 @@ export default function __Home__() {
           >
             Powers of 10
           </TOCItem>
-          <TOCItem
-            article_type={3}
-            href="bootcamp3"
-          >
-            Components Playground
-          </TOCItem>
-        </ul>
-      </div>
-      <Spacer />
-      <div id="appendix">
-        <TOCTitle label="Appendices" />
-        <ul>
-          <TOCItem
-            article_type="A"
-            href="appendixA"
-          >
-            Cutting Room Floor Exercises
-          </TOCItem>
         </ul>
       </div>
     </TOC>

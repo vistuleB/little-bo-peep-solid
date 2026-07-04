@@ -1,0 +1,26 @@
+|> Exercise
+    handle=_cos_of_x_plus_0_point_1_
+
+    Is
+
+    $$
+    y =  \cos(x + 0.1)
+    $$
+
+    the shift of $y = \cos(x)$ to the left by $0.1$,
+    or to the right by $0.1$?
+
+    |> Solution
+        The function $x \ra \cos(x + 0.1)$ fetches its values
+
+        __in the future__
+
+        by $0.1$, compared to $\cos(x)$. It is therefore
+
+        __ahead__
+
+        or its graph
+
+        __to the left__
+
+        of $y = \cos(x)$, by $0.1$.
