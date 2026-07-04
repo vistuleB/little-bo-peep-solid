@@ -21,7 +21,7 @@ export default function __Chapter1__() {
       nextPage="/article/chapter2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_25_h.a.i_"
+      id="_29_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -30,31 +30,26 @@ export default function __Chapter1__() {
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
-          <InChapterLink href="?id=section-1">
-            square roots (bis)
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-2">
             fractions and division
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             distributivity
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             epilogue
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             vocabulary
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-6">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -218,24 +213,8 @@ export default function __Chapter1__() {
             .)
           </NoBreak>
         </OuterP>
-      </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const showMore = useShowMore();
-  return <>
-    {showMore() && <>
-      <Pause />
-      <Section id="section-1">
-        <OuterP>
-          <b>
-            Square roots (bis).
-          </b>
-          {" "}
-          We next ponder the value of
+        <OuterP class="indent-10">
+          Next, we will ponder
         </OuterP>
         <Pause />
         <MathBlock>
@@ -548,6 +527,15 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -961,7 +949,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_21_h.a.i_">
+        <Example id="_25_h.a.i_">
           <OuterP>
             <b>
               Example 2.
@@ -1102,7 +1090,7 @@ const Rest = () => {
           <OuterP>
             obtaining the same result as {" "}
             <InChapterLink
-              href="/article/chapter1#_21_h.a.i_"
+              href="/article/chapter1#_25_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1503,10 +1491,10 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_24_h.a.i_"
+        id="_28_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_22_h.a.i_">
+          <ExerciseStatement id="_26_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2666,7 +2654,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_23_h.a.i_">
+          <ExerciseStatement id="_27_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2674,7 +2662,7 @@ const Rest = () => {
               {" "}
               In the solution to {" "}
               <InChapterLink
-                href="/article/chapter1#_22_h.a.i_"
+                href="/article/chapter1#_26_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1

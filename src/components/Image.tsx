@@ -1,17 +1,18 @@
-import { MOBILE_MAX_WIDTH } from "~/constants";
 import {
-  createEffect,
-  createSignal,
-  onCleanup,
-  mergeProps,
   ParentProps,
+  createMemo,
+  createSignal,
+  mergeProps,
+  onCleanup,
+  onMount,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
-import { useGlobalContext } from "~/store/StoreProvider";
-import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
+import { TEXT_X_PADDING } from "~/constants";
+
+const SHOW_DEBUG_COLORS = false;
 
 type ImageProps = ParentProps &
   SharedProps & {
@@ -20,162 +21,159 @@ type ImageProps = ParentProps &
     width?: string;
     height?: string;
     local_url?: string;
+    constrained?: boolean;
   };
 
 const Image = (props: ImageProps) => {
-  let [scale, set_scale] = createSignal({
-    scale: 1.0,
-    name: props.src,
-    after_first_click: false,
-  });
-  let [scaled_down, set_scaled_down] = createSignal(false);
-  let [recent_click, set_recent_click] = createSignal(0);
-  const [innerWidth, set_innerWidth] = createSignal(0);
-  let [after_first_click, set_after_first_click] = createSignal(false);
-  let image_ref: HTMLImageElement | undefined;
-  const { set_height_change_listener_store } =
-    useHeightChangeListenerContext() || {};
-  const { store } = useGlobalContext();
-
-  props = mergeProps(
+  const merged = mergeProps(
     {
       height: "",
       width: "",
+      constrained: true,
     },
     props,
   );
 
-  let comp = 0;
+  let image_element!: HTMLImageElement;
+  let transitionTimeout: number | undefined;
 
-  const imageWidth = () => {
-    let toReturn = image_ref
-      ? Math.max(image_ref.naturalWidth, image_ref.offsetWidth)
-      : 3000;
-    if (!comp && image_ref) {
-      comp = parseFloat(window.getComputedStyle(image_ref).width);
-    }
-    console.log("toReturn: ", toReturn, "comp:", comp);
-    return toReturn;
-  };
-  const scaled_down_scale = () =>
-    Math.min(1, (store.innerWidth - 32.0) / imageWidth());
-  const our_on_mobile = () => store.innerWidth <= MOBILE_MAX_WIDTH;
+  const currentViewportWidth = () =>
+    typeof window === "undefined" ? 0 : window.innerWidth;
 
-  const set_should_be_scaled_down = (should_be_scaled_down: boolean) => {
-    const large_scale = scaled_down_scale() < 0.81 ? 1 : scaled_down_scale();
-    const scale_to_use = should_be_scaled_down
-      ? scaled_down_scale()
-      : large_scale;
-    set_scale({
-      scale: 1.1,
-      name: props.src,
-      after_first_click: after_first_click(),
-    }); // desperately trying to get a reaction
-    set_scale({
-      scale: scale_to_use,
-      name: props.src,
-      after_first_click: after_first_click(),
-    });
-    set_scaled_down(scale_to_use < large_scale);
+  const [after_first_click, set_after_first_click] = createSignal(false);
+  const [naturalImageWidth, setNaturalImageWidth] = createSignal(0);
+  const [constrained, setConstrained] = createSignal(merged.constrained);
+  const [transitionsEnabled, setTransitionsEnabled] = createSignal(false);
+  const [viewportWidth, setViewportWidth] = createSignal(
+    currentViewportWidth(),
+  );
+
+  const authorWidth = () => {
+    const width = parseFloat(merged.width);
+    return Number.isFinite(width) && width > 0 ? width : 0;
   };
 
-  const reset_scale = () => {
-    if (our_on_mobile() && (scaled_down_scale() < 1 || scaled_down())) {
-      set_should_be_scaled_down(true);
-    } else {
-      set_should_be_scaled_down(false);
-    }
+  const imageIntrinsicWidth = () => authorWidth() || naturalImageWidth();
+
+  const imageStyleWidth = () => {
+    if (merged.width) return merged.width;
+    const intrinsicWidth = imageIntrinsicWidth();
+    return intrinsicWidth ? `${intrinsicWidth}px` : "";
   };
 
-  const handleResize = () => {
-    // backup
-    let previous_on_mobile = our_on_mobile();
-
-    // we only want to reset scale as a result of
-    // resize if we are not on mobile, or if the on_mobile
-    // status has changed (true -> false, false -> true)
-    if (previous_on_mobile != our_on_mobile() || !previous_on_mobile)
-      reset_scale();
+  const targetScale = () => {
+    const intrinsicWidth = imageIntrinsicWidth();
+    if (!intrinsicWidth || !constrained()) return 1;
+    return Math.min(1, viewportWidth() / intrinsicWidth);
   };
 
-  createEffect(() => {
-    window.requestAnimationFrame(() => {
-      handleResize();
-      set_should_be_scaled_down(true);
-    });
-    setTimeout(() => {
-      set_should_be_scaled_down(true);
+  const scale = createMemo(() => ({
+    scale: targetScale(),
+    name: props.src,
+    after_first_click: after_first_click(),
+  }));
+
+  const toggleConstrained = () => {
+    setConstrained((beforeToggle) => !beforeToggle);
+  };
+
+  const disableTransitionsDuringWindowResizes = () => {
+    clearTimeout(transitionTimeout);
+    setTransitionsEnabled(false);
+  };
+
+  const enableTransitionForToggle = () => {
+    clearTimeout(transitionTimeout);
+    setTransitionsEnabled(true);
+    transitionTimeout = window.setTimeout(() => {
+      setTransitionsEnabled(false);
     }, 600);
-    window.addEventListener("resize", handleResize);
-    onCleanup(() => {
-      window.removeEventListener("resize", handleResize);
-    });
+  };
+
+  const debugBackground = () => {
+    const currentScale = scale().scale;
+    const isConstrained = constrained();
+    if (isConstrained && currentScale < 1) return "#8b0000";
+    if (isConstrained) return "#ffb3b3";
+    if (currentScale < 1) return "#12b886";
+    return "#a5d8ff";
+  };
+
+  const handleClick = (event: MouseEvent) => {
+    event.stopPropagation();
+
+    const intrinsicWidth = imageIntrinsicWidth();
+    if (window.innerWidth <= intrinsicWidth) {
+      enableTransitionForToggle();
+      requestAnimationFrame(toggleConstrained);
+    }
+
+    set_after_first_click(true);
+  };
+
+  const handleTransitionEnd = () => {
+    clearTimeout(transitionTimeout);
+    setTransitionsEnabled(false);
+  };
+
+  const handleWindowResize = () => {
+    disableTransitionsDuringWindowResizes();
+    setViewportWidth(currentViewportWidth());
+  };
+
+  const handleImageLoad = () => {
+    setNaturalImageWidth(image_element.naturalWidth);
+  };
+
+  const imageStyle = () => {
+    const styleWidth = imageStyleWidth();
+    const constrainedWidth =
+      styleWidth &&
+      `min(${viewportWidth()}px, calc(${styleWidth} + ${TEXT_X_PADDING * 2}px))`;
+    const width = constrained()
+      ? constrainedWidth || "auto"
+      : styleWidth || "auto";
+    const padding = constrained() ? `padding:0 ${TEXT_X_PADDING}px;` : "";
+
+    const debugColor = SHOW_DEBUG_COLORS
+      ? `background-color:${debugBackground()};`
+      : "";
+
+    return `${debugColor}width:${width};max-width:none;box-sizing:border-box;max-height:${merged.height};${padding}${merged.style}`;
+  };
+
+  onMount(() => {
+    setViewportWidth(currentViewportWidth());
+    window.addEventListener("resize", handleWindowResize);
+  });
+
+  onCleanup(() => {
+    clearTimeout(transitionTimeout);
+    window.removeEventListener("resize", handleWindowResize);
   });
 
   return (
     <ScaleProvider scale={scale}>
-      <div id={props.id} class={twJoin("w-fit relative m-auto", props.class)}>
-        <ImageOrSideImage
-          ref={image_ref}
-          onLoad={() => {
-            window.requestAnimationFrame(() => {
-              set_should_be_scaled_down(true);
-            });
-          }}
-          onClick={() => {
-            if (store.margin_mode) return;
-
-            // should we scale? (if it's the first click we should def. scale up)
-            const should_be_scaled_down =
-              our_on_mobile() && !scaled_down() && after_first_click();
-            set_should_be_scaled_down(should_be_scaled_down);
-
-            // bookkeeping other things
-            set_after_first_click(true);
-            set_scale({
-              scale: scale().scale,
-              name: scale().name,
-              after_first_click: true,
-            });
-            set_recent_click(should_be_scaled_down ? 1 : 2);
-            setTimeout(() => {
-              set_recent_click(0);
-            }, 100);
-            set_innerWidth(window.innerWidth); // (refreshing for safety, since we have all these bugs)
-            set_height_change_listener_store?.(
-              "re_calculate_height",
-              (prev) => !prev,
-            );
-          }}
-          class={twJoin(
-            props.class,
-            "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
-            our_on_mobile() &&
-              (scale().scale < 1 || !after_first_click()) &&
-              "max-width-screen",
-            our_on_mobile() &&
-              (scale().scale < 1 || !after_first_click()) &&
-              "scaled-down-bg",
-            !(our_on_mobile() && (scale().scale < 1 || !after_first_click())) &&
-              "scaled-up-bg",
-            // (our_on_mobile() && scale().scale < 0.81) && "scaled-down-bg",  // dark gray means "max-width-screen"
-            // !(our_on_mobile() && scale().scale < 0.81) && "scaled-up-bg",   // light gray means not "max-width-screen"
-
-            // (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-500",  // dark means "max-width-screen"
-            // !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 0 && "bg-slate-200", // light means not "max-width-screen"
-            // (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 1 && "bg-reddish-dark", // dark red means "max-width-screen" & recent "scale down" click
-            // !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 1 && "bg-reddish",     // light red means not "max-width-screen" & recent "scale down" click
-            // (our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish-dark", // dark yellow means "max-width-screen" & recent "scale up" click
-            // !(our_on_mobile() && (scaled_down() || !after_first_click())) && recent_click() == 2 && "bg-yellowish",     // light yellow means not "max-width-screen" & recent "scale up" click
-
-            after_first_click() && "transition-img",
-          )}
-          style={`width:${props.width};height:${props.height};${props.style}`}
-          src={props.src}
-          side_image={false}
-          local_url={props.local_url}
-        />
-        {props.children}
+      <div id={merged.id} class="w-full flex items-center justify-center">
+        <div class={twJoin("flex items-center justify-center", "w-full")}>
+          <ImageOrSideImage
+            ref={image_element}
+            src={merged.src}
+            onLoad={handleImageLoad}
+            onClick={handleClick}
+            onTransitionEnd={handleTransitionEnd}
+            style={imageStyle()}
+            class={twJoin(
+              transitionsEnabled() && [
+                "transition-[width,max-width,padding]",
+                "duration-500",
+                "ease-[cubic-bezier(0.4, 0, 0.2, 1)]",
+              ],
+              !transitionsEnabled() && "transition-none",
+            )}
+          />
+          {merged.children}
+        </div>
       </div>
     </ScaleProvider>
   );

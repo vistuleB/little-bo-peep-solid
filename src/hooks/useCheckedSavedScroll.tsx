@@ -1,5 +1,5 @@
 import { useLocation, useSearchParams } from "@solidjs/router";
-import { createEffect, createSignal, onMount } from "solid-js";
+import { createEffect, createSignal, onMount, untrack } from "solid-js";
 import useScrollToInChapter from "./useScrollToInChapter";
 import { useGlobalContext } from "~/store/StoreProvider";
 
@@ -28,21 +28,23 @@ const useCheckedSavedScroll = () => {
   }
 
   const [scroll, set_scroll] = createSignal<number | null>(null);
+  const article = location.pathname.split("/").pop() || "";
+  const scrollKey = `${article}_scroll`;
+
   createEffect(() => {
-    const update = (e: Event) => {
+    const update = () => {
+      if (untrack(() => store.suppress_scroll_memory)) return;
       set_scroll(window.scrollY);
     };
 
     setTimeout(() => {
-      const article = location.pathname.split("/").pop();
-      set_scroll(Number(localStorage.getItem(`${article}_scroll`) || "0"));
+      const savedScroll = Number(localStorage.getItem(scrollKey) || "0");
+      set_scroll(savedScroll);
 
-      if (scroll() !== null) {
-        window.scrollTo(
-          (document.body.scrollWidth - window.innerWidth) / 2,
-          Number(scroll()),
-        );
-      }
+      window.scrollTo(
+        (document.body.scrollWidth - window.innerWidth) / 2,
+        savedScroll,
+      );
       set_store("saved_scroll_finished", true);
 
       window.addEventListener("scroll", update);
@@ -54,12 +56,14 @@ const useCheckedSavedScroll = () => {
   });
 
   createEffect(() => {
-    if (scroll() !== null) {
-      requestAnimationFrame(() => {
-        const article = location.pathname.split("/").pop();
-        localStorage.setItem(`${article}_scroll`, window.scrollY.toString());
-      });
-    }
+    const currentScroll = scroll();
+    if (currentScroll === null) return;
+    if (untrack(() => store.suppress_scroll_memory)) return;
+
+    requestAnimationFrame(() => {
+      if (untrack(() => store.suppress_scroll_memory)) return;
+      localStorage.setItem(scrollKey, currentScroll.toString());
+    });
   });
 };
 

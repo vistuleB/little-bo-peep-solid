@@ -6,15 +6,21 @@ import {
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
 import smoothScrollTo from "~/utils/smoothScrollTo";
-import useScrollToInChapter from "~/hooks/useScrollToInChapter";
-import { useExercisesContext } from "~/store/ExercisesStoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
+
+type ExerciseStop = {
+  anchorY: number;
+  scrollY: number;
+};
 
 const PageTopBottomArrows = () => {
   const { store } = useGlobalContext();
-  const { exercises_store } = useExercisesContext();
   const [opacity, set_opacity] = createSignal(1);
   const [hovered, set_hovered] = createSignal(false);
+  const DOWN_STOP_SKIP_TOP_VIEWPORT_RATIO = 0.7;
+  const UP_STOP_SKIP_BOTTOM_VIEWPORT_RATIO = 0.7;
+  const STOP_POSITION_VIEWPORT_RATIO = 0.5;
+  const STOP_REPEAT_SCROLL_TOLERANCE = 2;
 
   const calc_opacity = () => {
     // prettier-ignore
@@ -37,26 +43,51 @@ const PageTopBottomArrows = () => {
     });
   });
 
-  const { calculateTargetCenterOnPage } = useScrollToInChapter();
-  const selectedExercise = () =>
-    document
-      .querySelectorAll(".exo-statement")
-      .item(
-        exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
-      ) as HTMLElement;
+  const groupAnchorY = (group: HTMLElement) =>
+    window.scrollY + group.getBoundingClientRect().top;
+
+  const exerciseStops = (): ExerciseStop[] =>
+    Array.from(
+      document.querySelectorAll<HTMLElement>("[data-exercise-group-id]"),
+    )
+      .map((group) => {
+        const anchorY = groupAnchorY(group);
+        return {
+          anchorY,
+          scrollY: anchorY - store.innerHeight * STOP_POSITION_VIEWPORT_RATIO,
+        };
+      })
+      .filter((stop) => Number.isFinite(stop.anchorY))
+      .sort((a, b) => a.anchorY - b.anchorY);
+
+  const previousExerciseStop = () =>
+    exerciseStops()
+      .filter(
+        (stop) =>
+          stop.scrollY < store.scrollY - STOP_REPEAT_SCROLL_TOLERANCE &&
+          stop.anchorY <
+            store.scrollY +
+              store.innerHeight * (1 - UP_STOP_SKIP_BOTTOM_VIEWPORT_RATIO),
+      )
+      .at(-1);
+
+  const nextExerciseStop = () =>
+    exerciseStops().find(
+      (stop) =>
+        stop.scrollY > store.scrollY + STOP_REPEAT_SCROLL_TOLERANCE &&
+        stop.anchorY >
+          store.scrollY + store.innerHeight * DOWN_STOP_SKIP_TOP_VIEWPORT_RATIO,
+    );
 
   const handleUpClick = (_: MouseEvent) => {
-    let middleScroll = calculateTargetCenterOnPage(selectedExercise());
-    let scrollTo = store.scrollY < middleScroll + 100 ? 0 : middleScroll + 50;
+    const stop = previousExerciseStop();
+    const scrollTo = stop?.scrollY ?? 0;
     smoothScrollTo(scrollTo, store.animations ? 100 : 0);
   };
 
   const handleDownClick = (_: MouseEvent) => {
-    let middleScroll = calculateTargetCenterOnPage(selectedExercise());
-    let scrollTo =
-      store.scrollY > middleScroll - 100
-        ? document.body.scrollHeight
-        : middleScroll + 50;
+    const stop = nextExerciseStop();
+    const scrollTo = stop?.scrollY ?? document.body.scrollHeight;
 
     smoothScrollTo(scrollTo, store.animations ? 100 : 0);
   };

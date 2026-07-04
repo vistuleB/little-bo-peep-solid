@@ -25,7 +25,7 @@ const cannot_contain_p = [
 
 // dual | switcher-only | list-only
 const end_of_chapter_exercises_switcher_type = "dual"
-const exercise_graveyard_switcher_type = "switcher-only"
+const exercise_graveyard_switcher_type = "list-only"
 
 pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipeline {
   [
@@ -56,7 +56,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       ..pp.markdown_link_splitting(["MathBlock", "Math"]),
     ],
     [
-      dl.table_marker(),
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
       dl.append_attribute(#("Book", "counter", "ChapterCounter", infra.GoBack)),
       dl.append_attribute(#("Book", "counter", "BootcampCounter", infra.GoBack)),
@@ -85,12 +84,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         #("Exercises", "counter", "ExerciseCounter"),
         #("Solution", "counter", "SolutionNoteCounter"),
       ]),
-      dl.append_attribute_if(#("Section", fn(section) { !infra.v_has_attr_with_key(section, "id") }, "id", "section-::++SectionCounter", infra.Continue)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(_, _, _, _, following_siblings) { list.is_empty(following_siblings) }, "at_end_of_page", "true", infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.contains(ancestors, "Appendix") && !infra.v_has_attr_with_key(exercises, "mode") }, "mode", end_of_chapter_exercises_switcher_type, infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercise", fn(_, ancestors, _, _, _) { infra.first_is(ancestors, "Exercises") }, "number", "::øøExerciseCounter", infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.contains(ancestors, "Appendix") }, "show_curlicue", "true", infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, _) { infra.contains(ancestors, "Appendix") && !infra.v_has_attr_with_key(exercises, "mode") }, "mode", exercise_graveyard_switcher_type, infra.GoBack)),
       dl.prepend_counter_incrementing_attribute__outside(#("Chapter", "ChapterCounter", infra.GoBack), ["Bootcamp", "Appendix"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Bootcamp", "BootcampCounter", infra.GoBack), ["Chapter", "Appendix"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Appendix", "AppendixCounter", infra.GoBack), ["Chapter", "Bootcamp"]),
@@ -98,6 +91,13 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.prepend_counter_incrementing_attribute(#("Example", "ExampleCounter", infra.GoBack)),
       dl.prepend_counter_incrementing_attribute(#("SolutionNote", "SolutionNoteCounter", infra.GoBack)),
       dl.prepend_counter_incrementing_attribute(#("Note", "NoteCounter", infra.GoBack)),
+      dl.prepend_counter_incrementing_attribute(#("Section", "SectionCounter", infra.GoBack)),
+      dl.append_attribute_if(#("Section", fn(section) { !infra.v_has_attr_with_key(section, "id") }, "id", "section-::øøSectionCounter", infra.Continue)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(_, _, _, _, following_siblings) { list.is_empty(following_siblings) }, "at_end_of_page", "true", infra.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.contains(ancestors, "Appendix") && !infra.v_has_attr_with_key(exercises, "mode") }, "mode", end_of_chapter_exercises_switcher_type, infra.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercise", fn(_, ancestors, _, _, _) { infra.first_is(ancestors, "Exercises") }, "number", "::øøExerciseCounter", infra.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.contains(ancestors, "Appendix") }, "show_curlicue", "true", infra.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, _) { infra.contains(ancestors, "Appendix") && !infra.v_has_attr_with_key(exercises, "mode") }, "mode", exercise_graveyard_switcher_type, infra.GoBack)),
       dl.set_handle_value__outside(#("Chapter", "::øøChapterCounter", infra.GoBack), ["Bootcamp"]),
       dl.set_handle_value__outside(#("Bootcamp", "::øøBootcampCounter", infra.GoBack), ["Chapter"]),
       dl.set_handle_value__outside(#("Appendix", "::øøAppendixCounter", infra.GoBack), ["Chapter", "Bootcamp"]),
@@ -105,15 +105,18 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.set_handle_value(#("Exercise", "::øøExerciseCounter", infra.GoBack)),
       dl.set_handle_value(#("Note", "::øøNoteCounter", infra.GoBack)),
       dl.set_handle_value(#("SolutionNote", "::øøSolutionNoteCounter", infra.GoBack)),
+      dl.set_handle_value(#("Section", "::øøSectionCounter", infra.GoBack)),
       dl.prepend_text_node(#("Example", "*Example ::øøExampleCounter.*")),
+      // dl.prepend_text_node(#("Section", "*§::øøSectionCounter.* ")),
       dl.prepend_text_node(#("SolutionNote", "_Note ::øøSolutionNoteCounter._")),
       dl.prepend_text_node(#("Note", "_Note ::øøNoteCounter._")),
       dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise ::øøExerciseCounter.*", fn(_, ancestors, _, _, _) { infra.first_is(ancestors, "Exercises") })),
       dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise*", fn(_, ancestors, _, _, _) { !infra.first_is(ancestors, "Exercises") })),
       dl.substitute_counters(),
+      dl.handles_generate_v_definitions_from_t_definitions(),
       dl.handles_add_ids(),
-      dl.handles_generate_dictionary_and_id_list("path"),
-      dl.handles_substitute_and_fix_nonlocal_id_links(#("path", "InChapterLink", "a", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"])),
+      dl.handles_generate_dictionary("path"),
+      dl.handles_substitute(#("path", "InChapterLink", "a", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"])),
       dl.unwrap("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Bootcamp", "ArticleTitle", "banner"), ["Chapter"]),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Chapter", "ArticleTitle", "banner"), ["Bootcamp"]),
@@ -134,6 +137,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     [
       dl.table_section_header("pp.asymmetric_delim_splitting"),
+      dl.table_marker(),
       ..pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
     ],
     [

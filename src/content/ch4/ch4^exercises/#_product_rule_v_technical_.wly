@@ -1,0 +1,345 @@
+|> Exercise
+    handle=_product_rule_
+
+    In this exercise we consider two points
+    in time $t_0$ and $t_0 + \Delta{}t$ (here
+    “$\Delta{}t$”, read “delta $t$”, is a
+    standard notation for a small amount of
+    time):
+
+    |> Image
+        src=images/svg_ch4_RATS_timeline.svg
+
+    We also consider quantities $A$ and $B$
+    that are changing with time; $A$ and $B$
+    have some value at $t_0$, and, say, grow
+    to be larger at $t_0 + \Delta{}t$:
+
+    |> Image
+        src=images/svg_ch4_RATS_timeline_with_A_B.svg
+
+    More specifically, we are interested in
+    the change in the value of the product
+
+    $$
+    \Large AB
+    $$
+
+    over said course of time.
+
+    To introduce an unsolicited metaphor,
+    imagine $A$ and $B$ as
+
+    |> Image
+        src=images/svg_ch4_RATS_rats.svg
+
+    that are crossing a hallway surveyed by
+    a cat. One side of the hallway is time
+    $t_0$, the other side of the hallway is
+    time $t_0 + \Delta{}t$. So great is 
+    their terror
+    that $A$ and $B$ have decided to
+    cross the hallway one at a time—first
+    $A$ will go, then $B$. In so, 
+    three moments of interest
+    can be separated
+    (“moments” that exist inside the
+    metaphorical timeline of the story, not
+    on the $t$-number line, to be clear):
+
+    |> ImageLeft
+        offset_x= 0.5em
+        offset_y=-0.5em
+        src=images/svg_ch4_RATS_corridor_cloud.svg
+
+    |> TextParent
+        |> ol
+            style=margin:0 1.5em 0.5em 2em;list-style:auto;list-style-position:outside;
+
+            |> li
+                style=margin-top:0.5em
+                when $A$ and $B$ are both still at $t_0$
+
+            |> li
+                style=margin-top:0.5em
+                when $A$ has made it to $t_0 + \Delta{}t$,
+                and $B$ is still at $t_0$
+
+            |> li
+                style=margin-top:0.5em
+                |> del
+                    when _B_'s tail is sticking out of the
+                    cat's mouth, and
+                \ when $A$ and $B$ have both made it
+                to $t_0 + \Delta{}t$
+
+    Correspondingly, the product
+
+    $$
+    \Large AB
+    $$
+
+    changes in two increments: first as $A$
+    makes it to the other side of the hallway,
+    and $A$ grows bigger; then as $B$ joins
+    him/her, and $B$ grows bigger. In an
+    equation:
+
+    |> Image
+        src=images/svg_ch4_RATS_equation.svg
+
+    If we divide the above equation by $\Delta{}t$
+    and let $\Delta{}t$ drop to $0$, what does
+    each term become?
+    
+    PS: You can assume that all functions involved are
+    differentiable at $t_0$.
+    !! $A$, $B$, as well as $AB : \rr \ra \rr$
+    !! $A$, $B$, $AB$
+    !! are differentiable at $t_0$.
+
+    |> Solution
+
+        Dividing by $\Delta{}t$:
+
+        |> Image
+            src=images/svg_ch4_RATS_equation_over_Dt.svg
+
+        The first term on the left-hand side comes
+        out to
+
+        |> ImageRight
+            src=images/svg_ch4_RATS_first_term_lhs_cloud.svg
+            offset_x=-3em
+
+        $$
+        {(AB)(t_0 + \Delta t) - (AB)(t_0)\over \Delta t}
+        $$
+
+        when written out, which approaches
+
+        |> Boxed
+            $$
+            (AB)'(t_0)
+            $$
+
+        as $\Delta t$ approaches $0$, because it has the
+        form 
+
+        $$
+        {f(t_0 + \Delta{}t) - f(t_0)\over \Delta{}t}
+        $$
+
+        of a difference quotient, with $f = AB$, and by assumed
+        differentiability of $AB$ at $t_0$. (Cf. Note
+        >>_difference_quotient_limit_ of Exercise >>_difference_quotient_illustration_.)
+        
+        [Nb: $AB : \rr \ra \rr$ is the function
+        given by 
+
+        $$
+        (AB)(t) = A(t)B(t)
+        $$
+
+        as per the definition of function multiplication. !!]
+
+        The first term on the right-hand side, for
+        its part, comes out to
+
+        |> ImageRight
+            src=images/svg_ch4_RATS_first_term_cloud.svg
+
+        $$
+        {A(t_0 + \Delta{}t)B(t_0) - A(t_0)B(t_0) \over \Delta{}t}
+        $$
+
+        when written out, or
+
+        $$
+        B(t_0)\cdot{A(t_0 + \Delta{}t) - A(t_0) \over \Delta{}t}
+        $$
+
+        by factoring “$B(t_0)$” from the numerator; but
+
+        $$
+        {A(t_0 + \Delta{}t) - A(t_0) \over \Delta{}t}
+        $$
+
+        approaches
+
+        $$
+        A'(t_0)
+        $$
+
+        as $\Delta t$ approaches $0$, being a difference 
+        !! quotient,
+        quotient and by the assumed differentiability of $A$ at $t_0$,
+        so the whole term approaches
+
+        |> Boxed
+
+            $$
+            B(t_0)A'(t_0)
+            $$
+
+        as $\Delta t$ approaches $0$, reintroducing the “$B(t_0)$”
+        back in.
+
+        !! [Nb: We assume $A$ and $B$ are differentiable at $t_0$, etc—the
+        !! exercise has all the veneer of conceptuality, not so much
+        !! of technicality.]
+
+        Lastly the second term on the right-hand side
+        comes out to
+
+        |> ImageRight
+            src=images/svg_ch4_RATS_second_term_cloud.svg
+
+        $$
+        {A(t_0 + \Delta{}t)B(t_0+\Delta{}t) - A(t_0+ \Delta{}t)B(t_0) \over \Delta{}t}
+        $$
+
+        or
+
+        $$
+        A(t_0 + \Delta{}t)\cdot{B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
+        $$
+
+        when factoring out 
+        “$A(t_0 + \Delta{}t)$”
+        from the numerator; on the one hand,
+
+        $$
+        {B(t_0+\Delta{}t) - B(t_0) \over \Delta{}t}
+        $$
+
+        approaches
+
+        $$
+        B'(t_0)
+        $$
+
+        as $\Delta{}t$ approaches $0$ by the property of the
+        difference quotient & differentiability,
+        while, on the other hand,
+
+        $$
+        A(t_0 + \Delta{}t)
+        $$
+
+        approaches
+
+        $$
+        A(t_0)
+        $$
+
+        as $\Delta t$ approaches $0$—(from the technical standpoint,
+        the
+
+        __differentiability__
+
+        of $A$ at $t_0$ implies the
+
+        __continuity__
+
+        of $A$ at $t_0$, which implies that $A(t_0 + \Delta{}t)$
+        approaches $A(t_0)$ as $\Delta t$ approaches $0$, but
+        anyway)—so as the
+        
+        __product-of-two-things-each-approaching-a-certain-value-approaches-the-product-of-the-two-approached-values__
+
+        the whole term approaches
+
+        |> Boxed
+            $$
+            A(t_0)B'(t_0)
+            $$
+
+        as $\Delta t$ approaches $0$.
+
+        |> SolutionNote
+            handle=_product_rule_first_note_
+
+            We deduce 
+
+            |> Boxed
+                $$
+                (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
+                $$
+
+            since, as the three terms inch closer and closer to
+
+            $$
+            (AB)'(t_0),\,\,B(t_0)A'(t_0)\,\,\,\te{ and }\,\,\,A(t_0)B'(t_0)
+            $$
+
+            respectively as $\Delta t$ approaches $0$, it
+            would be impossible for the equation boxed in red
+            to _not_ hold—if the boxed equation didn't hold, then
+            at some point, “something would have to break”
+            in the original equation...
+
+            |> Image
+                src=images/svg_ch4_RATS_equation_over_Dt.svg
+
+            ...as $\Delta t$ goes to $0$.
+
+        |> SolutionNote
+
+            The differentiability of $AB$ at $t_0$ can
+            be deduced from the computation itself, because
+            the fact that the difference quotient
+
+            $$
+            {(AB)(t_0 + \Delta t) - (AB)(t_0)\over \Delta t}
+            $$
+
+            approaches a fixed value as $\Delta t$ goes to
+            $0$, as the computation shows from the right-hand
+            side, implies the
+            differentiability of $AB$ at $t_0$. So the only
+            “truly necessary assumptions” are the differentiability
+            of $A$ and $B$ at $t_0$!
+
+            !! The assumption that $AB$ is differentiable at
+            !! $t_0$ can be dropped, being deduced as a
+            !! consequence of the computation itself.
+            !! What remains is the assumption that $A$ and $B$,
+            !! individually, are differentiable at $t_0$, from
+            !! which the boxed equation of Note >>_product_rule_first_note_
+            !! follows!
+
+        |> SolutionNote
+            Keeping things alphabetical everywhere, the
+            !! same equation
+            boxed equation of Note >>_product_rule_first_note_
+            is more often written
+
+            |> Boxed
+                $$
+                (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
+                $$
+
+            with “$A'(t_0)B(t_0)$” in the middle, which is
+            namely valid for $A$, $B$ differentiable at $t_0 \in \rr$,
+            or 
+
+            |> Boxed
+                $$
+                (AB)' = A'B + AB'
+                $$
+
+            more shortly, valid for
+            $A, B : \rr \ra \rr$ differentiable, or
+
+            |> Boxed
+                $$
+                (fg)' = f'g + fg'
+                $$
+
+            if we replace “$A$” and “$B$” by the more familiar “$f$” and “$g$”.
+            !! This result is known as the _product rule_.
+
+        |> SolutionNote
+            This result is known as the _product rule_.
+

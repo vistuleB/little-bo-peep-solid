@@ -1,0 +1,67 @@
+|> Exercise
+    handle=_complete_the_missing_units_
+
+    Complete the missing units for each strip
+    below, based on those units that are given:
+
+    |> Image
+        src=tmp-images/svg_ch4_missing_units_v4.svg
+
+    !! |> Image
+    !!     src=tmp-images/svg_ch4_missing_units_v3.svg
+
+    |> Solution
+
+        The pattern to respect is that, each time
+        you take a derivative, the units on the $x$
+        axis stay the same, while the units on the
+        $y$ axis become divided by those on the $x$
+        axis. This gives the unique solutions:
+
+        |> Image
+            !! src=tmp-images/svg_ch4_missing_units_solution_v3.svg
+            src=tmp-images/svg_ch4_missing_units_solution_v4.svg
+
+        ...where we find units of
+
+        $$
+        \Huge \te{s}^{1\over 2}
+        $$
+        
+        or _square root seconds_ on the $x$ axis
+        in the last strip,
+        which is not at all clear what it means, or
+        if such a thing exists.
+        (But if there's a solution, it's that one, so we
+        blindly write that down.)
+
+        |> SolutionNote
+            A unit of “$1$” is a
+
+            __dimensionless__
+
+            unit. Dimensionless units arise when
+            quantities are divided by like quantities.
+            Think of dimensionless quantities as “pure
+            fractions” or “pure ratios”. (Percentages
+            are dimensionless—in fact the term
+
+            __percentage__
+
+            is synonymous with
+
+            __dimensionless ratio__
+
+            though if you spoke to people about
+            “dimensionless ratios” they would look at
+            you funny. Also percentages are a system of
+            notation, whereby the symbol “%” means
+            “divide the preceding number by 100 in
+            order to discover the numerical value of
+            the ratio I'm talking about”.) (To drive
+            it home: In Chinese, 
+            !! the written expressions
+            “$23\%$” and “$23/100$” are
+            indistinguishable when read out loud; they
+            are both  read “$23$ over $100$”; that is
+            the simple _&_ correct way!)

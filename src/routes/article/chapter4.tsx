@@ -24,7 +24,7 @@ export default function __Chapter4__() {
       nextPage="/article/chapter5"
       pageNecessaryMargin={1450}
       maxElementWidth={700}
-      id="_88_h.a.i_"
+      id="_93_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -94,7 +94,7 @@ export default function __Chapter4__() {
       <Pause />
       <Image
         src="/build-img/svgo-svg/myNp.svg"
-        id="_57_h.a.i_"
+        id="_61_h.a.i_"
       />
       <Pause />
       <Image src="/build-img/svgo-svg/dO9o.svg" />
@@ -120,14 +120,14 @@ export default function __Chapter4__() {
         <OuterP class="indent-10">
           (&#8288;
           <InChapterLink
-            href="/article/chapter4#_69_h.a.i_"
+            href="/article/chapter4#_74_h.a.i_"
             class="in-chapter-link"
           >
-            Note 12
+            Note 13
           </InChapterLink>
           {" "} of {" "}
           <InChapterLink
-            href="/article/chapter4#_88_h.a.i_"
+            href="/article/chapter4#_93_h.a.i_"
             class="in-chapter-link"
           >
             Chapter 4
@@ -1724,7 +1724,7 @@ const Rest = () => {
           {" "}
           Coming briefly back to {" "}
           <a
-            href="/article/chapter3#_56_h.a.i_"
+            href="/article/chapter3#_60_h.a.i_"
             class="out-chapter-link"
           >
             Chapter 3
@@ -1792,7 +1792,7 @@ const Rest = () => {
         <OuterP>
           goes back to {" "}
           <a
-            href="/article/chapter3#_38_h.a.i_"
+            href="/article/chapter3#_42_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 5 of Chapter 3
@@ -1833,7 +1833,7 @@ const Rest = () => {
         <OuterP>
           of functions already appear in {" "}
           <a
-            href="/article/chapter3#_51_h.a.i_"
+            href="/article/chapter3#_55_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 17 of Chapter 3
@@ -1868,10 +1868,10 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_87_h.a.i_"
+        id="_92_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_58_h.a.i_">
+          <ExerciseStatement id="_62_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1894,13 +1894,13 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              That would be:
+              It is:
             </OuterP>
             <Pause />
             <Image src="/build-img/svgo-svg/KPKF.svg" />
             <Pause />
             <OuterP>
-              (The derivative is {" "}
+              (I.e., the derivative is {" "}
               <Math>
                 $1/2$
               </Math>
@@ -1912,7 +1912,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              is {" "}
+              {" "}
               <Math>
                 $-1/2$
               </Math>
@@ -1923,13 +1923,12 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} and is
-              undefined at the corners.)
+              {" "} and undefined at the corners.)
             </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_59_h.a.i_">
+          <ExerciseStatement id="_63_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -1983,7 +1982,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_60_h.a.i_">
+          <ExerciseStatement id="_64_h.a.i_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -1999,7 +1998,7 @@ const Rest = () => {
             <OuterP>
               derivative of the graph in {" "}
               <InChapterLink
-                href="/article/chapter4#_58_h.a.i_"
+                href="/article/chapter4#_62_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1
@@ -2041,7 +2040,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_61_h.a.i_">
+          <ExerciseStatement id="_65_h.a.i_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2049,7 +2048,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of {" "}
               <InChapterLink
-                href="/article/chapter4#_58_h.a.i_"
+                href="/article/chapter4#_62_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1
@@ -2126,7 +2125,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_62_h.a.i_">
+          <ExerciseStatement id="_66_h.a.i_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -2307,23 +2306,29 @@ const Rest = () => {
                 </Math>
                 's:
               </NoBreak>
-              {" "} the {" "}
+              {" "}
+              the {" "}
               <Math>
                 $x$
               </Math>
-              {" "} that
-              denotes the input, and the {" "}
+              {" "} that is used as a placeholder to describe 
+              what the first function does, and the {" "}
               <Math>
                 $x$
               </Math>
-              {" "} that is used as
-              a placeholder to describe how the first function
-              acts.
+              {" "} that denotes
+              the “outermost” input to the sum of the two functions. (These are
+              really separate, and the “placeholder” {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} could be
+              any symbol.)
             </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={6}>
-          <ExerciseStatement id="_63_h.a.i_">
+          <ExerciseStatement id="_67_h.a.i_">
             <OuterP>
               <b>
                 Exercise 6.
@@ -2333,7 +2338,7 @@ const Rest = () => {
               below, based on those units that are given:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/xp2w.svg" />
+            <Image src="/tmp-images/svg_ch4_missing_units_v4.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2356,7 +2361,7 @@ const Rest = () => {
               axis. This gives the unique solutions:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/CZUY.svg" />
+            <Image src="/tmp-images/svg_ch4_missing_units_solution_v4.svg" />
             <Pause />
             <OuterP>
               ...where we find units of
@@ -2477,8 +2482,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={7}>
-          <ExerciseStatement id="_64_h.a.i_">
+        <Exercise
+          work="ing"
+          number={7}
+        >
+          <ExerciseStatement id="_68_h.a.i_">
             <OuterP>
               <b>
                 Exercise 7.
@@ -2501,7 +2509,7 @@ const Rest = () => {
               at four places, per appearances:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/yAV_.svg" />
+            <Image src="/build-img/svgo-svg/NfeV.svg" />
             <Pause />
             <OuterP>
               The derivative will therefore have four
@@ -2513,7 +2521,7 @@ const Rest = () => {
               curious, it looks like this:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/dDBS.svg" />
+            <Image src="/build-img/svgo-svg/4xlL.svg" />
             <Pause />
             <OuterP>
               But nothing prevents the graph from
@@ -2525,11 +2533,64 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={8}>
-          <ExerciseStatement id="_65_h.a.i_">
+        <Exercise
+          work="ing"
+          number={8}
+        >
+          <ExerciseStatement id="_69_h.a.i_">
             <OuterP>
               <b>
                 Exercise 8.
+              </b>
+              {" "}
+              How many “up bumps” and “down bumps”, respectively,
+              does the derivative of the function below have?
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/cRZH.svg"
+              style="padding-bottom:1rem"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The derivative crests each time the
+              slope of the original function reaches a
+              steepest point before de-sloping again, 
+              giving us—at the macro level from what
+              our eyes can see, barring mini-variations
+              of the slope that would give mini-bumps
+              atop each bump—six “up bumps” for
+              the derivative and,
+              reasoning symmetrically, five “down bumps”:
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/ArpL.svg" />
+            <Pause />
+            <OuterP>
+              (So the answer is: {" "}
+              <Math>
+                $6$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} respectively.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={9}
+        >
+          <ExerciseStatement id="_70_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 9.
               </b>
               {" "}
               Among the functions below, which is the
@@ -2591,7 +2652,7 @@ const Rest = () => {
               starts and ends:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/gqxn.svg" />
+            <Image src="/build-img/svgo-svg/-86e.svg" />
             <Pause />
             <OuterP>
               Likewise, the second graph has slope
@@ -2616,7 +2677,7 @@ const Rest = () => {
               {" "} of the third graph:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/4Efs.svg" />
+            <Image src="/build-img/svgo-svg/m_fp.svg" />
             <Pause />
             <OuterP>
               ...and none of this coincidentally, since the
@@ -2625,11 +2686,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement id="_66_h.a.i_">
+        <Exercise number={10}>
+          <ExerciseStatement id="_71_h.a.i_">
             <OuterP>
               <b>
-                Exercise 9.
+                Exercise 10.
               </b>
               {" "}
               Where is the rate of change of the function
@@ -2717,12 +2778,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           ref="rence"
-          number={10}
+          number={11}
         >
-          <ExerciseStatement id="_67_h.a.i_">
+          <ExerciseStatement id="_72_h.a.i_">
             <OuterP>
               <b>
-                Exercise 10.
+                Exercise 11.
               </b>
               {" "}
               If you scale the graph of a function {" "}
@@ -2781,7 +2842,7 @@ const Rest = () => {
                 $y$
               </Math>
               {" "} axis has
-              been doubled. (Hehe.) This means that the ratio
+              been doubled. This means that the ratio
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2800,7 +2861,7 @@ const Rest = () => {
                 -coordinate
               </NoBreak>
               {" "}
-              is twice as large!), whereas “run” stays
+              is twice as large), whereas “run” stays
               the same. (So the slope of the tangent has
               doubled, so the derivative is doubled.)
             </OuterP>
@@ -2808,12 +2869,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           ref="rence"
-          number={11}
+          number={12}
         >
-          <ExerciseStatement id="_68_h.a.i_">
+          <ExerciseStatement id="_73_h.a.i_">
             <OuterP>
               <b>
-                Exercise 11.
+                Exercise 12.
               </b>
               {" "}
               The solution to the previous exercise
@@ -2990,12 +3051,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           ref="rence"
-          number={12}
+          number={13}
         >
-          <ExerciseStatement id="_69_h.a.i_">
+          <ExerciseStatement id="_74_h.a.i_">
             <OuterP>
               <b>
-                Exercise 12.
+                Exercise 13.
               </b>
               {" "}
               In the following graph, which curve might
@@ -3578,11 +3639,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_70_h.a.i_">
+        <Exercise number={14}>
+          <ExerciseStatement id="_75_h.a.i_">
             <OuterP>
               <b>
-                Exercise 13.
+                Exercise 14.
               </b>
               {" "}
               What English-language aphorism might summarize the identity
@@ -3659,11 +3720,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_72_h.a.i_">
+        <Exercise number={15}>
+          <ExerciseStatement id="_77_h.a.i_">
             <OuterP>
               <b>
-                Exercise 14.
+                Exercise 15.
               </b>
               {" "}
               The fraction
@@ -3775,7 +3836,7 @@ const Rest = () => {
               curve”.
             </OuterP>
             <Pause />
-            <SolutionNote id="_71_h.a.i_">
+            <SolutionNote id="_76_h.a.i_">
               <OuterP>
                 <i>
                   Note 1.
@@ -3850,11 +3911,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_73_h.a.i_">
+        <Exercise number={16}>
+          <ExerciseStatement id="_78_h.a.i_">
             <OuterP>
               <b>
-                Exercise 15.
+                Exercise 16.
               </b>
               {" "}
               If {" "}
@@ -3942,28 +4003,28 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={16}>
-          <ExerciseStatement id="_74_h.a.i_">
+        <Exercise number={17}>
+          <ExerciseStatement id="_79_h.a.i_">
             <OuterP>
               <b>
-                Exercise 16.
+                Exercise 17.
               </b>
               {" "}
               By what should the change mentioned in {" "}
               <InChapterLink
-                href="/article/chapter4#_73_h.a.i_"
+                href="/article/chapter4#_78_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 15
+                Exercise 16
               </InChapterLink>
               {" "}
               be divided by in order 
               to obtain a difference quotient (cf. {" "}
               <InChapterLink
-                href="/article/chapter4#_72_h.a.i_"
+                href="/article/chapter4#_77_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 14
+                Exercise 15
               </InChapterLink>
               &#8288;)?
             </OuterP>
@@ -4138,12 +4199,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="ing"
-          number={17}
+          number={18}
         >
-          <ExerciseStatement id="_75_h.a.i_">
+          <ExerciseStatement id="_80_h.a.i_">
             <OuterP>
               <b>
-                Exercise 17.
+                Exercise 18.
               </b>
               {" "}
               Keeping {" "}
@@ -4152,10 +4213,10 @@ const Rest = () => {
               </Math>
               {" "} as in {" "}
               <InChapterLink
-                href="/article/chapter4#_73_h.a.i_"
+                href="/article/chapter4#_78_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 15
+                Exercise 16
               </InChapterLink>
               &#8288;,
               and assuming that {" "}
@@ -4196,8 +4257,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The “pure math” rendition (rendering?) of the fraction
-              is
+              The “pure math” version is
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -4230,10 +4290,10 @@ const Rest = () => {
               </NoBreak>
               {" "} per {" "}
               <InChapterLink
-                href="/article/chapter4#_71_h.a.i_"
+                href="/article/chapter4#_76_h.a.i_"
                 class="in-chapter-link"
               >
-                Note 1 of Exercise 14
+                Note 1 of Exercise 15
               </InChapterLink>
               &#8288;. (This is a
               difference quotient, notwitstanding the renaming of {" "}
@@ -4257,11 +4317,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={18}>
-          <ExerciseStatement id="_76_h.a.i_">
+        <Exercise number={19}>
+          <ExerciseStatement id="_81_h.a.i_">
             <OuterP>
               <b>
-                Exercise 18.
+                Exercise 19.
               </b>
               {" "}
               In this exercise we consider two points
@@ -4612,10 +4672,10 @@ const Rest = () => {
               </NoBreak>
               {" "} (Cf. {" "}
               <InChapterLink
-                href="/article/chapter4#_71_h.a.i_"
+                href="/article/chapter4#_76_h.a.i_"
                 class="in-chapter-link"
               >
-                Note 1 of Exercise 14
+                Note 1 of Exercise 15
               </InChapterLink>
               &#8288;.)
               (Nb: We assume differentiability, otherwise
@@ -4705,10 +4765,10 @@ const Rest = () => {
               quotient 
               (cf. {" "}
               <InChapterLink
-                href="/article/chapter4#_71_h.a.i_"
+                href="/article/chapter4#_76_h.a.i_"
                 class="in-chapter-link"
               >
-                Note 1 of Exercise 14
+                Note 1 of Exercise 15
               </InChapterLink>
               &#8288;),
               so the whole term approaches
@@ -5070,11 +5130,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={19}>
-          <ExerciseStatement id="_77_h.a.i_">
+        <Exercise number={20}>
+          <ExerciseStatement id="_82_h.a.i_">
             <OuterP>
               <b>
-                Exercise 19.
+                Exercise 20.
               </b>
               {" "}
               What does...
@@ -5133,10 +5193,10 @@ const Rest = () => {
               This is seen to be a Newton quotient
               (cf. {" "}
               <InChapterLink
-                href="/article/chapter4#_72_h.a.i_"
+                href="/article/chapter4#_77_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 14
+                Exercise 15
               </InChapterLink>
               &#8288;)
             </OuterP>
@@ -5165,10 +5225,10 @@ const Rest = () => {
               {" "} per which
               (&#8288;
               <InChapterLink
-                href="/article/chapter4#_72_h.a.i_"
+                href="/article/chapter4#_77_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 14
+                Exercise 15
               </InChapterLink>
               {" "} Note 3), the fraction approaches
             </OuterP>
@@ -5413,11 +5473,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_78_h.a.i_">
+        <Exercise number={21}>
+          <ExerciseStatement id="_83_h.a.i_">
             <OuterP>
               <b>
-                Exercise 20.
+                Exercise 21.
               </b>
               {" "}
               Express the...
@@ -5710,7 +5770,7 @@ const Rest = () => {
                 (For other proofs see Exercise 32, Exercise 33, as
                 well as Exercise 9, {" "}
                 <a
-                  href="/article/chapter3#_56_h.a.i_"
+                  href="/article/chapter3#_60_h.a.i_"
                   class="out-chapter-link"
                 >
                   Chapter 3
@@ -5720,11 +5780,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={21}>
-          <ExerciseStatement id="_79_h.a.i_">
+        <Exercise number={22}>
+          <ExerciseStatement id="_84_h.a.i_">
             <OuterP>
               <b>
-                Exercise 21.
+                Exercise 22.
               </b>
               {" "}
               Apply the definition
@@ -5868,7 +5928,7 @@ const Rest = () => {
               equal if and only if every input is mapped to the
               same output under either function. See {" "}
               <a
-                href="/article/chapter3#_42_h.a.i_"
+                href="/article/chapter3#_46_h.a.i_"
                 class="out-chapter-link"
               >
                 Note 6, Exercise 9, Chapter 3
@@ -6007,7 +6067,7 @@ const Rest = () => {
               <OuterP>
                 (if you recall that one) in {" "}
                 <a
-                  href="/article/chapter3#_43_h.a.i_"
+                  href="/article/chapter3#_47_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 9 of Chapter 3
@@ -6052,12 +6112,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="in"
-          number={22}
+          number={23}
         >
-          <ExerciseStatement id="_81_h.a.i_">
+          <ExerciseStatement id="_86_h.a.i_">
             <OuterP>
               <b>
-                Exercise 22.
+                Exercise 23.
               </b>
               {" "}
               Imagine a single particle in a one-dimensional
@@ -6097,7 +6157,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see {" "}
               <InChapterLink
-                href="/article/chapter4#_80_h.a.i_"
+                href="/article/chapter4#_85_h.a.i_"
                 class="in-chapter-link"
               >
                 Note 1
@@ -6256,7 +6316,7 @@ const Rest = () => {
               {" "} no matter how far back in time we look.)
             </OuterP>
             <Pause />
-            <SolutionNote id="_80_h.a.i_">
+            <SolutionNote id="_85_h.a.i_">
               <OuterP>
                 <i>
                   Note 1.
@@ -6353,11 +6413,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={23}>
-          <ExerciseStatement id="_82_h.a.i_">
+        <Exercise number={24}>
+          <ExerciseStatement id="_87_h.a.i_">
             <OuterP>
               <b>
-                Exercise 23.
+                Exercise 24.
               </b>
               {" "}
               Take a system of two particles on the real
@@ -6540,10 +6600,10 @@ const Rest = () => {
                 {" "} axis of the graph of the 
                 particle of {" "}
                 <InChapterLink
-                  href="/article/chapter4#_81_h.a.i_"
+                  href="/article/chapter4#_86_h.a.i_"
                   class="in-chapter-link"
                 >
-                  Exercise 22
+                  Exercise 23
                 </InChapterLink>
                 &#8288;, whose
                 velocity is equal to its position and whose
@@ -6605,11 +6665,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={24}>
-          <ExerciseStatement id="_83_h.a.i_">
+        <Exercise number={25}>
+          <ExerciseStatement id="_88_h.a.i_">
             <OuterP>
               <b>
-                Exercise 24.
+                Exercise 25.
               </b>
               {" "}
               Four particles are placed
@@ -6820,10 +6880,10 @@ const Rest = () => {
               the particles discussed in the solution to
               {" "}
               <InChapterLink
-                href="/article/chapter4#_69_h.a.i_"
+                href="/article/chapter4#_74_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 12
+                Exercise 13
               </InChapterLink>
               &#8288;, that obey a similar set of
               constraints
@@ -6927,20 +6987,20 @@ const Rest = () => {
               identical to the behavior of the red
               particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_81_h.a.i_"
+                href="/article/chapter4#_86_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 22
+                Exercise 23
               </InChapterLink>
               &#8288;,
               except that the current
               “UNO particle” has a slight head-start over the
               red particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_81_h.a.i_"
+                href="/article/chapter4#_86_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 22
+                Exercise 23
               </InChapterLink>
               &#8288;, being
               at position {" "}
@@ -8642,10 +8702,10 @@ const Rest = () => {
                 As half-mentioned in
                 the solution to {" "}
                 <InChapterLink
-                  href="/article/chapter4#_69_h.a.i_"
+                  href="/article/chapter4#_74_h.a.i_"
                   class="in-chapter-link"
                 >
-                  Exercise 12
+                  Exercise 13
                 </InChapterLink>
                 &#8288;,
                 but might be worth emphasizing,
@@ -8695,21 +8755,21 @@ const Rest = () => {
         </Exercise>
         <Exercise
           ref="rence"
-          number={25}
+          number={26}
         >
-          <ExerciseStatement id="_84_h.a.i_">
+          <ExerciseStatement id="_89_h.a.i_">
             <OuterP>
               <b>
-                Exercise 25.
+                Exercise 26.
               </b>
               {" "}
               The function below is also the blue
               curve from {" "}
               <InChapterLink
-                href="/article/chapter4#_69_h.a.i_"
+                href="/article/chapter4#_74_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 12
+                Exercise 13
               </InChapterLink>
               &#8288;, known as the
               {" "}
@@ -8719,7 +8779,7 @@ const Rest = () => {
               {" "} (already encountered
               in {" "}
               <a
-                href="/article/chapter3#_40_h.a.i_"
+                href="/article/chapter3#_44_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 3, Exercise 7
@@ -8958,19 +9018,19 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={26}>
-          <ExerciseStatement id="_85_h.a.i_">
+        <Exercise number={27}>
+          <ExerciseStatement id="_90_h.a.i_">
             <OuterP>
               <b>
-                Exercise 26.
+                Exercise 27.
               </b>
               {" "}
               {" "}
               <InChapterLink
-                href="/article/chapter4#_69_h.a.i_"
+                href="/article/chapter4#_74_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 12
+                Exercise 13
               </InChapterLink>
               {" "} exhibits a function {" "}
               <NoBreak>
@@ -9081,10 +9141,10 @@ const Rest = () => {
               We can naïvely try to imitiate how the
               curves of {" "}
               <InChapterLink
-                href="/article/chapter4#_72_h.a.i_"
+                href="/article/chapter4#_77_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 14
+                Exercise 15
               </InChapterLink>
               {" "} are generated by
               placing five equally spaced particles
@@ -9836,11 +9896,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={27}>
-          <ExerciseStatement id="_86_h.a.i_">
+        <Exercise number={28}>
+          <ExerciseStatement id="_91_h.a.i_">
             <OuterP>
               <b>
-                Exercise 27.
+                Exercise 28.
               </b>
               {" "}
               If we seek a function {" "}

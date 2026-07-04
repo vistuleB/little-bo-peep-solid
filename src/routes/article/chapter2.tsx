@@ -22,7 +22,7 @@ export default function __Chapter2__() {
       nextPage="/article/chapter3"
       pageNecessaryMargin={650}
       maxElementWidth={900}
-      id="_32_h.a.i_"
+      id="_36_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -295,7 +295,7 @@ const Rest = () => {
           .
         </OuterP>
         <Pause />
-        <Example id="_26_h.a.i_">
+        <Example id="_30_h.a.i_">
           <OuterP>
             <b>
               Example 1.
@@ -336,7 +336,7 @@ const Rest = () => {
         <OuterP>
           (In {" "}
           <InChapterLink
-            href="/article/chapter2#_26_h.a.i_"
+            href="/article/chapter2#_30_h.a.i_"
             class="in-chapter-link"
           >
             Example 1
@@ -1668,10 +1668,10 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_31_h.a.i_"
+        id="_35_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_27_h.a.i_">
+          <ExerciseStatement id="_31_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1755,25 +1755,14 @@ const Rest = () => {
               <Image
                 src="/build-img/svgo-svg/_wle.svg"
                 class="relative w-fit"
-              >
-                <ImageRight
-                  src="/images/c2_slope_p_minus_one_over_p_cloud_right.svg"
-                  offset_y="28%"
-                  offset_x="-5%"
-                />
-                <ImageLeft
-                  src="/images/c2_slope_p_minus_one_over_p_cloud_left.svg"
-                  offset_x="-18%"
-                  offset_y="44%"
-                />
-              </Image>
+              />
               <Pause />
               <StarDivider />
             </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_28_h.a.i_">
+          <ExerciseStatement id="_32_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2041,7 +2030,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_29_h.a.i_">
+          <ExerciseStatement id="_33_h.a.i_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -2215,7 +2204,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_30_h.a.i_">
+          <ExerciseStatement id="_34_h.a.i_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2224,7 +2213,7 @@ const Rest = () => {
               Digressing on the second-to-last equation
               in the solution to {" "}
               <InChapterLink
-                href="/article/chapter2#_28_h.a.i_"
+                href="/article/chapter2#_32_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 2
