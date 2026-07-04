@@ -411,8 +411,62 @@
 
                     iv. $g \circ f = (x \ra g(f(x)))$
 
-                
-    _*Image*_ renders an image centered in the main text column. On load it should be _constrained_ (fits the screen width, padded), and its _scale_ (current width ÷ original width) must be known _immediately on load_.
+        |> Exercise
+            handle=mathblock-component
+
+            |> ExerciseStatement
+                What is the MathBlock component ?
+
+            |> Solution
+                _*MathBlock*_ renders a centered display equation, written with the `$$ ... $$` delimiters (as opposed to inline `$ ... $` math). It is responsive and has four behaviors worth understanding:
+
+                |> Pause
+
+                _*1. Centered & lazy.*_ The block is horizontally centered in the column. MathJax only typesets it once it scrolls near the viewport, then it fades in (opacity transition).
+
+                |> Pause
+
+                _*2. Auto scale-to-fit.*_ On mount and on every window resize, it measures the equation's natural width. If that width is wider than the available column ($innerWidth - 40px$), it automatically shrinks the whole block to fit the screen — so wide equations never overflow horizontally on narrow/mobile screens.
+
+                |> Pause
+
+                _*3. Click to toggle.*_ Clicking the block toggles between the fitted (scaled-down) size and its full natural size. Click a shrunk equation to see it at 100% (it may then overflow), and click again to re-fit it.
+
+                |> Pause
+
+                _*4. Resize recompute.*_ Whenever the window width changes, the fit decision is recomputed, so the same block looks right on desktop, tablet, and phone. _Try resizing your browser while watching the cases below._
+
+                |> Pause
+
+                _*Case 1:*_ short equation — narrower than the column, so it stays at natural size on every screen and clicking has no visible effect.
+
+                $$
+                2 \times 2 = 4
+                $$
+
+                |> Pause
+
+                _*Case 2:*_ moderately wide equation — fits on desktop, but auto-shrinks once the window gets narrow enough. Resize to watch it shrink, or click to toggle full size.
+
+                $$
+                \sqrt{x^2 + 2x + 1} \rt{0.1} = \rt{0.1} \sqrt{(x + 1)^2} \rt{0.1} = \rt{0.1} |x + 1|
+                $$
+
+                |> Pause
+
+                _*Case 3:*_ very wide equation — overflows the column on almost any screen, so it renders scaled-down by default. Click it to see the full-size version.
+
+                $$
+                (a + b + c + d + e)^2 = a^2 + b^2 + c^2 + d^2 + e^2 + 2ab + 2ac + 2ad + 2ae + 2bc + 2bd + 2be + 2cd + 2ce + 2de
+                $$
+
+                |> Pause
+
+                _*Case 4:*_ tall equation (stacked fraction) — height, not width, is the constraint here; it stays centered and fades in like the others.
+
+                $$
+                x = {-b \pm \sqrt{\up{0.6} b^2 - 4ac} \over \up{0.6} 2a}
+                $$
 
     |> Pause
 

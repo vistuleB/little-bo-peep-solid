@@ -5,11 +5,11 @@ import Grid  from "~/components/Grid";
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { Item }  from "~/components/List";
-import { Math }  from "~/components/Math";
+import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import Solution  from "~/components/Solution";
-import { InTextWarning, Pause }  from "~/components/Wrappers";
+import { NoBreak, InTextWarning, Pause }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Bootcamp3__() {
@@ -19,7 +19,7 @@ export default function __Bootcamp3__() {
       nextPage="/article/bootcamp2"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
-      id="_23_h.a.i_"
+      id="_24_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -32,7 +32,7 @@ export default function __Bootcamp3__() {
         Components Playground
       </ArticleTitle>
       <Pause />
-      <Exercises id="_22_h.a.i_">
+      <Exercises id="_23_h.a.i_">
         <Exercise number={1}>
           <ExerciseStatement id="_21_h.a.i_">
             <OuterP>
@@ -498,7 +498,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 3 cols, 2 on mobile, mobile-cutoff=520, center-on-overflow=true (from {" "}
               <a
-                href="/article/chapter1#_25_h.a.i_"
+                href="/article/chapter1#_26_h.a.i_"
                 class="out-chapter-link"
               >
                 1
@@ -576,7 +576,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 3 cols, place-items=end (from {" "}
               <a
-                href="/article/chapter1#_25_h.a.i_"
+                href="/article/chapter1#_26_h.a.i_"
                 class="out-chapter-link"
               >
                 1
@@ -673,7 +673,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} 2 cols, 1 on mobile, place-items=start, with-padding=false, column-first=true (from {" "}
               <a
-                href="/article/chapter3#_39_h.a.i_"
+                href="/article/chapter3#_40_h.a.i_"
                 class="out-chapter-link"
               >
                 3
@@ -722,7 +722,7 @@ export default function __Bootcamp3__() {
               </i>
               {" "} same as Case 16, 4 items only (from {" "}
               <a
-                href="/article/chapter3#_39_h.a.i_"
+                href="/article/chapter3#_40_h.a.i_"
                 class="out-chapter-link"
               >
                 3
@@ -811,27 +811,154 @@ export default function __Bootcamp3__() {
             </Grid>
           </Solution>
         </Exercise>
+        <Exercise number={2}>
+          <ExerciseStatement id="_22_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 2.
+              </b>
+              <ExerciseStatement>
+                What is the MathBlock component ?
+              </ExerciseStatement>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                <b>
+                  MathBlock
+                </b>
+              </i>
+              {" "} renders a centered display equation, written with the `
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              ...
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ` delimiters (as opposed to inline {" "}
+              <NoBreak>
+                `
+                <Math>
+                  $...$
+                </Math>
+                `
+              </NoBreak>
+              {" "} math). It is responsive and has four behaviors worth understanding:
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <b>
+                  1. Centered &amp; lazy.
+                </b>
+              </i>
+              {" "} The block is horizontally centered in the column. MathJax only typesets it once it scrolls near the viewport, then it fades in (opacity transition).
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <b>
+                  2. Auto scale-to-fit.
+                </b>
+              </i>
+              {" "} On mount and on every window resize, it measures the equation's natural width. If that width is wider than the available column {" "}
+              <NoBreak>
+                (
+                <Math>
+                  $innerWidth - 40px$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} it automatically shrinks the whole block to fit the screen — so wide equations never overflow horizontally on narrow/mobile screens.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <b>
+                  3. Click to toggle.
+                </b>
+              </i>
+              {" "} Clicking the block toggles between the fitted (scaled-down) size and its full natural size. Click a shrunk equation to see it at 100% (it may then overflow), and click again to re-fit it.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <b>
+                  4. Resize recompute.
+                </b>
+              </i>
+              {" "} Whenever the window width changes, the fit decision is recomputed, so the same block looks right on desktop, tablet, and phone. {" "}
+              <i>
+                Try resizing your browser while watching the cases below.
+              </i>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <b>
+                  Case 1:
+                </b>
+              </i>
+              {" "} short equation — narrower than the column, so it stays at natural size on every screen and clicking has no visible effect.
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              2 \times 2 = 4
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <i>
+                <b>
+                  Case 2:
+                </b>
+              </i>
+              {" "} moderately wide equation — fits on desktop, but auto-shrinks once the window gets narrow enough. Resize to watch it shrink, or click to toggle full size.
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;x^2 + 2x + 1&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; \sqrt&#123;(x + 1)^2&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x + 1|
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <i>
+                <b>
+                  Case 3:
+                </b>
+              </i>
+              {" "} very wide equation — overflows the column on almost any screen, so it renders scaled-down by default. Click it to see the full-size version.
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (a + b + c + d + e)^2 = a^2 + b^2 + c^2 + d^2 + e^2 + 2ab + 2ac + 2ad + 2ae + 2bc + 2bd + 2be + 2cd + 2ce + 2de
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <i>
+                <b>
+                  Case 4:
+                </b>
+              </i>
+              {" "} tall equation (stacked fraction) — height, not width, is the constraint here; it stays centered and fades in like the others.
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = &#123;-b \pm \sqrt&#123;\up&#123;0.6&#125; b^2 - 4ac&#125; \over \up&#123;0.6&#125; 2a&#125;
+              $$
+            </MathBlock>
+          </Solution>
+        </Exercise>
       </Exercises>
-      <OuterP>
-        <i>
-          <b>
-            Image
-          </b>
-        </i>
-        {" "} renders an image centered in the main text column. On load it should be {" "}
-        <i>
-          constrained
-        </i>
-        {" "} (fits the screen width, padded), and its {" "}
-        <i>
-          scale
-        </i>
-        {" "} (current width ÷ original width) must be known {" "}
-        <i>
-          immediately on load
-        </i>
-        .
-      </OuterP>
       <Pause />
       <OuterP>
         <i>

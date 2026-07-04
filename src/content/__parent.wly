@@ -14,8 +14,7 @@
     |> In
         chapter=>>playground
         >>grid-component
-        >>image-component
-        >>table-component
+        >>mathblock-component
 
     |> In
         chapter=>>powers
