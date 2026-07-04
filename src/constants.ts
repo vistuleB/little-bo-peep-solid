@@ -1,6 +1,7 @@
 export const MOBILE_MAX_WIDTH = 900;
 export const DESKTOP_COLUMN_WIDTH = 488;
 export const TEXT_X_PADDING = 20;
+export const MOBILE_TEXT_X_PADDING = 26;
 export const HAMBURGER_MENU_SCROLLY_START_FADE = 800;
 export const HAMBURGER_MENU_SCROLLY_END_FADE = 2000;
 export const BOTTOM_BORDER_SCROLLY_START_FADE = 300;
@@ -22,9 +23,10 @@ export const setContentsAsCssVars = () => {
     "--desktop-text-column-width-with-padding",
     `${DESKTOP_COLUMN_WIDTH}px`,
   );
+  root.style.setProperty("--text-x-padding", `${TEXT_X_PADDING}px`);
   root.style.setProperty(
-    "--desktop-text-column-padding",
-    `${TEXT_X_PADDING}px`,
+    "--mobile-text-x-padding",
+    `${MOBILE_TEXT_X_PADDING}px`,
   );
   root.style.setProperty("--mobile-max-width", `${MOBILE_MAX_WIDTH}px`);
 };

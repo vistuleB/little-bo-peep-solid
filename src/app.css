@@ -24,6 +24,7 @@
 
 :root {
   zoom: 100%;
+  --desktop-text-column-padding: var(--text-x-padding);
   /* --background-rgb: rgb(255, 249, 249); */
   --background-rgb: #fff9f9;
   --foreground-rgb: rgb(0, 0, 0);
@@ -727,6 +728,9 @@ ul.toc_ul {
 }
 
 @media (width <= 900px) {
+  :root {
+    --desktop-text-column-padding: var(--mobile-text-x-padding);
+  }
   .text-column {
     width: calc(100vw - 2 * var(--desktop-text-column-padding));
   }
