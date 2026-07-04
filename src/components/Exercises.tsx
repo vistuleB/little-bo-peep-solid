@@ -1,6 +1,6 @@
 import { children, createUniqueId, For, ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
-import Image from "./Image";
+import Image from "./OldImage";
 import { JSX } from "solid-js/h/jsx-runtime";
 import { twJoin } from "tailwind-merge";
 import useExercises from "~/hooks/useExercises";

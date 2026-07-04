@@ -6,7 +6,8 @@
 
 
     |> Exercises
-        _handle=playground-exercises
+        handle=playground-exercises
+
 
         |> Exercise
             handle=grid-component
@@ -467,9 +468,34 @@
                 x = {-b \pm \sqrt{\up{0.6} b^2 - 4ac} \over \up{0.6} 2a}
                 $$
 
-        |> Exercise
-            handle=table-component
+    |> Pause
 
-            |> ExerciseStatement
-                What is the Table component ?
-                    
+    _*Case 1:*_ set width=1000px, native 350px
+
+    |> Image
+        src=images/test_native_350.svg
+        width=1000px
+
+    |> Pause
+
+    _*Case 2:*_ set width=1000px, native 1000px
+
+    |> Image
+        src=images/test_native_1000.svg
+        width=1000px
+
+    |> Pause
+
+    _*Case 3:*_ set width=350px, native 1000px
+
+    |> Image
+        src=images/test_native_1000.svg
+        width=350px
+
+    |> Pause
+
+    _*Case 4:*_ set width=350px, native 350px
+
+    |> Image
+        src=images/test_native_350.svg
+        width=350px
