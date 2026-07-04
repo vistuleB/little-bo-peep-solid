@@ -34,6 +34,9 @@ const Container = (props: ParentProps) => {
     );
   };
 
+  const contentReady = () =>
+    store.saved_scroll_finished || store.scroll_is_at_0;
+
   return (
     <>
       <div
@@ -41,7 +44,6 @@ const Container = (props: ParentProps) => {
         class="-z-10 relative overflow-hidden"
         style={{
           width: containerWidth() + "px",
-          opacity: store.saved_scroll_finished || store.scroll_is_at_0 ? 1 : 0,
         }}>
         <EarlyImages />
         {/* <div class="relative"> */}
@@ -50,7 +52,9 @@ const Container = (props: ParentProps) => {
           marginShowAreaDivs()}
         {store.show_areas && midLineDiv()}
         <Nav />
-        {props.children}
+        <div style={{ opacity: contentReady() ? 1 : 0 }}>
+          {props.children}
+        </div>
         {store.loading && <LoadingGraphic />}
         {/* </div> */}
         <div
