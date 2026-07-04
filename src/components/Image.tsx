@@ -42,21 +42,46 @@ const Image = (props: ImageProps) => {
 
   const [after_first_click, set_after_first_click] = createSignal(false);
   const [naturalImageWidth, setNaturalImageWidth] = createSignal(0);
+  const [naturalImageHeight, setNaturalImageHeight] = createSignal(0);
   const [constrained, setConstrained] = createSignal(merged.constrained);
   const [transitionsEnabled, setTransitionsEnabled] = createSignal(false);
   const [viewportWidth, setViewportWidth] = createSignal(
     currentViewportWidth(),
   );
 
+  const parseCssLength = (length: string) => {
+    const match = length.trim().match(/^([0-9]*\.?[0-9]+)(.*)$/);
+    if (!match) return null;
+
+    const value = parseFloat(match[1]);
+    if (!Number.isFinite(value) || value <= 0) return null;
+
+    return { value, unit: match[2] || "px" };
+  };
+
   const authorWidth = () => {
     const width = parseFloat(merged.width);
     return Number.isFinite(width) && width > 0 ? width : 0;
   };
 
-  const imageIntrinsicWidth = () => authorWidth() || naturalImageWidth();
+  const authorWidthFromHeight = () => {
+    if (merged.width) return "";
+
+    const height = parseCssLength(merged.height);
+    const naturalWidth = naturalImageWidth();
+    const naturalHeight = naturalImageHeight();
+    if (!height || !naturalWidth || !naturalHeight) return "";
+
+    return `${(height.value * naturalWidth) / naturalHeight}${height.unit}`;
+  };
+
+  const imageIntrinsicWidth = () =>
+    authorWidth() || parseFloat(authorWidthFromHeight()) || naturalImageWidth();
 
   const imageStyleWidth = () => {
     if (merged.width) return merged.width;
+    const widthFromHeight = authorWidthFromHeight();
+    if (widthFromHeight) return widthFromHeight;
     const intrinsicWidth = imageIntrinsicWidth();
     return intrinsicWidth ? `${intrinsicWidth}px` : "";
   };
@@ -123,6 +148,7 @@ const Image = (props: ImageProps) => {
 
   const handleImageLoad = () => {
     setNaturalImageWidth(image_element.naturalWidth);
+    setNaturalImageHeight(image_element.naturalHeight);
   };
 
   const imageStyle = () => {
@@ -164,6 +190,7 @@ const Image = (props: ImageProps) => {
             onTransitionEnd={handleTransitionEnd}
             style={imageStyle()}
             class={twJoin(
+              merged.class,
               transitionsEnabled() && [
                 "transition-[width,max-width,padding]",
                 "duration-500",

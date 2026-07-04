@@ -1,6 +1,6 @@
 import { children, createUniqueId, For, ParentProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
-import Image from "./OldImage";
+import Image from "./Image";
 import { JSX } from "solid-js/h/jsx-runtime";
 import { twJoin } from "tailwind-merge";
 import useExercises from "~/hooks/useExercises";
@@ -48,8 +48,9 @@ export const Exercises = (props: ExercisesProps) => {
         <Image
           id={`exo-${group_id}`}
           src="/non-build-img/separator.png"
-          height="50px"
-          class="mt-[15px] mb-[40px]"></Image>
+          height="60px"
+          class="mt-[15px] mb-[40px]"
+          ></Image>
       )}
       {mode !== "list-only" && children_list.toArray().length > 1 && (
         <>
