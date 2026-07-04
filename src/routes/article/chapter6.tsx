@@ -21,7 +21,7 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_167_h.a.i_"
+      id="_166_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -108,7 +108,9 @@ export default function __Chapter6__() {
           <a
             href="/article/chapter4#section-6"
             class="out-chapter-link"
-          />
+          >
+            6
+          </a>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -153,10 +155,7 @@ const Rest = () => {
   return <>
     {showMore() && <>
       <Pause />
-      <Section
-        and="sth_else"
-        id="section-2"
-      >
+      <Section id="section-2">
         <OuterP>
           <b>
             Function signatures.
@@ -528,16 +527,14 @@ const Rest = () => {
         </OuterP>
         <OuterP class="indent-10">
           By contrast, when multiplying two functions we can
-          stomach 
-          the output units to be different since
+          stomach the output units to be different since
           composite units such as “kilowatt-hour”, “worker-years”, etc,
-          exist,
-          and likewise when dividing. We have:
+          exist, and likewise when dividing. We have:
         </OuterP>
         <Pause />
         <Image
-          src="/build-img/svgo-svg/qdyx.svg"
-          id="_157_h.a.i_"
+          src="/tmp-images/c6_flowers_here_v3.svg"
+          id="_156_h.a.i_"
         />
         <Pause />
         <OuterP>
@@ -579,17 +576,17 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/build-img/svgo-svg/lyKL.svg"
-          id="_158_h.a.i_"
+          src="/tmp-images/c6_flowers_here_two_more_v2.svg"
+          id="_157_h.a.i_"
         />
         <Pause />
         <OuterP>
           [*See {" "}
           <a
             class="out-chapter-link"
-            href="/article/chapter5#_94_h.a.i_"
+            href="/article/chapter5#section-2"
           >
-            Chapter 5
+            Chapter 5 §2
           </a>
           &#8288;.]
         </OuterP>
@@ -733,7 +730,7 @@ const Rest = () => {
           depicted here as an eye-of-Godzilla flying saucer:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/vx7K.svg" />
+        <Image src="/tmp-images/c6_differentiation_operator_intro_v2.svg" />
         <Pause />
         <OuterP>
           Though similarly, the
@@ -741,7 +738,7 @@ const Rest = () => {
           operations from {" "}
           <InChapterLink
             class="in-chapter-link"
-            href="#_158_h.a.i_"
+            href="#_157_h.a.i_"
           >
             Table 1.2
           </InChapterLink>
@@ -750,7 +747,7 @@ const Rest = () => {
           as input and producing one function as output:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/119H.svg" />
+        <Image src="/tmp-images/c6_negation_operator_v2.svg" />
         <Pause />
         <OuterP>
           The other function operations from Table 1.1
@@ -767,7 +764,7 @@ const Rest = () => {
           can be depicted as a two-input-tube-flying-saucer:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/Zh1r.svg" />
+        <Image src="/tmp-images/c6_addition_operator_standalone_v2.svg" />
         <Pause />
         <OuterP>
           In this fashion, the complete list of all
@@ -892,7 +889,7 @@ const Rest = () => {
           as listed in {" "}
           <InChapterLink
             class="in-chapter-link"
-            href="#_157_h.a.i_"
+            href="#_156_h.a.i_"
           >
             Table 1.1
           </InChapterLink>
@@ -1064,7 +1061,7 @@ const Rest = () => {
           as units are concerned: nothing untoward has been found!
         </OuterP>
         <Pause />
-        <Example id="_159_h.a.i_">
+        <Example id="_158_h.a.i_">
           <OuterP>
             <b>
               Example 2.
@@ -1138,7 +1135,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_159_h.a.i_"
+                href="/article/chapter6#_158_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 2
@@ -1148,7 +1145,7 @@ const Rest = () => {
             {" "}
             In the case of {" "}
             <InChapterLink
-              href="/article/chapter6#_159_h.a.i_"
+              href="/article/chapter6#_158_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1186,7 +1183,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_160_h.a.i_">
+        <Example id="_159_h.a.i_">
           <OuterP>
             <b>
               Example 3.
@@ -1357,7 +1354,7 @@ const Rest = () => {
           both differentiable it is still 
           true, however, that
         </OuterP>
-        <Boxed id="_161_h.a.i_">
+        <Boxed id="_160_h.a.i_">
           <MathBlock>
             $$
             (f + g)'(x_0) = f'(x_0) + g'(x_0)
@@ -1509,7 +1506,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example id="_162_h.a.i_">
+        <Example id="_161_h.a.i_">
           <OuterP>
             <b>
               Example 4.
@@ -1517,7 +1514,7 @@ const Rest = () => {
             {" "}
             As in {" "}
             <InChapterLink
-              href="/article/chapter6#_159_h.a.i_"
+              href="/article/chapter6#_158_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1642,7 +1639,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_162_h.a.i_"
+                href="/article/chapter6#_161_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 4
@@ -1672,7 +1669,7 @@ const Rest = () => {
           <OuterP>
             in {" "}
             <InChapterLink
-              href="/article/chapter6#_162_h.a.i_"
+              href="/article/chapter6#_161_h.a.i_"
               class="in-chapter-link"
             >
               Example 4
@@ -2278,13 +2275,13 @@ const Rest = () => {
             similarly to the {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#_161_h.a.i_"
+              href="#_160_h.a.i_"
             >
               postscript
             </InChapterLink>
             {" "} following {" "}
             <InChapterLink
-              href="/article/chapter6#_160_h.a.i_"
+              href="/article/chapter6#_159_h.a.i_"
               class="in-chapter-link"
             >
               Example 3
@@ -2294,7 +2291,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_163_h.a.i_">
+        <Example id="_162_h.a.i_">
           <OuterP>
             <b>
               Example 6.
@@ -2370,7 +2367,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_164_h.a.i_">
+        <Example id="_163_h.a.i_">
           <OuterP>
             <b>
               Example 7.
@@ -2388,7 +2385,7 @@ const Rest = () => {
           <OuterP>
             by {" "}
             <InChapterLink
-              href="/article/chapter6#_163_h.a.i_"
+              href="/article/chapter6#_162_h.a.i_"
               class="in-chapter-link"
             >
               Example 6
@@ -2425,7 +2422,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_164_h.a.i_"
+                href="/article/chapter6#_163_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 7
@@ -2665,10 +2662,10 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_166_h.a.i_"
+        id="_165_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_165_h.a.i_">
+          <ExerciseStatement id="_164_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
