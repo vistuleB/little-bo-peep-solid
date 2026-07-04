@@ -3,6 +3,7 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import {
   DESKTOP_COLUMN_WIDTH,
   MOBILE_MAX_WIDTH,
+  MOBILE_TEXT_X_PADDING,
   TEXT_X_PADDING,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
@@ -55,10 +56,12 @@ const Title = () => {
 
   createEffect(() => {
     if (!headerBlob || !imageLoaded()) return;
-    const columnLeft = store.innerWidth > MOBILE_MAX_WIDTH
-      ? (containerWidth() - DESKTOP_COLUMN_WIDTH) / 2
-      : 0;
-    const leftPos = columnLeft + TEXT_X_PADDING;
+    const onMobile = store.innerWidth < MOBILE_MAX_WIDTH;
+    const columnLeft = onMobile
+      ? 0
+      : (containerWidth() - DESKTOP_COLUMN_WIDTH) / 2;
+    const xPadding = onMobile ? MOBILE_TEXT_X_PADDING : TEXT_X_PADDING;
+    const leftPos = columnLeft + xPadding;
     headerBlob.style.left = `${leftPos}px`;
   });
 
