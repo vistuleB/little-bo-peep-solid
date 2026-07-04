@@ -1,5 +1,6 @@
 import {
   ParentProps,
+  createMemo,
   createSignal,
   mergeProps,
   onCleanup,
@@ -38,50 +39,40 @@ const Image = (props: ImageProps) => {
     typeof window === "undefined" ? 0 : window.innerWidth;
 
   const [after_first_click, set_after_first_click] = createSignal(false);
-  const [intrinsicImageWidth, setIntrinsicImageWidth] = createSignal(0);
-  const [scale, set_scale] = createSignal({
-    scale: 1.0,
-    name: props.src,
-    after_first_click: false,
-  });
+  const [naturalImageWidth, setNaturalImageWidth] = createSignal(0);
   const [constrained, setConstrained] = createSignal(merged.constrained);
   const [transitionsEnabled, setTransitionsEnabled] = createSignal(false);
   const [viewportWidth, setViewportWidth] = createSignal(
     currentViewportWidth(),
   );
 
-  const imageIntrinsicWidth = () => {
-    const authorWidth = parseInt(merged.width);
-    if (Number.isInteger(authorWidth) && authorWidth > 0) return authorWidth;
-    return image_element?.naturalWidth || 0;
+  const authorWidth = () => {
+    const width = parseFloat(merged.width);
+    return Number.isFinite(width) && width > 0 ? width : 0;
   };
+
+  const imageIntrinsicWidth = () => authorWidth() || naturalImageWidth();
 
   const imageStyleWidth = () => {
     if (merged.width) return merged.width;
-    const intrinsicWidth = intrinsicImageWidth();
+    const intrinsicWidth = imageIntrinsicWidth();
     return intrinsicWidth ? `${intrinsicWidth}px` : "";
   };
 
-  const scaleForConstrainedState = (isConstrained: boolean) => {
+  const targetScale = () => {
     const intrinsicWidth = imageIntrinsicWidth();
-    if (!intrinsicWidth || !isConstrained) return 1;
+    if (!intrinsicWidth || !constrained()) return 1;
     return Math.min(1, viewportWidth() / intrinsicWidth);
   };
 
-  const setScaleForConstrainedState = (isConstrained = constrained()) => {
-    set_scale({
-      scale: scaleForConstrainedState(isConstrained),
-      name: props.src,
-      after_first_click: after_first_click(),
-    });
-  };
+  const scale = createMemo(() => ({
+    scale: targetScale(),
+    name: props.src,
+    after_first_click: after_first_click(),
+  }));
 
   const toggleConstrained = () => {
-    setConstrained((beforeToggle) => {
-      const afterToggle = !beforeToggle;
-      setScaleForConstrainedState(afterToggle);
-      return afterToggle;
-    });
+    setConstrained((beforeToggle) => !beforeToggle);
   };
 
   const disableTransitionsDuringWindowResizes = () => {
@@ -93,22 +84,8 @@ const Image = (props: ImageProps) => {
     clearTimeout(transitionTimeout);
     setTransitionsEnabled(true);
     transitionTimeout = window.setTimeout(() => {
-      updateImageScale();
       setTransitionsEnabled(false);
     }, 600);
-  };
-
-  const updateImageScale = (width = intrinsicImageWidth()) => {
-    const scale = constrained()
-      ? scaleForConstrainedState(true)
-      : width
-        ? Math.max(1, image_element.offsetWidth / width)
-        : 1;
-    set_scale({
-      scale,
-      name: props.src,
-      after_first_click: after_first_click(),
-    });
   };
 
   const debugBackground = () => {
@@ -123,8 +100,8 @@ const Image = (props: ImageProps) => {
   const handleClick = (event: MouseEvent) => {
     event.stopPropagation();
 
-    const width = intrinsicImageWidth();
-    if (window.innerWidth <= width) {
+    const intrinsicWidth = imageIntrinsicWidth();
+    if (window.innerWidth <= intrinsicWidth) {
       enableTransitionForToggle();
       requestAnimationFrame(toggleConstrained);
     }
@@ -133,7 +110,6 @@ const Image = (props: ImageProps) => {
   };
 
   const handleTransitionEnd = () => {
-    updateImageScale();
     clearTimeout(transitionTimeout);
     setTransitionsEnabled(false);
   };
@@ -141,30 +117,20 @@ const Image = (props: ImageProps) => {
   const handleWindowResize = () => {
     disableTransitionsDuringWindowResizes();
     setViewportWidth(currentViewportWidth());
-    requestAnimationFrame(() => updateImageScale());
   };
 
   const handleImageLoad = () => {
-    requestAnimationFrame(() => {
-      const width = imageIntrinsicWidth();
-      setIntrinsicImageWidth(width);
-      updateImageScale(width);
-    });
+    setNaturalImageWidth(image_element.naturalWidth);
   };
 
   const imageStyle = () => {
     const styleWidth = imageStyleWidth();
-
     const constrainedWidth =
       styleWidth &&
       `min(${viewportWidth()}px, calc(${styleWidth} + ${TEXT_X_PADDING * 2}px))`;
-
     const width = constrained()
       ? constrainedWidth || "auto"
-      : styleWidth
-        ? styleWidth
-        : "auto";
-
+      : styleWidth || "auto";
     const padding = constrained() ? `padding:0 ${TEXT_X_PADDING}px;` : "";
 
     return `background-color:${debugBackground()};width:${width};max-width:none;box-sizing:border-box;max-height:${merged.height};${padding}${merged.style}`;
