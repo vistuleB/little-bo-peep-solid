@@ -8,6 +8,7 @@ import { SetStoreFunction } from "solid-js/store";
 import { createStore } from "solid-js/store";
 
 export type RouteLoadTarget = "top" | "saved-scroll" | "hash";
+export type RoutePhase = "idle" | "loading-old-route" | "loading-new-route";
 
 export type RouteLoadMemory = {
   firstContentPaintMs?: number;
@@ -38,7 +39,8 @@ export type Store = {
   maxElementWidth: number;
   nextPage: string;
   prevPage: string;
-  loading: boolean;
+  route_phase: RoutePhase;
+  spinner_currently_visible: boolean;
   have_been_outside_home: boolean;
   last_page_load_ms: number;
   total_page_load_ms: number;
@@ -74,7 +76,8 @@ const [store, set_store] = createStore<Store>({
   maxElementWidth: 0,
   nextPage: "",
   prevPage: "",
-  loading: false,
+  route_phase: "idle",
+  spinner_currently_visible: false,
   have_been_outside_home: false,
   last_page_load_ms: 0,
   total_page_load_ms: 0,
@@ -110,7 +113,8 @@ export const StoreProvider: ParentComponent = (props) => {
       value={{
         store,
         set_store,
-      }}>
+      }}
+    >
       {props.children}
     </StoreContext.Provider>
   );

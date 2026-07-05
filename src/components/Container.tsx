@@ -44,7 +44,8 @@ const Container = (props: ParentProps) => {
         class="-z-10 relative overflow-hidden"
         style={{
           width: containerWidth() + "px",
-        }}>
+        }}
+      >
         <EarlyImages />
         {/* <div class="relative"> */}
         {store.show_areas &&
@@ -52,16 +53,15 @@ const Container = (props: ParentProps) => {
           marginShowAreaDivs()}
         {store.show_areas && midLineDiv()}
         <Nav />
-        <div style={{ opacity: contentReady() ? 1 : 0 }}>
-          {props.children}
-        </div>
-        {store.loading && <LoadingGraphic />}
+        <div style={{ opacity: contentReady() ? 1 : 0 }}>{props.children}</div>
+        {store.spinner_currently_visible && <LoadingGraphic />}
         {/* </div> */}
         <div
           class="h-14"
           style={{
             background: store.show_areas ? "teal" : "#0000",
-          }}></div>
+          }}
+        ></div>
       </div>
     </>
   );

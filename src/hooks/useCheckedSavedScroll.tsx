@@ -1,8 +1,17 @@
 import { useLocation, useSearchParams } from "@solidjs/router";
-import { createEffect, createSignal, onCleanup, onMount, untrack } from "solid-js";
+import {
+  createEffect,
+  createSignal,
+  onCleanup,
+  onMount,
+  untrack,
+} from "solid-js";
 import useScrollToInChapter from "./useScrollToInChapter";
 import { useGlobalContext } from "~/store/StoreProvider";
-import { finishRouteLoad } from "~/utils/routeLoading";
+import {
+  finishRouteLoad,
+  markDestinationRouteMounted,
+} from "~/utils/routeLoading";
 import {
   HASH_SCROLL_RESTORATION_DELAY_MS,
   IN_CHAPTER_SCROLL_DURATION_MS,
@@ -17,6 +26,7 @@ const useCheckedSavedScroll = () => {
 
   onMount(() => {
     set_store("saved_scroll_finished", false);
+    markDestinationRouteMounted(location.pathname, store, set_store);
   });
 
   const anchorId = searchParams.id || location.hash.slice(1);

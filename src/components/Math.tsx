@@ -61,9 +61,7 @@ const runMathJaxFallbackSweep = async () => {
   mathJaxFallbackTimeout = undefined;
 
   const pendingEntries = [...mathJaxFallbackEntries].filter(
-    (entry) =>
-      !entry.visible() &&
-      !entry.typesetting,
+    (entry) => !entry.visible() && !entry.typesetting,
   );
 
   const entries = pendingEntries.filter(
@@ -105,18 +103,14 @@ const scheduleMathJaxFallbackSweep = () => {
   );
 };
 
-const registerMathJaxFallback = (
-  entry: MathJaxFallbackEntry | undefined,
-) => {
+const registerMathJaxFallback = (entry: MathJaxFallbackEntry | undefined) => {
   if (!entry || !ENABLE_MATHJAX_INTERSECTION_FALLBACK) return;
 
   mathJaxFallbackEntries.add(entry);
   scheduleMathJaxFallbackSweep();
 };
 
-const unregisterMathJaxFallback = (
-  entry: MathJaxFallbackEntry | undefined,
-) => {
+const unregisterMathJaxFallback = (entry: MathJaxFallbackEntry | undefined) => {
   if (!entry) return;
   mathJaxFallbackEntries.delete(entry);
 };
@@ -130,7 +124,7 @@ export const Math = (props: ParentProps) => {
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
     const routeReady = () =>
-      !store.loading &&
+      !store.spinner_currently_visible &&
       !store.route_scroll_in_progress &&
       store.saved_scroll_finished;
     const mathJaxEntry = ref
@@ -168,7 +162,8 @@ export const Math = (props: ParentProps) => {
     <span
       class="transition-opacity"
       style={{ opacity: visible() ? "1" : "0" }}
-      ref={ref}>
+      ref={ref}
+    >
       {props.children}
     </span>
   );
@@ -198,7 +193,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
     const routeReady = () =>
-      !store.loading &&
+      !store.spinner_currently_visible &&
       !store.route_scroll_in_progress &&
       store.saved_scroll_finished;
     const measureOriginalWidth: () => boolean = () => {
@@ -293,7 +288,8 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
       class={`mathblock transition-all`}
       style={{ opacity: visible() ? "1" : "0" }}
       onClick={handleClick}
-      ref={ref}>
+      ref={ref}
+    >
       {props.children}
     </div>
   );

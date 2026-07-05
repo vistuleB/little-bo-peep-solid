@@ -1,7 +1,7 @@
 import { useNavigate, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { startRouteLoad } from "~/utils/routeLoading";
-import { RouteLoadTarget } from "~/store/StoreProvider";
+import type { RouteLoadTarget } from "~/store/StoreProvider";
 
 const usePrevNextPage = () => {
   const { store, set_store } = useGlobalContext();
@@ -30,45 +30,6 @@ const usePrevNextPage = () => {
     return targetHasSavedTopScroll(page) ? "top" : "saved-scroll";
   };
 
-  const currentScrollKey = () => {
-    const article = articleFromPath(location.pathname);
-    return `${article}_scroll`;
-  };
-
-  const scrollToTopDuringLoad = () => {
-    localStorage.setItem(currentScrollKey(), window.scrollY.toString());
-    set_store("suppress_scroll_memory", true);
-
-    const centeredScrollX = (document.body.scrollWidth - window.innerWidth) / 2;
-    const scrollToTop = () => {
-      window.scroll({
-        left: centeredScrollX,
-        top: 0,
-        behavior: "instant",
-      });
-      set_store("scrollX", centeredScrollX);
-      set_store("scrollY", 0);
-      set_store("scroll_is_at_0", true);
-    };
-
-    scrollToTop();
-
-    requestAnimationFrame(() => {
-      if (store.loading) scrollToTop();
-    });
-
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        set_store("suppress_scroll_memory", false);
-      });
-    });
-  };
-
-  const scrollToTopForTopSavedTarget = (page: string) => {
-    if (!targetHasSavedTopScroll(page)) return;
-    scrollToTopDuringLoad();
-  };
-
   const getPage = (page: string) => {
     if (page === "" || location.pathname === page) return;
     // note: if a value of 'page' is given such that location.pathname != page
@@ -77,11 +38,6 @@ const usePrevNextPage = () => {
     // the rabbit is never cleared; so you always need to call getPage with carefully
     // normalized, 'correct' paths!!! (or with paths that certifiably point to a
     // different page)
-    if (pageHasHash(page)) {
-      scrollToTopDuringLoad();
-    } else {
-      scrollToTopForTopSavedTarget(page);
-    }
     startRouteLoad(page, routeLoadTarget(page), store, set_store);
     if (store.navigation_delays) {
       setTimeout(

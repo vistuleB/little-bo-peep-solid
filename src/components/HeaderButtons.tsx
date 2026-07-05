@@ -12,6 +12,7 @@ import {
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "../store/StoreProvider";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
+import { decideRouteNavbarPosition } from "~/utils/routeTransitionPolicy";
 
 const HeaderButtons = () => {
   return (
@@ -41,8 +42,8 @@ const ButtonsContainer = (props: ParentProps) => {
         1.0 -
           (scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) /
             (HAMBURGER_MENU_SCROLLY_END_FADE -
-              HAMBURGER_MENU_SCROLLY_START_FADE)
-      )
+              HAMBURGER_MENU_SCROLLY_START_FADE),
+      ),
     );
   };
 
@@ -53,22 +54,31 @@ const ButtonsContainer = (props: ParentProps) => {
         0,
         1.0 -
           (scrollY - BOTTOM_BORDER_SCROLLY_START_FADE) /
-            (BOTTOM_BORDER_SCROLLY_END_FADE - BOTTOM_BORDER_SCROLLY_START_FADE)
-      )
+            (BOTTOM_BORDER_SCROLLY_END_FADE - BOTTOM_BORDER_SCROLLY_START_FADE),
+      ),
     );
   };
 
+  const navbarPosition = () =>
+    decideRouteNavbarPosition({
+      onMobile: on_mobile(),
+      routePhase: store.route_phase,
+      spinnerCurrentlyVisible: store.spinner_currently_visible,
+    });
+
   const navbarVisible = () =>
-    on_mobile() || currentScrollY() < HAMBURGER_MENU_HEIGHT;
+    navbarPosition() === "fixed" || currentScrollY() < HAMBURGER_MENU_HEIGHT;
 
   const controlsPinnedVisible = () =>
     open() ||
     on_mobile() ||
-    (store.loading && navbarVisible()) ||
+    (store.spinner_currently_visible && navbarVisible()) ||
     store.scroll_is_at_0;
 
   const borderPinnedVisible = () =>
-    on_mobile() || (store.loading && navbarVisible()) || store.scroll_is_at_0;
+    on_mobile() ||
+    (store.spinner_currently_visible && navbarVisible()) ||
+    store.scroll_is_at_0;
 
   const nearTopDesktopBorderVisible = () =>
     !on_mobile() && !open() && currentScrollY() < 2 * HAMBURGER_MENU_HEIGHT;
@@ -107,9 +117,7 @@ const ButtonsContainer = (props: ParentProps) => {
 
   return (
     <>
-      <div
-        class="fixed right-0 h-14"
-      >
+      <div class="fixed right-0 h-14">
         {/* the large-height background */}
         <div
           style={{
@@ -158,7 +166,7 @@ const LeftArrowButton = () => {
       () => {
         setPressedTimeout(false);
       },
-      on_mobile() ? 50 : 20
+      on_mobile() ? 50 : 20,
     );
   };
 
@@ -173,7 +181,7 @@ const LeftArrowButton = () => {
         !on_mobile() && "mr-2",
         // this used to be "mr-4" when we had Hamburg menu:
         on_mobile() && "mr-3",
-        prevDisabled() && "cursor-default"
+        prevDisabled() && "cursor-default",
       )}
       onClick={(e) => {
         e.stopPropagation();
@@ -202,7 +210,7 @@ const LeftArrowButton = () => {
             ? "stroke-[var(--arrow-pressed)]"
             : !prevDisabled()
               ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
-              : "stroke-stone-300"
+              : "stroke-stone-300",
         )}
         style=""
         // style="box-sizing:inherit;"
@@ -225,7 +233,7 @@ const RightArrowButton = () => {
       () => {
         setPressedTimeout(false);
       },
-      on_mobile() ? 50 : 20
+      on_mobile() ? 50 : 20,
     );
   };
 
@@ -240,7 +248,7 @@ const RightArrowButton = () => {
         !on_mobile() && "mr-3",
         // this used to be "mr-4" when we were still showing the hamburger menu:
         on_mobile() && "mr-3",
-        nextDisabled() && "cursor-default"
+        nextDisabled() && "cursor-default",
       )}
       onClick={(e) => {
         e.stopPropagation();
@@ -268,7 +276,7 @@ const RightArrowButton = () => {
             ? "stroke-[var(--arrow-pressed)]"
             : !nextDisabled()
               ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
-              : "stroke-stone-300"
+              : "stroke-stone-300",
         )}
         style=""
       />

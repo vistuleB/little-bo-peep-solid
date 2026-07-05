@@ -4,13 +4,49 @@ import {
   LOADING_SPINNER_DELAY_MS,
   ROUTE_LOAD_MEMORY_TTL_MS,
 } from "~/constants";
-import { RouteLoadTarget, Store } from "~/store/StoreProvider";
+import type { RouteLoadTarget, Store } from "~/store/StoreProvider";
+import { shouldSetProvisionalDestinationTopScroll } from "./routeTransitionPolicy";
 
 let loadingDelayTimeout: number | undefined;
 
 export const routePathFromPage = (page: string) => {
   const [path] = page.split(/[?#]/);
   return path || "/";
+};
+
+const setSpinnerCurrentlyVisible = (
+  set_store: SetStoreFunction<Store>,
+  visible: boolean,
+) => {
+  set_store("spinner_currently_visible", visible);
+};
+
+const maybeSetProvisionalDestinationTopScroll = (
+  store: Store,
+  set_store: SetStoreFunction<Store>,
+) => {
+  if (
+    shouldSetProvisionalDestinationTopScroll({
+      spinnerCurrentlyVisible: store.spinner_currently_visible,
+    })
+  ) {
+    setProvisionalDestinationTopScroll(set_store);
+  }
+};
+
+const setProvisionalDestinationTopScroll = (
+  set_store: SetStoreFunction<Store>,
+) => {
+  const centeredScrollX = (document.body.scrollWidth - window.innerWidth) / 2;
+
+  window.scroll({
+    left: centeredScrollX,
+    top: 0,
+    behavior: "instant",
+  });
+  set_store("scrollX", centeredScrollX);
+  set_store("scrollY", 0);
+  set_store("scroll_is_at_0", true);
 };
 
 const loadMsForTarget = (
@@ -21,9 +57,7 @@ const loadMsForTarget = (
   const memory = store.route_load_memory[routePath];
   if (!memory) return undefined;
 
-  return target === "top"
-    ? memory.firstContentPaintMs
-    : memory.routeReadyMs;
+  return target === "top" ? memory.firstContentPaintMs : memory.routeReadyMs;
 };
 
 const recentFastLoad = (
@@ -51,16 +85,32 @@ export const startRouteLoad = (
   set_store("pending_route_started_at", performance.now());
   set_store("pending_route_path", routePath);
   set_store("pending_route_target", target);
+  set_store("route_phase", "loading-old-route");
 
   if (recentFastLoad(store, routePath, target)) {
-    set_store("loading", false);
+    setSpinnerCurrentlyVisible(set_store, false);
     loadingDelayTimeout = window.setTimeout(() => {
-      set_store("loading", true);
+      setSpinnerCurrentlyVisible(set_store, true);
+      if (store.route_phase === "loading-new-route") {
+        maybeSetProvisionalDestinationTopScroll(store, set_store);
+      }
     }, LOADING_SPINNER_DELAY_MS);
     return;
   }
 
-  set_store("loading", true);
+  setSpinnerCurrentlyVisible(set_store, true);
+};
+
+export const markDestinationRouteMounted = (
+  page: string,
+  store: Store,
+  set_store: SetStoreFunction<Store>,
+) => {
+  const routePath = routePathFromPage(page);
+  if (store.pending_route_path !== routePath) return;
+
+  set_store("route_phase", "loading-new-route");
+  maybeSetProvisionalDestinationTopScroll(store, set_store);
 };
 
 export const recordFirstContentPaint = (
@@ -70,7 +120,10 @@ export const recordFirstContentPaint = (
 ) => {
   const routePath = routePathFromPage(page);
 
-  if (store.pending_route_path !== routePath || !store.pending_route_started_at) {
+  if (
+    store.pending_route_path !== routePath ||
+    !store.pending_route_started_at
+  ) {
     return;
   }
 
@@ -92,7 +145,10 @@ export const finishRouteLoad = (
   const routePath = routePathFromPage(page);
   window.clearTimeout(loadingDelayTimeout);
 
-  if (store.pending_route_path === routePath && store.pending_route_started_at) {
+  if (
+    store.pending_route_path === routePath &&
+    store.pending_route_started_at
+  ) {
     const routeReadyMs = performance.now() - store.pending_route_started_at;
     const memory = store.route_load_memory[routePath];
     set_store("last_page_load_ms", routeReadyMs);
@@ -108,6 +164,7 @@ export const finishRouteLoad = (
   set_store("pending_route_started_at", 0);
   set_store("pending_route_path", "");
   set_store("pending_route_target", "top");
+  set_store("route_phase", "idle");
   set_store("route_scroll_in_progress", false);
-  set_store("loading", false);
+  setSpinnerCurrentlyVisible(set_store, false);
 };

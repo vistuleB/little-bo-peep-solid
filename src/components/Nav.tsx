@@ -11,21 +11,29 @@ import useScrollX from "~/hooks/useScrollX";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import HeaderBlob from "./HeaderBlob";
 import containerWidth from "~/hooks/useContainerWidth";
+import { decideRouteNavbarPosition } from "~/utils/routeTransitionPolicy";
 
 const Nav = () => {
   let { store } = useGlobalContext();
   useScrollX();
+  const navPosition = () =>
+    decideRouteNavbarPosition({
+      onMobile: store.innerWidth < MOBILE_MAX_WIDTH,
+      routePhase: store.route_phase,
+      spinnerCurrentlyVisible: store.spinner_currently_visible,
+    });
+
   return (
     <>
       <div
         class={twJoin(
           "select-none w-full z-[60]",
-          store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
-          store.innerWidth >= MOBILE_MAX_WIDTH && "absolute",
+          navPosition() === "fixed" ? "!fixed" : "absolute",
         )}
         onClick={(e) => {
           e.stopPropagation();
-        }}>
+        }}
+      >
         <div class="relative select-none border-[var(--nav-border)] border-b bg-bg z-40 w-full h-14 left-0">
           <Title />
         </div>
@@ -84,7 +92,8 @@ const Title = () => {
       class="mr-auto absolute origin-top-left opacity-0"
       ref={headerBlob}
       href="/"
-      onClick={() => getPage("/")}>
+      onClick={() => getPage("/")}
+    >
       <HeaderBlob />
     </a>
   );
