@@ -35,9 +35,8 @@
 
         |> ImageLeft
             src=images/svg_ch3_r_s_substitution_1_1.1em_cloud.svg
-            popup=true
             line=1
-            offset_x=1em
+            offset-x=1em
 
         |> div
             style=font-size:1.1em;margin:0.8em 0em;

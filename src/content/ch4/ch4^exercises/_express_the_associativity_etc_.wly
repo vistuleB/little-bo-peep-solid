@@ -46,7 +46,7 @@
 
                 |> ImageLeft
                     src=images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg
-                    offset_x=4em
+                    offset-x=4em
 
             _the associativity of function multiplication is
             the fact that $f(gh) = (fg)h$ for all $f, g, h : \rr \ra \rr$_

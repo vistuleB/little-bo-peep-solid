@@ -34,7 +34,7 @@
 
         |> ImageRight
             src=images/svg_ch5_ex_polar_discovery2_cloud.svg
-            offset_x=8em
+            offset-x=8em
 
         whereby multiplying by $W$ and collecting coefficients
         of $\sin x$, $\cos x$ gives

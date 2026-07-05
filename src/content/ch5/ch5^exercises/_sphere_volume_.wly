@@ -199,7 +199,7 @@
         !!     $$
 
         !!     |> ImageRight
-        !!         offset_x=5em
+        !!         offset-x=5em
         !!         src=images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg
 
         !!     above, and
@@ -209,7 +209,7 @@
         !!     $$
 
         !!     |> ImageLeft
-        !!         offset_x= 2.5em
+        !!         offset-x= 2.5em
         !!         src=images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg
 
         !!     below, for sufficiently small mesh size; but

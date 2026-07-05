@@ -20,7 +20,6 @@ export type Store = {
   panel_opened: boolean;
   show_section_dividers: boolean;
   show_areas: boolean;
-  show_squiggles: boolean;
   title: string;
   innerWidth: number;
   innerHeight: number;
@@ -57,7 +56,6 @@ const [store, set_store] = createStore<Store>({
   panel_opened: false,
   show_section_dividers: false,
   show_areas: false,
-  show_squiggles: false,
   title: "Little Bo Peep",
   innerWidth: document.documentElement.clientWidth || window.innerWidth,
   innerHeight: window.innerHeight,

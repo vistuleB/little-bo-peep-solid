@@ -34,8 +34,8 @@
 
         |> ImageRight
             src=images/svg_ch4_circle_at_2_4_with_some_vectors_cloud.svg
-            offset_y=150px
-            offset_x= -0.5em
+            offset-y=150px
+            offset-x= -0.5em
 
         For $t < 0$ motion will be
         down and to the left, at least initially—it
@@ -142,7 +142,7 @@
 
         |> ImageRight
             src=images/svg_ch4_ex_circle_at_2_4_position_equals_velocity_cloud.svg
-            offset_x=-4em
+            offset-x=-4em
 
         of said particles, is equal to the
 

@@ -468,6 +468,79 @@
                 x = {-b \pm \sqrt{\up{0.6} b^2 - 4ac} \over \up{0.6} 2a}
                 $$
 
+        |> Exercise
+            handle=side-image-component
+
+            |> ExerciseStatement
+                What is the SideImage component ?
+
+            |> Solution
+                _*SideImage*_ places an out-of-flow image beside the paragraph, math block, or image that immediately precedes it.
+
+                |> Pause
+
+                _*Case 1:*_ ImageRight attached to a paragraph, with a positive horizontal offset.
+
+                This paragraph has a right-side cloud attached to its right edge. The cloud should sit outside the text column, vertically centered on this paragraph.
+
+                |> ImageRight
+                    src=images/svg_ch1_ch_minus_two_squared_cloud.svg
+                    offset-x=2em
+
+                |> Pause
+
+                _*Case 2:*_ ImageLeft attached to a paragraph, with a positive horizontal offset.
+
+                This paragraph has a left-side cloud attached to its left edge. The positive offset moves the cloud farther left, away from the paragraph.
+
+                |> ImageLeft
+                    src=tmp-images/c2_a_b_fraction_cloud.svg
+                    offset-x=2em
+
+                |> Pause
+
+                _*Case 3:*_ ImageRight attached to a math block. The renderer adds at-least-as-wide=true for this case.
+
+                $$
+                a^2 + b^2 = c^2
+                $$
+
+                |> ImageRight
+                    src=images/c2_swap_cloud.svg
+                    offset-x=1em
+
+                |> Pause
+
+                _*Case 4:*_ line anchoring from the top and bottom of a paragraph.
+
+                This paragraph has enough text to span several lines on normal desktop widths. The right cloud uses line=2, so its anchor should be near the second line from the top. The left cloud uses line=-1, so its anchor should be near the first line from the bottom. Resize the viewport to check that both anchors stay related to the parent text.
+
+                |> ImageRight
+                    src=images/svg_bt2_bt_10_to_the_minus_0_cloud.svg
+                    line=2
+                    offset-x=1em
+
+                |> ImageLeft
+                    src=images/svg_ch4_pacman1_disp_4_cloud.svg
+                    line=-1
+                    offset-x=1em
+
+                |> Pause
+
+                _*Case 5:*_ child overlay positioning inside the scaled side-image wrapper.
+
+                This figure has a label positioned by children-x and children-y. The label container should move and scale with the side image.
+
+                |> ImageLeft
+                    src=images/svg_ch4_5_euler_spiral_figure.svg
+                    offset-x=1.5em
+                    children-x=50%
+                    children-y=105%
+
+                    |> span
+                        style=font-size:1.4em;left:50%;transform:translate(-50%);position:absolute;white-space:nowrap;
+                        Fig. 1
+
     |> Pause
 
     _*Case 1:*_ set width=1000px, native 350px

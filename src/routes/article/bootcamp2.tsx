@@ -17,7 +17,7 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Bootcamp2__() {
   return (
     <Article
-      prevPage=""
+      prevPage="/article/bootcamp3"
       nextPage="/article/bootcamp1"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
@@ -234,9 +234,9 @@ const Rest = () => {
           $$
           <ImageLeft
             src="/build-img/svgo-svg/DSem.svg"
-            offset_y="-0.2em"
-            offset_x="4em"
-            compensate_offset_x_for_large_text_columns={true}
+            offsetY="-0.2em"
+            offsetX="4em"
+            atLeastAsWide={true}
           />
         </MathBlock>
         <Pause />
@@ -2107,8 +2107,8 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/nMNN.svg"
-              offset_x="0em"
-              compensate_offset_x_for_large_text_columns={true}
+              offsetX="0em"
+              atLeastAsWide={true}
             />
           </MathBlock>
           <Pause />
@@ -3506,9 +3506,9 @@ const Rest = () => {
               $$
               <ImageRight
                 src="/build-img/svgo-svg/bESG.svg"
-                offset_y="-0.5em"
-                offset_x="0.5em"
-                compensate_offset_x_for_large_text_columns={true}
+                offsetY="-0.5em"
+                offsetX="0.5em"
+                atLeastAsWide={true}
               />
             </MathBlock>
             <Pause />

@@ -22,9 +22,8 @@
         $$
 
         |> ImageRight
-            offset_x=5rem
+            offset-x=5rem
             src=images/svg_ch1_ex_25.svg
-            squiggle=false
 
         (as previously computed) is smaller than
 
@@ -33,9 +32,8 @@
         $$
 
         |> ImageRight
-            offset_x=10rem
+            offset-x=10rem
             src=images/svg_ch1_ex_26.svg
-            squiggle=false
 
         we will compute the difference
 
@@ -65,7 +63,7 @@
 
         |> ImageRight
             src=images/svg_ch1_ex_27.svg
-            offset_y=-0.5em
+            offset-y=-0.5em
 
         which, for large $n$, is roughly
 

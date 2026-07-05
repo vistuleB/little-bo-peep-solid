@@ -81,7 +81,7 @@
 
         !! |> ImageRight
         !!     src=images/e5_polar_P1P2_a_minus_b_squared_cloud.svg
-        !!     offset_x=2.5em
+        !!     offset-x=2.5em
 
         to be applied with $(x_1, y_1) = P_1$, $(x_2, y_2) = P_2$, i.e., with
 

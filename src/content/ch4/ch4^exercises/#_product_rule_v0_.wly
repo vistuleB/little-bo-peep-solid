@@ -48,8 +48,8 @@
     on the $t$-number line, to be clear):
 
     |> ImageLeft
-        offset_x= 0.5em
-        offset_y=-0.5em
+        offset-x= 0.5em
+        offset-y=-0.5em
         src=images/svg_ch4_RATS_corridor_cloud.svg
 
     |> TextParent

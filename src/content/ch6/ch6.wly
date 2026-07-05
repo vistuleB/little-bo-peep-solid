@@ -677,7 +677,7 @@
     $$
     |> ImageLeft
         src=images/c6_fg_prime_signature_cloud_v2.svg
-        offset_x=5em
+        offset-x=5em
 
     whereas
 
@@ -686,7 +686,7 @@
     $$
     |> ImageRight
         src=images/c6_f_prime_g_prime_signature_cloud_v2.svg
-        offset_x=5em
+        offset-x=5em
 
     as is easy to check, and
 
@@ -762,7 +762,7 @@
 
         |> ImageLeft
             src=images/c6_x1x2_3600_cloud.svg
-            offset_x=1em
+            offset-x=1em
 
         |> Pause
 
@@ -1026,7 +1026,7 @@
 
     |> ImageRight
         src=images/c6_chain_rule_units_cloud.svg
-        offset_x=3.1em
+        offset-x=3.1em
 
     !! $$
     !! \Large\left[{\tC\over\tB}\right]\cdot\left[{\tB\over\tA}\right] = \left[{\tC\over\tA}\right]
@@ -1168,7 +1168,7 @@
         $$
         |> ImageRight
             src=images/c6_composition_reminder_cloud.svg
-            offset_x=2em
+            offset-x=2em
         
         we can write the same equation as
 
@@ -1207,7 +1207,7 @@
         !! |> ImageRight
         !!     src=images/c6_forbidden_fprime_of_t0_v2.svg
         !!     line=-3
-        !!     offset_x=1em
+        !!     offset-x=1em
 
         |> Pause
 
@@ -1252,7 +1252,7 @@
         $$
         |> ImageLeft
             src=images/c6_chain_rule_reminder_cloud.svg
-            offset_x=2em
+            offset-x=2em
 
         by [the chain rule](>>chain_rule_discovery),
         since $\cos' = -\sin$, or

@@ -121,8 +121,8 @@
 
     |> ImageRight
         src=images/svg_ch4_ch_curve_to_sketch_cloud_cleaned.svg
-        offset_y=  5%
-        offset_x=-25%
+        offset-y=  5%
+        offset-x=-25%
 
     ...voilà!
 
@@ -165,7 +165,7 @@
 
     |> ImageLeft
         src=images/svg_ch4_ch_constant_derivative_cloud.svg
-        offset_x= 8em
+        offset-x= 8em
 
     because at each $x$-value you find a slope of
     $0$, when you look up or down at the graph.
@@ -206,7 +206,7 @@
 
     |> ImageLeft
         src=images/svg_ch4_ch_affine_derivative_cloud.svg
-        offset_x= 7em
+        offset-x= 7em
 
     because the slope of a line of slope $A$ is
     $A$, no matter where you place yourself on the
@@ -289,7 +289,7 @@
 
     |> ImageRight
         src=images/derivative_units1_cloud.svg
-        offset_y=0.6em
+        offset-y=0.6em
     
     |> List
         style=padding-left:2.5rem;padding-right:2rem;
@@ -309,7 +309,7 @@
 
     |> ImageLeft
         src=images/derivative_units2_cloud.svg
-        offset_y=0.6em
+        offset-y=0.6em
     
     |> List
         style=padding-left:2.5rem;padding-right:2rem;
@@ -388,8 +388,8 @@
 
         |> ImageRight
             src=images/svg_ch4_3x_plus_one_and_second_cloud.svg
-            offset_x=6em
-            offset_y=0.1em
+            offset-x=6em
+            offset-y=0.1em
 
     because, firstly,
 
@@ -647,7 +647,7 @@
 
         |> ImageRight
             src=images/svg_ch4_ch_units_cancellation_cloud.svg
-            offset_x=5em
+            offset-x=5em
 
         according to the template
 

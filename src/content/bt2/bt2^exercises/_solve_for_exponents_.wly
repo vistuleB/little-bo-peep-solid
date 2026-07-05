@@ -86,8 +86,8 @@
         $$
         |> ImageRight
             src=images/svg_bt2_ex_equation_addition_cloud.svg
-            offset_y=-0.5em
-            offset_x= 0.5em
+            offset-y=-0.5em
+            offset-x= 0.5em
         and adding this last equation to the first
         equation above, we find
         $$

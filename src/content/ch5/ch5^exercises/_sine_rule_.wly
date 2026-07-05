@@ -54,8 +54,8 @@
 
         |> ImageRight
             src=images/e5_sine_rule_sin_2b_cloud.svg
-            offset_x=-30%
-            offset_y=38%
+            offset-x=-30%
+            offset-y=38%
 
         That's it!
 

@@ -164,10 +164,10 @@
         out to infinity.
 
         |> ImageLeft
-            offset_x=1.5em
+            offset-x=1.5em
             src=images/svg_ch4_5_euler_spiral_figure.svg
-            children_x=50%
-            children_y=105%
+            children-x=50%
+            children-y=105%
 
             |> span
                 style=font-size:1.4em;left:50%;transform:translate(-50%);position:absolute;white-space:nowrap;
@@ -312,11 +312,11 @@
 
             |> ImageLeft
                 src=images/svg_ch4_5_euler_hearts_left.svg
-                offset_x=-5rem
+                offset-x=-5rem
 
             |> ImageRight
                 src=images/svg_ch4_5_euler_hearts_right.svg
-                offset_x=-5rem
+                offset-x=-5rem
 
             in that you would never spot the symmetry
             at play, or have a chance of eyeballing

@@ -25,7 +25,7 @@
 
         |> ImageRight
             src=images/e5_sperical_coordinates_180_cloud.svg
-            offset_x=4em
+            offset-x=4em
 
         !! (or
 

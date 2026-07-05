@@ -604,8 +604,8 @@ const Rest = () => {
           $$
           <ImageRight
             src="/build-img/svgo-svg/dcQB.svg"
-            offset_x="3em"
-            compensate_offset_x_for_large_text_columns={true}
+            offsetX="3em"
+            atLeastAsWide={true}
           />
         </MathBlock>
         <Pause />

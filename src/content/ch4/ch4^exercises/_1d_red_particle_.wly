@@ -29,7 +29,7 @@
 
         |> ImageLeft
             src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
-            offset_x=10em
+            offset-x=10em
 
         time to cross, because the maximum speed of the particle
         inside of that interval is $1$. Similarly, the interval from
@@ -52,7 +52,7 @@
 
         !! |> ImageLeft
         !!     src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
-        !!     offset_x=10em
+        !!     offset-x=10em
 
         time to cross, because the maximum speed of the particle
         inside of that interval is $0.5$.
@@ -76,7 +76,7 @@
 
         !! |> ImageLeft
         !!     src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
-        !!     offset_x=10em
+        !!     offset-x=10em
 
         time to cross, because the maximum speed of the particle
         inside of that interval is $0.25$—etc—each interval

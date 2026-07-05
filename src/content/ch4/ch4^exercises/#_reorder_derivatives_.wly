@@ -42,6 +42,6 @@
 
         !! |> ImageRight
         !!     src=images/svg_ch4_ex_position_by_time_find_the_order_cloud.svg
-        !!     offset_y=-0.1em
-        !!     offset_x= -0.5em
+        !!     offset-y=-0.1em
+        !!     offset-x= -0.5em
 

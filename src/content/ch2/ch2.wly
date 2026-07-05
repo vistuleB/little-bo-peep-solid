@@ -88,8 +88,8 @@
 
     |> ImageRight
         src=images/c2_slope_formula_cloud.svg
-        offset_y=-0.7em
-        offset_x=3em
+        offset-y=-0.7em
+        offset-x=3em
 
     more succinctly. We call this equation the _slope formula_.
 
@@ -259,7 +259,7 @@
     |> ImageRight
         src=images/c2_swap_cloud.svg
         line=3
-        offset_x=-0.5em
+        offset-x=-0.5em
 
     $$ {y_2 - y_1 \over x_2 - x_1}\qquad\,\,\,\,\,\te{and}\,\,\,\,\,\qquad{y_1 - y_2 \over x_1 - x_2} $$
 
@@ -268,9 +268,9 @@
     $$ {y_2 - y_1 \over x_2 - x_1} = {-(y_2 - y_1) \over -(x_2 - x_1)} = {y_1 - y_2 \over x_1 - x_2} $$
 
     |> ImageLeft
-        src=images/c2_a_b_fraction_cloud.svg
-        offset_x= 2.5em
-        offset_y=-60px
+        src=tmp-images/c2_a_b_fraction_cloud.svg
+        offset-x=2.5em
+        offset-y=0
 
     which verifies this hypothesis. In particular,
 
@@ -464,8 +464,8 @@
 
     |> ImageLeft
         src=images/svg_ch2_ch_vertical_line_equation.svg
-        offset_y=-6em
-        offset_x= 1em
+        offset-y=-6em
+        offset-x= 1em
 
     $$y = b$$
 

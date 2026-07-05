@@ -42,7 +42,7 @@
 
         |> ImageRight
             src=images/svg_ch4_17_velocity_vector_1_cloud.svg
-            offset_x=3rem
+            offset-x=3rem
 
         Maintaining this relationship at all
         points in time, and given that the velocity

@@ -40,7 +40,7 @@
 
     |> ImageRight
         src=images/svg_ch1_ch_minus_two_squared_cloud.svg
-        offset_x=5em
+        offset-x=5em
 
     and, in particular, it is _not_ true that
 
@@ -315,8 +315,8 @@
     $$
 
     |> ImageLeft
-        src=images/325.svg
-        offset_x=1.9em
+        src=images/c1_abCD_cloud.svg
+        offset-x=1.9em
 
     that come from multiplying every term of the first
     parenthesis with every term of the second

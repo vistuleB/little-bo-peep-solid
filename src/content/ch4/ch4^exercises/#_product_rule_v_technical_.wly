@@ -48,8 +48,8 @@
     on the $t$-number line, to be clear):
 
     |> ImageLeft
-        offset_x= 0.5em
-        offset_y=-0.5em
+        offset-x= 0.5em
+        offset-y=-0.5em
         src=images/svg_ch4_RATS_corridor_cloud.svg
 
     |> TextParent
@@ -110,7 +110,7 @@
 
         |> ImageRight
             src=images/svg_ch4_RATS_first_term_lhs_cloud.svg
-            offset_x=-3em
+            offset-x=-3em
 
         $$
         {(AB)(t_0 + \Delta t) - (AB)(t_0)\over \Delta t}

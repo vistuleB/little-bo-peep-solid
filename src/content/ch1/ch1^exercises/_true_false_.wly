@@ -69,7 +69,7 @@
 
         |> ImageLeft
             src=images/true_false_sixth_root_of_two_cloud1.svg
-            offset_y=23.5%
+            offset-y=23.5%
 
         and
 
@@ -85,7 +85,7 @@
 
         |> ImageLeft
             src=images/true_false_sixth_root_of_two_cloud2.svg
-            offset_y=23.5%
+            offset-y=23.5%
 
         so $(\sqrt[2]{\up{0.76}\sqrt[3]{2}}\rt{0.1})^6 =
         (\sqrt[3]{\up{0.76}\sqrt[2]{2}}\rt{0.1})^6 = 2$.
@@ -234,9 +234,8 @@
 
         !! |> ImageRight
         !!     src=images/svg_ch1_ex_104.svg
-        !!     offset_x=3rem
-        !!     offset_y=-1rem
-        !!     squiggle=false
+        !!     offset-x=3rem
+        !!     offset-y=-1rem
 
         or _one billion_ kilometers. By
         comparison, the distance from the Earth to
@@ -483,7 +482,7 @@
 
         |> ImageRight
             src=images/svg_ch1_ex_24.svg
-            offset_y=-0.5em
+            offset-y=-0.5em
 
         ...it's that much. (For example,
 

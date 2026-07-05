@@ -9,7 +9,7 @@
 
     |> ImageRight
         src=images/svg_ch4_big_product_parchment_cloud.svg
-        offset_x=2rem
+        offset-x=2rem
 
     ...approach as $h$ goes to $0$, if $A_1, \dots, A_n$
     $: \rr \ra \rr$ are differentiable at the point $t_0$?

@@ -252,7 +252,7 @@
 
             !! |> ImageLeft
             !!     src=images/e5_ABCD_roles_Au_cloud.svg
-            !!     offset_x=2em
+            !!     offset-x=2em
 
             !! ...you find that after $D$ has been dialed up,
             !! and it comes time to change $A$, there are TWO

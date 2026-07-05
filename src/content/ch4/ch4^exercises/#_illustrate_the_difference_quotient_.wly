@@ -43,7 +43,7 @@
         $$
 
         !! |> ImageRight
-        !!     offset_y=-0.5em
+        !!     offset-y=-0.5em
         !!     src=images/svg_ch4_new_quatient_x_fxplush_cloud.svg
 
         at the other end. 

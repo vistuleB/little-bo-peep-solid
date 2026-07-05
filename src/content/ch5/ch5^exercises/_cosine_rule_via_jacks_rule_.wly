@@ -75,7 +75,7 @@
         $$
         |> ImageRight
             src=images/_e5_cosine_rule_via_jacks_multiplying_cloud_.svg
-            offset_x=0.5em
+            offset-x=0.5em
 
         !! $$
         !! \begin{gathered}
@@ -89,7 +89,7 @@
         the first we obtain...
         |> ImageLeft
             src=images/_e5_cosine_rule_via_jacks_equation_adding_cloud.svg
-            offset_x=0.5em
+            offset-x=0.5em
 
         $$
         -2ab\cos\theta_{ab} = c^2 - a^2 - b^2

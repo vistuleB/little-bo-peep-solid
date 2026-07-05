@@ -291,7 +291,7 @@
         |> ImageLeft
             src=images/svg_ch3_0.5625_cloud.svg
             line=-1
-            offset_y=0em
+            offset-y=0em
 
 |> Section
 
@@ -473,7 +473,7 @@
 
     |> ImageRight
         src=images/svg_ch3_ch_crossing_circle_cloud.svg
-        offset_x=2em
+        offset-x=2em
 
     ...is not the graph of any function, because
     some vertical lines intersect the graph more
@@ -783,8 +783,8 @@
 
     |> ImageRight
         src=images/svg_ch3_ch_a1_x1_cloud.svg
-        offset_y=0.2em
-        offset_x= -0.1em
+        offset-y=0.2em
+        offset-x= -0.1em
 
     for all $x$, and
 
@@ -794,7 +794,7 @@
 
     |> ImageRight
         src=images/svg_ch3_ch_a0_x0_cloud.svg
-        offset_x=0em
-        offset_y=0.2em
+        offset-x=0em
+        offset-y=0.2em
 
     for all $x$ (even $x = 0$), namely.

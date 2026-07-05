@@ -21,7 +21,7 @@ export default function __Chapter1__() {
       nextPage="/article/chapter2"
       pageNecessaryMargin={800}
       maxElementWidth={500}
-      id="_25_h.a.i_"
+      id="_30_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -117,8 +117,8 @@ export default function __Chapter1__() {
           $$
           <ImageRight
             src="/build-img/svgo-svg/Z39o.svg"
-            offset_x="5em"
-            compensate_offset_x_for_large_text_columns={true}
+            offsetX="5em"
+            atLeastAsWide={true}
           />
         </MathBlock>
         <Pause />
@@ -883,9 +883,9 @@ const Rest = () => {
           (a + b)(C + D) \,=\, aC + bC + aD + bD
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/QC6w.svg"
-            offset_x="1.9em"
-            compensate_offset_x_for_large_text_columns={true}
+            src="/build-img/svgo-svg/-TtU.svg"
+            offsetX="1.9em"
+            atLeastAsWide={true}
           />
         </MathBlock>
         <Pause />
@@ -951,7 +951,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_21_h.a.i_">
+        <Example id="_26_h.a.i_">
           <OuterP>
             <b>
               Example 2.
@@ -1092,7 +1092,7 @@ const Rest = () => {
           <OuterP>
             obtaining the same result as {" "}
             <InChapterLink
-              href="/article/chapter1#_21_h.a.i_"
+              href="/article/chapter1#_26_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1499,10 +1499,10 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_24_h.a.i_"
+        id="_29_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_22_h.a.i_">
+          <ExerciseStatement id="_27_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1657,8 +1657,8 @@ const Rest = () => {
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/rgbH.svg"
-                offset_y="23.5%"
-                compensate_offset_x_for_large_text_columns={true}
+                offsetY="23.5%"
+                atLeastAsWide={true}
               />
             </MathBlock>
             <Pause />
@@ -1678,8 +1678,8 @@ const Rest = () => {
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/Trg3.svg"
-                offset_y="23.5%"
-                compensate_offset_x_for_large_text_columns={true}
+                offsetY="23.5%"
+                atLeastAsWide={true}
               />
             </MathBlock>
             <Pause />
@@ -2520,8 +2520,8 @@ const Rest = () => {
               $$
               <ImageRight
                 src="/build-img/svgo-svg/omps.svg"
-                offset_y="-0.5em"
-                compensate_offset_x_for_large_text_columns={true}
+                offsetY="-0.5em"
+                atLeastAsWide={true}
               />
             </MathBlock>
             <Pause />
@@ -2662,7 +2662,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_23_h.a.i_">
+          <ExerciseStatement id="_28_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2670,7 +2670,7 @@ const Rest = () => {
               {" "}
               In the solution to {" "}
               <InChapterLink
-                href="/article/chapter1#_22_h.a.i_"
+                href="/article/chapter1#_27_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1
@@ -2739,10 +2739,9 @@ const Rest = () => {
               &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
               $$
               <ImageRight
-                offset_x="5rem"
+                offsetX="5rem"
                 src="/build-img/svgo-svg/Xx87.svg"
-                squiggle={false}
-                compensate_offset_x_for_large_text_columns={true}
+                atLeastAsWide={true}
               />
             </MathBlock>
             <Pause />
@@ -2755,10 +2754,9 @@ const Rest = () => {
               &#123;1 \over n^2&#125;
               $$
               <ImageRight
-                offset_x="10rem"
+                offsetX="10rem"
                 src="/build-img/svgo-svg/jBCw.svg"
-                squiggle={false}
-                compensate_offset_x_for_large_text_columns={true}
+                atLeastAsWide={true}
               />
             </MathBlock>
             <Pause />
@@ -2800,8 +2798,8 @@ const Rest = () => {
               $$
               <ImageRight
                 src="/build-img/svgo-svg/4oJD.svg"
-                offset_y="-0.5em"
-                compensate_offset_x_for_large_text_columns={true}
+                offsetY="-0.5em"
+                atLeastAsWide={true}
               />
             </MathBlock>
             <Pause />

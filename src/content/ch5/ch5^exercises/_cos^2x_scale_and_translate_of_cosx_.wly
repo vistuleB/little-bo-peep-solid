@@ -41,7 +41,7 @@
 
         |> ImageRight
             src=images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg
-            offset_x=4em
+            offset-x=4em
 
         $$
         \Large\cos(2x)
@@ -52,7 +52,7 @@
 
         |> ImageRight
             src=images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg
-            offset_x=4em
+            offset-x=4em
 
         $$
         \Large 1 + \cos(2x)
@@ -63,7 +63,7 @@
 
         |> ImageRight
             src=images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg
-            offset_x=4em
+            offset-x=4em
 
         $$
         \Large{1 + \cos(2x)\over 2}
@@ -146,8 +146,8 @@
 
         |> ImageLeft
             src=images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg
-            offset_x= 3.4em
-            offset_y=3%
+            offset-x= 3.4em
+            offset-y=3%
 
         ...as conjectured!
         (In particular, $\cos^2(x)$ truly _is_ a

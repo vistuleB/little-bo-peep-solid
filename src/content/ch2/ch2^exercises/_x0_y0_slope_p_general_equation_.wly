@@ -14,8 +14,8 @@
 
         |> ImageLeft
             src=images/svg_ch2_ex_x0_y0_line_equation_cloud.svg
-            offset_x=10rem
-            offset_y=0%
+            offset-x=10rem
+            offset-y=0%
 
         because
 
@@ -65,8 +65,8 @@
 
         |> ImageRight
             src=images/svg_slope_times_run_equals_rise_cloud.svg
-            offset_x=2.5rem
-            offset_y=0%
+            offset-x=2.5rem
+            offset-y=0%
 
         which can also make it easy to remember!
 

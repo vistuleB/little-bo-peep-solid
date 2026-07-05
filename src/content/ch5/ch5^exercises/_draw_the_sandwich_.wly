@@ -15,7 +15,7 @@
 
         |> ImageRight
             src=images/e5_greg_sandwich_tant_cloud.svg
-            offset_x=4em
+            offset-x=4em
 
         for $0 < \theta < \eta$, is hereby illustrated, using
         the fact that 

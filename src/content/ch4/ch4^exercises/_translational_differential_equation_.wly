@@ -27,7 +27,7 @@
 
         |> ImageLeft
             src=images/svg_ch4_ex_cosine_recall_cloud.svg
-            offset_x= 200px
+            offset-x= 200px
 
         is the distance between adjacent bumps. Thus if
 

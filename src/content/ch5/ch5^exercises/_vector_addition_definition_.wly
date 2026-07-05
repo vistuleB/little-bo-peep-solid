@@ -61,7 +61,7 @@
 
         |> ImageRight
             src=images/svg_ch5_ex_vector_sum_101_cloud.svg
-            offset_x=1em
+            offset-x=1em
 
         because
 

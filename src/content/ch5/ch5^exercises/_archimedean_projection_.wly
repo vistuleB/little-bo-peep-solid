@@ -24,7 +24,7 @@
         $$
 
         |> ImageRight
-            offset_x=9em
+            offset-x=9em
             src=images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg
 
         by the projection, whereas longitudes (the other

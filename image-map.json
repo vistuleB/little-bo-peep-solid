@@ -18,8 +18,8 @@
     "original-size": 498,
     "compressed-size": 354,
     "compression": "28.92%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla","pla"]
   },
   "svg_ch4_circle_at_2_4_black_version.svg": {
     "build-version": "svgo-svg/qPL0.svg",
@@ -1416,7 +1416,7 @@
     "compressed-size": 7869,
     "compression": "82.67%",
     "used-last-build": true,
-    "3chars": ["ch1"]
+    "3chars": ["ch1","pla"]
   },
   "svg_ch4_17_particle9_inline.svg": {
     "build-version": "svgo-svg/A7E1.svg",
@@ -1977,7 +1977,7 @@
     "compressed-size": 23248,
     "compression": "77.13%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg": {
     "build-version": "svgo-svg/Wi-I.svg",
@@ -2054,7 +2054,7 @@
     "compressed-size": 74513,
     "compression": "38.22%",
     "used-last-build": true,
-    "3chars": ["ch4"]
+    "3chars": ["ch4","pla"]
   },
   "svg_ch5_ex_big_snail_quad_purple_angle_2.svg": {
     "build-version": "svgo-svg/JRLJ.svg",
@@ -2198,6 +2198,17 @@
     "compression": "65.62%",
     "used-last-build": true,
     "3chars": ["ch5"]
+  },
+  "c1_abCD_cloud.svg": {
+    "build-version": "svgo-svg/-TtU.svg",
+    "build-version-created-on": 1783283699,
+    "build-method": "svgo",
+    "build-version-size": 16108,
+    "original-size": 43031,
+    "compressed-size": 16108,
+    "compression": "62.57%",
+    "used-last-build": true,
+    "3chars": ["ch1"]
   },
   "svg_ch5_ex_gas_sphere_profile.svg": {
     "build-version": "svgo-svg/VrOC.svg",
@@ -4396,8 +4407,8 @@
     "original-size": 43031,
     "compressed-size": 16108,
     "compression": "62.57%",
-    "used-last-build": true,
-    "3chars": ["ch1"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e5_ABCD_roles_identity_comp_D.svg": {
     "build-version": "svgo-svg/mE-x.svg",
@@ -4894,6 +4905,17 @@
     "used-last-build": true,
     "3chars": ["ch6"]
   },
+  "svg_ch4_pacman1_disp_4_cloud.svg": {
+    "build-version": "svgo-svg/dcmY.svg",
+    "build-version-created-on": 1783283428,
+    "build-method": "svgo",
+    "build-version-size": 99511,
+    "original-size": 99704,
+    "compressed-size": 99511,
+    "compression": "0.19%",
+    "used-last-build": true,
+    "3chars": ["pla"]
+  },
   "svg_ch_ch_x_displacement_and_x_radians_radian_definition.svg": {
     "build-version": "svgo-svg/kCui.svg",
     "build-version-created-on": 1776436207,
@@ -5243,8 +5265,8 @@
     "original-size": 495,
     "compressed-size": 352,
     "compression": "28.89%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla","pla"]
   },
   "svg_ch3_connection_x_6.svg": {
     "build-version": "svgo-svg/WvHW.svg",
@@ -5805,7 +5827,7 @@
     "compressed-size": 34933,
     "compression": "0.34%",
     "used-last-build": true,
-    "3chars": ["bt2"]
+    "3chars": ["bt2","pla"]
   },
   "svg_ch4_ex_cosine_recall.svg": {
     "build-version": "svgo-svg/X2nI.svg",
@@ -8092,8 +8114,8 @@
     "original-size": 45243,
     "compressed-size": 14552,
     "compression": "67.84%",
-    "used-last-build": true,
-    "3chars": ["ch2"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_snail_stack_3.svg": {
     "build-version": "svgo-svg/ADw8.svg",

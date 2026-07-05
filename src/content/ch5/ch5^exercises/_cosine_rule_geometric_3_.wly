@@ -38,8 +38,8 @@
         !! |> ImageLeft
         !!     line=0.5
         !!     src=images/_e5_cosine_rule_geometric_3_sol1_cloud.svg
-        !!     offset_x=-28%
-        !!     offset_y=-2em
+        !!     offset-x=-28%
+        !!     offset-y=-2em
 
         Then
 
@@ -104,7 +104,7 @@
 
         !! |> ImageLeft
         !!     src=images/_e5_cosine_rule_geometric_3_cloud.svg
-        !!     offset_y=44%
+        !!     offset-y=44%
 
         !! Secondly we have these measurements and areas, giving us two
         !! more different ways of writing A and B, as well:

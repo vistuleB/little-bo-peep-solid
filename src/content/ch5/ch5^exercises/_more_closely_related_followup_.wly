@@ -80,7 +80,7 @@
 
         |> ImageLeft
             src=images/e5_more_closely_related_followup_cloud4.svg
-            offset_y=1.3em
+            offset-y=1.3em
 
         which completes the proof, since
         $$(\cos(2x) + 1)\cdot {1\over 2}$$
@@ -110,7 +110,7 @@
 
         |> ImageLeft
             src=images/e5_more_closely_related_followup_cloud5.svg
-            offset_y=0.2em
+            offset-y=0.2em
 
         which completes a proof.
 
