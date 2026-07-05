@@ -8,6 +8,7 @@ import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
 import { Item, List }  from "~/components/List";
 import { MathBlock, Math }  from "~/components/Math";
+import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
@@ -164,13 +165,13 @@ export default function __Chapter5__() {
           {" "} We have
           already encountered the ‘cos’ function in 
           {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter3#_44_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 7 of Chapter 3
-          </a>
-          &#8288;,
+          </OutChapterLink>
+          ,
           e.g.. It is the one that has this graph:
         </OuterP>
         <Pause />
@@ -497,12 +498,12 @@ export default function __Chapter5__() {
         <Pause />
         <OuterP>
           in {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter4#_89_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 26 of Chapter 3
-          </a>
+          </OutChapterLink>
           {" "} (by direct inspection
           of the graph {" "}
           <NoBreak>
@@ -861,13 +862,13 @@ const Rest = () => {
         <OuterP>
           These are the same four curves that
           appear in {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter4#_74_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 13 of Chapter 4
-          </a>
-          &#8288;.
+          </OutChapterLink>
+          .
           In particular,
         </OuterP>
         <Pause />
@@ -935,21 +936,21 @@ const Rest = () => {
           </Math>
           {" "}
           (cf. {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter4#_72_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 11
-          </a>
+          </OutChapterLink>
           {" "}
           and {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter4#_73_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 12 of Chapter 4
-          </a>
-          &#8288;),
+          </OutChapterLink>
+          ),
           which implies that
         </OuterP>
         <Pause />
@@ -1057,20 +1058,20 @@ const Rest = () => {
           </NoBreak>
           {" "}
           (Cf. {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter4#_89_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 26
-          </a>
-          &#8288;, {" "}
-          <a
+          </OutChapterLink>
+          , {" "}
+          <OutChapterLink
             href="/article/chapter4#_93_h.a.i_"
             class="out-chapter-link"
           >
             Chapter 4
-          </a>
-          &#8288;.) You should
+          </OutChapterLink>
+          .) You should
           be able to verify each of these identities
           just by looking at them and thinking of the
           definitions of {" "}
@@ -4331,32 +4332,32 @@ const Rest = () => {
             <Pause />
             <OuterP>
               making it a true {" "}
-              <a
+              <OutChapterLink
                 class="out-chapter-link"
                 href="/article/chapter3#_37_h.a.i_"
               >
                 <i>
                   linear
                 </i>
-              </a>
+              </OutChapterLink>
               {" "} function (as opposed
               to {" "}
-              <a
+              <OutChapterLink
                 class="out-chapter-link"
                 href="/article/chapter3#_37_h.a.i_"
               >
                 <i>
                   affine
                 </i>
-              </a>
-              &#8288;, cf. {" "}
-              <a
+              </OutChapterLink>
+              , cf. {" "}
+              <OutChapterLink
                 class="out-chapter-link"
                 href="/article/chapter3#_37_h.a.i_"
               >
                 Chapter 3
-              </a>
-              &#8288;).
+              </OutChapterLink>
+              ).
             </OuterP>
             <OuterP class="indent-10">
               As for the “something”—the bumpy one—it appears
@@ -4537,13 +4538,13 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} cf. {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter3#_60_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 3
-              </a>
-              &#8288;.]
+              </OutChapterLink>
+              .]
             </OuterP>
             <OuterP class="indent-10">
               As the parabola is symmetric about the {" "}
@@ -11701,21 +11702,21 @@ const Rest = () => {
             <Pause />
             <OuterP>
               (Cf. {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter3#_44_h.a.i_"
                 class="out-chapter-link"
               >
                 Exercise 7 of Chapter 3
-              </a>
-              &#8288;, 
+              </OutChapterLink>
+              , 
               {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter3#_52_h.a.i_"
                 class="out-chapter-link"
               >
                 Exercise 14 of Chapter 3
-              </a>
-              &#8288;.)
+              </OutChapterLink>
+              .)
             </OuterP>
           </Solution>
         </Exercise>
@@ -16234,20 +16235,20 @@ const Rest = () => {
                 that is not the first or the last is the
                 arithematic mean of the two terms on either side.
                 (Cf. {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_85_h.a.i_"
                   class="out-chapter-link"
                 >
                   Note 1
-                </a>
+                </OutChapterLink>
                 {" "} in {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_86_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 23 of Chapter 4
-                </a>
-                &#8288;.)
+                </OutChapterLink>
+                .)
               </OuterP>
             </SolutionNote>
           </Solution>

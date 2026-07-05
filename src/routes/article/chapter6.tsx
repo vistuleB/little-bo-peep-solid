@@ -6,6 +6,7 @@ import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises"
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
+import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
@@ -96,21 +97,21 @@ export default function __Chapter6__() {
           </b>
           {" "}
           As explained in the {" "}
-          <a
+          <OutChapterLink
             class="out-chapter-link"
             href="/article/chapter2#section-9"
           >
             Postcript to Chapter 2
-          </a>
-          &#8288;, the
+          </OutChapterLink>
+          , the
           term
           {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter4#section-6"
             class="out-chapter-link"
           >
             6
-          </a>
+          </OutChapterLink>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -582,13 +583,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           [*See {" "}
-          <a
+          <OutChapterLink
             class="out-chapter-link"
             href="/article/chapter5#section-2"
           >
             Chapter 5 §2
-          </a>
-          &#8288;.]
+          </OutChapterLink>
+          .]
         </OuterP>
       </Section>
       <Pause />
@@ -602,21 +603,21 @@ const Rest = () => {
           </b>
           {" "}
           As reviewed in {" "}
-          <a
+          <OutChapterLink
             class="out-chapter-link"
             href="/article/chapter4#section-6"
           >
             Chapter 4
-          </a>
+          </OutChapterLink>
           {" "}
           (see also {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter4#_67_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
-          </a>
-          &#8288;),
+          </OutChapterLink>
+          ),
           differentiation divides the units of the output
           by the units of the input. 
           In terms of signatures,
@@ -672,13 +673,13 @@ const Rest = () => {
           </NoBreak>
           {" "} of
           {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter4#_67_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
-          </a>
-          &#8288;, that one needs to
+          </OutChapterLink>
+          , that one needs to
           multiply the output units of {" "}
           <Math>
             $g''$
@@ -2680,13 +2681,13 @@ const Rest = () => {
                 </Math>
               </NoBreak>
               {" "} {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter4#_81_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 4, Exercise 19
-              </a>
-              &#8288;):
+              </OutChapterLink>
+              ):
             </OuterP>
             <Boxed>
               <MathBlock>

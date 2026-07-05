@@ -6,6 +6,7 @@ import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { Item }  from "~/components/List";
 import { MathBlock, Math }  from "~/components/Math";
+import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import Solution  from "~/components/Solution";
@@ -497,13 +498,13 @@ export default function __Bootcamp3__() {
                 </b>
               </i>
               {" "} 3 cols, 2 on mobile, mobile-cutoff=520, center-on-overflow=true (from {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter1#_26_h.a.i_"
                 class="out-chapter-link"
               >
                 1
-              </a>
-              &#8288;)
+              </OutChapterLink>
+              )
             </OuterP>
             <Pause />
             <Grid
@@ -575,13 +576,13 @@ export default function __Bootcamp3__() {
                 </b>
               </i>
               {" "} 3 cols, place-items=end (from {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter1#_26_h.a.i_"
                 class="out-chapter-link"
               >
                 1
-              </a>
-              &#8288;)
+              </OutChapterLink>
+              )
             </OuterP>
             <Pause />
             <Grid
@@ -672,13 +673,13 @@ export default function __Bootcamp3__() {
                 </b>
               </i>
               {" "} 2 cols, 1 on mobile, place-items=start, with-padding=false, column-first=true (from {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter3#_40_h.a.i_"
                 class="out-chapter-link"
               >
                 3
-              </a>
-              &#8288;)
+              </OutChapterLink>
+              )
             </OuterP>
             <Pause />
             <Grid
@@ -721,13 +722,13 @@ export default function __Bootcamp3__() {
                 </b>
               </i>
               {" "} same as Case 16, 4 items only (from {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter3#_40_h.a.i_"
                 class="out-chapter-link"
               >
                 3
-              </a>
-              &#8288;)
+              </OutChapterLink>
+              )
             </OuterP>
             <Pause />
             <Grid
@@ -770,13 +771,13 @@ export default function __Bootcamp3__() {
                 </b>
               </i>
               {" "} 2 cols, 1 on mobile, center-on-overflow=true, place-items=start, with-padding=false, column-first=true (from {" "}
-              <a
+              <OutChapterLink
                 href="/article/appendixA#_167_h.a.i_"
                 class="out-chapter-link"
               >
                 1
-              </a>
-              &#8288;)
+              </OutChapterLink>
+              )
             </OuterP>
             <Pause />
             <Grid

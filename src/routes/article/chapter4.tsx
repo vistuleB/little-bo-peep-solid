@@ -8,6 +8,7 @@ import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
 import { Item, List }  from "~/components/List";
 import { Math, MathBlock }  from "~/components/Math";
+import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageLeft, ImageRight }  from "~/components/SideImage";
@@ -1723,13 +1724,13 @@ const Rest = () => {
           </b>
           {" "}
           Coming briefly back to {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter3#_60_h.a.i_"
             class="out-chapter-link"
           >
             Chapter 3
-          </a>
-          &#8288;-related
+          </OutChapterLink>
+          -related
           matters, if
         </OuterP>
         <Pause />
@@ -1791,13 +1792,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           goes back to {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter3#_42_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 5 of Chapter 3
-          </a>
-          &#8288;, with
+          </OutChapterLink>
+          , with
           the little circle {" "}
           <NoBreak>
             “
@@ -1832,13 +1833,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           of functions already appear in {" "}
-          <a
+          <OutChapterLink
             href="/article/chapter3#_55_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 17 of Chapter 3
-          </a>
-          &#8288;, also. (On the other hand, the
+          </OutChapterLink>
+          , also. (On the other hand, the
           quotient (i.e. {" "}
           <NoBreak>
             <Math>
@@ -5769,13 +5770,13 @@ const Rest = () => {
                 of function addition, but it is easy to prove!
                 (For other proofs see Exercise 32, Exercise 33, as
                 well as Exercise 9, {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter3#_60_h.a.i_"
                   class="out-chapter-link"
                 >
                   Chapter 3
-                </a>
-                &#8288;.)
+                </OutChapterLink>
+                .)
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -5927,13 +5928,13 @@ const Rest = () => {
               based on input-output behavior: two functions are
               equal if and only if every input is mapped to the
               same output under either function. See {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter3#_46_h.a.i_"
                 class="out-chapter-link"
               >
                 Note 6, Exercise 9, Chapter 3
-              </a>
-              &#8288;.)
+              </OutChapterLink>
+              .)
             </OuterP>
             <OuterP class="indent-10">
               Starting up,
@@ -6066,13 +6067,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 (if you recall that one) in {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter3#_47_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 9 of Chapter 3
-                </a>
-                &#8288;.
+                </OutChapterLink>
+                .
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -8778,13 +8779,13 @@ const Rest = () => {
               </i>
               {" "} (already encountered
               in {" "}
-              <a
+              <OutChapterLink
                 href="/article/chapter3#_44_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 3, Exercise 7
-              </a>
-              &#8288;).
+              </OutChapterLink>
+              ).
               Knowing that this function is the {" "}
               <NoBreak>
                 <Math>

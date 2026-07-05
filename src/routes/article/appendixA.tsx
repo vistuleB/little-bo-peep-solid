@@ -10,6 +10,7 @@ import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
 import { Item }  from "~/components/List";
 import { MathBlock, Math }  from "~/components/Math";
+import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
@@ -1291,13 +1292,13 @@ export default function __AppendixA__() {
               <Pause />
               <OuterP>
                 The velocity vector (cf. {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_74_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 13
-                </a>
-                &#8288;) is therefore about
+                </OutChapterLink>
+                ) is therefore about
               </OuterP>
               <Pause />
               <MathBlock>
@@ -1321,13 +1322,13 @@ export default function __AppendixA__() {
                 {" "}
                 and the speed, being the length of the velocity
                 vector (cf. {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_74_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 13
-                </a>
-                &#8288;), is about
+                </OutChapterLink>
+                ), is about
               </OuterP>
               <Pause />
               <MathBlock>
@@ -1594,13 +1595,13 @@ export default function __AppendixA__() {
                   </Math>
                 </NoBreak>
                 {" "} {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_89_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 26
-                </a>
-                &#8288;),
+                </OutChapterLink>
+                ),
                 this would indicate that
                 the curve (which is a quarter-circle, as
                 all curves in this maze) has radius
@@ -3225,13 +3226,13 @@ export default function __AppendixA__() {
             <Solution>
               <OuterP>
                 Recall the curves from {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_74_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 13
-                </a>
-                &#8288;:
+                </OutChapterLink>
+                :
               </OuterP>
               <Pause />
               <Image src="/build-img/svgo-svg/X2nI.svg" />
@@ -3311,13 +3312,13 @@ export default function __AppendixA__() {
                 </NoBreak>
                 {" "} as discussed
                 in Exercise 14 of {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter3#_60_h.a.i_"
                   class="out-chapter-link"
                 >
                   Chapter 3
-                </a>
-                &#8288;. (Well, this shows
+                </OutChapterLink>
+                . (Well, this shows
                 one solution, at least.)
               </OuterP>
             </Solution>
@@ -3352,13 +3353,13 @@ export default function __AppendixA__() {
                 {" "} [“two
                 x”] vertical dilation of the graph in 
                 {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_74_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 13
-                </a>
-                &#8288;.) Should we use 
+                </OutChapterLink>
+                .) Should we use 
                 a circle of radius {" "}
                 <NoBreak>
                   <Math>
@@ -3396,23 +3397,23 @@ export default function __AppendixA__() {
                 values go through one cycle in the same
                 amount of time as the particles of
                 {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_74_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 13
-                </a>
-                &#8288;, but the circle has twice the
+                </OutChapterLink>
+                , but the circle has twice the
                 circumference (having twice the radius),
                 so the particles are going twice as fast!
                 (I.e.: speed 2, since the particles of
                 {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_74_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 13
-                </a>
+                </OutChapterLink>
                 {" "} have unit speed.)
               </OuterP>
               <Pause />
@@ -5576,13 +5577,13 @@ export default function __AppendixA__() {
               <Pause />
               <OuterP>
                 and prove your answer. (Comparison: {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter5#_150_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 56
-                </a>
-                &#8288;.)
+                </OutChapterLink>
+                .)
               </OuterP>
             </ExerciseStatement>
             <Solution>
@@ -5637,13 +5638,13 @@ export default function __AppendixA__() {
                   ,
                 </NoBreak>
                 {" "} as uncovered in {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter5#_150_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 56
-                </a>
-                &#8288;,
+                </OutChapterLink>
+                ,
                 from which the following graphic is recovered:
               </OuterP>
               <Pause />
@@ -5719,20 +5720,20 @@ export default function __AppendixA__() {
               <OuterP>
                 Now you might recall from previous discussions
                 (cf. {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter3#_52_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 14 of Chapter 3
-                </a>
-                &#8288;,
+                </OutChapterLink>
+                ,
                 part 1 of {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter5#_127_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 33
-                </a>
+                </OutChapterLink>
                 {" "} in this chapter) that
               </OuterP>
               <Pause />
@@ -8615,13 +8616,13 @@ export default function __AppendixA__() {
               </OuterP>
               <OuterP class="indent-10">
                 As discussed in {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter4#_74_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 13
-                </a>
-                &#8288;, the function
+                </OutChapterLink>
+                , the function
               </OuterP>
               <Pause />
               <MathBlock>
@@ -9102,12 +9103,12 @@ export default function __AppendixA__() {
                   $y = \cos x + \sin x$
                 </Math>
                 {" "} from {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter5#_146_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 52
-                </a>
+                </OutChapterLink>
                 {" "} has a maximum value greater than {" "}
                 <NoBreak>
                   <Math>
@@ -9526,12 +9527,12 @@ export default function __AppendixA__() {
                   $y = \cos(x) + \sin(x)$
                 </Math>
                 {" "} from {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter5#_146_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 52
-                </a>
+                </OutChapterLink>
                 {" "} has a maximum value greater than {" "}
                 <NoBreak>
                   <Math>

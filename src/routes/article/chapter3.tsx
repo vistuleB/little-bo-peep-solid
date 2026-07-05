@@ -9,6 +9,7 @@ import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
 import { Item }  from "~/components/List";
 import { MathBlock, Math }  from "~/components/Math";
+import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
@@ -6385,13 +6386,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 as briefly flashed by, e.g., in {" "}
-                <a
+                <OutChapterLink
                   href="/article/chapter1#_29_h.a.i_"
                   class="out-chapter-link"
                 >
                   Chapter 1
-                </a>
-                &#8288;.
+                </OutChapterLink>
+                .
               </OuterP>
             </SolutionNote>
           </Solution>
