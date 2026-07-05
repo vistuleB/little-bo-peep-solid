@@ -18,6 +18,18 @@ import SharedProps from "./types/SharedProps";
 
 const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN_PX}px`;
 
+type MathJaxFallbackEntry = {
+  ref: HTMLElement;
+  visible: Accessor<boolean>;
+  setVisible: Setter<boolean>;
+  setScrollHeight: () => void;
+  afterTypeset?: () => void;
+  typesetting: boolean;
+};
+
+const mathJaxFallbackEntries = new Set<MathJaxFallbackEntry>();
+let mathJaxFallbackTimeout: number | undefined;
+
 const nearMathJaxObserverViewport = (el: HTMLElement) => {
   const rect = el.getBoundingClientRect();
   return (
@@ -26,17 +38,78 @@ const nearMathJaxObserverViewport = (el: HTMLElement) => {
   );
 };
 
-const typesetMath = async (
-  ref: HTMLElement | undefined,
-  visible: Accessor<boolean>,
-  setVisible: Setter<boolean>,
-  setScrollHeight: () => void,
-) => {
-  if (!ref || visible()) return false;
-  await (window as any).MathJax.typesetPromise([ref]);
-  setVisible(true);
-  setScrollHeight();
+const completeTypeset = (entry: MathJaxFallbackEntry) => {
+  if (entry.visible()) return false;
+
+  entry.setVisible(true);
+  entry.setScrollHeight();
+  entry.afterTypeset?.();
   return true;
+};
+
+const typesetMath = async (entry: MathJaxFallbackEntry) => {
+  if (entry.visible() || entry.typesetting) return false;
+
+  entry.typesetting = true;
+  await (window as any).MathJax.typesetPromise([entry.ref]);
+  entry.typesetting = false;
+  return completeTypeset(entry);
+};
+
+const runMathJaxFallbackSweep = async () => {
+  mathJaxFallbackTimeout = undefined;
+
+  const entries = [...mathJaxFallbackEntries].filter(
+    (entry) =>
+      !entry.visible() &&
+      !entry.typesetting &&
+      nearMathJaxObserverViewport(entry.ref),
+  );
+
+  if (entries.length === 0) return;
+
+  entries.forEach((entry) => {
+    entry.typesetting = true;
+  });
+
+  await (window as any).MathJax.typesetPromise(
+    entries.map((entry) => entry.ref),
+  );
+
+  entries.forEach((entry) => {
+    entry.typesetting = false;
+    completeTypeset(entry);
+  });
+};
+
+const scheduleMathJaxFallbackSweep = () => {
+  if (
+    !ENABLE_MATHJAX_INTERSECTION_FALLBACK ||
+    mathJaxFallbackTimeout !== undefined
+  ) {
+    return;
+  }
+
+  mathJaxFallbackTimeout = window.setTimeout(
+    runMathJaxFallbackSweep,
+    MATHJAX_INTERSECTION_FALLBACK_DELAY_MS,
+  );
+};
+
+const registerMathJaxFallback = (
+  entry: MathJaxFallbackEntry | undefined,
+) => {
+  if (!entry || !ENABLE_MATHJAX_INTERSECTION_FALLBACK) return;
+
+  mathJaxFallbackEntries.add(entry);
+  scheduleMathJaxFallbackSweep();
+};
+
+const unregisterMathJaxFallback = (
+  entry: MathJaxFallbackEntry | undefined,
+) => {
+  if (!entry) return;
+  mathJaxFallbackEntries.delete(entry);
 };
 
 export const Math = (props: ParentProps) => {
@@ -47,10 +120,19 @@ export const Math = (props: ParentProps) => {
   onMount(() => {
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
+    const mathJaxEntry = ref
+      ? {
+          ref,
+          visible,
+          setVisible,
+          setScrollHeight,
+          typesetting: false,
+        }
+      : undefined;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          typesetMath(ref, visible, setVisible, setScrollHeight);
+        if (entry.isIntersecting && mathJaxEntry) {
+          typesetMath(mathJaxEntry);
           observer.disconnect();
         }
       },
@@ -60,19 +142,11 @@ export const Math = (props: ParentProps) => {
     );
     if (ref) observer.observe(ref);
 
-    const fallbackTimeout = ENABLE_MATHJAX_INTERSECTION_FALLBACK
-      ? window.setTimeout(() => {
-          if (!ref || !nearMathJaxObserverViewport(ref)) return;
-          typesetMath(ref, visible, setVisible, setScrollHeight);
-          observer.disconnect();
-        }, MATHJAX_INTERSECTION_FALLBACK_DELAY_MS)
-      : undefined;
+    registerMathJaxFallback(mathJaxEntry);
 
     onCleanup(() => {
       observer.disconnect();
-      if (fallbackTimeout !== undefined) {
-        window.clearTimeout(fallbackTimeout);
-      }
+      unregisterMathJaxFallback(mathJaxEntry);
     });
   });
 
@@ -109,10 +183,31 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
   onMount(() => {
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
+    const measureOriginalWidth: () => boolean = () => {
+      let svg = null;
+      if (ref) {
+        svg = ref.querySelector("svg");
+        svg?.classList.add("transition-all");
+        if (svg) {
+          setOriginalWidth(svg.getBoundingClientRect().width);
+        }
+      }
+      return svg != null;
+    };
+    const mathJaxEntry = ref
+      ? {
+          ref,
+          visible,
+          setVisible,
+          setScrollHeight,
+          afterTypeset: measureOriginalWidth,
+          typesetting: false,
+        }
+      : undefined;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          typesetMath(ref, visible, setVisible, setScrollHeight);
+        if (entry.isIntersecting && mathJaxEntry) {
+          typesetMath(mathJaxEntry);
           observer.disconnect();
           if (!measureOriginalWidth()) {
             console.log("failed to measure width once");
@@ -134,34 +229,9 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
       observer.observe(ref);
     }
 
-    const measureOriginalWidth: () => boolean = () => {
-      let svg = null;
-      if (ref) {
-        svg = ref.querySelector("svg");
-        svg?.classList.add("transition-all");
-        if (svg) {
-          setOriginalWidth(svg.getBoundingClientRect().width);
-        }
-      }
-      return svg != null;
-    };
-
     setTimeout(measureOriginalWidth, 50);
 
-    const fallbackTimeout = ENABLE_MATHJAX_INTERSECTION_FALLBACK
-      ? window.setTimeout(async () => {
-          if (!ref || !nearMathJaxObserverViewport(ref)) return;
-          const didTypeset = await typesetMath(
-            ref,
-            visible,
-            setVisible,
-            setScrollHeight,
-          );
-          if (!didTypeset) return;
-          observer.disconnect();
-          measureOriginalWidth();
-        }, MATHJAX_INTERSECTION_FALLBACK_DELAY_MS)
-      : undefined;
+    registerMathJaxFallback(mathJaxEntry);
 
     const handleResize = () => {
       let oldInnerWidth = localInnerWidthCopy();
@@ -175,9 +245,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
 
     onCleanup(() => {
       observer.disconnect();
-      if (fallbackTimeout !== undefined) {
-        window.clearTimeout(fallbackTimeout);
-      }
+      unregisterMathJaxFallback(mathJaxEntry);
       window.removeEventListener("resize", handleResize);
     });
   });

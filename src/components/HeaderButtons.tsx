@@ -31,39 +31,47 @@ const ButtonsContainer = (props: ParentProps) => {
   const [buttonOpacity, setButtonOpacity] = createSignal(1);
   const [borderOpacity, setBorderOpacity] = createSignal(1);
 
-  const calcButtonOpacity = () => {
+  const currentScrollY = () => window.scrollY;
+
+  const calcButtonOpacity = (scrollY = currentScrollY()) => {
     return Math.min(
       1.0,
       Math.max(
         0,
         1.0 -
-          (store.scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) /
+          (scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) /
             (HAMBURGER_MENU_SCROLLY_END_FADE -
               HAMBURGER_MENU_SCROLLY_START_FADE)
       )
     );
   };
 
-  const calcBorderOpacity = () => {
+  const calcBorderOpacity = (scrollY = currentScrollY()) => {
     return Math.min(
       1.0,
       Math.max(
         0,
         1.0 -
-          (store.scrollY - BOTTOM_BORDER_SCROLLY_START_FADE) /
+          (scrollY - BOTTOM_BORDER_SCROLLY_START_FADE) /
             (BOTTOM_BORDER_SCROLLY_END_FADE - BOTTOM_BORDER_SCROLLY_START_FADE)
       )
     );
   };
 
+  const navbarVisible = () =>
+    on_mobile() || currentScrollY() < HAMBURGER_MENU_HEIGHT;
+
   const controlsPinnedVisible = () =>
-    open() || on_mobile() || store.loading || store.scroll_is_at_0;
+    open() ||
+    on_mobile() ||
+    (store.loading && navbarVisible()) ||
+    store.scroll_is_at_0;
 
   const borderPinnedVisible = () =>
-    on_mobile() || store.loading || store.scroll_is_at_0;
+    on_mobile() || (store.loading && navbarVisible()) || store.scroll_is_at_0;
 
   const nearTopDesktopBorderVisible = () =>
-    !on_mobile() && !open() && store.scrollY < 2 * HAMBURGER_MENU_HEIGHT;
+    !on_mobile() && !open() && currentScrollY() < 2 * HAMBURGER_MENU_HEIGHT;
 
   const finalButtonOpacity = () => {
     return controlsPinnedVisible()
@@ -84,8 +92,9 @@ const ButtonsContainer = (props: ParentProps) => {
   };
 
   const handleScroll = () => {
-    setButtonOpacity(calcButtonOpacity());
-    setBorderOpacity(calcBorderOpacity());
+    const scrollY = currentScrollY();
+    setButtonOpacity(calcButtonOpacity(scrollY));
+    setBorderOpacity(calcBorderOpacity(scrollY));
   };
 
   createEffect(() => {
@@ -108,7 +117,7 @@ const ButtonsContainer = (props: ParentProps) => {
             right: "0px",
             width: "100%",
             height:
-              store.scrollY <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
+              currentScrollY() <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
               !on_mobile() &&
               store.scrollX + store.innerWidth >=
                 store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2
