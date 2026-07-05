@@ -62,6 +62,8 @@
         and whose outputs denote British pounds. 
 
 |> Section
+    split_here=Rest
+
     *Dimensionless units.*
     There is a special unit that we denote
 
@@ -181,7 +183,7 @@
 
     |> Image
         handle=table_1_1
-        src=tmp-images/c6_flowers_here_v3.svg
+        src=images/c6_flowers_here_v3.svg
 
     ...summarizing the constraints that appear at the
     input (“component signatures”) and output (“resultant
@@ -200,7 +202,7 @@
 
     |> Image
         handle=table_1_2
-        src=tmp-images/c6_flowers_here_two_more_v2.svg
+        src=images/c6_flowers_here_two_more_v2.svg
 
     [*See [Chapter >>trigonometry#decoy:5 §>>trigonometry-derivatives#decoy:2](>>negation-of-a-function-first-mention).]
 
@@ -257,7 +259,7 @@
     depicted here as an eye-of-Godzilla flying saucer: 
 
     |> Image
-        src=tmp-images/c6_differentiation_operator_intro_v2.svg
+        src=images/c6_differentiation_operator_intro_v2.svg
 
     Though similarly, the
     unary function
@@ -266,7 +268,7 @@
     as input and producing one function as output:
 
     |> Image
-        src=tmp-images/c6_negation_operator_v2.svg
+        src=images/c6_negation_operator_v2.svg
 
     The other function operations from Table 1.1
     are also operators, albeit
@@ -278,8 +280,8 @@
     can be depicted as a two-input-tube-flying-saucer:
 
     |> Image
-        !! src=tmp-images/c6_addition_operator_standalone.svg
-        src=tmp-images/c6_addition_operator_standalone_v2.svg
+        !! src=images/c6_addition_operator_standalone.svg
+        src=images/c6_addition_operator_standalone_v2.svg
 
     In this fashion, the complete list of all
     operators that we have dealt with so far, similarly
