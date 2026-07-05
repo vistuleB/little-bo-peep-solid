@@ -388,6 +388,23 @@ table.first-line tr td:first-child {
   );
 }
 
+.mathblock-background-divide {
+  background-image: linear-gradient(
+      to bottom,
+      #ffffff00 0%,
+      #ffffff00 50%,
+      #00000033 50%,
+      #00000033 100%
+    ),
+    linear-gradient(
+      to right,
+      #d1d1f7 0%,
+      #d1d1f7 50%,
+      #e6bbff 50%,
+      #e6bbff 100%
+    );
+}
+
 .dots {
   flex-grow: 1;
   height: 2px;

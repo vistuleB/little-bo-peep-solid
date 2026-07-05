@@ -15,6 +15,7 @@ import {
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import SharedProps from "./types/SharedProps";
+import { twJoin } from "tailwind-merge";
 
 const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN_PX}px`;
 
@@ -285,7 +286,10 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
   return (
     <div
       id={props.id}
-      class={`mathblock transition-all`}
+      class={twJoin(
+        "mathblock transition-all",
+        store.show_areas && "mathblock-background-divide",
+      )}
       style={{ opacity: visible() ? "1" : "0" }}
       onClick={handleClick}
       ref={ref}
