@@ -146,15 +146,6 @@ export default function __Chapter6__() {
           “that which relates to units”, so we have this catch-all instead.
         </OuterP>
       </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const visibleRestSections = useShowMore(11);
-  return <>
-    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -267,9 +258,16 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
       <Pause />
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const visibleRestSections = useShowMore(10);
+  return <>
+    {visibleRestSections() > 0 && <>
       <Section id="section-3">
         <OuterP>
           <b>
@@ -455,7 +453,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 2 && <>
+    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -538,7 +536,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_v3.svg"
+          src="/build-img/svgo-svg/-9Yt.svg"
           id="_156_h.a.i_"
         />
         <Pause />
@@ -549,7 +547,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 3 && <>
+    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -583,7 +581,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_two_more_v2.svg"
+          src="/build-img/svgo-svg/jdJ7.svg"
           id="_157_h.a.i_"
         />
         <Pause />
@@ -599,7 +597,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 4 && <>
+    {visibleRestSections() > 3 && <>
       <Pause />
       <Section
         _handle="differentiation_and_signatures"
@@ -709,7 +707,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 5 && <>
+    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -741,7 +739,7 @@ const Rest = () => {
           depicted here as an eye-of-Godzilla flying saucer:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_differentiation_operator_intro_v2.svg" />
+        <Image src="/build-img/svgo-svg/Pl1U.svg" />
         <Pause />
         <OuterP>
           Though similarly, the
@@ -758,7 +756,7 @@ const Rest = () => {
           as input and producing one function as output:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_negation_operator_v2.svg" />
+        <Image src="/build-img/svgo-svg/2YHQ.svg" />
         <Pause />
         <OuterP>
           The other function operations from Table 1.1
@@ -775,7 +773,7 @@ const Rest = () => {
           can be depicted as a two-input-tube-flying-saucer:
         </OuterP>
         <Pause />
-        <Image src="/tmp-images/c6_addition_operator_standalone_v2.svg" />
+        <Image src="/build-img/svgo-svg/A7d4.svg" />
         <Pause />
         <OuterP>
           In this fashion, the complete list of all
@@ -822,7 +820,7 @@ const Rest = () => {
         <StarDivider style="margin-top:-0.3em" />
       </Section>
     </>}
-    {visibleRestSections() > 6 && <>
+    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1400,7 +1398,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 7 && <>
+    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -1734,7 +1732,7 @@ const Rest = () => {
         </Example>
       </Section>
     </>}
-    {visibleRestSections() > 8 && <>
+    {visibleRestSections() > 7 && <>
       <Pause />
       <Section id="section-10">
         <OuterP>
@@ -2500,7 +2498,7 @@ const Rest = () => {
         </Example>
       </Section>
     </>}
-    {visibleRestSections() > 9 && <>
+    {visibleRestSections() > 8 && <>
       <Pause />
       <Section id="section-11">
         <OuterP>
@@ -2677,7 +2675,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 10 && <>
+    {visibleRestSections() > 9 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}

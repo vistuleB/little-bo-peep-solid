@@ -2342,7 +2342,7 @@ const Rest = () => {
               below, based on those units that are given:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch4_missing_units_v4.svg" />
+            <Image src="/build-img/svgo-svg/xFEG.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2365,7 +2365,7 @@ const Rest = () => {
               axis. This gives the unique solutions:
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/svg_ch4_missing_units_solution_v4.svg" />
+            <Image src="/build-img/svgo-svg/GQf4.svg" />
             <Pause />
             <OuterP>
               ...where we find units of
