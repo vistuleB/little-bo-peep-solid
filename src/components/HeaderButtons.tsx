@@ -57,7 +57,7 @@ const ButtonsContainer = (props: ParentProps) => {
   };
 
   const finalButtonOpacity = () => {
-    return open() || on_mobile() || store.scroll_is_at_0
+    return open() || on_mobile() || store.loading || store.scroll_is_at_0
       ? 1
       : store.saved_scroll_finished
         ? buttonOpacity()
@@ -65,7 +65,7 @@ const ButtonsContainer = (props: ParentProps) => {
   };
 
   const finalBorderOpacity = () => {
-    return on_mobile() || store.scroll_is_at_0
+    return on_mobile() || store.loading || store.scroll_is_at_0
       ? 1
       : store.saved_scroll_finished
         ? borderOpacity()
