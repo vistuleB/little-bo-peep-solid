@@ -28,11 +28,13 @@ const useCheckedSavedScroll = () => {
     onMount(() => {
       setTimeout(async () => {
         const scrollDuration = 200;
+        set_store("route_scroll_in_progress", true);
         await scrollToInChapter(anchorId as string, scrollDuration);
         window.setTimeout(
           () => {
             update();
             set_store("saved_scroll_finished", true);
+            set_store("route_scroll_in_progress", false);
             finishRouteLoad(location.pathname, store, set_store);
             window.addEventListener("scroll", update);
           },
@@ -60,11 +62,13 @@ const useCheckedSavedScroll = () => {
       const savedScroll = Number(localStorage.getItem(scrollKey) || "0");
       set_scroll(savedScroll);
 
+      set_store("route_scroll_in_progress", true);
       window.scrollTo(
         (document.body.scrollWidth - window.innerWidth) / 2,
         savedScroll,
       );
       set_store("saved_scroll_finished", true);
+      set_store("route_scroll_in_progress", false);
       finishRouteLoad(location.pathname, store, set_store);
 
       window.addEventListener("scroll", updateScroll);

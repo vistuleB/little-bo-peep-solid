@@ -63,5 +63,6 @@ export const finishRouteLoad = (
 
   set_store("pending_route_started_at", 0);
   set_store("pending_route_path", "");
+  set_store("route_scroll_in_progress", false);
   set_store("loading", false);
 };

@@ -28,6 +28,7 @@ export type Store = {
   content_loaded: boolean;
   saved_scroll_finished: boolean;
   suppress_scroll_memory: boolean;
+  route_scroll_in_progress: boolean;
   scroll_is_at_0: boolean;
   margin_mode: boolean;
   pageNecessaryMargin: number;
@@ -62,6 +63,7 @@ const [store, set_store] = createStore<Store>({
   content_loaded: false,
   saved_scroll_finished: false,
   suppress_scroll_memory: false,
+  route_scroll_in_progress: false,
   scroll_is_at_0: false,
   margin_mode: false,
   pageNecessaryMargin: 0,

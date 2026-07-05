@@ -74,6 +74,8 @@ const ButtonsContainer = (props: ParentProps) => {
   };
 
   const finalBorderOpacity = () => {
+    if (store.route_scroll_in_progress) return 0;
+
     return borderPinnedVisible() || nearTopDesktopBorderVisible()
       ? 1
       : store.saved_scroll_finished
