@@ -62,6 +62,9 @@ const ButtonsContainer = (props: ParentProps) => {
   const borderPinnedVisible = () =>
     on_mobile() || store.loading || store.scroll_is_at_0;
 
+  const nearTopDesktopBorderVisible = () =>
+    !on_mobile() && !open() && store.scrollY < 2 * HAMBURGER_MENU_HEIGHT;
+
   const finalButtonOpacity = () => {
     return controlsPinnedVisible()
       ? 1
@@ -71,7 +74,7 @@ const ButtonsContainer = (props: ParentProps) => {
   };
 
   const finalBorderOpacity = () => {
-    return borderPinnedVisible()
+    return borderPinnedVisible() || nearTopDesktopBorderVisible()
       ? 1
       : store.saved_scroll_finished
         ? borderOpacity()
@@ -94,13 +97,7 @@ const ButtonsContainer = (props: ParentProps) => {
   return (
     <>
       <div
-        class={twJoin(
-          "fixed right-0 h-14",
-          !on_mobile() &&
-            !open() &&
-            store.scrollY < 2 * HAMBURGER_MENU_HEIGHT &&
-            "border-b border-[var(--nav-border)]"
-        )}
+        class="fixed right-0 h-14"
       >
         {/* the large-height background */}
         <div
