@@ -23,6 +23,7 @@ type MathJaxFallbackEntry = {
   visible: Accessor<boolean>;
   setVisible: Setter<boolean>;
   setScrollHeight: () => void;
+  routeReady: Accessor<boolean>;
   afterTypeset?: () => void;
   typesetting: boolean;
 };
@@ -59,14 +60,22 @@ const typesetMath = async (entry: MathJaxFallbackEntry) => {
 const runMathJaxFallbackSweep = async () => {
   mathJaxFallbackTimeout = undefined;
 
-  const entries = [...mathJaxFallbackEntries].filter(
+  const pendingEntries = [...mathJaxFallbackEntries].filter(
     (entry) =>
       !entry.visible() &&
-      !entry.typesetting &&
-      nearMathJaxObserverViewport(entry.ref),
+      !entry.typesetting,
   );
 
-  if (entries.length === 0) return;
+  const entries = pendingEntries.filter(
+    (entry) => entry.routeReady() && nearMathJaxObserverViewport(entry.ref),
+  );
+
+  if (entries.length === 0) {
+    if (pendingEntries.some((entry) => !entry.routeReady())) {
+      scheduleMathJaxFallbackSweep();
+    }
+    return;
+  }
 
   entries.forEach((entry) => {
     entry.typesetting = true;
@@ -115,17 +124,22 @@ const unregisterMathJaxFallback = (
 export const Math = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
   const [visible, setVisible] = createSignal(false);
-  const { set_store } = useGlobalContext();
+  const { store, set_store } = useGlobalContext();
 
   onMount(() => {
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
+    const routeReady = () =>
+      !store.loading &&
+      !store.route_scroll_in_progress &&
+      store.saved_scroll_finished;
     const mathJaxEntry = ref
       ? {
           ref,
           visible,
           setVisible,
           setScrollHeight,
+          routeReady,
           typesetting: false,
         }
       : undefined;
@@ -183,6 +197,10 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
   onMount(() => {
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
+    const routeReady = () =>
+      !store.loading &&
+      !store.route_scroll_in_progress &&
+      store.saved_scroll_finished;
     const measureOriginalWidth: () => boolean = () => {
       let svg = null;
       if (ref) {
@@ -200,6 +218,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
           visible,
           setVisible,
           setScrollHeight,
+          routeReady,
           afterTypeset: measureOriginalWidth,
           typesetting: false,
         }
