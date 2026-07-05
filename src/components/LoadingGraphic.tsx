@@ -1,9 +1,7 @@
 import { onMount, createSignal, onCleanup } from "solid-js";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
-import { useGlobalContext } from "~/store/StoreProvider";
 
 const LoadingGraphic = () => {
-  const { store, set_store } = useGlobalContext();
   const [ms, setMs] = createSignal(0);
   const [_interval, _setInterval] = createSignal<NodeJS.Timeout | null>(null);
   const startTime = performance.now();
@@ -14,10 +12,6 @@ const LoadingGraphic = () => {
   });
 
   onCleanup(() => {
-    let delta = performance.now() - startTime;
-    set_store("last_page_load_ms", delta);
-    set_store("total_page_load_ms", store.total_page_load_ms + delta);
-    set_store("num_page_loads", store.num_page_loads + 1);
     clearInterval(_interval()!);
   });
 

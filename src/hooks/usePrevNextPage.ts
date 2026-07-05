@@ -1,11 +1,11 @@
 import { useNavigate, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { startRouteLoad } from "~/utils/routeLoading";
 
 const usePrevNextPage = () => {
   const { store, set_store } = useGlobalContext();
   const navigate = useNavigate();
   const location = useLocation();
-  const clearCurrentPage = () => set_store("loading", true);
   const prevDisabled = () => store.prevPage === "";
   const nextDisabled = () => store.nextPage === "";
   const getPrevPage = () => getPage(store.prevPage);
@@ -59,7 +59,7 @@ const usePrevNextPage = () => {
     if (!pageHasHash(page)) {
       scrollToTopForTopSavedTarget(page);
     }
-    clearCurrentPage();
+    startRouteLoad(page, store, set_store);
     if (store.navigation_delays) {
       setTimeout(
         () => {

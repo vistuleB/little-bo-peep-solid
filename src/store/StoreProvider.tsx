@@ -7,6 +7,11 @@ import {
 import { SetStoreFunction } from "solid-js/store";
 import { createStore } from "solid-js/store";
 
+export type RouteLoadMemory = {
+  loadMs: number;
+  measuredAt: number;
+};
+
 export type Store = {
   panel_opened: boolean;
   show_section_dividers: boolean;
@@ -34,6 +39,9 @@ export type Store = {
   last_page_load_ms: number;
   total_page_load_ms: number;
   num_page_loads: number;
+  pending_route_started_at: number;
+  pending_route_path: string;
+  route_load_memory: Record<string, RouteLoadMemory>;
   navigation_delays: boolean;
   animations: boolean;
 };
@@ -65,6 +73,9 @@ const [store, set_store] = createStore<Store>({
   last_page_load_ms: 0,
   total_page_load_ms: 0,
   num_page_loads: 0,
+  pending_route_started_at: 0,
+  pending_route_path: "",
+  route_load_memory: {},
   navigation_delays: false,
   animations: false,
 });

@@ -2,6 +2,7 @@ import { useLocation, useSearchParams } from "@solidjs/router";
 import { createEffect, createSignal, onCleanup, onMount, untrack } from "solid-js";
 import useScrollToInChapter from "./useScrollToInChapter";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { finishRouteLoad } from "~/utils/routeLoading";
 
 const useCheckedSavedScroll = () => {
   const [searchParams, _] = useSearchParams();
@@ -32,7 +33,7 @@ const useCheckedSavedScroll = () => {
           () => {
             update();
             set_store("saved_scroll_finished", true);
-            set_store("loading", false);
+            finishRouteLoad(location.pathname, store, set_store);
             window.addEventListener("scroll", update);
           },
           store.animations ? scrollDuration + 50 : 0,
@@ -64,7 +65,7 @@ const useCheckedSavedScroll = () => {
         savedScroll,
       );
       set_store("saved_scroll_finished", true);
-      set_store("loading", false);
+      finishRouteLoad(location.pathname, store, set_store);
 
       window.addEventListener("scroll", updateScroll);
     }, 100);
