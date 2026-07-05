@@ -7,8 +7,11 @@ import {
 import { SetStoreFunction } from "solid-js/store";
 import { createStore } from "solid-js/store";
 
+export type RouteLoadTarget = "top" | "saved-scroll" | "hash";
+
 export type RouteLoadMemory = {
-  loadMs: number;
+  firstContentPaintMs?: number;
+  routeReadyMs?: number;
   measuredAt: number;
 };
 
@@ -42,6 +45,7 @@ export type Store = {
   num_page_loads: number;
   pending_route_started_at: number;
   pending_route_path: string;
+  pending_route_target: RouteLoadTarget;
   route_load_memory: Record<string, RouteLoadMemory>;
   navigation_delays: boolean;
   animations: boolean;
@@ -77,6 +81,7 @@ const [store, set_store] = createStore<Store>({
   num_page_loads: 0,
   pending_route_started_at: 0,
   pending_route_path: "",
+  pending_route_target: "top",
   route_load_memory: {},
   navigation_delays: false,
   animations: false,

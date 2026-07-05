@@ -1,9 +1,11 @@
-import { ParentProps } from "solid-js";
+import { onCleanup, onMount, ParentProps } from "solid-js";
 import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
 import { ExerciseGroupRegistryProvider } from "~/store/ExerciseGroupRegistryProvider";
 import PageTopBottomArrows from "./PageTopBottomArrows";
 import Page from "./Page";
 import PageUpDownArrows from "./PageUpDownArrows";
+import { useGlobalContext } from "~/store/StoreProvider";
+import { recordFirstContentPaint } from "~/utils/routeLoading";
 
 type ArticleProps = {
   id?: string;
@@ -31,6 +33,23 @@ const Article = (props: ParentProps & ArticleProps) => {
 };
 
 const ArticleScrollCoordinator = (props: ParentProps) => {
+  const { store, set_store } = useGlobalContext();
+  let firstFrame = 0;
+  let secondFrame = 0;
+
+  onMount(() => {
+    firstFrame = requestAnimationFrame(() => {
+      secondFrame = requestAnimationFrame(() => {
+        recordFirstContentPaint(location.pathname, store, set_store);
+      });
+    });
+  });
+
+  onCleanup(() => {
+    cancelAnimationFrame(firstFrame);
+    cancelAnimationFrame(secondFrame);
+  });
+
   useCheckedSavedScroll();
   return <>{props.children}</>;
 };

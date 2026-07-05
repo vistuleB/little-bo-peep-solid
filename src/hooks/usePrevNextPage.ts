@@ -1,6 +1,7 @@
 import { useNavigate, useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { startRouteLoad } from "~/utils/routeLoading";
+import { RouteLoadTarget } from "~/store/StoreProvider";
 
 const usePrevNextPage = () => {
   const { store, set_store } = useGlobalContext();
@@ -23,6 +24,11 @@ const usePrevNextPage = () => {
   };
 
   const pageHasHash = (page: string) => page.includes("#");
+
+  const routeLoadTarget = (page: string): RouteLoadTarget => {
+    if (pageHasHash(page)) return "hash";
+    return targetHasSavedTopScroll(page) ? "top" : "saved-scroll";
+  };
 
   const currentScrollKey = () => {
     const article = articleFromPath(location.pathname);
@@ -76,7 +82,7 @@ const usePrevNextPage = () => {
     } else {
       scrollToTopForTopSavedTarget(page);
     }
-    startRouteLoad(page, store, set_store);
+    startRouteLoad(page, routeLoadTarget(page), store, set_store);
     if (store.navigation_delays) {
       setTimeout(
         () => {

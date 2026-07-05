@@ -2,6 +2,8 @@ import { createSignal, onCleanup, onMount } from "solid-js";
 
 const useShowMore = (targetCount = 1) => {
   const [showMoreCount, setShowMoreCount] = createSignal(0);
+  let firstDelayFrame = 0;
+  let secondDelayFrame = 0;
   let frame = 0;
 
   onMount(() => {
@@ -15,10 +17,14 @@ const useShowMore = (targetCount = 1) => {
       });
     };
 
-    frame = requestAnimationFrame(showNext);
+    firstDelayFrame = requestAnimationFrame(() => {
+      secondDelayFrame = requestAnimationFrame(showNext);
+    });
   });
 
   onCleanup(() => {
+    cancelAnimationFrame(firstDelayFrame);
+    cancelAnimationFrame(secondDelayFrame);
     cancelAnimationFrame(frame);
   });
 
