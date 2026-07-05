@@ -118,23 +118,6 @@ export default function __Chapter4__() {
           </i>
           {" "} of a function
         </OuterP>
-        <OuterP class="indent-10">
-          (&#8288;
-          <InChapterLink
-            href="/article/chapter4#_74_h.a.i_"
-            class="in-chapter-link"
-          >
-            Note 13
-          </InChapterLink>
-          {" "} of {" "}
-          <InChapterLink
-            href="/article/chapter4#_93_h.a.i_"
-            class="in-chapter-link"
-          >
-            Chapter 4
-          </InChapterLink>
-          &#8288;.)
-        </OuterP>
         <Pause />
         <MathBlock>
           $$
@@ -290,9 +273,9 @@ export default function __Chapter4__() {
 }
 
 const Rest = () => {
-  const showMore = useShowMore();
+  const visibleRestSections = useShowMore(11);
   return <>
-    {showMore() && <>
+    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -380,6 +363,8 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -434,6 +419,8 @@ const Rest = () => {
           (Well, charming in our opinion, at least.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -551,6 +538,8 @@ const Rest = () => {
           (the way people usually state it).
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -788,6 +777,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -983,6 +974,8 @@ const Rest = () => {
           keeps changing from point to point.
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -1199,6 +1192,8 @@ const Rest = () => {
         <Pause />
         <StarDivider style="margin-top:-0.5em;margin-bottom:0em" />
       </Section>
+    </>}
+    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1296,6 +1291,8 @@ const Rest = () => {
           of a significant change in slope, once again).
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 7 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -1382,6 +1379,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 8 && <>
       <Pause />
       <Section id="section-10">
         <OuterP>
@@ -1623,6 +1622,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 9 && <>
       <Pause />
       <Section id="section-11">
         <OuterP>
@@ -1864,6 +1865,8 @@ const Rest = () => {
           {" "} familiar!)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 10 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}

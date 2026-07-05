@@ -362,9 +362,9 @@ export default function __Chapter3__() {
 }
 
 const Rest = () => {
-  const showMore = useShowMore();
+  const visibleRestSections = useShowMore(13);
   return <>
-    {showMore() && <>
+    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -533,6 +533,8 @@ const Rest = () => {
           with other existing variable names.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -649,6 +651,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -707,6 +711,8 @@ const Rest = () => {
           .)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -869,6 +875,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -1054,6 +1062,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -1188,6 +1198,8 @@ const Rest = () => {
           following the pattern above.
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1345,6 +1357,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 7 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -1408,6 +1422,8 @@ const Rest = () => {
           (Pretty cool, no?)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 8 && <>
       <Pause />
       <Section id="section-10">
         <OuterP>
@@ -1609,6 +1625,8 @@ const Rest = () => {
           useful.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 9 && <>
       <Pause />
       <Section id="section-11">
         <OuterP>
@@ -1707,6 +1725,8 @@ const Rest = () => {
           as a “function”, arrow or no arrow.
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 10 && <>
       <Pause />
       <Section id="section-12">
         <OuterP>
@@ -1889,6 +1909,8 @@ const Rest = () => {
           src="/build-img/svgo-svg/wfGL.svg"
         />
       </Section>
+    </>}
+    {visibleRestSections() > 11 && <>
       <Pause />
       <Section id="section-13">
         <OuterP>
@@ -2027,6 +2049,8 @@ const Rest = () => {
           {" "} namely.
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 12 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}

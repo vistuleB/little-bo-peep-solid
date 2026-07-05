@@ -687,9 +687,9 @@ export default function __Chapter5__() {
 }
 
 const Rest = () => {
-  const showMore = useShowMore();
+  const visibleRestSections = useShowMore(19);
   return <>
-    {showMore() && <>
+    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -1000,6 +1000,8 @@ const Rest = () => {
           signs again!
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -1178,6 +1180,8 @@ const Rest = () => {
           diagram, e.g..
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -1273,6 +1277,8 @@ const Rest = () => {
           input!
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -1374,6 +1380,8 @@ const Rest = () => {
           (The definition of function multiplication!)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -1593,6 +1601,8 @@ const Rest = () => {
           this one.) Etc.
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -1798,6 +1808,8 @@ const Rest = () => {
         <Pause />
         <TildeDivider style="margin-top:-1em" />
       </Section>
+    </>}
+    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1896,6 +1908,8 @@ const Rest = () => {
           .
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 7 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -2332,6 +2346,8 @@ const Rest = () => {
         <Pause />
         <Image src="/build-img/svgo-svg/tDhP.svg" />
       </Section>
+    </>}
+    {visibleRestSections() > 8 && <>
       <Pause />
       <Section id="section-10">
         <OuterP>
@@ -2427,6 +2443,8 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 9 && <>
       <Pause />
       <Section id="section-11">
         <OuterP>
@@ -2667,6 +2685,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 10 && <>
       <Pause />
       <Section id="section-12">
         <OuterP>
@@ -2886,6 +2906,8 @@ const Rest = () => {
           .
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 11 && <>
       <Pause />
       <Section id="section-13">
         <OuterP>
@@ -3043,6 +3065,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 12 && <>
       <Pause />
       <Section id="section-14">
         <OuterP>
@@ -3150,6 +3174,8 @@ const Rest = () => {
           “utility” of the diagram might be!)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 13 && <>
       <Pause />
       <Section id="section-15">
         <OuterP>
@@ -3432,6 +3458,8 @@ const Rest = () => {
           of the original inequality.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 14 && <>
       <Pause />
       <Section id="section-16">
         <OuterP>
@@ -3726,6 +3754,8 @@ const Rest = () => {
           arc, and that claims a strict inequality.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 15 && <>
       <Pause />
       <Section id="section-17">
         <OuterP>
@@ -3912,6 +3942,8 @@ const Rest = () => {
           that way, at least.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 16 && <>
       <Pause />
       <Section id="section-18">
         <OuterP>
@@ -4239,6 +4271,8 @@ const Rest = () => {
           which preserves north-south distances.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 17 && <>
       <Pause />
       <Section
         work="ing"
@@ -4287,6 +4321,8 @@ const Rest = () => {
           case, that you're in the mode that you want.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 18 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}

@@ -10257,9 +10257,7 @@ export default function __AppendixA__() {
 }
 
 const Rest = () => {
-  const showMore = useShowMore();
+  const visibleRestSections = useShowMore(0);
   return <>
-    {showMore() && <>
-    </>}
   </>;
 };

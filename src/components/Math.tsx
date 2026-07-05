@@ -1,13 +1,43 @@
 import {
   createEffect,
+  Accessor,
   createSignal,
   onCleanup,
   onMount,
   ParentProps,
+  Setter,
 } from "solid-js";
-import { TEXT_X_PADDING } from "~/constants";
+import {
+  ENABLE_MATHJAX_INTERSECTION_FALLBACK,
+  MATHJAX_INTERSECTION_FALLBACK_DELAY_MS,
+  MATHJAX_INTERSECTION_ROOT_MARGIN_PX,
+  TEXT_X_PADDING,
+} from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import SharedProps from "./types/SharedProps";
+
+const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN_PX}px`;
+
+const nearMathJaxObserverViewport = (el: HTMLElement) => {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.bottom >= -MATHJAX_INTERSECTION_ROOT_MARGIN_PX &&
+    rect.top <= window.innerHeight + MATHJAX_INTERSECTION_ROOT_MARGIN_PX
+  );
+};
+
+const typesetMath = async (
+  ref: HTMLElement | undefined,
+  visible: Accessor<boolean>,
+  setVisible: Setter<boolean>,
+  setScrollHeight: () => void,
+) => {
+  if (!ref || visible()) return false;
+  await (window as any).MathJax.typesetPromise([ref]);
+  setVisible(true);
+  setScrollHeight();
+  return true;
+};
 
 export const Math = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
@@ -15,21 +45,35 @@ export const Math = (props: ParentProps) => {
   const { set_store } = useGlobalContext();
 
   onMount(() => {
+    const setScrollHeight = () =>
+      set_store("scrollHeight", document.body.scrollHeight);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          (window as any).MathJax.typesetPromise([ref]);
-          setVisible(true);
-          set_store("scrollHeight", document.body.scrollHeight);
+          typesetMath(ref, visible, setVisible, setScrollHeight);
           observer.disconnect();
         }
       },
       {
-        rootMargin: "300px",
+        rootMargin: mathJaxRootMargin,
       },
     );
     if (ref) observer.observe(ref);
-    onCleanup(() => observer.disconnect());
+
+    const fallbackTimeout = ENABLE_MATHJAX_INTERSECTION_FALLBACK
+      ? window.setTimeout(() => {
+          if (!ref || !nearMathJaxObserverViewport(ref)) return;
+          typesetMath(ref, visible, setVisible, setScrollHeight);
+          observer.disconnect();
+        }, MATHJAX_INTERSECTION_FALLBACK_DELAY_MS)
+      : undefined;
+
+    onCleanup(() => {
+      observer.disconnect();
+      if (fallbackTimeout !== undefined) {
+        window.clearTimeout(fallbackTimeout);
+      }
+    });
   });
 
   return (
@@ -63,12 +107,12 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
   };
 
   onMount(() => {
+    const setScrollHeight = () =>
+      set_store("scrollHeight", document.body.scrollHeight);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          (window as any).MathJax.typesetPromise([ref]);
-          setVisible(true);
-          set_store("scrollHeight", document.body.scrollHeight);
+          typesetMath(ref, visible, setVisible, setScrollHeight);
           observer.disconnect();
           if (!measureOriginalWidth()) {
             console.log("failed to measure width once");
@@ -82,7 +126,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
         }
       },
       {
-        rootMargin: "300px",
+        rootMargin: mathJaxRootMargin,
       },
     );
 
@@ -104,6 +148,21 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
 
     setTimeout(measureOriginalWidth, 50);
 
+    const fallbackTimeout = ENABLE_MATHJAX_INTERSECTION_FALLBACK
+      ? window.setTimeout(async () => {
+          if (!ref || !nearMathJaxObserverViewport(ref)) return;
+          const didTypeset = await typesetMath(
+            ref,
+            visible,
+            setVisible,
+            setScrollHeight,
+          );
+          if (!didTypeset) return;
+          observer.disconnect();
+          measureOriginalWidth();
+        }, MATHJAX_INTERSECTION_FALLBACK_DELAY_MS)
+      : undefined;
+
     const handleResize = () => {
       let oldInnerWidth = localInnerWidthCopy();
       let newInnerWidth = window.innerWidth;
@@ -116,6 +175,9 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
 
     onCleanup(() => {
       observer.disconnect();
+      if (fallbackTimeout !== undefined) {
+        window.clearTimeout(fallbackTimeout);
+      }
       window.removeEventListener("resize", handleResize);
     });
   });

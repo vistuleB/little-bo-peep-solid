@@ -4,6 +4,7 @@ import desugaring as ds
 import emitter_imports as ei
 import gleam/dict.{type Dict}
 import gleam/io
+import gleam/int
 import gleam/list
 import gleam/option.{Some, None}
 import gleam/string.{inspect as ins}
@@ -121,12 +122,68 @@ fn split_vxml_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
   #(V(b, t, a, [rest_tag, ..before_rest] |> list.reverse), rest)
 }
 
+fn rest_section_batches(vxmls: List(VXML)) -> List(List(VXML)) {
+  rest_section_batches_loop(vxmls, [], [])
+}
+
+fn rest_section_batches_loop(
+  upcoming: List(VXML),
+  current: List(VXML),
+  previous_batches: List(List(VXML)),
+) -> List(List(VXML)) {
+  case upcoming {
+    [] -> {
+      case current {
+        [] -> list.reverse(previous_batches)
+        _ -> list.reverse([list.reverse(current), ..previous_batches])
+      }
+    }
+    [first, ..rest] -> {
+      let current = [first, ..current]
+      case is_section(first) {
+        True ->
+          rest_section_batches_loop(
+            rest,
+            [],
+            [list.reverse(current), ..previous_batches],
+          )
+        False -> rest_section_batches_loop(rest, current, previous_batches)
+      }
+    }
+  }
+}
+
+fn rest_batch_output_lines(
+  batches: List(List(VXML)),
+  index: Int,
+) -> List(OutputLine) {
+  case batches {
+    [] -> []
+    [batch, ..rest] ->
+      list.flatten([
+        [
+          OutputLine(
+            blame_us("article_emitter"),
+            4,
+            "{visibleRestSections() > " <> int.to_string(index) <> " && <>",
+          ),
+        ],
+        vxml.vxmls_to_jsx_output_lines(batch, 6, 2),
+        [
+          OutputLine(blame_us("article_emitter"), 4, "</>}"),
+        ],
+        rest_batch_output_lines(rest, index + 1),
+      ])
+  }
+}
+
 fn article_emitter(
   fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
 
   let #(first_split, rest) = split_vxml_to_first_section_and_rest(fr.payload)
+  let rest_batches = rest_section_batches(rest)
   let assert Article(funcname) = fr.classifier
 
   use component_imports <- on.error_ok(
@@ -151,13 +208,11 @@ fn article_emitter(
         OutputLine(blame_us("article_emitter"), 0, "}"),
         OutputLine(blame_us("article_emitter"), 0, ""),
         OutputLine(blame_us("article_emitter"), 0, "const Rest = () => {"),
-        OutputLine(blame_us("article_emitter"), 2, "const showMore = useShowMore();"),
+        OutputLine(blame_us("article_emitter"), 2, "const visibleRestSections = useShowMore(" <> int.to_string(list.length(rest_batches)) <> ");"),
         OutputLine(blame_us("article_emitter"), 2, "return <>"),
-        OutputLine(blame_us("article_emitter"), 4, "{showMore() && <>"),
       ],
-      vxml.vxmls_to_jsx_output_lines(rest, 6, 2),
+      rest_batch_output_lines(rest_batches, 0),
       [
-        OutputLine(blame_us("article_emitter"), 4, "</>}"),
         OutputLine(blame_us("article_emitter"), 2, "</>;"),
         OutputLine(blame_us("article_emitter"), 0, "};"),
       ],

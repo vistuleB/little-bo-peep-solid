@@ -533,9 +533,9 @@ export default function __Chapter1__() {
 }
 
 const Rest = () => {
-  const showMore = useShowMore();
+  const visibleRestSections = useShowMore(5);
   return <>
-    {showMore() && <>
+    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -778,6 +778,8 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -1369,6 +1371,8 @@ const Rest = () => {
         <Pause />
         <StarDivider />
       </Section>
+    </>}
+    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -1442,6 +1446,8 @@ const Rest = () => {
           for a difference of squares!
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -1486,6 +1492,8 @@ const Rest = () => {
           and so on.
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 4 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}

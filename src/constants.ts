@@ -24,6 +24,9 @@ export const HASH_SCROLL_RESTORATION_DELAY_MS = 300;
 export const SAVED_SCROLL_RESTORATION_DELAY_MS = 100;
 export const IN_CHAPTER_SCROLL_DURATION_MS = 200;
 export const SCROLL_RESTORATION_ANIMATION_FINISH_BUFFER_MS = 50;
+export const MATHJAX_INTERSECTION_ROOT_MARGIN_PX = 300;
+export const ENABLE_MATHJAX_INTERSECTION_FALLBACK = false;
+export const MATHJAX_INTERSECTION_FALLBACK_DELAY_MS = 500;
 
 export const setContentsAsCssVars = () => {
   const root = document.documentElement;

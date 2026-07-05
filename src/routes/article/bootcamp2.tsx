@@ -134,9 +134,9 @@ export default function __Bootcamp2__() {
 }
 
 const Rest = () => {
-  const showMore = useShowMore();
+  const visibleRestSections = useShowMore(9);
   return <>
-    {showMore() && <>
+    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -546,6 +546,8 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -761,6 +763,8 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -881,6 +885,8 @@ const Rest = () => {
           {" "} (Or for some other base.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -1068,6 +1074,8 @@ const Rest = () => {
           ...!
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -1314,6 +1322,8 @@ const Rest = () => {
           {" "} sentence.
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -1690,6 +1700,8 @@ const Rest = () => {
           {" "} (“nm” = “nanometer”).
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1881,6 +1893,8 @@ const Rest = () => {
           being a single 0/1 value.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 7 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -2117,6 +2131,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 8 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}

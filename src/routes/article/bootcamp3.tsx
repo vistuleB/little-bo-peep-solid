@@ -1025,9 +1025,7 @@ export default function __Bootcamp3__() {
 }
 
 const Rest = () => {
-  const showMore = useShowMore();
+  const visibleRestSections = useShowMore(0);
   return <>
-    {showMore() && <>
-    </>}
   </>;
 };

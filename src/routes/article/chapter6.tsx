@@ -152,9 +152,9 @@ export default function __Chapter6__() {
 }
 
 const Rest = () => {
-  const showMore = useShowMore();
+  const visibleRestSections = useShowMore(11);
   return <>
-    {showMore() && <>
+    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -267,6 +267,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -452,6 +454,8 @@ const Rest = () => {
           <ImageRight src="/build-img/svgo-svg/BYVX.svg" />
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -544,6 +548,8 @@ const Rest = () => {
           signature”) ends, for the five main function operations.
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -592,6 +598,8 @@ const Rest = () => {
           .]
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 4 && <>
       <Pause />
       <Section
         _handle="differentiation_and_signatures"
@@ -700,6 +708,8 @@ const Rest = () => {
           {" "} etc.)
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -811,6 +821,8 @@ const Rest = () => {
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
       </Section>
+    </>}
+    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1387,6 +1399,8 @@ const Rest = () => {
           us a “point by point” version of the sum rule—more granular!
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 7 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -1719,6 +1733,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 8 && <>
       <Pause />
       <Section id="section-10">
         <OuterP>
@@ -2483,6 +2499,8 @@ const Rest = () => {
           <Image src="/build-img/svgo-svg/khDb.svg" />
         </Example>
       </Section>
+    </>}
+    {visibleRestSections() > 9 && <>
       <Pause />
       <Section id="section-11">
         <OuterP>
@@ -2658,6 +2676,8 @@ const Rest = () => {
           {" "} the pure number!!
         </OuterP>
       </Section>
+    </>}
+    {visibleRestSections() > 10 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}

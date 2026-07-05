@@ -1,11 +1,28 @@
-import { createSignal, onMount } from "solid-js";
+import { createSignal, onCleanup, onMount } from "solid-js";
 
-const useShowMore = () => {
-  const [showMore, setShowMore] = createSignal(false);
+const useShowMore = (targetCount = 1) => {
+  const [showMoreCount, setShowMoreCount] = createSignal(0);
+  let frame = 0;
+
   onMount(() => {
-    setShowMore(true);
+    const showNext = () => {
+      frame = requestAnimationFrame(() => {
+        setShowMoreCount((count) => {
+          const nextCount = Math.min(count + 1, targetCount);
+          if (nextCount < targetCount) showNext();
+          return nextCount;
+        });
+      });
+    };
+
+    frame = requestAnimationFrame(showNext);
   });
-  return showMore;
+
+  onCleanup(() => {
+    cancelAnimationFrame(frame);
+  });
+
+  return showMoreCount;
 };
 
 export default useShowMore;
