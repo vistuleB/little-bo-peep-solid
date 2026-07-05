@@ -25,4 +25,3 @@ type ProvisionalDestinationScrollInput = {
 export const shouldSetProvisionalDestinationTopScroll = ({
   spinnerCurrentlyVisible,
 }: ProvisionalDestinationScrollInput) => spinnerCurrentlyVisible;
-
