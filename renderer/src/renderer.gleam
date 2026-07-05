@@ -6,7 +6,7 @@ import gleam/dict.{type Dict}
 import gleam/io
 import gleam/int
 import gleam/list
-import gleam/option.{Some, None}
+import gleam/option.{type Option, Some, None}
 import gleam/string.{inspect as ins}
 import infrastructure as infra
 import io_lines.{type OutputLine, OutputLine}
@@ -100,6 +100,25 @@ fn is_section(vxml: VXML) -> Bool {
   infra.is_v_and_tag_equals(vxml, "Section")
 }
 
+fn is_rest_split_attr(attr: vxml.Attr) -> Bool {
+  attr.key == "split_here" && attr.val == "Rest"
+}
+
+fn is_rest_split_section(vxml: VXML) -> Bool {
+  case vxml {
+    V(_, "Section", attrs, _) -> list.any(attrs, is_rest_split_attr)
+    _ -> False
+  }
+}
+
+fn remove_rest_split_attr(vxml: VXML) -> VXML {
+  case vxml {
+    V(_, "Section", attrs, _) ->
+      V(..vxml, attrs: list.filter(attrs, fn(attr) { !is_rest_split_attr(attr) }))
+    _ -> vxml
+  }
+}
+
 fn up_to_and_including_first_section(
   previous: List(VXML),
   upcoming: List(VXML)
@@ -115,9 +134,27 @@ fn up_to_and_including_first_section(
   }
 }
 
+fn up_to_rest_split_section(
+  previous: List(VXML),
+  upcoming: List(VXML),
+) -> Option(#(List(VXML), List(VXML))) {
+  case upcoming {
+    [] -> None
+    [first, ..rest] -> {
+      case is_rest_split_section(first) {
+        True -> Some(#(previous, [remove_rest_split_attr(first), ..rest]))
+        False -> up_to_rest_split_section([first, ..previous], rest)
+      }
+    }
+  }
+}
+
 fn split_vxml_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
   let assert V(b, t, a, children) = vxml
-  let #(before_rest, rest) = up_to_and_including_first_section([], children)
+  let #(before_rest, rest) = case up_to_rest_split_section([], children) {
+    Some(split) -> split
+    None -> up_to_and_including_first_section([], children)
+  }
   let rest_tag = V(blame_us("rest tag"), "Rest", [], [])
   #(V(b, t, a, [rest_tag, ..before_rest] |> list.reverse), rest)
 }
