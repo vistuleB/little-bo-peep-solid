@@ -56,8 +56,14 @@ const ButtonsContainer = (props: ParentProps) => {
     );
   };
 
+  const controlsPinnedVisible = () =>
+    open() || on_mobile() || store.loading || store.scroll_is_at_0;
+
+  const borderPinnedVisible = () =>
+    on_mobile() || store.loading || store.scroll_is_at_0;
+
   const finalButtonOpacity = () => {
-    return open() || on_mobile() || store.loading || store.scroll_is_at_0
+    return controlsPinnedVisible()
       ? 1
       : store.saved_scroll_finished
         ? buttonOpacity()
@@ -65,7 +71,7 @@ const ButtonsContainer = (props: ParentProps) => {
   };
 
   const finalBorderOpacity = () => {
-    return on_mobile() || store.loading || store.scroll_is_at_0
+    return borderPinnedVisible()
       ? 1
       : store.saved_scroll_finished
         ? borderOpacity()
