@@ -9,6 +9,7 @@ import {
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import {
+  BATCH_SOLUTION_SCROLL_ANCHOR_FRAMES,
   DESKTOP_COLUMN_WIDTH,
   GREEN_DIV_HEIGHT,
   MOBILE_MAX_WIDTH,
@@ -27,6 +28,7 @@ import smoothScrollTo from "~/utils/smoothScrollTo";
 import { HeightChangeListenerProvider } from "~/store/HeightChangeListenerProvider";
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useOneExerciseContext } from "~/store/OneExerciseStoreProvider";
+import { useExerciseGroupRegistry } from "~/store/ExerciseGroupRegistryProvider";
 
 type SolutionProps = ParentProps &
   SharedProps & {
@@ -72,9 +74,8 @@ export const Solution = (props: SolutionProps) => {
   let ref: HTMLDivElement | undefined;
   let buttonRef: HTMLDivElement | undefined;
 
-  let { store: global_store, set_store: set_global_store } = useGlobalContext();
+  let { store: global_store } = useGlobalContext();
   const {
-    set_exercises_store: set_store,
     exercises_store: store,
     group_id,
     at_end_of_page,
@@ -212,7 +213,7 @@ export const Solution = (props: SolutionProps) => {
         set_solution_fully_opened={set_solution_fully_opened}
         set_solution_transition={set_solution_transition}
         solution_number={solution_number}
-        ref={buttonRef}
+        setButtonRef={(el) => (buttonRef = el)}
         resetter={reset_content_height_etc}
       />
       <SpaceAfterSolutionButtonAlwaysShowing />
@@ -228,13 +229,15 @@ export const Solution = (props: SolutionProps) => {
           height: `${solution_open() ? content_height() : 0}px`,
           "transition-duration": `${global_store.animations ? solution_transition() : 0}ms`,
           "transition-property": "height",
-        }}>
+        }}
+      >
         <div
           ref={ref}
           style={{
             position: solution_fully_opened() ? "relative" : "absolute",
           }}
-          class={twJoin(" bottom-0 w-full")}>
+          class={twJoin(" bottom-0 w-full")}
+        >
           <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           {props.children}
         </div>
@@ -243,7 +246,8 @@ export const Solution = (props: SolutionProps) => {
           class={twJoin(
             "absolute top-0 left-1/2 -translate-x-1/2 spacer-100 bg-bg",
             solution_fully_opened() && "opacity-0",
-          )}></div>
+          )}
+        ></div>
       </div>
       {at_end_of_page && (
         <>
@@ -270,7 +274,8 @@ export const Solution = (props: SolutionProps) => {
               height: `${(!store.list_view || solution_number === num_exercises()) && (!solution_open() || bot_div()) ? green_div_height() : 0}px`,
               "background-color": global_store.show_areas ? "#00440050" : "",
               "transition-duration": `${global_store.animations ? green_div_transition() : 0}ms`,
-            }}></div>
+            }}
+          ></div>
         </>
       )}
     </HeightChangeListenerProvider>
@@ -283,13 +288,15 @@ type SolutionBtnProps = {
   solution_number: number;
   set_solution_fully_opened: Setter<boolean>;
   set_solution_transition: Setter<number>;
-  ref: HTMLDivElement | undefined;
+  setButtonRef: (el: HTMLDivElement) => void;
   resetter: () => void;
 };
 
 const SolutionButton = (props: SolutionBtnProps) => {
   const { exercises_store: store, group_id } = useExercisesContext();
   const { updateExerciseByIndex } = useExercisesStateHelpers();
+  const registry = useExerciseGroupRegistry();
+  let buttonRef: HTMLDivElement | undefined;
   const solution_open = () =>
     store.exercises[props.solution_number - 1]?.solution_open;
   const transition_duration = () =>
@@ -299,15 +306,65 @@ const SolutionButton = (props: SolutionBtnProps) => {
   const { set_handle, set_solution_fully_opened, set_solution_transition } =
     props;
 
+  const preserveButtonPosition = (update: () => void) => {
+    const topBefore = buttonRef?.getBoundingClientRect().top;
+    update();
+
+    const restoreButtonPosition = (remainingFrames: number) => {
+      if (topBefore === undefined || !buttonRef) return;
+      const topAfter = buttonRef.getBoundingClientRect().top;
+      window.scrollBy(0, topAfter - topBefore);
+
+      if (remainingFrames > 1) {
+        requestAnimationFrame(() => restoreButtonPosition(remainingFrames - 1));
+      }
+    };
+
+    requestAnimationFrame(() =>
+      restoreButtonPosition(BATCH_SOLUTION_SCROLL_ANCHOR_FRAMES),
+    );
+  };
+
+  const setAllSolutionsInChapter = (open: boolean) => {
+    const article = location.pathname.split("/").pop();
+
+    registry?.getAll().forEach(([registeredGroupId, entry]) => {
+      entry.set_exercises_store("exercises", (exercises) =>
+        exercises.map((exercise, index) => {
+          localStorage.setItem(
+            `${article}_${registeredGroupId}_exo_${index + 1}_opened`,
+            String(open),
+          );
+          return {
+            ...exercise,
+            solution_open: open,
+          };
+        }),
+      );
+    });
+  };
+
   return (
     <div
-      ref={props.ref}
+      ref={(el) => {
+        buttonRef = el;
+        props.setButtonRef(el);
+      }}
       class="relative"
-      style={`padding-inline: ${TEXT_X_PADDING}px`}>
+      style={`padding-inline: ${TEXT_X_PADDING}px`}
+    >
       <SolutionSVG
         solution_open={solution_open}
         onClick={(event) => {
           event.stopPropagation();
+
+          if (event.metaKey) {
+            const open = !solution_open();
+            preserveButtonPosition(() => setAllSolutionsInChapter(open));
+            set_solution_fully_opened(open);
+            set_solution_transition(0);
+            return;
+          }
 
           // *** track if solution is fully opened ***
           if (props.handle()) {
@@ -401,7 +458,8 @@ export const BackupArrow = (props: BackupArrowProps) => {
         "flex items-center justify-center",
         (!solution_open() || !solution_fully_opened()) && "opacity-0",
         bot_div() && "delay-[2s]",
-      )}>
+      )}
+    >
       <svg
         id="backup-btn"
         width={`${2 + w}`}
@@ -419,18 +477,22 @@ export const BackupArrow = (props: BackupArrowProps) => {
           } else {
             document?.getElementById(`exo-${group_id}`)?.scrollIntoView();
           }
-        }}>
+        }}
+      >
         <path
           d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-          class="active_exercises_button"></path>
+          class="active_exercises_button"
+        ></path>
         {/* could not compound these two into single path without getting evenodd
           fill-style, who knows why */}
         <path
           d={`M ${1 + w / 2 - arrow_body_width / 2} ${1 + h - arrow_start_to_edge} h ${arrow_body_width} v ${-arrow_body_length} h ${-arrow_body_width} z`}
-          fill="black"></path>
+          fill="black"
+        ></path>
         <path
           d={`M ${1 + w / 2} ${1 + triangle_tip_to_edge} l ${triangle_sidelength * 0.5} ${triangle_height} h ${-triangle_sidelength} z`}
-          fill="black"></path>
+          fill="black"
+        ></path>
       </svg>
     </div>
   );
@@ -454,7 +516,8 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
               x="-7"
               y="-7"
               width="123"
-              height="50"></rect>
+              height="50"
+            ></rect>
             <rect
               aria-label="solution_button_focus_rect"
               class={twJoin(
@@ -464,7 +527,8 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
                   : "active_solution_button_rect",
               )}
               width="109"
-              height="36"></rect>
+              height="36"
+            ></rect>
             <path
               aria-label="solution_button_lip"
               class={twJoin(
@@ -473,7 +537,8 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
                   ? "inactive_solution_button_lip"
                   : "active_solution_button_lip",
               )}
-              d="M 0 10 v -10 h 109 v 10 M 0 26 v 10 h 109 v -10"></path>
+              d="M 0 10 v -10 h 109 v 10 M 0 26 v 10 h 109 v -10"
+            ></path>
             <g
               aria-label="solution_button_finger_pair"
               class={twJoin(
@@ -481,17 +546,21 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
                 props.solution_open()
                   ? "inactive_solution_button_hands"
                   : "active_solution_button_hands",
-              )}>
+              )}
+            >
               <use
                 href="#finger_pointing_left"
-                transform="translate(101.5, 18)"></use>
+                transform="translate(101.5, 18)"
+              ></use>
               <use
                 href="#finger_pointing_left"
-                transform="scale(-1, 1) translate(-8, 20)"></use>
+                transform="scale(-1, 1) translate(-8, 20)"
+              ></use>
               <use
                 x="-2"
                 href="#solution_button_text"
-                style="pointer-events:none;"></use>
+                style="pointer-events:none;"
+              ></use>
             </g>
           </g>
         </svg>
