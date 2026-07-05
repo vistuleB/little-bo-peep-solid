@@ -19,10 +19,10 @@ export default function __Chapter6__() {
   return (
     <Article
       prevPage="/article/chapter5"
-      nextPage="/article/appendixA"
+      nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_166_h.a.i_"
+      id="_162_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -537,7 +537,7 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/-9Yt.svg"
-          id="_156_h.a.i_"
+          id="_152_h.a.i_"
         />
         <Pause />
         <OuterP>
@@ -582,7 +582,7 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/jdJ7.svg"
-          id="_157_h.a.i_"
+          id="_153_h.a.i_"
         />
         <Pause />
         <OuterP>
@@ -618,7 +618,7 @@ const Rest = () => {
           {" "}
           (see also {" "}
           <OutChapterLink
-            href="/article/chapter4#_67_h.a.i_"
+            href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -680,7 +680,7 @@ const Rest = () => {
           {" "} of
           {" "}
           <OutChapterLink
-            href="/article/chapter4#_67_h.a.i_"
+            href="/article/chapter4#_63_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
@@ -747,7 +747,7 @@ const Rest = () => {
           operations from {" "}
           <InChapterLink
             class="in-chapter-link"
-            href="#_157_h.a.i_"
+            href="#_153_h.a.i_"
           >
             Table 1.2
           </InChapterLink>
@@ -900,7 +900,7 @@ const Rest = () => {
           as listed in {" "}
           <InChapterLink
             class="in-chapter-link"
-            href="#_156_h.a.i_"
+            href="#_152_h.a.i_"
           >
             Table 1.1
           </InChapterLink>
@@ -1072,7 +1072,7 @@ const Rest = () => {
           as units are concerned: nothing untoward has been found!
         </OuterP>
         <Pause />
-        <Example id="_158_h.a.i_">
+        <Example id="_154_h.a.i_">
           <OuterP>
             <b>
               Example 2.
@@ -1146,7 +1146,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_158_h.a.i_"
+                href="/article/chapter6#_154_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 2
@@ -1156,7 +1156,7 @@ const Rest = () => {
             {" "}
             In the case of {" "}
             <InChapterLink
-              href="/article/chapter6#_158_h.a.i_"
+              href="/article/chapter6#_154_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1194,7 +1194,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_159_h.a.i_">
+        <Example id="_155_h.a.i_">
           <OuterP>
             <b>
               Example 3.
@@ -1365,7 +1365,7 @@ const Rest = () => {
           both differentiable it is still 
           true, however, that
         </OuterP>
-        <Boxed id="_160_h.a.i_">
+        <Boxed id="_156_h.a.i_">
           <MathBlock>
             $$
             (f + g)'(x_0) = f'(x_0) + g'(x_0)
@@ -1519,7 +1519,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example id="_161_h.a.i_">
+        <Example id="_157_h.a.i_">
           <OuterP>
             <b>
               Example 4.
@@ -1527,7 +1527,7 @@ const Rest = () => {
             {" "}
             As in {" "}
             <InChapterLink
-              href="/article/chapter6#_158_h.a.i_"
+              href="/article/chapter6#_154_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1652,7 +1652,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_161_h.a.i_"
+                href="/article/chapter6#_157_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 4
@@ -1682,7 +1682,7 @@ const Rest = () => {
           <OuterP>
             in {" "}
             <InChapterLink
-              href="/article/chapter6#_161_h.a.i_"
+              href="/article/chapter6#_157_h.a.i_"
               class="in-chapter-link"
             >
               Example 4
@@ -2290,13 +2290,13 @@ const Rest = () => {
             similarly to the {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#_160_h.a.i_"
+              href="#_156_h.a.i_"
             >
               postscript
             </InChapterLink>
             {" "} following {" "}
             <InChapterLink
-              href="/article/chapter6#_159_h.a.i_"
+              href="/article/chapter6#_155_h.a.i_"
               class="in-chapter-link"
             >
               Example 3
@@ -2306,7 +2306,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_162_h.a.i_">
+        <Example id="_158_h.a.i_">
           <OuterP>
             <b>
               Example 6.
@@ -2382,7 +2382,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_163_h.a.i_">
+        <Example id="_159_h.a.i_">
           <OuterP>
             <b>
               Example 7.
@@ -2400,7 +2400,7 @@ const Rest = () => {
           <OuterP>
             by {" "}
             <InChapterLink
-              href="/article/chapter6#_162_h.a.i_"
+              href="/article/chapter6#_158_h.a.i_"
               class="in-chapter-link"
             >
               Example 6
@@ -2437,7 +2437,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_163_h.a.i_"
+                href="/article/chapter6#_159_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 7
@@ -2681,10 +2681,10 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_165_h.a.i_"
+        id="_161_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_164_h.a.i_">
+          <ExerciseStatement id="_160_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2700,7 +2700,7 @@ const Rest = () => {
               </NoBreak>
               {" "} {" "}
               <OutChapterLink
-                href="/article/chapter4#_81_h.a.i_"
+                href="/article/chapter4#_77_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 4, Exercise 19
