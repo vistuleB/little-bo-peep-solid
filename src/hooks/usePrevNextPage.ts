@@ -29,23 +29,38 @@ const usePrevNextPage = () => {
     return `${article}_scroll`;
   };
 
-  const scrollToTopForTopSavedTarget = (page: string) => {
-    if (!targetHasSavedTopScroll(page)) return;
-
+  const scrollToTopDuringLoad = () => {
     localStorage.setItem(currentScrollKey(), window.scrollY.toString());
     set_store("suppress_scroll_memory", true);
 
     const centeredScrollX = (document.body.scrollWidth - window.innerWidth) / 2;
-    window.scrollTo(centeredScrollX, 0);
-    set_store("scrollX", centeredScrollX);
-    set_store("scrollY", 0);
-    set_store("scroll_is_at_0", true);
+    const scrollToTop = () => {
+      window.scroll({
+        left: centeredScrollX,
+        top: 0,
+        behavior: "instant",
+      });
+      set_store("scrollX", centeredScrollX);
+      set_store("scrollY", 0);
+      set_store("scroll_is_at_0", true);
+    };
+
+    scrollToTop();
+
+    requestAnimationFrame(() => {
+      if (store.loading) scrollToTop();
+    });
 
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         set_store("suppress_scroll_memory", false);
       });
     });
+  };
+
+  const scrollToTopForTopSavedTarget = (page: string) => {
+    if (!targetHasSavedTopScroll(page)) return;
+    scrollToTopDuringLoad();
   };
 
   const getPage = (page: string) => {
@@ -56,7 +71,9 @@ const usePrevNextPage = () => {
     // the rabbit is never cleared; so you always need to call getPage with carefully
     // normalized, 'correct' paths!!! (or with paths that certifiably point to a
     // different page)
-    if (!pageHasHash(page)) {
+    if (pageHasHash(page)) {
+      scrollToTopDuringLoad();
+    } else {
       scrollToTopForTopSavedTarget(page);
     }
     startRouteLoad(page, store, set_store);
