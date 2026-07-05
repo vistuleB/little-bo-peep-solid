@@ -3,6 +3,12 @@ import { createEffect, createSignal, onCleanup, onMount, untrack } from "solid-j
 import useScrollToInChapter from "./useScrollToInChapter";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { finishRouteLoad } from "~/utils/routeLoading";
+import {
+  HASH_SCROLL_RESTORATION_DELAY_MS,
+  IN_CHAPTER_SCROLL_DURATION_MS,
+  SAVED_SCROLL_RESTORATION_DELAY_MS,
+  SCROLL_RESTORATION_ANIMATION_FINISH_BUFFER_MS,
+} from "~/constants";
 
 const useCheckedSavedScroll = () => {
   const [searchParams, _] = useSearchParams();
@@ -22,14 +28,24 @@ const useCheckedSavedScroll = () => {
     localStorage.setItem(scrollKey, window.scrollY.toString());
   };
 
+  const waitForRouteContentMount = () =>
+    new Promise<void>((resolve) => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => resolve());
+      });
+    });
+
   if (anchorId) {
     const { scrollToInChapter } = useScrollToInChapter();
 
     onMount(() => {
-      setTimeout(async () => {
-        const scrollDuration = 200;
+      const restoreScroll = async () => {
         set_store("route_scroll_in_progress", true);
-        await scrollToInChapter(anchorId as string, scrollDuration);
+        await waitForRouteContentMount();
+        await scrollToInChapter(
+          anchorId as string,
+          IN_CHAPTER_SCROLL_DURATION_MS,
+        );
         window.setTimeout(
           () => {
             update();
@@ -38,9 +54,13 @@ const useCheckedSavedScroll = () => {
             finishRouteLoad(location.pathname, store, set_store);
             window.addEventListener("scroll", update);
           },
-          store.animations ? scrollDuration + 50 : 0,
+          store.animations
+            ? IN_CHAPTER_SCROLL_DURATION_MS +
+                SCROLL_RESTORATION_ANIMATION_FINISH_BUFFER_MS
+            : 0,
         );
-      }, 300);
+      };
+      window.setTimeout(restoreScroll, HASH_SCROLL_RESTORATION_DELAY_MS);
     });
 
     onCleanup(() => {
@@ -58,11 +78,12 @@ const useCheckedSavedScroll = () => {
       set_scroll(window.scrollY);
     };
 
-    setTimeout(() => {
+    const restoreScroll = async () => {
       const savedScroll = Number(localStorage.getItem(scrollKey) || "0");
       set_scroll(savedScroll);
 
       set_store("route_scroll_in_progress", true);
+      await waitForRouteContentMount();
       window.scrollTo(
         (document.body.scrollWidth - window.innerWidth) / 2,
         savedScroll,
@@ -72,7 +93,8 @@ const useCheckedSavedScroll = () => {
       finishRouteLoad(location.pathname, store, set_store);
 
       window.addEventListener("scroll", updateScroll);
-    }, 100);
+    };
+    window.setTimeout(restoreScroll, SAVED_SCROLL_RESTORATION_DELAY_MS);
 
     return () => {
       window.removeEventListener("scroll", updateScroll);

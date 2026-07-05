@@ -1,7 +1,12 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import {
+  DOWN_STOP_SKIP_TOP_VIEWPORT_RATIO,
   HAMBURGER_MENU_SCROLLY_END_FADE,
   HAMBURGER_MENU_SCROLLY_START_FADE,
+  PAGE_TOP_BOTTOM_ARROW_SCROLL_DURATION_MS,
+  STOP_POSITION_VIEWPORT_RATIO,
+  STOP_REPEAT_SCROLL_TOLERANCE,
+  UP_STOP_SKIP_BOTTOM_VIEWPORT_RATIO,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
@@ -17,10 +22,6 @@ const PageTopBottomArrows = () => {
   const { store } = useGlobalContext();
   const [opacity, set_opacity] = createSignal(1);
   const [hovered, set_hovered] = createSignal(false);
-  const DOWN_STOP_SKIP_TOP_VIEWPORT_RATIO = 0.7;
-  const UP_STOP_SKIP_BOTTOM_VIEWPORT_RATIO = 0.7;
-  const STOP_POSITION_VIEWPORT_RATIO = 0.5;
-  const STOP_REPEAT_SCROLL_TOLERANCE = 2;
 
   const calc_opacity = () => {
     // prettier-ignore
@@ -82,14 +83,20 @@ const PageTopBottomArrows = () => {
   const handleUpClick = (_: MouseEvent) => {
     const stop = previousExerciseStop();
     const scrollTo = stop?.scrollY ?? 0;
-    smoothScrollTo(scrollTo, store.animations ? 100 : 0);
+    smoothScrollTo(
+      scrollTo,
+      store.animations ? PAGE_TOP_BOTTOM_ARROW_SCROLL_DURATION_MS : 0,
+    );
   };
 
   const handleDownClick = (_: MouseEvent) => {
     const stop = nextExerciseStop();
     const scrollTo = stop?.scrollY ?? document.body.scrollHeight;
 
-    smoothScrollTo(scrollTo, store.animations ? 100 : 0);
+    smoothScrollTo(
+      scrollTo,
+      store.animations ? PAGE_TOP_BOTTOM_ARROW_SCROLL_DURATION_MS : 0,
+    );
   };
 
   const containerWidth = () => {

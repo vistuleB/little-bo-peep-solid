@@ -1,9 +1,10 @@
 import { SetStoreFunction } from "solid-js/store";
+import {
+  FAST_ROUTE_LOAD_MS,
+  LOADING_SPINNER_DELAY_MS,
+  ROUTE_LOAD_MEMORY_TTL_MS,
+} from "~/constants";
 import { Store } from "~/store/StoreProvider";
-
-export const FAST_ROUTE_LOAD_MS = 200;
-export const ROUTE_LOAD_MEMORY_TTL_MS = 5 * 60 * 1000;
-export const LOADING_SPINNER_DELAY_MS = 10000;
 
 let loadingDelayTimeout: number | undefined;
 
