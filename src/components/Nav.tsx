@@ -35,7 +35,7 @@ const Nav = () => {
         }}
       >
         <div class="relative select-none border-[var(--nav-border)] border-b bg-bg z-40 w-full h-14 left-0">
-          <Title />
+          <Title navPosition={navPosition()} />
         </div>
       </div>
       <div class="h-14"></div>
@@ -43,7 +43,7 @@ const Nav = () => {
   );
 };
 
-const Title = () => {
+const Title = (props: { navPosition: "fixed" | "absolute" }) => {
   const { getPage } = usePrevNextPage();
   const { store } = useGlobalContext();
   let headerBlob: HTMLAnchorElement | undefined;
@@ -67,7 +67,9 @@ const Title = () => {
     const onMobile = store.innerWidth < MOBILE_MAX_WIDTH;
     const columnLeft = onMobile
       ? 0
-      : (containerWidth() - DESKTOP_COLUMN_WIDTH) / 2;
+      : props.navPosition === "fixed"
+        ? (store.innerWidth - DESKTOP_COLUMN_WIDTH) / 2
+        : (containerWidth() - DESKTOP_COLUMN_WIDTH) / 2;
     const xPadding = onMobile ? MOBILE_TEXT_X_PADDING : TEXT_X_PADDING;
     const leftPos = columnLeft + xPadding;
     headerBlob.style.left = `${leftPos}px`;
