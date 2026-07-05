@@ -170,8 +170,8 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.wrap_children_up_to(#("Exercise", "Solution", "ExerciseStatement", infra.GoBack)),
       dl.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
       dl.absorb_into_previous_sibling(["ImageRight", "ImageLeft"]),
-      dl.append_attribute_if_child_of(#("ImageRight", "MathBlock", "compensate_offset_x_for_large_text_columns", "true")),
-      dl.append_attribute_if_child_of(#("ImageLeft", "MathBlock", "compensate_offset_x_for_large_text_columns", "true")),
+      dl.append_attribute_if_child_of(#("ImageRight", "MathBlock", "at-least-as-wide", "true")),
+      dl.append_attribute_if_child_of(#("ImageLeft", "MathBlock", "at-least-as-wide", "true")),
       dl.append_attribute_to_second_of_kind__outside(#("p", "class", "indent-10"), ["CentralDisplay", "CentralDisplayItalic"]),
       dl.add_between_all_pairs_2(#(
         [
@@ -214,7 +214,6 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         #("Chapter <a href=1>_1_</a>", "<a href=1>Chapter _1_</a>"),
         #("Bootcamp <a href=1>_1_</a>", "<a href=1>Bootcamp _1_</a>"),
         #("Exercise <a href=1>_1_</a>", "<a href=1>Exercise _1_</a>"),
-        #("(Exercise <a href=1>_1_</a>", "<a href=1>(Exercise _1_</a>"),
         #("Example <a href=1>_1_</a>", "<a href=1>Example _1_</a>"),
         #("Note <a href='1'>_1_</a>", "<a href='1'>Note _1_</a>"),
       ]),
