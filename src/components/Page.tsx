@@ -236,7 +236,6 @@ const Page = (props: ParentProps & PageProps) => {
   onMount(() => {
     handleScroll();
     handleResize();
-    set_store("loading", false);
     if (location.pathname !== "/") {
       set_store("have_been_outside_home", true);
     }

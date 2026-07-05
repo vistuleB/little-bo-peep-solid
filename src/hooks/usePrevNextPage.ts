@@ -22,6 +22,8 @@ const usePrevNextPage = () => {
     return Number(localStorage.getItem(`${article}_scroll`) || "0") === 0;
   };
 
+  const pageHasHash = (page: string) => page.includes("#");
+
   const currentScrollKey = () => {
     const article = articleFromPath(location.pathname);
     return `${article}_scroll`;
@@ -54,7 +56,9 @@ const usePrevNextPage = () => {
     // the rabbit is never cleared; so you always need to call getPage with carefully
     // normalized, 'correct' paths!!! (or with paths that certifiably point to a
     // different page)
-    scrollToTopForTopSavedTarget(page);
+    if (!pageHasHash(page)) {
+      scrollToTopForTopSavedTarget(page);
+    }
     clearCurrentPage();
     if (store.navigation_delays) {
       setTimeout(

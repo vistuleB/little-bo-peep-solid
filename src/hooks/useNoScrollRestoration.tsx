@@ -7,6 +7,7 @@ const useNoScrollRestoration = () => {
   onMount(() => {
     // pages that don't need scroll restoration should mark as finished immediately
     set_store("saved_scroll_finished", true);
+    set_store("loading", false);
   });
 };
 
