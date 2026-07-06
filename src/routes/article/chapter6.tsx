@@ -536,7 +536,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/build-img/svgo-svg/-9Yt.svg"
+          src="/build-img/svgo-svg/AUok.svg"
           id="_152_h.a.i_"
         />
         <Pause />

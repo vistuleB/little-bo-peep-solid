@@ -183,7 +183,7 @@
 
     |> Image
         handle=table_1_1
-        src=images/c6_flowers_here_v3.svg
+        src=images/c6_flowers_here_bob.svg
 
     ...summarizing the constraints that appear at the
     input (“component signatures”) and output (“resultant

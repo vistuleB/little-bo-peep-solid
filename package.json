@@ -30,6 +30,7 @@
   "devDependencies": {
     "@types/node": "^24.10.1",
     "mathjax": "^4.1.0",
-    "mathjax-full": "^3.2.2"
+    "mathjax-full": "^3.2.2",
+    "svgo": "^4.0.1"
   }
 }

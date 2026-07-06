@@ -1343,6 +1343,11 @@ bindings@^1.4.0:
   dependencies:
     file-uri-to-path "1.0.0"
 
+boolbase@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz"
+  integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
+
 boxen@^8.0.1:
   version "8.0.1"
   resolved "https://registry.npmjs.org/boxen/-/boxen-8.0.1.tgz"
@@ -1531,6 +1536,11 @@ comma-separated-tokens@^2.0.0:
   resolved "https://registry.npmjs.org/comma-separated-tokens/-/comma-separated-tokens-2.0.3.tgz"
   integrity sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==
 
+commander@^11.1.0:
+  version "11.1.0"
+  resolved "https://registry.npmjs.org/commander/-/commander-11.1.0.tgz"
+  integrity sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==
+
 commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz"
@@ -1641,10 +1651,49 @@ crossws@^0.3.4, crossws@^0.3.5, "crossws@>=0.2.0 <0.4.0":
   dependencies:
     uncrypto "^0.1.3"
 
+css-select@^5.1.0:
+  version "5.2.2"
+  resolved "https://registry.npmjs.org/css-select/-/css-select-5.2.2.tgz"
+  integrity sha512-TizTzUddG/xYLA3NXodFM0fSbNizXjOKhqiQQwvhlspadZokn1KDy0NZFS0wuEubIYAV5/c1/lAr0TaaFXEXzw==
+  dependencies:
+    boolbase "^1.0.0"
+    css-what "^6.1.0"
+    domhandler "^5.0.2"
+    domutils "^3.0.1"
+    nth-check "^2.0.1"
+
+css-tree@^3.0.1:
+  version "3.2.1"
+  resolved "https://registry.npmjs.org/css-tree/-/css-tree-3.2.1.tgz"
+  integrity sha512-X7sjQzceUhu1u7Y/ylrRZFU2FS6LRiFVp6rKLPg23y3x3c3DOKAwuXGDp+PAGjh6CSnCjYeAul8pcT8bAl+lSA==
+  dependencies:
+    mdn-data "2.27.1"
+    source-map-js "^1.2.1"
+
+css-tree@~2.2.0:
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/css-tree/-/css-tree-2.2.1.tgz"
+  integrity sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==
+  dependencies:
+    mdn-data "2.0.28"
+    source-map-js "^1.0.1"
+
+css-what@^6.1.0:
+  version "6.2.2"
+  resolved "https://registry.npmjs.org/css-what/-/css-what-6.2.2.tgz"
+  integrity sha512-u/O3vwbptzhMs3L1fQE82ZSLHQQfto5gyZzwteVIEyeaY5Fc7R4dapF/BvRoSYFeqfBk4m0V1Vafq5Pjv25wvA==
+
 cssesc@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
+
+csso@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.npmjs.org/csso/-/csso-5.0.5.tgz"
+  integrity sha512-0LrrStPOdJj+SPCCrGhzryycLjwcgUSHBtxNA8aIDxf0GLsRh1cKYhB00Gd1lDOS4yGH69+SNn13+TWbVHETFQ==
+  dependencies:
+    css-tree "~2.2.0"
 
 csstype@^3.1.0:
   version "3.1.3"
@@ -1750,6 +1799,36 @@ dlv@^1.1.3:
   resolved "https://registry.npmjs.org/dlv/-/dlv-1.1.3.tgz"
   integrity sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==
 
+dom-serializer@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/dom-serializer/-/dom-serializer-2.0.0.tgz"
+  integrity sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==
+  dependencies:
+    domelementtype "^2.3.0"
+    domhandler "^5.0.2"
+    entities "^4.2.0"
+
+domelementtype@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/domelementtype/-/domelementtype-2.3.0.tgz"
+  integrity sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==
+
+domhandler@^5.0.2, domhandler@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.npmjs.org/domhandler/-/domhandler-5.0.3.tgz"
+  integrity sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==
+  dependencies:
+    domelementtype "^2.3.0"
+
+domutils@^3.0.1:
+  version "3.2.2"
+  resolved "https://registry.npmjs.org/domutils/-/domutils-3.2.2.tgz"
+  integrity sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==
+  dependencies:
+    dom-serializer "^2.0.0"
+    domelementtype "^2.3.0"
+    domhandler "^5.0.3"
+
 dot-prop@^10.1.0:
   version "10.1.0"
   resolved "https://registry.npmjs.org/dot-prop/-/dot-prop-10.1.0.tgz"
@@ -1811,6 +1890,11 @@ encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/encodeurl/-/encodeurl-1.0.2.tgz"
   integrity sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==
+
+entities@^4.2.0:
+  version "4.5.0"
+  resolved "https://registry.npmjs.org/entities/-/entities-4.5.0.tgz"
+  integrity sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==
 
 entities@^6.0.0:
   version "6.0.1"
@@ -2595,6 +2679,16 @@ mdast-util-to-hast@^13.0.0:
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
 
+mdn-data@2.0.28:
+  version "2.0.28"
+  resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.28.tgz"
+  integrity sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==
+
+mdn-data@2.27.1:
+  version "2.27.1"
+  resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.27.1.tgz"
+  integrity sha512-9Yubnt3e8A0OKwxYSXyhLymGW4sCufcLG6VdiDdUGVkPhpqLxlvP5vl1983gQjJl3tqbrM731mjaZaP68AgosQ==
+
 merge-anything@^5.1.7:
   version "5.1.7"
   resolved "https://registry.npmjs.org/merge-anything/-/merge-anything-5.1.7.tgz"
@@ -2903,6 +2997,13 @@ npm-run-path@^5.1.0:
   integrity sha512-ppwTtiJZq0O/ai0z7yfudtBpWIoxM8yE6nHi1X47eFR2EWORqfbu6CnPlNsjeN683eT0qG6H/Pyf9fCcvjnnnQ==
   dependencies:
     path-key "^4.0.0"
+
+nth-check@^2.0.1:
+  version "2.1.1"
+  resolved "https://registry.npmjs.org/nth-check/-/nth-check-2.1.1.tgz"
+  integrity sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==
+  dependencies:
+    boolbase "^1.0.0"
 
 nypm@^0.6.0:
   version "0.6.2"
@@ -3372,6 +3473,11 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz"
   integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
 
+sax@^1.5.0:
+  version "1.6.0"
+  resolved "https://registry.npmjs.org/sax/-/sax-1.6.0.tgz"
+  integrity sha512-6R3J5M4AcbtLUdZmRv2SygeVaM7IhrLXu9BmnOGmmACak8fiUtOsYNWUS4uK7upbmHIBbLBeFeI//477BKLBzA==
+
 scule@^1.3.0:
   version "1.3.0"
   resolved "https://registry.npmjs.org/scule/-/scule-1.3.0.tgz"
@@ -3548,7 +3654,7 @@ solidjs-hooks@^1.1.2:
   dependencies:
     js-cookie "^3.0.1"
 
-source-map-js@^1.0.2, source-map-js@^1.2.0, source-map-js@^1.2.1:
+source-map-js@^1.0.1, source-map-js@^1.0.2, source-map-js@^1.2.0, source-map-js@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.1.tgz"
   integrity sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==
@@ -3741,6 +3847,19 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
+
+svgo@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.npmjs.org/svgo/-/svgo-4.0.1.tgz"
+  integrity sha512-XDpWUOPC6FEibaLzjfe0ucaV0YrOjYotGJO1WpF0Zd+n6ZGEQUsSugaoLq9QkEZtAfQIxT42UChcssDVPP3+/w==
+  dependencies:
+    commander "^11.1.0"
+    css-select "^5.1.0"
+    css-tree "^3.0.1"
+    css-what "^6.1.0"
+    csso "^5.0.5"
+    picocolors "^1.1.1"
+    sax "^1.5.0"
 
 system-architecture@^0.1.0:
   version "0.1.0"
