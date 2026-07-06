@@ -13,7 +13,7 @@ import { ScaleProvider } from "~/store/ScaleProvider";
 import { TEXT_X_PADDING } from "~/constants";
 import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
 
-const SHOW_DEBUG_COLORS = true;
+const SHOW_DEBUG_COLORS = false;
 const HEIGHT_CHANGE_RAF_MAX_MS = 800;
 
 type ImageProps = ParentProps &
