@@ -238,7 +238,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       False -> []
     },
     [
-      dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, only)),
+      dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, False)),
       dl.ensure_attribute_value_starts_with(#("src", "/")),
     ],
   ]
