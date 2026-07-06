@@ -18,14 +18,14 @@
 
         |> Boxed
             $$
-            \begin{align}
+            \begin{align*}
             \sec^2(\theta)
             \,\,&=\,\, {1\over \cos^2(\theta)} \\
             &amp;=\,\, \up{2} {\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)} \\
             &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
             &amp;=\,\, \up{2} 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
             &amp;=\,\, \up{2}1 + \tan^2(\theta).
-            \end{align}
+            \end{align*}
             $$
 
         (Ta-daa!) (It's slightly harder in this

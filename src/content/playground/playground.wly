@@ -475,17 +475,23 @@
                 What is the SideImage component ?
 
             |> Solution
-                _*Book-context fixtures.*_ These are the active clouds from ch1, ch2, bt1, and bt2. Each fixture keeps the same attached element used in the book, with one surrounding element above and beneath.
+                _*Book-context fixtures.*_ These are the
+                active clouds from ch1, ch2, bt1, and bt2.
+                Each source excerpt keeps the actual attached
+                paragraph/equation/image and its adjacent
+                source blocks.
 
                 |> Pause
 
-                _*ch1.1:*_ `svg_ch1_ch_minus_two_squared_cloud.svg`
+                _*ch1.1: `svg_ch1_ch_minus_two_squared_cloud.svg`*_
 
+                while, of course,
                 $$
                 2 \times 2 = 4
                 $$
-
-                Hence,
+                is positive as well. But $\sqrt{4}$
+                is, by definition, the unique _nonnegative_
+                solution to $x^2 = 4$. Hence,
 
                 $$
                 \sqrt{(-2)^2} = 2
@@ -493,14 +499,18 @@
 
                 |> ImageRight
                     src=images/svg_ch1_ch_minus_two_squared_cloud.svg
-                    offset-x=5em
                     at-least-as-wide=false
+                    offset-x=5em
 
                 and, in particular, it is _not_ true that
 
+                $$
+                \sqrt{x^{2}} \rt{0.1} = \rt{0.1} x
+                $$
+
                 |> Pause
 
-                _*ch1.2:*_ `c1_abCD_cloud.svg`
+                _*ch1.2: `c1_abCD_cloud.svg`*_
 
                 A little more generally, one has such identities
                 as
@@ -514,11 +524,17 @@
                     offset-x=-1em
 
                 that come from multiplying every term of the first
-                parenthesis with every term of the second parenthesis.
+                parenthesis with every term of the second
+                parenthesis. Indeed,
+
+
+                $$
+                (a + b)(C + D) = (a + b)C + (a + b)D
+                $$
 
                 |> Pause
 
-                _*ch1.3:*_ `svg_ch1_ex_25.svg`
+                _*ch1.3-4: `svg_ch1_ex_25.svg`, `svg_ch1_ex_26.svg`*_
 
                 Since
 
@@ -527,18 +543,8 @@
                 $$
 
                 |> ImageRight
-                    offset-x=5rem
                     src=images/svg_ch1_ex_25.svg
-
-                (as previously computed) is smaller than
-
-                |> Pause
-
-                _*ch1.4:*_ `svg_ch1_ex_26.svg`
-
-                $$
-                {1 \over n} - {1 \over n+1} = {1 \over n(n+1)}
-                $$
+                    offset-x=-4rem
 
                 (as previously computed) is smaller than
 
@@ -547,22 +553,28 @@
                 $$
 
                 |> ImageRight
-                    offset-x=10rem
+                    offset-x=-4rem
                     src=images/svg_ch1_ex_26.svg
 
                 we will compute the difference
 
+                $$
+                {1 \over n^2} - {1 \over n(n+1)}
+                $$
+
                 |> Pause
 
-                _*ch1.5:*_ `svg_ch1_ex_27.svg`
+                _*ch1.5: `svg_ch1_ex_27.svg`*_
 
-                $$
-                {1 \over n(n+1)} - {1 \over n^2}
-                $$
+                to avoid a minus sign in the result.
+                (Computing the second difference and having
+                a minus sign does not constitute a mistake,
+                however.) Having said this, the difference is:
 
                 $$
                 \begin{align*}
-                {1 \over n^2} - {1 \over n(n+1)} &= {1 \over n^2} \cdot {n+1 \over n+1} - {1 \over n(n+1)} \cdot {n \over n}\\
+                {1 \over n^2} - {1 \over n(n+1)} &= {1 \over n^2} \cdot {n+1 \over n+1} - {1 \over n(n+1)} \cdot
+                {n \over n}\\
                 &= {n+1 \over n^2(n+1)} - {n \over n^2(n+1)}\up{1.5}\\
                 &= {1 \over n^2(n+1)}\up{1.5}
                 \end{align*}
@@ -574,16 +586,25 @@
 
                 which, for large $n$, is roughly
 
+                $$
+                {1 \over n^3}
+                $$
+
                 |> Pause
 
-                _*ch1.6:*_ `true_false_sixth_root_of_two_cloud1.svg`
+                _*ch1.6-7: `true_false_sixth_root_of_two_cloud1.svg`, `true_false_sixth_root_of_two_cloud2.svg`*_
 
-                To convince yourself, note that
+                $\sqrt[2]{\up{0.75}\sqrt[3]{2}}$
+                and $\sqrt[3]{\up{0.75}\sqrt[2]{2}}$ are
+                both equal to $\sqrt[6]{\up{0.6}2}$. To
+                convince yourself, note that
 
                 $$
                 \begin{align*}
                 &\,\, (\sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.1})^6 \\
-                =&\,\, \up{1.4} (\gbk\sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.11})^3 \\
+                =&\,\, \up{1.4} \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}}\qquad\\
+                =&\,\, \up{1.4} (\gbk\sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.11}) \times (\gbk\sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.11}) \times (\gbk\sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.11}) \\
+                =& \,\, \up{1.4} (\sqrt[3]{\up{0.64}2}\rt{0.1}) \times (\sqrt[3]{\up{0.64}2}\rt{0.1}) \times (\sqrt[3]{\up{0.64}2}\rt{0.1})\\
                 =& \,\, \up{1.4} 2
                 \end{align*}
                 $$
@@ -592,34 +613,26 @@
                     src=images/true_false_sixth_root_of_two_cloud1.svg
                     offset-y=23.5%
 
+                and
+
                 $$
-                \begin{align}
+                \begin{align*}
                 \    &\,\, (\sqrt[3]{\up{0.75}\sqrt[2]{2}}\rt{0.1})^6 \\
+                \   =&\,\, \up{1.4} \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}}\\
+                \   =&\,\, \up{1.4} (\gbk\sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}}\rt{0.11}) \times (\gbk\sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}}\rt{0.11})\\
+                \   =&\,\, \up{1.4} \sqrt[2]{\up{0.65}2} \times \sqrt[2]{\up{0.65}2}\\
                 \   =&\,\, \up{1.4} 2
-                \end{align}
-                $$
-
-                |> Pause
-
-                _*ch1.7:*_ `true_false_sixth_root_of_two_cloud2.svg`
-
-                $$
-                \begin{align}
-                &\,\, (\sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.1})^6 \\
-                =&\,\, 2
-                \end{align}
-                $$
-
-                $$
-                \begin{align}
-                \    &\,\, (\sqrt[3]{\up{0.75}\sqrt[2]{2}}\rt{0.1})^6 \\
-                \   =&\,\, \up{1.4} 2
-                \end{align}
+                \end{align*}
                 $$
 
                 |> ImageLeft
                     src=images/true_false_sixth_root_of_two_cloud2.svg
                     offset-y=23.5%
+
+                so $(\sqrt[2]{\up{0.76}\sqrt[3]{2}}\rt{0.1})^6 =
+                (\sqrt[3]{\up{0.76}\sqrt[2]{2}}\rt{0.1})^6 = 2$.
+
+                Technically, however, a number $x$ such that
 
                 $$
                 x^6 = 2
@@ -627,18 +640,21 @@
 
                 |> Pause
 
-                _*ch1.8:*_ `svg_ch1_ex_24.svg`
+                _*ch1.8: `svg_ch1_ex_24.svg`*_
+
+                of the sum? (By the way, this $n$-th term
+                is the difference
+                ${1 \over 99} - {1 \over 100}$ for $n = 99$,
+                which is how we came to be reminded of this
+                infinite sum in the first place.) Well...
 
                 $$
-                {1 \over 99} - {1 \over 100}
-                $$
-
-                $$
-                \begin{align}
+                \begin{align*}
                 {1 \over n} - {1 \over n+1} &= {1 \over n}\cdot{n+1 \over n+1}\, - \,
                 {1 \over n+1}\cdot{n \over n}\up{1.5}\\
+                &= {n+1 \over n(n+1)} - {n \over n(n+1)}\up{1.5}\\
                 &= {1 \over n(n+1)}\up{1.5}
-                \end{align}
+                \end{align*}
                 $$
 
                 |> ImageRight
@@ -647,9 +663,13 @@
 
                 ...it's that much. (For example,
 
+                $$
+                {1 \over 1} - {1 \over 2} = {1 \over 1 \cdot 2} = {1 \over 2}
+                $$
+
                 |> Pause
 
-                _*ch2.1:*_ `c2_slope_formula_cloud.svg`
+                _*ch2.1: `c2_slope_formula_cloud.svg`*_
 
                 are the horizontal and the vertical change,
                 respectively, from $A$ to $B$, so
@@ -663,13 +683,16 @@
                     offset-y=-0.7em
                     offset-x=3em
 
-                A line that passes through two points gives the next example.
+                more succinctly. We call this equation the _slope formula_.
 
                 |> Pause
 
-                _*ch2.2:*_ `c2_swap_cloud.svg`
+                _*ch2.2-3: `c2_swap_cloud.svg`, `tmp-images/c2_a_b_fraction_cloud.svg`*_
 
-                We should verify that the slope formula gives the same answer if the points swap places.
+                In fact, we _should_ be able to algebraically
+                verify that the slope formula gives the same
+                answer if $(x_1, y_1)$ and $(x_2, y_2)$ swap
+                places, or, namely, to show that the fractions
 
                 |> ImageRight
                     src=images/c2_swap_cloud.svg
@@ -678,13 +701,7 @@
 
                 $$ {y_2 - y_1 \over x_2 - x_1}\qquad\,\,\,\,\,\te{and}\,\,\,\,\,\qquad{y_1 - y_2 \over x_1 - x_2} $$
 
-                $$ {y_2 - y_1 \over x_2 - x_1} = {-(y_2 - y_1) \over -(x_2 - x_1)} = {y_1 - y_2 \over x_1 - x_2} $$
-
-                |> Pause
-
-                _*ch2.3:*_ `tmp-images/c2_a_b_fraction_cloud.svg`
-
-                $$ {y_2 - y_1 \over x_2 - x_1}\qquad\,\,\,\,\,\te{and}\,\,\,\,\,\qquad{y_1 - y_2 \over x_1 - x_2} $$
+                are somehow equal. But, indeed,
 
                 $$ {y_2 - y_1 \over x_2 - x_1} = {-(y_2 - y_1) \over -(x_2 - x_1)} = {y_1 - y_2 \over x_1 - x_2} $$
 
@@ -693,13 +710,14 @@
                     offset-x=2.5em
                     offset-y=0
 
-                which verifies this hypothesis.
+                which verifies this hypothesis. In particular,
 
                 |> Pause
 
-                _*ch2.4:*_ `svg_ch2_ch_vertical_line_equation.svg`
+                _*ch2.4: `svg_ch2_ch_vertical_line_equation.svg`*_
 
-                A vertical line is described by an equation of the form
+                what would $a$ be equal to? Instead, a vertical
+                line is described by an equation of the form
 
                 $$x = c$$
 
@@ -713,11 +731,19 @@
 
                 $$y = b$$
 
+                for a horizontal line, where $b \in \rr$ is a
+
                 |> Pause
 
-                _*ch2.5:*_ `svg_3_plus_minus_one_times_x_cloud.svg`
+                _*ch2.5: `svg_3_plus_minus_one_times_x_cloud.svg`*_
+
+                One should also bear in mind that an equation can
+                define a line without having either of the forms
+                “$y = ax + b$” or “$x = c$”. For example,
 
                 $$x + y = 3$$
+
+                is equivalent to
 
                 $$y = 3 - x$$
 
@@ -728,15 +754,12 @@
                     src=images/svg_3_plus_minus_one_times_x_cloud.svg
                     line=1
 
-                $$
-                \te{slope has units}
-                $$
-
                 |> Pause
 
-                _*ch2.6:*_ `c2_units_cloud.svg`
+                _*ch2.6: `c2_units_cloud.svg`*_
 
-                The amount of time required for the balloon to go up by $4$m is
+                The amount of time required
+                for the balloon to go up by (say) $4$m is
 
                 $$
                 \frac{4\te{m}}{0.75\te{m}/\te{s}}\! = 5.3333...\te{s}
@@ -745,15 +768,20 @@
                 |> ImageRight
                     src=images/c2_units_cloud.svg
 
+                following the template
+
                 $$
+                \rt{0.1}
                 \te{amount of time} \,\,=\,\, \frac{\!\rt{0.15}\te{amount of change}\!\rt{0.1}}{\te{rate of change}}
+                \rt{0.1}
                 $$
 
                 |> Pause
 
-                _*ch2.7:*_ `c2_slope_two_and_minus_one_half_cloud_right.svg`
+                _*ch2.7-8: `c2_slope_two_and_minus_one_half_cloud_right.svg`, `c2_slope_two_and_minus_one_half_cloud_left.svg`*_
 
-                This is true, as illustrated by the following pair of lines:
+                This is true, as illustrated by the following
+                pair of lines:
 
                 |> Image
                     src=images/c2_slope_two_and_minus_one_half.svg
@@ -764,45 +792,40 @@
                     offset-y=20%
                     offset-x=-5%
 
-                In more detail, the two triangles are related by a $90^\circ$ rotation.
-
-                |> Pause
-
-                _*ch2.8:*_ `c2_slope_two_and_minus_one_half_cloud_left.svg`
-
-                This is true, as illustrated by the following pair of lines:
-
-                |> Image
-                    src=images/c2_slope_two_and_minus_one_half.svg
-                    class=relative w-fit
-
                 |> ImageLeft
                     src=images/c2_slope_two_and_minus_one_half_cloud_left.svg
                     offset-x=-25%
                     offset-y=47%
 
-                In more detail, the two triangles are related by a $90^\circ$ rotation.
+                In more detail, the two triangles are related
+                by a $90^\circ$ rotation and so, likewise,
+                are the lines defined by their hypotenuses!
 
                 |> Pause
 
-                _*ch2.9:*_ `svg_ch2_ex_x0_y0_line_equation_cloud.svg`
+                _*ch2.9: `svg_ch2_ex_x0_y0_line_equation_cloud.svg`*_
 
-                A point $(x,y) \ne (x_0,y_0)$ is on the line of slope $p$ if and only if
+                A point $(x,y) \ne (x_0,y_0)$ is on the
+                line of slope $p$ if and only if
 
                 $$ p = {y - y_0 \over x - x_0} $$
 
                 |> ImageLeft
                     src=images/svg_ch2_ex_x0_y0_line_equation_cloud.svg
-                    offset-x=10rem
-                    offset-y=0%
+                    offset-x=0rem
 
                 because
 
+                $$ \,\,{y - y_0 \over x - x_0} $$
+
                 |> Pause
 
-                _*ch2.10:*_ `svg_slope_times_run_equals_rise_cloud.svg`
+                _*ch2.10: `svg_slope_times_run_equals_rise_cloud.svg`*_
 
-                This can be a final answer, and has the form
+                which is satisfied by the point $(x,y) = (x_0,y_0)$
+                as well as by every other point on the line.
+                This can be a final answer, and, pleasingly,
+                has the form
 
                 $$
                 \te{“}\te{slope} \times \te{run} = \te{rise}\te{”}
@@ -813,11 +836,20 @@
                     offset-x=2.5rem
                     offset-y=0%
 
-                $$ y - y_0 = p(x - x_0) $$
+                which can also make it easy to remember!
 
                 |> Pause
 
-                _*bt1.1:*_ `svg_bt1_bt_empty_set_cloud.svg`
+                _Note 1._
+                The answer we gave is more often written
+
+                $$
+                y - y_0 = p(x - x_0)
+                $$
+
+                |> Pause
+
+                _*bt1.1: `svg_bt1_bt_empty_set_cloud.svg`*_
 
                 Mind you, concerning this example, that
 
@@ -830,12 +862,26 @@
                     offset-x=3em
 
                 because a box containing an empty box is not the
-                same thing as an empty box!
+                same thing as an empty box! Specifically,
+
+                $$
+                \Large \{ \{\} \}
+                $$
 
                 |> Pause
 
-                _*bt2.1:*_ `svg_bt2_bt_alert_cloud.svg`
+                _*bt2.1: `svg_bt2_bt_alert_cloud.svg`*_
 
+                For example,
+                $$
+                \Large 10^4 = 1 \times 10 \times 10 \times 10 \times 10 = 10000
+                $$
+                $$
+                \Large 10^3 = 1 \times 10 \times 10 \times 10 = 1000
+                $$
+                $$
+                \Large 10^2 = 1 \times 10 \times 10 = 100
+                $$
                 $$
                 \Large 10^1 = 1 \times 10 = 10
                 $$
@@ -851,12 +897,30 @@
 
                 (where, in the last line, $1$ is multiplied by $10$ _zero times_,
                 as per the exponent, which is zero) by the first definition, while
+                $$
+                \Large 10^{-1} = 1\,/\,10 = 0.1
+                $$
+                $$
+                \Large 10^{-2} = (1\,/\, 10)\,/\,10 = 0.01
+                $$
+                $$
+                \Large 10^{-3} = ((1\,/\, 10)\,/\,10)\,/\,10 = 0.001
+                $$
+                $$
+                \Large 10^{-4} = (((1\,/\, 10)\,/\,10)\,/\, 10)\,/\, 10 = 0.0001
+                $$
+                by the second definition.
 
                 |> Pause
 
-                _*bt2.2:*_ `svg_bt2_bt_10_to_the_minus_0_cloud.svg`
+                _*bt2.2: `svg_bt2_bt_10_to_the_minus_0_cloud.svg`*_
 
-                $$\Large 10^{-n} = {1 \over 10^{\hspace{0.2ex}n}}\tag{A}$$
+                As $n$ successive divisions
+                by $10$ is the same as one division by $10^n$, one also has
+
+                |> MathBlock
+                    handle=_10_to_the_minus_n_ A
+                    \Large 10^{-n} = {1 \over 10^{\hspace{0.2ex}n}}\tag{A}
 
                 for every positive integer $n$, which gives an alternate means of computing $10^{-n}$.
                 Moreover, (>>_10_to_the_minus_n_) actually holds for
@@ -871,12 +935,26 @@
                     src=images/svg_bt2_bt_10_to_the_minus_0_cloud.svg
                     line=2
 
-                $$\Large 10^{-n}10^n = 1 \tag{AA}$$
+                |> MathBlock
+                    handle=_10_to_the_minus_n__reworked AA
+                    \Large 10^{-n}10^n = 1 \tag{AA}
+
+                which holds for $n$ if and only if it holds for
+                $-n$. (By which we mean: replacing “$n$” by “$-n$”
+                in (>>_10_to_the_minus_n__reworked) lands you right back on (>>_10_to_the_minus_n__reworked), due to the fact
+                that $-{(-n)} = n$.) (So, namely, if (>>_10_to_the_minus_n__reworked) holds for all
+                positive values of $\hspace{0.05em}n$, then it holds
+                for all negative values of $n$, as well.)
 
                 |> Pause
 
-                _*bt2.3:*_ `svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg`
+                _*bt2.3-5: `svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg`, `svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg`, `svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg`*_
 
+                __one million is a thousand thousand__
+                because
+                $$
+                \Large 1000 \times 1000 = 1000\hspace{0.3ex}000
+                $$
                 by counting zeroes, or, equivalently, because
                 $$
                 \Large 10^3 \times 10^3 = 10^6
@@ -890,38 +968,23 @@
 
                 and __one trillion is a thousand billion__
 
-                |> Pause
-
-                _*bt2.4:*_ `svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg`
-
-                __one billion is a thousand million__
-
-                and __one trillion is a thousand billion__
-
                 |> ImageLeft
                     src=images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg
 
-                and also __one trillion is a million million__
+                and also (while we're at it)
 
-                |> Pause
-
-                _*bt2.5:*_ `svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg`
-
-                and __one trillion is a thousand billion__
-
-                and also __one trillion is a million million__
+                __one trillion is a million million__
 
                 |> ImageRight
                     src=images/svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg
 
-                as can be seen by replacing “billion” with “thousand million”.
+                as can be seen, for example, by replacing “billion”
 
                 |> Pause
 
-                _*bt2.6:*_ `svg_bt2_bt_ten_to_the_minus_5_cloud.svg`
+                _*bt2.6: `svg_bt2_bt_ten_to_the_minus_5_cloud.svg`*_
 
                 Since
-
                 $$
                 \Large 0.00001 = 10^{-5}
                 $$
@@ -934,62 +997,66 @@
 
                 |> Pause
 
-                _*bt2.7:*_ `svg_bt2_ex_equation_addition_cloud.svg`
+                _*bt2.7: `svg_bt2_ex_equation_addition_cloud.svg`*_
 
+                $$
+                \Large a + b - c - 3 = 0
+                $$
                 $$
                 \Large -a -2b - c = 0
                 $$
-
+                ...are satisfied! Adding the second and
+                third equation together, we find
                 $$
                 \Large -b -2c -3 = 0
                 $$
-
                 |> ImageRight
                     src=images/svg_bt2_ex_equation_addition_cloud.svg
                     offset-y=-0.5em
                     offset-x= 0.5em
-
                 and adding this last equation to the first
                 equation above, we find
+                $$
+                \Large -c -2 = 0
+                $$
 
                 |> Pause
 
-                _*Large image stress fixture:*_ 1000px-wide image with six book clouds.
+                _*Large image stress fixture:*_ 1000px-wide image with six test clouds.
 
                 |> Image
                     src=images/test_native_1000.svg
                     width=1000px
 
                 |> ImageLeft
-                    src=images/c1_abCD_cloud.svg
+                    src=images/test_cloud_NW.svg
+                    offset-y=-50%
+                    offset-x=2em
+
+                |> ImageLeft
+                    src=images/test_cloud_W.svg
                     offset-y=0%
                     offset-x=2em
 
                 |> ImageLeft
-                    src=images/svg_ch2_ch_vertical_line_equation.svg
+                    src=images/test_cloud_SW.svg
                     offset-y=50%
                     offset-x=2em
 
-                |> ImageLeft
-                    src=images/svg_bt2_bt_alert_cloud.svg
-                    offset-y=100%
+                |> ImageRight
+                    src=images/test_cloud_NE.svg
+                    offset-y=-50%
                     offset-x=2em
 
                 |> ImageRight
-                    src=images/svg_ch1_ch_minus_two_squared_cloud.svg
+                    src=images/test_cloud_E.svg
                     offset-y=0%
                     offset-x=2em
 
                 |> ImageRight
-                    src=images/c2_slope_formula_cloud.svg
+                    src=images/test_cloud_SE.svg
                     offset-y=50%
                     offset-x=2em
-
-                |> ImageRight
-                    src=images/svg_bt1_bt_empty_set_cloud.svg
-                    offset-y=100%
-                    offset-x=2em
-
     |> Pause
 
     _*Case 1:*_ set width=1000px, native 350px
@@ -1021,3 +1088,17 @@
     |> Image
         src=images/test_native_350.svg
         width=350px
+
+    |> Pause
+
+    _*Case 5:*_ no width attribute, native 1000px
+
+    |> Image
+        src=images/test_native_1000.svg
+
+    |> Pause
+
+    _*Case 6:*_ no width attribute, native 350px
+
+    |> Image
+        src=images/test_native_350.svg

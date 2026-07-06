@@ -351,9 +351,9 @@
         then
 
         $$
-        \begin{align}
+        \begin{align*}
         \dom\, g &\,=\, [1, \infty)
-        \end{align}
+        \end{align*}
         $$
 
         because the square root of a number is defined
@@ -372,9 +372,9 @@
     !!     then
 
     !!     $$
-    !!     \begin{align}
+    !!     \begin{align*}
     !!     \dom\,h \,=\, \rr\back\{-1\} =\, (-\infty,-1) \cup (-1,\infty)
-    !!     \end{align}
+    !!     \end{align*}
     !!     $$
 
     !!     because $1/(x+1)$ is well-defined if and only if

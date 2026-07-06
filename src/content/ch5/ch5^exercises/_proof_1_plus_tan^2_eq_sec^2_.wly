@@ -40,7 +40,7 @@
         $$
         and, by the definitions,
         $$
-        \begin{align}
+        \begin{align*}
         1 + \tan^2(\theta)
         \,\,&=\,\, 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
         &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
@@ -48,7 +48,7 @@
         &amp;=\,\, \up{2} {1\over \cos^2(\theta)} \\
         &amp;=\,\, \up{2} \left({1\over \cos(\theta)}\right)^{\!2} \\
         &amp;=\,\, \up{2} \sec^2(\theta)
-        \end{align}
+        \end{align*}
         $$
         using the pythagorean identity in the fourth step.
 

@@ -605,6 +605,21 @@ p a:hover,
   pointer-events: auto;
 }
 
+.t-3003-i-copy {
+  vertical-align: middle;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 150%;
+  line-height: 1;
+  text-decoration: none;
+  user-select: none;
+  pointer-events: auto;
+}
+
+.t-3003-i-copy:active {
+  color: #2f95c7;
+}
+
 .t-3003::after {
   content: "";
   position: absolute;
@@ -626,7 +641,8 @@ p a:hover,
   background-color: transparent; /* Invisible */
 }
 
-.t-3003:hover {
+.t-3003:not(.t-3003-i):hover,
+.t-3003-i-path:hover {
   text-decoration: underline;
 }
 

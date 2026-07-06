@@ -15,13 +15,13 @@
 
         We have
         $$
-        \begin{align}
+        \begin{align*}
         &amp;\,\,\, (\cos\cdot\sin)(x + 2\eta)\\
         =&\,\,\, \up{1.2}\cos(x + 2\eta)\cdot\sin(x + 2\eta)\\
         =&\,\,\, \up{1.2}(-\cos(x))\cdot(-\sin(x))\\
         =&\,\,\, \up{1.2}\cos(x)\cdot\sin(x)\\
         =&\,\,\, \up{1.2}(\cos\cdot\sin)(x)
-        \end{align}
+        \end{align*}
         $$
         for all $x \in \rr$, using the fact that
         $$
@@ -33,23 +33,23 @@
         $$
         for all $x \in \rr$, and, likewise,
         $$
-        \begin{align}
+        \begin{align*}
         &amp;\,\,\, \cos^2(x + 2\eta)\\
         =&\,\,\, \up{1.2}\cos(x + 2\eta)\cdot\cos(x + 2\eta)\\
         =&\,\,\, \up{1.2}(-\cos(x))\cdot(-\cos(x))\\
         =&\,\,\, \up{1.2}\cos(x)\cdot\cos(x)\\
         =&\,\,\, \up{1.2}\cos^2(x)
-        \end{align}
+        \end{align*}
         $$
         for all $x \in \rr$, and
         $$
-        \begin{align}
+        \begin{align*}
         &amp;\,\,\, \sin^2(x + 2\eta)\\
         =&\,\,\, \up{1.2}\sin(x + 2\eta)\cdot\sin(x + 2\eta)\\
         =&\,\,\, \up{1.2}(-\sin(x))\cdot(-\sin(x))\\
         =&\,\,\, \up{1.2}\sin(x)\cdot\sin(x)\\
         =&\,\,\, \up{1.2}\sin^2(x)
-        \end{align}
+        \end{align*}
         $$
         for all $x \in \rr$.
 

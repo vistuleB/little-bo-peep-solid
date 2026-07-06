@@ -38,23 +38,23 @@
         values of the functions. So—for example—
 
         $$
-        \begin{align}
+        \begin{align*}
         & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(5) \\
         =& \,\,\,(x \ra x + 1)(5) + (u \ra 2u + 1)(5) \up{1.5} \\
         =& \,\,\,(5 + 1) + (2\cdot 5 + 1) \up{1.5} \\
         =& \,\,\,3\cdot 5 + 2 = 17 \up{1.5}
-        \end{align}
+        \end{align*}
         $$
 
         and—with a general input $t$—
 
         $$
-        \begin{align}
+        \begin{align*}
         & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(t) \\
         =& \,\,\,(x \ra x + 1)(t) + (u \ra 2u + 1)(t) \up{1.5} \\
         =& \,\,\,(t + 1) + (2t + 1) \up{1.5} \\
         =& \,\,\,3t + 2 \up{1.5}
-        \end{align}
+        \end{align*}
         $$
 
         which implies that, indeed,
@@ -73,12 +73,12 @@
         in place of $t$:
 
         $$
-        \begin{align}
+        \begin{align*}
         & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(x) \\
         =& \,\,\,(x \ra x + 1)(x) + (u \ra 2u + 1)(x) \up{1.5} \\
         =& \,\,\,(x + 1) + (2x + 1) \up{1.5} \\
         =& \,\,\,3x + 2 \up{1.5}
-        \end{align}
+        \end{align*}
         $$
 
         Here we have two different $x$'s:

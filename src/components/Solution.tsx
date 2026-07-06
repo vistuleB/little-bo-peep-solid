@@ -25,7 +25,10 @@ import {
   useExercisesStateHelpers,
 } from "~/store/ExercisesStoreProvider";
 import smoothScrollTo from "~/utils/smoothScrollTo";
-import { HeightChangeListenerProvider } from "~/store/HeightChangeListenerProvider";
+import {
+  HeightChangeListenerProvider,
+  useHeightChangeListenerContext,
+} from "~/store/HeightChangeListenerProvider";
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useOneExerciseContext } from "~/store/OneExerciseStoreProvider";
 import { useExerciseGroupRegistry } from "~/store/ExerciseGroupRegistryProvider";
@@ -69,6 +72,19 @@ const SpaceBeforeBackupArrow = () => (
     <Spacer />
   </>
 );
+
+const SolutionHeightChangeListener = (props: { resetter: () => void }) => {
+  const context = useHeightChangeListenerContext();
+
+  createEffect(() => {
+    context?.height_change_listener_store.re_calculate_height;
+    props.resetter();
+    requestAnimationFrame(props.resetter);
+    window.setTimeout(props.resetter, 50);
+  });
+
+  return <></>;
+};
 
 export const Solution = (props: SolutionProps) => {
   let ref: HTMLDivElement | undefined;
@@ -206,6 +222,7 @@ export const Solution = (props: SolutionProps) => {
 
   return (
     <HeightChangeListenerProvider>
+      <SolutionHeightChangeListener resetter={reset_content_height_etc} />
       <SpaceBetweenStatementAndSolutionButton />
       <SolutionButton
         handle={handle}

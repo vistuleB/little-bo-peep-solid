@@ -1,4 +1,5 @@
 import {
+  createEffect,
   createSignal,
   mergeProps,
   onCleanup,
@@ -26,20 +27,24 @@ Horizontal placement:
   image's right-center point as its pivot.
 - atLeastAsWide widens the semantic parent rectangle, centered on the actual
   parent, to at least the main text width before the anchor is chosen.
-- offsetX is then applied away from the parent, multiplied by the parent scale.
+- offsetX is then applied away from the parent; non-percent lengths are
+  multiplied by the parent scale, while percent lengths are relative to the
+  parent rectangle and are not multiplied.
 
 Vertical placement:
 - line = 0 anchors halfway down the parent rectangle.
 - line > 0 anchors (line - 0.5) unscaled line heights from the top.
 - line < 0 anchors (0.5 - abs(line)) unscaled line heights from the bottom.
-- offsetY is added after the line calculation and multiplied by the parent scale.
+- offsetY is added after the line calculation; non-percent lengths are
+  multiplied by the parent scale, while percent lengths are relative to the
+  parent rectangle and are not multiplied.
 */
 
 type UserFacingSideImageProps = ParentProps &
   SharedProps & {
     src: string;
-    offsetX?: string;
-    offsetY?: string;
+    offsetX?: string | number;
+    offsetY?: string | number;
     atLeastAsWide?: boolean;
     line?: number | string;
     childrenX?: string | number;
@@ -50,8 +55,8 @@ type UserFacingSideImageProps = ParentProps &
 
 type InternalSideImageProps = UserFacingSideImageProps & {
   side: "left" | "right";
-  offsetX: string;
-  offsetY: string;
+  offsetX: string | number;
+  offsetY: string | number;
   atLeastAsWide: boolean;
   line: number | string;
 };
@@ -60,10 +65,36 @@ const SideImage = (props: InternalSideImageProps) => {
   let parentRef: HTMLDivElement | undefined;
   const scale = useScale();
   const [parentWidth, setParentWidth] = createSignal(0);
+  const [parentMeasured, setParentMeasured] = createSignal(false);
   const textWidth = () => mainColumnWidth() - 2 * TEXT_X_PADDING;
   const sideScale = () => scale().scale;
+  const offsetX = () => scaledCssLength(props.offsetX, sideScale());
+  const offsetY = () => scaledCssLength(props.offsetY, sideScale());
   const widthInflationOffset = () =>
     props.atLeastAsWide ? Math.max(0, (textWidth() - parentWidth()) / 2) : 0;
+  const isTestCloud = () => props.local_url?.includes("test_cloud_");
+
+  createEffect(() => {
+    if (!isTestCloud()) return;
+
+    const nextOffsetX = offsetX();
+    const nextOffsetY = offsetY();
+    const nextWidthInflationOffset = widthInflationOffset();
+    console.log("[SideImage test cloud geometry]", props.local_url, {
+      scale: sideScale(),
+      afterFirstClick: scale().after_first_click,
+      side: props.side,
+      offsetX: props.offsetX,
+      computedOffsetX: nextOffsetX,
+      computedOffsetY: nextOffsetY,
+      left: getLeft(props.side, nextOffsetX, nextWidthInflationOffset),
+      right: getRight(props.side, nextOffsetX, nextWidthInflationOffset),
+      top: getTop(props.line, nextOffsetY, sideScale()),
+      widthInflationOffset: nextWidthInflationOffset,
+      parentMeasured: parentMeasured(),
+      parentWidth: parentWidth(),
+    });
+  });
 
   const maybeChildren = () => {
     if (props.children) {
@@ -71,8 +102,8 @@ const SideImage = (props: InternalSideImageProps) => {
         <div
           class="absolute z-10"
           style={{
-            top: `${props.childrenY}`,
-            left: `${props.childrenX}`,
+            top: unscaledCssLength(props.childrenY),
+            left: unscaledCssLength(props.childrenX),
           }}
         >
           {props.children}
@@ -84,7 +115,10 @@ const SideImage = (props: InternalSideImageProps) => {
 
   onMount(() => {
     const measureParent = () => {
-      if (parentRef) setParentWidth(parentRef.getBoundingClientRect().width);
+      if (!parentRef) return;
+
+      setParentWidth(parentRef.getBoundingClientRect().width);
+      setParentMeasured(true);
     };
     const observer = new ResizeObserver(measureParent);
 
@@ -104,24 +138,26 @@ const SideImage = (props: InternalSideImageProps) => {
         style={{
           left: getLeft(
             props.side,
-            props.offsetX,
-            sideScale(),
+            offsetX(),
             widthInflationOffset(),
           ),
           right: getRight(
             props.side,
-            props.offsetX,
-            sideScale(),
+            offsetX(),
             widthInflationOffset(),
           ),
-          top: getTop(props.line, props.offsetY, sideScale()),
-          transform: "translateY(-50%)",
+          top: getTop(props.line, offsetY(), sideScale()),
+          transform: `translateY(-50%) scale(${sideScale()})`,
           padding: `${props.padding}`,
           "transform-origin": getTransformOrigin(props.side),
-          scale: sideScale(),
           "z-index": 20,
         }}
-        class="flex shrink-0 transition-opacity duration-300 lg:transition-none lg:opacity-100 absolute w-max"
+        class={twJoin(
+          "flex shrink-0 lg:opacity-100 absolute w-max",
+          parentMeasured() && scale().after_first_click
+            ? "transition-[left,right,top,transform,opacity] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+            : "transition-none",
+        )}
       >
         <ImageOrSideImage
           class={twJoin(props.class, "max-w-max", "cloud")}
@@ -175,22 +211,20 @@ export const ImageLeft = ({
 const getLeft = (
   side: "left" | "right",
   offsetX: string,
-  scale: number,
   widthInflationOffset: number,
 ): string => {
   return side === "right"
-    ? `calc(100% + ${widthInflationOffset}px + (${offsetX}) * ${scale})`
+    ? `calc(100% + ${widthInflationOffset}px + (${offsetX}))`
     : "";
 };
 
 const getRight = (
   side: "left" | "right",
   offsetX: string,
-  scale: number,
   widthInflationOffset: number,
 ): string => {
   return side === "left"
-    ? `calc(100% + ${widthInflationOffset}px + (${offsetX}) * ${scale})`
+    ? `calc(100% + ${widthInflationOffset}px + (${offsetX}))`
     : "";
 };
 
@@ -202,14 +236,35 @@ const getTop = (
   const line = Number(lineValue);
   let top = "";
   if (line > 0) {
-    top = `calc(0% + ${(line - 0.5) * LINE_HEIGHT}px * ${scale} + (${offsetY}) * ${scale})`;
+    top = `calc(0% + ${(line - 0.5) * LINE_HEIGHT * scale}px + (${offsetY}))`;
   } else if (line < 0) {
-    top = `calc(100% + ${(0.5 + line) * LINE_HEIGHT}px * ${scale} + (${offsetY}) * ${scale})`;
+    top = `calc(100% + ${(0.5 + line) * LINE_HEIGHT * scale}px + (${offsetY}))`;
   } else {
-    top = `calc(50% + (${offsetY}) * ${scale})`;
+    top = `calc(50% + (${offsetY}))`;
   }
   return top;
 };
 
 const getTransformOrigin = (side: "left" | "right") =>
   side === "right" ? "left center" : "right center";
+
+const unscaledCssLength = (
+  value: string | number | undefined,
+): string | undefined => {
+  if (value === undefined) return undefined;
+  if (value === 0) return "0px";
+
+  const stringValue = String(value).trim();
+  return stringValue === "0" ? "0px" : stringValue;
+};
+
+const scaledCssLength = (
+  value: string | number | undefined,
+  scale: number,
+): string => {
+  const length = unscaledCssLength(value) || "0px";
+  if (length.endsWith("%") || length === "0px") return length;
+  if (Math.abs(scale - 1) < 0.0001) return length;
+
+  return scale === 0 ? "0px" : `(${length}) / ${1 / scale}`;
+};

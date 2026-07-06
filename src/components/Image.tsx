@@ -11,8 +11,10 @@ import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
 import { TEXT_X_PADDING } from "~/constants";
+import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
 
-const SHOW_DEBUG_COLORS = false;
+const SHOW_DEBUG_COLORS = true;
+const HEIGHT_CHANGE_RAF_MAX_MS = 800;
 
 type ImageProps = ParentProps &
   SharedProps & {
@@ -36,6 +38,10 @@ const Image = (props: ImageProps) => {
 
   let image_element!: HTMLImageElement;
   let transitionTimeout: number | undefined;
+  let heightChangeAnimationFrame: number | undefined;
+  let heightChangeAnimationFrameExpiresAt = 0;
+  const { set_height_change_listener_store } =
+    useHeightChangeListenerContext() || {};
 
   const currentViewportWidth = () =>
     typeof window === "undefined" ? 0 : window.innerWidth;
@@ -86,10 +92,13 @@ const Image = (props: ImageProps) => {
     return intrinsicWidth ? `${intrinsicWidth}px` : "";
   };
 
+  const availableViewportWidth = () =>
+    Math.max(0, viewportWidth() - TEXT_X_PADDING * 2);
+
   const targetScale = () => {
     const intrinsicWidth = imageIntrinsicWidth();
     if (!intrinsicWidth || !constrained()) return 1;
-    return Math.min(1, viewportWidth() / intrinsicWidth);
+    return Math.min(1, availableViewportWidth() / intrinsicWidth);
   };
 
   const scale = createMemo(() => ({
@@ -102,16 +111,62 @@ const Image = (props: ImageProps) => {
     setConstrained((beforeToggle) => !beforeToggle);
   };
 
+  const notifyHeightChange = () => {
+    set_height_change_listener_store?.(
+      "re_calculate_height",
+      (previous) => !previous,
+    );
+  };
+
+  const notifyHeightChangeAcrossFrames = () => {
+    notifyHeightChange();
+    requestAnimationFrame(notifyHeightChange);
+    window.setTimeout(notifyHeightChange, 50);
+  };
+
+  const stopHeightChangeAnimationFrameLoop = () => {
+    if (heightChangeAnimationFrame === undefined) return;
+
+    cancelAnimationFrame(heightChangeAnimationFrame);
+    heightChangeAnimationFrame = undefined;
+    heightChangeAnimationFrameExpiresAt = 0;
+  };
+
+  const startHeightChangeAnimationFrameLoop = () => {
+    heightChangeAnimationFrameExpiresAt =
+      performance.now() + HEIGHT_CHANGE_RAF_MAX_MS;
+
+    if (heightChangeAnimationFrame !== undefined) return;
+
+    const tick = () => {
+      if (performance.now() > heightChangeAnimationFrameExpiresAt) {
+        heightChangeAnimationFrame = undefined;
+        heightChangeAnimationFrameExpiresAt = 0;
+        notifyHeightChangeAcrossFrames();
+        return;
+      }
+
+      notifyHeightChange();
+      heightChangeAnimationFrame = requestAnimationFrame(tick);
+    };
+
+    heightChangeAnimationFrame = requestAnimationFrame(tick);
+  };
+
   const disableTransitionsDuringWindowResizes = () => {
     clearTimeout(transitionTimeout);
+    stopHeightChangeAnimationFrameLoop();
     setTransitionsEnabled(false);
   };
 
   const enableTransitionForToggle = () => {
     clearTimeout(transitionTimeout);
     setTransitionsEnabled(true);
+    startHeightChangeAnimationFrameLoop();
     transitionTimeout = window.setTimeout(() => {
       setTransitionsEnabled(false);
+      stopHeightChangeAnimationFrameLoop();
+      notifyHeightChangeAcrossFrames();
     }, 600);
   };
 
@@ -130,7 +185,10 @@ const Image = (props: ImageProps) => {
     const intrinsicWidth = imageIntrinsicWidth();
     if (window.innerWidth <= intrinsicWidth) {
       enableTransitionForToggle();
-      requestAnimationFrame(toggleConstrained);
+      requestAnimationFrame(() => {
+        toggleConstrained();
+        notifyHeightChangeAcrossFrames();
+      });
     }
 
     set_after_first_click(true);
@@ -138,7 +196,9 @@ const Image = (props: ImageProps) => {
 
   const handleTransitionEnd = () => {
     clearTimeout(transitionTimeout);
+    stopHeightChangeAnimationFrameLoop();
     setTransitionsEnabled(false);
+    notifyHeightChangeAcrossFrames();
   };
 
   const handleWindowResize = () => {
@@ -149,23 +209,22 @@ const Image = (props: ImageProps) => {
   const handleImageLoad = () => {
     setNaturalImageWidth(image_element.naturalWidth);
     setNaturalImageHeight(image_element.naturalHeight);
+    notifyHeightChangeAcrossFrames();
   };
 
   const imageStyle = () => {
     const styleWidth = imageStyleWidth();
     const constrainedWidth =
-      styleWidth &&
-      `min(${viewportWidth()}px, calc(${styleWidth} + ${TEXT_X_PADDING * 2}px))`;
+      styleWidth && `min(${availableViewportWidth()}px, ${styleWidth})`;
     const width = constrained()
       ? constrainedWidth || "auto"
       : styleWidth || "auto";
-    const padding = constrained() ? `padding:0 ${TEXT_X_PADDING}px;` : "";
 
     const debugColor = SHOW_DEBUG_COLORS
       ? `background-color:${debugBackground()};`
       : "";
 
-    return `${debugColor}width:${width};max-width:none;box-sizing:border-box;max-height:${merged.height};${padding}${merged.style}`;
+    return `${debugColor}width:${width};max-width:none;box-sizing:border-box;max-height:${merged.height};${merged.style}`;
   };
 
   onMount(() => {
@@ -175,16 +234,19 @@ const Image = (props: ImageProps) => {
 
   onCleanup(() => {
     clearTimeout(transitionTimeout);
+    stopHeightChangeAnimationFrameLoop();
     window.removeEventListener("resize", handleWindowResize);
   });
 
   return (
     <ScaleProvider scale={scale}>
       <div id={merged.id} class="w-full flex items-center justify-center">
-        <div class={twJoin("flex items-center justify-center", "w-full")}>
+        <div class={twJoin("relative flex items-center justify-center w-fit")}>
           <ImageOrSideImage
             ref={image_element}
             src={merged.src}
+            side_image={false}
+            local_url={merged.local_url}
             onLoad={handleImageLoad}
             onClick={handleClick}
             onTransitionEnd={handleTransitionEnd}
@@ -192,7 +254,7 @@ const Image = (props: ImageProps) => {
             class={twJoin(
               merged.class,
               transitionsEnabled() && [
-                "transition-[width,max-width,padding]",
+                "transition-[width,max-width]",
                 "duration-500",
                 "ease-[cubic-bezier(0.4, 0, 0.2, 1)]",
               ],

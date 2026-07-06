@@ -8,7 +8,7 @@
     "compressed-size": 14095,
     "compression": "0.11%",
     "used-last-build": true,
-    "3chars": ["pla","pla"]
+    "3chars": ["pla"]
   },
   "test_native_1000.svg": {
     "build-version": "svgo-svg/S-T0.svg",
@@ -19,7 +19,7 @@
     "compressed-size": 354,
     "compression": "28.92%",
     "used-last-build": true,
-    "3chars": ["pla","pla","pla"]
+    "3chars": ["pla","pla","pla","pla"]
   },
   "svg_ch4_circle_at_2_4_black_version.svg": {
     "build-version": "svgo-svg/qPL0.svg",
@@ -1416,7 +1416,7 @@
     "compressed-size": 7869,
     "compression": "82.67%",
     "used-last-build": true,
-    "3chars": ["pla","pla"]
+    "3chars": ["pla"]
   },
   "svg_ch4_17_particle9_inline.svg": {
     "build-version": "svgo-svg/A7E1.svg",
@@ -2155,6 +2155,17 @@
     "used-last-build": false,
     "3chars": []
   },
+  "test_cloud_SW.svg": {
+    "build-version": "svg/GyQV.svg",
+    "build-version-created-on": 1783323112,
+    "build-method": "cp",
+    "build-version-size": 1572,
+    "original-size": 1572,
+    "compressed-size": 1572,
+    "compression": "0.0%",
+    "used-last-build": true,
+    "3chars": ["pla"]
+  },
   "svg_ch3_f_box.svg": {
     "build-version": "svgo-svg/tYyP.svg",
     "build-version-created-on": 1776436207,
@@ -2165,6 +2176,17 @@
     "compression": "5.31%",
     "used-last-build": false,
     "3chars": []
+  },
+  "test_cloud_W.svg": {
+    "build-version": "svg/mJ_i.svg",
+    "build-version-created-on": 1783323112,
+    "build-method": "cp",
+    "build-version-size": 1565,
+    "original-size": 1565,
+    "compressed-size": 1565,
+    "compression": "0.0%",
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "true_false_sixth_root_of_two_cloud1.svg": {
     "build-version": "svgo-svg/rgbH.svg",
@@ -2208,7 +2230,7 @@
     "compressed-size": 16108,
     "compression": "62.57%",
     "used-last-build": true,
-    "3chars": ["pla","pla"]
+    "3chars": ["pla"]
   },
   "svg_ch5_ex_gas_sphere_profile.svg": {
     "build-version": "svgo-svg/VrOC.svg",
@@ -2549,7 +2571,7 @@
     "compressed-size": 7366,
     "compression": "93.1%",
     "used-last-build": true,
-    "3chars": ["pla","pla"]
+    "3chars": ["pla"]
   },
   "svg_ch4_circle_at_2_4_UNO_with_gradated_line.svg": {
     "build-version": "svgo-svg/VxRW.svg",
@@ -2649,6 +2671,17 @@
     "compression": "17.34%",
     "used-last-build": false,
     "3chars": []
+  },
+  "test_cloud_NE.svg": {
+    "build-version": "svg/enf-.svg",
+    "build-version-created-on": 1783323112,
+    "build-method": "cp",
+    "build-version-size": 1571,
+    "original-size": 1571,
+    "compressed-size": 1571,
+    "compression": "0.0%",
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg": {
     "build-version": "svgo-svg/BfG4.svg",
@@ -2968,6 +3001,17 @@
     "compression": "34.64%",
     "used-last-build": false,
     "3chars": []
+  },
+  "test_cloud_SE.svg": {
+    "build-version": "svg/SN5W.svg",
+    "build-version-created-on": 1783323112,
+    "build-method": "cp",
+    "build-version-size": 1571,
+    "original-size": 1571,
+    "compressed-size": 1571,
+    "compression": "0.0%",
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "_e5_cosine_rule_via_jacks_two_cases.svg": {
     "build-version": "svgo-svg/YaSq.svg",
@@ -3880,7 +3924,7 @@
     "compressed-size": 19787,
     "compression": "0.11%",
     "used-last-build": true,
-    "3chars": ["pla","pla"]
+    "3chars": ["pla"]
   },
   "svg_ch4_one_long_line_what_are_the_rises_3.svg": {
     "build-version": "svgo-svg/sAnB.svg",
@@ -5266,7 +5310,7 @@
     "compressed-size": 352,
     "compression": "28.89%",
     "used-last-build": true,
-    "3chars": ["pla","pla"]
+    "3chars": ["pla","pla","pla"]
   },
   "svg_ch3_connection_x_6.svg": {
     "build-version": "svgo-svg/WvHW.svg",
@@ -5443,6 +5487,17 @@
     "compression": "73.08%",
     "used-last-build": false,
     "3chars": []
+  },
+  "test_cloud_E.svg": {
+    "build-version": "svg/J4JH.svg",
+    "build-version-created-on": 1783323112,
+    "build-method": "cp",
+    "build-version-size": 1565,
+    "original-size": 1565,
+    "compressed-size": 1565,
+    "compression": "0.0%",
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "svg_ch4_RATS_second_term_cloud.svg": {
     "build-version": "svgo-svg/9OXS.svg",
@@ -5741,6 +5796,17 @@
     "used-last-build": false,
     "3chars": []
   },
+  "test_cloud_NW.svg": {
+    "build-version": "svg/0439.svg",
+    "build-version-created-on": 1783323112,
+    "build-method": "cp",
+    "build-version-size": 1572,
+    "original-size": 1572,
+    "compressed-size": 1572,
+    "compression": "0.0%",
+    "used-last-build": true,
+    "3chars": ["pla"]
+  },
   "svg_ch5_ex_bomb_shelter_annotated.svg": {
     "build-version": "svgo-svg/x_qH.svg",
     "build-version-created-on": 1781421995,
@@ -5915,7 +5981,7 @@
     "compressed-size": 31334,
     "compression": "34.84%",
     "used-last-build": true,
-    "3chars": ["pla","pla"]
+    "3chars": ["pla"]
   },
   "e5_sqrt_AB_solution2_1.svg": {
     "build-version": "svgo-svg/OwXA.svg",
@@ -6476,7 +6542,7 @@
     "compressed-size": 12800,
     "compression": "44.82%",
     "used-last-build": true,
-    "3chars": ["pla","pla"]
+    "3chars": ["pla"]
   },
   "e5_cosx_plus_sinx_as_geometric_cos_composition.svg": {
     "build-version": "svgo-svg/4t6F.svg",

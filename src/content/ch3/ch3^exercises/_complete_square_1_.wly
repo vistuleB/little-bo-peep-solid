@@ -19,10 +19,10 @@
         $$
         because
         $$
-        \begin{align}
+        \begin{align*}
         \,\,\,\,(x + 5)^2
         &= x^2 + (2\cdot 5)x + 5^2 \\
         &= \up{1.4} x^2 + 10x + 25
-        \end{align}
+        \end{align*}
         $$
         and adding $5$ gives $x^2 + 10x + 30$.

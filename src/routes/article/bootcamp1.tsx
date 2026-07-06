@@ -22,7 +22,7 @@ export default function __Bootcamp1__() {
       nextPage="/"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
-      id="_5_h.a.i_"
+      id="_7_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -45,7 +45,7 @@ export default function __Bootcamp1__() {
         </span>
       </ArticleTitle>
       <Pause />
-      <Exercises id="_4_h.a.i_">
+      <Exercises id="_6_h.a.i_">
         <Exercise number={1}>
           <ExerciseStatement id="_1_h.a.i_">
             <OuterP>
@@ -1605,7 +1605,7 @@ export default function __Bootcamp1__() {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_3_h.a.i_">
+          <ExerciseStatement id="_5_h.a.i_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -1632,33 +1632,42 @@ export default function __Bootcamp1__() {
                   </span>
                 </b>
               </i>
-              {" "} These are the active clouds from ch1, ch2, bt1, and bt2. Each fixture keeps the same attached element used in the book, with one surrounding element above and beneath.
+              {" "} These are the
+              active clouds from ch1, ch2, bt1, and bt2.
+              Each source excerpt keeps the actual attached
+              paragraph/equation/image and its adjacent
+              source blocks.
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch1.1:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:482:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch1.1: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:486:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              ch1
               <i>
-                ch1
+                ch
               </i>
-              ch
+              minus
               <i>
-                minus
+                two
               </i>
-              two
+              squared
               <i>
-                squared
+                cloud.svg`*
               </i>
-              cloud.svg`
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                while, of course,
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:488:17
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1669,11 +1678,28 @@ export default function __Bootcamp1__() {
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                Hence,
+                is positive as well. But {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:488:17
+                  ./src/content/playground/playground.wly:492:17
                 </span>
               </span>
+              <Math>
+                $\sqrt&#123;4&#125;$
+              </Math>
+              {" "}
+              is, by definition, the unique {" "}
+              <i>
+                nonnegative
+              </i>
+              {" "}
+              solution to {" "}
+              <NoBreak>
+                <Math>
+                  $x^2 = 4$
+                </Math>
+                .
+              </NoBreak>
+              {" "} Hence,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1682,8 +1708,8 @@ export default function __Bootcamp1__() {
               $$
               <ImageRight
                 src="/build-img/svgo-svg/Z39o.svg"
-                offsetX="5em"
                 atLeastAsWide={false}
+                offsetX="5em"
                 local_url="./images/svg_ch1_ch_minus_two_squared_cloud.svg"
               />
             </MathBlock>
@@ -1692,7 +1718,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 and, in particular, it is {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:499:17
+                  ./src/content/playground/playground.wly:505:17
                 </span>
               </span>
               <i>
@@ -1701,28 +1727,31 @@ export default function __Bootcamp1__() {
               {" "} true that
             </OuterP>
             <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch1.2:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:503:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch1.2: `c1
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:513:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `c1
+              abCD
               <i>
-                abCD
+                cloud.svg`*
               </i>
-              cloud.svg`
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
                 A little more generally, one has such identities
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:505:17
+                  ./src/content/playground/playground.wly:515:17
                 </span>
               </span>
               {" "}
@@ -1746,36 +1775,48 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 that come from multiplying every term of the first
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:516:17
+                  ./src/content/playground/playground.wly:526:17
                 </span>
               </span>
               {" "}
               {" "}
-              parenthesis with every term of the second parenthesis.
+              parenthesis with every term of the second
+              parenthesis. Indeed,
             </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (a + b)(C + D) = (a + b)C + (a + b)D
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch1.3:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:521:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch1.3-4: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:537:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              ch1
+              <i>
+                ex
+              </i>
+              25.svg`, `svg
               <i>
                 ch1
               </i>
-              ex_25.svg`
+              ex
+              <i>
+                26.svg`*
+              </i>
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
                 Since
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:523:17
+                  ./src/content/playground/playground.wly:539:17
                 </span>
               </span>
             </OuterP>
@@ -1785,8 +1826,8 @@ export default function __Bootcamp1__() {
               &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
               $$
               <ImageRight
-                offsetX="5rem"
                 src="/build-img/svgo-svg/Xx87.svg"
+                offsetX="-4rem"
                 atLeastAsWide={true}
                 local_url="./images/svg_ch1_ex_25.svg"
               />
@@ -1796,40 +1837,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 (as previously computed) is smaller than
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:533:17
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch1.4:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:537:19
-                    </span>
-                  </span>
-                </b>
-              </i>
-              {" "} `svg
-              <i>
-                ch1
-              </i>
-              ex_26.svg`
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                (as previously computed) is smaller than
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:543:17
+                  ./src/content/playground/playground.wly:549:17
                 </span>
               </span>
             </OuterP>
@@ -1839,7 +1847,7 @@ export default function __Bootcamp1__() {
               &#123;1 \over n^2&#125;
               $$
               <ImageRight
-                offsetX="10rem"
+                offsetX="-4rem"
                 src="/build-img/svgo-svg/jBCw.svg"
                 atLeastAsWide={true}
                 local_url="./images/svg_ch1_ex_26.svg"
@@ -1850,39 +1858,51 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 we will compute the difference
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:553:17
+                  ./src/content/playground/playground.wly:559:17
                 </span>
               </span>
             </OuterP>
             <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125;
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch1.5:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:557:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch1.5: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:567:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              ch1
               <i>
-                ch1
+                ex
               </i>
-              ex_27.svg`
+              27.svg`*_
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                to avoid a minus sign in the result.
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:569:17
+                </span>
+              </span>
+              {" "}
+              {" "}
+              (Computing the second difference and having
+              a minus sign does not constitute a mistake,
+              however.) Having said this, the difference is:
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over n(n+1)&#125; - &#123;1 \over n^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
               \begin&#123;align*&#125;
-              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125; &amp;= &#123;1 \over n^2&#125; \cdot &#123;n+1 \over n+1&#125; - &#123;1 \over n(n+1)&#125; \cdot &#123;n \over n&#125;\\
+              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125; &amp;= &#123;1 \over n^2&#125; \cdot &#123;n+1 \over n+1&#125; - &#123;1 \over n(n+1)&#125; \cdot
+              &#123;n \over n&#125;\\
               &amp;= &#123;n+1 \over n^2(n+1)&#125; - &#123;n \over n^2(n+1)&#125;\up&#123;1.5&#125;\\
               &amp;= &#123;1 \over n^2(n+1)&#125;\up&#123;1.5&#125;
               \end&#123;align*&#125;
@@ -1899,7 +1919,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 which, for large {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:575:17
+                  ./src/content/playground/playground.wly:587:17
                 </span>
               </span>
               <NoBreak>
@@ -1911,45 +1931,81 @@ export default function __Bootcamp1__() {
               {" "} is roughly
             </OuterP>
             <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over n^3&#125;
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch1.6:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:579:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch1.6-7: `true
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:595:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `true
+              false
               <i>
-                false
+                sixth
               </i>
-              sixth
+              root
               <i>
-                root
+                of
               </i>
-              of
+              two
               <i>
-                two
+                cloud1.svg`, `true
               </i>
-              cloud1.svg`
+              false
+              <i>
+                sixth
+              </i>
+              root
+              <i>
+                of
+              </i>
+              two
+              <i>
+                cloud2.svg`*
+              </i>
             </OuterP>
             <OuterP class="indent-10">
+              <Math>
+                $\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;$
+              </Math>
+              {" "}{" "}
+              {" "}
+              {" "}
               <span class="t-3003-c">
-                To convince yourself, note that
+                and {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:581:17
+                  ./src/content/playground/playground.wly:598:17
                 </span>
               </span>
+              <Math>
+                $\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;$
+              </Math>
+              {" "} are
+              both equal to {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+                </Math>
+                .
+              </NoBreak>
+              {" "} To
+              convince yourself, note that
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \begin&#123;align*&#125;
               &amp;\,\, (\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
-              =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;)^3 \\
+              =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\qquad\\
+              =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \\
+              =&amp; \,\, \up&#123;1.4&#125; (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;)\\
               =&amp; \,\, \up&#123;1.4&#125; 2
               \end&#123;align*&#125;
               $$
@@ -1961,56 +2017,24 @@ export default function __Bootcamp1__() {
               />
             </MathBlock>
             <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align&#125;
-                  &amp;\,\, (\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
-                 =&amp;\,\, \up&#123;1.4&#125; 2
-              \end&#123;align&#125;
-              $$
-            </MathBlock>
-            <Pause />
             <OuterP>
-              <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch1.7:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:604:19
-                    </span>
-                  </span>
-                </b>
-              </i>
-              {" "} `true
-              <i>
-                false
-              </i>
-              sixth
-              <i>
-                root
-              </i>
-              of
-              <i>
-                two
-              </i>
-              cloud2.svg`
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:616:17
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align&#125;
-              &amp;\,\, (\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
-              =&amp;\,\, 2
-              \end&#123;align&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align&#125;
+              \begin&#123;align*&#125;
                   &amp;\,\, (\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
+                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\\
+                 =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;)\\
+                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.65&#125;2&#125; \times \sqrt[2]&#123;\up&#123;0.65&#125;2&#125;\\
                  =&amp;\,\, \up&#123;1.4&#125; 2
-              \end&#123;align&#125;
+              \end&#123;align*&#125;
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/Trg3.svg"
@@ -2020,6 +2044,34 @@ export default function __Bootcamp1__() {
               />
             </MathBlock>
             <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                so {" "}
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:632:17
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $(\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 =
+                  (\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 = 2$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                Technically, however, a number {" "}
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:635:17
+                </span>
+              </span>
+              <Math>
+                $x$
+              </Math>
+              {" "} such that
+            </OuterP>
+            <Pause />
             <MathBlock>
               $$
               x^6 = 2
@@ -2028,35 +2080,58 @@ export default function __Bootcamp1__() {
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch1.8:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:630:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch1.8: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:643:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              ch1
               <i>
-                ch1
+                ex
               </i>
-              ex_24.svg`
+              24.svg`*_
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                of the sum? (By the way, this {" "}
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:645:17
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                -th
+              </NoBreak>
+              {" "} term
+              is the difference
+              {" "}
+              <Math>
+                $&#123;1 \over 99&#125; - &#123;1 \over 100&#125;$
+              </Math>
+              {" "} for {" "}
+              <NoBreak>
+                <Math>
+                  $n = 99$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              which is how we came to be reminded of this
+              infinite sum in the first place.) Well...
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over 99&#125; - &#123;1 \over 100&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align&#125;
+              \begin&#123;align*&#125;
               &#123;1 \over n&#125; - &#123;1 \over n+1&#125; &amp;= &#123;1 \over n&#125;\cdot&#123;n+1 \over n+1&#125;\, - \,
               &#123;1 \over n+1&#125;\cdot&#123;n \over n&#125;\up&#123;1.5&#125;\\
+              &amp;= &#123;n+1 \over n(n+1)&#125; - &#123;n \over n(n+1)&#125;\up&#123;1.5&#125;\\
               &amp;= &#123;1 \over n(n+1)&#125;\up&#123;1.5&#125;
-              \end&#123;align&#125;
+              \end&#123;align*&#125;
               $$
               <ImageRight
                 src="/build-img/svgo-svg/omps.svg"
@@ -2070,33 +2145,37 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 ...it's that much. (For example,
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:648:17
+                  ./src/content/playground/playground.wly:664:17
                 </span>
               </span>
             </OuterP>
             <Pause />
+            <MathBlock>
+              $$
+              &#123;1 \over 1&#125; - &#123;1 \over 2&#125; = &#123;1 \over 1 \cdot 2&#125; = &#123;1 \over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.1:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:652:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch2.1: `c2
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:672:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `c2
+              slope
               <i>
-                slope
+                formula
               </i>
-              formula_cloud.svg`
+              cloud.svg`*_
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
                 are the horizontal and the vertical change,
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:654:17
+                  ./src/content/playground/playground.wly:674:17
                 </span>
               </span>
               {" "}
@@ -2130,37 +2209,61 @@ export default function __Bootcamp1__() {
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                A line that passes through two points gives the next example.
+                more succinctly. We call this equation the {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:666:17
+                  ./src/content/playground/playground.wly:686:17
                 </span>
               </span>
+              <i>
+                slope formula
+              </i>
+              .
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.2:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:670:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch2.2-3: `c2
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:690:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `c2
+              swap
               <i>
-                swap
+                cloud.svg`, `tmp-images/c2
               </i>
-              cloud.svg`
+              a
+              <i>
+                b
+              </i>
+              fraction
+              <i>
+                cloud.svg`*
+              </i>
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
-                We should verify that the slope formula gives the same answer if the points swap places.
+                In fact, we {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:672:17
+                  ./src/content/playground/playground.wly:692:17
                 </span>
               </span>
+              <i>
+                should
+              </i>
+              {" "} be able to algebraically
+              verify that the slope formula gives the same
+              answer if {" "}
+              <Math>
+                $(x_1, y_1)$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $(x_2, y_2)$
+              </Math>
+              {" "} swap
+              places, or, namely, to show that the fractions
               <ImageRight
                 src="/build-img/svgo-svg/9GPK.svg"
                 line={3}
@@ -2175,39 +2278,14 @@ export default function __Bootcamp1__() {
               $$
             </MathBlock>
             <Pause />
-            <MathBlock>
-              $$
-              &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125;
-              $$
-            </MathBlock>
-            <Pause />
             <OuterP>
-              <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.3:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:685:19
-                    </span>
-                  </span>
-                </b>
-              </i>
-              {" "} `tmp-images/c2
-              <i>
-                a
-              </i>
-              b
-              <i>
-                fraction
-              </i>
-              cloud.svg`
+              <span class="t-3003-c">
+                are somehow equal. But, indeed,
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:704:17
+                </span>
+              </span>
             </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;y_2 - y_1 \over x_2 - x_1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y_1 - y_2 \over x_1 - x_2&#125;
-              $$
-            </MathBlock>
             <Pause />
             <MathBlock>
               $$
@@ -2224,41 +2302,44 @@ export default function __Bootcamp1__() {
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                which verifies this hypothesis.
+                which verifies this hypothesis. In particular,
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:696:17
+                  ./src/content/playground/playground.wly:713:17
                 </span>
               </span>
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.4:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:700:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch2.4: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:717:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              ch2
               <i>
-                ch2
+                ch
               </i>
-              ch
+              vertical
               <i>
-                vertical
+                line
               </i>
-              line_equation.svg`
+              equation.svg`*_
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
-                A vertical line is described by an equation of the form
+                what would {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:702:17
+                  ./src/content/playground/playground.wly:719:17
                 </span>
               </span>
+              <Math>
+                $a$
+              </Math>
+              {" "} be equal to? Instead, a vertical
+              line is described by an equation of the form
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2271,7 +2352,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 (see Fig. 1) where {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:706:17
+                  ./src/content/playground/playground.wly:724:17
                 </span>
               </span>
               <Math>
@@ -2294,29 +2375,68 @@ export default function __Bootcamp1__() {
             </MathBlock>
             <Pause />
             <OuterP>
+              <span class="t-3003-c">
+                for a horizontal line, where {" "}
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:734:17
+                </span>
+              </span>
+              <Math>
+                $b \in \rr$
+              </Math>
+              {" "} is a
+            </OuterP>
+            <Pause />
+            <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.5:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:718:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch2.5: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:738:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              3
               <i>
-                3
+                plus
               </i>
-              plus
+              minus
               <i>
-                minus
+                one
               </i>
-              one
+              times
               <i>
-                times
+                x
               </i>
-              x_cloud.svg`
+              cloud.svg`*_
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                One should also bear in mind that an equation can
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:740:17
+                </span>
+              </span>
+              {" "}
+              {" "}
+              define a line without having either of the forms
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $y = ax + b$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} or {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $x = c$
+                </Math>
+                ”.
+              </NoBreak>
+              {" "} For example,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2324,6 +2444,15 @@ export default function __Bootcamp1__() {
               x + y = 3
               $$
             </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is equivalent to
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:746:17
+                </span>
+              </span>
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -2335,7 +2464,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 and thus describes a line of {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:724:17
+                  ./src/content/playground/playground.wly:750:17
                 </span>
               </span>
               <NoBreak>
@@ -2363,36 +2492,30 @@ export default function __Bootcamp1__() {
               />
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              \te&#123;slope has units&#125;
-              $$
-            </MathBlock>
-            <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.6:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:737:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch2.6: `c2
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:759:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `c2
+              units
               <i>
-                units
+                cloud.svg`*
               </i>
-              cloud.svg`
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
-                The amount of time required for the balloon to go up by {" "}
+                The amount of time required
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:739:17
+                  ./src/content/playground/playground.wly:761:17
                 </span>
               </span>
+              {" "}
+              {" "}
+              for the balloon to go up by (say) {" "}
               <NoBreak>
                 <Math>
                   $4$
@@ -2413,48 +2536,75 @@ export default function __Bootcamp1__() {
               />
             </MathBlock>
             <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                following the template
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:771:17
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
             <MathBlock>
               $$
+              \rt&#123;0.1&#125;
               \te&#123;amount of time&#125; \,\,=\,\, \frac&#123;\!\rt&#123;0.15&#125;\te&#123;amount of change&#125;\!\rt&#123;0.1&#125;&#125;&#123;\te&#123;rate of change&#125;&#125;
+              \rt&#123;0.1&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.7:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:754:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch2.7-8: `c2
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:781:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `c2
+              slope
               <i>
-                slope
+                two
               </i>
-              two
+              and
               <i>
-                and
+                minus
               </i>
-              minus
+              one
               <i>
-                one
+                half
               </i>
-              half
+              cloud
               <i>
-                cloud
+                right.svg`, `c2
               </i>
-              right.svg`
+              slope
+              <i>
+                two
+              </i>
+              and
+              <i>
+                minus
+              </i>
+              one
+              <i>
+                half
+              </i>
+              cloud
+              <i>
+                left.svg`*
+              </i>
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
-                This is true, as illustrated by the following pair of lines:
+                This is true, as illustrated by the following
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:756:17
+                  ./src/content/playground/playground.wly:783:17
                 </span>
               </span>
+              {" "}
+              {" "}
+              pair of lines:
             </OuterP>
             <Pause />
             <Image
@@ -2468,64 +2618,6 @@ export default function __Bootcamp1__() {
                 offsetX="-5%"
                 local_url="./images/c2_slope_two_and_minus_one_half_cloud_right.svg"
               />
-            </Image>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                In more detail, the two triangles are related by a {" "}
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:767:17
-                </span>
-              </span>
-              <Math>
-                $90^\circ$
-              </Math>
-              {" "} rotation.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.8:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:771:19
-                    </span>
-                  </span>
-                </b>
-              </i>
-              {" "} `c2
-              <i>
-                slope
-              </i>
-              two
-              <i>
-                and
-              </i>
-              minus
-              <i>
-                one
-              </i>
-              half
-              <i>
-                cloud
-              </i>
-              left.svg`
-            </OuterP>
-            <OuterP class="indent-10">
-              <span class="t-3003-c">
-                This is true, as illustrated by the following pair of lines:
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:773:17
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/t-Sk.svg"
-              class="relative w-fit"
-              local_url="./images/c2_slope_two_and_minus_one_half.svg"
-            >
               <ImageLeft
                 src="/build-img/svgo-svg/P0MQ.svg"
                 offsetX="-25%"
@@ -2536,53 +2628,56 @@ export default function __Bootcamp1__() {
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                In more detail, the two triangles are related by a {" "}
+                In more detail, the two triangles are related
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:784:17
+                  ./src/content/playground/playground.wly:800:17
                 </span>
               </span>
+              {" "}
+              {" "}
+              by a {" "}
               <Math>
                 $90^\circ$
               </Math>
-              {" "} rotation.
+              {" "} rotation and so, likewise,
+              are the lines defined by their hypotenuses!
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.9:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:788:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch2.9: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:806:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              ch2
               <i>
-                ch2
+                ex
               </i>
-              ex
+              x0
               <i>
-                x0
+                y0
               </i>
-              y0
+              line
               <i>
-                line
+                equation
               </i>
-              equation_cloud.svg`
+              cloud.svg`*_
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
                 A point {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:790:17
+                  ./src/content/playground/playground.wly:808:17
                 </span>
               </span>
               <Math>
                 $(x,y) \ne (x_0,y_0)$
               </Math>
-              {" "} is on the line of slope {" "}
+              {" "} is on the
+              line of slope {" "}
               <Math>
                 $p$
               </Math>
@@ -2595,8 +2690,7 @@ export default function __Bootcamp1__() {
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/eaW7.svg"
-                offsetX="10rem"
-                offsetY="0%"
+                offsetX="0rem"
                 atLeastAsWide={true}
                 local_url="./images/svg_ch2_ex_x0_y0_line_equation_cloud.svg"
               />
@@ -2606,43 +2700,53 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 because
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:799:17
+                  ./src/content/playground/playground.wly:817:17
                 </span>
               </span>
             </OuterP>
             <Pause />
+            <MathBlock>
+              $$
+              \,\,&#123;y - y_0 \over x - x_0&#125;
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    ch2.10:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:803:19
-                    </span>
+                <span class="t-3003-c">
+                  *ch2.10: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:823:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              slope
               <i>
-                slope
+                times
               </i>
-              times
+              run
               <i>
-                run
+                equals
               </i>
-              equals
+              rise
               <i>
-                rise
+                cloud.svg`*
               </i>
-              cloud.svg`
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
-                This can be a final answer, and has the form
+                which is satisfied by the point {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:805:17
+                  ./src/content/playground/playground.wly:825:17
                 </span>
               </span>
+              <Math>
+                $(x,y) = (x_0,y_0)$
+              </Math>
+              {" "}
+              as well as by every other point on the line.
+              This can be a final answer, and, pleasingly,
+              has the form
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2658,6 +2762,28 @@ export default function __Bootcamp1__() {
               />
             </MathBlock>
             <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which can also make it easy to remember!
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:839:17
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Note 1.
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:843:18
+                  </span>
+                </span>
+              </i>
+              {" "}
+              The answer we gave is more often written
+            </OuterP>
+            <Pause />
             <MathBlock>
               $$
               y - y_0 = p(x - x_0)
@@ -2666,30 +2792,28 @@ export default function __Bootcamp1__() {
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    bt1.1:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:820:19
-                    </span>
+                <span class="t-3003-c">
+                  *bt1.1: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:852:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              bt1
               <i>
-                bt1
+                bt
               </i>
-              bt
+              empty
               <i>
-                empty
+                set
               </i>
-              set_cloud.svg`
+              cloud.svg`*_
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
                 Mind you, concerning this example, that
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:822:17
+                  ./src/content/playground/playground.wly:854:17
                 </span>
               </span>
             </OuterP>
@@ -2710,35 +2834,64 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 because a box containing an empty box is not the
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:832:17
+                  ./src/content/playground/playground.wly:864:17
                 </span>
               </span>
               {" "}
               {" "}
-              same thing as an empty box!
+              same thing as an empty box! Specifically,
             </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \&#123; \&#123;\&#125; \&#125;
+              $$
+            </MathBlock>
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    bt2.1:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:837:19
-                    </span>
+                <span class="t-3003-c">
+                  *bt2.1: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:873:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              bt2
               <i>
-                bt2
+                bt
               </i>
-              bt
+              alert
               <i>
-                alert
+                cloud.svg`*
               </i>
-              cloud.svg`
             </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                For example,
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:875:17
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^4 = 1 \times 10 \times 10 \times 10 \times 10 = 10000
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^3 = 1 \times 10 \times 10 \times 10 = 1000
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^2 = 1 \times 10 \times 10 = 100
+              $$
+            </MathBlock>
             <Pause />
             <MathBlock>
               $$
@@ -2763,7 +2916,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 (where, in the last line, {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:852:17
+                  ./src/content/playground/playground.wly:898:17
                 </span>
               </span>
               <Math>
@@ -2781,38 +2934,92 @@ export default function __Bootcamp1__() {
               as per the exponent, which is zero) by the first definition, while
             </OuterP>
             <Pause />
+            <MathBlock>
+              $$
+              \Large 10^&#123;-1&#125; = 1\,/\,10 = 0.1
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^&#123;-2&#125; = (1\,/\, 10)\,/\,10 = 0.01
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^&#123;-3&#125; = ((1\,/\, 10)\,/\,10)\,/\,10 = 0.001
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 10^&#123;-4&#125; = (((1\,/\, 10)\,/\,10)\,/\, 10)\,/\, 10 = 0.0001
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by the second definition.
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:912:17
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    bt2.2:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:857:19
-                    </span>
+                <span class="t-3003-c">
+                  *bt2.2: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:916:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              bt2
               <i>
-                bt2
+                bt
               </i>
-              bt
+              10
               <i>
-                10
+                to
               </i>
-              to
+              the
               <i>
-                the
+                minus
               </i>
-              minus
+              0
               <i>
-                0
+                cloud.svg`*
               </i>
-              cloud.svg`
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                As {" "}
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:918:17
+                </span>
+              </span>
+              <Math>
+                $n$
+              </Math>
+              {" "} successive divisions
+              by {" "}
+              <Math>
+                $10$
+              </Math>
+              {" "} is the same as one division by {" "}
+              <NoBreak>
+                <Math>
+                  $10^n$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} one also has
             </OuterP>
             <Pause />
             <TextParent>
-              <MathBlock>
+              <MathBlock id="_3_h.a.i_">
                 $$
                 \Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;
                 $$
@@ -2823,7 +3030,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 for every positive integer {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:861:17
+                  ./src/content/playground/playground.wly:925:17
                 </span>
               </span>
               <NoBreak>
@@ -2840,18 +3047,21 @@ export default function __Bootcamp1__() {
                 .
               </NoBreak>
               {" "}
-              Moreover, (
-              <InTextWarning>
-                undefined handle at playground/playground.wly:862:17: _10_to_the_minus_n_
-              </InTextWarning>
-              ) actually holds for
+              Moreover, (&#8288;
+              <InChapterLink
+                href="/article/bootcamp1#_3_h.a.i_"
+                class="in-chapter-link"
+              >
+                A
+              </InChapterLink>
+              &#8288;) actually holds for
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
               <span class="t-3003-c">
                 every
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:864:19
+                  ./src/content/playground/playground.wly:928:19
                 </span>
               </span>
             </CentralDisplayItalic>
@@ -2860,7 +3070,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 integer {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:866:17
+                  ./src/content/playground/playground.wly:930:17
                 </span>
               </span>
               <NoBreak>
@@ -2870,19 +3080,25 @@ export default function __Bootcamp1__() {
                 ,
               </NoBreak>
               {" "} which is mildly important. In more
-              detail, (
-              <InTextWarning>
-                undefined handle at playground/playground.wly:867:17: _10_to_the_minus_n_
-              </InTextWarning>
-              ) holds for {" "}
+              detail, (&#8288;
+              <InChapterLink
+                href="/article/bootcamp1#_3_h.a.i_"
+                class="in-chapter-link"
+              >
+                A
+              </InChapterLink>
+              &#8288;) holds for {" "}
               <Math>
                 $n = 0$
               </Math>
-              {" "} by inspection, and (
-              <InTextWarning>
-                undefined handle at playground/playground.wly:867:66: _10_to_the_minus_n_
-              </InTextWarning>
-              )
+              {" "} by inspection, and (&#8288;
+              <InChapterLink
+                href="/article/bootcamp1#_3_h.a.i_"
+                class="in-chapter-link"
+              >
+                A
+              </InChapterLink>
+              &#8288;)
               is equivalent to the identity
               <ImageLeft
                 src="/build-img/svgo-svg/rdZz.svg"
@@ -2892,7 +3108,7 @@ export default function __Bootcamp1__() {
             </OuterP>
             <Pause />
             <TextParent>
-              <MathBlock>
+              <MathBlock id="_4_h.a.i_">
                 $$
                 \Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;
                 $$
@@ -2900,21 +3116,110 @@ export default function __Bootcamp1__() {
             </TextParent>
             <Pause />
             <OuterP>
+              <span class="t-3003-c">
+                which holds for {" "}
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:942:17
+                </span>
+              </span>
+              <Math>
+                $n$
+              </Math>
+              {" "} if and only if it holds for
+              {" "}
+              <NoBreak>
+                <Math>
+                  $-n$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (By which we mean: replacing {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $n$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} by {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $-n$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              in (&#8288;
+              <InChapterLink
+                href="/article/bootcamp1#_4_h.a.i_"
+                class="in-chapter-link"
+              >
+                AA
+              </InChapterLink>
+              &#8288;) lands you right back on (&#8288;
+              <InChapterLink
+                href="/article/bootcamp1#_4_h.a.i_"
+                class="in-chapter-link"
+              >
+                AA
+              </InChapterLink>
+              &#8288;), due to the fact
+              that {" "}
+              <NoBreak>
+                <Math>
+                  $-&#123;(-n)&#125; = n$
+                </Math>
+                .)
+              </NoBreak>
+              {" "} (So, namely, if (&#8288;
+              <InChapterLink
+                href="/article/bootcamp1#_4_h.a.i_"
+                class="in-chapter-link"
+              >
+                AA
+              </InChapterLink>
+              &#8288;) holds for all
+              positive values of {" "}
+              <NoBreak>
+                <Math>
+                  $\hspace&#123;0.05em&#125;n$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} then it holds
+              for all negative values of {" "}
+              <NoBreak>
+                <Math>
+                  $n$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as well.)
+            </OuterP>
+            <Pause />
+            <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    bt2.3:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:878:19
-                    </span>
+                <span class="t-3003-c">
+                  *bt2.3-5: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:951:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              bt2
               <i>
-                bt2
+                bt
               </i>
-              bt
+              ten
+              <i>
+                to
+              </i>
+              the
+              <i>
+                3
+              </i>
+              times
               <i>
                 ten
               </i>
@@ -2922,9 +3227,37 @@ export default function __Bootcamp1__() {
               <i>
                 the
               </i>
-              3
+              6
               <i>
-                times
+                cloud.svg`, `svg
+              </i>
+              bt2
+              <i>
+                bt
+              </i>
+              ten
+              <i>
+                to
+              </i>
+              the
+              <i>
+                3
+              </i>
+              times
+              <i>
+                ten
+              </i>
+              to
+              <i>
+                the
+              </i>
+              9
+              <i>
+                cloud.svg`, `svg
+              </i>
+              bt2
+              <i>
+                bt
               </i>
               ten
               <i>
@@ -2934,13 +3267,49 @@ export default function __Bootcamp1__() {
               <i>
                 6
               </i>
-              cloud.svg`
+              times
+              <i>
+                ten
+              </i>
+              to
+              <i>
+                the
+              </i>
+              6
+              <i>
+                cloud.svg`*
+              </i>
             </OuterP>
-            <OuterP class="indent-10">
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                one million is a thousand thousand
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:953:19
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:954:17
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 1000 \times 1000 = 1000\hspace&#123;0.3ex&#125;000
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
               <span class="t-3003-c">
                 by counting zeroes, or, equivalently, because
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:880:17
+                  ./src/content/playground/playground.wly:958:17
                 </span>
               </span>
             </OuterP>
@@ -2955,7 +3324,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 by additivity of exponents. Similarly, note that
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:884:17
+                  ./src/content/playground/playground.wly:962:17
                 </span>
               </span>
             </OuterP>
@@ -2964,7 +3333,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 one billion is a thousand million
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:886:19
+                  ./src/content/playground/playground.wly:964:19
                 </span>
               </span>
               <ImageLeft
@@ -2977,7 +3346,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 and
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:891:17
+                  ./src/content/playground/playground.wly:969:17
                 </span>
               </span>
             </OuterP>
@@ -2986,72 +3355,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 one trillion is a thousand billion
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:891:23
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <i>
-                <b>
-                  <span class="t-3003-c">
-                    bt2.4:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:895:19
-                    </span>
-                  </span>
-                </b>
-              </i>
-              {" "} `svg
-              <i>
-                bt2
-              </i>
-              bt
-              <i>
-                ten
-              </i>
-              to
-              <i>
-                the
-              </i>
-              3
-              <i>
-                times
-              </i>
-              ten
-              <i>
-                to
-              </i>
-              the
-              <i>
-                9
-              </i>
-              cloud.svg`
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                one billion is a thousand million
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:897:19
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:899:17
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                one trillion is a thousand billion
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:899:23
+                  ./src/content/playground/playground.wly:969:23
                 </span>
               </span>
               <ImageLeft
@@ -3062,9 +3366,9 @@ export default function __Bootcamp1__() {
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                and also
+                and also (while we're at it)
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:904:17
+                  ./src/content/playground/playground.wly:974:17
                 </span>
               </span>
             </OuterP>
@@ -3073,80 +3377,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 one trillion is a million million
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:904:28
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <i>
-                <b>
-                  <span class="t-3003-c">
-                    bt2.5:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:908:19
-                    </span>
-                  </span>
-                </b>
-              </i>
-              {" "} `svg
-              <i>
-                bt2
-              </i>
-              bt
-              <i>
-                ten
-              </i>
-              to
-              <i>
-                the
-              </i>
-              6
-              <i>
-                times
-              </i>
-              ten
-              <i>
-                to
-              </i>
-              the
-              <i>
-                6
-              </i>
-              cloud.svg`
-            </OuterP>
-            <OuterP class="indent-10">
-              <span class="t-3003-c">
-                and
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:910:17
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                one trillion is a thousand billion
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:910:23
-                </span>
-              </span>
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and also
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:912:17
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              <span class="t-3003-c">
-                one trillion is a million million
-                <span class="t-3003">
-                  ./src/content/playground/playground.wly:912:28
+                  ./src/content/playground/playground.wly:976:19
                 </span>
               </span>
               <ImageRight
@@ -3157,47 +3388,44 @@ export default function __Bootcamp1__() {
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                as can be seen by replacing “billion” with “thousand million”.
+                as can be seen, for example, by replacing “billion”
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:917:17
+                  ./src/content/playground/playground.wly:981:17
                 </span>
               </span>
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    bt2.6:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:921:19
-                    </span>
+                <span class="t-3003-c">
+                  *bt2.6: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:985:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              bt2
               <i>
-                bt2
+                bt
               </i>
-              bt
+              ten
               <i>
-                ten
+                to
               </i>
-              to
+              the
               <i>
-                the
+                minus
               </i>
-              minus
+              5
               <i>
-                5
+                cloud.svg`*
               </i>
-              cloud.svg`
             </OuterP>
             <OuterP class="indent-10">
               <span class="t-3003-c">
                 Since
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:923:17
+                  ./src/content/playground/playground.wly:987:17
                 </span>
               </span>
             </OuterP>
@@ -3218,7 +3446,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 the logarithm base {" "}
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:933:17
+                  ./src/content/playground/playground.wly:996:17
                 </span>
               </span>
               <Math>
@@ -3239,31 +3467,47 @@ export default function __Bootcamp1__() {
             <Pause />
             <OuterP>
               <i>
-                <b>
-                  <span class="t-3003-c">
-                    bt2.7:
-                    <span class="t-3003">
-                      ./src/content/playground/playground.wly:937:19
-                    </span>
+                <span class="t-3003-c">
+                  *bt2.7: `svg
+                  <span class="t-3003">
+                    ./src/content/playground/playground.wly:1000:18
                   </span>
-                </b>
+                </span>
               </i>
-              {" "} `svg
+              bt2
               <i>
-                bt2
+                ex
               </i>
-              ex
+              equation
               <i>
-                equation
+                addition
               </i>
-              addition_cloud.svg`
+              cloud.svg`*_
             </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large a + b - c - 3 = 0
+              $$
+            </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large -a -2b - c = 0
               $$
             </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...are satisfied! Adding the second and
+                <span class="t-3003">
+                  ./src/content/playground/playground.wly:1008:17
+                </span>
+              </span>
+              {" "}
+              {" "}
+              third equation together, we find
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -3282,7 +3526,7 @@ export default function __Bootcamp1__() {
               <span class="t-3003-c">
                 and adding this last equation to the first
                 <span class="t-3003">
-                  ./src/content/playground/playground.wly:952:17
+                  ./src/content/playground/playground.wly:1017:17
                 </span>
               </span>
               {" "}
@@ -3290,18 +3534,24 @@ export default function __Bootcamp1__() {
               equation above, we find
             </OuterP>
             <Pause />
+            <MathBlock>
+              $$
+              \Large -c -2 = 0
+              $$
+            </MathBlock>
+            <Pause />
             <OuterP>
               <i>
                 <b>
                   <span class="t-3003-c">
                     Large image stress fixture:
                     <span class="t-3003">
-                      ./src/content/playground/playground.wly:957:19
+                      ./src/content/playground/playground.wly:1025:19
                     </span>
                   </span>
                 </b>
               </i>
-              {" "} 1000px-wide image with six book clouds.
+              {" "} 1000px-wide image with six test clouds.
             </OuterP>
             <Pause />
             <Image
@@ -3310,40 +3560,40 @@ export default function __Bootcamp1__() {
               local_url="./images/test_native_1000.svg"
             >
               <ImageLeft
-                src="/build-img/svgo-svg/-TtU.svg"
-                offsetY="0%"
+                src="/build-img/svg/0439.svg"
+                offsetY="-50%"
                 offsetX="2em"
-                local_url="./images/c1_abCD_cloud.svg"
+                local_url="./images/test_cloud_NW.svg"
               />
               <ImageLeft
-                src="/build-img/svgo-svg/3IFS.svg"
-                offsetY="50%"
-                offsetX="2em"
-                local_url="./images/svg_ch2_ch_vertical_line_equation.svg"
-              />
-              <ImageLeft
-                src="/build-img/svgo-svg/DSem.svg"
-                offsetY="100%"
-                offsetX="2em"
-                local_url="./images/svg_bt2_bt_alert_cloud.svg"
-              />
-              <ImageRight
-                src="/build-img/svgo-svg/Z39o.svg"
+                src="/build-img/svg/mJ_i.svg"
                 offsetY="0%"
                 offsetX="2em"
-                local_url="./images/svg_ch1_ch_minus_two_squared_cloud.svg"
+                local_url="./images/test_cloud_W.svg"
               />
-              <ImageRight
-                src="/build-img/svgo-svg/EgBm.svg"
+              <ImageLeft
+                src="/build-img/svg/GyQV.svg"
                 offsetY="50%"
                 offsetX="2em"
-                local_url="./images/c2_slope_formula_cloud.svg"
+                local_url="./images/test_cloud_SW.svg"
               />
               <ImageRight
-                src="/build-img/svgo-svg/dcQB.svg"
-                offsetY="100%"
+                src="/build-img/svg/enf-.svg"
+                offsetY="-50%"
                 offsetX="2em"
-                local_url="./images/svg_bt1_bt_empty_set_cloud.svg"
+                local_url="./images/test_cloud_NE.svg"
+              />
+              <ImageRight
+                src="/build-img/svg/J4JH.svg"
+                offsetY="0%"
+                offsetX="2em"
+                local_url="./images/test_cloud_E.svg"
+              />
+              <ImageRight
+                src="/build-img/svg/SN5W.svg"
+                offsetY="50%"
+                offsetX="2em"
+                local_url="./images/test_cloud_SE.svg"
               />
             </Image>
           </Solution>
@@ -3356,7 +3606,7 @@ export default function __Bootcamp1__() {
             <span class="t-3003-c">
               Case 1:
               <span class="t-3003">
-                ./src/content/playground/playground.wly:995:7
+                ./src/content/playground/playground.wly:1062:7
               </span>
             </span>
           </b>
@@ -3376,7 +3626,7 @@ export default function __Bootcamp1__() {
             <span class="t-3003-c">
               Case 2:
               <span class="t-3003">
-                ./src/content/playground/playground.wly:1003:7
+                ./src/content/playground/playground.wly:1070:7
               </span>
             </span>
           </b>
@@ -3396,7 +3646,7 @@ export default function __Bootcamp1__() {
             <span class="t-3003-c">
               Case 3:
               <span class="t-3003">
-                ./src/content/playground/playground.wly:1011:7
+                ./src/content/playground/playground.wly:1078:7
               </span>
             </span>
           </b>
@@ -3416,7 +3666,7 @@ export default function __Bootcamp1__() {
             <span class="t-3003-c">
               Case 4:
               <span class="t-3003">
-                ./src/content/playground/playground.wly:1019:7
+                ./src/content/playground/playground.wly:1086:7
               </span>
             </span>
           </b>
@@ -3427,6 +3677,44 @@ export default function __Bootcamp1__() {
       <Image
         src="/build-img/svgo-svg/6BLF.svg"
         width="350px"
+        local_url="./images/test_native_350.svg"
+      />
+      <Pause />
+      <OuterP>
+        <i>
+          <b>
+            <span class="t-3003-c">
+              Case 5:
+              <span class="t-3003">
+                ./src/content/playground/playground.wly:1094:7
+              </span>
+            </span>
+          </b>
+        </i>
+        {" "} no width attribute, native 1000px
+      </OuterP>
+      <Pause />
+      <Image
+        src="/build-img/svgo-svg/S-T0.svg"
+        local_url="./images/test_native_1000.svg"
+      />
+      <Pause />
+      <OuterP>
+        <i>
+          <b>
+            <span class="t-3003-c">
+              Case 6:
+              <span class="t-3003">
+                ./src/content/playground/playground.wly:1101:7
+              </span>
+            </span>
+          </b>
+        </i>
+        {" "} no width attribute, native 350px
+      </OuterP>
+      <Pause />
+      <Image
+        src="/build-img/svgo-svg/6BLF.svg"
         local_url="./images/test_native_350.svg"
       />
       <Rest />

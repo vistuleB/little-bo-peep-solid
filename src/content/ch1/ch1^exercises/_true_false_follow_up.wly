@@ -53,12 +53,12 @@
         however.) Having said this, the difference is:
 
         $$
-        \begin{align}
+        \begin{align*}
         {1 \over n^2} - {1 \over n(n+1)} &= {1 \over n^2} \cdot {n+1 \over n+1} - {1 \over n(n+1)} \cdot
         {n \over n}\\
         &= {n+1 \over n^2(n+1)} - {n \over n^2(n+1)}\up{1.5}\\
         &= {1 \over n^2(n+1)}\up{1.5}
-        \end{align}
+        \end{align*}
         $$
 
         |> ImageRight

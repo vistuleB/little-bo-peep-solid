@@ -58,13 +58,13 @@
         convince yourself, note that
 
         $$
-        \begin{align}
+        \begin{align*}
         &\,\, (\sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.1})^6 \\
         =&\,\, \up{1.4} \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}}\qquad\\
         =&\,\, \up{1.4} (\gbk\sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.11}) \times (\gbk\sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.11}) \times (\gbk\sqrt[2]{\up{0.75}\sqrt[3]{2}} \times \sqrt[2]{\up{0.75}\sqrt[3]{2}}\rt{0.11}) \\
         =& \,\, \up{1.4} (\sqrt[3]{\up{0.64}2}\rt{0.1}) \times (\sqrt[3]{\up{0.64}2}\rt{0.1}) \times (\sqrt[3]{\up{0.64}2}\rt{0.1})\\
         =& \,\, \up{1.4} 2
-        \end{align}
+        \end{align*}
         $$
 
         |> ImageLeft
@@ -74,13 +74,13 @@
         and
 
         $$
-        \begin{align}
+        \begin{align*}
         \    &\,\, (\sqrt[3]{\up{0.75}\sqrt[2]{2}}\rt{0.1})^6 \\
         \   =&\,\, \up{1.4} \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}}\\
         \   =&\,\, \up{1.4} (\gbk\sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}}\rt{0.11}) \times (\gbk\sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}} \times \sqrt[3]{\up{0.75}\sqrt[2]{2}}\rt{0.11})\\
         \   =&\,\, \up{1.4} \sqrt[2]{\up{0.65}2} \times \sqrt[2]{\up{0.65}2}\\
         \   =&\,\, \up{1.4} 2
-        \end{align}
+        \end{align*}
         $$
 
         |> ImageLeft
@@ -262,12 +262,12 @@
         preserving the inequality, one has
 
         $$
-        \begin{align}
+        \begin{align*}
         & {1 \over 0.95} > 1.05\\
         \iff & 1 > 1.05 \cdot 0.95\up{1.4}\\
         \iff & 1 > (1 + 0.05)(1 - 0.05)\up{1.4}\\
         \iff & 1 > 1 - 0.05^2\up{1.4}
-        \end{align}
+        \end{align*}
         $$
 
         (using the fact that $(1+x)(1-x) = 1-x^2$, of
@@ -406,38 +406,38 @@
         stopping at
 
         $$
-        \begin{align}
+        \begin{align*}
         &\, \left(1 - {1 \over 2}\right) \\
         + \,&\, \left({1 \over 2} - {1 \over 3}\right) \\
         \hline
         = \,&\, \left(1 - {1 \over 3}\right)
-        \end{align}
+        \end{align*}
         $$
 
         for another break. Keeping with this pattern,
         the hare then stops at
 
         $$
-        \begin{align}
+        \begin{align*}
         &\, \left(1 - {1 \over 2}\right)\\
         + \,&\, \left({1 \over 2} - {1 \over 3}\right)\\
         + \,&\, \left({1 \over 3} - {1 \over 4}\right)\\
         \hline
         = \,&\, \left(1 - {1 \over 4}\right)
-        \end{align}
+        \end{align*}
         $$
 
         and then at
 
         $$
-        \begin{align}
+        \begin{align*}
         &\, \left(1 - {1 \over 2}\right)\\
         + \,&\, \left({1 \over 2} - {1 \over 3}\right)\\
         + \,&\, \left({1 \over 3} - {1 \over 4}\right)\\
         + \,&\, \left({1 \over 4} - {1 \over 5}\right)\\
         \hline
         = \,&\, \left(1 - {1 \over 5}\right)
-        \end{align}
+        \end{align*}
         $$
 
         and so on.
@@ -447,7 +447,7 @@
         _infinite_ sum
 
         $$
-        \begin{align}
+        \begin{align*}
         &\, \left(1 - {1 \over 2}\right)\\
         + \,&\, \left({1 \over 2} - {1 \over 3}\right)\\
         + \,&\, \left({1 \over 3} - {1 \over 4}\right)\\
@@ -455,7 +455,7 @@
         + \,&\, \left({1 \over 5} - {1 \over 6}\right)\\
         + \,&\, \left({1 \over 6} - {1 \over 7}\right)\\
         + \,&\, \,\,\,\,\,\,\,\,\dots\up{1.3}
-        \end{align}
+        \end{align*}
         $$
 
         is “equal” (in some sense) to $1$. But how
@@ -472,12 +472,12 @@
         infinite sum in the first place.) Well...
 
         $$
-        \begin{align}
+        \begin{align*}
         {1 \over n} - {1 \over n+1} &= {1 \over n}\cdot{n+1 \over n+1}\, - \,
         {1 \over n+1}\cdot{n \over n}\up{1.5}\\
         &= {n+1 \over n(n+1)} - {n \over n(n+1)}\up{1.5}\\
         &= {1 \over n(n+1)}\up{1.5}
-        \end{align}
+        \end{align*}
         $$
 
         |> ImageRight
@@ -499,7 +499,7 @@
         and so on.) So the infinite sum
 
         $$
-        \begin{align}
+        \begin{align*}
         &\, \left(1 - {1 \over 2}\right)\\
         + \,&\, \left({1 \over 2} - {1 \over 3}\right)\\
         + \,&\, \left({1 \over 3} - {1 \over 4}\right)\\
@@ -508,7 +508,7 @@
         + \,&\, \left({1 \over 6} - {1 \over 7}\right)\\
         + \,&\, \,\,\,\,\,\,\,\,\dots\up{1.3}\dn{1}\\ \hline
         = \,&\, 1\up{1.5}
-        \end{align}
+        \end{align*}
         $$
 
         can also be written

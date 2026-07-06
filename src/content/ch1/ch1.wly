@@ -251,11 +251,11 @@
     (one second!):
 
     $$
-    \begin{align}
+    \begin{align*}
     {71 \over 40} \,&=\, {40 + 30 + 1 \over 40} \,=\, {40 \over 40} + {30 \over 40} + {1 \over 40}\\
     \,&=\, 1 + {3 \over 4} + {1 \over 4}\!\cdot \!{1 \over 10}\up{1.5}\\
     \,&=\, 1 + 0.75 + 0.025 = 1.775\up{1.5}
-    \end{align}
+    \end{align*}
     $$
 
     ...so we find, among others, that $71$ is exactly
@@ -360,11 +360,11 @@
         One has
 
         $$
-        \begin{align}
+        \begin{align*}
         (10 + 3)(10 + 3) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
         \,&=\, 100 \,+\, 30 \,+\, 30 \,+\, 9 \up{1.1}\\
         \,&=\, 169 \up{1.1}
-        \end{align}
+        \end{align*}
         $$
 
         so $13 \times 13 = 169$.
@@ -404,11 +404,11 @@
         of degree two”),
 
         $$
-        \begin{align}
+        \begin{align*}
         \up{1} (10 + 3)^2 \,&=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
         \up{1} \,&=\, 100 + 60 + 9 \up{1.1}\\
         \up{1} \,&=\, 169 \up{1.1}
-        \end{align}
+        \end{align*}
         $$
 
         !! which agrees with Example 2.
@@ -510,11 +510,11 @@
     because, indeed,
 
     $$
-    \begin{align}
+    \begin{align*}
     (-1)(a - b) \,&=\, (-1)(a + (-b)) \\
     \,&=\, (-1)a + (-1)(-b) \up{1.1} \\
     \,&=\, -a + b \up{1.1}
-    \end{align}
+    \end{align*}
     $$
 
     by distributivity (used in the second step).
@@ -543,11 +543,11 @@
     ...? Well if you observe, additionally, that
 
     $$
-    \begin{align}
+    \begin{align*}
     11\,\cdot\,13 &= 12^2 - 1\\
     10\,\cdot\,12 &= 11^2 - 1 \up{1.1}\\
     9\,\cdot\,11 &= 10^2 - 1 \up{1.1}
-    \end{align}
+    \end{align*}
     $$
 
     (etc) you might become suspicious of a pattern!

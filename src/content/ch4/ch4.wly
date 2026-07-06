@@ -346,11 +346,11 @@
     Likewise, we have, e.g.,
 
     $$
-    \begin{align}
+    \begin{align*}
     \up{0.95}f''' &= (f'')'\\
     \up{1.25}f'''' &= (f''')'\\
     \up{1.25}f''''\psa' &= (f'''')'\\
-    \end{align}
+    \end{align*}
     $$
 
     these being, namely, the _third_, _fourth_
