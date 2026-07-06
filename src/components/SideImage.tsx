@@ -1,5 +1,4 @@
 import {
-  createEffect,
   createSignal,
   mergeProps,
   onCleanup,
@@ -72,29 +71,6 @@ const SideImage = (props: InternalSideImageProps) => {
   const offsetY = () => scaledCssLength(props.offsetY, sideScale());
   const widthInflationOffset = () =>
     props.atLeastAsWide ? Math.max(0, (textWidth() - parentWidth()) / 2) : 0;
-  const isTestCloud = () => props.local_url?.includes("test_cloud_");
-
-  createEffect(() => {
-    if (!isTestCloud()) return;
-
-    const nextOffsetX = offsetX();
-    const nextOffsetY = offsetY();
-    const nextWidthInflationOffset = widthInflationOffset();
-    console.log("[SideImage test cloud geometry]", props.local_url, {
-      scale: sideScale(),
-      afterFirstClick: scale().after_first_click,
-      side: props.side,
-      offsetX: props.offsetX,
-      computedOffsetX: nextOffsetX,
-      computedOffsetY: nextOffsetY,
-      left: getLeft(props.side, nextOffsetX, nextWidthInflationOffset),
-      right: getRight(props.side, nextOffsetX, nextWidthInflationOffset),
-      top: getTop(props.line, nextOffsetY, sideScale()),
-      widthInflationOffset: nextWidthInflationOffset,
-      parentMeasured: parentMeasured(),
-      parentWidth: parentWidth(),
-    });
-  });
 
   const maybeChildren = () => {
     if (props.children) {
