@@ -1,0 +1,52 @@
+|> Exercise
+    handle=_lorentz_factor_dimensionality_
+
+    if $v$ and $c$ are both speeds, what
+    is the dimension of...
+    $$
+    \sqrt{1 - {v^2\over c^2}}
+    $$
+    ...?
+
+    |> Solution
+
+        Since 
+        $$
+        {v\over c}
+        $$
+        
+        is “speed over speed” is dimensionless,
+        and since the sums, differences, squares,
+        and square roots, etc, of dimensionless
+        quantities is dimensionless, the entire
+        expression is dimensionless.
+
+        |> Pause
+
+        _Vocabulary._
+        When $c$ is the speed of light
+        the reciprocal of this expression, often
+        written ‘$\gamma$’, is known as the
+        _Lorentz factor_ in physics. It is:
+
+        $$
+        \gamma = {1\over \sqrt{1 - {v^2\over c^2}}}.
+        $$
+
+        (Because the reciprocal of a dimensionless
+        quantity is dimensionless, the Lorentz factor
+        is also dimensionless.)
+
+        !! ...known as the _Lorentz factor_ in physics.
+        !! presuming $c$ is the speed of light.
+        !! Because the reciprocal of a dimensionless
+        !! quantity is dimensionless, the Lorentz factor
+        !! is just as dimensionless as its reciprocal,
+        !! i.e., the square root that we studied.
+
+        !! |> SolutionNote
+
+        !!     Because the reciprocal of a dimensionless
+        !!     quantity is dimensionless, the Lorentz factor
+        !!     is also dimensionless. (In case you had any nagging
+        !!     doubts.)

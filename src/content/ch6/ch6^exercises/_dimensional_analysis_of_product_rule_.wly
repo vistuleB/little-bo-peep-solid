@@ -1,4 +1,289 @@
 |> Exercise
+    handle=_dimensional_f_f_
+
+    For functions $f$ with what kind of
+    signature does the composition
+    $$
+    f \circ f
+    $$
+    make sense?
+
+    |> Solution
+
+        A signature of the form 
+        $$
+        f : [\tA] \ra [\tA]
+        $$
+        is necessary and sufficient. In more detail, for  
+        two functions $f$, $g$ of general signature
+
+        $$
+        \begin{gathered}
+        f : [\tA] \ra [\tB] \\
+        \up{1.6}g : [\tC] \ra [\tD]
+        \end{gathered}
+        $$
+
+        the composition
+
+        $$
+        f\circ g
+        $$
+
+        is well-formed if and ony if $[\tD] = [\tA]$. 
+        (Cf. [Table 1.1](>>table_1_1).)
+        In our case $g = f$ so we additionally have
+
+        $$
+        \begin{gathered}
+        !! some mathjax bug requires this \up{0}, on last check:
+        \up{0}[\tC] = [\tA] \\
+        \up{1.6}[\tD] = [\tB]
+        \end{gathered}
+        $$
+
+        to start with, which, together with 
+        $[\tD] = [\tA]$, collapses the signature of $f$
+        to “$[\tA] \ra [\tA]$”.
+
+        !! The output of $f$ is fed back to into itself
+        !! as an input, so a signature of the form
+
+        !! $$
+        !! f : [\tA] \ra [\tA]
+        !! $$
+
+        !! is required, and is also sufficient by inspection!
+
+|> Exercise
+    handle=_sueeyyy_
+
+    !! For wich functions $f$ (with what kind of
+    !! signature) does the function
+    What constraints does the assemblage
+    $$
+    f \circ {f\over f\circ f}
+    $$
+    !! make sense?
+    impose on the signature of $f$?
+
+    |> Solution
+
+        To start with, the presence of $f \circ f$ as a sub-expression
+        imposes a restricted signature of the form
+
+        $$
+        f : [\tA] \ra [\tA]
+        $$
+
+        by Exercise >>_dimensional_f_f_. But then
+
+        $$
+        {f\over f\circ f} : [\tA] \ra [1]
+        $$
+
+        !! $$
+        !! f : [\tA] \ra [\tA]
+        !! $$
+        !! $$
+        !! f\circ f : [\tA] \ra [\tA]
+        !! $$
+        !! $$
+        !! {f\over f\circ f} : [\tA] \ra \left[{\tA\over \tA}\right] = [\tA] \ra [1]
+        !! $$
+
+        because the output units at top and bottom of the fraction are
+        both A, which cancels. (Or
+
+        |> Image
+            src=images/e6_some_quotient.svg
+
+        where $\tA/\tA = 1$.) As
+
+        $$
+        {f\over f\circ f}
+        $$
+
+        is fed back to $f$, this forces...
+
+        $$
+        [\tA] = [1]
+        $$
+
+        ...$f$ to accept dimensionless inputs, and...
+        
+        $$f : [1] \ra [1]$$
+
+        ..._in fine_.
+
+        !! Because
+        !! $$
+        !! f\circ f
+        !! $$
+        !! has the same output units as $f$, the fraction
+        !! $$
+        !! {f\over f\circ f}
+        !! $$
+        !! outputs a dimensionless quantity (same units over
+        !! same units); but the value of this fra
+
+
+|> Exercise
+    handle=_dimensional_f_f_f_
+
+    !! For what kinds of function $f$ (what kinds of
+    !! signature) does
+    For functions $f$ with what kind of
+    signature does the composition
+    $$
+    \Large f \circ f \circ f
+    $$
+    make sense?
+
+    |> Solution
+
+        A signature of the form
+
+        $$
+        f : [\tA] \ra [\tA]
+        $$
+
+        is necessary and sufficient. In more detail,
+        the composition
+
+        $$
+        f \circ f
+        $$
+
+        already requires a signature of this form 
+        by Exercise >>_dimensional_f_f_, after which
+
+        $$
+        f \circ f : [\tA] \ra [\tA]
+        $$
+
+        and
+
+        $$
+        f \circ f \circ f = f \circ (f \circ f)
+        $$
+
+        is also well-formed, since
+
+        $$
+        \begin{gathered}
+        f : [\tA] \ra [\tA] \\
+        \up{1.6}f \circ f : [\tA] \ra [\tA]
+        \end{gathered}
+        $$
+
+        can be used in lieu of $f$ and $g$ in a general
+        composition $f \circ g$.
+
+|> Exercise
+    handle=_dimensional_f_g_f_
+
+    !! What restrictions on the signature of $f$ and $g$
+    !! does the composition
+    !! $$
+    !! \Large f \circ g \circ f
+    !! $$
+    !! impose?
+    What kinds of functions $f$ and $g$, signature-wise,
+    does the composition 
+    $$
+    f \circ g \circ f
+    $$
+    require?
+    !! For functions $f$ and $g$ with what kind of signature 
+    !! does the composition
+    !! $$
+    !! \Large f \circ g \circ f
+    !! $$
+    !! make sense?
+
+    |> Solution
+
+        The composition requires $f$ and $g$ of the form
+
+        $$
+        \begin{gathered}
+        f : [\tA] \ra [\tB] \\
+        \up{1.6}g : [\tB] \ra [\tA]
+        \end{gathered}
+        $$
+
+        for some units A and B
+        since the output of $f$ is forwarded to $g$, whose
+        output of $g$ if forwarded back to $f$.
+
+|> Exercise
+    handle=_physicist_choose_to_write_
+
+    If units of time and space are chosen
+    such that $c = 1$ where $c$ is the speed of the light,
+    why might we still choose
+    to write expressions containing ‘$c$’?
+
+    |> Solution
+
+        !! Besides wanting to “remind the general
+        !! formula”, one reason is
+        !! to keep expressions dimensionally consistent;
+        !! for example, if $v < c$
+        !! is another speed, then
+
+        !! $$
+        !! \sqrt{1 - {v^2\over c^2}}
+        !! $$
+
+        !! is the so-called _Lorentz contraction factor_
+        !! of special relativity, which is dimensionless—writing
+
+        !! $$
+        !! \sqrt{1 - v^2}
+        !! $$
+
+        !! might be numerically correct and typographically more
+        !! expedient, but is dimensionally
+        !! inconsistent: either a speed squared is being subtracted
+        !! from a dimensionless ‘$1$’, or else we pretend
+        !! that ‘$1$’ stands for ‘$c^2$’, which is also a speed squared,
+        !! but then the entire square root is a speed instead of
+        !! being dimensionless—failures on all sides!
+
+        Besides wanting to “remind the general
+        formula”, one reason is
+        to keep expressions dimensionally consistent.
+        For example, the reciprocal of the Lorentz factor
+
+        $$
+        \sqrt{1 - {v^2\over c^2}}
+        $$
+
+        (cf. Exercise >>_lorentz_factor_dimensionality_)
+        !! is the so-called _Lorentz factor_
+        !! of special relativity, which is dimensionless—writing
+        would become
+
+        $$
+        \sqrt{1 - v^2}
+        $$
+
+        if 
+        taking advantage of $c = 1$ to
+        elide the ‘$c$’, which
+        might be numerically correct and typographically more
+        expedient, but is dimensionally
+        inconsistent: either a speed squared is being subtracted
+        from a dimensionless ‘$1$’, or, in a last-ditch effort, we pretend
+        that ‘$1$’ stands for ‘$c^2$’, which is also a speed squared,
+        but then the entire square root is a speed instead of
+        being dimensionless, as the Lorentz factor should be—failures on all sides!
+
+
+
+|> Exercise
     handle=_dimensional_analysis_of_product_rule_
     Give a dimensional analysis of the (real,
     “late afternoon”) product rule (cf$.$ Chapter >>derivatives#decoy:4, Exercise >>_product_rule_#decoy:16):
@@ -9,4 +294,82 @@
         $$
 
     |> Solution
-        Hello.
+        Products of the form
+
+        !! $$
+        !! fg
+        !! $$
+        !! $$
+        !! f'g
+        !! $$
+        !! $$
+        !! fg'
+        !! $$
+
+        $$
+        \begin{gathered}
+        fg  \\
+        f'g\up{1.9} \\
+        fg'\up{1.9}
+        \end{gathered}
+        $$
+
+        require $f$ and $g$ to have the same input units, but no more,
+        per the multiplication rule of [Table 1.1](>>table_1_1),
+        and per the fact that
+        $h'$ has the same input units as $h$
+        for any function $h : \rr \ra \rr$. 
+        Therefore, signatures of the form
+
+        $$
+        \begin{gathered}
+        f : [\tA] \ra [\tB] \\
+        g : [\tA] \ra [\tC] \up{1.6}
+        \end{gathered}
+        $$
+
+        are at least necessary on either side of the equation.
+        Then, evaluating further, one finds
+        !! But then one finds, in order, that
+        !! $$
+        !! \begin{gathered}
+        !! fg : [\tA] \ra [\tB\tC] \\
+        !! \up{2.5}(fg)' : [\tA] \ra \left[{\tB\tC\over \tA}\right] \\
+        !! \up{2.5}f' : [\tA] \ra \left[{\tB\over \tA}\right] \\
+        !! \up{2.5}f'g : [\tA] \ra \left[{\tB\tC\over \tA}\right] \\
+        !! \up{2.5}g' : [\tA] \ra \left[{\tC\over \tA}\right] \\
+        !! \up{2.5}fg' : [\tA] \ra \left[{\tB\tC\over \tA}\right]
+        !! \end{gathered}
+        !! $$
+
+        $$
+        \begin{gathered}
+        fg : [\tA] \ra [\tB\tC]                    \\
+        \up{1.6}(fg)' : [\tA] \ra [\tB\tC/\tA]     \\
+        \up{1.6}f' : [\tA] \ra [\tB/\tA]           \\
+        \up{1.6}g' : [\tA] \ra [\tC/\tA]           \\
+        \up{1.6}f'g : [\tA] \ra [\tB\tC/\tA]       \\
+        \up{1.6}fg' : [\tA] \ra [\tB\tC/\tA]       \\
+        \up{1.6}f'g + fg' : [\tA] \ra [\tB\tC/\tA]
+        \end{gathered}
+        $$
+
+        so these signatures are also sufficient to
+        evaluate either side of the equation to the end, and,
+        moreover,
+        $(fg)'$
+        and
+        $f'g + g'f$
+        are found to have the same signature, concluding the 
+        dimensional analysis. (= Both sides impose the same
+        signature constraints, and evaluate to the same final
+        signature.)
+
+        !! so signatures as above are also _sufficient_ to
+        !! evaluate either side of the equation to the end, and,
+        !! moreover,
+        !! $(fg)'$
+        !! and
+        !! $f'g + g'f$
+        !! are found to have the same signature,
+        !! so the equation is dimensionally consistent.

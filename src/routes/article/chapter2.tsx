@@ -635,7 +635,7 @@ const Rest = () => {
           &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125;
           $$
           <ImageLeft
-            src="/tmp-images/c2_a_b_fraction_cloud.svg"
+            src="/build-img/svgo-svg/kzAf.svg"
             offsetX="2.5em"
             offsetY={0}
             atLeastAsWide={true}

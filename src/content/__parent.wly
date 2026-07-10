@@ -169,6 +169,14 @@
 
     |> In
         chapter=>>chain
+        >>_dimensional_f_f_
+        >>_sueeyyy_
+        !! >>_dimensional_f_f_f_
+        >>_dimensional_f_g_f_
+        !! >>_dimensional_cos_f_
+        >>_dimensional_omega_
+        >>_lorentz_factor_dimensionality_
+        >>_physicist_choose_to_write_
         >>_dimensional_analysis_of_product_rule_
 
 
@@ -313,4 +321,5 @@
         !! |> div
         !!     style=height:54px;width:200px;background-color:#333
         |> img
-            src=non-build-img/loading_screen.png
+            !! src=non-build-img/loading_screen.png
+            src=non-build-img/dark_calculus_1.svg

@@ -22,7 +22,7 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_162_h.a.i_"
+      id="_168_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -103,15 +103,8 @@ export default function __Chapter6__() {
           >
             Postcript to Chapter 2
           </OutChapterLink>
-          , the
-          term
-          {" "}
-          <OutChapterLink
-            href="/article/chapter4#section-6"
-            class="out-chapter-link"
-          >
-            6
-          </OutChapterLink>
+          , 
+          the term
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -279,7 +272,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large[1]
+          \Large [1]
           $$
         </MathBlock>
         <Pause />
@@ -599,10 +592,7 @@ const Rest = () => {
     </>}
     {visibleRestSections() > 3 && <>
       <Pause />
-      <Section
-        _handle="differentiation_and_signatures"
-        id="section-6"
-      >
+      <Section id="section-6">
         <OuterP>
           <b>
             Differentiation.
@@ -2681,13 +2671,640 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_161_h.a.i_"
+        id="_167_h.a.i_"
       >
         <Exercise number={1}>
           <ExerciseStatement id="_160_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
+              </b>
+              {" "}
+              For functions {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} with what kind of
+              signature does the composition
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              make sense?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              A signature of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [\tA] \ra [\tA]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is necessary and sufficient. In more detail, for  
+              two functions {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} of general signature
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              f : [\tA] \ra [\tB] \\
+              \up&#123;1.6&#125;g : [\tC] \ra [\tD]
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              the composition
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f\circ g
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is well-formed if and ony if {" "}
+              <NoBreak>
+                <Math>
+                  $[\tD] = [\tA]$
+                </Math>
+                .
+              </NoBreak>
+              {" "} 
+              (Cf. {" "}
+              <InChapterLink
+                class="in-chapter-link"
+                href="#_152_h.a.i_"
+              >
+                Table 1.1
+              </InChapterLink>
+              &#8288;.)
+              In our case {" "}
+              <Math>
+                $g = f$
+              </Math>
+              {" "} so we additionally have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \up&#123;0&#125;[\tC] = [\tA] \\
+              \up&#123;1.6&#125;[\tD] = [\tB]
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              to start with, which, together with 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $[\tD] = [\tA]$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} collapses the signature of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}
+              to {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $[\tA] \ra [\tA]$
+                </Math>
+                ”.
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={2}>
+          <ExerciseStatement id="_161_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 2.
+              </b>
+              {" "}
+              What constraints does the assemblage
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ &#123;f\over f\circ f&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              impose on the signature of {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              To start with, the presence of {" "}
+              <Math>
+                $f \circ f$
+              </Math>
+              {" "} as a sub-expression
+              imposes a restricted signature of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [\tA] \ra [\tA]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              by {" "}
+              <InChapterLink
+                href="/article/chapter6#_160_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 1
+              </InChapterLink>
+              &#8288;. But then
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f\over f\circ f&#125; : [\tA] \ra [1]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              because the output units at top and bottom of the fraction are
+              both A, which cancels. (Or
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/Udaw.svg" />
+            <Pause />
+            <OuterP>
+              where {" "}
+              <NoBreak>
+                <Math>
+                  $\tA/\tA = 1$
+                </Math>
+                .)
+              </NoBreak>
+              {" "} As
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f\over f\circ f&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is fed back to {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} this forces...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              [\tA] = [1]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <NoBreak>
+                ...
+                <Math>
+                  $f$
+                </Math>
+              </NoBreak>
+              {" "} to accept dimensionless inputs, and...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [1] \ra [1]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...
+              <i>
+                in fine
+              </i>
+              .
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={3}>
+          <ExerciseStatement id="_162_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 3.
+              </b>
+              {" "}
+              What kinds of functions {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} signature-wise,
+              does the composition
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ g \circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              require?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The composition requires {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              f : [\tA] \ra [\tB] \\
+              \up&#123;1.6&#125;g : [\tB] \ra [\tA]
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some units A and B
+              since the output of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} is forwarded to {" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} whose
+              output of {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} if forwarded back to {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={4}>
+          <ExerciseStatement id="_163_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 4.
+              </b>
+              {" "}
+              If the expression
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \cos(\omega t)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is to be dimensionally consistent,
+              and if {" "}
+              <Math>
+                $t$
+              </Math>
+              {" "} has units of seconds, then what units
+              must {" "}
+              <Math>
+                $\omega$
+              </Math>
+              {" "} have?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos : [1] \ra [1]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos : [\rad] \ra [1]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              rephrased (we have {" "}
+              <NoBreak>
+                <Math>
+                  $[\rad] = [1]$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} putting “radians” is a
+              matter of “author's choice” semantic emphasis), {" "}
+              <Math>
+                $\omega$
+              </Math>
+              {" "} must have units of
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              radians per second
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              per second
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (equiv.) in order to cancel out the seconds in {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $t$
+                </Math>
+                ”.
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/5qHf.svg" />
+          </Solution>
+        </Exercise>
+        <Exercise number={5}>
+          <ExerciseStatement id="_164_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 5.
+              </b>
+              {" "}
+              if {" "}
+              <Math>
+                $v$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} are both speeds, what
+              is the dimension of...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;v\over c&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is “speed over speed” is dimensionless,
+              and since the sums, differences, squares,
+              and square roots, etc, of dimensionless
+              quantities is dimensionless, the entire
+              expression is dimensionless.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                Vocabulary.
+              </i>
+              {" "}
+              When {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} is the speed of light
+              the reciprocal of this expression, often
+              written {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\gamma$
+                </Math>
+                ’,
+              </NoBreak>
+              {" "} is known as the
+              {" "}
+              <i>
+                Lorentz factor
+              </i>
+              {" "} in physics. It is:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \gamma = &#123;1\over \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (Because the reciprocal of a dimensionless
+              quantity is dimensionless, the Lorentz factor
+              is also dimensionless.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={6}>
+          <ExerciseStatement id="_165_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 6.
+              </b>
+              {" "}
+              If units of time and space are chosen
+              such that {" "}
+              <Math>
+                $c = 1$
+              </Math>
+              {" "} where {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} is the speed of the light,
+              why might we still choose
+              to write expressions containing {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $c$
+                </Math>
+                ’?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Besides wanting to “remind the general
+              formula”, one reason is
+              to keep expressions dimensionally consistent.
+              For example, the reciprocal of the Lorentz factor
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              (cf. {" "}
+              <InChapterLink
+                href="/article/chapter6#_164_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 5
+              </InChapterLink>
+              &#8288;)
+              would become
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;1 - v^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              if 
+              taking advantage of {" "}
+              <Math>
+                $c = 1$
+              </Math>
+              {" "} to
+              elide the {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $c$
+                </Math>
+                ’,
+              </NoBreak>
+              {" "} which
+              might be numerically correct and typographically more
+              expedient, but is dimensionally
+              inconsistent: either a speed squared is being subtracted
+              from a dimensionless {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’,
+              </NoBreak>
+              {" "} or, in a last-ditch effort, we pretend
+              that {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} stands for {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $c^2$
+                </Math>
+                ’,
+              </NoBreak>
+              {" "} which is also a speed squared,
+              but then the entire square root is a speed instead of
+              being dimensionless, as the Lorentz factor should be—failures on all sides!
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={7}>
+          <ExerciseStatement id="_166_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 7.
               </b>
               {" "}
               Give a dimensional analysis of the (real,
@@ -2717,7 +3334,105 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Hello.
+              Products of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              fg  \\
+              f'g\up&#123;1.9&#125; \\
+              fg'\up&#123;1.9&#125;
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              require {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} to have the same input units, but no more,
+              per the multiplication rule of {" "}
+              <InChapterLink
+                class="in-chapter-link"
+                href="#_152_h.a.i_"
+              >
+                Table 1.1
+              </InChapterLink>
+              &#8288;,
+              and per the fact that
+              {" "}
+              <Math>
+                $h'$
+              </Math>
+              {" "} has the same input units as {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "}
+              for any function {" "}
+              <NoBreak>
+                <Math>
+                  $h : \rr \ra \rr$
+                </Math>
+                .
+              </NoBreak>
+              {" "} 
+              Therefore, signatures of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              f : [\tA] \ra [\tB] \\
+              g : [\tA] \ra [\tC] \up&#123;1.6&#125;
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              are at least necessary on either side of the equation.
+              Then, evaluating further, one finds
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              fg : [\tA] \ra [\tB\tC]                    \\
+              \up&#123;1.6&#125;(fg)' : [\tA] \ra [\tB\tC/\tA]     \\
+              \up&#123;1.6&#125;f' : [\tA] \ra [\tB/\tA]           \\
+              \up&#123;1.6&#125;g' : [\tA] \ra [\tC/\tA]           \\
+              \up&#123;1.6&#125;f'g : [\tA] \ra [\tB\tC/\tA]       \\
+              \up&#123;1.6&#125;fg' : [\tA] \ra [\tB\tC/\tA]       \\
+              \up&#123;1.6&#125;f'g + fg' : [\tA] \ra [\tB\tC/\tA]
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              so these signatures are also sufficient to
+              evaluate either side of the equation to the end, and,
+              moreover,
+              {" "}
+              <Math>
+                $(fg)'$
+              </Math>
+              {" "}
+              and
+              {" "}
+              <Math>
+                $f'g + g'f$
+              </Math>
+              {" "}
+              are found to have the same signature, concluding the 
+              dimensional analysis. (= Both sides impose the same
+              signature constraints, and evaluate to the same final
+              signature.)
             </OuterP>
           </Solution>
         </Exercise>

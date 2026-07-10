@@ -1,0 +1,41 @@
+|> Exercise
+    handle=_dimensional_omega_
+
+    If the expression 
+
+    $$
+    \Large \cos(\omega t)
+    $$
+
+    is to be dimensionally consistent,
+    and if $t$ has units of seconds, then what units
+    must $\omega$ have?
+
+    |> Solution
+
+        Since
+
+        $$
+        \cos : [1] \ra [1]
+        $$
+
+        or
+
+        $$
+        \cos : [\rad] \ra [1]
+        $$
+
+        rephrased (we have $[\rad] = [1]$, putting “radians” is a
+        matter of “author's choice” semantic emphasis), $\omega$ must have units of
+
+        __radians per second__
+
+        or
+
+        __per second__
+
+        (equiv.) in order to cancel out the seconds in “$t$”.
+
+        |> Image
+            src=images/e6_bottom_radian_cloud.svg
+

@@ -1,0 +1,85 @@
+|> Exercise
+    handle=_dimensional_cos_f_
+    For which signatures of $k : \rr \ra \rr$ are
+    $$
+    \Large \cos \circ\,k
+    $$
+    and
+    $$
+    \Large k \circ \cos
+    $$
+    and 
+    $$
+    \Large \cos \circ\, k \circ k
+    $$
+    and 
+    $$
+    \Large k \circ k \circ \cos
+    $$
+    and 
+    $$
+    \Large k \circ \cos \circ\, k
+    $$
+    and, lastly,
+    $$
+    \Large \cos \circ\, k \circ \cos
+    $$
+    well-formed compositions? (Separately for
+    each.)
+
+    |> Solution
+
+        Because
+
+        $$
+        \cos : [1] \ra [1]
+        $$
+
+        inputs and outputs dimensionless values,
+
+        $$
+        \cos \circ\, k
+        $$
+
+        requires a $k$ of the form
+
+        $$
+        k : [\tA] \ra [1]
+        $$
+
+        for some arbitrary units A,
+        so that the output of $k$ can be fed to $\cos$,
+        while
+
+        $$
+        k \circ \cos
+        $$
+
+        requires a $k$ of the form
+
+        $$
+        k : [1] \ra [\tA]
+        $$
+
+        so that the output of $\cos$ is compatible with $k$.
+
+        All of the other combinations require
+
+        $$
+        k : [1] \ra [1]
+        $$
+
+        since they either involve
+
+        $$
+        k \circ k
+        $$
+
+        that requires $k$ of the form $k : [A] \ra [A]$,
+        but “touching” $\cos$ at one end further forcing $[A] = [1]$,
+        or else both of the combinations
+        “$k \circ \cos$” and “$\cos \circ\, k$” in the same expression,
+        !! involve $k$ both accepting inputs from $\cos$
+        !! and passing outputs on to $\cos$, 
+        directly forcing the input
+        and output units of $k$ to be dimensionless.

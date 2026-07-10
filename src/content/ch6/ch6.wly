@@ -2,9 +2,8 @@
     handle=_ch6_start_
 
     *Terminology: “dimension” vs. “dimensional”.*
-    As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions), the
-    term
-    >>units_of_the_derivative#decoy:4
+    As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions), 
+    the term
 
     __dimension__
 
@@ -68,7 +67,7 @@
     There is a special unit that we denote
 
     $$
-    \Large[1]
+    \Large [1]
     $$
 
     that stands for a “dimensionless unit” or “dimensionless
@@ -206,8 +205,12 @@
 
     [*See [Chapter >>trigonometry#decoy:5 §>>trigonometry-derivatives#decoy:2](>>negation-of-a-function-first-mention).]
 
+    !! $$
+    !! (-f)(x) = -f(x)\qquad(1/f)(x) = 1/f(x)
+    !! $$
+
 |> Section
-    _handle=differentiation_and_signatures
+    handle=derivative_signature
     *Differentiation.*
     As reviewed in [Chapter >>derivatives#decoy:4](>>units_of_the_derivative)
     (see also Exercise >>_complete_the_missing_units_#decoy:6 of Chapter >>derivatives#decoy:4),
@@ -482,8 +485,6 @@
 
     which indicates that the sum “checks out” insofar
     as units are concerned: nothing untoward has been found!
-    !! which means that the sum rule “survives” the
-    !! dimensional analysis: nothing untoward has been found!
 
     |> Example
         handle=_ms_x1_x2_example_
