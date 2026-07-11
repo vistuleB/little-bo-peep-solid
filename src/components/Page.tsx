@@ -9,6 +9,8 @@ import usePrevNextPage from "~/hooks/usePrevNextPage";
 import useAuthorMode from "~/hooks/useAuthorMode";
 import { useLocation } from "@solidjs/router";
 import {
+  HORIZONTAL_SCROLL_END_FALLBACK_DELAY_MS,
+  HORIZONTAL_SCROLL_SNAP_BACK_DURATION_MS,
   HORIZONTAL_SCROLL_SNAP_BACK_MAX,
   HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO,
 } from "~/constants";
@@ -39,6 +41,51 @@ const Page = (props: ParentProps & PageProps) => {
   set_store("nextPage", props.nextPage || "");
   set_store("prevPage", props.prevPage || "");
 
+  let snapBackAnimationFrame: number | undefined;
+  let scrollEndFallbackTimeout: number | undefined;
+  let snapBackAnimationRunning = false;
+  const supportsScrollEnd = "onscrollend" in document;
+
+  const cancelSnapBackAnimation = () => {
+    if (snapBackAnimationFrame !== undefined) {
+      cancelAnimationFrame(snapBackAnimationFrame);
+      snapBackAnimationFrame = undefined;
+    }
+    snapBackAnimationRunning = false;
+  };
+
+  const animateHorizontalSnapBack = (targetX: number) => {
+    cancelSnapBackAnimation();
+
+    const startX = window.scrollX;
+    const distance = targetX - startX;
+    const startedAt = performance.now();
+    snapBackAnimationRunning = true;
+
+    const tick = (now: number) => {
+      const progress = Math.min(
+        1,
+        (now - startedAt) / HORIZONTAL_SCROLL_SNAP_BACK_DURATION_MS,
+      );
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+
+      window.scroll({
+        left: startX + distance * easedProgress,
+        behavior: "instant",
+      });
+
+      if (progress < 1) {
+        snapBackAnimationFrame = requestAnimationFrame(tick);
+        return;
+      }
+
+      snapBackAnimationFrame = undefined;
+      snapBackAnimationRunning = false;
+    };
+
+    snapBackAnimationFrame = requestAnimationFrame(tick);
+  };
+
   // **********************
   // **** handleScroll ****
   // **********************
@@ -46,15 +93,26 @@ const Page = (props: ParentProps & PageProps) => {
   const handleScroll = () => {
     set_store("scrollY", window.scrollY);
     set_store("scrollX", window.scrollX);
+
+    if (!supportsScrollEnd && !snapBackAnimationRunning) {
+      clearTimeout(scrollEndFallbackTimeout);
+      scrollEndFallbackTimeout = window.setTimeout(
+        handleScrollFinished,
+        HORIZONTAL_SCROLL_END_FALLBACK_DELAY_MS,
+      );
+    }
   };
 
   // ************************************
   // **** handleScrollendAndTouchend ****
   // ************************************
 
-  const handleScrollendAndTouchend = () => {
-    let scrollXWhenCentered = (store.scrollWidth - store.innerWidth) / 2;
-    let distanceFromCentered = Math.abs(store.scrollX - scrollXWhenCentered);
+  const handleScrollFinished = () => {
+    if (snapBackAnimationRunning) return;
+
+    const scrollXWhenCentered =
+      (document.body.scrollWidth - window.innerWidth) / 2;
+    const distanceFromCentered = Math.abs(window.scrollX - scrollXWhenCentered);
 
     if (distanceFromCentered < 1) {
       set_store("margin_mode", false);
@@ -68,10 +126,7 @@ const Page = (props: ParentProps & PageProps) => {
         HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO * store.innerWidth,
       )
     ) {
-      window.scroll({
-        left: scrollXWhenCentered,
-        behavior: "smooth",
-      });
+      animateHorizontalSnapBack(scrollXWhenCentered);
       set_store("margin_mode", false);
       return;
     }
@@ -244,16 +299,22 @@ const Page = (props: ParentProps & PageProps) => {
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-    document.addEventListener("scrollend", handleScrollendAndTouchend);
-    document.addEventListener("touchend", handleScrollendAndTouchend);
+    if (supportsScrollEnd) {
+      document.addEventListener("scrollend", handleScrollFinished);
+    }
+    document.addEventListener("touchstart", cancelSnapBackAnimation);
     window.addEventListener("click", handleClick, { capture: true });
     window.addEventListener("keydown", handleKeydown);
 
     onCleanup(() => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
-      document.removeEventListener("scrollend", handleScrollendAndTouchend);
-      document.removeEventListener("touchend", handleScrollendAndTouchend);
+      if (supportsScrollEnd) {
+        document.removeEventListener("scrollend", handleScrollFinished);
+      }
+      document.removeEventListener("touchstart", cancelSnapBackAnimation);
+      clearTimeout(scrollEndFallbackTimeout);
+      cancelSnapBackAnimation();
       window.removeEventListener("click", handleClick, { capture: true });
       window.removeEventListener("keydown", handleKeydown);
     });
