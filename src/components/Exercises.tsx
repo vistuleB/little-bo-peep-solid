@@ -159,6 +159,30 @@ const Switcher = (props: SwitcherProps) => {
     return store.selected_exo < props.exercises.length && !store.list_view;
   };
 
+  const activateOnEnterOrSpace = (event: KeyboardEvent, action: () => void) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    event.stopPropagation();
+    action();
+  };
+
+  const selectPrevious = () => {
+    if (left_on()) set_store("selected_exo", selected_exo() - 1);
+  };
+
+  const selectNext = () => {
+    if (right_on()) set_store("selected_exo", selected_exo() + 1);
+  };
+
+  const toggleListView = () => {
+    const new_list_view = !store.list_view;
+    set_store("list_view", new_list_view);
+    if (store.list_view && close_solutions_on_entering_list_view)
+      closeAllSolutions(set_store);
+    if (!store.list_view && close_solutions_on_exiting_list_view)
+      closeAllSolutions(set_store);
+  };
+
   return (
     <div class="m-auto">
       <div
@@ -166,6 +190,10 @@ const Switcher = (props: SwitcherProps) => {
         class="flex justify-center !text-xl gap-0 mt-[2px]"
       >
         <svg
+          role="button"
+          aria-label="Previous exercise"
+          aria-disabled={!left_on()}
+          tabIndex={left_on() ? 0 : -1}
           width={`${2 + w}`}
           height={`${2 + w}`}
           viewBox={`0 0 ${2 + w} ${2 + w}`}
@@ -177,10 +205,9 @@ const Switcher = (props: SwitcherProps) => {
           )}
           onClick={(e) => {
             e.stopPropagation();
-            if (left_on()) {
-              set_store("selected_exo", selected_exo() - 1);
-            }
+            selectPrevious();
           }}
+          onKeyDown={(e) => activateOnEnterOrSpace(e, selectPrevious)}
         >
           <path
             class={twJoin(
@@ -206,6 +233,10 @@ const Switcher = (props: SwitcherProps) => {
         ></svg>
         <div class="relative w-fit">
           <svg
+            role="button"
+            aria-label="Next exercise"
+            aria-disabled={!right_on()}
+            tabIndex={right_on() ? 0 : -1}
             width={`${2 + w}`}
             height={`${2 + w}`}
             viewBox={`0 0 ${2 + w} ${2 + w}`}
@@ -217,10 +248,9 @@ const Switcher = (props: SwitcherProps) => {
             )}
             onClick={(e) => {
               e.stopPropagation();
-              if (right_on()) {
-                set_store("selected_exo", selected_exo() + 1);
-              }
+              selectNext();
             }}
+            onKeyDown={(e) => activateOnEnterOrSpace(e, selectNext)}
           >
             <path
               class={twJoin(
@@ -249,6 +279,9 @@ const Switcher = (props: SwitcherProps) => {
           </svg>
           {props.show_toggle && (
             <svg
+              role="button"
+              aria-label="Toggle exercise list view"
+              tabIndex={0}
               class={twJoin(
                 "toggle absolute cursor-pointer",
                 store.list_view ? "disabled" : "",
@@ -260,13 +293,9 @@ const Switcher = (props: SwitcherProps) => {
               xmlns="http://www.w3.org/2000/svg"
               onClick={(e) => {
                 e.stopPropagation();
-                const new_list_view = !store.list_view;
-                set_store("list_view", new_list_view);
-                if (store.list_view && close_solutions_on_entering_list_view)
-                  closeAllSolutions(set_store);
-                if (!store.list_view && close_solutions_on_exiting_list_view)
-                  closeAllSolutions(set_store);
+                toggleListView();
               }}
+              onKeyDown={(e) => activateOnEnterOrSpace(e, toggleListView)}
             >
               <path
                 d={`

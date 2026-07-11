@@ -515,7 +515,12 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
   const { store: global_store } = useGlobalContext();
   return (
     <>
-      <div onClick={props.onClick} class="cursor-pointer w-fit m-auto">
+      <button
+        type="button"
+        aria-label="Toggle solution"
+        onClick={props.onClick}
+        class="cursor-pointer w-fit m-auto block"
+      >
         <svg class="mx-auto h-[37px] overflow-visible">
           <g transform="translate(96,0)">
             <rect
@@ -572,7 +577,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
             </g>
           </g>
         </svg>
-      </div>
+      </button>
     </>
   );
 };
