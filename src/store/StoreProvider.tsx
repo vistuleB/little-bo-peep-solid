@@ -11,7 +11,12 @@ export type RouteLoadTarget = "top" | "saved-scroll" | "hash";
 export type RoutePhase = "idle" | "loading-old-route" | "loading-new-route";
 export type NavigationKind = "standard" | "swipe";
 export type HorizontalSwipeDirection = "left" | "right";
-export type HorizontalArrivalPhase = "idle" | "preparing" | "animating";
+export type HorizontalArrivalPhase =
+  | "idle"
+  | "awaiting-destination"
+  | "killing-momentum"
+  | "preparing"
+  | "animating";
 
 export type RouteLoadMemory = {
   firstContentPaintMs?: number;
@@ -39,6 +44,7 @@ export type Store = {
   pending_arrival_direction: HorizontalSwipeDirection | null;
   arrival_route_path: string;
   horizontal_arrival_phase: HorizontalArrivalPhase;
+  horizontal_arrival_offset: number;
   rest_mounting_finished_for_route_started_at: number;
   scroll_is_at_0: boolean;
   margin_mode: boolean;
@@ -80,6 +86,7 @@ const [store, set_store] = createStore<Store>({
   pending_arrival_direction: null,
   arrival_route_path: "",
   horizontal_arrival_phase: "idle",
+  horizontal_arrival_offset: 0,
   rest_mounting_finished_for_route_started_at: 0,
   scroll_is_at_0: false,
   margin_mode: false,

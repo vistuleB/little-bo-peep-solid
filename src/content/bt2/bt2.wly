@@ -120,6 +120,7 @@
 
 
 |> Section
+    split_here=Rest
 
     *Other bases.*
     Integer powers of other nonzero bases are defined

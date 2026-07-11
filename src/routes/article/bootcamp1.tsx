@@ -175,15 +175,6 @@ export default function __Bootcamp1__() {
           {" "} set, a set with no elements!
         </OuterP>
       </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const visibleRestSections = useShowMore(7);
-  return <>
-    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -390,9 +381,16 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
       <Pause />
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const visibleRestSections = useShowMore(6);
+  return <>
+    {visibleRestSections() > 0 && <>
       <Section id="section-3">
         <OuterP>
           <b>
@@ -519,7 +517,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 2 && <>
+    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -553,7 +551,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 3 && <>
+    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -673,7 +671,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 4 && <>
+    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -932,7 +930,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 5 && <>
+    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -1109,7 +1107,7 @@ const Rest = () => {
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 6 && <>
+    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>

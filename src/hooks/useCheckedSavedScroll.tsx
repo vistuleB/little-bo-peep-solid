@@ -13,9 +13,7 @@ import {
   markDestinationRouteMounted,
 } from "~/utils/routeLoading";
 import {
-  ENABLE_HORIZONTAL_SWIPE_ARRIVAL,
   HASH_SCROLL_RESTORATION_DELAY_MS,
-  HORIZONTAL_PAGE_ARRIVAL_OFFSET,
   IN_CHAPTER_SCROLL_DURATION_MS,
   SAVED_SCROLL_RESTORATION_DELAY_MS,
 } from "~/constants";
@@ -25,6 +23,7 @@ import { swipeArrivalPreparation } from "~/utils/routeTransitionPolicy";
 const useCheckedSavedScroll = () => {
   const [searchParams, _] = useSearchParams();
   const location = useLocation();
+  const routePath = location.pathname;
   const { store, set_store } = useGlobalContext();
   const routeStartedAt = store.pending_route_started_at;
   let active = true;
@@ -38,11 +37,11 @@ const useCheckedSavedScroll = () => {
 
   onMount(() => {
     set_store("saved_scroll_finished", false);
-    markDestinationRouteMounted(location.pathname, store, set_store);
+    markDestinationRouteMounted(routePath, store, set_store);
   });
 
   const anchorId = searchParams.id || location.hash.slice(1);
-  const article = location.pathname.split("/").pop() || "";
+  const article = routePath.split("/").pop() || "";
   const scrollKey = `${article}_scroll`;
 
   const update = () => {
@@ -83,7 +82,7 @@ const useCheckedSavedScroll = () => {
 
   const waitForRequiredRestMounting = () => {
     const requiresFullRest =
-      swipeArrivalPreparation(store, location.pathname) === "deep";
+      swipeArrivalPreparation(store, routePath) === "deep";
     if (
       !requiresFullRest ||
       store.rest_mounting_finished_for_route_started_at === routeStartedAt
@@ -114,28 +113,18 @@ const useCheckedSavedScroll = () => {
   };
 
   const isCurrentSwipeTopArrival = () =>
-    swipeArrivalPreparation(store, location.pathname) === "top";
+    swipeArrivalPreparation(store, routePath) === "top";
 
   const arrivalStartX = () => {
     const centeredX = (document.body.scrollWidth - window.innerWidth) / 2;
-    const hasSwipeArrival =
-      ENABLE_HORIZONTAL_SWIPE_ARRIVAL &&
-      swipeArrivalPreparation(store, location.pathname) !== "none" &&
-      store.pending_arrival_direction !== null;
-    if (!hasSwipeArrival) return centeredX;
-    return (
-      centeredX +
-      (store.pending_arrival_direction === "left"
-        ? -HORIZONTAL_PAGE_ARRIVAL_OFFSET
-        : HORIZONTAL_PAGE_ARRIVAL_OFFSET)
-    );
+    return centeredX;
   };
 
   const completeRestoration = (onScroll: () => void) => {
     if (!active) return;
     set_store("saved_scroll_finished", true);
     set_store("route_scroll_in_progress", false);
-    finishRouteLoad(location.pathname, store, set_store);
+    finishRouteLoad(routePath, store, set_store);
     window.addEventListener("scroll", onScroll);
   };
 

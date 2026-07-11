@@ -97,6 +97,7 @@
     an element of the set $\{1, 2\}$.
 
 |> Section
+    split_here=Rest
 
     *Set Equality.*
     Two sets are deemed to be

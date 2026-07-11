@@ -41,9 +41,16 @@ const Container = (props: ParentProps) => {
     swipeArrivalPreparation(store, location.pathname) === "deep" &&
     store.horizontal_arrival_phase === "preparing";
 
+  const positioningSwipeDestination = () =>
+    swipeArrivalPreparation(store, location.pathname) !== "none" &&
+    (store.horizontal_arrival_phase === "killing-momentum" ||
+      store.horizontal_arrival_phase === "preparing") &&
+    store.horizontal_arrival_offset === 0;
+
   const contentReady = () =>
     (store.saved_scroll_finished || store.scroll_is_at_0) &&
-    !preparingDeepSwipeArrival();
+    !preparingDeepSwipeArrival() &&
+    !positioningSwipeDestination();
 
   return (
     <>
@@ -61,8 +68,17 @@ const Container = (props: ParentProps) => {
           marginShowAreaDivs()}
         {store.show_areas && midLineDiv()}
         <Nav />
-        <div style={{ opacity: contentReady() ? 1 : 0 }}>{props.children}</div>
-        {store.spinner_currently_visible && <LoadingGraphic />}
+        <div
+          style={{
+            opacity: contentReady() ? 1 : 0,
+            transform: `translate3d(${store.horizontal_arrival_offset}px, 0, 0)`,
+            "will-change":
+              store.horizontal_arrival_phase === "idle" ? "auto" : "transform",
+          }}
+        >
+          {props.children}
+        </div>
+        <LoadingGraphic visible={store.spinner_currently_visible} />
         {/* </div> */}
         <div
           class="h-14"
@@ -78,7 +94,6 @@ const Container = (props: ParentProps) => {
 const EarlyImages = () => {
   return (
     <div style="overflow:hidden;position:absolute;top:0px;left:0px;pointer-events:none;width:1px;height:1px;">
-      <img src="/non-build-img/loading_screen.png" style="position:absolute" />
       <img src="/build-img/svgo-svg/anTr.svg" style="position:absolute" />
       <img src="/build-img/svgo-svg/Z39o.svg" style="position:absolute" />
       <img src="/build-img/svgo-svg/9z9J.svg" style="position:absolute" />

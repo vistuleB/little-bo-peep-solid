@@ -1,4 +1,5 @@
-import { onMount } from "solid-js";
+import { useLocation } from "@solidjs/router";
+import { createEffect } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
   finishRouteLoad,
@@ -7,10 +8,18 @@ import {
 
 const useNoScrollRestoration = () => {
   const { store, set_store } = useGlobalContext();
+  const location = useLocation();
+  let initialized = false;
 
-  onMount(() => {
+  createEffect(() => {
+    const routePath = location.pathname;
+    const pendingRoutePath = store.pending_route_path;
+    if (routePath !== "/") return;
+    if (initialized && pendingRoutePath !== routePath) return;
+    initialized = true;
+
     // pages that don't need scroll restoration should mark as finished immediately
-    markDestinationRouteMounted(location.pathname, store, set_store);
+    markDestinationRouteMounted(routePath, store, set_store);
     window.scroll({ top: 0, behavior: "instant" });
     set_store("scrollY", 0);
     set_store("scroll_is_at_0", true);
@@ -19,7 +28,7 @@ const useNoScrollRestoration = () => {
       store.pending_route_started_at,
     );
     set_store("saved_scroll_finished", true);
-    finishRouteLoad(location.pathname, store, set_store);
+    finishRouteLoad(routePath, store, set_store);
   });
 };
 

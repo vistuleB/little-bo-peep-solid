@@ -2,7 +2,6 @@ import { createEffect, onCleanup, onMount } from "solid-js";
 import {
   ENABLE_HORIZONTAL_SWIPE_ARRIVAL,
   HORIZONTAL_PAGE_ARRIVAL_DURATION_MS,
-  HORIZONTAL_PAGE_ARRIVAL_OFFSET,
   HORIZONTAL_SCROLL_END_FALLBACK_DELAY_MS,
   HORIZONTAL_SCROLL_SNAP_BACK_MAX,
   HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO,
@@ -13,6 +12,7 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import { useLocation } from "@solidjs/router";
 import type { HorizontalGestureEnd } from "~/hooks/useHorizontalSwipeNavigation";
 import { swipeArrivalPreparation } from "~/utils/routeTransitionPolicy";
+import { unlockHorizontalDocumentScroll } from "~/utils/horizontalScrollLock";
 
 export type HorizontalScrollPolicy = "range-limited" | "always-snap-back";
 
@@ -24,6 +24,7 @@ const useHorizontalPageMotion = (
   let arrivalAnimationFrame: number | undefined;
   let scrollEndFallbackTimeout: number | undefined;
   let initialCenterFrame: number | undefined;
+  let snapBackInProgress = false;
   const supportsScrollEnd = "onscrollend" in document;
 
   const centeredScrollX = () =>
@@ -33,16 +34,6 @@ const useHorizontalPageMotion = (
     ENABLE_HORIZONTAL_SWIPE_ARRIVAL &&
     swipeArrivalPreparation(store, location.pathname) !== "none" &&
     store.pending_arrival_direction !== null;
-
-  const arrivalStartX = (centeredX: number) => {
-    if (!routeHasSwipeArrival()) return centeredX;
-    return (
-      centeredX +
-      (store.pending_arrival_direction === "left"
-        ? -HORIZONTAL_PAGE_ARRIVAL_OFFSET
-        : HORIZONTAL_PAGE_ARRIVAL_OFFSET)
-    );
-  };
 
   const maximumScrollX = () =>
     Math.max(
@@ -80,14 +71,14 @@ const useHorizontalPageMotion = (
     set_store("pending_arrival_direction", null);
     set_store("arrival_route_path", "");
     set_store("pending_route_target", "top");
+    set_store("horizontal_arrival_offset", 0);
+    unlockHorizontalDocumentScroll();
   };
 
   const startCustomArrival = () => {
     clearArrivalAnimationFrame();
     window.clearTimeout(scrollEndFallbackTimeout);
-    const startX = window.scrollX;
-    const targetX = centeredScrollX();
-    const distance = targetX - startX;
+    const startOffset = store.horizontal_arrival_offset;
     const startedAt = performance.now();
     set_store("horizontal_arrival_phase", "animating");
 
@@ -97,10 +88,7 @@ const useHorizontalPageMotion = (
         (now - startedAt) / HORIZONTAL_PAGE_ARRIVAL_DURATION_MS,
       );
       const easedProgress = 1 - Math.pow(1 - progress, 3);
-      window.scroll({
-        left: startX + distance * easedProgress,
-        behavior: "instant",
-      });
+      set_store("horizontal_arrival_offset", startOffset * (1 - easedProgress));
 
       if (progress < 1) {
         arrivalAnimationFrame = requestAnimationFrame(tick);
@@ -116,18 +104,23 @@ const useHorizontalPageMotion = (
   };
 
   const smoothlyCenter = () => {
+    if (snapBackInProgress) return;
     completeArrival();
     window.clearTimeout(scrollEndFallbackTimeout);
-    window.scroll({ left: centeredScrollX(), behavior: "smooth" });
+    const targetX = centeredScrollX();
+    if (Math.abs(window.scrollX - targetX) < 1) {
+      set_store("margin_mode", false);
+      return;
+    }
+    snapBackInProgress = true;
+    window.scroll({ left: targetX, behavior: "smooth" });
   };
 
   const handleScrollFinished = () => {
     if (store.horizontal_arrival_phase === "animating") return;
 
     const centeredX = centeredScrollX();
-    const pendingArrivalX = arrivalStartX(centeredX);
-
-    if (pendingArrivalX !== centeredX) {
+    if (routeHasSwipeArrival()) {
       set_store("margin_mode", false);
       return;
     }
@@ -135,9 +128,12 @@ const useHorizontalPageMotion = (
     const distanceFromCentered = Math.abs(window.scrollX - centeredX);
 
     if (distanceFromCentered < 1) {
+      snapBackInProgress = false;
       set_store("margin_mode", false);
       return;
     }
+
+    if (snapBackInProgress) return;
 
     if (isWithinSnapBackRange(window.scrollX, centeredX)) {
       smoothlyCenter();
@@ -162,6 +158,8 @@ const useHorizontalPageMotion = (
   };
 
   const handleTouchStart = () => {
+    snapBackInProgress = false;
+
     if (routeHasSwipeArrival()) {
       completeArrival();
       window.clearTimeout(scrollEndFallbackTimeout);
@@ -175,6 +173,7 @@ const useHorizontalPageMotion = (
   const handleGestureEnd = (result: HorizontalGestureEnd) => {
     if (
       result.swipeInitiated ||
+      snapBackInProgress ||
       store.horizontal_arrival_phase === "animating"
     ) {
       return;
@@ -201,11 +200,11 @@ const useHorizontalPageMotion = (
 
   const alignImmediately = () => {
     if (store.horizontal_arrival_phase === "animating") return;
+    snapBackInProgress = false;
     clearArrivalAnimationFrame();
     window.clearTimeout(scrollEndFallbackTimeout);
     const centeredX = centeredScrollX();
-    const left = arrivalStartX(centeredX);
-    window.scroll({ left, behavior: "instant" });
+    window.scroll({ left: centeredX, behavior: "instant" });
   };
 
   createEffect(() => {
@@ -218,8 +217,7 @@ const useHorizontalPageMotion = (
       return;
     }
 
-    const startX = arrivalStartX(centeredScrollX());
-    window.scroll({ left: startX, behavior: "instant" });
+    window.scroll({ left: centeredScrollX(), behavior: "instant" });
     startCustomArrival();
   });
 
@@ -244,7 +242,6 @@ const useHorizontalPageMotion = (
       document.removeEventListener("touchstart", handleTouchStart);
       window.clearTimeout(scrollEndFallbackTimeout);
       clearArrivalAnimationFrame();
-      if (store.arrival_route_path === location.pathname) completeArrival();
     });
   });
 

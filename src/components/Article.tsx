@@ -6,6 +6,7 @@ import Page from "./Page";
 import PageUpPageDownButtons from "./PageUpPageDownButtons";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { recordFirstContentPaint } from "~/utils/routeLoading";
+import { useLocation } from "@solidjs/router";
 
 type ArticleProps = {
   id?: string;
@@ -35,13 +36,15 @@ const Article = (props: ParentProps & ArticleProps) => {
 
 const ArticleScrollCoordinator = (props: ParentProps) => {
   const { store, set_store } = useGlobalContext();
+  const location = useLocation();
+  const routePath = location.pathname;
   let firstFrame = 0;
   let secondFrame = 0;
 
   onMount(() => {
     firstFrame = requestAnimationFrame(() => {
       secondFrame = requestAnimationFrame(() => {
-        recordFirstContentPaint(location.pathname, store, set_store);
+        recordFirstContentPaint(routePath, store, set_store);
       });
     });
   });

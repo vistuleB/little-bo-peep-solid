@@ -14,8 +14,27 @@ import {
   routeNeverNeedsInitialLoadingScreen,
   shouldSetProvisionalDestinationTopScroll,
 } from "./routeTransitionPolicy";
+import {
+  lockHorizontalDocumentScroll,
+  unlockHorizontalDocumentScroll,
+} from "./horizontalScrollLock";
 
 let loadingDelayTimeout: number | undefined;
+let momentumKillFrame: number | undefined;
+let unlockFrame: number | undefined;
+let positionVerificationFrame: number | undefined;
+
+const cancelMomentumPreparation = () => {
+  if (momentumKillFrame !== undefined) cancelAnimationFrame(momentumKillFrame);
+  if (unlockFrame !== undefined) cancelAnimationFrame(unlockFrame);
+  if (positionVerificationFrame !== undefined) {
+    cancelAnimationFrame(positionVerificationFrame);
+  }
+  momentumKillFrame = undefined;
+  unlockFrame = undefined;
+  positionVerificationFrame = undefined;
+  unlockHorizontalDocumentScroll();
+};
 
 export type RouteNavigationIntent =
   | { kind: "standard" }
@@ -51,22 +70,13 @@ const setProvisionalDestinationTopScroll = (
   set_store: SetStoreFunction<Store>,
 ) => {
   const centeredScrollX = (document.body.scrollWidth - window.innerWidth) / 2;
-  const hasSwipeArrival =
-    store.pending_navigation_kind === "swipe" &&
-    store.pending_arrival_direction !== null;
-  const provisionalScrollX = hasSwipeArrival
-    ? centeredScrollX +
-      (store.pending_arrival_direction === "left"
-        ? -HORIZONTAL_PAGE_ARRIVAL_OFFSET
-        : HORIZONTAL_PAGE_ARRIVAL_OFFSET)
-    : centeredScrollX;
 
   window.scroll({
-    left: provisionalScrollX,
+    left: centeredScrollX,
     top: 0,
     behavior: "instant",
   });
-  set_store("scrollX", provisionalScrollX);
+  set_store("scrollX", centeredScrollX);
   set_store("scrollY", 0);
   set_store("scroll_is_at_0", true);
 };
@@ -104,6 +114,7 @@ export const startRouteLoad = (
 ) => {
   const routePath = routePathFromPage(page);
   window.clearTimeout(loadingDelayTimeout);
+  cancelMomentumPreparation();
 
   set_store("pending_route_started_at", performance.now());
   set_store("pending_route_path", routePath);
@@ -119,14 +130,17 @@ export const startRouteLoad = (
   );
   set_store(
     "horizontal_arrival_phase",
-    navigationIntent.kind === "swipe" ? "preparing" : "idle",
+    navigationIntent.kind === "swipe" ? "awaiting-destination" : "idle",
   );
+  set_store("horizontal_arrival_offset", 0);
   set_store("route_phase", "loading-old-route");
 
-  if (
-    routeNeverNeedsInitialLoadingScreen(routePath) ||
-    recentFastLoad(store, routePath, target)
-  ) {
+  if (routeNeverNeedsInitialLoadingScreen(routePath)) {
+    setSpinnerCurrentlyVisible(set_store, false);
+    return;
+  }
+
+  if (recentFastLoad(store, routePath, target)) {
     setSpinnerCurrentlyVisible(set_store, false);
     loadingDelayTimeout = window.setTimeout(() => {
       setSpinnerCurrentlyVisible(set_store, true);
@@ -147,6 +161,55 @@ export const markDestinationRouteMounted = (
 ) => {
   const routePath = routePathFromPage(page);
   if (store.pending_route_path !== routePath) return;
+
+  if (
+    store.pending_navigation_kind === "swipe" &&
+    store.arrival_route_path === routePath &&
+    store.pending_arrival_direction !== null
+  ) {
+    set_store("horizontal_arrival_phase", "killing-momentum");
+    lockHorizontalDocumentScroll();
+    const direction = store.pending_arrival_direction;
+    const arrivalStillCurrent = () =>
+      store.pending_navigation_kind === "swipe" &&
+      store.arrival_route_path === routePath &&
+      store.pending_arrival_direction === direction;
+
+    momentumKillFrame = requestAnimationFrame(() => {
+      momentumKillFrame = undefined;
+      if (!arrivalStillCurrent()) return;
+
+      unlockFrame = requestAnimationFrame(() => {
+        unlockFrame = undefined;
+        if (!arrivalStillCurrent()) return;
+
+        unlockHorizontalDocumentScroll();
+        const centeredScrollX =
+          (document.body.scrollWidth - window.innerWidth) / 2;
+        window.scroll({ left: centeredScrollX, behavior: "instant" });
+        set_store("scrollX", centeredScrollX);
+
+        positionVerificationFrame = requestAnimationFrame(() => {
+          positionVerificationFrame = undefined;
+          if (!arrivalStillCurrent()) return;
+
+          const verifiedCenter =
+            (document.body.scrollWidth - window.innerWidth) / 2;
+          if (Math.abs(window.scrollX - verifiedCenter) >= 1) {
+            window.scroll({ left: verifiedCenter, behavior: "instant" });
+          }
+          set_store("scrollX", window.scrollX);
+          set_store(
+            "horizontal_arrival_offset",
+            direction === "left"
+              ? HORIZONTAL_PAGE_ARRIVAL_OFFSET
+              : -HORIZONTAL_PAGE_ARRIVAL_OFFSET,
+          );
+          set_store("horizontal_arrival_phase", "preparing");
+        });
+      });
+    });
+  }
 
   set_store("route_phase", "loading-new-route");
   maybeSetProvisionalDestinationTopScroll(store, set_store);
@@ -182,12 +245,11 @@ export const finishRouteLoad = (
   set_store: SetStoreFunction<Store>,
 ) => {
   const routePath = routePathFromPage(page);
+  if (store.pending_route_path !== routePath) return;
+
   window.clearTimeout(loadingDelayTimeout);
 
-  if (
-    store.pending_route_path === routePath &&
-    store.pending_route_started_at
-  ) {
+  if (store.pending_route_started_at) {
     const routeReadyMs = performance.now() - store.pending_route_started_at;
     const memory = store.route_load_memory[routePath];
     set_store("last_page_load_ms", routeReadyMs);
