@@ -278,10 +278,6 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
 
   createEffect(() => {
     if (scaledDown()) {
-      console.log(
-        "setting it here to: ",
-        availableViewportWidth(store.innerWidth) + "px",
-      );
       ref?.style.setProperty(
         "width",
         availableViewportWidth(store.innerWidth) + "px",

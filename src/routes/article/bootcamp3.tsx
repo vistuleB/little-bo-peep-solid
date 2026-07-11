@@ -2622,12 +2622,12 @@ export default function __Bootcamp3__() {
             Case 1:
           </b>
         </i>
-        {" "} set width=1000px, native 350px
+        {" "} set width=1500px, native 350px
       </OuterP>
       <Pause />
       <Image
         src="/build-img/svgo-svg/6BLF.svg"
-        width="1000px"
+        width="1500px"
         intrinsicWidth={350}
         intrinsicHeight={250}
       />

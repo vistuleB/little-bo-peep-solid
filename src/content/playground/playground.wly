@@ -1078,11 +1078,11 @@
                     offset-x=2em
     |> Pause
 
-    _*Case 1:*_ set width=1000px, native 350px
+    _*Case 1:*_ set width=1500px, native 350px
 
     |> Image
         src=images/test_native_350.svg
-        width=1000px
+        width=1500px
 
     |> Pause
 

@@ -480,6 +480,18 @@ table.first-line tr td:first-child {
   line-height: 2rem;
 }
 
+.article-title {
+  padding-top: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+@media (width > 900px) {
+  .article-title {
+    padding-top: 1.75rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
 .breadcrumb,
 .breadcrumb-prev-next {
   position: relative;

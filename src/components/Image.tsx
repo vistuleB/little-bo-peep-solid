@@ -13,7 +13,7 @@ import { ScaleProvider } from "~/store/ScaleProvider";
 import { MOBILE_TEXT_COLUMN_SIDE_INSET } from "~/constants";
 import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
 
-const SHOW_DEBUG_COLORS = false;
+const SHOW_DEBUG_COLORS = true;
 const HEIGHT_CHANGE_RAF_MAX_MS = 800;
 
 type ImageProps = ParentProps &
@@ -213,7 +213,8 @@ const Image = (props: ImageProps) => {
   const imageStyle = () => {
     const styleWidth = imageStyleWidth();
     const constrainedWidth =
-      styleWidth && `min(${availableViewportWidth()}px, ${styleWidth})`;
+      styleWidth &&
+      `min(calc(100vw - 2 * var(--mobile-text-column-side-inset)), ${styleWidth})`;
     const width = constrained()
       ? constrainedWidth || "auto"
       : styleWidth || "auto";
