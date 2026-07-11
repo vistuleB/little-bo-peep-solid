@@ -4,9 +4,11 @@ import {
   HORIZONTAL_SWIPE_DIRECTION_RATIO,
   HORIZONTAL_SWIPE_EDGE_EXCLUSION,
   HORIZONTAL_SWIPE_MAX_DURATION_MS,
+  HORIZONTAL_SWIPE_MAX_RELEASE_PAUSE_MS,
   HORIZONTAL_SWIPE_MAX_REVERSAL,
   HORIZONTAL_SWIPE_MIN_DISTANCE,
-  HORIZONTAL_SWIPE_MIN_VELOCITY,
+  HORIZONTAL_SWIPE_MIN_TERMINAL_VELOCITY,
+  HORIZONTAL_SWIPE_TERMINAL_SAMPLE_MS,
 } from "~/constants";
 
 type HorizontalSwipeNavigationOptions = {
@@ -21,6 +23,12 @@ type Gesture = {
   lastX: number;
   horizontalTravel: number;
   startedAt: number;
+  samples: GestureSample[];
+};
+
+type GestureSample = {
+  x: number;
+  at: number;
 };
 
 const emptyGesture = (): Gesture => ({
@@ -30,6 +38,7 @@ const emptyGesture = (): Gesture => ({
   lastX: 0,
   horizontalTravel: 0,
   startedAt: 0,
+  samples: [],
 });
 
 const useHorizontalSwipeNavigation = (
@@ -51,6 +60,7 @@ const useHorizontalSwipeNavigation = (
     }
 
     const touch = event.touches[0];
+    const startedAt = performance.now();
     const startedAwayFromBrowserNavigationEdges =
       touch.clientX > HORIZONTAL_SWIPE_EDGE_EXCLUSION &&
       touch.clientX < window.innerWidth - HORIZONTAL_SWIPE_EDGE_EXCLUSION;
@@ -62,7 +72,8 @@ const useHorizontalSwipeNavigation = (
       startY: touch.clientY,
       lastX: touch.clientX,
       horizontalTravel: 0,
-      startedAt: performance.now(),
+      startedAt,
+      samples: [{ x: touch.clientX, at: startedAt }],
     };
   };
 
@@ -73,6 +84,7 @@ const useHorizontalSwipeNavigation = (
     }
 
     const currentX = event.touches[0].clientX;
+    gesture.samples.push({ x: currentX, at: performance.now() });
     gesture.horizontalTravel += Math.abs(currentX - gesture.lastX);
     gesture.lastX = currentX;
   };
@@ -87,16 +99,40 @@ const useHorizontalSwipeNavigation = (
     const deltaX = touch.clientX - gesture.startX;
     const deltaY = touch.clientY - gesture.startY;
     const horizontalDistance = Math.abs(deltaX);
-    const duration = performance.now() - gesture.startedAt;
-    const velocity = duration > 0 ? horizontalDistance / duration : 0;
+    const endedAt = performance.now();
+    const duration = endedAt - gesture.startedAt;
     const reversalDistance = gesture.horizontalTravel - horizontalDistance;
+    const finalSample = gesture.samples.at(-1);
+    const terminalCutoff =
+      (finalSample?.at || endedAt) - HORIZONTAL_SWIPE_TERMINAL_SAMPLE_MS;
+    let terminalStartSample = gesture.samples.find(
+      (sample) => sample.at >= terminalCutoff,
+    );
+    if (terminalStartSample === finalSample && gesture.samples.length > 1) {
+      terminalStartSample = gesture.samples.at(-2);
+    }
+    const terminalDeltaX =
+      finalSample && terminalStartSample
+        ? finalSample.x - terminalStartSample.x
+        : 0;
+    const terminalDuration =
+      finalSample && terminalStartSample
+        ? finalSample.at - terminalStartSample.at
+        : 0;
+    const terminalVelocity =
+      terminalDuration > 0 ? Math.abs(terminalDeltaX) / terminalDuration : 0;
+    const releasePause = finalSample ? endedAt - finalSample.at : Infinity;
+    const terminalDirectionMatches =
+      Math.sign(terminalDeltaX) === Math.sign(deltaX);
 
     const isSwipe =
       horizontalDistance >= HORIZONTAL_SWIPE_MIN_DISTANCE &&
       duration <= HORIZONTAL_SWIPE_MAX_DURATION_MS &&
       horizontalDistance >=
         Math.abs(deltaY) * HORIZONTAL_SWIPE_DIRECTION_RATIO &&
-      velocity >= HORIZONTAL_SWIPE_MIN_VELOCITY &&
+      releasePause <= HORIZONTAL_SWIPE_MAX_RELEASE_PAUSE_MS &&
+      terminalVelocity >= HORIZONTAL_SWIPE_MIN_TERMINAL_VELOCITY &&
+      terminalDirectionMatches &&
       reversalDistance <= HORIZONTAL_SWIPE_MAX_REVERSAL;
 
     gesture = emptyGesture();

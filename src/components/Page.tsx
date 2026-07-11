@@ -8,6 +8,7 @@ import usePrevNextPage from "~/hooks/usePrevNextPage";
 import useAuthorMode from "~/hooks/useAuthorMode";
 import useHorizontalSwipeNavigation from "~/hooks/useHorizontalSwipeNavigation";
 import useHorizontalPageMotion from "~/hooks/useHorizontalPageMotion";
+import type { HorizontalScrollPolicy } from "~/hooks/useHorizontalPageMotion";
 import { setPendingHorizontalSwipeArrival } from "~/utils/horizontalSwipeArrival";
 import { useLocation } from "@solidjs/router";
 
@@ -18,6 +19,7 @@ type PageProps = {
   maxElementWidth?: number;
   nextPage?: string;
   prevPage?: string;
+  horizontalScrollPolicy?: HorizontalScrollPolicy;
 };
 
 const Page = (props: ParentProps & PageProps) => {
@@ -25,7 +27,9 @@ const Page = (props: ParentProps & PageProps) => {
   const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
   const location = useLocation();
-  const { alignImmediately } = useHorizontalPageMotion();
+  const { alignImmediately } = useHorizontalPageMotion(
+    props.horizontalScrollPolicy || "range-limited",
+  );
 
   useHorizontalSwipeNavigation({
     onSwipeLeft: () => {

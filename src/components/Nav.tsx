@@ -6,7 +6,6 @@ import {
   MOBILE_TEXT_COLUMN_SIDE_INSET,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
-import useScrollX from "~/hooks/useScrollX";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import HeaderBlob from "./HeaderBlob";
 import containerWidth from "~/hooks/useContainerWidth";
@@ -14,7 +13,6 @@ import { decideRouteNavbarPosition } from "~/utils/routeTransitionPolicy";
 
 const Nav = () => {
   let { store } = useGlobalContext();
-  useScrollX();
   const navPosition = () =>
     decideRouteNavbarPosition({
       onMobile: store.innerWidth <= MOBILE_MAX_WIDTH,

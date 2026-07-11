@@ -13,8 +13,11 @@ import { horizontalSwipeArrivalStartX } from "~/utils/horizontalSwipeArrival";
 import { useLocation } from "@solidjs/router";
 
 type AnimationKind = "arrival" | "snap-back";
+export type HorizontalScrollPolicy = "range-limited" | "always-snap-back";
 
-const useHorizontalPageMotion = () => {
+const useHorizontalPageMotion = (
+  horizontalScrollPolicy: HorizontalScrollPolicy,
+) => {
   const { store, set_store } = useGlobalContext();
   const location = useLocation();
   let animationFrame: number | undefined;
@@ -93,11 +96,12 @@ const useHorizontalPageMotion = () => {
     }
 
     if (
+      horizontalScrollPolicy === "always-snap-back" ||
       distanceFromCentered <
-      Math.min(
-        HORIZONTAL_SCROLL_SNAP_BACK_MAX,
-        HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO * store.innerWidth,
-      )
+        Math.min(
+          HORIZONTAL_SCROLL_SNAP_BACK_MAX,
+          HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO * store.innerWidth,
+        )
     ) {
       animateToCenter("snap-back");
       set_store("margin_mode", false);
