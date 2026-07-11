@@ -24,6 +24,9 @@ export const consumePendingHorizontalSwipeArrival = (pathname: string) => {
   return direction;
 };
 
+export const hasPendingHorizontalSwipeArrival = (pathname: string) =>
+  pendingArrival?.routePath === pathname;
+
 export const horizontalSwipeArrivalStartX = (
   pathname: string,
   centeredX: number,

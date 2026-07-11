@@ -146,6 +146,8 @@ export const Math = (props: ParentProps) => {
     const routeReady = () =>
       !store.spinner_currently_visible &&
       !store.route_scroll_in_progress &&
+      !store.horizontal_arrival_in_progress &&
+      store.route_phase === "idle" &&
       store.saved_scroll_finished;
     const mathJaxEntry = ref
       ? {
@@ -160,7 +162,7 @@ export const Math = (props: ParentProps) => {
       : undefined;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && mathJaxEntry) {
+        if (entry.isIntersecting && mathJaxEntry && routeReady()) {
           typesetMath(mathJaxEntry);
           observer.disconnect();
         }
@@ -172,6 +174,17 @@ export const Math = (props: ParentProps) => {
     if (ref) observer.observe(ref);
 
     registerMathJaxFallback(mathJaxEntry);
+
+    createEffect(() => {
+      if (
+        mathJaxEntry &&
+        routeReady() &&
+        nearMathJaxObserverViewport(mathJaxEntry.ref)
+      ) {
+        typesetMath(mathJaxEntry);
+        observer.disconnect();
+      }
+    });
 
     onCleanup(() => {
       if (mathJaxEntry) mathJaxEntry.active = false;
@@ -221,6 +234,8 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
     const routeReady = () =>
       !store.spinner_currently_visible &&
       !store.route_scroll_in_progress &&
+      !store.horizontal_arrival_in_progress &&
+      store.route_phase === "idle" &&
       store.saved_scroll_finished;
     const measureOriginalWidth: () => boolean = () => {
       let svg = null;
@@ -247,7 +262,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
       : undefined;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && mathJaxEntry) {
+        if (entry.isIntersecting && mathJaxEntry && routeReady()) {
           typesetMath(mathJaxEntry);
           observer.disconnect();
           if (!measureOriginalWidth()) {
@@ -273,6 +288,17 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
     setTimeout(measureOriginalWidth, 50);
 
     registerMathJaxFallback(mathJaxEntry);
+
+    createEffect(() => {
+      if (
+        mathJaxEntry &&
+        routeReady() &&
+        nearMathJaxObserverViewport(mathJaxEntry.ref)
+      ) {
+        typesetMath(mathJaxEntry);
+        observer.disconnect();
+      }
+    });
 
     const handleResize = () => {
       let oldInnerWidth = localInnerWidthCopy();

@@ -5,7 +5,10 @@ import {
   ROUTE_LOAD_MEMORY_TTL_MS,
 } from "~/constants";
 import type { RouteLoadTarget, Store } from "~/store/StoreProvider";
-import { shouldSetProvisionalDestinationTopScroll } from "./routeTransitionPolicy";
+import {
+  routeNeverNeedsInitialLoadingScreen,
+  shouldSetProvisionalDestinationTopScroll,
+} from "./routeTransitionPolicy";
 
 let loadingDelayTimeout: number | undefined;
 
@@ -87,7 +90,10 @@ export const startRouteLoad = (
   set_store("pending_route_target", target);
   set_store("route_phase", "loading-old-route");
 
-  if (recentFastLoad(store, routePath, target)) {
+  if (
+    routeNeverNeedsInitialLoadingScreen(routePath) ||
+    recentFastLoad(store, routePath, target)
+  ) {
     setSpinnerCurrentlyVisible(set_store, false);
     loadingDelayTimeout = window.setTimeout(() => {
       setSpinnerCurrentlyVisible(set_store, true);

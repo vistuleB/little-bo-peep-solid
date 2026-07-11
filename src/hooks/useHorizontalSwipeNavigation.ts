@@ -14,6 +14,13 @@ import {
 type HorizontalSwipeNavigationOptions = {
   onSwipeLeft: () => void;
   onSwipeRight: () => void;
+  onGestureEnd?: (result: HorizontalGestureEnd) => void;
+};
+
+export type HorizontalGestureEnd = {
+  swipeInitiated: boolean;
+  projectedTerminalVelocity: number;
+  releasePauseMs: number;
 };
 
 type Gesture = {
@@ -119,11 +126,11 @@ const useHorizontalSwipeNavigation = (
       finalSample && terminalStartSample
         ? finalSample.at - terminalStartSample.at
         : 0;
-    const terminalVelocity =
-      terminalDuration > 0 ? Math.abs(terminalDeltaX) / terminalDuration : 0;
+    const projectedTerminalVelocity =
+      terminalDuration > 0
+        ? (terminalDeltaX / terminalDuration) * Math.sign(deltaX)
+        : 0;
     const releasePause = finalSample ? endedAt - finalSample.at : Infinity;
-    const terminalDirectionMatches =
-      Math.sign(terminalDeltaX) === Math.sign(deltaX);
 
     const isSwipe =
       horizontalDistance >= HORIZONTAL_SWIPE_MIN_DISTANCE &&
@@ -131,11 +138,15 @@ const useHorizontalSwipeNavigation = (
       horizontalDistance >=
         Math.abs(deltaY) * HORIZONTAL_SWIPE_DIRECTION_RATIO &&
       releasePause <= HORIZONTAL_SWIPE_MAX_RELEASE_PAUSE_MS &&
-      terminalVelocity >= HORIZONTAL_SWIPE_MIN_TERMINAL_VELOCITY &&
-      terminalDirectionMatches &&
+      projectedTerminalVelocity >= HORIZONTAL_SWIPE_MIN_TERMINAL_VELOCITY &&
       reversalDistance <= HORIZONTAL_SWIPE_MAX_REVERSAL;
 
     gesture = emptyGesture();
+    options.onGestureEnd?.({
+      swipeInitiated: isSwipe,
+      projectedTerminalVelocity,
+      releasePauseMs: releasePause,
+    });
     if (!isSwipe) return;
 
     if (deltaX < 0) options.onSwipeLeft();

@@ -10,7 +10,7 @@ const TOC = (
 ) => {
   return (
     <Page
-      pageNecessaryMargin={200}
+      pageNecessaryMargin={300}
       horizontalScrollPolicy="always-snap-back"
       nextPage={props.nextPage}
       prevPage={props.prevPage}

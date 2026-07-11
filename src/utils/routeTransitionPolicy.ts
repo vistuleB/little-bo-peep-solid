@@ -1,5 +1,8 @@
 import type { RoutePhase } from "~/store/StoreProvider";
 
+export const routeNeverNeedsInitialLoadingScreen = (routePath: string) =>
+  routePath === "/";
+
 type NavbarPositionInput = {
   onMobile: boolean;
   routePhase: RoutePhase;

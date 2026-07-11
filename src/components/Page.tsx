@@ -27,11 +27,11 @@ const Page = (props: ParentProps & PageProps) => {
   const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
   const location = useLocation();
-  const { alignImmediately } = useHorizontalPageMotion(
-    props.horizontalScrollPolicy || "range-limited",
-  );
+  const { alignImmediately, handleGestureEnd, smoothlyCenter } =
+    useHorizontalPageMotion(props.horizontalScrollPolicy || "range-limited");
 
   useHorizontalSwipeNavigation({
+    onGestureEnd: handleGestureEnd,
     onSwipeLeft: () => {
       if (!store.nextPage) return;
       setPendingHorizontalSwipeArrival("left", store.nextPage);
@@ -97,10 +97,7 @@ const Page = (props: ParentProps & PageProps) => {
     }
 
     if (store.margin_mode) {
-      window.scroll({
-        left: (store.scrollWidth - store.innerWidth) / 2,
-        behavior: "smooth",
-      });
+      smoothlyCenter();
       set_store("margin_mode", false);
       e.stopPropagation();
       return;

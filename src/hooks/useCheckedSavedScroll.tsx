@@ -18,9 +18,9 @@ import {
   HORIZONTAL_PAGE_ARRIVAL_OFFSET,
   IN_CHAPTER_SCROLL_DURATION_MS,
   SAVED_SCROLL_RESTORATION_DELAY_MS,
-  SCROLL_RESTORATION_ANIMATION_FINISH_BUFFER_MS,
 } from "~/constants";
 import { horizontalSwipeArrivalStartX } from "~/utils/horizontalSwipeArrival";
+import type { SmoothScrollController } from "~/utils/smoothScrollTo";
 
 const useCheckedSavedScroll = () => {
   const [searchParams, _] = useSearchParams();
@@ -28,10 +28,10 @@ const useCheckedSavedScroll = () => {
   const { store, set_store } = useGlobalContext();
   let active = true;
   let restoreTimeout: number | undefined;
-  let completionTimeout: number | undefined;
   let firstMountFrame: number | undefined;
   let secondMountFrame: number | undefined;
   let resolveMountWait: ((mounted: boolean) => void) | undefined;
+  let activeVerticalScroll: SmoothScrollController | undefined;
 
   onMount(() => {
     set_store("saved_scroll_finished", false);
@@ -68,7 +68,7 @@ const useCheckedSavedScroll = () => {
   const cancelPendingRestoration = () => {
     active = false;
     window.clearTimeout(restoreTimeout);
-    window.clearTimeout(completionTimeout);
+    activeVerticalScroll?.cancel();
     if (firstMountFrame !== undefined) cancelAnimationFrame(firstMountFrame);
     if (secondMountFrame !== undefined) cancelAnimationFrame(secondMountFrame);
     resolveMountWait?.(false);
@@ -85,6 +85,14 @@ const useCheckedSavedScroll = () => {
     );
   };
 
+  const completeRestoration = (onScroll: () => void) => {
+    if (!active) return;
+    set_store("saved_scroll_finished", true);
+    set_store("route_scroll_in_progress", false);
+    finishRouteLoad(location.pathname, store, set_store);
+    window.addEventListener("scroll", onScroll);
+  };
+
   if (anchorId) {
     const { scrollToInChapter } = useScrollToInChapter();
 
@@ -93,26 +101,15 @@ const useCheckedSavedScroll = () => {
         if (!active) return;
         set_store("route_scroll_in_progress", true);
         if (!(await waitForRouteContentMount())) return;
-        await scrollToInChapter(
+        activeVerticalScroll = scrollToInChapter(
           anchorId as string,
           IN_CHAPTER_SCROLL_DURATION_MS,
         );
+        await activeVerticalScroll.finished;
         if (!active) return;
-        completionTimeout = window.setTimeout(
-          () => {
-            if (!active) return;
-            window.scroll({ left: arrivalStartX(), behavior: "instant" });
-            update();
-            set_store("saved_scroll_finished", true);
-            set_store("route_scroll_in_progress", false);
-            finishRouteLoad(location.pathname, store, set_store);
-            window.addEventListener("scroll", update);
-          },
-          store.animations
-            ? IN_CHAPTER_SCROLL_DURATION_MS +
-                SCROLL_RESTORATION_ANIMATION_FINISH_BUFFER_MS
-            : 0,
-        );
+        window.scroll({ left: arrivalStartX(), behavior: "instant" });
+        update();
+        completeRestoration(update);
       };
       restoreTimeout = window.setTimeout(
         restoreScroll,
@@ -145,11 +142,7 @@ const useCheckedSavedScroll = () => {
       if (!(await waitForRouteContentMount())) return;
       if (!active) return;
       window.scrollTo(arrivalStartX(), savedScroll);
-      set_store("saved_scroll_finished", true);
-      set_store("route_scroll_in_progress", false);
-      finishRouteLoad(location.pathname, store, set_store);
-
-      window.addEventListener("scroll", updateScroll);
+      completeRestoration(updateScroll);
     };
     restoreTimeout = window.setTimeout(
       restoreScroll,

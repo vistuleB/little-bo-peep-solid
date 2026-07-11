@@ -11,6 +11,9 @@ const useNoScrollRestoration = () => {
   onMount(() => {
     // pages that don't need scroll restoration should mark as finished immediately
     markDestinationRouteMounted(location.pathname, store, set_store);
+    window.scroll({ top: 0, behavior: "instant" });
+    set_store("scrollY", 0);
+    set_store("scroll_is_at_0", true);
     set_store("saved_scroll_finished", true);
     finishRouteLoad(location.pathname, store, set_store);
   });
