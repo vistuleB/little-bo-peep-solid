@@ -4,9 +4,12 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import LoadingGraphic from "./LoadingGraphic";
 import containerWidth from "~/hooks/useContainerWidth";
+import { useLocation } from "@solidjs/router";
+import { swipeArrivalPreparation } from "~/utils/routeTransitionPolicy";
 
 const Container = (props: ParentProps) => {
   let { store } = useGlobalContext();
+  const location = useLocation();
 
   const marginWidth = () => (containerWidth() - mainColumnWidth()) / 2;
 
@@ -34,8 +37,13 @@ const Container = (props: ParentProps) => {
     );
   };
 
+  const preparingDeepSwipeArrival = () =>
+    swipeArrivalPreparation(store, location.pathname) === "deep" &&
+    store.horizontal_arrival_phase === "preparing";
+
   const contentReady = () =>
-    store.saved_scroll_finished || store.scroll_is_at_0;
+    (store.saved_scroll_finished || store.scroll_is_at_0) &&
+    !preparingDeepSwipeArrival();
 
   return (
     <>

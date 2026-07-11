@@ -9,6 +9,9 @@ import { createStore } from "solid-js/store";
 
 export type RouteLoadTarget = "top" | "saved-scroll" | "hash";
 export type RoutePhase = "idle" | "loading-old-route" | "loading-new-route";
+export type NavigationKind = "standard" | "swipe";
+export type HorizontalSwipeDirection = "left" | "right";
+export type HorizontalArrivalPhase = "idle" | "preparing" | "animating";
 
 export type RouteLoadMemory = {
   firstContentPaintMs?: number;
@@ -32,7 +35,11 @@ export type Store = {
   saved_scroll_finished: boolean;
   suppress_scroll_memory: boolean;
   route_scroll_in_progress: boolean;
-  horizontal_arrival_in_progress: boolean;
+  pending_navigation_kind: NavigationKind;
+  pending_arrival_direction: HorizontalSwipeDirection | null;
+  arrival_route_path: string;
+  horizontal_arrival_phase: HorizontalArrivalPhase;
+  rest_mounting_finished_for_route_started_at: number;
   scroll_is_at_0: boolean;
   margin_mode: boolean;
   pageNecessaryMargin: number;
@@ -69,7 +76,11 @@ const [store, set_store] = createStore<Store>({
   saved_scroll_finished: false,
   suppress_scroll_memory: false,
   route_scroll_in_progress: false,
-  horizontal_arrival_in_progress: false,
+  pending_navigation_kind: "standard",
+  pending_arrival_direction: null,
+  arrival_route_path: "",
+  horizontal_arrival_phase: "idle",
+  rest_mounting_finished_for_route_started_at: 0,
   scroll_is_at_0: false,
   margin_mode: false,
   pageNecessaryMargin: 0,

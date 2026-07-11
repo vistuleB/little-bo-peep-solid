@@ -146,7 +146,7 @@ export const Math = (props: ParentProps) => {
     const routeReady = () =>
       !store.spinner_currently_visible &&
       !store.route_scroll_in_progress &&
-      !store.horizontal_arrival_in_progress &&
+      store.horizontal_arrival_phase === "idle" &&
       store.route_phase === "idle" &&
       store.saved_scroll_finished;
     const mathJaxEntry = ref
@@ -234,7 +234,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
     const routeReady = () =>
       !store.spinner_currently_visible &&
       !store.route_scroll_in_progress &&
-      !store.horizontal_arrival_in_progress &&
+      store.horizontal_arrival_phase === "idle" &&
       store.route_phase === "idle" &&
       store.saved_scroll_finished;
     const measureOriginalWidth: () => boolean = () => {

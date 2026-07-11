@@ -1,7 +1,22 @@
-import type { RoutePhase } from "~/store/StoreProvider";
+import type { RoutePhase, Store } from "~/store/StoreProvider";
 
 export const routeNeverNeedsInitialLoadingScreen = (routePath: string) =>
   routePath === "/";
+
+export type SwipeArrivalPreparation = "none" | "top" | "deep";
+
+export const swipeArrivalPreparation = (
+  store: Store,
+  pathname: string,
+): SwipeArrivalPreparation => {
+  if (
+    store.pending_navigation_kind !== "swipe" ||
+    store.arrival_route_path !== pathname
+  ) {
+    return "none";
+  }
+  return store.pending_route_target === "top" ? "top" : "deep";
+};
 
 type NavbarPositionInput = {
   onMobile: boolean;

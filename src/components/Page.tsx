@@ -9,7 +9,6 @@ import useAuthorMode from "~/hooks/useAuthorMode";
 import useHorizontalSwipeNavigation from "~/hooks/useHorizontalSwipeNavigation";
 import useHorizontalPageMotion from "~/hooks/useHorizontalPageMotion";
 import type { HorizontalScrollPolicy } from "~/hooks/useHorizontalPageMotion";
-import { setPendingHorizontalSwipeArrival } from "~/utils/horizontalSwipeArrival";
 import { useLocation } from "@solidjs/router";
 
 const env = import.meta.env.VITE_ENV;
@@ -34,13 +33,11 @@ const Page = (props: ParentProps & PageProps) => {
     onGestureEnd: handleGestureEnd,
     onSwipeLeft: () => {
       if (!store.nextPage) return;
-      setPendingHorizontalSwipeArrival("left", store.nextPage);
-      getNextPage();
+      getPage(store.nextPage, { kind: "swipe", direction: "left" });
     },
     onSwipeRight: () => {
       if (!store.prevPage) return;
-      setPendingHorizontalSwipeArrival("right", store.prevPage);
-      getPrevPage();
+      getPage(store.prevPage, { kind: "swipe", direction: "right" });
     },
   });
 

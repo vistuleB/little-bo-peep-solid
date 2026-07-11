@@ -1,20 +1,18 @@
 import { createEffect, onCleanup, onMount } from "solid-js";
 import {
   ENABLE_HORIZONTAL_SWIPE_ARRIVAL,
+  HORIZONTAL_PAGE_ARRIVAL_DURATION_MS,
   HORIZONTAL_PAGE_ARRIVAL_OFFSET,
   HORIZONTAL_SCROLL_END_FALLBACK_DELAY_MS,
   HORIZONTAL_SCROLL_SNAP_BACK_MAX,
   HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO,
-  HORIZONTAL_SWIPE_CENTER_TOLERANCE,
   HORIZONTAL_SWIPE_IMMEDIATE_SNAP_MAX_TERMINAL_VELOCITY,
   HORIZONTAL_SWIPE_IMMEDIATE_SNAP_MIN_RELEASE_PAUSE_MS,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
-import { consumePendingHorizontalSwipeArrival } from "~/utils/horizontalSwipeArrival";
-import { horizontalSwipeArrivalStartX } from "~/utils/horizontalSwipeArrival";
-import { hasPendingHorizontalSwipeArrival } from "~/utils/horizontalSwipeArrival";
 import { useLocation } from "@solidjs/router";
 import type { HorizontalGestureEnd } from "~/hooks/useHorizontalSwipeNavigation";
+import { swipeArrivalPreparation } from "~/utils/routeTransitionPolicy";
 
 export type HorizontalScrollPolicy = "range-limited" | "always-snap-back";
 
@@ -23,13 +21,28 @@ const useHorizontalPageMotion = (
 ) => {
   const { store, set_store } = useGlobalContext();
   const location = useLocation();
+  let arrivalAnimationFrame: number | undefined;
   let scrollEndFallbackTimeout: number | undefined;
-  let arrivalAnimationRunning = false;
   let initialCenterFrame: number | undefined;
   const supportsScrollEnd = "onscrollend" in document;
 
   const centeredScrollX = () =>
     (document.body.scrollWidth - window.innerWidth) / 2;
+
+  const routeHasSwipeArrival = () =>
+    ENABLE_HORIZONTAL_SWIPE_ARRIVAL &&
+    swipeArrivalPreparation(store, location.pathname) !== "none" &&
+    store.pending_arrival_direction !== null;
+
+  const arrivalStartX = (centeredX: number) => {
+    if (!routeHasSwipeArrival()) return centeredX;
+    return (
+      centeredX +
+      (store.pending_arrival_direction === "left"
+        ? -HORIZONTAL_PAGE_ARRIVAL_OFFSET
+        : HORIZONTAL_PAGE_ARRIVAL_OFFSET)
+    );
+  };
 
   const maximumScrollX = () =>
     Math.max(
@@ -53,44 +66,66 @@ const useHorizontalPageMotion = (
     );
   };
 
-  const finishArrival = () => {
-    arrivalAnimationRunning = false;
-    set_store("horizontal_arrival_in_progress", false);
+  const clearArrivalAnimationFrame = () => {
+    if (arrivalAnimationFrame === undefined) return;
+    cancelAnimationFrame(arrivalAnimationFrame);
+    arrivalAnimationFrame = undefined;
   };
 
-  const startNativeArrival = () => {
+  const completeArrival = () => {
+    clearArrivalAnimationFrame();
+    if (store.arrival_route_path !== location.pathname) return;
+    set_store("horizontal_arrival_phase", "idle");
+    set_store("pending_navigation_kind", "standard");
+    set_store("pending_arrival_direction", null);
+    set_store("arrival_route_path", "");
+    set_store("pending_route_target", "top");
+  };
+
+  const startCustomArrival = () => {
+    clearArrivalAnimationFrame();
     window.clearTimeout(scrollEndFallbackTimeout);
-    arrivalAnimationRunning = true;
-    set_store("horizontal_arrival_in_progress", true);
-    window.scroll({ left: centeredScrollX(), behavior: "smooth" });
+    const startX = window.scrollX;
+    const targetX = centeredScrollX();
+    const distance = targetX - startX;
+    const startedAt = performance.now();
+    set_store("horizontal_arrival_phase", "animating");
+
+    const tick = (now: number) => {
+      const progress = Math.min(
+        1,
+        (now - startedAt) / HORIZONTAL_PAGE_ARRIVAL_DURATION_MS,
+      );
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      window.scroll({
+        left: startX + distance * easedProgress,
+        behavior: "instant",
+      });
+
+      if (progress < 1) {
+        arrivalAnimationFrame = requestAnimationFrame(tick);
+        return;
+      }
+
+      arrivalAnimationFrame = undefined;
+      completeArrival();
+      set_store("margin_mode", false);
+    };
+
+    arrivalAnimationFrame = requestAnimationFrame(tick);
   };
 
   const smoothlyCenter = () => {
-    finishArrival();
+    completeArrival();
     window.clearTimeout(scrollEndFallbackTimeout);
     window.scroll({ left: centeredScrollX(), behavior: "smooth" });
   };
 
   const handleScrollFinished = () => {
-    if (arrivalAnimationRunning) {
-      if (
-        Math.abs(window.scrollX - centeredScrollX()) <=
-        HORIZONTAL_SWIPE_CENTER_TOLERANCE
-      ) {
-        finishArrival();
-        set_store("margin_mode", false);
-      }
-      return;
-    }
+    if (store.horizontal_arrival_phase === "animating") return;
 
     const centeredX = centeredScrollX();
-    const pendingArrivalX = ENABLE_HORIZONTAL_SWIPE_ARRIVAL
-      ? horizontalSwipeArrivalStartX(
-          location.pathname,
-          centeredX,
-          HORIZONTAL_PAGE_ARRIVAL_OFFSET,
-        )
-      : centeredX;
+    const pendingArrivalX = arrivalStartX(centeredX);
 
     if (pendingArrivalX !== centeredX) {
       set_store("margin_mode", false);
@@ -117,7 +152,7 @@ const useHorizontalPageMotion = (
     set_store("scrollY", window.scrollY);
     set_store("scrollX", window.scrollX);
 
-    if (!supportsScrollEnd) {
+    if (!supportsScrollEnd && store.horizontal_arrival_phase !== "animating") {
       window.clearTimeout(scrollEndFallbackTimeout);
       scrollEndFallbackTimeout = window.setTimeout(
         handleScrollFinished,
@@ -127,22 +162,23 @@ const useHorizontalPageMotion = (
   };
 
   const handleTouchStart = () => {
-    if (hasPendingHorizontalSwipeArrival(location.pathname)) {
-      consumePendingHorizontalSwipeArrival(location.pathname);
-    }
-
-    if (arrivalAnimationRunning) {
-      finishArrival();
+    if (routeHasSwipeArrival()) {
+      completeArrival();
       window.clearTimeout(scrollEndFallbackTimeout);
       window.scroll({ left: centeredScrollX(), behavior: "instant" });
       return;
     }
 
-    finishArrival();
+    clearArrivalAnimationFrame();
   };
 
   const handleGestureEnd = (result: HorizontalGestureEnd) => {
-    if (result.swipeInitiated || arrivalAnimationRunning) return;
+    if (
+      result.swipeInitiated ||
+      store.horizontal_arrival_phase === "animating"
+    ) {
+      return;
+    }
 
     const fingerStopped =
       Math.abs(result.projectedTerminalVelocity) <=
@@ -164,34 +200,27 @@ const useHorizontalPageMotion = (
   };
 
   const alignImmediately = () => {
-    finishArrival();
+    if (store.horizontal_arrival_phase === "animating") return;
+    clearArrivalAnimationFrame();
     window.clearTimeout(scrollEndFallbackTimeout);
     const centeredX = centeredScrollX();
-    const left = ENABLE_HORIZONTAL_SWIPE_ARRIVAL
-      ? horizontalSwipeArrivalStartX(
-          location.pathname,
-          centeredX,
-          HORIZONTAL_PAGE_ARRIVAL_OFFSET,
-        )
-      : centeredX;
+    const left = arrivalStartX(centeredX);
     window.scroll({ left, behavior: "instant" });
   };
 
   createEffect(() => {
     if (!store.saved_scroll_finished || store.route_phase !== "idle") return;
 
-    if (!hasPendingHorizontalSwipeArrival(location.pathname)) return;
+    if (
+      !routeHasSwipeArrival() ||
+      store.horizontal_arrival_phase !== "preparing"
+    ) {
+      return;
+    }
 
-    const direction = consumePendingHorizontalSwipeArrival(location.pathname);
-    if (!direction || !ENABLE_HORIZONTAL_SWIPE_ARRIVAL) return;
-
-    const startX =
-      centeredScrollX() +
-      (direction === "left"
-        ? -HORIZONTAL_PAGE_ARRIVAL_OFFSET
-        : HORIZONTAL_PAGE_ARRIVAL_OFFSET);
+    const startX = arrivalStartX(centeredScrollX());
     window.scroll({ left: startX, behavior: "instant" });
-    startNativeArrival();
+    startCustomArrival();
   });
 
   onMount(() => {
@@ -214,7 +243,8 @@ const useHorizontalPageMotion = (
       }
       document.removeEventListener("touchstart", handleTouchStart);
       window.clearTimeout(scrollEndFallbackTimeout);
-      finishArrival();
+      clearArrivalAnimationFrame();
+      if (store.arrival_route_path === location.pathname) completeArrival();
     });
   });
 

@@ -19,18 +19,21 @@ import {
   IN_CHAPTER_SCROLL_DURATION_MS,
   SAVED_SCROLL_RESTORATION_DELAY_MS,
 } from "~/constants";
-import { horizontalSwipeArrivalStartX } from "~/utils/horizontalSwipeArrival";
 import type { SmoothScrollController } from "~/utils/smoothScrollTo";
+import { swipeArrivalPreparation } from "~/utils/routeTransitionPolicy";
 
 const useCheckedSavedScroll = () => {
   const [searchParams, _] = useSearchParams();
   const location = useLocation();
   const { store, set_store } = useGlobalContext();
+  const routeStartedAt = store.pending_route_started_at;
   let active = true;
   let restoreTimeout: number | undefined;
   let firstMountFrame: number | undefined;
   let secondMountFrame: number | undefined;
+  let restWaitFrame: number | undefined;
   let resolveMountWait: ((mounted: boolean) => void) | undefined;
+  let resolveRestWait: ((mounted: boolean) => void) | undefined;
   let activeVerticalScroll: SmoothScrollController | undefined;
 
   onMount(() => {
@@ -71,17 +74,60 @@ const useCheckedSavedScroll = () => {
     activeVerticalScroll?.cancel();
     if (firstMountFrame !== undefined) cancelAnimationFrame(firstMountFrame);
     if (secondMountFrame !== undefined) cancelAnimationFrame(secondMountFrame);
+    if (restWaitFrame !== undefined) cancelAnimationFrame(restWaitFrame);
     resolveMountWait?.(false);
+    resolveRestWait?.(false);
     resolveMountWait = undefined;
+    resolveRestWait = undefined;
   };
+
+  const waitForRequiredRestMounting = () => {
+    const requiresFullRest =
+      swipeArrivalPreparation(store, location.pathname) === "deep";
+    if (
+      !requiresFullRest ||
+      store.rest_mounting_finished_for_route_started_at === routeStartedAt
+    ) {
+      return Promise.resolve(true);
+    }
+
+    return new Promise<boolean>((resolve) => {
+      resolveRestWait = resolve;
+      const check = () => {
+        if (!active) {
+          resolveRestWait = undefined;
+          resolve(false);
+          return;
+        }
+        if (
+          store.rest_mounting_finished_for_route_started_at === routeStartedAt
+        ) {
+          restWaitFrame = undefined;
+          resolveRestWait = undefined;
+          resolve(true);
+          return;
+        }
+        restWaitFrame = requestAnimationFrame(check);
+      };
+      restWaitFrame = requestAnimationFrame(check);
+    });
+  };
+
+  const isCurrentSwipeTopArrival = () =>
+    swipeArrivalPreparation(store, location.pathname) === "top";
 
   const arrivalStartX = () => {
     const centeredX = (document.body.scrollWidth - window.innerWidth) / 2;
-    if (!ENABLE_HORIZONTAL_SWIPE_ARRIVAL) return centeredX;
-    return horizontalSwipeArrivalStartX(
-      location.pathname,
-      centeredX,
-      HORIZONTAL_PAGE_ARRIVAL_OFFSET,
+    const hasSwipeArrival =
+      ENABLE_HORIZONTAL_SWIPE_ARRIVAL &&
+      swipeArrivalPreparation(store, location.pathname) !== "none" &&
+      store.pending_arrival_direction !== null;
+    if (!hasSwipeArrival) return centeredX;
+    return (
+      centeredX +
+      (store.pending_arrival_direction === "left"
+        ? -HORIZONTAL_PAGE_ARRIVAL_OFFSET
+        : HORIZONTAL_PAGE_ARRIVAL_OFFSET)
     );
   };
 
@@ -101,6 +147,7 @@ const useCheckedSavedScroll = () => {
         if (!active) return;
         set_store("route_scroll_in_progress", true);
         if (!(await waitForRouteContentMount())) return;
+        if (!(await waitForRequiredRestMounting())) return;
         activeVerticalScroll = scrollToInChapter(
           anchorId as string,
           IN_CHAPTER_SCROLL_DURATION_MS,
@@ -140,13 +187,14 @@ const useCheckedSavedScroll = () => {
 
       set_store("route_scroll_in_progress", true);
       if (!(await waitForRouteContentMount())) return;
+      if (!(await waitForRequiredRestMounting())) return;
       if (!active) return;
       window.scrollTo(arrivalStartX(), savedScroll);
       completeRestoration(updateScroll);
     };
     restoreTimeout = window.setTimeout(
       restoreScroll,
-      SAVED_SCROLL_RESTORATION_DELAY_MS,
+      isCurrentSwipeTopArrival() ? 0 : SAVED_SCROLL_RESTORATION_DELAY_MS,
     );
 
     return () => {

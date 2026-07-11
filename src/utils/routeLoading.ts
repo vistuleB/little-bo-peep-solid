@@ -1,16 +1,25 @@
 import { SetStoreFunction } from "solid-js/store";
 import {
   FAST_ROUTE_LOAD_MS,
+  HORIZONTAL_PAGE_ARRIVAL_OFFSET,
   LOADING_SPINNER_DELAY_MS,
   ROUTE_LOAD_MEMORY_TTL_MS,
 } from "~/constants";
-import type { RouteLoadTarget, Store } from "~/store/StoreProvider";
+import type {
+  HorizontalSwipeDirection,
+  RouteLoadTarget,
+  Store,
+} from "~/store/StoreProvider";
 import {
   routeNeverNeedsInitialLoadingScreen,
   shouldSetProvisionalDestinationTopScroll,
 } from "./routeTransitionPolicy";
 
 let loadingDelayTimeout: number | undefined;
+
+export type RouteNavigationIntent =
+  | { kind: "standard" }
+  | { kind: "swipe"; direction: HorizontalSwipeDirection };
 
 export const routePathFromPage = (page: string) => {
   const [path] = page.split(/[?#]/);
@@ -33,21 +42,31 @@ const maybeSetProvisionalDestinationTopScroll = (
       spinnerCurrentlyVisible: store.spinner_currently_visible,
     })
   ) {
-    setProvisionalDestinationTopScroll(set_store);
+    setProvisionalDestinationTopScroll(store, set_store);
   }
 };
 
 const setProvisionalDestinationTopScroll = (
+  store: Store,
   set_store: SetStoreFunction<Store>,
 ) => {
   const centeredScrollX = (document.body.scrollWidth - window.innerWidth) / 2;
+  const hasSwipeArrival =
+    store.pending_navigation_kind === "swipe" &&
+    store.pending_arrival_direction !== null;
+  const provisionalScrollX = hasSwipeArrival
+    ? centeredScrollX +
+      (store.pending_arrival_direction === "left"
+        ? -HORIZONTAL_PAGE_ARRIVAL_OFFSET
+        : HORIZONTAL_PAGE_ARRIVAL_OFFSET)
+    : centeredScrollX;
 
   window.scroll({
-    left: centeredScrollX,
+    left: provisionalScrollX,
     top: 0,
     behavior: "instant",
   });
-  set_store("scrollX", centeredScrollX);
+  set_store("scrollX", provisionalScrollX);
   set_store("scrollY", 0);
   set_store("scroll_is_at_0", true);
 };
@@ -81,6 +100,7 @@ export const startRouteLoad = (
   target: RouteLoadTarget,
   store: Store,
   set_store: SetStoreFunction<Store>,
+  navigationIntent: RouteNavigationIntent = { kind: "standard" },
 ) => {
   const routePath = routePathFromPage(page);
   window.clearTimeout(loadingDelayTimeout);
@@ -88,6 +108,19 @@ export const startRouteLoad = (
   set_store("pending_route_started_at", performance.now());
   set_store("pending_route_path", routePath);
   set_store("pending_route_target", target);
+  set_store("pending_navigation_kind", navigationIntent.kind);
+  set_store(
+    "pending_arrival_direction",
+    navigationIntent.kind === "swipe" ? navigationIntent.direction : null,
+  );
+  set_store(
+    "arrival_route_path",
+    navigationIntent.kind === "swipe" ? routePath : "",
+  );
+  set_store(
+    "horizontal_arrival_phase",
+    navigationIntent.kind === "swipe" ? "preparing" : "idle",
+  );
   set_store("route_phase", "loading-old-route");
 
   if (
@@ -169,7 +202,9 @@ export const finishRouteLoad = (
 
   set_store("pending_route_started_at", 0);
   set_store("pending_route_path", "");
-  set_store("pending_route_target", "top");
+  if (store.pending_navigation_kind === "standard") {
+    set_store("pending_route_target", "top");
+  }
   set_store("route_phase", "idle");
   set_store("route_scroll_in_progress", false);
   setSpinnerCurrentlyVisible(set_store, false);
