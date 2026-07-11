@@ -13,6 +13,7 @@ const isOfflineMode = (process.env.OFFLINE_MODE || env.OFFLINE_MODE) === "true";
 export default defineConfig({
   ssr: false,
   server: {
+    publicURL: process.env.PUBLIC_URL,
     prerender: {
       crawlLinks: true,
     },

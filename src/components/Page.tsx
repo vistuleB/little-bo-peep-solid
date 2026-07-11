@@ -7,6 +7,7 @@ import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
 import useOnMobile from "../hooks/useOnMobile";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import useAuthorMode from "~/hooks/useAuthorMode";
+import useHorizontalSwipeNavigation from "~/hooks/useHorizontalSwipeNavigation";
 import { useLocation } from "@solidjs/router";
 import {
   HORIZONTAL_SCROLL_END_FALLBACK_DELAY_MS,
@@ -29,6 +30,11 @@ const Page = (props: ParentProps & PageProps) => {
   const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
   const location = useLocation();
+
+  useHorizontalSwipeNavigation({
+    onSwipeLeft: getNextPage,
+    onSwipeRight: getPrevPage,
+  });
 
   useScrollX();
   useScrollIsAt0();

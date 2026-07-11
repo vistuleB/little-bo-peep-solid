@@ -8,6 +8,8 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
 import smoothScrollTo from "~/utils/smoothScrollTo";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
+import useOnMobile from "~/hooks/useOnMobile";
+import { Show } from "solid-js";
 
 type ExerciseStop = {
   anchorY: number;
@@ -16,6 +18,7 @@ type ExerciseStop = {
 
 const ElevatorArrows = () => {
   const { store } = useGlobalContext();
+  const { on_mobile } = useOnMobile();
 
   const groupAnchorY = (group: HTMLElement) =>
     window.scrollY + group.getBoundingClientRect().top;
@@ -86,58 +89,60 @@ const ElevatorArrows = () => {
   };
 
   return (
-    <div
-      id="scroll-btns"
-      style={{
-        left: `${effectiveMarginWidth() - store.scrollX - 39}px`,
-      }}
-      class="group fixed bottom-3"
-    >
+    <Show when={!on_mobile()}>
       <div
-        aria-hidden="true"
+        id="scroll-btns"
         style={{
-          position: "absolute",
-          left: "-4em",
-          right: "0",
-          top: "-2em",
-          bottom: "0",
+          left: `${effectiveMarginWidth() - store.scrollX - 39}px`,
         }}
-      />
-      <div class="relative opacity-0 group-hover:opacity-100 transition-opacity">
-        <button
-          onClick={handleUpClick}
+        class="group fixed bottom-3"
+      >
+        <div
+          aria-hidden="true"
           style={{
-            "background-color": store.show_areas ? "#fff000" : "transparent",
+            position: "absolute",
+            left: "-4em",
+            right: "0",
+            top: "-2em",
+            bottom: "0",
           }}
-          class={twJoin(
-            "relative block px-1 mb-2",
-            store.scrollY > 1
-              ? "stroke-black hover:stroke-stone-600"
-              : "stroke-stone-300",
-            "transition-all",
-          )}
-        >
-          <ElevatorButtonHitArea />
-          <DoubleUpArrowSVG />
-        </button>
-        <button
-          onClick={handleDownClick}
-          style={{
-            "background-color": store.show_areas ? "#fff000" : "transparent",
-          }}
-          class={twJoin(
-            "relative block px-1 mb-1",
-            store.scrollY + store.innerHeight - store.scrollHeight < -1
-              ? "stroke-black hover:stroke-stone-600"
-              : "stroke-stone-300",
-            "transition-all",
-          )}
-        >
-          <ElevatorButtonHitArea />
-          <DoubleDownArrowSVG />
-        </button>
+        />
+        <div class="relative opacity-0 group-hover:opacity-100 transition-opacity">
+          <button
+            onClick={handleUpClick}
+            style={{
+              "background-color": store.show_areas ? "#fff000" : "transparent",
+            }}
+            class={twJoin(
+              "relative block px-1 mb-2",
+              store.scrollY > 1
+                ? "stroke-black hover:stroke-stone-600"
+                : "stroke-stone-300",
+              "transition-all",
+            )}
+          >
+            <ElevatorButtonHitArea />
+            <DoubleUpArrowSVG />
+          </button>
+          <button
+            onClick={handleDownClick}
+            style={{
+              "background-color": store.show_areas ? "#fff000" : "transparent",
+            }}
+            class={twJoin(
+              "relative block px-1 mb-1",
+              store.scrollY + store.innerHeight - store.scrollHeight < -1
+                ? "stroke-black hover:stroke-stone-600"
+                : "stroke-stone-300",
+              "transition-all",
+            )}
+          >
+            <ElevatorButtonHitArea />
+            <DoubleDownArrowSVG />
+          </button>
+        </div>
       </div>
-    </div>
+    </Show>
   );
 };
 
