@@ -606,6 +606,8 @@ const Rest = () => {
             src="/build-img/svgo-svg/dcQB.svg"
             offsetX="3em"
             atLeastAsWide={true}
+            intrinsicWidth={300}
+            intrinsicHeight={150}
           />
         </MathBlock>
         <Pause />

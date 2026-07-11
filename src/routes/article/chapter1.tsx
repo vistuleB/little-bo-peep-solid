@@ -119,6 +119,8 @@ export default function __Chapter1__() {
             src="/build-img/svgo-svg/Z39o.svg"
             offsetX="-2em"
             atLeastAsWide={true}
+            intrinsicWidth={360}
+            intrinsicHeight={160}
           />
         </MathBlock>
         <Pause />
@@ -886,6 +888,8 @@ const Rest = () => {
             src="/build-img/svgo-svg/-TtU.svg"
             offsetX="-1em"
             atLeastAsWide={true}
+            intrinsicWidth={350}
+            intrinsicHeight={250}
           />
         </MathBlock>
         <Pause />
@@ -1659,6 +1663,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/rgbH.svg"
                 offsetY="23.5%"
                 atLeastAsWide={true}
+                intrinsicWidth={346}
+                intrinsicHeight={142}
               />
             </MathBlock>
             <Pause />
@@ -1680,6 +1686,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/Trg3.svg"
                 offsetY="23.5%"
                 atLeastAsWide={true}
+                intrinsicWidth={444}
+                intrinsicHeight={126}
               />
             </MathBlock>
             <Pause />
@@ -2522,6 +2530,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/omps.svg"
                 offsetY="-0.5em"
                 atLeastAsWide={true}
+                intrinsicWidth="497.212"
+                intrinsicHeight="317.105"
               />
             </MathBlock>
             <Pause />
@@ -2742,6 +2752,8 @@ const Rest = () => {
                 offsetX="5rem"
                 src="/build-img/svgo-svg/Xx87.svg"
                 atLeastAsWide={true}
+                intrinsicWidth="362.474"
+                intrinsicHeight="177.616"
               />
             </MathBlock>
             <Pause />
@@ -2757,6 +2769,8 @@ const Rest = () => {
                 offsetX="10rem"
                 src="/build-img/svgo-svg/jBCw.svg"
                 atLeastAsWide={true}
+                intrinsicWidth="362.474"
+                intrinsicHeight="177.616"
               />
             </MathBlock>
             <Pause />
@@ -2800,6 +2814,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/4oJD.svg"
                 offsetY="-0.5em"
                 atLeastAsWide={true}
+                intrinsicWidth="606.819"
+                intrinsicHeight="317.105"
               />
             </MathBlock>
             <Pause />

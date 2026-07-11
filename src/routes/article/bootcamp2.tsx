@@ -102,7 +102,11 @@ export default function __Bootcamp2__() {
           :
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/anTr.svg" />
+        <Image
+          src="/build-img/svgo-svg/anTr.svg"
+          intrinsicWidth={500}
+          intrinsicHeight={125}
+        />
         <Pause />
         <OuterP>
           The whole expression is read {" "}
@@ -237,6 +241,8 @@ const Rest = () => {
             offsetY="-0.2em"
             offsetX="4em"
             atLeastAsWide={true}
+            intrinsicWidth={200}
+            intrinsicHeight={110}
           />
         </MathBlock>
         <Pause />
@@ -374,6 +380,8 @@ const Rest = () => {
           <ImageLeft
             src="/build-img/svgo-svg/rdZz.svg"
             line={2}
+            intrinsicWidth={530}
+            intrinsicHeight={380}
           />
         </OuterP>
         <Pause />
@@ -1290,7 +1298,11 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft src="/build-img/svgo-svg/55Oe.svg" />
+          <ImageLeft
+            src="/build-img/svgo-svg/55Oe.svg"
+            intrinsicWidth={250}
+            intrinsicHeight={100}
+          />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1299,7 +1311,11 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft src="/build-img/svgo-svg/tAeJ.svg" />
+          <ImageLeft
+            src="/build-img/svgo-svg/tAeJ.svg"
+            intrinsicWidth={250}
+            intrinsicHeight={100}
+          />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1308,7 +1324,11 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight src="/build-img/svgo-svg/xlFe.svg" />
+          <ImageRight
+            src="/build-img/svgo-svg/xlFe.svg"
+            intrinsicWidth={300}
+            intrinsicHeight={100}
+          />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1461,7 +1481,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/VZCO.svg" />
+        <Image
+          src="/build-img/svgo-svg/VZCO.svg"
+          intrinsicWidth={100}
+          intrinsicHeight={55}
+        />
         <Pause />
         <OuterP>
           Likewise, the standard decimal expansion for {" "}
@@ -1478,7 +1502,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/A20h.svg" />
+        <Image
+          src="/build-img/svgo-svg/A20h.svg"
+          intrinsicWidth={100}
+          intrinsicHeight={55}
+        />
         <Pause />
         <OuterP>
           ...and so on, which is a possible trick to check
@@ -2109,6 +2137,8 @@ const Rest = () => {
               src="/build-img/svgo-svg/nMNN.svg"
               offsetX="0em"
               atLeastAsWide={true}
+              intrinsicWidth={250}
+              intrinsicHeight={150}
             />
           </MathBlock>
           <Pause />
@@ -2217,7 +2247,11 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/KJqj.svg" />
+              <Image
+                src="/build-img/svgo-svg/KJqj.svg"
+                intrinsicWidth={400}
+                intrinsicHeight={80}
+              />
               <Pause />
               <OuterP>
                 Half of twelve hundredths is six hundredths, and
@@ -2232,7 +2266,11 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/SBDm.svg" />
+              <Image
+                src="/build-img/svgo-svg/SBDm.svg"
+                intrinsicWidth={450}
+                intrinsicHeight={150}
+              />
               <Pause />
               <OuterP>
                 ...so {" "}
@@ -2938,7 +2976,11 @@ const Rest = () => {
               hoping for:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/FF0n.svg" />
+            <Image
+              src="/build-img/svgo-svg/FF0n.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={245}
+            />
             <Pause />
             <OuterP>
               The point is that the second equality uses the identity
@@ -2976,7 +3018,11 @@ const Rest = () => {
               is as follows (minus fine print):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/5e0k.svg" />
+            <Image
+              src="/build-img/svgo-svg/5e0k.svg"
+              intrinsicWidth="672.44"
+              intrinsicHeight="613.41"
+            />
             <Pause />
             <OuterP>
               The first law can be recognized as “additivity of exponents”
@@ -3509,6 +3555,8 @@ const Rest = () => {
                 offsetY="-0.5em"
                 offsetX="0.5em"
                 atLeastAsWide={true}
+                intrinsicWidth={440}
+                intrinsicHeight={250}
               />
             </MathBlock>
             <Pause />

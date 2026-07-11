@@ -23,6 +23,9 @@ function ImageOrSideImage(
       onClick={props.onClick}
       onTransitionEnd={props.onTransitionEnd}
       src={props.src}
+      width={props.width}
+      height={props.height}
+      loading={props.loading}
       alt={props.alt || ""}
       class={twJoin(
         "block",

@@ -94,7 +94,11 @@ export default function __Chapter2__() {
           the values, see below):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/2--j.svg" />
+        <Image
+          src="/build-img/svgo-svg/2--j.svg"
+          intrinsicWidth={470}
+          intrinsicHeight={945}
+        />
         <Pause />
         <OuterP>
           To explain, the slope of a line is...
@@ -145,7 +149,11 @@ export default function __Chapter2__() {
           {" "} unit for each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/P_gw.svg" />
+        <Image
+          src="/build-img/svgo-svg/P_gw.svg"
+          intrinsicWidth={327}
+          intrinsicHeight={321}
+        />
         <Pause />
         <OuterP>
           On the other hand, the line below has slope
@@ -168,7 +176,11 @@ export default function __Chapter2__() {
           with each unit to the right:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/0j6M.svg" />
+        <Image
+          src="/build-img/svgo-svg/0j6M.svg"
+          intrinsicWidth={340}
+          intrinsicHeight={329}
+        />
         <Pause />
         <OuterP>
           ...and so on.
@@ -206,7 +218,11 @@ const Rest = () => {
           {" "} on the line:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/v-HV.svg" />
+        <Image
+          src="/build-img/svgo-svg/v-HV.svg"
+          intrinsicWidth={302}
+          intrinsicHeight={384}
+        />
         <Pause />
         <MathBlock>
           $$
@@ -284,6 +300,8 @@ const Rest = () => {
             offsetY="-0.7em"
             offsetX="3em"
             atLeastAsWide={true}
+            intrinsicWidth={600}
+            intrinsicHeight={400}
           />
         </MathBlock>
         <Pause />
@@ -480,6 +498,8 @@ const Rest = () => {
                   src="/build-img/svg/za9i.svg"
                   width={50}
                   style="padding-top:7px;padding-bottom:7px;"
+                  intrinsicWidth="311.273"
+                  intrinsicHeight="247.518"
                 />
               </td>
               <td>
@@ -505,6 +525,8 @@ const Rest = () => {
                 <img
                   src="/build-img/svgo-svg/a4fG.svg"
                   style="margin-top:7px;margin-bottom:7px;width:105px;"
+                  intrinsicWidth="453.802"
+                  intrinsicHeight="407.973"
                 />
               </td>
               <td>
@@ -531,6 +553,8 @@ const Rest = () => {
                   src="/build-img/svgo-svg/dHNp.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
+                  intrinsicWidth="471.106"
+                  intrinsicHeight="409.862"
                 />
               </td>
               <td>
@@ -557,6 +581,8 @@ const Rest = () => {
                   src="/build-img/svgo-svg/st9S.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
+                  intrinsicWidth="466.97"
+                  intrinsicHeight="418.406"
                 />
               </td>
               <td>
@@ -583,6 +609,8 @@ const Rest = () => {
                   src="/build-img/svgo-svg/dHNp.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
+                  intrinsicWidth="471.106"
+                  intrinsicHeight="409.862"
                 />
               </td>
               <td>
@@ -617,6 +645,8 @@ const Rest = () => {
             src="/build-img/svgo-svg/9GPK.svg"
             line={3}
             offsetX="-0.5em"
+            intrinsicWidth={400}
+            intrinsicHeight={200}
           />
         </OuterP>
         <Pause />
@@ -639,6 +669,8 @@ const Rest = () => {
             offsetX="2.5em"
             offsetY={0}
             atLeastAsWide={true}
+            intrinsicWidth={400}
+            intrinsicHeight={500}
           />
         </MathBlock>
         <Pause />
@@ -682,7 +714,11 @@ const Rest = () => {
           line:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/o4Yb.svg" />
+        <Image
+          src="/build-img/svgo-svg/o4Yb.svg"
+          intrinsicWidth={355}
+          intrinsicHeight={270}
+        />
         <Pause />
         <OuterP>
           Indeed, vertical lines have {" "}
@@ -755,13 +791,19 @@ const Rest = () => {
             <InlineImage
               src="/build-img/svgo-svg/OonE.svg"
               width="28px"
+              intrinsicWidth={61}
+              intrinsicHeight={62}
             />
             ”),
           </span>
           {" "} following such a picture:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/nL2k.svg" />
+        <Image
+          src="/build-img/svgo-svg/nL2k.svg"
+          intrinsicWidth={300}
+          intrinsicHeight="245.948"
+        />
         <Pause />
         <OuterP>
           In this context, note that, in physics, a
@@ -800,7 +842,11 @@ const Rest = () => {
           also include this picture:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/x7mx.svg" />
+        <Image
+          src="/build-img/svgo-svg/x7mx.svg"
+          intrinsicWidth={300}
+          intrinsicHeight="245.258"
+        />
         <Pause />
         <OuterP>
           Then “rise” and “run” have their signs flipped,
@@ -913,7 +959,11 @@ const Rest = () => {
           or “run equals rise over slope”. Or:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/DoAv.svg" />
+        <Image
+          src="/build-img/svgo-svg/DoAv.svg"
+          intrinsicWidth={340}
+          intrinsicHeight={415}
+        />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
       </Section>
@@ -948,7 +998,11 @@ const Rest = () => {
           the Cartesian plane. E.g.:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/LVCC.svg" />
+        <Image
+          src="/build-img/svgo-svg/LVCC.svg"
+          intrinsicWidth={644}
+          intrinsicHeight={680}
+        />
         <Pause />
         <OuterP>
           Note that, assuming said {" "}
@@ -1191,6 +1245,8 @@ const Rest = () => {
             src="/build-img/svgo-svg/3IFS.svg"
             offsetY="-6em"
             offsetX="1em"
+            intrinsicWidth={200}
+            intrinsicHeight="335.103"
           />
         </OuterP>
         <Pause />
@@ -1269,6 +1325,8 @@ const Rest = () => {
           <ImageRight
             src="/build-img/svgo-svg/h7oS.svg"
             line={1}
+            intrinsicWidth={300}
+            intrinsicHeight={150}
           />
         </OuterP>
       </Section>
@@ -1351,7 +1409,11 @@ const Rest = () => {
           in seconds:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/88nB.svg" />
+        <Image
+          src="/build-img/svgo-svg/88nB.svg"
+          intrinsicWidth={423}
+          intrinsicHeight={325}
+        />
         <Pause />
         <OuterP>
           The slope of the graph is {" "}
@@ -1483,7 +1545,11 @@ const Rest = () => {
           the same idea(s) in “applied” language:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/s_jj.svg" />
+        <Image
+          src="/build-img/svgo-svg/s_jj.svg"
+          intrinsicWidth={512}
+          intrinsicHeight={460}
+        />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
         <Pause />
@@ -1561,6 +1627,8 @@ const Rest = () => {
             <ImageRight
               src="/build-img/svgo-svg/mtGc.svg"
               atLeastAsWide={true}
+              intrinsicWidth={930}
+              intrinsicHeight={250}
             />
           </MathBlock>
           <Pause />
@@ -1716,16 +1784,22 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/t-Sk.svg"
               class="relative w-fit"
+              intrinsicWidth={400}
+              intrinsicHeight={400}
             >
               <ImageRight
                 src="/build-img/svgo-svg/Y5Cw.svg"
                 offsetY="20%"
                 offsetX="-5%"
+                intrinsicWidth={340}
+                intrinsicHeight="154.789"
               />
               <ImageLeft
                 src="/build-img/svgo-svg/P0MQ.svg"
                 offsetX="-25%"
                 offsetY="47%"
+                intrinsicWidth={340}
+                intrinsicHeight={180}
               />
             </Image>
             <Pause />
@@ -1771,6 +1845,8 @@ const Rest = () => {
               <Image
                 src="/build-img/svgo-svg/_wle.svg"
                 class="relative w-fit"
+                intrinsicWidth={400}
+                intrinsicHeight={400}
               />
               <Pause />
               <StarDivider />
@@ -1823,6 +1899,8 @@ const Rest = () => {
                 offsetX="10rem"
                 offsetY="0%"
                 atLeastAsWide={true}
+                intrinsicWidth={700}
+                intrinsicHeight={800}
               />
             </MathBlock>
             <Pause />
@@ -1955,6 +2033,8 @@ const Rest = () => {
                 offsetX="2.5rem"
                 offsetY="0%"
                 atLeastAsWide={true}
+                intrinsicWidth={400}
+                intrinsicHeight="123.091"
               />
             </MathBlock>
             <Pause />
@@ -2061,7 +2141,11 @@ const Rest = () => {
               as the graph):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/lnNr.svg" />
+            <Image
+              src="/build-img/svgo-svg/lnNr.svg"
+              intrinsicWidth={667}
+              intrinsicHeight={358}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2069,7 +2153,11 @@ const Rest = () => {
               velocity:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/u0yv.svg" />
+            <Image
+              src="/build-img/svgo-svg/u0yv.svg"
+              intrinsicWidth={623}
+              intrinsicHeight={420}
+            />
             <Pause />
             <OuterP>
               On each interval, the velocity is rate of
@@ -2124,7 +2212,11 @@ const Rest = () => {
               {" "} An empty circle
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Jp8B.svg" />
+            <Image
+              src="/build-img/svgo-svg/Jp8B.svg"
+              intrinsicWidth={30}
+              intrinsicHeight="30.001"
+            />
             <Pause />
             <OuterP>
               indicates a “missing” value. Specifically, in
@@ -2269,7 +2361,11 @@ const Rest = () => {
               E.g.:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/gR1_.svg" />
+            <Image
+              src="/build-img/svgo-svg/gR1_.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={250}
+            />
             <Pause />
             <OuterP>
               The rise from the {" "}

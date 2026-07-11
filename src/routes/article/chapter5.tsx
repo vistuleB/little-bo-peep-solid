@@ -175,7 +175,11 @@ export default function __Chapter5__() {
           e.g.. It is the one that has this graph:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/hiZe.svg" />
+        <Image
+          src="/build-img/svgo-svg/hiZe.svg"
+          intrinsicWidth="1139.5"
+          intrinsicHeight="175.5"
+        />
         <Pause />
         <OuterP>
           It has a close cousin named ‘sin’. While {" "}
@@ -204,7 +208,11 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/fuoV.svg" />
+        <Image
+          src="/build-img/svgo-svg/fuoV.svg"
+          intrinsicWidth="1139.5"
+          intrinsicHeight="175.5"
+        />
         <Pause />
         <OuterP>
           As far as standard definitions go, {" "}
@@ -297,7 +305,11 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/aPyP.svg" />
+        <Image
+          src="/build-img/svgo-svg/aPyP.svg"
+          intrinsicWidth={1200}
+          intrinsicHeight={205}
+        />
         <Pause />
         <OuterP>
           Per the definitions, the point half a
@@ -340,7 +352,11 @@ export default function __Chapter5__() {
           a calculator equipped with ‘sin’ and ‘cos’ will tell us):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/SPMY.svg" />
+        <Image
+          src="/build-img/svgo-svg/SPMY.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           As a second example, the graphs indicate that
@@ -365,7 +381,11 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/T8lW.svg" />
+        <Image
+          src="/build-img/svgo-svg/T8lW.svg"
+          intrinsicWidth={1200}
+          intrinsicHeight={205}
+        />
         <Pause />
         <OuterP>
           Indeed, going {" "}
@@ -425,7 +445,11 @@ export default function __Chapter5__() {
           per the calculator):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/9Ygl.svg" />
+        <Image
+          src="/build-img/svgo-svg/9Ygl.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           For a last example,
@@ -458,7 +482,11 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/BfG4.svg" />
+        <Image
+          src="/build-img/svgo-svg/BfG4.svg"
+          intrinsicWidth={1200}
+          intrinsicHeight={205}
+        />
         <Pause />
         <OuterP>
           Some thought reveals that 
@@ -583,7 +611,11 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/h28T.svg" />
+        <Image
+          src="/build-img/svgo-svg/h28T.svg"
+          intrinsicWidth={720}
+          intrinsicHeight={455}
+        />
         <Pause />
         <OuterP>
           In more detail, if you tilt your head  sideways,
@@ -650,7 +682,11 @@ export default function __Chapter5__() {
           particle:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/5m2X.svg" />
+        <Image
+          src="/build-img/svgo-svg/5m2X.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={370}
+        />
         <Pause />
         <OuterP>
           ...to be contrasted with our first definition,
@@ -658,7 +694,11 @@ export default function __Chapter5__() {
           two different axes:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/7839.svg" />
+        <Image
+          src="/build-img/svgo-svg/7839.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           The second definition (former diagram) explains
@@ -726,7 +766,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/WKck.svg" />
+        <Image
+          src="/build-img/svgo-svg/WKck.svg"
+          intrinsicWidth={460}
+          intrinsicHeight={390}
+        />
         <Pause />
         <OuterP>
           These labels are chosen because the {" "}
@@ -856,7 +900,11 @@ const Rest = () => {
           {" "} etc:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/RzLW.svg" />
+        <Image
+          src="/build-img/svgo-svg/RzLW.svg"
+          intrinsicWidth={1261}
+          intrinsicHeight={200}
+        />
         <Pause />
         <OuterP>
           These are the same four curves that
@@ -1105,7 +1153,11 @@ const Rest = () => {
           things to the author's way of seeing things):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/g1x7.svg" />
+        <Image
+          src="/build-img/svgo-svg/g1x7.svg"
+          intrinsicWidth={780}
+          intrinsicHeight={1050}
+        />
         <Pause />
         <OuterP>
           Two more identities
@@ -1137,7 +1189,11 @@ const Rest = () => {
           plane:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/9iTV.svg" />
+        <Image
+          src="/build-img/svgo-svg/9iTV.svg"
+          intrinsicWidth={780}
+          intrinsicHeight={305}
+        />
         <Pause />
         <OuterP>
           We also have these identities...
@@ -1623,7 +1679,11 @@ const Rest = () => {
           that arc:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/dau_.svg" />
+        <Image
+          src="/build-img/svgo-svg/dau_.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={180}
+        />
         <Pause />
         <OuterP>
           By this definition, the radian measure of an
@@ -1637,7 +1697,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/byWA.svg" />
+        <Image
+          src="/build-img/svgo-svg/byWA.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={190}
+        />
         <Pause />
         <OuterP>
           In particular, the radian measure
@@ -1654,13 +1718,21 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/uhJc.svg" />
+        <Image
+          src="/build-img/svgo-svg/uhJc.svg"
+          intrinsicWidth={420}
+          intrinsicHeight={250}
+        />
         <Pause />
         <OuterP>
           To imprint this fact in our memories:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/GrNS.svg" />
+        <Image
+          src="/build-img/svgo-svg/GrNS.svg"
+          intrinsicWidth={420}
+          intrinsicHeight={130}
+        />
         <Pause />
         <OuterP>
           (We will often leave out the “rad”—in fact,
@@ -1687,7 +1759,11 @@ const Rest = () => {
           {" "} radians:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/PhlK.svg" />
+        <Image
+          src="/build-img/svgo-svg/PhlK.svg"
+          intrinsicWidth={420}
+          intrinsicHeight={130}
+        />
         <Pause />
         <OuterP>
           aaaand... and so on.
@@ -1724,7 +1800,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/KPHA.svg" />
+        <Image
+          src="/build-img/svgo-svg/KPHA.svg"
+          intrinsicWidth={430}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           In particular,
@@ -1732,7 +1812,11 @@ const Rest = () => {
           sin and cos like this...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/n-qa.svg" />
+        <Image
+          src="/build-img/svgo-svg/n-qa.svg"
+          intrinsicWidth={420}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           ...with the input appearing as a
@@ -1740,7 +1824,11 @@ const Rest = () => {
           like this...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/kCui.svg" />
+        <Image
+          src="/build-img/svgo-svg/kCui.svg"
+          intrinsicWidth={420}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           ...with the input appearing as a radian.
@@ -1764,7 +1852,11 @@ const Rest = () => {
             {" "} like this...
           </OuterP>
           <Pause />
-          <Image src="/build-img/svgo-svg/tIP3.svg" />
+          <Image
+            src="/build-img/svgo-svg/tIP3.svg"
+            intrinsicWidth={420}
+            intrinsicHeight={345}
+          />
           <Pause />
           <OuterP>
             ...with the input {" "}
@@ -1776,7 +1868,11 @@ const Rest = () => {
             or like this...
           </OuterP>
           <Pause />
-          <Image src="/build-img/svgo-svg/jn-F.svg" />
+          <Image
+            src="/build-img/svgo-svg/jn-F.svg"
+            intrinsicWidth={420}
+            intrinsicHeight={345}
+          />
           <Pause />
           <OuterP>
             ...with the input {" "}
@@ -1803,7 +1899,11 @@ const Rest = () => {
           measure times the radius:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/8wuf.svg" />
+        <Image
+          src="/build-img/svgo-svg/8wuf.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={180}
+        />
         <Pause />
         <TildeDivider style="margin-top:-1em" />
       </Section>
@@ -1987,7 +2087,11 @@ const Rest = () => {
           family look like this:)
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/Yhim.svg" />
+        <Image
+          src="/build-img/svgo-svg/Yhim.svg"
+          intrinsicWidth={530}
+          intrinsicHeight={530}
+        />
         <Pause />
         <OuterP>
           Vice-versa, every point
@@ -2012,7 +2116,11 @@ const Rest = () => {
           following points:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/BFW6.svg" />
+        <Image
+          src="/build-img/svgo-svg/BFW6.svg"
+          intrinsicWidth={720}
+          intrinsicHeight={415}
+        />
         <Pause />
         <OuterP>
           Here
@@ -2106,7 +2214,11 @@ const Rest = () => {
           triangles:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/uUEG.svg" />
+        <Image
+          src="/build-img/svgo-svg/uUEG.svg"
+          intrinsicWidth={520}
+          intrinsicHeight={250}
+        />
         <Pause />
         <OuterP>
           The first triangle implies that the the unique
@@ -2315,7 +2427,11 @@ const Rest = () => {
           drawn as follows (adding the angles in, as well):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/Zu5W.svg" />
+        <Image
+          src="/build-img/svgo-svg/Zu5W.svg"
+          intrinsicWidth={600}
+          intrinsicHeight={415}
+        />
         <Pause />
         <OuterP>
           <i>
@@ -2343,7 +2459,11 @@ const Rest = () => {
           {" "} In this case:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/tDhP.svg" />
+        <Image
+          src="/build-img/svgo-svg/tDhP.svg"
+          intrinsicWidth={600}
+          intrinsicHeight={415}
+        />
       </Section>
     </>}
     {visibleRestSections() > 8 && <>
@@ -2370,7 +2490,11 @@ const Rest = () => {
           because that is the definition of sin and cos:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/HYoa.svg" />
+        <Image
+          src="/build-img/svgo-svg/HYoa.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           But say now that
@@ -2391,7 +2515,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/oidH.svg" />
+        <Image
+          src="/build-img/svgo-svg/oidH.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           ...what are the coordinates of {" "}
@@ -2919,7 +3047,11 @@ const Rest = () => {
           (it's a scaled-up/down unit circle):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/xqXh.svg" />
+        <Image
+          src="/build-img/svgo-svg/xqXh.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           If we assume {" "}
@@ -2940,7 +3072,11 @@ const Rest = () => {
           the sidelengths of a right triangle:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/VAIj.svg" />
+        <Image
+          src="/build-img/svgo-svg/VAIj.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={230}
+        />
         <Pause />
         <OuterP>
           If we rebrand the three legs of the triangle
@@ -2954,19 +3090,31 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/j3G_.svg" />
+        <Image
+          src="/build-img/svgo-svg/j3G_.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={260}
+        />
         <Pause />
         <OuterP>
           ...the relationship can be written:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/3N4N.svg" />
+        <Image
+          src="/build-img/svgo-svg/3N4N.svg"
+          intrinsicWidth={470}
+          intrinsicHeight={255}
+        />
         <Pause />
         <OuterP>
           To be paired with this figure:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/Jk8H.svg" />
+        <Image
+          src="/build-img/svgo-svg/Jk8H.svg"
+          intrinsicWidth={470}
+          intrinsicHeight={415}
+        />
         <Pause />
         <OuterP>
           The arrows are meant to indicate that {" "}
@@ -3006,7 +3154,11 @@ const Rest = () => {
             In the following diagram...
           </OuterP>
           <Pause />
-          <Image src="/build-img/svgo-svg/zVzp.svg" />
+          <Image
+            src="/build-img/svgo-svg/zVzp.svg"
+            intrinsicWidth={400}
+            intrinsicHeight={315}
+          />
           <Pause />
           <OuterP>
             ...the length of the side marked ‘?’ is
@@ -3040,7 +3192,11 @@ const Rest = () => {
             In the following diagram...
           </OuterP>
           <Pause />
-          <Image src="/build-img/svgo-svg/WPT7.svg" />
+          <Image
+            src="/build-img/svgo-svg/WPT7.svg"
+            intrinsicWidth={400}
+            intrinsicHeight={315}
+          />
           <Pause />
           <OuterP>
             ...the length of the side marked ‘?’ is
@@ -3079,7 +3235,11 @@ const Rest = () => {
           two right triangles:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/-N5q.svg" />
+        <Image
+          src="/build-img/svgo-svg/-N5q.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={240}
+        />
         <Pause />
         <OuterP>
           Rotate a copy of the smaller
@@ -3091,7 +3251,11 @@ const Rest = () => {
           we end up with two pairs of parallel sides:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/-oWb.svg" />
+        <Image
+          src="/build-img/svgo-svg/-oWb.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={275}
+        />
         <Pause />
         <OuterP>
           Therefore, if we snap a scaled copy of the
@@ -3108,7 +3272,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/ADw8.svg" />
+        <Image
+          src="/build-img/svgo-svg/ADw8.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={240}
+        />
         <Pause />
         <OuterP>
           We finish off the diagram by setting the
@@ -3122,7 +3290,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/1jEs.svg" />
+        <Image
+          src="/build-img/svgo-svg/1jEs.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={240}
+        />
         <Pause />
         <OuterP>
           This completes the diagram. Note that it is
@@ -3144,7 +3316,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/G2n-.svg" />
+        <Image
+          src="/build-img/svgo-svg/G2n-.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={245}
+        />
         <Pause />
         <OuterP>
           ...but, by construction, {" "}
@@ -3192,7 +3368,11 @@ const Rest = () => {
           sides of the angle, clearing the arc:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/dXdk.svg" />
+        <Image
+          src="/build-img/svgo-svg/dXdk.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={130}
+        />
         <Pause />
         <OuterP>
           The eponymous
@@ -3239,7 +3419,11 @@ const Rest = () => {
           {" "} of the arc on the number line...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/KxqB.svg" />
+        <Image
+          src="/build-img/svgo-svg/KxqB.svg"
+          intrinsicWidth={460}
+          intrinsicHeight={59}
+        />
         <Pause />
         <OuterP>
           ...and in the space between {" "}
@@ -3262,7 +3446,11 @@ const Rest = () => {
           approximating the arc...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/0Mwx.svg" />
+        <Image
+          src="/build-img/svgo-svg/0Mwx.svg"
+          intrinsicWidth={460}
+          intrinsicHeight={288}
+        />
         <Pause />
         <OuterP>
           ...because such polygonal lines can
@@ -3291,14 +3479,22 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/Vx2_.svg" />
+        <Image
+          src="/build-img/svgo-svg/Vx2_.svg"
+          intrinsicWidth={460}
+          intrinsicHeight={155}
+        />
         <Pause />
         <OuterP>
           This last claim follows from the following
           diagram:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/onjp.svg" />
+        <Image
+          src="/build-img/svgo-svg/onjp.svg"
+          intrinsicWidth={460}
+          intrinsicHeight={210}
+        />
         <Pause />
         <OuterP>
           The point is that
@@ -3386,7 +3582,11 @@ const Rest = () => {
           of values...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/2Fam.svg" />
+        <Image
+          src="/build-img/svgo-svg/2Fam.svg"
+          intrinsicWidth={460}
+          intrinsicHeight={60}
+        />
         <Pause />
         <OuterP>
           ...on the number line is 
@@ -3398,7 +3598,11 @@ const Rest = () => {
           which this original arrangement of values...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/dTqx.svg" />
+        <Image
+          src="/build-img/svgo-svg/dTqx.svg"
+          intrinsicWidth={460}
+          intrinsicHeight={60}
+        />
         <Pause />
         <OuterP>
           ...on the number line is an impossibility,
@@ -3627,7 +3831,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/wtkr.svg" />
+        <Image
+          src="/build-img/svgo-svg/wtkr.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={420}
+        />
         <Pause />
         <OuterP>
           Namely, per the one slightly pedantic logic,
@@ -3690,7 +3898,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/HxgB.svg" />
+        <Image
+          src="/build-img/svgo-svg/HxgB.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={420}
+        />
         <Pause />
         <OuterP>
           Specifically,
@@ -3777,7 +3989,11 @@ const Rest = () => {
           four other outer edges precisely once:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/pFL0.svg" />
+        <Image
+          src="/build-img/svgo-svg/pFL0.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={345}
+        />
         <Pause />
         <OuterP>
           (Note by the way that {" "}
@@ -3854,7 +4070,11 @@ const Rest = () => {
           sums or differences of the four outer edges:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/C7FC.svg" />
+        <Image
+          src="/build-img/svgo-svg/C7FC.svg"
+          intrinsicWidth={540}
+          intrinsicHeight={420}
+        />
         <Pause />
         <OuterP>
           (Or with {" "}
@@ -3866,7 +4086,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/cixf.svg" />
+        <Image
+          src="/build-img/svgo-svg/cixf.svg"
+          intrinsicWidth={540}
+          intrinsicHeight={420}
+        />
         <Pause />
         <OuterP>
           ...works as well!)
@@ -3875,7 +4099,11 @@ const Rest = () => {
           In other words, we find...
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/FJxQ.svg" />
+        <Image
+          src="/build-img/svgo-svg/FJxQ.svg"
+          intrinsicWidth={540}
+          intrinsicHeight={333}
+        />
         <Pause />
         <OuterP>
           ...for {" "}
@@ -3924,7 +4152,11 @@ const Rest = () => {
           note the “pattern” of the angle-sum formulas:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/3BtA.svg" />
+        <Image
+          src="/build-img/svgo-svg/3BtA.svg"
+          intrinsicWidth={540}
+          intrinsicHeight={333}
+        />
         <Pause />
         <OuterP>
           The point of remembering these patterns
@@ -3956,7 +4188,11 @@ const Rest = () => {
           are hereby drawn:
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/sa0S.svg" />
+        <Image
+          src="/build-img/svgo-svg/sa0S.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={230}
+        />
         <Pause />
         <OuterP>
           In fact, there is a dedicated, named function
@@ -3965,7 +4201,11 @@ const Rest = () => {
           functions (!!):
         </OuterP>
         <Pause />
-        <Image src="/build-img/svgo-svg/wra-.svg" />
+        <Image
+          src="/build-img/svgo-svg/wra-.svg"
+          intrinsicWidth={440}
+          intrinsicHeight={230}
+        />
         <Pause />
         <OuterP>
           Here
@@ -4160,6 +4400,8 @@ const Rest = () => {
           <Image
             width="480px"
             src="/build-img/svgo-svg/_wct.svg"
+            intrinsicWidth={760}
+            intrinsicHeight="596.22009"
           />
           <Pause />
           <OuterP>
@@ -4189,6 +4431,8 @@ const Rest = () => {
             width="480px"
             src="/build-img/svgo-svg/ZWuF.svg"
             style="margin-bottom:-1em"
+            intrinsicWidth="762.5"
+            intrinsicHeight="805.41925"
           />
           <Pause />
           <OuterP>
@@ -4262,6 +4506,8 @@ const Rest = () => {
         <Image
           width="1300px"
           src="/build-img/svgo-svg/sA2I.svg"
+          intrinsicWidth={1960}
+          intrinsicHeight={1300}
         />
         <Pause />
         <OuterP>
@@ -4339,7 +4585,11 @@ const Rest = () => {
               Guesstimate a function with this graph:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/L2CX.svg" />
+            <Image
+              src="/build-img/svgo-svg/L2CX.svg"
+              intrinsicWidth="754.5"
+              intrinsicHeight="329.5"
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -4348,7 +4598,11 @@ const Rest = () => {
               diagram:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/tYzo.svg" />
+            <Image
+              src="/build-img/svgo-svg/tYzo.svg"
+              intrinsicWidth={1850}
+              intrinsicHeight={270}
+            />
             <Pause />
             <OuterP>
               (Or in the technical sense of taking the sum
@@ -4419,10 +4673,16 @@ const Rest = () => {
               <ImageLeft
                 line={-2}
                 src="/build-img/svgo-svg/9sIf.svg"
+                intrinsicWidth={400}
+                intrinsicHeight={150}
               />
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/tW8i.svg" />
+            <Image
+              src="/build-img/svgo-svg/tW8i.svg"
+              intrinsicWidth="754.5"
+              intrinsicHeight="329.5"
+            />
             <Pause />
             <OuterP>
               As cos goes through {" "}
@@ -4497,6 +4757,8 @@ const Rest = () => {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/yMU3.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
             />
           </ExerciseStatement>
           <Solution>
@@ -4510,6 +4772,8 @@ const Rest = () => {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/7pg9.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
@@ -4656,6 +4920,8 @@ const Rest = () => {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/Wk9W.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
@@ -4710,6 +4976,8 @@ const Rest = () => {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/XW1g.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
@@ -4790,6 +5058,8 @@ const Rest = () => {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/MP5H.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
@@ -4895,6 +5165,8 @@ const Rest = () => {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/FLx-.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
@@ -4934,7 +5206,11 @@ const Rest = () => {
               Guesstimate a function with this graph:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/dt9I.svg" />
+            <Image
+              src="/build-img/svgo-svg/dt9I.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -4942,7 +5218,11 @@ const Rest = () => {
               curve in purple:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/3ZYf.svg" />
+            <Image
+              src="/build-img/svgo-svg/3ZYf.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
+            />
             <Pause />
             <OuterP>
               It appears to be a linear function (line through
@@ -4956,7 +5236,11 @@ const Rest = () => {
               draw a line between them and estimate the slope:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/r7Qe.svg" />
+            <Image
+              src="/build-img/svgo-svg/r7Qe.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
+            />
             <Pause />
             <OuterP>
               This makes the linear function portion of the purple
@@ -4982,7 +5266,11 @@ const Rest = () => {
               we won't be able to see where we're measuring):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/CZVO.svg" />
+            <Image
+              src="/build-img/svgo-svg/CZVO.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
+            />
             <Pause />
             <OuterP>
               So it appears that the sinusoid has a total height
@@ -4999,7 +5287,11 @@ const Rest = () => {
               to measure the vertical width of this blue band...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/9l0x.svg" />
+            <Image
+              src="/build-img/svgo-svg/9l0x.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
+            />
             <Pause />
             <OuterP>
               ...that, indeed, seems near {" "}
@@ -5035,7 +5327,11 @@ const Rest = () => {
               that “purple curve” retains its unique meaning):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/I-bw.svg" />
+            <Image
+              src="/build-img/svgo-svg/I-bw.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
+            />
             <Pause />
             <OuterP>
               This graph has the form
@@ -5069,6 +5365,8 @@ const Rest = () => {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/eM2n.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
@@ -5085,7 +5383,11 @@ const Rest = () => {
               has graph...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/YfcA.svg" />
+            <Image
+              src="/build-img/svgo-svg/YfcA.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
+            />
             <Pause />
             <OuterP>
               ...and, from there, all that remains is to
@@ -5111,7 +5413,11 @@ const Rest = () => {
               the top of each large-scale bump):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/So_Y.svg" />
+            <Image
+              src="/build-img/svgo-svg/So_Y.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
+            />
             <Pause />
             <OuterP>
               As
@@ -5193,7 +5499,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/yXJ4.svg" />
+            <Image
+              src="/build-img/svgo-svg/yXJ4.svg"
+              intrinsicWidth="1139.5"
+              intrinsicHeight="406.5"
+            />
             <Pause />
             <OuterP>
               So the small-scale oscillation is running
@@ -5275,6 +5585,8 @@ const Rest = () => {
             <Image
               style="width:500px;margin-top:1em;margin-bottom:1em;"
               src="/build-img/svgo-svg/OeWS.svg"
+              intrinsicWidth={740}
+              intrinsicHeight={640}
             />
           </ExerciseStatement>
           <Solution>
@@ -5285,7 +5597,11 @@ const Rest = () => {
               ratio over and over again:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/QIQa.svg" />
+            <Image
+              src="/build-img/svgo-svg/QIQa.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={270}
+            />
             <Pause />
             <OuterP>
               But the two triangles involved are
@@ -5305,7 +5621,11 @@ const Rest = () => {
               functions. Specifically, as per this drawing:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/IZD7.svg" />
+            <Image
+              src="/build-img/svgo-svg/IZD7.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={270}
+            />
             <Pause />
             <OuterP>
               The multiplicative ratios that correspond to the
@@ -5499,6 +5819,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1em;"
                 src="/build-img/svgo-svg/FQro.svg"
+                intrinsicWidth={400}
+                intrinsicHeight={255}
               />
               <Pause />
               <OuterP>
@@ -5522,6 +5844,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1em;"
                 src="/build-img/svgo-svg/JRLJ.svg"
+                intrinsicWidth={400}
+                intrinsicHeight={255}
               />
               <Pause />
               <OuterP>
@@ -5579,7 +5903,11 @@ const Rest = () => {
               {" "} radians?
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/lwHG.svg" />
+            <Image
+              src="/build-img/svgo-svg/lwHG.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={182}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -5615,6 +5943,8 @@ const Rest = () => {
             <Image
               style="margin-top:1em;margin-bottom:0em;"
               src="/build-img/svgo-svg/TFcy.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={182}
             />
             <Pause />
             <StarDivider />
@@ -5652,6 +5982,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:0em;"
                 src="/build-img/svgo-svg/0sAj.svg"
+                intrinsicWidth={400}
+                intrinsicHeight={120}
               />
               <Pause />
               <StarDivider />
@@ -5716,6 +6048,8 @@ const Rest = () => {
             <Image
               style="margin-top:1em;margin-bottom:0.5em;"
               src="/build-img/svgo-svg/PhJT.svg"
+              intrinsicWidth={440}
+              intrinsicHeight={250}
             />
           </ExerciseStatement>
           <Solution>
@@ -5766,6 +6100,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/8O7n.svg"
                 offsetX="6em"
                 atLeastAsWide={true}
+                intrinsicWidth={300}
+                intrinsicHeight={250}
               />
             </MathBlock>
             <Pause />
@@ -5790,6 +6126,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/_riK.svg"
                 offsetX="7.75em"
                 atLeastAsWide={true}
+                intrinsicWidth={300}
+                intrinsicHeight={250}
               />
             </MathBlock>
             <Pause />
@@ -6011,6 +6349,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/rUfo.svg"
                 offsetX="1em"
                 atLeastAsWide={true}
+                intrinsicWidth={240}
+                intrinsicHeight={200}
               />
             </MathBlock>
             <Pause />
@@ -6128,7 +6468,11 @@ const Rest = () => {
                 respectively...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/Sx1Y.svg" />
+              <Image
+                src="/build-img/svgo-svg/Sx1Y.svg"
+                intrinsicWidth={450}
+                intrinsicHeight={240}
+              />
               <Pause />
               <OuterP>
                 ...then..
@@ -6155,7 +6499,11 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/JkS_.svg" />
+              <Image
+                src="/build-img/svgo-svg/JkS_.svg"
+                intrinsicWidth={450}
+                intrinsicHeight={135}
+              />
               <Pause />
               <OuterP>
                 ...component displacements, while...
@@ -6182,7 +6530,11 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/efoR.svg" />
+              <Image
+                src="/build-img/svgo-svg/efoR.svg"
+                intrinsicWidth={450}
+                intrinsicHeight={150}
+              />
               <Pause />
               <OuterP>
                 ...component displacements; moreover, both
@@ -6199,7 +6551,11 @@ const Rest = () => {
                 arrows...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/Qnaf.svg" />
+              <Image
+                src="/build-img/svgo-svg/Qnaf.svg"
+                intrinsicWidth={450}
+                intrinsicHeight={305}
+              />
               <Pause />
               <OuterP>
                 ...which actually implies that {" "}
@@ -6227,7 +6583,11 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/7Z4q.svg" />
+              <Image
+                src="/build-img/svgo-svg/7Z4q.svg"
+                intrinsicWidth={450}
+                intrinsicHeight={305}
+              />
               <Pause />
               <OuterP>
                 This makes a mess, but the point is that this
@@ -6278,6 +6638,8 @@ const Rest = () => {
               <Image
                 style="margin-top:1em;margin-bottom:0.8em;"
                 src="/build-img/svgo-svg/Mzki.svg"
+                intrinsicWidth={500}
+                intrinsicHeight={260}
               />
             </SolutionNote>
           </Solution>
@@ -6648,7 +7010,11 @@ const Rest = () => {
                 diagram illustrates the two possibilities:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/rUnE.svg" />
+              <Image
+                src="/build-img/svgo-svg/rUnE.svg"
+                intrinsicWidth={760}
+                intrinsicHeight={590}
+              />
             </SolutionNote>
             <Pause />
             <SolutionNote>
@@ -6661,7 +7027,11 @@ const Rest = () => {
                 than two solutions, picture this diagram...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/0eyH.svg" />
+              <Image
+                src="/build-img/svgo-svg/0eyH.svg"
+                intrinsicWidth={190}
+                intrinsicHeight={190}
+              />
               <Pause />
               <OuterP>
                 ...and imagine the vertical line scanning
@@ -6736,7 +7106,11 @@ const Rest = () => {
               {" "} axis:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/FZVx.svg" />
+            <Image
+              src="/build-img/svgo-svg/FZVx.svg"
+              intrinsicWidth={410}
+              intrinsicHeight={460}
+            />
             <Pause />
             <OuterP>
               What are {" "}
@@ -6794,6 +7168,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/DuQk.svg"
                 offsetX="4em"
                 atLeastAsWide={true}
+                intrinsicWidth={500}
+                intrinsicHeight={150}
               />
             </MathBlock>
             <Pause />
@@ -6837,7 +7213,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/giDO.svg" />
+            <Image
+              src="/build-img/svgo-svg/giDO.svg"
+              intrinsicWidth={410}
+              intrinsicHeight={480}
+            />
             <Pause />
             <OuterP>
               ...whereas {" "}
@@ -6952,7 +7332,11 @@ const Rest = () => {
               which is nonnegative, happily, as noted):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/10Fl.svg" />
+            <Image
+              src="/build-img/svgo-svg/10Fl.svg"
+              intrinsicWidth={380}
+              intrinsicHeight={330}
+            />
             <Pause />
             <OuterP>
               Or:
@@ -7029,7 +7413,11 @@ const Rest = () => {
               formulas affected?
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/haQ7.svg" />
+            <Image
+              src="/build-img/svgo-svg/haQ7.svg"
+              intrinsicWidth={410}
+              intrinsicHeight={460}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -7129,7 +7517,11 @@ const Rest = () => {
               &#8288;:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/3aFp.svg" />
+            <Image
+              src="/build-img/svgo-svg/3aFp.svg"
+              intrinsicWidth={410}
+              intrinsicHeight={460}
+            />
             <Pause />
             <OuterP>
               The coordinate transformations are
@@ -7203,7 +7595,11 @@ const Rest = () => {
               an angled inside wall (all distances in inches):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/shI1.svg" />
+            <Image
+              src="/build-img/svgo-svg/shI1.svg"
+              intrinsicWidth={860}
+              intrinsicHeight={475}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -7211,7 +7607,11 @@ const Rest = () => {
               red length, then the blue length, then add 130:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/nm64.svg" />
+            <Image
+              src="/build-img/svgo-svg/nm64.svg"
+              intrinsicWidth={860}
+              intrinsicHeight={475}
+            />
             <Pause />
             <OuterP>
               Proceeding, the longer and smaller green lengths
@@ -7228,7 +7628,11 @@ const Rest = () => {
               respectively:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/xKw8.svg" />
+            <Image
+              src="/build-img/svgo-svg/xKw8.svg"
+              intrinsicWidth={860}
+              intrinsicHeight={400}
+            />
             <Pause />
             <OuterP>
               The red length is therefore
@@ -7275,6 +7679,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/O1mN.svg"
                 offsetX="10em"
                 atLeastAsWide={true}
+                intrinsicWidth={800}
+                intrinsicHeight={520}
               />
             </MathBlock>
             <Pause />
@@ -7340,7 +7746,11 @@ const Rest = () => {
               to polar coordinates”.)
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/fgGT.svg" />
+            <Image
+              src="/build-img/svgo-svg/fgGT.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={410}
+            />
             <Pause />
             <OuterP>
               And:
@@ -7373,7 +7783,11 @@ const Rest = () => {
               the ceiling near the top of the door:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Tsmn.svg" />
+            <Image
+              src="/build-img/svgo-svg/Tsmn.svg"
+              intrinsicWidth={1200}
+              intrinsicHeight={410}
+            />
             <Pause />
             <OuterP>
               For this we need the lengths marked ‘2’ and
@@ -7383,7 +7797,11 @@ const Rest = () => {
               (we will also reuse length ‘3’ below|):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/odA8.svg" />
+            <Image
+              src="/build-img/svgo-svg/odA8.svg"
+              intrinsicWidth={1200}
+              intrinsicHeight={410}
+            />
             <Pause />
             <OuterP>
               (Nb: One can also compute the length marked ‘2’ as
@@ -7469,7 +7887,11 @@ const Rest = () => {
               {" "} digits of accuracy):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/OO4Q.svg" />
+            <Image
+              src="/build-img/svgo-svg/OO4Q.svg"
+              intrinsicWidth={530}
+              intrinsicHeight={460}
+            />
             <Pause />
             <OuterP>
               Here
@@ -7608,7 +8030,11 @@ const Rest = () => {
               {" "} Here is a possibility:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/uqSS.svg" />
+            <Image
+              src="/build-img/svgo-svg/uqSS.svg"
+              intrinsicWidth={430}
+              intrinsicHeight={333}
+            />
             <Pause />
             <OuterP>
               Starting with a length of {" "}
@@ -7646,7 +8072,11 @@ const Rest = () => {
               of right triangles sharing a common vertex:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/2Pqq.svg" />
+            <Image
+              src="/build-img/svgo-svg/2Pqq.svg"
+              intrinsicWidth={430}
+              intrinsicHeight={220}
+            />
             <Pause />
             <OuterP>
               Or if we move the angle {" "}
@@ -7659,7 +8089,11 @@ const Rest = () => {
               this one:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/H7R8.svg" />
+            <Image
+              src="/build-img/svgo-svg/H7R8.svg"
+              intrinsicWidth={330}
+              intrinsicHeight={335}
+            />
             <Pause />
             <OuterP>
               Though in fact, this tower is already embedded
@@ -7667,7 +8101,11 @@ const Rest = () => {
               scale and orientation) (!):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Xdq7.svg" />
+            <Image
+              src="/build-img/svgo-svg/Xdq7.svg"
+              intrinsicWidth={430}
+              intrinsicHeight={333}
+            />
             <Pause />
             <OuterP>
               In each of these diagrams, in fact,
@@ -7690,14 +8128,22 @@ const Rest = () => {
               outside [below right]:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/ICZK.svg" />
+            <Image
+              src="/build-img/svgo-svg/ICZK.svg"
+              intrinsicWidth={1210}
+              intrinsicHeight={333}
+            />
             <Pause />
             <OuterP>
               Two slight variants on another diagram (for
               which more labelings are also possible):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/CvsG.svg" />
+            <Image
+              src="/build-img/svgo-svg/CvsG.svg"
+              intrinsicWidth={855}
+              intrinsicHeight={362}
+            />
             <Pause />
             <OuterP>
               ...and other more-or-less logical diagrams
@@ -7714,19 +8160,31 @@ const Rest = () => {
                 One way to formally verify that...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/ci-a.svg" />
+              <Image
+                src="/build-img/svgo-svg/ci-a.svg"
+                intrinsicWidth={130}
+                intrinsicHeight={80}
+              />
               <Pause />
               <OuterP>
                 ...in this diagram...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/UspN.svg" />
+              <Image
+                src="/build-img/svgo-svg/UspN.svg"
+                intrinsicWidth={430}
+                intrinsicHeight={333}
+              />
               <Pause />
               <OuterP>
                 ...is to note that...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/VLwm.svg" />
+              <Image
+                src="/build-img/svgo-svg/VLwm.svg"
+                intrinsicWidth={590}
+                intrinsicHeight={80}
+              />
               <Pause />
               <OuterP>
                 ...by direct measure and simplifying the fraction—always
@@ -7793,6 +8251,8 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/HPwG.svg"
               width="470px"
+              intrinsicWidth={615}
+              intrinsicHeight={568}
             />
             <Pause />
             <OuterP>
@@ -7813,6 +8273,8 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/ME1k.svg"
               style="margin-bottom:0.5em;"
+              intrinsicWidth={488}
+              intrinsicHeight={495}
             />
             <Pause />
             <OuterP>
@@ -7849,6 +8311,8 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/FGx3.svg"
               style="margin-bottom:0.5em;"
+              intrinsicWidth={420}
+              intrinsicHeight={540}
             />
             <Pause />
             <OuterP>
@@ -7885,7 +8349,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/YYAQ.svg" />
+            <Image
+              src="/build-img/svgo-svg/YYAQ.svg"
+              intrinsicWidth={430}
+              intrinsicHeight={540}
+            />
             <Pause />
             <OuterP>
               In other words,
@@ -7987,7 +8455,11 @@ const Rest = () => {
               ...respectively, as illustrated...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/FyVW.svg" />
+            <Image
+              src="/build-img/svgo-svg/FyVW.svg"
+              intrinsicWidth={650}
+              intrinsicHeight={525}
+            />
             <Pause />
             <OuterP>
               ...here.
@@ -8014,9 +8486,15 @@ const Rest = () => {
               <Image
                 src="/build-img/svgo-svg/7Hpe.svg"
                 style="margin-bottom:-0.5em"
+                intrinsicWidth={700}
+                intrinsicHeight={180}
               />
               <Pause />
-              <Image src="/build-img/svgo-svg/H0zm.svg" />
+              <Image
+                src="/build-img/svgo-svg/H0zm.svg"
+                intrinsicWidth={700}
+                intrinsicHeight={180}
+              />
             </SolutionNote>
           </Solution>
         </Exercise>
@@ -8060,7 +8538,11 @@ const Rest = () => {
               outside, in a time-space porthole of its own):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Mpne.svg" />
+            <Image
+              src="/build-img/svgo-svg/Mpne.svg"
+              intrinsicWidth="456.029"
+              intrinsicHeight="706.523"
+            />
             <Pause />
             <OuterP>
               The division stops when we see the same
@@ -8149,6 +8631,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.4em;"
                 src="/build-img/svgo-svg/Izko.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={190}
               />
               <Pause />
               <OuterP>
@@ -8180,6 +8664,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/60IQ.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={190}
               />
               <Pause />
               <OuterP>
@@ -8214,6 +8700,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/51XG.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={190}
               />
               <Pause />
               <OuterP>
@@ -8243,6 +8731,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/IIuD.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={190}
               />
               <Pause />
               <OuterP>
@@ -8277,6 +8767,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/0ytO.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={190}
               />
               <Pause />
               <OuterP>
@@ -8331,6 +8823,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/vfTE.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={240}
               />
               <Pause />
               <OuterP>
@@ -8372,6 +8866,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/cQmJ.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={240}
               />
               <Pause />
               <OuterP>
@@ -8393,6 +8889,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/4s2G.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={240}
               />
               <Pause />
               <OuterP>
@@ -8427,6 +8925,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/RSlJ.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={240}
               />
               <Pause />
               <OuterP>
@@ -8482,6 +8982,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/Yo2I.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={320}
               />
               <Pause />
               <OuterP>
@@ -8514,6 +9016,8 @@ const Rest = () => {
               <Image
                 style="margin-top:0.8em;margin-bottom:1.5em;"
                 src="/build-img/svgo-svg/xkzr.svg"
+                intrinsicWidth="456.029"
+                intrinsicHeight={320}
               />
               <Pause />
               <OuterP>
@@ -8548,7 +9052,11 @@ const Rest = () => {
               remainders repeat, look as follows:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/CURd.svg" />
+            <Image
+              src="/build-img/svgo-svg/CURd.svg"
+              intrinsicWidth="1492.16"
+              intrinsicHeight="697.643"
+            />
             <Pause />
             <OuterP>
               In each case, the digits of the quotient
@@ -8675,7 +9183,11 @@ const Rest = () => {
               the “last remainder”):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/yLyJ.svg" />
+            <Image
+              src="/build-img/svgo-svg/yLyJ.svg"
+              intrinsicWidth="655.542"
+              intrinsicHeight="696.25"
+            />
             <Pause />
             <OuterP>
               Said quotient is
@@ -8737,7 +9249,11 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/x9Ng.svg" />
+              <Image
+                src="/build-img/svgo-svg/x9Ng.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={150}
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8761,7 +9277,11 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/6uMQ.svg" />
+              <Image
+                src="/build-img/svgo-svg/6uMQ.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={150}
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8787,7 +9307,11 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/D10R.svg" />
+              <Image
+                src="/build-img/svgo-svg/D10R.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={150}
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8813,7 +9337,11 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/2kAo.svg" />
+              <Image
+                src="/build-img/svgo-svg/2kAo.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={150}
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8839,14 +9367,22 @@ const Rest = () => {
                 the remainder:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/qwI2.svg" />
+              <Image
+                src="/build-img/svgo-svg/qwI2.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={215}
+              />
               <Pause />
               <OuterP>
                 (FYI, the remainder now consists of these yellow
                 digits:)
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/mxCX.svg" />
+              <Image
+                src="/build-img/svgo-svg/mxCX.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={220}
+              />
               <Pause />
               <OuterP>
                 Continuing, we bring down a {" "}
@@ -8871,7 +9407,11 @@ const Rest = () => {
                 {" "} the answer will go here:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/SaeW.svg" />
+              <Image
+                src="/build-img/svgo-svg/SaeW.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={215}
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8904,7 +9444,11 @@ const Rest = () => {
                 here:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/sCyt.svg" />
+              <Image
+                src="/build-img/svgo-svg/sCyt.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={215}
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8937,7 +9481,11 @@ const Rest = () => {
                 here:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/QJ-A.svg" />
+              <Image
+                src="/build-img/svgo-svg/QJ-A.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={215}
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8970,7 +9518,11 @@ const Rest = () => {
                 here:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/aGjl.svg" />
+              <Image
+                src="/build-img/svgo-svg/aGjl.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={215}
+              />
               <Pause />
               <OuterP>
                 The answer is {" "}
@@ -8995,14 +9547,22 @@ const Rest = () => {
                 {" "} giving us a new remainder:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/mwDw.svg" />
+              <Image
+                src="/build-img/svgo-svg/mwDw.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={300}
+              />
               <Pause />
               <OuterP>
                 (And to be specific, the remainder is now formed
                 by...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/zsA9.svg" />
+              <Image
+                src="/build-img/svgo-svg/zsA9.svg"
+                intrinsicWidth="655.542"
+                intrinsicHeight={303}
+              />
               <Pause />
               <OuterP>
                 ...these yellow digits.) Etc.
@@ -9019,7 +9579,11 @@ const Rest = () => {
                 long-form subtraction, say your subtraction is this:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/DL_-.svg" />
+              <Image
+                src="/build-img/svgo-svg/DL_-.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={95}
+              />
               <Pause />
               <OuterP>
                 You can either treat the top or bottom number as an
@@ -9032,7 +9596,11 @@ const Rest = () => {
                 would be as follows:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/tkDH.svg" />
+              <Image
+                src="/build-img/svgo-svg/tkDH.svg"
+                intrinsicWidth="305.007"
+                intrinsicHeight="163.326"
+              />
               <Pause />
               <OuterP>
                 Starting from the right end of the subtraction, we ask
@@ -9057,7 +9625,11 @@ const Rest = () => {
                 will write the answer below:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/eoA2.svg" />
+              <Image
+                src="/build-img/svgo-svg/eoA2.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
+              />
               <Pause />
               <OuterP>
                 The answer is: {" "}
@@ -9071,7 +9643,11 @@ const Rest = () => {
                 say):
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/XKhM.svg" />
+              <Image
+                src="/build-img/svgo-svg/XKhM.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
+              />
               <Pause />
               <OuterP>
                 But the odometer will pass
@@ -9133,7 +9709,11 @@ const Rest = () => {
                 {" "} as some teachers put it):
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/5nhK.svg" />
+              <Image
+                src="/build-img/svgo-svg/5nhK.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
+              />
               <Pause />
               <OuterP>
                 Next we ask “by how many {" "}
@@ -9165,7 +9745,11 @@ const Rest = () => {
                 will write the answer below:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/_-US.svg" />
+              <Image
+                src="/build-img/svgo-svg/_-US.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
+              />
               <Pause />
               <OuterP>
                 The answer is: {" "}
@@ -9183,7 +9767,11 @@ const Rest = () => {
                 {" "} of miles]:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/jj0a.svg" />
+              <Image
+                src="/build-img/svgo-svg/jj0a.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
+              />
               <Pause />
               <OuterP>
                 But here too the odometer will pass
@@ -9222,7 +9810,11 @@ const Rest = () => {
                 effect:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/qylE.svg" />
+              <Image
+                src="/build-img/svgo-svg/qylE.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
+              />
               <Pause />
               <OuterP>
                 Next we ask “by how many {" "}
@@ -9254,7 +9846,11 @@ const Rest = () => {
                 will write the answer below:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/anHE.svg" />
+              <Image
+                src="/build-img/svgo-svg/anHE.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
+              />
               <Pause />
               <OuterP>
                 The answer is: {" "}
@@ -9272,7 +9868,11 @@ const Rest = () => {
                 {" "} of miles]:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/Tte9.svg" />
+              <Image
+                src="/build-img/svgo-svg/Tte9.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
+              />
               <Pause />
               <OuterP>
                 Next we ask “by how many {" "}
@@ -9302,7 +9902,11 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/_sJ5.svg" />
+              <Image
+                src="/build-img/svgo-svg/_sJ5.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={175}
+              />
               <Pause />
               <OuterP>
                 The answer is: {" "}
@@ -9320,7 +9924,11 @@ const Rest = () => {
                 {" "} of miles]:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/jqe5.svg" />
+              <Image
+                src="/build-img/svgo-svg/jqe5.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
+              />
               <Pause />
               <OuterP>
                 Etc—we finally obtain:
@@ -9329,6 +9937,8 @@ const Rest = () => {
               <Image
                 style="margin-top:1em;margin-bottom:1em;"
                 src="/build-img/svgo-svg/y31C.svg"
+                intrinsicWidth={320}
+                intrinsicHeight={164}
               />
               <Pause />
               <OuterP>
@@ -9349,7 +9959,11 @@ const Rest = () => {
                 Generally,
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/E79T.svg" />
+              <Image
+                src="/build-img/svgo-svg/E79T.svg"
+                intrinsicWidth={530}
+                intrinsicHeight={120}
+              />
               <Pause />
               <OuterP>
                 at any point in a long division after the
@@ -9377,7 +9991,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Vd8x.svg" />
+            <Image
+              src="/build-img/svgo-svg/Vd8x.svg"
+              intrinsicWidth={300}
+              intrinsicHeight={110}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9478,7 +10096,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/MXN9.svg" />
+            <Image
+              src="/build-img/svgo-svg/MXN9.svg"
+              intrinsicWidth={300}
+              intrinsicHeight={110}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9494,7 +10116,11 @@ const Rest = () => {
               of my complement is myself”:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/SIuZ.svg" />
+            <Image
+              src="/build-img/svgo-svg/SIuZ.svg"
+              intrinsicWidth={380}
+              intrinsicHeight={210}
+            />
             <Pause />
             <OuterP>
               Another method of deduction uses the fact that,
@@ -9522,7 +10148,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/lswQ.svg" />
+            <Image
+              src="/build-img/svgo-svg/lswQ.svg"
+              intrinsicWidth={380}
+              intrinsicHeight={130}
+            />
             <Pause />
             <OuterP>
               (In one case we use the fact that the
@@ -9553,7 +10183,11 @@ const Rest = () => {
               the center of the circle:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/XRFw.svg" />
+            <Image
+              src="/build-img/svgo-svg/XRFw.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={265}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9567,7 +10201,11 @@ const Rest = () => {
               respectively, of the central angle:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/wC_h.svg" />
+            <Image
+              src="/build-img/svgo-svg/wC_h.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={275}
+            />
             <Pause />
             <OuterP>
               The angle marked ‘?’ is therefore obtained
@@ -9600,7 +10238,11 @@ const Rest = () => {
                 {" "} to:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/Wi-I.svg" />
+              <Image
+                src="/build-img/svgo-svg/Wi-I.svg"
+                intrinsicWidth={720}
+                intrinsicHeight={285}
+              />
             </SolutionNote>
             <Pause />
             <SolutionNote>
@@ -9645,7 +10287,11 @@ const Rest = () => {
                 With the various terms illustrated here:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/hFz7.svg" />
+              <Image
+                src="/build-img/svgo-svg/hFz7.svg"
+                intrinsicWidth={510}
+                intrinsicHeight={290}
+              />
               <Pause />
               <OuterP>
                 ...but if it was such a great verbalization we
@@ -9674,7 +10320,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/WqQR.svg" />
+            <Image
+              src="/build-img/svgo-svg/WqQR.svg"
+              intrinsicWidth={300}
+              intrinsicHeight={150}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9696,7 +10346,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1KiR.svg" />
+            <Image
+              src="/build-img/svgo-svg/1KiR.svg"
+              intrinsicWidth={360}
+              intrinsicHeight={153}
+            />
             <Pause />
             <OuterP>
               On the one hand, {" "}
@@ -9708,7 +10362,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/DU_p.svg" />
+            <Image
+              src="/build-img/svgo-svg/DU_p.svg"
+              intrinsicWidth={360}
+              intrinsicHeight={228}
+            />
             <Pause />
             <OuterP>
               On the other hand, {" "}
@@ -9725,7 +10383,11 @@ const Rest = () => {
               the middle-sized right triangle):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/OHG8.svg" />
+            <Image
+              src="/build-img/svgo-svg/OHG8.svg"
+              intrinsicWidth={430}
+              intrinsicHeight={222}
+            />
             <Pause />
             <OuterP>
               The answer is therefore:
@@ -9768,7 +10430,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/8gZl.svg" />
+            <Image
+              src="/build-img/svgo-svg/8gZl.svg"
+              intrinsicWidth={300}
+              intrinsicHeight={185}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9798,7 +10464,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/0rFq.svg" />
+            <Image
+              src="/build-img/svgo-svg/0rFq.svg"
+              intrinsicWidth={360}
+              intrinsicHeight={190}
+            />
             <Pause />
             <OuterP>
               On the one hand, {" "}
@@ -9810,7 +10480,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/xVQI.svg" />
+            <Image
+              src="/build-img/svgo-svg/xVQI.svg"
+              intrinsicWidth={360}
+              intrinsicHeight={238}
+            />
             <Pause />
             <OuterP>
               On the other hand, {" "}
@@ -9823,7 +10497,11 @@ const Rest = () => {
               {" "} also (!?):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/4_JC.svg" />
+            <Image
+              src="/build-img/svgo-svg/4_JC.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={236}
+            />
             <Pause />
             <OuterP>
               Thus:
@@ -9866,7 +10544,11 @@ const Rest = () => {
               Exercise 22:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/YcZS.svg" />
+            <Image
+              src="/build-img/svgo-svg/YcZS.svg"
+              intrinsicWidth={360}
+              intrinsicHeight={191}
+            />
             <Pause />
             <OuterP>
               We find:
@@ -9963,7 +10645,11 @@ const Rest = () => {
               is also given below.
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/dKeI.svg" />
+            <Image
+              src="/build-img/svgo-svg/dKeI.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={380}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -10010,7 +10696,11 @@ const Rest = () => {
               ...as depicted in this...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/BvFn.svg" />
+            <Image
+              src="/build-img/svgo-svg/BvFn.svg"
+              intrinsicWidth={560}
+              intrinsicHeight={370}
+            />
             <Pause />
             <OuterP>
               ...sketch, and because the
@@ -10065,7 +10755,11 @@ const Rest = () => {
                 projection):
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/pG5W.svg" />
+              <Image
+                src="/build-img/svgo-svg/pG5W.svg"
+                intrinsicWidth={450}
+                intrinsicHeight={440}
+              />
               <Pause />
               <OuterP>
                 For a second, more exotic example,
@@ -10074,7 +10768,11 @@ const Rest = () => {
                 in this diagram...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/7Dao.svg" />
+              <Image
+                src="/build-img/svgo-svg/7Dao.svg"
+                intrinsicWidth={450}
+                intrinsicHeight={440}
+              />
               <Pause />
               <OuterP>
                 ...have equal areas on the cylinder,
@@ -10103,7 +10801,11 @@ const Rest = () => {
               smallest area slice:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/MAo2.svg" />
+            <Image
+              src="/build-img/svgo-svg/MAo2.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={340}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -10145,7 +10847,11 @@ const Rest = () => {
                 hugging the sphere, by Exercise 46, and because
                 the area of a cylinder slice only depends on its
                 height.
-                <ImageRight src="/build-img/svgo-svg/xEpL.svg" />
+                <ImageRight
+                  src="/build-img/svgo-svg/xEpL.svg"
+                  intrinsicWidth={900}
+                  intrinsicHeight={420}
+                />
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -10198,7 +10904,11 @@ const Rest = () => {
               {" "} by Exercise 46:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/ivEh.svg" />
+            <Image
+              src="/build-img/svgo-svg/ivEh.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={260}
+            />
             <Pause />
             <OuterP>
               (Namely,
@@ -10242,7 +10952,11 @@ const Rest = () => {
               sphere as being made up of many cones:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/TNdV.svg" />
+            <Image
+              src="/build-img/svgo-svg/TNdV.svg"
+              intrinsicWidth={240}
+              intrinsicHeight={240}
+            />
             <Pause />
             <OuterP>
               When we add up the volume
@@ -10353,7 +11067,11 @@ const Rest = () => {
               point it makes a beeline for the top:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/wF1d.svg" />
+            <Image
+              src="/build-img/svgo-svg/wF1d.svg"
+              intrinsicWidth={620}
+              intrinsicHeight={425}
+            />
             <Pause />
             <OuterP>
               How long, roughly, is the inside handrail
@@ -10411,7 +11129,11 @@ const Rest = () => {
               over again, etc, like so:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/EiSR.svg" />
+            <Image
+              src="/build-img/svgo-svg/EiSR.svg"
+              intrinsicWidth={460}
+              intrinsicHeight={415}
+            />
             <Pause />
             <OuterP>
               The total length of the handrail is the sum of
@@ -10465,7 +11187,11 @@ const Rest = () => {
               as illustrated here:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/VrOC.svg" />
+            <Image
+              src="/build-img/svgo-svg/VrOC.svg"
+              intrinsicWidth={900}
+              intrinsicHeight={400}
+            />
             <Pause />
             <OuterP>
               And therefore the sum of the white diagonal segments
@@ -10522,7 +11248,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/E5ov.svg" />
+            <Image
+              src="/build-img/svgo-svg/E5ov.svg"
+              intrinsicWidth={900}
+              intrinsicHeight={400}
+            />
             <Pause />
             <OuterP>
               ...and hence the {" "}
@@ -10556,7 +11286,11 @@ const Rest = () => {
                 portion of the handrail:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/tyZN.svg" />
+              <Image
+                src="/build-img/svgo-svg/tyZN.svg"
+                intrinsicWidth={620}
+                intrinsicHeight={435}
+              />
               <Pause />
               <OuterP>
                 If we “unroll” the triangle onto a vertical plane
@@ -10570,7 +11304,11 @@ const Rest = () => {
                 handrail to maintain this angle everywhere:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/-SnV.svg" />
+              <Image
+                src="/build-img/svgo-svg/-SnV.svg"
+                intrinsicWidth={350}
+                intrinsicHeight={280}
+              />
               <Pause />
               <OuterP>
                 Hence the length of the lower half of the handrail
@@ -10881,7 +11619,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/bA_Z.svg" />
+            <Image
+              src="/build-img/svgo-svg/bA_Z.svg"
+              intrinsicWidth="290.51501"
+              intrinsicHeight="375.13101"
+            />
             <Pause />
             <OuterP>
               Use this approximation of {" "}
@@ -11074,7 +11816,11 @@ const Rest = () => {
                 quotient...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/qFb7.svg" />
+              <Image
+                src="/build-img/svgo-svg/qFb7.svg"
+                intrinsicWidth="316.51501"
+                intrinsicHeight={460}
+              />
               <Pause />
               <OuterP>
                 ...we obtain the modified approximation...
@@ -11272,7 +12018,11 @@ const Rest = () => {
               ship?
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/NUnQ.svg" />
+            <Image
+              src="/build-img/svgo-svg/NUnQ.svg"
+              intrinsicWidth={620}
+              intrinsicHeight={400}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -11281,7 +12031,11 @@ const Rest = () => {
               with the boat:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/tjm5.svg" />
+            <Image
+              src="/build-img/svgo-svg/tjm5.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={270}
+            />
             <Pause />
             <OuterP>
               (We replace
@@ -11335,7 +12089,11 @@ const Rest = () => {
               times the sum of all the butterly's northward legs:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/u2Fw.svg" />
+            <Image
+              src="/build-img/svgo-svg/u2Fw.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={270}
+            />
             <Pause />
             <OuterP>
               The total distance traveled by the ship
@@ -11416,7 +12174,11 @@ const Rest = () => {
               function):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/hzK8.svg" />
+            <Image
+              src="/build-img/svgo-svg/hzK8.svg"
+              intrinsicWidth={460}
+              intrinsicHeight={420}
+            />
             <Pause />
             <OuterP>
               Rewrite each case:
@@ -12117,7 +12879,11 @@ const Rest = () => {
               boxes going right to left):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/r-G7.svg" />
+            <Image
+              src="/build-img/svgo-svg/r-G7.svg"
+              intrinsicWidth={755}
+              intrinsicHeight={95}
+            />
             <Pause />
             <OuterP>
               In the initial setting of the variables
@@ -12134,7 +12900,11 @@ const Rest = () => {
               identity*:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/sweo.svg" />
+            <Image
+              src="/build-img/svgo-svg/sweo.svg"
+              intrinsicWidth={570}
+              intrinsicHeight={150}
+            />
             <Pause />
             <OuterP>
               (*When we say “the identity” we mean
@@ -12174,7 +12944,11 @@ const Rest = () => {
               “brought online”:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/2ziI.svg" />
+            <Image
+              src="/build-img/svgo-svg/2ziI.svg"
+              intrinsicWidth={755}
+              intrinsicHeight={150}
+            />
             <Pause />
             <OuterP>
               The effect of adding such a box to the
@@ -12214,7 +12988,11 @@ const Rest = () => {
               {" "} brings the rightmost box online:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Ao9J.svg" />
+            <Image
+              src="/build-img/svgo-svg/Ao9J.svg"
+              intrinsicWidth={755}
+              intrinsicHeight={150}
+            />
             <Pause />
             <OuterP>
               Because this box is to the right of all
@@ -12246,7 +13024,11 @@ const Rest = () => {
               left of sin online...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/DvlU.svg" />
+            <Image
+              src="/build-img/svgo-svg/DvlU.svg"
+              intrinsicWidth={755}
+              intrinsicHeight={150}
+            />
             <Pause />
             <OuterP>
               ...which scales the graph-so-far vertically by a
@@ -12268,7 +13050,11 @@ const Rest = () => {
               and finally step 4 brings the leftmost box online...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/mE-x.svg" />
+            <Image
+              src="/build-img/svgo-svg/mE-x.svg"
+              intrinsicWidth={755}
+              intrinsicHeight={95}
+            />
             <Pause />
             <OuterP>
               ...that vertically translates the entire graph,
@@ -12300,7 +13086,11 @@ const Rest = () => {
                 gluing new boxes on to what's already there:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/EsiI.svg" />
+              <Image
+                src="/build-img/svgo-svg/EsiI.svg"
+                intrinsicWidth={570}
+                intrinsicHeight={195}
+              />
               <Pause />
               <OuterP>
                 (Otherwise, things get more complicated.)
@@ -12564,6 +13354,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/172j.svg"
                 offsetX="4em"
                 atLeastAsWide={true}
+                intrinsicWidth={400}
+                intrinsicHeight={150}
               />
             </MathBlock>
             <Pause />
@@ -12586,7 +13378,11 @@ const Rest = () => {
               arc length on the unit circle:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/vI4f.svg" />
+            <Image
+              src="/build-img/svgo-svg/vI4f.svg"
+              intrinsicWidth={470}
+              intrinsicHeight={400}
+            />
             <Pause />
             <StarDivider />
           </Solution>
@@ -12620,7 +13416,11 @@ const Rest = () => {
               just a name.)
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/oty_.svg" />
+            <Image
+              src="/build-img/svgo-svg/oty_.svg"
+              intrinsicWidth={600}
+              intrinsicHeight={575}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -12628,7 +13428,11 @@ const Rest = () => {
               both of these rectangles:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/XjcR.svg" />
+            <Image
+              src="/build-img/svgo-svg/XjcR.svg"
+              intrinsicWidth={600}
+              intrinsicHeight={610}
+            />
             <Pause />
             <OuterP>
               In more detail, here is how {" "}
@@ -12652,7 +13456,11 @@ const Rest = () => {
               the two rectangles, respectively, zooming in:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/n3ZM.svg" />
+            <Image
+              src="/build-img/svgo-svg/n3ZM.svg"
+              intrinsicWidth={750}
+              intrinsicHeight={350}
+            />
             <Pause />
             <OuterP>
               Thus the rectangles respectively have areas...
@@ -12732,7 +13540,11 @@ const Rest = () => {
               these rectangles have the same area:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/q6NB.svg" />
+            <Image
+              src="/build-img/svgo-svg/q6NB.svg"
+              intrinsicWidth={600}
+              intrinsicHeight={575}
+            />
             <Pause />
             <OuterP>
               But by a similar argument,
@@ -12741,13 +13553,21 @@ const Rest = () => {
               have the same area:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Sie8.svg" />
+            <Image
+              src="/build-img/svgo-svg/Sie8.svg"
+              intrinsicWidth={700}
+              intrinsicHeight={335}
+            />
             <Pause />
             <OuterP>
               This gives...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Prt-.svg" />
+            <Image
+              src="/build-img/svgo-svg/Prt-.svg"
+              intrinsicWidth={3100}
+              intrinsicHeight={180}
+            />
             <Pause />
             <OuterP>
               ...thiiiis...
@@ -12797,7 +13617,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/cigo.svg" />
+            <Image
+              src="/build-img/svgo-svg/cigo.svg"
+              intrinsicWidth={1080}
+              intrinsicHeight={595}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -12838,7 +13662,11 @@ const Rest = () => {
               the areas are:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/H_Um.svg" />
+            <Image
+              src="/build-img/svgo-svg/H_Um.svg"
+              intrinsicWidth={1080}
+              intrinsicHeight={606}
+            />
             <Pause />
             <OuterP>
               Then
@@ -12934,7 +13762,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/hnrJ.svg" />
+            <Image
+              src="/build-img/svgo-svg/hnrJ.svg"
+              intrinsicWidth={1080}
+              intrinsicHeight={670}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -12981,7 +13813,11 @@ const Rest = () => {
               &#8288;:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/VpDU.svg" />
+            <Image
+              src="/build-img/svgo-svg/VpDU.svg"
+              intrinsicWidth={1080}
+              intrinsicHeight={670}
+            />
             <Pause />
             <OuterP>
               From which...
@@ -13171,7 +14007,11 @@ const Rest = () => {
               angle are symmetric to one another, we consider only one):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/YaSq.svg" />
+            <Image
+              src="/build-img/svgo-svg/YaSq.svg"
+              intrinsicWidth={600}
+              intrinsicHeight={231}
+            />
             <Pause />
             <OuterP>
               In Case 1 we obviously have
@@ -13228,6 +14068,8 @@ const Rest = () => {
               <InlineImage
                 src="/build-img/svgo-svg/0pnk.svg"
                 style="transform:translate(0,-3px)"
+                intrinsicWidth={50}
+                intrinsicHeight={20}
               />
             </OuterP>
             <OuterP class="indent-10">
@@ -13255,6 +14097,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/3Vd8.svg"
                 offsetX="0.5em"
                 atLeastAsWide={true}
+                intrinsicWidth={500}
+                intrinsicHeight={200}
               />
             </MathBlock>
             <Pause />
@@ -13264,6 +14108,8 @@ const Rest = () => {
               <ImageLeft
                 src="/build-img/svgo-svg/739B.svg"
                 offsetX="0.5em"
+                intrinsicWidth={500}
+                intrinsicHeight={200}
               />
             </OuterP>
             <Pause />
@@ -13308,7 +14154,11 @@ const Rest = () => {
               {" "} respectively:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/E-Fq.svg" />
+            <Image
+              src="/build-img/svgo-svg/E-Fq.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={300}
+            />
             <Pause />
             <OuterP>
               What is the distance from {" "}
@@ -13480,7 +14330,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               that will be good to slightly rewrite as
-              <ImageLeft src="/build-img/svgo-svg/Y5Rf.svg" />
+              <ImageLeft
+                src="/build-img/svgo-svg/Y5Rf.svg"
+                intrinsicWidth={400}
+                intrinsicHeight={100}
+              />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -13706,7 +14560,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/RLiz.svg" />
+            <Image
+              src="/build-img/svgo-svg/RLiz.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={230}
+            />
             <Pause />
             <OuterP>
               Since the rotation does not affect distances,
@@ -13908,7 +14766,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1jJD.svg" />
+            <Image
+              src="/build-img/svgo-svg/1jJD.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={175}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -14060,7 +14922,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/FCDD.svg" />
+            <Image
+              src="/build-img/svgo-svg/FCDD.svg"
+              intrinsicWidth={420}
+              intrinsicHeight={182}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -14102,7 +14968,11 @@ const Rest = () => {
               &#8288;):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/kTuA.svg" />
+            <Image
+              src="/build-img/svgo-svg/kTuA.svg"
+              intrinsicWidth={420}
+              intrinsicHeight={187}
+            />
             <Pause />
             <OuterP>
               The top length of ‘?’, on the other hand,
@@ -14140,11 +15010,17 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/EPyX.svg">
+            <Image
+              src="/build-img/svgo-svg/EPyX.svg"
+              intrinsicWidth={420}
+              intrinsicHeight={240}
+            >
               <ImageRight
                 src="/build-img/svgo-svg/k0X9.svg"
                 offsetX="-30%"
                 offsetY="38%"
+                intrinsicWidth={200}
+                intrinsicHeight={100}
               />
             </Image>
             <Pause />
@@ -14199,7 +15075,11 @@ const Rest = () => {
                 {" "} as labeled here...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/VvH9.svg" />
+              <Image
+                src="/build-img/svgo-svg/VvH9.svg"
+                intrinsicWidth={340}
+                intrinsicHeight={214}
+              />
               <Pause />
               <OuterP>
                 ...though we can condense these equations to...
@@ -14275,7 +15155,11 @@ const Rest = () => {
                 exterior angles of the triangle:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/CquJ.svg" />
+              <Image
+                src="/build-img/svgo-svg/CquJ.svg"
+                intrinsicWidth={340}
+                intrinsicHeight={285}
+              />
               <Pause />
               <OuterP>
                 ...then each of {" "}
@@ -14311,6 +15195,8 @@ const Rest = () => {
                 <ImageRight
                   line="1.0"
                   src="/build-img/svgo-svg/NoGZ.svg"
+                  intrinsicWidth={500}
+                  intrinsicHeight={100}
                 />
               </OuterP>
             </SolutionNote>
@@ -14344,7 +15230,11 @@ const Rest = () => {
               {" "} axes?
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/AdMn.svg" />
+            <Image
+              src="/build-img/svgo-svg/AdMn.svg"
+              intrinsicWidth={550}
+              intrinsicHeight={340}
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -14360,7 +15250,11 @@ const Rest = () => {
               purple lengths below:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/nF2I.svg" />
+            <Image
+              src="/build-img/svgo-svg/nF2I.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={190}
+            />
             <Pause />
             <OuterP>
               Regarding this diagram, note that:
@@ -14438,9 +15332,17 @@ const Rest = () => {
               {" "} similarly:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/wgBS.svg" />
+            <Image
+              src="/build-img/svgo-svg/wgBS.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={190}
+            />
             <Pause />
-            <Image src="/build-img/svgo-svg/D8sZ.svg" />
+            <Image
+              src="/build-img/svgo-svg/D8sZ.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={200}
+            />
             <Pause />
             <OuterP>
               ...i.e., in the first quadrant, at least, the
@@ -14451,14 +15353,22 @@ const Rest = () => {
               {" "} and $\csc( theta):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/i6Bn.svg" />
+            <Image
+              src="/build-img/svgo-svg/i6Bn.svg"
+              intrinsicWidth={550}
+              intrinsicHeight={340}
+            />
             <Pause />
             <OuterP>
               For the other quadrants we can reason by
               symmetry with the first quadrant:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/TRpy.svg" />
+            <Image
+              src="/build-img/svgo-svg/TRpy.svg"
+              intrinsicWidth={660}
+              intrinsicHeight={530}
+            />
             <Pause />
             <OuterP>
               In more detail, the product of the two coordinates
@@ -14650,7 +15560,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/d3kY.svg" />
+            <Image
+              src="/build-img/svgo-svg/d3kY.svg"
+              intrinsicWidth={660}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               However, one way to “materialize” a slope 
@@ -14678,6 +15592,8 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/wJEo.svg"
               style="margin-bottom:-0.5em"
+              intrinsicWidth={980}
+              intrinsicHeight={450}
             />
             <Pause />
             <OuterP>
@@ -14693,6 +15609,8 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/VCX7.svg"
               style="margin-bottom:-0.5em"
+              intrinsicWidth={980}
+              intrinsicHeight={384}
             />
             <Pause />
             <OuterP>
@@ -14726,7 +15644,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/qnKn.svg" />
+            <Image
+              src="/build-img/svgo-svg/qnKn.svg"
+              intrinsicWidth={660}
+              intrinsicHeight={440}
+            />
             <Pause />
             <OuterP>
               Overall,
@@ -14834,6 +15756,8 @@ const Rest = () => {
             <Image
               style="margin-top:0.8em;margin-bottom:0.8em;"
               src="/build-img/svgo-svg/j4h0.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={40}
             />
             <Pause />
             <OuterP>
@@ -14908,9 +15832,17 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/kxTm.svg" />
+            <Image
+              src="/build-img/svgo-svg/kxTm.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={225}
+            />
             <Pause />
-            <Image src="/build-img/svgo-svg/ryx0.svg" />
+            <Image
+              src="/build-img/svgo-svg/ryx0.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={225}
+            />
             <Pause />
             <OuterP>
               (Cf. {" "}
@@ -14954,7 +15886,11 @@ const Rest = () => {
               this, the procedure is to use two circles of equal radius:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/JM7s.svg" />
+            <Image
+              src="/build-img/svgo-svg/JM7s.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={540}
+            />
             <Pause />
             <OuterP>
               <i>
@@ -14968,7 +15904,11 @@ const Rest = () => {
               center is that midpoint:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/eQmC.svg" />
+            <Image
+              src="/build-img/svgo-svg/eQmC.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={330}
+            />
             <Pause />
             <OuterP>
               <i>
@@ -14988,7 +15928,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/emr1.svg" />
+            <Image
+              src="/build-img/svgo-svg/emr1.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={330}
+            />
             <Pause />
             <OuterP>
               <i>
@@ -15004,14 +15948,22 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/XE7K.svg" />
+            <Image
+              src="/build-img/svgo-svg/XE7K.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={330}
+            />
             <Pause />
             <OuterP>
               (The reason that the whole procedure works is that
               this triangle...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/KO2V.svg" />
+            <Image
+              src="/build-img/svgo-svg/KO2V.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={330}
+            />
             <Pause />
             <OuterP>
               ...is actually right-angled at its upper corner
@@ -15080,7 +16032,11 @@ const Rest = () => {
               of any radius:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/RGWo.svg" />
+            <Image
+              src="/build-img/svgo-svg/RGWo.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={121}
+            />
             <Pause />
             <OuterP>
               <i>
@@ -15104,7 +16060,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/4MXO.svg" />
+            <Image
+              src="/build-img/svgo-svg/4MXO.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={190}
+            />
             <Pause />
             <OuterP>
               <i>
@@ -15131,7 +16091,11 @@ const Rest = () => {
               intersection of the circle with the perpendicular:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/FPj6.svg" />
+            <Image
+              src="/build-img/svgo-svg/FPj6.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={210}
+            />
             <Pause />
             <OuterP>
               <i>
@@ -15151,7 +16115,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/hKBQ.svg" />
+            <Image
+              src="/build-img/svgo-svg/hKBQ.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={245}
+            />
             <Pause />
             <StarDivider />
             <Pause />
@@ -15208,7 +16176,11 @@ const Rest = () => {
               &#8288;):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/SB49.svg" />
+            <Image
+              src="/build-img/svgo-svg/SB49.svg"
+              intrinsicWidth={640}
+              intrinsicHeight={229}
+            />
             <Pause />
             <OuterP>
               However,
@@ -15254,7 +16226,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/vM7r.svg" />
+            <Image
+              src="/build-img/svgo-svg/vM7r.svg"
+              intrinsicWidth={640}
+              intrinsicHeight={229}
+            />
             <Pause />
             <OuterP>
               Or, symmetrically, we can treat {" "}
@@ -15282,7 +16258,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/5-80.svg" />
+            <Image
+              src="/build-img/svgo-svg/5-80.svg"
+              intrinsicWidth={640}
+              intrinsicHeight={520}
+            />
             <Pause />
             <OuterP>
               The second diagram
@@ -15302,7 +16282,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/xbp-.svg" />
+            <Image
+              src="/build-img/svgo-svg/xbp-.svg"
+              intrinsicWidth={640}
+              intrinsicHeight={610}
+            />
             <Pause />
             <OuterP>
               ...like so; 
@@ -15321,7 +16305,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/YikH.svg" />
+            <Image
+              src="/build-img/svgo-svg/YikH.svg"
+              intrinsicWidth={750}
+              intrinsicHeight={460}
+            />
             <Pause />
             <OuterP>
               ...like so, since {" "}
@@ -15440,7 +16428,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/MGoY.svg" />
+            <Image
+              src="/build-img/svgo-svg/MGoY.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={290}
+            />
             <Pause />
             <OuterP>
               Take the intersection of this line with a
@@ -15457,7 +16449,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/RxWQ.svg" />
+            <Image
+              src="/build-img/svgo-svg/RxWQ.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={205}
+            />
             <Pause />
             <OuterP>
               This gives us an angle {" "}
@@ -15473,7 +16469,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/g3LH.svg" />
+            <Image
+              src="/build-img/svgo-svg/g3LH.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={205}
+            />
             <Pause />
             <OuterP>
               Now it suffices to apply one of the “powers of
@@ -15488,11 +16488,17 @@ const Rest = () => {
               for example either of:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/K2J8.svg" />
+            <Image
+              src="/build-img/svgo-svg/K2J8.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={400}
+            />
             <Pause />
             <Image
               src="/build-img/svgo-svg/Ubox.svg"
               style="margin-bottom:0.5em;"
+              intrinsicWidth={485}
+              intrinsicHeight={390}
             />
             <Pause />
             <OuterP>
@@ -15539,7 +16545,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/9g0C.svg" />
+            <Image
+              src="/build-img/svgo-svg/9g0C.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={180}
+            />
             <Pause />
             <OuterP>
               We can then do a “powers of cosine” construction,
@@ -15554,14 +16564,22 @@ const Rest = () => {
               {" "} for example:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/6l6A.svg" />
+            <Image
+              src="/build-img/svgo-svg/6l6A.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={243}
+            />
             <Pause />
             <OuterP>
               Though in this case, it bears discussing how we
               construct, say, this perpendicular:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/1-DQ.svg" />
+            <Image
+              src="/build-img/svgo-svg/1-DQ.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={243}
+            />
             <Pause />
             <OuterP>
               ...because this perpendicular must
@@ -15593,14 +16611,22 @@ const Rest = () => {
               in two places:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/FFkM.svg" />
+            <Image
+              src="/build-img/svgo-svg/FFkM.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={162}
+            />
             <Pause />
             <OuterP>
               Then use those crossings as the
               centers of two more circles of equal radius...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/9C_S.svg" />
+            <Image
+              src="/build-img/svgo-svg/9C_S.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={193}
+            />
             <Pause />
             <OuterP>
               ...whose intersection gives us a second point
@@ -15644,7 +16670,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/shlb.svg" />
+            <Image
+              src="/build-img/svgo-svg/shlb.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={230}
+            />
             <Pause />
             <OuterP>
               This defines a an angle {" "}
@@ -15660,14 +16690,22 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/wSrB.svg" />
+            <Image
+              src="/build-img/svgo-svg/wSrB.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={205}
+            />
             <Pause />
             <OuterP>
               Then we can use any construction for powers of
               tan, for example this spiral construction:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/PFh1.svg" />
+            <Image
+              src="/build-img/svgo-svg/PFh1.svg"
+              intrinsicWidth={485}
+              intrinsicHeight={275}
+            />
             <Pause />
             <OuterP>
               (Again, constructing the spiral means constructing
@@ -15705,7 +16743,11 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/XL-k.svg" />
+              <Image
+                src="/build-img/svgo-svg/XL-k.svg"
+                intrinsicWidth={485}
+                intrinsicHeight={252}
+              />
               <Pause />
               <OuterP>
                 (No such thing exists for {" "}
@@ -15789,7 +16831,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/3JBw.svg" />
+            <Image
+              src="/build-img/svgo-svg/3JBw.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={105}
+            />
             <Pause />
             <OuterP>
               The proof is that
@@ -15902,7 +16948,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/83jd.svg" />
+            <Image
+              src="/build-img/svgo-svg/83jd.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={213}
+            />
             <Pause />
             <OuterP>
               We construct {" "}
@@ -15927,7 +16977,11 @@ const Rest = () => {
               {" "} of equal radius:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/aEvK.svg" />
+            <Image
+              src="/build-img/svgo-svg/aEvK.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={485}
+            />
             <Pause />
             <OuterP>
               We draw a half-circle of radius {" "}
@@ -15952,7 +17006,11 @@ const Rest = () => {
               {" "} and...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/7wy4.svg" />
+            <Image
+              src="/build-img/svgo-svg/7wy4.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={200}
+            />
             <Pause />
             <OuterP>
               ...the red triangle above is a right triangle by the
@@ -15967,7 +17025,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Usrx.svg" />
+            <Image
+              src="/build-img/svgo-svg/Usrx.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={215}
+            />
             <Pause />
             <OuterP>
               As seen in {" "}
@@ -16022,7 +17084,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/S9xt.svg" />
+            <Image
+              src="/build-img/svgo-svg/S9xt.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={190}
+            />
             <Pause />
             <OuterP>
               ...here, in our construction from a few lines
@@ -16045,7 +17111,11 @@ const Rest = () => {
               {" "} end-to-end:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/-HLJ.svg" />
+            <Image
+              src="/build-img/svgo-svg/-HLJ.svg"
+              intrinsicWidth={470}
+              intrinsicHeight={129}
+            />
             <Pause />
             <OuterP>
               Find the middle of the combined segment and
@@ -16054,7 +17124,11 @@ const Rest = () => {
               combined segment:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/OwXA.svg" />
+            <Image
+              src="/build-img/svgo-svg/OwXA.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={380}
+            />
             <Pause />
             <OuterP>
               Draw a perpendicular
@@ -16071,7 +17145,11 @@ const Rest = () => {
               Peloponnesian circle theorem:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/-W11.svg" />
+            <Image
+              src="/build-img/svgo-svg/-W11.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={225}
+            />
             <Pause />
             <OuterP>
               Because 
@@ -16092,7 +17170,11 @@ const Rest = () => {
               &#8288;):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/UWy5.svg" />
+            <Image
+              src="/build-img/svgo-svg/UWy5.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={225}
+            />
             <Pause />
             <OuterP>
               The ratio that takes {" "}
@@ -16114,7 +17196,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/KocC.svg" />
+            <Image
+              src="/build-img/svgo-svg/KocC.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={225}
+            />
             <Pause />
             <OuterP>
               This implies that
@@ -16327,7 +17413,11 @@ const Rest = () => {
               {" "} in the unit circle?
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/QGG0.svg" />
+            <Image
+              src="/build-img/svgo-svg/QGG0.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               (I.e., find the ruler-readings
@@ -16379,7 +17469,11 @@ const Rest = () => {
               {" "} respectively):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/DHtw.svg" />
+            <Image
+              src="/build-img/svgo-svg/DHtw.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               The ruler-readings are therefore
@@ -16422,7 +17516,11 @@ const Rest = () => {
               Recalling first...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/h28T.svg" />
+            <Image
+              src="/build-img/svgo-svg/h28T.svg"
+              intrinsicWidth={720}
+              intrinsicHeight={455}
+            />
             <Pause />
             <OuterP>
               ...this figure from the chapter, we note that
@@ -16431,14 +17529,22 @@ const Rest = () => {
               based on clockwise instead of counterclockwise rotation:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/9QAk.svg" />
+            <Image
+              src="/build-img/svgo-svg/9QAk.svg"
+              intrinsicWidth={720}
+              intrinsicHeight={455}
+            />
             <Pause />
             <OuterP>
               Now comparing these definitions to
               this figure...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/__cS.svg" />
+            <Image
+              src="/build-img/svgo-svg/__cS.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={395}
+            />
             <Pause />
             <OuterP>
               ...in which, by contrast to usual, angles are measured
@@ -16493,7 +17599,11 @@ const Rest = () => {
               without affecting the ruler-reading:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/5XuI.svg" />
+            <Image
+              src="/build-img/svgo-svg/5XuI.svg"
+              intrinsicWidth={900}
+              intrinsicHeight={395}
+            />
             <Pause />
             <OuterP>
               (Because what counts is the angle between the
@@ -16516,7 +17626,11 @@ const Rest = () => {
               while the two vectors are each replaced by a ruler:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Xur8.svg" />
+            <Image
+              src="/build-img/svgo-svg/Xur8.svg"
+              intrinsicWidth={900}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               ...and in the new configuration, at bottom right, 
@@ -16548,6 +17662,8 @@ const Rest = () => {
               <Image
                 src="/build-img/svgo-svg/HbFF.svg"
                 style="margin:0.3em 0"
+                intrinsicWidth={1300}
+                intrinsicHeight={560}
               />
               <Pause />
               <OuterP>
@@ -16559,6 +17675,8 @@ const Rest = () => {
               <Image
                 src="/build-img/svgo-svg/R1PW.svg"
                 style="margin:0.3em 0"
+                intrinsicWidth={1300}
+                intrinsicHeight={560}
               />
               <Pause />
               <OuterP>
@@ -16645,7 +17763,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/k70-.svg" />
+            <Image
+              src="/build-img/svgo-svg/k70-.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={395}
+            />
             <Pause />
             <OuterP>
               In what follows we will write {" "}
@@ -16677,7 +17799,11 @@ const Rest = () => {
               {" "} (in the manner of physicists):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/EWAA.svg" />
+            <Image
+              src="/build-img/svgo-svg/EWAA.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={370}
+            />
             <Pause />
             <OuterP>
               As established in {" "}
@@ -16711,7 +17837,11 @@ const Rest = () => {
               {" "} respectively on the ruler:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/rAlI.svg" />
+            <Image
+              src="/build-img/svgo-svg/rAlI.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={370}
+            />
             <Pause />
             <OuterP>
               On the other hand, the vector {" "}
@@ -16745,7 +17875,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/q8lI.svg" />
+            <Image
+              src="/build-img/svgo-svg/q8lI.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={370}
+            />
             <Pause />
             <OuterP>
               The scaled copy of {" "}
@@ -16767,7 +17901,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/vjt3.svg" />
+            <Image
+              src="/build-img/svgo-svg/vjt3.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={370}
+            />
             <Pause />
             <OuterP>
               Similarly, the scaled copy of {" "}
@@ -16792,14 +17930,22 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/KjPQ.svg" />
+            <Image
+              src="/build-img/svgo-svg/KjPQ.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={370}
+            />
             <Pause />
             <OuterP>
               Moreover, the sum-of-projections is the
               projection-of-the-sum:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/cfa7.svg" />
+            <Image
+              src="/build-img/svgo-svg/cfa7.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={615}
+            />
             <Pause />
             <OuterP>
               This gives us
@@ -16886,7 +18032,11 @@ const Rest = () => {
               {" "} another point on the unit sphere:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/jyl2.svg" />
+            <Image
+              src="/build-img/svgo-svg/jyl2.svg"
+              intrinsicWidth={605}
+              intrinsicHeight={690}
+            />
             <Pause />
             <OuterP>
               Find the value of the projection—the place we land on the
@@ -16986,7 +18136,11 @@ const Rest = () => {
               This sum can be illustrated:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/w_-r.svg" />
+            <Image
+              src="/build-img/svgo-svg/w_-r.svg"
+              intrinsicWidth={605}
+              intrinsicHeight={690}
+            />
             <Pause />
             <OuterP>
               As discussed in Note 1 of Exercise 11 we can
@@ -17023,7 +18177,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/vsD9.svg" />
+            <Image
+              src="/build-img/svgo-svg/vsD9.svg"
+              intrinsicWidth={800}
+              intrinsicHeight={700}
+            />
             <Pause />
             <OuterP>
               However, the projection of {" "}
@@ -17057,7 +18215,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/-iIq.svg" />
+            <Image
+              src="/build-img/svgo-svg/-iIq.svg"
+              intrinsicWidth={605}
+              intrinsicHeight={690}
+            />
             <Pause />
             <OuterP>
               The projection of {" "}
@@ -17085,7 +18247,11 @@ const Rest = () => {
               projected (cf. Solution 3 of Exercise 0):
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e5_ruler_sphere_z_switched_combined.svg" />
+            <Image
+              src="/tmp-images/e5_ruler_sphere_z_switched_combined.svg"
+              intrinsicWidth={1200}
+              intrinsicHeight={700}
+            />
             <Pause />
             <OuterP>
               But the 
@@ -17288,7 +18454,11 @@ const Rest = () => {
               </tbody>
             </table>
             <Pause />
-            <Image src="/build-img/svgo-svg/huBu.svg" />
+            <Image
+              src="/build-img/svgo-svg/huBu.svg"
+              intrinsicWidth="1203.483"
+              intrinsicHeight="361.683"
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -17401,7 +18571,11 @@ const Rest = () => {
               the last standing possibility is...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/Ninz.svg" />
+            <Image
+              src="/build-img/svgo-svg/Ninz.svg"
+              intrinsicWidth={1240}
+              intrinsicHeight={375}
+            />
             <Pause />
             <OuterP>
               ...this one!
@@ -17522,11 +18696,15 @@ const Rest = () => {
             <Image
               style="margin-top:1.1em;margin-bottom:1.1em;"
               src="/build-img/svgo-svg/hRhs.svg"
+              intrinsicWidth={580}
+              intrinsicHeight={160}
             />
             <Pause />
             <Image
               style="margin-top:1.1em;margin-bottom:1.1em;"
               src="/build-img/svgo-svg/nEBv.svg"
+              intrinsicWidth={580}
+              intrinsicHeight={160}
             />
             <Pause />
             <OuterP>
@@ -17553,6 +18731,8 @@ const Rest = () => {
             <Image
               style="margin-top:1.1em;margin-bottom:1.1em;"
               src="/build-img/svgo-svg/qKN7.svg"
+              intrinsicWidth={580}
+              intrinsicHeight={160}
             />
             <Pause />
             <OuterP>
@@ -17811,6 +18991,8 @@ const Rest = () => {
                 <ImageLeft
                   src="/build-img/svgo-svg/hCre.svg"
                   atLeastAsWide={true}
+                  intrinsicWidth={500}
+                  intrinsicHeight={100}
                 />
               </MathBlock>
               <Pause />
@@ -17974,7 +19156,11 @@ const Rest = () => {
               {" "} is, by virtue of alignment of the bumps:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/yO5U.svg" />
+            <Image
+              src="/build-img/svgo-svg/yO5U.svg"
+              intrinsicWidth={600}
+              intrinsicHeight={280}
+            />
             <Pause />
             <OuterP>
               Our conjecture, per appearance of the graphs, is that
@@ -18004,7 +19190,11 @@ const Rest = () => {
               <Math>
                 $1/2$
               </Math>
-              <ImageRight src="/build-img/svgo-svg/EWxG.svg" />
+              <ImageRight
+                src="/build-img/svgo-svg/EWxG.svg"
+                intrinsicWidth={1500}
+                intrinsicHeight={300}
+              />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -18030,7 +19220,11 @@ const Rest = () => {
               <Math>
                 $1/2$
               </Math>
-              <ImageLeft src="/build-img/svgo-svg/Hkfc.svg" />
+              <ImageLeft
+                src="/build-img/svgo-svg/Hkfc.svg"
+                intrinsicWidth={1500}
+                intrinsicHeight={300}
+              />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -18070,6 +19264,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/ZFCF.svg"
                 offsetY="1.3em"
                 atLeastAsWide={true}
+                intrinsicWidth={500}
+                intrinsicHeight={200}
               />
             </MathBlock>
             <Pause />
@@ -18133,7 +19329,11 @@ const Rest = () => {
               <Math>
                 $1/2$
               </Math>
-              <ImageLeft src="/build-img/svgo-svg/mQFa.svg" />
+              <ImageLeft
+                src="/build-img/svgo-svg/mQFa.svg"
+                intrinsicWidth={1500}
+                intrinsicHeight={300}
+              />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -18154,6 +19354,8 @@ const Rest = () => {
                 src="/build-img/svgo-svg/Xb68.svg"
                 offsetY="0.2em"
                 atLeastAsWide={true}
+                intrinsicWidth={500}
+                intrinsicHeight={200}
               />
             </MathBlock>
             <Pause />
@@ -18173,7 +19375,11 @@ const Rest = () => {
               more closely related:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/ADAv.svg" />
+            <Image
+              src="/build-img/svgo-svg/ADAv.svg"
+              intrinsicWidth={600}
+              intrinsicHeight={280}
+            />
             <Pause />
             <OuterP>
               In fact, it seems that {" "}
@@ -18306,7 +19512,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/TH1y.svg" />
+            <Image
+              src="/build-img/svgo-svg/TH1y.svg"
+              intrinsicWidth={600}
+              intrinsicHeight={180}
+            />
             <Pause />
             <OuterP>
               Reasoning geometrically,
@@ -18364,7 +19574,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/xf9D.svg" />
+            <Image
+              src="/build-img/svgo-svg/xf9D.svg"
+              intrinsicWidth={660}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               The displacements can be summed geometrically
@@ -18380,19 +19594,31 @@ const Rest = () => {
               horizontal on its side:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/byhq.svg" />
+            <Image
+              src="/build-img/svgo-svg/byhq.svg"
+              intrinsicWidth={660}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               For short:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/2Wso.svg" />
+            <Image
+              src="/build-img/svgo-svg/2Wso.svg"
+              intrinsicWidth={660}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               Some more examples (if need be):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/yFHg.svg" />
+            <Image
+              src="/build-img/svgo-svg/yFHg.svg"
+              intrinsicWidth={900}
+              intrinsicHeight={480}
+            />
             <Pause />
             <OuterP>
               Given this description, it seems obvious (or:
@@ -18432,7 +19658,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/xwF6.svg" />
+            <Image
+              src="/build-img/svgo-svg/xwF6.svg"
+              intrinsicWidth={660}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               (Individually, we have
@@ -18521,9 +19751,17 @@ const Rest = () => {
                 with this new information, in degrees and in radians:
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/GHRw.svg" />
+              <Image
+                src="/build-img/svgo-svg/GHRw.svg"
+                intrinsicWidth={600}
+                intrinsicHeight={170}
+              />
               <Pause />
-              <Image src="/build-img/svgo-svg/BJ2x.svg" />
+              <Image
+                src="/build-img/svgo-svg/BJ2x.svg"
+                intrinsicWidth={600}
+                intrinsicHeight={170}
+              />
               <Pause />
               <OuterP>
                 (Note that {" "}
@@ -18590,7 +19828,11 @@ const Rest = () => {
               {" "} axis, as illustrated here:
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/77pT.svg" />
+            <Image
+              src="/build-img/svgo-svg/77pT.svg"
+              intrinsicWidth={700}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               Using this geometric insight, how can we express
@@ -18657,7 +19899,11 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/US0B.svg" />
+            <Image
+              src="/build-img/svgo-svg/US0B.svg"
+              intrinsicWidth={700}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               (This ruler contains just the same numbers as the {" "}
@@ -18701,7 +19947,11 @@ const Rest = () => {
               {" "} through the circle...
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/DXtE.svg" />
+            <Image
+              src="/build-img/svgo-svg/DXtE.svg"
+              intrinsicWidth={700}
+              intrinsicHeight={360}
+            />
             <Pause />
             <OuterP>
               ...and then later multiply by {" "}
@@ -18940,7 +20190,11 @@ const Rest = () => {
                 ...as it is the graph of the composition...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/4t6F.svg" />
+              <Image
+                src="/build-img/svgo-svg/4t6F.svg"
+                intrinsicWidth={395}
+                intrinsicHeight={95}
+              />
               <Pause />
               <OuterP>
                 (...cf. {" "}
@@ -18996,7 +20250,11 @@ const Rest = () => {
                 &#8288;)...
               </OuterP>
               <Pause />
-              <Image src="/build-img/svgo-svg/8ykE.svg" />
+              <Image
+                src="/build-img/svgo-svg/8ykE.svg"
+                intrinsicWidth={600}
+                intrinsicHeight={170}
+              />
               <Pause />
               <OuterP>
                 ...it certainly {" "}

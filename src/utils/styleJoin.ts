@@ -12,6 +12,7 @@ const styleDictionaryToString = (styles: StyleObject): string => {
             : key == 'marginTop' ?
              'margin-top'
             : key == 'marginBottom' ? 'margin-bottom'
+            : key == 'aspectRatio' ? 'aspect-ratio'
             : key
         }:${value}`
     ).join(';')

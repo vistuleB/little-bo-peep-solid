@@ -1106,6 +1106,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/Z39o.svg"
                 atLeastAsWide={false}
                 offsetX="5em"
+                intrinsicWidth={360}
+                intrinsicHeight={160}
               />
             </MathBlock>
             <Pause />
@@ -1145,6 +1147,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/-TtU.svg"
                 offsetX="-1em"
                 atLeastAsWide={true}
+                intrinsicWidth={350}
+                intrinsicHeight={250}
               />
             </MathBlock>
             <Pause />
@@ -1189,6 +1193,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/Xx87.svg"
                 offsetX="-4rem"
                 atLeastAsWide={true}
+                intrinsicWidth="362.474"
+                intrinsicHeight="177.616"
               />
             </MathBlock>
             <Pause />
@@ -1204,6 +1210,8 @@ export default function __Bootcamp3__() {
                 offsetX="-4rem"
                 src="/build-img/svgo-svg/jBCw.svg"
                 atLeastAsWide={true}
+                intrinsicWidth="362.474"
+                intrinsicHeight="177.616"
               />
             </MathBlock>
             <Pause />
@@ -1247,6 +1255,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/4oJD.svg"
                 offsetY="-0.5em"
                 atLeastAsWide={true}
+                intrinsicWidth="606.819"
+                intrinsicHeight="317.105"
               />
             </MathBlock>
             <Pause />
@@ -1331,6 +1341,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/rgbH.svg"
                 offsetY="23.5%"
                 atLeastAsWide={true}
+                intrinsicWidth={346}
+                intrinsicHeight={142}
               />
             </MathBlock>
             <Pause />
@@ -1352,6 +1364,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/Trg3.svg"
                 offsetY="23.5%"
                 atLeastAsWide={true}
+                intrinsicWidth={444}
+                intrinsicHeight={126}
               />
             </MathBlock>
             <Pause />
@@ -1428,6 +1442,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/omps.svg"
                 offsetY="-0.5em"
                 atLeastAsWide={true}
+                intrinsicWidth="497.212"
+                intrinsicHeight="317.105"
               />
             </MathBlock>
             <Pause />
@@ -1476,6 +1492,8 @@ export default function __Bootcamp3__() {
                 offsetY="-0.7em"
                 offsetX="3em"
                 atLeastAsWide={true}
+                intrinsicWidth={600}
+                intrinsicHeight={400}
               />
             </MathBlock>
             <Pause />
@@ -1525,6 +1543,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/9GPK.svg"
                 line={3}
                 offsetX="-0.5em"
+                intrinsicWidth={400}
+                intrinsicHeight={200}
               />
             </OuterP>
             <Pause />
@@ -1547,6 +1567,8 @@ export default function __Bootcamp3__() {
                 offsetX="2.5em"
                 offsetY={0}
                 atLeastAsWide={true}
+                intrinsicWidth={400}
+                intrinsicHeight={500}
               />
             </MathBlock>
             <Pause />
@@ -1594,6 +1616,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/3IFS.svg"
                 offsetY="-6em"
                 offsetX="1em"
+                intrinsicWidth={200}
+                intrinsicHeight="335.103"
               />
             </OuterP>
             <Pause />
@@ -1690,6 +1714,8 @@ export default function __Bootcamp3__() {
               <ImageRight
                 src="/build-img/svgo-svg/h7oS.svg"
                 line={1}
+                intrinsicWidth={300}
+                intrinsicHeight={150}
               />
             </OuterP>
             <Pause />
@@ -1721,6 +1747,8 @@ export default function __Bootcamp3__() {
               <ImageRight
                 src="/build-img/svgo-svg/mtGc.svg"
                 atLeastAsWide={true}
+                intrinsicWidth={930}
+                intrinsicHeight={250}
               />
             </MathBlock>
             <Pause />
@@ -1781,16 +1809,22 @@ export default function __Bootcamp3__() {
             <Image
               src="/build-img/svgo-svg/t-Sk.svg"
               class="relative w-fit"
+              intrinsicWidth={400}
+              intrinsicHeight={400}
             >
               <ImageRight
                 src="/build-img/svgo-svg/Y5Cw.svg"
                 offsetY="20%"
                 offsetX="-5%"
+                intrinsicWidth={340}
+                intrinsicHeight="154.789"
               />
               <ImageLeft
                 src="/build-img/svgo-svg/P0MQ.svg"
                 offsetX="-25%"
                 offsetY="47%"
+                intrinsicWidth={340}
+                intrinsicHeight={180}
               />
             </Image>
             <Pause />
@@ -1843,6 +1877,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/eaW7.svg"
                 offsetX="0rem"
                 atLeastAsWide={true}
+                intrinsicWidth={700}
+                intrinsicHeight={800}
               />
             </MathBlock>
             <Pause />
@@ -1893,6 +1929,8 @@ export default function __Bootcamp3__() {
                 offsetX="2.5rem"
                 offsetY="0%"
                 atLeastAsWide={true}
+                intrinsicWidth={400}
+                intrinsicHeight="123.091"
               />
             </MathBlock>
             <Pause />
@@ -1940,6 +1978,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/dcQB.svg"
                 offsetX="3em"
                 atLeastAsWide={true}
+                intrinsicWidth={300}
+                intrinsicHeight={150}
               />
             </MathBlock>
             <Pause />
@@ -2004,6 +2044,8 @@ export default function __Bootcamp3__() {
                 offsetY="-0.2em"
                 offsetX="4em"
                 atLeastAsWide={true}
+                intrinsicWidth={200}
+                intrinsicHeight={110}
               />
             </MathBlock>
             <Pause />
@@ -2163,6 +2205,8 @@ export default function __Bootcamp3__() {
               <ImageLeft
                 src="/build-img/svgo-svg/rdZz.svg"
                 line={2}
+                intrinsicWidth={530}
+                intrinsicHeight={380}
               />
             </OuterP>
             <Pause />
@@ -2360,7 +2404,11 @@ export default function __Bootcamp3__() {
             <Pause />
             <CentralDisplayItalic>
               one billion is a thousand million
-              <ImageLeft src="/build-img/svgo-svg/55Oe.svg" />
+              <ImageLeft
+                src="/build-img/svgo-svg/55Oe.svg"
+                intrinsicWidth={250}
+                intrinsicHeight={100}
+              />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -2369,7 +2417,11 @@ export default function __Bootcamp3__() {
             <Pause />
             <CentralDisplayItalic>
               one trillion is a thousand billion
-              <ImageLeft src="/build-img/svgo-svg/tAeJ.svg" />
+              <ImageLeft
+                src="/build-img/svgo-svg/tAeJ.svg"
+                intrinsicWidth={250}
+                intrinsicHeight={100}
+              />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -2378,7 +2430,11 @@ export default function __Bootcamp3__() {
             <Pause />
             <CentralDisplayItalic>
               one trillion is a million million
-              <ImageRight src="/build-img/svgo-svg/xlFe.svg" />
+              <ImageRight
+                src="/build-img/svgo-svg/xlFe.svg"
+                intrinsicWidth={300}
+                intrinsicHeight={100}
+              />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -2418,6 +2474,8 @@ export default function __Bootcamp3__() {
                 src="/build-img/svgo-svg/nMNN.svg"
                 offsetX="0em"
                 atLeastAsWide={true}
+                intrinsicWidth={250}
+                intrinsicHeight={150}
               />
             </MathBlock>
             <Pause />
@@ -2480,6 +2538,8 @@ export default function __Bootcamp3__() {
                 offsetY="-0.5em"
                 offsetX="0.5em"
                 atLeastAsWide={true}
+                intrinsicWidth={440}
+                intrinsicHeight={250}
               />
             </MathBlock>
             <Pause />
@@ -2506,36 +2566,50 @@ export default function __Bootcamp3__() {
             <Image
               src="/build-img/svgo-svg/S-T0.svg"
               width="1000px"
+              intrinsicWidth={1000}
+              intrinsicHeight={250}
             >
               <ImageLeft
                 src="/build-img/svgo-svg/0439.svg"
                 offsetY="-50%"
                 offsetX="2em"
+                intrinsicWidth={200}
+                intrinsicHeight={100}
               />
               <ImageLeft
                 src="/build-img/svgo-svg/mJ_i.svg"
                 offsetY="0%"
                 offsetX="2em"
+                intrinsicWidth={200}
+                intrinsicHeight={100}
               />
               <ImageLeft
                 src="/build-img/svgo-svg/GyQV.svg"
                 offsetY="50%"
                 offsetX="2em"
+                intrinsicWidth={200}
+                intrinsicHeight={100}
               />
               <ImageRight
                 src="/build-img/svgo-svg/enf-.svg"
                 offsetY="-50%"
                 offsetX="2em"
+                intrinsicWidth={200}
+                intrinsicHeight={100}
               />
               <ImageRight
                 src="/build-img/svgo-svg/J4JH.svg"
                 offsetY="0%"
                 offsetX="2em"
+                intrinsicWidth={200}
+                intrinsicHeight={100}
               />
               <ImageRight
                 src="/build-img/svgo-svg/SN5W.svg"
                 offsetY="50%"
                 offsetX="2em"
+                intrinsicWidth={200}
+                intrinsicHeight={100}
               />
             </Image>
           </Solution>
@@ -2554,6 +2628,8 @@ export default function __Bootcamp3__() {
       <Image
         src="/build-img/svgo-svg/6BLF.svg"
         width="1000px"
+        intrinsicWidth={350}
+        intrinsicHeight={250}
       />
       <Pause />
       <OuterP>
@@ -2568,6 +2644,8 @@ export default function __Bootcamp3__() {
       <Image
         src="/build-img/svgo-svg/S-T0.svg"
         width="1000px"
+        intrinsicWidth={1000}
+        intrinsicHeight={250}
       />
       <Pause />
       <OuterP>
@@ -2582,6 +2660,8 @@ export default function __Bootcamp3__() {
       <Image
         src="/build-img/svgo-svg/S-T0.svg"
         width="350px"
+        intrinsicWidth={1000}
+        intrinsicHeight={250}
       />
       <Pause />
       <OuterP>
@@ -2596,6 +2676,8 @@ export default function __Bootcamp3__() {
       <Image
         src="/build-img/svgo-svg/6BLF.svg"
         width="350px"
+        intrinsicWidth={350}
+        intrinsicHeight={250}
       />
       <Pause />
       <OuterP>
@@ -2607,7 +2689,11 @@ export default function __Bootcamp3__() {
         {" "} no width attribute, native 1000px
       </OuterP>
       <Pause />
-      <Image src="/build-img/svgo-svg/S-T0.svg" />
+      <Image
+        src="/build-img/svgo-svg/S-T0.svg"
+        intrinsicWidth={1000}
+        intrinsicHeight={250}
+      />
       <Pause />
       <OuterP>
         <i>
@@ -2618,7 +2704,11 @@ export default function __Bootcamp3__() {
         {" "} no width attribute, native 350px
       </OuterP>
       <Pause />
-      <Image src="/build-img/svgo-svg/6BLF.svg" />
+      <Image
+        src="/build-img/svgo-svg/6BLF.svg"
+        intrinsicWidth={350}
+        intrinsicHeight={250}
+      />
       <Rest />
     </Article>
   );

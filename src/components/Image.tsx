@@ -10,7 +10,7 @@ import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
-import { MOBILE_MAX_WIDTH, MOBILE_TEXT_COLUMN_SIDE_INSET } from "~/constants";
+import { MOBILE_TEXT_COLUMN_SIDE_INSET } from "~/constants";
 import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
 
 const SHOW_DEBUG_COLORS = false;
@@ -22,6 +22,8 @@ type ImageProps = ParentProps &
     id?: string;
     width?: string;
     height?: string;
+    intrinsicWidth?: string | number;
+    intrinsicHeight?: string | number;
     local_url?: string;
     constrained?: boolean;
   };
@@ -46,65 +48,54 @@ const Image = (props: ImageProps) => {
   const currentViewportWidth = () =>
     typeof window === "undefined" ? 0 : window.innerWidth;
 
+  const positiveNumber = (value: string | number | undefined) => {
+    const number = Number(value);
+    return Number.isFinite(number) && number > 0 ? number : 0;
+  };
+
   const [after_first_click, set_after_first_click] = createSignal(false);
-  const [naturalImageWidth, setNaturalImageWidth] = createSignal(0);
-  const [naturalImageHeight, setNaturalImageHeight] = createSignal(0);
+  const [naturalImageWidth, setNaturalImageWidth] = createSignal(
+    positiveNumber(merged.intrinsicWidth),
+  );
+  const [naturalImageHeight, setNaturalImageHeight] = createSignal(
+    positiveNumber(merged.intrinsicHeight),
+  );
   const [constrained, setConstrained] = createSignal(merged.constrained);
   const [transitionsEnabled, setTransitionsEnabled] = createSignal(false);
   const [viewportWidth, setViewportWidth] = createSignal(
     currentViewportWidth(),
   );
 
-  const parseCssLength = (length: string) => {
-    const match = length.trim().match(/^([0-9]*\.?[0-9]+)(.*)$/);
-    if (!match) return null;
-
-    const value = parseFloat(match[1]);
-    if (!Number.isFinite(value) || value <= 0) return null;
-
-    return { value, unit: match[2] || "px" };
-  };
-
   const authorWidth = () => {
     const width = parseFloat(merged.width);
     return Number.isFinite(width) && width > 0 ? width : 0;
   };
 
-  const authorWidthFromHeight = () => {
-    if (merged.width) return "";
+  const displayWidth = () => authorWidth() || naturalImageWidth();
 
-    const height = parseCssLength(merged.height);
-    const naturalWidth = naturalImageWidth();
-    const naturalHeight = naturalImageHeight();
-    if (!height || !naturalWidth || !naturalHeight) return "";
-
-    return `${(height.value * naturalWidth) / naturalHeight}${height.unit}`;
+  const intrinsicAspectRatio = () => {
+    if (merged.width && merged.height) return "";
+    const width = naturalImageWidth();
+    const height = naturalImageHeight();
+    return width && height ? `${width} / ${height}` : "";
   };
 
-  const imageIntrinsicWidth = () =>
-    authorWidth() || parseFloat(authorWidthFromHeight()) || naturalImageWidth();
+  const useNativeDimensions = () => !merged.width && !merged.height;
 
   const imageStyleWidth = () => {
     if (merged.width) return merged.width;
-    const widthFromHeight = authorWidthFromHeight();
-    if (widthFromHeight) return widthFromHeight;
-    const intrinsicWidth = imageIntrinsicWidth();
-    return intrinsicWidth ? `${intrinsicWidth}px` : "";
+    if (merged.height) return "auto";
+    const width = displayWidth();
+    return width ? `${width}px` : "";
   };
 
   const availableViewportWidth = () =>
-    Math.max(
-      0,
-      viewportWidth() -
-        (viewportWidth() <= MOBILE_MAX_WIDTH
-          ? MOBILE_TEXT_COLUMN_SIDE_INSET * 2
-          : 0),
-    );
+    Math.max(0, viewportWidth() - MOBILE_TEXT_COLUMN_SIDE_INSET * 2);
 
   const targetScale = () => {
-    const intrinsicWidth = imageIntrinsicWidth();
-    if (!intrinsicWidth || !constrained()) return 1;
-    return Math.min(1, availableViewportWidth() / intrinsicWidth);
+    const width = displayWidth();
+    if (!width || !constrained()) return 1;
+    return Math.min(1, availableViewportWidth() / width);
   };
 
   const scale = createMemo(() => ({
@@ -188,8 +179,8 @@ const Image = (props: ImageProps) => {
   const handleClick = (event: MouseEvent) => {
     event.stopPropagation();
 
-    const intrinsicWidth = imageIntrinsicWidth();
-    if (window.innerWidth <= intrinsicWidth) {
+    const width = displayWidth();
+    if (window.innerWidth <= width) {
       enableTransitionForToggle();
       requestAnimationFrame(() => {
         toggleConstrained();
@@ -213,8 +204,9 @@ const Image = (props: ImageProps) => {
   };
 
   const handleImageLoad = () => {
-    setNaturalImageWidth(image_element.naturalWidth);
-    setNaturalImageHeight(image_element.naturalHeight);
+    if (!naturalImageWidth()) setNaturalImageWidth(image_element.naturalWidth);
+    if (!naturalImageHeight())
+      setNaturalImageHeight(image_element.naturalHeight);
     notifyHeightChangeAcrossFrames();
   };
 
@@ -230,7 +222,10 @@ const Image = (props: ImageProps) => {
       ? `background-color:${debugBackground()};`
       : "";
 
-    return `${debugColor}width:${width};max-width:none;box-sizing:border-box;max-height:${merged.height};${merged.style}`;
+    const height = merged.height || "auto";
+    const aspectRatio = intrinsicAspectRatio();
+
+    return `${debugColor}width:${width};height:${height};${aspectRatio ? `aspect-ratio:${aspectRatio};` : ""}max-width:none;box-sizing:border-box;${merged.style}`;
   };
 
   onMount(() => {
@@ -251,6 +246,8 @@ const Image = (props: ImageProps) => {
           <ImageOrSideImage
             ref={image_element}
             src={merged.src}
+            width={useNativeDimensions() ? merged.intrinsicWidth : undefined}
+            height={useNativeDimensions() ? merged.intrinsicHeight : undefined}
             side_image={false}
             local_url={merged.local_url}
             onLoad={handleImageLoad}

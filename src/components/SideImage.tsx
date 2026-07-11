@@ -10,6 +10,7 @@ import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
 import { useScale } from "~/store/ScaleProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
+import styleJoin from "~/utils/styleJoin";
 
 const LINE_HEIGHT = 30;
 
@@ -41,6 +42,8 @@ Vertical placement:
 type UserFacingSideImageProps = ParentProps &
   SharedProps & {
     src: string;
+    intrinsicWidth?: string | number;
+    intrinsicHeight?: string | number;
     offsetX?: string | number;
     offsetY?: string | number;
     atLeastAsWide?: boolean;
@@ -70,6 +73,10 @@ const SideImage = (props: InternalSideImageProps) => {
   const offsetY = () => scaledCssLength(props.offsetY, sideScale());
   const widthInflationOffset = () =>
     props.atLeastAsWide ? Math.max(0, (textWidth() - parentWidth()) / 2) : 0;
+  const intrinsicAspectRatio = () =>
+    props.intrinsicWidth && props.intrinsicHeight
+      ? `${props.intrinsicWidth} / ${props.intrinsicHeight}`
+      : undefined;
 
   const maybeChildren = () => {
     if (props.children) {
@@ -128,8 +135,13 @@ const SideImage = (props: InternalSideImageProps) => {
       >
         <ImageOrSideImage
           class={twJoin(props.class, "max-w-max", "cloud")}
-          style={props.style}
+          style={styleJoin(
+            { aspectRatio: intrinsicAspectRatio() },
+            props.style,
+          )}
           src={props.src}
+          width={props.intrinsicWidth}
+          height={props.intrinsicHeight}
           side_image={true}
           local_url={props.local_url}
         />
