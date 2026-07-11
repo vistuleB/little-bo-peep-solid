@@ -86,7 +86,7 @@
         >>_reorder_derivatives_
         >>_narrow_and_less_narrow_bends_
         >>_first_law_of_differentiation_
-        >>_define_product_of_constant_and_function_
+        >>_scalar_times_function_definition_
         >>_four_particles_
         >>_sum_rule_summary_
         >>_difference_quotient_illustration_
@@ -170,14 +170,18 @@
     |> In
         chapter=>>chain
         >>_dimensional_f_f_
-        >>_sueeyyy_
+        >>_dimensional_big_composition_
+        >>_dimensional_z_combinations_
         !! >>_dimensional_f_f_f_
         >>_dimensional_f_g_f_
         !! >>_dimensional_cos_f_
-        >>_dimensional_omega_
         >>_lorentz_factor_dimensionality_
         >>_physicist_choose_to_write_
         >>_dimensional_analysis_of_product_rule_
+        >>_hello_world_
+        >>_guess_reciprocal_name_
+        >>_dimensional_omega_
+        >>_dimensionality_t_over_v_
 
 
         !! ch5 exercise 'cycles':
@@ -321,5 +325,5 @@
         !! |> div
         !!     style=height:54px;width:200px;background-color:#333
         |> img
-            !! src=non-build-img/loading_screen.png
-            src=non-build-img/dark_calculus_1.svg
+            src=non-build-img/loading_screen.png
+            !! src=non-build-img/K12.svg

@@ -1,0 +1,51 @@
+|> Exercise
+    handle=_dimensional_f_f_f_
+
+    !! For what kinds of function $f$ (what kinds of
+    !! signature) does
+    For functions $f$ with what kind of
+    signature does the composition
+    $$
+    \Large f \circ f \circ f
+    $$
+    make sense?
+
+    |> Solution
+
+        A signature of the form
+
+        $$
+        f : [\tA] \ra [\tA]
+        $$
+
+        is necessary and sufficient. In more detail,
+        the composition
+
+        $$
+        f \circ f
+        $$
+
+        already requires a signature of this form 
+        by Exercise >>_dimensional_f_f_, after which
+
+        $$
+        f \circ f : [\tA] \ra [\tA]
+        $$
+
+        and
+
+        $$
+        f \circ f \circ f = f \circ (f \circ f)
+        $$
+
+        is also well-formed, since
+
+        $$
+        \begin{gathered}
+        f : [\tA] \ra [\tA] \\
+        \up{1.6}f \circ f : [\tA] \ra [\tA]
+        \end{gathered}
+        $$
+
+        can be used in lieu of $f$ and $g$ in a general
+        composition $f \circ g$.

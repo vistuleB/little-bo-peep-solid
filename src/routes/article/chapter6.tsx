@@ -12,7 +12,7 @@ import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBrea
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
-import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
+import { SolutionNote, Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter6__() {
@@ -22,7 +22,7 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_168_h.a.i_"
+      id="_172_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -592,7 +592,10 @@ const Rest = () => {
     </>}
     {visibleRestSections() > 3 && <>
       <Pause />
-      <Section id="section-6">
+      <Section
+        _handle="derivative_signature"
+        id="section-6"
+      >
         <OuterP>
           <b>
             Differentiation.
@@ -889,8 +892,8 @@ const Rest = () => {
         <OuterP>
           as listed in {" "}
           <InChapterLink
+            href="/article/chapter6#_152_h.a.i_"
             class="in-chapter-link"
-            href="#_152_h.a.i_"
           >
             Table 1.1
           </InChapterLink>
@@ -1462,7 +1465,7 @@ const Rest = () => {
           $$
           <ImageLeft
             src="/build-img/svgo-svg/jPk2.svg"
-            offsetX="5em"
+            offsetX="0em"
             atLeastAsWide={true}
           />
         </MathBlock>
@@ -1477,7 +1480,7 @@ const Rest = () => {
           $$
           <ImageRight
             src="/build-img/svgo-svg/qX4a.svg"
-            offsetX="5em"
+            offsetX="0em"
             atLeastAsWide={true}
           />
         </MathBlock>
@@ -2158,7 +2161,7 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/g4I6.svg"
-              offsetX="2em"
+              offsetX="-1em"
               atLeastAsWide={true}
             />
           </MathBlock>
@@ -2671,7 +2674,7 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_167_h.a.i_"
+        id="_171_h.a.i_"
       >
         <Exercise number={1}>
           <ExerciseStatement id="_160_h.a.i_">
@@ -2680,12 +2683,7 @@ const Rest = () => {
                 Exercise 1.
               </b>
               {" "}
-              For functions {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} with what kind of
-              signature does the composition
+              What constraints does the composition
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2695,7 +2693,13 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              make sense?
+              impose on the signature of {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -2923,7 +2927,13 @@ const Rest = () => {
               <i>
                 in fine
               </i>
-              .
+              , since {" "}
+              <NoBreak>
+                <Math>
+                  $f : [\tA] \ra [\tA]$
+                </Math>
+                .
+              </NoBreak>
             </OuterP>
           </Solution>
         </Exercise>
@@ -2932,6 +2942,213 @@ const Rest = () => {
             <OuterP>
               <b>
                 Exercise 3.
+              </b>
+              {" "}
+              What are
+              the signatures of {" "}
+              <NoBreak>
+                <Math>
+                  $1/z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $-z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z + z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z/z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $z - z$
+              </Math>
+              {" "}
+              and {" "}
+              <NoBreak>
+                <Math>
+                  $z \circ z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              where {" "}
+              <NoBreak>
+                <Math>
+                  $z : [\lbs] \ra [\te&#123;£&#125;]$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              We have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (1/z) : [\lbs] \ra [1/\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              z^2 : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;^2\rt&#123;0.1&#125;]
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (-z) : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (z + z) : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (z/z) : [\lbs] \ra [\rt&#123;0.1&#125;1\rt&#123;0.1&#125;]
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (z - z) : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              applying the rules of {" "}
+              <InChapterLink
+                href="/article/chapter6#_152_h.a.i_"
+                class="in-chapter-link"
+              >
+                Table 1.1
+              </InChapterLink>
+              {" "} with {" "}
+              <Math>
+                $f = g = z$
+              </Math>
+              {" "}
+              and of {" "}
+              <InChapterLink
+                href="/article/chapter6#_153_h.a.i_"
+                class="in-chapter-link"
+              >
+                Table 1.2
+              </InChapterLink>
+              {" "} with {" "}
+              <NoBreak>
+                <Math>
+                  $f = z$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              On the other hand,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z \circ z
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is not a well-formed composition, and does not have
+              a well-defined signature, since the output units of
+              {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} do not match the input units of {" "}
+              <NoBreak>
+                <Math>
+                  $z$
+                </Math>
+                !
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                Since
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                -z = (-1)z,
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                z + z = 2z,
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                z - z = 0z
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                three of the cases considered are just special
+                cases of multiplying the function by a 
+                constant. (Which does not change the signature, as long
+                as the constant is dimensionless.)
+              </OuterP>
+              <OuterP class="indent-10">
+                [Nb: The multiplication of a function by a constant
+                is formally treated in {" "}
+                <OutChapterLink
+                  href="/article/chapter4#_69_h.a.i_"
+                  class="out-chapter-link"
+                >
+                  Exercise 12 of Chapter 4
+                </OutChapterLink>
+                .]
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={4}>
+          <ExerciseStatement id="_163_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 4.
               </b>
               {" "}
               What kinds of functions {" "}
@@ -3009,99 +3226,6 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={4}>
-          <ExerciseStatement id="_163_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 4.
-              </b>
-              {" "}
-              If the expression
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \cos(\omega t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is to be dimensionally consistent,
-              and if {" "}
-              <Math>
-                $t$
-              </Math>
-              {" "} has units of seconds, then what units
-              must {" "}
-              <Math>
-                $\omega$
-              </Math>
-              {" "} have?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos : [1] \ra [1]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos : [\rad] \ra [1]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              rephrased (we have {" "}
-              <NoBreak>
-                <Math>
-                  $[\rad] = [1]$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} putting “radians” is a
-              matter of “author's choice” semantic emphasis), {" "}
-              <Math>
-                $\omega$
-              </Math>
-              {" "} must have units of
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              radians per second
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              per second
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (equiv.) in order to cancel out the seconds in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $t$
-                </Math>
-                ”.
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image src="/build-img/svgo-svg/5qHf.svg" />
-          </Solution>
-        </Exercise>
         <Exercise number={5}>
           <ExerciseStatement id="_164_h.a.i_">
             <OuterP>
@@ -3174,7 +3298,7 @@ const Rest = () => {
               <i>
                 Lorentz factor
               </i>
-              {" "} in physics. It is:
+              {" "} in physics. It is also dimensionless:
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3182,12 +3306,6 @@ const Rest = () => {
               \gamma = &#123;1\over \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;&#125;.
               $$
             </MathBlock>
-            <Pause />
-            <OuterP>
-              (Because the reciprocal of a dimensionless
-              quantity is dimensionless, the Lorentz factor
-              is also dimensionless.)
-            </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={6}>
@@ -3207,7 +3325,9 @@ const Rest = () => {
                 $c$
               </Math>
               {" "} is the speed of the light,
-              why might we still choose
+              why might 
+              a physicist
+              still choose
               to write expressions containing {" "}
               <NoBreak>
                 ‘
@@ -3223,7 +3343,7 @@ const Rest = () => {
               Besides wanting to “remind the general
               formula”, one reason is
               to keep expressions dimensionally consistent.
-              For example, the reciprocal of the Lorentz factor
+              For example, the Lorentz factor reciprocal
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3296,7 +3416,8 @@ const Rest = () => {
               </NoBreak>
               {" "} which is also a speed squared,
               but then the entire square root is a speed instead of
-              being dimensionless, as the Lorentz factor should be—failures on all sides!
+              being dimensionless, 
+              is it should be—failures on all sides!
             </OuterP>
           </Solution>
         </Exercise>
@@ -3434,6 +3555,525 @@ const Rest = () => {
               signature constraints, and evaluate to the same final
               signature.)
             </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={8}>
+          <ExerciseStatement id="_167_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 8.
+              </b>
+              {" "}
+              Use dimensional analysis to
+              conjecture a formula for
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;1\over f&#125;\right)'
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for {" "}
+              <Math>
+                $f : \rr \ra \rr$
+              </Math>
+              {" "} differentiable. 
+              (The “building blocks” that appear in the formula
+              should be {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $f'$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The expression
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;1\over f&#125;\right)'
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              does not on its own impose any restrictions on
+              the signature of {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so we can consider
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [\tA] \ra [\tB]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              of generic signature. Then
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over f&#125; : [\tA] \ra \left[&#123;1\over\tB&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as in the second half of {" "}
+              <InChapterLink
+                href="/article/chapter6#_153_h.a.i_"
+                class="in-chapter-link"
+              >
+                Table 1.2
+              </InChapterLink>
+              &#8288;,
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;1\over f&#125;\right)' : [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              per the usual effect of differentiation on units.
+            </OuterP>
+            <OuterP class="indent-10">
+              In order to achieve the signature
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              using
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [\tA] \ra [\tB]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f' : [\tA] \ra \left[&#123;\tB\over \tA&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as building blocks we can start with {" "}
+              <Math>
+                $f'$
+              </Math>
+              {" "} and divide
+              by {" "}
+              <NoBreak>
+                <Math>
+                  $f^2$
+                </Math>
+                .
+              </NoBreak>
+              {" "} 
+              (In fact, this is the only combination that works, modulo
+              multiplication by a dimensionless constant.)
+              Specifically, since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [\tA] \ra [\tB]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f^2 : [\tA] \ra [\tB^2]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over f^2&#125; : [\tA] \ra \left[&#123;1\over\tB^2&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              multiplying {" "}
+              <Math>
+                $f'$
+              </Math>
+              {" "} by {" "}
+              <Math>
+                $&#123;1\over f^2&#125;$
+              </Math>
+              {" "} gives us a function
+              of signature
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              [\tA] \ra \left[&#123;\tB\over \,\tA^&#123;\vphantom&#123;2&#125;&#125;&#125;\cdot&#123;1\over\tB^2&#125;\right]\,\, = \,\,[\tA] \ra \left[&#123;1\over\tA\tB&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              as desired, which makes
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                &#123;f'\over f^2&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              a plausible conjecture.
+            </OuterP>
+            <OuterP class="indent-10">
+              However, we know from Exercise X that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;1\over f&#125;\right)'
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              should have opposite sign to {" "}
+              <NoBreak>
+                <Math>
+                  $f'$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} whereas
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f'\over f^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              does {" "}
+              <i>
+                not
+              </i>
+              {" "} have opposite sign, since {" "}
+              <Math>
+                $f^2$
+              </Math>
+              {" "} is
+              nonnegative. (Nb: When {" "}
+              <Math>
+                $f = 0$
+              </Math>
+              {" "} neither {" "}
+              <Math>
+                $1/f$
+              </Math>
+              {" "} nor
+              {" "}
+              <Math>
+                $(1/f)'$
+              </Math>
+              {" "} 
+              nor {" "}
+              <Math>
+                $f'/f^2$
+              </Math>
+              {" "}
+              are defined, so those points are not our
+              concern.)
+            </OuterP>
+            <OuterP class="indent-10">
+              Since our conjecture is at least “consistently
+              wrong”—by which we mean that our formula {" "}
+              <i>
+                always
+              </i>
+              {" "} has the wrong sign—a plausible fix
+              is just to negate the expression (and indeed
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              negation
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              is one of the things we can do to a function
+              without changing its signature, per {" "}
+              <InChapterLink
+                href="/article/chapter6#_153_h.a.i_"
+                class="in-chapter-link"
+              >
+                Table 1.2
+              </InChapterLink>
+              &#8288;), giving
+              us
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \left(&#123;1\over f&#125;\right)' = -&#123;f'\over f^2&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              as an “educated guess” for a formula for {" "}
+              <NoBreak>
+                <Math>
+                  $(&#123;1\over f&#125;)'$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={9}>
+          <ExerciseStatement id="_168_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 9.
+              </b>
+              {" "}
+              The formula given at the end of the solution
+              to {" "}
+              <InChapterLink
+                href="/article/chapter6#_167_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 8
+              </InChapterLink>
+              {" "} happens to be the true,
+              “correct” formula for {" "}
+              <NoBreak>
+                <Math>
+                  $(&#123;1\over f&#125;)'$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} for a differentiable
+              function {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                .
+              </NoBreak>
+              {" "} What {" "}
+              <i>
+                name
+              </i>
+              {" "} do
+              we expect this formula to have, as it takes its place
+              in the mathematical pantheon?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Hello.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={10}>
+          <ExerciseStatement id="_169_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 10.
+              </b>
+              {" "}
+              If the expression
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \cos(\omega t)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is to be dimensionally consistent,
+              and if {" "}
+              <Math>
+                $t$
+              </Math>
+              {" "} has units of seconds, then what units
+              must {" "}
+              <Math>
+                $\omega$
+              </Math>
+              {" "} have?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              Since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos : [1] \ra [1]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos : [\rad] \ra [1]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              rephrased (we have {" "}
+              <NoBreak>
+                <Math>
+                  $[\rad] = [1]$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} putting “radians” is a
+              matter of “author's choice” semantic emphasis), {" "}
+              <Math>
+                $\omega$
+              </Math>
+              {" "} must have units of
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              radians per second
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              or
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              per second
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              (equiv.) in order to cancel out the seconds in {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $t$
+                </Math>
+                ”.
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image src="/build-img/svgo-svg/5qHf.svg" />
+          </Solution>
+        </Exercise>
+        <Exercise number={11}>
+          <ExerciseStatement id="_170_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 11.
+              </b>
+              {" "}
+              If {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} is a spatial displacement and {" "}
+              <Math>
+                $v$
+              </Math>
+              {" "} is speed, what is
+              the dimension of {" "}
+              <NoBreak>
+                <Math>
+                  $x/v$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              It is time, since speed has the form
+              “distance over time”, which cancels the “distance”
+              dimension on top:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\te&#123;DISTANCE&#125;\over\te&#123;SPEED&#125;&#125; = &#123;\te&#123;DISTANCE&#125;\over \left(&#123;\te&#123;DISTANCE&#125; \over &#123;\te&#123;TIME&#125;&#125;&#125;\right)&#125; = &#123;\te&#123;DISTANCE&#125;&#125;\cdot &#123;\te&#123;TIME&#125;\over \te&#123;DISTANCE&#125;&#125; = \te&#123;TIME&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                What you see above are cancellations of
+                dimensions (or units, in a related computation),
+                not exact cancellation of quantities—what interests
+                us is the {" "}
+                <i>
+                  dimension
+                </i>
+                {" "} of the final quantity,
+                not its exact value.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                It is a good rule of thumb to remember that
+                “one over speed” converts distance to time via
+                multiplication, just like speed converts time
+                to distance via multiplication. One is a consequence of the other:
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
       </Exercises>

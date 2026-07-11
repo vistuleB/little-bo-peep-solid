@@ -17086,7 +17086,7 @@ const Rest = () => {
               projected (cf. Solution 3 of Exercise 0):
             </OuterP>
             <Pause />
-            <Image src="/build-img/svgo-svg/k0fx.svg" />
+            <Image src="/tmp-images/e5_ruler_sphere_z_switched_combined.svg" />
             <Pause />
             <OuterP>
               But the 
@@ -17095,11 +17095,8 @@ const Rest = () => {
               <Math>
                 $(x_2, y_2, z_2)$
               </Math>
-              {" "} onto {" "}
-              <Math>
-                $\vk$
-              </Math>
-              {" "}
+              {" "} onto 
+              the vertical ruler
               equals simply
             </OuterP>
             <Pause />
@@ -17157,7 +17154,7 @@ const Rest = () => {
               by scaling.
             </OuterP>
             <OuterP class="indent-10">
-              Likewise, we find that
+              Likewise,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -17167,7 +17164,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is the projection of {" "}
+              will be the projection of {" "}
               <Math>
                 $y_1\rt&#123;0.1&#125;\vj$
               </Math>
@@ -17179,7 +17176,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              and that
+              and
             </OuterP>
             <Pause />
             <MathBlock>
@@ -17189,7 +17186,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is the projection of {" "}
+              will be the projection of {" "}
               <Math>
                 $x_1\vi$
               </Math>

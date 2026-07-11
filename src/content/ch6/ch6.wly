@@ -181,7 +181,7 @@
     exist, and likewise when dividing. We have:
 
     |> Image
-        handle=table_1_1
+        handle=table_1_1 Table 1.1
         src=images/c6_flowers_here_bob.svg
 
     ...summarizing the constraints that appear at the
@@ -200,7 +200,7 @@
     and _reciprocal_, defined by formulas here:
 
     |> Image
-        handle=table_1_2
+        handle=table_1_2 Table 1.2
         src=images/c6_flowers_here_two_more_v2.svg
 
     [*See [Chapter >>trigonometry#decoy:5 §>>trigonometry-derivatives#decoy:2](>>negation-of-a-function-first-mention).]
@@ -210,7 +210,7 @@
     !! $$
 
 |> Section
-    handle=derivative_signature
+    _handle=derivative_signature
     *Differentiation.*
     As reviewed in [Chapter >>derivatives#decoy:4](>>units_of_the_derivative)
     (see also Exercise >>_complete_the_missing_units_#decoy:6 of Chapter >>derivatives#decoy:4),
@@ -378,7 +378,7 @@
     \end{aligned}
     $$
 
-    as listed in [Table 1.1](>>table_1_1),
+    as listed in >>table_1_1,
     while the subsequent taking of a derivative doesn't
     impose any new constraints. 
     !! This is the sole
@@ -678,7 +678,7 @@
     $$
     |> ImageLeft
         src=images/c6_fg_prime_signature_cloud_v2.svg
-        offset-x=5em
+        offset-x=0em
 
     whereas
 
@@ -687,7 +687,7 @@
     $$
     |> ImageRight
         src=images/c6_f_prime_g_prime_signature_cloud_v2.svg
-        offset-x=5em
+        offset-x=0em
 
     as is easy to check, and
 
@@ -1169,7 +1169,7 @@
         $$
         |> ImageRight
             src=images/c6_composition_reminder_cloud.svg
-            offset-x=2em
+            offset-x=-1em
         
         we can write the same equation as
 

@@ -72,6 +72,8 @@ window.MathJax = {
       s: ["\\text{s}"],
       Rad: ["\\text{Rad}"],
       rad: ["\\text{rad}"],
+      kg: ["\\text{kg}"],
+      lbs: ["\\text{lbs}"],
       uA: ["[\\text{A}]"],
       uB: ["[\\text{B}]"],
       uC: ["[\\text{C}]"],

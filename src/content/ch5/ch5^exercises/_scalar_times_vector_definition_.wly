@@ -1,8 +1,8 @@
 |> Exercise
     handle=_scalar_times_vector_definition_
 
-    Similarly to Exercise 9, suggest a definition for
-    the product
+    Similarly to Exercise >>_vector_addition_definition_,
+    suggest a definition for the product
 
     $$
     c\cdot\vec{v}

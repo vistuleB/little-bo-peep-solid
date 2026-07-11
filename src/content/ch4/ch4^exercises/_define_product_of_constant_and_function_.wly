@@ -1,6 +1,6 @@
 |> Exercise
     ref=rence
-    handle=_define_product_of_constant_and_function_
+    handle=_scalar_times_function_definition_
     The solution to the previous exercise
     erroneously assumes that the product of a
     constant and a function has been defined. It

@@ -1,12 +1,17 @@
 |> Exercise
     handle=_dimensional_f_f_
 
-    For functions $f$ with what kind of
-    signature does the composition
+    !! For functions $f$ with what kind of
+    !! signature does the composition
+    !! $$
+    !! f \circ f
+    !! $$
+    !! make sense?
+    What constraints does the composition
     $$
     f \circ f
     $$
-    make sense?
+    impose on the signature of $f$?
 
     |> Solution
 
@@ -36,7 +41,7 @@
 
         $$
         \begin{gathered}
-        !! some mathjax bug requires this \up{0}, on last check:
+        !! found mathjax bug that requires this \up{0}:
         \up{0}[\tC] = [\tA] \\
         \up{1.6}[\tD] = [\tB]
         \end{gathered}
@@ -46,25 +51,13 @@
         $[\tD] = [\tA]$, collapses the signature of $f$
         to “$[\tA] \ra [\tA]$”.
 
-        !! The output of $f$ is fed back to into itself
-        !! as an input, so a signature of the form
-
-        !! $$
-        !! f : [\tA] \ra [\tA]
-        !! $$
-
-        !! is required, and is also sufficient by inspection!
-
 |> Exercise
-    handle=_sueeyyy_
+    handle=_dimensional_big_composition_
 
-    !! For wich functions $f$ (with what kind of
-    !! signature) does the function
     What constraints does the assemblage
     $$
     f \circ {f\over f\circ f}
     $$
-    !! make sense?
     impose on the signature of $f$?
 
     |> Solution
@@ -114,93 +107,106 @@
         
         $$f : [1] \ra [1]$$
 
-        ..._in fine_.
-
-        !! Because
-        !! $$
-        !! f\circ f
-        !! $$
-        !! has the same output units as $f$, the fraction
-        !! $$
-        !! {f\over f\circ f}
-        !! $$
-        !! outputs a dimensionless quantity (same units over
-        !! same units); but the value of this fra
-
+        ..._in fine_, since $f : [\tA] \ra [\tA]$.
 
 |> Exercise
-    handle=_dimensional_f_f_f_
-
-    !! For what kinds of function $f$ (what kinds of
-    !! signature) does
-    For functions $f$ with what kind of
-    signature does the composition
-    $$
-    \Large f \circ f \circ f
-    $$
-    make sense?
+    handle=_dimensional_z_combinations_
+    !! If , 
+    What are
+    the signatures of $1/z$, $z^2$, $-z$, $z + z$, $z/z$, $z - z$
+    and $z \circ z$,
+    where $z : [\lbs] \ra [\te{£}]$?
+    !! is the function of Example 1?
 
     |> Solution
 
-        A signature of the form
+        !! The signatures 
+        !! of $1/z$, $z^2$, $-z$, $z + z$ and $z/z$
+        !! are respectively 
+        We have
 
         $$
-        f : [\tA] \ra [\tA]
+        (1/z) : [\lbs] \ra [1/\rt{0.1}\te{£}\rt{0.1}]
+        !! [\lbs] \ra [1/\rt{0.1}\te{£}\rt{0.1}]
+        $$
+        $$
+        z^2 : [\lbs] \ra [\rt{0.1}\te{£}^2\rt{0.1}]
+        !! [\lbs] \ra [\rt{0.1}\te{£}^2\rt{0.1}]
+        $$
+        $$
+        (-z) : [\lbs] \ra [\rt{0.1}\te{£}\rt{0.1}]
+        !! [\lbs] \ra [\rt{0.1}\te{£}\rt{0.1}]
+        $$
+        $$
+        (z + z) : [\lbs] \ra [\rt{0.1}\te{£}\rt{0.1}]
+        !! [\lbs] \ra [\rt{0.1}\te{£}\rt{0.1}]
+        $$
+        $$
+        (z/z) : [\lbs] \ra [\rt{0.1}1\rt{0.1}]
+        !! [\lbs] \ra [1]
+        $$
+        $$
+        (z - z) : [\lbs] \ra [\rt{0.1}\te{£}\rt{0.1}]
+        !! [\lbs] \ra [1]
         $$
 
-        is necessary and sufficient. In more detail,
-        the composition
+        !! for $1/z$, $z^2$, $-z$, $z + z$ and $z/z$ respectively
+        applying the rules of >>table_1_1 with $f = g = z$
+        and of >>table_1_2 with $f = z$. 
+        
+        On the other hand,
 
         $$
-        f \circ f
+        z \circ z
         $$
 
-        already requires a signature of this form 
-        by Exercise >>_dimensional_f_f_, after which
+        is not a well-formed composition, and does not have
+        a well-defined signature, since the output units of
+        $z$ do not match the input units of $z$!
 
-        $$
-        f \circ f : [\tA] \ra [\tA]
-        $$
+        !! as obtained from the rules for adding 
+        !! for the function $z$ of >>table_1_1, as obtained by
+        !! reciprocating 
 
-        and
+        |> SolutionNote
 
-        $$
-        f \circ f \circ f = f \circ (f \circ f)
-        $$
+            Since
 
-        is also well-formed, since
+            $$
+            -z = (-1)z,
+            $$
+            $$
+            z + z = 2z,
+            $$
 
-        $$
-        \begin{gathered}
-        f : [\tA] \ra [\tA] \\
-        \up{1.6}f \circ f : [\tA] \ra [\tA]
-        \end{gathered}
-        $$
+            !! and
 
-        can be used in lieu of $f$ and $g$ in a general
-        composition $f \circ g$.
+            $$
+            z - z = 0z
+            $$
+
+            three of the cases considered are just special
+            cases of multiplying the function by a 
+            constant. (Which does not change the signature, as long
+            as the constant is dimensionless.)
+
+            [Nb: The multiplication of a function by a constant
+            is formally treated in Exercise >>_scalar_times_function_definition_#decoy:0
+            of Chapter >>derivatives#decoy:0.]
+            !! where the multiplication of a function by a
+            !! constant brings to light a “missing operation”. 
+            !! we can see that three of these are just special
+            !! cases of multiplying a function by a constant.
 
 |> Exercise
     handle=_dimensional_f_g_f_
 
-    !! What restrictions on the signature of $f$ and $g$
-    !! does the composition
-    !! $$
-    !! \Large f \circ g \circ f
-    !! $$
-    !! impose?
     What kinds of functions $f$ and $g$, signature-wise,
     does the composition 
     $$
     f \circ g \circ f
     $$
     require?
-    !! For functions $f$ and $g$ with what kind of signature 
-    !! does the composition
-    !! $$
-    !! \Large f \circ g \circ f
-    !! $$
-    !! make sense?
 
     |> Solution
 
@@ -222,7 +228,9 @@
 
     If units of time and space are chosen
     such that $c = 1$ where $c$ is the speed of the light,
-    why might we still choose
+    why might 
+    a physicist
+    still choose
     to write expressions containing ‘$c$’?
 
     |> Solution
@@ -255,7 +263,7 @@
         Besides wanting to “remind the general
         formula”, one reason is
         to keep expressions dimensionally consistent.
-        For example, the reciprocal of the Lorentz factor
+        For example, the Lorentz factor reciprocal
 
         $$
         \sqrt{1 - {v^2\over c^2}}
@@ -279,9 +287,9 @@
         from a dimensionless ‘$1$’, or, in a last-ditch effort, we pretend
         that ‘$1$’ stands for ‘$c^2$’, which is also a speed squared,
         but then the entire square root is a speed instead of
-        being dimensionless, as the Lorentz factor should be—failures on all sides!
-
-
+        being dimensionless, 
+        is it should be—failures on all sides!
+        !! as the Lorentz factor should be—failures on all sides!
 
 |> Exercise
     handle=_dimensional_analysis_of_product_rule_
@@ -295,16 +303,6 @@
 
     |> Solution
         Products of the form
-
-        !! $$
-        !! fg
-        !! $$
-        !! $$
-        !! f'g
-        !! $$
-        !! $$
-        !! fg'
-        !! $$
 
         $$
         \begin{gathered}
@@ -373,3 +371,171 @@
         !! $f'g + g'f$
         !! are found to have the same signature,
         !! so the equation is dimensionally consistent.
+
+|> Exercise
+    handle=_hello_world_
+    Use dimensional analysis to
+    conjecture a formula for
+
+    $$
+    \left({1\over f}\right)'
+    $$
+
+    for $f : \rr \ra \rr$ differentiable. 
+    (The “building blocks” that appear in the formula
+    should be $f$, $f'$.)
+
+    !! for a generic differentiable function
+    !! $f : \rr \ra \rr$ via dimensional analysis.
+
+    |> Solution
+
+        The expression
+
+        $$
+        \left({1\over f}\right)'
+        $$
+
+        does not on its own impose any restrictions on
+        the signature of $f$, so we can consider
+
+        $$
+        f : [\tA] \ra [\tB]
+        $$
+
+        of generic signature. Then
+
+        $$
+        {1\over f} : [\tA] \ra \left[{1\over\tB}\right]
+        $$
+
+        as in the second half of >>table_1_2,
+        and
+
+        $$
+        \left({1\over f}\right)' : [\tA] \ra \left[{1\over\tA\tB}\right]
+        $$
+
+        !! dividing the output units by the input units.
+        !! which divides the output
+        !! units by the input units.
+        per the usual effect of differentiation on units.
+
+        In order to achieve the signature 
+
+        $$
+        [\tA] \ra \left[{1\over\tA\tB}\right]
+        $$
+
+        using
+
+        $$
+        f : [\tA] \ra [\tB]
+        $$
+
+        and
+
+        $$
+        f' : [\tA] \ra \left[{\tB\over \tA}\right]
+        $$
+
+        as building blocks we can start with $f'$ and divide
+        by $f^2$. 
+        (In fact, this is the only combination that works, modulo
+        multiplication by a dimensionless constant.)
+        Specifically, since
+
+        $$
+        f : [\tA] \ra [\tB]
+        $$
+
+        we have
+        
+        $$
+        f^2 : [\tA] \ra [\tB^2]
+        $$
+
+        and
+
+        $$
+        {1\over f^2} : [\tA] \ra \left[{1\over\tB^2}\right]
+        $$
+
+        multiplying $f'$ by ${1\over f^2}$ gives us a function
+        of signature
+
+        $$
+        !! {f'\over f^2} : 
+        [\tA] \ra \left[{\tB\over \,\tA^{\vphantom{2}}}\cdot{1\over\tB^2}\right]\,\, = \,\,[\tA] \ra \left[{1\over\tA\tB}\right]
+        $$
+
+        as desired, which makes
+
+        |> Boxed
+            $$
+            !! f'\cdot {1\over f^2} = {f'\over f^2}
+            !! \left({1\over f}\right)' = {f'\over f^2}
+            {f'\over f^2}
+            $$
+
+        a plausible conjecture.
+
+        However, we know from Exercise X that
+
+        $$
+        \left({1\over f}\right)'
+        $$
+
+        should have opposite sign to $f'$, whereas
+
+        $$
+        {f'\over f^2}
+        $$
+
+        does _not_ have opposite sign, since $f^2$ is
+        nonnegative. (Nb: When $f = 0$ neither $1/f$ nor
+        $(1/f)'$ 
+        nor $f'/f^2$
+        are defined, so those points are not our
+        concern.)
+        !! positive. (Or zero, in which case _neither_
+        !! $(1/f)'$ nor $f'/f^2$ are defined, which is
+        !! another “good sign” for our conjecture.) 
+        !! (The
+        !! only “bad sign” for our conjecture is being the
+        !! sign itself, right now!)
+
+        Since our conjecture is at least “consistently
+        wrong”—by which we mean that our formula _always_ has the wrong sign—a plausible fix
+        is just to negate the expression (and indeed
+
+        __negation__
+
+        is one of the things we can do to a function
+        without changing its signature, per >>table_1_2), giving
+        us 
+
+        |> Boxed
+            $$
+            \left({1\over f}\right)' = -{f'\over f^2}
+            $$
+
+        as an “educated guess” for a formula for $({1\over f})'$.
+
+        !! |> SolutionNote
+
+        !!     This boxed equation is the correct formula, and is called the
+        !!     _reciprocal rule_.
+
+|> Exercise
+    handle=_guess_reciprocal_name_
+    The formula given at the end of the solution
+    to Exercise >>_hello_world_ happens to be the true,
+    “correct” formula for $({1\over f})'$, for a differentiable
+    function $f$. What _name_ do
+    we expect this formula to have, as it takes its place
+    in the mathematical pantheon?
+
+    |> Solution
+
+        Hello.
