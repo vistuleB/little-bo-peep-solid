@@ -1,6 +1,7 @@
 import { SetStoreFunction } from "solid-js/store";
 import {
   FAST_ROUTE_LOAD_MS,
+  FIRST_ROUTE_LOAD_GRACE_MS,
   HORIZONTAL_PAGE_ARRIVAL_OFFSET,
   LOADING_SPINNER_DELAY_MS,
   ROUTE_LOAD_MEMORY_TTL_MS,
@@ -92,17 +93,31 @@ const loadMsForTarget = (
   return target === "top" ? memory.firstContentPaintMs : memory.routeReadyMs;
 };
 
-const recentFastLoad = (
+const recentLoadMs = (
   store: Store,
   routePath: string,
   target: RouteLoadTarget,
 ) => {
   const memory = store.route_load_memory[routePath];
   const loadMs = loadMsForTarget(store, routePath, target);
-  if (!memory || loadMs === undefined) return false;
+  if (!memory || loadMs === undefined) return undefined;
 
   const recent = Date.now() - memory.measuredAt < ROUTE_LOAD_MEMORY_TTL_MS;
-  return recent && loadMs < FAST_ROUTE_LOAD_MS;
+  return recent ? loadMs : undefined;
+};
+
+const showSpinnerAfter = (
+  delayMs: number,
+  store: Store,
+  set_store: SetStoreFunction<Store>,
+) => {
+  setSpinnerCurrentlyVisible(set_store, false);
+  loadingDelayTimeout = window.setTimeout(() => {
+    setSpinnerCurrentlyVisible(set_store, true);
+    if (store.route_phase === "loading-new-route") {
+      maybeSetProvisionalDestinationTopScroll(store, set_store);
+    }
+  }, delayMs);
 };
 
 export const startRouteLoad = (
@@ -140,14 +155,14 @@ export const startRouteLoad = (
     return;
   }
 
-  if (recentFastLoad(store, routePath, target)) {
-    setSpinnerCurrentlyVisible(set_store, false);
-    loadingDelayTimeout = window.setTimeout(() => {
-      setSpinnerCurrentlyVisible(set_store, true);
-      if (store.route_phase === "loading-new-route") {
-        maybeSetProvisionalDestinationTopScroll(store, set_store);
-      }
-    }, LOADING_SPINNER_DELAY_MS);
+  const previousLoadMs = recentLoadMs(store, routePath, target);
+  if (previousLoadMs === undefined) {
+    showSpinnerAfter(FIRST_ROUTE_LOAD_GRACE_MS, store, set_store);
+    return;
+  }
+
+  if (previousLoadMs < FAST_ROUTE_LOAD_MS) {
+    showSpinnerAfter(LOADING_SPINNER_DELAY_MS, store, set_store);
     return;
   }
 
