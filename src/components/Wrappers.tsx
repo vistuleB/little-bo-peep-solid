@@ -1,6 +1,7 @@
 import { JSX, ParentProps } from "solid-js";
 import { SectionDivider } from "./SectionDivider";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { Spacer } from "./Spacer";
 
 interface ExampleProps {
   style?: string | JSX.CSSProperties;
@@ -24,11 +25,7 @@ export const Section = (
 
 export const Example = (props: ParentProps<ExampleProps>) => {
   return (
-    <div
-      class={props.class}
-      style={props.style}
-      id={props.id}
-    >
+    <div class={props.class} style={props.style} id={props.id}>
       {props.children}
     </div>
   );
@@ -51,5 +48,5 @@ export const InTextWarning = (props: ParentProps) => {
 };
 
 export const Pause = () => {
-  return <div class="spacer-150" />;
+  return <Spacer />;
 };

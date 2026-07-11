@@ -5,11 +5,11 @@ import {
   children,
   For,
   createEffect,
+  createMemo,
   onCleanup,
   createSignal,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
-import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
 import styleJoin from "~/utils/styleJoin";
 
@@ -67,22 +67,31 @@ const Grid = (_props: GridProps) => {
     onCleanup(() => window.removeEventListener("resize", handleResize));
   });
 
-  let parentSpan: HTMLDivElement | undefined;
+  const visualChildren = createMemo(() => {
+    if (!props.columnFirst) return children_array;
 
-  createEffect(() => {
-    if (!props.columnFirst) return;
-    // modify each child order in the grid so the grip will be filled top to bottom instead of left to right
-    const children = parentSpan?.children || [];
-    const rows = Math.ceil(children.length / cols());
-    for (let i = 0; i < children.length; i++) {
-      const elementCol = Math.ceil((i + 1) / rows);
-      const elementRow = (i % rows) + 1;
-      const precedingElementsInPrevRows = (elementRow - 1) * cols();
-      const precedingElementsInCurrRow = elementCol - 1;
-      let number = precedingElementsInPrevRows + precedingElementsInCurrRow;
-      children[i].setAttribute("style", `order: ${number}`);
-    }
+    const rows = Math.ceil(children_array.length / cols());
+    return children_array
+      .map((child, index) => {
+        const column = Math.floor(index / rows);
+        const row = index % rows;
+        return { child, order: row * cols() + column };
+      })
+      .sort((a, b) => a.order - b.order)
+      .map(({ child }) => child);
   });
+
+  const overflowCount = () => visualChildren().length % cols();
+  const centerOverflow = () =>
+    Boolean(props.centerOnOverflow && overflowCount() > 0);
+  const regularChildren = () =>
+    centerOverflow()
+      ? visualChildren().slice(0, -overflowCount())
+      : visualChildren();
+  const overflowChildren = () =>
+    centerOverflow() ? visualChildren().slice(-overflowCount()) : [];
+  const cellWidth = () =>
+    `calc((100% - ${cols() - 1} * ${props.gap}) / ${cols()})`;
 
   return (
     <div
@@ -97,7 +106,6 @@ const Grid = (_props: GridProps) => {
       )}
     >
       <div
-        ref={parentSpan}
         class={`text-column !grid list-none`}
         style={{
           "grid-template-columns": `repeat(${cols()}, 1fr)`,
@@ -106,20 +114,33 @@ const Grid = (_props: GridProps) => {
           gap: props.gap,
         }}
       >
-        <For each={children_array}>
-          {(child, index) => {
-            const isLastInRow =
-              children_array.length - index() < cols() &&
-              children_array.length % cols() !== 0;
-            return (
-              <span
-                class={twJoin("w-max", isLastInRow && "col-span-full w-max")}
-              >
-                {child}
-              </span>
-            );
-          }}
+        <For each={regularChildren()}>
+          {(child) => <span class="w-max">{child}</span>}
         </For>
+        {centerOverflow() && (
+          <div
+            class="col-span-full flex justify-center"
+            style={{
+              gap: props.gap,
+              width: "100%",
+              "justify-self": "stretch",
+            }}
+          >
+            <For each={overflowChildren()}>
+              {(child) => (
+                <span
+                  class="flex w-max"
+                  style={{
+                    width: cellWidth(),
+                    "justify-content": props.placeItems,
+                  }}
+                >
+                  {child}
+                </span>
+              )}
+            </For>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ import {
 import { twJoin } from "tailwind-merge";
 
 const SOLUTION_BUTTON_INLINE_PADDING = 20;
-import { Spacer, SpacerSm, SpacerXs, SpacerXXs } from "./Spacer";
+import { Spacer } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
   useExercisesContext,
@@ -40,38 +40,24 @@ type SolutionProps = ParentProps &
   };
 
 const SpaceBetweenStatementAndSolutionButton = () => (
-  <>
-    <Spacer />
-    <SpacerXs />
-    <SpacerXXs />
-  </>
+  <Spacer height="var(--document-exercise-statement-to-solution-button-space)" />
 );
 
 const SpaceAfterSolutionButtonAlwaysShowing = () => (
-  <>
-    <SpacerSm />
-    <SpacerXXs />
-  </>
+  <Spacer height="var(--document-before-solution-space)" />
 );
 
 const ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing = () => (
-  <>
-    <SpacerSm />
-  </>
+  <Spacer height="var(--document-before-open-solution-extra-space)" />
 );
 
 const SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing =
   () => (
-    <>
-      <SpacerSm />
-      <SpacerXs />
-    </>
+    <Spacer height="var(--document-after-solution-before-next-exercise-space)" />
   );
 
 const SpaceBeforeBackupArrow = () => (
-  <>
-    <Spacer />
-  </>
+  <Spacer height="var(--document-before-backup-arrow-space)" />
 );
 
 const SolutionHeightChangeListener = (props: { resetter: () => void }) => {
@@ -260,13 +246,19 @@ export const Solution = (props: SolutionProps) => {
           {props.children}
         </div>
         <div
-          style={`width:${global_store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_TEXT_COLUMN_WIDTH : global_store.innerWidth}px;`}
+          style={{
+            width: `${global_store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_TEXT_COLUMN_WIDTH : global_store.innerWidth}px`,
+            height: "var(--document-before-open-solution-extra-space)",
+          }}
           class={twJoin(
-            "absolute top-0 left-1/2 -translate-x-1/2 spacer-100 bg-bg",
+            "absolute top-0 left-1/2 -translate-x-1/2 bg-bg",
             solution_fully_opened() && "opacity-0",
           )}
         ></div>
       </div>
+      {store.list_view && solution_number !== num_exercises() && (
+        <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
+      )}
       {at_end_of_page && (
         <>
           {/* Possible backup arrow */}
@@ -281,10 +273,6 @@ export const Solution = (props: SolutionProps) => {
               />
             </>
           )}
-          {store.list_view && solution_number !== num_exercises() && (
-            <SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing />
-          )}
-
           {/* Green Div */}
           <div
             class="text-column transition-all col-start-2"
