@@ -9,12 +9,13 @@ import {
 const useNoScrollRestoration = () => {
   const { store, set_store } = useGlobalContext();
   const location = useLocation();
+  const owningRoutePath = location.pathname;
   let initialized = false;
 
   createEffect(() => {
     const routePath = location.pathname;
     const pendingRoutePath = store.pending_route_path;
-    if (routePath !== "/") return;
+    if (routePath !== owningRoutePath) return;
     if (initialized && pendingRoutePath !== routePath) return;
     initialized = true;
 

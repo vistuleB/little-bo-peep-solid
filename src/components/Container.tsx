@@ -71,9 +71,12 @@ const Container = (props: ParentProps) => {
         <div
           style={{
             opacity: contentReady() ? 1 : 0,
-            transform: `translate3d(${store.horizontal_arrival_offset}px, 0, 0)`,
+            transform:
+              store.horizontal_arrival_offset === 0
+                ? "none"
+                : `translate3d(${store.horizontal_arrival_offset}px, 0, 0)`,
             "will-change":
-              store.horizontal_arrival_phase === "idle" ? "auto" : "transform",
+              store.horizontal_arrival_offset === 0 ? "auto" : "transform",
           }}
         >
           {props.children}
