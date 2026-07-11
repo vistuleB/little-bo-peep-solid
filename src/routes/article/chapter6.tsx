@@ -27,61 +27,56 @@ export default function __Chapter6__() {
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            terminology: “dimension” vs. “dimensional”
+            function signatures
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            function signatures
+            dimensionless units
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
-            dimensionless units
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
             restrictions imposed on signatures by function
             operations
           </InChapterLink>
         </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            the unary function operations
+          </InChapterLink>
+        </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
-            the unary function operations
+            differentiation
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
-            differentiation
+            operators
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
-            operators
+            the sum rule
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
-            the sum rule
+            the “early afteroon product rule”
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
-            the “early afteroon product rule”
+            the chain rule
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=section-10">
-            the chain rule
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-10">
-          <InChapterLink href="?id=section-11">
             epilogue: the dimensionless plane
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-11">
+        <BreadcrumbItem id="breadcrumb-10">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -91,56 +86,6 @@ export default function __Chapter6__() {
         Dimensional Analysis
       </ArticleTitle>
       <Section id="section-1">
-        <OuterP>
-          <b>
-            Terminology: “dimension” vs. “dimensional”.
-          </b>
-          {" "}
-          As explained in the {" "}
-          <OutChapterLink
-            class="out-chapter-link"
-            href="/article/chapter2#section-9"
-          >
-            Postcript to Chapter 2
-          </OutChapterLink>
-          , 
-          the term
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          dimension
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          can mean a qualitative category of units, such as
-          in the phrase {" "}
-          <NoBreak>
-            “
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
-          {" "} has dimensions of time”.
-          On the other hand,
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          dimensional
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          means “that which relates to
-          dimensions {" "}
-          <i>
-            or
-          </i>
-          {" "} units”, 
-          i.e., there is no standalone term for
-          “that which relates to units”, so we have this catch-all instead.
-        </OuterP>
-      </Section>
-      <Pause />
-      <Section id="section-2">
         <OuterP>
           <b>
             Function signatures.
@@ -261,7 +206,7 @@ const Rest = () => {
   const visibleRestSections = useShowMore(10);
   return <>
     {visibleRestSections() > 0 && <>
-      <Section id="section-3">
+      <Section id="section-2">
         <OuterP>
           <b>
             Dimensionless units.
@@ -464,7 +409,7 @@ const Rest = () => {
     </>}
     {visibleRestSections() > 1 && <>
       <Pause />
-      <Section id="section-4">
+      <Section id="section-3">
         <OuterP>
           <b>
             Restrictions imposed on signatures by function
@@ -543,36 +488,32 @@ const Rest = () => {
           By contrast, when multiplying two functions we can
           stomach the output units to be different since
           composite units such as “kilowatt-hour”, “worker-years”, etc,
-          exist, and likewise when dividing. We have:
+          exist, and likewise when dividing. 
+          The following table summarizes the constraints
+          that appear at the
+          input (“component signatures”) and output (“resultant
+          signature”) ends, for the five main function operations:
         </OuterP>
         <Pause />
         <Image
           src="/build-img/svgo-svg/AUok.svg"
           id="_152_h.a.i_"
           intrinsicWidth={700}
-          intrinsicHeight={850}
+          intrinsicHeight={883}
         />
         <Pause />
-        <OuterP>
-          ...summarizing the constraints that appear at the
-          input (“component signatures”) and output (“resultant
-          signature”) ends, for the five main function operations.
-        </OuterP>
+        <StarDivider style="margin-top:-0.3em" />
       </Section>
     </>}
     {visibleRestSections() > 2 && <>
       <Pause />
-      <Section id="section-5">
+      <Section id="section-4">
         <OuterP>
           <b>
             The unary function operations.
           </b>
           {" "}
-          We will add two more not-yet-discussed—or {" "}
-          <i>
-            hardly
-          </i>
-          * discussed—
+          We will add two more not-yet-much-discussed
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -590,7 +531,25 @@ const Rest = () => {
           <i>
             reciprocal
           </i>
-          , defined by formulas here:
+          , 
+          written {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\f$
+            </Math>
+            “
+          </NoBreak>
+          {" "} and {" "}
+          <NoBreak>
+            “
+            <Math>
+              $1/f$
+            </Math>
+            ”,
+          </NoBreak>
+          {" "}
+          and defined by formulas here:
         </OuterP>
         <Pause />
         <Image
@@ -600,23 +559,14 @@ const Rest = () => {
           intrinsicHeight={310}
         />
         <Pause />
-        <OuterP>
-          [*See {" "}
-          <OutChapterLink
-            class="out-chapter-link"
-            href="/article/chapter5#section-2"
-          >
-            Chapter 5 §2
-          </OutChapterLink>
-          .]
-        </OuterP>
+        <StarDivider style="margin-top:-0.3em" />
       </Section>
     </>}
     {visibleRestSections() > 3 && <>
       <Pause />
       <Section
         _handle="derivative_signature"
-        id="section-6"
+        id="section-5"
       >
         <OuterP>
           <b>
@@ -662,8 +612,7 @@ const Rest = () => {
         <Pause />
         <OuterP>
           for any units A, B.
-          By the same token, the “if and only if”-ness
-          implies that
+          By the same token,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -688,7 +637,7 @@ const Rest = () => {
           <NoBreak>
             “
             <Math>
-              $g$
+              $h$
             </Math>
             ”
           </NoBreak>
@@ -703,18 +652,18 @@ const Rest = () => {
           , that one needs to
           multiply the output units of {" "}
           <Math>
-            $g''$
+            $h''$
           </Math>
           {" "} by the
           units of input units of {" "}
           <Math>
-            $g''$
+            $h''$
           </Math>
           {" "} in order to recover the output
           units of {" "}
           <NoBreak>
             <Math>
-              $g'$
+              $h'$
             </Math>
             ,
           </NoBreak>
@@ -724,7 +673,7 @@ const Rest = () => {
     </>}
     {visibleRestSections() > 4 && <>
       <Pause />
-      <Section id="section-7">
+      <Section id="section-6">
         <OuterP>
           <b>
             Operators.
@@ -756,7 +705,7 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/Pl1U.svg"
-          intrinsicWidth={500}
+          intrinsicWidth={520}
           intrinsicHeight={220}
         />
         <Pause />
@@ -777,7 +726,7 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/2YHQ.svg"
-          intrinsicWidth={600}
+          intrinsicWidth={520}
           intrinsicHeight={500}
         />
         <Pause />
@@ -857,7 +806,7 @@ const Rest = () => {
     </>}
     {visibleRestSections() > 5 && <>
       <Pause />
-      <Section id="section-8">
+      <Section id="section-7">
         <OuterP>
           <b>
             The sum rule.
@@ -1336,7 +1285,7 @@ const Rest = () => {
           <Pause />
           <Image
             src="/build-img/svgo-svg/aASR.svg"
-            intrinsicWidth={470}
+            intrinsicWidth={442}
             intrinsicHeight={945}
           />
           <Pause />
@@ -1439,7 +1388,7 @@ const Rest = () => {
     </>}
     {visibleRestSections() > 6 && <>
       <Pause />
-      <Section id="section-9">
+      <Section id="section-8">
         <OuterP>
           <b>
             The “early afteroon product rule”.
@@ -1779,7 +1728,7 @@ const Rest = () => {
     </>}
     {visibleRestSections() > 7 && <>
       <Pause />
-      <Section id="section-10">
+      <Section id="section-9">
         <OuterP>
           <b>
             The chain rule.
@@ -2390,7 +2339,7 @@ const Rest = () => {
             by {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#section-10"
+              href="#section-9"
             >
               the chain rule
             </InChapterLink>
@@ -2568,7 +2517,7 @@ const Rest = () => {
     </>}
     {visibleRestSections() > 8 && <>
       <Pause />
-      <Section id="section-11">
+      <Section id="section-10">
         <OuterP>
           <b>
             Epilogue: the dimensionless plane.

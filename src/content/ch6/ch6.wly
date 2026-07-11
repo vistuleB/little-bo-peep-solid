@@ -1,24 +1,26 @@
+!! |> Section
+!!     handle=_ch6_start_
+
+!!     *Terminology: “dimension” vs. “dimensional”.*
+!!     As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions), 
+!!     the term
+
+!!     __dimension__
+
+!!     can mean a qualitative category of units, such as
+!!     in the phrase “$x$ has dimensions of time”.
+!!     On the other hand,
+
+!!     __dimensional__
+
+!!     means “that which relates to
+!!     dimensions _or_ units”, 
+!!     i.e., there is no standalone term for
+!!     “that which relates to units”, so we have this catch-all instead.
+
 |> Section
     handle=_ch6_start_
 
-    *Terminology: “dimension” vs. “dimensional”.*
-    As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions), 
-    the term
-
-    __dimension__
-
-    can mean a qualitative category of units, such as
-    in the phrase “$x$ has dimensions of time”.
-    On the other hand,
-
-    __dimensional__
-
-    means “that which relates to
-    dimensions _or_ units”, 
-    i.e., there is no standalone term for
-    “that which relates to units”, so we have this catch-all instead.
-
-|> Section
     *Function signatures.*
     If $f$ is a function from $\rr$ to $\rr$
     we write
@@ -180,32 +182,45 @@
     By contrast, when multiplying two functions we can
     stomach the output units to be different since
     composite units such as “kilowatt-hour”, “worker-years”, etc,
-    exist, and likewise when dividing. We have:
+    exist, and likewise when dividing. 
+    !! We have:
+    The following table summarizes the constraints
+    that appear at the
+    input (“component signatures”) and output (“resultant
+    signature”) ends, for the five main function operations:
 
     |> Image
         handle=table_1_1 Table 1.1
         src=images/c6_flowers_here_bob.svg
 
-    ...summarizing the constraints that appear at the
-    input (“component signatures”) and output (“resultant
-    signature”) ends, for the five main function operations.
+    !! ...summarizing the constraints that appear at the
+    !! input (“component signatures”) and output (“resultant
+    !! signature”) ends, for the five main function operations.
+
+    |> StarDivider
+        style=margin-top:-0.3em
 
 |> Section
 
     *The unary function operations.*
-    We will add two more not-yet-discussed—or _hardly_* discussed—
+    We will add two more not-yet-much-discussed
 
     __unary__
 
     function operations to our list of officially
     considered function operations, being _negation_
-    and _reciprocal_, defined by formulas here:
+    and _reciprocal_, 
+    written “$-\f$“ and “$1/f$”,
+    and defined by formulas here:
 
     |> Image
         handle=table_1_2 Table 1.2
         src=images/c6_flowers_here_two_more_v2.svg
 
-    [*See [Chapter >>trigonometry#decoy:5 §>>trigonometry-derivatives#decoy:2](>>negation-of-a-function-first-mention).]
+    |> StarDivider
+        style=margin-top:-0.3em
+
+    !! [*See [Chapter >>trigonometry#decoy:5 §>>trigonometry-derivatives#decoy:2](>>negation-of-a-function-first-mention).]
 
     !! $$
     !! (-f)(x) = -f(x)\qquad(1/f)(x) = 1/f(x)
@@ -227,8 +242,8 @@
     f' : [\tA] \ra [\tB/\tA]
     $$
     for any units A, B.
-    By the same token, the “if and only if”-ness
-    implies that
+    By the same token, 
+    !! the “if and only if”-ness implies that
     $$
     f' : [\tC] \ra [\tD]
     $$
@@ -239,12 +254,12 @@
     for any units C, D. 
     !! (Think that C is playing the
     !! role of A, while D plays the role of B/A.)
-    (Think of the fact, as in part “$g$” of
+    (Think of the fact, as in part “$h$” of
     Exercise >>_complete_the_missing_units_#decoy:6
     of Chapter >>derivatives#decoy:4, that one needs to
-    multiply the output units of $g''$ by the
-    units of input units of $g''$ in order to recover the output
-    units of $g'$, etc.)
+    multiply the output units of $h''$ by the
+    units of input units of $h''$ in order to recover the output
+    units of $h'$, etc.)
     
 |> Section
     *Operators.*
