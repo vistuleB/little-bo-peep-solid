@@ -10,7 +10,7 @@ import useAuthorMode from "~/hooks/useAuthorMode";
 import { useLocation } from "@solidjs/router";
 import {
   HORIZONTAL_SCROLL_SNAP_BACK_MAX,
-  HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_FRACTION,
+  HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO,
 } from "~/constants";
 
 const env = import.meta.env.VITE_ENV;
@@ -65,7 +65,7 @@ const Page = (props: ParentProps & PageProps) => {
       distanceFromCentered <
       Math.min(
         HORIZONTAL_SCROLL_SNAP_BACK_MAX,
-        HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_FRACTION * store.innerWidth,
+        HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO * store.innerWidth,
       )
     ) {
       window.scroll({
@@ -114,21 +114,13 @@ const Page = (props: ParentProps & PageProps) => {
   // *********************
 
   const handleClick = (e: MouseEvent) => {
-    const targetIsAnchor = (element: Element) => {
-      let currentElement = element;
-      while (
-        currentElement !== null &&
-        currentElement !== document.documentElement
-      ) {
-        if (currentElement.tagName === "A") {
-          return true;
-        }
-        currentElement = currentElement.parentElement as Element;
-      }
-      return false;
-    };
+    const targetIsInteractive = (target: EventTarget | null) =>
+      target instanceof Element &&
+      target.closest(
+        "a, button, input, textarea, select, [role='button'], [contenteditable='true']",
+      ) !== null;
 
-    if (targetIsAnchor(e.target as Element)) {
+    if (targetIsInteractive(e.target)) {
       return;
     }
 
@@ -254,7 +246,7 @@ const Page = (props: ParentProps & PageProps) => {
     window.addEventListener("resize", handleResize);
     document.addEventListener("scrollend", handleScrollendAndTouchend);
     document.addEventListener("touchend", handleScrollendAndTouchend);
-    window.addEventListener("click", handleClick);
+    window.addEventListener("click", handleClick, { capture: true });
     window.addEventListener("keydown", handleKeydown);
 
     onCleanup(() => {
@@ -262,7 +254,7 @@ const Page = (props: ParentProps & PageProps) => {
       window.removeEventListener("resize", handleResize);
       document.removeEventListener("scrollend", handleScrollendAndTouchend);
       document.removeEventListener("touchend", handleScrollendAndTouchend);
-      window.removeEventListener("click", handleClick);
+      window.removeEventListener("click", handleClick, { capture: true });
       window.removeEventListener("keydown", handleKeydown);
     });
   });

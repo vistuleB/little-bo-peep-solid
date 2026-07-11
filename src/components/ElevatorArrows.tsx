@@ -1,12 +1,8 @@
-import { createEffect, createSignal, onCleanup } from "solid-js";
 import {
-  DOWN_STOP_SKIP_TOP_VIEWPORT_RATIO,
-  HEADER_BUTTONS_SCROLLY_END_FADE,
-  HEADER_BUTTONS_SCROLLY_START_FADE,
-  PAGE_TOP_BOTTOM_ARROW_SCROLL_DURATION_MS,
-  STOP_POSITION_VIEWPORT_RATIO,
-  STOP_REPEAT_SCROLL_TOLERANCE,
-  UP_STOP_SKIP_BOTTOM_VIEWPORT_RATIO,
+  ELEVATOR_ARROW_SCROLL_DURATION_MS,
+  ELEVATOR_STOP_DOWN_SKIP_TOP_VIEWPORT_RATIO,
+  ELEVATOR_STOP_POSITION_VIEWPORT_RATIO,
+  ELEVATOR_STOP_UP_SKIP_BOTTOM_VIEWPORT_RATIO,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
@@ -18,31 +14,8 @@ type ExerciseStop = {
   scrollY: number;
 };
 
-const PageTopBottomArrows = () => {
+const ElevatorArrows = () => {
   const { store } = useGlobalContext();
-  const [opacity, set_opacity] = createSignal(1);
-  const [hovered, set_hovered] = createSignal(false);
-
-  const calc_opacity = () => {
-    // prettier-ignore
-    return Math.min(
-      0.0,
-      Math.max(0, 1.0 - (store.scrollY - HEADER_BUTTONS_SCROLLY_START_FADE) / (HEADER_BUTTONS_SCROLLY_END_FADE - HEADER_BUTTONS_SCROLLY_START_FADE))
-    );
-  };
-
-  const handleScroll = () => {
-    set_opacity(calc_opacity());
-  };
-
-  createEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-
-    onCleanup(() => {
-      window.removeEventListener("scroll", handleScroll);
-    });
-  });
 
   const groupAnchorY = (group: HTMLElement) =>
     window.scrollY + group.getBoundingClientRect().top;
@@ -55,7 +28,8 @@ const PageTopBottomArrows = () => {
         const anchorY = groupAnchorY(group);
         return {
           anchorY,
-          scrollY: anchorY - store.innerHeight * STOP_POSITION_VIEWPORT_RATIO,
+          scrollY:
+            anchorY - store.innerHeight * ELEVATOR_STOP_POSITION_VIEWPORT_RATIO,
         };
       })
       .filter((stop) => Number.isFinite(stop.anchorY))
@@ -65,19 +39,19 @@ const PageTopBottomArrows = () => {
     exerciseStops()
       .filter(
         (stop) =>
-          stop.scrollY < store.scrollY - STOP_REPEAT_SCROLL_TOLERANCE &&
           stop.anchorY <
-            store.scrollY +
-              store.innerHeight * (1 - UP_STOP_SKIP_BOTTOM_VIEWPORT_RATIO),
+          store.scrollY +
+            store.innerHeight *
+              (1 - ELEVATOR_STOP_UP_SKIP_BOTTOM_VIEWPORT_RATIO),
       )
       .at(-1);
 
   const nextExerciseStop = () =>
     exerciseStops().find(
       (stop) =>
-        stop.scrollY > store.scrollY + STOP_REPEAT_SCROLL_TOLERANCE &&
         stop.anchorY >
-          store.scrollY + store.innerHeight * DOWN_STOP_SKIP_TOP_VIEWPORT_RATIO,
+        store.scrollY +
+          store.innerHeight * ELEVATOR_STOP_DOWN_SKIP_TOP_VIEWPORT_RATIO,
     );
 
   const handleUpClick = (_: MouseEvent) => {
@@ -85,7 +59,7 @@ const PageTopBottomArrows = () => {
     const scrollTo = stop?.scrollY ?? 0;
     smoothScrollTo(
       scrollTo,
-      store.animations ? PAGE_TOP_BOTTOM_ARROW_SCROLL_DURATION_MS : 0,
+      store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0,
     );
   };
 
@@ -95,7 +69,7 @@ const PageTopBottomArrows = () => {
 
     smoothScrollTo(
       scrollTo,
-      store.animations ? PAGE_TOP_BOTTOM_ARROW_SCROLL_DURATION_MS : 0,
+      store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0,
     );
   };
 
@@ -114,47 +88,71 @@ const PageTopBottomArrows = () => {
   return (
     <div
       id="scroll-btns"
-      onMouseOver={() => set_hovered(true)}
-      onMouseOut={() => set_hovered(false)}
       style={{
-        opacity: hovered() ? 1 : opacity(),
-        left: `${effectiveMarginWidth() - store.scrollX - 33}px`,
+        left: `${effectiveMarginWidth() - store.scrollX - 39}px`,
       }}
-      class="fixed bottom-3"
+      class="group fixed bottom-3"
     >
-      <button
-        onClick={handleUpClick}
+      <div
+        aria-hidden="true"
         style={{
-          "background-color": store.show_areas ? "#fff000" : "transparent",
+          position: "absolute",
+          left: "-4em",
+          right: "0",
+          top: "-2em",
+          bottom: "0",
         }}
-        class={twJoin(
-          "block px-1 mb-2",
-          store.scrollY > 1
-            ? "stroke-black hover:stroke-stone-600"
-            : "stroke-stone-300",
-          "transition-all",
-        )}
-      >
-        <DoubleUpArrowSVG />
-      </button>
-      <button
-        onClick={handleDownClick}
-        style={{
-          "background-color": store.show_areas ? "#fff000" : "transparent",
-        }}
-        class={twJoin(
-          "block px-1 mb-1",
-          store.scrollY + store.innerHeight - store.scrollHeight < -1
-            ? "stroke-black hover:stroke-stone-600"
-            : "stroke-stone-300",
-          "transition-all",
-        )}
-      >
-        <DoubleDownArrowSVG />
-      </button>
+      />
+      <div class="relative opacity-0 group-hover:opacity-100 transition-opacity">
+        <button
+          onClick={handleUpClick}
+          style={{
+            "background-color": store.show_areas ? "#fff000" : "transparent",
+          }}
+          class={twJoin(
+            "relative block px-1 mb-2",
+            store.scrollY > 1
+              ? "stroke-black hover:stroke-stone-600"
+              : "stroke-stone-300",
+            "transition-all",
+          )}
+        >
+          <ElevatorButtonHitArea />
+          <DoubleUpArrowSVG />
+        </button>
+        <button
+          onClick={handleDownClick}
+          style={{
+            "background-color": store.show_areas ? "#fff000" : "transparent",
+          }}
+          class={twJoin(
+            "relative block px-1 mb-1",
+            store.scrollY + store.innerHeight - store.scrollHeight < -1
+              ? "stroke-black hover:stroke-stone-600"
+              : "stroke-stone-300",
+            "transition-all",
+          )}
+        >
+          <ElevatorButtonHitArea />
+          <DoubleDownArrowSVG />
+        </button>
+      </div>
     </div>
   );
 };
+
+const ElevatorButtonHitArea = () => (
+  <span
+    aria-hidden="true"
+    style={{
+      position: "absolute",
+      left: "-3em",
+      right: "0",
+      top: "0",
+      bottom: "0",
+    }}
+  />
+);
 
 const sw = 2.6;
 const cdy = -1;
@@ -215,4 +213,4 @@ const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
   );
 };
 
-export default PageTopBottomArrows;
+export default ElevatorArrows;

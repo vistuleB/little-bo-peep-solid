@@ -1,38 +1,10 @@
-import { createEffect, createSignal, onCleanup } from "solid-js";
-import {
-  DESKTOP_TEXT_COLUMN_WIDTH,
-  HEADER_BUTTONS_SCROLLY_END_FADE,
-  HEADER_BUTTONS_SCROLLY_START_FADE,
-} from "~/constants";
+import { DESKTOP_TEXT_COLUMN_WIDTH } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
-const PageUpDownArrows = () => {
+const PageUpPageDownButtons = () => {
   const { store } = useGlobalContext();
-  const [opacity, set_opacity] = createSignal(1);
-  const [hovered, set_hovered] = createSignal(false);
-
-  const calc_opacity = () => {
-    // prettier-ignore
-    return Math.min(
-      0.0,
-      Math.max(0, 1.0 - (store.scrollY - HEADER_BUTTONS_SCROLLY_START_FADE) / (HEADER_BUTTONS_SCROLLY_END_FADE - HEADER_BUTTONS_SCROLLY_START_FADE))
-    );
-  };
-
-  const handleScroll = () => {
-    set_opacity(calc_opacity());
-  };
-
-  createEffect(() => {
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-
-    onCleanup(() => {
-      window.removeEventListener("scroll", handleScroll);
-    });
-  });
 
   const handleUpClick = (e: MouseEvent) => {
     e.stopImmediatePropagation();
@@ -59,13 +31,10 @@ const PageUpDownArrows = () => {
   return (
     <div
       id="scroll-btns"
-      onMouseOver={() => set_hovered(true)}
-      onMouseOut={() => set_hovered(false)}
       style={{
-        opacity: hovered() ? 1 : opacity(),
         left: `${effectiveMarginWidth() - store.scrollX + DESKTOP_TEXT_COLUMN_WIDTH}px`,
       }}
-      class="fixed bottom-3"
+      class="fixed bottom-3 opacity-0 hover:opacity-100 transition-opacity"
     >
       <button
         onClick={handleUpClick}
@@ -73,7 +42,7 @@ const PageUpDownArrows = () => {
           "background-color": store.show_areas ? "#fff000" : "transparent",
         }}
         class={twJoin(
-          "block px-1 mb-2",
+          "block px-1 mb-1",
           store.scrollY > 1
             ? "stroke-black hover:stroke-stone-600 fill-black hover:fill-stone-600"
             : "stroke-stone-300 fill-stone-300",
@@ -137,4 +106,4 @@ const IconSvg = (props: { style: string }) => {
   );
 };
 
-export default PageUpDownArrows;
+export default PageUpPageDownButtons;

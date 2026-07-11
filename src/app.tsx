@@ -6,10 +6,10 @@ import HeaderButtons from "./components/HeaderButtons";
 import Container from "~/components/Container";
 import { Suspense } from "solid-js";
 import "./app.css";
-import { setContentsAsCssVars } from "./constants";
+import { setLayoutConstantsAsCssVars } from "./constants";
 
 export default function App() {
-  setContentsAsCssVars();
+  setLayoutConstantsAsCssVars();
   return (
     <MetaProvider>
       <Meta property="og:image" content="images/lbp_preview.png"></Meta>
@@ -23,7 +23,8 @@ export default function App() {
                 <Suspense>{props.children}</Suspense>
               </Container>
             </>
-          )}>
+          )}
+        >
           <FileRoutes />
         </Router>
       </StoreProvider>

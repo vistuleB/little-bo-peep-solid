@@ -11,10 +11,10 @@ import SharedProps from "./types/SharedProps";
 import {
   BATCH_SOLUTION_SCROLL_ANCHOR_FRAMES,
   DESKTOP_TEXT_COLUMN_WIDTH,
-  GREEN_DIV_HEIGHT,
+  SOLUTION_GREEN_DIV_HEIGHT,
   MOBILE_MAX_WIDTH,
-  PREV_NEXT_EXERCISE_BUTTON_W,
-  PREV_NEXT_EXERCISE_BUTTON_RX,
+  PREV_NEXT_EXERCISE_BUTTON_WIDTH,
+  PREV_NEXT_EXERCISE_BUTTON_CORNER_RADIUS,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
 
@@ -33,6 +33,7 @@ import {
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useOneExerciseContext } from "~/store/OneExerciseStoreProvider";
 import { useExerciseGroupRegistry } from "~/store/ExerciseGroupRegistryProvider";
+import typesetMathJaxElements from "~/utils/typesetMathJax";
 
 type SolutionProps = ParentProps &
   SharedProps & {
@@ -102,8 +103,9 @@ export const Solution = (props: SolutionProps) => {
   );
   const [green_div_transition, set_green_div_transition] = createSignal(0);
   const [solution_transition, set_solution_transition] = createSignal(0);
-  const [green_div_height, set_green_div_height] =
-    createSignal(GREEN_DIV_HEIGHT);
+  const [green_div_height, set_green_div_height] = createSignal(
+    SOLUTION_GREEN_DIV_HEIGHT,
+  );
 
   const handleResize = () => {
     set_content_height(ref?.clientHeight || 0);
@@ -169,7 +171,7 @@ export const Solution = (props: SolutionProps) => {
     if (exo?.clientHeight < 200 + green_div_height()) {
       set_green_div_height(700);
     } else {
-      set_green_div_height(GREEN_DIV_HEIGHT);
+      set_green_div_height(SOLUTION_GREEN_DIV_HEIGHT);
     }
     store.selected_exo; // re-run
   });
@@ -194,7 +196,7 @@ export const Solution = (props: SolutionProps) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          (window as any).MathJax.typesetPromise([ref]);
+          void typesetMathJaxElements([ref]);
           observer.disconnect();
         }
       },
@@ -432,8 +434,8 @@ export const BackupArrow = (props: BackupArrowProps) => {
   const { solution_open, solution_fully_opened, solution_transition, bot_div } =
     props;
 
-  let w = PREV_NEXT_EXERCISE_BUTTON_W;
-  let rx = PREV_NEXT_EXERCISE_BUTTON_RX;
+  let w = PREV_NEXT_EXERCISE_BUTTON_WIDTH;
+  let rx = PREV_NEXT_EXERCISE_BUTTON_CORNER_RADIUS;
 
   const { calculateTargetCenterOnPage } = useScrollToInChapter();
   const selectedExercise = () => {

@@ -16,6 +16,7 @@ import SharedProps from "./types/SharedProps";
 import OutlinedText from "./OutlinedText";
 import { useLocalStorage } from "solidjs-hooks";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
+import typesetMathJaxElements from "~/utils/typesetMathJax";
 
 const screen_width_to_achieve_max_size = 1500;
 const screen_width_to_achieve_min_size = 1280;
@@ -170,9 +171,10 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       setOutSideHovered(true);
     };
 
-    (window as any).MathJax.typesetPromise([ref]);
-    ref?.querySelectorAll(".math").forEach((math) => {
-      (math as HTMLElement).style.opacity = "1";
+    void typesetMathJaxElements([ref]).then(() => {
+      ref?.querySelectorAll(".math").forEach((math) => {
+        (math as HTMLElement).style.opacity = "1";
+      });
     });
 
     document.body.addEventListener("mouseover", handler);

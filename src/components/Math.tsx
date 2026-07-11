@@ -10,15 +10,16 @@ import {
 import {
   ENABLE_MATHJAX_INTERSECTION_FALLBACK,
   MATHJAX_INTERSECTION_FALLBACK_DELAY_MS,
-  MATHJAX_INTERSECTION_ROOT_MARGIN_PX,
+  MATHJAX_INTERSECTION_ROOT_MARGIN,
   MOBILE_MAX_WIDTH,
   MOBILE_TEXT_COLUMN_SIDE_INSET,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
+import typesetMathJaxElements from "~/utils/typesetMathJax";
 
-const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN_PX}px`;
+const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN}px`;
 
 type MathJaxFallbackEntry = {
   ref: HTMLElement;
@@ -36,8 +37,8 @@ let mathJaxFallbackTimeout: number | undefined;
 const nearMathJaxObserverViewport = (el: HTMLElement) => {
   const rect = el.getBoundingClientRect();
   return (
-    rect.bottom >= -MATHJAX_INTERSECTION_ROOT_MARGIN_PX &&
-    rect.top <= window.innerHeight + MATHJAX_INTERSECTION_ROOT_MARGIN_PX
+    rect.bottom >= -MATHJAX_INTERSECTION_ROOT_MARGIN &&
+    rect.top <= window.innerHeight + MATHJAX_INTERSECTION_ROOT_MARGIN
   );
 };
 
@@ -54,9 +55,12 @@ const typesetMath = async (entry: MathJaxFallbackEntry) => {
   if (entry.visible() || entry.typesetting) return false;
 
   entry.typesetting = true;
-  await (window as any).MathJax.typesetPromise([entry.ref]);
-  entry.typesetting = false;
-  return completeTypeset(entry);
+  try {
+    const typesetSucceeded = await typesetMathJaxElements([entry.ref]);
+    return typesetSucceeded ? completeTypeset(entry) : false;
+  } finally {
+    entry.typesetting = false;
+  }
 };
 
 const runMathJaxFallbackSweep = async () => {
@@ -81,14 +85,16 @@ const runMathJaxFallbackSweep = async () => {
     entry.typesetting = true;
   });
 
-  await (window as any).MathJax.typesetPromise(
+  const typesetSucceeded = await typesetMathJaxElements(
     entries.map((entry) => entry.ref),
   );
 
   entries.forEach((entry) => {
     entry.typesetting = false;
-    completeTypeset(entry);
+    if (typesetSucceeded) completeTypeset(entry);
   });
+
+  if (!typesetSucceeded) scheduleMathJaxFallbackSweep();
 };
 
 const scheduleMathJaxFallbackSweep = () => {

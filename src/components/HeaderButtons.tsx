@@ -118,7 +118,7 @@ const ButtonsContainer = (props: ParentProps) => {
 
   return (
     <>
-      <div class="fixed right-0 h-14">
+      <div class="fixed right-0" style={{ height: "var(--header-height)" }}>
         {/* the large-height background */}
         <div
           style={{

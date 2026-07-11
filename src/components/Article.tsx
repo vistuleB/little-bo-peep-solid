@@ -1,9 +1,9 @@
 import { onCleanup, onMount, ParentProps } from "solid-js";
 import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
 import { ExerciseGroupRegistryProvider } from "~/store/ExerciseGroupRegistryProvider";
-import PageTopBottomArrows from "./PageTopBottomArrows";
+import ElevatorArrows from "./ElevatorArrows";
 import Page from "./Page";
-import PageUpDownArrows from "./PageUpDownArrows";
+import PageUpPageDownButtons from "./PageUpPageDownButtons";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { recordFirstContentPaint } from "~/utils/routeLoading";
 
@@ -21,12 +21,13 @@ const Article = (props: ParentProps & ArticleProps) => {
       pageNecessaryMargin={props.pageNecessaryMargin}
       maxElementWidth={props.maxElementWidth}
       nextPage={props.nextPage}
-      prevPage={props.prevPage}>
+      prevPage={props.prevPage}
+    >
       <ExerciseGroupRegistryProvider>
         <span id={props.id} class="id_span"></span>
         <ArticleScrollCoordinator>{props.children}</ArticleScrollCoordinator>
-        <PageTopBottomArrows />
-        <PageUpDownArrows />
+        <ElevatorArrows />
+        <PageUpPageDownButtons />
       </ExerciseGroupRegistryProvider>
     </Page>
   );

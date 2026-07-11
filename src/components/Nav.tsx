@@ -17,7 +17,7 @@ const Nav = () => {
   useScrollX();
   const navPosition = () =>
     decideRouteNavbarPosition({
-      onMobile: store.innerWidth < MOBILE_MAX_WIDTH,
+      onMobile: store.innerWidth <= MOBILE_MAX_WIDTH,
       routePhase: store.route_phase,
       spinnerCurrentlyVisible: store.spinner_currently_visible,
     });
@@ -33,11 +33,14 @@ const Nav = () => {
           e.stopPropagation();
         }}
       >
-        <div class="relative select-none border-[var(--nav-border)] border-b bg-bg z-40 w-full h-14 left-0">
+        <div
+          class="relative select-none border-[var(--nav-border)] border-b bg-bg z-40 w-full left-0"
+          style={{ height: "var(--header-height)" }}
+        >
           <Title navPosition={navPosition()} />
         </div>
       </div>
-      <div class="h-14"></div>
+      <div style={{ height: "var(--header-height)" }}></div>
     </>
   );
 };
@@ -63,7 +66,7 @@ const Title = (props: { navPosition: "fixed" | "absolute" }) => {
 
   createEffect(() => {
     if (!headerBlob || !imageLoaded()) return;
-    const onMobile = store.innerWidth < MOBILE_MAX_WIDTH;
+    const onMobile = store.innerWidth <= MOBILE_MAX_WIDTH;
     const columnLeft = onMobile
       ? 0
       : props.navPosition === "fixed"
