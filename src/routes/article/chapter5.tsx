@@ -359,7 +359,7 @@ export default function __Chapter5__() {
         />
         <Pause />
         <OuterP>
-          As a second example, the graphs indicate that
+          As a second example, the graphs show that
           {" "}
           <NoBreak>
             <Math>

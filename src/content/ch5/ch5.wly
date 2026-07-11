@@ -59,7 +59,7 @@
     !! |> Image
     !!     src=images/svg_ch5_ch_unit_circle_@0.333_smaller.svg
 
-    As a second example, the graphs indicate that
+    As a second example, the graphs show that
     $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$
     (or something close to $-1$):
 

@@ -1797,8 +1797,7 @@ const Rest = () => {
         <OuterP>
           similar to the sum rule,
           and we can try guessing such a formula using
-          dimensional analysis, i.e., from the fact that the
-          formula should be dimensionally consistent.
+          dimensional analysis.
         </OuterP>
         <OuterP class="indent-10">
           To be clear, such a formula should use only the

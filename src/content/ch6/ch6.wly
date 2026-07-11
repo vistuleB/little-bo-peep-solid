@@ -871,14 +871,6 @@
     handle=chain_rule_discovery
 
     *The chain rule.*
-    !! As we have formulas for
-    !! $$
-    !! (f + g)'
-    !! $$
-    !! and
-    !! $$
-    !! (fg)'
-    !! $$
     We would we like a formula for
 
     $$
@@ -886,29 +878,8 @@
     $$
 
     similar to the sum rule,
-    !! or product rule,
     and we can try guessing such a formula using
-    dimensional analysis, i.e., from the fact that the
-    formula should be dimensionally consistent.
-    !! and we can collect some candidate(s) for
-    !! this formula just by knowing how the units should
-    !! behave, i.e., just from the fact that the final
-    !! formula should be dimensionally consistent.
-
-    !! and we already know that such a formula will
-    !! have to be “dimensionally consistent” (i.e., survive
-    !! the dimensional analysis x-ray that we will apply
-    !! to it later), so we can also have a try
-    !! at guessing the formula just from that fact.
-
-    !! Being bold, we can try to use dimensional
-    !! analysis to guess a formula for
-
-    !! $$
-    !! (f \circ g)'
-    !! $$
-
-    !! where $f$, $g$ are differentiable functions.
+    dimensional analysis.
 
     To be clear, such a formula should use only the
     “atomic components”
