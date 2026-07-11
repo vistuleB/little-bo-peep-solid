@@ -40,7 +40,9 @@
     denote kilograms and for which the outputs denote degrees
     fahrenheit. We refer to the ordered pair $(\te{A}, \te{B})$ 
     as the
+
     __signature__
+
     of $f$.
 
     |> Example

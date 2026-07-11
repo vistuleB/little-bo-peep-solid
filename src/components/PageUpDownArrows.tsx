@@ -1,8 +1,8 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import {
   DESKTOP_COLUMN_WIDTH,
-  HAMBURGER_MENU_SCROLLY_END_FADE,
-  HAMBURGER_MENU_SCROLLY_START_FADE,
+  HEADER_BUTTONS_SCROLLY_END_FADE,
+  HEADER_BUTTONS_SCROLLY_START_FADE,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { twJoin } from "tailwind-merge";
@@ -17,7 +17,7 @@ const PageUpDownArrows = () => {
     // prettier-ignore
     return Math.min(
       0.0,
-      Math.max(0, 1.0 - (store.scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) / (HAMBURGER_MENU_SCROLLY_END_FADE - HAMBURGER_MENU_SCROLLY_START_FADE))
+      Math.max(0, 1.0 - (store.scrollY - HEADER_BUTTONS_SCROLLY_START_FADE) / (HEADER_BUTTONS_SCROLLY_END_FADE - HEADER_BUTTONS_SCROLLY_START_FADE))
     );
   };
 
@@ -65,7 +65,8 @@ const PageUpDownArrows = () => {
         opacity: hovered() ? 1 : opacity(),
         left: `${effectiveMarginWidth() - store.scrollX + DESKTOP_COLUMN_WIDTH}px`,
       }}
-      class="fixed bottom-3">
+      class="fixed bottom-3"
+    >
       <button
         onClick={handleUpClick}
         style={{
@@ -77,7 +78,8 @@ const PageUpDownArrows = () => {
             ? "stroke-black hover:stroke-stone-600 fill-black hover:fill-stone-600"
             : "stroke-stone-300 fill-stone-300",
           "transition-all",
-        )}>
+        )}
+      >
         <IconSvg style="width:30px;" />
       </button>
       <button
@@ -91,7 +93,8 @@ const PageUpDownArrows = () => {
             ? "stroke-black hover:stroke-stone-600 fill-black hover:fill-stone-600"
             : "stroke-stone-300 fill-stone-300",
           "transition-all",
-        )}>
+        )}
+      >
         <IconSvg style="width:30px;transform:scale(1, -1);" />
       </button>
     </div>
@@ -105,7 +108,8 @@ const IconSvg = (props: { style: string }) => {
       viewBox="0 0 340.45 340.45"
       xmlns="http://www.w3.org/2000/svg"
       width="30px"
-      style={props.style}>
+      style={props.style}
+    >
       <path d="m69.054 40.511h14.452v-13.954h-14.452z" fill="none" />
       <path d="m170.22 40.511h14.452v-13.954h-14.452z" fill="none" />
       <path d="m256.94 124.24h14.452v-13.954h-14.452z" fill="none" />

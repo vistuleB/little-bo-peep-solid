@@ -33,7 +33,7 @@
     is a circle of radius $1$, while “the” unit
     circle is the circle of radius $1$ centered
     at $(0, 0)$.) For example, 
-    observe from the graphs 
+    the graphs show
     !! that $\cos({1\over 3}) \approx 0.9$, $\sin({1\over 3}) \approx 0.3$:
     that $\cos({1\over 2}) \approx 0.9$, $\sin({1\over 2}) \approx 0.5$:
 
@@ -61,7 +61,7 @@
 
     As a second example, the graphs indicate that
     $\sin(-3) \approx -0.2$, $\cos(-3) \approx -0.99$
-    (or something very close to $-1$, at least):
+    (or something close to $-1$):
 
     |> Image
         src=images/svg_ch5_ch_cosine_and_sine_@-3_v2.svg

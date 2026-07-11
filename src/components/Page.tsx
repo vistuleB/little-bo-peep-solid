@@ -8,6 +8,10 @@ import useOnMobile from "../hooks/useOnMobile";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import useAuthorMode from "~/hooks/useAuthorMode";
 import { useLocation } from "@solidjs/router";
+import {
+  HORIZONTAL_SCROLL_SNAP_BACK_MAX,
+  HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_FRACTION,
+} from "~/constants";
 
 const env = import.meta.env.VITE_ENV;
 
@@ -57,7 +61,13 @@ const Page = (props: ParentProps & PageProps) => {
       return;
     }
 
-    if (distanceFromCentered < 200) {
+    if (
+      distanceFromCentered <
+      Math.min(
+        HORIZONTAL_SCROLL_SNAP_BACK_MAX,
+        HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_FRACTION * store.innerWidth,
+      )
+    ) {
       window.scroll({
         left: scrollXWhenCentered,
         behavior: "smooth",

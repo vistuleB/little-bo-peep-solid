@@ -1,12 +1,12 @@
 import { createSignal, onCleanup, ParentProps, createEffect } from "solid-js";
 import { twJoin, twMerge } from "tailwind-merge";
 import {
-  HAMBURGER_MENU_HEIGHT,
-  HAMBURGER_MENU_SCROLLY_END_FADE,
-  HAMBURGER_MENU_SCROLLY_START_FADE,
-  HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY,
-  BOTTOM_BORDER_SCROLLY_START_FADE,
-  BOTTOM_BORDER_SCROLLY_END_FADE,
+  HEADER_HEIGHT,
+  HEADER_BUTTONS_SCROLLY_END_FADE,
+  HEADER_BUTTONS_SCROLLY_START_FADE,
+  HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY,
+  HEADER_BOTTOM_BORDER_SCROLLY_START_FADE,
+  HEADER_BOTTOM_BORDER_SCROLLY_END_FADE,
   MOBILE_MAX_WIDTH,
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
@@ -40,9 +40,9 @@ const ButtonsContainer = (props: ParentProps) => {
       Math.max(
         0,
         1.0 -
-          (scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) /
-            (HAMBURGER_MENU_SCROLLY_END_FADE -
-              HAMBURGER_MENU_SCROLLY_START_FADE),
+          (scrollY - HEADER_BUTTONS_SCROLLY_START_FADE) /
+            (HEADER_BUTTONS_SCROLLY_END_FADE -
+              HEADER_BUTTONS_SCROLLY_START_FADE),
       ),
     );
   };
@@ -53,8 +53,9 @@ const ButtonsContainer = (props: ParentProps) => {
       Math.max(
         0,
         1.0 -
-          (scrollY - BOTTOM_BORDER_SCROLLY_START_FADE) /
-            (BOTTOM_BORDER_SCROLLY_END_FADE - BOTTOM_BORDER_SCROLLY_START_FADE),
+          (scrollY - HEADER_BOTTOM_BORDER_SCROLLY_START_FADE) /
+            (HEADER_BOTTOM_BORDER_SCROLLY_END_FADE -
+              HEADER_BOTTOM_BORDER_SCROLLY_START_FADE),
       ),
     );
   };
@@ -67,7 +68,7 @@ const ButtonsContainer = (props: ParentProps) => {
     });
 
   const navbarVisible = () =>
-    navbarPosition() === "fixed" || currentScrollY() < HAMBURGER_MENU_HEIGHT;
+    navbarPosition() === "fixed" || currentScrollY() < HEADER_HEIGHT;
 
   const controlsPinnedVisible = () =>
     open() ||
@@ -81,7 +82,7 @@ const ButtonsContainer = (props: ParentProps) => {
     store.scroll_is_at_0;
 
   const nearTopDesktopBorderVisible = () =>
-    !on_mobile() && !open() && currentScrollY() < 2 * HAMBURGER_MENU_HEIGHT;
+    !on_mobile() && !open() && currentScrollY() < 2 * HEADER_HEIGHT;
 
   const finalButtonOpacity = () => {
     return controlsPinnedVisible()
@@ -125,7 +126,7 @@ const ButtonsContainer = (props: ParentProps) => {
             right: "0px",
             width: "100%",
             height:
-              currentScrollY() <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
+              currentScrollY() <= HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY &&
               !on_mobile() &&
               store.scrollX + store.innerWidth >=
                 store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2

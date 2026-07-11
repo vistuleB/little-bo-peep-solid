@@ -1,8 +1,8 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import {
   DOWN_STOP_SKIP_TOP_VIEWPORT_RATIO,
-  HAMBURGER_MENU_SCROLLY_END_FADE,
-  HAMBURGER_MENU_SCROLLY_START_FADE,
+  HEADER_BUTTONS_SCROLLY_END_FADE,
+  HEADER_BUTTONS_SCROLLY_START_FADE,
   PAGE_TOP_BOTTOM_ARROW_SCROLL_DURATION_MS,
   STOP_POSITION_VIEWPORT_RATIO,
   STOP_REPEAT_SCROLL_TOLERANCE,
@@ -27,7 +27,7 @@ const PageTopBottomArrows = () => {
     // prettier-ignore
     return Math.min(
       0.0,
-      Math.max(0, 1.0 - (store.scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) / (HAMBURGER_MENU_SCROLLY_END_FADE - HAMBURGER_MENU_SCROLLY_START_FADE))
+      Math.max(0, 1.0 - (store.scrollY - HEADER_BUTTONS_SCROLLY_START_FADE) / (HEADER_BUTTONS_SCROLLY_END_FADE - HEADER_BUTTONS_SCROLLY_START_FADE))
     );
   };
 
@@ -120,7 +120,8 @@ const PageTopBottomArrows = () => {
         opacity: hovered() ? 1 : opacity(),
         left: `${effectiveMarginWidth() - store.scrollX - 33}px`,
       }}
-      class="fixed bottom-3">
+      class="fixed bottom-3"
+    >
       <button
         onClick={handleUpClick}
         style={{
@@ -132,7 +133,8 @@ const PageTopBottomArrows = () => {
             ? "stroke-black hover:stroke-stone-600"
             : "stroke-stone-300",
           "transition-all",
-        )}>
+        )}
+      >
         <DoubleUpArrowSVG />
       </button>
       <button
@@ -146,7 +148,8 @@ const PageTopBottomArrows = () => {
             ? "stroke-black hover:stroke-stone-600"
             : "stroke-stone-300",
           "transition-all",
-        )}>
+        )}
+      >
         <DoubleDownArrowSVG />
       </button>
     </div>
@@ -171,7 +174,8 @@ const DoubleUpArrowSVG = (props: { class?: string; style?: string }) => {
       class={props.class}
       width="30"
       height="30"
-      viewBox="0 5 30 35">
+      viewBox="0 5 30 35"
+    >
       <path
         d={`
           M${un - adx} ${un + cdy + ady} l${adx} ${-ady} ${adx} ${ady}
@@ -179,7 +183,8 @@ const DoubleUpArrowSVG = (props: { class?: string; style?: string }) => {
         `}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"></path>
+        fill="none"
+      ></path>
     </svg>
   );
 };
@@ -195,7 +200,8 @@ const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
       class={props.class}
       width="30"
       height="30"
-      viewBox="0 -15 30 35">
+      viewBox="0 -15 30 35"
+    >
       <path
         d={`
           M${un - adx} ${un - cdy - ady} l${adx} ${ady} ${adx} ${-ady}
@@ -203,7 +209,8 @@ const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
         `}
         stroke-linecap="round"
         stroke-width={sw}
-        fill="none"></path>
+        fill="none"
+      ></path>
     </svg>
   );
 };

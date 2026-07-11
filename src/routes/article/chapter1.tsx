@@ -1,530 +1,958 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
-import { CentralDisplayItalic }  from "~/components/Delimiters";
+import Boxed  from "~/components/Boxed";
+import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
-import Grid  from "~/components/Grid";
+import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
+import InlineImage  from "~/components/InlineImage";
 import { Item, List }  from "~/components/List";
-import { Math, MathBlock }  from "~/components/Math";
+import { MathBlock, Math }  from "~/components/Math";
+import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
-import { ImageLeft, ImageRight }  from "~/components/SideImage";
+import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
-import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
+import TextParent  from "~/components/TextParent";
+import { TildeDivider }  from "~/components/TildeDivider";
+import { SolutionNote, InTextWarning, Example, Pause, Section, NoBreak }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter1__() {
   return (
     <Article
       prevPage="/"
-      nextPage="/article/chapter2"
-      pageNecessaryMargin={800}
-      maxElementWidth={500}
-      id="_25_h.a.i_"
+      nextPage=""
+      pageNecessaryMargin={1500}
+      maxElementWidth={1000}
+      id="_62_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=first-section">
-            square roots
+          <InChapterLink href="?id=section-1">
+            <span class="t-3003-c">
+              cos and sin. (“cosine” and “sine”.)
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:4:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            fractions and division
+            <span class="t-3003-c">
+              derivatives
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:158:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
-            distributivity
+            <span class="t-3003-c">
+              even/odd identities, and identities with {" "}
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:273:6
+              </span>
+            </span>
+            <NoBreak>
+              <span class="t-3003-c">
+                “
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:273:6
+                </span>
+              </span>
+              <Math>
+                $\eta$
+              </Math>
+              <span class="t-3003-c">
+                ”
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:273:54
+                </span>
+              </span>
+            </NoBreak>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
-            epilogue
+            <span class="t-3003-c">
+              relation to derivatives
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:352:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
-            vocabulary
+            <span class="t-3003-c">
+              parenthetization and powers
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:398:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
+          <InChapterLink href="?id=section-6">
+            <span class="t-3003-c">
+              the pythagorean identity
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:437:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-6">
+          <InChapterLink href="?id=section-7">
+            <span class="t-3003-c">
+              inputs as radians
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:554:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-7">
+          <InChapterLink href="?id=section-8">
+            <span class="t-3003-c">
+              the degree “°” notation
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:662:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-8">
+          <InChapterLink href="?id=section-9">
+            <span class="t-3003-c">
+              sines and cosines of {" "}
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:730:6
+              </span>
+            </span>
+            <NoBreak>
+              <Math>
+                $\mathbf&#123;30^\circ&#125;$
+              </Math>
+              <span class="t-3003-c">
+                ,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:730:46
+                </span>
+              </span>
+            </NoBreak>
+            {" "}
+            {" "}
+            <Math>
+              $\mathbf&#123;45^\circ&#125;$
+            </Math>
+            <span class="t-3003-c">
+              {" "} and {" "}
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:731:24
+              </span>
+            </span>
+            <NoBreak>
+              <Math>
+                $\mathbf&#123;60^\circ&#125;$
+              </Math>
+            </NoBreak>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-9">
+          <InChapterLink href="?id=section-10">
+            <span class="t-3003-c">
+              scaling the circle
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:951:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-10">
+          <InChapterLink href="?id=section-11">
+            <span class="t-3003-c">
+              polar coordinates
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:984:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-11">
+          <InChapterLink href="?id=section-12">
+            <span class="t-3003-c">
+              change-of-coordinate formulas
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1075:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-12">
+          <InChapterLink href="?id=section-13">
+            <span class="t-3003-c">
+              right triangles
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1153:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-13">
+          <InChapterLink href="?id=section-14">
+            <span class="t-3003-c">
+              a famous diagram
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1232:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-14">
+          <InChapterLink href="?id=section-15">
+            <span class="t-3003-c">
+              the abercrombie inequality
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1280:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-15">
+          <InChapterLink href="?id=section-16">
+            <span class="t-3003-c">
+              the gregorinovich sandwich
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1401:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-16">
+          <InChapterLink href="?id=section-17">
+            <span class="t-3003-c">
+              the angle-sum formulas
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1514:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-17">
+          <InChapterLink href="?id=section-18">
+            <span class="t-3003-c">
+              the missing arrows
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1588:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-18">
+          <InChapterLink href="?id=section-19">
+            <span class="t-3003-c">
+              note on calculators
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1751:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-19">
           <InChapterLink href="?id=exercises">
-            exercises
+            <span class="t-3003-c">
+              exercises
+              <span class="t-3003">
+                ./src/content/ch5/ch5^exercises/__parent.wly:1:1
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 1:">
-        A Few Refreshers
+        <span class="t-3003-c">
+          The Trigonometric Functions
+          <span class="t-3003">
+            ./src/content/ch5/__parent.wly:2:11
+          </span>
+        </span>
       </ArticleTitle>
-      <Section id="first-section">
+      <Section id="section-1">
         <OuterP>
           <b>
-            Square roots.
+            <span class="t-3003-c">
+              Cos and sin. (“Cosine” and “sine”.)
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:4:6
+              </span>
+            </span>
           </b>
+          {" "} We have
+          already encountered the ‘cos’ function in 
           {" "}
-          Due to the fact that “minus times minus is plus”
-          (the enemy of my enemy is my friend)
-          and that “plus times plus is plus”,
-          any nonzero number multiplied by itself
-          is positive. For example,
+          <OutChapterLink
+            href="decoy-target-path#decoy-id"
+            class="out-chapter-link"
+          >
+            Exercise 14 of Chapter 3
+          </OutChapterLink>
+          ,
+          e.g.. It is the one that has this graph:
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          (-2) \times (-2) = 4
-          $$
-        </MathBlock>
+        <Image
+          src="/build-img/svgo-svg/hiZe.svg"
+          local_url="./images/svg_ch5_ch_cosine.svg"
+        />
         <Pause />
         <OuterP>
-          is positive, 
-          while, of course,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          2 \times 2 = 4
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is positive as well. 
-          But {" "}
+          <span class="t-3003-c">
+            It has a close cousin named ‘sin’. While {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:12:5
+            </span>
+          </span>
           <Math>
-            $\sqrt&#123;4&#125;$
+            $\cos(x)$
           </Math>
           {" "}
-          is, by definition, the unique {" "}
-          <i>
-            nonnegative
-          </i>
-          {" "}
-          solution to {" "}
+          tops off at {" "}
           <NoBreak>
             <Math>
-              $x^2 = 4$
+              $x = 0$
             </Math>
-            .
+            ,
           </NoBreak>
+          {" "} {" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} goes diagonally through
           {" "}
-          Hence,
+          <NoBreak>
+            <Math>
+              $(0, 0)$
+            </Math>
+            :
+          </NoBreak>
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          \sqrt&#123;(-2)^2&#125; = 2
-          $$
-          <ImageRight
-            src="/build-img/svgo-svg/Z39o.svg"
-            offsetX="5em"
-            atLeastAsWide={false}
-          />
-        </MathBlock>
+        <Image
+          src="/build-img/svgo-svg/fuoV.svg"
+          local_url="./images/svg_ch5_ch_cosine_and_sine.svg"
+        />
         <Pause />
         <OuterP>
-          and, in particular, it is {" "}
-          <i>
-            not
-          </i>
-          {" "} true that
+          <span class="t-3003-c">
+            As far as standard definitions go, {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:19:5
+            </span>
+          </span>
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "}
+          is the
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          for every real number {" "}
+        <CentralDisplayItalic>
           <NoBreak>
             <Math>
               $x$
             </Math>
-            .
+            <span class="t-3003-c">
+              -coordinate
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:22:10
+              </span>
+            </span>
           </NoBreak>
-          {" "} Instead we have
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x|
-          $$
-        </MathBlock>
+        </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          for every real number {" "}
+          <span class="t-3003-c">
+            and {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:24:5
+            </span>
+          </span>
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} is the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <NoBreak>
+            <Math>
+              $y$
+            </Math>
+            <span class="t-3003-c">
+              -coordinate
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:26:10
+              </span>
+            </span>
+          </NoBreak>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            of a point {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:28:5
+            </span>
+          </span>
+          <Math>
+            $x$
+          </Math>
+          {" "} units counterclockwise from
+          {" "}
+          <Math>
+            $(1, 0)$
+          </Math>
+          {" "} on the unit circle. (Note that “a”
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            unit circle
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:31:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is a circle of radius {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:33:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} while “the” unit
+          circle is the circle of radius {" "}
+          <Math>
+            $1$
+          </Math>
+          {" "} centered
+          at {" "}
+          <NoBreak>
+            <Math>
+              $(0, 0)$
+            </Math>
+            .)
+          </NoBreak>
+          {" "} For example, 
+          observe from the graphs 
+          that {" "}
+          <NoBreak>
+            <Math>
+              $\cos(&#123;1\over 2&#125;) \approx 0.9$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\sin(&#123;1\over 2&#125;) \approx 0.5$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/aPyP.svg"
+          local_url="./images/svg_ch5_ch_cosine_and_sine_@0.5_v2.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Per the definitions, the point half a
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:43:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          unit counterclockwise from {" "}
+          <Math>
+            $(1, 0)$
+          </Math>
+          {" "} on the unit
+          circle has coordinates {" "}
+          <Math>
+            $\approx 0.9$
+          </Math>
+          {" "} in {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}
+          and {" "}
+          <Math>
+            $\approx 0.5$
+          </Math>
+          {" "} in {" "}
+          <Math>
+            $y$
+          </Math>
+          {" "} (or actually 
+          {" "}
+          <Math>
+            $0.87758...$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $0.47942...$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} 
+          which is what 
+          a calculator equipped with ‘sin’ and ‘cos’ will tell us):
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/SPMY.svg"
+          local_url="./images/svg_ch5_ch_unit_circle_@0.5_smaller_v2.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            As a second example, the graphs indicate that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:62:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          {" "}{" "}
+          <NoBreak>
+            <Math>
+              $\sin(-3) \approx -0.2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $\cos(-3) \approx -0.99$
+          </Math>
+          {" "}
+          (or something very close to {" "}
+          <NoBreak>
+            <Math>
+              $-1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} at least):
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/T8lW.svg"
+          local_url="./images/svg_ch5_ch_cosine_and_sine_@-3_v2.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Indeed, going {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:69:5
+            </span>
+          </span>
+          <Math>
+            $-3$
+          </Math>
+          {" "} units counterclockwise—which
+          means, going {" "}
+          <Math>
+            $3$
+          </Math>
+          {" "} units clockwise—on the unit
+          circle, starting from {" "}
+          <NoBreak>
+            <Math>
+              $(1, 0)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} brings us to a point
+          with {" "}
+          <NoBreak>
+            <Math>
+              $y$
+            </Math>
+            -
+          </NoBreak>
+          {" "} and {" "}
           <NoBreak>
             <Math>
               $x$
+            </Math>
+            -coordinates
+          </NoBreak>
+          {" "} of {" "}
+          <Math>
+            $\approx -0.2$
+          </Math>
+          {" "}
+          and {" "}
+          <Math>
+            $\approx -0.99$
+          </Math>
+          {" "} respectively (or {" "}
+          <Math>
+            $-0.1411...$
+          </Math>
+          {" "}
+          and {" "}
+          <NoBreak>
+            <Math>
+              $-0.989992...$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} 
+          per the calculator):
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/9Ygl.svg"
+          local_url="./images/svg_ch5_ch_unit_circle_@-3_smaller.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            For a last example,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:81:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          note that there appears
+          to be a value of {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} near {" "}
+          <NoBreak>
+            <Math>
+              $-1.6$
             </Math>
             ,
           </NoBreak>
           {" "} where {" "}
-          <Math>
-            $|x|$
-          </Math>
-          {" "}
-          denotes the absolute value of {" "}
           <NoBreak>
             <Math>
-              $x$
+              $\cos(x) = 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <NoBreak>
+            <Math>
+              $\sin(x) = -1$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/BfG4.svg"
+          local_url="./images/svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Some thought reveals that {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:89:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          such a value {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} does exist, and more precisely equals 
+          {" "}
+          <i>
+            minus one-quarter the circumference
+            of a unit circle
+          </i>
+          , because {" "}
+          <Math>
+            $(0, -1)$
+          </Math>
+          {" "} is
+          one-quarter of the unit circle clockwise from {" "}
+          <NoBreak>
+            <Math>
+              $(1, 0)$
             </Math>
             .
           </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          (NB: If ever you want to indicate both
-          solutions of the equation {" "}
-          <Math>
-            $x^2 = 4$
-          </Math>
-          {" "} you
-          can always use the notation {" "}
-          <NoBreak>
-            “
-            <Math>
-              $\pm \sqrt&#123;4&#125;$
-            </Math>
-            ”.
-          </NoBreak>
           {" "}
-          This is what happens, for example, in the
-          maybe-well-known formula
+          Note that one-quarter the circumference of a unit
+          circle was estimated to be
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          x = &#123;-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a&#125;
+          \approx &#123;11\over 7&#125; = 1.\overline&#123;571428&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          for the solutions to {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} to {" "}
+          <span class="t-3003-c">
+            in {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:101:5
+            </span>
+          </span>
+          <OutChapterLink
+            href="decoy-target-path#decoy-id"
+            class="out-chapter-link"
+          >
+            Exercise 26 of Chapter 3
+          </OutChapterLink>
+          {" "} (by direct inspection
+          of the graph {" "}
           <NoBreak>
             <Math>
-              $ax^2 + bx + c = 0$
+              $y = \cos(x)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} for that matter,
+          which may or may not be cheating), which agrees
+          with the visual estimate {" "}
+          <NoBreak>
+            <Math>
+              $x \approx -1.6$
+            </Math>
+            .
+          </NoBreak>
+          {" "} (But
+          that value would be namely {" "}
+          <NoBreak>
+            <Math>
+              $x = -1.57...$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} not
+          {" "}
+          <NoBreak>
+            <Math>
+              $x = -1.6$
             </Math>
             .)
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          Next, we will ponder
+          <span class="t-3003-c">
+            In another possible definition,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:111:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \sqrt&#123;0.5&#125;
+          \sin(x)
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          which is, by definition, the unique
-          nonnegative solution {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} to
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 = 0.5.
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          As beginners, there's nothing wrong with
-          trying to solve this equation by trial and
-          error. With {" "}
+          <span class="t-3003-c">
+            is defined as the {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:117:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
-              $x = &#123;1\over 4&#125;$
+              $x$
             </Math>
-            ,
+            -coordinate
           </NoBreak>
-          {" "} for example,
-          we find
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 = &#123;1\over 4&#125;\times&#123;1\over 4&#125; = &#123;1\over 16&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          so {" "}
-          <Math>
-            $x = &#123;1\over 4&#125;$
-          </Math>
-          {" "} is not a solution of
-          the equation, being apparently too small.
-          Increasing {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} to {" "}
-          <NoBreak>
-            <Math>
-              $x = &#123;1\over 2&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} say, we
-          find
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 = &#123;1\over 2&#125;\times&#123;1\over 2&#125; = &#123;1\over 4&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          which is better, since {" "}
-          <Math>
-            $1/4$
-          </Math>
-          {" "} is closer to {" "}
-          <NoBreak>
-            <Math>
-              $1/2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          but still too small. Increasing {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} by {" "}
-          <Math>
-            $1/4$
-          </Math>
-          {" "}
-          again, say, to {" "}
-          <NoBreak>
-            <Math>
-              $x = &#123;3\over 4&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} we find
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 = &#123;3\over 4&#125;\times&#123;3\over 4&#125; = &#123;9\over 16&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          which—surprise!—is actually pretty close to
-          {" "}
-          <NoBreak>
-            <Math>
-              $1/2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} as {" "}
-          <NoBreak>
-            <Math>
-              $1/2 = 8/16$
-            </Math>
-            .
-          </NoBreak>
-          {" "} And since {" "}
-          <NoBreak>
-            <Math>
-              $9/16 &gt; 0.5$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          {" "}
-          <Math>
-            $\sqrt&#123;0.5&#125;$
-          </Math>
-          {" "} must be a little {" "}
-          <i>
-            less
-          </i>
-          {" "} than
-          {" "}
-          <NoBreak>
-            <Math>
-              $&#123;3\over 4&#125; = 0.75$
-            </Math>
-            .
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          In last resort, and in reasonably good
-          agreement with our observations, a calculator
-          reveals that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \sqrt&#123;0.5&#125; = 0.7071067...
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          where the decimals trail off with no pattern.
-          (This number is irrational.) Even so, the fact
-          that {" "}
-          <Math>
-            $\sqrt&#123;0.5&#125;$
-          </Math>
-          {" "} is {" "}
-          <i>
-            greater
-          </i>
-          {" "} than {" "}
-          <Math>
-            $0.5$
-          </Math>
-          {" "} is
-          often perceived as counterintuitive.
-        </OuterP>
-        <OuterP class="indent-10">
-          You can think of it this way: multiplying a
-          value by {" "}
-          <NoBreak>
-            <Math>
-              $0.7071$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} or approximately {" "}
-          <NoBreak>
-            <Math>
-              $\sqrt&#123;0.5&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          is like taking {" "}
-          <Math>
-            $70.71\%$
-          </Math>
-          {" "} of that value—for
-          example, say,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          605 \cdot 0.7071 = 427.7955
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
+          {" "} of a point that
           is {" "}
           <Math>
-            $70.71\%$
+            $x$
           </Math>
-          {" "} of {" "}
+          {" "} units counterclockwise from {" "}
+          <Math>
+            $(0, -1)$
+          </Math>
+          {" "} on
+          the unit circle. In this case, {" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} and
+          {" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "} are both defined by {" "}
           <NoBreak>
             <Math>
-              $605$
+              $x$
+            </Math>
+            -coordinates:
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/h28T.svg"
+          local_url="./images/svg_ch5_ch_unit_circle_with_new_definition.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            In more detail, if you tilt your head  sideways,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:125:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          you will see that the {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} axis looks, from the
+          vantage point of {" "}
+          <NoBreak>
+            <Math>
+              $(0, -1)$
             </Math>
             ,
           </NoBreak>
-          {" "} and so on—so if we
-          multiply {" "}
-          <i>
-            twice
-          </i>
-          {" "} by {" "}
+          {" "} the same as the {" "}
           <Math>
-            $0.7071$
+            $y$
           </Math>
-          {" "} we obtain
           {" "}
-          <NoBreak>
-            “
-            <Math>
-              $70.71\%$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
+          axis looks from the vantage point of {" "}
           <NoBreak>
             <Math>
-              $70.71\%$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} and it just so happens
-          that {" "}
-          <NoBreak>
-            “
-            <Math>
-              $70.71\%$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
-          <NoBreak>
-            <Math>
-              $70.71\%$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} is close to
-          {" "}
-          <NoBreak>
-            <Math>
-              $50\%$
+              $(1, 0)$
             </Math>
             .
           </NoBreak>
+          {" "}
+          So the old and new definitions of {" "}
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} are
+          equivalent! (👍👍)
         </OuterP>
         <OuterP class="indent-10">
-          The point is: if {" "}
+          <span class="t-3003-c">
+            In particular, {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:132:5
+            </span>
+          </span>
+          <Math>
+            $\sin(x)$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\cos(x)$
+          </Math>
+          {" "} can also
+          be understood as the {" "}
           <NoBreak>
-            “
             <Math>
-              $X\%$
+              $x$
             </Math>
+            -coordinates
           </NoBreak>
-          {" "} of {" "}
+          {" "} of two
+          particles on the unit circle such that the ‘sin’
+          particle is one-quarter-turn behind the {" "}
           <NoBreak>
+            ‘
             <Math>
-              $X\%$
+              $\cos$
             </Math>
-            ”
-          </NoBreak>
-          {" "} equals {" "}
-          <NoBreak>
-            <Math>
-              $50\%$
-            </Math>
-            ,
+            ’
           </NoBreak>
           {" "}
-          then, of course, {" "}
+          particle:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/5m2X.svg"
+          local_url="./images/svg_ch5_ch_unit_circle_with_sin_and_cos_particles.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...to be contrasted with our first definition,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:141:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          employing a single point projected onto
+          two different axes:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/7839.svg"
+          local_url="./images/svg_ch5_ch_unit_circle_with_sincos_particle.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The second definition (former diagram) explains
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:148:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          why values of {" "}
+          <Math>
+            $\sin$
+          </Math>
+          {" "} lag a fixed amount behind
+          values of {" "}
           <NoBreak>
             <Math>
-              $\rt&#123;0.03&#125;X &gt; 50$
+              $\cos$
             </Math>
-            —that
+            .
           </NoBreak>
-          {" "} much
-          seems logical—and, with a little thought, the
-          same phenomenon explains why {" "}
-          <NoBreak>
-            <Math>
-              $\sqrt&#123;0.5&#125; &gt; 0.5$
-            </Math>
-            !
-          </NoBreak>
+          {" "} (“Lagging” when you read the
+          graphs from left to right.) It's because the ‘sin’
+          particle follows in the trail blazed by the ‘cos’
+          particle.
         </OuterP>
       </Section>
       <Rest />
@@ -533,249 +961,416 @@ export default function __Chapter1__() {
 }
 
 const Rest = () => {
-  const visibleRestSections = useShowMore(5);
+  const visibleRestSections = useShowMore(19);
   return <>
     {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
           <b>
-            Fractions and Division.
+            <span class="t-3003-c">
+              Derivatives.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:158:6
+              </span>
+            </span>
           </b>
           {" "}
-          An elementary fraction, or division, such as
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;50 \over 2&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          can be thought of in a few different ways:
-        </OuterP>
-        <Pause />
-        <List
-          marker="decimal"
-          style="gap:2px;"
-        >
-          <Item>
-            <p>
-              Fifty halves (i.e., {" "}
-              <NoBreak>
-                <Math>
-                  $50 \times &#123;1\over 2&#125;$
-                </Math>
-                ).
-              </NoBreak>
-            </p>
-          </Item>
-          <Item>
-            <p>
-              The size obtained when something of size
-              fifty is divided into two equal parts
-              (answer: {" "}
-              <NoBreak>
-                <Math>
-                  $25$
-                </Math>
-                ).
-              </NoBreak>
-            </p>
-          </Item>
-          <Item>
-            <p>
-              The number of times that {" "}
-              <Math>
-                $2$
-              </Math>
-              {" "} goes into {" "}
-              <Math>
-                $50$
-              </Math>
-              {" "}
-              (answer: {" "}
-              <NoBreak>
-                <Math>
-                  $25$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} because it takes twenty-five
-              {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                's
-              </NoBreak>
-              {" "} to make up {" "}
-              <NoBreak>
-                <Math>
-                  $50$
-                </Math>
-                ).
-              </NoBreak>
-            </p>
-          </Item>
-        </List>
-        <Pause />
-        <OuterP>
-          But {" "}
-          <Math>
-            $50/2$
-          </Math>
-          {" "} is a ratio of integers, 
-          and for a ratio of
-          decimals, such as, say,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \,&#123;1 \over 0.01&#125;,
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          our possible points of view are going to be
-          more restricted. Thankfully, though, we can
-          still characterize this fraction as the
-          answer to the question “how many times does
-          {" "}
-          <Math>
-            $0.01$
-          </Math>
-          {" "} go into {" "}
+          Continuing the last topic,
+          we can
+          add two more particles to the diagram that
+          defines ‘sin’ and ‘cos’ via {" "}
           <NoBreak>
             <Math>
-              $1$
+              $x$
             </Math>
-            ?”,
+            -coordinates.
           </NoBreak>
-          {" "} as in the third option
-          above—from which,
+          {" "}
+          The two new particles are labeled {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\!\sin$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          and {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\!\cos$
+            </Math>
+            ”:
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/WKck.svg"
+          local_url="./images/svg_ch5_ch_unit_circle_with_four_particles.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            These labels are chosen because the {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:169:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinate
+          </NoBreak>
+          {" "}
+          of the {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\!\sin$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} particle, e.g., is
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          &#123;1 \over 0.01&#125; \,=\,100
+          -\!\sin(x)
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          because {" "}
+          <span class="t-3003-c">
+            by symmetry with the {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:176:5
+            </span>
+          </span>
           <Math>
-            $0.01$
+            $\sin$
           </Math>
-          {" "} goes {" "}
-          <Math>
-            $100$
-          </Math>
-          {" "} times into {" "}
+          {" "} particle, meaning that 
+          the {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\!\sin$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} particle defines the function
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x \ra -\!\sin(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            which is also known simply as
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:183:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <CentralDisplay>
+          <NoBreak>
+            <span class="t-3003-c">
+              “
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:185:7
+              </span>
+            </span>
+            <Math>
+              $-\!\sin$
+            </Math>
+            <span class="t-3003-c">
+              ”
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:185:17
+              </span>
+            </span>
+          </NoBreak>
+        </CentralDisplay>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            by the general definition that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:187:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          -f = (x \ra -f(x))
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            for all {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:191:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
-              $1$
+              $f : \rr \ra \rr$
             </Math>
             .
           </NoBreak>
-          {" "} For
-          that matter,
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            Adding the curves for {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:193:5
+            </span>
+          </span>
+          <Math>
+            $-\!\sin$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $-\!\cos$
+          </Math>
+          {" "}
+          to the graphs fills the “gap” between {" "}
+          <Math>
+            $y = \sin(x)$
+          </Math>
+          {" "}
+          and {" "}
+          <Math>
+            $y = \cos(x)$
+          </Math>
+          {" "} with two new equally-spaced curves;
+          note that
+          {" "}
+          <Math>
+            $\cos$
+          </Math>
+          {" "} lags behind {" "}
+          <Math>
+            $-\!\sin$
+          </Math>
+          {" "}
+          (reading the graphs from left to right)
+          by the same amount that {" "}
+          <Math>
+            $\sin$
+          </Math>
+          {" "} lags behind
+          {" "}
+          <NoBreak>
+            <Math>
+              $\cos$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} etc:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/RzLW.svg"
+          local_url="./images/svg_ch5_ch_four_curves.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            These are the same four curves that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:205:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          appear in {" "}
+          <OutChapterLink
+            href="decoy-target-path#decoy-id"
+            class="out-chapter-link"
+          >
+            Exercise 12 of Chapter 4
+          </OutChapterLink>
+          .
+          In particular,
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          &#123; 1 \over 0.001&#125; = 1000,\qquad&#123;1 \over 0.0001&#125; = 10000,\quad\,\,\,\,\textrm&#123;(etc)&#125;
+          \sin' = \cos
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos' = -\!\sin
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          (-\!\sin)' = -\!\cos
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          (-\!\cos)' = \sin
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          by the same reasoning, which explains why
-          dividing by smaller and smaller numbers produces
-          larger and larger results. (Also, why dividing by {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} is undefined.)
-        </OuterP>
-        <Pause />
-        <OuterP>
-          <b>
-            Note.
-          </b>
-          {" "} In general, the ratio of two decimal
-          numbers can be turned into a ratio of integers
-          by multiplying the ratio top and bottom by a
-          suitable power of {" "}
+          <span class="t-3003-c">
+            because the rate of change of each
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:220:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          particle's {" "}
           <NoBreak>
             <Math>
-              $10$
+              $x$
             </Math>
-            .
+            -coordinate
           </NoBreak>
-          {" "} E.g.:
+          {" "} is the
+          {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinate
+          </NoBreak>
+          {" "} of the next particle
+          in the order of rotation, as explained
+          in the solution to that problem,
+          clockwise vs. counterclockwise rotation
+          notwithstanding.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            One can also note that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:228:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          &#123;1.42 \over 0.8&#125; = &#123;100 \cdot 1.42 \over 100 \cdot 0.8&#125; = &#123;142 \over 80&#125; = &#123;71 \over 40&#125;.
+          (-f)' = ((-1)\cdot f)' = (-1) \cdot f' = -f'
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          This example was chosen randomly, and, if you
-          allow, we would like to see how large {" "}
+          <span class="t-3003-c">
+            in general for any {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:232:5
+            </span>
+          </span>
           <Math>
-            $71/40$
+            $f : \rr \ra \rr$
           </Math>
           {" "}
-          really is
-          (one second!):
+          (cf. {" "}
+          <OutChapterLink
+            href="decoy-target-path#decoy-id"
+            class="out-chapter-link"
+          >
+            Exercise 10
+          </OutChapterLink>
+          {" "}
+          and {" "}
+          <OutChapterLink
+            href="decoy-target-path#decoy-id"
+            class="out-chapter-link"
+          >
+            Exercise 11 of Chapter 4
+          </OutChapterLink>
+          ),
+          which implies that
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;align*&#125;
-          &#123;71 \over 40&#125; \,&amp;=\, &#123;40 + 30 + 1 \over 40&#125; \,=\, &#123;40 \over 40&#125; + &#123;30 \over 40&#125; + &#123;1 \over 40&#125;\\
-          \,&amp;=\, 1 + &#123;3 \over 4&#125; + &#123;1 \over 4&#125;\!\cdot \!&#123;1 \over 10&#125;\up&#123;1.5&#125;\\
-          \,&amp;=\, 1 + 0.75 + 0.025 = 1.775\up&#123;1.5&#125;
-          \end&#123;align*&#125;
+          (-\!\sin)' = -\!\sin'
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          ...so we find, among others, that {" "}
-          <Math>
-            $71$
-          </Math>
-          {" "} is exactly
+          <span class="t-3003-c">
+            (or
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:246:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-\!\sin)' = -\!\sin' = -\!\cos
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            to finish the computation),
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:250:5
+            </span>
+          </span>
           {" "}
-          <Math>
-            $77.5\%$
-          </Math>
-          {" "} greater than {" "}
-          <NoBreak>
-            <Math>
-              $40$
-            </Math>
-            .
-          </NoBreak>
           {" "}
-          (Check yourself: {" "}
-          <Math>
-            $70$
-          </Math>
-          {" "} is {" "}
-          <Math>
-            $75\%$
-          </Math>
-          {" "} greater than {" "}
-          <NoBreak>
-            <Math>
-              $40$
-            </Math>
-            .)
-          </NoBreak>
+          and that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-\!\cos)' = -\!\cos'
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (or
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:255:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (-\!\cos)' = -\!\cos' = -(-\!\sin) = \sin
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            to finish the computation),
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:259:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          which means that one only needs to
+          remember the first two equations—though
+          even better is to just remember the entire
+          four-particle diagram, and never think about
+          signs again!
         </OuterP>
       </Section>
     </>}
@@ -784,592 +1379,238 @@ const Rest = () => {
       <Section id="section-3">
         <OuterP>
           <b>
-            Distributivity.
-          </b>
-          {" "}
-          As you might already know a number that
-          multiplies a sum can be brought “inside” the
-          sum. For example,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          5(10 + 2) \,=\, 5\!\cdot\!10 \,+\, 5\!\cdot\!2
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          (five times twelve equals fifty plus ten), or
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          a(b + c) = ab + ac
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          more generally. This property is known as the
-          {" "}
-          <i>
-            distributivity of multiplication over addition
-          </i>
-          ,
-          or {" "}
-          <i>
-            distributivity
-          </i>
-          {" "} for short.
-        </OuterP>
-        <OuterP class="indent-10">
-          (We might clarify that {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $\cdot$
-            </Math>
-            ’
-          </NoBreak>
-          {" "} means
-          “times”, i.e., the same as {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $\times$
-            </Math>
-            ’.
-          </NoBreak>
-          {" "} Moreover,
-          when we write
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          5\!\cdot\!10 \,+\, 5\!\cdot\!2
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          we really mean
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (5\!\cdot\!10) + (5\!\cdot\!2)
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          as opposed to something else, such as
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          ((5\!\cdot\!10) + 5)\!\cdot\! 2,
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          because multiplication takes precedence over
-          addition, absent parentheses.)
-        </OuterP>
-        <OuterP class="indent-10">
-          A little more generally, one has such identities
-          as
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(C + D) \,=\, aC + bC + aD + bD
-          $$
-          <ImageLeft
-            src="/build-img/svgo-svg/-TtU.svg"
-            offsetX="-1em"
-            atLeastAsWide={true}
-          />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          that come from multiplying every term of the first
-          parenthesis with every term of the second
-          parenthesis. Indeed,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(C + D) = (a + b)C + (a + b)D
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          by one application of distributivity, while
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)C = aC + bC
-          $$
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)D = aD + bD
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          by distributivity again.
-        </OuterP>
-        <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 1.
-            </b>
-            {" "}
-            One has
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \begin&#123;aligned&#125;
-            (10 + 2)(10 + 4) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4 \\
-            \,&amp;=\, 100 \,+\, 40 \,+\, 20 \,+\, 8 \up&#123;1.1&#125;\\
-            \,&amp;=\, 168 \up&#123;1.1&#125;
-            \end&#123;aligned&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            so {" "}
-            <NoBreak>
-              <Math>
-                $12 \times 14 = 168$
-              </Math>
-              .
-            </NoBreak>
-          </OuterP>
-        </Example>
-        <Pause />
-        <Example id="_21_h.a.i_">
-          <OuterP>
-            <b>
-              Example 2.
-            </b>
-            {" "}
-            One has
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \begin&#123;align*&#125;
-            (10 + 3)(10 + 3) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
-            \,&amp;=\, 100 \,+\, 30 \,+\, 30 \,+\, 9 \up&#123;1.1&#125;\\
-            \,&amp;=\, 169 \up&#123;1.1&#125;
-            \end&#123;align*&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            so {" "}
-            <NoBreak>
-              <Math>
-                $13 \times 13 = 169$
-              </Math>
-              .
-            </NoBreak>
-          </OuterP>
-        </Example>
-        <Pause />
-        <OuterP>
-          (The fact that {" "}
-          <Math>
-            $13 \times 13$
-          </Math>
-          {" "} is exactly one
-          greater than {" "}
-          <Math>
-            $12 \times 14$
-          </Math>
-          {" "} is a bit curious
-          indeed.)
-        </OuterP>
-        <OuterP class="indent-10">
-          If we start from the afore-mentioned identity
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(C + D) \,=\, aC + bC + aD + bD
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          and set {" "}
-          <NoBreak>
-            <Math>
-              $C = a$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $D = b$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} we find
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(a + b) \,=\, aa + ba + ab + bb
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          or, equivalently,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)^2 = a^2 + 2ab + b^2
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          since {" "}
-          <NoBreak>
-            <Math>
-              $(a + b)(a + b) = (a + b)^2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <Math>
-            $aa = a^2$
-          </Math>
-          {" "}
-          and {" "}
-          <NoBreak>
-            <Math>
-              $bb = b^2$
-            </Math>
-            .
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          (This is the {" "}
-          <i>
-            binomial expansion
-            of degree two
-          </i>
-          , but such terminology is not very
-          important at this stage.)
-        </OuterP>
-        <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 3.
-            </b>
-            {" "}
-            By the last formula (or “binomial expansion
-            of degree two”),
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \begin&#123;align*&#125;
-            \up&#123;1&#125; (10 + 3)^2 \,&amp;=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
-            \up&#123;1&#125; \,&amp;=\, 100 + 60 + 9 \up&#123;1.1&#125;\\
-            \up&#123;1&#125; \,&amp;=\, 169 \up&#123;1.1&#125;
-            \end&#123;align*&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            obtaining the same result as {" "}
-            <InChapterLink
-              href="/article/chapter1#_21_h.a.i_"
-              class="in-chapter-link"
-            >
-              Example 2
-            </InChapterLink>
-            &#8288;.
-          </OuterP>
-        </Example>
-        <Pause />
-        <OuterP>
-          On the other hand, setting {" "}
-          <NoBreak>
-            <Math>
-              $C = a$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <Math>
-            $D = -b$
-          </Math>
-          {" "} in
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(C + D) = aC + aD + bC + bD
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          gives
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(a + (-b)) = aa + a(-b) + ba + b(-b)
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          or
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(a - b) = aa - ab + ba - bb
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          or
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(a - b) = a^2 - b^2
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          since {" "}
-          <NoBreak>
-            <Math>
-              $- ab + ba = 0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $aa = a^2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $bb = b^2$
-            </Math>
-            .
-          </NoBreak>
-          {" "} Note that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          a^2 - b^2
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          a difference of squares
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          whence {" "}
-          <i>
-            a difference of squares can always be
-            factored
-          </i>
-          . (Factored as {" "}
-          <NoBreak>
-            <Math>
-              $(a + b)(a - b)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} that
-          is.) (NB: “Factored” means “written as a product”.)
-        </OuterP>
-        <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 4.
-            </b>
-            {" "}
-            Since
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            19 = 100 - 81 = 10^2 - 9^2
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            is a difference of squares, {" "}
-            <Math>
-              $19$
-            </Math>
-            {" "} can be
-            factored. (On the other hand {" "}
-            <Math>
-              $19$
-            </Math>
-            {" "} is a prime
-            number, but nevermind.)
-          </OuterP>
-        </Example>
-        <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 5.
-            </b>
-            {" "}
-            The expression
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            1 - x^2
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            can be factored, because
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            1 = 1^2
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            implies that
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            1 - x^2
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            truly is “a difference of squares”. And, indeed,
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            1 - x^2 = (1 - x)(1 + x)
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            as per {" "}
+            <span class="t-3003-c">
+              Even/odd identities, and identities with {" "}
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:273:6
+              </span>
+            </span>
             <NoBreak>
               “
               <Math>
-                $\rt&#123;0.04&#125;a^2 - b^2 = (a - b)(a + b)$
+                $\eta$
               </Math>
               ”.
             </NoBreak>
-          </OuterP>
-        </Example>
+          </b>
+          {" "}
+          One has
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \displaylines&#123;
+          \up&#123;1.0&#125;\cos(-x) = \cos(x) \\
+          \up&#123;1.7&#125;\sin(-x) = -\sin(x) \\
+          \up&#123;1.7&#125;\sin(x + \eta) = \cos(x) \\
+          \up&#123;1.7&#125;\cos(x - \eta) = \sin(x) \\
+          \up&#123;1.7&#125;\dn&#123;0.5&#125;\cos(\eta/2 + x) = \sin(\eta/2 - x)
+          &#125;
+          $$
+        </MathBlock>
         <Pause />
         <OuterP>
-          In relation to distributivity, we should also
-          mention the simple but important fact that
-          multiplying a difference by {" "}
-          <Math>
-            $-1$
-          </Math>
+          <span class="t-3003-c">
+            for all {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:286:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $x \in \rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} where
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \eta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (“aye-tah”, Greek letter “eta”) is a
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:292:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          constant that denotes the quarter-circumference
+          of a unit circle, or about {" "}
+          <NoBreak>
+            <Math>
+              $&#123;11\over 7&#125;$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (Cf. {" "}
+          <OutChapterLink
+            href="decoy-target-path#decoy-id"
+            class="out-chapter-link"
+          >
+            Exercise 26
+          </OutChapterLink>
+          , {" "}
+          <OutChapterLink
+            href="decoy-target-path#decoy-id"
+            class="out-chapter-link"
+          >
+            Chapter 4
+          </OutChapterLink>
+          .) You should
+          be able to verify each of these identities
+          just by looking at them and thinking of the
+          definitions of {" "}
+          <NoBreak>
+            <Math>
+              $\sin(x)$
+            </Math>
+            ,
+          </NoBreak>
           {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\cos(x)$
+            </Math>
+            —possibly
+          </NoBreak>
+          {" "}
+          the “second” definition of {" "}
+          <NoBreak>
+            <Math>
+              $\sin(x)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} in some
+          —casesbut in case something goes wrong, here
+          is a cheat sheet that does some of the thinking
+          for you
+          (or help you compare your way of seeing
+          things to the author's way of seeing things):
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/g1x7.svg"
+          local_url="./images/svg_ch5_ch_identity_explanations.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Two more identities
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:309:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\eta - x) = \cos(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:313:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\eta - x) = \sin(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            are related to the last identity above, in that they
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:317:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          involve symmetry about the line {" "}
+          <Math>
+            $x = y$
+          </Math>
+          {" "} in the Cartesian
+          plane:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/9iTV.svg"
+          local_url="./images/svg_ch5_ch_identity_explanations_more.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            We also have these identities...
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:324:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \displaylines&#123;
+          \up&#123;1.2&#125;\cos(x + 4\eta) = \cos(x)\\
+          \up&#123;1.7&#125;\sin(x + 4\eta) = \rt&#123;0.15&#125;\sin(x)\rt&#123;0.15&#125;\\
+          \up&#123;1.7&#125;\cos(x + 2\eta) = \rt&#123;0.15&#125;-\!\cos(x)\rt&#123;0.15&#125;\\
+          \up&#123;1.7&#125;\sin(x + 2\eta) = \rt&#123;0.15&#125;-\!\sin(x)\rt&#123;0.15&#125;
+          &#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...that follow because one full turn
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:335:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          around the circle brings you back to the
+          same position, whereas a half-turn brings
+          you around  to your {" "}
           <i>
-            reverses
+            antipode
           </i>
-          {" "} the
-          difference. That is,
+          {" "} (where
+          both coordinates are negated), and these
+          two more...
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          (-1)(a - b) \,=\, b - a
+          \displaylines&#123;\up&#123;1.0&#125;\cos(x + \eta) = -\!\sin(x) \\
+          \up&#123;1.7&#125;\sin(x - \eta) = -\!\cos(x)&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          or, for short,
+          <span class="t-3003-c">
+            ...that follow from the four-particle
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:347:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          diagram, e.g..
         </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          -(a - b) \,=\, b - a
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          because, indeed,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;align*&#125;
-          (-1)(a - b) \,&amp;=\, (-1)(a + (-b)) \\
-          \,&amp;=\, (-1)a + (-1)(-b) \up&#123;1.1&#125; \\
-          \,&amp;=\, -a + b \up&#123;1.1&#125;
-          \end&#123;align*&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          by distributivity (used in the second step).
-        </OuterP>
-        <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 6.
-            </b>
-            {" "}
-            We have {" "}
-            <NoBreak>
-              <Math>
-                $-(10 - 3) = 3 - 10$
-              </Math>
-              .
-            </NoBreak>
-            {" "}
-            (Because {" "}
-            <NoBreak>
-              <Math>
-                $-7 = -7$
-              </Math>
-              ,
-            </NoBreak>
-            {" "} as it would be, haha.)
-          </OuterP>
-        </Example>
-        <Pause />
-        <StarDivider />
       </Section>
     </>}
     {visibleRestSections() > 2 && <>
@@ -1377,73 +1618,120 @@ const Rest = () => {
       <Section id="section-4">
         <OuterP>
           <b>
-            Epilogue.
+            <span class="t-3003-c">
+              Relation to derivatives.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:352:6
+              </span>
+            </span>
           </b>
-          {" "} Do you remember the near miss between
+          {" "}
+          Note that the derivatives of
+          sin and cos can also be expressed by
+          the [possibly more “logical”] formulas
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          12\cdot 14 \,=\, 168
+          \sin'(x) = \sin(x + \eta)
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos'(x) = \cos(x + \eta)
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          and
+          <span class="t-3003-c">
+            given that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:364:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          13 \cdot 13 \,=\, 13^2 \,=\, 169
+          \sin(x + \eta) = \cos(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(x + \eta) = -\!\sin(x)
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          ...? Well if you observe, additionally, that
+          <span class="t-3003-c">
+            as seen in the previous section.
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:373:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            In fact, one can make the further observation that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:375:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;align*&#125;
-          11\,\cdot\,13 &amp;= 12^2 - 1\\
-          10\,\cdot\,12 &amp;= 11^2 - 1 \up&#123;1.1&#125;\\
-          9\,\cdot\,11 &amp;= 10^2 - 1 \up&#123;1.1&#125;
-          \end&#123;align*&#125;
+          \sin^&#123;(\ell)&#125;(x) = \sin(x + \ell\eta)
           $$
         </MathBlock>
-        <Pause />
-        <OuterP>
-          (etc) you might become suspicious of a pattern!
-          But the mystery is rather thin: we have
-        </OuterP>
         <Pause />
         <MathBlock>
           $$
-          (n - 1)(n + 1) \,=\, n^2 - 1
+          \cos^&#123;(\ell)&#125;(x) = \cos(x + \ell\eta)
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          for {" "}
-          <i>
-            every
-          </i>
-          {" "} real number {" "}
+          <span class="t-3003-c">
+            where {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:384:5
+            </span>
+          </span>
+          <NoBreak>
+            “
+            <Math>
+              $^&#123;(\ell)&#125;$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} denotes the {" "}
+          <NoBreak>
+            <Math>
+              $\ell$
+            </Math>
+            -th
+          </NoBreak>
+          {" "}
+          derivative, for all {" "}
+          <NoBreak>
+            <Math>
+              $\ell \in \nn$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          Since each
+          derivative is obtained by moving to the next
+          particle in the order of rotation, each
+          derivative is obtained by adding {" "}
           <Math>
-            $n$
+            $+\eta$
           </Math>
-          {" "} because of the
-          formula
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a - b)(a + b) \,=\, a^2 - b^2
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          for a difference of squares!
+          {" "} to the
+          input!
         </OuterP>
       </Section>
     </>}
@@ -1452,1278 +1740,7321 @@ const Rest = () => {
       <Section id="section-5">
         <OuterP>
           <b>
-            Vocabulary.
+            <span class="t-3003-c">
+              Parenthetization and powers.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:398:6
+              </span>
+            </span>
           </b>
+          {" "} 
+          It is allowed to write
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \te&#123;“&#125;\cos x\rt&#123;0.2&#125;\te&#123;”&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            for
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:403:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \te&#123;“&#125;\cos(x)\rt&#123;0.1&#125;\te&#123;”&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            when the input is just one symbol. Also,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:407:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos^2(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (or
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:411:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos^2 x
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            similarly to the just-introduced convention)
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:415:5
+            </span>
+          </span>
           {" "}
-          A pair of algebraic expressions of the form
+          {" "}
+          means
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          a + b,\, a - b
+          (\cos(x))^2
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          is called a {" "}
-          <i>
-            conjugate pair
-          </i>
-          . For example,
+          <span class="t-3003-c">
+            which is a special case of the fact that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:423:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          n + 1,\, n - 1
+          f^2(x) = (f(x))^2
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          is a conjugate pair, as is
+          <span class="t-3003-c">
+            for any function {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:427:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          which is itself a special case of the fact that
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \sqrt&#123;3&#125; + \sqrt&#123;2&#125;,\,\, \sqrt&#123;3&#125; - \sqrt&#123;2&#125;
+          (fg)(x) = f(x)g(x)
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          and so on.
+          <span class="t-3003-c">
+            for all functions {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:432:5
+            </span>
+          </span>
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (The definition of function multiplication!)
         </OuterP>
       </Section>
     </>}
     {visibleRestSections() > 4 && <>
       <Pause />
+      <Section id="section-6">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              The pythagorean identity.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:437:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          Because
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^2 + y^2 = 1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is the equation of the unit circle, and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:444:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          points of the form
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\cos x, \sin x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            are points on the unit circle, we have
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:451:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <TextParent>
+          <MathBlock>
+            $$
+            \cos^2(x) + \sin^2(x) = 1 \tag&#123;*&#125;
+            $$
+          </MathBlock>
+        </TextParent>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            for all {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:457:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $x \in \rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} surprise or not.
+          We refer to (*) as the {" "}
+          <i>
+            pythagorean identity
+          </i>
+          .
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            Various “tricks” are associated to the
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:460:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          pythagorean identity. For example, the
+          number
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is forevermore suspect, because it might
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:468:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          just be
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin^2(x) + \cos^2(x)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (or for some other variable) in disguise,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:475:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          depending on the situation. Also
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (variable not important) might be
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:482:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - \cos^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            just as
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:488:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            might be
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:494:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - \sin^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (also
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:500:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - \cos^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:506:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - \sin^2 (y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            might end up respectively rewritten
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:512:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (1 - \cos y)\cdot (1 + \cos y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:518:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (1 - \sin y)\cdot (1 + \sin y)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            by the difference-of-squares factorization),
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:524:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin^2 \theta - \cos^2 \theta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            might be
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:531:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          1 - 2\cos^2 \theta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            since {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:537:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $\sin^2 \theta = 1 - \cos^2\theta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} or
+          might be
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          2\sin^2 \theta - 1
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            since {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:544:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $\cos^2 \theta = 1 - \sin^2\theta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          and symmetrically for the opposite difference. (I.e.,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \,\cos^2 \theta - \sin^2 \theta,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            this one.) Etc.
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:551:5
+            </span>
+          </span>
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 5 && <>
+      <Pause />
+      <Section id="section-7">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Inputs as radians.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:554:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          The
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            radian measure
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:557:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            of an angle {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:559:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          is the length of a circular arc subtended
+          by the angle, divided by the radius of
+          that arc:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/dau_.svg"
+          local_url="./images/svg_ch5_ch_radian_definition.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            By this definition, the radian measure of an
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:567:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          angle coincides with the length of a subtended arc
+          of radius {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/byWA.svg"
+          local_url="./images/svg_ch5_ch_radian_definition_radius_1.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            In particular, the radian measure
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:574:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          of {" "}
+          <Math>
+            $90^\circ$
+          </Math>
+          {" "} is {" "}
+          <NoBreak>
+            <Math>
+              $\eta$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/uhJc.svg"
+          local_url="./images/svg_ch5_ch_radian_definition_90_degrees_is.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            To imprint this fact in our memories:
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:580:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/GrNS.svg"
+          local_url="./images/svg_ch5_ch_radian_definition_90_imprint.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (We will often leave out the “rad”—in fact,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:585:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          if you don't see a degree symbol {" "}
+          <NoBreak>
+            “
+            <Math>
+              $^\circ$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          next to an angle, that means the angle
+          is a radian.) From there, other radian
+          measures can be proportionally deduced; for
+          example, {" "}
+          <Math>
+            $45^\circ$
+          </Math>
+          {" "} is {" "}
+          <Math>
+            $\eta/2$
+          </Math>
+          {" "} radians:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/PhlK.svg"
+          local_url="./images/svg_ch5_ch_radian_definition_45_imprint.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            aaaand... and so on.
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:595:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            As a consequence of the definition, a
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:597:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          displacement of {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} units on the unit circle
+          subtends an angle—or technically: {" "}
+          <i>
+            rotation
+          </i>
+          ,
+          because there is a “positive” direction—and
+          you can also say {" "}
+          <i>
+            signed angle
+          </i>
+          {" "} instead of
+          {" "}
+          <i>
+            rotation
+          </i>
+          , by the way—whose (signed) radian
+          measure is {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/KPHA.svg"
+          local_url="./images/svg_ch5_ch_x_displacement_and_x_radians.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            In particular,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:608:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          instead of positing the definitions of
+          sin and cos like this...
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/n-qa.svg"
+          local_url="./images/svg_ch5_ch_x_displacement_and_x_radians_displacement_definition.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...with the input appearing as a
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:615:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          displacement, we can posit the definitions
+          like this...
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/kCui.svg"
+          local_url="./images/svg_ch_ch_x_displacement_and_x_radians_radian_definition.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...with the input appearing as a radian.
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:622:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 1.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              We can conceptualize {" "}
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:625:9
+              </span>
+            </span>
+            <Math>
+              $\cos(\eta/2)$
+            </Math>
+            {" "}
+            and {" "}
+            <Math>
+              $\sin(\eta/2)$
+            </Math>
+            {" "} like this...
+          </OuterP>
+          <Pause />
+          <Image
+            src="/build-img/svgo-svg/tIP3.svg"
+            local_url="./images/svg_ch5_ch_etaOver2_example_displacement_version.svg"
+          />
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              ...with the input {" "}
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:631:9
+              </span>
+            </span>
+            <Math>
+              $\eta/2$
+            </Math>
+            {" "} being a displacement
+            along the periphery of the unit circle,
+            or like this...
+          </OuterP>
+          <Pause />
+          <Image
+            src="/build-img/svgo-svg/jn-F.svg"
+            local_url="./images/svg_ch5_ch_etaOver2_example_angle_version.svg"
+          />
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              ...with the input {" "}
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:638:9
+              </span>
+            </span>
+            <Math>
+              $\eta/2$
+            </Math>
+            {" "} being the radian measure
+            of an angle opening counterclockwise from the positive {" "}
+            <Math>
+              $x$
+            </Math>
+            {" "} axis.
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          <i>
+            <span class="t-3003-c">
+              Note.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:643:6
+              </span>
+            </span>
+          </i>
+          {" "}
+          The definition of radians also implies
+          that the length of a circular
+          arc subtended by an angle is its radian
+          measure times the radius:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/8wuf.svg"
+          local_url="./images/svg_ch5_ch_radian_definition_consequence.svg"
+        />
+        <Pause />
+        <TildeDivider style="margin-top:-1em" />
+      </Section>
+    </>}
+    {visibleRestSections() > 6 && <>
+      <Pause />
+      <Section id="section-8">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              The degree “°” notation.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:662:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          We consider the degree notation
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $^\circ$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} to be pig lipstick on top of
+          radians by defining
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          x^\circ = x \cdot &#123;\eta\over 90&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            for all {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:671:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $x \in \rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} where the multiplication
+          by
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \eta\over 90
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            converts from degrees to radians.
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:678:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            For example,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:680:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          90^\circ = 90 \cdot &#123;\eta\over 90&#125; = \eta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:686:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          45^\circ = 45 \cdot &#123;\eta\over 90&#125; = \eta/2,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and so on.
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:692:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            Thus, for example,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:694:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(90^\circ\hlfbk) = \cos(\eta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            not because of anything to do with ‘cos’ or
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:700:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          by some sort of convention, etc, but because
+          {" "}
+          <Math>
+            $90^\circ$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\eta$
+          </Math>
+          {" "} {" "}
+          <i>
+            are the same real number
+          </i>
+          .
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 7 && <>
+      <Pause />
+      <Section id="section-9">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Sines and cosines of {" "}
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:730:6
+              </span>
+            </span>
+            <NoBreak>
+              <Math>
+                $\mathbf&#123;30^\circ&#125;$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}
+            {" "}
+            <Math>
+              $\mathbf&#123;45^\circ&#125;$
+            </Math>
+            {" "} and {" "}
+            <NoBreak>
+              <Math>
+                $\mathbf&#123;60^\circ&#125;$
+              </Math>
+              .
+            </NoBreak>
+          </b>
+          {" "}
+          Note that every point of the form
+        </OuterP>
+        <Pause />
+        <TextParent>
+          <MathBlock>
+            $$
+            (\pm\sqrt&#123;x&#125;, \pm\sqrt&#123;1 - x&#125;),\,\,\,0 \leq x \leq 1 \tag&#123;*&#125;
+            $$
+          </MathBlock>
+        </TextParent>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is on the unit circle, because the
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:738:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          sum-of-the-squares-of-the-two-coordinates is {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (The equation of the unit circle is {" "}
+          <NoBreak>
+            <Math>
+              $x^2 + y^2 = 1$
+            </Math>
+            .)
+          </NoBreak>
+          {" "}
+          E.g.,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.2&#125;, \sqrt&#123;0.8&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is on the unit circle, as is
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:747:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.1&#125;, \sqrt&#123;0.9&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and so on. (If you're curious, points of this
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:753:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          family look like this:)
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/Yhim.svg"
+          local_url="./images/svg_ch5_ch_that_family.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Vice-versa, every point
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:760:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          on the unit circle has the form (*) for some
+          {" "}
+          <Math>
+            $0 \leq x \leq 1$
+          </Math>
+          {" "} and some choice of the {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $\pm$
+            </Math>
+            ’
+          </NoBreak>
+          {" "}
+          signs.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            In particular, the unit circle contains the
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:765:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          following points:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/BFW6.svg"
+          local_url="./images/svg_ch5_ch_main_angles_first.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Here
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:771:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.5&#125;,\, \sqrt&#123;0.5&#125;\rt&#123;0.2&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is obviously at {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:777:5
+            </span>
+          </span>
+          <Math>
+            $45^\circ\hlfbk$
+          </Math>
+          {" "} from the {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "}
+          axis, which implies
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(45^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            or
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:787:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\eta/2) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\eta/2) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            in radians. Symmetrically,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:796:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(135^\circ\hlfbk) = -\sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(135^\circ\hlfbk) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (or
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:805:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(1.5\eta) = -\sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(1.5\eta) = \sqrt&#123;0.5&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            in radians) in the second quadrant, and so on.
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:814:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            For the remaining values we rely on the
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:816:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          existence of the following two equilateral
+          triangles:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/uUEG.svg"
+          local_url="./images/svg_ch5_ch_main_angles_two_equilateral_triangles.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The first triangle implies that the the unique
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:830:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          point on the unit circle with {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            -coordinate
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "} in the first quadrant is at {" "}
+          <Math>
+            $60^\circ\hlfbk$
+          </Math>
+          {" "}
+          from the {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} axis, while the second triangle implies that the unique point
+          on the unit circle with {" "}
+          <NoBreak>
+            <Math>
+              $y$
+            </Math>
+            -coordinate
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $0.5$
+          </Math>
+          {" "}
+          in the first quadrant is at {" "}
+          <Math>
+            $30^\circ\hlfbk$
+          </Math>
+          {" "}
+          from the {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} axis; but since
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.25&#125; = 0.5
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (surprise!), the two points in question must be
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:842:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          the afore-shown
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.25&#125;, \,\sqrt&#123;0.75&#125;) = (0.5, \,\sqrt&#123;0.75&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            at the upper tip of the first triangle, and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:849:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (\sqrt&#123;0.75&#125;, \,\sqrt&#123;0.25&#125;) = (\sqrt&#123;0.75&#125;, \,0.5)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            at the rightward tip of the second triangle,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:855:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          and we find
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(60^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(60^\circ\hlfbk) = \sqrt&#123;0.75&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:865:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(30^\circ\hlfbk) = \sqrt&#123;0.75&#125;,
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(30^\circ\hlfbk) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            by conclusion; or
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:874:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(2\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(2\eta/3) = \sqrt&#123;0.75&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:883:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\eta/3) = \sqrt&#123;0.75&#125;,
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\eta/3) = 0.5 \,\,(= \sqrt&#123;0.25&#125;)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            in radians!
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:892:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            (And symmetrically in other quadrants, e.g.,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:894:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(120^\circ\hlfbk) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(120^\circ\hlfbk) = \sqrt&#123;0.75&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            a.k.a.,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:903:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(4\eta/3) = -0.5 \,\,(= -\sqrt&#123;0.25&#125;),
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(4\eta/3) = \sqrt&#123;0.75&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            in radians, etc.)
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:912:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <i>
+            <span class="t-3003-c">
+              Postscript 1.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:916:6
+              </span>
+            </span>
+          </i>
+          {" "} We have
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:922:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sqrt&#123;0.75&#125; = &#123;\sqrt&#123;3&#125;\over 2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            so the above “wheel of special values” can also be
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:928:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          drawn as follows (adding the angles in, as well):
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/Zu5W.svg"
+          local_url="./images/svg_ch5_ch_main_angles_second.svg"
+        />
+        <Pause />
+        <OuterP>
+          <i>
+            <span class="t-3003-c">
+              Postscript 2.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:936:6
+              </span>
+            </span>
+          </i>
+          {" "}
+          Some teachers also like to so-call
+          “rationalize the denominator”; they will write
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\sqrt&#123;2&#125;\over 2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            for {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:944:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $\sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;$
+            </Math>
+            .
+          </NoBreak>
+          {" "} In this case:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/tDhP.svg"
+          local_url="./images/svg_ch5_ch_main_angles_third.svg"
+        />
+      </Section>
+    </>}
+    {visibleRestSections() > 8 && <>
+      <Pause />
+      <Section id="section-10">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Scaling the circle.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:951:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          In the following diagram, the coordinates
+          of the point {" "}
+          <Math>
+            $P$
+          </Math>
+          {" "} are obviously {" "}
+          <NoBreak>
+            <Math>
+              $(\cos \theta, \sin\theta)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          because that is the definition of sin and cos:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/HYoa.svg"
+          local_url="./images/svg_ch5_ch_scaling_circle_1.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            But say now that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:959:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          we re-scale the circle to have some arbitrary
+          radius {" "}
+          <NoBreak>
+            <Math>
+              $r$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} while maintaining the angle {" "}
+          <NoBreak>
+            <Math>
+              $\theta$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/oidH.svg"
+          local_url="./images/svg_ch5_ch_scaling_circle_r.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...what are the coordinates of {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:966:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $Q$
+            </Math>
+            ?
+          </NoBreak>
+          {" "}
+          The coordinates are obviously the old coordinates
+          scaled up/down by {" "}
+          <NoBreak>
+            <Math>
+              $r$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} i.e.,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          Q = (r\cos\theta, r\sin\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            or
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:972:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;aligned&#125;
+          Q_x &amp;= r\cdot\cos(\theta), \\
+          Q_y &amp;= r\cdot\sin(\theta) \up&#123;1.4&#125;
+          \end&#123;aligned&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            where {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:979:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $(Q_x, Q_y) = Q$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 9 && <>
+      <Pause />
+      <Section id="section-11">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Polar coordinates.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:984:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          The so-called
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            polar coordinates
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:987:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            of a point {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:989:5
+            </span>
+          </span>
+          <Math>
+            $P$
+          </Math>
+          {" "} in the plane are a pair of
+          numbers
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (r, \theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            with {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:996:5
+            </span>
+          </span>
+          <Math>
+            $r \geq 0$
+          </Math>
+          {" "} such that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          P = (r\cos(\theta), r\sin(\theta))
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            or namely with the property that:
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1002:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <List style="padding-left:1.8em;">
+          <Item>
+            <p>
+              <Math>
+                $r$
+              </Math>
+              <span class="t-3003-c">
+                {" "} is the distance from {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:1007:12
+                </span>
+              </span>
+              <Math>
+                $P$
+              </Math>
+              <span class="t-3003-c">
+                {" "} to the origin;
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:1007:37
+                </span>
+              </span>
+            </p>
+          </Item>
+          <Item>
+            <p>
+              <Math>
+                $\theta$
+              </Math>
+              <span class="t-3003-c">
+                {" "} is “the” counterclockwise angle
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:1009:17
+                </span>
+              </span>
+              {" "}
+              {" "}
+              from the positive {" "}
+              <Math>
+                $x$
+              </Math>
+              <span class="t-3003-c">
+                {" "} axis to the segment
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:1010:30
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $OP$
+                </Math>
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5.wly:1011:13
+                  </span>
+                </span>
+              </NoBreak>
+              <span class="t-3003-c">
+                {" "} where {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:1011:13
+                </span>
+              </span>
+              <Math>
+                $O$
+              </Math>
+              <span class="t-3003-c">
+                {" "} is the origin;
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:1011:24
+                </span>
+              </span>
+            </p>
+          </Item>
+        </List>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...even though {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1013:5
+            </span>
+          </span>
+          <Math>
+            $\theta$
+          </Math>
+          {" "} is not unique,
+          because any multiple of {" "}
+          <Math>
+            $4\eta$
+          </Math>
+          {" "} may be
+          added to {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} without altering the
+          values of {" "}
+          <Math>
+            $\sin(\theta)$
+          </Math>
+          {" "} or {" "}
+          <NoBreak>
+            <Math>
+              $\cos(\theta)$
+            </Math>
+            ;
+          </NoBreak>
+          {" "}
+          slightly worse even: if {" "}
+          <NoBreak>
+            <Math>
+              $r = 0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} then
+          {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} may be anything. (Because in that
+          case
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          P = (0, 0)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and any value of {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1025:5
+            </span>
+          </span>
+          <Math>
+            $\theta$
+          </Math>
+          {" "} will satisfy
+          the equation
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          P = (0\cdot \cos\theta, 0\cdot \sin\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            namely.)
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1032:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            NONETHELESS—even though the polar coordinates
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1034:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          of a point are not (not ever!) uniquely
+          determined, we say “the” polar coordinates of
+          a point, out of expediency!
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 2.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              The pairs
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1041:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, -3.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, 0.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, 4.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              count among the polar coordinates of the point
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1053:9
+              </span>
+            </span>
+            {" "}
+            {" "}
+            {" "}{" "}
+            <NoBreak>
+              <Math>
+                $(1, 1) \in \rr^2$
+              </Math>
+              .
+            </NoBreak>
+          </OuterP>
+        </Example>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 3.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              The pairs
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1058:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, -2.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, 1.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <MathBlock>
+            $$
+            (\sqrt&#123;2&#125;,\, 101.5\eta)
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              count among the polar coordinates of the point
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1070:9
+              </span>
+            </span>
+            {" "}
+            {" "}
+            {" "}{" "}
+            <NoBreak>
+              <Math>
+                $(-1, 1) \in \rr^2$
+              </Math>
+              .
+            </NoBreak>
+          </OuterP>
+        </Example>
+      </Section>
+    </>}
+    {visibleRestSections() > 10 && <>
+      <Pause />
+      <Section id="section-12">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Change-of-coordinate formulas.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1075:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          Definitionally, the equations
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \displaylines&#123;x = r \cos(\theta)\\
+          \up&#123;1.3&#125;y = r \sin(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            give the change-of-coordinate formulas
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1083:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          from a polar coordinate {" "}
+          <Math>
+            $(r, \theta)$
+          </Math>
+          {" "}
+          to a cartesian coordinate {" "}
+          <NoBreak>
+            <Math>
+              $(x, y)$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (It's right there in the promise of what
+          it means to be a valid polar coordinate
+          {" "}
+          <NoBreak>
+            <Math>
+              $(r, \theta)$
+            </Math>
+            .)
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            Conversely, to recover the polar
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1090:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          coordinates {" "}
+          <Math>
+            $(r, \theta)$
+          </Math>
+          {" "} from the cartesian
+          coordinates {" "}
+          <NoBreak>
+            <Math>
+              $(x, y)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} one has at least
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          r = \sqrt&#123;x^2 + y^2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            by the Pythagorean theorem, but the
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1098:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          formula for {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} is not so cheerful—out
+          of completeness, we can jot it down
+          anyway, for your entertainment:
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \theta = \begin&#123;cases&#125;
+          \arctan(y/x) &amp; \te&#123;if &#125;\, x \ne 0, \,\te&#123;else&#125; \\
+          \up&#123;1.2&#125;\te&#123;arccot&#125;(x/y) &amp; \te&#123;if &#125;\, y \ne 0, \,\te&#123;else&#125; \\
+          \up&#123;1.2&#125;\rm&#123;?&#125; &amp; \te&#123;if &#125;\, x = 0, y = 0
+          \end&#123;cases&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...where “arctan”, “arccot” are
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1111:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          some-functions-or-other-to-be-discussed-later.
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <i>
+            <span class="t-3003-c">
+              Note.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1116:6
+              </span>
+            </span>
+          </i>
+          {" "}
+          Popular programming languages such as
+          python offer a function named {" "}
+          <span class="code-cartouche">
+            atan2
+          </span>
+          {" "} that will compute the {" "}
+          <i>
+            argument
+          </i>
+          {" "} (see
+          Vocabulary below) {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} of a given pair
+          {" "}
+          <Math>
+            $(x, y)$
+          </Math>
+          {" "} out of the box, without you having to
+          worry about which of {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} or {" "}
+          <Math>
+            $y$
+          </Math>
+          {" "} is {" "}
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} etc.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            But the call goes {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1127:5
+            </span>
+          </span>
+          <span class="code-cartouche">
+            atan2(y, x)
+          </span>
+          {" "} not {" "}
+          <span class="code-cartouche">
+            atan2(x, y)
+          </span>
+          {" "} by some bizareness. (Well, actually a
+          throwback to the fact that in this expression...
+        </OuterP>
+        <Pause />
+        <CentralDisplay>
+          <NoBreak>
+            <span class="t-3003-c">
+              “
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1138:7
+              </span>
+            </span>
+            <Math>
+              $\arctan(y/x)$
+            </Math>
+            <span class="t-3003-c">
+              ”
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1138:22
+              </span>
+            </span>
+          </NoBreak>
+        </CentralDisplay>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...you hit {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1140:5
+            </span>
+          </span>
+          <NoBreak>
+            “
+            <Math>
+              $y$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} before {" "}
+          <NoBreak>
+            “
+            <Math>
+              $x$
+            </Math>
+            ”.)
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <i>
+            <span class="t-3003-c">
+              Vocabulary.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1144:6
+              </span>
+            </span>
+          </i>
+          {" "}
+          The first coordinate of a polar
+          coordinate—colloquially, {" "}
+          <NoBreak>
+            “
+            <Math>
+              $r$
+            </Math>
+            ”—is
+          </NoBreak>
+          {" "} called the
+          {" "}
+          <i>
+            radius
+          </i>
+          {" "} or the {" "}
+          <i>
+            norm
+          </i>
+          . The second coordinate
+          of a polar coordinate—colloquially, {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\theta$
+            </Math>
+            ”—is
+          </NoBreak>
+          {" "}
+          called the {" "}
+          <i>
+            angle
+          </i>
+          {" "} or the {" "}
+          <i>
+            argument
+          </i>
+          .
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 11 && <>
+      <Pause />
+      <Section id="section-13">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Right triangles.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1153:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          Hopefully, the following figure should seem
+          believable-and/or-familiar, at this point
+          (it's a scaled-up/down unit circle):
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/xqXh.svg"
+          local_url="./images/svg_ch5_ch_triangle_sequence_1.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            If we assume {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1161:5
+            </span>
+          </span>
+          <Math>
+            $0 \leq \theta \leq \eta$
+          </Math>
+          {" "} then both
+          {" "}
+          <Math>
+            $r\cos(\theta)$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $r\sin(\theta)$
+          </Math>
+          {" "} are nonnegative,
+          and we can redraw the figure as a relationship between
+          the sidelengths of a right triangle:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/VAIj.svg"
+          local_url="./images/svg_ch5_ch_triangle_sequence_2.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            If we rebrand the three legs of the triangle
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1169:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          as “hypotenuse”, “opposite”, and “adjacent” according
+          to their relationship to the angle {" "}
+          <NoBreak>
+            <Math>
+              $\theta$
+            </Math>
+            ...
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/j3G_.svg"
+          local_url="./images/svg_ch5_ch_triangle_sequence_rebranded.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...the relationship can be written:
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1176:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/3N4N.svg"
+          local_url="./images/svg_ch5_ch_relationships_of_note.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            To be paired with this figure:
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1181:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/Jk8H.svg"
+          local_url="./images/svg_ch5_ch_relationships_of_note_triangle_version.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The arrows are meant to indicate that {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1186:5
+            </span>
+          </span>
+          <Math>
+            $\cos(\theta)$
+          </Math>
+          {" "} is the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            multiplicative factor
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1188:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            that takes one from “hypotenuse” to “adjacent”,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1190:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          while {" "}
+          <Math>
+            $\sin(\theta)$
+          </Math>
+          {" "} is (again) the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            multiplicative factor
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1193:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            that takes one from “hypotenuse” to “opposite”.
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1195:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 4.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              In the following diagram...
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1199:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <Image
+            src="/build-img/svgo-svg/zVzp.svg"
+            local_url="./images/svg_ch5_ch_example_multiplications_1.svg"
+          />
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              ...the length of the side marked ‘?’ is
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1204:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            10\cdot \cos(43^\circ\hlfbk)\cdot \cos(20^\circ\hlfbk)
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              by following two ‘cos’ arrows (i.e.,
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1210:9
+              </span>
+            </span>
+            {" "}
+            {" "}
+            two hypotenuse-to-adjacent arrows) starting
+            from the sidelength of {" "}
+            <NoBreak>
+              <Math>
+                $10$
+              </Math>
+              .
+            </NoBreak>
+          </OuterP>
+        </Example>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 5.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              In the following diagram...
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1216:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <Image
+            src="/build-img/svgo-svg/WPT7.svg"
+            local_url="./images/svg_ch5_ch_example_multiplications_2.svg"
+          />
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              ...the length of the side marked ‘?’ is
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1221:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            14\cdot \cos(43^\circ\hlfbk)\cdot \sin(60^\circ\hlfbk)\cdot \sin(50^\circ\hlfbk)
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              by following one ‘cos’ and then two ‘sin’
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1227:9
+              </span>
+            </span>
+            {" "}
+            {" "}
+            arrows, starting from the sidelength of {" "}
+            <NoBreak>
+              <Math>
+                $14$
+              </Math>
+              .
+            </NoBreak>
+          </OuterP>
+        </Example>
+      </Section>
+    </>}
+    {visibleRestSections() > 12 && <>
+      <Pause />
+      <Section id="section-14">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              A famous diagram.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1232:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          There is a somewhat infamous diagram similar
+          to the diagrams of examples 5 and 6; to draw the
+          diagram, start with a “snail shell” stack of
+          two right triangles:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/-N5q.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_1.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Rotate a copy of the smaller
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1241:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          triangle by {" "}
+          <Math>
+            $90^\circ$
+          </Math>
+          {" "} towards the bigger one;
+          we end up with two pairs of parallel sides:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/-oWb.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_2.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Therefore, if we snap a scaled copy of the
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1248:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          smaller triangle onto the remaining non-hypotenuse
+          side of the bigger triangle, we end up with a
+          flush side consisting of a single straight
+          segment (you can also think in terms of
+          angles that add up to {" "}
+          <NoBreak>
+            <Math>
+              $180^\circ$
+            </Math>
+            ):
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/ADw8.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_3.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            We finish off the diagram by setting the
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1258:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          hypotenuse of the original big triangle to
+          have length {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/1jEs.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_4.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            This completes the diagram. Note that it is
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1265:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          possible for the sum of {" "}
+          <Math>
+            $\theta_1$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\theta_2$
+          </Math>
+          {" "}
+          to be greater than {" "}
+          <NoBreak>
+            <Math>
+              $\eta$
+            </Math>
+            ...
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/G2n-.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_greater_eta.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...but, by construction, {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1272:5
+            </span>
+          </span>
+          <Math>
+            $\theta_1$
+          </Math>
+          {" "} and
+          {" "}
+          <Math>
+            $\theta_2$
+          </Math>
+          {" "} are individually in the range from
+          {" "}
+          <Math>
+            $0$
+          </Math>
+          {" "} to {" "}
+          <NoBreak>
+            <Math>
+              $\eta$
+            </Math>
+            .
+          </NoBreak>
+          {" "} (Being “proper angles” of right
+          triangles.) (You can now contemplate what the
+          “utility” of the diagram might be!)
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 13 && <>
+      <Pause />
+      <Section id="section-15">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              The Abercrombie inequality.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1280:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          Take an ordinary angle of aperture less than
+          {" "}
+          <Math>
+            $180^\circ\hlfbk$
+          </Math>
+          {" "} with a circular arc drawn
+          inside and a line segment spanning the two
+          sides of the angle, clearing the arc:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/dXdk.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_statement.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The eponymous
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1289:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            Abercrombie inequality
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1291:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            states that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1293:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          the length of the arc is less than or equal to the length of the segment, i.e., that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          A\leq S
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            where {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1300:5
+            </span>
+          </span>
+          <Math>
+            $A$
+          </Math>
+          {" "} is the length of the arc and {" "}
+          <Math>
+            $S$
+          </Math>
+          {" "} is
+          the length of the segment, as in the figure.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            The proof is that, if this were not the case,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1306:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          the length {" "}
+          <Math>
+            $S$
+          </Math>
+          {" "} of the segment would lie to left of the
+          length {" "}
+          <Math>
+            $A$
+          </Math>
+          {" "} of the arc on the number line...
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/KxqB.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_to_the_left.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...and in the space between {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1313:5
+            </span>
+          </span>
+          <Math>
+            $S$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $A$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} we could then
+          find the length {" "}
+          <Math>
+            $P$
+          </Math>
+          {" "} of a polygonal line
+          approximating the arc...
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/0Mwx.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_with_P.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...because such polygonal lines can
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1320:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          approximate the arc arbitrarily closely, i.e.,
+          have lengths that come arbitrarily close to
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $A$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} on the number line from the left.
+          (This constitutes our “axiomatic” belief
+          about the  nature of curved length.) But this
+          will be a contradiction, because we claim
+          that each segment of the polygonal line has
+          length less than its corresponding “shadow”
+          on the segment of length {" "}
+          <NoBreak>
+            <Math>
+              $S$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/Vx2_.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_shadows.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            This last claim follows from the following
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1334:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          diagram:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/onjp.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_s1s2p1p2.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The point is that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1340:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \overline&#123;s_1s_2&#125;\, &gt; \,\overline&#123;p_1p_2&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            because {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1346:5
+            </span>
+          </span>
+          <Math>
+            $s_1$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $s_2$
+          </Math>
+          {" "} are separated by a
+          pair of parallel lines that are at distance
+          {" "}
+          <Math>
+            $\overline&#123;p_1p_2&#125;$
+          </Math>
+          {" "} from one another, and
+          because at least one of {" "}
+          <NoBreak>
+            <Math>
+              $s_1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $s_2$
+          </Math>
+          {" "} is
+          not on either of the parallel lines (or else
+          we would have {" "}
+          <NoBreak>
+            <Math>
+              $s_1 = p_1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $s_2 = p_2$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} and
+          the segment {" "}
+          <Math>
+            $s_1s_2$
+          </Math>
+          {" "} would not clear the arc).
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            Therefore, each segment of {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1354:5
+            </span>
+          </span>
+          <Math>
+            $P$
+          </Math>
+          {" "} has length
+          less than its corresponding “shadow segment”
+          on the crossover segment of length {" "}
+          <NoBreak>
+            <Math>
+              $S$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} from
+          which {" "}
+          <NoBreak>
+            <Math>
+              $S &gt; P$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} from which this arrangement
+          of values...
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/2Fam.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_to_the_left_second.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...on the number line is {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1363:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          false—we have achieved a so-called {" "}
+          <i>
+            contradiction
+          </i>
+          —from
+          which this original arrangement of values...
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/dTqx.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_to_the_left_third.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...on the number line is an impossibility,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1370:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          i.e., it must be that {" "}
+          <NoBreak>
+            <Math>
+              $S \geq A$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          This constitutes the proof of the Abercrombie
+          inequality.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            One can polish a few more details by noting that:
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1375:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <List
+          marker="lower-roman-paren"
+          markerFontFamily="Baskerville Bold"
+          style="gap:1em;"
+        >
+          <Item>
+            <p>
+              <span class="t-3003-c">
+                the segment can be tangent to the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:1382:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              arc at one point, the proof will still go
+              through (so the segment does not need to
+              {" "}
+              <i>
+                <span class="t-3003-c">
+                  strictly
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5.wly:1385:10
+                  </span>
+                </span>
+              </i>
+              <span class="t-3003-c">
+                {" "} clear the arc);
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:1385:19
+                </span>
+              </span>
+            </p>
+          </Item>
+          <Item>
+            <p>
+              <span class="t-3003-c">
+                as long as the angle is nonzero,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5.wly:1387:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              and the arc has nonzero radius, the
+              length of the segment will be STRICTLY
+              GREATER than the length of the arc,
+              not just greater-or-equal-to
+            </p>
+          </Item>
+        </List>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (Point {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1393:5
+            </span>
+          </span>
+          <b>
+            (ii)
+          </b>
+          {" "} can be seen by
+          comparing the segment to a two-segment
+          assemblage that is shorter than the segment
+          itself, but still-as-long-as-the-arc, by virtue
+          of the original inequality.)
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 14 && <>
+      <Pause />
+      <Section id="section-16">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              The Gregorinovich sandwich.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1401:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          The “Gregorinovich sandwich”—sometimes
+          Gr
+          <i>
+            i
+          </i>
+          gorinovich—states that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta) \,&lt;\, \theta \,&lt;\, &#123;\sin(\theta)\over\cos(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            for all {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1409:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          The Gregorinovich sandwich is so-called because
+          it “sandwiches” {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "}
+          between
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            below, and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1416:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\sin(\theta)\over\cos(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            above. (Indeed,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1420:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\sin(\theta)\over\cos(\theta)&#125; &gt; \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            in the range {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1424:5
+            </span>
+          </span>
+          <Math>
+            $0 &lt; \theta &lt; \eta$
+          </Math>
+          {" "}
+          because dividing by
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            makes you
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1429:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <CentralDisplay>
+          <span class="t-3003-c">
+            BIGGER
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1430:7
+            </span>
+          </span>
+        </CentralDisplay>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            when {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1431:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $0 &lt; \cos(\theta) &lt; 1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} which is the case
+          for {" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            —in
+          </NoBreak>
+          {" "} fact, dividing by
+          {" "}
+          <Math>
+            $\cos(\theta)$
+          </Math>
+          {" "} will make you
+        </OuterP>
+        <Pause />
+        <CentralDisplay>
+          <span class="t-3003-c">
+            DRAMATICALLY BIGGER
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1434:7
+            </span>
+          </span>
+        </CentralDisplay>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            when {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1435:5
+            </span>
+          </span>
+          <Math>
+            $\cos(\theta)$
+          </Math>
+          {" "} is close to {" "}
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} which is the
+          case when {" "}
+          <Math>
+            $\theta$
+          </Math>
+          {" "} is close to {" "}
+          <NoBreak>
+            <Math>
+              $\eta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            .)
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            The first inequality
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1438:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta) \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; \theta
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            follows by this illustration (using {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1444:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $0 &lt; \theta &lt; \eta$
+            </Math>
+            ):
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/wtkr.svg"
+          local_url="./images/svg_ch5_ch_fisher_first_ineq.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Namely, per the one slightly pedantic logic,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1449:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \theta &gt; L
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            on the one hand, where {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1455:5
+            </span>
+          </span>
+          <Math>
+            $L$
+          </Math>
+          {" "} is the length of
+          the dotted chord, and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          L &gt; \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            on the other hand. Together, this implies
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1462:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          {" "}{" "}
+          <NoBreak>
+            <Math>
+              $\theta \rt&#123;0.1&#125;&gt;\rt&#123;0.1&#125; \sin(\theta)$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            For the second inequality, we have to start
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1465:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          by noting that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\sin(\theta)\over \cos(\theta)&#125; = &#123;1\over \cos(\theta)&#125;\cdot \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is the length that {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1472:5
+            </span>
+          </span>
+          <Math>
+            $\theta$
+          </Math>
+          {" "} projects onto
+          the line {" "}
+          <NoBreak>
+            <Math>
+              $x = 1$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/HxgB.svg"
+          local_url="./images/svg_ch5_ch_fisher_second_ineq.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Specifically,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1478:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;1\over \cos(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            turns the bottom segment of length {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1484:5
+            </span>
+          </span>
+          <Math>
+            $1$
+          </Math>
+          {" "}
+          into the pink hypotenuse, because just as ‘cos’
+          is the hypotenuse-to-adjacent multiplicative
+          factor, so is {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $1/\!\cos$
+            </Math>
+            ’
+          </NoBreak>
+          {" "} the adjacent-to-hypotenuse
+          multiplicative factor (don't be confused by the
+          presence of two possible triangles to which
+          this can be applied); then,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            brings one over to the right-hand segment
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1496:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          from the pink hypotenuse, being the
+          hypotenuse-to-opposite multiplicative
+          factor.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            The fact that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1501:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\theta&#125; \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; &#123;\sin(\theta)\over \cos(\theta)&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            then follows from the “polished” version
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1507:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          of the Abercrombie inequality. (The version
+          that allows the segment to be tangent to the
+          arc, and that claims a strict inequality.)
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 15 && <>
+      <Pause />
+      <Section id="section-17">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              The angle-sum formulas.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1514:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          In the “famous diagram” from above there
+          are a total of four different ways to
+          reach an outer edge by means of ‘cos’
+          and ‘sin’ arrows while starting from the
+          edge of length {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} reaching each of the
+          four other outer edges precisely once:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/pFL0.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_1.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (Note by the way that {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1525:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $0 \leq \theta_1 \leq \eta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $0 \leq \theta_2 \leq \eta$
+          </Math>
+          {" "} because of
+          the way the figure is constructed, which
+          implies that {" "}
+          <NoBreak>
+            <Math>
+              $\sin(\theta_1\!\rt&#123;0.1&#125;)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <NoBreak>
+            <Math>
+              $\cos(\theta_1\!\rt&#123;0.1&#125;)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          {" "}
+          <Math>
+            $\sin(\theta_2\!\rt&#123;0.1&#125;)$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\cos(\theta_2\!\rt&#123;0.1&#125;)$
+          </Math>
+          {" "}
+          are all nonnegative, and that all their
+          products are nonnegative, as well.)
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            On the other hand, if we inscribe the
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1534:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          figure in the unit circle with the joint angle
+          {" "}
+          <Math>
+            $\theta_1 + \theta_2$
+          </Math>
+          {" "} at the center, we find that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \,\sin(\theta_1 + \theta_2)\,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1542:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \,\cos(\theta_1 + \theta_2)\,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            make an appearance as coordinates, and
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1548:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          that these coordinates can be expressed as
+          sums or differences of the four outer edges:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/C7FC.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_2.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (Or with {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1555:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $\theta_1 + \theta_2 &gt; \eta$
+            </Math>
+            ...
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/cixf.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_3.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...works as well!)
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1560:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            In other words, we find...
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1562:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/FJxQ.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_formulas_flowers.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            ...for {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1567:5
+            </span>
+          </span>
+          <Math>
+            $\theta_1$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\theta_2$
+          </Math>
+          {" "} as may
+          appear in such a figure, i.e., for
+          {" "}
+          <NoBreak>
+            <Math>
+              $0 \leq \theta_1, \theta_2 \leq \eta$
+            </Math>
+            .
+          </NoBreak>
+          {" "} In
+          fact, these two formulas hold for {" "}
+          <i>
+            all
+          </i>
+          {" "}
+          {" "}
+          <NoBreak>
+            <Math>
+              $\theta_1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\theta_2 \in \rr$
+            </Math>
+            .
+          </NoBreak>
+          {" "} They are
+          known as the {" "}
+          <i>
+            angle-sum formulas
+          </i>
+          . Also
+          note the “pattern” of the angle-sum formulas:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/3BtA.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_formulas_by_heart.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The point of remembering these patterns
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1578:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          is that, on their own, these patterns are
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            enough
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1581:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            to reconstruct the full formulas from scratch!
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1583:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          (Well, a lot of students remember the formulas
+          that way, at least.)
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 16 && <>
+      <Pause />
+      <Section id="section-18">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              The missing arrows.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1588:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          ‘sin’ and ‘cos’ only constitute two out
+          of six ratios that exist among the sides
+          of a right triangle. The four “missing ratios”
+          are hereby drawn:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/sa0S.svg"
+          local_url="./images/svg_ch5_ch_missing_arrows_veiled.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            In fact, there is a dedicated, named function
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1597:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          that computes each of the six ratios. We shall
+          now reveal the names of the four missing
+          functions (!!):
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/wra-.svg"
+          local_url="./images/svg_ch5_ch_missing_arrows_unveiled.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Here
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1605:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          “sec” is short for {" "}
+          <i>
+            secant
+          </i>
+          ,
+          “tan” is short for {" "}
+          <i>
+            tangent
+          </i>
+          ,
+          “cot” is short for {" "}
+          <i>
+            cotangent
+          </i>
+          , and
+          “csc” is short for {" "}
+          <i>
+            cosecant
+          </i>
+          .
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            To be clear, multiplying by
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1611:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sec(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            takes you from ‘adjacent’ to ‘hypotenuse’, multiplying by
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1617:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \csc(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            takes you from ‘opposite’ to ‘hypotenuse’, multiplying by
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1623:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \tan(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            takes you from ‘adjacent’ to ‘opposite’,
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1629:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          and multiplying by
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cot(\theta)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            takes you from ‘opposite’ to ‘adjacent’. (!)
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1636:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            You may observe that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1638:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sec = &#123;1\over \cos&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and that
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1643:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \csc = &#123;1\over \sin&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            as multiplying by ‘cos’ undoes the work
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1648:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          of multiplying by ‘sec’, and likewise for
+          ‘sin’ and ‘csc’; also,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \,\tan = &#123;1\over \cot&#125;,
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cot = &#123;1\over \tan&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            modulo the fact that {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1659:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $&#123;1\over \infty&#125; \ne 0$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (Or, more exactly, 
+          modulo
+          the fact that what people think of as {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\pm\infty$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          is, in fact, an {" "}
+          <i>
+            undefined
+          </i>
+          {" "} value of the function.)
+          And
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \tan \,=\, \sec \cdot \sin \,\,=\,\, &#123;\sin\!\!\!\!\phantom&#123;1&#125;\over \cos&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <MathBlock>
+          $$
+          \cot \,=\, \csc \cdot \cos \,\,=\,\, &#123;\cos\!\!\!\!\phantom&#123;1&#125;\over \sin&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            since one way to reach ‘opposite’ from
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1678:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          ‘adjacent’ is to go via ‘hypotenuse’, and
+          vice-versa for reaching ‘adjacent’ from
+          ‘opposite’. (In fact, the next-to-last
+          identity played a role in our proof of the
+          Gregorinovich sandwich.) (Indeed,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is another way of writing the Grigorinovich
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1689:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          sandwich.)
+        </OuterP>
+        <Pause />
+        <Example id="_1_h.a.i_">
+          <OuterP>
+            <b>
+              Example 6.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              If the Earth [is modeled as] a sphere
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1695:9
+              </span>
+            </span>
+            {" "}
+            {" "}
+            of radius {" "}
+            <Math>
+              $1$
+            </Math>
+            {" "} then, as stands to reason, the circle
+            of latitude {" "}
+            <Math>
+              $\theta$
+            </Math>
+            {" "} has radius {" "}
+            <NoBreak>
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              :
+            </NoBreak>
+          </OuterP>
+          <Pause />
+          <Image
+            width="480px"
+            src="/build-img/svgo-svg/_wct.svg"
+            local_url="./images/country_sphere_35_m45.svg"
+          />
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              [&#8288;
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1703:9
+              </span>
+            </span>
+            <InChapterLink
+              href="/article/chapter1#_1_h.a.i_"
+              class="in-chapter-link"
+            >
+              Example 6
+            </InChapterLink>
+            {" "} continued.] In particular, this means that 
+            in any cylindrical
+            projection** of the Earth, such as the
+            “Lambert projection” depicted below
+            (that just sends each latitude out to
+            its own height), the radius of a latitude is dilated
+            by [a factor of] {" "}
+            <NoBreak>
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              :
+            </NoBreak>
+          </OuterP>
+          <Pause />
+          <Image
+            width="480px"
+            src="/build-img/svgo-svg/ZWuF.svg"
+            style="margin-bottom:-1em"
+            local_url="./images/country_sphere_35_m45_sec_v3.svg"
+          />
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              ...because...
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1716:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \Huge \sec(\theta)\cdot\cos(\theta) = 1
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              ...which means that {" "}
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1722:9
+              </span>
+            </span>
+            <NoBreak>
+              “
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              ”
+            </NoBreak>
+            {" "}
+            is the correct multiplicative factor
+            to take the Earth-radius to the
+            cylinder-radius. 
+            (Or just
+            think of the fact that {" "}
+            <NoBreak>
+              <Math>
+                $1/\cos(\theta) = \sec(\theta)$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}
+            dividing one radius by the other.)
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              **Vocabulary.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1730:6
+              </span>
+            </span>
+          </b>
+          {" "} A (so-called
+          {" "}
+          <i>
+            normal
+          </i>
+          ) {" "}
+          <i>
+            cylindrical projection
+          </i>
+          {" "}
+          is a projection that maps the Earth to
+          a vertical cylinder abutting the Earth at the
+          equator while sending each latitude of the
+          Earth to a circle on the cylinder, etc;
+          besides the Lambert projection depicted
+          above, two more examples are the {" "}
+          <i>
+            central
+            cylindrical projection
+          </i>
+          {" "} and the
+          {" "}
+          <i>
+            plate carée
+          </i>
+          :
+        </OuterP>
+        <Pause />
+        <Image
+          width="1300px"
+          src="/build-img/svgo-svg/sA2I.svg"
+          local_url="./images/plate_caree_central_lambert_combination_with_use_saved.svg"
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (In the plate carée, at right, {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1745:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          longitudes are “unrolled” onto the cylinder,
+          which preserves north-south distances.)
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 17 && <>
+      <Pause />
+      <Section
+        work="ing"
+        id="section-19"
+      >
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Note on calculators.
+              <span class="t-3003">
+                ./src/content/ch5/ch5.wly:1751:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          Your calculator has “degree mode” and
+          “radian mode”. If your calculator tells
+          you that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \cos(1.57)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is a number close to {" "}
+            <span class="t-3003">
+              ./src/content/ch5/ch5.wly:1760:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} instead of being
+          a number close to {" "}
+          <NoBreak>
+            <Math>
+              $0$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} it means that your
+          calculator is in “degree mode”—it has treated
+          as {" "}
+          <Math>
+            $1.57$
+          </Math>
+          {" "} as a number of degrees, instead of
+          as a number of radians! (Be sure, in any
+          case, that you're in the mode that you want.)
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 18 && <>
+      <Pause />
       <Exercises
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_24_h.a.i_"
+        id="_61_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_22_h.a.i_">
+          <ExerciseStatement id="_2_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
               </b>
+              {" "}{" "}
               {" "}
-              True or false (and, if possible, explain):
+              {" "}
+              <span class="t-3003-c">
+                Guesstimate a function with this graph:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_linear_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
-            <Grid
-              cols={3}
-              mobileCols={2}
-              mobileCutoff={520}
-              centerOnOverflow={true}
-            >
-              <Item>
-                a. {" "}
-                <Math>
-                  $0.9^2 &lt; 0.9$
-                </Math>
-              </Item>
-              <Item>
-                b. {" "}
-                <Math>
-                  $\sqrt&#123;0.01&#125; = 0.1$
-                </Math>
-              </Item>
-              <Item>
-                c. {" "}
-                <Math>
-                  $\sqrt[2]&#123;\up&#123;0.8&#125;\sqrt[3]&#123;2&#125;&#125; = \sqrt[3]&#123;\up&#123;0.8&#125;\sqrt[2]&#123;2&#125;&#125;$
-                </Math>
-              </Item>
-              <Item>
-                d. {" "}
-                <Math>
-                  $&#123;\sqrt&#123;2&#125; \over \up&#123;0.55&#125;2&#125; = \sqrt&#123;0.5&#125;$
-                </Math>
-              </Item>
-              <Item>
-                e. {" "}
-                <Math>
-                  $&#123;1 \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;0.5&#125;$
-                </Math>
-              </Item>
-              <Item>
-                f. {" "}
-                <Math>
-                  $2^&#123;30&#125; &gt; 1000^3$
-                </Math>
-              </Item>
-              <Item>
-                g. {" "}
-                <Math>
-                  $&#123;1 \over 0.95&#125; &gt; 1.05$
-                </Math>
-              </Item>
-              <Item>
-                h. {" "}
-                <Math>
-                  $(-1)^&#123;101&#125; = -1$
-                </Math>
-              </Item>
-              <Item>
-                i. {" "}
-                <Math>
-                  $&#123;100 \over \up&#123;0.5&#125;99&#125; &lt; &#123;101 \over \up&#123;0.5&#125;100&#125;$
-                </Math>
-              </Item>
-            </Grid>
+            <Image
+              src="/build-img/svgo-svg/L2CX.svg"
+              local_url="./images/e5_cosine_10x_plus_x_over_4.svg"
+            />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Part by part:
-            </OuterP>
-            <Pause />
-            <OuterP>
-              a. (True) We have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              0.9^2 = &#123;9 \over 10&#125;\cdot&#123;9 \over 10&#125; = &#123;81 \over 100&#125; = 0.81
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and {" "}
-              <NoBreak>
-                <Math>
-                  $0.81 &lt; 0.9$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              b. (True) We have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              0.1^2 = &#123;1 \over 10&#125; \cdot &#123;1 \over 10&#125; = &#123;1 \over 100&#125; = 0.01,
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and {" "}
-              <Math>
-                $0.1$
-              </Math>
-              {" "} is nonnegative, so {" "}
-              <NoBreak>
-                <Math>
-                  $\sqrt&#123;0.01&#125; = 0.1$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              c. (True) In fact,
+              <span class="t-3003-c">
+                It appears that the function is “a line plus
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_linear_.wly:13:9
+                </span>
+              </span>
               {" "}
-              <Math>
-                $\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;$
-              </Math>
               {" "}
-              and {" "}
-              <Math>
-                $\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;$
-              </Math>
-              {" "} are
-              both equal to {" "}
-              <NoBreak>
-                <Math>
-                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
-                </Math>
-                .
-              </NoBreak>
-              {" "} To
-              convince yourself, note that
+              something”, in the sense of the following
+              diagram:
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\,\, (\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
-              =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\qquad\\
-              =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \\
-              =&amp; \,\, \up&#123;1.4&#125; (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;)\\
-              =&amp; \,\, \up&#123;1.4&#125; 2
-              \end&#123;align*&#125;
-              $$
-              <ImageLeft
-                src="/build-img/svgo-svg/rgbH.svg"
-                offsetY="23.5%"
-                atLeastAsWide={true}
-              />
-            </MathBlock>
+            <Image
+              src="/build-img/svgo-svg/tYzo.svg"
+              local_url="./images/svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg"
+            />
             <Pause />
             <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-                  &amp;\,\, (\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
-                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\\
-                 =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;)\\
-                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.65&#125;2&#125; \times \sqrt[2]&#123;\up&#123;0.65&#125;2&#125;\\
-                 =&amp;\,\, \up&#123;1.4&#125; 2
-              \end&#123;align*&#125;
-              $$
-              <ImageLeft
-                src="/build-img/svgo-svg/Trg3.svg"
-                offsetY="23.5%"
-                atLeastAsWide={true}
-              />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so {" "}
-              <NoBreak>
-                <Math>
-                  $(\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 =
-                  (\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 = 2$
-                </Math>
-                .
-              </NoBreak>
+              <span class="t-3003-c">
+                (Or in the technical sense of taking the sum
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_linear_.wly:20:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of two functions, to be more exact—that is what
+              the sum of two functions looks like, pictorialized!)
             </OuterP>
             <OuterP class="indent-10">
-              Technically, however, a number {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} such that
+              <span class="t-3003-c">
+                The line appears to be
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_linear_.wly:24:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              x^6 = 2
+              y = &#123;1\over 4&#125;x
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              is not necessarily {" "}
-              <NoBreak>
-                <Math>
-                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              because {" "}
-              <Math>
-                $x = -\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
-              </Math>
-              {" "} satisfies
-              this equation as well!
+              <span class="t-3003-c">
+                making it a true {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_linear_.wly:28:9
+                </span>
+              </span>
+              <a href="&gt;&gt;linear_vs_affine">
+                <i>
+                  linear
+                </i>
+              </a>
+              {" "} function (as opposed
+              to {" "}
+              <a href="&gt;&gt;linear_vs_affine">
+                <i>
+                  affine
+                </i>
+              </a>
+              &#8288;, cf. {" "}
+              <a href="&gt;&gt;linear_vs_affine">
+                Chapter {" "}
+                <InTextWarning>
+                  undefined handle at ch5/ch5^exercises/_guesstimate_linear_.wly:29:49: functions
+                </InTextWarning>
+              </a>
+              &#8288;).
             </OuterP>
             <OuterP class="indent-10">
-              The last step, therefore, is to note that
+              <span class="t-3003-c">
+                As for the “something”—the bumpy one—it appears
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_linear_.wly:31:9
+                </span>
+              </span>
               {" "}
-              <Math>
-                $\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;$
-              </Math>
-              {" "} and
               {" "}
+              to just be a “sped up cosine”, and note that
+              the graph goes through approximately {" "}
               <Math>
-                $\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;$
-              </Math>
-              {" "} are both
-              {" "}
-              <i>
-                nonnegative
-              </i>
-              {" "} numbers (taken as obvious),
-              and which implies that they are the {" "}
-              <i>
-                unique
-                nonnegative
-              </i>
-              {" "} solution to {" "}
-              <NoBreak>
-                <Math>
-                  $x^6 = 2$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              d. (True) In general,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; = \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for all {" "}
-              <NoBreak>
-                <Math>
-                  $x \geq 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $y &gt; 0$
-              </Math>
-              {" "} (you need each
-              root to be defined), so
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\sqrt&#123;2&#125; \over 2&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;4&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;2 \over 4&#125; = \sqrt&#123;0.5&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...ta-daa!
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 1.
-              </i>
-              {" "} One can also proceed by “direct
-              verification”:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;\sqrt&#123;2&#125; \over 2&#125;\right)^&#123;\!2&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;\cdot&#123;\sqrt&#123;2&#125; \over 2&#125;
-              = &#123;\sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125; \over 4&#125; = &#123;2 \over 4&#125; = 0.5.
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (This, together with the fact that
-              {" "}
-              <Math>
-                $&#123;\sqrt&#123;2&#125; \over 2&#125;$
-              </Math>
-              {" "} is not negative,
-              establishes that {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;\sqrt&#123;2&#125; \over 2&#125; =
-                  \sqrt&#123;0.5&#125;$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              e. (True) Using the
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $&#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; =
-                  \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} identity:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;1&#125; \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;1 \over 2&#125; = \sqrt&#123;0.5&#125;.
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              Or by direct verification:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;1 \over \sqrt&#123;2&#125;&#125;\right)^&#123;\!2&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;\cdot&#123;1 \over \sqrt&#123;2&#125;&#125;
-              = &#123;1 \over \sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125;&#125; = &#123;1 \over 2&#125; = 0.5.
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (And {" "}
-              <Math>
-                $1 \over \sqrt&#123;2&#125;$
-              </Math>
-              {" "} is nonnegative.)
-              Or by reducing to part d:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;2&#125; \cdot \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;.
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (The point being: we already know that
-              {" "}
-              <Math>
-                $&#123;\sqrt&#123;2&#125; \over 2&#125; = \sqrt&#123;0.5&#125;$
-              </Math>
-              {" "} by part d.)
-            </OuterP>
-            <Pause />
-            <OuterP>
-              f. (True) We have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2^&#123;30&#125; = 2^&#123;10&#125; \times 2^&#123;10&#125; \times 2^&#123;10&#125; = (2^&#123;10&#125;)^3
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (2^&#123;10&#125;)^3 = (1024)^3 &gt; 1000^3.
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 2.
-              </i>
-              {" "}
-              The first ten or so powers of {" "}
-              <Math>
-                $2$
-              </Math>
-              {" "} are worth
-              knowing by heart (here's {" "}
-              <i>
-                eleven
-              </i>
-              {" "} powers, mind
-              you):
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;array&#125;&#123;c|c&#125;
-              \,\,\,\,n\,\,\,\, &amp; 2^n\dn&#123;0.3&#125; \\ \hline
-              0 &amp; 1 \up&#123;1.1&#125;\\
-              1 &amp; 2 \\
-              2 &amp; 4 \\
-              3 &amp; 8 \\
-              4 &amp; 16 \\
-              5 &amp; 32 \\
-              6 &amp; 64 \\
-              7 &amp; 128 \\
-              8 &amp; 256 \\
-              9 &amp; 512 \\
-              10 &amp; 1024
-              \end&#123;array&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              Among which, the fact that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2^&#123;10&#125; \approx 10^3
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              can be particularly useful to know! For
-              example, if a 1-millimeter-thick napkin is
-              folded {" "}
-              <Math>
-                $50$
-              </Math>
-              {" "} times over, doubling the width
-              each time, one obtains something of
-              thickness
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2^&#123;50&#125;\fw\te&#123;mm&#125; = (2^&#123;10&#125;)^5\fw\te&#123;mm&#125; \approx (10^3)^5\fw\te&#123;mm&#125; = 10^&#123;15&#125;\fw\te&#123;mm&#125;.
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              As
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1\fw\te&#123;mm&#125; = 10^&#123;-6&#125;\fw\te&#123;km&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              this is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              10^&#123;15&#125;\fw&#123;&#125;(10^&#123;-6&#125;\fw\te&#123;km&#125;) = 10^&#123;15-6&#125;\fw\te&#123;km&#125; = 10^&#123;9&#125;\fw\te&#123;km&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or {" "}
-              <i>
-                one billion
-              </i>
-              {" "} kilometers. By
-              comparison, the distance from the Earth to
-              the Sun is a mere {" "}
-              <Math>
-                $150$
-              </Math>
-              {" "} million kilometers.
-              (The point being: that we could go from the
-              relatively mysterious
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;“&#125;2^&#123;50&#125;\fw\te&#123;mm&#125;\te&#123;”&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to the relatively less mysterious
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;“&#125;\fw10^&#123;15&#125;\te&#123;mm&#125;\te&#123;”&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              thanks to the fact that {" "}
-              <NoBreak>
-                <Math>
-                  $2^&#123;10&#125; \approx 10^3$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              g. (True) As an inequality can be multiplied
-              on both sides by a positive number while
-              preserving the inequality, one has
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp; &#123;1 \over 0.95&#125; &gt; 1.05\\
-              \iff &amp; 1 &gt; 1.05 \cdot 0.95\up&#123;1.4&#125;\\
-              \iff &amp; 1 &gt; (1 + 0.05)(1 - 0.05)\up&#123;1.4&#125;\\
-              \iff &amp; 1 &gt; 1 - 0.05^2\up&#123;1.4&#125;
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (using the fact that {" "}
-              <NoBreak>
-                <Math>
-                  $(1+x)(1-x) = 1-x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;“&#125;\,(a+b)(a-b) = a^2-b^2\,\te&#123;”&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              fame), and since the {" "}
-              <i>
-                last
-              </i>
-              {" "} inequality is true,
-              the {" "}
-              <i>
-                first
-              </i>
-              {" "} inequality is true! (Recall that
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\!\iff\!$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} means “if and only if”.)
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 3.
-              </i>
-              {" "}
-              More generally, even though
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 1 - \epsilon&#125; &gt; 1 + \epsilon
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for any small {" "}
-              <NoBreak>
-                <Math>
-                  $\epsilon &gt; 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} the number
-              {" "}
-              <Math>
-                $1 + \epsilon$
-              </Math>
-              {" "} remains a good approximation to
-              {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1 \over 1 - \epsilon&#125;$
-                </Math>
-                .
-              </NoBreak>
-              {" "} For example,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 0.99&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is a good approximation to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 0.99&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              while
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 0.999&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is a good approximation to
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 0.999&#125;,
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              etc.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              h. (True) Here are the first few powers of {" "}
-              <Math>
-                $-1$
+                $10$
               </Math>
               {" "}
-              (note how each additional multiplication by {" "}
-              <Math>
-                $-1$
-              </Math>
-              {" "}
-              simply changes the sign of the previous result):
-            </OuterP>
-            <Pause />
-            <Grid
-              cols={3}
-              placeItems="end"
-            >
-              <Item>
-                <Math>
-                  $(-1)^1 =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $(-1) =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $-1$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $(-1)^2 =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $(-1)\times (-1) =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $1$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $(-1)^3 =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $(-1)\times(-1)\times (-1) =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $-1$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $(-1)^4 =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $(-1)\times(-1)\times(-1)\times(-1) =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $1$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $(-1)^5 =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $\,\,\,(-1)\times(-1)\times(-1)\times(-1)\times(-1) =$
-                </Math>
-              </Item>
-              <Item>
-                <Math>
-                  $-1$
-                </Math>
-              </Item>
-            </Grid>
-            <Pause />
-            <OuterP>
-              (Etc.) Obviously, even powers of {" "}
-              <Math>
-                $(-1)$
-              </Math>
-              {" "} are
-              equal to {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} while odd powers of {" "}
-              <Math>
-                $(-1)$
-              </Math>
-              {" "} are
-              equal to {" "}
-              <NoBreak>
-                <Math>
-                  $-1$
-                </Math>
-                .
-              </NoBreak>
-              {" "} As {" "}
-              <Math>
-                $101$
-              </Math>
-              {" "} is odd, {" "}
-              <Math>
-                $(-1)^&#123;101&#125;$
-              </Math>
-              {" "}
-              is {" "}
-              <NoBreak>
-                <Math>
-                  $-1$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              i. (False) We have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;100 \over 99&#125; = &#123;99 + 1 \over 99&#125; = 1 + &#123;1 \over 99&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;101 \over 100&#125; = &#123;100 + 1 \over 100&#125; = 1 + &#123;1 \over 100&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so the smaller of the two fractions is {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;101
-                  \over 100&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} since {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1 \over 100&#125; &lt; &#123;1 \over
-                  99&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Note 4.
-              </i>
-              {" "}
-              The difference
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 99&#125; - &#123;1 \over 100&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is interesting in its own right, being
-              connected to a famous infinite sum. To
-              visualize this sum, picture a hare poised at
-              {" "}
+              cycles between {" "}
               <Math>
                 $x = 0$
               </Math>
-              {" "} on the number line. This hare runs
-              forward by one unit and backwards by half a
-              unit, stopping at the number
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1 - &#123;1\over 2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              by virtue of this back-and-forth movement.
-              The hare then proceeds to run forward by
-              {" "}
-              <i>
-                half
-              </i>
-              {" "} a unit and back by a {" "}
-              <i>
-                third
-              </i>
-              {" "} of a unit,
-              stopping at
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right) \\
-              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right) \\
-              \hline
-              = \,&amp;\, \left(1 - &#123;1 \over 3&#125;\right)
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for another break. Keeping with this pattern,
-              the hare then stops at
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
-              \hline
-              = \,&amp;\, \left(1 - &#123;1 \over 4&#125;\right)
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and then at
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
-              \hline
-              = \,&amp;\, \left(1 - &#123;1 \over 5&#125;\right)
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and so on.
-              Clearly, the successive positions at which
-              the hare stops are approaching the number {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}
-              from the left, pointing to the fact that the
-              {" "}
-              <i>
-                infinite
-              </i>
-              {" "} sum
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
-              + \,&amp;\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is “equal” (in some sense) to {" "}
+              {" "} and {" "}
               <NoBreak>
                 <Math>
-                  $1$
-                </Math>
-                .
-              </NoBreak>
-              {" "} But how
-              much, exactly, is the {" "}
-              <NoBreak>
-                <Math>
-                  $n$
-                </Math>
-                -th
-              </NoBreak>
-              {" "} term
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              of the sum? (By the way, this {" "}
-              <NoBreak>
-                <Math>
-                  $n$
-                </Math>
-                -th
-              </NoBreak>
-              {" "} term
-              is the difference
-              {" "}
-              <Math>
-                $&#123;1 \over 99&#125; - &#123;1 \over 100&#125;$
-              </Math>
-              {" "} for {" "}
-              <NoBreak>
-                <Math>
-                  $n = 99$
+                  $x = 6.28 \approx 4\eta$
                 </Math>
                 ,
               </NoBreak>
               {" "}
-              which is how we came to be reminded of this
-              infinite sum in the first place.) Well...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; &amp;= &#123;1 \over n&#125;\cdot&#123;n+1 \over n+1&#125;\, - \,
-              &#123;1 \over n+1&#125;\cdot&#123;n \over n&#125;\up&#123;1.5&#125;\\
-              &amp;= &#123;n+1 \over n(n+1)&#125; - &#123;n \over n(n+1)&#125;\up&#123;1.5&#125;\\
-              &amp;= &#123;1 \over n(n+1)&#125;\up&#123;1.5&#125;
-              \end&#123;align*&#125;
-              $$
-              <ImageRight
-                src="/build-img/svgo-svg/omps.svg"
-                offsetY="-0.5em"
-                atLeastAsWide={true}
+              as we can count on the graph of the original
+              function:
+              <ImageLeft
+                line={-2}
+                src="/build-img/svgo-svg/9sIf.svg"
+                local_url="./images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
               />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...it's that much. (For example,
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 1&#125; - &#123;1 \over 2&#125; = &#123;1 \over 1 \cdot 2&#125; = &#123;1 \over 2&#125;
-              $$
-            </MathBlock>
+            <Image
+              src="/build-img/svgo-svg/tW8i.svg"
+              local_url="./images/e5_cosine_10x_plus_x_over_4_bump_count.svg"
+            />
             <Pause />
             <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 2&#125; - &#123;1 \over 3&#125; = &#123;1 \over 2 \cdot 3&#125; = &#123;1 \over 6&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and so on.) So the infinite sum
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
-              + \,&amp;\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;\dn&#123;1&#125;\\ \hline
-              = \,&amp;\, 1\up&#123;1.5&#125;
-              \end&#123;align*&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              can also be written
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 1 \cdot 2&#125; + &#123;1 \over 2 \cdot 3&#125; + &#123;1 \over 3 \cdot 4&#125; + &#123;1 \over 4 \cdot 5&#125; + &#123;1 \over
-              5 \cdot 6&#125; + \dots \,=\, 1
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 2&#125; + &#123;1 \over 6&#125; + &#123;1 \over 12&#125; + &#123;1 \over 20&#125; + &#123;1 \over 30&#125; + \dots \,=\, 1
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              equivalently) which is not obvious at first
-              glance, and kind of interesting!
-            </OuterP>
-            <Pause />
-            <OuterP>
+              <span class="t-3003-c">
+                As cos goes through {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_linear_.wly:48:9
+                </span>
+              </span>
               <i>
-                Note 5.
+                one
               </i>
-              {" "} The fact that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              means, in particular, that
-              {" "}
+              {" "} cycle from {" "}
               <Math>
-                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
+                $x = 0$
               </Math>
-              {" "} is roughly
+              {" "} to
               {" "}
-              <Math>
-                $&#123;1 \over n^2&#125;$
-              </Math>
-              {" "} for large {" "}
               <NoBreak>
                 <Math>
-                  $n$
+                  $x = 4\eta$
                 </Math>
                 ,
               </NoBreak>
-              {" "} which is
-              sometimes handy to know. For example,
+              {" "} the “bumpy function” is therefore
+              (roughly, from what we can see) a {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $10$
+                </Math>
+                &#x200b;
+              </NoBreak>
+              <NoBreak>
+                <Math>
+                  $\times$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              sped-up version of cosine, i.e.,
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              y = \cos(10x)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              is approximately {" "}
-              <NoBreak>
-                <Math>
-                  $1/10^2 = 0.01$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} while
+              <span class="t-3003-c">
+                from which the guesstimate for the initial function
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_linear_.wly:55:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              would be
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over 100&#125; - &#123;1 \over 101&#125;
+              y = \cos(10x) + &#123;1\over 4&#125; x
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              is approximately {" "}
-              <NoBreak>
-                <Math>
-                  $1/100^2 = 0.01^2 = 0.0001$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              etc.
+              <span class="t-3003-c">
+                adding our two separate guesstimates together.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_linear_.wly:60:9
+                </span>
+              </span>
             </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_23_h.a.i_">
+          <ExerciseStatement id="_3_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
               </b>
+              {" "}{" "}
               {" "}
-              In the solution to {" "}
-              <InChapterLink
-                href="/article/chapter1#_22_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 1
-              </InChapterLink>
-              {" "} it
-              is observed that the difference
+              {" "}
+              <span class="t-3003-c">
+                Guesstimate a function with this graph (we can
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              tell you that the large-scale curve is a
+              parabola):
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/yMU3.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Having intimated that the answer is the sum of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:14:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              a parabola and of some cosine deviant, let us
+              focus on the parabolic portion first, that would
+              namely be roughly this purple curve:
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/7pg9.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                [Nb:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:23:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                parabolic
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:25:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is a synonym of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:27:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                quadratic
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:29:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                or
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:31:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                degree {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:33:11
+                </span>
+              </span>
+              <Math>
+                $\mathit&#123;2&#125;$
+              </Math>
+              <span class="t-3003-c">
+                {" "} polynomial
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:33:30
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                i.e., a function of the form
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:35:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
+              x \ra a_2x^2 + a_1x + a_0
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              is {" "}
-              <i>
-                roughly
-              </i>
-              {" "} {" "}
-              <Math>
-                $1/n^2$
-              </Math>
-              {" "} for large {" "}
+              <span class="t-3003-c">
+                for constants {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:39:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
-                  $n$
+                  $a_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $a_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $a_0 \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} cf. Chapter {" "}
+              <InTextWarning>
+                undefined handle at ch5/ch5^exercises/_guesstimate_parabolic_.wly:39:50: functions
+              </InTextWarning>
+              .]
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                As the parabola is symmetric about the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:41:9
+                </span>
+              </span>
+              <Math>
+                $y$
+              </Math>
+              {" "} axis it will
+              be of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = Ax^2 + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for some constants {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:46:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $C \in \rr$
                 </Math>
                 .
               </NoBreak>
-              {" "} But how
-              far off is this exactly? (I.e., what is the
-              difference between {" "}
+              {" "}
+              (And specifically
+              without a
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $Bx$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              term, that would break symmetry.)
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                The value
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:52:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is easy because it is the value of the parabola at
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:56:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which in this case appears to be {" "}
+              <NoBreak>
+                <Math>
+                  $y = -3$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/Wk9W.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...so...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:63:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              C = -3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (we say). For {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:68:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              note that the parabola appears to have value {" "}
               <Math>
-                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
+                $y \approx 3$
               </Math>
               {" "}
-              and {" "}
+              at {" "}
               <NoBreak>
                 <Math>
-                  $&#123;1 \over n^2&#125;$
+                  $x = \pm 12$
                 </Math>
-                ?)
+                ,
               </NoBreak>
-              {" "} And {" "}
-              <i>
-                roughly
-              </i>
-              {" "} how much is
-              this far-offness, for large {" "}
+              {" "} resulting in an increase of {" "}
+              <Math>
+                $\approx 6$
+              </Math>
+              {" "}
+              between {" "}
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} and {" "}
               <NoBreak>
                 <Math>
-                  $n$
+                  $x = \pm 12$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/XW1g.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                That increase being entirely due to the term
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:77:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $Ax^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} we get
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A \cdot 12^2 \approx 6
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (in more detail,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:82:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A\cdot 12^2 - A\cdot 0^2 \approx 6
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                but {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:86:9
+                </span>
+              </span>
+              <Math>
+                $A\cdot 0^2$
+              </Math>
+              {" "} goes away), meaning
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A \approx &#123;6\over 12^2&#125; = &#123;1\over 24&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                meaning that the quadratic portion of the function is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:90:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;x^2\over 24&#125; - 3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                per this estimate.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:94:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                The other portion of the answer—what is left
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:96:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              after the parabola is subtracted—is a cosine-like
+              function (or {" "}
+              <i>
+                sinusoid
+              </i>
+              ) whose amplitude (the
+              height of a bump) is roughly {" "}
+              <NoBreak>
+                <Math>
+                  $0.5$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which is half the
+              amplitude of
+              sine/cosine:
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/MP5H.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Moreover at {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:107:9
+                </span>
+              </span>
+              <Math>
+                $x = 0$
+              </Math>
+              {" "} we find
+              more or less exactly
+              the {" "}
+              <i>
+                bottom
+              </i>
+              {" "} of a
+              bump,
+              so altogether
+              we can use a function of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -0.5\cos(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                to model this sinusoid,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:116:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              where the multiplication by {" "}
+              <Math>
+                $0.5$
+              </Math>
+              {" "} gives us
+              the desired amplitude and where the {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $-$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} gives
+              us an anti-bump (“trough”?) instead of a bump at {" "}
+              <NoBreak>
+                <Math>
+                  $x = 0$
+                </Math>
+                ;
+              </NoBreak>
+              {" "}
+              on the other hand the value {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} will control the amount of
+              horizontal compression inside the curve; specifically,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              B = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                will give a curve that goes through one full cycle
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:125:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              per interval of length {" "}
+              <NoBreak>
+                <Math>
+                  $4\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              while, in general, an arbitrary value of {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} will give a
+              curve that goes {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} full cycles
+              per interval of length {" "}
+              <Math>
+                $4\eta$
+              </Math>
+              {" "} (the larger {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} is,
+              the more “frenzied” the curve);
+              in our case, it seems that {" "}
+              <NoBreak>
+                <Math>
+                  $B \approx 20$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/FLx-.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                So an estimate for the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:137:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              second function
+              would be...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -0.5\cos(20x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...giving us...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:143:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -0.5\cos(20x) + &#123;x^2\over 24&#125; - 3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...for our final answer, after adding the parabola back.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_parabolic_.wly:147:9
+                </span>
+              </span>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={3}>
+          <ExerciseStatement id="_4_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 3.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Guesstimate a function with this graph:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/dt9I.svg"
+              local_url="./images/svg_ch5_ex_big_wave.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                First we estimate a function for the large-scale
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:11:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              curve in purple:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/3ZYf.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                It appears to be a linear function (line through
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:17:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "} sloping down) plus a sinusoid. To
+              estimate the slope of the linear function we can
+              take two points in like relation to the sinusoid,
+              draw a line between them and estimate the slope:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/r7Qe.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_blue_with_1_4.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This makes the linear function portion of the purple
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:26:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              curve
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -&#123;1\over 4&#125;x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                or thereabouts.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:33:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                To model the sinusoid portion of the large-scale
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:35:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              purple curve we need more measurements, such as
+              the total height of the sinusoid from top of
+              bump to bottom of trough; we can add a third “bottom
+              of trough” dot, in same relation to the top of
+              bumps (but we won't actually draw this dot or else
+              we won't be able to see where we're measuring):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/CZVO.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_blue_with_height.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                So it appears that the sinusoid has a total height
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:46:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of {" "}
+              <Math>
+                $\approx 4$
+              </Math>
+              {" "} from top of bump to bottom of trough.
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                (And in case you're confused by what we're trying
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:49:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              to do,
+              let us re-explain that we are trying
+              to measure the vertical width of this blue band...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/9l0x.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_blue_with_band.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...that, indeed, seems near {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:57:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $4$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                What this means is that if we remove the linear
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:59:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              portion
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -&#123;1\over 4&#125;x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                from the purple curve, what we will find is a
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:66:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              sinusoid whose individual bumps have height {" "}
+              <NoBreak>
+                <Math>
+                  $\approx 2$
+                </Math>
+                ;
+              </NoBreak>
+              {" "}
+              something like this (we switch the color to aquamarine, so
+              that “purple curve” retains its unique meaning):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/I-bw.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_sinusoid_only.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This graph has the form
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:74:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -2\sin(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for some value of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:78:9
+                </span>
+              </span>
+              <Math>
+                $B \in \rr$
+              </Math>
+              {" "} that, chosen correctly,
+              will give us the desired “wavelength”. (Note that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -\sin(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                has graph...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:83:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/eM2n.svg"
+              local_url="./images/svg_ch5_ex_big_wave_minus_sin_x.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...and that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:89:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -2\sin(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                has graph...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:93:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/YfcA.svg"
+              local_url="./images/svg_ch5_ex_big_wave_minus_2sin_x.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...and, from there, all that remains is to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:98:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              “slow down” the oscillation to match the
+              aquamarine graph—the “slowing down” is what
+              {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} is for.)
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                To know how much {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:103:9
+                </span>
+              </span>
+              <Math>
+                $B$
+              </Math>
+              {" "} must be, we must measure
+              the cycle length (it is, admittedly, hard to
+              accurately determine the position of the top
+              of each large-scale bump, but we do our best by
+              basing ourselves off of what appear to be identical
+              patterns in the small-scale oscillations at
+              the top of each large-scale bump):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/So_Y.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_blue_period_measurement.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                As
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:114:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              12.6 \approx 12.56 = 2\times 6.28 \approx 2\cdot 4\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                the period of the large-scale sinusoid is near
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:120:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              twice the period of sin or cos; i.e., we need to
+              “slow down”
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -2\sin(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by a factor {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:128:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} i.e., put
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              B = 0.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                i.e., use
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:134:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -2\sin(0.5x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for the large-scale sinusoid. (Aquamarine graph.)
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:140:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                (So far we have
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:142:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -&#123;1\over 4&#125;x - 2\sin(0.5x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for our approximation to the purple curve, putting
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:148:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              the linear and sinusoidal parts together. Now we
+              move on from the purple curve.)
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                It remains to add in the small-scale oscillation
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:152:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              from the original curve; we can do the tedious
+              part first, and count the number cycles in an
+              interval of length {" "}
+              <NoBreak>
+                <Math>
+                  $4\eta \approx 6.28$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/yXJ4.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_small_scale_bump_count.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                So the small-scale oscillation is running
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:160:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              at {" "}
+              <Math>
+                $\approx 19$
+              </Math>
+              {" "} times the frequency of an ordinary
+              sine or cosine, and we can model the small-scale
+              oscillation by
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra -0.5\sin(19x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                since, like the large-scale oscillation from the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:169:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              purple curve, it shares the same phase as {" "}
+              <NoBreak>
+                <Math>
+                  $-\sin(x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and since, like the small-scale oscillation from
+              {" "}
+              <InChapterLink
+                href="/article/chapter1#_3_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 2
+              </InChapterLink>
+              &#8288;, it has
+              an amplitude of {" "}
+              <NoBreak>
+                <Math>
+                  $\approx 0.5$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                Altogether, we get
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:175:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = -&#123;1\over 4&#125;x - 2\sin(0.5x) - 0.5\sin(19x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as our “guesstimate”, while adding the linear
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_guesstimate_sinusoid_.wly:181:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              function, the large-scale sinusoid, and the small-scale
+              sinusoid together!
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={4}>
+          <ExerciseStatement id="_5_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 4.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Compute {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $A/B$
+              </Math>
+              {" "} assuming all same-colored
+              triangles are similar and
+              with the help of a calculator:
+            </OuterP>
+            <Pause />
+            <Image
+              style="width:500px;margin-top:1em;margin-bottom:1em;"
+              src="/build-img/svgo-svg/OeWS.svg"
+              local_url="./images/svg_ch5_ex_big_snail.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                What we want is the multiplicative ratio that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:14:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              would take us from the bottom to the top side of
+              this quadrilateral, so that we can multiply by that
+              ratio over and over again:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/QIQa.svg"
+              local_url="./images/svg_ch5_ex_big_snail_quad.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                But the two triangles involved are
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:22:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplay>
+              <span class="t-3003-c">
+                NOT RIGHT TRIANGLES
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:24:11
+                </span>
+              </span>
+            </CentralDisplay>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and we must break them into smaller parts that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:26:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <i>
+                are
+              </i>
+              {" "} right triangles in order to use trigonometric
+              functions. Specifically, as per this drawing:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/IZD7.svg"
+              local_url="./images/svg_ch5_ex_big_snail_quad_four_parts.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The multiplicative ratios that correspond to the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:33:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              first and third arrows (in arrow-order from bottom
+              to top) are
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(68^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(59^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because these are “hypotenuse-to-opposite” arrows,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:44:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              while the multiplicative ratios that correspond to the
+              second and fourth arrows are
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \csc(71^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \csc(60^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because these are the opposite (no pun intended),
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:55:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              i.e.,“opposite-to-hypotenuse” arrows. The “big grey
+              arrow” ratio from two diagrams ago is obtained by multiplying
+              these four small-arrow ratios together, or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(68^\circ\hlfbk)\times\csc(71^\circ\hlfbk)\times\sin(59^\circ\hlfbk)\times\csc(60^\circ\hlfbk)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (that can also be written
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:64:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sin(68^\circ\hlfbk)\times\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\times\sin(60^\circ\hlfbk)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:70:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\csc = &#123;1\over \sin&#125;$
+                </Math>
+                )
+              </NoBreak>
+              {" "} which, numerically, comes out to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.97057870529467...
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                meaning that the top side of the quadrilateral tile is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:76:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              97\%
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and some the length of the bottom side; taking
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:82:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              the {" "}
+              <NoBreak>
+                <Math>
+                  $36$
+                </Math>
+                -th
+              </NoBreak>
+              {" "} power of {" "}
+              <NoBreak>
+                <Math>
+                  $0.9705\dots$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because {" "}
+              <Math>
+                $36$
+              </Math>
+              {" "} is the
+              number of times that the quadrilateral
+              repeats within the spiral, we find
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.34127722635785...
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which is the desired ratio {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:91:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $A/B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and which agrees with the
+              drawing, as {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} seems plausibly to be about one-third of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} from the drawing!
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  While the final answer can be written
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:97:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                (\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^&#123;36&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  or
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:103:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \left(&#123;\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)&#125;\right)^&#123;\!36&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  teachers typically want to see such expressions
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:109:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                evualuated out, to make sure that you and your
+                calculator form a good team. (And, to be fair,
+                catching one's own calculator mistakes by virtue
+                of spotting a nonsensical number is a skill in
+                itself.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Instead of counting the number of times that the
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:118:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                quadrilateral appears in the double spiral by hand
+                one can
+                calculate the amount of rotation between one
+                quadrilateral and the next, which is this purple angle:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1em;"
+                src="/build-img/svgo-svg/FQro.svg"
+                local_url="./images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The key to measuring this
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:128:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                angle is the concept of an “alternating angle”,
+                whereby {" "}
+                <Math>
+                  $68^\circ$
+                </Math>
+                {" "} reappears to the left of {" "}
+                <NoBreak>
+                  <Math>
+                    $71^\circ$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                here:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1em;"
+                src="/build-img/svgo-svg/JRLJ.svg"
+                local_url="./images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Then we can calculate the purple angle as
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:137:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                68^\circ + 71^\circ + 61^\circ - 180^\circ = 20^\circ
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  meaning that each quadrilateral is rotated by {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:143:13
+                  </span>
+                </span>
+                <Math>
+                  $20^\circ$
+                </Math>
+                {" "} from the
+                previous, and in one turn of the spiral there are
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;360^\circ\over 20^\circ&#125; = 18
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  quadrilaterals, or
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:150:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                2 \times 18 = 36
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  quadrilaterals for two turns!
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_triangle_conch_.wly:156:13
+                  </span>
+                </span>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={5}>
+          <ExerciseStatement id="_6_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 5.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Which of these angles is {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_0.2_radians_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $0.2$
+              </Math>
+              {" "} radians?
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/lwHG.svg"
+              local_url="./images/svg_ch5_ex_0_2_radians_guess.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                An angle is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_0.2_radians_.wly:11:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                radians if the length of the subtended arc is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_0.2_radians_.wly:15:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              20\%
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                the length of the radius;
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_0.2_radians_.wly:19:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              proceeding by elimination—many things are obviously
+              not {" "}
+              <Math>
+                $20\%$
+              </Math>
+              {" "} of the radius—that's this one:
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:1em;margin-bottom:0em;"
+              src="/build-img/svgo-svg/TFcy.svg"
+              local_url="./images/svg_ch5_ex_0_2_radians_guess_answer.svg"
+            />
+            <Pause />
+            <StarDivider />
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If you zoom in
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_0.2_radians_.wly:30:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                a little bit
+                you can actually see
+                {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $100\%$
+                  </Math>
+                  ”,
+                </NoBreak>
+                {" "}
+                {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $20\%$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}
+                written in fine print:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:0em;"
+                src="/build-img/svgo-svg/0sAj.svg"
+                local_url="./images/svg_ch5_ex_0_2_radians_guess_joke_v1.svg"
+              />
+              <Pause />
+              <StarDivider />
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={6}>
+          <ExerciseStatement id="_7_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 6.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                In the drawing below the oval is a circle of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_handdraw_oval_P_position_.wly:3:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              radius {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} and the angle {" "}
+              <Math>
+                $\phi$
+              </Math>
+              {" "} is in “standard
+              position”, meaning that it opens counterclockwise
+              for a positive angle from the direction of the
+              positive {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis. What are the coordinates
+              of {" "}
+              <Math>
+                $P$
+              </Math>
+              {" "} in terms of {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $x_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $y_0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\phi$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:1em;margin-bottom:0.5em;"
+              src="/build-img/svgo-svg/PhJT.svg"
+              local_url="./images/svg_ch5_ex_P_in_terms_of_ADEphi_v2.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_handdraw_oval_P_position_.wly:16:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinates
+              </NoBreak>
+              {" "} are
+              respectively
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_0 + r\cdot \cos(\phi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_handdraw_oval_P_position_.wly:22:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y_0 + r\cdot \sin(\phi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_handdraw_oval_P_position_.wly:26:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot\cos(\phi)
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/8O7n.svg"
+                offsetX="6em"
+                atLeastAsWide={true}
+                local_url="./images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaX_v2_cloud.svg"
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the difference from the center of the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_handdraw_oval_P_position_.wly:36:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              circle to {" "}
+              <Math>
+                $P$
+              </Math>
+              {" "} in {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot\sin(\phi)
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/_riK.svg"
+                offsetX="7.75em"
+                atLeastAsWide={true}
+                local_url="./images/svg_ch5_ex_P_in_terms_of_ADEphi_DeltaY_v2_cloud.svg"
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the difference from the center of the circle to {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_handdraw_oval_P_position_.wly:47:9
+                </span>
+              </span>
+              <Math>
+                $P$
+              </Math>
+              {" "} in {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              as per scaling a unit circle to radius {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={7}>
+          <ExerciseStatement id="_8_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 7.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What ratios do
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_eta_and_4eta_as_ratios_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_eta_and_4eta_as_ratios_.wly:10:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              4\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                represent?
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_eta_and_4eta_as_ratios_.wly:16:5
+                </span>
+              </span>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                While {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_eta_and_4eta_as_ratios_.wly:20:9
+                </span>
+              </span>
+              <Math>
+                $\eta$
+              </Math>
+              {" "} was defined
+              as the quarter-circumference of a unit circle,
+              more generally,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the quarter-circumference of a circle (any
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_eta_and_4eta_as_ratios_.wly:28:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              circle) divided by its radius, and, correspondingly,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              4\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the circumference of a circle (any circle)
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_eta_and_4eta_as_ratios_.wly:35:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              divided by its radius.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={8}>
+          <ExerciseStatement id="_9_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 8.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                If a
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                vector
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:6:7
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:8:5
+                </span>
+              </span>
+              <i>
+                a pair of numbers
+              </i>
+              {" "} (in 2D), suggest a
+              definition for the
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                sum
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:11:7
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                of two vectors. (The most logical definition wins.)
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:13:5
+                </span>
+              </span>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The standard definition is that the sum
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:17:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \vec&#123;u&#125; + \vec&#123;v&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                of a vector
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:23:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \vec&#123;u&#125; = (u_x, u_y)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and of a vector
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:29:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \vec&#123;v&#125; = (v_x, v_y)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the vector
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:35:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (u_x + v_x, u_y + v_y)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                whose first coordinate is the sum of the first
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:41:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              coordinates of {" "}
+              <Math>
+                $\vec&#123;u&#125;$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\vec&#123;v&#125;$
+              </Math>
+              {" "} and whose
+              second coordinate is the sum of the second coordinates
+              of {" "}
+              <Math>
+                $\vec&#123;u&#125;$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\vec&#123;v&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Example 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:48:10
+                  </span>
+                </span>
+              </i>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \vec&#123;u&#125; = (100, 100)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:52:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \vec&#123;v&#125; = (1, -1)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                then
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:56:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\vec&#123;u&#125; + \vec&#123;v&#125; = (101, 99)
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/rUfo.svg"
+                offsetX="1em"
+                atLeastAsWide={true}
+                local_url="./images/svg_ch5_ex_vector_sum_101_cloud.svg"
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:66:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              100 + 1 = 101
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                on the one hand, and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:72:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              100 - 1 = 99
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                on the other hand.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:78:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The little arrow {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:82:13
+                  </span>
+                </span>
+                <NoBreak>
+                  “
+                  <Math>
+                    $\vec&#123;\phantom&#123;x&#125;&#125;$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "}
+                is a notation used to denote vectors. (Feel free
+                to choose your own notation.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If we represent the vectors {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:88:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $\vec&#123;u&#125;$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $\vec&#123;v&#125;$
+                </Math>
+                {" "}
+                by arrows whose components are displacements {" "}
+                <NoBreak>
+                  <Math>
+                    $u_x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $u_y$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $v_x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $v_y$
+                </Math>
+                {" "} in {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $x$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $y$
+                </Math>
+                {" "} again
+                respectively...
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/Sx1Y.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_vectors.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...then..
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:96:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                u_x + v_x
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  may be geometrically realized as the concatenation
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:102:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                of the {" "}
+                <Math>
+                  $u_x$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $v_x$
+                  </Math>
+                  ...
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/JkS_.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_ux_plus_vx.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...component displacements, while...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:108:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                u_y + v_y
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...may be geometrically realized as the concatenation
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:114:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                of the {" "}
+                <Math>
+                  $u_y$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $v_y$
+                  </Math>
+                  ...
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/efoR.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_uy_plus_vy.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...component displacements; moreover, both
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:120:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                concatenations may be simultaneously obtained by
+                concatenating the original {" "}
+                <Math>
+                  $\vec&#123;u&#125;$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $\vec&#123;v&#125;$
+                </Math>
+                {" "}
+                arrows...
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/Qnaf.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_u_concat_v.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...which actually implies that {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:128:13
+                  </span>
+                </span>
+                <Math>
+                  $\vec&#123;u&#125; + \vec&#123;v&#125;$
+                </Math>
+                {" "}
+                is the vector going from the head of {" "}
+                <Math>
+                  $\vec&#123;u&#125;$
+                </Math>
+                {" "} to
+                the tail of {" "}
+                <Math>
+                  $\vec&#123;v&#125;$
+                </Math>
+                {" "} in the afore-mentioned
+                concatenation, because of how we defined
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\vec&#123;u&#125; + \vec&#123;v&#125;$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/7Z4q.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_u_plus_v.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  This makes a mess, but the point is that this
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:137:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                gives us a
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  geometric interpretation
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:140:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  or
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:142:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  geometric representation
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:144:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  or
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:146:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  geometric method of evaluation
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:148:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  for the sum of two vectors: concatenate the arrows
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:150:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                of the vectors you're summing, and take the final
+                displacement from the head of the first arrow to the
+                tail of the last arrow.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The solution to Exercise 7 can be cast in terms of
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_vector_addition_definition_.wly:157:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                vector addition, with, specifically, the position
+                vector of the point being equal to the sum of the
+                position vector of the circle's center with the “radial
+                vector” from the center to the point:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:1em;margin-bottom:0.8em;"
+                src="/build-img/svgo-svg/Mzki.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_previous_example.svg"
+              />
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={9}>
+          <ExerciseStatement id="_10_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 9.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                If a particle in {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $\rr^2$
+              </Math>
+              {" "} (= “in the plane”)
+              has {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A\cdot\cos(Bt + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                at time {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:9:5
+                </span>
+              </span>
+              <Math>
+                $t$
+              </Math>
+              {" "} what is the most likely motion
+              that the particle is undergoing? In that
+              case, what is the geometric meaning of the
+              constants {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $C$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $D$
                 </Math>
                 ?
               </NoBreak>
@@ -2731,215 +9062,18831 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since
+              <span class="t-3003-c">
+                The simplest motion that would produce such
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:16:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              an {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} (according to subjective human
+              standards of simplicity, admittedly) is circular
+              motion at uniform speed. In this case:
+            </OuterP>
+            <Pause />
+            <List style="padding-left:2em;gap:0.2em;">
+              <Item>
+                <p>
+                  <Math>
+                    $A$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} is the radius of the circle
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:24:16
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <Math>
+                    $D$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} is the {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:26:16
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $x$
+                    </Math>
+                    <span class="t-3003-c">
+                      -coordinate
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:26:27
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} of the circle's center
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:26:27
+                    </span>
+                  </span>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                And either:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:28:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <List style="padding-left:2em;">
+              <Item>
+                <p>
+                  <Math>
+                    $B$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} is the counterclockwise
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:33:16
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  {" "}{" "}
+                  <i>
+                    <span class="t-3003-c">
+                      angular speed
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:34:14
+                      </span>
+                    </span>
+                  </i>
+                  <span class="t-3003-c">
+                    /
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:34:28
+                    </span>
+                  </span>
+                  <i>
+                    <span class="t-3003-c">
+                      angular frequency
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:34:30
+                      </span>
+                    </span>
+                  </i>
+                  <span class="t-3003-c">
+                    {" "} (radians per
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:34:48
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  unit time) and {" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} is the counterclockwise
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:35:31
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  starting angle {" "}
+                  <NoBreak>
+                    <span class="t-3003-c">
+                      (
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:36:13
+                      </span>
+                    </span>
+                    <Math>
+                      $t = 0$
+                    </Math>
+                    <span class="t-3003-c">
+                      )
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:36:36
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} of the particle, as
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:36:36
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  measured from a translate of the positive {" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  {" "}{" "}
+                  {" "}
+                  {" "}
+                  <span class="t-3003-c">
+                    axis going through the center of the circle
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:38:13
+                    </span>
+                  </span>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Or:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:40:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <List style="padding-left:2em;">
+              <Item>
+                <p>
+                  <Math>
+                    $B$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} is the {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:45:16
+                    </span>
+                  </span>
+                  <i>
+                    <span class="t-3003-c">
+                      clockwise
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:45:25
+                      </span>
+                    </span>
+                  </i>
+                  {" "}{" "}
+                  {" "}
+                  {" "}
+                  <span class="t-3003-c">
+                    angular speed/angular frequency of the particle
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:46:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  and {" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} is the {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:47:20
+                    </span>
+                  </span>
+                  <i>
+                    <span class="t-3003-c">
+                      clockwise
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:47:29
+                      </span>
+                    </span>
+                  </i>
+                  <span class="t-3003-c">
+                    {" "} starting angle
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:47:39
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  of the particle, as measured from a translate of
+                  the positive {" "}
+                  <Math>
+                    $x$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} axis going through the center
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:49:29
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  of the circle
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In more detail, every time
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:52:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
+              t
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                increases by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:58:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Bt + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                increases by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:64:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} but
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Bt + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is an amount of radians, because anything
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:70:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              fed to ‘cos’ is an amount of radians; and so
+              {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} ends up being the
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                radian increase per unit time,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:74:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                or angular speed, of the particle.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:76:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                However, said “increase” in radians can be
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:78:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              associated to either clockwise or a
+              counterclockwise motion, there is no telling.
+              (Quite aside from the fact that {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} might be
+              negative.) Indeed, while we have a tendency to
+              think of {" "}
+              <Math>
+                $\cos(x)$
+              </Math>
+              {" "} as
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:85:11
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                <span class="t-3003-c">
+                  -coordinate
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:85:18
+                  </span>
+                </span>
+              </NoBreak>
+              <span class="t-3003-c">
+                {" "} of a point {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:85:18
+                </span>
+              </span>
+              <Math>
+                $x$
+              </Math>
+              <span class="t-3003-c">
+                {" "} units
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:85:44
+                </span>
+              </span>
+              <br />
+              <span class="t-3003-c">
+                counterclockwise from {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:87:9
+                </span>
+              </span>
+              <Math>
+                $(1, 0)$
+              </Math>
+              <span class="t-3003-c">
+                {" "} on the unit circle
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:87:39
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <Math>
+                $\cos(x)$
+              </Math>
+              <span class="t-3003-c">
+                {" "} is also
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:89:18
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:91:11
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                <span class="t-3003-c">
+                  -coordinate
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:91:18
+                  </span>
+                </span>
+              </NoBreak>
+              <span class="t-3003-c">
+                {" "} of a point {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:91:18
+                </span>
+              </span>
+              <Math>
+                $x$
+              </Math>
+              <span class="t-3003-c">
+                {" "} units
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:91:44
+                </span>
+              </span>
+              <br />
+              <span class="t-3003-c">
+                clockwise from {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:93:9
+                </span>
+              </span>
+              <Math>
+                $(1, 0)$
+              </Math>
+              <span class="t-3003-c">
+                {" "} on the unit circle
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:93:32
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                [“counterclockwise” {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:95:9
+                </span>
+              </span>
+              <Math>
+                $\ra$
+              </Math>
+              {" "} “clockwise”].
+              Per the one interpretation of ‘cos’,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Bt + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is an amount of counterclockwise radians; per
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:102:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              the other,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              Bt + C
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is an amount of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:109:9
+                </span>
+              </span>
+              <i>
+                clockwise
+              </i>
+              {" "} radians. 
+              This accounts for
+              the two solutions listed above. (But it can
+              only be one of those two solutions, having made
+              the “Occam's razor” assumption that the
+              particle is traveling at uniform speed around
+              a circle.) (Nb: In particular, “uniform speed”
+              precludes sudden reversals of direction at either
+              end of the circle, if you were at all thinking
+              of that, for speed would be undefined at
+              those points where direction is reversed!)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The following
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:123:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                diagram illustrates the two possibilities:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/rUnE.svg"
+                local_url="./images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg"
+              />
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If you harbor any doubts about there being no more
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:139:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                than two solutions, picture this diagram...
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/0eyH.svg"
+                local_url="./images/svg_ch5_ex_Bt_plus_C_black_on_white.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...and imagine the vertical line scanning
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_circular_motion_from_x_coordinate_.wly:145:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                to the left and to the right again as it
+                tracks the {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  -coordinate
+                </NoBreak>
+                {" "} of a particle going
+                around the circle, unseen. Then there is one
+                clockwise particle that tracks with the line,
+                and one counterclockwise particle that tracks
+                with the line, but no more, insofar as
+                non-direction-reversing particles are
+                concerned!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={10}>
+          <ExerciseStatement id="_11_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 10.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                A point {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $P \in \rr^3$
+              </Math>
+              {" "} at distance {" "}
+              <Math>
+                $R$
+              </Math>
+              {" "} from the
+              origin forms an angle {" "}
+              <Math>
+                $\phi$
+              </Math>
+              {" "} with the positive
+              {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} axis, while {" "}
+              <NoBreak>
+                <Math>
+                  $P$
+                </Math>
+                's
+              </NoBreak>
+              {" "} projection onto the {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                -plane
+              </NoBreak>
+              {" "}
+              is at a counterclockwise angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} from the
+              positive {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/FZVx.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_statement.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                What are {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:13:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} in terms of {" "}
+              <NoBreak>
+                <Math>
+                  $R$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <Math>
+                $\phi$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Since {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:18:9
+                </span>
+              </span>
+              <Math>
+                $\phi$
+              </Math>
+              {" "} is an ordinary geometric angle
+              between two lines, (as opposed to: an oriented
+              angle, a.k.a., “signed angle”), we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0 \leq \phi \leq 2\eta
               $$
               <ImageRight
-                offsetX="5rem"
-                src="/build-img/svgo-svg/Xx87.svg"
+                src="/build-img/svgo-svg/DuQk.svg"
+                offsetX="4em"
                 atLeastAsWide={true}
+                local_url="./images/e5_sperical_coordinates_180_cloud.svg"
               />
             </MathBlock>
             <Pause />
             <OuterP>
-              (as previously computed) is smaller than
+              <span class="t-3003-c">
+                from which
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:44:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over n^2&#125;
+              \sin(\phi) \geq 0
               $$
-              <ImageRight
-                offsetX="10rem"
-                src="/build-img/svgo-svg/jBCw.svg"
-                atLeastAsWide={true}
-              />
             </MathBlock>
             <Pause />
             <OuterP>
-              we will compute the difference
+              <span class="t-3003-c">
+                and from which {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:56:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $R\sin(\phi)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as it appears in the 
+              following diagram, is the actual {" "}
+              <i>
+                length
+              </i>
+              {" "} of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $P$
+                </Math>
+                's
+              </NoBreak>
+              {" "} projection onto the {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                -plane:
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/giDO.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_Rsin_phi.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...whereas {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:63:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $R\cos(\phi)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as it appears above, is a
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                signed length
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:65:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:68:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125;
+              \cos(\phi)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              as opposed to the “other” difference
+              <span class="t-3003-c">
+                is negative for {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:74:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\eta &lt; \phi \leq 2\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} positive
+              for {" "}
+              <NoBreak>
+                <Math>
+                  $0 \leq \phi &lt; \eta$
+                </Math>
+                !
+              </NoBreak>
+              {" "} But in any case that is what
+              we want, since {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} switches from positive to negative
+              at {" "}
+              <Math>
+                $\phi = \eta$
+              </Math>
+              {" "} just like {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(\phi)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              giving us
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over n(n+1)&#125; - &#123;1 \over n^2&#125;
+              z = R\cos(\phi)
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              to avoid a minus sign in the result.
-              (Computing the second difference and having
-              a minus sign does not constitute a mistake,
-              however.) Having said this, the difference is:
+              <span class="t-3003-c">
+                and “one coordinate down”.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:84:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                For {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:86:9
+                </span>
+              </span>
+              <Math>
+                $x$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} then, we are left in a “classical”
+              situation of converting polar coordinates to Cartesian
+              coordinates in the {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                -plane;
+              </NoBreak>
+              {" "} only  the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $r$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} of
+              polar coordinates is now {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $R\sin(\phi)$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} (but
+              which is nonnegative, happily, as noted):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/10Fl.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_xy_plane.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Or:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_1_.wly:95:9
+                </span>
+              </span>
+            </OuterP>
+            <Boxed style="margin-bottom:-5px;">
+              <MathBlock>
+                $$
+                x = R\sin(\phi)\cos(\theta)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                y = R\sin(\phi)\sin(\theta)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                z = R\cos(\phi)
+                $$
+              </MathBlock>
+            </Boxed>
+            <Pause />
+            <StarDivider />
+          </Solution>
+        </Exercise>
+        <Exercise number={11}>
+          <ExerciseStatement id="_12_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 11.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                If, {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_2_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              in {" "}
+              <InChapterLink
+                href="/article/chapter1#_11_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 10
+              </InChapterLink>
+              &#8288;,
+              we modify the definition of the angle {" "}
+              <Math>
+                $\phi$
+              </Math>
+              {" "}
+              to be {" "}
+              <NoBreak>
+                <Math>
+                  $P$
+                </Math>
+                's
+              </NoBreak>
+              {" "} elevation above the {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                -plane,
+              </NoBreak>
+              {" "}
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\phi \in [-\eta, \eta]$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              as illustrated below, 
+              how are the corresponding change-of-coordinate 
+              formulas affected?
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/haQ7.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_otherway_statement.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_2_.wly:18:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \phi \in [-\eta, \eta]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                one has
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_2_.wly:22:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\phi) \geq 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_2_.wly:26:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              R\cos(\phi) \geq 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                from which {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_2_.wly:30:9
+                </span>
+              </span>
+              <Math>
+                $R\cos(\phi)$
+              </Math>
+              {" "} becomes the 
+              length of
+              {" "}
+              <NoBreak>
+                <Math>
+                  $P$
+                </Math>
+                's
+              </NoBreak>
+              {" "} projection onto the {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                -plane,
+              </NoBreak>
+              {" "}
+              similarly to {" "}
+              <Math>
+                $R\sin(\phi)$
+              </Math>
+              {" "} being that
+              length in {" "}
+              <InChapterLink
+                href="/article/chapter1#_11_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 10
+              </InChapterLink>
+              &#8288;,
+              while on the other the other hand,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              R\sin(\phi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is a signed quantity equal to {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_2_.wly:39:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} similarly
+              to {" "}
+              <Math>
+                $R\cos(\phi)$
+              </Math>
+              {" "} in {" "}
+              <InChapterLink
+                href="/article/chapter1#_11_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 10
+              </InChapterLink>
+              &#8288;:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/3aFp.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_otherway_Rcos_phi.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The coordinate transformations are
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_spherical_to_cartesian_coordinates_2_.wly:45:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              thus obtained by interchanging {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\sin(\phi)$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} and
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\cos(\phi)$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} in the formulas of {" "}
+              <InChapterLink
+                href="/article/chapter1#_11_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 10
+              </InChapterLink>
+              &#8288;,
+              giving us:
+            </OuterP>
+            <Boxed style="margin-bottom:0em;">
+              <MathBlock>
+                $$
+                x = R\cos(\phi)\cos(\theta)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                y = R\cos(\phi)\sin(\theta)
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                z = R\sin(\phi)
+                $$
+              </MathBlock>
+            </Boxed>
+            <Pause />
+            <StarDivider />
+          </Solution>
+        </Exercise>
+        <Exercise number={12}>
+          <ExerciseStatement id="_13_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 12.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Compute the vertical distance from {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $A$
+              </Math>
+              {" "} to {" "}
+              <Math>
+                $A'$
+              </Math>
+              {" "}
+              from the following set of blueprints for a shed with
+              an angled inside wall (all distances in inches):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/shI1.svg"
+              local_url="./images/svg_ch5_ex_floorplan.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                We will compute the two green lengths, then the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:13:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              red length, then the blue length, then add 130:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/nm64.svg"
+              local_url="./images/svg_ch5_ex_floorplan_soln1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Proceeding, the longer and smaller green lengths
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:19:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              are {" "}
+              <Math>
+                $112\rt&#123;0.1&#125; \cdot \sin(25.5^\circ\hlfbk)$
+              </Math>
+              {" "}
+              and {" "}
+              <Math>
+                $8\rt&#123;0.1&#125; \cdot \cos(25.5^\circ\hlfbk)$
+              </Math>
+              {" "} inches,
+              respectively:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/xKw8.svg"
+              local_url="./images/svg_ch5_ex_floorplan_soln2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The red length is therefore
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:27:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \begin&#123;align*&#125;
-              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125; &amp;= &#123;1 \over n^2&#125; \cdot &#123;n+1 \over n+1&#125; - &#123;1 \over n(n+1)&#125; \cdot
-              &#123;n \over n&#125;\\
-              &amp;= &#123;n+1 \over n^2(n+1)&#125; - &#123;n \over n^2(n+1)&#125;\up&#123;1.5&#125;\\
-              &amp;= &#123;1 \over n^2(n+1)&#125;\up&#123;1.5&#125;
+              &amp;\,\,268 - 8 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk) \\
+              \up&#123;1.6&#125; =&amp;\,\,260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)
               \end&#123;align*&#125;
               $$
-              <ImageRight
-                src="/build-img/svgo-svg/4oJD.svg"
-                offsetY="-0.5em"
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (inches) while the blue length is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:36:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (inches) and the final answer is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:42:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              130 + \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                inches, which comes out to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:48:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              212.65
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/O1mN.svg"
+                offsetX="10em"
                 atLeastAsWide={true}
+                local_url="./images/svg_ch5_ex_floorplan_computation_cloud.svg"
               />
             </MathBlock>
             <Pause />
             <OuterP>
-              which, for large {" "}
+              <span class="t-3003-c">
+                minus some. (Approximating to {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:58:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
-                  $n$
+                  $1/100$
                 </Math>
-                ,
+                -th
               </NoBreak>
-              {" "} is roughly
+              {" "} of an inch
+              should be good enough for a construction site.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Note that...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:63:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(25.5^\circ) = 0.90258\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin(25.5^\circ) = 0.43051\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                \tan(22^\circ) = 0.40402\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...and if you are not finding these values, then make sure
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_blueprints_top_and_side_.wly:73:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                that your calculator is in “degree mode”.
+                (Otherwise you have to manually
+                convert the arguments to radians.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={13}>
+          <ExerciseStatement id="_14_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 13.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Given the following sketch, to what angle
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              can the door be opened before it hits against
+              the roof? (Hint: You will need to Google “how
+              to use arctan”, or “how to convert from Cartesian
+              to polar coordinates”.)
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/fgGT.svg"
+              local_url="./images/svg_ch5_ex_opening_door.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                And:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:13:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <List style="padding-left:2.2em;gap:0.2em;">
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    all distances are in inches
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:18:9
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    assume half an inch from the edge of the door
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:20:9
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  to the center of its hinge
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    assume the door has negligible thicknesss
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:23:9
+                    </span>
+                  </span>
+                </p>
+              </Item>
+            </List>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The “key intermediate length” to compute is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:27:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              the distance 
+              from the hinge-edge of the door to
+              the ceiling near the top of the door:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Tsmn.svg"
+              local_url="./images/svg_ch5_ex_opening_door_soln0.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                For this we need the lengths marked ‘2’ and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:38:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              ‘4’ below, each of which requires a separate
+              mini-computation, including deducing the width 
+              of the door (length ‘3’) in order to deduce the length marked ‘4’
+              (we will also reuse length ‘3’ below|):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/odA8.svg"
+              local_url="./images/svg_ch5_ex_opening_door_soln1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (Nb: One can also compute the length marked ‘2’ as
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:47:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over n^3&#125;
+              &#123;42\over \tan(23^\circ)&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              since {" "}
-              <Math>
-                $n^2(n+1) \approx n^3$
-              </Math>
-              {" "} for large {" "}
+              <span class="t-3003-c">
+                since {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:51:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
-                  $n$
+                  $\cot = 1/\tan$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} or
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              42\cdot \tan(67^\circ)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                since {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:55:9
+                </span>
+              </span>
+              <Math>
+                $67^\circ = 90^\circ - 23^\circ$
+              </Math>
+              {" "} is the complement
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $23^\circ$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                Next, as
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:58:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the distance from the side of the door to its
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:64:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              hinge, the door swings at a radius of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              38.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and the distance between the hinge's center
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:71:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              and the ceiling, measured horizontally at the top
+              of the door, is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              30.945 - 0.5 = 30.445...
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by subtracting from the length marked ‘5’.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:79:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              We can draw the following overhead sketch of the situation
+              (not to scale, and keeping to {" "}
+              <Math>
+                $3$
+              </Math>
+              {" "} digits of accuracy):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/OO4Q.svg"
+              local_url="./images/svg_ch5_ex_opening_door_overhead.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Here
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:86:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \arctan
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is a function that you can find notated as
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:92:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;“&#125;\tan^&#123;-1&#125;\te&#123;”&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                on your calculator (a questionable choice of notation,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:98:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              because it is {" "}
+              <i>
+                not
+              </i>
+              {" "} the same as {" "}
+              <NoBreak>
+                <Math>
+                  $1/\tan = \cot$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} and
+              sometimes known as
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                tangent inverse
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:102:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by the gallery, converts a fraction of the form
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:104:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\te&#123;opposite&#125;\over\te&#123;adjacent&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                into the corresponding angle whose tangent equals that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:110:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              fraction.
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                The final answer to the problem is...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:113:9
+                </span>
+              </span>
+            </OuterP>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  90^\circ + 52.26^\circ = 142.26^\circ
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <OuterP>
+              <span class="t-3003-c">
+                ...because {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_blueprints_open_thin_door_.wly:124:9
+                </span>
+              </span>
+              <Math>
+                $\alpha$
+              </Math>
+              {" "} only constitutes the amount of rotation
+              past {" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} per the drawing.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={14}>
+          <ExerciseStatement id="_15_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 14.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                If aliens descended on Earth, captured everyone,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              took you aside and told you that the fate of
+              humanity rested on your ability to “illustrate
+              powers of secant”, without further instructions,
+              what would you do?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Presumably the aliens are asking
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:12:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              for an illustration of the sequence
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1, \sec \theta, \,\sec^2(\theta), \,\sec^3(\theta), \,\sec^4(\theta), \dots
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for some fixed {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:19:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} based on a geometric
+              interpretation of {" "}
+              <NoBreak>
+                <Math>
+                  $\sec$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} where we start the sequence
+              at {" "}
+              <NoBreak>
+                <Math>
+                  $\sec^0(\theta) = 1$
+                </Math>
+                .
+              </NoBreak>
+              {" "} Here is a possibility:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/uqSS.svg"
+              local_url="./images/e5_sec_powers_bounce.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Starting with a length of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:26:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} bottom left,
+              successive multiplications by {" "}
+              <Math>
+                $\sec \theta$
+              </Math>
+              {" "}
+              are performed by “dropping a height up” onto
+              the opposite side of the angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              bouncing back and forth between the two sides.
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                If we are willing to reproduce the angle
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:32:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} several times over,
+              another possibility is to draw a “snail stack”
+              of right triangles sharing a common vertex:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/2Pqq.svg"
+              local_url="./images/e5_sec_powers_snail.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Or if we move the angle {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:40:9
+                </span>
+              </span>
+              <Math>
+                $\theta$
+              </Math>
+              {" "} around from
+              one end of the previously obtained segment to
+              another, another somewhat exotic possibility is
+              this one:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/H7R8.svg"
+              local_url="./images/e5_sec_powers_inverted_towers.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Though in fact, this tower is already embedded
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:48:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              as a subdiagram of our first illustration (modulo
+              scale and orientation) (!):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Xdq7.svg"
+              local_url="./images/e5_sec_powers_bounce_cameo.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In each of these diagrams, in fact,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:55:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              successive “similar” lengths are a factor {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "}
+              from one another—giving rise to many possibilities
+              of labeling a single diagram. For example, in the
+              original diagram, the blue lengths below also
+              form a geometric sequence
+              of ratio {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} [below left], leading to an
+              alternate labeling of the tower [below middle],
+              or the snail stack could be labeled from the
+              outside [below right]:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/ICZK.svg"
+              local_url="./images/e5_sec_powers_bounce_triptic.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Two slight variants on another diagram (for
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:69:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              which more labelings are also possible):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/CvsG.svg"
+              local_url="./images/e5_sec_powers_circles_two_labelings.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...and other more-or-less logical diagrams
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:75:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              are possible,
+              but this seems to content the aliens!
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  One way to formally verify that...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:110:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/ci-a.svg"
+                local_url="./images/e5_sec_powers_bounce_ratio_explanation_fraction.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...in this diagram...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:115:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/UspN.svg"
+                local_url="./images/e5_sec_powers_bounce_ratio_explanation.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...is to note that...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:120:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/VLwm.svg"
+                local_url="./images/e5_sec_powers_bounce_ratio_explanation_fraction_2.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...by direct measure and simplifying the fraction—always
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_powers_of_secant_.wly:130:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                nice to see a bit of algebra!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={15}>
+          <ExerciseStatement id="_16_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 15.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What are the maximum and minimum values
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta \ra \cos\theta\sin\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and for which {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:11:5
+                </span>
+              </span>
+              <Math>
+                $\theta$
+              </Math>
+              {" "} are they attained?
+              (Reason geometrically or algebraically, not by calculus.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:16:10
+                  </span>
+                </span>
+              </i>
+              {" "} For a geometric solution we start by
+              reminding to ourselves that if we plot all the solutions of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              xy = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                we find the curve
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:23:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y = &#123;1\over x&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (equivalent!) whose general aspect is...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:29:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/HPwG.svg"
+              width="470px"
+              local_url="./images/_e5_max_cosx_sinx_one_over_x_graph.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...like so; a little more generally,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:35:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              “isosets” of the two-variable function...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x, y) \ra xy
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...have this general aspect...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:42:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/ME1k.svg"
+              style="margin-bottom:0.5em;"
+              local_url="./images/svg_ch5_ex_max_xy_xy_isosets.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...where you see the curve {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:48:9
+                </span>
+              </span>
+              <NoBreak>
+                “
+                <Math>
+                  $xy = 1$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} among a
+              mix of other such curves, of the form {" "}
+              <NoBreak>
+                <Math>
+                  $xy = C$
+                </Math>
+                ;
+              </NoBreak>
+              {" "}
+              what will give us a maybe even better level of
+              insight is the following “heatmap” of {" "}
+              <NoBreak>
+                <Math>
+                  $(x, y) \ra xy$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              where the curves above show up as boundaries between
+              the regions of different color:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/FGx3.svg"
+              style="margin-bottom:0.5em;"
+              local_url="./images/svg_ch5_ex_max_xy_rainbow.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The geometric insight that is of interest to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:67:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              is that,
+              at any given
+              distance from the origin, the lines
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = y
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:77:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x = -y
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                hold the largest and smallest values, respectively,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:84:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $xy$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/YYAQ.svg"
+              local_url="./images/svg_ch5_ex_max_xy_fixed_distance_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In other words,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:90:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\theta)\cdot\sin(\theta),
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as a value of the form {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:94:9
+                </span>
+              </span>
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} times {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate”
+              </NoBreak>
+              {" "}
+              of a point confined to the unit circle,
+              will reach its maximum when
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\cos \theta, \sin \theta) = \pm(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                where it attains value
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:102:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and will reach its minimum when
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:109:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\cos \theta, \sin \theta) = \pm(-\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                where it attains value
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:115:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (-\sqrt&#123;0.5&#125;) \cdot \sqrt&#123;0.5&#125; = -&#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                while, to answer the last part of the question,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:122:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              the set of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                's
+              </NoBreak>
+              {" "} for which the 
+              maximum and minimum are reached will be...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;0.5\eta + 2\eta k: k \in \zz\&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...and...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:130:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \&#123;1.5\eta + 2\eta k: k \in \zz\&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...respectively, as illustrated...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:136:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/FyVW.svg"
+              local_url="./images/svg_ch5_ex_max_xy_angles_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...here.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:141:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Here are annotated graphs of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_isosets_of_xy_v5_.wly:147:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $x \ra \cos x\sin x$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} in 
+                radians and in degrees, proudly displaying the newly
+                discovered max &amp; min:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/7Hpe.svg"
+                style="margin-bottom:-0.5em"
+                local_url="./images/svg_ch5_ex_max_xy_graph_v2.svg"
+              />
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/H0zm.svg"
+                local_url="./images/svg_ch5_ex_max_xy_graph_degrees.svg"
+              />
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={16}>
+          <ExerciseStatement id="_17_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 16.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Compute
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;11\over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by hand using long division.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:10:5
+                </span>
+              </span>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Here is the division in American notation
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:14:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              overlayed on top of a “Plaza” wallpaper to
+              help demarcate the different columns of
+              digits (in American notation each column
+              of digits is associated to a power of {" "}
+              <NoBreak>
+                <Math>
+                  $10$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              with both the numerator and the quotient
+              [the result] living inside the same set of
+              columns, and only the denominator living
+              outside, in a time-space porthole of its own):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Mpne.svg"
+              local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The division stops when we see the same
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:27:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              remainder twice—here {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $40$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} reappears, which
+              means that the next digit of the quotient
+              will be {" "}
+              <Math>
+                $5$
+              </Math>
+              {" "} (like the second digit of the
+              quotient, that we obtained back when we had
+              a remainder of {" "}
+              <NoBreak>
+                <Math>
+                  $40$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} the next one {" "}
+              <Math>
+                $7$
+              </Math>
+              {" "} (the
+              third digit of the quotient), etc—digits will
+              repeat and the “final” quotient when we let
+              the division unravel infinitely far to the right
+              will be
+            </OuterP>
+            <div style="font-size:1.65em;margin:1em 0;">
+              <MathBlock>
+                $$
+                1.\overline&#123;571428&#125;
+                $$
+              </MathBlock>
+            </div>
+            <OuterP>
+              <span class="t-3003-c">
+                ...where the decimal point is after the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:45:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              first {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} because the first {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} is in the
+              {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $10^0$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} column.
+            </OuterP>
+            <Pause />
+            <StarDivider />
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If you've never done this kind of thing before, the
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:53:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                division starts in this blank state:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.4em;"
+                src="/build-img/svgo-svg/Izko.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_1.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  We take the first digit of the numerator,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:60:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                which is {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $1$
+                  </Math>
+                  ’,
+                </NoBreak>
+                {" "} ask “how many times does
+                {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} we will write the answer
+                here:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/60IQ.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_2a.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:69:13
+                  </span>
+                </span>
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
+                {" "} goes {" "}
+                <Math>
+                  $0$
+                </Math>
+                {" "} times into {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/51XG.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_2b.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  We next add a digit from the numerator, giving
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:75:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                us {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we ask “how many times does {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} go into
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} we will write the answer here:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/IIuD.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_3a.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:83:13
+                  </span>
+                </span>
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $1$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
+                {" "} goes {" "}
+                <Math>
+                  $1$
+                </Math>
+                {" "} times into {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/0ytO.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_3b.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  We subtract
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:89:13
+                  </span>
+                </span>
+              </OuterP>
+              <div style="font-size:1.65em;margin:1em 0;">
+                <MathBlock>
+                  $$
+                  1 \times 7
+                  $$
+                </MathBlock>
+              </div>
+              <OuterP>
+                <span class="t-3003-c">
+                  from {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:98:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} giving us a new remainder
+                of {" "}
+                <Math>
+                  $4$
+                </Math>
+                {" "} (the very first “remainder” is actually {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                before anything starts) (before anything started we
+                had {" "}
+                <NoBreak>
+                  <Math>
+                    $11 = 7 \times 0 + 11$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and now we have
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $11 = 7 \times 1 + 4$
+                  </Math>
+                  ):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/vfTE.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_4.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Because {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:108:13
+                  </span>
+                </span>
+                <Math>
+                  $7$
+                </Math>
+                {" "} does not fit into {" "}
+                <Math>
+                  $4$
+                </Math>
+                {" "} (and if it did,
+                we would have done something wrong)
+                we “bring down a {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} that is actually part of
+                a hidden sequence of {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  's
+                </NoBreak>
+                {" "} sitting to the right
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $11$
+                  </Math>
+                  :
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/cQmJ.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_5.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  We ask “how many times does {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:118:13
+                  </span>
+                </span>
+                <Math>
+                  $7$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $40$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "}
+                we will write the answer here:
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/4s2G.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_6a.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:125:13
+                  </span>
+                </span>
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  (
+                  <Math>
+                    $7$
+                  </Math>
+                </NoBreak>
+                {" "} goes {" "}
+                <Math>
+                  $5$
+                </Math>
+                {" "} times into {" "}
+                <NoBreak>
+                  <Math>
+                    $40$
+                  </Math>
+                  ):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/RSlJ.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_6b.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  We subtract
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:131:13
+                  </span>
+                </span>
+              </OuterP>
+              <div style="font-size:1.65em;margin:1em 0;">
+                <MathBlock>
+                  $$
+                  5\times 7
+                  $$
+                </MathBlock>
+              </div>
+              <OuterP>
+                <span class="t-3003-c">
+                  from {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:140:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $40$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} giving us a new remainder
+                of {" "}
+                <Math>
+                  $5$
+                </Math>
+                {" "}
+                (well, to be technical, the remainder is actually
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $5 \times 10^&#123;-1&#125;$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} not {" "}
+                <NoBreak>
+                  <Math>
+                    $5$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} but
+                the teacher at the board will often say {" "}
+                <NoBreak>
+                  “
+                  <Math>
+                    $5$
+                  </Math>
+                  ”):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/Yo2I.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_7.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Because {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:150:13
+                  </span>
+                </span>
+                <Math>
+                  $7$
+                </Math>
+                {" "} does not fit into {" "}
+                <NoBreak>
+                  <Math>
+                    $5$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we bring
+                another {" "}
+                <Math>
+                  $0$
+                </Math>
+                {" "} down from our infinite reserve of
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  's:
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:0.8em;margin-bottom:1.5em;"
+                src="/build-img/svgo-svg/xkzr.svg"
+                local_url="./images/svg_ch5_ex_11_over_7_longhand_eloise_start_8.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (Etc.)
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_11_over_7_.wly:158:13
+                  </span>
+                </span>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={17}>
+          <ExerciseStatement id="_18_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 17.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Compute
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_22_over_7_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;22\over 7&#125;, \,\,\,\,\, &#123;33\over 7&#125;, \,\,\,\,\,\rm&#123;and&#125;\,\,\,\,\,&#123;44\over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by hand using long division.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_22_over_7_.wly:8:5
+                </span>
+              </span>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The divisions, pursued up to the point where
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_22_over_7_.wly:12:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              remainders repeat, look as follows:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/CURd.svg"
+              local_url="./images/svg_ch5_ex_22_and_33_and_44_over_7_combined_longhands.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In each case, the digits of the quotient
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_22_over_7_.wly:18:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              are about to restart from the first digit
+              after the decimal point; the answers are therefore:
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \displaylines&#123;
+                \Large \up&#123;1.5&#125;&#123;22\over 7&#125; = 3.\overline&#123;142857&#125;\\
+                \Large \up&#123;1.7&#125;&#123;33\over 7&#125; = 4.\overline&#123;714285&#125;\\
+                \Large \up&#123;1.7&#125;&#123;44\over 7&#125; = 6.\overline&#123;285714&#125;
+                &#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <Pause />
+            <StarDivider style="margin-top:-1.5em" />
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Because...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_22_over_7_.wly:51:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \displaylines&#123;
+                \Large         \eta  \approx&#123;11\over 7&#125;\\
+                \Large \up&#123;1.7&#125;2\eta \approx&#123;22\over 7&#125;\\
+                \Large \up&#123;1.7&#125;3\eta \approx&#123;33\over 7&#125;\\
+                \Large \up&#123;1.7&#125;4\eta \approx&#123;44\over 7&#125;
+                &#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...we thus have...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_22_over_7_.wly:62:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \displaylines&#123;
+                \Large         \eta \approx  1.\overline&#123;571428&#125;\\
+                \Large \up&#123;1.7&#125;2\eta \approx 3.\overline&#123;142857&#125;\\
+                \Large \up&#123;1.7&#125;3\eta \approx 4.\overline&#123;714285&#125;\\
+                \Large \up&#123;1.7&#125;4\eta \approx 6.\overline&#123;285714&#125;&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...though each estimate is only accurate to
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_22_over_7_.wly:72:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                two decimal places, meaning that the last four
+                digits of the period are “wasted (in)accuracy”.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={18}>
+          <ExerciseStatement id="_19_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 18.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                To close our division skills: use the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              table below to compute the integer part and
+              the first three digits past the decimal point
+              (no rounding based on the fourth digit) of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              15542486476949/777
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by hand, using long division. What is the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:13:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              new (last) remainder when the quotient reaches
+              the 3rd digit after the decimal point, and what
+              equation is implied from the quotient and the
+              new (last) remainder at that point?
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;array&#125;&#123;c|cc&#125;
+              \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
+              \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
+              \\
+              \end&#123;array&#125;
+              $$
+            </MathBlock>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Here is the long division, pursued up to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:29:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $10^&#123;-3&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} column of the quotient,
+              including one last remainder computation
+              that occurs pursuant to adding the digit in
+              the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $10^&#123;-3&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} column of the quotient (this
+              is what the problem statement refers to as
+              the “last remainder”):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/yLyJ.svg"
+              local_url="./images/svg_ch5_ex_big_division.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Said quotient is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:40:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              20003200099.033
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                while the new (last) remainder is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:46:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              0.359
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and the equation linking the two is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:52:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              15542486476949 = 777 \times 20003200099.033 + 0.359
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                per properties of the long division algorithm.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:58:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Lest anyone get left behind, we can go
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:62:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                over the division “on the board”
+                for a bit.
+              </OuterP>
+              <OuterP class="indent-10">
+                <span class="t-3003-c">
+                  We start by asking “how many times does {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:66:13
+                  </span>
+                </span>
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $1$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/x9Ng.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_1.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:72:13
+                  </span>
+                </span>
+                <Math>
+                  $0$
+                </Math>
+                {" "} (that we need not write
+                down, but we can), we move to asking
+                “how many times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $15$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/6uMQ.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_2.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:80:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we move to asking
+                “how many times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $155$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/D10R.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_3.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:87:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we move to asking
+                “how many times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $1554$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/2kAo.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_4.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:94:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we subtract {" "}
+                <Math>
+                  $2 \times 777$
+                </Math>
+                {" "}
+                from {" "}
+                <NoBreak>
+                  <Math>
+                    $1554$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} giving us a new “prefix” for
+                the remainder:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/qwI2.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_4b.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (FYI, the remainder now consists of these yellow
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:101:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                digits:)
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/mxCX.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_4remainder.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Continuing, we bring down a {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:107:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} ask “how many times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "}
+                go into {" "}
+                <NoBreak>
+                  <Math>
+                    $2$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go here:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/SaeW.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_5b_v2.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:113:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} we bring down a {" "}
+                <NoBreak>
+                  <Math>
+                    $4$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} ask “how many
+                times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $24$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go
+                here:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/sCyt.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_6b_v2.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:120:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} we bring down an {" "}
+                <NoBreak>
+                  <Math>
+                    $8$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} ask “how many
+                times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $248$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go
+                here:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/QJ-A.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_7b_v2.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:127:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $0$
+                  </Math>
+                  ;
+                </NoBreak>
+                {" "} we bring down a {" "}
+                <NoBreak>
+                  <Math>
+                    $6$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} ask “how many
+                times does {" "}
+                <Math>
+                  $777$
+                </Math>
+                {" "} go into {" "}
+                <NoBreak>
+                  <Math>
+                    $2486$
+                  </Math>
+                  ?”,
+                </NoBreak>
+                {" "} the answer will go
+                here:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/aGjl.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_8b_v2.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:134:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $3$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} we subtract {" "}
+                <Math>
+                  $3 \times 777$
+                </Math>
+                {" "}
+                from {" "}
+                <NoBreak>
+                  <Math>
+                    $2648$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} giving us a new remainder:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/mwDw.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_8c.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (And to be specific, the remainder is now formed
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:140:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                by...
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/zsA9.svg"
+                local_url="./images/svg_ch5_ex_big_division_inside_8remainder.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...these yellow digits.) Etc.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:146:13
+                  </span>
+                </span>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If you need help brushing up on your
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:150:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                long-form subtraction, say your subtraction is this:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/DL_-.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_a.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  You can either treat the top or bottom number as an
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:156:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                odometer, and count how much a car with this
+                odometer must be driven back/forth to reach the other
+                number.
+              </OuterP>
+              <OuterP class="indent-10">
+                <span class="t-3003-c">
+                  Viewing the top number as an odometer, the odometer
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:161:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                would be as follows:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/tkDH.svg"
+                local_url="./images/svg_ch5_ex_big_division_odometer_1.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Starting from the right end of the subtraction, we ask
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:167:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                “by how much (or how little) does a car need to be
+                driven backwards, to turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $2$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into an {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $8$
+                  </Math>
+                  ’?”,
+                </NoBreak>
+                {" "} we
+                will write the answer below:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/eoA2.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_c.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is: {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:175:13
+                  </span>
+                </span>
+                <Math>
+                  $4$
+                </Math>
+                {" "} [miles
+                <b>
+                  ] (
+                </b>
+                say):
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/XKhM.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_d.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  But the odometer will pass
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:180:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                from {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} on its way down to {" "}
+                <NoBreak>
+                  <Math>
+                    $8$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} so we also
+                turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $6$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} (or “borrow a {" "}
+                <NoBreak>
+                  <Math>
+                    $10$
+                  </Math>
+                  ”
+                </NoBreak>
+                {" "} to do
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $12 - 8 = 4$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} as some teachers put it):
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/5nhK.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_e.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Next we ask “by how many {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:188:13
+                  </span>
+                </span>
+                <NoBreak>
+                  [
+                  <Math>
+                    $10$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles] does the car need
+                to be driven back, to turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’?”,
+                </NoBreak>
+                {" "} we
+                will write the answer below:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/_-US.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_f.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is: {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:195:13
+                  </span>
+                </span>
+                <Math>
+                  $6$
+                </Math>
+                {" "} {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $10$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles]:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/jj0a.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_g.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  But here too the odometer will pass
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:200:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                from {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} as we reduce it, so the wheel to its
+                left must be turned back a notch as well; and because that
+                wheel is a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} already, the wheel to {" "}
+                <i>
+                  its
+                </i>
+                left
+                must be turned back a notch; and so on, resulting in a small cascade
+                effect:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/qylE.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_h.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Next we ask “by how many {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:210:13
+                  </span>
+                </span>
+                <NoBreak>
+                  [
+                  <Math>
+                    $100$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles] does the car need
+                to be driven back, to turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $0$
+                  </Math>
+                  ’?”,
+                </NoBreak>
+                {" "} we
+                will write the answer below:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/anHE.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_i.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is: {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:217:13
+                  </span>
+                </span>
+                <Math>
+                  $9$
+                </Math>
+                {" "} {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $100$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles]:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/Tte9.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_j.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Next we ask “by how many {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:222:13
+                  </span>
+                </span>
+                <NoBreak>
+                  [
+                  <Math>
+                    $1000$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles] does the car need
+                to be driven back, to turn the {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $9$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} into a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $5$
+                  </Math>
+                  ’?”:
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/_sJ5.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_k.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  The answer is: {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:228:13
+                  </span>
+                </span>
+                <Math>
+                  $4$
+                </Math>
+                {" "} {" "}
+                <NoBreak>
+                  [
+                  <Math>
+                    $1000$
+                  </Math>
+                  s
+                </NoBreak>
+                {" "} of miles]:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/jqe5.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_l.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Etc—we finally obtain:
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:233:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <Image
+                style="margin-top:1em;margin-bottom:1em;"
+                src="/build-img/svgo-svg/y31C.svg"
+                local_url="./images/svg_ch5_ex_big_division_big_subtraction_final.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (And like we alluded to above, one can also
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:239:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                consider the bottom number to be the odometer,
+                and “count up” towards the top number, leading
+                to a symmetric algorithm, but one method is not
+                better than the other.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Generally,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:247:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/E79T.svg"
+                local_url="./images/svg_ch5_ex_big_division_remainder_equation.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  at any point in a long division after the
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_long_division_15542486476949_777_.wly:252:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                remainder is updated to account for a new term
+                added to the quotient. That's what the remainder
+                is for: to satisfy this equation!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={19}>
+          <ExerciseStatement id="_20_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 19.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What is the angle marked ‘?’, as a function
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_complement_calculation_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Vd8x.svg"
+              local_url="./images/svg_ch5_ex_angle_sum_180.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Since the angles of a triangle add to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_complement_calculation_.wly:12:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $180^\circ = 2\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} we need to solve
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta + \eta + \te&#123;?&#125; = 2\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for ‘?’, giving us
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_complement_calculation_.wly:19:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;?&#125; = 2\eta - \eta - \theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                or an answer of...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_complement_calculation_.wly:26:9
+                </span>
+              </span>
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \eta - \theta
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                ...!!
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_complement_calculation_.wly:33:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Two angles that sum to {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_complement_calculation_.wly:45:13
+                  </span>
+                </span>
+                <Math>
+                  $\eta$
+                </Math>
+                {" "} are
+                called {" "}
+                <i>
+                  complementary
+                </i>
+                , with each angle being
+                the {" "}
+                <i>
+                  complement
+                </i>
+                {" "} of the other.
+                The two
+                non-right angles of a right triangle are,
+                therefore, complementary!
+                (Not
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  complimentary
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_complement_calculation_.wly:53:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  which would indicate that the angles are
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_complement_calculation_.wly:55:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                given to you for free—everything in math is
+                free, not just those angles!)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={20}>
+          <ExerciseStatement id="_21_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 20.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What is the angle marked ‘?’, as a function of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_complement_of_complement_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/MXN9.svg"
+              local_url="./images/svg_ch5_ex_angle_sum_180_followup.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                It is {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_complement_of_complement_.wly:12:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as well. One method of
+              deduction uses the fact that “the complement
+              of my complement is myself”:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/SIuZ.svg"
+              local_url="./images/svg_ch5_ex_angle_sum_180_followup_explanation.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Another method of deduction uses the fact that,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_complement_of_complement_.wly:19:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              together with the angle immediately to its left
+              (which happens to be {" "}
+              <NoBreak>
+                <Math>
+                  $\eta - \theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because
+              it is the complement of {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} via the smallest
+              right triangle present), the sought-for angle
+              makes up {" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/lswQ.svg"
+              local_url="./images/svg_ch5_ex_angle_sum_180_followup_explanation_2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (In one case we use the fact that the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_complement_of_complement_.wly:29:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              medium-sized triangle is a right triangle,
+              in another case that the smallest-size
+              triangle is a right triangle—and in both cases
+              that the original, largest triangle is a
+              right triangle.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={21}>
+          <ExerciseStatement id="_22_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 21.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Argue that, in the following figure, the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              angle marked ‘?’ equals {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the angle at
+              the center of the circle:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/XRFw.svg"
+              local_url="./images/svg_ch5_ex_tangent_angle_v2.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The ending and starting half-lines of the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:13:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              angle marked ‘?’ are both {" "}
+              <Math>
+                $90^\circ$
+              </Math>
+              {" "} counterclockwise
+              from the ending and starting half-lines,
+              respectively, of the central angle:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/wC_h.svg"
+              local_url="./images/svg_ch5_ex_tangent_angle_explanation_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The angle marked ‘?’ is therefore obtained
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:21:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              by a {" "}
+              <Math>
+                $90^\circ$
+              </Math>
+              {" "} rotation (and then translation)
+              of the central angle, and is, therefore, equal
+              to the central angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
                 </Math>
                 .
               </NoBreak>
             </OuterP>
             <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  This holds no matter which quadrant we
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:28:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                push {" "}
+                <Math>
+                  $\theta$
+                </Math>
+                {" "} to:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/Wi-I.svg"
+                local_url="./images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg"
+              />
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Here is an attempt at verbalization:
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:36:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  the counterclockwise angle from the positive
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:38:15
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                {" "}{" "}
+                <Math>
+                  $x$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} axis to
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:39:16
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                the radial vector [of angle {" "}
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  <span class="t-3003-c">
+                    ]
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:40:49
+                    </span>
+                  </span>
+                </NoBreak>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  equals the counterclockwise angle from the positive
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:41:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                {" "}{" "}
+                <Math>
+                  $y$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} axis to the counterclockwise tangent [of angle {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:42:16
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  <span class="t-3003-c">
+                    ]
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:42:72
+                    </span>
+                  </span>
+                </NoBreak>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  With the various terms illustrated here:
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:44:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/hFz7.svg"
+                local_url="./images/svg_ch5_ex_tangent_angle_verbalization_explanation.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...but if it was such a great verbalization we
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_rotate_central_90_.wly:49:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                wouldn't need to illustrate it, ergo, we failed!
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={22}>
+          <ExerciseStatement id="_23_h.a.i_">
             <OuterP>
-              <i>
-                Example 1.
-              </i>
-              {" "} Above, we estimated
+              <b>
+                Exercise 22.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Express {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_tan^2_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $A/B$
+              </Math>
+              {" "} as a function of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/WqQR.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                We shall use the height {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_tan^2_.wly:11:9
+                </span>
+              </span>
+              <Math>
+                $C$
+              </Math>
+              {" "} of the triangle
+              as a stopover between {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/1KiR.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_height_C.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                On the one hand, {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_tan^2_.wly:17:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $C/B = \tan(\theta)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/DU_p.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_left_part.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                On the other hand, {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_tan^2_.wly:22:9
+                </span>
+              </span>
+              <Math>
+                $A/C = \tan(\theta)$
+              </Math>
+              {" "}
+              also, by the result of Exercise 19 (whereby
+              {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} reappears as the top left angle of
+              the middle-sized right triangle):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/OHG8.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_right_part.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The answer is therefore:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_tan^2_.wly:30:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              \tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              to be roughly {" "}
+              <span class="t-3003-c">
+                (As per the fact that {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_tan^2_.wly:36:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
-                  $1/100 = 0.01$
+                  $(A/B) = (C/B)\cdot(A/C)$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={23}>
+          <ExerciseStatement id="_24_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 23.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Express {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $A/B$
+              </Math>
+              {" "} as a function of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/8gZl.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Here are two solutions:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:11:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:15:10
+                  </span>
+                </span>
+              </i>
+              {" "} We use the small leg {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "}
+              of the triangle as a stopover between {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and
+              {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/0rFq.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_D.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                On the one hand, {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:22:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $D/B = \sec(\theta)\,\, (= 1/\cos(\theta))$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/xVQI.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A_left_part.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                On the other hand, {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:27:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $A/D = \sec(\theta)$
                 </Math>
                 ,
               </NoBreak>
-              {" "} but {" "}
+              {" "} also (!?):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/4_JC.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A_right_part_shrunk.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Thus:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:32:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;A\over B&#125; = &#123;D\over B&#125;\times &#123;A\over D&#125; = \sec(\theta)\cdot \sec(\theta) = \sec^2(\theta).
+              $$
+            </MathBlock>
+            <Pause />
+            <StarDivider style="margin-top:0.5em;" />
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:41:10
+                  </span>
+                </span>
+              </i>
+              {" "}
+              We decompose {" "}
               <Math>
-                $1/100$
+                $A$
+              </Math>
+              {" "} as {" "}
+              <Math>
+                $B + A'$
+              </Math>
+              {" "}
+              where {" "}
+              <Math>
+                $A' = B - A$
+              </Math>
+              {" "} is the “old {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} from
+              Exercise 22:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/YcZS.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                We find:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:49:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;A\over B&#125; = &#123;&#123;B + A'&#125;\over B&#125; = &#123;B\over B&#125; + &#123;A'\over B&#125; = 1 + \tan^2(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...since
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:55:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;A'\over B&#125; = \tan^2(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by Exercise 22. (The End.)
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:61:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Since the two solutions compute
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:65:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                answers to the same question,
+                one can in particular deduce that
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \sec^2(\theta) = 1 + \tan^2(\theta)
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                <span class="t-3003-c">
+                  for all {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:74:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $0 &lt; \theta &lt; \eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} which is
+                the range of {" "}
+                <Math>
+                  $\theta$
+                </Math>
+                {" "} covered by these
+                diagrams. (The same identity holds more
+                generally than just those {" "}
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  's,
+                </NoBreak>
+                {" "}
+                however.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={24}>
+          <ExerciseStatement id="_25_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 24.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                By what factor are areas stretched
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              as a function of the latitude {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} in the
+              Lambert projection of a sphere onto a cylinder?
+              (Cf. {" "}
+              <InChapterLink
+                href="/article/chapter1#_1_h.a.i_"
+                class="in-chapter-link"
+              >
+                Example 6
+              </InChapterLink>
+              &#8288;.)
+              For reference, a profile view of the Lambert projection
+              is also given below.
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/dKeI.svg"
+              local_url="./images/svg_ch5_ex_horizontal_projection_sphere_statement.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Areas are scaled by a factor of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:16:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec(\theta) \cdot \cos(\theta) = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because latitudes are stretched by a factor of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:20:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as covered in {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:31:9
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_1_h.a.i_"
+                class="in-chapter-link"
+              >
+                Example 6
+              </InChapterLink>
+              &#8288;,
+              whereas longitudes (the other
+              ones, perpendicular to latitudes) are locally stretched
+              by a factor of...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...as depicted in this...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:40:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/BvFn.svg"
+              local_url="./images/svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...sketch, and because the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:45:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              overall scaling in area is the latitudinal
+              scaling factor times the longitudinal
+              scaling factor. (Area = width {" "}
+              <Math>
+                $\times$
+              </Math>
+              {" "} height,
+              so you take the factor by which “width” scales,
+              times the factor by which “height” scales—presuming
+              your old “width” and “height” are still at right
+              angle to one another after the projection, which
+              is the case here: longitudes and latitudes, that
+              are perpendicular on the sphere, project to
+              lines and circles, respectively, that are
+              perpendicular on the cylinder.)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  As a consequence, {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:59:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                the area of a shape on the sphere is equal to
+                the area of the projection of that shape onto
+                the cylinder, for any shape.
+                We will refer to this (strange?) fact as the
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  Archimedean property
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:65:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  of the sphere.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:67:13
+                  </span>
+                </span>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  For example, the following two orange areas, one
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:93:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                on the sphere and one on the cylinder, are
+                equal, by the Archimedean property (this is a Lambert
+                projection):
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/pG5W.svg"
+                local_url="./images/svg_ch5_ex_horizontal_projection_sphere_orange_1.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  For a second, more exotic example,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:101:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                the 8 “tube sections” 
+                of each circle
+                in this diagram...
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/7Dao.svg"
+                local_url="./images/svg_ch5_ex_horizontal_projection_sphere_orange_9.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...have equal areas on the cylinder,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_archimedean_projection_new_ver_.wly:109:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                even though dissimilar in shape,
+                since those sections
+                have equal area to one another on the sphere.
+                (For each circle separately,
+                we mean.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={25}>
+          <ExerciseStatement id="_26_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 25.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Rank the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_rank_the_7_slices_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $7$
+              </Math>
+              {" "} slices of this
+              sphere with unit radius from the greatest to
+              smallest area slice:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/MAo2.svg"
+              local_url="./images/svg_ch5_ex_pez_sphere_statement.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The three slices of height {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_rank_the_7_slices_.wly:13:9
+                </span>
+              </span>
+              <Math>
+                $1/3$
+              </Math>
+              {" "} have the same
+              area, as do the four slices of height {" "}
+              <NoBreak>
+                <Math>
+                  $1/4$
+                </Math>
+                .
+              </NoBreak>
+              {" "} But
+              naturally, the slices of height {" "}
+              <Math>
+                $1/3$
+              </Math>
+              {" "} have larger
+              area than the slices of height {" "}
+              <NoBreak>
+                <Math>
+                  $1/4$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  This holds because each slice has the same area
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_rank_the_7_slices_.wly:20:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                as the horizontal projection of that slice onto a cylinder
+                hugging the sphere, by Exercise 46, and because
+                the area of a cylinder slice only depends on its
+                height.
+                <ImageRight
+                  src="/build-img/svgo-svg/xEpL.svg"
+                  local_url="./images/svg_ch5_ex_pez_sphere_cloud.svg"
+                />
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={26}>
+          <ExerciseStatement id="_27_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 26.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Give a formula for the area of a sphere of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_area_formula_from_archimedean_property_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              radius {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The area of a sphere of radius {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_area_formula_from_archimedean_property_.wly:9:9
+                </span>
+              </span>
+              <Math>
+                $r$
               </Math>
               {" "} is
-              bigger than the actual value of
-              {" "}
-              <Math>
-                $&#123;1 \over 10\cdot 11&#125; = &#123;1 \over 110&#125;$
-              </Math>
-              {" "} by
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over 10^2\cdot 11&#125;
+              4\eta\rt&#123;0.05&#125;r\cdot 2r = 8\eta\rt&#123;0.05&#125;r^2
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              or close to {" "}
+              <span class="t-3003-c">
+                because it is the same as the area of a cylinder
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_area_formula_from_archimedean_property_.wly:13:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of radius {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} and and height {" "}
               <NoBreak>
                 <Math>
-                  $1/10^3 = 0.001$
+                  $2r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} by Exercise 46:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/ivEh.svg"
+              local_url="./images/svg_ch5_ex_sphere_area.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (Namely,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_area_formula_from_archimedean_property_.wly:19:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              4\eta\rt&#123;0.05&#125;r\cdot 2r
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the product “circumference {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_area_formula_from_archimedean_property_.wly:23:9
+                </span>
+              </span>
+              <Math>
+                $\times$
+              </Math>
+              {" "} height”
+              that gives the area of the cylinder.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={27}>
+          <ExerciseStatement id="_28_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 27.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Give a formula for the volume of a sphere of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_volume_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              radius {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} using the fact that the volume of
+              a cone is “one third base times height”.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The basic idea is that we can view the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_volume_.wly:10:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              sphere as being made up of many cones:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/TNdV.svg"
+              local_url="./images/svg_ch5_ex_sphere_volume_idea.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                When we add up the volume
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_volume_.wly:16:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 3&#125;\times \rm&#123;base&#125; \times \rm&#123;height&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                over all these cones, each height is nearly {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_volume_.wly:22:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              so what we really need is the sum of
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 3&#125;\times \rm&#123;base&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                over all the cones, which comes out to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_volume_.wly:29:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 3&#125;\times (&#123;\rm sphere\,\,area&#125;)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because the sum of all the areas of the bases
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_volume_.wly:35:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              is the sphere area. (Everything speaking
+              approximately, for many fine cones, in the
+              limit of our imagination as they become
+              infinitely fine.) (*Where each ‘base’ stands
+              for the shaved-off, “flattened” version of the
+              base.) So multiplying the height {" "}
+              <Math>
+                $r$
+              </Math>
+              {" "} back in,
+              we find
+            </OuterP>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  V = &#123;1\over 3&#125;\times (&#123;\rm sphere\,\,area&#125;) \times r = &#123;8\over 3&#125;\eta\rt&#123;.1&#125;r^3
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <OuterP>
+              <span class="t-3003-c">
+                for the volume {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_volume_.wly:53:9
+                </span>
+              </span>
+              <Math>
+                $V$
+              </Math>
+              {" "} of the sphere, using the fact that
+              the sphere area {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} is
+            </OuterP>
+            <center style="margin-top:1em;margin-bottom:1em;">
+              <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
+                <MathBlock>
+                  $$
+                  A = 8\eta\rt&#123;.05&#125;r^2
+                  $$
+                </MathBlock>
+              </div>
+            </center>
+            <OuterP>
+              <span class="t-3003-c">
+                by Exercise 49.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sphere_volume_.wly:65:9
+                </span>
+              </span>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={28}>
+          <ExerciseStatement id="_29_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 28.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                An access staircase goes up the side of a
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              hemispheric gas tank. It keeps a constant angle
+              of {" "}
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "} to vertical at its inside edge 
+              until it reaches {" "}
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "} up the tank, at which
+              point it makes a beeline for the top:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/wF1d.svg"
+              local_url="./images/svg_ch5_ex_gas_sphere.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                How long, roughly, is the inside handrail
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:13:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of the staircase as a function of the radius
+              of the tank?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Putting {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:19:9
+                </span>
+              </span>
+              <Math>
+                $r$
+              </Math>
+              {" "} for the radius, the answer is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx r(1 + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                where
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:25:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot 1=r
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                accounts for the first (lower) portion of the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:31:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              handrail, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot(\eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                accounts for the upper portion of the handrail.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:38:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              (Ignoring that the handrail doesn't quite
+              follow through to the tippy-top of the gas tank,
+              per the picture.)
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                To reason about the lower portion of the handrail
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:43:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              imagine a butterly that follows up the
+              handrail by flying straight up and
+              straight over, then straight up and straight
+              over again, etc, like so:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/EiSR.svg"
+              local_url="./images/svg_ch5_ex_gas_sphere_butterfly.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The total length of the handrail is the sum of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:52:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              all the diagonal segments (in dotted white) above.
+              Because the diagonal segment has length
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;2&#125;h
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for a leg in which the butterly goes up by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:60:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} the
+              total length of the diagonal segments is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                times the total amount that the butterfly goes up
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:67:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              for the first half of the handrail. But this
+              amount—call it {" "}
+              <NoBreak>
+                <Math>
+                  $H$
+                </Math>
+                —is
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot\sin(45^\circ) = r\cdot &#123;1\over \sqrt&#123;2&#125;&#125; = &#123;r\over \sqrt&#123;2&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as illustrated here:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:75:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/VrOC.svg"
+              local_url="./images/svg_ch5_ex_gas_sphere_profile.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                And therefore the sum of the white diagonal segments
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:80:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;2&#125;\cdot H = \sqrt&#123;2&#125;\cdot &#123;r\over \sqrt&#123;2&#125;&#125; = r
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...just {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:87:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as we said.
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                On the other hand, the upper portion of the handrail
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:89:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              has length
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r\cdot(\eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (modulo the kerfuffle at the top) simply by the fact
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:96:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              that, in a circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $r$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} an angle of {" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "}
+              radians subtends an arc of length {" "}
+              <NoBreak>
+                <Math>
+                  $r\alpha$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/E5ov.svg"
+              local_url="./images/svg_ch5_ex_gas_sphere_profile_2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...and hence the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:103:9
+                </span>
+              </span>
+              <i>
+                total
+              </i>
+              {" "} length of the handrail
+              is...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx r + r\cdot\eta/2 = r(1 + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...as claimed.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank.wly:110:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Another way to think about the length of the lower
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank.wly:114:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                portion of the handrail is via the green triangle 
+                depicted below, that drops down  onto the handrail
+                like a curtain, starting at the top of the lower
+                portion of the handrail:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/tyZN.svg"
+                local_url="./images/svg_ch5_ex_gas_sphere_green_2_1_45.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  If we “unroll” the triangle onto a vertical plane
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank.wly:123:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                while keeping its left edge vertical we find a 
+                triangle with a straight lower edge at {" "}
+                <Math>
+                  $45^\circ$
+                </Math>
+                {" "}
+                to horizontal, because that is the property of the
+                handrail to maintain this angle everywhere:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/-SnV.svg"
+                local_url="./images/svg_ch5_ex_gas_sphere_triangle_out_flat.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  Hence the length of the lower half of the handrail
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank.wly:132:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                is
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \large \sqrt&#123;2&#125;H
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  with {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank.wly:139:13
+                  </span>
+                </span>
+                <Math>
+                  $H = r/\sqrt&#123;2&#125;$
+                </Math>
+                {" "} as previously defined.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={29}>
+          <ExerciseStatement id="_30_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 29.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Give a decimal approximation to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:3:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              r(1 + \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:7:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $r = 100$
+                </Math>
+                m,
+              </NoBreak>
+              {" "} accurate within {" "}
+              <NoBreak>
+                <Math>
+                  $\pm 5\%$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (No calculators.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:11:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta \approx &#123;11\over 7&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                within 1/1000th, we have
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:17:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;align*&#125;
+                 r(1 + \eta/2)\,\, \approx&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;0.0&#125; r\left(1 + &#123;11\over 14&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(&#123;14 + 11\over 14&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\cdot &#123;25\over 14&#125;\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\cdot &#123;28 - 3\over 14&#125;\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(2 - &#123;3\over 14&#125;\right)\\
+                                   \approx&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(2 - &#123;3\over 15&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r\left(2 - &#123;1\over 5&#125;\right)\\
+                                         =&amp;\,\,\,\dn&#123;1.3&#125;\up&#123;1.3&#125; r(2 - 0.2)\\
+                                         =&amp;\,\,\,\dn&#123;0.0&#125;\up&#123;1.3&#125; 1.8r
+              \end&#123;align*&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                leading to an approximation of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:33:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx 180\te&#123;m&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:38:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $r = 100$
+                </Math>
+                m.
+              </NoBreak>
+              {" "}
+              For a different, coarser approach, one can
+              even use
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta \approx &#123;10.5\over 7&#125; = 1.5
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which gives
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:44:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 + \eta/2 \approx 1.75
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and a final approximation of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:48:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx 175\te&#123;m&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:52:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $r = 100$
+                </Math>
+                m.
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The two approximations given produce
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:56:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                {" "}{" "}
+                <NoBreak>
+                  1
+                  <Math>
+                    $\%$
+                  </Math>
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  2
+                  <Math>
+                    $\%$
+                  </Math>
+                </NoBreak>
+                {" "} of error, respectively, 
+                or {" "}
+                <Math>
+                  $\approx 0.8\%$
+                </Math>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $\approx 1.9\%$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} 
+                more exactly, respectively. (For the
+                second approximation,
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.5
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  is nearly {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:66:13
+                  </span>
+                </span>
+                <NoBreak>
+                  5
+                  <Math>
+                    $\%$
+                  </Math>
+                </NoBreak>
+                {" "} less than {" "}
+                <Math>
+                  $\eta/2$
+                </Math>
+                {" "} right
+                off the bat, but the fraction represented
+                by this error is diluted by the fact that
+                we add 1.)
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The true value is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:73:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $178.5$
+                  </Math>
+                  m,
+                </NoBreak>
+                {" "} as
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \eta/2 = 0.785\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  and some, as
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:79:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \eta = 1.570\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  and some. (Note that half of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:85:13
+                  </span>
+                </span>
+                <Math>
+                  $0.07$
+                </Math>
+                {" "} is {" "}
+                <NoBreak>
+                  <Math>
+                    $0.035$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                and that {" "}
+                <NoBreak>
+                  <Math>
+                    $0.75 + 0.035 = 0.785$
+                  </Math>
+                  .)
+                </NoBreak>
+                {" "} (PS: In fact,
+                doing the division
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.57/2
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  “by head” constitutes another perfectly valid
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_gas_tank_decimal_approximation_.wly:93:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                method of approximation, if you can remember
+                that {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta = 1.570\dots$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={30}>
+          <ExerciseStatement id="_31_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 30.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                From the first three steps of the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              division of {" "}
+              <Math>
+                $11$
+              </Math>
+              {" "} by {" "}
+              <Math>
+                $7$
+              </Math>
+              {" "} we find {" "}
+              <NoBreak>
+                <Math>
+                  $\eta \approx 1.57$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/bA_Z.svg"
+              local_url="./images/svg_ch5_ex_1_57_three_quarters_division.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Use this approximation of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:10:5
+                </span>
+              </span>
+              <Math>
+                $\eta$
+              </Math>
+              {" "} to approximate
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                three-quarters the circumference
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:12:7
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                of a circle of radius {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:14:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $100$
+                </Math>
+                m.
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:18:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is one-quarter the circumference of a circle divided
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:24:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              by its radius,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              3\eta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is three-quarters the circumference of a circle divided
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:31:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              by its radius; using {" "}
+              <NoBreak>
+                <Math>
+                  $\eta \approx 1.57$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $3\eta$
+              </Math>
+              {" "} is approximately
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              3 \times 1.57 = 3\times (1.5 + 0.07) = 3 \times 1.5 + 3\times 0.07
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              =\,\,4.5 + 0.21
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              =\,\,4.71
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                so three-quarters the circumference of a circle of radius {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:44:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $100$
+                </Math>
+                m
+              </NoBreak>
+              {" "}
+              will be
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \approx 4.71 \times 100\te&#123;m&#125; = 471\te&#123;m&#125;.
+              $$
+            </MathBlock>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The following table gives approximation ratios
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:52:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                going from {" "}
+                <Math>
+                  $n = 1$
+                </Math>
+                {" "} to {" "}
+                <Math>
+                  $n = 4$
+                </Math>
+                {" "} quarters, similarly
+                computed, that one might as well remember:
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;array&#125;&#123;c|c|c&#125;
+                \,\,\,\,n\,\,\,\, &amp; n(1.5 + 0.07) &amp; \,\,\,\,\approx n\eta\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
+                1 &amp; \up&#123;1.2&#125; 1.5 + 0.07 &amp; 1.57\\
+                2 &amp; \up&#123;1.2&#125; 3.0 + 0.14 &amp; 3.14\\
+                3 &amp; \up&#123;1.2&#125; 4.5 + 0.21 &amp; 4.71\\
+                4 &amp; \up&#123;1.2&#125; 6.0 + 0.28 &amp; 6.28
+                \end&#123;array&#125;
+                $$
+              </MathBlock>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  While
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:73:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large&#123;11\over 7&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  is about half-a-part-in-a-thousand
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:79:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  too large
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:81:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  compared to the true value of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:83:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} 
+                the approximations above just so turn out to
+                be (really nearly quite exactly) half-a-part-in-a-thousand
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  too small
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:87:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  due to the fact that the the long division of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:89:13
+                  </span>
+                </span>
+                <Math>
+                  $11$
+                </Math>
+                {" "} by
+                {" "}
+                <Math>
+                  $7$
+                </Math>
+                {" "} is terminated early. But if we pursue the division
+                for just one more step, which adds a {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $1$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to the
+                quotient...
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/qFb7.svg"
+                local_url="./images/svg_ch5_ex_1_57_three_quarters_division_one_more.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...we obtain the modified approximation...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:97:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \eta \approx 1.571
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...that is, for its part, an {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:103:13
+                  </span>
+                </span>
+                <i>
+                  overestimate
+                </i>
+                {" "} of {" "}
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "}
+                (Whereas
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.57
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  is still an {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:104:30
+                  </span>
+                </span>
+                <i>
+                  underestimate
+                </i>
+                .) From there,
+                any further digits that are added to the quotient only
+                worsen the approximation, since we are already overshooting!
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  In fact, the true value of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:110:13
+                  </span>
+                </span>
+                <Math>
+                  $\eta$
+                </Math>
+                {" "} is roughly half-way
+                between
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.57
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  and
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:117:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;11\over 7&#125; = 1.571428\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  being
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:123:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \,\eta = 1.570796\dots
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  per the calculator. (That knows this value by heart.)
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:129:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                Taking into account that
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.570796
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:136:13
+                  </span>
+                </span>
+                <i>
+                  basically
+                </i>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                1.5708
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  gives us the following improved approximations of
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:142:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $2\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $3\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and {" "}
+                <NoBreak>
+                  <Math>
+                    $4\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} based on adding
+                multiples of {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $08$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} to the tail end of our previous
+                approximations:
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;array&#125;&#123;c|c|c&#125;
+                \,\,\,\,n\,\,\,\, &amp; n(1.5 + 0.07 + 0.0008) &amp; \,\,\,\,\approx n\eta\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
+                1 &amp; \up&#123;1.2&#125; 1.5 + 0.07 + 0.0008 &amp; 1.5708\\
+                2 &amp; \up&#123;1.2&#125; 3.0 + 0.14 + 0.0016 &amp; 3.1416\\
+                3 &amp; \up&#123;1.2&#125; 4.5 + 0.21 + 0.0024 &amp; 4.7124\\
+                4 &amp; \up&#123;1.2&#125; 6.0 + 0.28 + 0.0032 &amp; 6.2832
+                \end&#123;array&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...with these approximations being good to {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_three_quarters_decimal_approximation_.wly:157:13
+                  </span>
+                </span>
+                <i>
+                  three
+                  parts in a million
+                </i>
+                . (Improved, namely, from {" "}
+                <i>
+                  half a
+                  part in a thousand
+                </i>
+                .)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={31}>
+          <ExerciseStatement id="_32_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 31.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                A ship travels from the South pole of a watery
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              copy of the Earth to the North pole while maintaining
+              a constant compass bearing of {" "}
+              <Math>
+                $5^\circ$
+              </Math>
+              {" "} North of East.
+              (See Fig.) What is the length of the curve traced by the
+              ship?
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/NUnQ.svg"
+              local_url="./images/svg_ch5_ex_spiral_sphere.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Imagine that a butterfly that only flies by
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:14:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              small steps East and North, alternately, follows 
+              with the boat:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/tjm5.svg"
+              local_url="./images/svg_ch5_ex_butterfly_fig.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (We replace
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:21:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge 5^\circ
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:27:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \alpha
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                radians for more generality, that will make the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:33:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              problem no more nor less easy.) The total of all the
+              small northward legs that the butterfly travels is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              20004\,\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                or one-half the so-called {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:41:9
+                </span>
+              </span>
+              <i>
+                meridional circumference
+              </i>
+              {" "}
+              of the Earth. But the total distance traveled
+              by the ship is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \csc(\alpha)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                times the sum of all the butterly's northward legs:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:49:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/u2Fw.svg"
+              local_url="./images/svg_ch5_ex_butterfly_fig_with_csc.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The total distance traveled by the ship
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:54:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              is therefore
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large 20004\,\te&#123;km&#125;\cdot \csc \alpha = &#123;20004\,\te&#123;km&#125; \over \sin \alpha&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                that comes out to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:61:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large \sim 229520\,\te&#123;km&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                with {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_a_ship_.wly:67:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\alpha = 5^\circ$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  In reality the butterly's triangle is
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_a_ship_.wly:71:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                drawn on a spherical shell and it is
+                only because the triangle is very small
+                compared to the radius of the shell that
+                it resembles an ordinary triangle, without
+                quite being an ordinary triangle. But what
+                is important is that the {" "}
+                <i>
+                  ratios
+                </i>
+                {" "} of the
+                lengths of the butterly triangle approach
+                those of an ordinary right triangle of
+                angle {" "}
+                <Math>
+                  $\alpha$
+                </Math>
+                {" "} as we make the butterfly's
+                triangle sufficiently small. 
+                (Which is believable.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={32}>
+          <ExerciseStatement id="_33_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 32.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Below are four function compositions
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              depicted as “function box” diagrams, with
+              inputs coming in the right and outputs
+              going out the left (with {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} being some generic
+              function):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/hzK8.svg"
+              local_url="./images/svg_ch5_ex_four_compositions.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Rewrite each case:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:13:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <List
+              marker="lower-alpha-paren"
+              markerFontFamily="Baskerville Bold"
+              style="gap:0.2em;padding-left:2em;"
+            >
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    using the composition {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:20:9
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <span class="t-3003-c">
+                      “
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:20:9
+                      </span>
+                    </span>
+                    <Math>
+                      $\circ$
+                    </Math>
+                    <span class="t-3003-c">
+                      ”
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:20:39
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} operator;
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:20:39
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    as an expression of the form
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:22:9
+                    </span>
+                  </span>
+                </p>
+                <Pause />
+                <MathBlock>
+                  $$
+                  x \ra \dots
+                  $$
+                </MathBlock>
+                <Pause />
+                <p>
+                  <span class="t-3003-c">
+                    for some value of {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:23:9
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <span class="t-3003-c">
+                      “
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:23:9
+                      </span>
+                    </span>
+                    <Math>
+                      $\dots$
+                    </Math>
+                    <span class="t-3003-c">
+                      ”.
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:23:35
+                      </span>
+                    </span>
+                  </NoBreak>
+                </p>
+              </Item>
+            </List>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <b>
+                <span class="t-3003-c">
+                  (a)
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:27:10
+                  </span>
+                </span>
+              </b>
+              {" "}
+              The expressions are respectively...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (u \ra u + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (z \ra Bz)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (u \ra u + A)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (z \ra Bz)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...but where the dummy variables don't matter,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:41:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              so we might as well write...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (t \ra t + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (t \ra Bt)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (t \ra t + A)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (t \ra Bt)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...or...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:55:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (x \ra x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f  \circ (x \ra Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra x + A)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (x \ra Bx)\circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...etc. (All are correct.)
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:68:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <b>
+                <span class="t-3003-c">
+                  (b)
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:72:10
+                  </span>
+                </span>
+              </b>
+              {" "}
+              The expressions are respectively:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra f(x) + A
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra Bf(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...where we use {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_expressed_.wly:86:9
+                </span>
+              </span>
+              <NoBreak>
+                “
+                <Math>
+                  $x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} as the dummy variable
+              because we were {" "}
+              <i>
+                told
+              </i>
+              {" "} to use {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                .
+              </NoBreak>
+              {" "} (By the statement.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={33}>
+          <ExerciseStatement id="_34_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 33.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                How would the graphs of the four compositions
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              in {" "}
+              <InChapterLink
+                href="/article/chapter1#_33_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 32
+              </InChapterLink>
+              {" "} 
+              compare to the graph of the generic function {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                For reference again, the four functions are:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:10:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;1.&#125;\,\, x \ra f(x + A)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;2.&#125;\,\, x \ra f(Bx)
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;3.&#125;\,\, x \ra f(x) + A
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;4.&#125;\,\, x \ra Bf(x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                For which the graphs are respectively obtained by:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:23:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <List
+              marker="decimal"
+              style="padding-left:2em;"
+            >
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    horizontally translating the graph of {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:29:13
+                    </span>
+                  </span>
+                  <Math>
+                    $f$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} by {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:29:54
+                    </span>
+                  </span>
+                  <Math>
+                    $A$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} units to the left;
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:29:61
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    horizontally compressing the graph of {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:31:13
+                    </span>
+                  </span>
+                  <Math>
+                    $f$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} by a factor {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:31:54
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    <span class="t-3003-c">
+                      ;
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:31:70
+                      </span>
+                    </span>
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    vertically translating the graph of {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:33:13
+                    </span>
+                  </span>
+                  <Math>
+                    $f$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} by {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:33:52
+                    </span>
+                  </span>
+                  <Math>
+                    $A$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} units upward;
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:33:59
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    vertically dilating (scaling) the graph of {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:35:13
+                    </span>
+                  </span>
+                  <Math>
+                    $f$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} by a factor {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:35:59
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $B$
+                    </Math>
+                    <span class="t-3003-c">
+                      .
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:35:75
+                      </span>
+                    </span>
+                  </NoBreak>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (Cf. Exercise {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_compositions_graphed_.wly:37:9
+                </span>
+              </span>
+              <InTextWarning>
+                undefined handle at ch5/ch5^exercises/_four_compositions_graphed_.wly:37:9: _cosine_of_1000x_
+              </InTextWarning>
+              {" "} of Chapter {" "}
+              <InTextWarning>
+                undefined handle at ch5/ch5^exercises/_four_compositions_graphed_.wly:37:9: functions
+              </InTextWarning>
+              , 
+              Exercise {" "}
+              <InTextWarning>
+                undefined handle at ch5/ch5^exercises/_four_compositions_graphed_.wly:38:9: _what_seq_AB_
+              </InTextWarning>
+              {" "} of Chapter {" "}
+              <InTextWarning>
+                undefined handle at ch5/ch5^exercises/_four_compositions_graphed_.wly:38:9: functions
+              </InTextWarning>
+              .)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={34}>
+          <ExerciseStatement id="_35_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 34.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Let
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f(x) = A\cos(Bx + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and imagine that each of the constants
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:10:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "} is connected to a dial,
+              and we originally set {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $C$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "}
+              to {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} respectively.
+              Then, in the following order, we...
+            </OuterP>
+            <Pause />
+            <List
+              marker="decimal"
+              style="padding-left:20%;"
+            >
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    ...increase {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:20:9
+                    </span>
+                  </span>
+                  <Math>
+                    $C$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} from {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:20:24
+                    </span>
+                  </span>
+                  <Math>
+                    $0$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} to {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:20:33
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $1&#123;&#125;.33$
+                    </Math>
+                    <span class="t-3003-c">
+                      ;
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:20:45
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} and
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:20:45
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    ...increase {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:22:9
+                    </span>
+                  </span>
+                  <Math>
+                    $B$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} from {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:22:24
+                    </span>
+                  </span>
+                  <Math>
+                    $1$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} to {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:22:33
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $2.33$
+                    </Math>
+                    <span class="t-3003-c">
+                      ;
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:22:43
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} and
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:22:43
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    ...increase {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:24:9
+                    </span>
+                  </span>
+                  <Math>
+                    $A$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} from {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:24:24
+                    </span>
+                  </span>
+                  <Math>
+                    $1$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} to {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:24:33
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $3.33$
+                    </Math>
+                    <span class="t-3003-c">
+                      ;
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:24:43
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} and
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:24:43
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    ...increase {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:26:9
+                    </span>
+                  </span>
+                  <Math>
+                    $D$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} from {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:26:24
+                    </span>
+                  </span>
+                  <Math>
+                    $0$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} to {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:26:33
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $4.33$
+                    </Math>
+                    <span class="t-3003-c">
+                      .
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:26:43
+                      </span>
+                    </span>
+                  </NoBreak>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                How does the graph of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:28:5
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "} react to each
+              of these changes, as they occur in sequence?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:43:10
+                  </span>
+                </span>
+              </i>
+              {" "} Reasoning by the analogy of
+              a particle going around a circle at uniform
+              speed (cf. {" "}
+              <InChapterLink
+                href="/article/chapter1#_10_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 9
+              </InChapterLink>
+              &#8288;):
+            </OuterP>
+            <Pause />
+            <List style="padding-left:33px;padding-right:2em;">
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    step 1: advances the initial position of
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:50:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  particle {" "}
+                  <Math>
+                    $C$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} radians forward, so the
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:51:25
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  graph shifts {" "}
+                  <i>
+                    <span class="t-3003-c">
+                      left
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:52:27
+                      </span>
+                    </span>
+                  </i>
+                  <span class="t-3003-c">
+                    {" "} by {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:52:32
+                    </span>
+                  </span>
+                  <Math>
+                    $C = 1.33$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} units (so that
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:52:46
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  the value {" "}
+                  <Math>
+                    $y = \sin(C)$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} finds itself at
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:53:36
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  {" "}{" "}
+                  <NoBreak>
+                    <Math>
+                      $x = 0$
+                    </Math>
+                    <span class="t-3003-c">
+                      )
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:54:20
+                      </span>
+                    </span>
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    step 2: speeds up the angular velocity of
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:56:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  the particle from {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} radian per unit time
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:57:34
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  to {" "}
+                  <Math>
+                    $B = 2.33$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} radians per unit time; this
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:58:26
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  can simply be thought of as a “speeding up
+                  of time”, and compresses the graph horizontally
+                  about the {" "}
+                  <Math>
+                    $y$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} axis by a factor {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:61:26
+                    </span>
+                  </span>
+                  <Math>
+                    $2.33$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} (while
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:61:50
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  keeping {" "}
+                  <Math>
+                    $y = \sin(C)$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} at {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:62:34
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $x = 0$
+                    </Math>
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:62:45
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} as should be);
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:62:45
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    step 3: increases the radius of the circle
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:64:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  from {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} to {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:65:21
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $A = 3.33$
+                    </Math>
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:65:35
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} which results in
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:65:35
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  a vertical dilation of the graph by a
+                  factor {" "}
+                  <NoBreak>
+                    <Math>
+                      $3.33$
+                    </Math>
+                    <span class="t-3003-c">
+                      ;
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:67:26
+                      </span>
+                    </span>
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    step 4: moves the coordinate (say,
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:69:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  {" "}{" "}
+                  <NoBreak>
+                    <Math>
+                      $y$
+                    </Math>
+                    <span class="t-3003-c">
+                      -coordinate,
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:70:16
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} if we are thinking of {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:70:16
+                    </span>
+                  </span>
+                  <Math>
+                    $f$
+                  </Math>
+                  {" "}{" "}
+                  {" "}
+                  {" "}
+                  <span class="t-3003-c">
+                    as reading off the {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:71:13
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $y$
+                    </Math>
+                    <span class="t-3003-c">
+                      -coordinate
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:71:35
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} of the
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:71:35
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  particle) from {" "}
+                  <Math>
+                    $y = 0$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} to {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:72:35
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $y = D = 4.33$
+                    </Math>
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:72:53
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} resulting
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:72:53
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  in a vertical translation upwards of the
+                  graph by {" "}
+                  <Math>
+                    $4.33$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} units!
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:74:28
+                    </span>
+                  </span>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:78:10
+                  </span>
+                </span>
+              </i>
+              {" "} One can understand
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f = x \ra A\sin(Bx + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as a 5-fold composition (with functions
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:84:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              boxes going right to left):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/r-G7.svg"
+              local_url="./images/e5_ABCD_roles_general_comp.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In the initial setting of the variables
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:90:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              with {" "}
+              <Math>
+                $A = B = 1$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $C = D = 0$
+              </Math>
+              {" "}
+              the four boxes on the periphery are the
+              identity*:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/sweo.svg"
+              local_url="./images/e5_ABCD_roles_identity_comp.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (*When we say “the identity” we mean
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:98:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                the identity function
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:100:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which is the function {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:102:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x \ra x$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                As we dial {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:104:9
+                </span>
+              </span>
+              <Math>
+                $C$
+              </Math>
+              {" "} up from {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $1.33$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              the box to the right of sin is
+              “brought online”:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/2ziI.svg"
+              local_url="./images/e5_ABCD_roles_identity_comp_C.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The effect of adding such a box to the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:112:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              right of sin is to translate the
+              graph of sin to the left by {" "}
+              <NoBreak>
+                <Math>
+                  $C$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as discussed
+              in {" "}
+              <InChapterLink
+                href="/article/chapter1#_34_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 33
+              </InChapterLink>
+              &#8288;.
+              The second step in which {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} is increased from
+              {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $2.33$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} brings the rightmost box online:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Ao9J.svg"
+              local_url="./images/e5_ABCD_roles_identity_comp_B.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Because this box is to the right of all
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:122:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              we have so far (which is {" "}
+              <NoBreak>
+                <Math>
+                  $x \ra \sin(x + C)$
+                </Math>
+                ),
+              </NoBreak>
+              {" "}
+              it compresses the [current] graph horizontally by
+              a factor {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} also as discussed in {" "}
+              <InChapterLink
+                href="/article/chapter1#_34_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 33
+              </InChapterLink>
+              &#8288;;
+              step 3 brings the box immediately to the
+              left of sin online...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/DvlU.svg"
+              local_url="./images/e5_ABCD_roles_identity_comp_A.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...which scales the graph-so-far vertically by a
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:132:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              factor {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as discussed in {" "}
+              <InChapterLink
+                href="/article/chapter1#_34_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 33
+              </InChapterLink>
+              &#8288;,
+              and finally step 4 brings the leftmost box online...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/mE-x.svg"
+              local_url="./images/e5_ABCD_roles_identity_comp_D.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...that vertically translates the entire graph,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:139:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              as it stands, by {" "}
+              <Math>
+                $D$
+              </Math>
+              {" "} units up, as again discussed
+              in {" "}
+              <InChapterLink
+                href="/article/chapter1#_34_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 33
+              </InChapterLink>
+              &#8288;.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Concerning the second solution, for simplicity of
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:160:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                analysis it's important
+                to bring the pre- and post-processing
+                functions online “from the inside out”,
+                gluing new boxes on to what's already there:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/EsiI.svg"
+                local_url="./images/e5_ABCD_roles_identity_comp_inside_out.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (Otherwise, things get more complicated.)
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:169:13
+                  </span>
+                </span>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The problem uses ‘sin’ as an example but the
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:266:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                same reasoning (with boxes) applies to any
+                function. Namely, the graph
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                y = A\cdot f(Bx + C) + D
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  is the graph {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:274:13
+                  </span>
+                </span>
+                <Math>
+                  $y = f(x)$
+                </Math>
+                {" "} translated left by
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} compressed (horizontally) by {" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                scaled (vertically) by {" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} etc. (Well, “etc.”:
+                translated vertically by {" "}
+                <NoBreak>
+                  <Math>
+                    $D$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  A function that can be written as
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:284:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                x \ra A\sin(Bx + C) + D
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  for some values of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:290:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $D \in \rr$
+                </Math>
+                {" "}
+                is called a
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  sinusoid
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:293:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (if we switch ‘sin’ to ‘cos’ it gives the same
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:295:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                class of functions: {" "}
+                <NoBreak>
+                  <Math>
+                    $\sin(Bx + C) = \cos(Bx + C - \eta)$
+                  </Math>
+                  ).
+                </NoBreak>
+              </OuterP>
+              <OuterP class="indent-10">
+                <span class="t-3003-c">
+                  Moreover:
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:298:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <List style="padding-left:33px;padding-right:2em;">
+                <Item>
+                  <p>
+                    <NoBreak>
+                      <Math>
+                        $C$
+                      </Math>
+                      <span class="t-3003-c">
+                        :
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:303:20
+                        </span>
+                      </span>
+                    </NoBreak>
+                    <span class="t-3003-c">
+                      {" "} may be referred to as the {" "}
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:303:20
+                      </span>
+                    </span>
+                    <i>
+                      <span class="t-3003-c">
+                        phase
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:303:49
+                        </span>
+                      </span>
+                    </i>
+                    {" "}{" "}
+                    {" "}
+                    {" "}
+                    <span class="t-3003-c">
+                      of the sinuoid (but which is only uniquely determined
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:304:17
+                      </span>
+                    </span>
+                    {" "}
+                    {" "}
+                    if you have decided whether your sinusoid is
+                    written in terms of ‘cos’ or ‘sin’, and even
+                    then only determined up to {" "}
+                    <NoBreak>
+                      <Math>
+                        $360^\circ = 4\eta$
+                      </Math>
+                      <span class="t-3003-c">
+                        ,
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:307:63
+                        </span>
+                      </span>
+                    </NoBreak>
+                    {" "}{" "}
+                    {" "}
+                    {" "}
+                    <span class="t-3003-c">
+                      or, even worse,
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:308:17
+                      </span>
+                    </span>
+                    {" "}
+                    {" "}
+                    up to {" "}
+                    <Math>
+                      $180^\circ = 2\eta$
+                    </Math>
+                    <span class="t-3003-c">
+                      {" "} if negative values of {" "}
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:309:42
+                      </span>
+                    </span>
+                    <Math>
+                      $A$
+                    </Math>
+                    {" "}{" "}
+                    {" "}
+                    {" "}
+                    <span class="t-3003-c">
+                      are allowed)
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:310:17
+                      </span>
+                    </span>
+                  </p>
+                </Item>
+                <Item>
+                  <p>
+                    <NoBreak>
+                      <Math>
+                        $A$
+                      </Math>
+                      <span class="t-3003-c">
+                        :
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:312:20
+                        </span>
+                      </span>
+                    </NoBreak>
+                    <span class="t-3003-c">
+                      {" "} may be referred to as the {" "}
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:312:20
+                      </span>
+                    </span>
+                    <i>
+                      <span class="t-3003-c">
+                        amplitude
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:312:49
+                        </span>
+                      </span>
+                    </i>
+                    <span class="t-3003-c">
+                      {" "} of the
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:312:59
+                      </span>
+                    </span>
+                    {" "}
+                    {" "}
+                    sinusoid
+                  </p>
+                </Item>
+                <Item>
+                  <p>
+                    <NoBreak>
+                      <Math>
+                        $B$
+                      </Math>
+                      <span class="t-3003-c">
+                        :
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:315:20
+                        </span>
+                      </span>
+                    </NoBreak>
+                    <span class="t-3003-c">
+                      {" "} may be referred to as the {" "}
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:315:20
+                      </span>
+                    </span>
+                    <i>
+                      <span class="t-3003-c">
+                        angular speed
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:315:49
+                        </span>
+                      </span>
+                    </i>
+                    <span class="t-3003-c">
+                      {" "} or
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:315:63
+                      </span>
+                    </span>
+                    {" "}
+                    {" "}
+                    {" "}{" "}
+                    <i>
+                      <span class="t-3003-c">
+                        angular frequency
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:316:18
+                        </span>
+                      </span>
+                    </i>
+                    <span class="t-3003-c">
+                      {" "} of the sinusoid
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:316:36
+                      </span>
+                    </span>
+                  </p>
+                </Item>
+                <Item>
+                  <p>
+                    <NoBreak>
+                      <Math>
+                        $D$
+                      </Math>
+                      <span class="t-3003-c">
+                        :
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:318:20
+                        </span>
+                      </span>
+                    </NoBreak>
+                    <span class="t-3003-c">
+                      {" "} may be referred to as the {" "}
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:318:20
+                      </span>
+                    </span>
+                    <i>
+                      <span class="t-3003-c">
+                        vertical shift
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:318:49
+                        </span>
+                      </span>
+                    </i>
+                    {" "}{" "}
+                    {" "}
+                    {" "}
+                    <span class="t-3003-c">
+                      or {" "}
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:319:17
+                      </span>
+                    </span>
+                    <i>
+                      <span class="t-3003-c">
+                        mean
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:319:21
+                        </span>
+                      </span>
+                    </i>
+                    {" "}{" "}
+                    {" "}
+                    {" "}
+                    <span class="t-3003-c">
+                      (mathematics) or as the {" "}
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:320:17
+                      </span>
+                    </span>
+                    <i>
+                      <span class="t-3003-c">
+                        DC bias
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:320:42
+                        </span>
+                      </span>
+                    </i>
+                    <span class="t-3003-c">
+                      {" "} or {" "}
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:320:50
+                      </span>
+                    </span>
+                    <i>
+                      <span class="t-3003-c">
+                        DC offset
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:320:55
+                        </span>
+                      </span>
+                    </i>
+                    <span class="t-3003-c">
+                      {" "} (engineering)
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:320:65
+                      </span>
+                    </span>
+                    {" "}
+                    {" "}
+                    or as the {" "}
+                    <i>
+                      <span class="t-3003-c">
+                        equilibrium position
+                        <span class="t-3003">
+                          ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:321:28
+                        </span>
+                      </span>
+                    </i>
+                    <span class="t-3003-c">
+                      {" "} (physics) of
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_ABCD_roles_.wly:321:49
+                      </span>
+                    </span>
+                    {" "}
+                    {" "}
+                    the sinusoid
+                  </p>
+                </Item>
+              </List>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={35}>
+          <ExerciseStatement id="_36_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 35.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Illustrate the “Gregorinovich sandwich”
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_draw_the_sandwich_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              with a picture that actually looks like
+              a sandwich.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The sandwich, which states that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_draw_the_sandwich_.wly:10:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin\theta &lt; \theta &lt; \tan\theta
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/172j.svg"
+                offsetX="4em"
+                atLeastAsWide={true}
+                local_url="./images/e5_greg_sandwich_tant_cloud.svg"
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_draw_the_sandwich_.wly:20:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $0 &lt; \theta &lt; \eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} is hereby illustrated, using
+              the fact that 
+              {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} 
+              equals subtended
+              arc length on the unit circle:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/vI4f.svg"
+              local_url="./images/e5_greg_sandwich.svg"
+            />
+            <Pause />
+            <StarDivider />
+          </Solution>
+        </Exercise>
+        <Exercise number={36}>
+          <ExerciseStatement id="_37_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 36.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                In the figure below, where can
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_1_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                be found, if at all? (Note that {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_1_.wly:10:5
+                </span>
+              </span>
+              <NoBreak>
+                “
+                <Math>
+                  $\theta_&#123;ab&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} is
+              just a name.)
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/oty_.svg"
+              local_url="./images/e5_cosine_rule_geometric_1_statement.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                It appears two places; it is the area of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_1_.wly:18:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              both of these rectangles:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/XjcR.svg"
+              local_url="./images/e5_cosine_rule_geometric_1_sol1_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In more detail, here is how {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_1_.wly:24:9
+                </span>
+              </span>
+              <NoBreak>
+                “
+                <Math>
+                  $b\cdot\cos\theta_&#123;ab&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} 
+              and {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $a\cdot\cos\theta_&#123;ab&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} show up as the widths of
+              the two rectangles, respectively, zooming in:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/n3ZM.svg"
+              local_url="./images/e5_cosine_rule_geometric_1_sol34_combined.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Thus the rectangles respectively have areas...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_1_.wly:33:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large a(b\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...and...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_1_.wly:38:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large b(a\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...as claimed!
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_1_.wly:43:9
+                </span>
+              </span>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={37}>
+          <ExerciseStatement id="_38_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 37.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Keeping the diagram of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_2_.wly:4:5
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_37_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 36
+              </InChapterLink>
+              &#8288;,
+              find a formula for {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} in terms of {" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $b$
+              </Math>
+              {" "}  
+              and {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_&#123;ab&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                By {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_2_.wly:10:9
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_37_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 36
+              </InChapterLink>
+              &#8288;,
+              these rectangles have the same area:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/q6NB.svg"
+              local_url="./images/_e5_cosine_rule_geometric_2_sol1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                But by a similar argument,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_2_.wly:17:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              these rectangles 
+              can also be shown to have
+              have the same area:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Sie8.svg"
+              local_url="./images/_e5_cosine_rule_geometric_2_sol2_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This gives...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_2_.wly:26:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Prt-.svg"
+              local_url="./images/_e5_cosine_rule_geometric_2_sol3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...thiiiis...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_2_.wly:31:9
+                </span>
+              </span>
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                c = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                ...formula!
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_2_.wly:38:9
+                </span>
+              </span>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={38}>
+          <ExerciseStatement id="_39_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 38.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Find expressions for areas A—F and use these to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              give a formula for {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} in terms of {" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $b$
+              </Math>
+              {" "} and
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_&#123;ab&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/cigo.svg"
+              local_url="./images/_e5_cosine_rule_geometric_3_statement_v2.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Keeping in mind that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:18:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(2\eta - x) = -\cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:24:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x\in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and that, in particular,
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(2\eta - \theta_&#123;ab&#125;) = -\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is a positive number in this diagram since
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:31:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $0 &lt; 2\eta - \theta_&#123;ab&#125; &lt; \eta$
+              </Math>
+              {" "} is an acute angle, 
+              the areas are:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/H_Um.svg"
+              local_url="./images/_e5_cosine_rule_geometric_3_sol1_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Then
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:44:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large c = \sqrt&#123;c^2&#125; = \sqrt&#123;\te&#123;D&#125; + \te&#123;C&#125;&#125; = \sqrt&#123;\te&#123;E&#125; + \te&#123;F&#125;&#125; = \sqrt&#123;(a^2 + \te&#123;B&#125;) + (b^2 + \te&#123;A&#125;)&#125; = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                where we use the fact that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:50:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \te&#123;D&#125; = \te&#123;E&#125;\, \\
+              \up&#123;1.4&#125;\te&#123;C&#125; = \te&#123;F&#125;\,
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                in the third equality, and the fact that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:59:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \te&#123;E&#125; = a^2 + \te&#123;B&#125;\, \\
+              \up&#123;1.4&#125;\te&#123;F&#125; = b^2 + \te&#123;A&#125;\,
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                in the fourth equality, and the fact that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:68:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \te&#123;A&#125; = \te&#123;B&#125; = -ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                in the last equality.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:74:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                So we obtain the same formula as in {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_3_.wly:76:9
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_38_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 37
+              </InChapterLink>
+              &#8288;!
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={39}>
+          <ExerciseStatement id="_40_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 39.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Find expressions for areas A—F and use these to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_4_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              give a formula for {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} in terms of {" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $b$
+              </Math>
+              {" "} and
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_&#123;ab&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/hnrJ.svg"
+              local_url="./images/_e5_cosine_rule_geometric_4_statement_v2.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                We can calculate each area as a plain “width {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_4_.wly:13:9
+                </span>
+              </span>
+              <Math>
+                $\times$
+              </Math>
+              {" "} height”
+              while keeping in mind that {" "}
+              <Math>
+                $\cos\theta_&#123;ac&#125; &lt; 0$
+              </Math>
+              {" "} (or more exactly
+              that {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(2\eta - \theta_&#123;ac&#125;) = -\cos\theta_&#123;ac&#125;$
+                </Math>
+                ),
+              </NoBreak>
+              {" "}
+              similarly to exercises {" "}
+              <InChapterLink
+                href="/article/chapter1#_37_h.a.i_"
+                class="in-chapter-link"
+              >
+                36
+              </InChapterLink>
+              &#8288;,
+              {" "}
+              <InChapterLink
+                href="/article/chapter1#_38_h.a.i_"
+                class="in-chapter-link"
+              >
+                37
+              </InChapterLink>
+              &#8288;, and {" "}
+              <InChapterLink
+                href="/article/chapter1#_39_h.a.i_"
+                class="in-chapter-link"
+              >
+                38
+              </InChapterLink>
+              &#8288;:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/VpDU.svg"
+              local_url="./images/_e5_cosine_rule_geometric_4_sol1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                From which...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_4_.wly:32:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Large c = \sqrt&#123;c^2&#125; = \sqrt&#123;B - D&#125; = \sqrt&#123;E - C&#125; = \sqrt&#123;(b^2 - A) - (F - a^2)&#125; = \sqrt&#123;(b^2 - ab\cos\theta_&#123;ab&#125;) - (ab\cos\theta_&#123;ab&#125; - a^2)&#125; = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...where we use the fact that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_4_.wly:38:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \te&#123;B&#125; = \te&#123;E&#125;\\
+              \up&#123;1.4&#125;\te&#123;D&#125; = \te&#123;C&#125;
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                in the third equality, and the fact that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_4_.wly:47:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \te&#123;E&#125; = b^2 - A\\
+              \up&#123;1.4&#125;\te&#123;C&#125; = F - a^2
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                in the fourth equality. The answer is therefore...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_4_.wly:56:9
+                </span>
+              </span>
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \Large c = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                ...as in exercises {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_geometric_4_.wly:64:9
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_38_h.a.i_"
+                class="in-chapter-link"
+              >
+                37
+              </InChapterLink>
+              {" "} and {" "}
+              <InChapterLink
+                href="/article/chapter1#_39_h.a.i_"
+                class="in-chapter-link"
+              >
+                38
+              </InChapterLink>
+              &#8288;.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={40}>
+          <ExerciseStatement id="_41_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 40.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Keeping a triangle with sides {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:4:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $b$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "}
+              with opposing angles
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_&#123;bc&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_&#123;ac&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\theta_&#123;ab&#125;$
+              </Math>
+              {" "}
+              respectively, prove {" "}
+              <i>
+                Jack's rule
+              </i>
+              , which is the triplet of equations...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              a\cos\theta_&#123;ac&#125; + b\cos\theta_&#123;bc&#125; = c \\
+              b\cos\theta_&#123;ab&#125; + c\cos\theta_&#123;ac&#125; = a \up&#123;1.4&#125;\\
+              a\cos\theta_&#123;ab&#125; + c\cos\theta_&#123;bc&#125; = b \up&#123;1.4&#125;
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...and then prove the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:17:5
+                </span>
+              </span>
+              <i>
+                cosine rule
+              </i>
+              , which is the equation...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              c^2 = a^2 + b^2  - 2ab\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...by manipulating the equations {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:23:5
+                </span>
+              </span>
+              <NoBreak>
+                in
+                <Math>
+                  $\rt&#123;0.1&#125;$
+                </Math>
+              </NoBreak>
+              {" "} Jack's rule.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Because the equations {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:27:9
+                </span>
+              </span>
+              <NoBreak>
+                in
+                <Math>
+                  $\rt&#123;0.1&#125;$
+                </Math>
+              </NoBreak>
+              {" "} Jack's rule are
+              symmetric it suffices to prove the first equation.
+              We need to consider two cases according to
+              whether 
+              side {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} is adjacent to {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} or {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}
+              obtuse angles 
+              (the two sub-cases in which there is {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} obtuse
+              angle are symmetric to one another, we consider only one):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/YaSq.svg"
+              local_url="./images/_e5_cosine_rule_via_jacks_two_cases.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In Case 1 we obviously have
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:39:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              c = a\cos\theta_&#123;ac&#125; + b\cos\theta_&#123;bc&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <NoBreak>
+                <span class="t-3003-c">
+                  verifying
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:45:9
+                  </span>
+                </span>
+                <Math>
+                  $\rt&#123;0.1&#125;$
+                </Math>
+              </NoBreak>
+              {" "} Jack's rule,
+              whereas, in Case 2, note that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -a\cos\theta_&#123;ab&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is positive—it's a {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:52:9
+                </span>
+              </span>
+              <i>
+                length
+              </i>
+              {" "} as the diagram
+              indicates—so
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              c = b\cos\theta_&#123;bc&#125; - (-a\cos\theta_&#123;ac&#125;) = b\cos\theta_&#123;bc&#125; + a\cos\theta_&#123;ac&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                again {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:59:9
+                </span>
+              </span>
+              <NoBreak>
+                verifying
+                <Math>
+                  $\rt&#123;0.1&#125;$
+                </Math>
+              </NoBreak>
+              {" "} Jack's rule, 
+              and which completes the proof thereof. {" "}
+              <InlineImage
+                src="/build-img/svgo-svg/0pnk.svg"
+                style="transform:translate(0,-3px)"
+              />
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                Next, for the algebraic manipulation of the equations,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:65:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              start by multiplying each equation {" "}
+              <NoBreak>
+                in
+                <Math>
+                  $\rt&#123;0.1&#125;$
+                </Math>
+              </NoBreak>
+              {" "} Jack's rule
+              by its own right-hand side, obtaining...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              ac\cos\theta_&#123;ac&#125; + bc\cos\theta_&#123;bc&#125; = c^2 \\
+              ab\cos\theta_&#123;ab&#125; + ac\cos\theta_&#123;ac&#125; = a^2 \up&#123;1.4&#125;\\
+              ab\cos\theta_&#123;ab&#125; + bc\cos\theta_&#123;bc&#125; = b^2 \up&#123;1.4&#125;
+              \end&#123;gathered&#125;
+              $$
+              <ImageRight
+                src="/build-img/svgo-svg/3Vd8.svg"
+                offsetX="0.5em"
+                atLeastAsWide={true}
+                local_url="./images/_e5_cosine_rule_via_jacks_multiplying_cloud_.svg"
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...but then if we subtract the last two equations from
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:88:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              the first we obtain...
+              <ImageLeft
+                src="/build-img/svgo-svg/739B.svg"
+                offsetX="0.5em"
+                local_url="./images/_e5_cosine_rule_via_jacks_equation_adding_cloud.svg"
+              />
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              -2ab\cos\theta_&#123;ab&#125; = c^2 - a^2 - b^2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...which is the cosine rule, rearranged!
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_via_jacks_rule_.wly:99:9
+                </span>
+              </span>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={41}>
+          <ExerciseStatement id="_42_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 41.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Let points {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $P_1$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $P_2$
+              </Math>
+              {" "} have polar coordinates
+              {" "}
+              <Math>
+                $(r_1, \theta_1)$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $(r_2, \theta_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} respectively:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/E-Fq.svg"
+              local_url="./images/e5_polar_P1P2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                What is the distance from {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:10:5
+                </span>
+              </span>
+              <Math>
+                $P_1$
+              </Math>
+              {" "} to {" "}
+              <Math>
+                $P_2$
+              </Math>
+              {" "}
+              as a function of {" "}
+              <NoBreak>
+                <Math>
+                  $r_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $r_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\theta_1$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_2$
+                </Math>
+                ?
+              </NoBreak>
+              {" "}
+              (Keep an eye out for algebraic simplifications and,
+              in particular, for the fact that the distance should
+              depend only on
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta_1 - \theta_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                or, even, only on
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:18:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              |\theta_1 - \theta_2|
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as opposed to depending on the individual values of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:22:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $\theta_1$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\theta_2$
+              </Math>
+              {" "} separately, since we can rotate
+              the entire diagram while keeping the distance from
+              {" "}
+              <Math>
+                $P_1$
+              </Math>
+              {" "} to {" "}
+              <Math>
+                $P_2$
+              </Math>
+              {" "} constant.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                As a preliminary, we first note that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:30:9
+                </span>
+              </span>
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \cos(A - B) = \cos A\cos B + \sin A\sin B
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:37:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $A, B \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(A + B) = \cos A\cos B - \sin A\sin B
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:43:9
+                </span>
+              </span>
+              <Math>
+                $A, B \in \rr$
+              </Math>
+              {" "} implies
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              \cos(A - B)\,&amp;=\,\,\up&#123;1.3&#125; \cos(A + (-B))\\
+                          &amp;=\,\,\up&#123;1.4&#125; \cos(A)\cos(-B) - \sin(A)\sin(-B) \\
+                          &amp;=\,\,\up&#123;1.4&#125; \cos A\cos B + \sin A\sin B
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:53:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\cos(-x) = \cos(x)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\sin(-x) = -\sin(x)$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                (There is a similar formula
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:55:9
+                </span>
+              </span>
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \sin(A - B) = -\cos A\sin B + \sin A\cos B
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                for the sine of a difference, but that one is hardly
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:62:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              as important or useful, you should forget it even though
+              we just boxed it.)
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                We now apply the Cartesian formula
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:66:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              for distance
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;(x_1 - x_2)^2 + (y_1 - y_2)^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                that will be good to slightly rewrite as
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:73:9
+                </span>
+              </span>
+              <ImageLeft
+                src="/build-img/svgo-svg/Y5Rf.svg"
+                local_url="./images/e5_polar_P1P2_a_minus_b_squared_left_cloud.svg"
+              />
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;x_1^2 + x_2^2 + y_1^2 + y_2^2 - 2(x_1x_2 + y_1y_2)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                to be applied with {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:86:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $(x_1, y_1) = P_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2) = P_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} i.e., with
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              (x_1, y_1) = (r_1\cos\theta_1, r_1\sin\theta_1) \\
+              (x_2, y_2) = (r_2\cos\theta_2, r_2\sin\theta_2)\up&#123;1.4&#125;
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by definition of polar coordinates,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:95:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              from which
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              \,&amp;x_1^2 + y_1^2 = r_1^2\cos^2\theta_1 + r_1^2\sin^2\theta_1 = r_1^2(\cos^2\theta_1 + \sin^2\theta_1) = r_1^2,\up&#123;1.3&#125; \\
+              &amp;x_2^2 + y_2^2 = r_2^2\cos^2\theta_2 + r_2^2\sin^2\theta_2 = r_2^2(\cos^2\theta_2 + \sin^2\theta_2) = r_2^2\up&#123;1.4&#125;
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:105:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1^2 + x_2^2 + y_1^2 + y_2^2 = r_1^2 + r_2^2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (in fact, we know that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:111:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1^2 + y_1^2 = r_1^2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:117:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_2^2 + y_2^2 = r_2^2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                just by common lore of polar coordinates,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:126:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              but anyway), while
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              \,x_1x_2 =\, r_1\cos\theta_1\cdot r_2\cos\theta_2 = r_1r_2\cos\theta_1\cos\theta_2,\up&#123;0.9&#125; \\
+              y_1y_2 =\, r_1\sin\theta_1\cdot r_2\sin\theta_2 = r_1r_2\sin\theta_1\sin\theta_2\up&#123;1.5&#125;\,\,
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                from which
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:136:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1x_2 + y_1y_2 = r_1r_2(\cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                but
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:142:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2 = \cos(\theta_1 - \theta_2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by the first remark, so
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:148:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1y_1 + x_2y_2 = r_1r_2\cos(\theta_1 - \theta_2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and, altogether, the distance...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:158:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;x_1^2 + x_2^2 + y_1^2 + y_2^2 - 2(x_1x_2 + y_1y_2)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...becomes...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:164:9
+                </span>
+              </span>
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \sqrt&#123;r_1^2 + r_2^2 - 2r_2r_2\cos(\theta_1 - \theta_2)&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                ...that, as can be seen, depends only on
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:178:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta_1 - \theta_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                or, even, only on
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:182:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              |\theta_1 - \theta_2|
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                since {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:186:9
+                </span>
+              </span>
+              <Math>
+                $\cos(x) = \cos(-x) = \cos(|x|)$
+              </Math>
+              {" "} for all {" "}
+              <NoBreak>
+                <Math>
+                  $x\in\rr$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                A SECOND SOLUTION—first solution is over—starts
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:191:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              by rotating {" "}
+              <NoBreak>
+                <Math>
+                  $P_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $P_2$
+              </Math>
+              {" "} by
+              {" "}
+              <Math>
+                $-\theta_2$
+              </Math>
+              {" "} radians about the origin, to new
+              points {" "}
+              <Math>
+                $P_1'$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $P_2'$
+              </Math>
+              {" "} such that {" "}
+              <Math>
+                $P_2'$
+              </Math>
+              {" "} is aligned
+              with the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis and {" "}
+              <Math>
+                $P_1'$
+              </Math>
+              {" "} has argument {" "}
+              <NoBreak>
+                <Math>
+                  $\theta_1 - \theta_2$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/RLiz.svg"
+              local_url="./images/e5_polar_P1P2_rotated.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Since the rotation does not affect distances,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:200:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              the answer becomes the previous formula
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;x_1^2 + y_1^2 + x_2^2 + y_2^2 - 2(x_1y_1 + x_2y_2)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                applied with
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:207:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gather&#125;
+              (x_1, y_1) \,=\, \,P_1' \,=\, (r_1\cos(\theta_1 - \theta_2),\, r_1\sin(\theta_1 - \theta_2)),\\
+              (x_2, y_2) \,=\, P_2' \,=\, (r_2, 0)\up&#123;1.8&#125;
+              \end&#123;gather&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which gives
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:216:9
+                </span>
+              </span>
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \sqrt&#123;r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                again, since, namely,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:223:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              x_1^2 + y_1^2 = r_1^2 \\
+              x_2^2 + y_2^2 = \up&#123;1.5&#125;r_2^2 \\
+              x_1y_1 = \up&#123;1.5&#125; r_1\cos(\theta_1 - \theta_2)\cdot r_2 \\
+              x_2y_2 = \up&#123;1.5&#125; r_1\cos(\theta_1 - \theta_2)\cdot 0 = 0
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                in this case, and this time we don't need to apply a fancy
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_polar_distance_.wly:234:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              algebraic observation, or anything!
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  As a result, the {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_polar_distance_.wly:240:13
+                  </span>
+                </span>
+                <i>
+                  distance squared
+                </i>
+                {" "} between {" "}
+                <Math>
+                  $P_1$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $P_2$
+                </Math>
+                {" "}
+                is (peel off the square root):
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  r_1^2 + r_2^2 - 2r_2r_2\cos(\theta_1 - \theta_2)
+                  $$
+                </MathBlock>
+              </Boxed>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The distance squared reduces to
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_polar_distance_.wly:252:13
+                  </span>
+                </span>
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  r_1^2 + r_2^2
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                <span class="t-3003-c">
+                  and the ordinary distance reduces to
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_polar_distance_.wly:259:13
+                  </span>
+                </span>
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \sqrt&#123;r_1^2 + r_2^2&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                <span class="t-3003-c">
+                  if {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_polar_distance_.wly:266:13
+                  </span>
+                </span>
+                <Math>
+                  $P_1$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $P_2$
+                </Math>
+                {" "} are at right angle, since
+                {" "}
+                <Math>
+                  $\cos|\theta_1 - \theta_2| = \cos\eta = 0$
+                </Math>
+                {" "} in that
+                case. This accords with the Pythagorean theorem, and
+                constitutes an extra check on our computations!
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Comparing the two solutions actually shows that
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_polar_distance_.wly:273:13
+                  </span>
+                </span>
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \cos(\theta_1 - \theta_2) = \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                <span class="t-3003-c">
+                  in and of itself. This is a “second proof” of the
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_polar_distance_.wly:280:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                angle-sum formula for cos.
+              </OuterP>
+              <OuterP class="indent-10">
+                <span class="t-3003-c">
+                  (*Some would say {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_polar_distance_.wly:283:13
+                  </span>
+                </span>
+                <i>
+                  first
+                </i>
+                {" "} proof, as our
+                original proof with the “famous diagram” put some restrictions
+                on the range of the angles, such as 
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $0 \leq \theta_1, \theta_2 \leq \eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                specifically.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={42}>
+          <ExerciseStatement id="_43_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 42.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What is the dotted line distance as a function
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $b$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/1jJD.svg"
+              local_url="./images/e5_cosine_rule_statement.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Recalling the “polar distance” formula
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_.wly:12:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_.wly:18:9
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_42_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 41
+              </InChapterLink>
+              &#8288;,
+              the answer is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;a^2 + b^2 - 2ab\cos\theta&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by putting {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosine_rule_.wly:25:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $r_1 = a$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $r_2 = b$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\theta_1 - \theta_2 = \theta$
+              </Math>
+              {" "}
+              in that formula.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  This result is known as the {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosine_rule_.wly:30:13
+                  </span>
+                </span>
+                <i>
+                  cosine rule
+                </i>
+                .
+                Like the “polar distance” formula from {" "}
+                <InChapterLink
+                  href="/article/chapter1#_42_h.a.i_"
+                  class="in-chapter-link"
+                >
+                  Exercise 41
+                </InChapterLink>
+                &#8288;,
+                to which it is equivalent, it is a generalization
+                of the Pythagorean theorem. This becomes extra clear if we rewrite it
+                as....
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  c^2 = a^2 + b^2 - 2ab\cdot\cos\theta
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                <span class="t-3003-c">
+                  ....with {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosine_rule_.wly:41:13
+                  </span>
+                </span>
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $c$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} the length of the dotted segment.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={43}>
+          <ExerciseStatement id="_44_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 43.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                How to express the two sides marked ‘?’ as functions
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sine_rule_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\alpha$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\beta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\gamma$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $a$
+                </Math>
+                ?
+              </NoBreak>
+              {" "} (NB: You can 
+              trust the drawing's suggestion that {" "}
+              <NoBreak>
+                <Math>
+                  $\beta &gt; \eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\gamma &lt; \eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\alpha &lt; \eta$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/FCDD.svg"
+              local_url="./images/e5_sine_rule_statement.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The bottom length of ‘?’ is
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sine_rule_.wly:13:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              a\cdot\sin\gamma\cdot\csc\alpha
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                or, equivalently,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sine_rule_.wly:19:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              a\cdot &#123;\sin \gamma\over \sin\alpha&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by swinging from the side of length {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sine_rule_.wly:26:9
+                </span>
+              </span>
+              <Math>
+                $a$
+              </Math>
+              {" "} to a
+              “middle height”, to the bottom length (this is
+              entirely the same as 
+              the solution technique of
+              {" "}
+              <InChapterLink
+                href="/article/chapter1#_5_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 4
+              </InChapterLink>
+              &#8288;):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/kTuA.svg"
+              local_url="./images/e5_sine_rule_sol1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The top length of ‘?’, on the other hand,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sine_rule_.wly:36:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              a\cdot\sin\beta\cdot\csc\alpha
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                or, equivalently,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sine_rule_.wly:43:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              a\cdot&#123;\sin\beta\over \sin\alpha&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                per a similar approach, while also using the fact that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sine_rule_.wly:49:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $\sin(2\eta - x) = \sin(x)$
+              </Math>
+              {" "} for all {" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/EPyX.svg"
+              local_url="./images/e5_sine_rule_sol2_new_ver.svg"
+            >
+              <ImageRight
+                src="/build-img/svgo-svg/k0X9.svg"
+                offsetX="-30%"
+                offsetY="38%"
+                local_url="./images/e5_sine_rule_sin_2b_cloud.svg"
+              />
+            </Image>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                That's it!
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sine_rule_.wly:60:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  One more generally has...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sine_rule_.wly:64:13
+                  </span>
+                </span>
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \begin&#123;gather*&#125;
+                  &#123;b\over a&#125; = &#123;\sin \beta\over \sin\alpha&#125;           \qquad &#123;a\over b&#125; = &#123;\sin \alpha\over \sin\beta&#125; \\
+                  &#123;c\over a&#125; = &#123;\sin \gamma\over \sin\alpha&#125; \up&#123;2.2&#125; \qquad &#123;a\over c&#125; = &#123;\sin \alpha\over \sin\gamma&#125;\\
+                  &#123;c\over b&#125; = &#123;\sin \gamma\over \sin\beta&#125;  \up&#123;2.2&#125; \qquad &#123;b\over c&#125; = &#123;\sin \beta\over \sin\gamma&#125; \\
+                  \end&#123;gather*&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                <span class="t-3003-c">
+                  ...(it's {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sine_rule_.wly:83:13
+                  </span>
+                </span>
+                <Math>
+                  $6$
+                </Math>
+                {" "} times the same equation, no use
+                looking at all of them) for a general triangle
+                of sidelengths {" "}
+                <NoBreak>
+                  <Math>
+                    $a$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $b$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $c$
+                </Math>
+                {" "} as labeled here...
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/VvH9.svg"
+                local_url="./images/e5_sine_rule_generic.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...though we can condense these equations to...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sine_rule_.wly:90:13
+                  </span>
+                </span>
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \begin&#123;gather*&#125;
+                  &#123;a\over \sin\alpha&#125; = &#123;b\over \sin\beta&#125;            \\
+                  &#123;a\over \sin\alpha&#125; = &#123;c\over \sin\gamma&#125;  \up&#123;2.2&#125; \\
+                  &#123;b\over \sin\beta&#125; = &#123;c\over \sin\gamma&#125;  \up&#123;2.2&#125;
+                  \end&#123;gather*&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                <span class="t-3003-c">
+                  ...or even to a single line...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sine_rule_.wly:101:13
+                  </span>
+                </span>
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  &#123;a\over \sin\alpha&#125; = &#123;b\over \sin\beta&#125; = &#123;c\over \sin\gamma&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                <span class="t-3003-c">
+                  ...through cross-multiplication/division!
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sine_rule_.wly:108:13
+                  </span>
+                </span>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  This result (e.g., the last boxed equation above)
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sine_rule_.wly:112:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                is known as the {" "}
+                <i>
+                  sine rule
+                </i>
+                .
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Amusingly (but not that we really care) the
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sine_rule_.wly:117:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                same equations hold if we change the definitions
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $\alpha$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $\beta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} and {" "}
+                <Math>
+                  $\gamma$
+                </Math>
+                {" "} to be the
+                exterior angles of the triangle:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/CquJ.svg"
+                local_url="./images/e5_sine_rule_generic_exterior.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...then each of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sine_rule_.wly:125:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $\sin \alpha$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $\sin \beta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $\sin \gamma$
+                </Math>
+                {" "} changes sign 
+                {" "}
+                <i>
+                  and only sign
+                </i>
+                {" "} 
+                (
+                <del>
+                  sine?
+                </del>
+                {" "} sign), leaving the original equations intact.
+                <ImageRight
+                  line="1.0"
+                  src="/build-img/svgo-svg/NoGZ.svg"
+                  local_url="./images/e5_sine_rule_sin_360_m_x_cloud.svg"
+                />
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={44}>
+          <ExerciseStatement id="_45_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 44.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                In the drawing below, at what coordinates,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              expressed as a function of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              does the tangent to the circle
+              intersect the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} axes?
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/AdMn.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Start by assuming
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:14:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              that {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} lies in
+              the first quadrant, in
+              which case both coordinates are nonnegative, and, more specifically, 
+              are equal to the two 
+              purple lengths below:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/nF2I.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_Q1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Regarding this diagram, note that:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:24:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <List style="gap:1em">
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    we have already “used up” the fact that
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:29:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  the radius of the circle is {" "}
+                  <Math>
+                    $1$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} by
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:30:44
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  making the dropped height (which used to
+                  be a radius) length {" "}
+                  <NoBreak>
+                    <Math>
+                      $1$
+                    </Math>
+                    <span class="t-3003-c">
+                      ;
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:32:36
+                      </span>
+                    </span>
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    we use a “the complement of my complement
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:34:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  is myself”-type argument to deduce that the
+                  upper left angle is {" "}
+                  <NoBreak>
+                    <Math>
+                      $\theta$
+                    </Math>
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:36:41
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} as well
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:36:41
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  (cf. {" "}
+                  <InChapterLink
+                    href="/article/chapter1#_20_h.a.i_"
+                    class="in-chapter-link"
+                  >
+                    Exercise 19
+                  </InChapterLink>
+                  <span class="t-3003-c">
+                    &#8288;,
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:37:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  {" "}{" "}
+                  <InChapterLink
+                    href="/article/chapter1#_21_h.a.i_"
+                    class="in-chapter-link"
+                  >
+                    Exercise 20
+                  </InChapterLink>
+                  <span class="t-3003-c">
+                    &#8288;).
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:38:13
+                    </span>
+                  </span>
+                </p>
+              </Item>
+            </List>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Because {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:40:9
+                </span>
+              </span>
+              <Math>
+                $1 \cdot \sec(\theta) = \sec(\theta)$
+              </Math>
+              {" "} the
+              bottom length is {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} while the vertical
+              length is {" "}
+              <NoBreak>
+                <Math>
+                  $1\cdot \csc(\theta) = \csc(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} similarly:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/wgBS.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_Q1_first_solve.svg"
+            />
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/D8sZ.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_Q1_second_solve.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...i.e., in the first quadrant, at least, the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:50:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              coordinates are {" "}
+              <Math>
+                $\sec(\theta)$
+              </Math>
+              {" "} and $\csc( theta):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/i6Bn.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_Q1_with_answer.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                For the other quadrants we can reason by
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:56:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              symmetry with the first quadrant:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/TRpy.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_all_quadrants.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In more detail, the product of the two coordinates
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:62:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              marked by purple arrows is the same in all four
+              quadrants, because “minus times minus is plus”; but
+              in first quadrant, the product is {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} because
+              we know the product takes the form {" "}
+              <Math>
+                $\cos\theta\cdot\sec\theta$
+              </Math>
+              {" "}
+              in that quadrant;
+              therefore the product is {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} in {" "}
+              <i>
+                all
+              </i>
+              {" "} quadrants; but
+              the coordinate marked by the inside purple arrow is
+              {" "}
+              <Math>
+                $\cos\theta$
+              </Math>
+              {" "} in all quadrants; therefore, lastly,
+              the coordinate marked by the {" "}
+              <i>
+                outside
+              </i>
+              {" "} purple arrow
+              is {" "}
+              <Math>
+                $\sec\theta$
+              </Math>
+              {" "} in all quadrants, since {" "}
+              <Math>
+                $\sec\theta$
+              </Math>
+              {" "}
+              is the unique number whose product with {" "}
+              <Math>
+                $\cos\theta$
+              </Math>
+              {" "}
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ;
+              </NoBreak>
+              {" "} similarly the inside orange arrow marks coordinate
+              {" "}
+              <Math>
+                $\sin\theta$
+              </Math>
+              {" "} is all quadrants, so the outside orange
+              arrow (by similar reasoning) has coordinate {" "}
+              <Math>
+                $\csc\theta$
+              </Math>
+              {" "}
+              in all quadrants, QED. (I.e., the grand conclusion is that the
+              two coordinates are
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \sec\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:84:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "} intersection, and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \Huge \csc\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_secant_cosecant_intersections_.wly:90:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "} intersection, no matter the quadrant.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={45}>
+          <ExerciseStatement id="_46_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 45.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Stipulating
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\tan\theta = &#123;\sin\theta\over\cos\theta&#125;,
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \cot\theta = &#123;\cos\theta\over\sin\theta&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as definitions of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:13:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              tan {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} cot,
+              where can we find {" "}
+              <Math>
+                $\tan(\theta)$
+              </Math>
+              {" "}
+              {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} {" "}
+              <Math>
+                $\cot(\theta)$
+              </Math>
+              {" "} as geometric quantities
+              that exist in relation to the unit circle,
+              in all quadrants?
+              (I.e., find “unit circle interpretations”
+              of 
+              tan {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} cot.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Note that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:25:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sin\theta\over\cos\theta&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                can be understood as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:31:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              a fraction of the form “rise over run”,
+              i.e., the slope of the line from {" "}
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $(\cos\theta, \sin\theta)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/d3kY.svg"
+              local_url="./images/e5_tan_cot_unit_circle_1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                However, one way to “materialize” a slope {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:38:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              as a displacement
+              is to scale the triangle “rise over run” until
+              the “run” becomes {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} 
+              whereby the rise becomes equal to the slope,
+              leading to this
+              construction of {" "}
+              <NoBreak>
+                <Math>
+                  $\tan\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/wJEo.svg"
+              style="margin-bottom:-0.5em"
+              local_url="./images/e5_tan_cot_unit_circle_2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This also works if {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:50:9
+                </span>
+              </span>
+              <Math>
+                $\theta$
+              </Math>
+              {" "} is in other
+              quadrants, with a negative scaling factor if
+              necessary:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/VCX7.svg"
+              style="margin-bottom:-0.5em"
+              local_url="./images/e5_tan_cot_unit_circle_3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Symmetrically, the ratio
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:58:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cot\theta = &#123;\cos\theta \over \sin\theta&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                has the form “run over rise”, and can
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:64:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              be evaluated by scaling the same triangle
+              until “rise” becomes {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} in which case the
+              corresponding (scaled) “run” becomes the value
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\cot\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/qnKn.svg"
+              local_url="./images/e5_tan_cot_unit_circle_4.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Overall,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:73:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              to give self-contained verbalizations of these
+              constructions, we have...
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <Math>
+                $\tan\theta$
+              </Math>
+              <span class="t-3003-c">
+                {" "} is the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:81:23
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                <span class="t-3003-c">
+                  -coordinate
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:81:34
+                  </span>
+                </span>
+              </NoBreak>
+              <span class="t-3003-c">
+                {" "} of the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:81:34
+                </span>
+              </span>
+              {" "}
+              {" "}
+              intersection of {" "}
+              <Math>
+                $x = 1$
+              </Math>
+              <span class="t-3003-c">
+                {" "} with the line through
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:82:32
+                </span>
+              </span>
+              {" "}
+              {" "}
+              the origin and {" "}
+              <Math>
+                $(\cos\theta, \sin\theta)$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...for {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:85:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\tan\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and...
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <Math>
+                $\cot\theta$
+              </Math>
+              <span class="t-3003-c">
+                {" "} is the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:91:23
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                <span class="t-3003-c">
+                  -coordinate
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:91:34
+                  </span>
+                </span>
+              </NoBreak>
+              <span class="t-3003-c">
+                {" "} of the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:91:34
+                </span>
+              </span>
+              {" "}
+              {" "}
+              intersection of {" "}
+              <Math>
+                $y = 1$
+              </Math>
+              <span class="t-3003-c">
+                {" "} with the line through the origin
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:92:32
+                </span>
+              </span>
+              {" "}
+              {" "}
+              and {" "}
+              <Math>
+                $(\cos\theta, \sin\theta)$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...for {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_tan_cot_on_unit_circle_.wly:95:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\cot\theta$
+                </Math>
+                !
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={46}>
+          <ExerciseStatement id="_47_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 46.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:4:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and a value {" "}
+              <Math>
+                $A &gt; 1$
+              </Math>
+              {" "} are marked
+              on a line...
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:0.8em;margin-bottom:0.8em;"
+              src="/build-img/svgo-svg/j4h0.svg"
+              local_url="./images/e5_line_with_0_1_and_A.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...how can we find the placement of...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:11:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              1 / A
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...on the same line by a purely geometric construction?
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:17:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              What about if {" "}
+              <NoBreak>
+                <Math>
+                  $0 &lt; A &lt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $-1 &lt; A &lt; 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} etc?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:22:10
+                  </span>
+                </span>
+              </i>
+              {" "}
+              The basic idea of this solution is to find
+              an angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} such that {" "}
+              <NoBreak>
+                <Math>
+                  $A = \sec(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              if {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &gt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              or symmetrically, such that {" "}
+              <NoBreak>
+                <Math>
+                  $A = \cos(\theta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} if {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &lt; 1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/kxTm.svg"
+              local_url="./images/e5_line_with_0_1_and_A_and_secant.svg"
+            />
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/ryx0.svg"
+              local_url="./images/e5_line_with_0_1_and_A_and_cos.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (Cf. {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:34:9
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_45_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 44
+              </InChapterLink>
+              &#8288;.)
+              We now proceed with
+              step-by-step
+              compass-and-ruler 
+              instructions for the two cases:
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                ~ ~ case {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:40:11
+                </span>
+              </span>
+              <Math>
+                $|A| &gt; 1$
+              </Math>
+              <span class="t-3003-c">
+                {" "} ~ ~
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:40:29
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Step 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:42:10
+                  </span>
+                </span>
+              </i>
+              {" "} Find the midpoint between {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ;
+              </NoBreak>
+              {" "} for
+              this, the procedure is to use two circles of equal radius:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/JM7s.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Step 2.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:48:10
+                  </span>
+                </span>
+              </i>
+              {" "} Draw a semicircle of radius {" "}
+              <Math>
+                $A/2$
+              </Math>
+              {" "} whose
+              center is that midpoint:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/eQmC.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Step 3.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:54:10
+                  </span>
+                </span>
+              </i>
+              {" "} Draw a circle of radius {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} whose center
+              is {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/emr1.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Step 4.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:60:10
+                  </span>
+                </span>
+              </i>
+              {" "} Draw a line through the intersections
+              of the two circles to find the position of {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/XE7K.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step4.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (The reason that the whole procedure works is that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:66:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              this triangle...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/KO2V.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...is actually right-angled at its upper corner
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:72:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              by 
+              the Peloponnesian circle theorem.
+              This implies that the line from {" "}
+              <Math>
+                $(A, 0)$
+              </Math>
+              {" "} to that
+              corner is tangent to the circle of radius {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which is
+              what we want/need.)
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              x = 1 \\
+              y = 1
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                ~ ~ case {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:86:11
+                </span>
+              </span>
+              <Math>
+                $|A| &lt; 1$
+              </Math>
+              <span class="t-3003-c">
+                {" "} ~ ~
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:86:29
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Step 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:88:10
+                  </span>
+                </span>
+              </i>
+              {" "} 
+              With {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &lt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} start by
+              marking points at equal distance to {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} 
+              by drawing a circle 
+              centered at {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              of any radius:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/RGWo.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Step 2.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:98:10
+                  </span>
+                </span>
+              </i>
+              {" "} Use these points to draw a perpendicular 
+              through {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} similarly to the first step of
+              the case {" "}
+              <NoBreak>
+                <Math>
+                  $|A| &gt; 1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/4MXO.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Step 3.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:105:10
+                  </span>
+                </span>
+              </i>
+              {" "} 
+              Draw a circle of radius {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} centered at {" "}
+              <NoBreak>
+                <Math>
+                  $(0, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and draw a line through {" "}
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "} and the upper
+              intersection of the circle with the perpendicular:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/FPj6.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Step 4.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:113:10
+                  </span>
+                </span>
+              </i>
+              {" "} 
+              Construct a perpendicular to this line
+              at the point of intersection by repeating the
+              process of the first two steps; 
+              the intersection of that line with the
+              main axis is {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/hKBQ.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg"
+            />
+            <Pause />
+            <StarDivider />
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:125:10
+                  </span>
+                </span>
+              </i>
+              {" "} Note that for an angle
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                the values
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:131:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \tan\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:131:34
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cot\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                can be
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:131:53
+                </span>
+              </span>
+              {" "}
+              {" "}
+              found here and here, by {" "}
+              <InChapterLink
+                href="/article/chapter1#_46_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 45
+              </InChapterLink>
+              {" "}
+              (this figure is just a recap of {" "}
+              <InChapterLink
+                href="/article/chapter1#_46_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 45
+              </InChapterLink>
+              &#8288;):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/SB49.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_without_A.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                However,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:138:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\cot\theta = 1/\tan\theta,
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                so if {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:144:9
+                </span>
+              </span>
+              <Math>
+                $\tan\theta = A$
+              </Math>
+              {" "} then {" "}
+              <NoBreak>
+                <Math>
+                  $\cot\theta = 1/A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which
+              gives rise to the following idea for a geometric construction
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} shown here for {" "}
+              <Math>
+                $0 &lt; A &lt; 1$
+              </Math>
+              {" "} (though it works for all {" "}
+              <NoBreak>
+                <Math>
+                  $A \in \rr$
+                </Math>
+                ):
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/vM7r.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_idea.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Or, symmetrically, we can treat {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:151:9
+                </span>
+              </span>
+              <Math>
+                $A$
+              </Math>
+              {" "} as {" "}
+              <NoBreak>
+                <Math>
+                  $\cot\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} from
+              which {" "}
+              <Math>
+                $\tan\theta$
+              </Math>
+              {" "} becomes {" "}
+              <NoBreak>
+                <Math>
+                  $1/A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/5-80.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_idea_symmetric.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The second diagram
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:188:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              can also
+              be understood in terms of “materializing” the slope
+              of a line of slope {" "}
+              <Math>
+                $1/A$
+              </Math>
+              {" "} by scaling a “rise over run”
+              triangle until the run hits {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/xbp-.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_idea_symmetric_slope_explained.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...like so; {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:197:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              and symmetrically, the first diagram can 
+              be understood in terms of scaling a “rise over run”
+              triangle until the {" "}
+              <i>
+                rise
+              </i>
+              {" "} hits {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/YikH.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_idea_slope_explained.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...like so, since {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:206:9
+                </span>
+              </span>
+              <NoBreak>
+                “
+                <Math>
+                  $\te&#123;run&#125; = &#123;\te&#123;rise&#125;\over \te&#123;slope&#125;&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              implies {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\te&#123;run&#125; = &#123;1\over \te&#123;slope&#125;&#125;$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} by the
+              time ‘rise’ hits {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} implying {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\te&#123;run&#125; = &#123;1\over A&#125;$
+                </Math>
+                ”,
+              </NoBreak>
+              {" "} since the 
+              slope is {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                Complete compass-and-ruler constructions can
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:211:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              easily be reconstituted from the above diagrams,
+              and we hereby declare the second solution finished!!
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={47}>
+          <ExerciseStatement id="_48_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 47.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Given a number line with {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:4:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}
+              and a value {" "}
+              <Math>
+                $A &gt; 0$
+              </Math>
+              {" "} indicated,
+              how can we construct the values {" "}
+              <Math>
+                $A^2$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $A^3$
+              </Math>
+              {" "}
+              as lengths, using only ruler and compass?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:11:10
+                  </span>
+                </span>
+              </i>
+              {" "} If {" "}
+              <NoBreak>
+                <Math>
+                  $A &gt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              start by constructing a perpendicular to the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis
+              (“the number line” = “the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis”) through {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/MGoY.svg"
+              local_url="./images/e5_x_square_x_cube_construction_1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Take the intersection of this line with a
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:18:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              circle of center {" "}
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "} of radius {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/RxWQ.svg"
+              local_url="./images/e5_x_square_x_cube_construction_2_38deg.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This gives us an angle {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:24:9
+                </span>
+              </span>
+              <Math>
+                $\theta$
+              </Math>
+              {" "} such that {" "}
+              <NoBreak>
+                <Math>
+                  $\sec\theta = A$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/g3LH.svg"
+              local_url="./images/e5_x_square_x_cube_construction_3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Now it suffices to apply one of the “powers of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:29:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              secant” constructions to obtain powers of {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              for example either of:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/K2J8.svg"
+              local_url="./images/e5_x_square_x_cube_construction_4.svg"
+            />
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Ubox.svg"
+              style="margin-bottom:0.5em;"
+              local_url="./images/e5_x_square_x_cube_construction_5.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (Either of these constructiongs requires constructing
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:40:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              perpendiculars, but we know how to do that.)
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:43:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $A &lt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} on the other hand,
+              do the same initial steps but with {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $A$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}
+              reversed, resulting in an angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} for
+              which {" "}
+              <NoBreak>
+                <Math>
+                  $A = \cos\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/9g0C.svg"
+              local_url="./images/e5_x_square_x_cube_construction_7.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                We can then do a “powers of cosine” construction,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:51:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              that is symmetric to powers of secant, to
+              find powers of {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} for example:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/6l6A.svg"
+              local_url="./images/e5_x_square_x_cube_construction_8.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Though in this case, it bears discussing how we
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:58:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              construct, say, this perpendicular:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/1-DQ.svg"
+              local_url="./images/e5_x_square_x_cube_construction_9.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...because this perpendicular must
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:64:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                arrive
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:66:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                perpendicularly at a given line, not
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:68:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                depart
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:70:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                perpendicularly from a given line. {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:72:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              (In the order in which the construction unfolds,
+              this perpendicular “originates” from its upper end,
+              which is a situation that we have not encountered
+              yet.)
+              In this case, the procedure is to draw a circle,
+              in orange below, whose center is the 
+              starting point
+              of the
+              perpendicular, and that crosses the line-to-which-we-must-be-perpendicular
+              in two places:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/FFkM.svg"
+              local_url="./images/e5_x_square_x_cube_construction_10.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Then use those crossings as the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:87:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              centers of two more circles of equal radius...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/9C_S.svg"
+              local_url="./images/e5_x_square_x_cube_construction_11.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...whose intersection gives us a second point
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:93:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              (even two more points, if we use a radius
+              different from the first orange circle), and the means to draw
+              the perpendicular itself.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:100:10
+                  </span>
+                </span>
+              </i>
+              {" "} Regardless of whether {" "}
+              <Math>
+                $A &lt; 1$
+              </Math>
+              {" "} or {" "}
+              <NoBreak>
+                <Math>
+                  $A &gt; 1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              draw a perpendicular to the number line through {" "}
+              <Math>
+                $x = 1$
+              </Math>
+              {" "}
+              and use a compass to report {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} onto this line
+              (here with {" "}
+              <NoBreak>
+                <Math>
+                  $A &lt; 1$
+                </Math>
+                ):
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/shlb.svg"
+              local_url="./images/e5_x_square_x_cube_construction_13.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This defines a an angle {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:108:9
+                </span>
+              </span>
+              <Math>
+                $\theta$
+              </Math>
+              {" "} such that {" "}
+              <NoBreak>
+                <Math>
+                  $A = \tan\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/wSrB.svg"
+              local_url="./images/e5_x_square_x_cube_construction_14.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Then we can use any construction for powers of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:113:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              tan, for example this spiral construction:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/PFh1.svg"
+              local_url="./images/e5_x_square_x_cube_construction_15.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (Again, constructing the spiral means constructing
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:119:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              a sequence of perpendiculars, but we can do that!)
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:124:13
+                  </span>
+                </span>
+                <Math>
+                  $A &lt; 1$
+                </Math>
+                {" "} there is a clever construction,
+                variant of solution 1, that one can use to
+                construct powers of {" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "} using only one compass
+                stroke and one ruler stroke per power of {" "}
+                <Math>
+                  $A$
+                </Math>
+                {" "}
+                (after setting up the angle {" "}
+                <NoBreak>
+                  <Math>
+                    $\theta$
+                  </Math>
+                  ):
+                </NoBreak>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/XL-k.svg"
+                local_url="./images/e5_x_square_x_cube_construction_16_v6.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (No such thing exists for {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_x_square_x_cube_construction_.wly:133:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $A &gt; 1$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={48}>
+          <ExerciseStatement id="_49_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 48.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Given two lengths {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} how can
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;AB&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                be constructed using
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:8:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              only ruler and compass?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                A preliminary “arithmetic” observation is that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:13:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              there is a common multiplicative
+              factor
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \gamma
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                separating {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:15:26
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} from {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;AB&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              from {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/3JBw.svg"
+              local_url="./images/e5_sqrt_AB_construction_1_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The proof is that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:21:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sqrt&#123;AB&#125;\over A&#125; = &#123;B\over\sqrt&#123;AB&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is equivalent to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:27:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\sqrt&#123;AB&#125;)^2 = AB
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which is true
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:33:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              by definition of {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;AB&#125;$
+                </Math>
+                —or
+              </NoBreak>
+              {" "} a second proof
+              (we can't help ourselves) is that...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\sqrt&#123;AB&#125;\over A&#125; = &#123;\sqrt&#123;A&#125;\cdot\sqrt&#123;B&#125;\over A&#125; = &#123;\sqrt&#123;B&#125;\over \sqrt&#123;A&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...while...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:41:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;B\over \sqrt&#123;AB&#125;&#125; = &#123;B \over \sqrt&#123;A&#125;\cdot\sqrt&#123;B&#125;&#125; = &#123;\sqrt&#123;B&#125;\over \sqrt&#123;A&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...is equal, and we can explicitly see that {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:47:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\gamma = \sqrt&#123;B&#125;/\sqrt&#123;A&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as
+              well, from the second proof. (Indeed, if you multiply
+              twice by {" "}
+              <Math>
+                $\sqrt&#123;B&#125;/\sqrt&#123;A&#125;$
+              </Math>
+              {" "} you're going to remove one
+              factor of {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} while introducing one factor of {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                This observation in hand, we can give two solutions:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:53:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:57:10
+                  </span>
+                </span>
+              </i>
+              {" "} Assume wlog (= “without loss of generality”)
+              that {" "}
+              <NoBreak>
+                <Math>
+                  $B &gt; A$
+                </Math>
+                .
+              </NoBreak>
+              {" "} We report the lengths {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} onto a
+              common number line such that the left end of each length
+              is identified with {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/83jd.svg"
+              local_url="./images/e5_sqrt_AB_construction_2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                We construct {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:66:9
+                </span>
+              </span>
+              <Math>
+                $B/2$
+              </Math>
+              {" "} by intersecting two sufficiently
+              large circles of centers {" "}
+              <NoBreak>
+                <Math>
+                  $0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} of equal radius:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/aEvK.svg"
+              local_url="./images/e5_sqrt_AB_construction_3_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                We draw a half-circle of radius {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:72:9
+                </span>
+              </span>
+              <Math>
+                $B/2$
+              </Math>
+              {" "} and of center {" "}
+              <NoBreak>
+                <Math>
+                  $B/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and a perpendicular emanating from {" "}
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/7wy4.svg"
+              local_url="./images/e5_sqrt_AB_construction_5.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...the red triangle above is a right triangle by the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:84:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              Peloponnesian circle theorem, so we have effectively 
+              succeeded in constructing this diagram,
+              for some angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Usrx.svg"
+              local_url="./images/e5_sqrt_AB_construction_6.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                As seen in {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:93:9
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_24_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 23
+              </InChapterLink>
+              &#8288;,
+              however, we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;B\over A&#125; = \sec^2\theta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                in this case, implying that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:100:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sec\theta = &#123;\sqrt&#123;B&#125;\over\sqrt&#123;A&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the factor {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:106:9
+                </span>
+              </span>
+              <Math>
+                $\gamma$
+              </Math>
+              {" "} mentioned in the
+              preliminary arithmetic observation, and that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A\sec\theta = A\gamma = \sqrt&#123;AB&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which places {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:114:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;AB&#125;$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/S9xt.svg"
+              local_url="./images/e5_sqrt_AB_construction_7.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...here, in our construction from a few lines
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:119:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              above.
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:124:10
+                  </span>
+                </span>
+              </i>
+              {" "}
+              Place {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} end-to-end:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/-HLJ.svg"
+              local_url="./images/e5_sqrt_AB_solution2_0.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Find the middle of the combined segment and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:132:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              use it to
+              draw a semicircle whose diameter is the
+              combined segment:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/OwXA.svg"
+              local_url="./images/e5_sqrt_AB_solution2_1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Draw a perpendicular
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:140:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              to the segment at the point where {" "}
+              <Math>
+                $A$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}
+              meet, which defines again a right triangle by the
+              Peloponnesian circle theorem:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/-W11.svg"
+              local_url="./images/e5_sqrt_AB_solution2_2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Because {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:148:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of the right angle,
+              the angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} at lower —leftif we label it
+              —suchis also repeated middle top right (this is
+              the content of {" "}
+              <InChapterLink
+                href="/article/chapter1#_21_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 20
+              </InChapterLink>
+              &#8288;):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/UWy5.svg"
+              local_url="./images/e5_sqrt_AB_solution2_3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The ratio that takes {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:157:9
+                </span>
+              </span>
+              <Math>
+                $A$
+              </Math>
+              {" "} to the middle height
+              and that takes the middle height to {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "} are therefore
+              both {" "}
+              <NoBreak>
+                <Math>
+                  $\tan(\theta)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/KocC.svg"
+              local_url="./images/e5_sqrt_AB_solution2_4.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This implies that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:164:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \tan(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the factor {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:170:9
+                </span>
+              </span>
+              <Math>
+                $\gamma$
+              </Math>
+              {" "} such that {" "}
+              <Math>
+                $A\gamma^2 = B$
+              </Math>
+              {" "}
+              mentioned at the outset, and that said “middle
+              height” is {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;AB&#125;$
+                </Math>
+                !
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Vocabulary.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:176:10
+                  </span>
+                </span>
+              </i>
+              {" "} The square-root-of-the-product
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sqrt&#123;xy&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is called the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:182:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                geometric mean
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:182:25
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:182:41
+                </span>
+              </span>
+              <Math>
+                $x$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x \geq 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y \geq 0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as opposed to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;x + y\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which is called the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:189:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                arithmetic mean
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:191:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (or just “mean”) of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:193:9
+                </span>
+              </span>
+              <Math>
+                $x$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y \in \rr$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Legend has it that a
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:197:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  geometric progression
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:199:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  is so-called because each term {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:201:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                in the sequence
+                that is not the first or the last is the
+                geometric mean of the two terms on either side,
+                and that similarly an
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  arithmetic progression
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:207:15
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  is so-called because each term
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_sqrt_xy_construction_.wly:209:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                in the sequence
+                that is not the first or the last is the
+                arithematic mean of the two terms on either side.
+                (Cf. Note {" "}
+                <InTextWarning>
+                  undefined handle at ch5/ch5^exercises/_sqrt_xy_construction_.wly:213:13: _geometric_progression_
+                </InTextWarning>
+                {" "} in Exercise {" "}
+                <InTextWarning>
+                  undefined handle at ch5/ch5^exercises/_sqrt_xy_construction_.wly:213:13: _1d_red_particle_
+                </InTextWarning>
+                {" "}
+                of Chapter {" "}
+                <InTextWarning>
+                  undefined handle at ch5/ch5^exercises/_sqrt_xy_construction_.wly:214:13: derivatives
+                </InTextWarning>
+                .)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={49}
+        >
+          <ExerciseStatement id="_50_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 49.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What are the orthogonal (= perpendicular) {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:5:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              projections of the
+              vectors {" "}
+              <NoBreak>
+                <Math>
+                  $(1, 0)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $(0, 1)$
+              </Math>
+              {" "} 
+              onto a {" "}
+              <NoBreak>
+                <Math>
+                  $(-1, 1)$
+                </Math>
+                -ruler
+              </NoBreak>
+              {" "}
+              placed at angle {" "}
+              <Math>
+                $\theta$
+              </Math>
+              {" "} in the unit circle?
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/QGG0.svg"
+              local_url="./images/e5_project_i_and_j_statement.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (I.e., find the ruler-readings
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:14:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              marked ‘1’ and ‘2’ above
+              as a function of the angle {" "}
+              <NoBreak>
+                <Math>
+                  $\theta$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:20:10
+                  </span>
+                </span>
+              </i>
+              {" "} If we rotate the diagram by {" "}
+              <Math>
+                $-\theta$
+              </Math>
+              {" "}
+              to align the ruler with the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis the new angles
+              of the vectors are {" "}
+              <Math>
+                $-\theta$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\eta - \theta$
+              </Math>
+              {" "}
+              (changed from {" "}
+              <Math>
+                $0$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\eta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} respectively):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/DHtw.svg"
+              local_url="./images/e5_project_i_and_j_sol1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The ruler-readings are therefore
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:28:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(-\theta) = \cos(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:32:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\eta - \theta) = \sin(\theta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                respectively (in order ‘1’, ‘2’), making use of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:37:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              basic identities. (See the section “Identities with {" "}
+              <NoBreak>
+                <Math>
+                  $\eta$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              in this chapter.)
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:43:10
+                  </span>
+                </span>
+              </i>
+              {" "} 
+              Recalling first...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/h28T.svg"
+              local_url="./images/svg_ch5_ch_unit_circle_with_new_definition.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...this figure from the chapter, we note that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:49:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              there is an alternate
+              set of definitions for sin and cos that is 
+              based on clockwise instead of counterclockwise rotation:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/9QAk.svg"
+              local_url="./images/e5_project_i_and_j_sol2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Now comparing these definitions to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:57:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              this figure...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/__cS.svg"
+              local_url="./images/e5_project_i_and_j_sol3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...in which, by contrast to usual, angles are measured
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:63:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                positively clockwise
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:65:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (that's why it's {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:67:9
+                </span>
+              </span>
+              <NoBreak>
+                “
+                <Math>
+                  $\theta$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} not {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $-\theta$
+                </Math>
+                ”)
+              </NoBreak>
+              {" "} 
+              it becomes trivial to see that the two ruler-readings
+              are just {" "}
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              {" "} (‘1’) and {" "}
+              <Math>
+                $\sin(\theta)$
+              </Math>
+              {" "} (‘2’).
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <i>
+                <span class="t-3003-c">
+                  Solution 3.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:73:10
+                  </span>
+                </span>
+              </i>
+              {" "} 
+              More generally, when a unit
+              vector is projected onto a “unit ruler”,
+              we can switch the ruler {" "}
+              <i>
+                &amp;
+              </i>
+              {" "} vector positions
+              without affecting the ruler-reading:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/5XuI.svg"
+              local_url="./images/e5_project_i_and_j_sol4.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (Because what counts is the angle between the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:82:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              “forward end” of the ruler and the forward end of
+              the vector, measured as an angle between {" "}
+              <Math>
+                $0^\circ$
+              </Math>
+              {" "}
+              and {" "}
+              <NoBreak>
+                <Math>
+                  $180^\circ$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and this angle remains the same.)
+              If we apply this to the problem statement
+              the unique ruler is replaced by a unique vector
+              while the two vectors are each replaced by a ruler:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Xur8.svg"
+              local_url="./images/e5_project_i_and_j_sol5_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...and in the new configuration, at bottom right, {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:93:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              one can see by the original definitions of sin
+              and cos that the projections are
+              are {" "}
+              <Math>
+                $\cos(\theta)$
+              </Math>
+              {" "} (‘1’), {" "}
+              <Math>
+                $\sin(\theta)$
+              </Math>
+              {" "} (‘2’).
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The original definitions of sin and cos involve
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:100:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                a single point rotating around the unit circle projected
+                onto two fixed rulers, resulting in two
+                functions:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/HbFF.svg"
+                style="margin:0.3em 0"
+                local_url="./images/e5_project_i_and_j_note1_v2.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  By the result of this exercise, sin and cos can also be
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:112:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                conceptualized in a dual fashion, via fixed points projected
+                onto a rotating ruler:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/R1PW.svg"
+                style="margin:0.3em 0"
+                local_url="./images/e5_project_i_and_j_note2_v2.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (E.g.,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:120:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  the positive part of the ruler goes
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:122:15
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                to meet the point
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  if you think about how the sine function starts out, instead
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_project_i_and_j_.wly:125:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                the point being the one to travel towards the positive part
+                of the ruler [onto which it is projected].)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={50}
+        >
+          <ExerciseStatement id="_51_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 50.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Show that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:5:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:9:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\alpha$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\beta \in \rr$
+              </Math>
+              {" "}
+              via a geometric argument.
+              (I.e., AVOID using the angle-sum formula.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                We know (or should know, or are about to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:15:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              know) (or are about to {" "}
+              <i>
+                believe
+              </i>
+              ) that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(\alpha - \beta)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the projection of a unit vector of angle
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:22:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $\alpha$
+              </Math>
+              {" "} onto a ruler of angle {" "}
+              <NoBreak>
+                <Math>
+                  $\beta$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/k70-.svg"
+              local_url="./images/e5_unit_dot_product_sol1_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In what follows we will write {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:28:9
+                </span>
+              </span>
+              <NoBreak>
+                ‘
+                <Math>
+                  $\vecb&#123;i&#125;$
+                </Math>
+                ’
+              </NoBreak>
+              {" "}
+              and {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $\vecb&#123;j&#125;$
+                </Math>
+                ’,
+              </NoBreak>
+              {" "} respectively, for the vectors
+              {" "}
+              <Math>
+                $(1, 0)$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $(0, 1)$
+              </Math>
+              {" "} (in the manner of physicists):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/EWAA.svg"
+              local_url="./images/e5_unit_dot_product_sol2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                As established in {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:35:9
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_50_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 49
+              </InChapterLink>
+              {" "}
+              {" "}
+              <Math>
+                $\vecb&#123;i&#125;$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $\vecb&#123;j&#125;$
+              </Math>
+              {" "} project to {" "}
+              <NoBreak>
+                <Math>
+                  $\cos\beta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <Math>
+                $\sin\beta$
+              </Math>
+              {" "} respectively on the ruler:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/rAlI.svg"
+              local_url="./images/e5_unit_dot_product_sol3_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                On the other hand, the vector {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:42:9
+                </span>
+              </span>
+              <Math>
+                $(\cos\alpha, \sin\alpha)$
+              </Math>
+              {" "}
+              is the sum of a scaled copy of {" "}
+              <Math>
+                $\vecb&#123;i&#125;$
+              </Math>
+              {" "} and
+              scaled copy of {" "}
+              <NoBreak>
+                <Math>
+                  $\vecb&#123;j&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}  specifically the sum of
+              {" "}
+              <Math>
+                $\vecb&#123;i&#125;\cdot\cos(\alpha)$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\vecb&#123;j&#125;\cdot\sin(\alpha)$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/q8lI.svg"
+              local_url="./images/e5_unit_dot_product_sol5_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The scaled copy of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:50:9
+                </span>
+              </span>
+              <Math>
+                $\vecb&#123;i&#125;$
+              </Math>
+              {" "} projects to
+              {" "}
+              <Math>
+                $\cos(\alpha)\cdot\cos(\beta)$
+              </Math>
+              {" "} on the ruler, 
+              by scaling the projection of {" "}
+              <NoBreak>
+                <Math>
+                  $\vecb&#123;i&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/vjt3.svg"
+              local_url="./images/e5_unit_dot_product_sol6_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Similarly, the scaled copy of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:57:9
+                </span>
+              </span>
+              <Math>
+                $\vecb&#123;j&#125;$
+              </Math>
+              {" "} projects
+              to {" "}
+              <NoBreak>
+                <Math>
+                  $\sin(\alpha)\cdot\sin(\beta)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} by scaling the
+              projection of {" "}
+              <NoBreak>
+                <Math>
+                  $\vecb&#123;j&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/KjPQ.svg"
+              local_url="./images/e5_unit_dot_product_sol7_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Moreover, the sum-of-projections is the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:64:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              projection-of-the-sum:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/cfa7.svg"
+              local_url="./images/e5_unit_dot_product_sol8_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This gives us
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:70:9
+                </span>
+              </span>
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \cos(\alpha-\beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                since both sides compute the projection of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_unit_dot_product_geometric_interpretation_.wly:77:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $(\cos \alpha, \sin \alpha)$
+              </Math>
+              {" "} onto the ruler of angle {" "}
+              <NoBreak>
+                <Math>
+                  $\beta$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise
+          work="ing"
+          number={51}
+        >
+          <ExerciseStatement id="_52_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 51.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                A unit vector
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:5:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x_1, y_1, z_1) \in \rr^3
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                [meaning: {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:11:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x_1^2 + y_1^2 + z_1^2 = 1$
+                </Math>
+                ]
+              </NoBreak>
+              {" "} is projected onto a ruler
+              whose {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $0$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} is at {" "}
+              <Math>
+                $(0, 0, 0)$
+              </Math>
+              {" "} and whose {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} is at
+              {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} another point on the unit sphere:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/jyl2.svg"
+              local_url="./images/e5_ruler_sphere_1_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Find the value of the projection—the place we land on the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:18:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              ruler, at {" "}
+              <NoBreak>
+                <Math>
+                  $90^\circ$
+                </Math>
+                —as
+              </NoBreak>
+              {" "} a
+              function of {" "}
+              <NoBreak>
+                <Math>
+                  $x_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z_1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $x_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z_2$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Putting
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:24:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              \vi = (1,\, 0,\, 0),         \\
+              \vj = (0,\, 1,\, 0),\up&#123;1.2&#125; \\
+              \vk = (0,\, 0,\, 1)\,\up&#123;1.2&#125;
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                we have
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:34:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              x_1\cdot\vi = (x_1, \,0,   \,0),         \\
+              y_1\cdot\vj = (0,   \,y_1, \,0)\up&#123;1.2&#125;, \\
+              z_1\cdot\vk = (0,   \,0,   \,z_1)\up&#123;1.2&#125;\, 
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                giving
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:44:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (x_1, y_1, z_1) = x_1\!\cdot\vi + y_1\!\cdot\vj + z_1\!\cdot\vk
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because vectors are added component-wise. {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:50:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              This sum can be illustrated:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/w_-r.svg"
+              local_url="./images/e5_ruler_sphere_decomp.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                As discussed in Note 1 of Exercise 11 we can
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:56:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              translate vectors to anywhere in space while
+              preserving their 
+              projection onto the ruler. 
+              In particular, keeping the same positioning in space of the
+              vectors as above shows that the projection of
+              {" "}
+              <Math>
+                $(x_1, y_1, z_1)$
+              </Math>
+              {" "} is the sum of the three separate projections 
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $x_1\vi$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_1\rt&#123;0.1&#125;\vj$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}  {" "}
+              <NoBreak>
+                <Math>
+                  $z_1\vk$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/vsD9.svg"
+              local_url="./images/e5_ruler_sphere_decomp3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                However, the projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:68:9
+                </span>
+              </span>
+              <Math>
+                $z_1\vk$
+              </Math>
+              {" "} is just 
+              {" "}
+              <Math>
+                $z_1$
+              </Math>
+              {" "} times the projection of {" "}
+              <NoBreak>
+                <Math>
+                  $\vk$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as illustrated
+              below, so it suffices to find the projection of {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "}
+              to find the projection of {" "}
+              <NoBreak>
+                <Math>
+                  $z_1\vk$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/-iIq.svg"
+              local_url="./images/e5_ruler_sphere_z_scale.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:79:9
+                </span>
+              </span>
+              <Math>
+                $\vk$
+              </Math>
+              {" "} 
+              is the same as the projection of {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "} onto
+              a ruler with ‘0’ at the origin and ‘1’ at {" "}
+              <NoBreak>
+                <Math>
+                  $\vk$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              because when one unit vector is projected onto another
+              the situation is symmetric, and we can always switch 
+              the role
+              of which vector is the ruler, and which is being
+              projected (cf. Solution 3 of Exercise 0):
+            </OuterP>
+            <Pause />
+            <Image
+              src="/tmp-images/e5_ruler_sphere_z_switched_combined.svg"
+              local_url="./public/tmp-images/e5_ruler_sphere_z_switched_combined.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                But the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:91:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              projection 
+              of {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "} onto 
+              the vertical ruler
+              equals simply
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by the fact that {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:102:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              we are projecting onto the {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} axis,
+              so the projection of {" "}
+              <Math>
+                $\vk$
+              </Math>
+              {" "} onto {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "}
+              is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as well,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:111:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              and the projection of {" "}
+              <Math>
+                $z_1\vk$
+              </Math>
+              {" "} onto {" "}
+              <Math>
+                $(x_2, y_2, z_2)$
+              </Math>
+              {" "} is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z_1z_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by scaling.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:118:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                Likewise,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:120:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              y_1y_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                will be the projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:126:9
+                </span>
+              </span>
+              <Math>
+                $y_1\rt&#123;0.1&#125;\vj$
+              </Math>
+              {" "} onto {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x_1x_2
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                will be the projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:133:9
+                </span>
+              </span>
+              <Math>
+                $x_1\vi$
+              </Math>
+              {" "} onto {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                x_1x_2 + y_1y_2 + z_1z_2
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                is the projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_project_i_and_j_and_k_.wly:140:9
+                </span>
+              </span>
+              <Math>
+                $(x_1, y_1, z_1)$
+              </Math>
+              {" "} onto {" "}
+              <NoBreak>
+                <Math>
+                  $(x_2, y_2, z_2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              summing the projections of {" "}
+              <NoBreak>
+                <Math>
+                  $x_1\vi$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $y_1\vj$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <Math>
+                $z_1\vk$
+              </Math>
+              {" "}
+              together.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={52}>
+          <ExerciseStatement id="_53_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 52.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Which function is most plausibly associated to
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_graphs_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              which graph?
+            </OuterP>
+            <Pause />
+            <table
+              class="slice"
+              style="border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;"
+            >
+              <colgroup>
+                <col width={200} />
+                <col width={200} />
+              </colgroup>
+              <tbody>
+                <tr style="border-bottom:1px solid black;">
+                  <td style="padding:0.5em 0;border-right:1px solid black">
+                    <Math>
+                      $x \ra \sin x \cdot \cos x$
+                    </Math>
+                  </td>
+                  <td style="padding:0.5em 0;">
+                    <Math>
+                      $x \ra \cos^2 x$
+                    </Math>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:0.5em 0;border-right:1px solid black">
+                    <Math>
+                      $x \ra \sin^2 x$
+                    </Math>
+                  </td>
+                  <td style="padding:0.5em 0;">
+                    <Math>
+                      $x \ra \sin x + \cos x$
+                    </Math>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/huBu.svg"
+              local_url="./images/svg_ch5_ex_four_graphs.svg"
+            />
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_graphs_.wly:39:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \sin^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \cos^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                are nonnegative [the square of a number
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_graphs_.wly:46:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              is nonnegative]
+              these functions must either be
+              the top right or bottom left graphs, as the
+              other two graphs weave in and out of negative territory;
+              given additionally that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\cos(0) = 1,
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(0) = 0
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                we can further deduce that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_graphs_.wly:58:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \sin^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                can only be the top right graph, and
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_graphs_.wly:62:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra \cos^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                can only be the bottom left graph; moreover, since
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_graphs_.wly:66:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              |\sin x \cdot \cos x| \leq 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_graphs_.wly:70:9
+                </span>
+              </span>
+              <Math>
+                $x \in \rr$
+              </Math>
+              {" "} (as the product of
+              two numbers that are between {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "} is
+              itself between {" "}
+              <Math>
+                $-1$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} whereas the
+              top left graph is at times greater than {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}
+              and at times less than {" "}
+              <NoBreak>
+                <Math>
+                  $-1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              the last standing possibility is...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Ninz.svg"
+              local_url="./images/svg_ch5_ex_four_graphs_labeled.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...this one!
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_four_graphs_.wly:81:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  These are in fact the actual graphs of
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_four_graphs_.wly:84:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                the stated functions, not just “plausible” graphs.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  It is
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_four_graphs_.wly:88:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                indeed quite striking that all of these
+                functions seem to be {" "}
+                <i>
+                  sinusoids
+                </i>
+                , given the
+                appearance of their graphs. (A “sinusoid” is 
+                formally defined as a function of the form
+                {" "}
+                <Math>
+                  $x \ra A\cdot \sin(Bx + C) + D$
+                </Math>
+                {" "} for some 
+                constants {" "}
+                <NoBreak>
+                  <Math>
+                    $A$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $C$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <NoBreak>
+                  <Math>
+                    $D \in \rr$
+                  </Math>
+                  .)
+                </NoBreak>
+                {" "}
+                There is {" "}
+                <i>
+                  a priori
+                </i>
+                {" "} no good reason for this.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={53}>
+          <ExerciseStatement id="_54_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 53.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Where or how, if at all, is the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_where_is_the_pythagorean_identity_.wly:3:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                pythagorean identity
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_where_is_the_pythagorean_identity_.wly:4:7
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                apparent in the four graphs of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_where_is_the_pythagorean_identity_.wly:5:5
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_53_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 52
+              </InChapterLink>
+              &#8288;?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Imagine wooden cutouts made from {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_where_is_the_pythagorean_identity_.wly:8:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\sin^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\cos^2$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/build-img/svgo-svg/hRhs.svg"
+              local_url="./images/svg_ch5_ex_pythagorean_graphs_sin2.svg"
+            />
+            <Pause />
+            <Image
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/build-img/svgo-svg/nEBv.svg"
+              local_url="./images/svg_ch5_ex_pythagorean_graphs_cos2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                It seems that if we would vertically flip
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_where_is_the_pythagorean_identity_.wly:19:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              one of the cutouts 
+              (in this case {" "}
+              <NoBreak>
+                <Math>
+                  $y = \cos^2(x)$
+                </Math>
+                ),
+              </NoBreak>
+              {" "}
+              it would perfectly fit on top of the other to make the
+              constant function {" "}
+              <NoBreak>
+                <Math>
+                  $y = 1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:1.1em;margin-bottom:1.1em;"
+              src="/build-img/svgo-svg/qKN7.svg"
+              local_url="./images/svg_ch5_ex_pythagorean_graphs_compounded.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This is no illusion: {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_where_is_the_pythagorean_identity_.wly:31:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              it occurs because
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos^2(x) + \sin^2(x) = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_where_is_the_pythagorean_identity_.wly:39:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $x \in \rr$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} 
+              i.e., because of 
+              the pythagorean identity!
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={54}>
+          <ExerciseStatement id="_55_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 54.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Based on the graphs of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:4:5
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_53_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 52
+              </InChapterLink>
+              &#8288;,
+              or some other logic,
+              does it seem more likely that 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $x \ra \cos^2 x$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $x \ra \sin^2 x$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $x \ra \cos x\sin x$
+              </Math>
+              {" "} 
+              are more closely related to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(x/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and/or {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:12:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\cos(x/2)$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              or to
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and/or {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:17:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\cos(2x)$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                One can see from the graphs of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:21:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\cos^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <Math>
+                $\sin^2$
+              </Math>
+              {" "}
+              and {" "}
+              <Math>
+                $\sin\cdot\cos$
+              </Math>
+              {" "} that these functions cycle “twice as
+              fast” as sine or cosine, just like {" "}
+              <Math>
+                $x \ra \sin(2x)$
+              </Math>
+              {" "}
+              and {" "}
+              <Math>
+                $x\ra \cos(2x)$
+              </Math>
+              {" "} cycle twice as fast. The answer is
+              therefore: the latter. (I.e., {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\sin(2x)$
+                </Math>
+              </NoBreak>
+              {" "} and/or {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(2x)$
+                </Math>
+                ”.)
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  More mathematically, say that {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:31:13
+                  </span>
+                </span>
+                <Math>
+                  $f : \rr \ra \rr$
+                </Math>
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  has period {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:33:15
+                  </span>
+                </span>
+                <Math>
+                  $T$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  or
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:35:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  is periodic mod {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:37:15
+                  </span>
+                </span>
+                <Math>
+                  $T$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  for some number {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:39:13
+                  </span>
+                </span>
+                <Math>
+                  $T \in \rr$
+                </Math>
+                {" "} if
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                f(x + T) = f(x)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  for all {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:45:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $x \in \dom f$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} Then {" "}
+                <NoBreak>
+                  <Math>
+                    $\sin$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $\cos$
+                </Math>
+                {" "} are
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  periodic mod {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:47:15
+                  </span>
+                </span>
+                <Math>
+                  $4\eta$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  while {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:49:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $\sin^2$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} {" "}
+                <Math>
+                  $\cos^2$
+                </Math>
+                {" "} and {" "}
+                <Math>
+                  $\sin\cos$
+                </Math>
+                {" "} are not
+                only periodic mod {" "}
+                <Math>
+                  $4\eta$
+                </Math>
+                {" "} but accomplish the further
+                feat of being
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  periodic mod {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:53:15
+                  </span>
+                </span>
+                <Math>
+                  $2\eta$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  since, for example,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:55:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \sin(x + 2\eta)\cos(x + 2\eta) = (-\sin x)(-\cos x) = \sin x\cos x
+                $$
+                <ImageLeft
+                  src="/build-img/svgo-svg/hCre.svg"
+                  atLeastAsWide={true}
+                  local_url="./images/e5_more_closely_related_to_sin2x_or_left_2eta_cloud.svg"
+                />
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  for all {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_to_sin2x_or_.wly:65:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $x \in \rr$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} which establishes the periodicity of {" "}
+                <Math>
+                  $\sin\cdot\cos$
+                </Math>
+                {" "} mod
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $2\eta$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} etc.
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={55}>
+          <ExerciseStatement id="_56_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 55.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                For each of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:4:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\cos^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $\sin^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $\sin\cdot\cos$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <List marker="decimal">
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    Choose either {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:9:9
+                    </span>
+                  </span>
+                  <Math>
+                    $\cos(2x)$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} or {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:9:33
+                    </span>
+                  </span>
+                  <Math>
+                    $\sin(2x)$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} as a
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:9:47
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  “most closely related starting point”, according
+                  to your sense of which of {" "}
+                  <Math>
+                    $\cos(2x)$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} or {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:11:45
+                    </span>
+                  </span>
+                  <Math>
+                    $\sin(2x)$
+                  </Math>
+                  {" "}{" "}
+                  {" "}
+                  {" "}
+                  <span class="t-3003-c">
+                    is more closely related to the given function.
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:12:9
+                    </span>
+                  </span>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    Conjecture a sequence of geometric transformations
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:14:9
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  of the plane that takes either {" "}
+                  <Math>
+                    $\cos(2x)$
+                  </Math>
+                  <span class="t-3003-c">
+                    {" "} or {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:15:50
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $\sin(2x)$
+                    </Math>
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:15:64
+                      </span>
+                    </span>
+                  </NoBreak>
+                  {" "}{" "}
+                  {" "}
+                  {" "}
+                  <span class="t-3003-c">
+                    depending on which you chose,
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:16:9
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
+                  onto the graph of the given function (be it {" "}
+                  <NoBreak>
+                    <Math>
+                      $\cos\sin$
+                    </Math>
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:18:63
+                      </span>
+                    </span>
+                  </NoBreak>
+                  {" "}
+                  {" "}
+                  <NoBreak>
+                    <Math>
+                      $\cos^2$
+                    </Math>
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:19:17
+                      </span>
+                    </span>
+                  </NoBreak>
+                  <span class="t-3003-c">
+                    {" "} or {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:19:17
+                    </span>
+                  </span>
+                  <NoBreak>
+                    <Math>
+                      $\sin^2$
+                    </Math>
+                    <span class="t-3003-c">
+                      ).
+                      <span class="t-3003">
+                        ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:19:30
+                      </span>
+                    </span>
+                  </NoBreak>
+                </p>
+              </Item>
+              <Item>
+                <p>
+                  <span class="t-3003-c">
+                    Prove your conjecture by algebra.
+                    <span class="t-3003">
+                      ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:21:9
+                    </span>
+                  </span>
+                </p>
+              </Item>
+            </List>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                For {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:25:9
+                </span>
+              </span>
+              <Math>
+                $\cos^2$
+              </Math>
+              {" "} we take
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(2x)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as our starting point, since the graph of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:31:9
+                </span>
+              </span>
+              <Math>
+                $\cos(2x)$
+              </Math>
+              {" "}
+              seems more closely related to the graph of {" "}
+              <Math>
+                $\cos^2(x)$
+              </Math>
+              {" "}
+              than {" "}
+              <Math>
+                $\sin(2x)$
+              </Math>
+              {" "} is, by virtue of alignment of the bumps:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/yO5U.svg"
+              local_url="./images/e5_more_closely_related_followup_sol1.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Our conjecture, per appearance of the graphs, is that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:38:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $\cos^2$
+              </Math>
+              {" "} is the graph of {" "}
+              <NoBreak>
+                <Math>
+                  $\cos(2x)$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                translated up by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:41:11
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:41:31
+                  </span>
+                </span>
+              </NoBreak>
+              <span class="t-3003-c">
+                {" "} vertically
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:41:31
+                </span>
+              </span>
+              {" "}
+              {" "}
+              scaled by {" "}
+              <Math>
+                $1/2$
+              </Math>
+              <ImageRight
+                src="/build-img/svgo-svg/EWxG.svg"
+                local_url="./images/e5_more_closely_related_followup_cloud1.svg"
+              />
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...or is the graph of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:47:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\cos(2x)$
+                </Math>
+                ...
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                vertically scaled by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:49:11
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $1/2$
+                </Math>
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:49:37
+                  </span>
+                </span>
+              </NoBreak>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                translated up by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:50:9
+                </span>
+              </span>
+              <Math>
+                $1/2$
+              </Math>
+              <ImageLeft
+                src="/build-img/svgo-svg/Hkfc.svg"
+                local_url="./images/e5_more_closely_related_followup_cloud2.svg"
+              />
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...equivalently; for the proof, the sum-formula
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:55:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(A + B) = \cos A\cos B - \sin A\sin B
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                implies
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:63:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(2x) = \cos^2 x - \sin^2 x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                from which
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:70:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              \phantom&#123;=&#125;&amp;\,\,(\cos(2x) + 1)\cdot &#123;1\over 2&#125; \\
+              =&amp;\,\,\up&#123;1.4&#125;(\cos^2 x - \sin^2 x + 1)\cdot &#123;1\over 2&#125; \\
+              =&amp;\,\,\up&#123;1.4&#125;(\cos^2 x + \cos^2 x)\cdot &#123;1\over 2&#125; \\
+              =&amp;\,\,\up&#123;1.4&#125;\cos^2 x
+              \end&#123;aligned&#125;
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/ZFCF.svg"
+                offsetY="1.3em"
+                atLeastAsWide={true}
+                local_url="./images/e5_more_closely_related_followup_cloud4.svg"
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which completes the proof, since
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:85:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\cos(2x) + 1)\cdot &#123;1\over 2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:87:9
+                </span>
+              </span>
+              <Math>
+                $\cos(2x)$
+              </Math>
+              {" "} translated up by {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} scaled
+              vertically by {" "}
+              <NoBreak>
+                <Math>
+                  $&#123;1\over 2&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                For {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:90:9
+                </span>
+              </span>
+              <Math>
+                $\sin^2$
+              </Math>
+              {" "} we can similarly conjecture that
+              {" "}
+              <Math>
+                $\sin^2$
+              </Math>
+              {" "} is the graph of {" "}
+              <Math>
+                $\cos(2x)$
+              </Math>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                vertically scaled by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:93:11
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $-1/2$
+                </Math>
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:93:38
+                  </span>
+                </span>
+              </NoBreak>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                translated up by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:94:9
+                </span>
+              </span>
+              <Math>
+                $1/2$
+              </Math>
+              <ImageLeft
+                src="/build-img/svgo-svg/mQFa.svg"
+                local_url="./images/e5_more_closely_related_followup_cloud3.svg"
+              />
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and, indeed,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:99:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              \phantom&#123;=&#125;&amp;\,\,-&#123;1\over 2&#125;\cos(2x) + &#123;1\over 2&#125;\\
+              =&amp;\,\,\up&#123;1.4&#125;-&#123;1\over 2&#125;(\cos^2 x - \sin^2 x) + &#123;1\over 2&#125;\\
+              =&amp;\,\,\up&#123;1.4&#125;&#123;1\over 2&#125;\sin^2 x + &#123;1\over 2&#125;(1 - \cos^2 x)\\
+              =&amp;\,\,\up&#123;1.4&#125;&#123;1\over 2&#125;\sin^2 x + &#123;1\over 2&#125;\sin^2 x\\
+              =&amp;\,\,\up&#123;1.4&#125;\sin^2 x
+              \end&#123;aligned&#125;
+              $$
+              <ImageLeft
+                src="/build-img/svgo-svg/Xb68.svg"
+                offsetY="0.2em"
+                atLeastAsWide={true}
+                local_url="./images/e5_more_closely_related_followup_cloud5.svg"
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which completes a proof.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:115:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                For {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:117:9
+                </span>
+              </span>
+              <Math>
+                $\sin\cdot\cos$
+              </Math>
+              {" "} it seems that {" "}
+              <Math>
+                $\sin(2x)$
+              </Math>
+              {" "} is
+              more closely related:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/ADAv.svg"
+              local_url="./images/e5_more_closely_related_followup_sol3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                In fact, it seems that {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:123:9
+                </span>
+              </span>
+              <Math>
+                $\sin\cdot\cos$
+              </Math>
+              {" "} is just {" "}
+              <Math>
+                $y = \sin(2x)$
+              </Math>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                vertically scaled by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:125:11
+                </span>
+              </span>
+              <Math>
+                $1/2$
+              </Math>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                which, indeed {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:127:9
+                </span>
+              </span>
+              <NoBreak>
+                (
+                <Math>
+                  $\times 2$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} can be verified from the fact that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(A + B) = \cos A\sin B + \sin A\cos B
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                implies
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:133:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(2x) = 2\sin x\cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by setting {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:139:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $A = B = x$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} which implies
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over 2&#125;\sin(2x) = \sin x\cos x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as per the conjecture!
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:145:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Here is a “pretty” rearrangement of the formulas
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:149:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                discovered above:
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \begin&#123;gathered&#125;
+                  \cos^2(x) = &#123;1\over 2&#125; + &#123;1\over 2&#125;\cos(2x) \\
+                  \up&#123;2.1&#125;\sin^2(x) = &#123;1\over 2&#125; - &#123;1\over 2&#125;\cos(2x) \\
+                  \up&#123;2.1&#125;\sin(x)\cos(x) = &#123;1\over 2&#125;\sin(2x)
+                  \end&#123;gathered&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+              <OuterP>
+                <span class="t-3003-c">
+                  Another pretty arrangement:
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_more_closely_related_followup_.wly:162:13
+                  </span>
+                </span>
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  \begin&#123;gathered&#125;
+                  \cos^2(x) = &#123;1 + \cos(2x) \over 2&#125;\\
+                  \up&#123;2.1&#125;\sin^2(x) = &#123;1 - \cos(2x) \over 2&#125; \\
+                  \up&#123;2.1&#125;\sin(x)\cos(x) = &#123;\sin(2x) \over 2 &#125;
+                  \end&#123;gathered&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={56}>
+          <ExerciseStatement id="_57_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 56.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                The graph {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $y = \cos x + \sin x$
+              </Math>
+              {" "} from {" "}
+              <InChapterLink
+                href="/article/chapter1#_53_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 52
+              </InChapterLink>
+              {" "} has a maximum value greater than {" "}
+              <NoBreak>
+                <Math>
+                  $1$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/TH1y.svg"
+              local_url="./images/svg_ch5_ex_maximum_of_sin_plus_cos.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Reasoning geometrically,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:10:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              what is this maximum value, and for which
+              value(s) of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} is it achieved?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                By the definition,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:19:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos x + \sin x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is the sum
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:23:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              of an {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -coordinate
+              </NoBreak>
+              {" "} and a {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -coordinate.
+              </NoBreak>
+              {" "}
+              We can represent the coordinates as
+              two displacements (changes), one in {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} 
+              one in {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/xf9D.svg"
+              local_url="./images/e5_max_cosx_plus_sinx_sol1_v3_2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                The displacements can be summed geometrically
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:32:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              by tipping the {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\sin x$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} displacement to be
+              horizontal on its side:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/byhq.svg"
+              local_url="./images/e5_max_cosx_plus_sinx_sol1_v3_3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                For short:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:39:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/2Wso.svg"
+              local_url="./images/e5_max_cosx_plus_sinx_sol1_without_lines.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Some more examples (if need be):
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:44:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/yFHg.svg"
+              local_url="./images/e5_max_cosx_plus_sinx_sol1_without_lines_more_examples.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Given this description, it seems obvious (or:
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:49:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              it {" "}
+              <i>
+                is
+              </i>
+              {" "} obvious) that the value of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} that
+              maximizes {" "}
+              <Math>
+                $\cos x + \sin x$
+              </Math>
+              {" "} is {" "}
+              <NoBreak>
+                <Math>
+                  $x = \eta/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              to make the line that rains down at {" "}
+              <Math>
+                $-45^\circ$
+              </Math>
+              {" "}
+              tangent to the circle at the top right corner of
+              the circle, and for which {" "}
+              <NoBreak>
+                <Math>
+                  $\cos x + \sin x = \sqrt&#123;2&#125;$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/xwF6.svg"
+              local_url="./images/e5_max_cosx_plus_sinx_sol1_eta_over_2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (Individually, we have
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:59:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \,\cos(\eta/2)= \sqrt&#123;0.5&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;,
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              \sin(\eta/2)=\sqrt&#123;0.5&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and when we add those two together we get {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:68:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $&#123;2\over \sqrt&#123;2&#125;&#125; = \sqrt&#123;2&#125;$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                Also,
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:70:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                any multiple of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:72:11
+                </span>
+              </span>
+              <Math>
+                $4\eta$
+              </Math>
+              <span class="t-3003-c">
+                {" "} can be added
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:72:34
+                </span>
+              </span>
+            </CentralDisplayItalic>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                [we don't need to say “or subtracted”
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:74:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              because “multiple” intimates “integer multiple”,
+              which subsumes negative multiples]
+              to {" "}
+              <NoBreak>
+                <Math>
+                  $x = \eta/2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} resulting in an infinite
+              set of points at which the maximum is achieved.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  A similar minimum of
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:82:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \large
+                -\sqrt&#123;2&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  occurs at the other end of the circle.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:87:13
+                  </span>
+                </span>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Annotating the graph of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:95:13
+                  </span>
+                </span>
+                <Math>
+                  $x \ra \cos x + \sin x$
+                </Math>
+                {" "}
+                with this new information, in degrees and in radians:
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/GHRw.svg"
+                local_url="./images/e5_cosx_plus_sinx_with_max_min_info.svg"
+              />
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/BJ2x.svg"
+                local_url="./images/e5_cosx_plus_sinx_with_max_min_info_radian_version.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (Note that {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:106:13
+                  </span>
+                </span>
+                <Math>
+                  $45^\circ = 0.78539\ldots = \eta/2$
+                </Math>
+                {" "}
+                as a real number, 
+                the two graphs really express the same thing.
+                Also...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \Large
+                \begin&#123;aligned&#125;
+                 &#123;\eta\over 2&#125; + 180^\circ
+                 =&amp;\,\,\up&#123;1.5&#125; &#123;\eta\over 2&#125; + 2\eta\\
+                 =&amp;\,\,\up&#123;1.5&#125; &#123;\eta\over 2&#125; + &#123;4\eta\over 2&#125;\\
+                 =&amp;\,\,\up&#123;1.5&#125; &#123;5\eta\over 2&#125;
+                \end&#123;aligned&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...in case you haven't seen this kind of
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_max_cosx_plus_sinx_new_new_ver_.wly:125:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                arithmetic before.)
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={57}>
+          <ExerciseStatement id="_58_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 57.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                A geometric interpretation of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $\cos x + \sin x$
+              </Math>
+              {" "} is given in {" "}
+              <InChapterLink
+                href="/article/chapter1#_57_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 56
+              </InChapterLink>
+              {" "}
+              that, to recap, involves “raining down at {" "}
+              <NoBreak>
+                <Math>
+                  $-45^\circ$
+                </Math>
+                ”
+              </NoBreak>
+              {" "}
+              onto the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis, as illustrated here:
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/77pT.svg"
+              local_url="./images/e5_cosx_plus_sinx_as_geometric_cos_1_v2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Using this geometric insight, how can we express
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:12:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <Math>
+                $x \ra \cos x + \sin x$
+              </Math>
+              {" "} as a function of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              x \ra A\cdot\cos(Bx + C) + D
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for some constants {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:19:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $A$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $C$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $D$
+                </Math>
+                ?
+              </NoBreak>
+              {" "} (Deduce the answer
+              using geometry, and, if you have the heart, verify using
+              algebra.)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Imagine a large ruler living below the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:25:9
+                </span>
+              </span>
+              <Math>
+                $x$
+              </Math>
+              {" "} axis,
+              off of which we read the values of {" "}
+              <NoBreak>
+                <Math>
+                  $\cos x + \sin x$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/US0B.svg"
+              local_url="./images/e5_cosx_plus_sinx_as_geometric_cos_2.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (This ruler contains just the same numbers as the {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:31:9
+                </span>
+              </span>
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              axis in the same place, but need only go from {" "}
+              <Math>
+                $-\sqrt&#123;2&#125;$
+              </Math>
+              {" "}
+              to {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} those being the minimum and maximum values
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $\theta \ra \cos\theta + \sin\theta$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} as covered in {" "}
+              <InChapterLink
+                href="/article/chapter1#_57_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 56
+              </InChapterLink>
+              &#8288;.)
+              Alternately, we could read values off of a ruler placed
+              at {" "}
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "} through the circle...
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/DXtE.svg"
+              local_url="./images/e5_cosx_plus_sinx_as_geometric_cos_3.svg"
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...and then later multiply by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:41:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} to recover the
+              original “scale” of the horizontal ruler. However, the
+              value on the diagonal ruler is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(x - \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                as one can see by rotating the entire diagram {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:49:9
+                </span>
+              </span>
+              <Math>
+                $45^\circ$
+              </Math>
+              {" "}
+              clockwise until that ruler aligns with the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} axis;
+              therefore,
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \cos x + \sin x = \sqrt&#123;2&#125;\cdot\cos(x - \eta/2)
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                ...where you can think of the left-hand side of the
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:58:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              equation as the value on the original “big” horizontal
+              ruler (from {" "}
+              <Math>
+                $-\sqrt&#123;2&#125;$
+              </Math>
+              {" "} to {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+                ),
+              </NoBreak>
+              {" "} and the value on
+              the right-hand side as the coordinate read off of the “small
+              diagonal ruler” re-normalized by the factor {" "}
+              <NoBreak>
+                <Math>
+                  $\sqrt&#123;2&#125;$
                 </Math>
                 .
               </NoBreak>
               {" "}
-              (So
+              Concretely,
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
+              \begin&#123;gathered&#125;
+              A = \sqrt&#123;2&#125;,\\
+              B = \up&#123;1.3&#125;1,\\
+              C = \up&#123;1.3&#125;-\eta/2,\\
+              D = \up&#123;1.3&#125;0,
+              \end&#123;gathered&#125;
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              is about {" "}
-              <NoBreak>
-                <Math>
-                  $0.01$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} while making an error of about
+              <span class="t-3003-c">
+                as those parameters appear in the problem statement.
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:74:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                Now for the ALGEBRAIC VERIFICATION {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:76:9
+                </span>
+              </span>
               {" "}
-              <NoBreak>
-                <Math>
-                  $0.001$
-                </Math>
-                .)
-              </NoBreak>
-              {" "} (In fact,
+              {" "}
+              that can accompany this geometric observation, we
+              use the angle-sum formula
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over 10^2\cdot 11&#125;
+              \cos(A + B) = \cos A\cos B - \sin A\sin B
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              is {" "}
-              <i>
-                less
-              </i>
-              {" "} than {" "}
+              <span class="t-3003-c">
+                for cosine, giving us...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:83:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              &amp;\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; - \sin(x)(-\sqrt&#123;0.5&#125;)) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos x + \sin x) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2 \cdot 0.5&#125;\cdot(\cos x + \sin x) \\
+              \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;1&#125;\cdot(\cos x + \sin x) \\
+              \up&#123;1.6&#125; =&amp;\,\, \cos x + \sin x
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...victory!!
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:96:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The fact that
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:100:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \sqrt&#123;2&#125;\cdot \sqrt&#123;0.5&#125; = 1
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  can also be seen from the fact that
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:104:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  previously discussed.
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:108:13
+                  </span>
+                </span>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If we admit
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:112:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \cos(A - B) = \cos A\cos B + \sin A\sin B
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (replace {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:118:13
+                  </span>
+                </span>
+                <Math>
+                  $B$
+                </Math>
+                {" "} by {" "}
+                <Math>
+                  $-B$
+                </Math>
+                {" "} in the angle-sum formula
+                for cosine, and use the fact that {" "}
+                <NoBreak>
+                  <Math>
+                    $\cos(-B) = \cos B$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "}
+                {" "}
+                <Math>
+                  $\sin(-B) = -\sin B$
+                </Math>
+                {" "} for all {" "}
+                <NoBreak>
+                  <Math>
+                    $B\in \rr$
+                  </Math>
+                  )
+                </NoBreak>
+                {" "} into the
+                “roster of known formulas”, the algebraic proof
+                becomes...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;aligned&#125;
+                &amp;\,\, \sqrt&#123;2&#125;\cdot \cos(x - \eta/2) \\
+                \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\cos(\eta/2) + \sin(x)\sin(\eta/2)) \\
+                \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot(\cos(x)\sqrt&#123;0.5&#125; + \sin(x)\sqrt&#123;0.5&#125;) \\
+                \up&#123;1.6&#125; =&amp;\,\, \sqrt&#123;2&#125;\cdot\sqrt&#123;0.5&#125;\cdot(\cos x + \sin x) \\
+                \up&#123;1.6&#125; =&amp;\,\, \cos x + \sin x
+                \end&#123;aligned&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...a bit simpler, with fewer {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:134:13
+                  </span>
+                </span>
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $-$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "} signs in particular.
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 3.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Note that the graph...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:138:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                y = \sqrt&#123;2&#125;\cos(x - \eta/2)
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...as it is the graph of the composition...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:144:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/4t6F.svg"
+                local_url="./images/e5_cosx_plus_sinx_as_geometric_cos_composition.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  (...cf. {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:149:13
+                  </span>
+                </span>
+                <InChapterLink
+                  href="/article/chapter1#_34_h.a.i_"
+                  class="in-chapter-link"
+                >
+                  Exercise 33
+                </InChapterLink>
+                &#8288;) 
+                can be obtained from...
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                y = \cos x
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...by...
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:156:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  1. translating horizontally by {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:158:15
+                  </span>
+                </span>
+                <Math>
+                  $\eta/2$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} to the right
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:158:54
+                  </span>
+                </span>
+              </CentralDisplayItalic>
+              <Pause />
+              <CentralDisplayItalic>
+                <span class="t-3003-c">
+                  2. dilating vertically by {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:160:15
+                  </span>
+                </span>
+                <Math>
+                  $\sqrt&#123;2&#125;$
+                </Math>
+              </CentralDisplayItalic>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...and, on the other hand, if we take a look at the
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:162:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                previously “annotated” graph of {" "}
+                <Math>
+                  $x \ra \cos x + \sin x$
+                </Math>
+                {" "}
+                (cf. {" "}
+                <InChapterLink
+                  href="/article/chapter1#_57_h.a.i_"
+                  class="in-chapter-link"
+                >
+                  Exercise 56
+                </InChapterLink>
+                &#8288;)...
+              </OuterP>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/8ykE.svg"
+                local_url="./images/e5_cosx_plus_sinx_with_max_min_info_radian_version_without_arrows.svg"
+              />
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  ...it certainly {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5/ch5^exercises/_cosx_plus_sinx_as_sinusoid_.wly:169:13
+                  </span>
+                </span>
+                <i>
+                  looks like
+                </i>
+                {" "} this curve could be obtained by
+                translating the graph {" "}
+                <Math>
+                  $y = \cos x$
+                </Math>
+                {" "} horizontally by
+                {" "}
+                <Math>
+                  $\eta/2$
+                </Math>
+                {" "} and then scaling vertically by {" "}
+                <NoBreak>
+                  <Math>
+                    $\sqrt&#123;2&#125;$
+                  </Math>
+                  .
+                </NoBreak>
+                {" "} 
+                And it {" "}
+                <i>
+                  looks
+                </i>
+                {" "} so because it {" "}
+                <i>
+                  is
+                </i>
+                {" "} so!
+                (We know that, now, because we have proved that {" "}
+                <Math>
+                  $\cos x + \sin x = \sqrt&#123;2&#125;\cos(x - \eta/2)$
+                </Math>
+                {" "}
+                for all {" "}
+                <NoBreak>
+                  <Math>
+                    $x \in \rr$
+                  </Math>
+                  .)
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={58}>
+          <ExerciseStatement id="_59_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 58.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Show that for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $A, B \in \rr$
+              </Math>
+              {" "} there exists
+              {" "}
               <NoBreak>
                 <Math>
-                  $1/10^3$
+                  $W$
                 </Math>
                 ,
               </NoBreak>
-              {" "} so the error is {" "}
-              <i>
-                less
-              </i>
-              {" "}
-              than {" "}
+              {" "} {" "}
+              <Math>
+                $\psi \in \rr$
+              </Math>
+              {" "} such that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A\cos x + B\sin x = W\cdot\cos(x - \psi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:11:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
-                  $0.001$
+                  $x \in \rr$
                 </Math>
-                .)
+                .
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Starting from the desired endpoint, note that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:15:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos(x - \psi) = \cos x\cos\psi + \sin x \sin \psi
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                by the “angle-difference formula” (cf. {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:21:9
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_51_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 50
+              </InChapterLink>
+              &#8288;) so
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              W\cdot\cos(x - \psi)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                equals
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:27:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (W\cos\psi)\cdot\cos x + (W\sin\psi)\cdot\sin x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                where we suggestively group the terms to underscore
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:33:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              that all we need to do in order to “win” is to satisfy 
+              the equations
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;aligned&#125;
+              A &amp;=         W\cos\psi,\\
+              B &amp;= \up&#123;1.5&#125;W\rt&#123;0.1&#125;\sin\psi\,
+              \end&#123;aligned&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and this can be done simply by setting {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:44:9
+                </span>
+              </span>
+              <Math>
+                $(W, \psi)$
+              </Math>
+              {" "} to
+              be the polar coordinates of the cartesian point {" "}
+              <NoBreak>
+                <Math>
+                  $(A, B) \in \rr^2$
+                </Math>
+                !
+              </NoBreak>
+              {" "}
+              I.e., put
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              W = \sqrt&#123;A^2 + B^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and...
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:52:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \psi = \begin&#123;cases&#125;
+              \arctan(B/A)&amp;\te&#123;if &#125;\, A \ne 0, \,\te&#123;else&#125; \\
+              \up&#123;1.2&#125;\te&#123;arccot&#125;(A/B) &amp;\te&#123;if &#125;\, B \ne 0, \,\te&#123;else&#125; \\
+              \up&#123;1.2&#125;\rm&#123;anything&#125; &amp;\te&#123;if &#125;\, A = 0, B = 0
+              \end&#123;cases&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                ...where we copy-paste a formula from the chapter. {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:62:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              (Or just {" "}
+              <span class="code-cartouche">
+                psi = atan2(B, A)
+              </span>
+              {" "} if we were writing python.*) (*Indeed,
+              {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $\psi$
+                </Math>
+                ”
+              </NoBreak>
+              {" "} is “psi”.)
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={59}>
+          <ExerciseStatement id="_60_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 59.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Relate {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:4:5
+                </span>
+              </span>
+              <InChapterLink
+                href="/article/chapter1#_58_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 57
+              </InChapterLink>
+              {" "} to {" "}
+              <InChapterLink
+                href="/article/chapter1#_59_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 58
+              </InChapterLink>
+              &#8288;.
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              {" "}{" "}
+              <InChapterLink
+                href="/article/chapter1#_58_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 57
+              </InChapterLink>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                establishes that
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:23:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos x + \sin x = \sqrt&#123;2&#125;\cos(x - \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                but this is the special case
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:29:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              A = B = 1
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                of
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:33:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <InChapterLink
+                href="/article/chapter1#_59_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 58
+              </InChapterLink>
+              {" "} since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \cos x + \sin x = 1\cdot \cos x + 1\cdot \sin x
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                and since
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:40:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (\sqrt&#123;2&#125;, \eta/2)
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                are the (“the”) polar coordinates of the point {" "}
+                <span class="t-3003">
+                  ./src/content/ch5/ch5^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:46:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $(1, 1) \in \rr^2$
+                </Math>
+                !
               </NoBreak>
             </OuterP>
           </Solution>
