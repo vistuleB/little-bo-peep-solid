@@ -1,7 +1,6 @@
 export const MOBILE_MAX_WIDTH = 900;
-export const DESKTOP_COLUMN_WIDTH = 488;
-export const TEXT_X_PADDING = 20;
-export const MOBILE_TEXT_X_PADDING = 22;
+export const DESKTOP_TEXT_COLUMN_WIDTH = 448;
+export const MOBILE_TEXT_COLUMN_SIDE_INSET = 22;
 export const HEADER_BUTTONS_SCROLLY_START_FADE = 800;
 export const HEADER_BUTTONS_SCROLLY_END_FADE = 2000;
 export const HEADER_BOTTOM_BORDER_SCROLLY_START_FADE = 300;
@@ -34,13 +33,12 @@ export const MATHJAX_INTERSECTION_FALLBACK_DELAY_MS = 500;
 export const setContentsAsCssVars = () => {
   const root = document.documentElement;
   root.style.setProperty(
-    "--desktop-text-column-width-with-padding",
-    `${DESKTOP_COLUMN_WIDTH}px`,
+    "--desktop-text-column-width",
+    `${DESKTOP_TEXT_COLUMN_WIDTH}px`,
   );
-  root.style.setProperty("--text-x-padding", `${TEXT_X_PADDING}px`);
   root.style.setProperty(
-    "--mobile-text-x-padding",
-    `${MOBILE_TEXT_X_PADDING}px`,
+    "--mobile-text-column-side-inset",
+    `${MOBILE_TEXT_COLUMN_SIDE_INSET}px`,
   );
   root.style.setProperty("--mobile-max-width", `${MOBILE_MAX_WIDTH}px`);
 };

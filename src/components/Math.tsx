@@ -11,7 +11,8 @@ import {
   ENABLE_MATHJAX_INTERSECTION_FALLBACK,
   MATHJAX_INTERSECTION_FALLBACK_DELAY_MS,
   MATHJAX_INTERSECTION_ROOT_MARGIN_PX,
-  TEXT_X_PADDING,
+  MOBILE_MAX_WIDTH,
+  MOBILE_TEXT_COLUMN_SIDE_INSET,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import SharedProps from "./types/SharedProps";
@@ -179,13 +180,17 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
   const [localInnerWidthCopy, setLocalInnerWidthCopy] = createSignal(0);
   let firstMeasureOfOriginalWidth = 0;
 
+  const availableViewportWidth = (viewportWidth: number) =>
+    viewportWidth -
+    (viewportWidth <= MOBILE_MAX_WIDTH ? MOBILE_TEXT_COLUMN_SIDE_INSET * 2 : 0);
+
   const handleClick = () => {
     setScaledDown(!scaledDown());
   };
 
   const shouldBeScaledDown = () => {
     if (ref && originalWidth() > 0) {
-      return originalWidth() > localInnerWidthCopy() - TEXT_X_PADDING * 2;
+      return originalWidth() > availableViewportWidth(localInnerWidthCopy());
     }
     return false;
   };
@@ -269,11 +274,11 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
     if (scaledDown()) {
       console.log(
         "setting it here to: ",
-        store.innerWidth - TEXT_X_PADDING * 2 + "px",
+        availableViewportWidth(store.innerWidth) + "px",
       );
       ref?.style.setProperty(
         "width",
-        store.innerWidth - TEXT_X_PADDING * 2 + "px",
+        availableViewportWidth(store.innerWidth) + "px",
       );
       return;
     }

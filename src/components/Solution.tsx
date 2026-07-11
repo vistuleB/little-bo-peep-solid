@@ -10,14 +10,15 @@ import {
 import SharedProps from "./types/SharedProps";
 import {
   BATCH_SOLUTION_SCROLL_ANCHOR_FRAMES,
-  DESKTOP_COLUMN_WIDTH,
+  DESKTOP_TEXT_COLUMN_WIDTH,
   GREEN_DIV_HEIGHT,
   MOBILE_MAX_WIDTH,
-  TEXT_X_PADDING,
   PREV_NEXT_EXERCISE_BUTTON_W,
   PREV_NEXT_EXERCISE_BUTTON_RX,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
+
+const SOLUTION_BUTTON_INLINE_PADDING = 20;
 import { Spacer, SpacerSm, SpacerXs, SpacerXXs } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
@@ -259,7 +260,7 @@ export const Solution = (props: SolutionProps) => {
           {props.children}
         </div>
         <div
-          style={`width:${global_store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : global_store.innerWidth}px;`}
+          style={`width:${global_store.innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_TEXT_COLUMN_WIDTH : global_store.innerWidth}px;`}
           class={twJoin(
             "absolute top-0 left-1/2 -translate-x-1/2 spacer-100 bg-bg",
             solution_fully_opened() && "opacity-0",
@@ -368,7 +369,7 @@ const SolutionButton = (props: SolutionBtnProps) => {
         props.setButtonRef(el);
       }}
       class="relative"
-      style={`padding-inline: ${TEXT_X_PADDING}px`}
+      style={`padding-inline: ${SOLUTION_BUTTON_INLINE_PADDING}px`}
     >
       <SolutionSVG
         solution_open={solution_open}

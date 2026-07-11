@@ -24,7 +24,6 @@
 
 :root {
   zoom: 100%;
-  --desktop-text-column-padding: var(--text-x-padding);
   /* --background-rgb: rgb(255, 249, 249); */
   --background-rgb: #fff9f9;
   --foreground-rgb: rgb(0, 0, 0);
@@ -436,7 +435,7 @@ table.first-line tr td:first-child {
 }
 
 .max-width-screen {
-  max-width: calc(100vw - var(--desktop-text-column-padding) * 2);
+  max-width: 100vw;
 }
 
 .bg-red-500 {
@@ -761,38 +760,29 @@ ul.toc_ul {
 }
 
 @media (width <= 900px) {
-  :root {
-    --desktop-text-column-padding: var(--mobile-text-x-padding);
-  }
   .text-column {
-    width: calc(100vw - 2 * var(--desktop-text-column-padding));
+    width: calc(100vw - 2 * var(--mobile-text-column-side-inset));
   }
   .text-column-90 {
-    width: calc(90vw - 2 * var(--desktop-text-column-padding));
+    width: calc(90vw - 2 * var(--mobile-text-column-side-inset));
   }
   .text-column-80 {
-    width: calc(80vw - 2 * var(--desktop-text-column-padding));
+    width: calc(80vw - 2 * var(--mobile-text-column-side-inset));
+  }
+  .max-width-screen {
+    max-width: calc(100vw - 2 * var(--mobile-text-column-side-inset));
   }
 }
 
 @media (width > 900px) {
   .text-column {
-    width: calc(
-      var(--desktop-text-column-width-with-padding) - 2 *
-        var(--desktop-text-column-padding)
-    );
+    width: var(--desktop-text-column-width);
   }
   .text-column-90 {
-    width: calc(
-      0.9 * var(--desktop-text-column-width-with-padding) - 2 *
-        var(--desktop-text-column-padding)
-    );
+    width: calc(0.9 * var(--desktop-text-column-width));
   }
   .text-column-80 {
-    width: calc(
-      0.8 * var(--desktop-text-column-width-with-padding) - 2 *
-        var(--desktop-text-column-padding)
-    );
+    width: calc(0.8 * var(--desktop-text-column-width));
   }
 }
 

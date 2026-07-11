@@ -1,6 +1,6 @@
 import { createEffect, createSignal, onCleanup } from "solid-js";
 import {
-  DESKTOP_COLUMN_WIDTH,
+  DESKTOP_TEXT_COLUMN_WIDTH,
   HEADER_BUTTONS_SCROLLY_END_FADE,
   HEADER_BUTTONS_SCROLLY_START_FADE,
 } from "~/constants";
@@ -63,7 +63,7 @@ const PageUpDownArrows = () => {
       onMouseOut={() => set_hovered(false)}
       style={{
         opacity: hovered() ? 1 : opacity(),
-        left: `${effectiveMarginWidth() - store.scrollX + DESKTOP_COLUMN_WIDTH}px`,
+        left: `${effectiveMarginWidth() - store.scrollX + DESKTOP_TEXT_COLUMN_WIDTH}px`,
       }}
       class="fixed bottom-3"
     >

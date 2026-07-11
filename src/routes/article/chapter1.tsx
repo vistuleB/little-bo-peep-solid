@@ -456,7 +456,7 @@ export default function __Chapter1__() {
             .)
           </NoBreak>
           {" "} For example, 
-          observe from the graphs 
+          the graphs show
           that {" "}
           <NoBreak>
             <Math>
@@ -552,14 +552,13 @@ export default function __Chapter1__() {
             $\cos(-3) \approx -0.99$
           </Math>
           {" "}
-          (or something very close to {" "}
+          (or something close to {" "}
           <NoBreak>
             <Math>
               $-1$
             </Math>
-            ,
+            ):
           </NoBreak>
-          {" "} at least):
         </OuterP>
         <Pause />
         <Image

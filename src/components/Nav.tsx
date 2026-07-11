@@ -1,10 +1,9 @@
 import { createEffect, createSignal, onMount } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
-  DESKTOP_COLUMN_WIDTH,
+  DESKTOP_TEXT_COLUMN_WIDTH,
   MOBILE_MAX_WIDTH,
-  MOBILE_TEXT_X_PADDING,
-  TEXT_X_PADDING,
+  MOBILE_TEXT_COLUMN_SIDE_INSET,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import useScrollX from "~/hooks/useScrollX";
@@ -68,10 +67,9 @@ const Title = (props: { navPosition: "fixed" | "absolute" }) => {
     const columnLeft = onMobile
       ? 0
       : props.navPosition === "fixed"
-        ? (store.innerWidth - DESKTOP_COLUMN_WIDTH) / 2
-        : (containerWidth() - DESKTOP_COLUMN_WIDTH) / 2;
-    const xPadding = onMobile ? MOBILE_TEXT_X_PADDING : TEXT_X_PADDING;
-    const leftPos = columnLeft + xPadding;
+        ? (store.innerWidth - DESKTOP_TEXT_COLUMN_WIDTH) / 2
+        : (containerWidth() - DESKTOP_TEXT_COLUMN_WIDTH) / 2;
+    const leftPos = columnLeft + (onMobile ? MOBILE_TEXT_COLUMN_SIDE_INSET : 0);
     headerBlob.style.left = `${leftPos}px`;
   });
 

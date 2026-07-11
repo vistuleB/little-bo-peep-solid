@@ -9,10 +9,11 @@ import {
   createSignal,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
-import { TEXT_X_PADDING } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import { useGlobalContext } from "~/store/StoreProvider";
 import styleJoin from "~/utils/styleJoin";
+
+const GRID_INLINE_PADDING = 20;
 
 type GridProps = ParentProps &
   SharedProps & {
@@ -90,10 +91,11 @@ const Grid = (_props: GridProps) => {
         {
           marginTop: `${props.marginTop}px`,
           marginBottom: `${props.marginBottom}px`,
-          paddingInline: props.withPadding ? `${TEXT_X_PADDING}px` : "0",
+          paddingInline: props.withPadding ? `${GRID_INLINE_PADDING}px` : "0",
         },
         props.style,
-      )}>
+      )}
+    >
       <div
         ref={parentSpan}
         class={`text-column !grid list-none`}
@@ -102,7 +104,8 @@ const Grid = (_props: GridProps) => {
           "place-items": props.placeItems,
           animation: "appear 2s ease 0s 1 normal forwards",
           gap: props.gap,
-        }}>
+        }}
+      >
         <For each={children_array}>
           {(child, index) => {
             const isLastInRow =
@@ -110,7 +113,8 @@ const Grid = (_props: GridProps) => {
               children_array.length % cols() !== 0;
             return (
               <span
-                class={twJoin("w-max", isLastInRow && "col-span-full w-max")}>
+                class={twJoin("w-max", isLastInRow && "col-span-full w-max")}
+              >
                 {child}
               </span>
             );

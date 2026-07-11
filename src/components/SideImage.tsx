@@ -9,7 +9,6 @@ import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
 import { useScale } from "~/store/ScaleProvider";
-import { TEXT_X_PADDING } from "~/constants";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 const LINE_HEIGHT = 30;
@@ -65,7 +64,7 @@ const SideImage = (props: InternalSideImageProps) => {
   const scale = useScale();
   const [parentWidth, setParentWidth] = createSignal(0);
   const [parentMeasured, setParentMeasured] = createSignal(false);
-  const textWidth = () => mainColumnWidth() - 2 * TEXT_X_PADDING;
+  const textWidth = () => mainColumnWidth();
   const sideScale = () => scale().scale;
   const offsetX = () => scaledCssLength(props.offsetX, sideScale());
   const offsetY = () => scaledCssLength(props.offsetY, sideScale());
@@ -112,16 +111,8 @@ const SideImage = (props: InternalSideImageProps) => {
     >
       <div
         style={{
-          left: getLeft(
-            props.side,
-            offsetX(),
-            widthInflationOffset(),
-          ),
-          right: getRight(
-            props.side,
-            offsetX(),
-            widthInflationOffset(),
-          ),
+          left: getLeft(props.side, offsetX(), widthInflationOffset()),
+          right: getRight(props.side, offsetX(), widthInflationOffset()),
           top: getTop(props.line, offsetY(), sideScale()),
           transform: `translateY(-50%) scale(${sideScale()})`,
           padding: `${props.padding}`,

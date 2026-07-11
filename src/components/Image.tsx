@@ -10,7 +10,7 @@ import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
-import { TEXT_X_PADDING } from "~/constants";
+import { MOBILE_MAX_WIDTH, MOBILE_TEXT_COLUMN_SIDE_INSET } from "~/constants";
 import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
 
 const SHOW_DEBUG_COLORS = false;
@@ -93,7 +93,13 @@ const Image = (props: ImageProps) => {
   };
 
   const availableViewportWidth = () =>
-    Math.max(0, viewportWidth() - TEXT_X_PADDING * 2);
+    Math.max(
+      0,
+      viewportWidth() -
+        (viewportWidth() <= MOBILE_MAX_WIDTH
+          ? MOBILE_TEXT_COLUMN_SIDE_INSET * 2
+          : 0),
+    );
 
   const targetScale = () => {
     const intrinsicWidth = imageIntrinsicWidth();
