@@ -1,5 +1,4 @@
 import { onMount, onCleanup, ParentProps } from "solid-js";
-import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import useSetRoute from "~/hooks/useSetRoute";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
@@ -8,13 +7,9 @@ import useOnMobile from "../hooks/useOnMobile";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import useAuthorMode from "~/hooks/useAuthorMode";
 import useHorizontalSwipeNavigation from "~/hooks/useHorizontalSwipeNavigation";
+import useHorizontalPageMotion from "~/hooks/useHorizontalPageMotion";
+import { setPendingHorizontalSwipeArrival } from "~/utils/horizontalSwipeArrival";
 import { useLocation } from "@solidjs/router";
-import {
-  HORIZONTAL_SCROLL_END_FALLBACK_DELAY_MS,
-  HORIZONTAL_SCROLL_SNAP_BACK_DURATION_MS,
-  HORIZONTAL_SCROLL_SNAP_BACK_MAX,
-  HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO,
-} from "~/constants";
 
 const env = import.meta.env.VITE_ENV;
 
@@ -30,13 +25,21 @@ const Page = (props: ParentProps & PageProps) => {
   const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
   const location = useLocation();
+  const { alignImmediately } = useHorizontalPageMotion();
 
   useHorizontalSwipeNavigation({
-    onSwipeLeft: getNextPage,
-    onSwipeRight: getPrevPage,
+    onSwipeLeft: () => {
+      if (!store.nextPage) return;
+      setPendingHorizontalSwipeArrival("left", store.nextPage);
+      getNextPage();
+    },
+    onSwipeRight: () => {
+      if (!store.prevPage) return;
+      setPendingHorizontalSwipeArrival("right", store.prevPage);
+      getPrevPage();
+    },
   });
 
-  useScrollX();
   useScrollIsAt0();
   useSetRoute();
   useBreadcrumbs();
@@ -46,99 +49,6 @@ const Page = (props: ParentProps & PageProps) => {
   set_store("maxElementWidth", props.maxElementWidth || 0);
   set_store("nextPage", props.nextPage || "");
   set_store("prevPage", props.prevPage || "");
-
-  let snapBackAnimationFrame: number | undefined;
-  let scrollEndFallbackTimeout: number | undefined;
-  let snapBackAnimationRunning = false;
-  const supportsScrollEnd = "onscrollend" in document;
-
-  const cancelSnapBackAnimation = () => {
-    if (snapBackAnimationFrame !== undefined) {
-      cancelAnimationFrame(snapBackAnimationFrame);
-      snapBackAnimationFrame = undefined;
-    }
-    snapBackAnimationRunning = false;
-  };
-
-  const animateHorizontalSnapBack = (targetX: number) => {
-    cancelSnapBackAnimation();
-
-    const startX = window.scrollX;
-    const distance = targetX - startX;
-    const startedAt = performance.now();
-    snapBackAnimationRunning = true;
-
-    const tick = (now: number) => {
-      const progress = Math.min(
-        1,
-        (now - startedAt) / HORIZONTAL_SCROLL_SNAP_BACK_DURATION_MS,
-      );
-      const easedProgress = 1 - Math.pow(1 - progress, 3);
-
-      window.scroll({
-        left: startX + distance * easedProgress,
-        behavior: "instant",
-      });
-
-      if (progress < 1) {
-        snapBackAnimationFrame = requestAnimationFrame(tick);
-        return;
-      }
-
-      snapBackAnimationFrame = undefined;
-      snapBackAnimationRunning = false;
-    };
-
-    snapBackAnimationFrame = requestAnimationFrame(tick);
-  };
-
-  // **********************
-  // **** handleScroll ****
-  // **********************
-
-  const handleScroll = () => {
-    set_store("scrollY", window.scrollY);
-    set_store("scrollX", window.scrollX);
-
-    if (!supportsScrollEnd && !snapBackAnimationRunning) {
-      clearTimeout(scrollEndFallbackTimeout);
-      scrollEndFallbackTimeout = window.setTimeout(
-        handleScrollFinished,
-        HORIZONTAL_SCROLL_END_FALLBACK_DELAY_MS,
-      );
-    }
-  };
-
-  // ************************************
-  // **** handleScrollendAndTouchend ****
-  // ************************************
-
-  const handleScrollFinished = () => {
-    if (snapBackAnimationRunning) return;
-
-    const scrollXWhenCentered =
-      (document.body.scrollWidth - window.innerWidth) / 2;
-    const distanceFromCentered = Math.abs(window.scrollX - scrollXWhenCentered);
-
-    if (distanceFromCentered < 1) {
-      set_store("margin_mode", false);
-      return;
-    }
-
-    if (
-      distanceFromCentered <
-      Math.min(
-        HORIZONTAL_SCROLL_SNAP_BACK_MAX,
-        HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO * store.innerWidth,
-      )
-    ) {
-      animateHorizontalSnapBack(scrollXWhenCentered);
-      set_store("margin_mode", false);
-      return;
-    }
-
-    set_store("margin_mode", true);
-  };
 
   // **********************
   // **** handleResize ****
@@ -163,10 +73,7 @@ const Page = (props: ParentProps & PageProps) => {
       oldInnerWidth != store.innerWidth ||
       oldScrollWidth != store.scrollWidth
     ) {
-      window.scroll({
-        left: (store.scrollWidth - store.innerWidth) / 2,
-        behavior: "instant",
-      });
+      alignImmediately();
     }
   };
 
@@ -297,30 +204,17 @@ const Page = (props: ParentProps & PageProps) => {
   };
 
   onMount(() => {
-    handleScroll();
     handleResize();
     if (location.pathname !== "/") {
       set_store("have_been_outside_home", true);
     }
 
-    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-    if (supportsScrollEnd) {
-      document.addEventListener("scrollend", handleScrollFinished);
-    }
-    document.addEventListener("touchstart", cancelSnapBackAnimation);
     window.addEventListener("click", handleClick, { capture: true });
     window.addEventListener("keydown", handleKeydown);
 
     onCleanup(() => {
-      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
-      if (supportsScrollEnd) {
-        document.removeEventListener("scrollend", handleScrollFinished);
-      }
-      document.removeEventListener("touchstart", cancelSnapBackAnimation);
-      clearTimeout(scrollEndFallbackTimeout);
-      cancelSnapBackAnimation();
       window.removeEventListener("click", handleClick, { capture: true });
       window.removeEventListener("keydown", handleKeydown);
     });

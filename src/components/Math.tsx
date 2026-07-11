@@ -29,6 +29,7 @@ type MathJaxFallbackEntry = {
   routeReady: Accessor<boolean>;
   afterTypeset?: () => void;
   typesetting: boolean;
+  active: boolean;
 };
 
 const mathJaxFallbackEntries = new Set<MathJaxFallbackEntry>();
@@ -43,7 +44,7 @@ const nearMathJaxObserverViewport = (el: HTMLElement) => {
 };
 
 const completeTypeset = (entry: MathJaxFallbackEntry) => {
-  if (entry.visible()) return false;
+  if (!entry.active || !entry.ref.isConnected || entry.visible()) return false;
 
   entry.setVisible(true);
   entry.setScrollHeight();
@@ -52,7 +53,14 @@ const completeTypeset = (entry: MathJaxFallbackEntry) => {
 };
 
 const typesetMath = async (entry: MathJaxFallbackEntry) => {
-  if (entry.visible() || entry.typesetting) return false;
+  if (
+    !entry.active ||
+    !entry.ref.isConnected ||
+    entry.visible() ||
+    entry.typesetting
+  ) {
+    return false;
+  }
 
   entry.typesetting = true;
   try {
@@ -67,7 +75,11 @@ const runMathJaxFallbackSweep = async () => {
   mathJaxFallbackTimeout = undefined;
 
   const pendingEntries = [...mathJaxFallbackEntries].filter(
-    (entry) => !entry.visible() && !entry.typesetting,
+    (entry) =>
+      entry.active &&
+      entry.ref.isConnected &&
+      !entry.visible() &&
+      !entry.typesetting,
   );
 
   const entries = pendingEntries.filter(
@@ -143,6 +155,7 @@ export const Math = (props: ParentProps) => {
           setScrollHeight,
           routeReady,
           typesetting: false,
+          active: true,
         }
       : undefined;
     const observer = new IntersectionObserver(
@@ -161,6 +174,7 @@ export const Math = (props: ParentProps) => {
     registerMathJaxFallback(mathJaxEntry);
 
     onCleanup(() => {
+      if (mathJaxEntry) mathJaxEntry.active = false;
       observer.disconnect();
       unregisterMathJaxFallback(mathJaxEntry);
     });
@@ -228,6 +242,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
           routeReady,
           afterTypeset: measureOriginalWidth,
           typesetting: false,
+          active: true,
         }
       : undefined;
     const observer = new IntersectionObserver(
@@ -270,6 +285,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
     window.addEventListener("resize", handleResize);
 
     onCleanup(() => {
+      if (mathJaxEntry) mathJaxEntry.active = false;
       observer.disconnect();
       unregisterMathJaxFallback(mathJaxEntry);
       window.removeEventListener("resize", handleResize);

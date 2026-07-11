@@ -204,10 +204,15 @@ const Image = (props: ImageProps) => {
   };
 
   const handleImageLoad = () => {
-    if (!naturalImageWidth()) setNaturalImageWidth(image_element.naturalWidth);
-    if (!naturalImageHeight())
-      setNaturalImageHeight(image_element.naturalHeight);
-    notifyHeightChangeAcrossFrames();
+    const widthWasMissing = !naturalImageWidth();
+    const heightWasMissing = !naturalImageHeight();
+
+    if (widthWasMissing) setNaturalImageWidth(image_element.naturalWidth);
+    if (heightWasMissing) setNaturalImageHeight(image_element.naturalHeight);
+
+    if (widthWasMissing || heightWasMissing) {
+      notifyHeightChangeAcrossFrames();
+    }
   };
 
   const imageStyle = () => {

@@ -13,16 +13,25 @@ import {
   markDestinationRouteMounted,
 } from "~/utils/routeLoading";
 import {
+  ENABLE_HORIZONTAL_SWIPE_ARRIVAL,
   HASH_SCROLL_RESTORATION_DELAY_MS,
+  HORIZONTAL_PAGE_ARRIVAL_OFFSET,
   IN_CHAPTER_SCROLL_DURATION_MS,
   SAVED_SCROLL_RESTORATION_DELAY_MS,
   SCROLL_RESTORATION_ANIMATION_FINISH_BUFFER_MS,
 } from "~/constants";
+import { horizontalSwipeArrivalStartX } from "~/utils/horizontalSwipeArrival";
 
 const useCheckedSavedScroll = () => {
   const [searchParams, _] = useSearchParams();
   const location = useLocation();
   const { store, set_store } = useGlobalContext();
+  let active = true;
+  let restoreTimeout: number | undefined;
+  let completionTimeout: number | undefined;
+  let firstMountFrame: number | undefined;
+  let secondMountFrame: number | undefined;
+  let resolveMountWait: ((mounted: boolean) => void) | undefined;
 
   onMount(() => {
     set_store("saved_scroll_finished", false);
@@ -39,25 +48,60 @@ const useCheckedSavedScroll = () => {
   };
 
   const waitForRouteContentMount = () =>
-    new Promise<void>((resolve) => {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => resolve());
+    new Promise<boolean>((resolve) => {
+      resolveMountWait = resolve;
+      firstMountFrame = requestAnimationFrame(() => {
+        firstMountFrame = undefined;
+        if (!active) {
+          resolveMountWait = undefined;
+          resolve(false);
+          return;
+        }
+        secondMountFrame = requestAnimationFrame(() => {
+          secondMountFrame = undefined;
+          resolveMountWait = undefined;
+          resolve(active);
+        });
       });
     });
+
+  const cancelPendingRestoration = () => {
+    active = false;
+    window.clearTimeout(restoreTimeout);
+    window.clearTimeout(completionTimeout);
+    if (firstMountFrame !== undefined) cancelAnimationFrame(firstMountFrame);
+    if (secondMountFrame !== undefined) cancelAnimationFrame(secondMountFrame);
+    resolveMountWait?.(false);
+    resolveMountWait = undefined;
+  };
+
+  const arrivalStartX = () => {
+    const centeredX = (document.body.scrollWidth - window.innerWidth) / 2;
+    if (!ENABLE_HORIZONTAL_SWIPE_ARRIVAL) return centeredX;
+    return horizontalSwipeArrivalStartX(
+      location.pathname,
+      centeredX,
+      HORIZONTAL_PAGE_ARRIVAL_OFFSET,
+    );
+  };
 
   if (anchorId) {
     const { scrollToInChapter } = useScrollToInChapter();
 
     onMount(() => {
       const restoreScroll = async () => {
+        if (!active) return;
         set_store("route_scroll_in_progress", true);
-        await waitForRouteContentMount();
+        if (!(await waitForRouteContentMount())) return;
         await scrollToInChapter(
           anchorId as string,
           IN_CHAPTER_SCROLL_DURATION_MS,
         );
-        window.setTimeout(
+        if (!active) return;
+        completionTimeout = window.setTimeout(
           () => {
+            if (!active) return;
+            window.scroll({ left: arrivalStartX(), behavior: "instant" });
             update();
             set_store("saved_scroll_finished", true);
             set_store("route_scroll_in_progress", false);
@@ -70,10 +114,14 @@ const useCheckedSavedScroll = () => {
             : 0,
         );
       };
-      window.setTimeout(restoreScroll, HASH_SCROLL_RESTORATION_DELAY_MS);
+      restoreTimeout = window.setTimeout(
+        restoreScroll,
+        HASH_SCROLL_RESTORATION_DELAY_MS,
+      );
     });
 
     onCleanup(() => {
+      cancelPendingRestoration();
       window.removeEventListener("scroll", update);
     });
 
@@ -89,24 +137,27 @@ const useCheckedSavedScroll = () => {
     };
 
     const restoreScroll = async () => {
+      if (!active) return;
       const savedScroll = Number(localStorage.getItem(scrollKey) || "0");
       set_scroll(savedScroll);
 
       set_store("route_scroll_in_progress", true);
-      await waitForRouteContentMount();
-      window.scrollTo(
-        (document.body.scrollWidth - window.innerWidth) / 2,
-        savedScroll,
-      );
+      if (!(await waitForRouteContentMount())) return;
+      if (!active) return;
+      window.scrollTo(arrivalStartX(), savedScroll);
       set_store("saved_scroll_finished", true);
       set_store("route_scroll_in_progress", false);
       finishRouteLoad(location.pathname, store, set_store);
 
       window.addEventListener("scroll", updateScroll);
     };
-    window.setTimeout(restoreScroll, SAVED_SCROLL_RESTORATION_DELAY_MS);
+    restoreTimeout = window.setTimeout(
+      restoreScroll,
+      SAVED_SCROLL_RESTORATION_DELAY_MS,
+    );
 
     return () => {
+      cancelPendingRestoration();
       window.removeEventListener("scroll", updateScroll);
     };
   });
@@ -116,10 +167,12 @@ const useCheckedSavedScroll = () => {
     if (currentScroll === null) return;
     if (untrack(() => store.suppress_scroll_memory)) return;
 
-    requestAnimationFrame(() => {
+    const storageFrame = requestAnimationFrame(() => {
       if (untrack(() => store.suppress_scroll_memory)) return;
       localStorage.setItem(scrollKey, currentScroll.toString());
     });
+
+    return () => cancelAnimationFrame(storageFrame);
   });
 };
 
