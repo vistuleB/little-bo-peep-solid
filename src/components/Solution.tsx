@@ -127,14 +127,18 @@ export const Solution = (props: SolutionProps) => {
     }
   };
 
-  createEffect(() => {
-    if (!solution_open() || solution_content_mounted()) return;
-
+  const mount_solution_content = () => {
+    if (solution_content_mounted()) return;
     set_solution_content_mounted(true);
     requestAnimationFrame(() => {
       reset_content_height_etc();
       void typesetMathJaxElements([ref]);
     });
+  };
+
+  createEffect(() => {
+    if (!solution_open()) return;
+    mount_solution_content();
   });
 
   createEffect(() => {
@@ -216,6 +220,7 @@ export const Solution = (props: SolutionProps) => {
         set_solution_fully_opened={set_solution_fully_opened}
         set_solution_transition={set_solution_transition}
         solution_number={solution_number}
+        mount_solution_content={mount_solution_content}
         resetter={reset_content_height_etc}
       />
       <SpaceAfterSolutionButtonAlwaysShowing />
@@ -294,6 +299,7 @@ type SolutionBtnProps = {
   solution_number: number;
   set_solution_fully_opened: Setter<boolean>;
   set_solution_transition: Setter<number>;
+  mount_solution_content: () => void;
   resetter: () => void;
 };
 
@@ -359,6 +365,11 @@ const SolutionButton = (props: SolutionBtnProps) => {
     >
       <SolutionSVG
         solution_open={solution_open}
+        onPointerMove={(event) => {
+          if (event.pointerType === "mouse") {
+            props.mount_solution_content();
+          }
+        }}
         onClick={(event) => {
           event.stopPropagation();
 
@@ -504,6 +515,7 @@ export const BackupArrow = (props: BackupArrowProps) => {
 
 type SolutionSVGProps = {
   onClick: (e: any) => void;
+  onPointerMove: (event: PointerEvent) => void;
   solution_open: Accessor<boolean>;
 };
 
@@ -514,6 +526,7 @@ export const SolutionSVG = (props: SolutionSVGProps) => {
       <button
         type="button"
         aria-label="Toggle solution"
+        onPointerMove={props.onPointerMove}
         onClick={props.onClick}
         class="cursor-pointer w-fit m-auto block"
       >
