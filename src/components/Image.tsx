@@ -12,6 +12,7 @@ import ImageOrSideImage from "./ImageOrSideImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
 import { MOBILE_TEXT_COLUMN_SIDE_INSET } from "~/constants";
 import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
+import { useLazyImages } from "~/store/LazyImageProvider";
 
 const SHOW_DEBUG_COLORS = false;
 const HEIGHT_CHANGE_RAF_MAX_MS = 800;
@@ -44,6 +45,7 @@ const Image = (props: ImageProps) => {
   let heightChangeAnimationFrameExpiresAt = 0;
   const { set_height_change_listener_store } =
     useHeightChangeListenerContext() || {};
+  const lazy = useLazyImages();
 
   const currentViewportWidth = () =>
     typeof window === "undefined" ? 0 : window.innerWidth;
@@ -252,6 +254,7 @@ const Image = (props: ImageProps) => {
           <ImageOrSideImage
             ref={image_element}
             src={merged.src}
+            loading={lazy ? "lazy" : undefined}
             width={useNativeDimensions() ? merged.intrinsicWidth : undefined}
             height={useNativeDimensions() ? merged.intrinsicHeight : undefined}
             side_image={false}

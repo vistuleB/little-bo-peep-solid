@@ -6,6 +6,7 @@ import {
   onCleanup,
   onMount,
   Setter,
+  Show,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import {
@@ -32,6 +33,7 @@ import {
 } from "~/store/HeightChangeListenerProvider";
 import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useOneExerciseContext } from "~/store/OneExerciseStoreProvider";
+import { LazyImageProvider } from "~/store/LazyImageProvider";
 import { useExerciseGroupRegistry } from "~/store/ExerciseGroupRegistryProvider";
 import typesetMathJaxElements from "~/utils/typesetMathJax";
 
@@ -76,7 +78,6 @@ const SolutionHeightChangeListener = (props: { resetter: () => void }) => {
 
 export const Solution = (props: SolutionProps) => {
   let ref: HTMLDivElement | undefined;
-  let buttonRef: HTMLDivElement | undefined;
 
   let { store: global_store } = useGlobalContext();
   const {
@@ -106,6 +107,8 @@ export const Solution = (props: SolutionProps) => {
   const [green_div_height, set_green_div_height] = createSignal(
     SOLUTION_GREEN_DIV_HEIGHT,
   );
+  const [solution_content_mounted, set_solution_content_mounted] =
+    createSignal(false);
 
   const handleResize = () => {
     set_content_height(ref?.clientHeight || 0);
@@ -123,6 +126,16 @@ export const Solution = (props: SolutionProps) => {
       });
     }
   };
+
+  createEffect(() => {
+    if (!solution_open() || solution_content_mounted()) return;
+
+    set_solution_content_mounted(true);
+    requestAnimationFrame(() => {
+      reset_content_height_etc();
+      void typesetMathJaxElements([ref]);
+    });
+  });
 
   createEffect(() => {
     reset_content_height_etc();
@@ -191,22 +204,6 @@ export const Solution = (props: SolutionProps) => {
     setTimeout(() => {
       set_solution_fully_opened(solution_open());
     }, 100);
-
-    // Typesetting solution mathjax when solution button is in-view . this helps to get rid of lag when openning solution
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          void typesetMathJaxElements([ref]);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin: "1000px",
-      },
-    );
-
-    if (buttonRef) observer.observe(buttonRef);
-    onCleanup(() => observer.disconnect());
   });
 
   return (
@@ -219,7 +216,6 @@ export const Solution = (props: SolutionProps) => {
         set_solution_fully_opened={set_solution_fully_opened}
         set_solution_transition={set_solution_transition}
         solution_number={solution_number}
-        setButtonRef={(el) => (buttonRef = el)}
         resetter={reset_content_height_etc}
       />
       <SpaceAfterSolutionButtonAlwaysShowing />
@@ -245,7 +241,9 @@ export const Solution = (props: SolutionProps) => {
           class={twJoin(" bottom-0 w-full")}
         >
           <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
-          {props.children}
+          <Show when={solution_content_mounted()}>
+            {() => <LazyImageProvider>{props.children}</LazyImageProvider>}
+          </Show>
         </div>
         <div
           style={{
@@ -296,7 +294,6 @@ type SolutionBtnProps = {
   solution_number: number;
   set_solution_fully_opened: Setter<boolean>;
   set_solution_transition: Setter<number>;
-  setButtonRef: (el: HTMLDivElement) => void;
   resetter: () => void;
 };
 
@@ -356,7 +353,6 @@ const SolutionButton = (props: SolutionBtnProps) => {
     <div
       ref={(el) => {
         buttonRef = el;
-        props.setButtonRef(el);
       }}
       class="relative"
       style={`padding-inline: ${SOLUTION_BUTTON_INLINE_PADDING}px`}

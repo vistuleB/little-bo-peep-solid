@@ -11,6 +11,7 @@ import ImageOrSideImage from "./ImageOrSideImage";
 import { useScale } from "~/store/ScaleProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import styleJoin from "~/utils/styleJoin";
+import { useLazyImages } from "~/store/LazyImageProvider";
 
 const LINE_HEIGHT = 30;
 
@@ -65,6 +66,7 @@ type InternalSideImageProps = UserFacingSideImageProps & {
 const SideImage = (props: InternalSideImageProps) => {
   let parentRef: HTMLDivElement | undefined;
   const scale = useScale();
+  const lazy = useLazyImages();
   const [parentWidth, setParentWidth] = createSignal(0);
   const [parentMeasured, setParentMeasured] = createSignal(false);
   const textWidth = () => mainColumnWidth();
@@ -140,6 +142,7 @@ const SideImage = (props: InternalSideImageProps) => {
             props.style,
           )}
           src={props.src}
+          loading={lazy ? "lazy" : undefined}
           width={props.intrinsicWidth}
           height={props.intrinsicHeight}
           side_image={true}
