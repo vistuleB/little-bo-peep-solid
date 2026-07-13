@@ -28,8 +28,8 @@
   --document-pause-space: 1.5rem;
   --document-exercise-statement-to-solution-button-space: 2.25rem;
   --document-before-solution-space: 1.25rem;
-  --document-before-open-solution-extra-space: 1rem;
-  --document-after-solution-before-next-exercise-space: 1.5rem;
+  --document-before-open-solution-extra-space: 1.4rem;
+  --document-after-solution-before-next-exercise-space: 1.4rem;
   --document-before-backup-arrow-space: 1.5rem;
   /* --background-rgb: rgb(255, 249, 249); */
   --background-rgb: #fff9f9;
@@ -590,7 +590,7 @@ p a:hover,
   font-size: 12px;
   display: none;
   position: absolute;
-  top: -3.85em;
+  top: calc(-3.85em + 4px);
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
@@ -667,7 +667,7 @@ img + .t-3003:hover {
   opacity: 1;
   position: absolute;
   left: 50%;
-  top: -3.5em;
+  top: calc(-3.5em + 4px);
 }
 
 .mathblock:hover:has(> .t-3003) {

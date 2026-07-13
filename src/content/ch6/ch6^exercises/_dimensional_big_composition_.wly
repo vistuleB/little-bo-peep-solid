@@ -1,0 +1,47 @@
+|> Exercise
+    handle=_dimensional_big_composition_
+
+    What constraints does the assemblage
+    $$
+    f \circ {f\over f\circ f}
+    $$
+    impose on the signature of $f$?
+
+    |> Solution
+
+        To start with, the presence of $f \circ f$ as a sub-expression
+        imposes a restricted signature of the form
+
+        $$
+        f : [\tA] \ra [\tA]
+        $$
+
+        by Exercise >>_dimensional_f_f_. But then
+
+        $$
+        {f\over f\circ f} : [\tA] \ra [1]
+        $$
+
+        because the output units at top and bottom of the fraction are
+        both A, which cancels. (Or
+
+        |> Image
+            src=images/e6_some_quotient.svg
+
+        where $\tA/\tA = 1$.) As
+
+        $$
+        {f\over f\circ f}
+        $$
+
+        is fed back to $f$, this forces...
+
+        $$
+        [\tA] = [1]
+        $$
+
+        ...$f$ to accept dimensionless inputs, and...
+        
+        $$f : [1] \ra [1]$$
+
+        ..._in fine_, since $f : [\tA] \ra [\tA]$.

@@ -1,0 +1,52 @@
+|> Exercise
+    handle=_dimensional_f_f_
+
+    !! For functions $f$ with what kind of
+    !! signature does the composition
+    !! $$
+    !! f \circ f
+    !! $$
+    !! make sense?
+    What constraints does the composition
+    $$
+    f \circ f
+    $$
+    impose on the signature of $f$?
+
+    |> Solution
+
+        A signature of the form 
+        $$
+        f : [\tA] \ra [\tA]
+        $$
+        is necessary and sufficient. In more detail, for  
+        two functions $f$, $g$ of general signature
+
+        $$
+        \begin{gathered}
+        f : [\tA] \ra [\tB] \\
+        \up{1.6}g : [\tC] \ra [\tD]
+        \end{gathered}
+        $$
+
+        the composition
+
+        $$
+        f\circ g
+        $$
+
+        is well-formed if and ony if $[\tD] = [\tA]$. 
+        (Cf. [Table 1.1](>>table_1_1).)
+        In our case $g = f$ so we additionally have
+
+        $$
+        \begin{gathered}
+        !! found mathjax bug that requires this \up{0}:
+        \up{0}[\tC] = [\tA] \\
+        \up{1.6}[\tD] = [\tB]
+        \end{gathered}
+        $$
+
+        to start with, which, together with 
+        $[\tD] = [\tA]$, collapses the signature of $f$
+        to “$[\tA] \ra [\tA]$”.

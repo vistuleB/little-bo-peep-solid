@@ -2893,16 +2893,18 @@ const Rest = () => {
         <MathBlock>
           $$
           \theta = \begin&#123;cases&#125;
-          \arctan(y/x) &amp; \te&#123;if &#125;\, x \ne 0, \,\te&#123;else&#125; \\
-          \up&#123;1.2&#125;\te&#123;arccot&#125;(x/y) &amp; \te&#123;if &#125;\, y \ne 0, \,\te&#123;else&#125; \\
+          \arctan(y/x) &amp; \te&#123;if &#125;\, x &gt; 0 \\
+          \up&#123;1.2&#125;-\arctan(y/x) &amp; \te&#123;if &#125;\, x &lt; 0 \\
+          \up&#123;1.2&#125;\eta &amp; \te&#123;if &#125;\, x = 0, y &gt; 0 \\
+          \up&#123;1.2&#125;-\eta &amp; \te&#123;if &#125;\, x = 0, y &lt; 0 \\
           \up&#123;1.2&#125;\rm&#123;?&#125; &amp; \te&#123;if &#125;\, x = 0, y = 0
           \end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          ...where “arctan”, “arccot” are
-          some-functions-or-other-to-be-discussed-later.
+          ...where “arctan” is
+          some-function-or-other-to-be-discussed-later.
         </OuterP>
         <Pause />
         <OuterP>
@@ -4621,32 +4623,23 @@ const Rest = () => {
             <Pause />
             <OuterP>
               making it a true {" "}
-              <OutChapterLink
-                class="out-chapter-link"
-                href="/article/chapter3#_33_h.a.i_"
-              >
+              <a href="&gt;&gt;linear_vs_affine#decoy:0">
                 <i>
                   linear
                 </i>
-              </OutChapterLink>
+              </a>
               {" "} function (as opposed
               to {" "}
-              <OutChapterLink
-                class="out-chapter-link"
-                href="/article/chapter3#_33_h.a.i_"
-              >
+              <a href="&gt;&gt;linear_vs_affine#decoy:0">
                 <i>
                   affine
                 </i>
-              </OutChapterLink>
-              , cf. {" "}
-              <OutChapterLink
-                class="out-chapter-link"
-                href="/article/chapter3#_33_h.a.i_"
-              >
+              </a>
+              &#8288;, cf. {" "}
+              <a href="&gt;&gt;linear_vs_affine#decoy:0">
                 Chapter 3
-              </OutChapterLink>
-              ).
+              </a>
+              &#8288;).
             </OuterP>
             <OuterP class="indent-10">
               As for the “something”—the bumpy one—it appears

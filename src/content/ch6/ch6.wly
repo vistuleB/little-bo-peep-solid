@@ -40,19 +40,30 @@
 
     indicates that $h$ is a function for which the inputs
     denote kilograms and for which the outputs denote degrees
-    fahrenheit. We refer to the ordered pair $(\te{A}, \te{B})$ 
+    fahrenheit. We refer to 
+    !! (or, formally, to the ordered pair $(\tA, \tB)$)
+    the ordered pair $(\te{A}, \te{B})$ 
+    !! or more loosely to the expression “$[\tA] \ra [\tB]$” 
+    !! (treated as a formal piece of notation)
+    !! and/or to the notational fragment “$[\tA] \ra [\tB]$”
     as the
 
     __signature__
 
     of $f$.
+    !! and we may also refer to the notational fragment
+    !! “$[\tA] \ra [\tB]$” as the
+
+    !! __signature__
+
+    !! (did we say it yet?) of $f$.
 
     |> Example
 
         If
 
         $$
-        z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{£}\rt{0.1}]
+        z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{zł}\rt{0.1}]
         $$
 
         then
@@ -62,7 +73,11 @@
         is a function
         whose inputs denote meters per seconds squared
         (a measure of acceleration)
-        and whose outputs denote British pounds. 
+        and whose outputs denote Polish zloty. 
+        The
+        __signature__
+        of $z$ is the ordered pair “$(\m/\s^2, \te{zł})$”.
+        !! or the expression “$[\m/\s^2] \ra [\rt{0.1}\te{zł}\rt{0.1}]$” itself.
 
 |> Section
     split_here=Rest
@@ -90,7 +105,7 @@
     Thus
 
     $$
-    \cos : [1] \ra [1]
+    \large \cos : [1] \ra [1]
     $$
 
     where the first ‘$[1]$’ 
@@ -102,7 +117,7 @@
     in the case of cosine!)
 
     |> ImageLeft
-        src=images/c6_radian_dimensionless_ratio_cloud.svg
+        src=tmp-images/c6_radian_dimensionless_ratio_cloud_v2.svg
 
     |> Pause
 
@@ -132,9 +147,9 @@
     |> Image
         src=images/c6_true_counterclockwiseness_2.svg
 
-    (This actually happens inside of SVG, the web-based
-    standard for so-called “vector graphics”, in which the $y$
-    axis points downwards; in an SVG file, 
+    (This actually happens inside of SVG, the
+    web standard for so-called “vector graphics”, in which the $y$
+    axis points downwards. In an SVG file, 
     |> span
         class=code-cartouche
         rotate(10)
@@ -149,8 +164,12 @@
     When we add two functions, the same input is passed
     to both functions:
 
+    !! $$
+    !! (f + g)(x) = f(x) + g(x)
+    !! $$
+    
     |> Image
-        src=images/c6_equal_inputs.svg
+        src=tmp-images/c6_equal_inputs_v2.svg
         style=margin-bottom:-1.3em
 
     This means that for the sum to make sense, $f$ and
@@ -176,7 +195,7 @@
     $$
 
     in order not to add apples to oranges, 
-    at the output end, either, i.e., to avoid 
+    at the output end, either, i.e., to avoid
     “$f(x) =$ apples”, “$g(x) =$ oranges”.
 
     By contrast, when multiplying two functions we can
@@ -191,7 +210,8 @@
 
     |> Image
         handle=table_1_1 Table 1.1
-        src=images/c6_flowers_here_bob.svg
+        !! src=tmp-images/c6_flowers_here_bob.svg
+        src=tmp-images/c6_flowers_here_bob_v2.svg
 
     !! ...summarizing the constraints that appear at the
     !! input (“component signatures”) and output (“resultant
@@ -215,7 +235,8 @@
 
     |> Image
         handle=table_1_2 Table 1.2
-        src=images/c6_flowers_here_two_more_v2.svg
+        !! src=images/c6_flowers_here_two_more_v2.svg
+        src=tmp-images/c6_flowers_here_two_more_v3.svg
 
     |> StarDivider
         style=margin-top:-0.3em
@@ -313,7 +334,7 @@
 
     (We recycle ‘$-$’ for two
     different operators—a unary one and a binary one.)
-    (Or, as computer scientists would say, we have
+    (Or as programmers would say, we have
     _overloaded_ ‘$-$’.)
 
     The following figure summarizes the interaction
@@ -1017,10 +1038,6 @@
         src=images/c6_chain_rule_units_cloud.svg
         offset-x=3.1em
 
-    !! $$
-    !! \Large\left[{\tC\over\tB}\right]\cdot\left[{\tB\over\tA}\right] = \left[{\tC\over\tA}\right]
-    !! $$
-
     as desired! It turns out that this is the
     correct formula, i.e., 
     we truly do have..
@@ -1254,10 +1271,25 @@
         or
         
         $$
-        (\cos \circ \cos)'(x) = \sin(\cos x)\sin(x)
+        (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x)
         $$
 
-        when evaluating the ‘$\circ$’ and cancelling the minus signs. 
+        when evaluating the ‘$\circ$’ and cancelling the minus signs,
+        or
+
+        $$
+        (\cos \circ \cos)' = (\sin \circ \cos)\sin
+        $$
+
+        |> ImageRight
+            src=tmp-images/c6_cancelling_signs_cloud.svg
+
+        $$
+        !! ((-f)\circ g) = -(f\circ g)\qquad (-f)(-g) = fg
+        ((-f)\circ g)(-f) = (f\circ g)f
+        $$
+
+        cancelling signs from the outset.
         
     |> Example
         handle=cos_cos_chain_rule_continued
@@ -1268,41 +1300,63 @@
         $$
 
         by Example >>cos_cos_chain_rule,
-        which looks visually compatible with the graph of
-        $\cos(\cos x)$
-        since
-        $(\cos \circ \cos)'(2.5)$ is supposed to be the slope
-        of $y = \cos(\cos x)$ at $x = 2.5$ (after all):
+        which
+        looks visually compatible with the graph
+        of $x \ra \cos(\cos(x))$ [nb: it should be the slope]:
+        !! since
+        !! $(\cos \circ \cos)'(2.5)$ is supposed to be the slope
+        !! of $y = \cos(\cos x)$ at $x = 2.5$:
 
         |> Image
             src=images/c6_sin_of_sin_graph.svg
 
         |> StarDivider
 
-        _Note on Example >>cos_cos_chain_rule_continued##_. Because
+        _Note on Example >>cos_cos_chain_rule_continued##_. 
+        The values of $\cos(\cos(x))$ can be throught of as
+        the $x$-coordinates of a certain horizontal windshield-wiper
+        whose angle at time $t$ is $\cos(t)$:
+
+        |> Image
+            src=images/c6_windshield_wiper.svg
+
+        Specifically, since
 
         $$
-        -1 \leq \cos(x) \leq 1
+        -1 \leq \cos(t) \leq 1
         $$
-        
-        the values of $\cos(\cos(x))$ remain stuck between
+
+        the angle of the wiper remains stuck between 
+        $-1\Rad \cong -57.29^\circ$
+        at one end at
+        $+1\Rad \cong 57.29^\circ$
+        at the
+        other end, with the values of $\cos(\cos(x))$
+        remaining stuck between
 
         $$
         \cos(\pm 1) = \cos(\pm 57.29\ldots^\circ) \approx 0.54
         $$
 
-        and $\cos(0) = 1$
-        which produces the graph above, that one can actually
-        think of as the $x$-coordinate of a certain horizontal
-        windshield-wiper whose angle at time $t$ is $\cos(t)$:
+        and $\cos(0) = 1$, producing the compressed
+        sinusoid-like wave seen in Example >>cos_cos_chain_rule_continued.
 
-        |> Image
-            src=images/c6_windshield_wiper.svg
+        !! _Note on Example >>cos_cos_chain_rule_continued##_. 
+        !! Because
 
         !! $$
-        !! \cos(\cos(t))
-        !! \cos(\cos t)
+        !! -1 \leq \cos(x) \leq 1
         !! $$
+        
+        !! the values of $\cos(\cos(x))$ remain stuck between
+
+        !! $$
+        !! \cos(\pm 1) = \cos(\pm 57.29\ldots^\circ) \approx 0.54
+        !! $$
+
+        !! and $\cos(0) = 1$ which produces the graph above,
+        !! that one can actually think of as the $x$-coordinate of a certain horizontal
+        !! windshield-wiper whose angle at time $t$ is $\cos(t)$:
 
 |> Section
     !! *Appendix: radians _&_ the dimensionless plane.*

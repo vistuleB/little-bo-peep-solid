@@ -12,7 +12,7 @@ import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBrea
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
-import { SolutionNote, Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
+import { SolutionNote, InTextWarning, Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter6__() {
@@ -141,7 +141,8 @@ export default function __Chapter6__() {
           </Math>
           {" "} is a function for which the inputs
           denote kilograms and for which the outputs denote degrees
-          fahrenheit. We refer to the ordered pair {" "}
+          fahrenheit. We refer to 
+          the ordered pair {" "}
           <Math>
             $(\te&#123;A&#125;, \te&#123;B&#125;)$
           </Math>
@@ -174,7 +175,7 @@ export default function __Chapter6__() {
           <Pause />
           <MathBlock>
             $$
-            z : [\te&#123;m&#125;/\te&#123;s&#125;^2] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
+            z : [\te&#123;m&#125;/\te&#123;s&#125;^2] \ra [\rt&#123;0.1&#125;\te&#123;zł&#125;\rt&#123;0.1&#125;]
             $$
           </MathBlock>
           <Pause />
@@ -192,7 +193,27 @@ export default function __Chapter6__() {
             is a function
             whose inputs denote meters per seconds squared
             (a measure of acceleration)
-            and whose outputs denote British pounds.
+            and whose outputs denote Polish zloty. 
+            The
+          </OuterP>
+          <Pause />
+          <CentralDisplayItalic>
+            signature
+          </CentralDisplayItalic>
+          <Pause />
+          <OuterP>
+            of {" "}
+            <Math>
+              $z$
+            </Math>
+            {" "} is the ordered pair {" "}
+            <NoBreak>
+              “
+              <Math>
+                $(\m/\s^2, \te&#123;zł&#125;)$
+              </Math>
+              ”.
+            </NoBreak>
           </OuterP>
         </Example>
       </Section>
@@ -259,7 +280,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \cos : [1] \ra [1]
+          \large \cos : [1] \ra [1]
           $$
         </MathBlock>
         <Pause />
@@ -288,7 +309,7 @@ const Rest = () => {
           “opposite over adjacent”. (Or “adjacent over hypotenuse”,
           in the case of cosine!)
           <ImageLeft
-            src="/build-img/svgo-svg/0z4q.svg"
+            src="/tmp-images/c6_radian_dimensionless_ratio_cloud_v2.svg"
             intrinsicWidth={600}
             intrinsicHeight={500}
           />
@@ -377,13 +398,13 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          (This actually happens inside of SVG, the web-based
-          standard for so-called “vector graphics”, in which the {" "}
+          (This actually happens inside of SVG, the
+          web standard for so-called “vector graphics”, in which the {" "}
           <Math>
             $y$
           </Math>
           {" "}
-          axis points downwards; in an SVG file, {" "}
+          axis points downwards. In an SVG file, {" "}
           <span class="code-cartouche">
             rotate(10)
           </span>
@@ -421,10 +442,10 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/build-img/svgo-svg/hJfJ.svg"
+          src="/tmp-images/c6_equal_inputs_v2.svg"
           style="margin-bottom:-1.3em"
-          intrinsicWidth={400}
-          intrinsicHeight={53}
+          intrinsicWidth={300}
+          intrinsicHeight={50}
         />
         <Pause />
         <OuterP>
@@ -467,7 +488,7 @@ const Rest = () => {
         <Pause />
         <OuterP>
           in order not to add apples to oranges, 
-          at the output end, either, i.e., to avoid 
+          at the output end, either, i.e., to avoid
           {" "}
           <NoBreak>
             “
@@ -496,7 +517,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/build-img/svgo-svg/AUok.svg"
+          src="/tmp-images/c6_flowers_here_bob_v2.svg"
           id="_152_h.a.i_"
           intrinsicWidth={700}
           intrinsicHeight={883}
@@ -553,7 +574,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/build-img/svgo-svg/jdJ7.svg"
+          src="/tmp-images/c6_flowers_here_two_more_v3.svg"
           id="_153_h.a.i_"
           intrinsicWidth={700}
           intrinsicHeight={310}
@@ -775,7 +796,7 @@ const Rest = () => {
           </NoBreak>
           {" "} for two
           different operators—a unary one and a binary one.)
-          (Or, as computer scientists would say, we have
+          (Or as programmers would say, we have
           {" "}
           <i>
             overloaded
@@ -2175,8 +2196,8 @@ const Rest = () => {
               src="/build-img/svgo-svg/g4I6.svg"
               offsetX="-1em"
               atLeastAsWide={true}
-              intrinsicWidth={500}
-              intrinsicHeight={500}
+              intrinsicWidth={250}
+              intrinsicHeight={100}
             />
           </MathBlock>
           <Pause />
@@ -2374,7 +2395,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            (\cos \circ \cos)'(x) = \sin(\cos x)\sin(x)
+            (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x)
             $$
           </MathBlock>
           <Pause />
@@ -2387,7 +2408,30 @@ const Rest = () => {
               </Math>
               ’
             </NoBreak>
-            {" "} and cancelling the minus signs.
+            {" "} and cancelling the minus signs,
+            or
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (\cos \circ \cos)' = (\sin \circ \cos)\sin
+            $$
+            <ImageRight
+              src="/tmp-images/c6_cancelling_signs_cloud.svg"
+              atLeastAsWide={true}
+              intrinsicWidth={800}
+              intrinsicHeight={200}
+            />
+          </MathBlock>
+          <Pause />
+          <MathBlock>
+            $$
+            ((-f)\circ g)(-f) = (f\circ g)f
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            cancelling signs from the outset.
           </OuterP>
         </Example>
         <Pause />
@@ -2415,27 +2459,13 @@ const Rest = () => {
               Example 6
             </InChapterLink>
             &#8288;,
-            which looks visually compatible with the graph of
-            {" "}
-            <Math>
-              $\cos(\cos x)$
-            </Math>
-            {" "}
-            since
-            {" "}
-            <Math>
-              $(\cos \circ \cos)'(2.5)$
-            </Math>
-            {" "} is supposed to be the slope
+            which
+            looks visually compatible with the graph
             of {" "}
             <Math>
-              $y = \cos(\cos x)$
+              $x \ra \cos(\cos(x))$
             </Math>
-            {" "} at {" "}
-            <Math>
-              $x = 2.5$
-            </Math>
-            {" "} (after all):
+            {" "} [nb: it should be the slope]:
           </OuterP>
           <Pause />
           <Image
@@ -2456,45 +2486,21 @@ const Rest = () => {
                 Example 7
               </InChapterLink>
             </i>
-            . Because
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            -1 \leq \cos(x) \leq 1
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            the values of {" "}
+            . 
+            The values of {" "}
             <Math>
               $\cos(\cos(x))$
             </Math>
-            {" "} remain stuck between
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \cos(\pm 1) = \cos(\pm 57.29\ldots^\circ) \approx 0.54
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            and {" "}
-            <Math>
-              $\cos(0) = 1$
-            </Math>
-            {" "}
-            which produces the graph above, that one can actually
-            think of as the {" "}
+            {" "} can be throught of as
+            the {" "}
             <NoBreak>
               <Math>
                 $x$
               </Math>
-              -coordinate
+              -coordinates
             </NoBreak>
-            {" "} of a certain horizontal
-            windshield-wiper whose angle at time {" "}
+            {" "} of a certain horizontal windshield-wiper
+            whose angle at time {" "}
             <Math>
               $t$
             </Math>
@@ -2512,6 +2518,63 @@ const Rest = () => {
             intrinsicWidth={400}
             intrinsicHeight={300}
           />
+          <Pause />
+          <OuterP>
+            Specifically, since
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            -1 \leq \cos(t) \leq 1
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            the angle of the wiper remains stuck between 
+            {" "}
+            <Math>
+              $-1\Rad \cong -57.29^\circ$
+            </Math>
+            {" "}
+            at one end at
+            {" "}
+            <Math>
+              $+1\Rad \cong 57.29^\circ$
+            </Math>
+            {" "}
+            at the
+            other end, with the values of {" "}
+            <Math>
+              $\cos(\cos(x))$
+            </Math>
+            {" "}
+            remaining stuck between
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \cos(\pm 1) = \cos(\pm 57.29\ldots^\circ) \approx 0.54
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            and {" "}
+            <NoBreak>
+              <Math>
+                $\cos(0) = 1$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} producing the compressed
+            sinusoid-like wave seen in {" "}
+            <InChapterLink
+              href="/article/chapter6#_159_h.a.i_"
+              class="in-chapter-link"
+            >
+              Example 7
+            </InChapterLink>
+            &#8288;.
+          </OuterP>
         </Example>
       </Section>
     </>}
@@ -2597,7 +2660,7 @@ const Rest = () => {
         <Image
           src="/build-img/svgo-svg/oqAL.svg"
           style="margin-top:-1.4em"
-          intrinsicWidth={700}
+          intrinsicWidth={600}
           intrinsicHeight={465}
         />
         <Pause />
@@ -2629,7 +2692,7 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/_SJ0.svg"
-          intrinsicWidth={700}
+          intrinsicWidth={600}
           intrinsicHeight={440}
         />
         <Pause />
@@ -2713,136 +2776,6 @@ const Rest = () => {
                 Exercise 1.
               </b>
               {" "}
-              What constraints does the composition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              impose on the signature of {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              A signature of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\tA] \ra [\tA]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is necessary and sufficient. In more detail, for  
-              two functions {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} of general signature
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              f : [\tA] \ra [\tB] \\
-              \up&#123;1.6&#125;g : [\tC] \ra [\tD]
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              the composition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f\circ g
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is well-formed if and ony if {" "}
-              <NoBreak>
-                <Math>
-                  $[\tD] = [\tA]$
-                </Math>
-                .
-              </NoBreak>
-              {" "} 
-              (Cf. {" "}
-              <InChapterLink
-                class="in-chapter-link"
-                href="#_152_h.a.i_"
-              >
-                Table 1.1
-              </InChapterLink>
-              &#8288;.)
-              In our case {" "}
-              <Math>
-                $g = f$
-              </Math>
-              {" "} so we additionally have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              \up&#123;0&#125;[\tC] = [\tA] \\
-              \up&#123;1.6&#125;[\tD] = [\tB]
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to start with, which, together with 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $[\tD] = [\tA]$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} collapses the signature of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}
-              to {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $[\tA] \ra [\tA]$
-                </Math>
-                ”.
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={2}>
-          <ExerciseStatement id="_161_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 2.
-              </b>
-              {" "}
               What constraints does the assemblage
             </OuterP>
             <Pause />
@@ -2879,14 +2812,11 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              by {" "}
-              <InChapterLink
-                href="/article/chapter6#_160_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 1
-              </InChapterLink>
-              &#8288;. But then
+              by Exercise {" "}
+              <InTextWarning>
+                undefined handle at ch6/ch6^exercises/_dimensional_big_composition_.wly:19:9: _dimensional_f_f_
+              </InTextWarning>
+              . But then
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2971,11 +2901,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={3}>
-          <ExerciseStatement id="_162_h.a.i_">
+        <Exercise number={2}>
+          <ExerciseStatement id="_161_h.a.i_">
             <OuterP>
               <b>
-                Exercise 3.
+                Exercise 2.
               </b>
               {" "}
               What are
@@ -3178,11 +3108,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={4}>
-          <ExerciseStatement id="_163_h.a.i_">
+        <Exercise number={3}>
+          <ExerciseStatement id="_162_h.a.i_">
             <OuterP>
               <b>
-                Exercise 4.
+                Exercise 3.
               </b>
               {" "}
               What kinds of functions {" "}
@@ -3260,11 +3190,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={5}>
-          <ExerciseStatement id="_164_h.a.i_">
+        <Exercise number={4}>
+          <ExerciseStatement id="_163_h.a.i_">
             <OuterP>
               <b>
-                Exercise 5.
+                Exercise 4.
               </b>
               {" "}
               if {" "}
@@ -3342,11 +3272,11 @@ const Rest = () => {
             </MathBlock>
           </Solution>
         </Exercise>
-        <Exercise number={6}>
-          <ExerciseStatement id="_165_h.a.i_">
+        <Exercise number={5}>
+          <ExerciseStatement id="_164_h.a.i_">
             <OuterP>
               <b>
-                Exercise 6.
+                Exercise 5.
               </b>
               {" "}
               If units of time and space are chosen
@@ -3389,10 +3319,10 @@ const Rest = () => {
             <OuterP>
               (cf. {" "}
               <InChapterLink
-                href="/article/chapter6#_164_h.a.i_"
+                href="/article/chapter6#_163_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 5
+                Exercise 4
               </InChapterLink>
               &#8288;)
               would become
@@ -3455,11 +3385,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={7}>
-          <ExerciseStatement id="_166_h.a.i_">
+        <Exercise number={6}>
+          <ExerciseStatement id="_165_h.a.i_">
             <OuterP>
               <b>
-                Exercise 7.
+                Exercise 6.
               </b>
               {" "}
               Give a dimensional analysis of the (real,
@@ -3591,11 +3521,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={8}>
-          <ExerciseStatement id="_167_h.a.i_">
+        <Exercise number={7}>
+          <ExerciseStatement id="_166_h.a.i_">
             <OuterP>
               <b>
-                Exercise 8.
+                Exercise 7.
               </b>
               {" "}
               Use dimensional analysis to
@@ -3901,20 +3831,20 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement id="_168_h.a.i_">
+        <Exercise number={8}>
+          <ExerciseStatement id="_167_h.a.i_">
             <OuterP>
               <b>
-                Exercise 9.
+                Exercise 8.
               </b>
               {" "}
               The formula given at the end of the solution
               to {" "}
               <InChapterLink
-                href="/article/chapter6#_167_h.a.i_"
+                href="/article/chapter6#_166_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 8
+                Exercise 7
               </InChapterLink>
               {" "} happens to be the true,
               “correct” formula for {" "}
@@ -3943,15 +3873,54 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Hello.
+              Just as
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f + g)' = f' + g'
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              (fg)' = f'g + fg'
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              are known as the {" "}
+              <i>
+                sum rule
+              </i>
+              {" "} and {" "}
+              <i>
+                product rule
+              </i>
+              ,
+              so is
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;1\over f&#125;\right)' = -&#123;f'\over f^2&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              also a “rule”, the {" "}
+              <i>
+                reciprocal rule
+              </i>
+              . (!)
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={10}>
-          <ExerciseStatement id="_169_h.a.i_">
+        <Exercise number={9}>
+          <ExerciseStatement id="_168_h.a.i_">
             <OuterP>
               <b>
-                Exercise 10.
+                Exercise 9.
               </b>
               {" "}
               If the expression
@@ -4044,11 +4013,11 @@ const Rest = () => {
             />
           </Solution>
         </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement id="_170_h.a.i_">
+        <Exercise number={10}>
+          <ExerciseStatement id="_169_h.a.i_">
             <OuterP>
               <b>
-                Exercise 11.
+                Exercise 10.
               </b>
               {" "}
               If {" "}
@@ -4113,6 +4082,185 @@ const Rest = () => {
               </OuterP>
             </SolutionNote>
           </Solution>
+        </Exercise>
+        <Exercise number={11}>
+          <ExerciseStatement id="_170_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 11.
+              </b>
+              {" "}
+              Let
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;-1&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              stand for the “inverse” of a function {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}
+              for which such an inverse exists. 
+              This means that {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} has the kind of graph
+              below, in which distinct {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                's
+              </NoBreak>
+              {" "} are mapped to
+              distinct {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                's:
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              src="/tmp-images/e6_f_inverse_distinct.svg"
+              intrinsicWidth={450}
+              intrinsicHeight={300}
+            />
+            <Pause />
+            <OuterP>
+              ...and which means that we can invert the flow
+              of the function, treating {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                's
+              </NoBreak>
+              {" "} as inputs, and recovering a
+              unique {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} for each {" "}
+              <Math>
+                $y$
+              </Math>
+              {" "} that is an output of {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                —this
+              </NoBreak>
+              {" "}
+              “inverse flow” function is what we write as {" "}
+              <NoBreak>
+                “
+                <Math>
+                  $f^&#123;-1&#125;$
+                </Math>
+                ”:
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <OuterP>
+              (In another view...
+            </OuterP>
+            <Pause />
+            <Image src="/tmp-images/e6_f_inverse_box_view.svg" />
+            <Pause />
+            <OuterP>
+              <NoBreak>
+                ...
+                <Math>
+                  $f^&#123;-1&#125;$
+                </Math>
+              </NoBreak>
+              {" "} is the box that undoes the work
+              of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and vice-versa, in janother view...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              (f^&#123;-1&#125; \circ f\rt&#123;0.05&#125;) = (x \ra x)\\
+              \up&#123;1.6&#125;(f \circ f^&#123;-1&#125;) = (x \ra x)
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <NoBreak>
+                ...
+                <Math>
+                  $f^&#123;-1&#125;$
+                </Math>
+              </NoBreak>
+              {" "} is the function that composes with
+              {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} 
+              to produce the {" "}
+              <i>
+                identity function
+              </i>
+              {" "} {" "}
+              <Math>
+                $x \ra x$
+              </Math>
+              {" "} and vice-versa,
+              and in another view...
+            </OuterP>
+            <Pause />
+            <OuterP>
+              <NoBreak>
+                ...
+                <Math>
+                  $f^&#123;-1&#125;$
+                </Math>
+              </NoBreak>
+              {" "} is the function whose graph is the
+              mirror image of {" "}
+              <Math>
+                $y = f(x)$
+              </Math>
+              {" "} about the line {" "}
+              <NoBreak>
+                <Math>
+                  $x = y$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+            <OuterP class="indent-10">
+              Use dimensional analysis to conjecture a formula for
+              the derivative of the inverse, i.e.,
+              a formula of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f^&#123;-1&#125;)' = \ldots
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              similar to the sum rule, product rule, etc.
+            </OuterP>
+          </ExerciseStatement>
         </Exercise>
       </Exercises>
     </>}

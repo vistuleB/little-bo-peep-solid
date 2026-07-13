@@ -243,7 +243,7 @@
   },
   "c6_differentiation_operator_intro_v2.svg": {
     "build-version": "svgo-svg/Pl1U.svg",
-    "build-version-created-on": 1783770516,
+    "build-version-created-on": 1783800721,
     "build-method": "svgo",
     "build-version-size": 10389,
     "original-size": 45944,
@@ -551,12 +551,12 @@
   },
   "c6_dimensionless_plane_1_v1_circled.svg": {
     "build-version": "svgo-svg/_SJ0.svg",
-    "build-version-created-on": 1782945390,
+    "build-version-created-on": 1783848848,
     "build-method": "svgo",
-    "build-version-size": 30820,
-    "original-size": 177416,
-    "compressed-size": 30820,
-    "compression": "82.63%",
+    "build-version-size": 29863,
+    "original-size": 177391,
+    "compressed-size": 29863,
+    "compression": "83.17%",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -969,12 +969,12 @@
   },
   "c6_negation_operator_v2.svg": {
     "build-version": "svgo-svg/2YHQ.svg",
-    "build-version-created-on": 1783770516,
+    "build-version-created-on": 1783909656,
     "build-method": "svgo",
-    "build-version-size": 22617,
-    "original-size": 60002,
-    "compressed-size": 22617,
-    "compression": "62.31%",
+    "build-version-size": 22616,
+    "original-size": 60134,
+    "compressed-size": 22616,
+    "compression": "62.39%",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -1101,12 +1101,12 @@
   },
   "c6_sin_of_sin_graph.svg": {
     "build-version": "svgo-svg/0dwB.svg",
-    "build-version-created-on": 1782945389,
+    "build-version-created-on": 1783905013,
     "build-method": "svgo",
-    "build-version-size": 25970,
-    "original-size": 76939,
-    "compressed-size": 25970,
-    "compression": "66.25%",
+    "build-version-size": 25937,
+    "original-size": 78115,
+    "compressed-size": 25937,
+    "compression": "66.8%",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -1310,12 +1310,12 @@
   },
   "c6_true_counterclockwiseness_1.svg": {
     "build-version": "svgo-svg/edTN.svg",
-    "build-version-created-on": 1782945380,
+    "build-version-created-on": 1783857438,
     "build-method": "svgo",
-    "build-version-size": 75312,
-    "original-size": 123876,
-    "compressed-size": 75312,
-    "compression": "39.2%",
+    "build-version-size": 73693,
+    "original-size": 123949,
+    "compressed-size": 73693,
+    "compression": "40.55%",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -2790,8 +2790,8 @@
     "original-size": 112631,
     "compressed-size": 18438,
     "compression": "83.63%",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_big_wave_purple_blue_with_height.svg": {
     "build-version": "svgo-svg/CZVO.svg",
@@ -3010,8 +3010,8 @@
     "original-size": 1240653,
     "compressed-size": 58463,
     "compression": "95.29%",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "test_cloud_SE.svg": {
     "build-version": "svgo-svg/SN5W.svg",
@@ -3059,12 +3059,12 @@
   },
   "c6_composition_reminder_cloud.svg": {
     "build-version": "svgo-svg/g4I6.svg",
-    "build-version-created-on": 1782945388,
+    "build-version-created-on": 1783907012,
     "build-method": "svgo",
-    "build-version-size": 10060,
-    "original-size": 43792,
-    "compressed-size": 10060,
-    "compression": "77.03%",
+    "build-version-size": 9137,
+    "original-size": 43849,
+    "compressed-size": 9137,
+    "compression": "79.16%",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -4060,7 +4060,7 @@
   },
   "c6_all_those_x1x2_graphs.svg": {
     "build-version": "svgo-svg/aASR.svg",
-    "build-version-created-on": 1783770710,
+    "build-version-created-on": 1783800721,
     "build-method": "svgo",
     "build-version-size": 41945,
     "original-size": 394314,
@@ -5039,14 +5039,14 @@
   },
   "c6_flowers_here_bob.svg": {
     "build-version": "svgo-svg/AUok.svg",
-    "build-version-created-on": 1783771961,
+    "build-version-created-on": 1783800721,
     "build-method": "svgo",
     "build-version-size": 155392,
     "original-size": 2175712,
     "compressed-size": 155392,
     "compression": "92.86%",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ch_abercrombie_to_the_left_third.svg": {
     "build-version": "svgo-svg/dTqx.svg",
@@ -7377,8 +7377,8 @@
     "original-size": 33527,
     "compressed-size": 23254,
     "compression": "30.64%",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_17_actual_functions_with_highlights.svg": {
     "build-version": "svgo-svg/SKRR.svg",
@@ -7822,12 +7822,12 @@
   },
   "c6_true_counterclockwiseness_2.svg": {
     "build-version": "svgo-svg/0QSx.svg",
-    "build-version-created-on": 1782945381,
+    "build-version-created-on": 1783857407,
     "build-method": "svgo",
-    "build-version-size": 87719,
-    "original-size": 144502,
-    "compressed-size": 87719,
-    "compression": "39.3%",
+    "build-version-size": 85925,
+    "original-size": 144550,
+    "compressed-size": 85925,
+    "compression": "40.56%",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -8724,12 +8724,12 @@
   },
   "c6_dimensionless_plane_1_v1.svg": {
     "build-version": "svgo-svg/oqAL.svg",
-    "build-version-created-on": 1782945389,
+    "build-version-created-on": 1783848848,
     "build-method": "svgo",
-    "build-version-size": 31008,
-    "original-size": 178448,
-    "compressed-size": 31008,
-    "compression": "82.62%",
+    "build-version-size": 30082,
+    "original-size": 178423,
+    "compressed-size": 30082,
+    "compression": "83.14%",
     "used-last-build": true,
     "3chars": ["ch6"]
   },

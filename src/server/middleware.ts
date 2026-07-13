@@ -1,5 +1,7 @@
 import { createMiddleware } from "@solidjs/start/middleware";
 import { spawn } from "child_process";
+import { resolve } from "path";
+import { pathToFileURL } from "url";
 
 export default createMiddleware({
   onRequest: async (event) => {
@@ -21,15 +23,22 @@ export default createMiddleware({
         });
       }
 
-      console.log(`[Author Mode] ${cmd}`);
-
       // Execute command
       if (cmd.startsWith("code --goto ")) {
         const filePath = cmd.replace("code --goto ", "");
-        spawn("code", ["--goto", filePath], {
+        const sourceLocation = filePath.match(/^(.*):(\d+):(\d+)$/);
+        const useVsCodeUrl = process.platform === "darwin" && sourceLocation;
+        const executable = useVsCodeUrl ? "open" : "code";
+        const args = useVsCodeUrl
+          ? [
+              `vscode://file${pathToFileURL(resolve(sourceLocation![1])).pathname}:${sourceLocation![2]}:${sourceLocation![3]}`,
+            ]
+          : ["--goto", filePath];
+        const child = spawn(executable, args, {
           detached: true,
           stdio: "ignore",
         });
+        child.once("error", () => {});
       } else if (cmd.startsWith("open ")) {
         const filePath = cmd.replace("open ", "");
         const openCmd =
@@ -38,7 +47,11 @@ export default createMiddleware({
             : process.platform === "win32"
               ? "start"
               : "xdg-open";
-        spawn(openCmd, [filePath], { detached: true, stdio: "ignore" });
+        const child = spawn(openCmd, [filePath], {
+          detached: true,
+          stdio: "ignore",
+        });
+        child.once("error", () => {});
       }
 
       return new Response(JSON.stringify({ success: true }), {

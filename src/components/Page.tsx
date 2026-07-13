@@ -86,7 +86,7 @@ const Page = (props: ParentProps & PageProps) => {
     const targetIsInteractive = (target: EventTarget | null) =>
       target instanceof Element &&
       target.closest(
-        "a, button, input, textarea, select, [role='button'], [contenteditable='true']",
+        "a, button, input, textarea, select, .t-3003, [role='button'], [contenteditable='true']",
       ) !== null;
 
     if (targetIsInteractive(e.target)) {

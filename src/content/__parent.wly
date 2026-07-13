@@ -169,7 +169,7 @@
 
     |> In
         chapter=>>chain
-        >>_dimensional_f_f_
+        !! >>_dimensional_f_f_
         >>_dimensional_big_composition_
         >>_dimensional_z_combinations_
         !! >>_dimensional_f_f_f_
@@ -182,6 +182,7 @@
         >>_guess_reciprocal_name_
         >>_dimensional_omega_
         >>_dimensionality_t_over_v_
+        >>_biz_
 
 
         !! ch5 exercise 'cycles':

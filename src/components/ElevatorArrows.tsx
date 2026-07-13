@@ -9,12 +9,16 @@ import { twJoin } from "tailwind-merge";
 import smoothScrollTo from "~/utils/smoothScrollTo";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import useOnMobile from "~/hooks/useOnMobile";
-import { Show } from "solid-js";
+import { onCleanup, onMount, Show } from "solid-js";
 
 type ExerciseStop = {
   anchorY: number;
   scrollY: number;
 };
+
+const isEditableTarget = (target: EventTarget | null) =>
+  target instanceof Element &&
+  Boolean(target.closest("input, textarea, select, [contenteditable]"));
 
 const ElevatorArrows = () => {
   const { store } = useGlobalContext();
@@ -57,7 +61,7 @@ const ElevatorArrows = () => {
           store.innerHeight * ELEVATOR_STOP_DOWN_SKIP_TOP_VIEWPORT_RATIO,
     );
 
-  const handleUpClick = (_: MouseEvent) => {
+  const goUp = () => {
     const stop = previousExerciseStop();
     const scrollTo = stop?.scrollY ?? 0;
     smoothScrollTo(
@@ -66,7 +70,7 @@ const ElevatorArrows = () => {
     );
   };
 
-  const handleDownClick = (_: MouseEvent) => {
+  const goDown = () => {
     const stop = nextExerciseStop();
     const scrollTo = stop?.scrollY ?? document.body.scrollHeight;
 
@@ -75,6 +79,32 @@ const ElevatorArrows = () => {
       store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0,
     );
   };
+
+  onMount(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (
+        on_mobile() ||
+        !event.metaKey ||
+        event.altKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        (event.key !== "ArrowUp" && event.key !== "ArrowDown") ||
+        isEditableTarget(event.target)
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      if (event.key === "ArrowUp") {
+        goUp();
+      } else {
+        goDown();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    onCleanup(() => window.removeEventListener("keydown", handleKeyDown));
+  });
 
   const containerWidth = () => {
     return Math.max(
@@ -109,7 +139,7 @@ const ElevatorArrows = () => {
         />
         <div class="relative opacity-0 group-hover:opacity-100 transition-opacity">
           <button
-            onClick={handleUpClick}
+            onClick={goUp}
             style={{
               "background-color": store.show_areas ? "#fff000" : "transparent",
             }}
@@ -125,7 +155,7 @@ const ElevatorArrows = () => {
             <DoubleUpArrowSVG />
           </button>
           <button
-            onClick={handleDownClick}
+            onClick={goDown}
             style={{
               "background-color": store.show_areas ? "#fff000" : "transparent",
             }}

@@ -1102,14 +1102,16 @@
 
     $$
     \theta = \begin{cases}
-    \arctan(y/x) & \te{if }\, x \ne 0, \,\te{else} \\
-    \up{1.2}\te{arccot}(x/y) & \te{if }\, y \ne 0, \,\te{else} \\
+    \arctan(y/x) & \te{if }\, x > 0 \\
+    \up{1.2}-\arctan(y/x) & \te{if }\, x < 0 \\
+    \up{1.2}\eta & \te{if }\, x = 0, y > 0 \\
+    \up{1.2}-\eta & \te{if }\, x = 0, y < 0 \\
     \up{1.2}\rm{?} & \te{if }\, x = 0, y = 0
     \end{cases}
     $$
 
-    ...where “arctan”, “arccot” are
-    some-functions-or-other-to-be-discussed-later.
+    ...where “arctan” is
+    some-function-or-other-to-be-discussed-later.
 
     |> Pause
 

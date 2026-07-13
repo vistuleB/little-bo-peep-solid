@@ -70,6 +70,7 @@ window.MathJax = {
       tE: ["\\text{E}"],
       tF: ["\\text{F}"],
       s: ["\\text{s}"],
+      m: ["\\text{m}"],
       Rad: ["\\text{Rad}"],
       rad: ["\\text{rad}"],
       kg: ["\\text{kg}"],

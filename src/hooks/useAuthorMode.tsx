@@ -52,27 +52,59 @@ const useAuthorMode = () => {
     for (const tooltip of tooltips) {
       if (tooltip.hasAttribute("data-author-init")) continue;
       tooltip.setAttribute("data-author-init", "true");
+      let pointerDownHandled = false;
 
-      tooltip.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+      tooltip.addEventListener("pointerdown", (e) => {
+        if (e.button !== 0 || !e.isPrimary) return;
 
-        const target = e.target as HTMLElement;
-        const copyTarget = target.closest(".t-3003-i-copy") as
+        pointerDownHandled = false;
+
+        const target = e.target;
+        const copyTarget = (target instanceof Element
+          ? target.closest(".t-3003-i-copy")
+          : null) as
           | HTMLElement
           | null;
         if (copyTarget && tooltip.contains(copyTarget)) {
+          pointerDownHandled = true;
+          e.preventDefault();
+          e.stopPropagation();
           void copyText(copyTarget.dataset.copySrc || "");
           return;
         }
 
         if (tooltip.classList.contains("t-3003-i")) {
           const url = imageTooltipPath(tooltip);
-          if (url) sendCommand("open " + url);
+          if (!url) return;
+
+          pointerDownHandled = true;
+          e.preventDefault();
+          e.stopPropagation();
+          sendCommand("open " + url);
         } else {
-          sendCommand("code --goto " + tooltip.textContent?.trim());
+          const source = tooltip.textContent?.trim();
+          if (!source) return;
+
+          pointerDownHandled = true;
+          e.preventDefault();
+          e.stopPropagation();
+          sendCommand("code --goto " + source);
         }
       });
+
+      // The action already ran on pointerdown. Consume the synthesized click so
+      // inline handlers and page-level click actions cannot run it again.
+      tooltip.addEventListener(
+        "click",
+        (e) => {
+          if (!pointerDownHandled) return;
+
+          pointerDownHandled = false;
+          e.preventDefault();
+          e.stopPropagation();
+        },
+        { capture: true },
+      );
     }
   };
 
