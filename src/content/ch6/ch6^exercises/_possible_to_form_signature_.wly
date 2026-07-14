@@ -6,8 +6,8 @@
     [\lbs] \ra [\m/\s]
     $$
 
-    from functions $\alpha : [\pounds] \ra [\lbs/s]$,
-    $\beta : [\m/\s] \ra [\m^2/s]$, and 
+    from functions $\alpha : [\pounds] \ra [\lbs/\s]$,
+    $\beta : [\m/\s] \ra [\m^2/\s]$, and 
     $\gamma : [\lbs] \ra [\s]$?
 
     |> Solution
@@ -16,4 +16,20 @@
         nor addition or multiplication etc, because none of
         the input units are the same, nor even do any of the
         output units (or powers thereof) coincide with any
-        of the other input units. It's completely dead in the water!
+        of the other input units—these functions are all like
+        oil and water to one another, despite superficial
+        similarities in the units!
+        !! (In fact, the only
+        !! dimension-respecting
+        !! combinations
+        !! of these functions are expressions of the form
+
+        !! $$
+        !! A\alpha^a\qquad{}\te{~or~}\qquad{}B\beta^b\qquad{}\te{~or~}\qquad{}C\gamma^c
+        !! $$
+
+        !! for constants $A$, $B$, $C$, $a$, $b$, $c \in \rr$.
+        !! The functions do not mix at all.)
+
+        
+        !! It's completely dead in the water!

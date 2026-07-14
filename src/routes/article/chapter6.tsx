@@ -3166,18 +3166,12 @@ const Rest = () => {
               </Math>
               {" "}
               if {" "}
-              <Math>
-                $z  : [\lbs] \ra [\pounds]$
-              </Math>
-              {" "}
-              (as in {" "}
-              <InChapterLink
-                href="/article/chapter6#_152_h.a.i_"
-                class="in-chapter-link"
-              >
-                Example 1
-              </InChapterLink>
-              &#8288;)?
+              <NoBreak>
+                <Math>
+                  $z  : [\lbs] \ra [\pounds]$
+                </Math>
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -3364,7 +3358,7 @@ const Rest = () => {
               from functions {" "}
               <NoBreak>
                 <Math>
-                  $\alpha : [\pounds] \ra [\lbs/s]$
+                  $\alpha : [\pounds] \ra [\lbs/\s]$
                 </Math>
                 ,
               </NoBreak>
@@ -3372,7 +3366,7 @@ const Rest = () => {
               {" "}
               <NoBreak>
                 <Math>
-                  $\beta : [\m/\s] \ra [\m^2/s]$
+                  $\beta : [\m/\s] \ra [\m^2/\s]$
                 </Math>
                 ,
               </NoBreak>
@@ -3392,7 +3386,9 @@ const Rest = () => {
               nor addition or multiplication etc, because none of
               the input units are the same, nor even do any of the
               output units (or powers thereof) coincide with any
-              of the other input units. It's completely dead in the water!
+              of the other input units—these functions are all like
+              oil and water to one another, despite superficial
+              similarities in the units!
             </OuterP>
           </Solution>
         </Exercise>
@@ -4670,7 +4666,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              makes sense?
+              is well-formed?
             </OuterP>
           </ExerciseStatement>
           <Solution>

@@ -1,20 +1,10 @@
 |> Exercise
     handle=_dimensional_z_combinations_
-    !! If
-    !! $$
-    !! \zeta : [\lbs] \ra [\te{£}]
-    !! $$
-    !! $
-    !! z : [\lbs] \ra [\te{£}]
-    !! $
-    !! Let $m : [\lbs] \ra [\te{£}]$.
     What are the signatures of 
     $1/z$, $z^2$, $-z$, $z + z$, $z/z$, $z - z$,
     and $z \circ z$
-    !! if $m : [\lbs] \ra [\te{£}]$?
-    if $z  : [\lbs] \ra [\pounds]$
-    (as in Example >>dimensional_first_example)?
-    !! (Reminder: $z : [\lbs] \ra [\pounds]$.)
+    if $z  : [\lbs] \ra [\pounds]$?
+    !! (as in Example >>dimensional_first_example)?
 
     |> Solution
 
