@@ -123,6 +123,11 @@ td {
   max-width: 100%;
   margin: auto;
 }
+.mathblock .MathJax svg {
+  display: block;
+  height: auto;
+  margin-inline: auto;
+}
 .MathJax_SVG {
   font-size: 100%;
   position: relative;
