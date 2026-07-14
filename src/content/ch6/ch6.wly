@@ -26,7 +26,7 @@
     we write
 
     $$
-    f : [\te{A}] \ra [\te{B}]
+    f : [\A] \ra [\B]
     $$
 
     to indicate that inputs passed to $f$ have semantics
@@ -41,7 +41,7 @@
     indicates that $h$ is a function for which the inputs
     denote kilograms and for which the outputs denote degrees
     fahrenheit. We refer to 
-    the ordered pair $(\te{A}, \te{B})$ 
+    the ordered pair $(\A, \B)$ 
     as the
 
     __signature__
@@ -172,8 +172,8 @@
 
     $$
     \begin{aligned}
-    f : [\te{A}] &\ra [\te{B}] \\
-    g : [\te{A}] &\ra [\te{C}] \up{1.35}
+    f : [\A] &\ra [\B] \\
+    g : [\A] &\ra [\te{C}] \up{1.35}
     \end{aligned}
     $$
 
@@ -184,8 +184,8 @@
 
     $$
     \begin{aligned}
-    f : [\te{A}] &\ra [\te{B}] \\
-    g : [\te{A}] &\ra [\te{B}] \up{1.35}
+    f : [\A] &\ra [\B] \\
+    g : [\A] &\ra [\B] \up{1.35}
     \end{aligned}
     $$
 
@@ -361,38 +361,6 @@
     also make sense and vice-versa,
     and the right-hand side should also yield the same
     final signature as the left-hand side.
-    !! in all cases.
-    !! and yield the same final signature.
-
-
-
-    !! |> Section
-    !!     *The sum rule.*
-    !!     We can apply dimensional analysis to the 
-    !!     so-called _sum rule_, which is the identity
-
-    !!     |> Boxed
-    !!         $$
-    !!         (f + g)' = f' + g'
-    !!         $$
-
-    !!     that holds for differentiable functions $f$, $g$.
-    !!     !! the _sum rule_. 
-    !!     (Exercise >>_sum_rule_summary_#decoy:14, Chapter >>derivatives#decoy:4.)
-    !!     !! I.e., “check the units” on this equation.
-
-    !!     !! This is a two-step process: we first check that
-    !!     We apply a two-step process, first checking that
-
-    !!     __the same constraints 
-    !!     on the signatures of $f$ and $g$ are imposed
-    !!     by either side of the equation__
-
-    !!     and then checking that, 
-    !!     for $f$ and $g$ meeting those constraints, 
-    !!     the two sides of the equation come out to the
-    !!     same units. We seek perfect agreement between both
-    !!     sides of the equation in any and all matters units-related!
 
     On the left-hand side,
 
@@ -404,39 +372,63 @@
 
     $$
     \begin{aligned}
-    f : [\te{A}] &\ra [\te{B}] \\
-    g : [\te{A}] &\ra [\te{B}] \up{1.35}
+    f : [\A] &\ra [\B] \\
+    g : [\A] &\ra [\B] \up{1.35}
     \end{aligned}
     $$
 
     as listed in >>table_1_1,
     while the subsequent taking of a derivative doesn't
     impose any new constraints. 
-    !! This is the sole
-    !! constraint coming from the left-hand side.
-    !! so we find that
-    !! $f$ and $g$ must have the same input and output
-    !! units, as the sole constraints coming from the left-hand
-    !! side.
 
-    !! To analyze 
-    On
-    the right-hand side,
+    !! On the right-hand side,
+    !! the sum 
+
+    !! $$
+    !! f' + g'
+    !! $$
+
+    !! likewise imposes signatures of the form
+
+    !! $$
+    !! \begin{aligned}
+    !! f' : [\C] &\ra [\D] \\
+    !! g' : [\C] &\ra [\D] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! on $f'$, $g'$ for some units C, D, but this implies
+
+    !! $$
+    !! \begin{aligned}
+    !! f : [\C] &\ra [\C\D] \\
+    !! g : [\C] &\ra [\C\D] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! and basically again that $f$ and $g$ have the same
+    !! input and output units.
+
+
+
+
+
+    On the right-hand side,
     we start by adopting the agnostic point of view that
 
     $$
     \begin{aligned}
-    f : [\te{A}] &\ra [\te{B}] \\
-    g : [\te{C}] &\ra [\te{D}] \up{1.35}
+    f : [\A] &\ra [\B] \\
+    g : [\C] &\ra [\D] \up{1.35}
     \end{aligned}
     $$
 
-    for some arbitrary units A, B, C, D; then,
+    for some arbitrary units $\A$, $\B$, $\C$, $\D$; then,
 
     $$
     \begin{aligned}
-    f' : [\te{A}] &\ra [\te{B}/\tA] \\
-    g' : [\te{C}] &\ra [\te{D}/\tC] \up{1.35}
+    f' : [\A] &\ra [\B/\A] \\
+    g' : [\C] &\ra [\D/\C] \up{1.35}
     \end{aligned}
     $$
 
@@ -449,60 +441,103 @@
     implies 
 
     $$
-    \begin{aligned}
-    \tA &= \tC \\
-    \tB/\tA &= \tD/\tC \up{1.35}
-    \end{aligned}
+    \A\,\,\, = \,\,\,\C
+    $$
+    and
+    $$
+    \left[{\B\over\A}\right]\! =\! \left[{\D\over\C}\right]
     $$
 
-    [a.k.a., “the input units of $f'$ equal the input units
-    of $g'$ and the output units of $f'$ equal the output
-    units of $g'$”]
+    !! [a.k.a., “the input units of $f'$ equal the input units
+    !! of $g'$ and the output units of $f'$ equal the output
+    !! units of $g'$”]
     by Table 1.1 again, which, together, imply 
 
     $$
     \begin{aligned}
-    \tA &= \tC \\
-    \tB &= \tD \up{1.35}
+    \,\A &= \C, \\
+    \B &= \D \up{1.35}
     \end{aligned}
     $$
 
     ...and we recover the same constraints on $f$ and $g$ as
     exist on the left-hand side!
+    
+    !! On the right-hand side,
+    !! we start by adopting the agnostic point of view that
 
-    !! Having completed the first step, 
-    !! Having completed the first part of the two-step process, 
+    !! $$
+    !! \begin{aligned}
+    !! f : [\A_f] &\ra [\B_f] \\
+    !! g : [\A_g] &\ra [\B_g] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! for some arbitrary units $\A_f$, $\B_f$, $\A_g$, $\B_g$; then,
+
+    !! $$
+    !! \begin{aligned}
+    !! f' : [\A_f] &\ra [\B_f/\A_f] \\
+    !! g' : [\A_g] &\ra [\B_g/\A_g] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! and the fact that we are taking the sum
+
+    !! $$
+    !! f' + g'
+    !! $$
+
+    !! implies 
+
+    !! $$
+    !! \begin{aligned}
+    !! \A_f &= \A_g \\
+    !! \B_f/\A_f &= \B_g/\A_g \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! [a.k.a., “the input units of $f'$ equal the input units
+    !! of $g'$ and the output units of $f'$ equal the output
+    !! units of $g'$”]
+    !! by Table 1.1 again, which, together, imply 
+
+    !! $$
+    !! \begin{aligned}
+    !! \A_f &= \A_g \\
+    !! \B_f &= \B_g \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! ...and we recover the same constraints on $f$ and $g$ as
+    !! exist on the left-hand side!
+
 
     Assuming now that $f$
     and $g$ have the form
 
     $$
     \begin{aligned}
-    f : [\te{A}] &\ra [\te{B}] \\
-    g : [\te{A}] &\ra [\te{B}] \up{1.35}
+    f : [\A] &\ra [\B] \\
+    g : [\A] &\ra [\B] \up{1.35}
     \end{aligned}
     $$
 
-    as required by either side of the equation,
-    we have
-    !! then we have, one by one in order, that
+    as required by either side of the equation, we have
 
     $$
     \begin{gathered}
-    f + g : [\te{A}] \ra [\te{B}] \\
-    (f + g)' : [\te{A}] \ra [\tB/\tA] \up{1.35} \\
-    f' :  [\te{A}] \ra [\tB/\tA] \up{1.35} \\
-    g' :  [\te{A}] \ra [\tB/\tA] \up{1.35} \\
-    f' + g' :  [\te{A}] \ra [\tB/\tA] \up{1.35}
+    f + g : [\A] \ra [\B] \\
+    (f + g)' : [\A] \ra [\tB/\tA] \up{1.35} \\
+    f' :  [\A] \ra [\tB/\tA] \up{1.35} \\
+    g' :  [\A] \ra [\tB/\tA] \up{1.35} \\
+    f' + g' :  [\A] \ra [\tB/\tA] \up{1.35}
     \end{gathered}
     $$
 
     by the rules according to which signatures 
     respond to the sum and differentiation operators,
     but in particular
-    !! by the usual rules according to which
-    !! signatures respond to sums and derivatives,
-    !! but in particular
 
     $$
     (f + g)'
@@ -692,8 +727,8 @@
 
     $$
     \begin{aligned}
-    f : [\te{A}] &\ra [\te{B}] \\
-    g : [\te{A}] &\ra [\te{C}] \up{1.35}
+    f : [\A] &\ra [\B] \\
+    g : [\A] &\ra [\C] \up{1.35}
     \end{aligned}
     $$
 
@@ -854,8 +889,8 @@
 !!     $$
 !!     \Large
 !!     \begin{aligned}
-!!     f : [\te{A}] &\ra [\te{B}] \\
-!!     g : [\te{A}] &\ra [\te{C}] \up{1.35}
+!!     f : [\A] &\ra [\B] \\
+!!     g : [\A] &\ra [\C] \up{1.35}
 !!     \end{aligned}
 !!     $$
 
@@ -872,18 +907,18 @@
 !!     $$
 !!     \Large
 !!     \begin{gathered}
-!!     !! f': [\te{A}] \ra [\tB/\tA] \\
-!!     !! g' : [\te{A}] \ra [\tC/\tA] \up{1.35} \\
-!!     f'g :  [\te{A}] \ra [\tB\tC/\tA] \\
-!!     fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
-!!     !! f'g + fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
+!!     !! f': [\A] \ra [\tB/\tA] \\
+!!     !! g' : [\A] \ra [\tC/\tA] \up{1.35} \\
+!!     f'g :  [\A] \ra [\tB\tC/\tA] \\
+!!     fg' :  [\A] \ra [\tB\tC/\tA] \up{1.35}
+!!     !! f'g + fg' :  [\A] \ra [\tB\tC/\tA] \up{1.35}
 !!     \end{gathered}
 !!     $$
 
 !!     and
 
 !!     $$
-!!     f'g + fg' :  [\te{A}] \ra [\tB\tC/\tA] \up{1.35}
+!!     f'g + fg' :  [\A] \ra [\tB\tC/\tA] \up{1.35}
 !!     $$
 
 !!     so $f'g + fg'$ has the

@@ -109,7 +109,7 @@ export default function __Chapter6__() {
         <Pause />
         <MathBlock>
           $$
-          f : [\te&#123;A&#125;] \ra [\te&#123;B&#125;]
+          f : [\A] \ra [\B]
           $$
         </MathBlock>
         <Pause />
@@ -144,7 +144,7 @@ export default function __Chapter6__() {
           fahrenheit. We refer to 
           the ordered pair {" "}
           <Math>
-            $(\te&#123;A&#125;, \te&#123;B&#125;)$
+            $(\A, \B)$
           </Math>
           {" "} 
           as the
@@ -466,8 +466,8 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
-          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\A] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -482,8 +482,8 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
-          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \up&#123;1.35&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -897,8 +897,8 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
-          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \up&#123;1.35&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -916,29 +916,56 @@ const Rest = () => {
           impose any new constraints.
         </OuterP>
         <OuterP class="indent-10">
-          On
-          the right-hand side,
+          On the right-hand side,
           we start by adopting the agnostic point of view that
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
-          g : [\te&#123;C&#125;] &amp;\ra [\te&#123;D&#125;] \up&#123;1.35&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\C] &amp;\ra [\D] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          for some arbitrary units A, B, C, D; then,
+          for some arbitrary units {" "}
+          <NoBreak>
+            <Math>
+              $\A$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\B$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\C$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\D$
+            </Math>
+            ;
+          </NoBreak>
+          {" "} then,
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f' : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;/\tA] \\
-          g' : [\te&#123;C&#125;] &amp;\ra [\te&#123;D&#125;/\tC] \up&#123;1.35&#125;
+          f' : [\A] &amp;\ra [\B/\A] \\
+          g' : [\C] &amp;\ra [\D/\C] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -959,44 +986,29 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;aligned&#125;
-          \tA &amp;= \tC \\
-          \tB/\tA &amp;= \tD/\tC \up&#123;1.35&#125;
-          \end&#123;aligned&#125;
+          \A\,\,\, = \,\,\,\C
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          [a.k.a., “the input units of {" "}
-          <Math>
-            $f'$
-          </Math>
-          {" "} equal the input units
-          of {" "}
-          <Math>
-            $g'$
-          </Math>
-          {" "} and the output units of {" "}
-          <Math>
-            $f'$
-          </Math>
-          {" "} equal the output
-          units of {" "}
-          <NoBreak>
-            <Math>
-              $g'$
-            </Math>
-            ”]
-          </NoBreak>
-          {" "}
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \left[&#123;\B\over\A&#125;\right]\! =\! \left[&#123;\D\over\C&#125;\right]
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
           by Table 1.1 again, which, together, imply
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          \tA &amp;= \tC \\
-          \tB &amp;= \tD \up&#123;1.35&#125;
+          \,\A &amp;= \C, \\
+          \B &amp;= \D \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -1029,25 +1041,24 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
-          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \up&#123;1.35&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          as required by either side of the equation,
-          we have
+          as required by either side of the equation, we have
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \begin&#123;gathered&#125;
-          f + g : [\te&#123;A&#125;] \ra [\te&#123;B&#125;] \\
-          (f + g)' : [\te&#123;A&#125;] \ra [\tB/\tA] \up&#123;1.35&#125; \\
-          f' :  [\te&#123;A&#125;] \ra [\tB/\tA] \up&#123;1.35&#125; \\
-          g' :  [\te&#123;A&#125;] \ra [\tB/\tA] \up&#123;1.35&#125; \\
-          f' + g' :  [\te&#123;A&#125;] \ra [\tB/\tA] \up&#123;1.35&#125;
+          f + g : [\A] \ra [\B] \\
+          (f + g)' : [\A] \ra [\tB/\tA] \up&#123;1.35&#125; \\
+          f' :  [\A] \ra [\tB/\tA] \up&#123;1.35&#125; \\
+          g' :  [\A] \ra [\tB/\tA] \up&#123;1.35&#125; \\
+          f' + g' :  [\A] \ra [\tB/\tA] \up&#123;1.35&#125;
           \end&#123;gathered&#125;
           $$
         </MathBlock>
@@ -1462,8 +1473,8 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
-          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\A] &amp;\ra [\C] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
