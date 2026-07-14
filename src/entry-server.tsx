@@ -116,7 +116,7 @@ export default createHandler(() => (
             defer={true}
           />
 
-          <title>Little Bo Peep</title>
+          <title>Baskerville Calculus</title>
 
           {assets}
         </head>

@@ -70,7 +70,7 @@ const [store, set_store] = createStore<Store>({
   panel_opened: false,
   show_section_dividers: false,
   show_areas: false,
-  title: "Little Bo Peep",
+  title: "BC",
   innerWidth: document.documentElement.clientWidth || window.innerWidth,
   innerHeight: window.innerHeight,
   scrollWidth: document.body.scrollWidth,
