@@ -39,7 +39,7 @@
     $$
 
     |> ImageRight
-        src=images/svg_ch1_ch_minus_two_squared_cloud.svg
+        src=images/c1_sqrt_-2^2_cloud.svg
         offset-x=-2em
 
     and, in particular, it is _not_ true that

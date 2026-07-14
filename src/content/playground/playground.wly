@@ -9,12 +9,85 @@
         *A First Section.*
         A very long equation:
 
-        $$
-        \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
-        $$
+        |> MathBlock
+            $$
+            \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+            $$
+        |> ImageRight
+            at-least-as-wide=false
+            src=images/c1_sqrt_-2^2_cloud.svg
 
+        ...with some text beneath.
+
+        |> MathBlock
+            $$
+            \begin{gathered}
+            \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx\\
+            \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx\\
+            \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx\\
+            \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx\\
+            \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx\\
+            \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+            \end{gathered}
+            $$
+
+        Hello.
 
     |> Exercises
+        |> Exercise
+            handle=_solution_math_test_
+            Test for solution containing bunch of math.
+
+            |> Solution
+
+                |> MathBlock
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+                |> ImageRight
+                    at-least-as-wide=false
+                    src=images/c1_sqrt_-2^2_cloud.svg
+                |> MathBlock
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+                |> MathBlock
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+                |> MathBlock
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+                |> MathBlock
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+                |> MathBlock
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+                |> MathBlock
+                    constrained=false
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+                |> MathBlock
+                    constrained=false
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+                |> MathBlock
+                    constrained=false
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+                |> MathBlock
+                    constrained=false
+                    $$
+                    \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+                    $$
+
         |> Exercise
             handle=grid-component
 
@@ -528,7 +601,7 @@
                 $$
 
                 |> ImageRight
-                    src=images/svg_ch1_ch_minus_two_squared_cloud.svg
+                    src=images/c1_sqrt_-2^2_cloud.svg
                     at-least-as-wide=false
                     offset-x=5em
 
