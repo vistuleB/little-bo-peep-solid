@@ -870,14 +870,14 @@
   },
   "c6_flowers_here_bob_v2.svg": {
     "build-version": "svgo-svg/5nYo.svg",
-    "build-version-created-on": 1783948810,
+    "build-version-created-on": 1784004822,
     "build-method": "svgo",
-    "build-version-size": 163739,
-    "original-size": 2206855,
-    "compressed-size": 163739,
+    "build-version-size": 163881,
+    "original-size": 2207180,
+    "compressed-size": 163881,
     "compression": "92.58%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch6"]
   },
   "svg_ch5_ex_tan_sq_AB_ratio_big_A.svg": {
     "build-version": "svgo-svg/8gZl.svg",
@@ -1527,6 +1527,17 @@
     "compression": "5.02%",
     "used-last-build": false,
     "3chars": []
+  },
+  "e6_f_inverse_g_f_composition.svg": {
+    "build-version": "svgo-svg/y-Ij.svg",
+    "build-version-created-on": 1784004822,
+    "build-method": "svgo",
+    "build-version-size": 30732,
+    "original-size": 90798,
+    "compressed-size": 30732,
+    "compression": "66.15%",
+    "used-last-build": true,
+    "3chars": ["ch6"]
   },
   "svg_ch5_ex_cos_and_cos2_comparison_transformations_1.svg": {
     "build-version": "svgo-svg/atoq.svg",
@@ -3664,14 +3675,14 @@
   },
   "c6_flowers_here_two_more_v3.svg": {
     "build-version": "svgo-svg/cZb4.svg",
-    "build-version-created-on": 1783948810,
+    "build-version-created-on": 1784004822,
     "build-method": "svgo",
-    "build-version-size": 61008,
-    "original-size": 1247383,
-    "compressed-size": 61008,
-    "compression": "95.11%",
-    "used-last-build": false,
-    "3chars": []
+    "build-version-size": 61161,
+    "original-size": 1247620,
+    "compressed-size": 61161,
+    "compression": "95.1%",
+    "used-last-build": true,
+    "3chars": ["ch6"]
   },
   "svg_ch5_ex_0_2_radians_guess_joke_v1.svg": {
     "build-version": "svgo-svg/0sAj.svg",

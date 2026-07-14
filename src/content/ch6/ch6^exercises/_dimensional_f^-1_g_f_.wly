@@ -43,4 +43,4 @@
 
         |> Image
             style=margin-top:-1em
-            src=tmp-images/e6_f_inverse_g_f_composition.svg
+            src=images/e6_f_inverse_g_f_composition.svg

@@ -519,7 +519,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_bob_v2.svg"
+          src="/build-img/svgo-svg/5nYo.svg"
           id="_153_h.a.i_"
           intrinsicWidth={700}
           intrinsicHeight={883}
@@ -576,7 +576,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_two_more_v3.svg"
+          src="/build-img/svgo-svg/cZb4.svg"
           id="_154_h.a.i_"
           intrinsicWidth={700}
           intrinsicHeight={310}
@@ -4733,7 +4733,7 @@ const Rest = () => {
             <Pause />
             <Image
               style="margin-top:-1em"
-              src="/tmp-images/e6_f_inverse_g_f_composition.svg"
+              src="/build-img/svgo-svg/y-Ij.svg"
               intrinsicWidth={600}
               intrinsicHeight={145}
             />
