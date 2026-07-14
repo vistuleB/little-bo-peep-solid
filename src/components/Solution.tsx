@@ -7,6 +7,7 @@ import {
   onMount,
   Setter,
   Show,
+  untrack,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import {
@@ -35,7 +36,11 @@ import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useOneExerciseContext } from "~/store/OneExerciseStoreProvider";
 import { LazyImageProvider } from "~/store/LazyImageProvider";
 import { useExerciseGroupRegistry } from "~/store/ExerciseGroupRegistryProvider";
-import typesetMathJaxElements from "~/utils/typesetMathJax";
+import {
+  createSolutionMathJaxController,
+  prepareSolutionMathJax,
+  SolutionMathJaxProvider,
+} from "~/store/SolutionMathJaxProvider";
 
 type SolutionProps = ParentProps &
   SharedProps & {
@@ -78,6 +83,8 @@ const SolutionHeightChangeListener = (props: { resetter: () => void }) => {
 
 export const Solution = (props: SolutionProps) => {
   let ref: HTMLDivElement | undefined;
+  let observed_math_preparation: Promise<boolean> | undefined;
+  const solutionMathJax = createSolutionMathJaxController();
 
   let { store: global_store } = useGlobalContext();
   const {
@@ -127,12 +134,32 @@ export const Solution = (props: SolutionProps) => {
     }
   };
 
+  const prepare_solution_math = () => {
+    const preparation = untrack(() => prepareSolutionMathJax(solutionMathJax));
+    if (preparation === observed_math_preparation) return;
+    observed_math_preparation = preparation;
+    void preparation
+      .then((succeeded) => {
+        if (!succeeded) return;
+        reset_content_height_etc();
+        requestAnimationFrame(reset_content_height_etc);
+      })
+      .finally(() => {
+        if (observed_math_preparation === preparation) {
+          observed_math_preparation = undefined;
+        }
+      });
+  };
+
   const mount_solution_content = () => {
-    if (solution_content_mounted()) return;
+    if (solution_content_mounted()) {
+      prepare_solution_math();
+      return;
+    }
     set_solution_content_mounted(true);
     requestAnimationFrame(() => {
       reset_content_height_etc();
-      void typesetMathJaxElements([ref]);
+      prepare_solution_math();
     });
   };
 
@@ -247,7 +274,11 @@ export const Solution = (props: SolutionProps) => {
         >
           <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           <Show when={solution_content_mounted()}>
-            {() => <LazyImageProvider>{props.children}</LazyImageProvider>}
+            {() => (
+              <SolutionMathJaxProvider controller={solutionMathJax}>
+                <LazyImageProvider>{props.children}</LazyImageProvider>
+              </SolutionMathJaxProvider>
+            )}
           </Show>
         </div>
         <div

@@ -18,6 +18,11 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import typesetMathJaxElements from "~/utils/typesetMathJax";
+import {
+  SolutionMathJaxEntry,
+  SolutionMathJaxController,
+  useSolutionMathJax,
+} from "~/store/SolutionMathJaxProvider";
 
 const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN}px`;
 
@@ -135,10 +140,31 @@ const unregisterMathJaxFallback = (entry: MathJaxFallbackEntry | undefined) => {
   mathJaxFallbackEntries.delete(entry);
 };
 
+const registerSolutionMathJax = (
+  controller: SolutionMathJaxController | undefined,
+  entry: MathJaxFallbackEntry | undefined,
+) => {
+  if (!controller || !entry) return;
+
+  const solutionEntry: SolutionMathJaxEntry = {
+    ref: entry.ref,
+    pending: () => entry.active && !entry.visible() && !entry.typesetting,
+    setTypesetting: (typesetting) => {
+      entry.typesetting = typesetting;
+    },
+    complete: () => {
+      completeTypeset(entry);
+    },
+  };
+  controller.entries.add(solutionEntry);
+  return () => controller.entries.delete(solutionEntry);
+};
+
 export const Math = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
   const [visible, setVisible] = createSignal(false);
   const { store, set_store } = useGlobalContext();
+  const solutionMathJax = useSolutionMathJax();
 
   onMount(() => {
     const setScrollHeight = () =>
@@ -175,6 +201,11 @@ export const Math = (props: ParentProps) => {
 
     registerMathJaxFallback(mathJaxEntry);
 
+    const unregisterSolutionMathJax = registerSolutionMathJax(
+      solutionMathJax,
+      mathJaxEntry,
+    );
+
     createEffect(() => {
       if (
         mathJaxEntry &&
@@ -190,6 +221,7 @@ export const Math = (props: ParentProps) => {
       if (mathJaxEntry) mathJaxEntry.active = false;
       observer.disconnect();
       unregisterMathJaxFallback(mathJaxEntry);
+      unregisterSolutionMathJax?.();
     });
   });
 
@@ -211,6 +243,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
   const [scaledDown, setScaledDown] = createSignal(false);
   const [originalWidth, setOriginalWidth] = createSignal(0);
   const [localInnerWidthCopy, setLocalInnerWidthCopy] = createSignal(0);
+  const solutionMathJax = useSolutionMathJax();
   let firstMeasureOfOriginalWidth = 0;
 
   const availableViewportWidth = (viewportWidth: number) =>
@@ -289,6 +322,11 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
 
     registerMathJaxFallback(mathJaxEntry);
 
+    const unregisterSolutionMathJax = registerSolutionMathJax(
+      solutionMathJax,
+      mathJaxEntry,
+    );
+
     createEffect(() => {
       if (
         mathJaxEntry &&
@@ -314,6 +352,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
       if (mathJaxEntry) mathJaxEntry.active = false;
       observer.disconnect();
       unregisterMathJaxFallback(mathJaxEntry);
+      unregisterSolutionMathJax?.();
       window.removeEventListener("resize", handleResize);
     });
   });
