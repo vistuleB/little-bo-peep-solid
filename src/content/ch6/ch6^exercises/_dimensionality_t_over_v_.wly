@@ -1,12 +1,12 @@
 |> Exercise
     handle=_dimensionality_t_over_v_
 
-    If $x$ is a spatial displacement and $v$ is speed, what is
+    If $x$ is position and $v$ is velocity, what is
     the dimension of $x/v$?
 
     |> Solution
 
-        It is time, since speed has the form
+        It is time, since velocity has dimensions
         “distance over time”, which cancels the “distance”
         dimension on top:
 

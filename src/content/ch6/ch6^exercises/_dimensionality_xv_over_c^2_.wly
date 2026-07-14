@@ -1,9 +1,9 @@
 |> Exercise
     handle=_dimensionality_xv_over_c^2_
 
-    If $x$ is a spatial displacement, $v$ is a velocity (speed),
-    and $c$ is the speed of light, what is
-    the dimension of $xv/c^2$?
+    If $x$ is position, $v$ is velocity,
+    and $c$ is the speed of light, what are
+    the dimensions of $xv/c^2$?
 
     |> Solution
 
@@ -14,7 +14,10 @@
         $$
 
         is dimensionless since $v$ and $c$ both
-        have dimensions of speed (speed/speed = 1),
+        have dimensions of speed (nb: velocity = speed,
+        insofar as dimensionality is concerned—one being
+        the absolute value of the other does not change
+        the units!),
         so
 
         $$
@@ -32,4 +35,5 @@
             src=images/e6_v_over_c_cancellation_cloud.svg
             offset-x=1em
 
-        which has dimensions of time by Exercise >>_dimensionality_t_over_v_.
+        which has dimensions of time by
+        Exercise >>_dimensionality_t_over_v_.

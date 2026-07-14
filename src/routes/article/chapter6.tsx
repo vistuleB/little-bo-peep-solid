@@ -4226,11 +4226,11 @@ const Rest = () => {
               <Math>
                 $x$
               </Math>
-              {" "} is a spatial displacement and {" "}
+              {" "} is position and {" "}
               <Math>
                 $v$
               </Math>
-              {" "} is speed, what is
+              {" "} is velocity, what is
               the dimension of {" "}
               <NoBreak>
                 <Math>
@@ -4242,7 +4242,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It is time, since speed has the form
+              It is time, since velocity has dimensions
               “distance over time”, which cancels the “distance”
               dimension on top:
             </OuterP>
@@ -4265,17 +4265,17 @@ const Rest = () => {
               <Math>
                 $x$
               </Math>
-              {" "} is a spatial displacement, {" "}
+              {" "} is position, {" "}
               <Math>
                 $v$
               </Math>
-              {" "} is a velocity (speed),
+              {" "} is velocity,
               and {" "}
               <Math>
                 $c$
               </Math>
-              {" "} is the speed of light, what is
-              the dimension of {" "}
+              {" "} is the speed of light, what are
+              the dimensions of {" "}
               <NoBreak>
                 <Math>
                   $xv/c^2$
@@ -4305,7 +4305,10 @@ const Rest = () => {
                 $c$
               </Math>
               {" "} both
-              have dimensions of speed (speed/speed = 1),
+              have dimensions of speed (nb: velocity = speed,
+              insofar as dimensionality is concerned—one being
+              the absolute value of the other does not change
+              the units!),
               so
             </OuterP>
             <Pause />
@@ -4333,7 +4336,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              which has dimensions of time by {" "}
+              which has dimensions of time by
+              {" "}
               <InChapterLink
                 href="/article/chapter6#_172_h.a.i_"
                 class="in-chapter-link"
