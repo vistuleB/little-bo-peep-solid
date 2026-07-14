@@ -13,7 +13,6 @@ import {
   ENABLE_MATHJAX_INTERSECTION_FALLBACK,
   MATHJAX_INTERSECTION_FALLBACK_DELAY_MS,
   MATHJAX_INTERSECTION_ROOT_MARGIN,
-  MOBILE_TEXT_COLUMN_SIDE_INSET,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import SharedProps from "./types/SharedProps";
@@ -24,11 +23,11 @@ import {
   SolutionMathJaxController,
   useSolutionMathJax,
 } from "~/store/SolutionMathJaxProvider";
-import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
 import { ScaleProvider } from "~/store/ScaleProvider";
+import useConstrainedContent from "~/hooks/useConstrainedContent";
+import styleJoin from "~/utils/styleJoin";
 
 const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN}px`;
-const HEIGHT_CHANGE_RAF_MAX_MS = 800;
 
 type MathJaxFallbackEntry = {
   ref: HTMLElement;
@@ -164,7 +163,7 @@ const registerSolutionMathJax = (
   return () => controller.entries.delete(solutionEntry);
 };
 
-export const Math = (props: ParentProps) => {
+const InlineMath = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
   const [visible, setVisible] = createSignal(false);
   const { store, set_store } = useGlobalContext();
@@ -240,6 +239,8 @@ export const Math = (props: ParentProps) => {
   );
 };
 
+export { InlineMath as Math };
+
 type MathBlockProps = SharedProps &
   ParentProps & {
     constrained?: boolean;
@@ -248,123 +249,30 @@ type MathBlockProps = SharedProps &
 export const MathBlock = (props: MathBlockProps) => {
   const merged = mergeProps({ constrained: true }, props);
   let ref: HTMLDivElement | undefined;
-  let transitionTimeout: number | undefined;
-  let heightChangeAnimationFrame: number | undefined;
-  let heightChangeAnimationFrameExpiresAt = 0;
   const { store, set_store } = useGlobalContext();
-  const { set_height_change_listener_store } =
-    useHeightChangeListenerContext() || {};
   const [visible, setVisible] = createSignal(false);
-  const [afterFirstClick, setAfterFirstClick] = createSignal(false);
   const [naturalWidth, setNaturalWidth] = createSignal(0);
-  const [constrained, setConstrained] = createSignal(merged.constrained);
-  const [transitionsEnabled, setTransitionsEnabled] = createSignal(false);
-  const [viewportWidth, setViewportWidth] = createSignal(
-    typeof window === "undefined" ? 0 : window.innerWidth,
-  );
+  const constrainedContent = useConstrainedContent({
+    naturalWidth,
+    initiallyConstrained: merged.constrained,
+  });
   const solutionMathJax = useSolutionMathJax();
 
-  const availableViewportWidth = () =>
-    globalThis.Math.max(0, viewportWidth() - MOBILE_TEXT_COLUMN_SIDE_INSET * 2);
-
-  const targetWidth = () => {
-    const width = naturalWidth();
-    if (!width) return 0;
-    return constrained()
-      ? globalThis.Math.min(width, availableViewportWidth())
-      : width;
-  };
+  const targetWidth = () => naturalWidth() * constrainedContent.targetScale();
 
   const scale = createMemo(() => ({
-    scale: naturalWidth() ? targetWidth() / naturalWidth() : 1,
+    scale: constrainedContent.targetScale(),
     name: merged.id || "MathBlock",
-    after_first_click: afterFirstClick(),
+    after_first_click: constrainedContent.afterFirstClick(),
   }));
 
-  const notifyHeightChange = () => {
-    set_height_change_listener_store?.(
-      "re_calculate_height",
-      (previous) => !previous,
-    );
-  };
-
-  const notifyHeightChangeAcrossFrames = () => {
-    notifyHeightChange();
-    requestAnimationFrame(notifyHeightChange);
-    window.setTimeout(notifyHeightChange, 50);
-  };
-
-  const stopHeightChangeAnimationFrameLoop = () => {
-    if (heightChangeAnimationFrame === undefined) return;
-
-    cancelAnimationFrame(heightChangeAnimationFrame);
-    heightChangeAnimationFrame = undefined;
-    heightChangeAnimationFrameExpiresAt = 0;
-  };
-
-  const startHeightChangeAnimationFrameLoop = () => {
-    heightChangeAnimationFrameExpiresAt =
-      performance.now() + HEIGHT_CHANGE_RAF_MAX_MS;
-
-    if (heightChangeAnimationFrame !== undefined) return;
-
-    const tick = () => {
-      if (performance.now() > heightChangeAnimationFrameExpiresAt) {
-        heightChangeAnimationFrame = undefined;
-        heightChangeAnimationFrameExpiresAt = 0;
-        notifyHeightChangeAcrossFrames();
-        return;
-      }
-
-      notifyHeightChange();
-      heightChangeAnimationFrame = requestAnimationFrame(tick);
-    };
-
-    heightChangeAnimationFrame = requestAnimationFrame(tick);
-  };
-
-  const disableTransitionsDuringWindowResizes = () => {
-    clearTimeout(transitionTimeout);
-    stopHeightChangeAnimationFrameLoop();
-    setTransitionsEnabled(false);
-  };
-
-  const enableTransitionForToggle = () => {
-    clearTimeout(transitionTimeout);
-    setTransitionsEnabled(true);
-    startHeightChangeAnimationFrameLoop();
-    transitionTimeout = window.setTimeout(() => {
-      setTransitionsEnabled(false);
-      stopHeightChangeAnimationFrameLoop();
-      notifyHeightChangeAcrossFrames();
-    }, 600);
-  };
-
   const handleClick = (event: MouseEvent) => {
-    event.stopPropagation();
-
-    if (naturalWidth() > availableViewportWidth()) {
-      enableTransitionForToggle();
-      requestAnimationFrame(() => {
-        setConstrained((beforeToggle) => !beforeToggle);
-        notifyHeightChangeAcrossFrames();
-      });
+    const target = event.target;
+    if (target instanceof Element && target.closest("[data-side-image]")) {
+      event.stopPropagation();
+      return;
     }
-    setAfterFirstClick(true);
-  };
-
-  const handleTransitionEnd = (event: TransitionEvent) => {
-    if (event.propertyName !== "width") return;
-
-    clearTimeout(transitionTimeout);
-    stopHeightChangeAnimationFrameLoop();
-    setTransitionsEnabled(false);
-    notifyHeightChangeAcrossFrames();
-  };
-
-  const handleWindowResize = () => {
-    disableTransitionsDuringWindowResizes();
-    setViewportWidth(window.innerWidth);
+    constrainedContent.handleClick(event);
   };
 
   onMount(() => {
@@ -382,15 +290,19 @@ export const MathBlock = (props: MathBlockProps) => {
 
       const previousRefWidth = ref.style.width;
       const previousSvgMaxWidth = svg.style.maxWidth;
-      ref.style.width = "max-content";
-      svg.style.maxWidth = "none";
-      const measuredWidth = svg.getBoundingClientRect().width;
-      ref.style.width = previousRefWidth;
-      svg.style.maxWidth = previousSvgMaxWidth;
+      let measuredWidth = 0;
+      try {
+        ref.style.width = "max-content";
+        svg.style.maxWidth = "none";
+        measuredWidth = svg.getBoundingClientRect().width;
+      } finally {
+        ref.style.width = previousRefWidth;
+        svg.style.maxWidth = previousSvgMaxWidth;
+      }
 
       if (measuredWidth > 0) {
         setNaturalWidth(measuredWidth);
-        notifyHeightChangeAcrossFrames();
+        constrainedContent.notifyHeightChangeAcrossFrames();
       }
       return measuredWidth > 0;
     };
@@ -440,17 +352,11 @@ export const MathBlock = (props: MathBlockProps) => {
       }
     });
 
-    setViewportWidth(window.innerWidth);
-    window.addEventListener("resize", handleWindowResize);
-
     onCleanup(() => {
-      clearTimeout(transitionTimeout);
-      stopHeightChangeAnimationFrameLoop();
       if (mathJaxEntry) mathJaxEntry.active = false;
       observer.disconnect();
       unregisterMathJaxFallback(mathJaxEntry);
       unregisterSolutionMathJax?.();
-      window.removeEventListener("resize", handleWindowResize);
     });
   });
 
@@ -460,7 +366,8 @@ export const MathBlock = (props: MathBlockProps) => {
         id={merged.id}
         class={twJoin(
           "mathblock",
-          transitionsEnabled()
+          merged.class,
+          constrainedContent.transitionsEnabled()
             ? [
                 "transition-[width]",
                 "duration-500",
@@ -469,14 +376,14 @@ export const MathBlock = (props: MathBlockProps) => {
             : "transition-opacity",
           store.show_areas && "mathblock-background-divide",
         )}
-        style={{
+        style={styleJoin(merged.style, {
           opacity: visible() ? "1" : "0",
           width: targetWidth() ? `${targetWidth()}px` : "fit-content",
-          "max-width": "none",
-          "box-sizing": "border-box",
-        }}
+          maxWidth: "none",
+          boxSizing: "border-box",
+        })}
         onClick={handleClick}
-        onTransitionEnd={handleTransitionEnd}
+        onTransitionEnd={constrainedContent.handleTransitionEnd}
         ref={ref}
       >
         {merged.children}

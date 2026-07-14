@@ -1,21 +1,13 @@
-import {
-  ParentProps,
-  createMemo,
-  createSignal,
-  mergeProps,
-  onCleanup,
-  onMount,
-} from "solid-js";
+import { ParentProps, createMemo, createSignal, mergeProps } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
 import { ScaleProvider } from "~/store/ScaleProvider";
-import { MOBILE_TEXT_COLUMN_SIDE_INSET } from "~/constants";
-import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
 import { useLazyImages } from "~/store/LazyImageProvider";
+import useConstrainedContent from "~/hooks/useConstrainedContent";
+import styleJoin from "~/utils/styleJoin";
 
 const SHOW_DEBUG_COLORS = false;
-const HEIGHT_CHANGE_RAF_MAX_MS = 800;
 
 type ImageProps = ParentProps &
   SharedProps & {
@@ -40,32 +32,18 @@ const Image = (props: ImageProps) => {
   );
 
   let image_element!: HTMLImageElement;
-  let transitionTimeout: number | undefined;
-  let heightChangeAnimationFrame: number | undefined;
-  let heightChangeAnimationFrameExpiresAt = 0;
-  const { set_height_change_listener_store } =
-    useHeightChangeListenerContext() || {};
   const lazy = useLazyImages();
-
-  const currentViewportWidth = () =>
-    typeof window === "undefined" ? 0 : window.innerWidth;
 
   const positiveNumber = (value: string | number | undefined) => {
     const number = Number(value);
     return Number.isFinite(number) && number > 0 ? number : 0;
   };
 
-  const [after_first_click, set_after_first_click] = createSignal(false);
   const [naturalImageWidth, setNaturalImageWidth] = createSignal(
     positiveNumber(merged.intrinsicWidth),
   );
   const [naturalImageHeight, setNaturalImageHeight] = createSignal(
     positiveNumber(merged.intrinsicHeight),
-  );
-  const [constrained, setConstrained] = createSignal(merged.constrained);
-  const [transitionsEnabled, setTransitionsEnabled] = createSignal(false);
-  const [viewportWidth, setViewportWidth] = createSignal(
-    currentViewportWidth(),
   );
 
   const authorWidth = () => {
@@ -74,6 +52,10 @@ const Image = (props: ImageProps) => {
   };
 
   const displayWidth = () => authorWidth() || naturalImageWidth();
+  const constrainedContent = useConstrainedContent({
+    naturalWidth: displayWidth,
+    initiallyConstrained: merged.constrained,
+  });
 
   const intrinsicAspectRatio = () => {
     if (merged.width && merged.height) return "";
@@ -91,118 +73,19 @@ const Image = (props: ImageProps) => {
     return width ? `${width}px` : "";
   };
 
-  const availableViewportWidth = () =>
-    Math.max(0, viewportWidth() - MOBILE_TEXT_COLUMN_SIDE_INSET * 2);
-
-  const targetScale = () => {
-    const width = displayWidth();
-    if (!width || !constrained()) return 1;
-    return Math.min(1, availableViewportWidth() / width);
-  };
-
   const scale = createMemo(() => ({
-    scale: targetScale(),
+    scale: constrainedContent.targetScale(),
     name: props.src,
-    after_first_click: after_first_click(),
+    after_first_click: constrainedContent.afterFirstClick(),
   }));
-
-  const toggleConstrained = () => {
-    setConstrained((beforeToggle) => !beforeToggle);
-  };
-
-  const notifyHeightChange = () => {
-    set_height_change_listener_store?.(
-      "re_calculate_height",
-      (previous) => !previous,
-    );
-  };
-
-  const notifyHeightChangeAcrossFrames = () => {
-    notifyHeightChange();
-    requestAnimationFrame(notifyHeightChange);
-    window.setTimeout(notifyHeightChange, 50);
-  };
-
-  const stopHeightChangeAnimationFrameLoop = () => {
-    if (heightChangeAnimationFrame === undefined) return;
-
-    cancelAnimationFrame(heightChangeAnimationFrame);
-    heightChangeAnimationFrame = undefined;
-    heightChangeAnimationFrameExpiresAt = 0;
-  };
-
-  const startHeightChangeAnimationFrameLoop = () => {
-    heightChangeAnimationFrameExpiresAt =
-      performance.now() + HEIGHT_CHANGE_RAF_MAX_MS;
-
-    if (heightChangeAnimationFrame !== undefined) return;
-
-    const tick = () => {
-      if (performance.now() > heightChangeAnimationFrameExpiresAt) {
-        heightChangeAnimationFrame = undefined;
-        heightChangeAnimationFrameExpiresAt = 0;
-        notifyHeightChangeAcrossFrames();
-        return;
-      }
-
-      notifyHeightChange();
-      heightChangeAnimationFrame = requestAnimationFrame(tick);
-    };
-
-    heightChangeAnimationFrame = requestAnimationFrame(tick);
-  };
-
-  const disableTransitionsDuringWindowResizes = () => {
-    clearTimeout(transitionTimeout);
-    stopHeightChangeAnimationFrameLoop();
-    setTransitionsEnabled(false);
-  };
-
-  const enableTransitionForToggle = () => {
-    clearTimeout(transitionTimeout);
-    setTransitionsEnabled(true);
-    startHeightChangeAnimationFrameLoop();
-    transitionTimeout = window.setTimeout(() => {
-      setTransitionsEnabled(false);
-      stopHeightChangeAnimationFrameLoop();
-      notifyHeightChangeAcrossFrames();
-    }, 600);
-  };
 
   const debugBackground = () => {
     const currentScale = scale().scale;
-    const isConstrained = constrained();
+    const isConstrained = constrainedContent.constrained();
     if (isConstrained && currentScale < 1) return "#8b0000";
     if (isConstrained) return "#ffb3b3";
     if (currentScale < 1) return "#12b886";
     return "#a5d8ff";
-  };
-
-  const handleClick = (event: MouseEvent) => {
-    event.stopPropagation();
-
-    const width = displayWidth();
-    if (width > availableViewportWidth()) {
-      enableTransitionForToggle();
-      requestAnimationFrame(() => {
-        toggleConstrained();
-        notifyHeightChangeAcrossFrames();
-      });
-    }
-
-    set_after_first_click(true);
-  };
-
-  const handleTransitionEnd = () => {
-    clearTimeout(transitionTimeout);
-    stopHeightChangeAnimationFrameLoop();
-    setTransitionsEnabled(false);
-    notifyHeightChangeAcrossFrames();
-  };
-
-  const handleWindowResize = () => {
-    disableTransitionsDuringWindowResizes();
-    setViewportWidth(currentViewportWidth());
   };
 
   const handleImageLoad = () => {
@@ -213,7 +96,7 @@ const Image = (props: ImageProps) => {
     if (heightWasMissing) setNaturalImageHeight(image_element.naturalHeight);
 
     if (widthWasMissing || heightWasMissing) {
-      notifyHeightChangeAcrossFrames();
+      constrainedContent.notifyHeightChangeAcrossFrames();
     }
   };
 
@@ -222,30 +105,22 @@ const Image = (props: ImageProps) => {
     const constrainedWidth =
       styleWidth &&
       `min(calc(100vw - 2 * var(--mobile-text-column-side-inset)), ${styleWidth})`;
-    const width = constrained()
+    const width = constrainedContent.constrained()
       ? constrainedWidth || "auto"
       : styleWidth || "auto";
-
-    const debugColor = SHOW_DEBUG_COLORS
-      ? `background-color:${debugBackground()};`
-      : "";
 
     const height = merged.height || "auto";
     const aspectRatio = intrinsicAspectRatio();
 
-    return `${debugColor}width:${width};height:${height};${aspectRatio ? `aspect-ratio:${aspectRatio};` : ""}max-width:none;box-sizing:border-box;${merged.style}`;
+    return styleJoin(merged.style, {
+      backgroundColor: SHOW_DEBUG_COLORS ? debugBackground() : undefined,
+      width,
+      height,
+      aspectRatio: aspectRatio || undefined,
+      maxWidth: "none",
+      boxSizing: "border-box",
+    });
   };
-
-  onMount(() => {
-    setViewportWidth(currentViewportWidth());
-    window.addEventListener("resize", handleWindowResize);
-  });
-
-  onCleanup(() => {
-    clearTimeout(transitionTimeout);
-    stopHeightChangeAnimationFrameLoop();
-    window.removeEventListener("resize", handleWindowResize);
-  });
 
   return (
     <ScaleProvider scale={scale}>
@@ -260,17 +135,17 @@ const Image = (props: ImageProps) => {
             side_image={false}
             local_url={merged.local_url}
             onLoad={handleImageLoad}
-            onClick={handleClick}
-            onTransitionEnd={handleTransitionEnd}
+            onClick={constrainedContent.handleClick}
+            onTransitionEnd={constrainedContent.handleTransitionEnd}
             style={imageStyle()}
             class={twJoin(
               merged.class,
-              transitionsEnabled() && [
+              constrainedContent.transitionsEnabled() && [
                 "transition-[width,max-width]",
                 "duration-500",
                 "ease-[cubic-bezier(0.4, 0, 0.2, 1)]",
               ],
-              !transitionsEnabled() && "transition-none",
+              !constrainedContent.transitionsEnabled() && "transition-none",
             )}
           />
           {merged.children}
