@@ -182,7 +182,7 @@ const Image = (props: ImageProps) => {
     event.stopPropagation();
 
     const width = displayWidth();
-    if (window.innerWidth <= width) {
+    if (width > availableViewportWidth()) {
       enableTransitionForToggle();
       requestAnimationFrame(() => {
         toggleConstrained();
