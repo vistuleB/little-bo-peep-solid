@@ -1,0 +1,15 @@
+|> Exercise
+    handle=_dimensionality_t_over_v_
+
+    If $x$ is a spatial displacement and $v$ is speed, what is
+    the dimension of $x/v$?
+
+    |> Solution
+
+        It is time, since speed has the form
+        “distance over time”, which cancels the “distance”
+        dimension on top:
+
+        $$
+        {\te{DISTANCE}\over\te{SPEED}} = {\te{DISTANCE}\over \left({\te{DISTANCE} \over {\te{TIME}}}\right)} = {\te{DISTANCE}}\cdot {\te{TIME}\over \te{DISTANCE}} = \te{TIME}.
+        $$

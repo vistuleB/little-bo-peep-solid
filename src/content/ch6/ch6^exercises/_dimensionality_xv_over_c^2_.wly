@@ -1,0 +1,35 @@
+|> Exercise
+    handle=_dimensionality_xv_over_c^2_
+
+    If $x$ is a spatial displacement, $v$ is a velocity (speed),
+    and $c$ is the speed of light, what is
+    the dimension of $xv/c^2$?
+
+    |> Solution
+
+        The factor
+
+        $$
+        {v\over c}
+        $$
+
+        is dimensionless since $v$ and $c$ both
+        have dimensions of speed (speed/speed = 1),
+        so
+
+        $$
+        {xv\over c^2} = {v\over c}\cdot{x\over c}
+        $$
+
+        has the same dimensions as 
+
+        $$
+        {x\over c}
+        $$
+
+        |> ImageRight
+            at-least-as-wide=false
+            src=tmp-images/e6_v_over_c_cancellation_cloud.svg
+            offset-x=1em
+
+        which has dimensions of time by Exercise >>_dimensionality_t_over_v_.

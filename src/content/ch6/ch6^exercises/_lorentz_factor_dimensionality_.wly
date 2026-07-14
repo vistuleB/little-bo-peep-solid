@@ -53,38 +53,3 @@
         !!     quantity is dimensionless, the Lorentz factor
         !!     is also dimensionless. (In case you had any nagging
         !!     doubts.)
-
-|> Exercise
-    handle=_dimensionality_t_over_v_
-
-    If $x$ is a spatial displacement and $v$ is speed, what is
-    the dimension of $x/v$?
-
-    |> Solution
-
-        It is time, since speed has the form
-        “distance over time”, which cancels the “distance”
-        dimension on top:
-
-        $$
-        {\te{DISTANCE}\over\te{SPEED}} = {\te{DISTANCE}\over \left({\te{DISTANCE} \over {\te{TIME}}}\right)} = {\te{DISTANCE}}\cdot {\te{TIME}\over \te{DISTANCE}} = \te{TIME}.
-        $$
-
-        !! |> SolutionNote
-
-        !!     What you see above are cancellations of
-        !!     dimensions (or units, in a related computation)—whether
-        !!     or not the two instances of ‘distance’ are the
-        !!     same or not is not our concern.
-        !! not cancellation of quantities.
-        !! —what interests
-        !! us is the _dimension_ of the final quantity,
-        !! not its exact value.
-
-        !! |> SolutionNote
-
-        !!     It is a good rule of thumb to remember that
-        !!     “one over speed” converts distance to time via
-        !!     multiplication, just like speed converts time
-        !!     to distance via multiplication. 
-        !!     !! One is a consequence of the other:

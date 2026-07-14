@@ -22,7 +22,7 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_176_h.a.i_"
+      id="_177_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -2763,7 +2763,7 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_175_h.a.i_"
+        id="_176_h.a.i_"
       >
         <Exercise number={1}>
           <ExerciseStatement id="_161_h.a.i_">
@@ -3579,8 +3579,8 @@ const Rest = () => {
               </NoBreak>
               {" "} which is also a speed squared,
               but then the entire square root is a speed instead of
-              being dimensionless, 
-              is it should be—failures on all sides!
+              being dimensionless, as the Lorentz factor (or its
+              reciprocal) should be!
             </OuterP>
           </Solution>
         </Exercise>
@@ -4261,6 +4261,96 @@ const Rest = () => {
                 Exercise 13.
               </b>
               {" "}
+              If {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "} is a spatial displacement, {" "}
+              <Math>
+                $v$
+              </Math>
+              {" "} is a velocity (speed),
+              and {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} is the speed of light, what is
+              the dimension of {" "}
+              <NoBreak>
+                <Math>
+                  $xv/c^2$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The factor
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;v\over c&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is dimensionless since {" "}
+              <Math>
+                $v$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} both
+              have dimensions of speed (speed/speed = 1),
+              so
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;xv\over c^2&#125; = &#123;v\over c&#125;\cdot&#123;x\over c&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              has the same dimensions as
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;x\over c&#125;
+              $$
+              <ImageRight
+                atLeastAsWide={false}
+                src="/tmp-images/e6_v_over_c_cancellation_cloud.svg"
+                offsetX="1em"
+                intrinsicWidth={200}
+                intrinsicHeight={100}
+              />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              which has dimensions of time by {" "}
+              <InChapterLink
+                href="/article/chapter6#_172_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 12
+              </InChapterLink>
+              &#8288;.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={14}>
+          <ExerciseStatement id="_174_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 14.
+              </b>
+              {" "}
               Let
             </OuterP>
             <Pause />
@@ -4625,11 +4715,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_174_h.a.i_">
+        <Exercise number={15}>
+          <ExerciseStatement id="_175_h.a.i_">
             <OuterP>
               <b>
-                Exercise 14.
+                Exercise 15.
               </b>
               {" "}
               Let {" "}
@@ -4642,10 +4732,10 @@ const Rest = () => {
               </Math>
               {" "} (cf. {" "}
               <InChapterLink
-                href="/article/chapter6#_173_h.a.i_"
+                href="/article/chapter6#_174_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 13
+                Exercise 14
               </InChapterLink>
               &#8288;).
               What is the most general signature of {" "}

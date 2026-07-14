@@ -22,8 +22,8 @@
         $$
 
         |> ImageRight
-            offset-x=5rem
             src=images/svg_ch1_ex_25.svg
+            offset-x=-1em
 
         (as previously computed) is smaller than
 
@@ -32,8 +32,8 @@
         $$
 
         |> ImageRight
-            offset-x=10rem
             src=images/svg_ch1_ex_26.svg
+            offset-x=-1em
 
         we will compute the difference
 

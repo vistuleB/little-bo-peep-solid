@@ -2749,8 +2749,8 @@ const Rest = () => {
               &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
               $$
               <ImageRight
-                offsetX="5rem"
                 src="/build-img/svgo-svg/Xx87.svg"
+                offsetX="-1em"
                 atLeastAsWide={true}
                 intrinsicWidth="362.474"
                 intrinsicHeight="177.616"
@@ -2766,8 +2766,8 @@ const Rest = () => {
               &#123;1 \over n^2&#125;
               $$
               <ImageRight
-                offsetX="10rem"
                 src="/build-img/svgo-svg/jBCw.svg"
+                offsetX="-1em"
                 atLeastAsWide={true}
                 intrinsicWidth="362.474"
                 intrinsicHeight="177.616"
