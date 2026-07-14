@@ -6568,12 +6568,12 @@
   },
   "c6_radian_dimensionless_ratio_cloud_v2.svg": {
     "build-version": "svgo-svg/aIgf.svg",
-    "build-version-created-on": 1783948809,
+    "build-version-created-on": 1784003699,
     "build-method": "svgo",
-    "build-version-size": 39204,
-    "original-size": 149272,
-    "compressed-size": 39204,
-    "compression": "73.74%",
+    "build-version-size": 39141,
+    "original-size": 149171,
+    "compressed-size": 39141,
+    "compression": "73.76%",
     "used-last-build": true,
     "3chars": ["ch6"]
   },

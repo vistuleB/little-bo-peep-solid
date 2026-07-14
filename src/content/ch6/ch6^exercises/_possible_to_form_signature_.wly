@@ -1,6 +1,6 @@
 |> Exercise
     handle=_possible_to_form_signature_
-    Is is possible to form a function of signature
+    Is it possible to form a function of signature
 
     $$
     [\lbs] \ra [\m/\s]

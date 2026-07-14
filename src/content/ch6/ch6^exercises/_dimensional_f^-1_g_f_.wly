@@ -37,16 +37,9 @@
 
         since outputs of $f$ become inputs
         of $g$ and outputs of $g$ become inputs
-        of $f^{-1}$.
-        !! $g$ needs to map outputs of $f$
-        !! back to outputs of $f$, in order for $f^{-1}$
-        !! to be able to process $g$'s output, while the
-        !! outputs of $f$ remain isolated-from or “detached”
-        !! from $g$.
-
-        !! $$
-        !! f^{-1}gf\,[\A]\,[\B]
-        !! $$
+        of 
+        !! $f^{-1} : [\B] \ra [\A]$.
+        $f^{-1}$, where $f^{-1} : [\B] \ra [\A]$ if $f : [\A] \ra [\B]$.
 
         |> Image
             style=margin-top:-1em

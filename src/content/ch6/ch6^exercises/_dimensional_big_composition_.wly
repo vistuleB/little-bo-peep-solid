@@ -22,7 +22,8 @@
         f : [\tA] \ra [\tA]
         $$
 
-        on $f$, since the output of $f$ must “fit” as an input to $f$.
+        !! on $f$, since the output of $f$ must “fit” as an input to $f$.
+        on $f$ by Exercise >>_dimensional_f_f_.
         But then
 
         $$
@@ -51,4 +52,4 @@
         
         $$f : [1] \ra [1]$$
 
-        ..._in fine_, since $f : [\tA] \ra [\tA]$.
+        ...since $f : [\tA] \ra [\tA]$.
