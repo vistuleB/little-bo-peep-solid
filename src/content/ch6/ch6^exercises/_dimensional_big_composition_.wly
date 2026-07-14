@@ -1,6 +1,12 @@
 |> Exercise
     handle=_dimensional_big_composition_
 
+    !! For functions $f$ of what signature does the assemblage
+    !! $$
+    !! f \circ {f\over f\circ f}
+    !! $$
+    !! have a well-formed signature of its own?
+
     What constraints does the assemblage
     $$
     f \circ {f\over f\circ f}
@@ -16,7 +22,8 @@
         f : [\tA] \ra [\tA]
         $$
 
-        by Exercise >>_dimensional_f_f_. But then
+        on $f$, since the output of $f$ must “fit” as an input to $f$.
+        But then
 
         $$
         {f\over f\circ f} : [\tA] \ra [1]

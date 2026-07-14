@@ -12,7 +12,7 @@ import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBrea
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
-import { SolutionNote, InTextWarning, Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
+import { SolutionNote, Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter6__() {
@@ -22,7 +22,7 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_172_h.a.i_"
+      id="_175_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -175,7 +175,7 @@ export default function __Chapter6__() {
           <Pause />
           <MathBlock>
             $$
-            z : [\te&#123;m&#125;/\te&#123;s&#125;^2] \ra [\rt&#123;0.1&#125;\te&#123;zł&#125;\rt&#123;0.1&#125;]
+            z : [\lbs] \ra [\pounds]
             $$
           </MathBlock>
           <Pause />
@@ -190,11 +190,14 @@ export default function __Chapter6__() {
           </MathBlock>
           <Pause />
           <OuterP>
-            is a function
-            whose inputs denote meters per seconds squared
-            (a measure of acceleration)
-            and whose outputs denote Polish zloty. 
-            The
+            is a function whose inputs denote pounds, the measure
+            of weight, 
+            and whose outputs denote {" "}
+            <i>
+              British
+            </i>
+            {" "} pounds, the measure
+            of wealth. The
           </OuterP>
           <Pause />
           <CentralDisplayItalic>
@@ -208,11 +211,10 @@ export default function __Chapter6__() {
             </Math>
             {" "} is the ordered pair {" "}
             <NoBreak>
-              “
               <Math>
-                $(\m/\s^2, \te&#123;zł&#125;)$
+                $(\lbs, \pounds)$
               </Math>
-              ”.
+              .
             </NoBreak>
           </OuterP>
         </Example>
@@ -309,7 +311,7 @@ const Rest = () => {
           “opposite over adjacent”. (Or “adjacent over hypotenuse”,
           in the case of cosine!)
           <ImageLeft
-            src="/tmp-images/c6_radian_dimensionless_ratio_cloud_v2.svg"
+            src="/build-img/svgo-svg/aIgf.svg"
             intrinsicWidth={600}
             intrinsicHeight={500}
           />
@@ -442,7 +444,7 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_equal_inputs_v2.svg"
+          src="/build-img/svgo-svg/trfz.svg"
           style="margin-bottom:-1.3em"
           intrinsicWidth={300}
           intrinsicHeight={50}
@@ -1983,7 +1985,7 @@ const Rest = () => {
           $$
           <ImageRight
             src="/build-img/svgo-svg/zysM.svg"
-            offsetX="3.1em"
+            offsetX="0em"
             atLeastAsWide={true}
             intrinsicWidth={500}
             intrinsicHeight={300}
@@ -2417,17 +2419,11 @@ const Rest = () => {
             (\cos \circ \cos)' = (\sin \circ \cos)\sin
             $$
             <ImageRight
-              src="/tmp-images/c6_cancelling_signs_cloud.svg"
+              src="/build-img/svgo-svg/e_hV.svg"
               atLeastAsWide={true}
               intrinsicWidth={800}
               intrinsicHeight={200}
             />
-          </MathBlock>
-          <Pause />
-          <MathBlock>
-            $$
-            ((-f)\circ g)(-f) = (f\circ g)f
-            $$
           </MathBlock>
           <Pause />
           <OuterP>
@@ -2767,13 +2763,221 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_171_h.a.i_"
+        id="_174_h.a.i_"
       >
         <Exercise number={1}>
           <ExerciseStatement id="_160_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
+              </b>
+              {" "}
+              What constraints does the composition
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              impose on the signature of {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              A signature of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [\tA] \ra [\tA]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is necessary and sufficient: since
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f\circ f)(x) = f(f(x))
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              we need a function that can evaluate its own output,
+              i.e., for which the input and output units match.
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                More formally, the general composition
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                f \circ g
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                requires signatures of the form
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;gathered&#125;
+                f : [\B] \ra [\C] \\
+                \up&#123;1.6&#125;g : [\A] \ra [\B]
+                \end&#123;gathered&#125;
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                for some units A, B, C. (Cf. {" "}
+                <InChapterLink
+                  href="/article/chapter6#_152_h.a.i_"
+                  class="in-chapter-link"
+                >
+                  Table 1.1
+                </InChapterLink>
+                &#8288;.) If {" "}
+                <Math>
+                  $g = f$
+                </Math>
+                {" "}
+                this implies {" "}
+                <Math>
+                  $\A = \B$
+                </Math>
+                {" "} because both are the inputs
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $f = g$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} as well as {" "}
+                <Math>
+                  $\B = \C$
+                </Math>
+                {" "} because both are the outputs
+                of {" "}
+                <NoBreak>
+                  <Math>
+                    $f = g$
+                  </Math>
+                  ,
+                </NoBreak>
+                {" "} collapsing A, B, C to a single unit {" "}
+                <NoBreak>
+                  <Math>
+                    $\A = \B = \C = \A$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={2}>
+          <ExerciseStatement id="_161_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 2.
+              </b>
+              {" "}
+              What constraints does the composition
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ g \circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              impose on the signatures of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              The composition requires {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              f : [\tA] \ra [\tB] \\
+              \up&#123;1.6&#125;g : [\tB] \ra [\tA]
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              for some units A and B
+              since the output of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} is forwarded to {" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} whose
+              output of {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} if forwarded back to {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={3}>
+          <ExerciseStatement id="_162_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 3.
               </b>
               {" "}
               What constraints does the assemblage
@@ -2812,11 +3016,26 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              by Exercise {" "}
-              <InTextWarning>
-                undefined handle at ch6/ch6^exercises/_dimensional_big_composition_.wly:19:9: _dimensional_f_f_
-              </InTextWarning>
-              . But then
+              on {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} since the output of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} must “fit” as an input to {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                .
+              </NoBreak>
+              {" "}
+              But then
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2901,15 +3120,15 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={2}>
-          <ExerciseStatement id="_161_h.a.i_">
+        <Exercise number={4}>
+          <ExerciseStatement id="_163_h.a.i_">
             <OuterP>
               <b>
-                Exercise 2.
+                Exercise 4.
               </b>
               {" "}
-              What are
-              the signatures of {" "}
+              What are the signatures of 
+              {" "}
               <NoBreak>
                 <Math>
                   $1/z$
@@ -2945,70 +3164,29 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <Math>
-                $z - z$
-              </Math>
-              {" "}
-              and {" "}
               <NoBreak>
                 <Math>
-                  $z \circ z$
+                  $z - z$
                 </Math>
                 ,
               </NoBreak>
               {" "}
+              and {" "}
+              <Math>
+                $z \circ z$
+              </Math>
+              {" "}
               where {" "}
-              <NoBreak>
-                <Math>
-                  $z : [\lbs] \ra [\te&#123;£&#125;]$
-                </Math>
-                ?
-              </NoBreak>
+              <Math>
+                $z  : [\lbs] \ra [\pounds]$
+              </Math>
+              {" "} 
+              is the function of Example 1?
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (1/z) : [\lbs] \ra [1/\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              z^2 : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;^2\rt&#123;0.1&#125;]
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (-z) : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (z + z) : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (z/z) : [\lbs] \ra [\rt&#123;0.1&#125;1\rt&#123;0.1&#125;]
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (z - z) : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              applying the rules of {" "}
+              Applying the rules of {" "}
               <InChapterLink
                 href="/article/chapter6#_152_h.a.i_"
                 class="in-chapter-link"
@@ -3032,10 +3210,47 @@ const Rest = () => {
                 <Math>
                   $f = z$
                 </Math>
-                .
+                :
               </NoBreak>
             </OuterP>
-            <OuterP class="indent-10">
+            <Boxed>
+              <MathBlock>
+                $$
+                (1/z) : [\lbs] \ra [1/\pounds]
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                z^2 : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;^2\rt&#123;0.1&#125;]
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                (-z) : [\lbs] \ra [\pounds]
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                (z + z) : [\lbs] \ra [\pounds]
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                (z/z) : [\lbs] \ra [\rt&#123;0.1&#125;1\rt&#123;0.1&#125;]
+                $$
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                (z - z) : [\lbs] \ra [\pounds]
+                $$
+              </MathBlock>
+            </Boxed>
+            <OuterP>
               On the other hand,
             </OuterP>
             <Pause />
@@ -3106,98 +3321,93 @@ const Rest = () => {
                 .]
               </OuterP>
             </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                It is indeed true that
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                z - z = 0
+                $$
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                identically, but this is zero {" "}
+                <i>
+                  pounds
+                </i>
+                , you see?
+                [British.]
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={3}>
-          <ExerciseStatement id="_162_h.a.i_">
+        <Exercise number={5}>
+          <ExerciseStatement id="_164_h.a.i_">
             <OuterP>
               <b>
-                Exercise 3.
+                Exercise 5.
               </b>
               {" "}
-              What kinds of functions {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} signature-wise,
-              does the composition
+              Is is possible to form a function of signature
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              f \circ g \circ f
+              [\lbs] \ra [\m/\s]
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              require?
+              from functions {" "}
+              <NoBreak>
+                <Math>
+                  $\alpha : [\pounds] \ra [\lbs/s]$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\beta : [\m/\s] \ra [\m^2/s]$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} and 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $\gamma : [\lbs] \ra [\s]$
+                </Math>
+                ?
+              </NoBreak>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The composition requires {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              f : [\tA] \ra [\tB] \\
-              \up&#123;1.6&#125;g : [\tB] \ra [\tA]
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for some units A and B
-              since the output of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} is forwarded to {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} whose
-              output of {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} if forwarded back to {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                .
-              </NoBreak>
+              No. These functions do not mix via composition,
+              nor addition or multiplication etc, because none of
+              the input units are the same, nor even do any of the
+              output units (or powers thereof) coincide with any
+              of the other input units. It's completely dead in the water!
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={4}>
-          <ExerciseStatement id="_163_h.a.i_">
+        <Exercise number={6}>
+          <ExerciseStatement id="_165_h.a.i_">
             <OuterP>
               <b>
-                Exercise 4.
+                Exercise 6.
               </b>
               {" "}
-              if {" "}
+              If {" "}
               <Math>
                 $v$
               </Math>
@@ -3206,7 +3416,8 @@ const Rest = () => {
                 $c$
               </Math>
               {" "} are both speeds, what
-              is the dimension of...
+              is the dimension of
+              the expression below?
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3214,10 +3425,6 @@ const Rest = () => {
               \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;
               $$
             </MathBlock>
-            <Pause />
-            <OuterP>
-              ...?
-            </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -3272,11 +3479,11 @@ const Rest = () => {
             </MathBlock>
           </Solution>
         </Exercise>
-        <Exercise number={5}>
-          <ExerciseStatement id="_164_h.a.i_">
+        <Exercise number={7}>
+          <ExerciseStatement id="_166_h.a.i_">
             <OuterP>
               <b>
-                Exercise 5.
+                Exercise 7.
               </b>
               {" "}
               If units of time and space are chosen
@@ -3319,10 +3526,10 @@ const Rest = () => {
             <OuterP>
               (cf. {" "}
               <InChapterLink
-                href="/article/chapter6#_163_h.a.i_"
+                href="/article/chapter6#_165_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 4
+                Exercise 6
               </InChapterLink>
               &#8288;)
               would become
@@ -3385,11 +3592,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={6}>
-          <ExerciseStatement id="_165_h.a.i_">
+        <Exercise number={8}>
+          <ExerciseStatement id="_167_h.a.i_">
             <OuterP>
               <b>
-                Exercise 6.
+                Exercise 8.
               </b>
               {" "}
               Give a dimensional analysis of the (real,
@@ -3484,6 +3691,9 @@ const Rest = () => {
               are at least necessary on either side of the equation.
               Then, evaluating further, one finds
             </OuterP>
+            <OuterP class="indent-10">
+              But then one finds, in order, that
+            </OuterP>
             <Pause />
             <MathBlock>
               $$
@@ -3521,11 +3731,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={7}>
-          <ExerciseStatement id="_166_h.a.i_">
+        <Exercise number={9}>
+          <ExerciseStatement id="_168_h.a.i_">
             <OuterP>
               <b>
-                Exercise 7.
+                Exercise 9.
               </b>
               {" "}
               Use dimensional analysis to
@@ -3534,7 +3744,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \left(&#123;1\over f&#125;\right)'
+              \large\left(&#123;1\over f&#125;\right)'
               $$
             </MathBlock>
             <Pause />
@@ -3831,20 +4041,20 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={8}>
-          <ExerciseStatement id="_167_h.a.i_">
+        <Exercise number={10}>
+          <ExerciseStatement id="_169_h.a.i_">
             <OuterP>
               <b>
-                Exercise 8.
+                Exercise 10.
               </b>
               {" "}
               The formula given at the end of the solution
               to {" "}
               <InChapterLink
-                href="/article/chapter6#_166_h.a.i_"
+                href="/article/chapter6#_168_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 7
+                Exercise 9
               </InChapterLink>
               {" "} happens to be the true,
               “correct” formula for {" "}
@@ -3916,11 +4126,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement id="_168_h.a.i_">
+        <Exercise number={11}>
+          <ExerciseStatement id="_170_h.a.i_">
             <OuterP>
               <b>
-                Exercise 9.
+                Exercise 11.
               </b>
               {" "}
               If the expression
@@ -4013,11 +4223,11 @@ const Rest = () => {
             />
           </Solution>
         </Exercise>
-        <Exercise number={10}>
-          <ExerciseStatement id="_169_h.a.i_">
+        <Exercise number={12}>
+          <ExerciseStatement id="_171_h.a.i_">
             <OuterP>
               <b>
-                Exercise 10.
+                Exercise 12.
               </b>
               {" "}
               If {" "}
@@ -4050,44 +4260,13 @@ const Rest = () => {
               &#123;\te&#123;DISTANCE&#125;\over\te&#123;SPEED&#125;&#125; = &#123;\te&#123;DISTANCE&#125;\over \left(&#123;\te&#123;DISTANCE&#125; \over &#123;\te&#123;TIME&#125;&#125;&#125;\right)&#125; = &#123;\te&#123;DISTANCE&#125;&#125;\cdot &#123;\te&#123;TIME&#125;\over \te&#123;DISTANCE&#125;&#125; = \te&#123;TIME&#125;.
               $$
             </MathBlock>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                What you see above are cancellations of
-                dimensions (or units, in a related computation),
-                not exact cancellation of quantities—what interests
-                us is the {" "}
-                <i>
-                  dimension
-                </i>
-                {" "} of the final quantity,
-                not its exact value.
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                It is a good rule of thumb to remember that
-                “one over speed” converts distance to time via
-                multiplication, just like speed converts time
-                to distance via multiplication. One is a consequence of the other:
-              </OuterP>
-            </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement id="_170_h.a.i_">
+        <Exercise number={13}>
+          <ExerciseStatement id="_172_h.a.i_">
             <OuterP>
               <b>
-                Exercise 11.
+                Exercise 13.
               </b>
               {" "}
               Let
@@ -4129,9 +4308,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/tmp-images/e6_f_inverse_distinct.svg"
+              src="/build-img/svgo-svg/bzLT.svg"
               intrinsicWidth={450}
-              intrinsicHeight={300}
+              intrinsicHeight={295}
             />
             <Pause />
             <OuterP>
@@ -4170,11 +4349,21 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
+            <Image
+              src="/build-img/svgo-svg/4pb6.svg"
+              intrinsicWidth={640}
+              intrinsicHeight={290}
+            />
+            <Pause />
             <OuterP>
               (In another view...
             </OuterP>
             <Pause />
-            <Image src="/tmp-images/e6_f_inverse_box_view.svg" />
+            <Image
+              src="/build-img/svgo-svg/wL23.svg"
+              intrinsicWidth={470}
+              intrinsicHeight={180}
+            />
             <Pause />
             <OuterP>
               <NoBreak>
@@ -4188,7 +4377,7 @@ const Rest = () => {
               <Math>
                 $f$
               </Math>
-              {" "} and vice-versa, in janother view...
+              {" "} and vice-versa, in another view...
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4225,6 +4414,12 @@ const Rest = () => {
               and in another view...
             </OuterP>
             <Pause />
+            <Image
+              src="/build-img/svgo-svg/wzGl.svg"
+              intrinsicWidth={440}
+              intrinsicHeight={350}
+            />
+            <Pause />
             <OuterP>
               <NoBreak>
                 ...
@@ -4246,9 +4441,9 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              Use dimensional analysis to conjecture a formula for
-              the derivative of the inverse, i.e.,
-              a formula of the form
+              Use dimensional analysis to conjecture a
+              formula for the derivative of the inverse,
+              i.e., a formula of the form
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4261,6 +4456,280 @@ const Rest = () => {
               similar to the sum rule, product rule, etc.
             </OuterP>
           </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              If
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [\tA] \ra [\tB]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              is a generic invertible function, then
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;-1&#125; : [\tB] \ra [\tA]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              since an input of {" "}
+              <Math>
+                $f^&#123;-1&#125;$
+              </Math>
+              {" "} is an output of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}
+              and vice-versa.
+              Thus
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              (f^&#123;-1&#125;)' : [\tB] \ra \left[&#123;\A\over \B&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              and we seek to build a function of signature {" "}
+              <Math>
+                $[\B] \ra [\A/\B]$
+              </Math>
+              {" "}
+              from these...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [\A] \ra [\B]\\
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f' : [\A] \ra \left[&#123;\B \over \A&#125;\right]\\
+              $$
+            </MathBlock>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;-1&#125; : [\B] \ra [\A]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...ingredients; note that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over f'&#125; : [\A] \ra \left[&#123;\A \over \B&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              gives us
+              the output units A/B at least, but the input 
+              units are wrong; (should be “B”);
+              however we can “slot in” the correct input units 
+              to {" "}
+              <Math>
+                $f'$
+              </Math>
+              {" "} by pre-composing with {" "}
+              <NoBreak>
+                <Math>
+                  $f^&#123;-1&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} i.e.,
+              observe that
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f' \circ f^&#123;-1&#125; : [\B] \ra \left[&#123;\B\over \A&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...giving us...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over f' \circ f^&#123;-1&#125;&#125; : [\B] \ra \left[&#123;\A\over \B&#125;\right]
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              ...the desired signature! Thus, a possibility is:
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                (f^&#123;-1&#125;)' = &#123;1\over f' \circ f^&#123;-1&#125;&#125;
+                $$
+              </MathBlock>
+            </Boxed>
+            <Pause />
+            <StarDivider style="margin-top:-1.3em" />
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The formula is (correct, and) known as the {" "}
+                <i>
+                  inverse rule
+                </i>
+                .
+                It is valid for all invertible, differentiable
+                {" "}
+                <NoBreak>
+                  <Math>
+                    $f : \rr \ra \rr$
+                  </Math>
+                  .
+                </NoBreak>
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}
+                The formula can be stated also in terms of what 
+                it implies for a specific input (maybe we should put {" "}
+                <NoBreak>
+                  ‘
+                  <Math>
+                    $y$
+                  </Math>
+                  ’
+                </NoBreak>
+                {" "}
+                here for the input, but anyway):
+              </OuterP>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  (f^&#123;-1&#125;)'(x) = &#123;1\over f'(f^&#123;-1&#125;(x))&#125;
+                  $$
+                </MathBlock>
+              </Boxed>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={14}>
+          <ExerciseStatement id="_173_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 14.
+              </b>
+              {" "}
+              Let {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} be an invertible function with inverse {" "}
+              <Math>
+                $f^&#123;-1&#125;$
+              </Math>
+              {" "} (cf. {" "}
+              <InChapterLink
+                href="/article/chapter6#_172_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 13
+              </InChapterLink>
+              &#8288;).
+              What is the most general signature of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} for which the composition
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;-1&#125; \circ g \circ f
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              makes sense?
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              This pattern requires {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              f : [\tA] \ra [\tB] \\
+              \up&#123;1.6&#125;g : [\tB] \ra [\tB]
+              \end&#123;gathered&#125;
+              $$
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              since outputs of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} become inputs
+              of {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} and outputs of {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} become inputs
+              of {" "}
+              <NoBreak>
+                <Math>
+                  $f^&#123;-1&#125;$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:-1em"
+              src="/tmp-images/e6_f_inverse_g_f_composition.svg"
+              intrinsicWidth={600}
+              intrinsicHeight={145}
+            />
+          </Solution>
         </Exercise>
       </Exercises>
     </>}

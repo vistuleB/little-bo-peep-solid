@@ -1,0 +1,66 @@
+|> Exercise
+    handle=_physicist_choose_to_write_
+
+    If units of time and space are chosen
+    such that $c = 1$ where $c$ is the speed of the light,
+    why might 
+    a physicist
+    still choose
+    to write expressions containing ‘$c$’?
+
+    |> Solution
+
+        !! Besides wanting to “remind the general
+        !! formula”, one reason is
+        !! to keep expressions dimensionally consistent;
+        !! for example, if $v < c$
+        !! is another speed, then
+
+        !! $$
+        !! \sqrt{1 - {v^2\over c^2}}
+        !! $$
+
+        !! is the so-called _Lorentz contraction factor_
+        !! of special relativity, which is dimensionless—writing
+
+        !! $$
+        !! \sqrt{1 - v^2}
+        !! $$
+
+        !! might be numerically correct and typographically more
+        !! expedient, but is dimensionally
+        !! inconsistent: either a speed squared is being subtracted
+        !! from a dimensionless ‘$1$’, or else we pretend
+        !! that ‘$1$’ stands for ‘$c^2$’, which is also a speed squared,
+        !! but then the entire square root is a speed instead of
+        !! being dimensionless—failures on all sides!
+
+        Besides wanting to “remind the general
+        formula”, one reason is
+        to keep expressions dimensionally consistent.
+        For example, the Lorentz factor reciprocal
+
+        $$
+        \sqrt{1 - {v^2\over c^2}}
+        $$
+
+        (cf. Exercise >>_lorentz_factor_dimensionality_)
+        would become
+
+        $$
+        \sqrt{1 - v^2}
+        $$
+
+        if 
+        taking advantage of $c = 1$ to
+        elide the ‘$c$’, which
+        might be numerically correct and typographically more
+        expedient, but is dimensionally
+        inconsistent: either a speed squared is being subtracted
+        from a dimensionless ‘$1$’, or, in a last-ditch effort, we pretend
+        that ‘$1$’ stands for ‘$c^2$’, which is also a speed squared,
+        but then the entire square root is a speed instead of
+        being dimensionless, 
+        is it should be—failures on all sides!
+        !! as the Lorentz factor should be—failures on all sides!
+

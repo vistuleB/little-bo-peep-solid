@@ -1,0 +1,146 @@
+|> Exercise
+    handle=_dimensional_reciprocal_rule_
+    Use dimensional analysis to
+    conjecture a formula for
+
+    $$
+    \large\left({1\over f}\right)'
+    $$
+
+    for $f : \rr \ra \rr$ differentiable. 
+    (The “building blocks” that appear in the formula
+    should be $f$, $f'$.)
+
+    |> Solution
+
+        The expression
+
+        $$
+        \left({1\over f}\right)'
+        $$
+
+        does not on its own impose any restrictions on
+        the signature of $f$, so we can consider
+
+        $$
+        f : [\tA] \ra [\tB]
+        $$
+
+        of generic signature. Then
+
+        $$
+        {1\over f} : [\tA] \ra \left[{1\over\tB}\right]
+        $$
+
+        as in the second half of >>table_1_2,
+        and
+
+        $$
+        \left({1\over f}\right)' : [\tA] \ra \left[{1\over\tA\tB}\right]
+        $$
+
+        !! dividing the output units by the input units.
+        !! which divides the output
+        !! units by the input units.
+        per the usual effect of differentiation on units.
+
+        In order to achieve the signature 
+
+        $$
+        [\tA] \ra \left[{1\over\tA\tB}\right]
+        $$
+
+        using
+
+        $$
+        f : [\tA] \ra [\tB]
+        $$
+
+        and
+
+        $$
+        f' : [\tA] \ra \left[{\tB\over \tA}\right]
+        $$
+
+        as building blocks we can start with $f'$ and divide
+        by $f^2$. 
+        (In fact, this is the only combination that works, modulo
+        multiplication by a dimensionless constant.)
+        Specifically, since
+
+        $$
+        f : [\tA] \ra [\tB]
+        $$
+
+        we have
+        
+        $$
+        f^2 : [\tA] \ra [\tB^2]
+        $$
+
+        and
+
+        $$
+        {1\over f^2} : [\tA] \ra \left[{1\over\tB^2}\right]
+        $$
+
+        multiplying $f'$ by ${1\over f^2}$ gives us a function
+        of signature
+
+        $$
+        !! {f'\over f^2} : 
+        [\tA] \ra \left[{\tB\over \,\tA^{\vphantom{2}}}\cdot{1\over\tB^2}\right]\,\, = \,\,[\tA] \ra \left[{1\over\tA\tB}\right]
+        $$
+
+        as desired, which makes
+
+        |> Boxed
+            $$
+            !! f'\cdot {1\over f^2} = {f'\over f^2}
+            !! \left({1\over f}\right)' = {f'\over f^2}
+            {f'\over f^2}
+            $$
+
+        a plausible conjecture.
+
+        However, we know from Exercise X that
+
+        $$
+        \left({1\over f}\right)'
+        $$
+
+        should have opposite sign to $f'$, whereas
+
+        $$
+        {f'\over f^2}
+        $$
+
+        does _not_ have opposite sign, since $f^2$ is
+        nonnegative. (Nb: When $f = 0$ neither $1/f$ nor
+        $(1/f)'$ 
+        nor $f'/f^2$
+        are defined, so those points are not our
+        concern.)
+        !! positive. (Or zero, in which case _neither_
+        !! $(1/f)'$ nor $f'/f^2$ are defined, which is
+        !! another “good sign” for our conjecture.) 
+        !! (The
+        !! only “bad sign” for our conjecture is being the
+        !! sign itself, right now!)
+
+        Since our conjecture is at least “consistently
+        wrong”—by which we mean that our formula _always_ has the wrong sign—a plausible fix
+        is just to negate the expression (and indeed
+
+        __negation__
+
+        is one of the things we can do to a function
+        without changing its signature, per >>table_1_2), giving
+        us 
+
+        |> Boxed
+            $$
+            \left({1\over f}\right)' = -{f'\over f^2}
+            $$
+
+        as an “educated guess” for a formula for $({1\over f})'$.

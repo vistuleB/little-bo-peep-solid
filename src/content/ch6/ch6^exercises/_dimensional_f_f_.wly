@@ -19,34 +19,89 @@
         $$
         f : [\tA] \ra [\tA]
         $$
-        is necessary and sufficient. In more detail, for  
-        two functions $f$, $g$ of general signature
+        is necessary and sufficient: since
 
         $$
-        \begin{gathered}
-        f : [\tA] \ra [\tB] \\
-        \up{1.6}g : [\tC] \ra [\tD]
-        \end{gathered}
+        (f\circ f)(x) = f(f(x))
         $$
 
-        the composition
+        we need a function that can evaluate its own output,
+        i.e., for which the input and output units match.
 
-        $$
-        f\circ g
-        $$
+        |> SolutionNote
+            More formally, the general composition
 
-        is well-formed if and ony if $[\tD] = [\tA]$. 
-        (Cf. [Table 1.1](>>table_1_1).)
-        In our case $g = f$ so we additionally have
+            $$
+            f \circ g
+            $$
 
-        $$
-        \begin{gathered}
-        !! found mathjax bug that requires this \up{0}:
-        \up{0}[\tC] = [\tA] \\
-        \up{1.6}[\tD] = [\tB]
-        \end{gathered}
-        $$
+            requires signatures of the form
 
-        to start with, which, together with 
-        $[\tD] = [\tA]$, collapses the signature of $f$
-        to “$[\tA] \ra [\tA]$”.
+            $$
+            \begin{gathered}
+            f : [\B] \ra [\C] \\
+            \up{1.6}g : [\A] \ra [\B]
+            \end{gathered}
+            $$
+
+            for some units A, B, C. (Cf. >>table_1_1.) If $g = f$
+            !! are the same function 
+            this implies $\A = \B$ because both are the inputs
+            of $f = g$, as well as $\B = \C$ because both are the outputs
+            of $f = g$, collapsing A, B, C to a single unit $\A = \B = \C = \A$.
+
+
+        !!     the composition
+
+        !!     $$
+        !!     f\circ g
+        !!     $$
+
+        !!     is well-formed if and ony if $[\tD] = [\tA]$. 
+        !!     (Cf. [Table 1.1](>>table_1_1).)
+        !!     In our case $g = f$ so we additionally have
+
+        !!     $$
+        !!     \begin{gathered}
+        !!     !! found mathjax bug that requires this \up{0}:
+        !!     \up{0}[\tC] = [\tA] \\
+        !!     \up{1.6}[\tD] = [\tB]
+        !!     \end{gathered}
+        !!     $$
+
+        !!     to start with, which, together with 
+        !!     $[\tD] = [\tA]$, collapses the signature of $f$
+        !!     to “$[\tA] \ra [\tA]$”.
+
+        !! |> SolutionNote
+        !!     Formally,
+        !!     two functions $f$, $g$ of general signature
+
+        !!     $$
+        !!     \begin{gathered}
+        !!     f : [\tA] \ra [\tB] \\
+        !!     \up{1.6}g : [\tC] \ra [\tD]
+        !!     \end{gathered}
+        !!     $$
+
+        !!     the composition
+
+        !!     $$
+        !!     f\circ g
+        !!     $$
+
+        !!     is well-formed if and ony if $[\tD] = [\tA]$. 
+        !!     (Cf. [Table 1.1](>>table_1_1).)
+        !!     In our case $g = f$ so we additionally have
+
+        !!     $$
+        !!     \begin{gathered}
+        !!     !! found mathjax bug that requires this \up{0}:
+        !!     \up{0}[\tC] = [\tA] \\
+        !!     \up{1.6}[\tD] = [\tB]
+        !!     \end{gathered}
+        !!     $$
+
+        !!     to start with, which, together with 
+        !!     $[\tD] = [\tA]$, collapses the signature of $f$
+        !!     to “$[\tA] \ra [\tA]$”.

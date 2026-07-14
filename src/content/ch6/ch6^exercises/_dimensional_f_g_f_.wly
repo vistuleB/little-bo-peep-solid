@@ -1,0 +1,23 @@
+|> Exercise
+    handle=_dimensional_f_g_f_
+
+    What constraints does the composition
+    $$
+    f \circ g \circ f
+    $$
+    impose on the signatures of $f$ and $g$?
+
+    |> Solution
+
+        The composition requires $f$ and $g$ of the form
+
+        $$
+        \begin{gathered}
+        f : [\tA] \ra [\tB] \\
+        \up{1.6}g : [\tB] \ra [\tA]
+        \end{gathered}
+        $$
+
+        for some units A and B
+        since the output of $f$ is forwarded to $g$, whose
+        output of $g$ if forwarded back to $f$.

@@ -69,6 +69,12 @@ window.MathJax = {
       tD: ["\\text{D}"],
       tE: ["\\text{E}"],
       tF: ["\\text{F}"],
+      A: ["\\text{A}"],
+      B: ["\\text{B}"],
+      C: ["\\text{C}"],
+      D: ["\\text{D}"],
+      E: ["\\text{E}"],
+      F: ["\\text{F}"],
       s: ["\\text{s}"],
       m: ["\\text{m}"],
       Rad: ["\\text{Rad}"],
@@ -79,6 +85,7 @@ window.MathJax = {
       uB: ["[\\text{B}]"],
       uC: ["[\\text{C}]"],
       uD: ["[\\text{D}]"],
+      pounds: ["\\rt{0.1}\\text{£}\\rt{0.1}"],
     }, // end Macros
   },
   options: {

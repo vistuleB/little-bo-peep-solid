@@ -1,0 +1,19 @@
+|> Exercise
+    handle=_possible_to_form_signature_
+    Is is possible to form a function of signature
+
+    $$
+    [\lbs] \ra [\m/\s]
+    $$
+
+    from functions $\alpha : [\pounds] \ra [\lbs/s]$,
+    $\beta : [\m/\s] \ra [\m^2/s]$, and 
+    $\gamma : [\lbs] \ra [\s]$?
+
+    |> Solution
+
+        No. These functions do not mix via composition,
+        nor addition or multiplication etc, because none of
+        the input units are the same, nor even do any of the
+        output units (or powers thereof) coincide with any
+        of the other input units. It's completely dead in the water!

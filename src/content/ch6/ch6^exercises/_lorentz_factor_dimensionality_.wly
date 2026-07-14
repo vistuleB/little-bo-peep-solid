@@ -1,13 +1,13 @@
 |> Exercise
     handle=_lorentz_factor_dimensionality_
 
-    if $v$ and $c$ are both speeds, what
-    is the dimension of...
-    !! this expression:
+    If $v$ and $c$ are both speeds, what
+    is the dimension of
+    the expression below?
     $$
     \sqrt{1 - {v^2\over c^2}}
     $$
-    ...?
+    !! ...?
 
     |> Solution
 
@@ -70,17 +70,21 @@
         {\te{DISTANCE}\over\te{SPEED}} = {\te{DISTANCE}\over \left({\te{DISTANCE} \over {\te{TIME}}}\right)} = {\te{DISTANCE}}\cdot {\te{TIME}\over \te{DISTANCE}} = \te{TIME}.
         $$
 
-        |> SolutionNote
+        !! |> SolutionNote
 
-            What you see above are cancellations of
-            dimensions (or units, in a related computation),
-            not exact cancellation of quantities—what interests
-            us is the _dimension_ of the final quantity,
-            not its exact value.
+        !!     What you see above are cancellations of
+        !!     dimensions (or units, in a related computation)—whether
+        !!     or not the two instances of ‘distance’ are the
+        !!     same or not is not our concern.
+        !! not cancellation of quantities.
+        !! —what interests
+        !! us is the _dimension_ of the final quantity,
+        !! not its exact value.
 
-        |> SolutionNote
+        !! |> SolutionNote
 
-            It is a good rule of thumb to remember that
-            “one over speed” converts distance to time via
-            multiplication, just like speed converts time
-            to distance via multiplication. One is a consequence of the other:
+        !!     It is a good rule of thumb to remember that
+        !!     “one over speed” converts distance to time via
+        !!     multiplication, just like speed converts time
+        !!     to distance via multiplication. 
+        !!     !! One is a consequence of the other:

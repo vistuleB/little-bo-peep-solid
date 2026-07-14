@@ -169,20 +169,21 @@
 
     |> In
         chapter=>>chain
-        !! >>_dimensional_f_f_
+        >>_dimensional_f_f_
+        >>_dimensional_f_g_f_
         >>_dimensional_big_composition_
         >>_dimensional_z_combinations_
-        !! >>_dimensional_f_f_f_
-        >>_dimensional_f_g_f_
+        >>_possible_to_form_signature_
         !! >>_dimensional_cos_f_
         >>_lorentz_factor_dimensionality_
         >>_physicist_choose_to_write_
         >>_dimensional_analysis_of_product_rule_
-        >>_hello_world_
+        >>_dimensional_reciprocal_rule_
         >>_guess_reciprocal_name_
         >>_dimensional_omega_
         >>_dimensionality_t_over_v_
-        >>_biz_
+        >>_dimensional_inverse_rule_
+        >>_dimensional_f^-1_g_f_
 
 
         !! ch5 exercise 'cycles':
@@ -230,7 +231,6 @@
         !!    - sum formulas for tan & cot
 
     |> In
-        content=selection
         chapter=>>exercise-graveyard
 
         !! unused exercises from Chapter 3:

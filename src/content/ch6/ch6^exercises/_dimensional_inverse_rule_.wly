@@ -1,0 +1,187 @@
+|> Exercise
+    handle=_dimensional_inverse_rule_
+
+    Let
+
+    $$
+    f^{-1}
+    $$
+
+    stand for the “inverse” of a function $f$
+    for which such an inverse exists. 
+    This means that $f$ has the kind of graph
+    below, in which distinct $x$'s are mapped to
+    distinct $y$'s:
+
+    |> Image
+        src=images/e6_f_inverse_distinct.svg
+
+    ...and which means that we can invert the flow
+    of the function, treating $y$'s as inputs, and recovering a
+    unique $x$ for each $y$ that is an output of $f$—this
+    “inverse flow” function is what we write as “$f^{-1}$”:
+
+    !! $$
+    !! y f x f^{-1}
+    !! $$
+
+    |> Image
+        src=images/e6_f_inverse_reversed.svg
+
+    (In another view...
+
+    |> Image
+        src=images/e6_f_inverse_box_view.svg
+
+    ...$f^{-1}$ is the box that undoes the work
+    of $f$ and vice-versa, in another view...
+
+    $$
+    \begin{gathered}
+    (f^{-1} \circ f\rt{0.05}) = (x \ra x)\\
+    \up{1.6}(f \circ f^{-1}) = (x \ra x)
+    \end{gathered}
+    $$
+
+    ...$f^{-1}$ is the function that composes with
+    $f$ 
+    to produce the _identity function_ $x \ra x$ and vice-versa,
+    and in another view...
+
+    |> Image
+        src=images/e6_f_inverse_upright.svg
+
+    ...$f^{-1}$ is the function whose graph is the
+    mirror image of $y = f(x)$ about the line $x = y$.)
+
+    !! $$
+    !! y = f(x)\,y = f^{-1}(x)
+    !! $$
+
+    Use dimensional analysis to conjecture a
+    formula for the derivative of the inverse,
+    i.e., a formula of the form
+
+    $$
+    (f^{-1})' = \ldots
+    $$
+
+    similar to the sum rule, product rule, etc.
+
+    |> Solution
+
+        If
+
+        $$
+        f : [\tA] \ra [\tB]
+        $$
+
+        is a generic invertible function, then
+
+        $$
+        f^{-1} : [\tB] \ra [\tA]
+        $$
+
+        since an input of $f^{-1}$ is an output of $f$
+        and vice-versa.
+        Thus 
+        !! the function that we seek to build has signature
+
+        $$
+        (f^{-1})' : [\tB] \ra \left[{\A\over \B}\right]
+        $$
+
+        and we seek to build a function of signature $[\B] \ra [\A/\B]$
+        from these...
+        !! Given that
+
+        !! $$
+        !! f' : [\A] \ra \left[{\B \over \A}\right]
+        !! $$
+
+        !! we have
+
+        !! $$
+        !! {1\over f'} : [\A] \ra \left[{\A \over \B}\right]
+        !! $$
+
+        !! which matches the desired signature in all but
+
+        !! The ingredients available are:
+        !! from these...
+
+        !! $$
+        !! \begin{gathered}
+        !! f : [\A] \ra [\B]\\
+        !! \up{1.2}f' : [\A] \ra [\A/\B]\\
+        !! \up{1.2}f^{-1} : [\B] \ra [\C]
+        !! \end{gathered}
+        !! $$
+        !! $$
+        !! f' : [\A] \ra [\B/\A]\\
+        !! $$
+            
+        $$
+        f : [\A] \ra [\B]\\
+        $$
+        $$
+        f' : [\A] \ra \left[{\B \over \A}\right]\\
+        $$
+        $$
+        f^{-1} : [\B] \ra [\A]
+        $$
+
+        ...ingredients; note that
+        !! one idea is to take the function $1/f'$,
+        !! since 
+
+        $$
+        {1\over f'} : [\A] \ra \left[{\A \over \B}\right]
+        $$
+
+        !! since we get 
+        gives us
+        the output units A/B at least, but the input 
+        units are wrong; (should be “B”);
+        however we can “slot in” the correct input units 
+        to $f'$ by pre-composing with $f^{-1}$, i.e.,
+        observe that
+
+        $$
+        f' \circ f^{-1} : [\B] \ra \left[{\B\over \A}\right]
+        $$
+
+        ...giving us...
+
+        $$
+        {1\over f' \circ f^{-1}} : [\B] \ra \left[{\A\over \B}\right]
+        $$
+
+        ...the desired signature! Thus, a possibility is:
+
+        |> Boxed
+            $$
+            (f^{-1})' = {1\over f' \circ f^{-1}}
+            $$
+
+        |> StarDivider
+            style=margin-top:-1.3em
+
+        |> SolutionNote
+
+            The formula is (correct, and) known as the _inverse rule_.
+            It is valid for all invertible, differentiable
+            $f : \rr \ra \rr$.
+
+        |> SolutionNote
+
+            !! We can evaluate the formula at an input:
+            The formula can be stated also in terms of what 
+            it implies for a specific input (maybe we should put ‘$y$’
+            here for the input, but anyway):
+
+            |> Boxed
+                $$
+                (f^{-1})'(x) = {1\over f'(f^{-1}(x))}
+                $$
+        

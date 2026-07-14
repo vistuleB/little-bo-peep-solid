@@ -1,0 +1,108 @@
+|> Exercise
+    handle=_dimensional_z_combinations_
+    !! If
+    !! $$
+    !! \zeta : [\lbs] \ra [\te{£}]
+    !! $$
+    !! $
+    !! z : [\lbs] \ra [\te{£}]
+    !! $
+    !! Let $m : [\lbs] \ra [\te{£}]$.
+    What are the signatures of 
+    $1/z$, $z^2$, $-z$, $z + z$, $z/z$, $z - z$,
+    and $z \circ z$
+    !! if $m : [\lbs] \ra [\te{£}]$?
+    where $z  : [\lbs] \ra [\pounds]$ 
+    is the function of Example 1?
+    !! (Reminder: $z : [\lbs] \ra [\pounds]$.)
+
+    |> Solution
+
+        Applying the rules of >>table_1_1 with $f = g = z$
+        and of >>table_1_2 with $f = z$:
+
+        |> Boxed
+
+            $$
+            (1/z) : [\lbs] \ra [1/\pounds]
+            !! [\lbs] \ra [1/\pounds]
+            $$
+            $$
+            z^2 : [\lbs] \ra [\rt{0.1}\te{£}^2\rt{0.1}]
+            !! [\lbs] \ra [\rt{0.1}\te{£}^2\rt{0.1}]
+            $$
+            $$
+            (-z) : [\lbs] \ra [\pounds]
+            !! [\lbs] \ra [\pounds]
+            $$
+            $$
+            (z + z) : [\lbs] \ra [\pounds]
+            !! [\lbs] \ra [\pounds]
+            $$
+            $$
+            (z/z) : [\lbs] \ra [\rt{0.1}1\rt{0.1}]
+            !! [\lbs] \ra [1]
+            $$
+            $$
+            (z - z) : [\lbs] \ra [\pounds]
+            !! [\lbs] \ra [1]
+            $$
+
+        !! !! for $1/z$, $z^2$, $-z$, $z + z$ and $z/z$ respectively
+        !! applying the rules of >>table_1_1 with $f = g = z$
+        !! and of >>table_1_2 with $f = z$. 
+        
+        On the other hand,
+
+        $$
+        z \circ z
+        $$
+
+        is not a well-formed composition, and does not have
+        a well-defined signature, since the output units of
+        $z$ do not match the input units of $z$!
+
+        !! as obtained from the rules for adding 
+        !! for the function $z$ of >>table_1_1, as obtained by
+        !! reciprocating 
+
+        |> SolutionNote
+
+            Since
+
+            $$
+            -z = (-1)z,
+            $$
+            $$
+            z + z = 2z,
+            $$
+
+            !! and
+
+            $$
+            z - z = 0z
+            $$
+
+            three of the cases considered are just special
+            cases of multiplying the function by a 
+            constant. (Which does not change the signature, as long
+            as the constant is dimensionless.)
+
+            [Nb: The multiplication of a function by a constant
+            is formally treated in Exercise >>_scalar_times_function_definition_#decoy:0
+            of Chapter >>derivatives#decoy:0.]
+            !! where the multiplication of a function by a
+            !! constant brings to light a “missing operation”. 
+            !! we can see that three of these are just special
+            !! cases of multiplying a function by a constant.
+
+        |> SolutionNote
+
+            It is indeed true that
+
+            $$
+            z - z = 0
+            $$
+
+            identically, but this is zero _pounds_, you see?
+            [British.]

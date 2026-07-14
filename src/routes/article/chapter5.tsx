@@ -18241,7 +18241,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/tmp-images/e5_ruler_sphere_z_switched_combined.svg"
+              src="/build-img/svgo-svg/k0fx.svg"
               intrinsicWidth={1200}
               intrinsicHeight={700}
             />

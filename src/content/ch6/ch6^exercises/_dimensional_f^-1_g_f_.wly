@@ -1,0 +1,53 @@
+|> Exercise
+    handle=_dimensional_f^-1_g_f_
+
+    !! Let $f$ be an invertible function with inverse $f^{-1}$.
+    !! What constraints does the composition
+    !! $$
+    !! f^{-1} \circ g \circ f
+    !! $$
+    !! impose on the signatures of $f$ and $g$?
+
+    Let $f$ be an invertible function with inverse $f^{-1}$ (cf. Exercise >>_dimensional_inverse_rule_).
+    !! What signatures does the composition
+    What is the most general signature of $f$ and $g$ for which the composition
+    $$
+    f^{-1} \circ g \circ f
+    $$
+    !! impose on $f$ and $g$?
+    makes sense?
+
+    !! For which signatures of $f$ and $g$ does the composition
+    !! $$
+    !! f^{-1} \circ g \circ f
+    !! $$
+    !! make sense,
+    !! where $f$ is an invertible function with inverse $f^{-1}$?
+
+    |> Solution
+
+        This pattern requires $f$ and $g$ of the form
+
+        $$
+        \begin{gathered}
+        f : [\tA] \ra [\tB] \\
+        \up{1.6}g : [\tB] \ra [\tB]
+        \end{gathered}
+        $$
+
+        since outputs of $f$ become inputs
+        of $g$ and outputs of $g$ become inputs
+        of $f^{-1}$.
+        !! $g$ needs to map outputs of $f$
+        !! back to outputs of $f$, in order for $f^{-1}$
+        !! to be able to process $g$'s output, while the
+        !! outputs of $f$ remain isolated-from or “detached”
+        !! from $g$.
+
+        !! $$
+        !! f^{-1}gf\,[\A]\,[\B]
+        !! $$
+
+        |> Image
+            style=margin-top:-1em
+            src=tmp-images/e6_f_inverse_g_f_composition.svg

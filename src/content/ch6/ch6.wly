@@ -41,43 +41,37 @@
     indicates that $h$ is a function for which the inputs
     denote kilograms and for which the outputs denote degrees
     fahrenheit. We refer to 
-    !! (or, formally, to the ordered pair $(\tA, \tB)$)
     the ordered pair $(\te{A}, \te{B})$ 
-    !! or more loosely to the expression “$[\tA] \ra [\tB]$” 
-    !! (treated as a formal piece of notation)
-    !! and/or to the notational fragment “$[\tA] \ra [\tB]$”
     as the
 
     __signature__
 
     of $f$.
-    !! and we may also refer to the notational fragment
-    !! “$[\tA] \ra [\tB]$” as the
-
-    !! __signature__
-
-    !! (did we say it yet?) of $f$.
 
     |> Example
 
         If
 
         $$
-        z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{zł}\rt{0.1}]
+        !! z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{zł}\rt{0.1}]
+        z : [\lbs] \ra [\pounds]
         $$
 
         then
         
         $$z : \rr \ra \rr$$
         
-        is a function
-        whose inputs denote meters per seconds squared
-        (a measure of acceleration)
-        and whose outputs denote Polish zloty. 
-        The
+        !! is a function whose inputs denote meters per seconds
+        !! squared (a measure of acceleration) and whose outputs
+        !! denote Polish zloty. The
+        is a function whose inputs denote pounds, the measure
+        of weight, 
+        and whose outputs denote _British_ pounds, the measure
+        of wealth. The
+
         __signature__
-        of $z$ is the ordered pair “$(\m/\s^2, \te{zł})$”.
-        !! or the expression “$[\m/\s^2] \ra [\rt{0.1}\te{zł}\rt{0.1}]$” itself.
+
+        of $z$ is the ordered pair $(\lbs, \pounds)$.
 
 |> Section
     split_here=Rest
@@ -117,7 +111,7 @@
     in the case of cosine!)
 
     |> ImageLeft
-        src=tmp-images/c6_radian_dimensionless_ratio_cloud_v2.svg
+        src=images/c6_radian_dimensionless_ratio_cloud_v2.svg
 
     |> Pause
 
@@ -169,7 +163,7 @@
     !! $$
     
     |> Image
-        src=tmp-images/c6_equal_inputs_v2.svg
+        src=images/c6_equal_inputs_v2.svg
         style=margin-bottom:-1.3em
 
     This means that for the sum to make sense, $f$ and
@@ -202,7 +196,6 @@
     stomach the output units to be different since
     composite units such as “kilowatt-hour”, “worker-years”, etc,
     exist, and likewise when dividing. 
-    !! We have:
     The following table summarizes the constraints
     that appear at the
     input (“component signatures”) and output (“resultant
@@ -210,7 +203,6 @@
 
     |> Image
         handle=table_1_1 Table 1.1
-        !! src=tmp-images/c6_flowers_here_bob.svg
         src=tmp-images/c6_flowers_here_bob_v2.svg
 
     !! ...summarizing the constraints that appear at the
@@ -1036,7 +1028,7 @@
 
     |> ImageRight
         src=images/c6_chain_rule_units_cloud.svg
-        offset-x=3.1em
+        offset-x=0em
 
     as desired! It turns out that this is the
     correct formula, i.e., 
@@ -1282,12 +1274,7 @@
         $$
 
         |> ImageRight
-            src=tmp-images/c6_cancelling_signs_cloud.svg
-
-        $$
-        !! ((-f)\circ g) = -(f\circ g)\qquad (-f)(-g) = fg
-        ((-f)\circ g)(-f) = (f\circ g)f
-        $$
+            src=images/c6_cancelling_signs_cloud.svg
 
         cancelling signs from the outset.
         
