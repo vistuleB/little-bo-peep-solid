@@ -4,6 +4,15 @@
     page-necessary-margin=270
     max-element-width=1200
 
+    |> Section
+
+        *A First Section.*
+        A very long equation:
+
+        $$
+        \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx + \int (a^2 + b^2 + c^2)dx
+        $$
+
 
     |> Exercises
         |> Exercise

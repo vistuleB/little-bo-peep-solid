@@ -29,7 +29,7 @@
 
         |> ImageRight
             at-least-as-wide=false
-            src=tmp-images/e6_v_over_c_cancellation_cloud.svg
+            src=images/e6_v_over_c_cancellation_cloud.svg
             offset-x=1em
 
         which has dimensions of time by Exercise >>_dimensionality_t_over_v_.

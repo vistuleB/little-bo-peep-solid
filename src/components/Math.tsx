@@ -1,7 +1,9 @@
 import {
   createEffect,
   Accessor,
+  createMemo,
   createSignal,
+  mergeProps,
   onCleanup,
   onMount,
   ParentProps,
@@ -11,7 +13,6 @@ import {
   ENABLE_MATHJAX_INTERSECTION_FALLBACK,
   MATHJAX_INTERSECTION_FALLBACK_DELAY_MS,
   MATHJAX_INTERSECTION_ROOT_MARGIN,
-  MOBILE_MAX_WIDTH,
   MOBILE_TEXT_COLUMN_SIDE_INSET,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
@@ -23,8 +24,11 @@ import {
   SolutionMathJaxController,
   useSolutionMathJax,
 } from "~/store/SolutionMathJaxProvider";
+import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
+import { ScaleProvider } from "~/store/ScaleProvider";
 
 const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN}px`;
+const HEIGHT_CHANGE_RAF_MAX_MS = 800;
 
 type MathJaxFallbackEntry = {
   ref: HTMLElement;
@@ -51,9 +55,9 @@ const nearMathJaxObserverViewport = (el: HTMLElement) => {
 const completeTypeset = (entry: MathJaxFallbackEntry) => {
   if (!entry.active || !entry.ref.isConnected || entry.visible()) return false;
 
+  entry.afterTypeset?.();
   entry.setVisible(true);
   entry.setScrollHeight();
-  entry.afterTypeset?.();
   return true;
 };
 
@@ -236,29 +240,131 @@ export const Math = (props: ParentProps) => {
   );
 };
 
-export const MathBlock = (props: SharedProps & ParentProps) => {
-  let ref: HTMLDivElement | undefined;
-  const { store, set_store } = useGlobalContext();
-  const [visible, setVisible] = createSignal(false);
-  const [scaledDown, setScaledDown] = createSignal(false);
-  const [originalWidth, setOriginalWidth] = createSignal(0);
-  const [localInnerWidthCopy, setLocalInnerWidthCopy] = createSignal(0);
-  const solutionMathJax = useSolutionMathJax();
-  let firstMeasureOfOriginalWidth = 0;
-
-  const availableViewportWidth = (viewportWidth: number) =>
-    viewportWidth -
-    (viewportWidth <= MOBILE_MAX_WIDTH ? MOBILE_TEXT_COLUMN_SIDE_INSET * 2 : 0);
-
-  const handleClick = () => {
-    setScaledDown(!scaledDown());
+type MathBlockProps = SharedProps &
+  ParentProps & {
+    constrained?: boolean;
   };
 
-  const shouldBeScaledDown = () => {
-    if (ref && originalWidth() > 0) {
-      return originalWidth() > availableViewportWidth(localInnerWidthCopy());
+export const MathBlock = (props: MathBlockProps) => {
+  const merged = mergeProps({ constrained: true }, props);
+  let ref: HTMLDivElement | undefined;
+  let transitionTimeout: number | undefined;
+  let heightChangeAnimationFrame: number | undefined;
+  let heightChangeAnimationFrameExpiresAt = 0;
+  const { store, set_store } = useGlobalContext();
+  const { set_height_change_listener_store } =
+    useHeightChangeListenerContext() || {};
+  const [visible, setVisible] = createSignal(false);
+  const [afterFirstClick, setAfterFirstClick] = createSignal(false);
+  const [naturalWidth, setNaturalWidth] = createSignal(0);
+  const [constrained, setConstrained] = createSignal(merged.constrained);
+  const [transitionsEnabled, setTransitionsEnabled] = createSignal(false);
+  const [viewportWidth, setViewportWidth] = createSignal(
+    typeof window === "undefined" ? 0 : window.innerWidth,
+  );
+  const solutionMathJax = useSolutionMathJax();
+
+  const availableViewportWidth = () =>
+    globalThis.Math.max(0, viewportWidth() - MOBILE_TEXT_COLUMN_SIDE_INSET * 2);
+
+  const targetWidth = () => {
+    const width = naturalWidth();
+    if (!width) return 0;
+    return constrained()
+      ? globalThis.Math.min(width, availableViewportWidth())
+      : width;
+  };
+
+  const scale = createMemo(() => ({
+    scale: naturalWidth() ? targetWidth() / naturalWidth() : 1,
+    name: merged.id || "MathBlock",
+    after_first_click: afterFirstClick(),
+  }));
+
+  const notifyHeightChange = () => {
+    set_height_change_listener_store?.(
+      "re_calculate_height",
+      (previous) => !previous,
+    );
+  };
+
+  const notifyHeightChangeAcrossFrames = () => {
+    notifyHeightChange();
+    requestAnimationFrame(notifyHeightChange);
+    window.setTimeout(notifyHeightChange, 50);
+  };
+
+  const stopHeightChangeAnimationFrameLoop = () => {
+    if (heightChangeAnimationFrame === undefined) return;
+
+    cancelAnimationFrame(heightChangeAnimationFrame);
+    heightChangeAnimationFrame = undefined;
+    heightChangeAnimationFrameExpiresAt = 0;
+  };
+
+  const startHeightChangeAnimationFrameLoop = () => {
+    heightChangeAnimationFrameExpiresAt =
+      performance.now() + HEIGHT_CHANGE_RAF_MAX_MS;
+
+    if (heightChangeAnimationFrame !== undefined) return;
+
+    const tick = () => {
+      if (performance.now() > heightChangeAnimationFrameExpiresAt) {
+        heightChangeAnimationFrame = undefined;
+        heightChangeAnimationFrameExpiresAt = 0;
+        notifyHeightChangeAcrossFrames();
+        return;
+      }
+
+      notifyHeightChange();
+      heightChangeAnimationFrame = requestAnimationFrame(tick);
+    };
+
+    heightChangeAnimationFrame = requestAnimationFrame(tick);
+  };
+
+  const disableTransitionsDuringWindowResizes = () => {
+    clearTimeout(transitionTimeout);
+    stopHeightChangeAnimationFrameLoop();
+    setTransitionsEnabled(false);
+  };
+
+  const enableTransitionForToggle = () => {
+    clearTimeout(transitionTimeout);
+    setTransitionsEnabled(true);
+    startHeightChangeAnimationFrameLoop();
+    transitionTimeout = window.setTimeout(() => {
+      setTransitionsEnabled(false);
+      stopHeightChangeAnimationFrameLoop();
+      notifyHeightChangeAcrossFrames();
+    }, 600);
+  };
+
+  const handleClick = (event: MouseEvent) => {
+    event.stopPropagation();
+
+    if (naturalWidth() > availableViewportWidth()) {
+      enableTransitionForToggle();
+      requestAnimationFrame(() => {
+        setConstrained((beforeToggle) => !beforeToggle);
+        notifyHeightChangeAcrossFrames();
+      });
     }
-    return false;
+    setAfterFirstClick(true);
+  };
+
+  const handleTransitionEnd = (event: TransitionEvent) => {
+    if (event.propertyName !== "width") return;
+
+    clearTimeout(transitionTimeout);
+    stopHeightChangeAnimationFrameLoop();
+    setTransitionsEnabled(false);
+    notifyHeightChangeAcrossFrames();
+  };
+
+  const handleWindowResize = () => {
+    disableTransitionsDuringWindowResizes();
+    setViewportWidth(window.innerWidth);
   };
 
   onMount(() => {
@@ -270,16 +376,23 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
       store.horizontal_arrival_phase === "idle" &&
       store.route_phase === "idle" &&
       store.saved_scroll_finished;
-    const measureOriginalWidth: () => boolean = () => {
-      let svg = null;
-      if (ref) {
-        svg = ref.querySelector("svg");
-        svg?.classList.add("transition-all");
-        if (svg) {
-          setOriginalWidth(svg.getBoundingClientRect().width);
-        }
+    const measureNaturalWidth = () => {
+      const svg = ref?.querySelector<SVGSVGElement>(".MathJax svg");
+      if (!ref || !svg) return false;
+
+      const previousRefWidth = ref.style.width;
+      const previousSvgMaxWidth = svg.style.maxWidth;
+      ref.style.width = "max-content";
+      svg.style.maxWidth = "none";
+      const measuredWidth = svg.getBoundingClientRect().width;
+      ref.style.width = previousRefWidth;
+      svg.style.maxWidth = previousSvgMaxWidth;
+
+      if (measuredWidth > 0) {
+        setNaturalWidth(measuredWidth);
+        notifyHeightChangeAcrossFrames();
       }
-      return svg != null;
+      return measuredWidth > 0;
     };
     const mathJaxEntry = ref
       ? {
@@ -288,7 +401,7 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
           setVisible,
           setScrollHeight,
           routeReady,
-          afterTypeset: measureOriginalWidth,
+          afterTypeset: measureNaturalWidth,
           typesetting: false,
           active: true,
         }
@@ -298,15 +411,6 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
         if (entry.isIntersecting && mathJaxEntry && routeReady()) {
           typesetMath(mathJaxEntry);
           observer.disconnect();
-          if (!measureOriginalWidth()) {
-            console.log("failed to measure width once");
-            setTimeout(() => {
-              if (!measureOriginalWidth()) {
-                console.log("failed to measure width twice");
-                console.error("failed to measure width twice");
-              }
-            }, 50);
-          }
         }
       },
       {
@@ -317,8 +421,6 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
     if (ref) {
       observer.observe(ref);
     }
-
-    setTimeout(measureOriginalWidth, 50);
 
     registerMathJaxFallback(mathJaxEntry);
 
@@ -338,51 +440,47 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
       }
     });
 
-    const handleResize = () => {
-      let oldInnerWidth = localInnerWidthCopy();
-      let newInnerWidth = window.innerWidth;
-      setLocalInnerWidthCopy(newInnerWidth);
-      if (newInnerWidth != oldInnerWidth) setScaledDown(shouldBeScaledDown());
-    };
-
-    handleResize(); // should result in call to setScaledDown()
-    window.addEventListener("resize", handleResize);
+    setViewportWidth(window.innerWidth);
+    window.addEventListener("resize", handleWindowResize);
 
     onCleanup(() => {
+      clearTimeout(transitionTimeout);
+      stopHeightChangeAnimationFrameLoop();
       if (mathJaxEntry) mathJaxEntry.active = false;
       observer.disconnect();
       unregisterMathJaxFallback(mathJaxEntry);
       unregisterSolutionMathJax?.();
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", handleWindowResize);
     });
   });
 
-  createEffect(() => {
-    if (scaledDown()) {
-      ref?.style.setProperty(
-        "width",
-        availableViewportWidth(store.innerWidth) + "px",
-      );
-      return;
-    }
-    ref?.style.setProperty(
-      "width",
-      ref && originalWidth() > 0 ? originalWidth() + "px" : "auto",
-    );
-  });
-
   return (
-    <div
-      id={props.id}
-      class={twJoin(
-        "mathblock transition-all",
-        store.show_areas && "mathblock-background-divide",
-      )}
-      style={{ opacity: visible() ? "1" : "0" }}
-      onClick={handleClick}
-      ref={ref}
-    >
-      {props.children}
-    </div>
+    <ScaleProvider scale={scale}>
+      <div
+        id={merged.id}
+        class={twJoin(
+          "mathblock",
+          transitionsEnabled()
+            ? [
+                "transition-[width]",
+                "duration-500",
+                "ease-[cubic-bezier(0.4,0,0.2,1)]",
+              ]
+            : "transition-opacity",
+          store.show_areas && "mathblock-background-divide",
+        )}
+        style={{
+          opacity: visible() ? "1" : "0",
+          width: targetWidth() ? `${targetWidth()}px` : "fit-content",
+          "max-width": "none",
+          "box-sizing": "border-box",
+        }}
+        onClick={handleClick}
+        onTransitionEnd={handleTransitionEnd}
+        ref={ref}
+      >
+        {merged.children}
+      </div>
+    </ScaleProvider>
   );
 };
