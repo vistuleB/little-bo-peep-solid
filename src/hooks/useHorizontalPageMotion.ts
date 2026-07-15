@@ -222,7 +222,18 @@ const useHorizontalPageMotion = (
   });
 
   onMount(() => {
-    initialCenterFrame = requestAnimationFrame(alignImmediately);
+    // Swipe destinations are centered by routeLoading only after the new route
+    // mounts and its content has been hidden for the handoff. Centering here as
+    // well can briefly re-center Suspense's retained outgoing page while the
+    // destination chunk is still loading.
+    //
+    // Longer term, all physical horizontal positioning should be owned by one
+    // persistent controller above route-level Page components. routeLoading,
+    // resize handling, and gesture handling should request motion from it
+    // instead of calling window.scroll independently.
+    if (!routeHasSwipeArrival()) {
+      initialCenterFrame = requestAnimationFrame(alignImmediately);
+    }
     window.addEventListener("scroll", handleScroll);
     if (supportsScrollEnd) {
       document.addEventListener("scrollend", handleScrollFinished);

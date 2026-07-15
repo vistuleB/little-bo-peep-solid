@@ -39,7 +39,8 @@
     indicates that $h$ is a function for which the inputs
     denote kilograms and for which the outputs denote degrees
     fahrenheit. We refer to 
-    the ordered pair $(\A, \B)$ 
+    the ordered pair $(\A, \B)$,
+    as encoded by the notation “$[\A] \ra [\B]$”,
     as the
 
     __signature__
@@ -70,7 +71,8 @@
 
         __signature__
 
-        of $z$ is the ordered pair $(\lbs, \pounds)$.
+        of $z$ is “$(\lbs, \pounds)$”
+        or “$[\lbs] \ra [\pounds]$”.
 
 |> Section
     split_here=Rest

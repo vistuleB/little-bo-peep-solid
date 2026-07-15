@@ -187,10 +187,22 @@ export default function __Chapter6__() {
           denote kilograms and for which the outputs denote degrees
           fahrenheit. We refer to 
           the ordered pair {" "}
-          <Math>
-            $(\A, \B)$
-          </Math>
-          {" "} 
+          <NoBreak>
+            <Math>
+              $(\A, \B)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          as encoded by the notation {" "}
+          <NoBreak>
+            “
+            <Math>
+              $[\A] \ra [\B]$
+            </Math>
+            ”,
+          </NoBreak>
+          {" "}
           as the
         </OuterP>
         <Pause />
@@ -253,12 +265,22 @@ export default function __Chapter6__() {
             <Math>
               $z$
             </Math>
-            {" "} is the ordered pair {" "}
+            {" "} is {" "}
             <NoBreak>
+              “
               <Math>
                 $(\lbs, \pounds)$
               </Math>
-              .
+              ”
+            </NoBreak>
+            {" "}
+            or {" "}
+            <NoBreak>
+              “
+              <Math>
+                $[\lbs] \ra [\pounds]$
+              </Math>
+              ”.
             </NoBreak>
           </OuterP>
         </Example>
