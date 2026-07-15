@@ -204,11 +204,7 @@
 
     |> Image
         handle=table_1_1 Table 1.1
-        src=images/c6_flowers_here_bob_v2.svg
-
-    !! ...summarizing the constraints that appear at the
-    !! input (“component signatures”) and output (“resultant
-    !! signature”) ends, for the five main function operations.
+        src=tmp-images/c6_flowers_here_bob_v2.svg
 
     |> StarDivider
         style=margin-top:-0.3em
@@ -228,8 +224,8 @@
 
     |> Image
         handle=table_1_2 Table 1.2
-        !! src=images/c6_flowers_here_two_more_v2.svg
-        src=images/c6_flowers_here_two_more_v3.svg
+        !! src=images/c6_flowers_here_two_more.svg
+        src=tmp-images/c6_flowers_here_two_more_v3.svg
 
     |> StarDivider
         style=margin-top:-0.3em

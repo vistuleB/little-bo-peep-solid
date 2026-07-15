@@ -887,8 +887,8 @@
     "original-size": 2207180,
     "compressed-size": 163881,
     "compression": "92.58%",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_tan_sq_AB_ratio_big_A.svg": {
     "build-version": "svgo-svg/8gZl.svg",
@@ -3703,8 +3703,8 @@
     "original-size": 1247620,
     "compressed-size": 61161,
     "compression": "95.1%",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_0_2_radians_guess_joke_v1.svg": {
     "build-version": "svgo-svg/0sAj.svg",
@@ -7877,12 +7877,12 @@
   },
   "c6_flowers_here_two_more.svg": {
     "build-version": "svgo-svg/lyKL.svg",
-    "build-version-created-on": 1782898703,
+    "build-version-created-on": 1784094234,
     "build-method": "svgo",
-    "build-version-size": 1002653,
-    "original-size": 1324140,
-    "compressed-size": 1002653,
-    "compression": "24.28%",
+    "build-version-size": 984294,
+    "original-size": 1324143,
+    "compressed-size": 984294,
+    "compression": "25.67%",
     "used-last-build": false,
     "3chars": []
   },
