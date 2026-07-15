@@ -2859,6 +2859,8 @@ const Rest = () => {
             <Pause />
             <OuterP>
               is necessary and sufficient.
+            </OuterP>
+            <OuterP class="indent-10">
               Formally, the general composition
             </OuterP>
             <Pause />
@@ -2970,7 +2972,8 @@ const Rest = () => {
               <Math>
                 $g$
               </Math>
-              {" "} of the form
+              {" "} of the
+              form
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2983,24 +2986,20 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              for some units A and B
-              since the output of {" "}
+              for some units A and B, as the output of {" "}
               <Math>
                 $f$
               </Math>
-              {" "} is forwarded to {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} whose
-              output of {" "}
+              {" "}
+              is passed to {" "}
               <Math>
                 $g$
               </Math>
-              {" "} if forwarded back to {" "}
+              {" "} and the output of {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} is passed to {" "}
               <NoBreak>
                 <Math>
                   $f$

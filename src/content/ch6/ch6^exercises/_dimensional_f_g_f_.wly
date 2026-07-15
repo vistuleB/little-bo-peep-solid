@@ -9,7 +9,8 @@
 
     |> Solution
 
-        The composition requires $f$ and $g$ of the form
+        The composition requires $f$ and $g$ of the
+        form
 
         $$
         \begin{gathered}
@@ -18,6 +19,35 @@
         \end{gathered}
         $$
 
-        for some units A and B
-        since the output of $f$ is forwarded to $g$, whose
-        output of $g$ if forwarded back to $f$.
+        for some units A and B, as the output of $f$
+        is passed to $g$ and the output of $g$ is passed to $f$.
+
+        !! Formally, parsing 
+        
+        !! $$
+        !! f \circ g \circ f
+        !! $$
+
+        !! as
+
+        !! $$
+        !! f \circ (g \circ f)
+        !! $$
+
+        !! the subexpression “$g \circ f$” implies
+        !! units of the form 
+
+        !! $$
+        !! \begin{gathered}
+        !! f : [\A] \ra [\B] \\
+        !! \up{1.6}g : [\B] \ra [\C]
+        !! \end{gathered}
+        !! $$
+
+        !! but then $(g \circ f)$ has output units C,
+        !! and the further composition with $f$ implies
+        !! $\C = \A$. (The alternate parsing
+
+        !! $$
+        !! (f \circ g) 
+        !! $$
