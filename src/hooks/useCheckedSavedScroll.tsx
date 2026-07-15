@@ -19,7 +19,6 @@ import {
 } from "~/constants";
 import type { SmoothScrollController } from "~/utils/smoothScrollTo";
 import { swipeArrivalPreparation } from "~/utils/routeTransitionPolicy";
-import { horizontalDiagnosticExplicitCenter } from "~/utils/horizontalMotionDiagnostic";
 
 const useCheckedSavedScroll = () => {
   const [searchParams, _] = useSearchParams();
@@ -144,7 +143,6 @@ const useCheckedSavedScroll = () => {
         );
         await activeVerticalScroll.finished;
         if (!active) return;
-        horizontalDiagnosticExplicitCenter("hash scroll restoration");
         window.scroll({ left: arrivalStartX(), behavior: "instant" });
         update();
         completeRestoration(update);
@@ -179,7 +177,6 @@ const useCheckedSavedScroll = () => {
     if (!(await waitForRouteContentMount())) return;
     if (!(await waitForRequiredRestMounting())) return;
     if (!active) return;
-    horizontalDiagnosticExplicitCenter("saved scroll restoration");
     window.scrollTo(arrivalStartX(), savedScroll);
     completeRestoration(updateScroll);
   };

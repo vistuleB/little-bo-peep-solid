@@ -13,7 +13,6 @@ import { useLocation } from "@solidjs/router";
 import type { HorizontalGestureEnd } from "~/hooks/useHorizontalSwipeNavigation";
 import { swipeArrivalPreparation } from "~/utils/routeTransitionPolicy";
 import { unlockHorizontalDocumentScroll } from "~/utils/horizontalScrollLock";
-import { horizontalDiagnosticExplicitCenter } from "~/utils/horizontalMotionDiagnostic";
 
 export type HorizontalScrollPolicy = "range-limited" | "always-snap-back";
 
@@ -114,7 +113,6 @@ const useHorizontalPageMotion = (
       return;
     }
     snapBackInProgress = true;
-    horizontalDiagnosticExplicitCenter("smoothlyCenter");
     window.scroll({ left: targetX, behavior: "smooth" });
   };
 
@@ -165,7 +163,6 @@ const useHorizontalPageMotion = (
     if (routeHasSwipeArrival()) {
       completeArrival();
       window.clearTimeout(scrollEndFallbackTimeout);
-      horizontalDiagnosticExplicitCenter("touchstart interrupts arrival");
       window.scroll({ left: centeredScrollX(), behavior: "instant" });
       return;
     }
@@ -207,7 +204,6 @@ const useHorizontalPageMotion = (
     clearArrivalAnimationFrame();
     window.clearTimeout(scrollEndFallbackTimeout);
     const centeredX = centeredScrollX();
-    horizontalDiagnosticExplicitCenter("alignImmediately");
     window.scroll({ left: centeredX, behavior: "instant" });
   };
 
@@ -221,7 +217,6 @@ const useHorizontalPageMotion = (
       return;
     }
 
-    horizontalDiagnosticExplicitCenter("prepare destination arrival");
     window.scroll({ left: centeredScrollX(), behavior: "instant" });
     startCustomArrival();
   });

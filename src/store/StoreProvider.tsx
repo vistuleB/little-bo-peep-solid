@@ -104,7 +104,7 @@ const [store, set_store] = createStore<Store>({
   pending_route_path: "",
   pending_route_target: "top",
   route_load_memory: {},
-  navigation_delays: true,
+  navigation_delays: false,
   animations: false,
 });
 

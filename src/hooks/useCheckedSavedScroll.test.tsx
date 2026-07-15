@@ -29,10 +29,6 @@ vi.mock("~/hooks/useScrollToInChapter", () => ({
   default: () => ({ scrollToInChapter: vi.fn() }),
 }));
 
-vi.mock("~/utils/horizontalMotionDiagnostic", () => ({
-  horizontalDiagnosticExplicitCenter: vi.fn(),
-}));
-
 import useCheckedSavedScroll from "./useCheckedSavedScroll";
 
 describe("useCheckedSavedScroll", () => {
