@@ -1,27 +1,25 @@
-!! |> Section
-!!     handle=_ch6_start_
+|> Section
+    *The topic.*
+    A
 
-!!     *Terminology: “dimension” vs. “dimensional”.*
-!!     As explained in the [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions), 
-!!     the term
+    __dimension__
 
-!!     __dimension__
+    is a category of units such as “time”, as
+    touched upon in the 
+    [Postcript to Chapter >>slopes#decoy:2](>>units_vs_dimensions).
+    The topic of
 
-!!     can mean a qualitative category of units, such as
-!!     in the phrase “$x$ has dimensions of time”.
-!!     On the other hand,
+    __dimensional analysis__
 
-!!     __dimensional__
-
-!!     means “that which relates to
-!!     dimensions _or_ units”, 
-!!     i.e., there is no standalone term for
-!!     “that which relates to units”, so we have this catch-all instead.
+    is that of “analyzing the units” within a mathematical 
+    expression to uncover contradictions (pointing
+    to upstream errors) and/or conversely to offer
+    validation.
 
 |> Section
     handle=_ch6_start_
 
-    *Function signatures.*
+    *Notation: function signatures.*
     If $f$ is a function from $\rr$ to $\rr$
     we write
 
@@ -49,7 +47,7 @@
     of $f$.
 
     |> Example
-        handle=dimensional_first_example
+        !! handle=dimensional_first_example
 
         If
 
@@ -1423,7 +1421,7 @@
 
     |> Image
         src=images/c6_dimensionless_plane_1_v1.svg
-        style=margin-top:-1.4em
+        style=margin-top:-0.5em
 
     The idea behind this notation is that the plane
     itself is a dimensionless object, so by doing

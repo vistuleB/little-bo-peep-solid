@@ -19,36 +19,28 @@
         $$
         f : [\tA] \ra [\tA]
         $$
-        is necessary and sufficient: since
+        is necessary and sufficient.
+        Formally, the general composition
 
         $$
-        (f\circ f)(x) = f(f(x))
+        f \circ g
         $$
 
-        we need a function that can evaluate its own output,
-        i.e., for which the input and output units match.
+        requires signatures of the form
 
-        |> SolutionNote
-            More formally, the general composition
+        $$
+        \begin{gathered}
+        f : [\B] \ra [\C] \\
+        \up{1.6}g : [\A] \ra [\B]
+        \end{gathered}
+        $$
 
-            $$
-            f \circ g
-            $$
-
-            requires signatures of the form
-
-            $$
-            \begin{gathered}
-            f : [\B] \ra [\C] \\
-            \up{1.6}g : [\A] \ra [\B]
-            \end{gathered}
-            $$
-
-            for some units A, B, C. (Cf. >>table_1_1.) If $g = f$
-            !! are the same function 
-            this implies $\A = \B$ because both are the inputs
-            of $f = g$, as well as $\B = \C$ because both are the outputs
-            of $f = g$, collapsing A, B, C to a single unit $\A = \B = \C = \A$.
+        for some units A, B, C, as per >>table_1_1.
+        If $g = f$
+        this implies $\A = \B$ because both are the inputs
+        of $f = g$, as well as $\B = \C$ because both are
+        the outputs of $f = g$, collapsing A, B, C to a
+        single unit $\A = \B = \C = \A$.
 
 
         !!     the composition

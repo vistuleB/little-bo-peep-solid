@@ -3,19 +3,11 @@
     id=first-section
 
     *Square roots.*
-    !! As “minus times minus
-    !! is plus” and “plus times plus is plus”
     Due to the fact that “minus times minus is plus”
     (the enemy of my enemy is my friend)
     and that “plus times plus is plus”,
-    !! (the enemy of my enemy is my friend),
     any nonzero number multiplied by itself
     is positive. For example,
-    !! You might remember that “minus times minus
-    !! is plus” and that “plus times plus is plus”.
-    !! (Why? The enemy of my enemy is my friend.)
-    !! So any nonzero number multiplied by itself
-    !! is positive. For example,
 
     $$
     (-2) \times (-2) = 4

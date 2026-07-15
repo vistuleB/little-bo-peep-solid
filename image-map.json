@@ -551,12 +551,12 @@
   },
   "c6_dimensionless_plane_1_v1_circled.svg": {
     "build-version": "svgo-svg/_SJ0.svg",
-    "build-version-created-on": 1783848848,
+    "build-version-created-on": 1784098561,
     "build-method": "svgo",
-    "build-version-size": 29863,
-    "original-size": 177391,
-    "compressed-size": 29863,
-    "compression": "83.17%",
+    "build-version-size": 30527,
+    "original-size": 168718,
+    "compressed-size": 30527,
+    "compression": "81.91%",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
