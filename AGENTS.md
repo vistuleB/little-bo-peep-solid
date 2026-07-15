@@ -309,6 +309,19 @@ Key architectural points:
 - `src/components/HeaderBlob.tsx` — **generated file**
 - All other `src/components/*.tsx` files — **manual** — edit these to change how tags render
 
+### Solid lifecycle rules
+
+- `createEffect` is reactive: every signal or store value read anywhere in its callback,
+  including through helper functions, becomes a dependency.
+- Returning a function from `createEffect` does **not** register cleanup. Solid treats the
+  return value as the previous value for the next execution. Use `onCleanup(() => ...)`.
+- Use `onMount` for work that must run once per component instance, including initial scroll
+  restoration.
+- Before placing navigation, scrolling, timers, or event-listener setup in `createEffect`,
+  identify every reactive dependency and verify that rerunning is intentional.
+- For route-transition bugs, retain diagnostic attribution until the behavior is verified on
+  the target device; timing correlation alone is not sufficient.
+
 ### Environment variables (`.env` / `app.config.ts`)
 
 | Variable | Values | Effect |

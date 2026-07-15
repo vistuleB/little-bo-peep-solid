@@ -19,6 +19,7 @@ import {
   lockHorizontalDocumentScroll,
   unlockHorizontalDocumentScroll,
 } from "./horizontalScrollLock";
+import { horizontalDiagnosticExplicitCenter } from "./horizontalMotionDiagnostic";
 
 let loadingDelayTimeout: number | undefined;
 let momentumKillFrame: number | undefined;
@@ -72,6 +73,7 @@ const setProvisionalDestinationTopScroll = (
 ) => {
   const centeredScrollX = (document.body.scrollWidth - window.innerWidth) / 2;
 
+  horizontalDiagnosticExplicitCenter("provisional destination top");
   window.scroll({
     left: centeredScrollX,
     top: 0,
@@ -113,6 +115,7 @@ const showSpinnerAfter = (
 ) => {
   setSpinnerCurrentlyVisible(set_store, false);
   loadingDelayTimeout = window.setTimeout(() => {
+    if (store.navigation_delays) return;
     setSpinnerCurrentlyVisible(set_store, true);
     if (store.route_phase === "loading-new-route") {
       maybeSetProvisionalDestinationTopScroll(store, set_store);
@@ -201,6 +204,7 @@ export const markDestinationRouteMounted = (
         unlockHorizontalDocumentScroll();
         const centeredScrollX =
           (document.body.scrollWidth - window.innerWidth) / 2;
+        horizontalDiagnosticExplicitCenter("destination mounted");
         window.scroll({ left: centeredScrollX, behavior: "instant" });
         set_store("scrollX", centeredScrollX);
 
@@ -211,6 +215,7 @@ export const markDestinationRouteMounted = (
           const verifiedCenter =
             (document.body.scrollWidth - window.innerWidth) / 2;
           if (Math.abs(window.scrollX - verifiedCenter) >= 1) {
+            horizontalDiagnosticExplicitCenter("verify destination center");
             window.scroll({ left: verifiedCenter, behavior: "instant" });
           }
           set_store("scrollX", window.scrollX);

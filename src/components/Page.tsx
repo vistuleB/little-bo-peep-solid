@@ -10,6 +10,7 @@ import useHorizontalSwipeNavigation from "~/hooks/useHorizontalSwipeNavigation";
 import useHorizontalPageMotion from "~/hooks/useHorizontalPageMotion";
 import type { HorizontalScrollPolicy } from "~/hooks/useHorizontalPageMotion";
 import { useLocation } from "@solidjs/router";
+import { horizontalDiagnosticEvent } from "~/utils/horizontalMotionDiagnostic";
 
 const env = import.meta.env.VITE_ENV;
 
@@ -56,6 +57,11 @@ const Page = (props: ParentProps & PageProps) => {
   // **********************
 
   const handleResize = () => {
+    horizontalDiagnosticEvent(
+      "PAGE HANDLE RESIZE",
+      "#a5d6a7",
+      `viewport=${window.innerWidth} body=${document.body.scrollWidth} x=${window.scrollX.toFixed(1)}`,
+    );
     let oldInnerWidth = store.innerWidth;
     let oldScrollWidth = store.scrollWidth;
 
