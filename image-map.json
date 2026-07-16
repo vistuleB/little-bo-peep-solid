@@ -4011,8 +4011,8 @@
     "original-size": 19809,
     "compressed-size": 19787,
     "compression": "0.11%",
-    "used-last-build": true,
-    "3chars": ["bt1"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_one_long_line_what_are_the_rises_3.svg": {
     "build-version": "svgo-svg/sAnB.svg",

@@ -1,12 +1,10 @@
-import { createEffect, onCleanup, onMount } from "solid-js";
+import { createEffect, createSignal, onCleanup, onMount } from "solid-js";
 import {
   ENABLE_HORIZONTAL_SWIPE_ARRIVAL,
   HORIZONTAL_PAGE_ARRIVAL_DURATION_MS,
   HORIZONTAL_PAN_EDGE_OVERSHOOT,
-  HORIZONTAL_PAN_EDGE_RESISTANCE,
   HORIZONTAL_PAN_ENTRY_DISTANCE,
   HORIZONTAL_PAN_RECT_EDGE_TOLERANCE,
-  HORIZONTAL_PAN_REVEAL_GUTTER,
   HORIZONTAL_SWIPE_CENTER_TOLERANCE,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
@@ -30,20 +28,32 @@ type InspectableSnapshot = {
 const INSPECTABLE_SELECTOR =
   '[data-horizontal-inspectable="true"], [data-side-image]';
 const HORIZONTAL_INTENT_RATIO = 1.1;
-const NAVIGATION_DRAG_RESISTANCE = 0.3;
+const PAN_SMOOTHING_FACTOR = 0.7;
+const PAN_SMOOTHING_MAX_LAG = 6;
+const PAN_SMOOTHING_SETTLE_DISTANCE = 0.25;
 const RECENTER_DURATION_MS = 280;
 const WHEEL_IDLE_MS = 120;
+let activePageMotionOwner: symbol | undefined;
 
-const useHorizontalPageMotion = () => {
+const useHorizontalPageMotion = (
+  pageCameraSurface: () => HTMLElement | undefined,
+  panningEnabled: () => boolean,
+) => {
+  const pageMotionOwner = Symbol("page-motion-owner");
+  activePageMotionOwner = pageMotionOwner;
   const { store, set_store } = useGlobalContext();
   const location = useLocation();
   let arrivalAnimationFrame: number | undefined;
   let cameraAnimationFrame: number | undefined;
   let encounterAnimationFrame: number | undefined;
   let initialCenterFrame: number | undefined;
+  let panSmoothingAnimationFrame: number | undefined;
+  let panSmoothingTarget = 0;
   let wheelIdleTimeout: number | undefined;
   let gestureStartOffset = 0;
   let gesturePanning = false;
+  let gestureOwnedByThisPage = false;
+  const [motionDebug, setMotionDebug] = createSignal("idle");
   // A panning trip has one symmetric, monotonically increasing range. It is
   // reset only when the page returns to its centered state.
   let tripCameraExtent = 0;
@@ -56,6 +66,7 @@ const useHorizontalPageMotion = () => {
     Math.max(0, (store.scrollWidth - store.innerWidth) / 2);
 
   const maximumCameraOffset = () => tripCameraExtent;
+  const motionIsActive = () => activePageMotionOwner === pageMotionOwner;
 
   const routeHasSwipeArrival = () =>
     ENABLE_HORIZONTAL_SWIPE_ARRIVAL &&
@@ -66,46 +77,114 @@ const useHorizontalPageMotion = () => {
     Math.abs(store.horizontal_camera_offset) <=
     HORIZONTAL_SWIPE_CENTER_TOLERANCE;
 
-  const updateVirtualScrollX = (cameraOffset: number) => {
-    set_store("scrollX", centeredVirtualScrollX() - cameraOffset);
-  };
-
   const resistedCameraOffset = (requested: number) => {
     const limit = maximumCameraOffset();
     const absolute = Math.abs(requested);
     if (absolute <= limit) return requested;
 
+    const excess = absolute - limit;
+    // Keep the movement's slope continuous at the range boundary, then
+    // progressively stiffen toward the maximum rubber-band overshoot.
     const resisted =
       limit +
-      Math.min(
-        HORIZONTAL_PAN_EDGE_OVERSHOOT,
-        (absolute - limit) * HORIZONTAL_PAN_EDGE_RESISTANCE,
-      );
+      HORIZONTAL_PAN_EDGE_OVERSHOOT *
+        (1 - Math.exp(-excess / HORIZONTAL_PAN_EDGE_OVERSHOOT));
     return Math.sign(requested) * resisted;
   };
 
   const setCameraOffset = (requested: number) => {
     const offset = resistedCameraOffset(requested);
     set_store("horizontal_camera_offset", offset);
-    updateVirtualScrollX(offset);
+  };
+
+  const clearPanSmoothing = () => {
+    if (panSmoothingAnimationFrame === undefined) return;
+    cancelAnimationFrame(panSmoothingAnimationFrame);
+    panSmoothingAnimationFrame = undefined;
+  };
+
+  const tickPanSmoothing = () => {
+    const target = resistedCameraOffset(panSmoothingTarget);
+    const current = store.horizontal_camera_offset;
+    const difference = target - current;
+    if (Math.abs(difference) <= PAN_SMOOTHING_SETTLE_DISTANCE) {
+      set_store("horizontal_camera_offset", target);
+      panSmoothingAnimationFrame = undefined;
+      return;
+    }
+
+    let next = current + difference * PAN_SMOOTHING_FACTOR;
+    const remainingLag = target - next;
+    if (Math.abs(remainingLag) > PAN_SMOOTHING_MAX_LAG) {
+      next = target - Math.sign(remainingLag) * PAN_SMOOTHING_MAX_LAG;
+    }
+    set_store("horizontal_camera_offset", next);
+    panSmoothingAnimationFrame = requestAnimationFrame(tickPanSmoothing);
+  };
+
+  const setSmoothedCameraOffset = (requested: number) => {
+    panSmoothingTarget = requested;
+    if (panSmoothingAnimationFrame !== undefined) return;
+    panSmoothingAnimationFrame = requestAnimationFrame(tickPanSmoothing);
   };
 
   const inspectableSnapshot = (): InspectableSnapshot => {
     const directions = { left: false, right: false };
     let encounteredOverflow = 0;
-    const viewportBottom = store.innerHeight;
-    const viewportRight = store.innerWidth;
+    const viewportBottom = window.innerHeight;
+    const viewportRight = window.innerWidth;
     const cameraOffset = store.horizontal_camera_offset;
+    const surface = pageCameraSurface();
+    if (!surface) return { directions, extent: 0 };
 
-    document
+    surface
       .querySelectorAll<HTMLElement>(INSPECTABLE_SELECTOR)
       .forEach((element) => {
         const rect = element.getBoundingClientRect();
+        if (
+          rect.width <= 0 ||
+          rect.height <= 0 ||
+          rect.bottom <= 0 ||
+          rect.top >= viewportBottom
+        ) {
+          return;
+        }
+
+        let visibleTop = rect.top;
+        let visibleBottom = rect.bottom;
+        let rendered = true;
+        let ancestor: HTMLElement | null = element;
+
+        while (rendered && ancestor) {
+          const style = getComputedStyle(ancestor);
+          if (
+            style.display === "none" ||
+            style.visibility === "hidden" ||
+            style.visibility === "collapse" ||
+            Number(style.opacity) === 0
+          ) {
+            rendered = false;
+            break;
+          }
+
+          if (
+            style.overflowY === "hidden" ||
+            style.overflowY === "clip" ||
+            style.overflowY === "auto" ||
+            style.overflowY === "scroll"
+          ) {
+            const ancestorRect = ancestor.getBoundingClientRect();
+            visibleTop = Math.max(visibleTop, ancestorRect.top);
+            visibleBottom = Math.min(visibleBottom, ancestorRect.bottom);
+          }
+          ancestor = ancestor.parentElement;
+        }
+
         const overlapsViewportVertically =
-          rect.width > 0 &&
-          rect.height > 0 &&
-          rect.bottom > 0 &&
-          rect.top < viewportBottom;
+          rendered &&
+          visibleBottom > visibleTop &&
+          visibleBottom > 0 &&
+          visibleTop < viewportBottom;
         if (!overlapsViewportVertically) return;
 
         // Measure in the page's centered coordinate space. Otherwise moving
@@ -132,7 +211,7 @@ const useHorizontalPageMotion = () => {
       directions,
       extent:
         encounteredOverflow > HORIZONTAL_PAN_RECT_EDGE_TOLERANCE
-          ? encounteredOverflow + HORIZONTAL_PAN_REVEAL_GUTTER
+          ? encounteredOverflow + viewportRight
           : 0,
     };
   };
@@ -206,13 +285,15 @@ const useHorizontalPageMotion = () => {
   };
 
   const smoothlyCenter = () => {
+    if (!motionIsActive()) return;
     completeArrival();
+    clearPanSmoothing();
     clearCameraAnimation();
+    set_store("margin_mode", false);
     const startOffset = store.horizontal_camera_offset;
     if (Math.abs(startOffset) < 1) {
       setCameraOffset(0);
       set_store("horizontal_camera_dragging", false);
-      set_store("margin_mode", false);
       tripCameraExtent = 0;
       return;
     }
@@ -232,18 +313,34 @@ const useHorizontalPageMotion = () => {
       cameraAnimationFrame = undefined;
       setCameraOffset(0);
       set_store("horizontal_camera_dragging", false);
-      set_store("margin_mode", false);
       tripCameraExtent = 0;
     };
     cameraAnimationFrame = requestAnimationFrame(tick);
   };
 
   const handleGestureStart = () => {
+    gestureOwnedByThisPage = motionIsActive();
+    if (!gestureOwnedByThisPage) {
+      setMotionDebug("inactive controller");
+      return;
+    }
     clearCameraAnimation();
+    clearPanSmoothing();
     gestureStartOffset = store.horizontal_camera_offset;
-    gesturePanning = store.margin_mode;
-    gestureInspectableSnapshot = inspectableSnapshot();
-    if (store.margin_mode) {
+    gesturePanning =
+      panningEnabled() && store.margin_mode && tripCameraExtent > 0;
+    if (store.margin_mode && !gesturePanning) {
+      set_store("margin_mode", false);
+    }
+    gestureInspectableSnapshot = panningEnabled()
+      ? inspectableSnapshot()
+      : { directions: { left: false, right: false }, extent: 0 };
+    setMotionDebug(
+      panningEnabled()
+        ? `start L${Number(gestureInspectableSnapshot.directions.left)} R${Number(gestureInspectableSnapshot.directions.right)} extent=${gestureInspectableSnapshot.extent.toFixed(1)}`
+        : "panning hard-disabled",
+    );
+    if (gesturePanning) {
       gestureInspectableSnapshot.directions = { left: true, right: true };
       tripCameraExtent = Math.max(
         tripCameraExtent,
@@ -259,11 +356,13 @@ const useHorizontalPageMotion = () => {
   };
 
   const handleGestureMove = (gesture: HorizontalGestureMove) => {
-    if (store.horizontal_arrival_phase === "animating") return;
+    if (!gestureOwnedByThisPage) return false;
+    if (!panningEnabled()) return true;
+    if (store.horizontal_arrival_phase === "animating") return false;
     const horizontalIntent =
       Math.abs(gesture.deltaX) >
       Math.abs(gesture.deltaY) * HORIZONTAL_INTENT_RATIO;
-    if (!horizontalIntent) return;
+    if (!horizontalIntent) return !gesturePanning;
 
     if (
       !gesturePanning &&
@@ -275,15 +374,22 @@ const useHorizontalPageMotion = () => {
         tripCameraExtent,
         gestureInspectableSnapshot.extent,
       );
+      setMotionDebug(`entered pan extent=${tripCameraExtent.toFixed(1)}`);
     }
 
-    const movement = gesturePanning
-      ? gesture.deltaX
-      : gesture.deltaX * NAVIGATION_DRAG_RESISTANCE;
-    setCameraOffset(gestureStartOffset + movement);
+    if (!gesturePanning) return true;
+
+    setSmoothedCameraOffset(gestureStartOffset + gesture.deltaX);
+    return false;
   };
 
   const handleGestureEnd = (result: HorizontalGestureEnd) => {
+    if (!gestureOwnedByThisPage) return;
+    gestureOwnedByThisPage = false;
+    if (gesturePanning) {
+      clearPanSmoothing();
+      setCameraOffset(gestureStartOffset + result.deltaX);
+    }
     set_store("horizontal_camera_dragging", false);
     if (result.swipeInitiated) {
       set_store("margin_mode", false);
@@ -299,12 +405,17 @@ const useHorizontalPageMotion = () => {
   };
 
   const handleGestureCancel = () => {
+    if (!gestureOwnedByThisPage) return;
+    gestureOwnedByThisPage = false;
+    clearPanSmoothing();
     set_store("horizontal_camera_dragging", false);
     if (store.margin_mode) return;
     smoothlyCenter();
   };
 
   const handleWheel = (event: WheelEvent) => {
+    if (!motionIsActive()) return;
+    if (!panningEnabled()) return;
     const horizontalDelta =
       Math.abs(event.deltaX) > Math.abs(event.deltaY)
         ? event.deltaX
@@ -337,17 +448,21 @@ const useHorizontalPageMotion = () => {
   };
 
   const alignImmediately = () => {
+    if (!motionIsActive()) return;
     if (store.horizontal_arrival_phase !== "idle") return;
     clearCameraAnimation();
+    clearPanSmoothing();
     clearArrivalAnimation();
     setCameraOffset(0);
     set_store("horizontal_camera_dragging", false);
     set_store("margin_mode", false);
     tripCameraExtent = 0;
+    set_store("scrollX", centeredVirtualScrollX());
     window.scroll({ left: 0, behavior: "instant" });
   };
 
   const handleScroll = () => {
+    if (!motionIsActive()) return;
     set_store("scrollY", window.scrollY);
     if (store.margin_mode) scheduleEncounterVisibleInspectables();
     if (window.scrollX !== 0) {
@@ -356,6 +471,7 @@ const useHorizontalPageMotion = () => {
   };
 
   createEffect(() => {
+    if (!motionIsActive()) return;
     if (!store.saved_scroll_finished || store.route_phase !== "idle") return;
     if (
       !routeHasSwipeArrival() ||
@@ -369,6 +485,7 @@ const useHorizontalPageMotion = () => {
   });
 
   onMount(() => {
+    activePageMotionOwner = pageMotionOwner;
     if (!routeHasSwipeArrival()) {
       initialCenterFrame = requestAnimationFrame(alignImmediately);
     }
@@ -376,6 +493,9 @@ const useHorizontalPageMotion = () => {
     window.addEventListener("wheel", handleWheel, { passive: false });
 
     onCleanup(() => {
+      if (activePageMotionOwner === pageMotionOwner) {
+        activePageMotionOwner = undefined;
+      }
       if (initialCenterFrame !== undefined) {
         cancelAnimationFrame(initialCenterFrame);
       }
@@ -387,6 +507,7 @@ const useHorizontalPageMotion = () => {
       }
       clearArrivalAnimation();
       clearCameraAnimation();
+      clearPanSmoothing();
     });
   });
 
@@ -397,6 +518,8 @@ const useHorizontalPageMotion = () => {
     handleGestureEnd,
     handleGestureMove,
     handleGestureStart,
+    motionDebug,
+    motionIsActive,
     smoothlyCenter,
   };
 };
