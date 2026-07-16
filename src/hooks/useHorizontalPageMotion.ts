@@ -34,13 +34,29 @@ const PAN_SMOOTHING_SETTLE_DISTANCE = 0.25;
 const RECENTER_DURATION_MS = 280;
 const WHEEL_IDLE_MS = 120;
 let activePageMotionOwner: symbol | undefined;
+const mountedPageMotionOwners: symbol[] = [];
+
+const claimPageMotionOwnership = (owner: symbol) => {
+  const previousIndex = mountedPageMotionOwners.indexOf(owner);
+  if (previousIndex !== -1) mountedPageMotionOwners.splice(previousIndex, 1);
+  mountedPageMotionOwners.push(owner);
+  activePageMotionOwner = owner;
+};
+
+const releasePageMotionOwnership = (owner: symbol) => {
+  const index = mountedPageMotionOwners.indexOf(owner);
+  if (index !== -1) mountedPageMotionOwners.splice(index, 1);
+  if (activePageMotionOwner === owner) {
+    activePageMotionOwner = mountedPageMotionOwners.at(-1);
+  }
+};
 
 const useHorizontalPageMotion = (
   pageCameraSurface: () => HTMLElement | undefined,
   panningEnabled: () => boolean,
 ) => {
   const pageMotionOwner = Symbol("page-motion-owner");
-  activePageMotionOwner = pageMotionOwner;
+  claimPageMotionOwnership(pageMotionOwner);
   const { store, set_store } = useGlobalContext();
   const location = useLocation();
   let arrivalAnimationFrame: number | undefined;
@@ -104,6 +120,10 @@ const useHorizontalPageMotion = (
   };
 
   const tickPanSmoothing = () => {
+    if (!motionIsActive()) {
+      panSmoothingAnimationFrame = undefined;
+      return;
+    }
     const target = resistedCameraOffset(panSmoothingTarget);
     const current = store.horizontal_camera_offset;
     const difference = target - current;
@@ -230,7 +250,9 @@ const useHorizontalPageMotion = (
     if (encounterAnimationFrame !== undefined) return;
     encounterAnimationFrame = requestAnimationFrame(() => {
       encounterAnimationFrame = undefined;
-      if (store.margin_mode) encounterVisibleInspectables();
+      if (motionIsActive() && store.margin_mode) {
+        encounterVisibleInspectables();
+      }
     });
   };
 
@@ -264,6 +286,10 @@ const useHorizontalPageMotion = (
     set_store("horizontal_arrival_phase", "animating");
 
     const tick = (now: number) => {
+      if (!motionIsActive()) {
+        arrivalAnimationFrame = undefined;
+        return;
+      }
       const progress = Math.min(
         1,
         (now - startedAt) / HORIZONTAL_PAGE_ARRIVAL_DURATION_MS,
@@ -301,6 +327,10 @@ const useHorizontalPageMotion = (
     const startedAt = performance.now();
     set_store("horizontal_camera_dragging", true);
     const tick = (now: number) => {
+      if (!motionIsActive()) {
+        cameraAnimationFrame = undefined;
+        return;
+      }
       const progress = Math.min(1, (now - startedAt) / RECENTER_DURATION_MS);
       const easedProgress = 1 - Math.pow(1 - progress, 3);
       setCameraOffset(startOffset * (1 - easedProgress));
@@ -443,7 +473,9 @@ const useHorizontalPageMotion = (
     setCameraOffset(store.horizontal_camera_offset + cameraDelta);
     window.clearTimeout(wheelIdleTimeout);
     wheelIdleTimeout = window.setTimeout(() => {
-      set_store("horizontal_camera_dragging", false);
+      if (motionIsActive()) {
+        set_store("horizontal_camera_dragging", false);
+      }
     }, WHEEL_IDLE_MS);
   };
 
@@ -485,7 +517,7 @@ const useHorizontalPageMotion = (
   });
 
   onMount(() => {
-    activePageMotionOwner = pageMotionOwner;
+    claimPageMotionOwnership(pageMotionOwner);
     if (!routeHasSwipeArrival()) {
       initialCenterFrame = requestAnimationFrame(alignImmediately);
     }
@@ -493,9 +525,7 @@ const useHorizontalPageMotion = (
     window.addEventListener("wheel", handleWheel, { passive: false });
 
     onCleanup(() => {
-      if (activePageMotionOwner === pageMotionOwner) {
-        activePageMotionOwner = undefined;
-      }
+      releasePageMotionOwnership(pageMotionOwner);
       if (initialCenterFrame !== undefined) {
         cancelAnimationFrame(initialCenterFrame);
       }

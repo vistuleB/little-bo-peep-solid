@@ -79,6 +79,12 @@ const useHorizontalSwipeNavigation = (
   let gesture = emptyGesture();
   let consumedTapUntil = 0;
 
+  const cancelGesture = () => {
+    const wasTracking = gesture.tracking;
+    gesture = emptyGesture();
+    if (wasTracking) options.onGestureCancel?.();
+  };
+
   const handleClick = (event: MouseEvent) => {
     if (performance.now() > consumedTapUntil) {
       return;
@@ -90,8 +96,11 @@ const useHorizontalSwipeNavigation = (
   };
 
   const handleTouchStart = (event: TouchEvent) => {
+    // A later physical gesture must never inherit suppression intended for
+    // the synthetic click belonging to the previous tap.
+    consumedTapUntil = 0;
     if (event.touches.length !== 1) {
-      gesture = emptyGesture();
+      cancelGesture();
       return;
     }
 
@@ -122,8 +131,9 @@ const useHorizontalSwipeNavigation = (
   };
 
   const handleTouchMove = (event: TouchEvent) => {
-    if (!gesture.tracking || event.touches.length !== 1) {
-      gesture = emptyGesture();
+    if (!gesture.tracking) return;
+    if (event.touches.length !== 1) {
+      cancelGesture();
       return;
     }
     if (!gesture.valid) return;
@@ -142,8 +152,9 @@ const useHorizontalSwipeNavigation = (
   };
 
   const handleTouchEnd = (event: TouchEvent) => {
-    if (!gesture.tracking || event.changedTouches.length !== 1) {
-      gesture = emptyGesture();
+    if (!gesture.tracking) return;
+    if (event.changedTouches.length !== 1) {
+      cancelGesture();
       return;
     }
 
@@ -211,11 +222,6 @@ const useHorizontalSwipeNavigation = (
     else options.onSwipeRight();
   };
 
-  const cancelGesture = () => {
-    gesture = emptyGesture();
-    options.onGestureCancel?.();
-  };
-
   onMount(() => {
     document.addEventListener("touchstart", handleTouchStart, {
       passive: true,
@@ -223,14 +229,18 @@ const useHorizontalSwipeNavigation = (
     document.addEventListener("touchmove", handleTouchMove, { passive: true });
     document.addEventListener("touchend", handleTouchEnd, { passive: true });
     document.addEventListener("touchcancel", cancelGesture, { passive: true });
-    document.addEventListener("click", handleClick, { capture: true });
+    window.addEventListener("click", handleClick, { capture: true });
+    window.addEventListener("blur", cancelGesture);
+    window.addEventListener("pagehide", cancelGesture);
 
     onCleanup(() => {
       document.removeEventListener("touchstart", handleTouchStart);
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
       document.removeEventListener("touchcancel", cancelGesture);
-      document.removeEventListener("click", handleClick, { capture: true });
+      window.removeEventListener("click", handleClick, { capture: true });
+      window.removeEventListener("blur", cancelGesture);
+      window.removeEventListener("pagehide", cancelGesture);
     });
   });
 };
