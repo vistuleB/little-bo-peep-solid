@@ -2,7 +2,8 @@ import { SetStoreFunction } from "solid-js/store";
 import {
   FAST_ROUTE_LOAD_MS,
   FIRST_ROUTE_LOAD_GRACE_MS,
-  HORIZONTAL_PAGE_ARRIVAL_OFFSET,
+  HORIZONTAL_PAGE_ARRIVAL_OFFSET_WITH_LOADING_SCREEN,
+  HORIZONTAL_PAGE_ARRIVAL_OFFSET_WITHOUT_LOADING_SCREEN,
   LOADING_SPINNER_DELAY_MS,
   ROUTE_LOAD_MEMORY_TTL_MS,
 } from "~/constants";
@@ -214,11 +215,12 @@ export const markDestinationRouteMounted = (
             window.scroll({ left: verifiedCenter, behavior: "instant" });
           }
           set_store("scrollX", window.scrollX);
+          const arrivalOffset = store.spinner_currently_visible
+            ? HORIZONTAL_PAGE_ARRIVAL_OFFSET_WITH_LOADING_SCREEN
+            : HORIZONTAL_PAGE_ARRIVAL_OFFSET_WITHOUT_LOADING_SCREEN;
           set_store(
             "horizontal_arrival_offset",
-            direction === "left"
-              ? HORIZONTAL_PAGE_ARRIVAL_OFFSET
-              : -HORIZONTAL_PAGE_ARRIVAL_OFFSET,
+            direction === "left" ? arrivalOffset : -arrivalOffset,
           );
           set_store("horizontal_arrival_phase", "preparing");
         });

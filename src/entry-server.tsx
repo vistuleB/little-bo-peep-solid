@@ -26,6 +26,12 @@ function resolveMathJAXEnv(): string {
   }
 }
 
+function resolvePreviewImageURL(): string {
+  const publicURL = process.env.PUBLIC_URL?.replace(/\/$/, "");
+  const path = "/images/lbp_preview.png";
+  return publicURL ? `${publicURL}${path}` : path;
+}
+
 export default createHandler(() => (
   <StartServer
     document={({ assets, children, scripts }) => (
@@ -33,6 +39,18 @@ export default createHandler(() => (
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="description"
+            content="Baskerville Calculus, an interactive calculus textbook."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Baskerville Calculus" />
+          <meta
+            property="og:description"
+            content="An interactive calculus textbook."
+          />
+          <meta property="og:image" content={resolvePreviewImageURL()} />
+          <meta name="twitter:card" content="summary_large_image" />
           {
             import.meta.env.VITE_ENV === "LOCAL" ? (
               <>
@@ -100,10 +118,6 @@ export default createHandler(() => (
             // )
           }
 
-          <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1.0,minimum-scale=1"
-          />
           <meta name="format-detection" content="telephone=no" />
           <script
             innerHTML={`window.env = { VITE_ENV: "${import.meta.env.VITE_ENV}" };`}
