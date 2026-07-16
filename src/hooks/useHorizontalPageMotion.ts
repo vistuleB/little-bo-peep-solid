@@ -4,6 +4,8 @@ import {
   HORIZONTAL_PAGE_ARRIVAL_DURATION_MS,
   HORIZONTAL_PAN_EDGE_OVERSHOOT,
   HORIZONTAL_PAN_ENTRY_DISTANCE,
+  HORIZONTAL_PAN_RECENTER_TOLERANCE_MIN,
+  HORIZONTAL_PAN_RECENTER_TOLERANCE_VIEWPORT_RATIO,
   HORIZONTAL_PAN_RECT_EDGE_TOLERANCE,
   HORIZONTAL_SWIPE_CENTER_TOLERANCE,
 } from "~/constants";
@@ -90,6 +92,15 @@ const useHorizontalPageMotion = (
   const cameraIsCentered = () =>
     Math.abs(store.horizontal_camera_offset) <=
     HORIZONTAL_SWIPE_CENTER_TOLERANCE;
+
+  const panRecenterTolerance = () =>
+    Math.max(
+      HORIZONTAL_PAN_RECENTER_TOLERANCE_MIN,
+      window.innerWidth * HORIZONTAL_PAN_RECENTER_TOLERANCE_VIEWPORT_RATIO,
+    );
+
+  const cameraIsWithinPanRecenterTolerance = () =>
+    Math.abs(store.horizontal_camera_offset) <= panRecenterTolerance();
 
   const resistedCameraOffset = (requested: number) => {
     const limit = maximumCameraOffset();
@@ -411,7 +422,7 @@ const useHorizontalPageMotion = (
       return;
     }
 
-    if (gesturePanning && Math.abs(store.horizontal_camera_offset) >= 1) {
+    if (gesturePanning && !cameraIsWithinPanRecenterTolerance()) {
       set_store("margin_mode", true);
       return;
     }
@@ -459,6 +470,9 @@ const useHorizontalPageMotion = (
     wheelIdleTimeout = window.setTimeout(() => {
       if (motionIsActive()) {
         set_store("horizontal_camera_dragging", false);
+        if (store.margin_mode && cameraIsWithinPanRecenterTolerance()) {
+          smoothlyCenter();
+        }
       }
     }, WHEEL_IDLE_MS);
   };
