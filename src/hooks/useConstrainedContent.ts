@@ -5,7 +5,10 @@ import {
   createSignal,
   onCleanup,
 } from "solid-js";
-import { MOBILE_TEXT_COLUMN_SIDE_INSET } from "~/constants";
+import {
+  MIN_UNCONSTRAIN_EXPANSION_RATIO,
+  MOBILE_TEXT_COLUMN_SIDE_INSET,
+} from "~/constants";
 import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
 import { useGlobalContext } from "~/store/StoreProvider";
 
@@ -36,6 +39,15 @@ const useConstrainedContent = (options: ConstrainedContentOptions) => {
   const [transitionsEnabled, setTransitionsEnabled] = createSignal(false);
 
   const availableWidth = () => availableViewportWidth(store.innerWidth);
+
+  const canUnconstrain = () => {
+    const naturalWidth = options.naturalWidth();
+    const constrainedWidth = Math.min(naturalWidth, availableWidth());
+    return (
+      constrainedWidth > 0 &&
+      naturalWidth >= MIN_UNCONSTRAIN_EXPANSION_RATIO * constrainedWidth
+    );
+  };
 
   const targetScale = createMemo(() => {
     const width = options.naturalWidth();
@@ -108,7 +120,7 @@ const useConstrainedContent = (options: ConstrainedContentOptions) => {
 
     event.stopPropagation();
 
-    if (options.naturalWidth() > availableWidth()) {
+    if (!constrained() || canUnconstrain()) {
       enableTransitionForToggle();
       requestAnimationFrame(() => {
         setConstrained((beforeToggle) => !beforeToggle);

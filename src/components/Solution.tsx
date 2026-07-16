@@ -21,6 +21,8 @@ import {
 import { twJoin } from "tailwind-merge";
 
 const SOLUTION_BUTTON_INLINE_PADDING = 20;
+const SOLUTION_MATH_PREPARATION_MIN_DELAY_MS = 2500;
+const MAX_ANIMATED_SOLUTION_HEIGHT = 800;
 import { Spacer } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
@@ -115,6 +117,7 @@ const SolutionHeightChangeListener = (props: {
 export const Solution = (props: SolutionProps) => {
   let ref: HTMLDivElement | undefined;
   let observed_math_preparation: Promise<boolean> | undefined;
+  let prepare_math_timeout: number | undefined;
   const solutionMathJax = createSolutionMathJaxController();
 
   let { store: global_store } = useGlobalContext();
@@ -148,19 +151,17 @@ export const Solution = (props: SolutionProps) => {
   const [solution_content_mounted, set_solution_content_mounted] =
     createSignal(false);
 
-  const handleResize = () => {
-    set_content_height(ref?.clientHeight || 0);
-  };
-
   const reset_content_height_etc = () => {
     props.re_calculate_height; // re-calc on change
     if (ref?.clientHeight) {
+      const height = ref.clientHeight;
       set_content_height(ref?.clientHeight || 0);
       updateExerciseByIndex(solution_number - 1, {
         field: "transition_duration",
-        value: global_store.animations
-          ? Math.min(ref?.clientHeight, 1000) * 0.8
-          : 0,
+        value:
+          global_store.animations && height <= MAX_ANIMATED_SOLUTION_HEIGHT
+            ? height * 0.8
+            : 0,
       });
     }
   };
@@ -182,15 +183,31 @@ export const Solution = (props: SolutionProps) => {
       });
   };
 
-  const mount_solution_content = () => {
+  const schedule_solution_math = (
+    delayMs = Math.max(
+      transition_duration() + 100,
+      SOLUTION_MATH_PREPARATION_MIN_DELAY_MS,
+    ),
+  ) => {
+    if (prepare_math_timeout !== undefined) {
+      window.clearTimeout(prepare_math_timeout);
+    }
+
+    prepare_math_timeout = window.setTimeout(() => {
+      prepare_math_timeout = undefined;
+      if (solution_content_mounted()) prepare_solution_math();
+    }, delayMs);
+  };
+
+  const mount_solution_content = (prepareMath = true, mathDelayMs?: number) => {
     if (solution_content_mounted()) {
-      prepare_solution_math();
+      if (prepareMath) schedule_solution_math(mathDelayMs);
       return;
     }
     set_solution_content_mounted(true);
     requestAnimationFrame(() => {
       reset_content_height_etc();
-      prepare_solution_math();
+      if (prepareMath) schedule_solution_math(mathDelayMs);
     });
   };
 
@@ -200,39 +217,44 @@ export const Solution = (props: SolutionProps) => {
     requestAnimationFrame(reset_content_height_etc);
   });
 
+  onCleanup(() => {
+    if (prepare_math_timeout !== undefined) {
+      window.clearTimeout(prepare_math_timeout);
+    }
+  });
+
   createEffect(() => {
     reset_content_height_etc();
-    setTimeout(() => {
+    const timeout50 = window.setTimeout(() => {
       if (solution_open()) {
         reset_content_height_etc();
       }
     }, 50);
-    setTimeout(() => {
+    const timeout500 = window.setTimeout(() => {
       if (solution_open()) {
         reset_content_height_etc();
       }
     }, 500);
-    setTimeout(() => {
+    const timeout1200 = window.setTimeout(() => {
       if (solution_open()) {
         reset_content_height_etc();
       }
     }, 1200);
+
+    onCleanup(() => {
+      window.clearTimeout(timeout50);
+      window.clearTimeout(timeout500);
+      window.clearTimeout(timeout1200);
+    });
   });
 
   createEffect(() => {
-    if (solution_open()) {
-      window.addEventListener("scroll", handleResize);
-      setTimeout(() => {
-        set_bot_div(false);
-      }, transition_duration());
-    } else {
-      window.removeEventListener("scroll", handleResize);
-      setTimeout(() => {
-        set_bot_div(true);
-      }, transition_duration());
-    }
+    const nextBotDiv = !solution_open();
+    const timeout = window.setTimeout(() => {
+      set_bot_div(nextBotDiv);
+    }, transition_duration());
 
-    onCleanup(() => window.removeEventListener("scroll", handleResize));
+    onCleanup(() => window.clearTimeout(timeout));
   });
 
   createEffect(() => {
@@ -256,17 +278,19 @@ export const Solution = (props: SolutionProps) => {
     // green div transition
     if (solution_fully_opened() || !solution_open()) {
       set_green_div_transition(transition_duration());
-      setTimeout(() => {
+      const timeout = window.setTimeout(() => {
         set_green_div_transition(0);
       }, transition_duration());
+      onCleanup(() => window.clearTimeout(timeout));
     }
   });
 
   onMount(() => {
     set_solution_fully_opened(solution_open());
-    setTimeout(() => {
+    const timeout = window.setTimeout(() => {
       set_solution_fully_opened(solution_open());
     }, 100);
+    onCleanup(() => window.clearTimeout(timeout));
   });
 
   return (
@@ -365,7 +389,7 @@ type SolutionBtnProps = {
   solution_number: number;
   set_solution_fully_opened: Setter<boolean>;
   set_solution_transition: Setter<number>;
-  mount_solution_content: () => void;
+  mount_solution_content: (prepareMath?: boolean, mathDelayMs?: number) => void;
   resetter: () => void;
 };
 
@@ -382,6 +406,19 @@ const SolutionButton = (props: SolutionBtnProps) => {
     store.exercises[props.solution_number - 1]?.transition_duration + 50;
   const { set_handle, set_solution_fully_opened, set_solution_transition } =
     props;
+  let resetterTimeouts: number[] = [];
+  let transitionTimeout: number | undefined;
+
+  const clearButtonTimeouts = () => {
+    resetterTimeouts.forEach((timeout) => window.clearTimeout(timeout));
+    resetterTimeouts = [];
+    if (transitionTimeout !== undefined) {
+      window.clearTimeout(transitionTimeout);
+      transitionTimeout = undefined;
+    }
+  };
+
+  onCleanup(clearButtonTimeouts);
 
   const preserveButtonPosition = (update: () => void) => {
     const topBefore = buttonRef?.getBoundingClientRect().top;
@@ -433,11 +470,12 @@ const SolutionButton = (props: SolutionBtnProps) => {
         solution_open={solution_open}
         onPointerMove={(event) => {
           if (event.pointerType === "mouse") {
-            props.mount_solution_content();
+            props.mount_solution_content(true, 0);
           }
         }}
         onClick={(event) => {
           event.stopPropagation();
+          clearButtonTimeouts();
 
           if (event.metaKey) {
             const open = !solution_open();
@@ -471,8 +509,10 @@ const SolutionButton = (props: SolutionBtnProps) => {
           });
 
           props.resetter();
-          setTimeout(props.resetter, 50);
-          setTimeout(props.resetter, transition_duration());
+          resetterTimeouts = [
+            window.setTimeout(props.resetter, 50),
+            window.setTimeout(props.resetter, transition_duration()),
+          ];
 
           if (store.list_view) {
             // update localstorage for the solution . as useExercises hook only updates the selectedExo which works only in carousel view
@@ -484,7 +524,7 @@ const SolutionButton = (props: SolutionBtnProps) => {
           }
 
           // *** solution transition should be not 0 only when button is clicked ***
-          setTimeout(() => {
+          transitionTimeout = window.setTimeout(() => {
             set_solution_transition(0);
           }, transition_duration());
         }}
