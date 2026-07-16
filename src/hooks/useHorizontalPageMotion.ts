@@ -406,7 +406,7 @@ const useHorizontalPageMotion = (
     if (!gesturePanning) return true;
 
     setSmoothedCameraOffset(gestureStartOffset + gesture.deltaX);
-    return false;
+    return true;
   };
 
   const handleGestureEnd = (result: HorizontalGestureEnd) => {
