@@ -1,6 +1,5 @@
 import { onCleanup, onMount } from "solid-js";
 import {
-  HORIZONTAL_SWIPE_CENTER_TOLERANCE,
   HORIZONTAL_SWIPE_DIRECTION_RATIO,
   HORIZONTAL_SWIPE_EDGE_EXCLUSION,
   HORIZONTAL_SWIPE_MAX_DURATION_MS,
@@ -14,13 +13,29 @@ import {
 type HorizontalSwipeNavigationOptions = {
   onSwipeLeft: () => void;
   onSwipeRight: () => void;
+  navigationEnabled?: () => boolean;
+  onGestureStart?: (gesture: HorizontalGestureStart) => void;
+  onGestureMove?: (gesture: HorizontalGestureMove) => void;
   onGestureEnd?: (result: HorizontalGestureEnd) => void;
+  onGestureCancel?: () => void;
+};
+
+export type HorizontalGestureStart = {
+  clientX: number;
+  clientY: number;
+};
+
+export type HorizontalGestureMove = {
+  deltaX: number;
+  deltaY: number;
 };
 
 export type HorizontalGestureEnd = {
   swipeInitiated: boolean;
   projectedTerminalVelocity: number;
   releasePauseMs: number;
+  deltaX: number;
+  deltaY: number;
 };
 
 type Gesture = {
@@ -31,6 +46,7 @@ type Gesture = {
   horizontalTravel: number;
   startedAt: number;
   samples: GestureSample[];
+  swipeEligible: boolean;
 };
 
 type GestureSample = {
@@ -46,19 +62,13 @@ const emptyGesture = (): Gesture => ({
   horizontalTravel: 0,
   startedAt: 0,
   samples: [],
+  swipeEligible: false,
 });
 
 const useHorizontalSwipeNavigation = (
   options: HorizontalSwipeNavigationOptions,
 ) => {
   let gesture = emptyGesture();
-
-  const pageIsHorizontallyCentered = () => {
-    const centeredX = (document.body.scrollWidth - window.innerWidth) / 2;
-    return (
-      Math.abs(window.scrollX - centeredX) <= HORIZONTAL_SWIPE_CENTER_TOLERANCE
-    );
-  };
 
   const handleTouchStart = (event: TouchEvent) => {
     if (event.touches.length !== 1) {
@@ -73,15 +83,22 @@ const useHorizontalSwipeNavigation = (
       touch.clientX < window.innerWidth - HORIZONTAL_SWIPE_EDGE_EXCLUSION;
 
     gesture = {
-      valid:
-        startedAwayFromBrowserNavigationEdges && pageIsHorizontallyCentered(),
+      valid: startedAwayFromBrowserNavigationEdges,
       startX: touch.clientX,
       startY: touch.clientY,
       lastX: touch.clientX,
       horizontalTravel: 0,
       startedAt,
       samples: [{ x: touch.clientX, at: startedAt }],
+      swipeEligible: options.navigationEnabled?.() ?? true,
     };
+
+    if (gesture.valid) {
+      options.onGestureStart?.({
+        clientX: touch.clientX,
+        clientY: touch.clientY,
+      });
+    }
   };
 
   const handleTouchMove = (event: TouchEvent) => {
@@ -94,6 +111,10 @@ const useHorizontalSwipeNavigation = (
     gesture.samples.push({ x: currentX, at: performance.now() });
     gesture.horizontalTravel += Math.abs(currentX - gesture.lastX);
     gesture.lastX = currentX;
+    options.onGestureMove?.({
+      deltaX: currentX - gesture.startX,
+      deltaY: event.touches[0].clientY - gesture.startY,
+    });
   };
 
   const handleTouchEnd = (event: TouchEvent) => {
@@ -133,6 +154,7 @@ const useHorizontalSwipeNavigation = (
     const releasePause = finalSample ? endedAt - finalSample.at : Infinity;
 
     const isSwipe =
+      gesture.swipeEligible &&
       horizontalDistance >= HORIZONTAL_SWIPE_MIN_DISTANCE &&
       duration <= HORIZONTAL_SWIPE_MAX_DURATION_MS &&
       horizontalDistance >=
@@ -146,6 +168,8 @@ const useHorizontalSwipeNavigation = (
       swipeInitiated: isSwipe,
       projectedTerminalVelocity,
       releasePauseMs: releasePause,
+      deltaX,
+      deltaY,
     });
     if (!isSwipe) return;
 
@@ -155,6 +179,7 @@ const useHorizontalSwipeNavigation = (
 
   const cancelGesture = () => {
     gesture = emptyGesture();
+    options.onGestureCancel?.();
   };
 
   onMount(() => {

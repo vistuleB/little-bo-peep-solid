@@ -370,6 +370,9 @@ export const MathBlock = (props: MathBlockProps) => {
     <ScaleProvider scale={scale}>
       <div
         id={merged.id}
+        data-horizontal-inspectable={
+          constrainedContent.constrained() ? undefined : "true"
+        }
         class={twJoin(
           "mathblock",
           merged.class,

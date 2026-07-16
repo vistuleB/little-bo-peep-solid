@@ -14,7 +14,7 @@ export type HorizontalSwipeDirection = "left" | "right";
 export type HorizontalArrivalPhase =
   | "idle"
   | "awaiting-destination"
-  | "killing-momentum"
+  | "positioning-destination"
   | "preparing"
   | "animating";
 
@@ -45,6 +45,8 @@ export type Store = {
   arrival_route_path: string;
   horizontal_arrival_phase: HorizontalArrivalPhase;
   horizontal_arrival_offset: number;
+  horizontal_camera_offset: number;
+  horizontal_camera_dragging: boolean;
   rest_mounting_finished_for_route_started_at: number;
   scroll_is_at_0: boolean;
   margin_mode: boolean;
@@ -87,6 +89,8 @@ const [store, set_store] = createStore<Store>({
   arrival_route_path: "",
   horizontal_arrival_phase: "idle",
   horizontal_arrival_offset: 0,
+  horizontal_camera_offset: 0,
+  horizontal_camera_dragging: false,
   rest_mounting_finished_for_route_started_at: 0,
   scroll_is_at_0: false,
   margin_mode: false,

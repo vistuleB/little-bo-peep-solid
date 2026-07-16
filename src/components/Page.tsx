@@ -8,8 +8,8 @@ import usePrevNextPage from "~/hooks/usePrevNextPage";
 import useAuthorMode from "~/hooks/useAuthorMode";
 import useHorizontalSwipeNavigation from "~/hooks/useHorizontalSwipeNavigation";
 import useHorizontalPageMotion from "~/hooks/useHorizontalPageMotion";
-import type { HorizontalScrollPolicy } from "~/hooks/useHorizontalPageMotion";
 import { useLocation } from "@solidjs/router";
+import { containerWidthForLayout } from "~/hooks/useContainerWidth";
 
 const env = import.meta.env.VITE_ENV;
 
@@ -18,7 +18,6 @@ type PageProps = {
   maxElementWidth?: number;
   nextPage?: string;
   prevPage?: string;
-  horizontalScrollPolicy?: HorizontalScrollPolicy;
 };
 
 const Page = (props: ParentProps & PageProps) => {
@@ -27,17 +26,34 @@ const Page = (props: ParentProps & PageProps) => {
   const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
   const location = useLocation();
-  const { alignImmediately, handleGestureEnd, smoothlyCenter } =
-    useHorizontalPageMotion(props.horizontalScrollPolicy || "range-limited");
+  const {
+    alignImmediately,
+    cameraIsCentered,
+    handleGestureCancel,
+    handleGestureEnd,
+    handleGestureMove,
+    handleGestureStart,
+    smoothlyCenter,
+  } = useHorizontalPageMotion();
 
   useHorizontalSwipeNavigation({
+    navigationEnabled: () => cameraIsCentered() && !store.margin_mode,
+    onGestureStart: handleGestureStart,
+    onGestureMove: handleGestureMove,
     onGestureEnd: handleGestureEnd,
+    onGestureCancel: handleGestureCancel,
     onSwipeLeft: () => {
-      if (!store.nextPage) return;
+      if (!store.nextPage) {
+        smoothlyCenter();
+        return;
+      }
       getPage(store.nextPage, { kind: "swipe", direction: "left" });
     },
     onSwipeRight: () => {
-      if (!store.prevPage) return;
+      if (!store.prevPage) {
+        smoothlyCenter();
+        return;
+      }
       getPage(store.prevPage, { kind: "swipe", direction: "right" });
     },
   });
@@ -57,12 +73,18 @@ const Page = (props: ParentProps & PageProps) => {
   // **********************
 
   const handleResize = () => {
-    let oldInnerWidth = store.innerWidth;
-    let oldScrollWidth = store.scrollWidth;
+    const oldInnerWidth = store.innerWidth;
+    const oldScrollWidth = store.scrollWidth;
+    const nextInnerWidth = window.innerWidth;
+    const nextScrollWidth = containerWidthForLayout(
+      nextInnerWidth,
+      store.maxElementWidth,
+      store.pageNecessaryMargin,
+    );
 
-    set_store("innerWidth", window.innerWidth);
+    set_store("innerWidth", nextInnerWidth);
     set_store("innerHeight", window.innerHeight);
-    set_store("scrollWidth", document.body.scrollWidth);
+    set_store("scrollWidth", nextScrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
 
     let _dummy =
@@ -71,10 +93,7 @@ const Page = (props: ParentProps & PageProps) => {
       store.scrollHeight +
       store.scrollWidth;
 
-    if (
-      oldInnerWidth != store.innerWidth ||
-      oldScrollWidth != store.scrollWidth
-    ) {
+    if (oldInnerWidth != nextInnerWidth || oldScrollWidth != nextScrollWidth) {
       alignImmediately();
     }
   };
@@ -105,7 +124,6 @@ const Page = (props: ParentProps & PageProps) => {
 
     if (store.margin_mode) {
       smoothlyCenter();
-      set_store("margin_mode", false);
       e.stopPropagation();
       return;
     }
@@ -231,7 +249,31 @@ const Page = (props: ParentProps & PageProps) => {
     });
   });
 
-  return <>{props.children}</>;
+  const cameraOffset = () =>
+    store.horizontal_camera_offset + store.horizontal_arrival_offset;
+
+  return (
+    <div
+      id="PageCameraSurface"
+      data-horizontal-arrival-phase={store.horizontal_arrival_phase}
+      data-horizontal-camera-offset={store.horizontal_camera_offset}
+      data-horizontal-margin-mode={store.margin_mode ? "true" : "false"}
+      style={{
+        background: "var(--background-rgb)",
+        transform:
+          cameraOffset() === 0
+            ? "none"
+            : `translate3d(${cameraOffset()}px, 0, 0)`,
+        "will-change":
+          store.horizontal_camera_dragging ||
+          store.horizontal_arrival_phase === "animating"
+            ? "transform"
+            : "auto",
+      }}
+    >
+      {props.children}
+    </div>
+  );
 };
 
 export default Page;

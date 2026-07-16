@@ -43,7 +43,7 @@ const Container = (props: ParentProps) => {
 
   const positioningSwipeDestination = () =>
     swipeArrivalPreparation(store, location.pathname) !== "none" &&
-    (store.horizontal_arrival_phase === "killing-momentum" ||
+    (store.horizontal_arrival_phase === "positioning-destination" ||
       store.horizontal_arrival_phase === "preparing") &&
     store.horizontal_arrival_offset === 0;
 
@@ -52,43 +52,43 @@ const Container = (props: ParentProps) => {
     !preparingDeepSwipeArrival() &&
     !positioningSwipeDestination();
 
+  const centeredSceneLeft = () => (store.innerWidth - containerWidth()) / 2;
+
   return (
     <>
       <div
-        id="Container"
-        class="-z-10 relative overflow-hidden"
+        id="ContainerViewport"
+        class="relative overflow-x-clip"
         style={{
-          width: containerWidth() + "px",
+          width: "100vw",
+          background: "var(--background-rgb)",
         }}
       >
-        <EarlyImages />
-        {/* <div class="relative"> */}
-        {store.show_areas &&
-          store.pageNecessaryMargin > 0 &&
-          marginShowAreaDivs()}
-        {store.show_areas && midLineDiv()}
-        <Nav />
         <div
+          id="Container"
+          class="relative"
           style={{
-            opacity: contentReady() ? 1 : 0,
-            transform:
-              store.horizontal_arrival_offset === 0
-                ? "none"
-                : `translate3d(${store.horizontal_arrival_offset}px, 0, 0)`,
-            "will-change":
-              store.horizontal_arrival_offset === 0 ? "auto" : "transform",
+            width: containerWidth() + "px",
+            "margin-left": centeredSceneLeft() + "px",
           }}
         >
-          {props.children}
+          <EarlyImages />
+          {store.show_areas &&
+            store.pageNecessaryMargin > 0 &&
+            marginShowAreaDivs()}
+          {store.show_areas && midLineDiv()}
+          <Nav />
+          <div style={{ opacity: contentReady() ? 1 : 0 }}>
+            {props.children}
+          </div>
+          <LoadingGraphic visible={store.spinner_currently_visible} />
+          <div
+            class="h-14"
+            style={{
+              background: store.show_areas ? "teal" : "#0000",
+            }}
+          ></div>
         </div>
-        <LoadingGraphic visible={store.spinner_currently_visible} />
-        {/* </div> */}
-        <div
-          class="h-14"
-          style={{
-            background: store.show_areas ? "teal" : "#0000",
-          }}
-        ></div>
       </div>
     </>
   );
