@@ -1,4 +1,4 @@
-import { createSignal, onMount, onCleanup, ParentProps } from "solid-js";
+import { onMount, onCleanup, ParentProps } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import useSetRoute from "~/hooks/useSetRoute";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
@@ -43,11 +43,6 @@ type PageProps = {
 const Page = (props: ParentProps & PageProps) => {
   let pageCameraSurface!: HTMLDivElement;
   let resizeAnimationFrame: number | undefined;
-  const [nativeLayout, setNativeLayout] = createSignal({
-    scrollX: window.scrollX,
-    bodyWidth: document.body.scrollWidth,
-    documentWidth: document.documentElement.scrollWidth,
-  });
   let { set_store, store } = useGlobalContext();
   const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
@@ -59,13 +54,9 @@ const Page = (props: ParentProps & PageProps) => {
     handleGestureEnd,
     handleGestureMove,
     handleGestureStart,
-    motionDebug,
     motionIsActive,
     smoothlyCenter,
-  } = useHorizontalPageMotion(
-    () => pageCameraSurface,
-    () => location.pathname !== "/article/bootcamp1",
-  );
+  } = useHorizontalPageMotion(() => pageCameraSurface);
 
   useHorizontalSwipeNavigation({
     navigationEnabled: () =>
@@ -151,14 +142,6 @@ const Page = (props: ParentProps & PageProps) => {
     resizeAnimationFrame = requestAnimationFrame(() => {
       resizeAnimationFrame = undefined;
       handleResize();
-    });
-  };
-
-  const updateNativeLayout = () => {
-    setNativeLayout({
-      scrollX: window.scrollX,
-      bodyWidth: document.body.scrollWidth,
-      documentWidth: document.documentElement.scrollWidth,
     });
   };
 
@@ -286,17 +269,11 @@ const Page = (props: ParentProps & PageProps) => {
     }
 
     window.addEventListener("resize", scheduleResize);
-    window.addEventListener("scroll", updateNativeLayout);
-    document.addEventListener("touchmove", updateNativeLayout, {
-      passive: true,
-    });
     window.addEventListener("click", handleClick, { capture: true });
     window.addEventListener("keydown", handleKeydown);
 
     onCleanup(() => {
       window.removeEventListener("resize", scheduleResize);
-      window.removeEventListener("scroll", updateNativeLayout);
-      document.removeEventListener("touchmove", updateNativeLayout);
       if (resizeAnimationFrame !== undefined) {
         cancelAnimationFrame(resizeAnimationFrame);
       }
@@ -309,40 +286,27 @@ const Page = (props: ParentProps & PageProps) => {
     store.horizontal_camera_offset + store.horizontal_arrival_offset;
 
   return (
-    <>
-      {location.pathname === "/article/bootcamp1" && (
-        <div class="fixed bottom-0 left-0 z-[9999] pointer-events-none bg-black/85 text-white font-mono text-[11px] leading-[14px] px-2 py-1">
-          camera={store.horizontal_camera_offset.toFixed(1)} margin=
-          {Number(store.margin_mode)} native={nativeLayout().scrollX.toFixed(1)}
-          <br />
-          inner={window.innerWidth} body={nativeLayout().bodyWidth} doc=
-          {nativeLayout().documentWidth} owner={Number(motionIsActive())}
-          <br />
-          {motionDebug()}
-        </div>
-      )}
-      <div
-        ref={pageCameraSurface}
-        id="PageCameraSurface"
-        data-horizontal-arrival-phase={store.horizontal_arrival_phase}
-        data-horizontal-camera-offset={store.horizontal_camera_offset}
-        data-horizontal-margin-mode={store.margin_mode ? "true" : "false"}
-        style={{
-          background: "var(--background-rgb)",
-          transform:
-            cameraOffset() === 0
-              ? "none"
-              : `translate3d(${cameraOffset()}px, 0, 0)`,
-          "will-change":
-            store.horizontal_camera_dragging ||
-            store.horizontal_arrival_phase === "animating"
-              ? "transform"
-              : "auto",
-        }}
-      >
-        {props.children}
-      </div>
-    </>
+    <div
+      ref={pageCameraSurface}
+      id="PageCameraSurface"
+      data-horizontal-arrival-phase={store.horizontal_arrival_phase}
+      data-horizontal-camera-offset={store.horizontal_camera_offset}
+      data-horizontal-margin-mode={store.margin_mode ? "true" : "false"}
+      style={{
+        background: "var(--background-rgb)",
+        transform:
+          cameraOffset() === 0
+            ? "none"
+            : `translate3d(${cameraOffset()}px, 0, 0)`,
+        "will-change":
+          store.horizontal_camera_dragging ||
+          store.horizontal_arrival_phase === "animating"
+            ? "transform"
+            : "auto",
+      }}
+    >
+      {props.children}
+    </div>
   );
 };
 

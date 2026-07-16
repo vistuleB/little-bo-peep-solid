@@ -1,4 +1,4 @@
-import { createEffect, createSignal, onCleanup, onMount } from "solid-js";
+import { createEffect, onCleanup, onMount } from "solid-js";
 import {
   ENABLE_HORIZONTAL_SWIPE_ARRIVAL,
   HORIZONTAL_PAGE_ARRIVAL_DURATION_MS,
@@ -53,7 +53,6 @@ const releasePageMotionOwnership = (owner: symbol) => {
 
 const useHorizontalPageMotion = (
   pageCameraSurface: () => HTMLElement | undefined,
-  panningEnabled: () => boolean,
 ) => {
   const pageMotionOwner = Symbol("page-motion-owner");
   claimPageMotionOwnership(pageMotionOwner);
@@ -69,7 +68,6 @@ const useHorizontalPageMotion = (
   let gestureStartOffset = 0;
   let gesturePanning = false;
   let gestureOwnedByThisPage = false;
-  const [motionDebug, setMotionDebug] = createSignal("idle");
   // A panning trip has one symmetric, monotonically increasing range. It is
   // reset only when the page returns to its centered state.
   let tripCameraExtent = 0;
@@ -350,26 +348,15 @@ const useHorizontalPageMotion = (
 
   const handleGestureStart = () => {
     gestureOwnedByThisPage = motionIsActive();
-    if (!gestureOwnedByThisPage) {
-      setMotionDebug("inactive controller");
-      return;
-    }
+    if (!gestureOwnedByThisPage) return;
     clearCameraAnimation();
     clearPanSmoothing();
     gestureStartOffset = store.horizontal_camera_offset;
-    gesturePanning =
-      panningEnabled() && store.margin_mode && tripCameraExtent > 0;
+    gesturePanning = store.margin_mode && tripCameraExtent > 0;
     if (store.margin_mode && !gesturePanning) {
       set_store("margin_mode", false);
     }
-    gestureInspectableSnapshot = panningEnabled()
-      ? inspectableSnapshot()
-      : { directions: { left: false, right: false }, extent: 0 };
-    setMotionDebug(
-      panningEnabled()
-        ? `start L${Number(gestureInspectableSnapshot.directions.left)} R${Number(gestureInspectableSnapshot.directions.right)} extent=${gestureInspectableSnapshot.extent.toFixed(1)}`
-        : "panning hard-disabled",
-    );
+    gestureInspectableSnapshot = inspectableSnapshot();
     if (gesturePanning) {
       gestureInspectableSnapshot.directions = { left: true, right: true };
       tripCameraExtent = Math.max(
@@ -387,7 +374,6 @@ const useHorizontalPageMotion = (
 
   const handleGestureMove = (gesture: HorizontalGestureMove) => {
     if (!gestureOwnedByThisPage) return false;
-    if (!panningEnabled()) return true;
     if (store.horizontal_arrival_phase === "animating") return false;
     const horizontalIntent =
       Math.abs(gesture.deltaX) >
@@ -404,7 +390,6 @@ const useHorizontalPageMotion = (
         tripCameraExtent,
         gestureInspectableSnapshot.extent,
       );
-      setMotionDebug(`entered pan extent=${tripCameraExtent.toFixed(1)}`);
     }
 
     if (!gesturePanning) return true;
@@ -445,7 +430,6 @@ const useHorizontalPageMotion = (
 
   const handleWheel = (event: WheelEvent) => {
     if (!motionIsActive()) return;
-    if (!panningEnabled()) return;
     const horizontalDelta =
       Math.abs(event.deltaX) > Math.abs(event.deltaY)
         ? event.deltaX
@@ -548,7 +532,6 @@ const useHorizontalPageMotion = (
     handleGestureEnd,
     handleGestureMove,
     handleGestureStart,
-    motionDebug,
     motionIsActive,
     smoothlyCenter,
   };
