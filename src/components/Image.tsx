@@ -6,6 +6,7 @@ import { ScaleProvider } from "~/store/ScaleProvider";
 import { useLazyImages } from "~/store/LazyImageProvider";
 import useConstrainedContent from "~/hooks/useConstrainedContent";
 import styleJoin from "~/utils/styleJoin";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 const SHOW_DEBUG_COLORS = false;
 
@@ -33,6 +34,7 @@ const Image = (props: ImageProps) => {
 
   let image_element!: HTMLImageElement;
   const lazy = useLazyImages();
+  const { store } = useGlobalContext();
 
   const positiveNumber = (value: string | number | undefined) => {
     const number = Number(value);
@@ -55,6 +57,7 @@ const Image = (props: ImageProps) => {
   const constrainedContent = useConstrainedContent({
     naturalWidth: displayWidth,
     initiallyConstrained: merged.constrained,
+    clickDisabled: () => store.margin_mode,
   });
 
   const intrinsicAspectRatio = () => {
@@ -102,9 +105,13 @@ const Image = (props: ImageProps) => {
 
   const imageStyle = () => {
     const styleWidth = imageStyleWidth();
+    const heightOnly = !merged.width && Boolean(merged.height);
+    const availableWidth =
+      "calc(100vw - 2 * var(--mobile-text-column-side-inset))";
     const constrainedWidth =
-      styleWidth &&
-      `min(calc(100vw - 2 * var(--mobile-text-column-side-inset)), ${styleWidth})`;
+      styleWidth && !heightOnly
+        ? `min(${availableWidth}, ${styleWidth})`
+        : styleWidth;
     const width = constrainedContent.constrained()
       ? constrainedWidth || "auto"
       : styleWidth || "auto";
@@ -117,7 +124,10 @@ const Image = (props: ImageProps) => {
       width,
       height,
       aspectRatio: aspectRatio || undefined,
-      maxWidth: "none",
+      maxWidth:
+        constrainedContent.constrained() && heightOnly
+          ? availableWidth
+          : "none",
       boxSizing: "border-box",
     });
   };

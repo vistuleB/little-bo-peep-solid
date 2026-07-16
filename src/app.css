@@ -427,12 +427,6 @@ table.first-line tr td:first-child {
   transform: rotateY(180deg);
 }
 
-.fill-available {
-  max-width: -moz-available;
-  max-width: fill-available;
-  max-width: -webkit-fill-available;
-}
-
 .max-width-screen {
   max-width: 100vw;
 }

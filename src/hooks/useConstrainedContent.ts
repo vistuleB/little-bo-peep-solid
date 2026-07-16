@@ -14,6 +14,7 @@ const currentViewportWidth = () =>
 type ConstrainedContentOptions = {
   naturalWidth: Accessor<number>;
   initiallyConstrained: boolean;
+  clickDisabled?: Accessor<boolean>;
 };
 
 const useConstrainedContent = (options: ConstrainedContentOptions) => {
@@ -99,6 +100,8 @@ const useConstrainedContent = (options: ConstrainedContentOptions) => {
   };
 
   const handleClick = (event: MouseEvent) => {
+    if (options.clickDisabled?.()) return;
+
     event.stopPropagation();
 
     if (options.naturalWidth() > availableWidth()) {
