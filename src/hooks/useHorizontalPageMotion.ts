@@ -6,6 +6,7 @@ import {
   HORIZONTAL_PAN_EDGE_RESISTANCE,
   HORIZONTAL_PAN_ENTRY_DISTANCE,
   HORIZONTAL_PAN_RECT_EDGE_TOLERANCE,
+  HORIZONTAL_PAN_REVEAL_GUTTER,
   HORIZONTAL_SWIPE_CENTER_TOLERANCE,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
@@ -21,6 +22,11 @@ type RevealableDirections = {
   right: boolean;
 };
 
+type InspectableSnapshot = {
+  directions: RevealableDirections;
+  extent: number;
+};
+
 const INSPECTABLE_SELECTOR =
   '[data-horizontal-inspectable="true"], [data-side-image]';
 const HORIZONTAL_INTENT_RATIO = 1.1;
@@ -33,20 +39,23 @@ const useHorizontalPageMotion = () => {
   const location = useLocation();
   let arrivalAnimationFrame: number | undefined;
   let cameraAnimationFrame: number | undefined;
+  let encounterAnimationFrame: number | undefined;
   let initialCenterFrame: number | undefined;
   let wheelIdleTimeout: number | undefined;
   let gestureStartOffset = 0;
   let gesturePanning = false;
-  let revealableDirections: RevealableDirections = {
-    left: false,
-    right: false,
+  // A panning trip has one symmetric, monotonically increasing range. It is
+  // reset only when the page returns to its centered state.
+  let tripCameraExtent = 0;
+  let gestureInspectableSnapshot: InspectableSnapshot = {
+    directions: { left: false, right: false },
+    extent: 0,
   };
 
   const centeredVirtualScrollX = () =>
     Math.max(0, (store.scrollWidth - store.innerWidth) / 2);
 
-  const maximumCameraOffset = () =>
-    Math.max(centeredVirtualScrollX(), store.pageNecessaryMargin);
+  const maximumCameraOffset = () => tripCameraExtent;
 
   const routeHasSwipeArrival = () =>
     ENABLE_HORIZONTAL_SWIPE_ARRIVAL &&
@@ -81,10 +90,12 @@ const useHorizontalPageMotion = () => {
     updateVirtualScrollX(offset);
   };
 
-  const inspectableDirections = (): RevealableDirections => {
+  const inspectableSnapshot = (): InspectableSnapshot => {
     const directions = { left: false, right: false };
+    let encounteredOverflow = 0;
     const viewportBottom = store.innerHeight;
     const viewportRight = store.innerWidth;
+    const cameraOffset = store.horizontal_camera_offset;
 
     document
       .querySelectorAll<HTMLElement>(INSPECTABLE_SELECTOR)
@@ -97,19 +108,52 @@ const useHorizontalPageMotion = () => {
           rect.top < viewportBottom;
         if (!overlapsViewportVertically) return;
 
-        if (rect.left < -HORIZONTAL_PAN_RECT_EDGE_TOLERANCE) {
+        // Measure in the page's centered coordinate space. Otherwise moving
+        // the camera would make the same element appear to extend the range.
+        const centeredLeft = rect.left - cameraOffset;
+        const centeredRight = rect.right - cameraOffset;
+        const leftOverflow = Math.max(0, -centeredLeft);
+        const rightOverflow = Math.max(0, centeredRight - viewportRight);
+
+        if (leftOverflow > HORIZONTAL_PAN_RECT_EDGE_TOLERANCE) {
           directions.left = true;
         }
-        if (rect.right > viewportRight + HORIZONTAL_PAN_RECT_EDGE_TOLERANCE) {
+        if (rightOverflow > HORIZONTAL_PAN_RECT_EDGE_TOLERANCE) {
           directions.right = true;
         }
+        encounteredOverflow = Math.max(
+          encounteredOverflow,
+          leftOverflow,
+          rightOverflow,
+        );
       });
 
-    return directions;
+    return {
+      directions,
+      extent:
+        encounteredOverflow > HORIZONTAL_PAN_RECT_EDGE_TOLERANCE
+          ? encounteredOverflow + HORIZONTAL_PAN_REVEAL_GUTTER
+          : 0,
+    };
   };
 
   const canRevealForDelta = (deltaX: number) =>
-    deltaX > 0 ? revealableDirections.left : revealableDirections.right;
+    deltaX > 0
+      ? gestureInspectableSnapshot.directions.left
+      : gestureInspectableSnapshot.directions.right;
+
+  const encounterVisibleInspectables = () => {
+    const snapshot = inspectableSnapshot();
+    tripCameraExtent = Math.max(tripCameraExtent, snapshot.extent);
+  };
+
+  const scheduleEncounterVisibleInspectables = () => {
+    if (encounterAnimationFrame !== undefined) return;
+    encounterAnimationFrame = requestAnimationFrame(() => {
+      encounterAnimationFrame = undefined;
+      if (store.margin_mode) encounterVisibleInspectables();
+    });
+  };
 
   const clearArrivalAnimation = () => {
     if (arrivalAnimationFrame === undefined) return;
@@ -169,6 +213,7 @@ const useHorizontalPageMotion = () => {
       setCameraOffset(0);
       set_store("horizontal_camera_dragging", false);
       set_store("margin_mode", false);
+      tripCameraExtent = 0;
       return;
     }
 
@@ -188,6 +233,7 @@ const useHorizontalPageMotion = () => {
       setCameraOffset(0);
       set_store("horizontal_camera_dragging", false);
       set_store("margin_mode", false);
+      tripCameraExtent = 0;
     };
     cameraAnimationFrame = requestAnimationFrame(tick);
   };
@@ -196,9 +242,14 @@ const useHorizontalPageMotion = () => {
     clearCameraAnimation();
     gestureStartOffset = store.horizontal_camera_offset;
     gesturePanning = store.margin_mode;
-    revealableDirections = store.margin_mode
-      ? { left: true, right: true }
-      : inspectableDirections();
+    gestureInspectableSnapshot = inspectableSnapshot();
+    if (store.margin_mode) {
+      gestureInspectableSnapshot.directions = { left: true, right: true };
+      tripCameraExtent = Math.max(
+        tripCameraExtent,
+        gestureInspectableSnapshot.extent,
+      );
+    }
     set_store("horizontal_camera_dragging", true);
 
     if (routeHasSwipeArrival()) {
@@ -220,6 +271,10 @@ const useHorizontalPageMotion = () => {
       canRevealForDelta(gesture.deltaX)
     ) {
       gesturePanning = true;
+      tripCameraExtent = Math.max(
+        tripCameraExtent,
+        gestureInspectableSnapshot.extent,
+      );
     }
 
     const movement = gesturePanning
@@ -260,9 +315,15 @@ const useHorizontalPageMotion = () => {
 
     const cameraDelta = -horizontalDelta;
     if (!store.margin_mode) {
-      revealableDirections = inspectableDirections();
+      gestureInspectableSnapshot = inspectableSnapshot();
       if (!canRevealForDelta(cameraDelta)) return;
+      tripCameraExtent = Math.max(
+        tripCameraExtent,
+        gestureInspectableSnapshot.extent,
+      );
       set_store("margin_mode", true);
+    } else {
+      encounterVisibleInspectables();
     }
 
     event.preventDefault();
@@ -282,11 +343,13 @@ const useHorizontalPageMotion = () => {
     setCameraOffset(0);
     set_store("horizontal_camera_dragging", false);
     set_store("margin_mode", false);
+    tripCameraExtent = 0;
     window.scroll({ left: 0, behavior: "instant" });
   };
 
   const handleScroll = () => {
     set_store("scrollY", window.scrollY);
+    if (store.margin_mode) scheduleEncounterVisibleInspectables();
     if (window.scrollX !== 0) {
       window.scroll({ left: 0, behavior: "instant" });
     }
@@ -319,6 +382,9 @@ const useHorizontalPageMotion = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("wheel", handleWheel);
       window.clearTimeout(wheelIdleTimeout);
+      if (encounterAnimationFrame !== undefined) {
+        cancelAnimationFrame(encounterAnimationFrame);
+      }
       clearArrivalAnimation();
       clearCameraAnimation();
     });
