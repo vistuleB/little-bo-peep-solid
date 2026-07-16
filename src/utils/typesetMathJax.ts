@@ -4,7 +4,25 @@ type MathJaxWindow = Window & {
   };
 };
 
+const MATHJAX_READY_TIMEOUT_MS = 10000;
+const MATHJAX_READY_POLL_MS = 50;
+
 let typesetQueue: Promise<void> = Promise.resolve();
+
+const wait = (ms: number) =>
+  new Promise<void>((resolve) => window.setTimeout(resolve, ms));
+
+const waitForMathJax = async () => {
+  const startedAt = Date.now();
+
+  while (Date.now() - startedAt < MATHJAX_READY_TIMEOUT_MS) {
+    const mathJax = (window as MathJaxWindow).MathJax;
+    if (mathJax?.typesetPromise) return mathJax;
+    await wait(MATHJAX_READY_POLL_MS);
+  }
+
+  return (window as MathJaxWindow).MathJax;
+};
 
 const typesetMathJax = async (
   elements: Array<HTMLElement | null | undefined>,
@@ -17,7 +35,7 @@ const typesetMathJax = async (
   if (requestedElements.length === 0) return false;
 
   const run = async () => {
-    const mathJax = (window as MathJaxWindow).MathJax;
+    const mathJax = await waitForMathJax();
     const connectedElements = requestedElements.filter(
       (element) => element.isConnected,
     );

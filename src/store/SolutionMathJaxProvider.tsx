@@ -1,11 +1,14 @@
 import { batch, createContext, ParentProps, useContext } from "solid-js";
 import typesetMathJaxElements from "~/utils/typesetMathJax";
 
+const SOLUTION_MATHJAX_CHUNK_SIZE = 1;
+
 export type SolutionMathJaxEntry = {
   ref: HTMLElement;
   pending: () => boolean;
   setTypesetting: (typesetting: boolean) => void;
-  complete: () => void;
+  complete: (updateScrollHeight?: boolean) => void;
+  updateScrollHeight: () => void;
 };
 
 export type SolutionMathJaxController = {
@@ -20,6 +23,37 @@ export const createSolutionMathJaxController =
     entries: new Set(),
   });
 
+const nextFrame = () =>
+  new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+
+const typesetSolutionMathJaxEntries = async (
+  entries: SolutionMathJaxEntry[],
+) => {
+  let completedAny = false;
+
+  for (let i = 0; i < entries.length; i += SOLUTION_MATHJAX_CHUNK_SIZE) {
+    const chunk = entries
+      .slice(i, i + SOLUTION_MATHJAX_CHUNK_SIZE)
+      .filter((entry) => entry.ref.isConnected);
+
+    if (chunk.length === 0) continue;
+
+    const succeeded = await typesetMathJaxElements(
+      chunk.map((entry) => entry.ref),
+    );
+    if (!succeeded) return false;
+
+    batch(() => chunk.forEach((entry) => entry.complete(false)));
+    completedAny = true;
+
+    if (i + SOLUTION_MATHJAX_CHUNK_SIZE < entries.length) {
+      await nextFrame();
+    }
+  }
+
+  return completedAny;
+};
+
 export const prepareSolutionMathJax = (
   controller: SolutionMathJaxController,
 ) => {
@@ -31,12 +65,10 @@ export const prepareSolutionMathJax = (
   if (entries.length === 0) return Promise.resolve(false);
 
   entries.forEach((entry) => entry.setTypesetting(true));
-  controller.preparation = typesetMathJaxElements(
-    entries.map((entry) => entry.ref),
-  )
+  controller.preparation = typesetSolutionMathJaxEntries(entries)
     .then((succeeded) => {
       if (succeeded) {
-        batch(() => entries.forEach((entry) => entry.complete()));
+        entries[0]?.updateScrollHeight();
       }
       return succeeded;
     })

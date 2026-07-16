@@ -51,12 +51,15 @@ const nearMathJaxObserverViewport = (el: HTMLElement) => {
   );
 };
 
-const completeTypeset = (entry: MathJaxFallbackEntry) => {
+const completeTypeset = (
+  entry: MathJaxFallbackEntry,
+  updateScrollHeight = true,
+) => {
   if (!entry.active || !entry.ref.isConnected || entry.visible()) return false;
 
   entry.afterTypeset?.();
   entry.setVisible(true);
-  entry.setScrollHeight();
+  if (updateScrollHeight) entry.setScrollHeight();
   return true;
 };
 
@@ -155,9 +158,10 @@ const registerSolutionMathJax = (
     setTypesetting: (typesetting) => {
       entry.typesetting = typesetting;
     },
-    complete: () => {
-      completeTypeset(entry);
+    complete: (updateScrollHeight = true) => {
+      completeTypeset(entry, updateScrollHeight);
     },
+    updateScrollHeight: entry.setScrollHeight,
   };
   controller.entries.add(solutionEntry);
   return () => controller.entries.delete(solutionEntry);
@@ -200,9 +204,9 @@ const InlineMath = (props: ParentProps) => {
         rootMargin: mathJaxRootMargin,
       },
     );
-    if (ref) observer.observe(ref);
+    if (ref && !solutionMathJax) observer.observe(ref);
 
-    registerMathJaxFallback(mathJaxEntry);
+    if (!solutionMathJax) registerMathJaxFallback(mathJaxEntry);
 
     const unregisterSolutionMathJax = registerSolutionMathJax(
       solutionMathJax,
@@ -211,6 +215,7 @@ const InlineMath = (props: ParentProps) => {
 
     createEffect(() => {
       if (
+        !solutionMathJax &&
         mathJaxEntry &&
         routeReady() &&
         nearMathJaxObserverViewport(mathJaxEntry.ref)
@@ -330,11 +335,11 @@ export const MathBlock = (props: MathBlockProps) => {
       },
     );
 
-    if (ref) {
+    if (ref && !solutionMathJax) {
       observer.observe(ref);
     }
 
-    registerMathJaxFallback(mathJaxEntry);
+    if (!solutionMathJax) registerMathJaxFallback(mathJaxEntry);
 
     const unregisterSolutionMathJax = registerSolutionMathJax(
       solutionMathJax,
@@ -343,6 +348,7 @@ export const MathBlock = (props: MathBlockProps) => {
 
     createEffect(() => {
       if (
+        !solutionMathJax &&
         mathJaxEntry &&
         routeReady() &&
         nearMathJaxObserverViewport(mathJaxEntry.ref)
