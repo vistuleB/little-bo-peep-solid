@@ -1,15 +1,19 @@
-import { Accessor, createSignal, onCleanup, onMount } from "solid-js";
+import {
+  Accessor,
+  createEffect,
+  createMemo,
+  createSignal,
+  onCleanup,
+} from "solid-js";
 import { MOBILE_TEXT_COLUMN_SIDE_INSET } from "~/constants";
 import { useHeightChangeListenerContext } from "~/store/HeightChangeListenerProvider";
+import { useGlobalContext } from "~/store/StoreProvider";
 
 const HEIGHT_CHANGE_RAF_MAX_MS = 800;
 const TRANSITION_CLEANUP_DELAY_MS = 600;
 
 export const availableViewportWidth = (viewportWidth: number) =>
   Math.max(0, viewportWidth - MOBILE_TEXT_COLUMN_SIDE_INSET * 2);
-
-const currentViewportWidth = () =>
-  typeof window === "undefined" ? 0 : window.innerWidth;
 
 type ConstrainedContentOptions = {
   naturalWidth: Accessor<number>;
@@ -21,6 +25,8 @@ const useConstrainedContent = (options: ConstrainedContentOptions) => {
   let transitionTimeout: number | undefined;
   let heightChangeAnimationFrame: number | undefined;
   let heightChangeAnimationFrameExpiresAt = 0;
+  let transitionViewportWidth = 0;
+  const { store } = useGlobalContext();
   const { set_height_change_listener_store } =
     useHeightChangeListenerContext() || {};
   const [afterFirstClick, setAfterFirstClick] = createSignal(false);
@@ -28,17 +34,14 @@ const useConstrainedContent = (options: ConstrainedContentOptions) => {
     options.initiallyConstrained,
   );
   const [transitionsEnabled, setTransitionsEnabled] = createSignal(false);
-  const [viewportWidth, setViewportWidth] = createSignal(
-    currentViewportWidth(),
-  );
 
-  const availableWidth = () => availableViewportWidth(viewportWidth());
+  const availableWidth = () => availableViewportWidth(store.innerWidth);
 
-  const targetScale = () => {
+  const targetScale = createMemo(() => {
     const width = options.naturalWidth();
     if (!width || !constrained()) return 1;
     return Math.min(1, availableWidth() / width);
-  };
+  });
 
   const notifyHeightChange = () => {
     set_height_change_listener_store?.(
@@ -90,6 +93,7 @@ const useConstrainedContent = (options: ConstrainedContentOptions) => {
 
   const enableTransitionForToggle = () => {
     clearTimeout(transitionTimeout);
+    transitionViewportWidth = store.innerWidth;
     setTransitionsEnabled(true);
     startHeightChangeAnimationFrameLoop();
     transitionTimeout = window.setTimeout(() => {
@@ -127,19 +131,14 @@ const useConstrainedContent = (options: ConstrainedContentOptions) => {
     notifyHeightChangeAcrossFrames();
   };
 
-  const handleWindowResize = () => {
-    disableTransitions();
-    setViewportWidth(currentViewportWidth());
-  };
-
-  onMount(() => {
-    setViewportWidth(currentViewportWidth());
-    window.addEventListener("resize", handleWindowResize);
+  createEffect(() => {
+    if (transitionsEnabled() && store.innerWidth !== transitionViewportWidth) {
+      disableTransitions();
+    }
   });
 
   onCleanup(() => {
     disableTransitions();
-    window.removeEventListener("resize", handleWindowResize);
   });
 
   return {

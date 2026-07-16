@@ -41,6 +41,7 @@ import {
   prepareSolutionMathJax,
   SolutionMathJaxProvider,
 } from "~/store/SolutionMathJaxProvider";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
 type SolutionProps = ParentProps &
   SharedProps & {
@@ -68,7 +69,12 @@ const SpaceBeforeBackupArrow = () => (
   <Spacer height="var(--document-before-backup-arrow-space)" />
 );
 
-const SolutionHeightChangeListener = (props: { resetter: () => void }) => {
+const SolutionHeightChangeListener = (props: {
+  resetter: () => void;
+  open: Accessor<boolean>;
+}) => {
+  let previousMainColumnWidth: number | undefined;
+  let resizeFrame: number | undefined;
   const context = useHeightChangeListenerContext();
 
   createEffect(() => {
@@ -76,6 +82,31 @@ const SolutionHeightChangeListener = (props: { resetter: () => void }) => {
     props.resetter();
     requestAnimationFrame(props.resetter);
     window.setTimeout(props.resetter, 50);
+  });
+
+  createEffect(() => {
+    if (!props.open()) {
+      previousMainColumnWidth = undefined;
+      return;
+    }
+
+    const width = mainColumnWidth();
+    if (previousMainColumnWidth === undefined) {
+      previousMainColumnWidth = width;
+      return;
+    }
+    if (width === previousMainColumnWidth) return;
+
+    previousMainColumnWidth = width;
+    if (resizeFrame !== undefined) return;
+    resizeFrame = requestAnimationFrame(() => {
+      resizeFrame = undefined;
+      if (props.open()) props.resetter();
+    });
+  });
+
+  onCleanup(() => {
+    if (resizeFrame !== undefined) cancelAnimationFrame(resizeFrame);
   });
 
   return <></>;
@@ -166,6 +197,7 @@ export const Solution = (props: SolutionProps) => {
   createEffect(() => {
     if (!solution_open()) return;
     mount_solution_content();
+    requestAnimationFrame(reset_content_height_etc);
   });
 
   createEffect(() => {
@@ -239,7 +271,10 @@ export const Solution = (props: SolutionProps) => {
 
   return (
     <HeightChangeListenerProvider>
-      <SolutionHeightChangeListener resetter={reset_content_height_etc} />
+      <SolutionHeightChangeListener
+        resetter={reset_content_height_etc}
+        open={solution_open}
+      />
       <SpaceBetweenStatementAndSolutionButton />
       <SolutionButton
         handle={handle}

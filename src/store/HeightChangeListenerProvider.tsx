@@ -1,10 +1,4 @@
-import {
-  createEffect,
-  onCleanup,
-  onMount,
-  ParentProps,
-  useContext,
-} from "solid-js";
+import { createEffect, ParentProps, useContext } from "solid-js";
 import { createStore, SetStoreFunction } from "solid-js/store";
 import { createContext } from "solid-js";
 import { useGlobalContext } from "./StoreProvider";
@@ -26,24 +20,13 @@ export const HeightChangeListenerProvider = (props: ParentProps) => {
     createStore({
       re_calculate_height: false,
     });
-  const notifyHeightChange = () => {
-    set_height_change_listener_store(
-      "re_calculate_height",
-      (previous) => !previous,
-    );
-  };
-
-  onMount(() => {
-    window.addEventListener("resize", notifyHeightChange);
-    onCleanup(() => window.removeEventListener("resize", notifyHeightChange));
-  });
-
   return (
     <HeightChangeListenerContext.Provider
       value={{
         height_change_listener_store,
         set_height_change_listener_store,
-      }}>
+      }}
+    >
       <Listener />
       {props.children}
     </HeightChangeListenerContext.Provider>

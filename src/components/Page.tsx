@@ -22,6 +22,7 @@ type PageProps = {
 };
 
 const Page = (props: ParentProps & PageProps) => {
+  let resizeAnimationFrame: number | undefined;
   let { set_store, store } = useGlobalContext();
   const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
@@ -76,6 +77,15 @@ const Page = (props: ParentProps & PageProps) => {
     ) {
       alignImmediately();
     }
+  };
+
+  const scheduleResize = () => {
+    if (resizeAnimationFrame !== undefined) return;
+
+    resizeAnimationFrame = requestAnimationFrame(() => {
+      resizeAnimationFrame = undefined;
+      handleResize();
+    });
   };
 
   // *********************
@@ -207,12 +217,15 @@ const Page = (props: ParentProps & PageProps) => {
       set_store("have_been_outside_home", true);
     }
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("resize", scheduleResize);
     window.addEventListener("click", handleClick, { capture: true });
     window.addEventListener("keydown", handleKeydown);
 
     onCleanup(() => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", scheduleResize);
+      if (resizeAnimationFrame !== undefined) {
+        cancelAnimationFrame(resizeAnimationFrame);
+      }
       window.removeEventListener("click", handleClick, { capture: true });
       window.removeEventListener("keydown", handleKeydown);
     });
