@@ -5,7 +5,6 @@
     "dev": "vinxi dev --port ${npm_config_port:-3000}",
     "dev-host": "PUBLIC_URL=http://$(ipconfig getifaddr en0):${npm_config_port:-3000} vinxi dev --host 0.0.0.0 --port ${npm_config_port:-3000}",
     "build": "vinxi build && node scripts/audit-built-html.mjs",
-    "test": "vitest run",
     "test:html": "node scripts/audit-built-html.mjs",
     "start": "vinxi start",
     "build-local-mathjax": "rm -rf public/mathjax3 public/mathjax4 && mkdir -p public/mathjax3 public/mathjax4 && cp -r node_modules/mathjax-full/es5/* public/mathjax3/ && cp -r node_modules/mathjax/* public/mathjax4/"
@@ -24,17 +23,15 @@
     "vinxi": "^0.5.10"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22.12"
   },
   "overrides": {
     "h3": "1.15.5"
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
-    "jsdom": "^29.1.1",
     "mathjax": "^4.1.0",
     "mathjax-full": "^3.2.2",
-    "svgo": "^4.0.1",
-    "vitest": "^4.1.10"
+    "svgo": "^4.0.1"
   }
 }
