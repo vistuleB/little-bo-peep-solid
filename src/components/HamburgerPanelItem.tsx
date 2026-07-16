@@ -10,7 +10,7 @@ const HamburgerPanelItem = (
     article_type: number;
   },
 ) => {
-  const { store } = useGlobalContext();
+  const { store, set_store } = useGlobalContext();
   const { getPage } = usePrevNextPage();
   const link = `/article/${props.href}`;
 
@@ -20,11 +20,12 @@ const HamburgerPanelItem = (
       onClick={() => getPage(link)}
       onSameRoute={(e) => {
         e.preventDefault();
-        window.scroll({
-          left: (store.scrollWidth - store.innerWidth) / 2,
-          behavior: "instant",
-        });
-      }}>
+        set_store("horizontal_camera_offset", 0);
+        set_store("margin_mode", false);
+        set_store("scrollX", (store.scrollWidth - store.innerWidth) / 2);
+        window.scroll({ left: 0, behavior: "instant" });
+      }}
+    >
       <div class="panel-item flex items-baseline justify-between leading-9 sm:leading-8 text-2xl">
         <div class="relative m-auto" style={`width:100%;direction:rtl;`}>
           <div class="toc-item-lead-wrapper">

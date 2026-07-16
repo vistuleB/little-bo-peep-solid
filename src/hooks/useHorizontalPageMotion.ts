@@ -2,69 +2,129 @@ import { createEffect, onCleanup, onMount } from "solid-js";
 import {
   ENABLE_HORIZONTAL_SWIPE_ARRIVAL,
   HORIZONTAL_PAGE_ARRIVAL_DURATION_MS,
-  HORIZONTAL_SCROLL_END_FALLBACK_DELAY_MS,
-  HORIZONTAL_SCROLL_SNAP_BACK_MAX,
-  HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO,
-  HORIZONTAL_SWIPE_IMMEDIATE_SNAP_MAX_TERMINAL_VELOCITY,
-  HORIZONTAL_SWIPE_IMMEDIATE_SNAP_MIN_RELEASE_PAUSE_MS,
+  HORIZONTAL_PAN_EDGE_OVERSHOOT,
+  HORIZONTAL_PAN_EDGE_RESISTANCE,
+  HORIZONTAL_PAN_ENTRY_DISTANCE,
+  HORIZONTAL_PAN_RECT_EDGE_TOLERANCE,
+  HORIZONTAL_SWIPE_CENTER_TOLERANCE,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { useLocation } from "@solidjs/router";
-import type { HorizontalGestureEnd } from "~/hooks/useHorizontalSwipeNavigation";
+import type {
+  HorizontalGestureEnd,
+  HorizontalGestureMove,
+} from "~/hooks/useHorizontalSwipeNavigation";
 import { swipeArrivalPreparation } from "~/utils/routeTransitionPolicy";
-import { unlockHorizontalDocumentScroll } from "~/utils/horizontalScrollLock";
 
-export type HorizontalScrollPolicy = "range-limited" | "always-snap-back";
+type RevealableDirections = {
+  left: boolean;
+  right: boolean;
+};
 
-const useHorizontalPageMotion = (
-  horizontalScrollPolicy: HorizontalScrollPolicy,
-) => {
+const INSPECTABLE_SELECTOR =
+  '[data-horizontal-inspectable="true"], [data-side-image]';
+const HORIZONTAL_INTENT_RATIO = 1.1;
+const NAVIGATION_DRAG_RESISTANCE = 0.3;
+const RECENTER_DURATION_MS = 280;
+const WHEEL_IDLE_MS = 120;
+
+const useHorizontalPageMotion = () => {
   const { store, set_store } = useGlobalContext();
   const location = useLocation();
   let arrivalAnimationFrame: number | undefined;
-  let scrollEndFallbackTimeout: number | undefined;
+  let cameraAnimationFrame: number | undefined;
   let initialCenterFrame: number | undefined;
-  let snapBackInProgress = false;
-  const supportsScrollEnd = "onscrollend" in document;
+  let wheelIdleTimeout: number | undefined;
+  let gestureStartOffset = 0;
+  let gesturePanning = false;
+  let revealableDirections: RevealableDirections = {
+    left: false,
+    right: false,
+  };
 
-  const centeredScrollX = () =>
-    (document.body.scrollWidth - window.innerWidth) / 2;
+  const centeredVirtualScrollX = () =>
+    Math.max(0, (store.scrollWidth - store.innerWidth) / 2);
+
+  const maximumCameraOffset = () =>
+    Math.max(centeredVirtualScrollX(), store.pageNecessaryMargin);
 
   const routeHasSwipeArrival = () =>
     ENABLE_HORIZONTAL_SWIPE_ARRIVAL &&
     swipeArrivalPreparation(store, location.pathname) !== "none" &&
     store.pending_arrival_direction !== null;
 
-  const maximumScrollX = () =>
-    Math.max(
-      0,
-      (document.scrollingElement?.scrollWidth || document.body.scrollWidth) -
-        window.innerWidth,
-    );
+  const cameraIsCentered = () =>
+    Math.abs(store.horizontal_camera_offset) <=
+    HORIZONTAL_SWIPE_CENTER_TOLERANCE;
 
-  const isWithinSnapBackRange = (scrollX: number, centeredX: number) => {
-    if (horizontalScrollPolicy === "always-snap-back") {
-      return scrollX >= 0 && scrollX <= maximumScrollX();
-    }
-
-    const distanceFromCentered = Math.abs(scrollX - centeredX);
-    return (
-      distanceFromCentered <
-      Math.min(
-        HORIZONTAL_SCROLL_SNAP_BACK_MAX,
-        HORIZONTAL_SCROLL_SNAP_BACK_SCREEN_WIDTH_RATIO * store.innerWidth,
-      )
-    );
+  const updateVirtualScrollX = (cameraOffset: number) => {
+    set_store("scrollX", centeredVirtualScrollX() - cameraOffset);
   };
 
-  const clearArrivalAnimationFrame = () => {
+  const resistedCameraOffset = (requested: number) => {
+    const limit = maximumCameraOffset();
+    const absolute = Math.abs(requested);
+    if (absolute <= limit) return requested;
+
+    const resisted =
+      limit +
+      Math.min(
+        HORIZONTAL_PAN_EDGE_OVERSHOOT,
+        (absolute - limit) * HORIZONTAL_PAN_EDGE_RESISTANCE,
+      );
+    return Math.sign(requested) * resisted;
+  };
+
+  const setCameraOffset = (requested: number) => {
+    const offset = resistedCameraOffset(requested);
+    set_store("horizontal_camera_offset", offset);
+    updateVirtualScrollX(offset);
+  };
+
+  const inspectableDirections = (): RevealableDirections => {
+    const directions = { left: false, right: false };
+    const viewportBottom = store.innerHeight;
+    const viewportRight = store.innerWidth;
+
+    document
+      .querySelectorAll<HTMLElement>(INSPECTABLE_SELECTOR)
+      .forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const overlapsViewportVertically =
+          rect.width > 0 &&
+          rect.height > 0 &&
+          rect.bottom > 0 &&
+          rect.top < viewportBottom;
+        if (!overlapsViewportVertically) return;
+
+        if (rect.left < -HORIZONTAL_PAN_RECT_EDGE_TOLERANCE) {
+          directions.left = true;
+        }
+        if (rect.right > viewportRight + HORIZONTAL_PAN_RECT_EDGE_TOLERANCE) {
+          directions.right = true;
+        }
+      });
+
+    return directions;
+  };
+
+  const canRevealForDelta = (deltaX: number) =>
+    deltaX > 0 ? revealableDirections.left : revealableDirections.right;
+
+  const clearArrivalAnimation = () => {
     if (arrivalAnimationFrame === undefined) return;
     cancelAnimationFrame(arrivalAnimationFrame);
     arrivalAnimationFrame = undefined;
   };
 
+  const clearCameraAnimation = () => {
+    if (cameraAnimationFrame === undefined) return;
+    cancelAnimationFrame(cameraAnimationFrame);
+    cameraAnimationFrame = undefined;
+  };
+
   const completeArrival = () => {
-    clearArrivalAnimationFrame();
+    clearArrivalAnimation();
     if (store.arrival_route_path !== location.pathname) return;
     set_store("horizontal_arrival_phase", "idle");
     set_store("pending_navigation_kind", "standard");
@@ -72,12 +132,10 @@ const useHorizontalPageMotion = (
     set_store("arrival_route_path", "");
     set_store("pending_route_target", "top");
     set_store("horizontal_arrival_offset", 0);
-    unlockHorizontalDocumentScroll();
   };
 
   const startCustomArrival = () => {
-    clearArrivalAnimationFrame();
-    window.clearTimeout(scrollEndFallbackTimeout);
+    clearArrivalAnimation();
     const startOffset = store.horizontal_arrival_offset;
     const startedAt = performance.now();
     set_store("horizontal_arrival_phase", "animating");
@@ -104,112 +162,138 @@ const useHorizontalPageMotion = (
   };
 
   const smoothlyCenter = () => {
-    if (snapBackInProgress) return;
     completeArrival();
-    window.clearTimeout(scrollEndFallbackTimeout);
-    const targetX = centeredScrollX();
-    if (Math.abs(window.scrollX - targetX) < 1) {
+    clearCameraAnimation();
+    const startOffset = store.horizontal_camera_offset;
+    if (Math.abs(startOffset) < 1) {
+      setCameraOffset(0);
+      set_store("horizontal_camera_dragging", false);
       set_store("margin_mode", false);
       return;
     }
-    snapBackInProgress = true;
-    window.scroll({ left: targetX, behavior: "smooth" });
+
+    const startedAt = performance.now();
+    set_store("horizontal_camera_dragging", true);
+    const tick = (now: number) => {
+      const progress = Math.min(1, (now - startedAt) / RECENTER_DURATION_MS);
+      const easedProgress = 1 - Math.pow(1 - progress, 3);
+      setCameraOffset(startOffset * (1 - easedProgress));
+
+      if (progress < 1) {
+        cameraAnimationFrame = requestAnimationFrame(tick);
+        return;
+      }
+
+      cameraAnimationFrame = undefined;
+      setCameraOffset(0);
+      set_store("horizontal_camera_dragging", false);
+      set_store("margin_mode", false);
+    };
+    cameraAnimationFrame = requestAnimationFrame(tick);
   };
 
-  const handleScrollFinished = () => {
-    if (store.horizontal_arrival_phase === "animating") return;
+  const handleGestureStart = () => {
+    clearCameraAnimation();
+    gestureStartOffset = store.horizontal_camera_offset;
+    gesturePanning = store.margin_mode;
+    revealableDirections = store.margin_mode
+      ? { left: true, right: true }
+      : inspectableDirections();
+    set_store("horizontal_camera_dragging", true);
 
-    const centeredX = centeredScrollX();
     if (routeHasSwipeArrival()) {
+      completeArrival();
+      setCameraOffset(0);
+    }
+  };
+
+  const handleGestureMove = (gesture: HorizontalGestureMove) => {
+    if (store.horizontal_arrival_phase === "animating") return;
+    const horizontalIntent =
+      Math.abs(gesture.deltaX) >
+      Math.abs(gesture.deltaY) * HORIZONTAL_INTENT_RATIO;
+    if (!horizontalIntent) return;
+
+    if (
+      !gesturePanning &&
+      Math.abs(gesture.deltaX) >= HORIZONTAL_PAN_ENTRY_DISTANCE &&
+      canRevealForDelta(gesture.deltaX)
+    ) {
+      gesturePanning = true;
+    }
+
+    const movement = gesturePanning
+      ? gesture.deltaX
+      : gesture.deltaX * NAVIGATION_DRAG_RESISTANCE;
+    setCameraOffset(gestureStartOffset + movement);
+  };
+
+  const handleGestureEnd = (result: HorizontalGestureEnd) => {
+    set_store("horizontal_camera_dragging", false);
+    if (result.swipeInitiated) {
       set_store("margin_mode", false);
       return;
     }
 
-    const distanceFromCentered = Math.abs(window.scrollX - centeredX);
-
-    if (distanceFromCentered < 1) {
-      snapBackInProgress = false;
-      set_store("margin_mode", false);
+    if (gesturePanning && Math.abs(store.horizontal_camera_offset) >= 1) {
+      set_store("margin_mode", true);
       return;
     }
 
-    if (snapBackInProgress) return;
+    smoothlyCenter();
+  };
 
-    if (isWithinSnapBackRange(window.scrollX, centeredX)) {
-      smoothlyCenter();
-      set_store("margin_mode", false);
-      return;
+  const handleGestureCancel = () => {
+    set_store("horizontal_camera_dragging", false);
+    if (store.margin_mode) return;
+    smoothlyCenter();
+  };
+
+  const handleWheel = (event: WheelEvent) => {
+    const horizontalDelta =
+      Math.abs(event.deltaX) > Math.abs(event.deltaY)
+        ? event.deltaX
+        : event.shiftKey
+          ? event.deltaY
+          : 0;
+    if (!horizontalDelta || store.horizontal_arrival_phase !== "idle") return;
+
+    const cameraDelta = -horizontalDelta;
+    if (!store.margin_mode) {
+      revealableDirections = inspectableDirections();
+      if (!canRevealForDelta(cameraDelta)) return;
+      set_store("margin_mode", true);
     }
 
-    set_store("margin_mode", true);
+    event.preventDefault();
+    clearCameraAnimation();
+    set_store("horizontal_camera_dragging", true);
+    setCameraOffset(store.horizontal_camera_offset + cameraDelta);
+    window.clearTimeout(wheelIdleTimeout);
+    wheelIdleTimeout = window.setTimeout(() => {
+      set_store("horizontal_camera_dragging", false);
+    }, WHEEL_IDLE_MS);
+  };
+
+  const alignImmediately = () => {
+    if (store.horizontal_arrival_phase !== "idle") return;
+    clearCameraAnimation();
+    clearArrivalAnimation();
+    setCameraOffset(0);
+    set_store("horizontal_camera_dragging", false);
+    set_store("margin_mode", false);
+    window.scroll({ left: 0, behavior: "instant" });
   };
 
   const handleScroll = () => {
     set_store("scrollY", window.scrollY);
-    set_store("scrollX", window.scrollX);
-
-    if (!supportsScrollEnd && store.horizontal_arrival_phase !== "animating") {
-      window.clearTimeout(scrollEndFallbackTimeout);
-      scrollEndFallbackTimeout = window.setTimeout(
-        handleScrollFinished,
-        HORIZONTAL_SCROLL_END_FALLBACK_DELAY_MS,
-      );
+    if (window.scrollX !== 0) {
+      window.scroll({ left: 0, behavior: "instant" });
     }
-  };
-
-  const handleTouchStart = () => {
-    snapBackInProgress = false;
-
-    if (routeHasSwipeArrival()) {
-      completeArrival();
-      window.clearTimeout(scrollEndFallbackTimeout);
-      window.scroll({ left: centeredScrollX(), behavior: "instant" });
-      return;
-    }
-
-    clearArrivalAnimationFrame();
-  };
-
-  const handleGestureEnd = (result: HorizontalGestureEnd) => {
-    if (
-      result.swipeInitiated ||
-      snapBackInProgress ||
-      store.horizontal_arrival_phase === "animating"
-    ) {
-      return;
-    }
-
-    const fingerStopped =
-      Math.abs(result.projectedTerminalVelocity) <=
-        HORIZONTAL_SWIPE_IMMEDIATE_SNAP_MAX_TERMINAL_VELOCITY ||
-      result.releasePauseMs >=
-        HORIZONTAL_SWIPE_IMMEDIATE_SNAP_MIN_RELEASE_PAUSE_MS;
-    if (!fingerStopped) return;
-
-    const centeredX = centeredScrollX();
-    const distanceFromCentered = Math.abs(window.scrollX - centeredX);
-
-    if (
-      distanceFromCentered >= 1 &&
-      isWithinSnapBackRange(window.scrollX, centeredX)
-    ) {
-      smoothlyCenter();
-      set_store("margin_mode", false);
-    }
-  };
-
-  const alignImmediately = () => {
-    if (store.horizontal_arrival_phase === "animating") return;
-    snapBackInProgress = false;
-    clearArrivalAnimationFrame();
-    window.clearTimeout(scrollEndFallbackTimeout);
-    const centeredX = centeredScrollX();
-    window.scroll({ left: centeredX, behavior: "instant" });
   };
 
   createEffect(() => {
     if (!store.saved_scroll_finished || store.route_phase !== "idle") return;
-
     if (
       !routeHasSwipeArrival() ||
       store.horizontal_arrival_phase !== "preparing"
@@ -217,46 +301,38 @@ const useHorizontalPageMotion = (
       return;
     }
 
-    window.scroll({ left: centeredScrollX(), behavior: "instant" });
+    setCameraOffset(0);
     startCustomArrival();
   });
 
   onMount(() => {
-    // Swipe destinations are centered by routeLoading only after the new route
-    // mounts and its content has been hidden for the handoff. Centering here as
-    // well can briefly re-center Suspense's retained outgoing page while the
-    // destination chunk is still loading.
-    //
-    // Longer term, all physical horizontal positioning should be owned by one
-    // persistent controller above route-level Page components. routeLoading,
-    // resize handling, and gesture handling should request motion from it
-    // instead of calling window.scroll independently.
     if (!routeHasSwipeArrival()) {
       initialCenterFrame = requestAnimationFrame(alignImmediately);
     }
     window.addEventListener("scroll", handleScroll);
-    if (supportsScrollEnd) {
-      document.addEventListener("scrollend", handleScrollFinished);
-    }
-    document.addEventListener("touchstart", handleTouchStart, {
-      passive: true,
-    });
+    window.addEventListener("wheel", handleWheel, { passive: false });
 
     onCleanup(() => {
       if (initialCenterFrame !== undefined) {
         cancelAnimationFrame(initialCenterFrame);
       }
       window.removeEventListener("scroll", handleScroll);
-      if (supportsScrollEnd) {
-        document.removeEventListener("scrollend", handleScrollFinished);
-      }
-      document.removeEventListener("touchstart", handleTouchStart);
-      window.clearTimeout(scrollEndFallbackTimeout);
-      clearArrivalAnimationFrame();
+      window.removeEventListener("wheel", handleWheel);
+      window.clearTimeout(wheelIdleTimeout);
+      clearArrivalAnimation();
+      clearCameraAnimation();
     });
   });
 
-  return { alignImmediately, handleGestureEnd, smoothlyCenter };
+  return {
+    alignImmediately,
+    cameraIsCentered,
+    handleGestureCancel,
+    handleGestureEnd,
+    handleGestureMove,
+    handleGestureStart,
+    smoothlyCenter,
+  };
 };
 
 export default useHorizontalPageMotion;

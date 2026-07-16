@@ -18,19 +18,19 @@ type ArticleProps = {
 
 const Article = (props: ParentProps & ArticleProps) => {
   return (
-    <Page
-      pageNecessaryMargin={props.pageNecessaryMargin}
-      maxElementWidth={props.maxElementWidth}
-      nextPage={props.nextPage}
-      prevPage={props.prevPage}
-    >
-      <ExerciseGroupRegistryProvider>
+    <ExerciseGroupRegistryProvider>
+      <Page
+        pageNecessaryMargin={props.pageNecessaryMargin}
+        maxElementWidth={props.maxElementWidth}
+        nextPage={props.nextPage}
+        prevPage={props.prevPage}
+      >
         <span id={props.id} class="id_span"></span>
         <ArticleScrollCoordinator>{props.children}</ArticleScrollCoordinator>
-        <ElevatorArrows />
-        <PageUpPageDownButtons />
-      </ExerciseGroupRegistryProvider>
-    </Page>
+      </Page>
+      <ElevatorArrows />
+      <PageUpPageDownButtons />
+    </ExerciseGroupRegistryProvider>
   );
 };
 

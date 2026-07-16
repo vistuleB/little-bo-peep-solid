@@ -32,8 +32,8 @@ const restoreScrollFromState = (
   const scroll = (state as Record<string, unknown>)[IN_CHAPTER_SCROLL_STATE];
   if (!scroll || typeof scroll !== "object") return;
 
-  const { x, y } = scroll as { x?: unknown; y?: unknown };
-  if (typeof x !== "number" || typeof y !== "number") return;
+  const { y } = scroll as { x?: unknown; y?: unknown };
+  if (typeof y !== "number") return;
 
   if (!canRestoreScrollY(y) && remainingFrames > 0) {
     requestAnimationFrame(() => {
@@ -43,7 +43,7 @@ const restoreScrollFromState = (
   }
 
   requestAnimationFrame(() => {
-    window.scrollTo(x, y);
+    window.scrollTo(0, y);
   });
 };
 
@@ -102,7 +102,7 @@ const InChapterLink = (
       {
         ...currentState,
         [IN_CHAPTER_SCROLL_STATE]: {
-          x: window.scrollX,
+          x: 0,
           y: window.scrollY,
         },
       },

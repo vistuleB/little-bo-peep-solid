@@ -135,7 +135,12 @@ const Image = (props: ImageProps) => {
   return (
     <ScaleProvider scale={scale}>
       <div id={merged.id} class="w-full flex items-center justify-center">
-        <div class={twJoin("relative flex items-center justify-center w-fit")}>
+        <div
+          class={twJoin("relative flex items-center justify-center w-fit")}
+          data-horizontal-inspectable={
+            constrainedContent.constrained() ? undefined : "true"
+          }
+        >
           <ImageOrSideImage
             ref={image_element}
             src={merged.src}

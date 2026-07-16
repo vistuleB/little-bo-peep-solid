@@ -115,10 +115,7 @@ const useCheckedSavedScroll = () => {
   const isCurrentSwipeTopArrival = () =>
     swipeArrivalPreparation(store, routePath) === "top";
 
-  const arrivalStartX = () => {
-    const centeredX = (document.body.scrollWidth - window.innerWidth) / 2;
-    return centeredX;
-  };
+  const arrivalStartX = () => 0;
 
   const completeRestoration = (onScroll: () => void) => {
     if (!active) return;
