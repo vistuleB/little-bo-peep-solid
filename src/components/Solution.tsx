@@ -13,10 +13,13 @@ import SharedProps from "./types/SharedProps";
 import {
   BATCH_SOLUTION_SCROLL_ANCHOR_FRAMES,
   DESKTOP_TEXT_COLUMN_WIDTH,
+  ENABLE_SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD,
   SOLUTION_GREEN_DIV_HEIGHT,
   MOBILE_MAX_WIDTH,
   PREV_NEXT_EXERCISE_BUTTON_WIDTH,
   PREV_NEXT_EXERCISE_BUTTON_CORNER_RADIUS,
+  SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_MS,
+  SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_ROOT_MARGIN,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
 
@@ -70,6 +73,116 @@ const SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing =
 const SpaceBeforeBackupArrow = () => (
   <Spacer height="var(--document-before-backup-arrow-space)" />
 );
+
+type SolutionViewportDwellPreloadEntry = {
+  element: HTMLElement;
+  preload: () => void;
+  triggered: boolean;
+  timeout?: number;
+};
+
+const solutionViewportDwellPreloadEntries = new Map<
+  Element,
+  SolutionViewportDwellPreloadEntry
+>();
+let solutionViewportDwellPreloadObserver: IntersectionObserver | undefined;
+
+const solutionViewportDwellPreloadIsMobile = () =>
+  window.innerWidth <= MOBILE_MAX_WIDTH;
+
+const solutionViewportDwellPreloadElementIsVisible = (element: HTMLElement) => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.width > 0 &&
+    rect.height > 0 &&
+    rect.bottom > 0 &&
+    rect.top < window.innerHeight &&
+    rect.right > 0 &&
+    rect.left < window.innerWidth
+  );
+};
+
+const clearSolutionViewportDwellPreloadTimeout = (
+  entry: SolutionViewportDwellPreloadEntry,
+) => {
+  if (entry.timeout === undefined) return;
+  window.clearTimeout(entry.timeout);
+  entry.timeout = undefined;
+};
+
+const ensureSolutionViewportDwellPreloadObserver = () => {
+  if (solutionViewportDwellPreloadObserver) {
+    return solutionViewportDwellPreloadObserver;
+  }
+
+  solutionViewportDwellPreloadObserver = new IntersectionObserver(
+    (observedEntries) => {
+      observedEntries.forEach((observedEntry) => {
+        const entry = solutionViewportDwellPreloadEntries.get(
+          observedEntry.target,
+        );
+        if (!entry) return;
+        if (entry.triggered) return;
+
+        if (
+          observedEntry.isIntersecting &&
+          solutionViewportDwellPreloadIsMobile()
+        ) {
+          if (entry.timeout !== undefined) return;
+          entry.timeout = window.setTimeout(() => {
+            entry.timeout = undefined;
+            if (
+              entry.element.isConnected &&
+              solutionViewportDwellPreloadIsMobile() &&
+              solutionViewportDwellPreloadElementIsVisible(entry.element)
+            ) {
+              entry.triggered = true;
+              entry.preload();
+            }
+          }, SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_MS);
+          return;
+        }
+
+        clearSolutionViewportDwellPreloadTimeout(entry);
+      });
+    },
+    {
+      rootMargin: SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_ROOT_MARGIN,
+    },
+  );
+
+  return solutionViewportDwellPreloadObserver;
+};
+
+const registerSolutionViewportDwellMathJaxPreload = (
+  element: HTMLElement,
+  preload: () => void,
+) => {
+  if (
+    !ENABLE_SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD ||
+    !solutionViewportDwellPreloadIsMobile()
+  ) {
+    return () => {};
+  }
+
+  const entry: SolutionViewportDwellPreloadEntry = {
+    element,
+    preload,
+    triggered: false,
+  };
+  solutionViewportDwellPreloadEntries.set(element, entry);
+  ensureSolutionViewportDwellPreloadObserver().observe(element);
+
+  return () => {
+    clearSolutionViewportDwellPreloadTimeout(entry);
+    solutionViewportDwellPreloadObserver?.unobserve(element);
+    solutionViewportDwellPreloadEntries.delete(element);
+    if (solutionViewportDwellPreloadEntries.size === 0) {
+      solutionViewportDwellPreloadObserver?.disconnect();
+      solutionViewportDwellPreloadObserver = undefined;
+    }
+  };
+};
 
 const SolutionHeightChangeListener = (props: {
   resetter: () => void;
@@ -419,6 +532,15 @@ const SolutionButton = (props: SolutionBtnProps) => {
   };
 
   onCleanup(clearButtonTimeouts);
+
+  onMount(() => {
+    if (!buttonRef) return;
+    const unregister = registerSolutionViewportDwellMathJaxPreload(
+      buttonRef,
+      () => props.mount_solution_content(true, 0),
+    );
+    onCleanup(unregister);
+  });
 
   const preserveButtonPosition = (update: () => void) => {
     const topBefore = buttonRef?.getBoundingClientRect().top;
