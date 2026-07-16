@@ -1,4 +1,4 @@
-import { onMount, onCleanup, ParentProps } from "solid-js";
+import { createSignal, onMount, onCleanup, ParentProps } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import useSetRoute from "~/hooks/useSetRoute";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
@@ -10,8 +10,28 @@ import useHorizontalSwipeNavigation from "~/hooks/useHorizontalSwipeNavigation";
 import useHorizontalPageMotion from "~/hooks/useHorizontalPageMotion";
 import { useLocation } from "@solidjs/router";
 import { containerWidthForLayout } from "~/hooks/useContainerWidth";
+import {
+  CONSTRAIN_IMAGE_ON_PAN_RECENTER_TAP,
+  PAN_RECENTER_CONSTRAIN_IMAGE_EVENT,
+} from "~/constants";
 
 const env = import.meta.env.VITE_ENV;
+
+const targetIsInteractive = (target: EventTarget | null) =>
+  target instanceof Element &&
+  target.closest(
+    "a, button, input, textarea, select, .t-3003, [role='button'], [contenteditable='true']",
+  ) !== null;
+
+const constrainImageForPanRecenter = (target: EventTarget | null) => {
+  if (!CONSTRAIN_IMAGE_ON_PAN_RECENTER_TAP || !(target instanceof Element)) {
+    return;
+  }
+
+  target
+    .closest<HTMLElement>('[data-pan-recenter-constrain-image="true"]')
+    ?.dispatchEvent(new Event(PAN_RECENTER_CONSTRAIN_IMAGE_EVENT));
+};
 
 type PageProps = {
   pageNecessaryMargin?: number;
@@ -21,7 +41,13 @@ type PageProps = {
 };
 
 const Page = (props: ParentProps & PageProps) => {
+  let pageCameraSurface!: HTMLDivElement;
   let resizeAnimationFrame: number | undefined;
+  const [nativeLayout, setNativeLayout] = createSignal({
+    scrollX: window.scrollX,
+    bodyWidth: document.body.scrollWidth,
+    documentWidth: document.documentElement.scrollWidth,
+  });
   let { set_store, store } = useGlobalContext();
   const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
@@ -33,15 +59,36 @@ const Page = (props: ParentProps & PageProps) => {
     handleGestureEnd,
     handleGestureMove,
     handleGestureStart,
+    motionDebug,
+    motionIsActive,
     smoothlyCenter,
-  } = useHorizontalPageMotion();
+  } = useHorizontalPageMotion(
+    () => pageCameraSurface,
+    () => location.pathname !== "/article/bootcamp1",
+  );
 
   useHorizontalSwipeNavigation({
-    navigationEnabled: () => cameraIsCentered() && !store.margin_mode,
+    navigationEnabled: () =>
+      cameraIsCentered() &&
+      motionIsActive() &&
+      !store.margin_mode &&
+      !store.horizontal_camera_dragging,
     onGestureStart: handleGestureStart,
     onGestureMove: handleGestureMove,
     onGestureEnd: handleGestureEnd,
     onGestureCancel: handleGestureCancel,
+    onTap: (target) => {
+      if (
+        motionIsActive() &&
+        store.margin_mode &&
+        !targetIsInteractive(target)
+      ) {
+        constrainImageForPanRecenter(target);
+        smoothlyCenter();
+        return true;
+      }
+      return false;
+    },
     onSwipeLeft: () => {
       if (!store.nextPage) {
         smoothlyCenter();
@@ -107,22 +154,25 @@ const Page = (props: ParentProps & PageProps) => {
     });
   };
 
+  const updateNativeLayout = () => {
+    setNativeLayout({
+      scrollX: window.scrollX,
+      bodyWidth: document.body.scrollWidth,
+      documentWidth: document.documentElement.scrollWidth,
+    });
+  };
+
   // *********************
   // **** handleClick ****
   // *********************
 
   const handleClick = (e: MouseEvent) => {
-    const targetIsInteractive = (target: EventTarget | null) =>
-      target instanceof Element &&
-      target.closest(
-        "a, button, input, textarea, select, .t-3003, [role='button'], [contenteditable='true']",
-      ) !== null;
-
     if (targetIsInteractive(e.target)) {
       return;
     }
 
     if (store.margin_mode) {
+      constrainImageForPanRecenter(e.target);
       smoothlyCenter();
       e.stopPropagation();
       return;
@@ -236,11 +286,17 @@ const Page = (props: ParentProps & PageProps) => {
     }
 
     window.addEventListener("resize", scheduleResize);
+    window.addEventListener("scroll", updateNativeLayout);
+    document.addEventListener("touchmove", updateNativeLayout, {
+      passive: true,
+    });
     window.addEventListener("click", handleClick, { capture: true });
     window.addEventListener("keydown", handleKeydown);
 
     onCleanup(() => {
       window.removeEventListener("resize", scheduleResize);
+      window.removeEventListener("scroll", updateNativeLayout);
+      document.removeEventListener("touchmove", updateNativeLayout);
       if (resizeAnimationFrame !== undefined) {
         cancelAnimationFrame(resizeAnimationFrame);
       }
@@ -253,26 +309,40 @@ const Page = (props: ParentProps & PageProps) => {
     store.horizontal_camera_offset + store.horizontal_arrival_offset;
 
   return (
-    <div
-      id="PageCameraSurface"
-      data-horizontal-arrival-phase={store.horizontal_arrival_phase}
-      data-horizontal-camera-offset={store.horizontal_camera_offset}
-      data-horizontal-margin-mode={store.margin_mode ? "true" : "false"}
-      style={{
-        background: "var(--background-rgb)",
-        transform:
-          cameraOffset() === 0
-            ? "none"
-            : `translate3d(${cameraOffset()}px, 0, 0)`,
-        "will-change":
-          store.horizontal_camera_dragging ||
-          store.horizontal_arrival_phase === "animating"
-            ? "transform"
-            : "auto",
-      }}
-    >
-      {props.children}
-    </div>
+    <>
+      {location.pathname === "/article/bootcamp1" && (
+        <div class="fixed bottom-0 left-0 z-[9999] pointer-events-none bg-black/85 text-white font-mono text-[11px] leading-[14px] px-2 py-1">
+          camera={store.horizontal_camera_offset.toFixed(1)} margin=
+          {Number(store.margin_mode)} native={nativeLayout().scrollX.toFixed(1)}
+          <br />
+          inner={window.innerWidth} body={nativeLayout().bodyWidth} doc=
+          {nativeLayout().documentWidth} owner={Number(motionIsActive())}
+          <br />
+          {motionDebug()}
+        </div>
+      )}
+      <div
+        ref={pageCameraSurface}
+        id="PageCameraSurface"
+        data-horizontal-arrival-phase={store.horizontal_arrival_phase}
+        data-horizontal-camera-offset={store.horizontal_camera_offset}
+        data-horizontal-margin-mode={store.margin_mode ? "true" : "false"}
+        style={{
+          background: "var(--background-rgb)",
+          transform:
+            cameraOffset() === 0
+              ? "none"
+              : `translate3d(${cameraOffset()}px, 0, 0)`,
+          "will-change":
+            store.horizontal_camera_dragging ||
+            store.horizontal_arrival_phase === "animating"
+              ? "transform"
+              : "auto",
+        }}
+      >
+        {props.children}
+      </div>
+    </>
   );
 };
 

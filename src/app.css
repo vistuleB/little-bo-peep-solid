@@ -429,7 +429,7 @@ p a:hover,
   display: flex;
   width: 100%;
   overflow: hidden;
-  z-index: -2;
+  z-index: 0;
 }
 
 .toc-item-lead-dots {
@@ -439,6 +439,8 @@ p a:hover,
 }
 
 .toc-item-title {
+  position: relative;
+  z-index: 1;
   max-width: calc(100% - 40px);
   align-items: right;
 }

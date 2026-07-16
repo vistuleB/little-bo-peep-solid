@@ -118,6 +118,19 @@ const useConstrainedContent = (options: ConstrainedContentOptions) => {
     setAfterFirstClick(true);
   };
 
+  const constrain = () => {
+    if (constrained()) return;
+
+    if (options.naturalWidth() > availableWidth()) {
+      enableTransitionForToggle();
+      requestAnimationFrame(() => {
+        setConstrained(true);
+        notifyHeightChangeAcrossFrames();
+      });
+    }
+    setAfterFirstClick(true);
+  };
+
   const handleTransitionEnd = (event?: TransitionEvent) => {
     if (
       event &&
@@ -144,6 +157,7 @@ const useConstrainedContent = (options: ConstrainedContentOptions) => {
   return {
     afterFirstClick,
     availableWidth,
+    constrain,
     constrained,
     handleClick,
     handleTransitionEnd,

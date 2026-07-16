@@ -1,4 +1,11 @@
-import { ParentProps, createMemo, createSignal, mergeProps } from "solid-js";
+import {
+  ParentProps,
+  createMemo,
+  createSignal,
+  mergeProps,
+  onCleanup,
+  onMount,
+} from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
@@ -7,6 +14,7 @@ import { useLazyImages } from "~/store/LazyImageProvider";
 import useConstrainedContent from "~/hooks/useConstrainedContent";
 import styleJoin from "~/utils/styleJoin";
 import { useGlobalContext } from "~/store/StoreProvider";
+import { PAN_RECENTER_CONSTRAIN_IMAGE_EVENT } from "~/constants";
 
 const SHOW_DEBUG_COLORS = false;
 
@@ -33,6 +41,7 @@ const Image = (props: ImageProps) => {
   );
 
   let image_element!: HTMLImageElement;
+  let imageWrapper!: HTMLDivElement;
   const lazy = useLazyImages();
   const { store } = useGlobalContext();
 
@@ -132,11 +141,29 @@ const Image = (props: ImageProps) => {
     });
   };
 
+  onMount(() => {
+    const constrainFromPanRecenter = () => constrainedContent.constrain();
+    imageWrapper.addEventListener(
+      PAN_RECENTER_CONSTRAIN_IMAGE_EVENT,
+      constrainFromPanRecenter,
+    );
+    onCleanup(() =>
+      imageWrapper.removeEventListener(
+        PAN_RECENTER_CONSTRAIN_IMAGE_EVENT,
+        constrainFromPanRecenter,
+      ),
+    );
+  });
+
   return (
     <ScaleProvider scale={scale}>
       <div id={merged.id} class="w-full flex items-center justify-center">
         <div
+          ref={imageWrapper}
           class={twJoin("relative flex items-center justify-center w-fit")}
+          data-pan-recenter-constrain-image={
+            constrainedContent.constrained() ? undefined : "true"
+          }
           data-horizontal-inspectable={
             constrainedContent.constrained() ? undefined : "true"
           }

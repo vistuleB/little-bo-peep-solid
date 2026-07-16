@@ -5,7 +5,6 @@ import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
-import { ImageRight }  from "~/components/SideImage";
 import { Pause, NoBreak, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
@@ -600,13 +599,6 @@ const Rest = () => {
           $$
           \Large \&#123;\&#123;\&#125; \&#125; \ne \&#123;\&#125;
           $$
-          <ImageRight
-            src="/build-img/svgo-svg/dcQB.svg"
-            offsetX="3em"
-            atLeastAsWide={true}
-            intrinsicWidth={300}
-            intrinsicHeight={150}
-          />
         </MathBlock>
         <Pause />
         <OuterP>

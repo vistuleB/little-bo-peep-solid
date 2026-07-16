@@ -24,7 +24,7 @@ const Nav = () => {
     <>
       <div
         class={twJoin(
-          "select-none w-full z-[60]",
+          "select-none w-full left-0 z-[60]",
           navPosition() === "fixed" ? "!fixed" : "absolute",
         )}
         onClick={(e) => {

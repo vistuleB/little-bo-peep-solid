@@ -58,10 +58,12 @@ const Container = (props: ParentProps) => {
     <>
       <div
         id="ContainerViewport"
-        class="relative overflow-x-clip"
+        class="relative overflow-x-hidden"
         style={{
           width: "100vw",
           background: "var(--background-rgb)",
+          "overscroll-behavior-x": "none",
+          "touch-action": "pan-y pinch-zoom",
         }}
       >
         <div
