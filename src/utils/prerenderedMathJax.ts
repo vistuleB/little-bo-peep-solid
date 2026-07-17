@@ -91,6 +91,23 @@ export const prerenderedMathJaxKey = (
   source: string,
 ) => {
   const text = `${kind}\n${stripMathDelimiters(kind, source)}`;
+  return hashMathText(kind, text);
+};
+
+const whitespaceStableMathSource = (
+  kind: PrerenderedMathKind,
+  source: string,
+) => stripMathDelimiters(kind, source).replace(/\s+/g, " ").trim();
+
+export const whitespaceStablePrerenderedMathJaxKey = (
+  kind: PrerenderedMathKind,
+  source: string,
+) => {
+  const text = `${kind}\n${whitespaceStableMathSource(kind, source)}`;
+  return hashMathText(kind, text);
+};
+
+const hashMathText = (kind: PrerenderedMathKind, text: string) => {
   let hash = 0x811c9dc5;
 
   for (let i = 0; i < text.length; i += 1) {
@@ -101,18 +118,66 @@ export const prerenderedMathJaxKey = (
   return `${kind}:${(hash >>> 0).toString(36)}`;
 };
 
+const getPrerenderedMathJaxKeys = (
+  kind: PrerenderedMathKind,
+  source: string,
+) => {
+  const primaryKey = prerenderedMathJaxKey(kind, source);
+  const whitespaceStableKey = whitespaceStablePrerenderedMathJaxKey(
+    kind,
+    source,
+  );
+
+  return primaryKey === whitespaceStableKey
+    ? [primaryKey]
+    : [primaryKey, whitespaceStableKey];
+};
+
 export const getPrerenderedMathJax = (
   kind: PrerenderedMathKind,
   children: unknown,
 ) => {
+  if (!import.meta.env.PRERENDER_MATHJAX) return undefined;
   if (typeof window === "undefined") return undefined;
 
   const source = mathTextFromChildren(children);
   if (!source) return undefined;
 
-  return window.__PRERENDERED_MATHJAX__?.[
-    prerenderedMathJaxKey(kind, source)
-  ];
+  const cache = window.__PRERENDERED_MATHJAX__;
+  if (!cache) return undefined;
+
+  for (const key of getPrerenderedMathJaxKeys(kind, source)) {
+    const entry = cache[key];
+    if (entry) return entry;
+  }
+
+  return undefined;
+};
+
+export const getPrerenderedMathJaxDebug = (
+  kind: PrerenderedMathKind,
+  children: unknown,
+) => {
+  const source = mathTextFromChildren(children);
+  const keys = source ? getPrerenderedMathJaxKeys(kind, source) : [];
+  const enabled = Boolean(import.meta.env.PRERENDER_MATHJAX);
+  const cacheLoaded =
+    typeof window !== "undefined" && Boolean(window.__PRERENDERED_MATHJAX__);
+  const hitKey =
+    enabled && cacheLoaded
+      ? keys.find((candidate) => window.__PRERENDERED_MATHJAX?.[candidate])
+      : undefined;
+  const hit =
+    enabled &&
+    cacheLoaded &&
+    Boolean(hitKey);
+
+  return {
+    enabled,
+    cacheLoaded,
+    hit,
+    key: hitKey || keys.join(" "),
+  };
 };
 
 export default getPrerenderedMathJax;

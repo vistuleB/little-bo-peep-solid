@@ -7,6 +7,13 @@ const ROOT = process.cwd();
 const ROUTES_DIR = path.join(ROOT, "src/routes");
 const SETUP_PATH = path.join(ROOT, "public/mathjax_setup.js");
 const OUTPUT_DIR = path.join(ROOT, "public/prerendered-mathjax");
+const PRERENDER_ENABLED = process.env.PRERENDER_MATHJAX !== "false";
+
+if (!PRERENDER_ENABLED) {
+  fs.rmSync(OUTPUT_DIR, { recursive: true, force: true });
+  console.log("Pre-rendered MathJax disabled by PRERENDER_MATHJAX=false.");
+  process.exit(0);
+}
 
 const decodeHtmlEntities = (value) =>
   value
@@ -78,6 +85,18 @@ const stripMathDelimiters = (kind, source) => {
 
 const prerenderedMathJaxKey = (kind, source) => {
   const text = `${kind}\n${stripMathDelimiters(kind, source)}`;
+  return hashMathText(kind, text);
+};
+
+const whitespaceStableMathSource = (kind, source) =>
+  stripMathDelimiters(kind, source).replace(/\s+/g, " ").trim();
+
+const whitespaceStablePrerenderedMathJaxKey = (kind, source) => {
+  const text = `${kind}\n${whitespaceStableMathSource(kind, source)}`;
+  return hashMathText(kind, text);
+};
+
+const hashMathText = (kind, text) => {
   let hash = 0x811c9dc5;
 
   for (let i = 0; i < text.length; i += 1) {
@@ -86,6 +105,18 @@ const prerenderedMathJaxKey = (kind, source) => {
   }
 
   return `${kind}:${(hash >>> 0).toString(36)}`;
+};
+
+const prerenderedMathJaxKeys = (kind, source) => {
+  const primaryKey = prerenderedMathJaxKey(kind, source);
+  const whitespaceStableKey = whitespaceStablePrerenderedMathJaxKey(
+    kind,
+    source,
+  );
+
+  return primaryKey === whitespaceStableKey
+    ? [primaryKey]
+    : [primaryKey, whitespaceStableKey];
 };
 
 const walk = (dir) =>
@@ -136,8 +167,8 @@ const collectMath = () => {
       const tex = stripMathDelimiters(kind, mathText);
       if (!tex) continue;
 
-      const key = prerenderedMathJaxKey(kind, mathText);
-      entries.set(key, { kind, tex });
+      const keys = prerenderedMathJaxKeys(kind, mathText);
+      entries.set(keys[0], { kind, tex, keys });
     }
 
     if (entries.size > 0) pages.set(routePath, entries);
@@ -179,7 +210,9 @@ for (const [routePath, entries] of pages) {
         skipped += 1;
         continue;
       }
-      rendered[key] = { html };
+      for (const alias of entry.keys) {
+        rendered[alias] = { html };
+      }
       renderedCount += 1;
     } catch (error) {
       failed += 1;

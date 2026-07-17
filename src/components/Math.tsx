@@ -27,7 +27,9 @@ import {
 import { ScaleProvider } from "~/store/ScaleProvider";
 import useConstrainedContent from "~/hooks/useConstrainedContent";
 import styleJoin from "~/utils/styleJoin";
-import getPrerenderedMathJax from "~/utils/prerenderedMathJax";
+import getPrerenderedMathJax, {
+  getPrerenderedMathJaxDebug,
+} from "~/utils/prerenderedMathJax";
 
 const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN}px`;
 
@@ -182,6 +184,9 @@ const InlineMath = (props: ParentProps) => {
   const prerenderedMathJax = createMemo(() =>
     getPrerenderedMathJax("inline", resolvedChildren()),
   );
+  const prerenderedMathJaxDebug = createMemo(() =>
+    getPrerenderedMathJaxDebug("inline", resolvedChildren()),
+  );
   const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
   const { store, set_store } = useGlobalContext();
   const solutionMathJax = useSolutionMathJax();
@@ -256,6 +261,17 @@ const InlineMath = (props: ParentProps) => {
   return (
     <span
       class="transition-opacity"
+      data-prerendered-mathjax={
+        prerenderedMathJaxDebug().enabled
+          ? prerenderedMathJaxDebug().hit
+            ? "hit"
+            : "miss"
+          : "off"
+      }
+      data-prerendered-mathjax-cache={
+        prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
+      }
+      data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
       style={{ opacity: visible() ? "1" : "0" }}
       ref={ref}
       innerHTML={prerenderedMathJax()?.html}
@@ -278,6 +294,9 @@ export const MathBlock = (props: MathBlockProps) => {
   const resolvedChildren = resolveChildren(() => merged.children);
   const prerenderedMathJax = createMemo(() =>
     getPrerenderedMathJax("display", resolvedChildren()),
+  );
+  const prerenderedMathJaxDebug = createMemo(() =>
+    getPrerenderedMathJaxDebug("display", resolvedChildren()),
   );
   const { store, set_store } = useGlobalContext();
   const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
@@ -405,6 +424,17 @@ export const MathBlock = (props: MathBlockProps) => {
     <ScaleProvider scale={scale}>
       <div
         id={merged.id}
+        data-prerendered-mathjax={
+          prerenderedMathJaxDebug().enabled
+            ? prerenderedMathJaxDebug().hit
+              ? "hit"
+              : "miss"
+            : "off"
+        }
+        data-prerendered-mathjax-cache={
+          prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
+        }
+        data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
         data-horizontal-inspectable={
           constrainedContent.constrained() ? undefined : "true"
         }
