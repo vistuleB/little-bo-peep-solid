@@ -11,6 +11,10 @@ const isAuthorMode = (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
 const isOfflineMode = (process.env.OFFLINE_MODE || env.OFFLINE_MODE) === "true";
 const prerenderMathJax =
   (process.env.PRERENDER_MATHJAX || env.PRERENDER_MATHJAX || "true") === "true";
+const prerenderMathJaxCacheVersion =
+  process.env.PRERENDER_MATHJAX_CACHE_VERSION ||
+  env.PRERENDER_MATHJAX_CACHE_VERSION ||
+  String(Date.now());
 
 export default defineConfig({
   ssr: false,
@@ -31,6 +35,9 @@ export default defineConfig({
       "import.meta.env.OFFLINE_MODE": isOfflineMode,
       "import.meta.env.MATHJAX_VERSION": JSON.stringify(mathJAXVersion),
       "import.meta.env.PRERENDER_MATHJAX": prerenderMathJax,
+      "import.meta.env.PRERENDER_MATHJAX_CACHE_VERSION": JSON.stringify(
+        prerenderMathJaxCacheVersion,
+      ),
     },
   },
 });

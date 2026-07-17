@@ -17,6 +17,7 @@ export default function __Bootcamp1__() {
       pageNecessaryMargin={160}
       maxElementWidth={800}
       id="_1_h.a.i_"
+      path="/article/bootcamp1"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">

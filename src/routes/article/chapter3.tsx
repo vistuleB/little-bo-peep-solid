@@ -26,6 +26,7 @@ export default function __Chapter3__() {
       pageNecessaryMargin={700}
       maxElementWidth={1500}
       id="_56_h.a.i_"
+      path="/article/chapter3"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
