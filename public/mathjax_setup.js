@@ -1,3 +1,5 @@
+window.__LBP_MATHJAX_SETUP_LOADED__ = false;
+
 window.MathJax = {
   svg: {
     mtextInheritFont: true,
@@ -95,6 +97,7 @@ window.MathJax = {
     ready: () => {
       MathJax.startup.defaultReady();
       MathJax.startup.promise.then(() => {
+        window.__LBP_MATHJAX_READY__ = true;
         // document.querySelectorAll(".hidden-on-startup").forEach((elem) => {
         //   elem.classList.remove("hidden-on-startup");
         //   elem.classList.add("animate-appear");
@@ -103,6 +106,8 @@ window.MathJax = {
     },
   },
 };
+
+window.__LBP_MATHJAX_SETUP_LOADED__ = true;
 
 // document.getElementsByTagName("body").item(0).style.opacity = 0;
 // MathJax.Hub.Register.StartupHook("End", function () {
