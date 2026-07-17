@@ -6,7 +6,7 @@ const env = loadEnv(mode, process.cwd(), "");
 
 // Priority: process.env (CLI) > .env file
 const viteEnv = process.env.VITE_ENV || env.VITE_ENV;
-const mathJAXVersion = process.env.MATHJAX_VERSION || env.MATHJAX_VERSION;
+const mathJAXVersion = process.env.MATHJAX_VERSION || env.MATHJAX_VERSION || "4";
 const isAuthorMode = (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
 const isOfflineMode = (process.env.OFFLINE_MODE || env.OFFLINE_MODE) === "true";
 

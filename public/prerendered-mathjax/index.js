@@ -1,0 +1,1 @@
+window.__PRERENDERED_MATHJAX__ = window.__PRERENDERED_MATHJAX__ || {};
