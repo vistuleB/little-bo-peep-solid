@@ -123,13 +123,15 @@ export default createHandler(() => (
             innerHTML={`window.env = { VITE_ENV: "${import.meta.env.VITE_ENV}" };`}
           />
           <script src="/extras.js" defer={true} />
-          <script
-            innerHTML={`(function () {
-              var route = window.location.pathname.replace(/\\/+$/, "") || "/index";
-              var src = "/prerendered-mathjax" + route + ".js";
-              document.write('<script src="' + src + '"><\\\\/script>');
-            })();`}
-          />
+          {import.meta.env.PRERENDER_MATHJAX && (
+            <script
+              innerHTML={`(function () {
+                var route = window.location.pathname.replace(/\\/+$/, "") || "/index";
+                var src = "/prerendered-mathjax" + route + ".js";
+                document.write('<script src="' + src + '"><\\\\/script>');
+              })();`}
+            />
+          )}
           <script src="/mathjax_setup.js" />
           <script
             type="text/javascript"
