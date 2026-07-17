@@ -389,10 +389,10 @@ const useHorizontalPageMotion = (
     const horizontalIntent =
       Math.abs(gesture.deltaX) >
       Math.abs(gesture.deltaY) * HORIZONTAL_INTENT_RATIO;
-    if (!horizontalIntent) return !gesturePanning;
 
     if (
       !gesturePanning &&
+      horizontalIntent &&
       Math.abs(gesture.deltaX) >= HORIZONTAL_PAN_ENTRY_DISTANCE &&
       canRevealForDelta(gesture.deltaX)
     ) {
