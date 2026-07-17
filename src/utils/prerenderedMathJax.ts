@@ -4,11 +4,29 @@ export type PrerenderedMathJaxEntry = {
   html: string;
 };
 
+type PrerenderedMathJaxRouteCacheStatus = "loading" | "loaded" | "error";
+
 declare global {
   interface Window {
     __PRERENDERED_MATHJAX__?: Record<string, PrerenderedMathJaxEntry>;
+    __PRERENDERED_MATHJAX_ROUTE_CACHE__?: Record<
+      string,
+      PrerenderedMathJaxRouteCacheStatus
+    >;
   }
 }
+
+const cacheListeners = new Set<() => void>();
+
+export const subscribePrerenderedMathJaxCache = (listener: () => void) => {
+  cacheListeners.add(listener);
+  listener();
+  return () => cacheListeners.delete(listener);
+};
+
+const notifyCacheListeners = () => {
+  cacheListeners.forEach((listener) => listener());
+};
 
 const decodeHtmlEntities = (value: string) =>
   value
@@ -85,6 +103,45 @@ export const stripMathDelimiters = (
 
 export const mathTextFromChildren = (children: unknown) =>
   normalizeMathSource(collectText(children));
+
+export const prerenderedMathJaxRouteCachePath = (pathname: string) => {
+  const route = pathname.replace(/\/+$/, "") || "/index";
+  return `/prerendered-mathjax${route}.js?v=${encodeURIComponent(
+    import.meta.env.PRERENDER_MATHJAX_CACHE_VERSION,
+  )}`;
+};
+
+export const getPrerenderedMathJaxRouteCacheStatus = (pathname: string) => {
+  if (typeof window === "undefined") return "server";
+  const src = prerenderedMathJaxRouteCachePath(pathname);
+  return window.__PRERENDERED_MATHJAX_ROUTE_CACHE__?.[src] || "unrequested";
+};
+
+export const ensurePrerenderedMathJaxRouteCache = (pathname: string) => {
+  if (!import.meta.env.PRERENDER_MATHJAX) return;
+  if (typeof window === "undefined" || typeof document === "undefined") return;
+
+  window.__PRERENDERED_MATHJAX_ROUTE_CACHE__ ||= {};
+
+  const src = prerenderedMathJaxRouteCachePath(pathname);
+  const status = window.__PRERENDERED_MATHJAX_ROUTE_CACHE__[src];
+  if (status === "loading" || status === "loaded") return;
+
+  window.__PRERENDERED_MATHJAX_ROUTE_CACHE__[src] = "loading";
+
+  const script = document.createElement("script");
+  script.src = src;
+  script.async = true;
+  script.onload = () => {
+    window.__PRERENDERED_MATHJAX_ROUTE_CACHE__![src] = "loaded";
+    notifyCacheListeners();
+  };
+  script.onerror = () => {
+    window.__PRERENDERED_MATHJAX_ROUTE_CACHE__![src] = "error";
+    notifyCacheListeners();
+  };
+  document.head.append(script);
+};
 
 export const prerenderedMathJaxKey = (
   kind: PrerenderedMathKind,
@@ -167,6 +224,10 @@ export const getPrerenderedMathJaxDebug = (
     enabled && cacheLoaded
       ? keys.find((candidate) => window.__PRERENDERED_MATHJAX?.[candidate])
       : undefined;
+  const availableKeys =
+    typeof window !== "undefined" && window.__PRERENDERED_MATHJAX__
+      ? Object.keys(window.__PRERENDERED_MATHJAX__).length
+      : 0;
   const hit =
     enabled &&
     cacheLoaded &&
@@ -177,6 +238,8 @@ export const getPrerenderedMathJaxDebug = (
     cacheLoaded,
     hit,
     key: hitKey || keys.join(" "),
+    keyPresent: Boolean(hitKey),
+    availableKeys,
   };
 };
 

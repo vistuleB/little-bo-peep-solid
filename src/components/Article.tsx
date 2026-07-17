@@ -7,9 +7,11 @@ import PageUpPageDownButtons from "./PageUpPageDownButtons";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { recordFirstContentPaint } from "~/utils/routeLoading";
 import { useLocation } from "@solidjs/router";
+import { ensurePrerenderedMathJaxRouteCache } from "~/utils/prerenderedMathJax";
 
 type ArticleProps = {
   id?: string;
+  path?: string;
   pageNecessaryMargin?: number;
   maxElementWidth?: number;
   nextPage?: string;
@@ -17,6 +19,10 @@ type ArticleProps = {
 };
 
 const Article = (props: ParentProps & ArticleProps) => {
+  onMount(() => {
+    if (props.path) ensurePrerenderedMathJaxRouteCache(props.path);
+  });
+
   return (
     <ExerciseGroupRegistryProvider>
       <Page

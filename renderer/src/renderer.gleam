@@ -89,6 +89,7 @@ fn our_splitter(
           let #(c, vxml.Attr(_, _, number)) = infra.v_assert_pop_attr(c, "number")
           let #(c, vxml.Attr(_,_,category)) = infra.v_assert_pop_attr(c, "category")
           let c = infra.v_set_tag(c, "Article")
+          let c = infra.v_set_attr(c, blame_us("article_path"), "path", path)
           ds.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
         }
       ),

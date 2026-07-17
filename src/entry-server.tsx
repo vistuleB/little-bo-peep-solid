@@ -127,7 +127,8 @@ export default createHandler(() => (
             <script
               innerHTML={`(function () {
                 var route = window.location.pathname.replace(/\\/+$/, "") || "/index";
-                var src = "/prerendered-mathjax" + route + ".js";
+                var version = "${import.meta.env.PRERENDER_MATHJAX_CACHE_VERSION}";
+                var src = "/prerendered-mathjax" + route + ".js?v=" + encodeURIComponent(version);
                 document.write('<script src="' + src + '"><\\\\/script>');
               })();`}
             />

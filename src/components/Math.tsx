@@ -28,7 +28,10 @@ import { ScaleProvider } from "~/store/ScaleProvider";
 import useConstrainedContent from "~/hooks/useConstrainedContent";
 import styleJoin from "~/utils/styleJoin";
 import getPrerenderedMathJax, {
+  ensurePrerenderedMathJaxRouteCache,
+  getPrerenderedMathJaxRouteCacheStatus,
   getPrerenderedMathJaxDebug,
+  subscribePrerenderedMathJaxCache,
 } from "~/utils/prerenderedMathJax";
 
 const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN}px`;
@@ -181,17 +184,38 @@ const nonTextChildren = (value: unknown): unknown => {
 const InlineMath = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
   const resolvedChildren = resolveChildren(() => props.children);
-  const prerenderedMathJax = createMemo(() =>
-    getPrerenderedMathJax("inline", resolvedChildren()),
-  );
-  const prerenderedMathJaxDebug = createMemo(() =>
-    getPrerenderedMathJaxDebug("inline", resolvedChildren()),
-  );
+  const [routeCacheVersion, setRouteCacheVersion] = createSignal(0);
+  const prerenderedMathJax = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJax("inline", resolvedChildren());
+  });
+  const prerenderedMathJaxDebug = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJaxDebug("inline", resolvedChildren());
+  });
+  const routeCacheStatus = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJaxRouteCacheStatus(
+      typeof window === "undefined" ? "" : window.location.pathname,
+    );
+  });
   const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
   const { store, set_store } = useGlobalContext();
   const solutionMathJax = useSolutionMathJax();
 
+  createEffect(() => {
+    if (prerenderedMathJax()) setVisible(true);
+  });
+
+  const renderedBy = () =>
+    prerenderedMathJax() ? "prerendered" : visible() ? "live" : "pending";
+
   onMount(() => {
+    ensurePrerenderedMathJaxRouteCache(window.location.pathname);
+    const unsubscribePrerenderedMathJaxCache =
+      subscribePrerenderedMathJaxCache(() =>
+        setRouteCacheVersion((version) => version + 1),
+      );
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
     const routeReady = () =>
@@ -251,6 +275,7 @@ const InlineMath = (props: ParentProps) => {
     });
 
     onCleanup(() => {
+      unsubscribePrerenderedMathJaxCache();
       if (mathJaxEntry) mathJaxEntry.active = false;
       observer.disconnect();
       unregisterMathJaxFallback(mathJaxEntry);
@@ -271,7 +296,15 @@ const InlineMath = (props: ParentProps) => {
       data-prerendered-mathjax-cache={
         prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
       }
+      data-prerendered-mathjax-route-cache={routeCacheStatus()}
       data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
+      data-prerendered-mathjax-key-present={
+        prerenderedMathJaxDebug().keyPresent ? "true" : "false"
+      }
+      data-prerendered-mathjax-available-keys={
+        prerenderedMathJaxDebug().availableKeys
+      }
+      data-mathjax-rendered={renderedBy()}
       style={{ opacity: visible() ? "1" : "0" }}
       ref={ref}
       innerHTML={prerenderedMathJax()?.html}
@@ -292,12 +325,21 @@ export const MathBlock = (props: MathBlockProps) => {
   const merged = mergeProps({ constrained: true }, props);
   let ref: HTMLDivElement | undefined;
   const resolvedChildren = resolveChildren(() => merged.children);
-  const prerenderedMathJax = createMemo(() =>
-    getPrerenderedMathJax("display", resolvedChildren()),
-  );
-  const prerenderedMathJaxDebug = createMemo(() =>
-    getPrerenderedMathJaxDebug("display", resolvedChildren()),
-  );
+  const [routeCacheVersion, setRouteCacheVersion] = createSignal(0);
+  const prerenderedMathJax = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJax("display", resolvedChildren());
+  });
+  const prerenderedMathJaxDebug = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJaxDebug("display", resolvedChildren());
+  });
+  const routeCacheStatus = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJaxRouteCacheStatus(
+      typeof window === "undefined" ? "" : window.location.pathname,
+    );
+  });
   const { store, set_store } = useGlobalContext();
   const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
   const [naturalWidth, setNaturalWidth] = createSignal(0);
@@ -315,6 +357,38 @@ export const MathBlock = (props: MathBlockProps) => {
     after_first_click: constrainedContent.afterFirstClick(),
   }));
 
+  const measureNaturalWidth = () => {
+    const svg = ref?.querySelector<SVGSVGElement>(".MathJax svg");
+    if (!ref || !svg) return false;
+
+    const previousRefWidth = ref.style.width;
+    const previousSvgMaxWidth = svg.style.maxWidth;
+    let measuredWidth = 0;
+    try {
+      ref.style.width = "max-content";
+      svg.style.maxWidth = "none";
+      measuredWidth = svg.getBoundingClientRect().width;
+    } finally {
+      ref.style.width = previousRefWidth;
+      svg.style.maxWidth = previousSvgMaxWidth;
+    }
+
+    if (measuredWidth > 0) {
+      setNaturalWidth(measuredWidth);
+      constrainedContent.notifyHeightChangeAcrossFrames();
+    }
+    return measuredWidth > 0;
+  };
+
+  createEffect(() => {
+    if (!prerenderedMathJax()) return;
+    setVisible(true);
+    window.requestAnimationFrame(measureNaturalWidth);
+  });
+
+  const renderedBy = () =>
+    prerenderedMathJax() ? "prerendered" : visible() ? "live" : "pending";
+
   const handleClick = (event: MouseEvent) => {
     const target = event.target;
     if (target instanceof Element && target.closest("[data-side-image]")) {
@@ -325,6 +399,11 @@ export const MathBlock = (props: MathBlockProps) => {
   };
 
   onMount(() => {
+    ensurePrerenderedMathJaxRouteCache(window.location.pathname);
+    const unsubscribePrerenderedMathJaxCache =
+      subscribePrerenderedMathJaxCache(() =>
+        setRouteCacheVersion((version) => version + 1),
+      );
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
     const routeReady = () =>
@@ -333,29 +412,6 @@ export const MathBlock = (props: MathBlockProps) => {
       store.horizontal_arrival_phase === "idle" &&
       store.route_phase === "idle" &&
       store.saved_scroll_finished;
-    const measureNaturalWidth = () => {
-      const svg = ref?.querySelector<SVGSVGElement>(".MathJax svg");
-      if (!ref || !svg) return false;
-
-      const previousRefWidth = ref.style.width;
-      const previousSvgMaxWidth = svg.style.maxWidth;
-      let measuredWidth = 0;
-      try {
-        ref.style.width = "max-content";
-        svg.style.maxWidth = "none";
-        measuredWidth = svg.getBoundingClientRect().width;
-      } finally {
-        ref.style.width = previousRefWidth;
-        svg.style.maxWidth = previousSvgMaxWidth;
-      }
-
-      if (measuredWidth > 0) {
-        setNaturalWidth(measuredWidth);
-        constrainedContent.notifyHeightChangeAcrossFrames();
-      }
-      return measuredWidth > 0;
-    };
-
     if (prerenderedMathJax()) {
       setVisible(true);
       window.requestAnimationFrame(() => {
@@ -413,6 +469,7 @@ export const MathBlock = (props: MathBlockProps) => {
     });
 
     onCleanup(() => {
+      unsubscribePrerenderedMathJaxCache();
       if (mathJaxEntry) mathJaxEntry.active = false;
       observer.disconnect();
       unregisterMathJaxFallback(mathJaxEntry);
@@ -434,7 +491,15 @@ export const MathBlock = (props: MathBlockProps) => {
         data-prerendered-mathjax-cache={
           prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
         }
+        data-prerendered-mathjax-route-cache={routeCacheStatus()}
         data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
+        data-prerendered-mathjax-key-present={
+          prerenderedMathJaxDebug().keyPresent ? "true" : "false"
+        }
+        data-prerendered-mathjax-available-keys={
+          prerenderedMathJaxDebug().availableKeys
+        }
+        data-mathjax-rendered={renderedBy()}
         data-horizontal-inspectable={
           constrainedContent.constrained() ? undefined : "true"
         }
