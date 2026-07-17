@@ -673,16 +673,19 @@ export const BackupArrow = (props: BackupArrowProps) => {
   let rx = PREV_NEXT_EXERCISE_BUTTON_CORNER_RADIUS;
 
   const { calculateTargetCenterOnPage } = useScrollToInChapter();
-  const selectedExercise = () => {
-    const section = document.querySelector(
+  const exercisesSection = () =>
+    document.querySelector<HTMLElement>(
       `[data-exercise-group-id="${group_id}"]`,
     );
+  const selectedExercise = () => {
+    const section = exercisesSection();
     return (section ?? document)
       .querySelectorAll(".exo-statement")
       .item(
         exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
       ) as HTMLElement;
   };
+  const backupTarget = () => selectedExercise() ?? exercisesSection();
 
   let h = w;
   let triangle_sidelength = 11.5;
@@ -710,16 +713,28 @@ export const BackupArrow = (props: BackupArrowProps) => {
         viewBox={`0 0 ${2 + w} ${2 + w}`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        role="button"
+        tabindex="0"
         class="tab cursor-pointer z-10"
-        onClick={() => {
+        onClick={(event) => {
+          event.stopPropagation();
+          const target = backupTarget();
           if (store.innerWidth > MOBILE_MAX_WIDTH) {
             smoothScrollTo(
-              calculateTargetCenterOnPage(selectedExercise()) + 50,
+              calculateTargetCenterOnPage(target) + 50,
               store.animations ? 100 : 0,
             );
           } else {
-            document?.getElementById(`exo-${group_id}`)?.scrollIntoView();
+            smoothScrollTo(
+              calculateTargetCenterOnPage(target) + 50,
+              store.animations ? 100 : 0,
+            );
           }
+        }}
+        onKeyDown={(event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          event.currentTarget.click();
         }}
       >
         <path
