@@ -199,16 +199,25 @@ const InlineMath = (props: ParentProps) => {
       typeof window === "undefined" ? "" : window.location.pathname,
     );
   });
+  const [liveRendered, setLiveRendered] = createSignal(false);
+  const activePrerenderedMathJax = () =>
+    liveRendered() ? undefined : prerenderedMathJax();
   const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
   const { store, set_store } = useGlobalContext();
   const solutionMathJax = useSolutionMathJax();
 
   createEffect(() => {
-    if (prerenderedMathJax()) setVisible(true);
+    if (activePrerenderedMathJax()) setVisible(true);
   });
 
   const renderedBy = () =>
-    prerenderedMathJax() ? "prerendered" : visible() ? "live" : "pending";
+    activePrerenderedMathJax()
+      ? "prerendered"
+      : liveRendered()
+        ? "live"
+        : visible()
+          ? "live"
+          : "pending";
 
   onMount(() => {
     ensurePrerenderedMathJaxRouteCache(window.location.pathname);
@@ -238,6 +247,7 @@ const InlineMath = (props: ParentProps) => {
           setVisible,
           setScrollHeight,
           routeReady,
+          afterTypeset: () => setLiveRendered(true),
           typesetting: false,
           active: true,
         }
@@ -307,9 +317,9 @@ const InlineMath = (props: ParentProps) => {
       data-mathjax-rendered={renderedBy()}
       style={{ opacity: visible() ? "1" : "0" }}
       ref={ref}
-      innerHTML={prerenderedMathJax()?.html}
+      innerHTML={activePrerenderedMathJax()?.html}
     >
-      {prerenderedMathJax() ? undefined : resolvedChildren()}
+      {activePrerenderedMathJax() ? undefined : resolvedChildren()}
     </span>
   );
 };
@@ -340,6 +350,9 @@ export const MathBlock = (props: MathBlockProps) => {
       typeof window === "undefined" ? "" : window.location.pathname,
     );
   });
+  const [liveRendered, setLiveRendered] = createSignal(false);
+  const activePrerenderedMathJax = () =>
+    liveRendered() ? undefined : prerenderedMathJax();
   const { store, set_store } = useGlobalContext();
   const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
   const [naturalWidth, setNaturalWidth] = createSignal(0);
@@ -381,13 +394,19 @@ export const MathBlock = (props: MathBlockProps) => {
   };
 
   createEffect(() => {
-    if (!prerenderedMathJax()) return;
+    if (!activePrerenderedMathJax()) return;
     setVisible(true);
     window.requestAnimationFrame(measureNaturalWidth);
   });
 
   const renderedBy = () =>
-    prerenderedMathJax() ? "prerendered" : visible() ? "live" : "pending";
+    activePrerenderedMathJax()
+      ? "prerendered"
+      : liveRendered()
+        ? "live"
+        : visible()
+          ? "live"
+          : "pending";
 
   const handleClick = (event: MouseEvent) => {
     const target = event.target;
@@ -412,7 +431,7 @@ export const MathBlock = (props: MathBlockProps) => {
       store.horizontal_arrival_phase === "idle" &&
       store.route_phase === "idle" &&
       store.saved_scroll_finished;
-    if (prerenderedMathJax()) {
+    if (activePrerenderedMathJax()) {
       setVisible(true);
       window.requestAnimationFrame(() => {
         measureNaturalWidth();
@@ -428,7 +447,10 @@ export const MathBlock = (props: MathBlockProps) => {
           setVisible,
           setScrollHeight,
           routeReady,
-          afterTypeset: measureNaturalWidth,
+          afterTypeset: () => {
+            setLiveRendered(true);
+            measureNaturalWidth();
+          },
           typesetting: false,
           active: true,
         }
@@ -525,9 +547,9 @@ export const MathBlock = (props: MathBlockProps) => {
         onTransitionEnd={constrainedContent.handleTransitionEnd}
         ref={ref}
       >
-        {prerenderedMathJax() ? (
+        {activePrerenderedMathJax() ? (
           <>
-            <div innerHTML={prerenderedMathJax()?.html} />
+            <div innerHTML={activePrerenderedMathJax()?.html} />
             {nonTextChildren(resolvedChildren())}
           </>
         ) : (
