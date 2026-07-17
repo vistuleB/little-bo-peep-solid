@@ -532,7 +532,6 @@ const Rest = () => {
           $$
           <ImageLeft
             src="/build-img/svgo-svg/tkpb.svg"
-            offsetX="8em"
             atLeastAsWide={true}
             intrinsicWidth={430}
             intrinsicHeight={300}
@@ -651,7 +650,6 @@ const Rest = () => {
           $$
           <ImageLeft
             src="/build-img/svgo-svg/2UFf.svg"
-            offsetX="7em"
             atLeastAsWide={true}
             intrinsicWidth={430}
             intrinsicHeight={300}
@@ -1180,7 +1178,6 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/ORL8.svg"
-              offsetX="6em"
               offsetY="0.1em"
               atLeastAsWide={true}
               intrinsicWidth={900}
@@ -1698,7 +1695,6 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/R0nW.svg"
-              offsetX="5em"
               atLeastAsWide={true}
               intrinsicWidth={350}
               intrinsicHeight={150}

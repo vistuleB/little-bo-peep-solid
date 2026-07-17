@@ -1,6 +1,7 @@
 import {
   createEffect,
   Accessor,
+  children as resolveChildren,
   createMemo,
   createSignal,
   mergeProps,
@@ -26,6 +27,7 @@ import {
 import { ScaleProvider } from "~/store/ScaleProvider";
 import useConstrainedContent from "~/hooks/useConstrainedContent";
 import styleJoin from "~/utils/styleJoin";
+import getPrerenderedMathJax from "~/utils/prerenderedMathJax";
 
 const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN}px`;
 
@@ -167,9 +169,20 @@ const registerSolutionMathJax = (
   return () => controller.entries.delete(solutionEntry);
 };
 
+const nonTextChildren = (value: unknown): unknown => {
+  if (value === null || value === undefined || value === false) return undefined;
+  if (typeof value === "string" || typeof value === "number") return undefined;
+  if (Array.isArray(value)) return value.map(nonTextChildren);
+  return value;
+};
+
 const InlineMath = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
-  const [visible, setVisible] = createSignal(false);
+  const resolvedChildren = resolveChildren(() => props.children);
+  const prerenderedMathJax = createMemo(() =>
+    getPrerenderedMathJax("inline", resolvedChildren()),
+  );
+  const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
   const { store, set_store } = useGlobalContext();
   const solutionMathJax = useSolutionMathJax();
 
@@ -182,6 +195,13 @@ const InlineMath = (props: ParentProps) => {
       store.horizontal_arrival_phase === "idle" &&
       store.route_phase === "idle" &&
       store.saved_scroll_finished;
+
+    if (prerenderedMathJax()) {
+      setVisible(true);
+      setScrollHeight();
+      return;
+    }
+
     const mathJaxEntry = ref
       ? {
           ref,
@@ -238,8 +258,9 @@ const InlineMath = (props: ParentProps) => {
       class="transition-opacity"
       style={{ opacity: visible() ? "1" : "0" }}
       ref={ref}
+      innerHTML={prerenderedMathJax()?.html}
     >
-      {props.children}
+      {prerenderedMathJax() ? undefined : resolvedChildren()}
     </span>
   );
 };
@@ -254,8 +275,12 @@ type MathBlockProps = SharedProps &
 export const MathBlock = (props: MathBlockProps) => {
   const merged = mergeProps({ constrained: true }, props);
   let ref: HTMLDivElement | undefined;
+  const resolvedChildren = resolveChildren(() => merged.children);
+  const prerenderedMathJax = createMemo(() =>
+    getPrerenderedMathJax("display", resolvedChildren()),
+  );
   const { store, set_store } = useGlobalContext();
-  const [visible, setVisible] = createSignal(false);
+  const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
   const [naturalWidth, setNaturalWidth] = createSignal(0);
   const constrainedContent = useConstrainedContent({
     naturalWidth,
@@ -311,6 +336,16 @@ export const MathBlock = (props: MathBlockProps) => {
       }
       return measuredWidth > 0;
     };
+
+    if (prerenderedMathJax()) {
+      setVisible(true);
+      window.requestAnimationFrame(() => {
+        measureNaturalWidth();
+        setScrollHeight();
+      });
+      return;
+    }
+
     const mathJaxEntry = ref
       ? {
           ref,
@@ -395,7 +430,14 @@ export const MathBlock = (props: MathBlockProps) => {
         onTransitionEnd={constrainedContent.handleTransitionEnd}
         ref={ref}
       >
-        {merged.children}
+        {prerenderedMathJax() ? (
+          <>
+            <div innerHTML={prerenderedMathJax()?.html} />
+            {nonTextChildren(resolvedChildren())}
+          </>
+        ) : (
+          resolvedChildren()
+        )}
       </div>
     </ScaleProvider>
   );

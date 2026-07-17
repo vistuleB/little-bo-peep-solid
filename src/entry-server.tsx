@@ -14,7 +14,7 @@ function resolveMathJAXEnv(): string {
       return "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js";
 
     case "4-false":
-      return "https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js";
+      return "https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-svg.js";
 
     default:
       console.warn("Cannot parse MATHJAX related env");
@@ -123,7 +123,14 @@ export default createHandler(() => (
             innerHTML={`window.env = { VITE_ENV: "${import.meta.env.VITE_ENV}" };`}
           />
           <script src="/extras.js" defer={true} />
-          <script src="/mathjax_setup.js" defer={true} />
+          <script
+            innerHTML={`(function () {
+              var route = window.location.pathname.replace(/\\/+$/, "") || "/index";
+              var src = "/prerendered-mathjax" + route + ".js";
+              document.write('<script src="' + src + '"><\\\\/script>');
+            })();`}
+          />
+          <script src="/mathjax_setup.js" />
           <script
             type="text/javascript"
             src={resolveMathJAXEnv()}
