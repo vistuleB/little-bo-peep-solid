@@ -4,7 +4,12 @@ export type PrerenderedMathJaxEntry = {
   html: string;
 };
 
-type PrerenderedMathJaxRouteCacheStatus = "loading" | "loaded" | "error";
+type PrerenderedMathJaxRouteCacheStatus =
+  | "loading"
+  | "loaded"
+  | "missing"
+  | "invalid"
+  | "error";
 
 declare global {
   interface Window {
@@ -119,7 +124,7 @@ export const getPrerenderedMathJaxRouteCacheStatus = (pathname: string) => {
 
 export const ensurePrerenderedMathJaxRouteCache = (pathname: string) => {
   if (!import.meta.env.PRERENDER_MATHJAX) return;
-  if (typeof window === "undefined" || typeof document === "undefined") return;
+  if (typeof window === "undefined") return;
 
   window.__PRERENDERED_MATHJAX_ROUTE_CACHE__ ||= {};
 
@@ -129,18 +134,26 @@ export const ensurePrerenderedMathJaxRouteCache = (pathname: string) => {
 
   window.__PRERENDERED_MATHJAX_ROUTE_CACHE__[src] = "loading";
 
-  const script = document.createElement("script");
-  script.src = src;
-  script.async = true;
-  script.onload = () => {
-    window.__PRERENDERED_MATHJAX_ROUTE_CACHE__![src] = "loaded";
-    notifyCacheListeners();
-  };
-  script.onerror = () => {
-    window.__PRERENDERED_MATHJAX_ROUTE_CACHE__![src] = "error";
-    notifyCacheListeners();
-  };
-  document.head.append(script);
+  void fetch(src)
+    .then(async (response) => {
+      const text = await response.text();
+      if (!response.ok) {
+        window.__PRERENDERED_MATHJAX_ROUTE_CACHE__![src] = "missing";
+        return;
+      }
+      if (!text.trimStart().startsWith("window.__PRERENDERED_MATHJAX__")) {
+        window.__PRERENDERED_MATHJAX_ROUTE_CACHE__![src] = "invalid";
+        return;
+      }
+
+      new Function(text)();
+      window.__PRERENDERED_MATHJAX_ROUTE_CACHE__![src] = "loaded";
+    })
+    .catch((error) => {
+      console.error("Could not load pre-rendered MathJax route cache", error);
+      window.__PRERENDERED_MATHJAX_ROUTE_CACHE__![src] = "error";
+    })
+    .finally(notifyCacheListeners);
 };
 
 export const prerenderedMathJaxKey = (

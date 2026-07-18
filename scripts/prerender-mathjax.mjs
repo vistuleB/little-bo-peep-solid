@@ -171,7 +171,7 @@ const collectMath = () => {
       entries.set(keys[0], { kind, tex, keys });
     }
 
-    if (entries.size > 0) pages.set(routePath, entries);
+    pages.set(routePath, entries);
   }
 
   return { pages, skipped };
