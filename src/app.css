@@ -567,6 +567,55 @@ img + .t-3003:hover {
   opacity: 0 !important;
 }
 
+.t-3003-mathjax-export {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: calc(-3.1em + 4px);
+  transform: translateX(-50%);
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.6;
+  font-size: 12px;
+  background-color: #333;
+  color: #ff6b6b;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 6px;
+  width: auto;
+  white-space: nowrap;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  cursor: pointer;
+  text-indent: 0;
+  z-index: 60;
+  pointer-events: auto;
+}
+
+.t-3003-mathjax-export::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+.t-3003-mathjax-export:hover {
+  text-decoration: underline;
+}
+
+.mathblock:hover > .t-3003-mathjax-export,
+.mathblock:has(> .t-3003-mathjax-export:hover) > .t-3003-mathjax-export {
+  display: block;
+  opacity: 1;
+}
+
 /* Also prevent when hovering the side image's tooltip */
 .mathblock:has(.absolute .t-3003:hover) {
   background-color: transparent !important;

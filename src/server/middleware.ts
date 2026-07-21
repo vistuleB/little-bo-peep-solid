@@ -1,10 +1,48 @@
 import { createMiddleware } from "@solidjs/start/middleware";
 import { spawn } from "child_process";
-import { resolve } from "path";
+import { mkdir, writeFile } from "fs/promises";
+import { dirname, resolve } from "path";
 import { pathToFileURL } from "url";
+
+const tooltipMathJaxSvgPath = resolve("images/tooltip_mathjax.svg");
 
 export default createMiddleware({
   onRequest: async (event) => {
+    if (
+      event.request.method === "POST" &&
+      event.request.url.includes("/write-tooltip-mathjax-svg")
+    ) {
+      try {
+        const { svg } = await event.request.json();
+
+        if (typeof svg !== "string" || !svg.includes("<svg")) {
+          return new Response(JSON.stringify({ error: "No SVG provided" }), {
+            status: 400,
+            headers: { "Content-Type": "application/json" },
+          });
+        }
+
+        await mkdir(dirname(tooltipMathJaxSvgPath), { recursive: true });
+        await writeFile(tooltipMathJaxSvgPath, svg, "utf8");
+
+        return new Response(
+          JSON.stringify({
+            success: true,
+            path: tooltipMathJaxSvgPath,
+            url: "images/tooltip_mathjax.svg",
+          }),
+          {
+            headers: { "Content-Type": "application/json" },
+          },
+        );
+      } catch {
+        return new Response(JSON.stringify({ error: "Failed to write SVG" }), {
+          status: 500,
+          headers: { "Content-Type": "application/json" },
+        });
+      }
+    }
+
     // Only handle POST requests to /log-event
     if (
       event.request.method !== "POST" ||
