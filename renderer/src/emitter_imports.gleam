@@ -33,6 +33,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("InlineImage", ExportedByFile(Some("InlineImage"), [])),
     #("List", ExportedByFile(None, ["List", "Item"])),
     #("Math", ExportedByFile(None, ["Math", "MathBlock"])),
+    #("MathJaxSvgExportTooltip", ExportedByFile(Some("MathJaxSvgExportTooltip"), [])),
     #("OutChapterLink", ExportedByFile(Some("OutChapterLink"), [])),
     #("SectionDivider", ExportedByFile(None, ["SectionDivider"])),
     #("SectionsBreadcrumbs", ExportedByFile(Some("SectionsBreadcrumbs"), ["BreadcrumbItem"])),

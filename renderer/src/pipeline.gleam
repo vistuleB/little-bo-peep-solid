@@ -4,6 +4,8 @@ import gleam/option.{None, Some}
 import infrastructure.{type Pipeline} as infra
 import prefabricated_pipelines as pp
 import desugarer_library as dl
+import blame.{Ext}
+import vxml.{V}
 
 const p_cannot_contain = [
   "Appendix", "ArticleTitle", "Bootcamp", "BoxedText", "CentralDisplay",
@@ -234,6 +236,11 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       True -> [
         dl.lbp_turn_lines_into_3003_spans("./src/content/", ["Math", "MathBlock"]),
         dl.lbp_adorn_img_with_3003_spans(#("./", "")),
+        dl.append_custom(#(
+          "MathBlock",
+          V(Ext([], "local-mathjax-svg-export-tooltip"), "MathJaxSvgExportTooltip", [], []),
+          infra.GoBack,
+        )),
       ]
       False -> []
     },
