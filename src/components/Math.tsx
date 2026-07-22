@@ -188,7 +188,7 @@ type InlineMathContainerProps = ParentProps<{
   renderedBy: Accessor<string>;
   routeCacheStatus: Accessor<string>;
   setRef: (element: HTMLSpanElement) => void;
-  visible: Accessor<boolean>;
+  revealed: Accessor<boolean>;
   html?: string;
 }>;
 
@@ -214,7 +214,7 @@ const InlineMathContainer = (props: InlineMathContainerProps) => {
           prerenderDebug().availableKeys
         }
         data-mathjax-rendered={props.renderedBy()}
-        style={{ opacity: props.visible() ? "1" : "0" }}
+        style={{ opacity: props.revealed() ? "1" : "0" }}
         ref={props.setRef}
         innerHTML={props.html}
       />
@@ -237,7 +237,7 @@ const InlineMathContainer = (props: InlineMathContainerProps) => {
         prerenderDebug().availableKeys
       }
       data-mathjax-rendered={props.renderedBy()}
-      style={{ opacity: props.visible() ? "1" : "0" }}
+      style={{ opacity: props.revealed() ? "1" : "0" }}
       ref={props.setRef}
     >
       {props.children}
@@ -267,15 +267,18 @@ const InlineMath = (props: ParentProps) => {
   const [liveHtml, setLiveHtml] = createSignal("");
   const activePrerenderedMathJax = () =>
     liveRendered() ? undefined : prerenderedMathJax();
-  const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
+  const [revealed, setRevealed] = createSignal(Boolean(prerenderedMathJax()));
   const { store, set_store } = useGlobalContext();
   const solutionMathJax = useSolutionMathJax();
+  const setRef = (element: HTMLSpanElement) => {
+    ref = element;
+  };
 
   createEffect(() => {
     if (activePrerenderedMathJax()) {
-      setVisible(true);
+      setRevealed(true);
     } else if (!liveRendered()) {
-      setVisible(false);
+      setRevealed(false);
     }
   });
 
@@ -301,7 +304,7 @@ const InlineMath = (props: ParentProps) => {
       store.saved_scroll_finished;
 
     if (prerenderedMathJax()) {
-      setVisible(true);
+      setRevealed(true);
       setScrollHeight();
       return;
     }
@@ -309,8 +312,8 @@ const InlineMath = (props: ParentProps) => {
     const mathJaxEntry = ref
       ? {
           ref,
-          visible,
-          setVisible,
+          visible: revealed,
+          setVisible: setRevealed,
           setScrollHeight,
           routeReady,
           afterTypeset: () => {
@@ -374,10 +377,8 @@ const InlineMath = (props: ParentProps) => {
               debug={prerenderedMathJaxDebug}
               renderedBy={renderedBy}
               routeCacheStatus={routeCacheStatus}
-              setRef={(element) => {
-                ref = element;
-              }}
-              visible={visible}
+              setRef={setRef}
+              revealed={revealed}
             >
               {resolvedChildren()}
             </InlineMathContainer>
@@ -387,10 +388,8 @@ const InlineMath = (props: ParentProps) => {
             debug={prerenderedMathJaxDebug}
             renderedBy={renderedBy}
             routeCacheStatus={routeCacheStatus}
-            setRef={(element) => {
-              ref = element;
-            }}
-            visible={visible}
+            setRef={setRef}
+            revealed={revealed}
             html={liveHtml()}
           />
         </Show>
@@ -402,10 +401,8 @@ const InlineMath = (props: ParentProps) => {
           html={entry.html}
           renderedBy={renderedBy}
           routeCacheStatus={routeCacheStatus}
-          setRef={(element) => {
-            ref = element;
-          }}
-          visible={visible}
+          setRef={setRef}
+          revealed={revealed}
         />
       )}
     </Show>

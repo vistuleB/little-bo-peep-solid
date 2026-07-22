@@ -65,7 +65,7 @@ body {
   color: var(--foreground-rgb);
   font-family: "Baskerville Regular";
   font-size: var(--document-font-size); /* Equivalent to text-xl */
-  line-height: 1.5em;
+  line-height: 1.55em;
 }
 
 /* Delimiters */
