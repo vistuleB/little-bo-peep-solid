@@ -11,7 +11,7 @@
 
     __dimensional analysis__
 
-    is that of “analyzing the units” within a mathematical 
+    is that of analyzing the units within a mathematical 
     expression to uncover contradictions (pointing
     to upstream errors) and/or conversely to offer
     validation.
@@ -28,7 +28,7 @@
     $$
 
     to indicate that inputs passed to $f$ have semantics
-    of units A while outputs returned by $f$ have semantics
+    of units A $\A$ while outputs returned by $f$ have semantics
     of units B. 
     For example,
 
@@ -53,7 +53,6 @@
         If
 
         $$
-        !! z : [\te{m}/\te{s}^2] \ra [\rt{0.1}\te{zł}\rt{0.1}]
         z : [\lbs] \ra [\pounds]
         $$
 
@@ -61,18 +60,16 @@
         
         $$z : \rr \ra \rr$$
         
-        !! is a function whose inputs denote meters per seconds
-        !! squared (a measure of acceleration) and whose outputs
-        !! denote Polish zloty. The
         is a function whose inputs denote pounds, the measure
         of weight, 
-        and whose outputs denote _British_ pounds, the measure
-        of wealth. The
+        and whose outputs denote pounds _sterling_, the measure
+        of wealth. 
+        !! The
 
-        __signature__
+        !! __signature__
 
-        of $z$ is “$(\lbs, \pounds)$”
-        or “$[\lbs] \ra [\pounds]$”.
+        !! of $z$ is “$(\lbs, \pounds)$”
+        !! or “$[\lbs] \ra [\pounds]$”.
 
 |> Section
     split_here=Rest

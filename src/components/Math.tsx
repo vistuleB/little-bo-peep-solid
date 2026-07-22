@@ -200,7 +200,7 @@ const InlineMathContainer = (props: InlineMathContainerProps) => {
   if (props.html !== undefined) {
     return (
       <span
-        class="transition-opacity"
+        class="math transition-opacity"
         data-prerendered-mathjax={renderedStatus()}
         data-prerendered-mathjax-cache={
           prerenderDebug().cacheLoaded ? "loaded" : "missing"
@@ -223,7 +223,7 @@ const InlineMathContainer = (props: InlineMathContainerProps) => {
 
   return (
     <span
-      class="transition-opacity"
+      class="math transition-opacity"
       data-prerendered-mathjax={renderedStatus()}
       data-prerendered-mathjax-cache={
         prerenderDebug().cacheLoaded ? "loaded" : "missing"

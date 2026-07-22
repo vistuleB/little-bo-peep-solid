@@ -8,7 +8,7 @@
     "compressed-size": 14095,
     "compression": "0.11%",
     "used-last-build": true,
-    "3chars": ["bt2"]
+    "3chars": ["bt2","pla"]
   },
   "test_native_1000.svg": {
     "build-version": "svgo-svg/S-T0.svg",
@@ -18,8 +18,8 @@
     "original-size": 498,
     "compressed-size": 354,
     "compression": "28.92%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla","pla","pla","pla"]
   },
   "svg_ch4_circle_at_2_4_black_version.svg": {
     "build-version": "svgo-svg/qPL0.svg",
@@ -536,7 +536,7 @@
     "compressed-size": 14477,
     "compression": "86.77%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "svg_ch3_ex_x0_y0_step0.svg": {
     "build-version": "svgo-svg/kIUQ.svg",
@@ -1009,7 +1009,7 @@
     "compressed-size": 32860,
     "compression": "66.11%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "svg_ch5_ex_pythagorean_graphs_cos2.svg": {
     "build-version": "svgo-svg/nEBv.svg",
@@ -2021,7 +2021,7 @@
     "compressed-size": 23248,
     "compression": "77.13%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg": {
     "build-version": "svgo-svg/Wi-I.svg",
@@ -2207,8 +2207,8 @@
     "original-size": 1572,
     "compressed-size": 506,
     "compression": "67.81%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "svg_ch3_f_box.svg": {
     "build-version": "svgo-svg/tYyP.svg",
@@ -2229,8 +2229,8 @@
     "original-size": 1565,
     "compressed-size": 501,
     "compression": "67.99%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "true_false_sixth_root_of_two_cloud1.svg": {
     "build-version": "svgo-svg/rgbH.svg",
@@ -2241,7 +2241,7 @@
     "compressed-size": 17231,
     "compression": "58.46%",
     "used-last-build": true,
-    "3chars": ["ch1"]
+    "3chars": ["ch1","pla"]
   },
   "svg_ch5_ex_0_2_radians_guess.svg": {
     "build-version": "svgo-svg/lwHG.svg",
@@ -2274,7 +2274,7 @@
     "compressed-size": 16108,
     "compression": "62.57%",
     "used-last-build": true,
-    "3chars": ["ch1"]
+    "3chars": ["ch1","pla"]
   },
   "svg_ch5_ex_gas_sphere_profile.svg": {
     "build-version": "svgo-svg/VrOC.svg",
@@ -2615,7 +2615,7 @@
     "compressed-size": 7366,
     "compression": "93.1%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "svg_ch4_circle_at_2_4_UNO_with_gradated_line.svg": {
     "build-version": "svgo-svg/VxRW.svg",
@@ -2735,8 +2735,8 @@
     "original-size": 1571,
     "compressed-size": 506,
     "compression": "67.79%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "svg_ch5_ch_cosine_and_sine_@minus_eta_v2.svg": {
     "build-version": "svgo-svg/BfG4.svg",
@@ -2912,7 +2912,7 @@
     "compressed-size": 16605,
     "compression": "85.75%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "derivative_sketching_method_1_step_1.svg": {
     "build-version": "svgo-svg/0-BA.svg",
@@ -3065,8 +3065,8 @@
     "original-size": 1571,
     "compressed-size": 506,
     "compression": "67.79%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "_e5_cosine_rule_via_jacks_two_cases.svg": {
     "build-version": "svgo-svg/YaSq.svg",
@@ -3088,7 +3088,7 @@
     "compressed-size": 7703,
     "compression": "83.04%",
     "used-last-build": true,
-    "3chars": ["ch1"]
+    "3chars": ["ch1","pla","pla","pla"]
   },
   "svg_ch4_one_long_line.svg": {
     "build-version": "svgo-svg/JTxK.svg",
@@ -3462,7 +3462,7 @@
     "compressed-size": 14015,
     "compression": "15.74%",
     "used-last-build": true,
-    "3chars": ["ch1"]
+    "3chars": ["ch1","pla"]
   },
   "svg_ch4_pacman1_maze_two_possibilities.svg": {
     "build-version": "svgo-svg/tzR7.svg",
@@ -4012,7 +4012,7 @@
     "compressed-size": 19787,
     "compression": "0.11%",
     "used-last-build": true,
-    "3chars": ["bt1"]
+    "3chars": ["bt1","pla"]
   },
   "svg_ch4_one_long_line_what_are_the_rises_3.svg": {
     "build-version": "svgo-svg/sAnB.svg",
@@ -4133,7 +4133,7 @@
     "compressed-size": 7733,
     "compression": "0.6%",
     "used-last-build": true,
-    "3chars": ["bt2"]
+    "3chars": ["bt2","pla"]
   },
   "svg_ch5_ch_unit_circle_with_new_definition.svg": {
     "build-version": "svgo-svg/h28T.svg",
@@ -4397,7 +4397,7 @@
     "compressed-size": 38376,
     "compression": "80.81%",
     "used-last-build": true,
-    "3chars": ["ch1"]
+    "3chars": ["ch1","pla"]
   },
   "svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg": {
     "build-version": "svgo-svg/Wk9W.svg",
@@ -4672,7 +4672,7 @@
     "compressed-size": 8533,
     "compression": "1.4%",
     "used-last-build": true,
-    "3chars": ["bt2"]
+    "3chars": ["bt2","pla"]
   },
   "svg_ch5_ex_four_graphs.svg": {
     "build-version": "svgo-svg/huBu.svg",
@@ -5321,7 +5321,7 @@
     "compressed-size": 23646,
     "compression": "0.32%",
     "used-last-build": true,
-    "3chars": ["bt2"]
+    "3chars": ["bt2","pla"]
   },
   "svg_ch4_5_euler_after_5_10th.svg": {
     "build-version": "svgo-svg/GKbB.svg",
@@ -5452,8 +5452,8 @@
     "original-size": 495,
     "compressed-size": 352,
     "compression": "28.89%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla","pla","pla"]
   },
   "svg_ch3_connection_x_6.svg": {
     "build-version": "svgo-svg/WvHW.svg",
@@ -5639,8 +5639,8 @@
     "original-size": 1565,
     "compressed-size": 501,
     "compression": "67.99%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "svg_ch4_RATS_second_term_cloud.svg": {
     "build-version": "svgo-svg/9OXS.svg",
@@ -5947,8 +5947,8 @@
     "original-size": 1572,
     "compressed-size": 506,
     "compression": "67.81%",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["pla"]
   },
   "svg_ch5_ex_bomb_shelter_annotated.svg": {
     "build-version": "svgo-svg/x_qH.svg",
@@ -5981,7 +5981,7 @@
     "compressed-size": 7130,
     "compression": "58.6%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "svg_ch4_circle_at_2_4_p2_inline.svg": {
     "build-version": "svgo-svg/6ZK8.svg",
@@ -6036,7 +6036,7 @@
     "compressed-size": 34933,
     "compression": "0.34%",
     "used-last-build": true,
-    "3chars": ["bt2"]
+    "3chars": ["bt2","pla"]
   },
   "svg_ch4_ex_cosine_recall.svg": {
     "build-version": "svgo-svg/X2nI.svg",
@@ -6124,7 +6124,7 @@
     "compressed-size": 31334,
     "compression": "34.84%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "e5_sqrt_AB_solution2_1.svg": {
     "build-version": "svgo-svg/OwXA.svg",
@@ -6663,7 +6663,7 @@
     "compressed-size": 58826,
     "compression": "77.35%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "svg_ch5_ch_unit_circle_@-3_smaller.svg": {
     "build-version": "svgo-svg/9Ygl.svg",
@@ -6696,7 +6696,7 @@
     "compressed-size": 12800,
     "compression": "44.82%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "e5_cosx_plus_sinx_as_geometric_cos_composition.svg": {
     "build-version": "svgo-svg/4t6F.svg",
@@ -6927,7 +6927,7 @@
     "compressed-size": 13584,
     "compression": "88.89%",
     "used-last-build": true,
-    "3chars": ["ch1"]
+    "3chars": ["ch1","pla"]
   },
   "svg_ch4_velocity_vector_radius_3_speed_2_acceleration_uncentered.svg": {
     "build-version": "svgo-svg/dF7b.svg",
@@ -7037,7 +7037,7 @@
     "compressed-size": 30835,
     "compression": "67.09%",
     "used-last-build": true,
-    "3chars": ["ch1"]
+    "3chars": ["ch1","pla"]
   },
   "svg_ch3_truth_be_said.svg": {
     "build-version": "svgo-svg/ioa4.svg",
@@ -7158,7 +7158,7 @@
     "compressed-size": 12352,
     "compression": "20.73%",
     "used-last-build": true,
-    "3chars": ["ch1"]
+    "3chars": ["ch1","pla"]
   },
   "svg_ch5_ch_triangle_sequence_1.svg": {
     "build-version": "svgo-svg/xqXh.svg",
@@ -7202,7 +7202,7 @@
     "compressed-size": 23286,
     "compression": "34.58%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg": {
     "build-version": "svgo-svg/auto.svg",
@@ -7730,7 +7730,7 @@
     "compressed-size": 46843,
     "compression": "0.04%",
     "used-last-build": true,
-    "3chars": ["bt2"]
+    "3chars": ["bt2","pla"]
   },
   "svg_ch5_ex_tan_sq_AB_ratio_left_part.svg": {
     "build-version": "svgo-svg/DU_p.svg",
@@ -7961,7 +7961,7 @@
     "compressed-size": 41458,
     "compression": "0.08%",
     "used-last-build": true,
-    "3chars": ["bt2"]
+    "3chars": ["bt2","pla"]
   },
   "svg_ch4_cosine_curves_cresting.svg": {
     "build-version": "svgo-svg/P9o9.svg",
@@ -8346,7 +8346,7 @@
     "compressed-size": 14472,
     "compression": "68.19%",
     "used-last-build": true,
-    "3chars": ["ch2"]
+    "3chars": ["ch2","pla"]
   },
   "svg_ch5_ch_snail_stack_3.svg": {
     "build-version": "svgo-svg/ADw8.svg",
