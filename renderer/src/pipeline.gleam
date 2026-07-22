@@ -155,8 +155,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       ..pp.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
     ],
     [
-      dl.find_replace__outside(#("\\*", "*"), ["MathBlock", "Math"]),
-      dl.find_replace__outside(#("\\_", "_"), ["MathBlock", "Math"]),
+      dl.unescape_delimiters__outside(["_", "*"], ["MathBlock", "Math"]),
       // dl.insert_word_joiner_into_adjacent_text_nodes(["Math", "i", "b"]),
       dl.wrap_adjacent_non_whitespace_text_with(#(["Math"], "NoBreak")),
       // cleaning 'p' second time around (not sure all the steps are necessary this time):

@@ -712,7 +712,7 @@ const Rest = () => {
                 offsetX="2.5em"
                 offsetY={0}
                 atLeastAsWide={true}
-                intrinsicWidth={400}
+                intrinsicWidth={300}
                 intrinsicHeight={500}
               />
             </MathBlock>

@@ -9,6 +9,7 @@ import {
   onMount,
   ParentProps,
   Setter,
+  Show,
 } from "solid-js";
 import {
   ENABLE_MATHJAX_INTERSECTION_FALLBACK,
@@ -201,6 +202,7 @@ const InlineMath = (props: ParentProps) => {
     );
   });
   const [liveRendered, setLiveRendered] = createSignal(false);
+  const [liveHtml, setLiveHtml] = createSignal("");
   const activePrerenderedMathJax = () =>
     liveRendered() ? undefined : prerenderedMathJax();
   const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
@@ -208,7 +210,11 @@ const InlineMath = (props: ParentProps) => {
   const solutionMathJax = useSolutionMathJax();
 
   createEffect(() => {
-    if (activePrerenderedMathJax()) setVisible(true);
+    if (activePrerenderedMathJax()) {
+      setVisible(true);
+    } else if (!liveRendered()) {
+      setVisible(false);
+    }
   });
 
   const renderedBy = () =>
@@ -216,9 +222,7 @@ const InlineMath = (props: ParentProps) => {
       ? "prerendered"
       : liveRendered()
         ? "live"
-        : visible()
-          ? "live"
-          : "pending";
+        : "pending";
 
   onMount(() => {
     ensurePrerenderedMathJaxRouteCache(window.location.pathname);
@@ -247,7 +251,10 @@ const InlineMath = (props: ParentProps) => {
           setVisible,
           setScrollHeight,
           routeReady,
-          afterTypeset: () => setLiveRendered(true),
+          afterTypeset: () => {
+            setLiveHtml(ref?.innerHTML || "");
+            setLiveRendered(true);
+          },
           typesetting: false,
           active: true,
         }
@@ -294,33 +301,97 @@ const InlineMath = (props: ParentProps) => {
   });
 
   return (
-    <span
-      class="transition-opacity"
-      data-prerendered-mathjax={
-        prerenderedMathJaxDebug().enabled
-          ? prerenderedMathJaxDebug().hit
-            ? "hit"
-            : "miss"
-          : "off"
+    <Show
+      when={activePrerenderedMathJax()}
+      keyed
+      fallback={
+        <Show
+          when={liveRendered()}
+          fallback={
+            <span
+              class="transition-opacity"
+              data-prerendered-mathjax={
+                prerenderedMathJaxDebug().enabled
+                  ? prerenderedMathJaxDebug().hit
+                    ? "hit"
+                    : "miss"
+                  : "off"
+              }
+              data-prerendered-mathjax-cache={
+                prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
+              }
+              data-prerendered-mathjax-route-cache={routeCacheStatus()}
+              data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
+              data-prerendered-mathjax-key-present={
+                prerenderedMathJaxDebug().keyPresent ? "true" : "false"
+              }
+              data-prerendered-mathjax-available-keys={
+                prerenderedMathJaxDebug().availableKeys
+              }
+              data-mathjax-rendered={renderedBy()}
+              style={{ opacity: visible() ? "1" : "0" }}
+              ref={ref}
+            >
+              {resolvedChildren()}
+            </span>
+          }
+        >
+          <span
+            class="transition-opacity"
+            data-prerendered-mathjax={
+              prerenderedMathJaxDebug().enabled
+                ? prerenderedMathJaxDebug().hit
+                  ? "hit"
+                  : "miss"
+                : "off"
+            }
+            data-prerendered-mathjax-cache={
+              prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
+            }
+            data-prerendered-mathjax-route-cache={routeCacheStatus()}
+            data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
+            data-prerendered-mathjax-key-present={
+              prerenderedMathJaxDebug().keyPresent ? "true" : "false"
+            }
+            data-prerendered-mathjax-available-keys={
+              prerenderedMathJaxDebug().availableKeys
+            }
+            data-mathjax-rendered={renderedBy()}
+            style={{ opacity: visible() ? "1" : "0" }}
+            ref={ref}
+            innerHTML={liveHtml()}
+          />
+        </Show>
       }
-      data-prerendered-mathjax-cache={
-        prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
-      }
-      data-prerendered-mathjax-route-cache={routeCacheStatus()}
-      data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
-      data-prerendered-mathjax-key-present={
-        prerenderedMathJaxDebug().keyPresent ? "true" : "false"
-      }
-      data-prerendered-mathjax-available-keys={
-        prerenderedMathJaxDebug().availableKeys
-      }
-      data-mathjax-rendered={renderedBy()}
-      style={{ opacity: visible() ? "1" : "0" }}
-      ref={ref}
-      innerHTML={activePrerenderedMathJax()?.html}
     >
-      {activePrerenderedMathJax() ? undefined : resolvedChildren()}
-    </span>
+      {(entry) => (
+        <span
+          class="transition-opacity"
+          data-prerendered-mathjax={
+            prerenderedMathJaxDebug().enabled
+              ? prerenderedMathJaxDebug().hit
+                ? "hit"
+                : "miss"
+              : "off"
+          }
+          data-prerendered-mathjax-cache={
+            prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
+          }
+          data-prerendered-mathjax-route-cache={routeCacheStatus()}
+          data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
+          data-prerendered-mathjax-key-present={
+            prerenderedMathJaxDebug().keyPresent ? "true" : "false"
+          }
+          data-prerendered-mathjax-available-keys={
+            prerenderedMathJaxDebug().availableKeys
+          }
+          data-mathjax-rendered={renderedBy()}
+          style={{ opacity: visible() ? "1" : "0" }}
+          ref={ref}
+          innerHTML={entry.html}
+        />
+      )}
+    </Show>
   );
 };
 
