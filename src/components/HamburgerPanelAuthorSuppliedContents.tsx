@@ -59,12 +59,6 @@ const HamburgerPanelAuthorSuppliedContents = () => {
         >
           Powers of 10
         </HamburgerPanelItem>
-        <HamburgerPanelItem
-          article_type={3}
-          href="bootcamp3"
-        >
-          Components Playground
-        </HamburgerPanelItem>
       </ul>
     </div>
   </>;

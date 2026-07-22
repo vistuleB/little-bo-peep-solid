@@ -183,6 +183,68 @@ const nonTextChildren = (value: unknown): unknown => {
   return value;
 };
 
+type InlineMathContainerProps = ParentProps<{
+  debug: Accessor<ReturnType<typeof getPrerenderedMathJaxDebug>>;
+  renderedBy: Accessor<string>;
+  routeCacheStatus: Accessor<string>;
+  setRef: (element: HTMLSpanElement) => void;
+  visible: Accessor<boolean>;
+  html?: string;
+}>;
+
+const InlineMathContainer = (props: InlineMathContainerProps) => {
+  const prerenderDebug = () => props.debug();
+  const renderedStatus = () =>
+    prerenderDebug().enabled ? (prerenderDebug().hit ? "hit" : "miss") : "off";
+
+  if (props.html !== undefined) {
+    return (
+      <span
+        class="transition-opacity"
+        data-prerendered-mathjax={renderedStatus()}
+        data-prerendered-mathjax-cache={
+          prerenderDebug().cacheLoaded ? "loaded" : "missing"
+        }
+        data-prerendered-mathjax-route-cache={props.routeCacheStatus()}
+        data-prerendered-mathjax-key={prerenderDebug().key}
+        data-prerendered-mathjax-key-present={
+          prerenderDebug().keyPresent ? "true" : "false"
+        }
+        data-prerendered-mathjax-available-keys={
+          prerenderDebug().availableKeys
+        }
+        data-mathjax-rendered={props.renderedBy()}
+        style={{ opacity: props.visible() ? "1" : "0" }}
+        ref={props.setRef}
+        innerHTML={props.html}
+      />
+    );
+  }
+
+  return (
+    <span
+      class="transition-opacity"
+      data-prerendered-mathjax={renderedStatus()}
+      data-prerendered-mathjax-cache={
+        prerenderDebug().cacheLoaded ? "loaded" : "missing"
+      }
+      data-prerendered-mathjax-route-cache={props.routeCacheStatus()}
+      data-prerendered-mathjax-key={prerenderDebug().key}
+      data-prerendered-mathjax-key-present={
+        prerenderDebug().keyPresent ? "true" : "false"
+      }
+      data-prerendered-mathjax-available-keys={
+        prerenderDebug().availableKeys
+      }
+      data-mathjax-rendered={props.renderedBy()}
+      style={{ opacity: props.visible() ? "1" : "0" }}
+      ref={props.setRef}
+    >
+      {props.children}
+    </span>
+  );
+};
+
 const InlineMath = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
   const resolvedChildren = resolveChildren(() => props.children);
@@ -308,87 +370,42 @@ const InlineMath = (props: ParentProps) => {
         <Show
           when={liveRendered()}
           fallback={
-            <span
-              class="transition-opacity"
-              data-prerendered-mathjax={
-                prerenderedMathJaxDebug().enabled
-                  ? prerenderedMathJaxDebug().hit
-                    ? "hit"
-                    : "miss"
-                  : "off"
-              }
-              data-prerendered-mathjax-cache={
-                prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
-              }
-              data-prerendered-mathjax-route-cache={routeCacheStatus()}
-              data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
-              data-prerendered-mathjax-key-present={
-                prerenderedMathJaxDebug().keyPresent ? "true" : "false"
-              }
-              data-prerendered-mathjax-available-keys={
-                prerenderedMathJaxDebug().availableKeys
-              }
-              data-mathjax-rendered={renderedBy()}
-              style={{ opacity: visible() ? "1" : "0" }}
-              ref={ref}
+            <InlineMathContainer
+              debug={prerenderedMathJaxDebug}
+              renderedBy={renderedBy}
+              routeCacheStatus={routeCacheStatus}
+              setRef={(element) => {
+                ref = element;
+              }}
+              visible={visible}
             >
               {resolvedChildren()}
-            </span>
+            </InlineMathContainer>
           }
         >
-          <span
-            class="transition-opacity"
-            data-prerendered-mathjax={
-              prerenderedMathJaxDebug().enabled
-                ? prerenderedMathJaxDebug().hit
-                  ? "hit"
-                  : "miss"
-                : "off"
-            }
-            data-prerendered-mathjax-cache={
-              prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
-            }
-            data-prerendered-mathjax-route-cache={routeCacheStatus()}
-            data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
-            data-prerendered-mathjax-key-present={
-              prerenderedMathJaxDebug().keyPresent ? "true" : "false"
-            }
-            data-prerendered-mathjax-available-keys={
-              prerenderedMathJaxDebug().availableKeys
-            }
-            data-mathjax-rendered={renderedBy()}
-            style={{ opacity: visible() ? "1" : "0" }}
-            ref={ref}
-            innerHTML={liveHtml()}
+          <InlineMathContainer
+            debug={prerenderedMathJaxDebug}
+            renderedBy={renderedBy}
+            routeCacheStatus={routeCacheStatus}
+            setRef={(element) => {
+              ref = element;
+            }}
+            visible={visible}
+            html={liveHtml()}
           />
         </Show>
       }
     >
       {(entry) => (
-        <span
-          class="transition-opacity"
-          data-prerendered-mathjax={
-            prerenderedMathJaxDebug().enabled
-              ? prerenderedMathJaxDebug().hit
-                ? "hit"
-                : "miss"
-              : "off"
-          }
-          data-prerendered-mathjax-cache={
-            prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
-          }
-          data-prerendered-mathjax-route-cache={routeCacheStatus()}
-          data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
-          data-prerendered-mathjax-key-present={
-            prerenderedMathJaxDebug().keyPresent ? "true" : "false"
-          }
-          data-prerendered-mathjax-available-keys={
-            prerenderedMathJaxDebug().availableKeys
-          }
-          data-mathjax-rendered={renderedBy()}
-          style={{ opacity: visible() ? "1" : "0" }}
-          ref={ref}
-          innerHTML={entry.html}
+        <InlineMathContainer
+          debug={prerenderedMathJaxDebug}
+          html={entry.html}
+          renderedBy={renderedBy}
+          routeCacheStatus={routeCacheStatus}
+          setRef={(element) => {
+            ref = element;
+          }}
+          visible={visible}
         />
       )}
     </Show>

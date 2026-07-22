@@ -2,7 +2,7 @@
     |> ChapterSelection
         >>sets         >>_bt2_start_  >>_bt2_exercises_
         >>powers       >>_bt1_start_
-        >>playground
+        !! >>playground
         >>refreshers   >>_ch1_start_  >>_ch1_exercises_
         >>slopes       >>_ch2_start_  >>_ch2_exercises_
         >>functions    >>_ch3_start_  >>_ch3_exercises_
