@@ -8,6 +8,9 @@ const env = loadEnv(mode, process.cwd(), "");
 const viteEnv = process.env.VITE_ENV || env.VITE_ENV;
 const mathJAXVersion = process.env.MATHJAX_VERSION || env.MATHJAX_VERSION || "4";
 const isAuthorMode = (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
+const mathJaxDebugAttributes =
+  (process.env.MATHJAX_DEBUG_ATTRIBUTES || env.MATHJAX_DEBUG_ATTRIBUTES) ===
+    "true" || isAuthorMode;
 const isOfflineMode = (process.env.OFFLINE_MODE || env.OFFLINE_MODE) === "true";
 const prerenderMathJax =
   (process.env.PRERENDER_MATHJAX || env.PRERENDER_MATHJAX || "true") === "true";
@@ -31,6 +34,7 @@ export default defineConfig({
   vite: {
     define: {
       "import.meta.env.VITE_AUTHOR_MODE": JSON.stringify(isAuthorMode),
+      "import.meta.env.MATHJAX_DEBUG_ATTRIBUTES": mathJaxDebugAttributes,
       "import.meta.env.VITE_ENV": JSON.stringify(viteEnv),
       "import.meta.env.OFFLINE_MODE": isOfflineMode,
       "import.meta.env.MATHJAX_VERSION": JSON.stringify(mathJAXVersion),

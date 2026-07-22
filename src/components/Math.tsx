@@ -194,6 +194,8 @@ const mathJaxDebugAttributes = (
   routeCacheStatus: Accessor<string>,
   renderedBy: Accessor<string>,
 ) => {
+  if (!import.meta.env.MATHJAX_DEBUG_ATTRIBUTES) return {};
+
   const prerenderDebug = debug();
   return {
     "data-prerendered-mathjax": prerenderedMathJaxStatus(prerenderDebug),
