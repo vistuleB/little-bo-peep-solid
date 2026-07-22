@@ -16,8 +16,6 @@ import styleJoin from "~/utils/styleJoin";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { PAN_RECENTER_CONSTRAIN_IMAGE_EVENT } from "~/constants";
 
-const SHOW_DEBUG_COLORS = false;
-
 type ImageProps = ParentProps &
   SharedProps & {
     src: string;
@@ -91,15 +89,6 @@ const Image = (props: ImageProps) => {
     after_first_click: constrainedContent.afterFirstClick(),
   }));
 
-  const debugBackground = () => {
-    const currentScale = scale().scale;
-    const isConstrained = constrainedContent.constrained();
-    if (isConstrained && currentScale < 1) return "#8b0000";
-    if (isConstrained) return "#ffb3b3";
-    if (currentScale < 1) return "#12b886";
-    return "#a5d8ff";
-  };
-
   const handleImageLoad = () => {
     const widthWasMissing = !naturalImageWidth();
     const heightWasMissing = !naturalImageHeight();
@@ -129,7 +118,6 @@ const Image = (props: ImageProps) => {
     const aspectRatio = intrinsicAspectRatio();
 
     return styleJoin(merged.style, {
-      backgroundColor: SHOW_DEBUG_COLORS ? debugBackground() : undefined,
       width,
       height,
       aspectRatio: aspectRatio || undefined,
