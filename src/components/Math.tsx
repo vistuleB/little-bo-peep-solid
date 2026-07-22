@@ -32,6 +32,7 @@ import getPrerenderedMathJax, {
   ensurePrerenderedMathJaxRouteCache,
   getPrerenderedMathJaxRouteCacheStatus,
   getPrerenderedMathJaxDebug,
+  PrerenderedMathKind,
   subscribePrerenderedMathJaxCache,
 } from "~/utils/prerenderedMathJax";
 
@@ -183,8 +184,68 @@ const nonTextChildren = (value: unknown): unknown => {
   return value;
 };
 
+type PrerenderedMathJaxDebug = ReturnType<typeof getPrerenderedMathJaxDebug>;
+
+const prerenderedMathJaxStatus = (debug: PrerenderedMathJaxDebug) =>
+  debug.enabled ? (debug.hit ? "hit" : "miss") : "off";
+
+const mathJaxDebugAttributes = (
+  debug: Accessor<PrerenderedMathJaxDebug>,
+  routeCacheStatus: Accessor<string>,
+  renderedBy: Accessor<string>,
+) => {
+  const prerenderDebug = debug();
+  return {
+    "data-prerendered-mathjax": prerenderedMathJaxStatus(prerenderDebug),
+    "data-prerendered-mathjax-cache": prerenderDebug.cacheLoaded
+      ? "loaded"
+      : "missing",
+    "data-prerendered-mathjax-route-cache": routeCacheStatus(),
+    "data-prerendered-mathjax-key": prerenderDebug.key,
+    "data-prerendered-mathjax-key-present": prerenderDebug.keyPresent
+      ? "true"
+      : "false",
+    "data-prerendered-mathjax-available-keys": prerenderDebug.availableKeys,
+    "data-mathjax-rendered": renderedBy(),
+  };
+};
+
+const currentPathname = () =>
+  typeof window === "undefined" ? "" : window.location.pathname;
+
+const usePrerenderedMathJaxCache = (
+  kind: PrerenderedMathKind,
+  resolvedChildren: Accessor<unknown>,
+) => {
+  const [routeCacheVersion, setRouteCacheVersion] = createSignal(0);
+
+  const entry = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJax(kind, resolvedChildren());
+  });
+
+  const debug = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJaxDebug(kind, resolvedChildren());
+  });
+
+  const routeCacheStatus = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJaxRouteCacheStatus(currentPathname());
+  });
+
+  const subscribeCurrentRoute = () => {
+    ensurePrerenderedMathJaxRouteCache(window.location.pathname);
+    return subscribePrerenderedMathJaxCache(() =>
+      setRouteCacheVersion((version) => version + 1),
+    );
+  };
+
+  return { entry, debug, routeCacheStatus, subscribeCurrentRoute };
+};
+
 type InlineMathContainerProps = ParentProps<{
-  debug: Accessor<ReturnType<typeof getPrerenderedMathJaxDebug>>;
+  debug: Accessor<PrerenderedMathJaxDebug>;
   renderedBy: Accessor<string>;
   routeCacheStatus: Accessor<string>;
   setRef: (element: HTMLSpanElement) => void;
@@ -193,27 +254,15 @@ type InlineMathContainerProps = ParentProps<{
 }>;
 
 const InlineMathContainer = (props: InlineMathContainerProps) => {
-  const prerenderDebug = () => props.debug();
-  const renderedStatus = () =>
-    prerenderDebug().enabled ? (prerenderDebug().hit ? "hit" : "miss") : "off";
-
   if (props.html !== undefined) {
     return (
       <span
         class="math transition-opacity"
-        data-prerendered-mathjax={renderedStatus()}
-        data-prerendered-mathjax-cache={
-          prerenderDebug().cacheLoaded ? "loaded" : "missing"
-        }
-        data-prerendered-mathjax-route-cache={props.routeCacheStatus()}
-        data-prerendered-mathjax-key={prerenderDebug().key}
-        data-prerendered-mathjax-key-present={
-          prerenderDebug().keyPresent ? "true" : "false"
-        }
-        data-prerendered-mathjax-available-keys={
-          prerenderDebug().availableKeys
-        }
-        data-mathjax-rendered={props.renderedBy()}
+        {...mathJaxDebugAttributes(
+          props.debug,
+          props.routeCacheStatus,
+          props.renderedBy,
+        )}
         style={{ opacity: props.revealed() ? "1" : "0" }}
         ref={props.setRef}
         innerHTML={props.html}
@@ -224,19 +273,11 @@ const InlineMathContainer = (props: InlineMathContainerProps) => {
   return (
     <span
       class="math transition-opacity"
-      data-prerendered-mathjax={renderedStatus()}
-      data-prerendered-mathjax-cache={
-        prerenderDebug().cacheLoaded ? "loaded" : "missing"
-      }
-      data-prerendered-mathjax-route-cache={props.routeCacheStatus()}
-      data-prerendered-mathjax-key={prerenderDebug().key}
-      data-prerendered-mathjax-key-present={
-        prerenderDebug().keyPresent ? "true" : "false"
-      }
-      data-prerendered-mathjax-available-keys={
-        prerenderDebug().availableKeys
-      }
-      data-mathjax-rendered={props.renderedBy()}
+      {...mathJaxDebugAttributes(
+        props.debug,
+        props.routeCacheStatus,
+        props.renderedBy,
+      )}
       style={{ opacity: props.revealed() ? "1" : "0" }}
       ref={props.setRef}
     >
@@ -248,26 +289,17 @@ const InlineMathContainer = (props: InlineMathContainerProps) => {
 const InlineMath = (props: ParentProps) => {
   let ref: HTMLSpanElement | undefined;
   const resolvedChildren = resolveChildren(() => props.children);
-  const [routeCacheVersion, setRouteCacheVersion] = createSignal(0);
-  const prerenderedMathJax = createMemo(() => {
-    routeCacheVersion();
-    return getPrerenderedMathJax("inline", resolvedChildren());
-  });
-  const prerenderedMathJaxDebug = createMemo(() => {
-    routeCacheVersion();
-    return getPrerenderedMathJaxDebug("inline", resolvedChildren());
-  });
-  const routeCacheStatus = createMemo(() => {
-    routeCacheVersion();
-    return getPrerenderedMathJaxRouteCacheStatus(
-      typeof window === "undefined" ? "" : window.location.pathname,
-    );
-  });
+  const prerenderedMathJax = usePrerenderedMathJaxCache(
+    "inline",
+    resolvedChildren,
+  );
   const [liveRendered, setLiveRendered] = createSignal(false);
   const [liveHtml, setLiveHtml] = createSignal("");
   const activePrerenderedMathJax = () =>
-    liveRendered() ? undefined : prerenderedMathJax();
-  const [revealed, setRevealed] = createSignal(Boolean(prerenderedMathJax()));
+    liveRendered() ? undefined : prerenderedMathJax.entry();
+  const [revealed, setRevealed] = createSignal(
+    Boolean(prerenderedMathJax.entry()),
+  );
   const { store, set_store } = useGlobalContext();
   const solutionMathJax = useSolutionMathJax();
   const setRef = (element: HTMLSpanElement) => {
@@ -290,10 +322,8 @@ const InlineMath = (props: ParentProps) => {
         : "pending";
 
   onMount(() => {
-    ensurePrerenderedMathJaxRouteCache(window.location.pathname);
-    const unsubscribePrerenderedMathJaxCache = subscribePrerenderedMathJaxCache(
-      () => setRouteCacheVersion((version) => version + 1),
-    );
+    const unsubscribePrerenderedMathJaxCache =
+      prerenderedMathJax.subscribeCurrentRoute();
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
     const routeReady = () =>
@@ -303,7 +333,7 @@ const InlineMath = (props: ParentProps) => {
       store.route_phase === "idle" &&
       store.saved_scroll_finished;
 
-    if (prerenderedMathJax()) {
+    if (prerenderedMathJax.entry()) {
       setRevealed(true);
       setScrollHeight();
       return;
@@ -374,9 +404,9 @@ const InlineMath = (props: ParentProps) => {
           when={liveRendered()}
           fallback={
             <InlineMathContainer
-              debug={prerenderedMathJaxDebug}
+              debug={prerenderedMathJax.debug}
               renderedBy={renderedBy}
-              routeCacheStatus={routeCacheStatus}
+              routeCacheStatus={prerenderedMathJax.routeCacheStatus}
               setRef={setRef}
               revealed={revealed}
             >
@@ -385,9 +415,9 @@ const InlineMath = (props: ParentProps) => {
           }
         >
           <InlineMathContainer
-            debug={prerenderedMathJaxDebug}
+            debug={prerenderedMathJax.debug}
             renderedBy={renderedBy}
-            routeCacheStatus={routeCacheStatus}
+            routeCacheStatus={prerenderedMathJax.routeCacheStatus}
             setRef={setRef}
             revealed={revealed}
             html={liveHtml()}
@@ -397,10 +427,10 @@ const InlineMath = (props: ParentProps) => {
     >
       {(entry) => (
         <InlineMathContainer
-          debug={prerenderedMathJaxDebug}
+          debug={prerenderedMathJax.debug}
           html={entry.html}
           renderedBy={renderedBy}
-          routeCacheStatus={routeCacheStatus}
+          routeCacheStatus={prerenderedMathJax.routeCacheStatus}
           setRef={setRef}
           revealed={revealed}
         />
@@ -420,26 +450,17 @@ export const MathBlock = (props: MathBlockProps) => {
   const merged = mergeProps({ constrained: true }, props);
   let ref: HTMLDivElement | undefined;
   const resolvedChildren = resolveChildren(() => merged.children);
-  const [routeCacheVersion, setRouteCacheVersion] = createSignal(0);
-  const prerenderedMathJax = createMemo(() => {
-    routeCacheVersion();
-    return getPrerenderedMathJax("display", resolvedChildren());
-  });
-  const prerenderedMathJaxDebug = createMemo(() => {
-    routeCacheVersion();
-    return getPrerenderedMathJaxDebug("display", resolvedChildren());
-  });
-  const routeCacheStatus = createMemo(() => {
-    routeCacheVersion();
-    return getPrerenderedMathJaxRouteCacheStatus(
-      typeof window === "undefined" ? "" : window.location.pathname,
-    );
-  });
+  const prerenderedMathJax = usePrerenderedMathJaxCache(
+    "display",
+    resolvedChildren,
+  );
   const [liveRendered, setLiveRendered] = createSignal(false);
   const activePrerenderedMathJax = () =>
-    liveRendered() ? undefined : prerenderedMathJax();
+    liveRendered() ? undefined : prerenderedMathJax.entry();
   const { store, set_store } = useGlobalContext();
-  const [visible, setVisible] = createSignal(Boolean(prerenderedMathJax()));
+  const [visible, setVisible] = createSignal(
+    Boolean(prerenderedMathJax.entry()),
+  );
   const [naturalWidth, setNaturalWidth] = createSignal(0);
   const constrainedContent = useConstrainedContent({
     naturalWidth,
@@ -503,10 +524,8 @@ export const MathBlock = (props: MathBlockProps) => {
   };
 
   onMount(() => {
-    ensurePrerenderedMathJaxRouteCache(window.location.pathname);
-    const unsubscribePrerenderedMathJaxCache = subscribePrerenderedMathJaxCache(
-      () => setRouteCacheVersion((version) => version + 1),
-    );
+    const unsubscribePrerenderedMathJaxCache =
+      prerenderedMathJax.subscribeCurrentRoute();
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
     const routeReady = () =>
@@ -587,25 +606,11 @@ export const MathBlock = (props: MathBlockProps) => {
     <ScaleProvider scale={scale}>
       <div
         id={merged.id}
-        data-prerendered-mathjax={
-          prerenderedMathJaxDebug().enabled
-            ? prerenderedMathJaxDebug().hit
-              ? "hit"
-              : "miss"
-            : "off"
-        }
-        data-prerendered-mathjax-cache={
-          prerenderedMathJaxDebug().cacheLoaded ? "loaded" : "missing"
-        }
-        data-prerendered-mathjax-route-cache={routeCacheStatus()}
-        data-prerendered-mathjax-key={prerenderedMathJaxDebug().key}
-        data-prerendered-mathjax-key-present={
-          prerenderedMathJaxDebug().keyPresent ? "true" : "false"
-        }
-        data-prerendered-mathjax-available-keys={
-          prerenderedMathJaxDebug().availableKeys
-        }
-        data-mathjax-rendered={renderedBy()}
+        {...mathJaxDebugAttributes(
+          prerenderedMathJax.debug,
+          prerenderedMathJax.routeCacheStatus,
+          renderedBy,
+        )}
         data-horizontal-inspectable={
           constrainedContent.constrained() ? undefined : "true"
         }
