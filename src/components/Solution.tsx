@@ -48,6 +48,8 @@ import {
 } from "~/store/SolutionMathJaxProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 
+const SOLUTION_HEIGHT_RECHECK_DELAYS = [50, 500, 1200];
+
 type SolutionProps = ParentProps &
   SharedProps & {
     re_calculate_height?: boolean;
@@ -73,6 +75,33 @@ const SpaceBeforeNextExerciseWhenNotLastExerciseInListViewAlwaysShowing =
 const SpaceBeforeBackupArrow = () => (
   <Spacer height="var(--document-before-backup-arrow-space)" />
 );
+
+const scheduleAnimationFrame = (callback: () => void) => {
+  const frame = requestAnimationFrame(callback);
+  return () => cancelAnimationFrame(frame);
+};
+
+const scheduleDelayedCallbacks = (
+  callback: () => void,
+  delays: number[],
+  shouldRun: () => boolean = () => true,
+) => {
+  const timeouts = delays.map((delay) =>
+    window.setTimeout(() => {
+      if (shouldRun()) callback();
+    }, delay),
+  );
+  return () => timeouts.forEach((timeout) => window.clearTimeout(timeout));
+};
+
+const resetNowAndScheduleRechecks = (
+  resetter: () => void,
+  shouldRun: () => boolean,
+  delays = SOLUTION_HEIGHT_RECHECK_DELAYS,
+) => {
+  resetter();
+  return scheduleDelayedCallbacks(resetter, delays, shouldRun);
+};
 
 type SolutionViewportDwellPreloadEntry = {
   element: HTMLElement;
@@ -327,7 +356,8 @@ export const Solution = (props: SolutionProps) => {
   createEffect(() => {
     if (!solution_open()) return;
     mount_solution_content();
-    requestAnimationFrame(reset_content_height_etc);
+    const cancelFrame = scheduleAnimationFrame(reset_content_height_etc);
+    onCleanup(cancelFrame);
   });
 
   onCleanup(() => {
@@ -337,28 +367,11 @@ export const Solution = (props: SolutionProps) => {
   });
 
   createEffect(() => {
-    reset_content_height_etc();
-    const timeout50 = window.setTimeout(() => {
-      if (solution_open()) {
-        reset_content_height_etc();
-      }
-    }, 50);
-    const timeout500 = window.setTimeout(() => {
-      if (solution_open()) {
-        reset_content_height_etc();
-      }
-    }, 500);
-    const timeout1200 = window.setTimeout(() => {
-      if (solution_open()) {
-        reset_content_height_etc();
-      }
-    }, 1200);
-
-    onCleanup(() => {
-      window.clearTimeout(timeout50);
-      window.clearTimeout(timeout500);
-      window.clearTimeout(timeout1200);
-    });
+    const cancelRechecks = resetNowAndScheduleRechecks(
+      reset_content_height_etc,
+      solution_open,
+    );
+    onCleanup(cancelRechecks);
   });
 
   createEffect(() => {
@@ -519,12 +532,12 @@ const SolutionButton = (props: SolutionBtnProps) => {
     store.exercises[props.solution_number - 1]?.transition_duration + 50;
   const { set_handle, set_solution_fully_opened, set_solution_transition } =
     props;
-  let resetterTimeouts: number[] = [];
+  let cancelScheduledResetters: (() => void) | undefined;
   let transitionTimeout: number | undefined;
 
   const clearButtonTimeouts = () => {
-    resetterTimeouts.forEach((timeout) => window.clearTimeout(timeout));
-    resetterTimeouts = [];
+    cancelScheduledResetters?.();
+    cancelScheduledResetters = undefined;
     if (transitionTimeout !== undefined) {
       window.clearTimeout(transitionTimeout);
       transitionTimeout = undefined;
@@ -630,11 +643,11 @@ const SolutionButton = (props: SolutionBtnProps) => {
             value: !solution_open(),
           });
 
-          props.resetter();
-          resetterTimeouts = [
-            window.setTimeout(props.resetter, 50),
-            window.setTimeout(props.resetter, transition_duration()),
-          ];
+          cancelScheduledResetters = resetNowAndScheduleRechecks(
+            props.resetter,
+            () => true,
+            [50, transition_duration()],
+          );
 
           if (store.list_view) {
             // update localstorage for the solution . as useExercises hook only updates the selectedExo which works only in carousel view
