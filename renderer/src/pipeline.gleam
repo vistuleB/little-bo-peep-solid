@@ -118,7 +118,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.handles_generate_v_definitions_from_t_definitions(),
       dl.handles_add_ids(),
       dl.handles_generate_dictionary("path"),
-      dl.handles_substitute(#("path", "InChapterLink", "OutChapterLink", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"])),
+      dl.handles_substitute(#("path", "InChapterLink", "OutChapterLink", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"], ["Math", "MathBlock"])),
       dl.unwrap("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Bootcamp", "ArticleTitle", "banner"), ["Chapter"]),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Chapter", "ArticleTitle", "banner"), ["Bootcamp"]),
