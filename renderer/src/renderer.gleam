@@ -14,6 +14,7 @@ import on
 import pipeline.{our_pipeline}
 import simplifile
 import vxml.{type VXML, V}
+import writerly_defaults as wd
 
 type LBPFragmentClassifer {
   Article(String)
@@ -443,8 +444,8 @@ pub fn main() {
 
   let renderer =
     ds.Renderer(
-      assembler: ds.default_writerly_assembler(_, options),
-      parser: ds.default_writerly_parser,
+      assembler: wd.default_writerly_assembler(_, options),
+      parser: wd.default_writerly_parser,
       filterer: ds.default_filterer(_, options, ["In", "HeaderBlob", "ChapterSelection"]),
       pipeline: our_pipeline(only, dict.has_key(amendments.user_args, remove_unused_build_img_option), dict.has_key(amendments.user_args, author_mode)),
       splitter: our_splitter,
