@@ -1,5 +1,5 @@
 import argv
-import blame.{type Blame, Src, Anchored}
+import blame.{type Blame, Ext}
 import desugaring as ds
 import emitter_imports as ei
 import gleam/dict.{type Dict}
@@ -40,8 +40,8 @@ type LBPEmitterError {
   )
 }
 
-fn blame_us(message: String) -> Blame {
-  Src([], message, -1, -1, Anchored)
+fn blame_us(loc: String) -> Blame {
+  Ext([], "renderer:" <> loc)
 }
 
 fn our_splitter(
@@ -70,9 +70,10 @@ fn our_splitter(
 
   let header_blob_vxml  = case infra.v_unique_child_with_singleton_error(root, "HeaderBlob") {
     Ok(value) -> Ok(value)
-    Error(infra.LessThanOne) -> Ok(V(blame_us("our_splitter"), "", [], []))
+    Error(infra.LessThanOne) -> Ok(V(blame_us("default_header_blob"), "HeaderBlob", [], []))
     Error(infra.MoreThanOne) -> Error(MoreThanOneHeaderBlob)
   }
+
   use header_blob_vxml <- on.ok(header_blob_vxml)
 
   Ok(
@@ -89,7 +90,7 @@ fn our_splitter(
           let #(c, vxml.Attr(_, _, number)) = infra.v_assert_pop_attr(c, "number")
           let #(c, vxml.Attr(_,_,category)) = infra.v_assert_pop_attr(c, "category")
           let c = infra.v_set_tag(c, "Article")
-          let c = infra.v_set_attr(c, blame_us("article_path"), "path", path)
+          let c = infra.v_set_attr(c, blame_us("list.map(articles)"), "path", path)
           ds.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
         }
       ),
@@ -156,7 +157,7 @@ fn split_vxml_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
     Some(split) -> split
     None -> up_to_and_including_first_section([], children)
   }
-  let rest_tag = V(blame_us("rest tag"), "Rest", [], [])
+  let rest_tag = V(blame_us("to_first_section_and_rest"), "Rest", [], [])
   #(V(b, t, a, [rest_tag, ..before_rest] |> list.reverse), rest)
 }
 
@@ -201,14 +202,14 @@ fn rest_batch_output_lines(
       list.flatten([
         [
           OutputLine(
-            blame_us("article_emitter"),
+            blame_us("rest_batch_a"),
             4,
             "{visibleRestSections() > " <> int.to_string(index) <> " && <>",
           ),
         ],
         vxml.vxmls_to_jsx_output_lines(batch, 6, 2),
         [
-          OutputLine(blame_us("article_emitter"), 4, "</>}"),
+          OutputLine(blame_us("rest_batch_b"), 4, "</>}"),
         ],
         rest_batch_output_lines(rest, index + 1),
       ])

@@ -289,43 +289,43 @@
     |> In
         chapter=>>classical-circle-theorems
 
-    |> HeaderBlob
-        !! TEST 1 : 'Little Bo Peep' SVG
-        !! |> img
-        !!     style=padding-top:0.65em;padding-bottom:0.4em;
-        !!     src=public/header-blob.svg
+    !! |> HeaderBlob
+    !!     !! TEST 1 : 'Little Bo Peep' SVG
+    !!     !! |> img
+    !!     !!     style=padding-top:0.65em;padding-bottom:0.4em;
+    !!     !!     src=public/header-blob.svg
 
-        !! TEST 2: two vertically stacked 'Little Bo Peep' SVGs
-        !! |> img
-        !!     style=padding-block:1em;
-        !!     src=public/header-blob.svg
-        !! |> img
-        !!     style=padding-block:1em;
-        !!     src=public/header-blob.svg
+    !!     !! TEST 2: two vertically stacked 'Little Bo Peep' SVGs
+    !!     !! |> img
+    !!     !!     style=padding-block:1em;
+    !!     !!     src=public/header-blob.svg
+    !!     !! |> img
+    !!     !!     style=padding-block:1em;
+    !!     !!     src=public/header-blob.svg
 
-        !! TEST 3: one <p> w/ many <br>
-        !! |> p
-        !!     Little Bo Peep
-        !!     |> br 
-        !!     Little Bo Peep
-        !!     |> br
-        !!     Little Bo Peep
-        !!     |> br
-        !!     Little Bo Peep
+    !!     !! TEST 3: one <p> w/ many <br>
+    !!     !! |> p
+    !!     !!     Little Bo Peep
+    !!     !!     |> br 
+    !!     !!     Little Bo Peep
+    !!     !!     |> br
+    !!     !!     Little Bo Peep
+    !!     !!     |> br
+    !!     !!     Little Bo Peep
 
-        !! TEST 4: several <p>
-        !! |> p
-        !!     Little Bo Peep
-        !! |> p 
-        !!     Little Bo Peep
-        !! |> p
-        !!     Little Bo Peep
-        !! |> p
-        !!     Little Bo Peep
+    !!     !! TEST 4: several <p>
+    !!     !! |> p
+    !!     !!     Little Bo Peep
+    !!     !! |> p 
+    !!     !!     Little Bo Peep
+    !!     !! |> p
+    !!     !!     Little Bo Peep
+    !!     !! |> p
+    !!     !!     Little Bo Peep
 
-        !! TEST 5: Loading Image
-        !! |> div
-        !!     style=height:54px;width:200px;background-color:#333
-        |> img
-            src=non-build-img/loading_screen.png
-            !! src=non-build-img/K12.svg
+    !!     !! TEST 5: Loading Image
+    !!     !! |> div
+    !!     !!     style=height:54px;width:200px;background-color:#333
+    !!     |> img
+    !!         src=non-build-img/loading_screen.png
+    !!         !! src=non-build-img/K12.svg

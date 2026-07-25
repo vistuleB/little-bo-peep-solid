@@ -455,7 +455,7 @@ export const Solution = (props: SolutionProps) => {
           style={{
             position: solution_fully_opened() ? "relative" : "absolute",
           }}
-          class={twJoin(" bottom-0 w-full")}
+          class={twJoin("exercise_solution bottom-0 w-full")}
         >
           <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           <Show when={solution_content_mounted()}>

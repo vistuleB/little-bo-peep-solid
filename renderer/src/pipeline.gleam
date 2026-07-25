@@ -25,6 +25,8 @@ const cannot_contain_p = [
   "MathBlock", "Math", "p",
 ]
 
+const our_blame = Ext([], "pipeline.gleam")
+
 // dual | switcher-only | list-only
 const end_of_chapter_exercises_switcher_type = "dual"
 const exercise_graveyard_switcher_type = "list-only"
@@ -47,15 +49,15 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     [
       dl.table_section_header("pp.create_mathblock_elements"), 
-      ..pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar),
+      ..pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar, ["WriterlyBlankLine"]),
     ],
     [
       dl.table_section_header("pp.create_math_elements"),
-      ..pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis),
+      ..pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis, ["WriterlyBlankLine"]),
     ],
     [
       dl.table_section_header("pp.markdown_link_splitting"),
-      ..pp.markdown_link_splitting(["MathBlock", "Math"]),
+      ..pp.markdown_link_splitting(["WriterlyBlankLine"], ["MathBlock", "Math"]),
     ],
     [
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
@@ -118,7 +120,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.handles_generate_v_definitions_from_t_definitions(),
       dl.handles_add_ids(),
       dl.handles_generate_dictionary("path"),
-      dl.handles_substitute(#("path", "InChapterLink", "OutChapterLink", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"])),
+      dl.handles_substitute(#("path", "InChapterLink", "OutChapterLink", [#("class", "in-chapter-link")], [#("class", "out-chapter-link")], ["a"], ["Math", "MathBlock"])),
       dl.unwrap("GrandWrapper"),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Bootcamp", "ArticleTitle", "banner"), ["Chapter"]),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Chapter", "ArticleTitle", "banner"), ["Bootcamp"]),
@@ -135,12 +137,12 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     [
       dl.table_section_header("pp.barbaric_symmetric_delim_splitting __"),
-      ..pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["Mathblock", "Math"]),
+      ..pp.barbaric_symmetric_delim_splitting("__", "__", "CentralDisplayItalic", ["WriterlyBlankLine"], ["Mathblock", "Math"]),
     ],
     [
       dl.table_section_header("pp.asymmetric_delim_splitting"),
       dl.table_marker(),
-      ..pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["Mathblock", "Math"]),
+      ..pp.asymmetric_delim_splitting("_\\|", "\\|_", "_|", "|_", "CentralDisplay", ["WriterlyBlankLine"], ["Mathblock", "Math"]),
     ],
     [
       dl.free_children(#("CentralDisplay", "p")),
@@ -148,11 +150,11 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     [
       dl.table_section_header("pp.barbaric_symmetric_delim_splitting _"),
-      ..pp.barbaric_symmetric_delim_splitting("_", "_", "i", ["MathBlock", "Math", "InTextWarning"]),
+      ..pp.barbaric_symmetric_delim_splitting("_", "_", "i", ["WriterlyBlankLine"], ["MathBlock", "Math", "InTextWarning"]),
     ],
     [
       dl.table_section_header("pp.barbaric_symmetric_delim_splitting *"),
-      ..pp.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["MathBlock", "Math"]),
+      ..pp.barbaric_symmetric_delim_splitting("\\*", "*", "b", ["WriterlyBlankLine"], ["MathBlock", "Math"]),
     ],
     [
       dl.unescape_delimiters__outside(["_", "*"], ["MathBlock", "Math"]),
@@ -237,7 +239,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         dl.lbp_adorn_img_with_3003_spans(#("./", "")),
         dl.append_custom(#(
           "MathBlock",
-          V(Ext([], "local-mathjax-svg-export-tooltip"), "MathJaxSvgExportTooltip", [], []),
+          V(our_blame, "MathJaxSvgExportTooltip", [], []),
           infra.GoBack,
         )),
       ]

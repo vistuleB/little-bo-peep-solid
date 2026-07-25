@@ -28,7 +28,7 @@
     $$
 
     to indicate that inputs passed to $f$ have semantics
-    of units A $\A$ while outputs returned by $f$ have semantics
+    of units A while outputs returned by $f$ have semantics
     of units B. 
     For example,
 

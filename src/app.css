@@ -17,9 +17,14 @@
   src: url("/fonts/Baskerville-Italic.ttf");
 }
 
+@font-face {
+  font-family: "Inconsolata";
+  src: url("/fonts/Inconsolata-Regular.ttf");
+}
+
 :root {
   zoom: 100%;
-  --document-font-size: 1.25rem;
+  --document-font-size: 1.27rem;
   --inline-math-scale: 1.03em;
   --display-math-scale: 1.06em;
   --document-pause-space: 1.5rem;
@@ -65,10 +70,16 @@
 body {
   background: var(--background-rgb);
   color: var(--foreground-rgb);
-  font-family: "Baskerville Regular";
+  /* font-family: "Baskerville Regular"; */
+  font-family: "Inconsolata";
   font-size: var(--document-font-size); /* Equivalent to text-xl */
   line-height: 1.55em;
 }
+
+
+/* .exercise_solution {
+  font-family: "Snell Roundhand";
+} */
 
 /* Delimiters */
 b {

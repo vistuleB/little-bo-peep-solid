@@ -164,11 +164,7 @@ export default function __Chapter6__() {
             $f$
           </Math>
           {" "} have semantics
-          of units A {" "}
-          <Math>
-            $\A$
-          </Math>
-          {" "} while outputs returned by {" "}
+          of units A while outputs returned by {" "}
           <Math>
             $f$
           </Math>
@@ -3460,7 +3456,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;v\over c&#125;
+              &#123;v \over c&#125;
               $$
             </MathBlock>
             <Pause />
