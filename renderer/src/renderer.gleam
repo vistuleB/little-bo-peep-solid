@@ -431,7 +431,7 @@ pub fn main() {
       output_dir: output_dir,
       prettifier_behavior: ds.PrettifierOff,
     )
-    |> ds.amend_renderer_paramaters_by_command_line_amendments(amendments)
+    |> ds.amend_renderer_parameters_by_command_line_amendments(amendments)
 
   let options =
     ds.RendererOptions(
