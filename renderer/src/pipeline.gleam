@@ -1,10 +1,10 @@
 import gleam/list
 import gleam/string
 import gleam/option.{None, Some}
-import infrastructure.{type Pipeline} as infra
-import prefabricated_pipelines as pp
-import desugarer_library as dl
-import blame.{Ext}
+import desugaring/core.{type Pipeline} as core
+import desugaring/pipelines as pp
+import desugaring/desugarers as dl
+import vxml/blame.{Ext}
 import vxml.{V}
 
 const p_cannot_contain = [
@@ -49,11 +49,11 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     [
       dl.table_section_header("pp.create_mathblock_elements"), 
-      ..pp.create_mathblock_elements([infra.DoubleDollar], infra.DoubleDollar, ["WriterlyBlankLine"]),
+      ..pp.create_mathblock_elements([core.DoubleDollar], core.DoubleDollar, ["WriterlyBlankLine"]),
     ],
     [
       dl.table_section_header("pp.create_math_elements"),
-      ..pp.create_math_elements([infra.SingleDollar], infra.SingleDollar, infra.BackslashParenthesis, ["WriterlyBlankLine"]),
+      ..pp.create_math_elements([core.SingleDollar], core.SingleDollar, core.BackslashParenthesis, ["WriterlyBlankLine"]),
     ],
     [
       dl.table_section_header("pp.markdown_link_splitting"),
@@ -61,9 +61,9 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     [
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
-      dl.append_attribute(#("Book", "counter", "ChapterCounter", infra.GoBack)),
-      dl.append_attribute(#("Book", "counter", "BootcampCounter", infra.GoBack)),
-      dl.append_attribute(#("Book", "counter-uppercase", "AppendixCounter", infra.GoBack)),
+      dl.append_attribute(#("Book", "counter", "ChapterCounter", core.GoBack)),
+      dl.append_attribute(#("Book", "counter", "BootcampCounter", core.GoBack)),
+      dl.append_attribute(#("Book", "counter-uppercase", "AppendixCounter", core.GoBack)),
       dl.append_attributes([
         #("Chapter", "counter", "ExampleCounter"),
         #("Chapter", "counter", "NoteCounter"),
@@ -88,34 +88,34 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         #("Exercises", "counter", "ExerciseCounter"),
         #("Solution", "counter", "SolutionNoteCounter"),
       ]),
-      dl.prepend_counter_incrementing_attribute__outside(#("Chapter", "ChapterCounter", infra.GoBack), ["Bootcamp", "Appendix"]),
-      dl.prepend_counter_incrementing_attribute__outside(#("Bootcamp", "BootcampCounter", infra.GoBack), ["Chapter", "Appendix"]),
-      dl.prepend_counter_incrementing_attribute__outside(#("Appendix", "AppendixCounter", infra.GoBack), ["Chapter", "Bootcamp"]),
-      dl.prepend_counter_incrementing_attribute_if_fancy(#("Exercise", "ExerciseCounter", fn(_, ancestors, _, _, _) { infra.first_is(ancestors, "Exercises") }, infra.GoBack)),
-      dl.prepend_counter_incrementing_attribute(#("Example", "ExampleCounter", infra.GoBack)),
-      dl.prepend_counter_incrementing_attribute(#("SolutionNote", "SolutionNoteCounter", infra.GoBack)),
-      dl.prepend_counter_incrementing_attribute(#("Note", "NoteCounter", infra.GoBack)),
-      dl.prepend_counter_incrementing_attribute(#("Section", "SectionCounter", infra.GoBack)),
-      dl.append_attribute_if(#("Section", fn(section) { !infra.v_has_attr_with_key(section, "id") }, "id", "section-::øøSectionCounter", infra.Continue)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(_, _, _, _, following_siblings) { list.is_empty(following_siblings) }, "at_end_of_page", "true", infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.contains(ancestors, "Appendix") && !infra.v_has_attr_with_key(exercises, "mode") }, "mode", end_of_chapter_exercises_switcher_type, infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercise", fn(_, ancestors, _, _, _) { infra.first_is(ancestors, "Exercises") }, "number", "::øøExerciseCounter", infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !infra.contains(ancestors, "Appendix") }, "show_curlicue", "true", infra.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, _) { infra.contains(ancestors, "Appendix") && !infra.v_has_attr_with_key(exercises, "mode") }, "mode", exercise_graveyard_switcher_type, infra.GoBack)),
-      dl.set_handle_value__outside(#("Chapter", "::øøChapterCounter", infra.GoBack), ["Bootcamp"]),
-      dl.set_handle_value__outside(#("Bootcamp", "::øøBootcampCounter", infra.GoBack), ["Chapter"]),
-      dl.set_handle_value__outside(#("Appendix", "::øøAppendixCounter", infra.GoBack), ["Chapter", "Bootcamp"]),
-      dl.set_handle_value(#("Example", "::øøExampleCounter", infra.GoBack)),
-      dl.set_handle_value(#("Exercise", "::øøExerciseCounter", infra.GoBack)),
-      dl.set_handle_value(#("Note", "::øøNoteCounter", infra.GoBack)),
-      dl.set_handle_value(#("SolutionNote", "::øøSolutionNoteCounter", infra.GoBack)),
-      dl.set_handle_value(#("Section", "::øøSectionCounter", infra.GoBack)),
+      dl.prepend_counter_incrementing_attribute__outside(#("Chapter", "ChapterCounter", core.GoBack), ["Bootcamp", "Appendix"]),
+      dl.prepend_counter_incrementing_attribute__outside(#("Bootcamp", "BootcampCounter", core.GoBack), ["Chapter", "Appendix"]),
+      dl.prepend_counter_incrementing_attribute__outside(#("Appendix", "AppendixCounter", core.GoBack), ["Chapter", "Bootcamp"]),
+      dl.prepend_counter_incrementing_attribute_if_fancy(#("Exercise", "ExerciseCounter", fn(_, ancestors, _, _, _) { core.first_is(ancestors, "Exercises") }, core.GoBack)),
+      dl.prepend_counter_incrementing_attribute(#("Example", "ExampleCounter", core.GoBack)),
+      dl.prepend_counter_incrementing_attribute(#("SolutionNote", "SolutionNoteCounter", core.GoBack)),
+      dl.prepend_counter_incrementing_attribute(#("Note", "NoteCounter", core.GoBack)),
+      dl.prepend_counter_incrementing_attribute(#("Section", "SectionCounter", core.GoBack)),
+      dl.append_attribute_if(#("Section", fn(section) { !core.v_has_attr_with_key(section, "id") }, "id", "section-::øøSectionCounter", core.Continue)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(_, _, _, _, following_siblings) { list.is_empty(following_siblings) }, "at_end_of_page", "true", core.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !core.contains(ancestors, "Appendix") && !core.v_has_attr_with_key(exercises, "mode") }, "mode", end_of_chapter_exercises_switcher_type, core.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercise", fn(_, ancestors, _, _, _) { core.first_is(ancestors, "Exercises") }, "number", "::øøExerciseCounter", core.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !core.contains(ancestors, "Appendix") }, "show_curlicue", "true", core.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, _) { core.contains(ancestors, "Appendix") && !core.v_has_attr_with_key(exercises, "mode") }, "mode", exercise_graveyard_switcher_type, core.GoBack)),
+      dl.set_handle_value__outside(#("Chapter", "::øøChapterCounter", core.GoBack), ["Bootcamp"]),
+      dl.set_handle_value__outside(#("Bootcamp", "::øøBootcampCounter", core.GoBack), ["Chapter"]),
+      dl.set_handle_value__outside(#("Appendix", "::øøAppendixCounter", core.GoBack), ["Chapter", "Bootcamp"]),
+      dl.set_handle_value(#("Example", "::øøExampleCounter", core.GoBack)),
+      dl.set_handle_value(#("Exercise", "::øøExerciseCounter", core.GoBack)),
+      dl.set_handle_value(#("Note", "::øøNoteCounter", core.GoBack)),
+      dl.set_handle_value(#("SolutionNote", "::øøSolutionNoteCounter", core.GoBack)),
+      dl.set_handle_value(#("Section", "::øøSectionCounter", core.GoBack)),
       dl.prepend_text_node(#("Example", "*Example ::øøExampleCounter.*")),
       // dl.prepend_text_node(#("Section", "*§::øøSectionCounter.* ")),
       dl.prepend_text_node(#("SolutionNote", "_Note ::øøSolutionNoteCounter._")),
       dl.prepend_text_node(#("Note", "_Note ::øøNoteCounter._")),
-      dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise ::øøExerciseCounter.*", fn(_, ancestors, _, _, _) { infra.first_is(ancestors, "Exercises") })),
-      dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise*", fn(_, ancestors, _, _, _) { !infra.first_is(ancestors, "Exercises") })),
+      dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise ::øøExerciseCounter.*", fn(_, ancestors, _, _, _) { core.first_is(ancestors, "Exercises") })),
+      dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise*", fn(_, ancestors, _, _, _) { !core.first_is(ancestors, "Exercises") })),
       dl.substitute_counters(),
       dl.handles_generate_v_definitions_from_t_definitions(),
       dl.handles_add_ids(),
@@ -126,7 +126,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.cut_paste_attribute_from_self_to_child__outside(#("Chapter", "ArticleTitle", "banner"), ["Bootcamp"]),
       dl.cut_paste_attribute_from_self_to_child__outside(#("Appendix", "ArticleTitle", "banner"), ["Chapter", "Bootcamp"]),
       dl.group_consecutive_children__outside(#("p", p_cannot_contain), cannot_contain_p),
-      dl.wrap_children_avoiding(#("List", "Item", "WriterlyBlankLine", infra.GoBack)),
+      dl.wrap_children_avoiding(#("List", "Item", "WriterlyBlankLine", core.GoBack)),
       dl.unwrap("WriterlyBlankLine"),
       // cleaning 'p' first time around:
       dl.concatenate_text_nodes(),
@@ -167,10 +167,10 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.trim("p"),
       dl.delete_if_empty("p"),
       // (end cleaning)
-      dl.unwrap_if_no_child_meets_condition(#("p", infra.is_t_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink", "InlineImage", "Math"]))),
+      dl.unwrap_if_no_child_meets_condition(#("p", core.is_t_or_is_one_of(_, ["b", "i", "a", "span", "InChapterLink", "InlineImage", "Math"]))),
       dl.unwrap_if_descendant_of(#("p", ["td", "li"])),
       dl.rename_if_child_of(#("p", "Item", "Grid")),
-      dl.wrap_children_up_to(#("Exercise", "Solution", "ExerciseStatement", infra.GoBack)),
+      dl.wrap_children_up_to(#("Exercise", "Solution", "ExerciseStatement", core.GoBack)),
       dl.cut_paste_attribute_from_self_to_child(#("Exercise", "ExerciseStatement", "id")),
       dl.absorb_into_previous_sibling(["ImageRight", "ImageLeft"]),
       dl.append_attribute_if_child_of(#("ImageRight", "MathBlock", "at-least-as-wide", "true")),
@@ -231,7 +231,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.unwrap("Scope"),
       dl.delete_attribute__outside("type", ["List"]),
       dl.delete_attribute__batch(["counter", "handle", "t", "_", "title", "test"]),
-      dl.rename_attributes_by_function(infra.kabob_case_to_camel_case),
+      dl.rename_attributes_by_function(core.kabob_case_to_camel_case),
     ],
     case author_mode {
       True -> [
@@ -240,7 +240,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
         dl.append_custom(#(
           "MathBlock",
           V(our_blame, "MathJaxSvgExportTooltip", [], []),
-          infra.GoBack,
+          core.GoBack,
         )),
       ]
       False -> []

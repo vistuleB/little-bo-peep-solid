@@ -2,11 +2,11 @@ import gleam/dict.{type Dict}
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/result
-import blame.{Ext}
-import io_lines.{type OutputLine, OutputLine}
+import vxml/blame.{Ext}
+import vxml/io_lines.{type OutputLine, OutputLine}
 import vxml.{type VXML, V, T}
 import gleam/string
-import infrastructure as infra
+import desugaring/core as core
 import on
 
 pub type ExportedByFile {
@@ -194,7 +194,7 @@ fn uppercase_tags_tree_walker(
   case vxml {
     V(_, tag, _, children) -> {
       let new_state = case take_root && string.starts_with(tag, string.uppercase(string.slice(tag, 0, 1))) {
-        True -> infra.append_if_not_present(state, tag)
+        True -> core.append_if_not_present(state, tag)
         False -> state
       }
       list.fold(children, new_state, fn(acc, child) {

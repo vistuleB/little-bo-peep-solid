@@ -1,5 +1,5 @@
 import argv
-import blame.{type Blame, Ext}
+import vxml/blame.{type Blame, Ext}
 import desugaring as ds
 import emitter_imports as ei
 import gleam/dict.{type Dict}
@@ -8,13 +8,13 @@ import gleam/int
 import gleam/list
 import gleam/option.{type Option, Some, None}
 import gleam/string.{inspect as ins}
-import infrastructure as infra
-import io_lines.{type OutputLine, OutputLine}
+import desugaring/core as core
+import vxml/io_lines.{type OutputLine, OutputLine}
 import on
 import pipeline.{our_pipeline}
 import simplifile
 import vxml.{type VXML, V}
-import writerly_defaults as wd
+import desugaring/writerly_defaults as wd
 
 type LBPFragmentClassifer {
   Article(String)
@@ -48,31 +48,31 @@ fn blame_us(loc: String) -> Blame {
 fn our_splitter(
   root: VXML,
 ) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
-  let articles = infra.v_children_with_tags(root, ["Chapter", "Bootcamp", "Appendix"])
+  let articles = core.v_children_with_tags(root, ["Chapter", "Bootcamp", "Appendix"])
   use toc_vxml <- on.error_ok(
-    infra.v_unique_child_with_singleton_error(root, "TOC"),
+    core.v_unique_child_with_singleton_error(root, "TOC"),
     on_error: fn(error) {
       case error {
-        infra.LessThanOne -> Error(NoTOC)
-        infra.MoreThanOne -> Error(MoreThanOneTOC)
+        core.LessThanOne -> Error(NoTOC)
+        core.MoreThanOne -> Error(MoreThanOneTOC)
       }
     },
   )
 
   use panel_vxml <- on.error_ok(
-    infra.v_unique_child_with_singleton_error(root, "HamburgerPanelAuthorSuppliedContents"),
+    core.v_unique_child_with_singleton_error(root, "HamburgerPanelAuthorSuppliedContents"),
     on_error: fn(error) {
       case error {
-        infra.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
-        infra.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
+        core.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
+        core.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
       }
     },
   )
 
-  let header_blob_vxml  = case infra.v_unique_child_with_singleton_error(root, "HeaderBlob") {
+  let header_blob_vxml  = case core.v_unique_child_with_singleton_error(root, "HeaderBlob") {
     Ok(value) -> Ok(value)
-    Error(infra.LessThanOne) -> Ok(V(blame_us("default_header_blob"), "HeaderBlob", [], []))
-    Error(infra.MoreThanOne) -> Error(MoreThanOneHeaderBlob)
+    Error(core.LessThanOne) -> Ok(V(blame_us("default_header_blob"), "HeaderBlob", [], []))
+    Error(core.MoreThanOne) -> Error(MoreThanOneHeaderBlob)
   }
 
   use header_blob_vxml <- on.ok(header_blob_vxml)
@@ -87,11 +87,11 @@ fn our_splitter(
       list.map(
         articles,
         fn(c) {
-          let #(c, vxml.Attr(_,_,path)) = infra.v_assert_pop_attr(c, "path")
-          let #(c, vxml.Attr(_, _, number)) = infra.v_assert_pop_attr(c, "number")
-          let #(c, vxml.Attr(_,_,category)) = infra.v_assert_pop_attr(c, "category")
-          let c = infra.v_set_tag(c, "Article")
-          let c = infra.v_set_attr(c, blame_us("list.map(articles)"), "path", path)
+          let #(c, vxml.Attr(_,_,path)) = core.v_assert_pop_attr(c, "path")
+          let #(c, vxml.Attr(_, _, number)) = core.v_assert_pop_attr(c, "number")
+          let #(c, vxml.Attr(_,_,category)) = core.v_assert_pop_attr(c, "category")
+          let c = core.v_set_tag(c, "Article")
+          let c = core.v_set_attr(c, blame_us("list.map(articles)"), "path", path)
           ds.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
         }
       ),
@@ -100,7 +100,7 @@ fn our_splitter(
 }
 
 fn is_section(vxml: VXML) -> Bool {
-  infra.is_v_and_tag_equals(vxml, "Section")
+  core.is_v_and_tag_equals(vxml, "Section")
 }
 
 fn is_rest_split_attr(attr: vxml.Attr) -> Bool {
@@ -313,7 +313,7 @@ fn standard_component_emitter(
         OutputLine(blame_us("standard_component_emitter"), 0, "const " <> component_name <> " = () => {"),
         OutputLine(blame_us("standard_component_emitter"), 2, "return <>"),
       ],
-      vxml.vxmls_to_jsx_output_lines(fr.payload |> infra.v_get_children, 4, 2),
+      vxml.vxmls_to_jsx_output_lines(fr.payload |> core.v_get_children, 4, 2),
       [
         OutputLine(blame_us("standard_component_emitter"), 2, "</>;"),
         OutputLine(blame_us("standard_component_emitter"), 0, "};"),
