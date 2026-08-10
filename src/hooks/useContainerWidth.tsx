@@ -1,24 +1,13 @@
 import { useGlobalContext } from "~/store/StoreProvider";
-import { mainColumnWidthForViewport } from "./useMainColumnWidth";
-
-export const containerWidthForLayout = (
-  innerWidth: number,
-  maxElementWidth: number,
-  pageNecessaryMargin: number,
-) =>
-  Math.max(
-    innerWidth,
-    maxElementWidth + 60,
-    mainColumnWidthForViewport(innerWidth) + 2 * pageNecessaryMargin,
-  );
+import mainColumnWidth from "./useMainColumnWidth";
 
 const containerWidth = () => {
   const { store } = useGlobalContext();
 
-  return containerWidthForLayout(
+  return Math.max(
     store.innerWidth,
-    store.maxElementWidth,
-    store.pageNecessaryMargin,
+    store.maxElementWidth + 60,
+    mainColumnWidth() + 2 * store.pageNecessaryMargin,
   );
 };
 

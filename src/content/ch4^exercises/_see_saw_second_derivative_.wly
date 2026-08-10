@@ -1,0 +1,26 @@
+|> Exercise
+    handle=_see_saw_second_derivative_
+
+    Sketch the
+
+    __second__
+
+    derivative of the graph in Exercise >>_see_saw_.
+
+    |> Solution
+
+        The second derivative is zero wherever the
+        first derivative is flat, and is undefined
+        wherever the first derivative is undefined;
+        this gives the second derivative the following
+        pockmarked appearance:
+
+        |> Image
+            src=images/svg_ch4_slope_one_half_see_saw_second_derivative.svg
+
+        |> SolutionNote
+            Taking even further derivatives produces
+            the same graph back, over and over again.
+
+        |> SolutionNote
+            “first derivative” is a synonym of “derivative”.

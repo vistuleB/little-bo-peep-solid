@@ -1,0 +1,69 @@
+|> Exercise
+    handle=_rewrite_function_operation_definitions_in_different_style_
+
+    The definition
+
+    $$
+    f + g = (x \ra f(x) + f(x))
+    $$
+
+    for a sum of functions $f, g : \rr \ra \rr$
+    can also be written
+
+    $$
+    (f + g)(x) = f(x) + g(x)
+    $$
+
+    in the sense that either of these equations tells
+    you how $f + g$ acts on an arbitrary input. (Which
+    is what you need to do, to define a function. A
+    slight subtlety is that the definition
+
+    $$
+    f + g = (x \ra f(x) + f(x))
+    $$
+
+    announces more clearly via its notation that
+    “$f + g$” _is a function_ and not some other
+    object, like a number, but this is a minor point.)
+    Rewrite the definitions of
+
+    $$
+    f \circ g
+    $$
+    $$
+    fg
+    $$
+    $$
+    f/g
+    $$
+    $$
+    f - g
+    $$
+
+    in the style of the second equation. For extra
+    credit: use a different symbol each time to denote
+    the input.
+
+    |> Solution
+
+        E.g.:
+
+        $$
+        (f \circ g)(x) = f(g(x))
+        $$
+        $$
+        (fg)(u) = f(u)g(u)
+        $$
+        $$
+        (f/g)(z) = f(z)/g(z)
+        $$
+        $$
+        (f - g)(t) = f(t) - g(t)
+        $$
+
+        (Looking at these definitions we must really admit that
+        we prefer the first form, with the arrow, found at the
+        end of the chapter—it's more explicit!)
+
+

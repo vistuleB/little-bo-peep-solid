@@ -1,4 +1,5 @@
 import { onMount, onCleanup, ParentProps } from "solid-js";
+import useScrollX from "~/hooks/useScrollX";
 import { useGlobalContext } from "~/store/StoreProvider";
 import useSetRoute from "~/hooks/useSetRoute";
 import useBreadcrumbs from "~/hooks/useBreadcrumbs";
@@ -6,32 +7,9 @@ import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
 import useOnMobile from "../hooks/useOnMobile";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import useAuthorMode from "~/hooks/useAuthorMode";
-import useHorizontalSwipeNavigation from "~/hooks/useHorizontalSwipeNavigation";
-import useHorizontalPageMotion from "~/hooks/useHorizontalPageMotion";
 import { useLocation } from "@solidjs/router";
-import { containerWidthForLayout } from "~/hooks/useContainerWidth";
-import {
-  CONSTRAIN_IMAGE_ON_PAN_RECENTER_TAP,
-  PAN_RECENTER_CONSTRAIN_IMAGE_EVENT,
-} from "~/constants";
 
 const env = import.meta.env.VITE_ENV;
-
-const targetIsInteractive = (target: EventTarget | null) =>
-  target instanceof Element &&
-  target.closest(
-    "a, button, input, textarea, select, .t-3003, [role='button'], [contenteditable='true']",
-  ) !== null;
-
-const constrainImageForPanRecenter = (target: EventTarget | null) => {
-  if (!CONSTRAIN_IMAGE_ON_PAN_RECENTER_TAP || !(target instanceof Element)) {
-    return;
-  }
-
-  target
-    .closest<HTMLElement>('[data-pan-recenter-constrain-image="true"]')
-    ?.dispatchEvent(new Event(PAN_RECENTER_CONSTRAIN_IMAGE_EVENT));
-};
 
 type PageProps = {
   pageNecessaryMargin?: number;
@@ -41,61 +19,12 @@ type PageProps = {
 };
 
 const Page = (props: ParentProps & PageProps) => {
-  let pageCameraSurface!: HTMLDivElement;
-  let resizeAnimationFrame: number | undefined;
   let { set_store, store } = useGlobalContext();
   const { getPrevPage, getNextPage, getPage } = usePrevNextPage();
   const { on_mobile } = useOnMobile();
   const location = useLocation();
-  const {
-    alignImmediately,
-    cameraIsCentered,
-    handleGestureCancel,
-    handleGestureEnd,
-    handleGestureMove,
-    handleGestureStart,
-    motionIsActive,
-    smoothlyCenter,
-  } = useHorizontalPageMotion(() => pageCameraSurface);
 
-  useHorizontalSwipeNavigation({
-    navigationEnabled: () =>
-      cameraIsCentered() &&
-      motionIsActive() &&
-      !store.margin_mode &&
-      !store.horizontal_camera_dragging,
-    onGestureStart: handleGestureStart,
-    onGestureMove: handleGestureMove,
-    onGestureEnd: handleGestureEnd,
-    onGestureCancel: handleGestureCancel,
-    onTap: (target) => {
-      if (
-        motionIsActive() &&
-        store.margin_mode &&
-        !targetIsInteractive(target)
-      ) {
-        constrainImageForPanRecenter(target);
-        smoothlyCenter();
-        return true;
-      }
-      return false;
-    },
-    onSwipeLeft: () => {
-      if (!store.nextPage) {
-        smoothlyCenter();
-        return;
-      }
-      getPage(store.nextPage, { kind: "swipe", direction: "left" });
-    },
-    onSwipeRight: () => {
-      if (!store.prevPage) {
-        smoothlyCenter();
-        return;
-      }
-      getPage(store.prevPage, { kind: "swipe", direction: "right" });
-    },
-  });
-
+  useScrollX();
   useScrollIsAt0();
   useSetRoute();
   useBreadcrumbs();
@@ -107,22 +36,50 @@ const Page = (props: ParentProps & PageProps) => {
   set_store("prevPage", props.prevPage || "");
 
   // **********************
+  // **** handleScroll ****
+  // **********************
+
+  const handleScroll = () => {
+    set_store("scrollY", window.scrollY);
+    set_store("scrollX", window.scrollX);
+  };
+
+  // ************************************
+  // **** handleScrollendAndTouchend ****
+  // ************************************
+
+  const handleScrollendAndTouchend = () => {
+    let scrollXWhenCentered = (store.scrollWidth - store.innerWidth) / 2;
+    let distanceFromCentered = Math.abs(store.scrollX - scrollXWhenCentered);
+
+    if (distanceFromCentered < 1) {
+      set_store("margin_mode", false);
+      return;
+    }
+
+    if (distanceFromCentered < 200) {
+      window.scroll({
+        left: scrollXWhenCentered,
+        behavior: "smooth",
+      });
+      set_store("margin_mode", false);
+      return;
+    }
+
+    set_store("margin_mode", true);
+  };
+
+  // **********************
   // **** handleResize ****
   // **********************
 
   const handleResize = () => {
-    const oldInnerWidth = store.innerWidth;
-    const oldScrollWidth = store.scrollWidth;
-    const nextInnerWidth = window.innerWidth;
-    const nextScrollWidth = containerWidthForLayout(
-      nextInnerWidth,
-      store.maxElementWidth,
-      store.pageNecessaryMargin,
-    );
+    let oldInnerWidth = store.innerWidth;
+    let oldScrollWidth = store.scrollWidth;
 
-    set_store("innerWidth", nextInnerWidth);
+    set_store("innerWidth", window.innerWidth);
     set_store("innerHeight", window.innerHeight);
-    set_store("scrollWidth", nextScrollWidth);
+    set_store("scrollWidth", document.body.scrollWidth);
     set_store("scrollHeight", document.body.scrollHeight);
 
     let _dummy =
@@ -131,18 +88,15 @@ const Page = (props: ParentProps & PageProps) => {
       store.scrollHeight +
       store.scrollWidth;
 
-    if (oldInnerWidth != nextInnerWidth || oldScrollWidth != nextScrollWidth) {
-      alignImmediately();
+    if (
+      oldInnerWidth != store.innerWidth ||
+      oldScrollWidth != store.scrollWidth
+    ) {
+      window.scroll({
+        left: (store.scrollWidth - store.innerWidth) / 2,
+        behavior: "instant",
+      });
     }
-  };
-
-  const scheduleResize = () => {
-    if (resizeAnimationFrame !== undefined) return;
-
-    resizeAnimationFrame = requestAnimationFrame(() => {
-      resizeAnimationFrame = undefined;
-      handleResize();
-    });
   };
 
   // *********************
@@ -150,13 +104,30 @@ const Page = (props: ParentProps & PageProps) => {
   // *********************
 
   const handleClick = (e: MouseEvent) => {
-    if (targetIsInteractive(e.target)) {
+    const targetIsAnchor = (element: Element) => {
+      let currentElement = element;
+      while (
+        currentElement !== null &&
+        currentElement !== document.documentElement
+      ) {
+        if (currentElement.tagName === "A") {
+          return true;
+        }
+        currentElement = currentElement.parentElement as Element;
+      }
+      return false;
+    };
+
+    if (targetIsAnchor(e.target as Element)) {
       return;
     }
 
     if (store.margin_mode) {
-      constrainImageForPanRecenter(e.target);
-      smoothlyCenter();
+      window.scroll({
+        left: (store.scrollWidth - store.innerWidth) / 2,
+        behavior: "smooth",
+      });
+      set_store("margin_mode", false);
       e.stopPropagation();
       return;
     }
@@ -263,51 +234,31 @@ const Page = (props: ParentProps & PageProps) => {
   };
 
   onMount(() => {
+    handleScroll();
     handleResize();
+    set_store("loading", false);
     if (location.pathname !== "/") {
       set_store("have_been_outside_home", true);
     }
 
-    window.addEventListener("resize", scheduleResize);
-    window.addEventListener("click", handleClick, { capture: true });
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
+    document.addEventListener("scrollend", handleScrollendAndTouchend);
+    document.addEventListener("touchend", handleScrollendAndTouchend);
+    window.addEventListener("click", handleClick);
     window.addEventListener("keydown", handleKeydown);
 
     onCleanup(() => {
-      window.removeEventListener("resize", scheduleResize);
-      if (resizeAnimationFrame !== undefined) {
-        cancelAnimationFrame(resizeAnimationFrame);
-      }
-      window.removeEventListener("click", handleClick, { capture: true });
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("scrollend", handleScrollendAndTouchend);
+      document.removeEventListener("touchend", handleScrollendAndTouchend);
+      window.removeEventListener("click", handleClick);
       window.removeEventListener("keydown", handleKeydown);
     });
   });
 
-  const cameraOffset = () =>
-    store.horizontal_camera_offset + store.horizontal_arrival_offset;
-
-  return (
-    <div
-      ref={pageCameraSurface}
-      id="PageCameraSurface"
-      data-horizontal-arrival-phase={store.horizontal_arrival_phase}
-      data-horizontal-camera-offset={store.horizontal_camera_offset}
-      data-horizontal-margin-mode={store.margin_mode ? "true" : "false"}
-      style={{
-        background: "var(--background-rgb)",
-        transform:
-          cameraOffset() === 0
-            ? "none"
-            : `translate3d(${cameraOffset()}px, 0, 0)`,
-        "will-change":
-          store.horizontal_camera_dragging ||
-          store.horizontal_arrival_phase === "animating"
-            ? "transform"
-            : "auto",
-      }}
-    >
-      {props.children}
-    </div>
-  );
+  return <>{props.children}</>;
 };
 
 export default Page;

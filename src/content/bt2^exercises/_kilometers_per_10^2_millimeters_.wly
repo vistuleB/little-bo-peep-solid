@@ -1,0 +1,17 @@
+|> Exercise
+    handle=_kilometers_per_10^24_millimeters_
+
+    How many kilometers is $10^{24}$ millimeters?
+
+    |> Solution
+
+        We have
+        $$
+        \Large 1\textrm{mm} = 10^{-6}\textrm{km}
+        $$
+        by the previous problem, so
+        $$
+        \Large 10^{24} \textrm{mm} = 10^{24}\cdot 10^{-6}\textrm{km} = 10^{18}\textrm{km}
+        $$
+        by direct substitution. (You can do that with
+        units.) The answer is therefore: $10^{18}$.

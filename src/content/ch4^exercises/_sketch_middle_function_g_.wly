@@ -1,0 +1,57 @@
+|> Exercise
+    handle=_sketch_middle_function_g_
+
+    Given these graphs...
+
+    |> Image
+        src=images/svg_ch4_sketch_the_middle_a.svg
+
+    ...what can you say about $g'(x)$?
+    (Produce the best sketch of $g'(x)$ that
+    you can, taking into account all the
+    information above.) (Don't get us wrong:
+    You don't _need_ the second derivative
+    to sketch the first derivative, but if
+    you're a human and not a machine, it can
+    help!)
+
+    |> Solution
+
+        To start with, the slope of $g$ seems to be
+        about $-1.5$, $0$ and (a bit greater than) $2$
+        at $x = -2$, $x = 0$ and $x = 2$ respectively:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol1.svg
+
+        This already gives us three points from which
+        to interpolate a basic approximation to the graph
+        $y = g'(x)$:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol2.svg
+
+        But the graph of $g''(x)$ indicates more,
+        namely that $g'(x)$ has a slope that rises
+        from $\approx 0.2$ near the left edge of
+        the graph up to $1.3$ at $x = 0.5$, before
+        falling again to $0.6$ past $x = 2$:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol3.svg
+
+        As a second step, we thus “bend into shape”
+        our previous sketch to produce these slopes...
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol4.svg
+
+        ...achieving our final answer.
+
+        |> Pause
+
+        _Note 1._ For reference, the actual
+        derivative looks like so:
+
+        |> Image
+            src=images/svg_ch4_sketch_the_middle_a_sol5.svg

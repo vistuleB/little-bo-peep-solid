@@ -1,0 +1,22 @@
+|> Exercise
+    handle=_define_abs_val_by_algebraic_formula_
+    How can you define the absolute value
+    function using an “ordinary” algebraic formula?
+
+    |> Solution
+
+        We have
+
+        $$
+        |x| = \sqrt{x^2}
+        $$
+
+        because $\sqrt{(-1)^2} = 1$, $\sqrt{(-5)^2} = 5$,
+        etc.
+
+        |> Pause
+
+        _Note 1._
+        This definition is less ad-hoc than might seem,
+        being a 1-dimensional form of the Pythagorean
+        theorem.

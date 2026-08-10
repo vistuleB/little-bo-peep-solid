@@ -9,6 +9,4 @@ services:
       - key: NODE_ENV
         value: production
       - key: NODE_VERSION
-        value: 22.12.0
-      - key: PRERENDER_MATHJAX
-        value: true
+        value: 22

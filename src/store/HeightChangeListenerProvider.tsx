@@ -25,8 +25,7 @@ export const HeightChangeListenerProvider = (props: ParentProps) => {
       value={{
         height_change_listener_store,
         set_height_change_listener_store,
-      }}
-    >
+      }}>
       <Listener />
       {props.children}
     </HeightChangeListenerContext.Provider>

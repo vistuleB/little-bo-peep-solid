@@ -1,0 +1,94 @@
+|> Exercise
+    handle=_cosx_to_cosx_+_sinx_
+
+    Conjecture a sequence of geometric transformations
+    that maps
+    $$
+    y = \cos x
+    $$
+    onto
+    $$
+    y = \sin x + \cos x
+    $$
+    and prove your answer. (Comparison: Exercise >>_max_cosx_plus_sinx_new_new_ver_.)
+
+    |> Solution
+
+        Note that $\sin + \cos$
+        has period $4\eta$ just like $\sin$ or
+        $\cos$, but, unlike $\sin$ and $\cos$,
+        $\sin + \cos$ reaches a maximum of $\sqrt{2}$
+        at $x = \eta/2$, as uncovered in Exercise >>_max_cosx_plus_sinx_new_new_ver_,
+        from which the following graphic is recovered:
+
+        |> Image
+            src=images/svg_ch5_ex_cos_to_sin_plus_cos_reminder.svg
+
+        (We have added the minimum at $y = -\sqrt{2}$,
+        which is no harder to prove than the
+        maximum at $y = \sqrt{2}$.)
+
+        Note that while the above graph may
+        __seem__
+        like a sinusoid, we have
+        __not yet proved__
+        that it is a sinusoid, which is indeed the goal
+        of the current exercise! But we can conjecture
+        that the
+        following two steps would take us from $y = \cos(x)$
+        to $y = \sin(x) + \cos(x)$, given the structure above:
+        __1. horizontal translation to the right by $\eta/2$__
+        __2. vertical scaling by $\sqrt{2}$__
+        Now you might recall from previous discussions
+        (cf. Exercise >>_what_seq_AB_ of Chapter >>functions,
+        part 1 of Exercise >>_four_compositions_graphed_ in this chapter) that
+        $$
+        x \ra f(x + a)
+        $$
+        has a graph that is the translate of $y = f(x)$ to
+        left by $a$ units, whence
+        $$
+        x \ra f(x - a)
+        $$
+        has a graph that is the translate of $y = f(x)$ to
+        the _right_ by $a$ units; whence, we can
+        conjecture that...
+
+        |> Boxed
+            $$
+            \sqrt{2}\cdot \cos(x - \eta/2)
+            $$
+
+        ...[$\cos(x)$, translated, scaled] actually coincides
+        with $\cos(x) + \sin(x)$!!! (!!!)
+
+        For the proof, we resort to the angle-sum formula...
+        $$
+        \cos(A + B) = \cos A\cos B - \sin A\sin B
+        $$
+        ...again, giving us...
+        $$
+        \begin{align*}
+        &\,\, \sqrt{2}\cdot \cos(x - \eta/2) \\
+        \up{1.6} =&\,\, \sqrt{2}\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
+        \up{1.6} =&\,\, \sqrt{2}\cdot(\cos(x)\sqrt{0.5} - \sin(x)(-\sqrt{0.5})) \\
+        \up{1.6} =&\,\, \sqrt{2}\cdot\sqrt{0.5}\cdot(\cos(x) + \sin(x)) \\
+        \up{1.6} =&\,\, \sqrt{2 \cdot 0.5}\cdot(\cos(x) + \sin(x)) \\
+        \up{1.6} =&\,\, \sqrt{1}\cdot(\cos(x) + \sin(x)) \\
+        \up{1.6} =&\,\, \cos(x) + \sin(x)
+        \end{align*}
+        $$
+        ...victory!!!!
+
+        |> SolutionNote
+
+            The fact that
+            $$
+            \sqrt{2}\cdot \sqrt{0.5} = 1
+            $$
+            can also be seen from the fact that
+            $$
+            \sqrt{0.5} = {1\over \sqrt{2}}
+            $$
+            previously discussed.
+

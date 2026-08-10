@@ -1,0 +1,256 @@
+|> Exercise
+    handle=_long_division_15542486476949_777_
+
+    To close our division skills: use the
+    table below to compute the integer part and
+    the first three digits past the decimal point
+    (no rounding based on the fourth digit) of
+
+    $$
+    15542486476949/777
+    $$
+
+    by hand, using long division. What is the
+    new (last) remainder when the quotient reaches
+    the 3rd digit after the decimal point, and what
+    equation is implied from the quotient and the
+    new (last) remainder at that point?
+
+    $$
+    \begin{array}{c|cc}
+    \up{1}\dn{0.5} n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
+    \up{1}\dn{0.5} n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
+    \\
+    \end{array}
+    $$
+
+    |> Solution
+
+        Here is the long division, pursued up to
+        the “$10^{-3}$” column of the quotient,
+        including one last remainder computation
+        that occurs pursuant to adding the digit in
+        the “$10^{-3}$” column of the quotient (this
+        is what the problem statement refers to as
+        the “last remainder”):
+
+        |> Image
+            src=images/svg_ch5_ex_big_division.svg
+
+        Said quotient is
+
+        $$
+        20003200099.033
+        $$
+
+        while the new (last) remainder is
+
+        $$
+        0.359
+        $$
+
+        and the equation linking the two is
+
+        $$
+        15542486476949 = 777 \times 20003200099.033 + 0.359
+        $$
+
+        per properties of the long division algorithm.
+
+        |> SolutionNote
+
+            Lest anyone get left behind, we can go
+            over the division “on the board”
+            for a bit.
+
+            We start by asking “how many times does $777$
+            go into $1$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_1.svg
+
+            The answer is $0$ (that we need not write
+            down, but we can), we move to asking
+            “how many times does $777$
+            go into $15$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_2.svg
+
+            The answer is $0$, we move to asking
+            “how many times does $777$
+            go into $155$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_3.svg
+
+            The answer is $0$, we move to asking
+            “how many times does $777$
+            go into $1554$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_4.svg
+
+            The answer is $2$, we subtract $2 \times 777$
+            from $1554$, giving us a new “prefix” for
+            the remainder:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_4b.svg
+
+            (FYI, the remainder now consists of these yellow
+            digits:)
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_4remainder.svg
+
+            Continuing, we bring down a $2$, ask “how many times does $777$
+            go into $2$?”, the answer will go here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_5b_v2.svg
+
+            The answer is $0$; we bring down a $4$, ask “how many
+            times does $777$ go into $24$?”, the answer will go
+            here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_6b_v2.svg
+
+            The answer is $0$; we bring down an $8$, ask “how many
+            times does $777$ go into $248$?”, the answer will go
+            here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_7b_v2.svg
+
+            The answer is $0$; we bring down a $6$, ask “how many
+            times does $777$ go into $2486$?”, the answer will go
+            here:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_8b_v2.svg
+
+            The answer is $3$, we subtract $3 \times 777$
+            from $2648$, giving us a new remainder:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_8c.svg
+
+            (And to be specific, the remainder is now formed
+            by...
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_inside_8remainder.svg
+
+            ...these yellow digits.) Etc.
+
+        |> SolutionNote
+
+            If you need help brushing up on your
+            long-form subtraction, say your subtraction is this:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_a.svg
+
+            You can either treat the top or bottom number as an
+            odometer, and count how much a car with this
+            odometer must be driven back/forth to reach the other
+            number.
+
+            Viewing the top number as an odometer, the odometer
+            would be as follows:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_odometer_1.svg
+
+            Starting from the right end of the subtraction, we ask
+            “by how much (or how little) does a car need to be
+            driven backwards, to turn the ‘$2$’ into an ‘$8$’?”, we
+            will write the answer below:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_c.svg
+
+            The answer is: $4$ [miles*] (*say):
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_d.svg
+
+            But the odometer will pass
+            from ‘$0$’ to ‘$9$’ on its way down to $8$, so we also
+            turn the ‘$6$’ into a ‘$5$’ (or “borrow a $10$” to do
+            $12 - 8 = 4$, as some teachers put it):
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_e.svg
+
+            Next we ask “by how many [$10$s of miles] does the car need
+            to be driven back, to turn the ‘$5$’ into a ‘$9$’?”, we
+            will write the answer below:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_f.svg
+
+            The answer is: $6$ [$10$s of miles]:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_g.svg
+
+            But here too the odometer will pass
+            from ‘$0$’ to ‘$9$’ as we reduce it, so the wheel to its
+            left must be turned back a notch as well; and because that
+            wheel is a ‘$0$’ already, the wheel to _its_left
+            must be turned back a notch; and so on, resulting in a small cascade
+            effect:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_h.svg
+
+            Next we ask “by how many [$100$s of miles] does the car need
+            to be driven back, to turn the ‘$9$’ into a ‘$0$’?”, we
+            will write the answer below:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_i.svg
+
+            The answer is: $9$ [$100$s of miles]:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_j.svg
+
+            Next we ask “by how many [$1000$s of miles] does the car need
+            to be driven back, to turn the ‘$9$’ into a ‘$5$’?”:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_k.svg
+
+            The answer is: $4$ [$1000$s of miles]:
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_big_subtraction_l.svg
+
+            Etc—we finally obtain:
+
+            |> Image
+                style=margin-top:1em;margin-bottom:1em;
+                src=images/svg_ch5_ex_big_division_big_subtraction_final.svg
+
+            (And like we alluded to above, one can also
+            consider the bottom number to be the odometer,
+            and “count up” towards the top number, leading
+            to a symmetric algorithm, but one method is not
+            better than the other.)
+
+        |> SolutionNote
+
+            Generally,
+
+            |> Image
+                src=images/svg_ch5_ex_big_division_remainder_equation.svg
+
+            at any point in a long division after the
+            remainder is updated to account for a new term
+            added to the quotient. That's what the remainder
+            is for: to satisfy this equation!
+

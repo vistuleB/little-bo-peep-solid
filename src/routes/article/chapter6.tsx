@@ -2,17 +2,14 @@ import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
 import Boxed  from "~/components/Boxed";
 import { CentralDisplayItalic }  from "~/components/Delimiters";
-import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
-import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
-import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
-import { SolutionNote, Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
+import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter6__() {
@@ -22,118 +19,71 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_176_h.a.i_"
-      path="/article/chapter6"
+      id="_158_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            the topic
+            function signatures
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            notation: function signatures
+            dimensionless units
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
-            dimensionless units
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
-          <InChapterLink href="?id=section-4">
             restrictions imposed on signatures by function
             operations
           </InChapterLink>
         </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-3">
+          <InChapterLink href="?id=section-4">
+            the unary function operations
+          </InChapterLink>
+        </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
-            the unary function operations
+            differentiation
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
-            differentiation
+            operators
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
-            operators
+            the sum rule
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
-            the sum rule
+            the “early afteroon product rule”
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
-            the “early afteroon product rule”
+            the chain rule
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=section-10">
-            the chain rule
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-10">
-          <InChapterLink href="?id=section-11">
             epilogue: the dimensionless plane
-          </InChapterLink>
-        </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-11">
-          <InChapterLink href="?id=exercises">
-            exercises
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 6:">
         Dimensional Analysis
       </ArticleTitle>
-      <Section id="section-1">
+      <Section
+        and="sth_else"
+        id="section-1"
+      >
         <OuterP>
           <b>
-            The topic.
-          </b>
-          {" "}
-          A
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          dimension
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          is a category of units such as “time”, as
-          touched upon in the 
-          {" "}
-          <OutChapterLink
-            class="out-chapter-link"
-            href="/article/chapter2#section-9"
-          >
-            Postcript to Chapter 2
-          </OutChapterLink>
-          .
-          The topic of
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          dimensional analysis
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          is that of analyzing the units within a mathematical 
-          expression to uncover contradictions (pointing
-          to upstream errors) and/or conversely to offer
-          validation.
-        </OuterP>
-      </Section>
-      <Pause />
-      <Section id="section-2">
-        <OuterP>
-          <b>
-            Notation: function signatures.
+            Function signatures.
           </b>
           {" "}
           If {" "}
@@ -154,7 +104,7 @@ export default function __Chapter6__() {
         <Pause />
         <MathBlock>
           $$
-          f : [\A] \ra [\B]
+          f : [\te&#123;A&#125;] \ra [\te&#123;B&#125;]
           $$
         </MathBlock>
         <Pause />
@@ -186,24 +136,11 @@ export default function __Chapter6__() {
           </Math>
           {" "} is a function for which the inputs
           denote kilograms and for which the outputs denote degrees
-          fahrenheit. We refer to 
-          the ordered pair {" "}
-          <NoBreak>
-            <Math>
-              $(\A, \B)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          as encoded by the notation {" "}
-          <NoBreak>
-            “
-            <Math>
-              $[\A] \ra [\B]$
-            </Math>
-            ”,
-          </NoBreak>
-          {" "}
+          fahrenheit. We refer to the ordered pair {" "}
+          <Math>
+            $(\te&#123;A&#125;, \te&#123;B&#125;)$
+          </Math>
+          {" "} 
           as the
         </OuterP>
         <Pause />
@@ -221,7 +158,7 @@ export default function __Chapter6__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example>
+        <Example id="_150_h.a.i_">
           <OuterP>
             <b>
               Example 1.
@@ -232,7 +169,7 @@ export default function __Chapter6__() {
           <Pause />
           <MathBlock>
             $$
-            z : [\lbs] \ra [\pounds]
+            z : [\te&#123;m&#125;/\te&#123;s&#125;^2] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;\rt&#123;0.1&#125;]
             $$
           </MathBlock>
           <Pause />
@@ -247,28 +184,24 @@ export default function __Chapter6__() {
           </MathBlock>
           <Pause />
           <OuterP>
-            is a function whose inputs denote pounds, the measure
-            of weight, 
-            and whose outputs denote pounds {" "}
-            <i>
-              sterling
-            </i>
-            , the measure
-            of wealth.
+            is a function
+            whose inputs denote meters per seconds squared
+            (a measure of acceleration)
+            and whose outputs denote British pounds.
           </OuterP>
         </Example>
       </Section>
-      <Pause />
       <Rest />
     </Article>
   );
 }
 
 const Rest = () => {
-  const visibleRestSections = useShowMore(10);
+  const showMore = useShowMore();
   return <>
-    {visibleRestSections() > 0 && <>
-      <Section id="section-3">
+    {showMore() && <>
+      <Pause />
+      <Section id="section-2">
         <OuterP>
           <b>
             Dimensionless units.
@@ -279,7 +212,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \Large [1]
+          \Large[1]
           $$
         </MathBlock>
         <Pause />
@@ -321,7 +254,7 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \large \cos : [1] \ra [1]
+          \cos : [1] \ra [1]
           $$
         </MathBlock>
         <Pause />
@@ -349,11 +282,7 @@ const Rest = () => {
           of one straight length by another*—the afore-mentioned
           “opposite over adjacent”. (Or “adjacent over hypotenuse”,
           in the case of cosine!)
-          <ImageLeft
-            src="/build-img/svgo-svg/aIgf.svg"
-            intrinsicWidth={600}
-            intrinsicHeight={500}
-          />
+          <ImageLeft src="/tmp-images/c6_radian_dimensionless_ratio_cloud.svg" />
         </OuterP>
         <Pause />
         <OuterP>
@@ -411,11 +340,7 @@ const Rest = () => {
           :
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/edTN.svg"
-          intrinsicWidth={400}
-          intrinsicHeight={275}
-        />
+        <Image src="/tmp-images/c6_true_counterclockwiseness_1.svg" />
         <Pause />
         <OuterP>
           What we mean is that if it was our custom to draw the
@@ -432,20 +357,16 @@ const Rest = () => {
           would be clockwise, not counterclockwise:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/0QSx.svg"
-          intrinsicWidth={400}
-          intrinsicHeight={275}
-        />
+        <Image src="/tmp-images/c6_true_counterclockwiseness_2.svg" />
         <Pause />
         <OuterP>
-          (This actually happens inside of SVG, the
-          web standard for so-called “vector graphics”, in which the {" "}
+          (This actually happens inside of SVG, the web-based
+          standard for so-called “vector graphics”, in which the {" "}
           <Math>
             $y$
           </Math>
           {" "}
-          axis points downwards. In an SVG file, {" "}
+          axis points downwards; in an SVG file, {" "}
           <span class="code-cartouche">
             rotate(10)
           </span>
@@ -461,17 +382,11 @@ const Rest = () => {
             clockwise
           </i>
           .)
-          <ImageRight
-            src="/build-img/svgo-svg/BYVX.svg"
-            intrinsicWidth={1500}
-            intrinsicHeight={500}
-          />
+          <ImageRight src="/tmp-images/c6_SVG_cloud.svg" />
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
       <Pause />
-      <Section id="section-4">
+      <Section id="section-3">
         <OuterP>
           <b>
             Restrictions imposed on signatures by function
@@ -483,10 +398,8 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/build-img/svgo-svg/trfz.svg"
+          src="/tmp-images/c6_equal_inputs.svg"
           style="margin-bottom:-1.3em"
-          intrinsicWidth={300}
-          intrinsicHeight={50}
         />
         <Pause />
         <OuterP>
@@ -505,8 +418,8 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\A] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
+          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
+          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -521,15 +434,15 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
+          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
+          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
           in order not to add apples to oranges, 
-          at the output end, either, i.e., to avoid
+          at the output end, either, i.e., to avoid 
           {" "}
           <NoBreak>
             “
@@ -548,34 +461,36 @@ const Rest = () => {
         </OuterP>
         <OuterP class="indent-10">
           By contrast, when multiplying two functions we can
-          stomach the output units to be different since
+          stomach 
+          the output units to be different since
           composite units such as “kilowatt-hour”, “worker-years”, etc,
-          exist, and likewise when dividing. 
-          The following table summarizes the constraints
-          that appear at the
-          input (“component signatures”) and output (“resultant
-          signature”) ends, for the five main function operations:
+          exist,
+          and likewise when dividing. We have:
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_bob_v2.svg"
-          id="_152_h.a.i_"
-          intrinsicWidth={700}
-          intrinsicHeight={883}
+          src="/tmp-images/c6_flowers_here_v2.svg"
+          id="_151_h.a.i_"
         />
         <Pause />
-        <StarDivider style="margin-top:-0.3em" />
+        <OuterP>
+          ...summarizing the constraints that appear at the
+          input (“component signatures”) and output (“resultant
+          signature”) ends, for the five main function operations.
+        </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 2 && <>
       <Pause />
-      <Section id="section-5">
+      <Section id="section-4">
         <OuterP>
           <b>
             The unary function operations.
           </b>
           {" "}
-          We will add two more not-yet-much-discussed
+          We will add two more not-yet-discussed—or {" "}
+          <i>
+            hardly
+          </i>
+          * discussed—
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -593,64 +508,48 @@ const Rest = () => {
           <i>
             reciprocal
           </i>
-          , 
-          written {" "}
-          <NoBreak>
-            “
-            <Math>
-              $-\f$
-            </Math>
-            “
-          </NoBreak>
-          {" "} and {" "}
-          <NoBreak>
-            “
-            <Math>
-              $1/f$
-            </Math>
-            ”,
-          </NoBreak>
-          {" "}
-          and defined by formulas here:
+          , defined by formulas here:
         </OuterP>
         <Pause />
         <Image
-          src="/tmp-images/c6_flowers_here_two_more_v3.svg"
-          id="_153_h.a.i_"
-          intrinsicWidth={700}
-          intrinsicHeight={310}
+          src="/tmp-images/c6_flowers_here_two_more.svg"
+          id="_152_h.a.i_"
         />
         <Pause />
-        <StarDivider style="margin-top:-0.3em" />
+        <OuterP>
+          [*See {" "}
+          <a
+            class="out-chapter-link"
+            href="/article/chapter5#_88_h.a.i_"
+          >
+            Chapter 5
+          </a>
+          &#8288;.]
+        </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 3 && <>
       <Pause />
-      <Section
-        _handle="derivative_signature"
-        id="section-6"
-      >
+      <Section id="section-5">
         <OuterP>
           <b>
             Differentiation.
           </b>
           {" "}
           As reviewed in {" "}
-          <OutChapterLink
+          <a
             class="out-chapter-link"
             href="/article/chapter4#section-6"
           >
             Chapter 4
-          </OutChapterLink>
+          </a>
           {" "}
           (see also {" "}
-          <OutChapterLink
-            href="/article/chapter4#_63_h.a.i_"
+          <a
+            href="/article/chapter4#_62_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
-          </OutChapterLink>
-          ),
+          </a>
+          &#8288;),
           differentiation divides the units of the output
           by the units of the input. 
           In terms of signatures,
@@ -674,7 +573,8 @@ const Rest = () => {
         <Pause />
         <OuterP>
           for any units A, B.
-          By the same token,
+          By the same token, the “if and only if”-ness
+          implies that
         </OuterP>
         <Pause />
         <MathBlock>
@@ -699,43 +599,41 @@ const Rest = () => {
           <NoBreak>
             “
             <Math>
-              $h$
+              $g$
             </Math>
             ”
           </NoBreak>
           {" "} of
           {" "}
-          <OutChapterLink
-            href="/article/chapter4#_63_h.a.i_"
+          <a
+            href="/article/chapter4#_62_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 6 of Chapter 4
-          </OutChapterLink>
-          , that one needs to
+          </a>
+          &#8288;, that one needs to
           multiply the output units of {" "}
           <Math>
-            $h''$
+            $g''$
           </Math>
           {" "} by the
           units of input units of {" "}
           <Math>
-            $h''$
+            $g''$
           </Math>
           {" "} in order to recover the output
           units of {" "}
           <NoBreak>
             <Math>
-              $h'$
+              $g'$
             </Math>
             ,
           </NoBreak>
           {" "} etc.)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 4 && <>
       <Pause />
-      <Section id="section-7">
+      <Section id="section-6">
         <OuterP>
           <b>
             Operators.
@@ -765,11 +663,7 @@ const Rest = () => {
           depicted here as an eye-of-Godzilla flying saucer:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/Pl1U.svg"
-          intrinsicWidth={520}
-          intrinsicHeight={220}
-        />
+        <Image src="/tmp-images/c6_differentiation_operator_intro.svg" />
         <Pause />
         <OuterP>
           Though similarly, the
@@ -777,7 +671,7 @@ const Rest = () => {
           operations from {" "}
           <InChapterLink
             class="in-chapter-link"
-            href="#_153_h.a.i_"
+            href="#_152_h.a.i_"
           >
             Table 1.2
           </InChapterLink>
@@ -786,11 +680,7 @@ const Rest = () => {
           as input and producing one function as output:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/2YHQ.svg"
-          intrinsicWidth={520}
-          intrinsicHeight={500}
-        />
+        <Image src="/tmp-images/c6_negation_operator.svg" />
         <Pause />
         <OuterP>
           The other function operations from Table 1.1
@@ -807,11 +697,7 @@ const Rest = () => {
           can be depicted as a two-input-tube-flying-saucer:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/A7d4.svg"
-          intrinsicWidth={600}
-          intrinsicHeight={235}
-        />
+        <Image src="/tmp-images/c6_addition_operator_standalone.svg" />
         <Pause />
         <OuterP>
           In this fashion, the complete list of all
@@ -820,11 +706,7 @@ const Rest = () => {
           the following:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/Mq0V.svg"
-          intrinsicWidth={600}
-          intrinsicHeight={585}
-        />
+        <Image src="/tmp-images/c6_all_our_operators_v2.svg" />
         <Pause />
         <OuterP>
           (We recycle {" "}
@@ -837,7 +719,7 @@ const Rest = () => {
           </NoBreak>
           {" "} for two
           different operators—a unary one and a binary one.)
-          (Or as programmers would say, we have
+          (Or, as computer scientists would say, we have
           {" "}
           <i>
             overloaded
@@ -857,18 +739,12 @@ const Rest = () => {
           in a similar vein of diagram:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/VuM1.svg"
-          intrinsicWidth={810}
-          intrinsicHeight={580}
-        />
+        <Image src="/tmp-images/c6_operators_acting_on_signatures_v2.svg" />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
       </Section>
-    </>}
-    {visibleRestSections() > 5 && <>
       <Pause />
-      <Section id="section-8">
+      <Section id="section-7">
         <OuterP>
           <b>
             The sum rule.
@@ -936,8 +812,8 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
+          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
+          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -945,8 +821,8 @@ const Rest = () => {
         <OuterP>
           as listed in {" "}
           <InChapterLink
-            href="/article/chapter6#_152_h.a.i_"
             class="in-chapter-link"
+            href="#_151_h.a.i_"
           >
             Table 1.1
           </InChapterLink>
@@ -955,56 +831,29 @@ const Rest = () => {
           impose any new constraints.
         </OuterP>
         <OuterP class="indent-10">
-          On the right-hand side,
+          On
+          the right-hand side,
           we start by adopting the agnostic point of view that
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\C] &amp;\ra [\D] \up&#123;1.35&#125;
+          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
+          g : [\te&#123;C&#125;] &amp;\ra [\te&#123;D&#125;] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          for some arbitrary units {" "}
-          <NoBreak>
-            <Math>
-              $\A$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $\B$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $\C$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $\D$
-            </Math>
-            ;
-          </NoBreak>
-          {" "} then,
+          for some arbitrary units A, B, C, D; then,
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f' : [\A] &amp;\ra [\B/\A] \\
-          g' : [\C] &amp;\ra [\D/\C] \up&#123;1.35&#125;
+          f' : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;/\tA] \\
+          g' : [\te&#123;C&#125;] &amp;\ra [\te&#123;D&#125;/\tC] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -1025,29 +874,44 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \A\,\,\, = \,\,\,\C
+          \begin&#123;aligned&#125;
+          \tA &amp;= \tC \\
+          \tB/\tA &amp;= \tD/\tC \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \left[&#123;\B\over\A&#125;\right]\! =\! \left[&#123;\D\over\C&#125;\right]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
+          [a.k.a., “the input units of {" "}
+          <Math>
+            $f'$
+          </Math>
+          {" "} equal the input units
+          of {" "}
+          <Math>
+            $g'$
+          </Math>
+          {" "} and the output units of {" "}
+          <Math>
+            $f'$
+          </Math>
+          {" "} equal the output
+          units of {" "}
+          <NoBreak>
+            <Math>
+              $g'$
+            </Math>
+            ”]
+          </NoBreak>
+          {" "}
           by Table 1.1 again, which, together, imply
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          \,\A &amp;= \C, \\
-          \B &amp;= \D \up&#123;1.35&#125;
+          \tA &amp;= \tC \\
+          \tB &amp;= \tD \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -1080,24 +944,25 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
+          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
+          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          as required by either side of the equation, we have
+          as required by either side of the equation,
+          we have
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \begin&#123;gathered&#125;
-          f + g : [\A] \ra [\B] \\
-          (f + g)' : [\A] \ra [\tB/\tA] \up&#123;1.35&#125; \\
-          f' :  [\A] \ra [\tB/\tA] \up&#123;1.35&#125; \\
-          g' :  [\A] \ra [\tB/\tA] \up&#123;1.35&#125; \\
-          f' + g' :  [\A] \ra [\tB/\tA] \up&#123;1.35&#125;
+          f + g : [\te&#123;A&#125;] \ra [\te&#123;B&#125;] \\
+          (f + g)' : [\te&#123;A&#125;] \ra [\tB/\tA] \up&#123;1.35&#125; \\
+          f' :  [\te&#123;A&#125;] \ra [\tB/\tA] \up&#123;1.35&#125; \\
+          g' :  [\te&#123;A&#125;] \ra [\tB/\tA] \up&#123;1.35&#125; \\
+          f' + g' :  [\te&#123;A&#125;] \ra [\tB/\tA] \up&#123;1.35&#125;
           \end&#123;gathered&#125;
           $$
         </MathBlock>
@@ -1129,7 +994,7 @@ const Rest = () => {
           as units are concerned: nothing untoward has been found!
         </OuterP>
         <Pause />
-        <Example id="_154_h.a.i_">
+        <Example id="_153_h.a.i_">
           <OuterP>
             <b>
               Example 2.
@@ -1203,7 +1068,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_154_h.a.i_"
+                href="/article/chapter6#_153_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 2
@@ -1213,7 +1078,7 @@ const Rest = () => {
             {" "}
             In the case of {" "}
             <InChapterLink
-              href="/article/chapter6#_154_h.a.i_"
+              href="/article/chapter6#_153_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1251,7 +1116,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_155_h.a.i_">
+        <Example id="_154_h.a.i_">
           <OuterP>
             <b>
               Example 3.
@@ -1356,11 +1221,7 @@ const Rest = () => {
             {" "} etc:
           </OuterP>
           <Pause />
-          <Image
-            src="/build-img/svgo-svg/aASR.svg"
-            intrinsicWidth={442}
-            intrinsicHeight={945}
-          />
+          <Image src="/tmp-images/c6_all_those_x1x2_graphs.svg" />
           <Pause />
           <OuterP>
             Thus
@@ -1426,7 +1287,7 @@ const Rest = () => {
           both differentiable it is still 
           true, however, that
         </OuterP>
-        <Boxed id="_156_h.a.i_">
+        <Boxed id="_155_h.a.i_">
           <MathBlock>
             $$
             (f + g)'(x_0) = f'(x_0) + g'(x_0)
@@ -1458,10 +1319,8 @@ const Rest = () => {
           us a “point by point” version of the sum rule—more granular!
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 6 && <>
       <Pause />
-      <Section id="section-9">
+      <Section id="section-8">
         <OuterP>
           <b>
             The “early afteroon product rule”.
@@ -1512,8 +1371,8 @@ const Rest = () => {
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\A] &amp;\ra [\C] \up&#123;1.35&#125;
+          f : [\te&#123;A&#125;] &amp;\ra [\te&#123;B&#125;] \\
+          g : [\te&#123;A&#125;] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
@@ -1532,11 +1391,9 @@ const Rest = () => {
           (fg)' : [\tA] \ra [\tB\tC/\tA]
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/jPk2.svg"
-            offsetX="0em"
-            atLeastAsWide={true}
-            intrinsicWidth={400}
-            intrinsicHeight={300}
+            src="/tmp-images/c6_fg_prime_signature_cloud_v2.svg"
+            offset_x="5em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -1549,11 +1406,9 @@ const Rest = () => {
           f'g' : [\tA] \ra [\tB\tC/\tA^2]
           $$
           <ImageRight
-            src="/build-img/svgo-svg/qX4a.svg"
-            offsetX="0em"
-            atLeastAsWide={true}
-            intrinsicWidth={450}
-            intrinsicHeight={300}
+            src="/tmp-images/c6_f_prime_g_prime_signature_cloud_v2.svg"
+            offset_x="5em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -1584,7 +1439,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Example id="_157_h.a.i_">
+        <Example id="_156_h.a.i_">
           <OuterP>
             <b>
               Example 4.
@@ -1592,7 +1447,7 @@ const Rest = () => {
             {" "}
             As in {" "}
             <InChapterLink
-              href="/article/chapter6#_154_h.a.i_"
+              href="/article/chapter6#_153_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
@@ -1708,10 +1563,8 @@ const Rest = () => {
             and therefore, the early afternoon product rule
             cannot hold in general.)
             <ImageLeft
-              src="/build-img/svgo-svg/U86u.svg"
-              offsetX="1em"
-              intrinsicWidth={800}
-              intrinsicHeight={550}
+              src="/tmp-images/c6_x1x2_3600_cloud.svg"
+              offset_x="1em"
             />
           </OuterP>
           <Pause />
@@ -1719,7 +1572,7 @@ const Rest = () => {
             <i>
               Note on {" "}
               <InChapterLink
-                href="/article/chapter6#_157_h.a.i_"
+                href="/article/chapter6#_156_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 4
@@ -1749,7 +1602,7 @@ const Rest = () => {
           <OuterP>
             in {" "}
             <InChapterLink
-              href="/article/chapter6#_157_h.a.i_"
+              href="/article/chapter6#_156_h.a.i_"
               class="in-chapter-link"
             >
               Example 4
@@ -1798,10 +1651,8 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 7 && <>
       <Pause />
-      <Section id="section-10">
+      <Section id="section-9">
         <OuterP>
           <b>
             The chain rule.
@@ -1819,7 +1670,8 @@ const Rest = () => {
         <OuterP>
           similar to the sum rule,
           and we can try guessing such a formula using
-          dimensional analysis.
+          dimensional analysis, i.e., from the fact that the
+          formula should be dimensionally consistent.
         </OuterP>
         <OuterP class="indent-10">
           To be clear, such a formula should use only the
@@ -1908,11 +1760,7 @@ const Rest = () => {
           schizophrenically put input tubes on the left, again):
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/YZvS.svg"
-          intrinsicWidth={520}
-          intrinsicHeight={175}
-        />
+        <Image src="/tmp-images/c6_lego_pieces.svg" />
         <Pause />
         <OuterP>
           From these pieces we seek to assemble a function
@@ -2034,11 +1882,9 @@ const Rest = () => {
           [\tA] \ra [\tC/\tA]
           $$
           <ImageRight
-            src="/build-img/svgo-svg/zysM.svg"
-            offsetX="0em"
-            atLeastAsWide={true}
-            intrinsicWidth={500}
-            intrinsicHeight={300}
+            src="/tmp-images/c6_chain_rule_units_cloud.svg"
+            offset_x="3.1em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -2091,11 +1937,7 @@ const Rest = () => {
             Say that a cute
           </OuterP>
           <Pause />
-          <Image
-            src="/build-img/svgo-svg/kL1E.svg"
-            intrinsicWidth={180}
-            intrinsicHeight="164.25"
-          />
+          <Image src="/tmp-images/c6_solo_RAT.svg" />
           <Pause />
           <OuterP>
             is running a fundraising race where one function
@@ -2231,9 +2073,7 @@ const Rest = () => {
           <Pause />
           <Image
             width="530px"
-            src="/build-img/svgo-svg/un6E.svg"
-            intrinsicWidth={680}
-            intrinsicHeight={145}
+            src="/tmp-images/c6_explained_rat_equation.svg"
           />
           <Pause />
           <OuterP>
@@ -2245,11 +2085,9 @@ const Rest = () => {
             f'(g(t_0)) = (f'\circ g)(t_0)
             $$
             <ImageRight
-              src="/build-img/svgo-svg/g4I6.svg"
-              offsetX="-1em"
-              atLeastAsWide={true}
-              intrinsicWidth={250}
-              intrinsicHeight={100}
+              src="/tmp-images/c6_composition_reminder_cloud.svg"
+              offset_x="2em"
+              compensate_offset_x_for_large_text_columns={true}
             />
           </MathBlock>
           <Pause />
@@ -2370,13 +2208,13 @@ const Rest = () => {
             similarly to the {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#_156_h.a.i_"
+              href="#_155_h.a.i_"
             >
               postscript
             </InChapterLink>
             {" "} following {" "}
             <InChapterLink
-              href="/article/chapter6#_155_h.a.i_"
+              href="/article/chapter6#_154_h.a.i_"
               class="in-chapter-link"
             >
               Example 3
@@ -2386,7 +2224,7 @@ const Rest = () => {
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_158_h.a.i_">
+        <Example id="_157_h.a.i_">
           <OuterP>
             <b>
               Example 6.
@@ -2399,20 +2237,13 @@ const Rest = () => {
             $$
             (\cos \circ \cos)' = ((-\sin) \circ \cos)(-\sin)
             $$
-            <ImageLeft
-              src="/build-img/svgo-svg/_iNd.svg"
-              offsetX="2em"
-              atLeastAsWide={true}
-              intrinsicWidth={400}
-              intrinsicHeight={300}
-            />
           </MathBlock>
           <Pause />
           <OuterP>
             by {" "}
             <InChapterLink
               class="in-chapter-link"
-              href="#section-10"
+              href="#section-9"
             >
               the chain rule
             </InChapterLink>
@@ -2447,7 +2278,7 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x)
+            (\cos \circ \cos)'(x) = \sin(\cos x)\sin(x)
             $$
           </MathBlock>
           <Pause />
@@ -2460,28 +2291,11 @@ const Rest = () => {
               </Math>
               ’
             </NoBreak>
-            {" "} and cancelling the minus signs,
-            or
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            (\cos \circ \cos)' = (\sin \circ \cos)\sin
-            $$
-            <ImageRight
-              src="/build-img/svgo-svg/e_hV.svg"
-              atLeastAsWide={true}
-              intrinsicWidth={800}
-              intrinsicHeight={200}
-            />
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            cancelling signs from the outset.
+            {" "} and cancelling the minus signs.
           </OuterP>
         </Example>
         <Pause />
-        <Example id="_159_h.a.i_">
+        <Example>
           <OuterP>
             <b>
               Example 7.
@@ -2499,102 +2313,53 @@ const Rest = () => {
           <OuterP>
             by {" "}
             <InChapterLink
-              href="/article/chapter6#_158_h.a.i_"
+              href="/article/chapter6#_157_h.a.i_"
               class="in-chapter-link"
             >
               Example 6
             </InChapterLink>
             &#8288;,
-            which
-            looks visually compatible with the graph
+            which looks visually compatible with the graph of
+            {" "}
+            <Math>
+              $\cos(\cos x)$
+            </Math>
+            {" "}
+            since
+            {" "}
+            <Math>
+              $(\cos \circ \cos)'(2.5)$
+            </Math>
+            {" "} is supposed to be the slope
             of {" "}
             <Math>
-              $x \ra \cos(\cos(x))$
+              $y = \cos(\cos x)$
             </Math>
-            {" "} [nb: it should be the slope]:
+            {" "} at {" "}
+            <Math>
+              $x = 2.5$
+            </Math>
+            {" "} (after all):
           </OuterP>
           <Pause />
-          <Image
-            src="/build-img/svgo-svg/0dwB.svg"
-            intrinsicWidth="892.21315"
-            intrinsicHeight="163.02727"
-          />
-          <Pause />
-          <StarDivider />
+          <Image src="/tmp-images/c6_sin_of_sin_graph.svg" />
           <Pause />
           <OuterP>
-            <i>
-              Note on {" "}
-              <InChapterLink
-                href="/article/chapter6#_159_h.a.i_"
-                class="in-chapter-link"
-              >
-                Example 7
-              </InChapterLink>
-            </i>
-            . 
-            The values of {" "}
-            <Math>
-              $\cos(\cos(x))$
-            </Math>
-            {" "} can be throught of as
-            the {" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              -coordinates
-            </NoBreak>
-            {" "} of a certain horizontal windshield-wiper
-            whose angle at time {" "}
-            <Math>
-              $t$
-            </Math>
-            {" "} is {" "}
-            <NoBreak>
-              <Math>
-                $\cos(t)$
-              </Math>
-              :
-            </NoBreak>
-          </OuterP>
-          <Pause />
-          <Image
-            src="/build-img/svgo-svg/khDb.svg"
-            intrinsicWidth={400}
-            intrinsicHeight={300}
-          />
-          <Pause />
-          <OuterP>
-            Specifically, since
+            (Because
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            -1 \leq \cos(t) \leq 1
+            -1 \leq \cos(x) \leq 1
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            the angle of the wiper remains stuck between 
-            {" "}
-            <Math>
-              $-1\Rad \cong -57.29^\circ$
-            </Math>
-            {" "}
-            at one end at
-            {" "}
-            <Math>
-              $+1\Rad \cong 57.29^\circ$
-            </Math>
-            {" "}
-            at the
-            other end, with the values of {" "}
+            the values of {" "}
             <Math>
               $\cos(\cos(x))$
             </Math>
-            {" "}
-            remaining stuck between
+            {" "} remain stuck between
           </OuterP>
           <Pause />
           <MathBlock>
@@ -2605,28 +2370,35 @@ const Rest = () => {
           <Pause />
           <OuterP>
             and {" "}
+            <Math>
+              $\cos(0) = 1$
+            </Math>
+            {" "}
+            which produces the graph above, that one can actually
+            think of as the {" "}
             <NoBreak>
               <Math>
-                $\cos(0) = 1$
+                $x$
               </Math>
-              ,
+              -coordinate
             </NoBreak>
-            {" "} producing the compressed
-            sinusoid-like wave seen in {" "}
-            <InChapterLink
-              href="/article/chapter6#_159_h.a.i_"
-              class="in-chapter-link"
-            >
-              Example 7
-            </InChapterLink>
-            &#8288;.
+            {" "} of a certain horizontal
+            windshield-wiper whose angle at time {" "}
+            <Math>
+              $t$
+            </Math>
+            {" "} is {" "}
+            <NoBreak>
+              <Math>
+                $\cos(t)$
+              </Math>
+              .)
+            </NoBreak>
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 8 && <>
       <Pause />
-      <Section id="section-11">
+      <Section id="section-10">
         <OuterP>
           <b>
             Epilogue: the dimensionless plane.
@@ -2704,10 +2476,8 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <Image
-          src="/build-img/svgo-svg/oqAL.svg"
-          style="margin-top:-0.5em"
-          intrinsicWidth={600}
-          intrinsicHeight={465}
+          src="/tmp-images/c6_dimensionless_plane_1_v1.svg"
+          style="margin-top:-1.4em"
         />
         <Pause />
         <OuterP>
@@ -2736,11 +2506,7 @@ const Rest = () => {
           {" "} here...
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/_SJ0.svg"
-          intrinsicWidth={600}
-          intrinsicHeight={465}
-        />
+        <Image src="/tmp-images/c6_dimensionless_plane_1_v1_circled.svg" />
         <Pause />
         <OuterP>
           ...is really a {" "}
@@ -2806,2061 +2572,6 @@ const Rest = () => {
           {" "} the pure number!!
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 9 && <>
-      <Pause />
-      <Exercises
-        at_end_of_page={true}
-        mode="dual"
-        show_curlicue={true}
-        id="_175_h.a.i_"
-      >
-        <Exercise number={1}>
-          <ExerciseStatement id="_160_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 1.
-              </b>
-              {" "}
-              What constraints does the composition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              impose on the signature of {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              A signature of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\tA] \ra [\tA]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is necessary and sufficient.
-            </OuterP>
-            <OuterP class="indent-10">
-              Formally, the general composition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ g
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              requires signatures of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              f : [\B] \ra [\C] \\
-              \up&#123;1.6&#125;g : [\A] \ra [\B]
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for some units A, B, C, as per {" "}
-              <InChapterLink
-                href="/article/chapter6#_152_h.a.i_"
-                class="in-chapter-link"
-              >
-                Table 1.1
-              </InChapterLink>
-              &#8288;.
-              If {" "}
-              <Math>
-                $g = f$
-              </Math>
-              {" "}
-              this implies {" "}
-              <Math>
-                $\A = \B$
-              </Math>
-              {" "} because both are the inputs
-              of {" "}
-              <NoBreak>
-                <Math>
-                  $f = g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} as well as {" "}
-              <Math>
-                $\B = \C$
-              </Math>
-              {" "} because both are
-              the outputs of {" "}
-              <NoBreak>
-                <Math>
-                  $f = g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} collapsing A, B, C to a
-              single unit {" "}
-              <NoBreak>
-                <Math>
-                  $\A = \B = \C = \A$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={2}>
-          <ExerciseStatement id="_161_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 2.
-              </b>
-              {" "}
-              What constraints does the composition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ g \circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              impose on the signatures of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $g$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The composition requires {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} of the
-              form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              f : [\tA] \ra [\tB] \\
-              \up&#123;1.6&#125;g : [\tB] \ra [\tA]
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for some units A and B, as the output of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}
-              is passed to {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} and the output of {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} is passed to {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={3}>
-          <ExerciseStatement id="_162_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 3.
-              </b>
-              {" "}
-              What constraints does the assemblage
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ &#123;f\over f\circ f&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              impose on the signature of {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              To start with, the presence of {" "}
-              <Math>
-                $f \circ f$
-              </Math>
-              {" "} as a sub-expression
-              imposes a restricted signature of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\tA] \ra [\tA]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              on {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} by {" "}
-              <InChapterLink
-                href="/article/chapter6#_160_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 1
-              </InChapterLink>
-              &#8288;.
-              But then
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;f\over f\circ f&#125; : [\tA] \ra [1]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              because the output units at top and bottom of the fraction are
-              both A, which cancels. (Or
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/Udaw.svg"
-              intrinsicWidth={500}
-              intrinsicHeight={120}
-            />
-            <Pause />
-            <OuterP>
-              where {" "}
-              <NoBreak>
-                <Math>
-                  $\tA/\tA = 1$
-                </Math>
-                .)
-              </NoBreak>
-              {" "} As
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;f\over f\circ f&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is fed back to {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} this forces...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              [\tA] = [1]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <NoBreak>
-                ...
-                <Math>
-                  $f$
-                </Math>
-              </NoBreak>
-              {" "} to accept dimensionless inputs, and...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [1] \ra [1]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...since {" "}
-              <NoBreak>
-                <Math>
-                  $f : [\tA] \ra [\tA]$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={4}>
-          <ExerciseStatement id="_163_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 4.
-              </b>
-              {" "}
-              What are the signatures of 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $1/z$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $z^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $-z$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $z + z$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $z/z$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $z - z$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              and {" "}
-              <Math>
-                $z \circ z$
-              </Math>
-              {" "}
-              if {" "}
-              <NoBreak>
-                <Math>
-                  $z  : [\lbs] \ra [\pounds]$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Applying the rules of {" "}
-              <InChapterLink
-                href="/article/chapter6#_152_h.a.i_"
-                class="in-chapter-link"
-              >
-                Table 1.1
-              </InChapterLink>
-              {" "} with {" "}
-              <Math>
-                $f = g = z$
-              </Math>
-              {" "}
-              and of {" "}
-              <InChapterLink
-                href="/article/chapter6#_153_h.a.i_"
-                class="in-chapter-link"
-              >
-                Table 1.2
-              </InChapterLink>
-              {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $f = z$
-                </Math>
-                :
-              </NoBreak>
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                (1/z) : [\lbs] \ra [1/\pounds]
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                z^2 : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;^2\rt&#123;0.1&#125;]
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                (-z) : [\lbs] \ra [\pounds]
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                (z + z) : [\lbs] \ra [\pounds]
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                (z/z) : [\lbs] \ra [\rt&#123;0.1&#125;1\rt&#123;0.1&#125;]
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                (z - z) : [\lbs] \ra [\pounds]
-                $$
-              </MathBlock>
-            </Boxed>
-            <OuterP>
-              On the other hand,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              z \circ z
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is not a well-formed composition, and does not have
-              a well-defined signature, since the output units of
-              {" "}
-              <Math>
-                $z$
-              </Math>
-              {" "} do not match the input units of {" "}
-              <NoBreak>
-                <Math>
-                  $z$
-                </Math>
-                !
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                Since
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                -z = (-1)z,
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                z + z = 2z,
-                $$
-              </MathBlock>
-              <Pause />
-              <MathBlock>
-                $$
-                z - z = 0z
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                three of the cases considered are just special
-                cases of multiplying the function by a 
-                constant. (Which does not change the signature, as long
-                as the constant is dimensionless.)
-              </OuterP>
-              <OuterP class="indent-10">
-                [Nb: The multiplication of a function by a constant
-                is formally treated in {" "}
-                <OutChapterLink
-                  href="/article/chapter4#_69_h.a.i_"
-                  class="out-chapter-link"
-                >
-                  Exercise 12 of Chapter 4
-                </OutChapterLink>
-                .]
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                It is indeed true that
-              </OuterP>
-              <Pause />
-              <MathBlock>
-                $$
-                z - z = 0
-                $$
-              </MathBlock>
-              <Pause />
-              <OuterP>
-                identically, but this is zero {" "}
-                <i>
-                  pounds
-                </i>
-                , you see?
-                [British.]
-              </OuterP>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={5}>
-          <ExerciseStatement id="_164_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 5.
-              </b>
-              {" "}
-              Is it possible to form a function of signature
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              [\lbs] \ra [\m/\s]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              from functions {" "}
-              <NoBreak>
-                <Math>
-                  $\alpha : [\pounds] \ra [\lbs/\s]$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              {" "}
-              <NoBreak>
-                <Math>
-                  $\beta : [\m/\s] \ra [\m^2/\s]$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} and 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $\gamma : [\lbs] \ra [\s]$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              No. These functions do not mix via composition,
-              nor addition or multiplication etc, because none of
-              the input units are the same, nor even do any of the
-              output units (or powers thereof) coincide with any
-              of the other input units—these functions are all like
-              oil and water to one another, despite superficial
-              similarities in the units!
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={6}>
-          <ExerciseStatement id="_165_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 6.
-              </b>
-              {" "}
-              If {" "}
-              <Math>
-                $v$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} are both speeds, what
-              is the dimension of
-              the expression below?
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;
-              $$
-            </MathBlock>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;v \over c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is “speed over speed” is dimensionless,
-              and since the sums, differences, squares,
-              and square roots, etc, of dimensionless
-              quantities is dimensionless, the entire
-              expression is dimensionless.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Vocabulary.
-              </i>
-              {" "}
-              When {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} is the speed of light
-              the reciprocal of this expression, often
-              written {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $\gamma$
-                </Math>
-                ’,
-              </NoBreak>
-              {" "} is known as the
-              {" "}
-              <i>
-                Lorentz factor
-              </i>
-              {" "} in physics. It is also dimensionless:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \gamma = &#123;1\over \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;&#125;.
-              $$
-            </MathBlock>
-          </Solution>
-        </Exercise>
-        <Exercise number={7}>
-          <ExerciseStatement id="_166_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 7.
-              </b>
-              {" "}
-              If units of time and space are chosen
-              such that {" "}
-              <Math>
-                $c = 1$
-              </Math>
-              {" "} where {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} is the speed of the light,
-              why might 
-              a physicist
-              still choose
-              to write expressions containing {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $c$
-                </Math>
-                ’?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Besides wanting to “remind the general
-              formula”, one reason is
-              to keep expressions dimensionally consistent.
-              For example, the Lorentz factor reciprocal
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              (cf. {" "}
-              <InChapterLink
-                href="/article/chapter6#_165_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 6
-              </InChapterLink>
-              &#8288;)
-              would become
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \sqrt&#123;1 - v^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              if 
-              taking advantage of {" "}
-              <Math>
-                $c = 1$
-              </Math>
-              {" "} to
-              elide the {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $c$
-                </Math>
-                ’,
-              </NoBreak>
-              {" "} which
-              might be numerically correct and typographically more
-              expedient, but is dimensionally
-              inconsistent: either a speed squared is being subtracted
-              from a dimensionless {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $1$
-                </Math>
-                ’,
-              </NoBreak>
-              {" "} or, in a last-ditch effort, we pretend
-              that {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $1$
-                </Math>
-                ’
-              </NoBreak>
-              {" "} stands for {" "}
-              <NoBreak>
-                ‘
-                <Math>
-                  $c^2$
-                </Math>
-                ’,
-              </NoBreak>
-              {" "} which is also a speed squared,
-              but then the entire square root is a speed instead of
-              being dimensionless, as the Lorentz factor (or its
-              reciprocal) should be!
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={8}>
-          <ExerciseStatement id="_167_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 8.
-              </b>
-              {" "}
-              Give a dimensional analysis of the (real,
-              “late afternoon”) product rule {" "}
-              <NoBreak>
-                (cf
-                <Math>
-                  $.$
-                </Math>
-              </NoBreak>
-              {" "} {" "}
-              <OutChapterLink
-                href="/article/chapter4#_77_h.a.i_"
-                class="out-chapter-link"
-              >
-                Chapter 4, Exercise 19
-              </OutChapterLink>
-              ):
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                \Large (fg)' = f'g + fg'
-                $$
-              </MathBlock>
-            </Boxed>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Products of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              fg  \\
-              f'g\up&#123;1.9&#125; \\
-              fg'\up&#123;1.9&#125;
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              require {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} to have the same input units, but no more,
-              per the multiplication rule of {" "}
-              <InChapterLink
-                class="in-chapter-link"
-                href="#_152_h.a.i_"
-              >
-                Table 1.1
-              </InChapterLink>
-              &#8288;,
-              and per the fact that
-              {" "}
-              <Math>
-                $h'$
-              </Math>
-              {" "} has the same input units as {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "}
-              for any function {" "}
-              <NoBreak>
-                <Math>
-                  $h : \rr \ra \rr$
-                </Math>
-                .
-              </NoBreak>
-              {" "} 
-              Therefore, signatures of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              f : [\tA] \ra [\tB] \\
-              g : [\tA] \ra [\tC] \up&#123;1.6&#125;
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              are at least necessary on either side of the equation.
-              Then, evaluating further, one finds
-            </OuterP>
-            <OuterP class="indent-10">
-              But then one finds, in order, that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              fg : [\tA] \ra [\tB\tC]                    \\
-              \up&#123;1.6&#125;(fg)' : [\tA] \ra [\tB\tC/\tA]     \\
-              \up&#123;1.6&#125;f' : [\tA] \ra [\tB/\tA]           \\
-              \up&#123;1.6&#125;g' : [\tA] \ra [\tC/\tA]           \\
-              \up&#123;1.6&#125;f'g : [\tA] \ra [\tB\tC/\tA]       \\
-              \up&#123;1.6&#125;fg' : [\tA] \ra [\tB\tC/\tA]       \\
-              \up&#123;1.6&#125;f'g + fg' : [\tA] \ra [\tB\tC/\tA]
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              so these signatures are also sufficient to
-              evaluate either side of the equation to the end, and,
-              moreover,
-              {" "}
-              <Math>
-                $(fg)'$
-              </Math>
-              {" "}
-              and
-              {" "}
-              <Math>
-                $f'g + g'f$
-              </Math>
-              {" "}
-              are found to have the same signature, concluding the 
-              dimensional analysis. (= Both sides impose the same
-              signature constraints, and evaluate to the same final
-              signature.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={9}>
-          <ExerciseStatement id="_168_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 9.
-              </b>
-              {" "}
-              Use dimensional analysis to
-              conjecture a formula for
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \large\left(&#123;1\over f&#125;\right)'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for {" "}
-              <Math>
-                $f : \rr \ra \rr$
-              </Math>
-              {" "} differentiable. 
-              (The “building blocks” that appear in the formula
-              should be {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $f'$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The expression
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;1\over f&#125;\right)'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              does not on its own impose any restrictions on
-              the signature of {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so we can consider
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\tA] \ra [\tB]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              of generic signature. Then
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1\over f&#125; : [\tA] \ra \left[&#123;1\over\tB&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as in the second half of {" "}
-              <InChapterLink
-                href="/article/chapter6#_153_h.a.i_"
-                class="in-chapter-link"
-              >
-                Table 1.2
-              </InChapterLink>
-              &#8288;,
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;1\over f&#125;\right)' : [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              per the usual effect of differentiation on units.
-            </OuterP>
-            <OuterP class="indent-10">
-              In order to achieve the signature
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              using
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\tA] \ra [\tB]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f' : [\tA] \ra \left[&#123;\tB\over \tA&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as building blocks we can start with {" "}
-              <Math>
-                $f'$
-              </Math>
-              {" "} and divide
-              by {" "}
-              <NoBreak>
-                <Math>
-                  $f^2$
-                </Math>
-                .
-              </NoBreak>
-              {" "} 
-              (In fact, this is the only combination that works, modulo
-              multiplication by a dimensionless constant.)
-              Specifically, since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\tA] \ra [\tB]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              we have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^2 : [\tA] \ra [\tB^2]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1\over f^2&#125; : [\tA] \ra \left[&#123;1\over\tB^2&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              multiplying {" "}
-              <Math>
-                $f'$
-              </Math>
-              {" "} by {" "}
-              <Math>
-                $&#123;1\over f^2&#125;$
-              </Math>
-              {" "} gives us a function
-              of signature
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              [\tA] \ra \left[&#123;\tB\over \,\tA^&#123;\vphantom&#123;2&#125;&#125;&#125;\cdot&#123;1\over\tB^2&#125;\right]\,\, = \,\,[\tA] \ra \left[&#123;1\over\tA\tB&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as desired, which makes
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                &#123;f'\over f^2&#125;
-                $$
-              </MathBlock>
-            </Boxed>
-            <OuterP>
-              a plausible conjecture.
-            </OuterP>
-            <OuterP class="indent-10">
-              However, we know from Exercise X that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;1\over f&#125;\right)'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              should have opposite sign to {" "}
-              <NoBreak>
-                <Math>
-                  $f'$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} whereas
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;f'\over f^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              does {" "}
-              <i>
-                not
-              </i>
-              {" "} have opposite sign, since {" "}
-              <Math>
-                $f^2$
-              </Math>
-              {" "} is
-              nonnegative. (Nb: When {" "}
-              <Math>
-                $f = 0$
-              </Math>
-              {" "} neither {" "}
-              <Math>
-                $1/f$
-              </Math>
-              {" "} nor
-              {" "}
-              <Math>
-                $(1/f)'$
-              </Math>
-              {" "} 
-              nor {" "}
-              <Math>
-                $f'/f^2$
-              </Math>
-              {" "}
-              are defined, so those points are not our
-              concern.)
-            </OuterP>
-            <OuterP class="indent-10">
-              Since our conjecture is at least “consistently
-              wrong”—by which we mean that our formula {" "}
-              <i>
-                always
-              </i>
-              {" "} has the wrong sign—a plausible fix
-              is just to negate the expression (and indeed
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              negation
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              is one of the things we can do to a function
-              without changing its signature, per {" "}
-              <InChapterLink
-                href="/article/chapter6#_153_h.a.i_"
-                class="in-chapter-link"
-              >
-                Table 1.2
-              </InChapterLink>
-              &#8288;), giving
-              us
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                \left(&#123;1\over f&#125;\right)' = -&#123;f'\over f^2&#125;
-                $$
-              </MathBlock>
-            </Boxed>
-            <OuterP>
-              as an “educated guess” for a formula for {" "}
-              <NoBreak>
-                <Math>
-                  $(&#123;1\over f&#125;)'$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={10}>
-          <ExerciseStatement id="_169_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 10.
-              </b>
-              {" "}
-              The formula given at the end of the solution
-              to {" "}
-              <InChapterLink
-                href="/article/chapter6#_168_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 9
-              </InChapterLink>
-              {" "} happens to be the true,
-              “correct” formula for {" "}
-              <NoBreak>
-                <Math>
-                  $(&#123;1\over f&#125;)'$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} for a differentiable
-              function {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                .
-              </NoBreak>
-              {" "} What {" "}
-              <i>
-                name
-              </i>
-              {" "} do
-              we expect this formula to have, as it takes its place
-              in the mathematical pantheon?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Just as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f + g)' = f' + g'
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)' = f'g + fg'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              are known as the {" "}
-              <i>
-                sum rule
-              </i>
-              {" "} and {" "}
-              <i>
-                product rule
-              </i>
-              ,
-              so is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;1\over f&#125;\right)' = -&#123;f'\over f^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              also a “rule”, the {" "}
-              <i>
-                reciprocal rule
-              </i>
-              . (!)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement id="_170_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 11.
-              </b>
-              {" "}
-              If the expression
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \Large \cos(\omega t)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is to be dimensionally consistent,
-              and if {" "}
-              <Math>
-                $t$
-              </Math>
-              {" "} has units of seconds, then what units
-              must {" "}
-              <Math>
-                $\omega$
-              </Math>
-              {" "} have?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos : [1] \ra [1]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \cos : [\rad] \ra [1]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              rephrased (we have {" "}
-              <NoBreak>
-                <Math>
-                  $[\rad] = [1]$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} putting “radians” is a
-              matter of “author's choice” semantic emphasis), {" "}
-              <Math>
-                $\omega$
-              </Math>
-              {" "} must have units of
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              radians per second
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              or
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              per second
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              (equiv.) in order to cancel out the seconds in {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $t$
-                </Math>
-                ”.
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/5qHf.svg"
-              intrinsicWidth={400}
-              intrinsicHeight={150}
-            />
-          </Solution>
-        </Exercise>
-        <Exercise number={12}>
-          <ExerciseStatement id="_171_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 12.
-              </b>
-              {" "}
-              If {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} is position and {" "}
-              <Math>
-                $v$
-              </Math>
-              {" "} is velocity, what is
-              the dimension of {" "}
-              <NoBreak>
-                <Math>
-                  $x/v$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              It is time, since velocity has dimensions
-              “distance over time”, which cancels the “distance”
-              dimension on top:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\te&#123;DISTANCE&#125;\over\te&#123;SPEED&#125;&#125; = &#123;\te&#123;DISTANCE&#125;\over \left(&#123;\te&#123;DISTANCE&#125; \over &#123;\te&#123;TIME&#125;&#125;&#125;\right)&#125; = &#123;\te&#123;DISTANCE&#125;&#125;\cdot &#123;\te&#123;TIME&#125;\over \te&#123;DISTANCE&#125;&#125; = \te&#123;TIME&#125;.
-              $$
-            </MathBlock>
-          </Solution>
-        </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_172_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 13.
-              </b>
-              {" "}
-              If {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} is position, {" "}
-              <Math>
-                $v$
-              </Math>
-              {" "} is velocity,
-              and {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} is the speed of light, what are
-              the dimensions of {" "}
-              <NoBreak>
-                <Math>
-                  $xv/c^2$
-                </Math>
-                ?
-              </NoBreak>
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The factor
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;v\over c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is dimensionless since {" "}
-              <Math>
-                $v$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $c$
-              </Math>
-              {" "} both
-              have dimensions of speed (nb: velocity = speed,
-              insofar as dimensionality is concerned—one being
-              the absolute value of the other does not change
-              the units!),
-              so
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;xv\over c^2&#125; = &#123;v\over c&#125;\cdot&#123;x\over c&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              has the same dimensions as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;x\over c&#125;
-              $$
-              <ImageRight
-                atLeastAsWide={false}
-                src="/build-img/svgo-svg/Z9Xf.svg"
-                offsetX="1em"
-                intrinsicWidth={200}
-                intrinsicHeight={100}
-              />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              which has dimensions of time by
-              {" "}
-              <InChapterLink
-                href="/article/chapter6#_171_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 12
-              </InChapterLink>
-              &#8288;.
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_173_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 14.
-              </b>
-              {" "}
-              Let
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;-1&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              stand for the “inverse” of a function {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}
-              for which such an inverse exists. 
-              This means that {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} has the kind of graph
-              below, in which distinct {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                's
-              </NoBreak>
-              {" "} are mapped to
-              distinct {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                's:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/bzLT.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={295}
-            />
-            <Pause />
-            <OuterP>
-              ...and which means that we can invert the flow
-              of the function, treating {" "}
-              <NoBreak>
-                <Math>
-                  $y$
-                </Math>
-                's
-              </NoBreak>
-              {" "} as inputs, and recovering a
-              unique {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} for each {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} that is an output of {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                —this
-              </NoBreak>
-              {" "}
-              “inverse flow” function is what we write as {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $f^&#123;-1&#125;$
-                </Math>
-                ”:
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/4pb6.svg"
-              intrinsicWidth={640}
-              intrinsicHeight={290}
-            />
-            <Pause />
-            <OuterP>
-              (In another view...
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/wL23.svg"
-              intrinsicWidth={470}
-              intrinsicHeight={180}
-            />
-            <Pause />
-            <OuterP>
-              <NoBreak>
-                ...
-                <Math>
-                  $f^&#123;-1&#125;$
-                </Math>
-              </NoBreak>
-              {" "} is the box that undoes the work
-              of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and vice-versa, in another view...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              (f^&#123;-1&#125; \circ f\rt&#123;0.05&#125;) = (x \ra x)\\
-              \up&#123;1.6&#125;(f \circ f^&#123;-1&#125;) = (x \ra x)
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <NoBreak>
-                ...
-                <Math>
-                  $f^&#123;-1&#125;$
-                </Math>
-              </NoBreak>
-              {" "} is the function that composes with
-              {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} 
-              to produce the {" "}
-              <i>
-                identity function
-              </i>
-              {" "} {" "}
-              <Math>
-                $x \ra x$
-              </Math>
-              {" "} and vice-versa,
-              and in another view...
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/wzGl.svg"
-              intrinsicWidth={440}
-              intrinsicHeight={350}
-            />
-            <Pause />
-            <OuterP>
-              <NoBreak>
-                ...
-                <Math>
-                  $f^&#123;-1&#125;$
-                </Math>
-              </NoBreak>
-              {" "} is the function whose graph is the
-              mirror image of {" "}
-              <Math>
-                $y = f(x)$
-              </Math>
-              {" "} about the line {" "}
-              <NoBreak>
-                <Math>
-                  $x = y$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
-              Use dimensional analysis to conjecture a
-              formula for the derivative of the inverse,
-              i.e., a formula of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f^&#123;-1&#125;)' = \ldots
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              similar to the sum rule, product rule, etc.
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              If
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\tA] \ra [\tB]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is a generic invertible function, then
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;-1&#125; : [\tB] \ra [\tA]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              since an input of {" "}
-              <Math>
-                $f^&#123;-1&#125;$
-              </Math>
-              {" "} is an output of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "}
-              and vice-versa.
-              Thus
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f^&#123;-1&#125;)' : [\tB] \ra \left[&#123;\A\over \B&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and we seek to build a function of signature {" "}
-              <Math>
-                $[\B] \ra [\A/\B]$
-              </Math>
-              {" "}
-              from these...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\A] \ra [\B]\\
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f' : [\A] \ra \left[&#123;\B \over \A&#125;\right]\\
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;-1&#125; : [\B] \ra [\A]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...ingredients; note that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1\over f'&#125; : [\A] \ra \left[&#123;\A \over \B&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              gives us
-              the output units A/B at least, but the input 
-              units are wrong; (should be “B”);
-              however we can “slot in” the correct input units 
-              to {" "}
-              <Math>
-                $f'$
-              </Math>
-              {" "} by pre-composing with {" "}
-              <NoBreak>
-                <Math>
-                  $f^&#123;-1&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} i.e.,
-              observe that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f' \circ f^&#123;-1&#125; : [\B] \ra \left[&#123;\B\over \A&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...giving us...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1\over f' \circ f^&#123;-1&#125;&#125; : [\B] \ra \left[&#123;\A\over \B&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...the desired signature! Thus, a possibility is:
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                (f^&#123;-1&#125;)' = &#123;1\over f' \circ f^&#123;-1&#125;&#125;
-                $$
-              </MathBlock>
-            </Boxed>
-            <Pause />
-            <StarDivider style="margin-top:-1.3em" />
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 1.
-                </i>
-                {" "}
-                The formula is (correct, and) known as the {" "}
-                <i>
-                  inverse rule
-                </i>
-                .
-                It is valid for all invertible, differentiable
-                {" "}
-                <NoBreak>
-                  <Math>
-                    $f : \rr \ra \rr$
-                  </Math>
-                  .
-                </NoBreak>
-              </OuterP>
-            </SolutionNote>
-            <Pause />
-            <SolutionNote>
-              <OuterP>
-                <i>
-                  Note 2.
-                </i>
-                {" "}
-                The formula can be stated also in terms of what 
-                it implies for a specific input (maybe we should put {" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $y$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}
-                here for the input, but anyway):
-              </OuterP>
-              <Boxed>
-                <MathBlock>
-                  $$
-                  (f^&#123;-1&#125;)'(x) = &#123;1\over f'(f^&#123;-1&#125;(x))&#125;
-                  $$
-                </MathBlock>
-              </Boxed>
-            </SolutionNote>
-          </Solution>
-        </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_174_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 15.
-              </b>
-              {" "}
-              Let {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} be an invertible function with inverse {" "}
-              <Math>
-                $f^&#123;-1&#125;$
-              </Math>
-              {" "} (cf. {" "}
-              <InChapterLink
-                href="/article/chapter6#_173_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 14
-              </InChapterLink>
-              &#8288;).
-              What is the most general signature of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} for which the composition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;-1&#125; \circ g \circ f
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is well-formed?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              This pattern requires {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              f : [\tA] \ra [\tB] \\
-              \up&#123;1.6&#125;g : [\tB] \ra [\tB]
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              since outputs of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} become inputs
-              of {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} and outputs of {" "}
-              <Math>
-                $g$
-              </Math>
-              {" "} become inputs
-              of 
-              {" "}
-              <NoBreak>
-                <Math>
-                  $f^&#123;-1&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} where {" "}
-              <Math>
-                $f^&#123;-1&#125; : [\B] \ra [\A]$
-              </Math>
-              {" "} if {" "}
-              <NoBreak>
-                <Math>
-                  $f : [\A] \ra [\B]$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <Image
-              style="margin-top:-1em"
-              src="/build-img/svgo-svg/y-Ij.svg"
-              intrinsicWidth={600}
-              intrinsicHeight={145}
-            />
-          </Solution>
-        </Exercise>
-      </Exercises>
     </>}
   </>;
 };

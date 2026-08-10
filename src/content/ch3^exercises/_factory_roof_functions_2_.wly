@@ -1,0 +1,83 @@
+|> Exercise
+    handle=_factory_roof_functions_2_
+    Find formulas for functions whose graphs look
+    like these:
+
+    |> Image
+        src=images/svg_ch3_ex_three_factories.svg
+
+    |> Solution
+
+        For the first graph, 
+        |> del
+            the
+        \ an answer is
+        $$
+        2 \cdot(x/2 - \fl{x/2})
+        $$
+        which simplifies to
+        $$
+        x - 2\fl{x/2}
+        $$
+        because all we have to do is to multiply
+        Exercise >>_factory_roof_functions_1_'s formula by $2$.
+
+        For the second graph, an answer is
+        $$
+        x/3 - \fl{x/3}
+        $$
+        because the problem is similar to Exercise >>_factory_roof_functions_1_
+        except with a factor $3$ horizontal dilation.
+
+        For the third graph, we will first stop to
+        find a formula  for the function depicted
+        here:
+
+        |> Image
+            src=images/svg_ch3_ex_three_factories_sol1.svg
+
+        And that formula is...
+
+        |> Image
+            src=images/svg_ch3_ex_three_factories_sol2.svg
+
+        ...iiiiiiiS...
+        $$
+        (x-1)/3 - \fl{(x-1)/3}
+        $$
+        as obtained by substituting “$x - 1$”
+        (the input, minus $1$) in place of “$x$” in
+        “$\,x/3 - \fl{x/3}$”, the formula for the
+        second graph. Then we multiply that by $3$
+        (to go from 
+        |> NoBreak
+
+            “
+            |> InlineImage
+                src=images/svg_ch3_3_3_grid_1.svg
+                width=0.9em
+                bottom=0.15em
+            ” 
+        to 
+        |> NoBreak
+
+            “
+            |> InlineImage
+                src=images/svg_ch3_3_3_grid_2.svg
+                width=0.9em
+                bottom=0.15em
+            ”, 
+        namely), meaning that the final answer is
+        $$
+        3 \cdot ((x-1)/3 - \fl{(x-1)/3})
+        $$
+        or
+        $$
+        (x - 1) - 3\fl{(x-1)/3}
+        $$
+        after simplification. (Or just
+        $$
+        x - 1 - 3\fl{(x-1)/3}
+        $$
+        though we personally prefer the previous
+        form, it being more “talkative”.)

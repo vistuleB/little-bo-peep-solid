@@ -1,0 +1,141 @@
+|> Exercise
+    handle=_1d_blue_yellow_particles_
+
+    Take a system of two particles on the real
+    line; at time $t = 0$, the first particle (yellow)
+    is at $x = -1$, while the second one (blue)
+    is at $x = 1$:
+
+    |> Image
+        src=images/1d_blue_yellow_particles.svg
+
+    If the velocity of the yellow particle is set to
+    track the position of the blue particle and vice-versa,
+    give a qualitative sketch of the
+    position-as-a-function-of-time (time on the $x$
+    axis, position on the $y$ axis) of the two
+    particles. What is the defining geometric relationship
+    between the two graphs?
+
+    |> Solution
+
+        At $t = 0$ the blue particle has velocity $-1$,
+        which is the position of the yellow particle,
+        and the yellow particle has velocity $1$, which
+        is the position of the blue particle:
+
+        |> Image
+            src=images/1d_blue_yellow_particles_with_velocities.svg
+
+        As we “release” time the two particles thus
+        start moving inward towards $0$ and then
+        start slowing down, as the opposing particle
+        inches closer to $0$. The result is two graphs that
+        form a mirror-image radioactive decay:
+
+        |> Image
+            src=images/svg_ch4_three_one_dimensional_particles_blue_yellow_v2.svg
+
+        The “defining geometric relationship” is that
+        the slope of one graph equals the value of the
+        other graph at any point in time. (One could 
+        also name the fact that the graphs have value
+        $\pm 1$ at $t = 0$, otherwise the graphs are not
+        uniquely determined, as they can be translated
+        together left or right by any amount while
+        maintaining the former condition about slope.)
+
+        |> SolutionNote
+
+            Saying
+
+            __a particle whose velocity is minus its
+            position
+            |> br
+            and whose position is $1$ at time $t = 0$__
+
+            is an alternate characterization of the blue particle
+            that does not invoke the yellow particle, and
+            likewise
+
+            __a particle whose velocity is minus its
+            position
+            |> br
+            and whose position is $-1$ at time $t = 0$__
+
+            is an alternate characterization of the yellow particle
+            that does not invoke the blue particle.
+
+        |> SolutionNote
+
+            The graph of the blue particle is the mirror
+            image through the $y$ axis of the graph of the 
+            particle of Exercise >>_1d_red_particle_, whose
+            velocity is equal to its position and whose
+            position is $1$ at $t = 0$:
+
+            |> Image
+                src=images/svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg
+
+            ...the detailed reasoning, as also indicated on the
+            figure, being that a mirror symmetry through
+            the $y$ axis flips the sign of the slope without
+            affecting the value of $y$, so that an equality of
+            the form “$y = \te{slope}$” becomes “$y = -\te{slope}$”,
+            and vice-versa.
+            
+            (I.e., the mirror image of the blue
+            curve satisfies the constraints of the red curve, and
+            vice-versa.)
+
+        !! |> Solution
+
+        !!     For $t > 0$ the yellow and blue particles
+        !!     approach $0$ in a kind of “radioactive decay”
+        !!     pattern; for $t < 0$,
+        !!     they spin
+        !!     off to $-\infty$ and $\infty$ respectively at an
+        !!     accelerating rate:
+
+        !!     |> Image
+        !!         src=images/svg_ch4_three_one_dimensional_particles_blue_yellow.svg
+
+        !!     If we add the graph of the red particle to the
+        !!     mix, it is simply the mirror image of the
+        !!     blue particle's position through the $y$ axis
+        !!     ($y$ axis that is ironically labeled “$x$”):
+
+        !!     |> Image
+        !!         src=images/svg_ch4_three_one_dimensional_particles_blue_yellow_red.svg
+
+    !!     Indeed, for the red graph,
+
+    !!     __the slope equals the $y$-value__
+
+    !!     (velocity = position), while
+
+    !!     __the slope equals minus the $y$-value__
+
+    !!     for the blue graph (velocity = position
+    !!     of yellow = minus own position).
+    !!     (We forgot to mention that the blue and
+    !!     yellow graphs are mirror images of one another
+    !!     through the horizontal axis—this is one of the
+    !!     “symmetries” that the problem statement asks about, though.)
+    !!     As taking a mirror image through the $y$ axis
+    !!     negates slopes without affecting $y$-coordinates,
+    !!     while both the blue and red graphs have the same
+    !!     value at $t = 0$, this explains why the mirror
+    !!     image of one graph fits the constraints of the other
+    !!     and vice-versa:
+
+    !!     |> Image
+    !!         src=images/svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg
+
+    !!     Also note that all graphs have slopes of
+    !!     $
+    !!     \pm 1
+    !!     $
+    !!     at $t = 0$, as we tried to reflect in the sketches,
+    !!     because each corresponding particle position
+    !!     is either $1$ or $-1$.

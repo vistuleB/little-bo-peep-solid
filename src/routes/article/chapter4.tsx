@@ -8,7 +8,6 @@ import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
 import { Item, List }  from "~/components/List";
 import { Math, MathBlock }  from "~/components/Math";
-import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageLeft, ImageRight }  from "~/components/SideImage";
@@ -25,8 +24,7 @@ export default function __Chapter4__() {
       nextPage="/article/chapter5"
       pageNecessaryMargin={1450}
       maxElementWidth={700}
-      id="_89_h.a.i_"
-      path="/article/chapter4"
+      id="_87_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -96,34 +94,16 @@ export default function __Chapter4__() {
       <Pause />
       <Image
         src="/build-img/svgo-svg/myNp.svg"
-        id="_57_h.a.i_"
-        intrinsicWidth={510}
-        intrinsicHeight={310}
+        id="_56_h.a.i_"
       />
       <Pause />
-      <Image
-        src="/build-img/svgo-svg/dO9o.svg"
-        intrinsicWidth={510}
-        intrinsicHeight={335}
-      />
+      <Image src="/build-img/svgo-svg/dO9o.svg" />
       <Pause />
-      <Image
-        src="/build-img/svgo-svg/V6Pe.svg"
-        intrinsicWidth={510}
-        intrinsicHeight={335}
-      />
+      <Image src="/build-img/svgo-svg/V6Pe.svg" />
       <Pause />
-      <Image
-        src="/build-img/svgo-svg/tzk1.svg"
-        intrinsicWidth={510}
-        intrinsicHeight={640}
-      />
+      <Image src="/build-img/svgo-svg/tzk1.svg" />
       <Pause />
-      <Image
-        src="/build-img/svgo-svg/an0s.svg"
-        intrinsicWidth={510}
-        intrinsicHeight={335}
-      />
+      <Image src="/build-img/svgo-svg/an0s.svg" />
       <div style="height:1.4em" />
       <Section id="section-1">
         <OuterP>
@@ -212,11 +192,7 @@ export default function __Chapter4__() {
           E.g.:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/G9zf.svg"
-          intrinsicWidth={1000}
-          intrinsicHeight={385}
-        />
+        <Image src="/build-img/svgo-svg/G9zf.svg" />
         <Pause />
         <OuterP>
           Note that {" "}
@@ -256,11 +232,7 @@ export default function __Chapter4__() {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/Tf6r.svg"
-          intrinsicWidth={1000}
-          intrinsicHeight={625}
-        />
+        <Image src="/build-img/svgo-svg/Tf6r.svg" />
         <Pause />
         <OuterP>
           In fact, we can
@@ -287,11 +259,7 @@ export default function __Chapter4__() {
           value for the derivative:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/5-sP.svg"
-          intrinsicWidth={600}
-          intrinsicHeight={320}
-        />
+        <Image src="/build-img/svgo-svg/5-sP.svg" />
         <Pause />
         <OuterP>
           In other words, what one might describe as
@@ -304,9 +272,9 @@ export default function __Chapter4__() {
 }
 
 const Rest = () => {
-  const visibleRestSections = useShowMore(11);
+  const showMore = useShowMore();
   return <>
-    {visibleRestSections() > 0 && <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -394,8 +362,6 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -407,11 +373,7 @@ const Rest = () => {
           of the “before” function from the last “before”/“after” pair above:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/JpFf.svg"
-          intrinsicWidth={429}
-          intrinsicHeight={398}
-        />
+        <Image src="/build-img/svgo-svg/JpFf.svg" />
         <Pause />
         <OuterP>
           One method is simply to eyeball the slope at
@@ -419,29 +381,15 @@ const Rest = () => {
           values and interpolate:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/0-BA.svg"
-          intrinsicWidth={850}
-          intrinsicHeight={446}
-        />
+        <Image src="/build-img/svgo-svg/0-BA.svg" />
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/azPc.svg"
-          intrinsicWidth={850}
-          intrinsicHeight="516.71069"
-        />
+        <Image src="/build-img/svgo-svg/azPc.svg" />
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/wTBE.svg"
-          intrinsicWidth={850}
-          intrinsicHeight="402.02762"
-        >
+        <Image src="/build-img/svgo-svg/wTBE.svg">
           <ImageRight
             src="/build-img/svgo-svg/WzTO.svg"
-            offsetY="5%"
-            offsetX="-25%"
-            intrinsicWidth={450}
-            intrinsicHeight={400}
+            offset_y="5%"
+            offset_x="-25%"
           />
         </Image>
         <Pause />
@@ -457,17 +405,9 @@ const Rest = () => {
           interval:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/eRkQ.svg"
-          intrinsicWidth={1250}
-          intrinsicHeight="379.0542"
-        />
+        <Image src="/build-img/svgo-svg/eRkQ.svg" />
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/Biz-.svg"
-          intrinsicWidth={1250}
-          intrinsicHeight="370.5058"
-        />
+        <Image src="/build-img/svgo-svg/Biz-.svg" />
         <Pause />
         <OuterP>
           The result (at bottom right)
@@ -476,8 +416,6 @@ const Rest = () => {
           (Well, charming in our opinion, at least.)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -533,9 +471,8 @@ const Rest = () => {
           $$
           <ImageLeft
             src="/build-img/svgo-svg/tkpb.svg"
-            atLeastAsWide={true}
-            intrinsicWidth={430}
-            intrinsicHeight={300}
+            offset_x="8em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -596,8 +533,6 @@ const Rest = () => {
           (the way people usually state it).
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -651,9 +586,8 @@ const Rest = () => {
           $$
           <ImageLeft
             src="/build-img/svgo-svg/2UFf.svg"
-            atLeastAsWide={true}
-            intrinsicWidth={430}
-            intrinsicHeight={300}
+            offset_x="7em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -836,8 +770,6 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -921,9 +853,7 @@ const Rest = () => {
           ...then the “after” graph will have units of...
           <ImageRight
             src="/build-img/svgo-svg/whL5.svg"
-            offsetY="0.6em"
-            intrinsicWidth={700}
-            intrinsicHeight={400}
+            offset_y="0.6em"
           />
         </OuterP>
         <Pause />
@@ -969,9 +899,7 @@ const Rest = () => {
           ...then the “after” graph will have units of...
           <ImageLeft
             src="/build-img/svgo-svg/ekk4.svg"
-            offsetY="0.6em"
-            intrinsicWidth={700}
-            intrinsicHeight={400}
+            offset_y="0.6em"
           />
         </OuterP>
         <Pause />
@@ -1037,8 +965,6 @@ const Rest = () => {
           keeps changing from point to point.
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -1084,11 +1010,11 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;align*&#125;
+          \begin&#123;align&#125;
           \up&#123;0.95&#125;f''' &amp;= (f'')'\\
           \up&#123;1.25&#125;f'''' &amp;= (f''')'\\
           \up&#123;1.25&#125;f''''\psa' &amp;= (f'''')'\\
-          \end&#123;align*&#125;
+          \end&#123;align&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1179,10 +1105,9 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/ORL8.svg"
-              offsetY="0.1em"
-              atLeastAsWide={true}
-              intrinsicWidth={900}
-              intrinsicHeight={700}
+              offset_x="6em"
+              offset_y="0.1em"
+              compensate_offset_x_for_large_text_columns={true}
             />
           </MathBlock>
         </Example>
@@ -1256,8 +1181,6 @@ const Rest = () => {
         <Pause />
         <StarDivider style="margin-top:-0.5em;margin-bottom:0em" />
       </Section>
-    </>}
-    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1273,11 +1196,7 @@ const Rest = () => {
           have a negative second derivative:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/gmq7.svg"
-          intrinsicWidth={1550}
-          intrinsicHeight={450}
-        />
+        <Image src="/build-img/svgo-svg/gmq7.svg" />
         <Pause />
         <OuterP>
           Reason like this: the second derivative is {" "}
@@ -1359,8 +1278,6 @@ const Rest = () => {
           of a significant change in slope, once again).
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 7 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -1391,11 +1308,7 @@ const Rest = () => {
           Viz:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/at2Y.svg"
-          intrinsicWidth={550}
-          intrinsicHeight={220}
-        />
+        <Image src="/build-img/svgo-svg/at2Y.svg" />
         <Pause />
         <OuterP>
           <b>
@@ -1411,11 +1324,7 @@ const Rest = () => {
           of a graph:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/tv8l.svg"
-          intrinsicWidth={500}
-          intrinsicHeight="258.022"
-        />
+        <Image src="/build-img/svgo-svg/tv8l.svg" />
         <Pause />
         <Example>
           <OuterP>
@@ -1455,8 +1364,6 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 8 && <>
       <Pause />
       <Section id="section-10">
         <OuterP>
@@ -1467,11 +1374,7 @@ const Rest = () => {
           A graph of the form...
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/UjMy.svg"
-          intrinsicWidth={400}
-          intrinsicHeight={300}
-        />
+        <Image src="/build-img/svgo-svg/UjMy.svg" />
         <Pause />
         <OuterP>
           ...describes {" "}
@@ -1482,11 +1385,7 @@ const Rest = () => {
           (look at the units); the derivative...
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/wwWE.svg"
-          intrinsicWidth={400}
-          intrinsicHeight={300}
-        />
+        <Image src="/build-img/svgo-svg/wwWE.svg" />
         <Pause />
         <OuterP>
           ...describes {" "}
@@ -1497,16 +1396,8 @@ const Rest = () => {
           finally, the second derivative...
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/cBcm.svg"
-          intrinsicWidth={400}
-          intrinsicHeight={300}
-        >
-          <ImageLeft
-            src="/build-img/svgo-svg/zAav.svg"
-            intrinsicWidth={1350}
-            intrinsicHeight={700}
-          />
+        <Image src="/build-img/svgo-svg/cBcm.svg">
+          <ImageLeft src="/build-img/svgo-svg/zAav.svg" />
         </Image>
         <Pause />
         <OuterP>
@@ -1563,11 +1454,7 @@ const Rest = () => {
           seconds:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/YS5-.svg"
-          intrinsicWidth={550}
-          intrinsicHeight={470}
-        />
+        <Image src="/build-img/svgo-svg/YS5-.svg" />
         <Pause />
         <OuterP>
           The ratio “rise over run” has the form
@@ -1696,9 +1583,8 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/R0nW.svg"
-              atLeastAsWide={true}
-              intrinsicWidth={350}
-              intrinsicHeight={150}
+              offset_x="5em"
+              compensate_offset_x_for_large_text_columns={true}
             />
           </MathBlock>
           <Pause />
@@ -1719,8 +1605,6 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 9 && <>
       <Pause />
       <Section id="section-11">
         <OuterP>
@@ -1822,13 +1706,13 @@ const Rest = () => {
           </b>
           {" "}
           Coming briefly back to {" "}
-          <OutChapterLink
-            href="/article/chapter3#_56_h.a.i_"
+          <a
+            href="/article/chapter3#_55_h.a.i_"
             class="out-chapter-link"
           >
             Chapter 3
-          </OutChapterLink>
-          -related
+          </a>
+          &#8288;&lrm;-related
           matters, if
         </OuterP>
         <Pause />
@@ -1890,13 +1774,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           goes back to {" "}
-          <OutChapterLink
-            href="/article/chapter3#_38_h.a.i_"
+          <a
+            href="/article/chapter3#_37_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 5 of Chapter 3
-          </OutChapterLink>
-          , with
+          </a>
+          &#8288;, with
           the little circle {" "}
           <NoBreak>
             “
@@ -1931,13 +1815,13 @@ const Rest = () => {
         <Pause />
         <OuterP>
           of functions already appear in {" "}
-          <OutChapterLink
-            href="/article/chapter3#_51_h.a.i_"
+          <a
+            href="/article/chapter3#_50_h.a.i_"
             class="out-chapter-link"
           >
             Exercise 17 of Chapter 3
-          </OutChapterLink>
-          , also. (On the other hand, the
+          </a>
+          &#8288;, also. (On the other hand, the
           quotient (i.e. {" "}
           <NoBreak>
             <Math>
@@ -1962,17 +1846,14 @@ const Rest = () => {
           {" "} familiar!)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 10 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}
-        mode="dual"
         show_curlicue={true}
-        id="_88_h.a.i_"
+        id="_86_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_58_h.a.i_">
+          <ExerciseStatement id="_57_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -1991,25 +1872,17 @@ const Rest = () => {
               {" "} a sharp corner):
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Is8C.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={230}
-            />
+            <Image src="/build-img/svgo-svg/Is8C.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It is:
+              That would be:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/KPKF.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={260}
-            />
+            <Image src="/build-img/svgo-svg/KPKF.svg" />
             <Pause />
             <OuterP>
-              (I.e., the derivative is {" "}
+              (The derivative is {" "}
               <Math>
                 $1/2$
               </Math>
@@ -2021,7 +1894,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              {" "}
+              is {" "}
               <Math>
                 $-1/2$
               </Math>
@@ -2032,12 +1905,13 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} and undefined at the corners.)
+              {" "} and is
+              undefined at the corners.)
             </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_59_h.a.i_">
+          <ExerciseStatement id="_58_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2074,11 +1948,7 @@ const Rest = () => {
               {" "} looks like so:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/hWOn.svg"
-              intrinsicWidth={500}
-              intrinsicHeight={500}
-            />
+            <Image src="/build-img/svgo-svg/hWOn.svg" />
             <Pause />
             <OuterP>
               As one can see, the slope is very negative
@@ -2095,7 +1965,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_60_h.a.i_">
+          <ExerciseStatement id="_59_h.a.i_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -2111,7 +1981,7 @@ const Rest = () => {
             <OuterP>
               derivative of the graph in {" "}
               <InChapterLink
-                href="/article/chapter4#_58_h.a.i_"
+                href="/article/chapter4#_57_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1
@@ -2128,11 +1998,7 @@ const Rest = () => {
               pockmarked appearance:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/oCwv.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={260}
-            />
+            <Image src="/build-img/svgo-svg/oCwv.svg" />
             <Pause />
             <SolutionNote>
               <OuterP>
@@ -2157,7 +2023,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_61_h.a.i_">
+          <ExerciseStatement id="_60_h.a.i_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2165,7 +2031,7 @@ const Rest = () => {
               {" "}
               If we pretend that the graph of {" "}
               <InChapterLink
-                href="/article/chapter4#_58_h.a.i_"
+                href="/article/chapter4#_57_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1
@@ -2220,23 +2086,11 @@ const Rest = () => {
               {" "} axis):
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/0dwd.svg"
-              intrinsicWidth={470}
-              intrinsicHeight={261}
-            />
+            <Image src="/build-img/svgo-svg/0dwd.svg" />
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/b7Oc.svg"
-              intrinsicWidth={470}
-              intrinsicHeight={280}
-            />
+            <Image src="/build-img/svgo-svg/b7Oc.svg" />
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/OG7m.svg"
-              intrinsicWidth={470}
-              intrinsicHeight={280}
-            />
+            <Image src="/build-img/svgo-svg/OG7m.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -2254,7 +2108,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_62_h.a.i_">
+          <ExerciseStatement id="_61_h.a.i_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -2334,12 +2188,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp; \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(5) \\
               =&amp; \,\,\,(x \ra x + 1)(5) + (u \ra 2u + 1)(5) \up&#123;1.5&#125; \\
               =&amp; \,\,\,(5 + 1) + (2\cdot 5 + 1) \up&#123;1.5&#125; \\
               =&amp; \,\,\,3\cdot 5 + 2 = 17 \up&#123;1.5&#125;
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2355,12 +2209,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp; \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(t) \\
               =&amp; \,\,\,(x \ra x + 1)(t) + (u \ra 2u + 1)(t) \up&#123;1.5&#125; \\
               =&amp; \,\,\,(t + 1) + (2t + 1) \up&#123;1.5&#125; \\
               =&amp; \,\,\,3t + 2 \up&#123;1.5&#125;
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2418,12 +2272,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp; \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(x) \\
               =&amp; \,\,\,(x \ra x + 1)(x) + (u \ra 2u + 1)(x) \up&#123;1.5&#125; \\
               =&amp; \,\,\,(x + 1) + (2x + 1) \up&#123;1.5&#125; \\
               =&amp; \,\,\,3x + 2 \up&#123;1.5&#125;
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2435,29 +2289,23 @@ const Rest = () => {
                 </Math>
                 's:
               </NoBreak>
-              {" "}
-              the {" "}
+              {" "} the {" "}
               <Math>
                 $x$
               </Math>
-              {" "} that is used as a placeholder to describe 
-              what the first function does, and the {" "}
+              {" "} that
+              denotes the input, and the {" "}
               <Math>
                 $x$
               </Math>
-              {" "} that denotes
-              the “outermost” input to the sum of the two functions. (These are
-              really separate, and the “placeholder” {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} could be
-              any symbol.)
+              {" "} that is used as
+              a placeholder to describe how the first function
+              acts.
             </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={6}>
-          <ExerciseStatement id="_63_h.a.i_">
+          <ExerciseStatement id="_62_h.a.i_">
             <OuterP>
               <b>
                 Exercise 6.
@@ -2467,11 +2315,7 @@ const Rest = () => {
               below, based on those units that are given:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/xFEG.svg"
-              intrinsicWidth={650}
-              intrinsicHeight={1145}
-            />
+            <Image src="/build-img/svgo-svg/xp2w.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2494,11 +2338,7 @@ const Rest = () => {
               axis. This gives the unique solutions:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/GQf4.svg"
-              intrinsicWidth={800}
-              intrinsicHeight={1145}
-            />
+            <Image src="/build-img/svgo-svg/CZUY.svg" />
             <Pause />
             <OuterP>
               ...where we find units of
@@ -2619,11 +2459,8 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={7}
-        >
-          <ExerciseStatement id="_64_h.a.i_">
+        <Exercise number={7}>
+          <ExerciseStatement id="_63_h.a.i_">
             <OuterP>
               <b>
                 Exercise 7.
@@ -2637,8 +2474,6 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/aG77.svg"
               style="padding-bottom:1rem"
-              intrinsicWidth={380}
-              intrinsicHeight={260}
             />
           </ExerciseStatement>
           <Solution>
@@ -2648,11 +2483,7 @@ const Rest = () => {
               at four places, per appearances:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/NfeV.svg"
-              intrinsicWidth={440}
-              intrinsicHeight={308}
-            />
+            <Image src="/build-img/svgo-svg/yAV_.svg" />
             <Pause />
             <OuterP>
               The derivative will therefore have four
@@ -2664,11 +2495,7 @@ const Rest = () => {
               curious, it looks like this:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/4xlL.svg"
-              intrinsicWidth={440}
-              intrinsicHeight={320}
-            />
+            <Image src="/build-img/svgo-svg/dDBS.svg" />
             <Pause />
             <OuterP>
               But nothing prevents the graph from
@@ -2680,70 +2507,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise
-          work="ing"
-          number={8}
-        >
-          <ExerciseStatement id="_65_h.a.i_">
+        <Exercise number={8}>
+          <ExerciseStatement id="_64_h.a.i_">
             <OuterP>
               <b>
                 Exercise 8.
-              </b>
-              {" "}
-              How many “up bumps” and “down bumps”, respectively,
-              does the derivative of the function below have?
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/cRZH.svg"
-              style="padding-bottom:1rem"
-              intrinsicWidth={720}
-              intrinsicHeight={220}
-            />
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              The derivative crests each time the
-              slope of the original function reaches a
-              steepest point before de-sloping again, 
-              giving us—at the macro level from what
-              our eyes can see, barring mini-variations
-              of the slope that would give mini-bumps
-              atop each bump—six “up bumps” for
-              the derivative and,
-              reasoning symmetrically, five “down bumps”:
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/ArpL.svg"
-              intrinsicWidth={780}
-              intrinsicHeight={430}
-            />
-            <Pause />
-            <OuterP>
-              (So the answer is: {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} respectively.)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise
-          work="ing"
-          number={9}
-        >
-          <ExerciseStatement id="_66_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 9.
               </b>
               {" "}
               Among the functions below, which is the
@@ -2773,11 +2541,7 @@ const Rest = () => {
               assuming that relationship exists.)
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/-8uy.svg"
-              intrinsicWidth="733.97"
-              intrinsicHeight="146.452"
-            />
+            <Image src="/build-img/svgo-svg/-8uy.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2786,11 +2550,7 @@ const Rest = () => {
               is:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/a02_.svg"
-              intrinsicWidth="733.97"
-              intrinsicHeight={178}
-            />
+            <Image src="/build-img/svgo-svg/a02_.svg" />
             <Pause />
             <OuterP>
               Referring to this rearranged sequence,
@@ -2813,11 +2573,7 @@ const Rest = () => {
               starts and ends:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/-86e.svg"
-              intrinsicWidth={650}
-              intrinsicHeight={210}
-            />
+            <Image src="/build-img/svgo-svg/gqxn.svg" />
             <Pause />
             <OuterP>
               Likewise, the second graph has slope
@@ -2842,11 +2598,7 @@ const Rest = () => {
               {" "} of the third graph:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/m_fp.svg"
-              intrinsicWidth={650}
-              intrinsicHeight={220}
-            />
+            <Image src="/build-img/svgo-svg/4Efs.svg" />
             <Pause />
             <OuterP>
               ...and none of this coincidentally, since the
@@ -2855,11 +2607,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={10}>
-          <ExerciseStatement id="_67_h.a.i_">
+        <Exercise number={9}>
+          <ExerciseStatement id="_65_h.a.i_">
             <OuterP>
               <b>
-                Exercise 10.
+                Exercise 9.
               </b>
               {" "}
               Where is the rate of change of the function
@@ -2875,11 +2627,7 @@ const Rest = () => {
               greatest?
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/GWW0.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={250}
-            />
+            <Image src="/build-img/svgo-svg/GWW0.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2888,11 +2636,7 @@ const Rest = () => {
               of the curve:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Qi_q.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={250}
-            />
+            <Image src="/build-img/svgo-svg/Qi_q.svg" />
             <Pause />
             <OuterP>
               On the other hand,
@@ -2910,11 +2654,7 @@ const Rest = () => {
               rate:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/kw0r.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={250}
-            />
+            <Image src="/build-img/svgo-svg/kw0r.svg" />
             <Pause />
             <StarDivider />
             <Pause />
@@ -2959,12 +2699,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           ref="rence"
-          number={11}
+          number={10}
         >
-          <ExerciseStatement id="_68_h.a.i_">
+          <ExerciseStatement id="_66_h.a.i_">
             <OuterP>
               <b>
-                Exercise 11.
+                Exercise 10.
               </b>
               {" "}
               If you scale the graph of a function {" "}
@@ -3009,11 +2749,7 @@ const Rest = () => {
               scaling:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/lJqH.svg"
-              intrinsicWidth={670}
-              intrinsicHeight={280}
-            />
+            <Image src="/build-img/svgo-svg/lJqH.svg" />
             <Pause />
             <OuterP>
               The second graph truly is the first
@@ -3027,7 +2763,7 @@ const Rest = () => {
                 $y$
               </Math>
               {" "} axis has
-              been doubled. This means that the ratio
+              been doubled. (Hehe.) This means that the ratio
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3046,7 +2782,7 @@ const Rest = () => {
                 -coordinate
               </NoBreak>
               {" "}
-              is twice as large), whereas “run” stays
+              is twice as large!), whereas “run” stays
               the same. (So the slope of the tangent has
               doubled, so the derivative is doubled.)
             </OuterP>
@@ -3054,12 +2790,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           ref="rence"
-          number={12}
+          number={11}
         >
-          <ExerciseStatement id="_69_h.a.i_">
+          <ExerciseStatement id="_67_h.a.i_">
             <OuterP>
               <b>
-                Exercise 12.
+                Exercise 11.
               </b>
               {" "}
               The solution to the previous exercise
@@ -3236,23 +2972,19 @@ const Rest = () => {
         </Exercise>
         <Exercise
           ref="rence"
-          number={13}
+          number={12}
         >
-          <ExerciseStatement id="_70_h.a.i_">
+          <ExerciseStatement id="_68_h.a.i_">
             <OuterP>
               <b>
-                Exercise 13.
+                Exercise 12.
               </b>
               {" "}
               In the following graph, which curve might
               be a derivative of which other curve?
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/_2ki.svg"
-              intrinsicWidth={1200}
-              intrinsicHeight={160}
-            />
+            <Image src="/build-img/svgo-svg/_2ki.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -3261,11 +2993,7 @@ const Rest = () => {
               blue is the derivative of the red:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/W11G.svg"
-              intrinsicWidth={1200}
-              intrinsicHeight={320}
-            />
+            <Image src="/build-img/svgo-svg/W11G.svg" />
             <Pause />
             <OuterP>
               Likewise, the yellow is the derivative
@@ -3320,11 +3048,7 @@ const Rest = () => {
                 bump, not the other way around:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/P9o9.svg"
-                intrinsicWidth={500}
-                intrinsicHeight={250}
-              />
+              <Image src="/build-img/svgo-svg/P9o9.svg" />
             </SolutionNote>
             <Pause />
             <SolutionNote>
@@ -3352,11 +3076,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/eSj9.svg"
-                intrinsicWidth={450}
-                intrinsicHeight={280}
-              />
+              <Image src="/build-img/svgo-svg/eSj9.svg" />
               <Pause />
               <OuterP>
                 The velocities of the two shadows
@@ -3448,11 +3168,7 @@ const Rest = () => {
                 velocity to draw an arrow emanating
                 from a point on the curve, this arrow
                 is tangent to the curve, and the
-                <ImageRight
-                  src="/build-img/svgo-svg/52rF.svg"
-                  intrinsicWidth={800}
-                  intrinsicHeight={400}
-                />
+                <ImageRight src="/build-img/svgo-svg/52rF.svg" />
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -3539,11 +3255,7 @@ const Rest = () => {
                 circle at the origin):
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/zkYn.svg"
-                intrinsicWidth={480}
-                intrinsicHeight={380}
-              />
+              <Image src="/build-img/svgo-svg/zkYn.svg" />
               <Pause />
               <OuterP>
                 The
@@ -3557,11 +3269,7 @@ const Rest = () => {
                 of the particles are as follows:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/g6Et.svg"
-                intrinsicWidth={480}
-                intrinsicHeight={380}
-              />
+              <Image src="/build-img/svgo-svg/g6Et.svg" />
               <Pause />
               <OuterP>
                 (You can't really see it so well, but
@@ -3584,11 +3292,7 @@ const Rest = () => {
                 are as follows:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/4R5D.svg"
-                intrinsicWidth={480}
-                intrinsicHeight={380}
-              />
+              <Image src="/build-img/svgo-svg/4R5D.svg" />
               <Pause />
               <OuterP>
                 (Like the position vectors, the
@@ -3622,11 +3326,7 @@ const Rest = () => {
                 that the second coordinate is equal to the
                 vertical displacement from the tail of the
                 arrow to the head of the arrow.)
-                <ImageRight
-                  src="/build-img/svgo-svg/BcYN.svg"
-                  intrinsicWidth={750}
-                  intrinsicHeight={500}
-                />
+                <ImageRight src="/build-img/svgo-svg/BcYN.svg" />
               </OuterP>
               <OuterP class="indent-10">
                 Due to the 90° rotations and uniform
@@ -3644,11 +3344,7 @@ const Rest = () => {
                 position vector:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/9nrU.svg"
-                intrinsicWidth={600}
-                intrinsicHeight={380}
-              />
+              <Image src="/build-img/svgo-svg/9nrU.svg" />
               <Pause />
               <OuterP>
                 Just looking at
@@ -3768,11 +3464,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/tBi5.svg"
-                intrinsicWidth={1200}
-                intrinsicHeight={240}
-              />
+              <Image src="/build-img/svgo-svg/tBi5.svg" />
               <Pause />
               <OuterP>
                 If we add the {" "}
@@ -3810,11 +3502,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/E0qc.svg"
-                intrinsicWidth={1200}
-                intrinsicHeight={320}
-              />
+              <Image src="/build-img/svgo-svg/E0qc.svg" />
               <Pause />
               <OuterP>
                 (If this just looks like a mess, then nevermind.)
@@ -3831,11 +3519,7 @@ const Rest = () => {
                 figure again:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/P9o9.svg"
-                intrinsicWidth={500}
-                intrinsicHeight={250}
-              />
+              <Image src="/build-img/svgo-svg/P9o9.svg" />
               <Pause />
               <OuterP>
                 The derivative is
@@ -3876,11 +3560,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_71_h.a.i_">
+        <Exercise number={13}>
+          <ExerciseStatement id="_69_h.a.i_">
             <OuterP>
               <b>
-                Exercise 14.
+                Exercise 13.
               </b>
               {" "}
               What English-language aphorism might summarize the identity
@@ -3957,11 +3641,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_73_h.a.i_">
+        <Exercise number={14}>
+          <ExerciseStatement id="_71_h.a.i_">
             <OuterP>
               <b>
-                Exercise 15.
+                Exercise 14.
               </b>
               {" "}
               The fraction
@@ -3993,8 +3677,6 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/1hYI.svg"
               style="margin-top:0.4em"
-              intrinsicWidth={456}
-              intrinsicHeight={420}
             />
           </ExerciseStatement>
           <Solution>
@@ -4002,11 +3684,7 @@ const Rest = () => {
               The teacher would like to see:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/cWTG.svg"
-              intrinsicWidth={456}
-              intrinsicHeight={420}
-            />
+            <Image src="/build-img/svgo-svg/cWTG.svg" />
             <Pause />
             <OuterP>
               Thus
@@ -4079,7 +3757,7 @@ const Rest = () => {
               curve”.
             </OuterP>
             <Pause />
-            <SolutionNote id="_72_h.a.i_">
+            <SolutionNote id="_70_h.a.i_">
               <OuterP>
                 <i>
                   Note 1.
@@ -4154,11 +3832,14 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={16}>
-          <ExerciseStatement id="_74_h.a.i_">
+        <Exercise
+          work="ing"
+          number={15}
+        >
+          <ExerciseStatement id="_72_h.a.i_">
             <OuterP>
               <b>
-                Exercise 16.
+                Exercise 15.
               </b>
               {" "}
               If {" "}
@@ -4246,28 +3927,31 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={17}>
-          <ExerciseStatement id="_75_h.a.i_">
+        <Exercise
+          work="ing"
+          number={16}
+        >
+          <ExerciseStatement id="_73_h.a.i_">
             <OuterP>
               <b>
-                Exercise 17.
+                Exercise 16.
               </b>
               {" "}
               By what should the change mentioned in {" "}
               <InChapterLink
-                href="/article/chapter4#_74_h.a.i_"
+                href="/article/chapter4#_72_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 16
+                Exercise 15
               </InChapterLink>
               {" "}
               be divided by in order 
               to obtain a difference quotient (cf. {" "}
               <InChapterLink
-                href="/article/chapter4#_73_h.a.i_"
+                href="/article/chapter4#_71_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 15
+                Exercise 14
               </InChapterLink>
               &#8288;)?
             </OuterP>
@@ -4413,23 +4097,11 @@ const Rest = () => {
                 immediately below:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/F0SL.svg"
-                intrinsicWidth={456}
-                intrinsicHeight={420}
-              />
+              <Image src="/build-img/svgo-svg/F0SL.svg" />
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/cWTG.svg"
-                intrinsicWidth={456}
-                intrinsicHeight={420}
-              />
+              <Image src="/build-img/svgo-svg/cWTG.svg" />
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/oADf.svg"
-                intrinsicWidth={456}
-                intrinsicHeight={420}
-              />
+              <Image src="/build-img/svgo-svg/oADf.svg" />
               <Pause />
               <OuterP>
                 In the last diagram {" "}
@@ -4454,12 +4126,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="ing"
-          number={18}
+          number={17}
         >
-          <ExerciseStatement id="_76_h.a.i_">
+          <ExerciseStatement id="_74_h.a.i_">
             <OuterP>
               <b>
-                Exercise 18.
+                Exercise 17.
               </b>
               {" "}
               Keeping {" "}
@@ -4468,10 +4140,10 @@ const Rest = () => {
               </Math>
               {" "} as in {" "}
               <InChapterLink
-                href="/article/chapter4#_74_h.a.i_"
+                href="/article/chapter4#_72_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 16
+                Exercise 15
               </InChapterLink>
               &#8288;,
               and assuming that {" "}
@@ -4512,7 +4184,8 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The “pure math” version is
+              The “pure math” rendition (rendering?) of the fraction
+              is
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -4545,10 +4218,10 @@ const Rest = () => {
               </NoBreak>
               {" "} per {" "}
               <InChapterLink
-                href="/article/chapter4#_72_h.a.i_"
+                href="/article/chapter4#_70_h.a.i_"
                 class="in-chapter-link"
               >
-                Note 1 of Exercise 15
+                Note 1 of Exercise 14
               </InChapterLink>
               &#8288;. (This is a
               difference quotient, notwitstanding the renaming of {" "}
@@ -4572,11 +4245,14 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={19}>
-          <ExerciseStatement id="_77_h.a.i_">
+        <Exercise
+          work="ing"
+          number={18}
+        >
+          <ExerciseStatement id="_75_h.a.i_">
             <OuterP>
               <b>
-                Exercise 19.
+                Exercise 18.
               </b>
               {" "}
               In this exercise we consider two points
@@ -4609,11 +4285,7 @@ const Rest = () => {
               time):
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/rzVH.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={60}
-            />
+            <Image src="/build-img/svgo-svg/rzVH.svg" />
             <Pause />
             <OuterP>
               We also consider quantities {" "}
@@ -4651,11 +4323,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Axof.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={200}
-            />
+            <Image src="/build-img/svgo-svg/Axof.svg" />
             <Pause />
             <OuterP>
               More specifically, we are interested in
@@ -4684,11 +4352,7 @@ const Rest = () => {
               {" "} as
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/zn1D.svg"
-              intrinsicWidth={180}
-              intrinsicHeight="164.25"
-            />
+            <Image src="/build-img/svgo-svg/zn1D.svg" />
             <Pause />
             <OuterP>
               that are crossing a hallway,
@@ -4746,11 +4410,9 @@ const Rest = () => {
               </NoBreak>
               {" "} line, to be clear):
               <ImageLeft
-                offsetX="0.5em"
-                offsetY="-0.5em"
+                offset_x="0.5em"
+                offset_y="-0.5em"
                 src="/build-img/svgo-svg/zR89.svg"
-                intrinsicWidth={750}
-                intrinsicHeight="552.632"
               />
             </OuterP>
             <TextParent>
@@ -4850,11 +4512,7 @@ const Rest = () => {
               equation:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/S2-s.svg"
-              intrinsicWidth={700}
-              intrinsicHeight={128}
-            />
+            <Image src="/build-img/svgo-svg/S2-s.svg" />
             <Pause />
             <OuterP>
               If we divide the above equation by {" "}
@@ -4888,20 +4546,12 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Im2x.svg"
-              intrinsicWidth={700}
-              intrinsicHeight={170}
-            />
+            <Image src="/build-img/svgo-svg/Im2x.svg" />
             <Pause />
             <OuterP>
               The first term on the left-hand side comes
               out to
-              <ImageRight
-                src="/build-img/svgo-svg/xIsR.svg"
-                intrinsicWidth={900}
-                intrinsicHeight={300}
-              />
+              <ImageRight src="/build-img/svgo-svg/xIsR.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4953,10 +4603,10 @@ const Rest = () => {
               </NoBreak>
               {" "} (Cf. {" "}
               <InChapterLink
-                href="/article/chapter4#_72_h.a.i_"
+                href="/article/chapter4#_70_h.a.i_"
                 class="in-chapter-link"
               >
-                Note 1 of Exercise 15
+                Note 1 of Exercise 14
               </InChapterLink>
               &#8288;.)
               (Nb: We assume differentiability, otherwise
@@ -4983,11 +4633,7 @@ const Rest = () => {
             <OuterP class="indent-10">
               The first term on the right-hand side, for
               its part, comes out to
-              <ImageRight
-                src="/build-img/svgo-svg/5bqq.svg"
-                intrinsicWidth={900}
-                intrinsicHeight={300}
-              />
+              <ImageRight src="/build-img/svgo-svg/5bqq.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5050,10 +4696,10 @@ const Rest = () => {
               quotient 
               (cf. {" "}
               <InChapterLink
-                href="/article/chapter4#_72_h.a.i_"
+                href="/article/chapter4#_70_h.a.i_"
                 class="in-chapter-link"
               >
-                Note 1 of Exercise 15
+                Note 1 of Exercise 14
               </InChapterLink>
               &#8288;),
               so the whole term approaches
@@ -5091,11 +4737,7 @@ const Rest = () => {
             <OuterP class="indent-10">
               Lastly the second term on the right-hand side
               comes out to
-              <ImageRight
-                src="/build-img/svgo-svg/9OXS.svg"
-                intrinsicWidth={900}
-                intrinsicHeight={300}
-              />
+              <ImageRight src="/build-img/svgo-svg/9OXS.svg" />
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5278,11 +4920,7 @@ const Rest = () => {
                 in the original equation...
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/Im2x.svg"
-                intrinsicWidth={700}
-                intrinsicHeight={170}
-              />
+              <Image src="/build-img/svgo-svg/Im2x.svg" />
               <Pause />
               <OuterP>
                 ...as {" "}
@@ -5423,11 +5061,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={20}>
-          <ExerciseStatement id="_78_h.a.i_">
+        <Exercise number={19}>
+          <ExerciseStatement id="_76_h.a.i_">
             <OuterP>
               <b>
-                Exercise 20.
+                Exercise 19.
               </b>
               {" "}
               What does...
@@ -5439,10 +5077,8 @@ const Rest = () => {
               $$
               <ImageRight
                 src="/build-img/svgo-svg/6ZYS.svg"
-                offsetX="2rem"
-                atLeastAsWide={true}
-                intrinsicWidth={700}
-                intrinsicHeight={500}
+                offset_x="2rem"
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />
@@ -5482,20 +5118,16 @@ const Rest = () => {
               middle of the product:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/c9db.svg"
-              intrinsicWidth={800}
-              intrinsicHeight={120}
-            />
+            <Image src="/build-img/svgo-svg/c9db.svg" />
             <Pause />
             <OuterP>
               This is seen to be a Newton quotient
               (cf. {" "}
               <InChapterLink
-                href="/article/chapter4#_73_h.a.i_"
+                href="/article/chapter4#_71_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 15
+                Exercise 14
               </InChapterLink>
               &#8288;)
             </OuterP>
@@ -5522,12 +5154,12 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} per which
-              (&#8288;
+              {" "}
               <InChapterLink
-                href="/article/chapter4#_73_h.a.i_"
+                href="/article/chapter4#_71_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 15
+                (Exercise 14
               </InChapterLink>
               {" "} Note 3), the fraction approaches
             </OuterP>
@@ -5592,11 +5224,7 @@ const Rest = () => {
               at the beginning of the product...
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/B9Zl.svg"
-              intrinsicWidth={800}
-              intrinsicHeight={100}
-            />
+            <Image src="/build-img/svgo-svg/B9Zl.svg" />
             <Pause />
             <OuterP>
               ...; here the
@@ -5734,11 +5362,7 @@ const Rest = () => {
               {" "} does not even appear:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/TQjR.svg"
-              intrinsicWidth={800}
-              intrinsicHeight={100}
-            />
+            <Image src="/build-img/svgo-svg/TQjR.svg" />
             <Pause />
             <OuterP>
               Because {" "}
@@ -5765,11 +5389,7 @@ const Rest = () => {
               therefore:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/hUGM.svg"
-              intrinsicWidth={700}
-              intrinsicHeight={150}
-            />
+            <Image src="/build-img/svgo-svg/hUGM.svg" />
             <Pause />
             <OuterP>
               ...with a lone {" "}
@@ -5784,11 +5404,11 @@ const Rest = () => {
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={21}>
-          <ExerciseStatement id="_79_h.a.i_">
+        <Exercise number={20}>
+          <ExerciseStatement id="_77_h.a.i_">
             <OuterP>
               <b>
-                Exercise 21.
+                Exercise 20.
               </b>
               {" "}
               Express the...
@@ -5936,9 +5556,7 @@ const Rest = () => {
                     </NoBreak>
                     <ImageLeft
                       src="/build-img/svgo-svg/pcYW.svg"
-                      offsetX="4em"
-                      intrinsicWidth={430}
-                      intrinsicHeight={240}
+                      offset_x="4em"
                     />
                   </i>
                 </Item>
@@ -6082,22 +5700,22 @@ const Rest = () => {
                 of function addition, but it is easy to prove!
                 (For other proofs see Exercise 32, Exercise 33, as
                 well as Exercise 9, {" "}
-                <OutChapterLink
-                  href="/article/chapter3#_56_h.a.i_"
+                <a
+                  href="/article/chapter3#_55_h.a.i_"
                   class="out-chapter-link"
                 >
                   Chapter 3
-                </OutChapterLink>
-                .)
+                </a>
+                &#8288;.)
               </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={22}>
-          <ExerciseStatement id="_80_h.a.i_">
+        <Exercise number={21}>
+          <ExerciseStatement id="_78_h.a.i_">
             <OuterP>
               <b>
-                Exercise 22.
+                Exercise 21.
               </b>
               {" "}
               Apply the definition
@@ -6240,13 +5858,13 @@ const Rest = () => {
               based on input-output behavior: two functions are
               equal if and only if every input is mapped to the
               same output under either function. See {" "}
-              <OutChapterLink
-                href="/article/chapter3#_42_h.a.i_"
+              <a
+                href="/article/chapter3#_41_h.a.i_"
                 class="out-chapter-link"
               >
                 Note 6, Exercise 9, Chapter 3
-              </OutChapterLink>
-              .)
+              </a>
+              &#8288;.)
             </OuterP>
             <OuterP class="indent-10">
               Starting up,
@@ -6379,13 +5997,13 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 (if you recall that one) in {" "}
-                <OutChapterLink
-                  href="/article/chapter3#_43_h.a.i_"
+                <a
+                  href="/article/chapter3#_42_h.a.i_"
                   class="out-chapter-link"
                 >
                   Exercise 9 of Chapter 3
-                </OutChapterLink>
-                .
+                </a>
+                &#8288;.
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -6425,12 +6043,12 @@ const Rest = () => {
         </Exercise>
         <Exercise
           work="in"
-          number={23}
+          number={22}
         >
-          <ExerciseStatement id="_82_h.a.i_">
+          <ExerciseStatement id="_80_h.a.i_">
             <OuterP>
               <b>
-                Exercise 23.
+                Exercise 22.
               </b>
               {" "}
               Imagine a single particle in a one-dimensional
@@ -6451,11 +6069,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/vEPq.svg"
-              intrinsicWidth={400}
-              intrinsicHeight={100}
-            />
+            <Image src="/build-img/svgo-svg/vEPq.svg" />
             <Pause />
             <OuterP>
               If we play time backward, will the particle
@@ -6474,7 +6088,7 @@ const Rest = () => {
               the particle to cross each of the intervals defined by
               the following geometric progression* (*see {" "}
               <InChapterLink
-                href="/article/chapter4#_81_h.a.i_"
+                href="/article/chapter4#_79_h.a.i_"
                 class="in-chapter-link"
               >
                 Note 1
@@ -6482,11 +6096,7 @@ const Rest = () => {
               &#8288;):
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/ESgD.svg"
-              intrinsicWidth={470}
-              intrinsicHeight={80}
-            />
+            <Image src="/build-img/svgo-svg/ESgD.svg" />
             <Pause />
             <OuterP>
               The interval from {" "}
@@ -6509,10 +6119,8 @@ const Rest = () => {
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/SiXb.svg"
-                offsetX="10em"
-                atLeastAsWide={true}
-                intrinsicWidth={400}
-                intrinsicHeight={200}
+                offset_x="10em"
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />
@@ -6639,7 +6247,7 @@ const Rest = () => {
               {" "} no matter how far back in time we look.)
             </OuterP>
             <Pause />
-            <SolutionNote id="_81_h.a.i_">
+            <SolutionNote id="_79_h.a.i_">
               <OuterP>
                 <i>
                   Note 1.
@@ -6736,11 +6344,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={24}>
-          <ExerciseStatement id="_83_h.a.i_">
+        <Exercise number={23}>
+          <ExerciseStatement id="_81_h.a.i_">
             <OuterP>
               <b>
-                Exercise 24.
+                Exercise 23.
               </b>
               {" "}
               Take a system of two particles on the real
@@ -6769,11 +6377,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/zLWR.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={70}
-            />
+            <Image src="/build-img/svgo-svg/zLWR.svg" />
             <Pause />
             <OuterP>
               If the velocity of the yellow particle is set to
@@ -6819,11 +6423,7 @@ const Rest = () => {
               is the position of the blue particle:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/RULR.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={150}
-            />
+            <Image src="/build-img/svgo-svg/RULR.svg" />
             <Pause />
             <OuterP>
               As we “release” time the two particles thus
@@ -6844,11 +6444,7 @@ const Rest = () => {
               form a mirror-image radioactive decay:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/aATY.svg"
-              intrinsicWidth={600}
-              intrinsicHeight={500}
-            />
+            <Image src="/build-img/svgo-svg/aATY.svg" />
             <Pause />
             <OuterP>
               The “defining geometric relationship” is that
@@ -6935,10 +6531,10 @@ const Rest = () => {
                 {" "} axis of the graph of the 
                 particle of {" "}
                 <InChapterLink
-                  href="/article/chapter4#_82_h.a.i_"
+                  href="/article/chapter4#_80_h.a.i_"
                   class="in-chapter-link"
                 >
-                  Exercise 23
+                  Exercise 22
                 </InChapterLink>
                 &#8288;, whose
                 velocity is equal to its position and whose
@@ -6955,11 +6551,7 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/a0qL.svg"
-                intrinsicWidth={526}
-                intrinsicHeight={300}
-              />
+              <Image src="/build-img/svgo-svg/a0qL.svg" />
               <Pause />
               <OuterP>
                 ...the detailed reasoning, as also indicated on the
@@ -7004,11 +6596,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={25}>
-          <ExerciseStatement id="_84_h.a.i_">
+        <Exercise number={24}>
+          <ExerciseStatement id="_82_h.a.i_">
             <OuterP>
               <b>
-                Exercise 25.
+                Exercise 24.
               </b>
               {" "}
               Four particles are placed
@@ -7029,11 +6621,7 @@ const Rest = () => {
               {" "} in the plane:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Tb68.svg"
-              intrinsicWidth="387.198"
-              intrinsicHeight="387.198"
-            />
+            <Image src="/build-img/svgo-svg/Tb68.svg" />
             <Pause />
             <OuterP>
               The velocity of each particle is set to
@@ -7088,10 +6676,8 @@ const Rest = () => {
               </NoBreak>
               <ImageRight
                 src="/build-img/svgo-svg/7A0o.svg"
-                offsetY="150px"
-                offsetX="-0.5em"
-                intrinsicWidth={500}
-                intrinsicHeight={600}
+                offset_y="150px"
+                offset_x="-0.5em"
               />
             </OuterP>
             <OuterP class="indent-10">
@@ -7129,57 +6715,41 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 , {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 , {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 , {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 , {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 , {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 , {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 , {" "}
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
               </p>
             </CentralDisplay>
@@ -7201,11 +6771,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/rYi5.svg"
-              intrinsicWidth={520}
-              intrinsicHeight={520}
-            />
+            <Image src="/build-img/svgo-svg/rYi5.svg" />
             <Pause />
             <OuterP>
               The black particles, for their part, are
@@ -7225,11 +6791,7 @@ const Rest = () => {
               of different colors, like a UNO card:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/qPL0.svg"
-              intrinsicWidth={520}
-              intrinsicHeight={520}
-            />
+            <Image src="/build-img/svgo-svg/qPL0.svg" />
             <Pause />
             <OuterP>
               Within each group we set the velocity of
@@ -7249,10 +6811,10 @@ const Rest = () => {
               the particles discussed in the solution to
               {" "}
               <InChapterLink
-                href="/article/chapter4#_70_h.a.i_"
+                href="/article/chapter4#_68_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 13
+                Exercise 12
               </InChapterLink>
               &#8288;, that obey a similar set of
               constraints
@@ -7305,9 +6867,7 @@ const Rest = () => {
               length of the position vector
               <ImageRight
                 src="/build-img/svgo-svg/vnba.svg"
-                offsetX="-4em"
-                intrinsicWidth={250}
-                intrinsicHeight={100}
+                offset_x="-4em"
               />
             </CentralDisplayItalic>
             <Pause />
@@ -7340,11 +6900,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/VxRW.svg"
-              intrinsicWidth={520}
-              intrinsicHeight={520}
-            />
+            <Image src="/build-img/svgo-svg/VxRW.svg" />
             <Pause />
             <OuterP>
               ...indicating the distance to the origin,
@@ -7355,31 +6911,27 @@ const Rest = () => {
               its position on this line:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/xj0g.svg"
-              intrinsicWidth={500}
-              intrinsicHeight={100}
-            />
+            <Image src="/build-img/svgo-svg/xj0g.svg" />
             <Pause />
             <OuterP>
               The behavior of such a particle is
               identical to the behavior of the red
               particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_82_h.a.i_"
+                href="/article/chapter4#_80_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 23
+                Exercise 22
               </InChapterLink>
               &#8288;,
               except that the current
               “UNO particle” has a slight head-start over the
               red particle from {" "}
               <InChapterLink
-                href="/article/chapter4#_82_h.a.i_"
+                href="/article/chapter4#_80_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 23
+                Exercise 22
               </InChapterLink>
               &#8288;, being
               at position {" "}
@@ -7403,8 +6955,6 @@ const Rest = () => {
               <ImageLeft
                 src="/build-img/svgo-svg/RFxt.svg"
                 line={-1}
-                intrinsicWidth={330}
-                intrinsicHeight={100}
               />
             </OuterP>
             <OuterP class="indent-10">
@@ -7420,8 +6970,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -7447,8 +6995,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x : \rr \ra \rr$
@@ -7465,8 +7011,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(2)$
@@ -7499,8 +7043,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -7530,8 +7072,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' =$
@@ -7540,8 +7080,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -7575,8 +7113,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' \,\,+$
@@ -7585,8 +7121,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' =$
@@ -7595,8 +7129,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x +$
@@ -7605,8 +7137,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -7627,8 +7157,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,\,+$
@@ -7637,8 +7165,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x)' =$
@@ -7647,8 +7173,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x +$
@@ -7657,8 +7181,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -7677,8 +7199,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -7687,8 +7207,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -7697,8 +7215,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -7706,8 +7222,6 @@ const Rest = () => {
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/build-img/svgo-svg/k4Y8.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
               />
               {" "} by setting...
             </OuterP>
@@ -7717,8 +7231,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x =$
@@ -7727,8 +7239,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -7737,8 +7247,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -7748,8 +7256,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y =$
@@ -7758,8 +7264,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -7768,8 +7272,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -7779,8 +7281,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x =$
@@ -7789,8 +7289,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -7799,8 +7297,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -7810,8 +7306,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y =$
@@ -7820,8 +7314,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -7830,8 +7322,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -7841,8 +7331,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x =$
@@ -7851,8 +7339,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -7861,8 +7347,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -7872,8 +7356,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y =$
@@ -7882,8 +7364,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -7892,8 +7372,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -7903,8 +7381,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x =$
@@ -7913,8 +7389,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -7923,8 +7397,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -7934,8 +7406,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y =$
@@ -7944,8 +7414,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -7954,8 +7422,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -7980,8 +7446,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' = ($
@@ -7989,8 +7453,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -7999,8 +7461,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\!\rt&#123;0.05&#125;)' =$
@@ -8009,8 +7469,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -8019,8 +7477,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x =$
@@ -8029,8 +7485,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -8040,8 +7494,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\,\!\!\!' = ($
@@ -8049,8 +7501,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -8059,8 +7509,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\!\rt&#123;0.05&#125;)' =$
@@ -8069,8 +7517,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -8079,8 +7525,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y =$
@@ -8089,8 +7533,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -8100,8 +7542,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' = ($
@@ -8109,8 +7549,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -8119,8 +7557,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\!\rt&#123;0.05&#125;)' =$
@@ -8129,8 +7565,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -8139,8 +7573,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x =$
@@ -8149,8 +7581,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -8160,8 +7590,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\,\!\!\!' = ($
@@ -8169,8 +7597,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -8179,8 +7605,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\!\rt&#123;0.05&#125;)' =$
@@ -8189,8 +7613,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -8199,8 +7621,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y =$
@@ -8209,8 +7629,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -8220,8 +7638,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' = ($
@@ -8229,8 +7645,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -8238,8 +7652,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\!\rt&#123;0.05&#125;)' =$
@@ -8248,8 +7660,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -8258,8 +7668,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x =$
@@ -8268,8 +7676,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -8279,8 +7685,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\,\!\!\!' = ($
@@ -8288,8 +7692,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -8298,8 +7700,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\!\rt&#123;0.05&#125;)' =$
@@ -8308,8 +7708,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -8318,8 +7716,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y =$
@@ -8328,8 +7724,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -8339,8 +7733,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' = ($
@@ -8348,8 +7740,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -8358,8 +7748,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\!\rt&#123;0.05&#125;)' =$
@@ -8368,8 +7756,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x \,+$
@@ -8378,8 +7764,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x =$
@@ -8388,8 +7772,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -8399,8 +7781,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\,\!\!\!' = ($
@@ -8408,8 +7788,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -8418,8 +7796,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\!\rt&#123;0.05&#125;)' =$
@@ -8428,8 +7804,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y \,+$
@@ -8438,8 +7812,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y =$
@@ -8448,8 +7820,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -8466,8 +7836,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' =$
@@ -8476,8 +7844,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -8487,8 +7853,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\,\!\!\!' =$
@@ -8497,8 +7861,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -8508,8 +7870,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' =$
@@ -8518,8 +7878,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -8529,8 +7887,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\,\!\!\!' =$
@@ -8539,8 +7895,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -8550,8 +7904,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' =$
@@ -8560,8 +7912,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -8571,8 +7921,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\,\!\!\!' =$
@@ -8581,8 +7929,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -8592,8 +7938,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x\,\!\!\!' =$
@@ -8602,8 +7946,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x$
@@ -8613,8 +7955,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y\,\!\!\!' =$
@@ -8623,8 +7963,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y$
@@ -8649,8 +7987,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) =$
@@ -8659,8 +7995,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) \,+$
@@ -8668,8 +8002,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) = 2\,\,+$
@@ -8678,8 +8010,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0)$
@@ -8689,8 +8019,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) =$
@@ -8699,8 +8027,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) \,+$
@@ -8709,8 +8035,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/d2g_.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) = 4\,\,+$
@@ -8719,8 +8043,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0)$
@@ -8730,8 +8052,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) =$
@@ -8740,8 +8060,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) \,+$
@@ -8750,8 +8068,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) = 2\,\,+$
@@ -8760,8 +8076,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0)$
@@ -8771,8 +8085,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) =$
@@ -8781,8 +8093,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) \,+$
@@ -8791,8 +8101,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/rDav.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) = 4\,\,+$
@@ -8801,8 +8109,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0)$
@@ -8812,8 +8118,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) =$
@@ -8822,8 +8126,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) \,+$
@@ -8832,8 +8134,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) = 2\,\,+$
@@ -8842,8 +8142,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0)$
@@ -8853,8 +8151,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) =$
@@ -8863,8 +8159,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) \,+$
@@ -8873,8 +8167,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/JFOc.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) = 4\,\,+$
@@ -8883,8 +8175,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0)$
@@ -8894,8 +8184,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) =$
@@ -8904,8 +8192,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) \,+$
@@ -8914,8 +8200,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) = 2\,\,+$
@@ -8924,8 +8208,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0)$
@@ -8935,8 +8217,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) =$
@@ -8945,8 +8225,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) \,+$
@@ -8955,8 +8233,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Okyf.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) = 4\,\,+$
@@ -8965,8 +8241,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0)$
@@ -8983,8 +8257,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) = 2\,\,+$
@@ -8993,8 +8265,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0)$
@@ -9004,8 +8274,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) = 4\,\,+$
@@ -9014,8 +8282,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Fhlm.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0)$
@@ -9025,8 +8291,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) = 2\,\,+$
@@ -9035,8 +8299,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0)$
@@ -9046,8 +8308,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) = 4\,\,+$
@@ -9056,8 +8316,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/jmDH.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0)$
@@ -9067,8 +8325,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) = 2\,\,+$
@@ -9077,8 +8333,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0)$
@@ -9088,8 +8342,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) = 4\,\,+$
@@ -9098,8 +8350,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/ZI6P.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0)$
@@ -9109,8 +8359,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0) = 2\,\,+$
@@ -9119,8 +8367,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_x(0)$
@@ -9130,8 +8376,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0) = 4\,\,+$
@@ -9140,8 +8384,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/YZSJ.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 <Math>
                   $_y(0)$
@@ -9161,8 +8403,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -9171,8 +8411,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -9180,15 +8418,11 @@ const Rest = () => {
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/build-img/svgo-svg/Ya08.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
               />
               {" "} and {" "}
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/build-img/svgo-svg/k4Y8.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
               />
               {" "} are the translate of the white particle
               positions at {" "}
@@ -9209,8 +8443,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -9219,8 +8451,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -9229,8 +8459,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/Ya08.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 {" "} and {" "}
               </NoBreak>
@@ -9239,8 +8467,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/k4Y8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
               </NoBreak>
               {" "} as they appear in the problem statement! I.e.,
@@ -9249,8 +8475,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -9259,8 +8483,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -9268,15 +8490,11 @@ const Rest = () => {
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/build-img/svgo-svg/Ya08.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
               />
               {" "} and {" "}
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/build-img/svgo-svg/k4Y8.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
               />
               {" "} are in the desired place at {" "}
               <NoBreak>
@@ -9292,8 +8510,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -9302,8 +8518,6 @@ const Rest = () => {
                 <InlineImage
                   class="ch4_inline_blackwhite_particles"
                   src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
                 />
                 ,
               </NoBreak>
@@ -9311,15 +8525,11 @@ const Rest = () => {
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/build-img/svgo-svg/Ya08.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
               />
               {" "} and {" "}
               <InlineImage
                 class="ch4_inline_blackwhite_particles"
                 src="/build-img/svgo-svg/k4Y8.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
               />
               {" "} “work” in the sense of satisfying all the conditions
               of the problem statement, and are, indeed, the
@@ -9358,11 +8568,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/KERt.svg"
-              intrinsicWidth={470}
-              intrinsicHeight={650}
-            />
+            <Image src="/build-img/svgo-svg/KERt.svg" />
             <Pause />
             <OuterP>
               The above plot goes from {" "}
@@ -9427,10 +8633,10 @@ const Rest = () => {
                 As half-mentioned in
                 the solution to {" "}
                 <InChapterLink
-                  href="/article/chapter4#_70_h.a.i_"
+                  href="/article/chapter4#_68_h.a.i_"
                   class="in-chapter-link"
                 >
-                  Exercise 13
+                  Exercise 12
                 </InChapterLink>
                 &#8288;,
                 but might be worth emphasizing,
@@ -9480,21 +8686,21 @@ const Rest = () => {
         </Exercise>
         <Exercise
           ref="rence"
-          number={26}
+          number={25}
         >
-          <ExerciseStatement id="_85_h.a.i_">
+          <ExerciseStatement id="_83_h.a.i_">
             <OuterP>
               <b>
-                Exercise 26.
+                Exercise 25.
               </b>
               {" "}
               The function below is also the blue
               curve from {" "}
               <InChapterLink
-                href="/article/chapter4#_70_h.a.i_"
+                href="/article/chapter4#_68_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 13
+                Exercise 12
               </InChapterLink>
               &#8288;, known as the
               {" "}
@@ -9503,13 +8709,13 @@ const Rest = () => {
               </i>
               {" "} (already encountered
               in {" "}
-              <OutChapterLink
-                href="/article/chapter3#_40_h.a.i_"
+              <a
+                href="/article/chapter3#_39_h.a.i_"
                 class="out-chapter-link"
               >
                 Chapter 3, Exercise 7
-              </OutChapterLink>
-              ).
+              </a>
+              &#8288;).
               Knowing that this function is the {" "}
               <NoBreak>
                 <Math>
@@ -9524,11 +8730,7 @@ const Rest = () => {
               deduced by looking (closely) at the graph?
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/njEr.svg"
-              intrinsicWidth={1240}
-              intrinsicHeight={180}
-            />
+            <Image src="/build-img/svgo-svg/njEr.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -9540,11 +8742,7 @@ const Rest = () => {
               to crest*:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/KEtq.svg"
-              intrinsicWidth={1240}
-              intrinsicHeight={190}
-            />
+            <Image src="/build-img/svgo-svg/KEtq.svg" />
             <Pause />
             <OuterP>
               (*We're just going to assume that the graph
@@ -9598,11 +8796,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/htXO.svg"
-              intrinsicWidth={1240}
-              intrinsicHeight={205}
-            />
+            <Image src="/build-img/svgo-svg/htXO.svg" />
             <Pause />
             <OuterP>
               This implies that in
@@ -9635,11 +8829,7 @@ const Rest = () => {
               {" "} to that point:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/9cV2.svg"
-              intrinsicWidth={1240}
-              intrinsicHeight={205}
-            />
+            <Image src="/build-img/svgo-svg/9cV2.svg" />
             <Pause />
             <OuterP>
               Thus
@@ -9759,19 +8949,19 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={27}>
-          <ExerciseStatement id="_86_h.a.i_">
+        <Exercise number={26}>
+          <ExerciseStatement id="_84_h.a.i_">
             <OuterP>
               <b>
-                Exercise 27.
+                Exercise 26.
               </b>
               {" "}
               {" "}
               <InChapterLink
-                href="/article/chapter4#_70_h.a.i_"
+                href="/article/chapter4#_68_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 13
+                Exercise 12
               </InChapterLink>
               {" "} exhibits a function {" "}
               <NoBreak>
@@ -9882,10 +9072,10 @@ const Rest = () => {
               We can naïvely try to imitiate how the
               curves of {" "}
               <InChapterLink
-                href="/article/chapter4#_73_h.a.i_"
+                href="/article/chapter4#_71_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 15
+                Exercise 14
               </InChapterLink>
               {" "} are generated by
               placing five equally spaced particles
@@ -9901,11 +9091,7 @@ const Rest = () => {
               convention), instead of 4:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/826P.svg"
-              intrinsicWidth={480}
-              intrinsicHeight={380}
-            />
+            <Image src="/build-img/svgo-svg/826P.svg" />
             <Pause />
             <OuterP>
               The idea would be that the
@@ -9931,11 +9117,7 @@ const Rest = () => {
               velocity vectors would be as follows:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/uq4U.svg"
-              intrinsicWidth={480}
-              intrinsicHeight={440}
-            />
+            <Image src="/build-img/svgo-svg/uq4U.svg" />
             <Pause />
             <OuterP>
               The velocity vectors are
@@ -9955,11 +9137,7 @@ const Rest = () => {
               to approximately these new positions:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/ZQgt.svg"
-              intrinsicWidth={540}
-              intrinsicHeight={515}
-            />
+            <Image src="/build-img/svgo-svg/ZQgt.svg" />
             <Pause />
             <OuterP>
               In the next one-tenth unit of time we
@@ -9977,11 +9155,7 @@ const Rest = () => {
               lines:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/0xaW.svg"
-              intrinsicWidth={560}
-              intrinsicHeight={405}
-            />
+            <Image src="/build-img/svgo-svg/0xaW.svg" />
             <Pause />
             <OuterP>
               Applying the same process for {" "}
@@ -9992,11 +9166,7 @@ const Rest = () => {
               steps:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/hg3g.svg"
-              intrinsicWidth={560}
-              intrinsicHeight={435}
-            />
+            <Image src="/build-img/svgo-svg/hg3g.svg" />
             <Pause />
             <OuterP>
               To be clear, in the above figure, the
@@ -10004,22 +9174,14 @@ const Rest = () => {
               fifth step...
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/GKbB.svg"
-              intrinsicWidth={560}
-              intrinsicHeight={435}
-            />
+            <Image src="/build-img/svgo-svg/GKbB.svg" />
             <Pause />
             <OuterP>
               ...is obtained by starting from the red
               particle's position at the fourth step...
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/jG_S.svg"
-              intrinsicWidth={560}
-              intrinsicHeight={435}
-            />
+            <Image src="/build-img/svgo-svg/jG_S.svg" />
             <Pause />
             <OuterP>
               ...and adding one-tenth of the approximation
@@ -10036,11 +9198,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Js6D.svg"
-              intrinsicWidth={560}
-              intrinsicHeight={435}
-            />
+            <Image src="/build-img/svgo-svg/Js6D.svg" />
             <Pause />
             <OuterP>
               ...and we do the same for each particle,
@@ -10075,11 +9233,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/8BpD.svg"
-              intrinsicWidth={560}
-              intrinsicHeight={395}
-            />
+            <Image src="/build-img/svgo-svg/8BpD.svg" />
             <Pause />
             <OuterP>
               To visualize such a fine-grained
@@ -10108,22 +9262,14 @@ const Rest = () => {
               approximation:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/uXS-.svg"
-              intrinsicWidth={560}
-              intrinsicHeight={395}
-            />
+            <Image src="/build-img/svgo-svg/uXS-.svg" />
             <Pause />
             <OuterP>
               Zooming in a bit (or else we still can't
               see anything):
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/IUP8.svg"
-              intrinsicWidth={560}
-              intrinsicHeight={395}
-            />
+            <Image src="/build-img/svgo-svg/IUP8.svg" />
             <Pause />
             <OuterP>
               In any case, even the {" "}
@@ -10151,12 +9297,10 @@ const Rest = () => {
               form doubly-infinite spirals—in to infinity,
               out to infinity.
               <ImageLeft
-                offsetX="1.5em"
+                offset_x="1.5em"
                 src="/build-img/svgo-svg/QRVl.svg"
-                childrenX="50%"
-                childrenY="105%"
-                intrinsicWidth={490}
-                intrinsicHeight={490}
+                children_x="50%"
+                children_y="105%"
               >
                 <p>
                   <span style="font-size:1.4em;left:50%;transform:translate(-50%);position:absolute;white-space:nowrap;">
@@ -10426,11 +9570,7 @@ const Rest = () => {
                 curves:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/U6Hi.svg"
-                intrinsicWidth={820}
-                intrinsicHeight={435}
-              />
+              <Image src="/build-img/svgo-svg/U6Hi.svg" />
             </SolutionNote>
             <Pause />
             <SolutionNote>
@@ -10576,11 +9716,7 @@ const Rest = () => {
                 e.g., ...
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/cejz.svg"
-                intrinsicWidth={450}
-                intrinsicHeight={70}
-              />
+              <Image src="/build-img/svgo-svg/cejz.svg" />
               <Pause />
               <OuterP>
                 ...(the initial positions really don't
@@ -10659,15 +9795,11 @@ const Rest = () => {
                 the whole is simpler than the parts
                 <ImageLeft
                   src="/build-img/svgo-svg/_DUb.svg"
-                  offsetX="-5rem"
-                  intrinsicWidth={500}
-                  intrinsicHeight={500}
+                  offset_x="-5rem"
                 />
                 <ImageRight
                   src="/build-img/svgo-svg/7DF3.svg"
-                  offsetX="-5rem"
-                  intrinsicWidth={500}
-                  intrinsicHeight={500}
+                  offset_x="-5rem"
                 />
               </CentralDisplayItalic>
               <Pause />
@@ -10695,11 +9827,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={28}>
-          <ExerciseStatement id="_87_h.a.i_">
+        <Exercise number={27}>
+          <ExerciseStatement id="_85_h.a.i_">
             <OuterP>
               <b>
-                Exercise 28.
+                Exercise 27.
               </b>
               {" "}
               If we seek a function {" "}
@@ -10750,11 +9882,7 @@ const Rest = () => {
               with position vectors):
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/UDTy.svg"
-              intrinsicWidth={480}
-              intrinsicHeight={380}
-            />
+            <Image src="/build-img/svgo-svg/UDTy.svg" />
             <Pause />
             <OuterP>
               Set the velocity of particle
@@ -10788,16 +9916,10 @@ const Rest = () => {
               vectors end up looking like so, for example:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/tkLL.svg"
-              intrinsicWidth={480}
-              intrinsicHeight={380}
-            >
+            <Image src="/build-img/svgo-svg/tkLL.svg">
               <ImageRight
                 src="/build-img/svgo-svg/Bvhk.svg"
-                offsetX="3rem"
-                intrinsicWidth={500}
-                intrinsicHeight={388}
+                offset_x="3rem"
               />
             </Image>
             <Pause />
@@ -10899,11 +10021,7 @@ const Rest = () => {
               of the particles look like so:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/kytU.svg"
-              intrinsicWidth={480}
-              intrinsicHeight={380}
-            />
+            <Image src="/build-img/svgo-svg/kytU.svg" />
             <Pause />
             <OuterP>
               ...and if you take the {" "}
@@ -10935,35 +10053,23 @@ const Rest = () => {
               {" "} functions that look like so:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/KuID.svg"
-              intrinsicWidth={900}
-              intrinsicHeight="408.207"
-            />
+            <Image src="/build-img/svgo-svg/KuID.svg" />
             <Pause />
             <OuterP>
               For example, the derivative of curve {" "}
               <InlineImage
                 class="ch4_17_pellets"
                 src="/build-img/svgo-svg/i4u9.svg"
-                intrinsicWidth="18.75"
-                intrinsicHeight="18.75"
               />
               , highlighted below in red, is curve {" "}
               <InlineImage
                 class="ch4_17_pellets"
                 src="/build-img/svgo-svg/twzO.svg"
-                intrinsicWidth="18.75"
-                intrinsicHeight="18.75"
               />
               , highlighted in blue:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/SKRR.svg"
-              intrinsicWidth={900}
-              intrinsicHeight="408.207"
-            />
+            <Image src="/build-img/svgo-svg/SKRR.svg" />
             <Pause />
             <OuterP>
               ...and taking sixteen more derivatives
@@ -10971,51 +10077,37 @@ const Rest = () => {
               <InlineImage
                 class="ch4_17_pellets"
                 src="/build-img/svgo-svg/twzO.svg"
-                intrinsicWidth="18.75"
-                intrinsicHeight="18.75"
               />
               {" "} we would go through curves {" "}
               <InlineImage
                 class="ch4_17_pellets"
                 src="/build-img/svgo-svg/A7E1.svg"
-                intrinsicWidth="18.75"
-                intrinsicHeight="18.75"
               />
               , {" "}
               <InlineImage
                 class="ch4_17_pellets"
                 src="/build-img/svgo-svg/256c.svg"
-                intrinsicWidth="18.75"
-                intrinsicHeight="18.75"
               />
               , {" "}
               <InlineImage
                 class="ch4_17_pellets"
                 src="/build-img/svgo-svg/oMBk.svg"
-                intrinsicWidth="18.75"
-                intrinsicHeight="18.75"
               />
               , {" "}
               <InlineImage
                 class="ch4_17_pellets"
                 src="/build-img/svgo-svg/26-z.svg"
-                intrinsicWidth="18.75"
-                intrinsicHeight="18.75"
               />
               , ..., {" "}
               <InlineImage
                 class="ch4_17_pellets"
                 src="/build-img/svgo-svg/hEuY.svg"
-                intrinsicWidth="18.75"
-                intrinsicHeight="18.75"
               />
               {" "} before finally coming back to curve {" "}
               <InlineImage
                 class="ch4_17_pellets"
                 src="/build-img/svgo-svg/i4u9.svg"
                 style="margin-right:0.1em"
-                intrinsicWidth="18.75"
-                intrinsicHeight="18.75"
               />
               !
             </OuterP>
@@ -11046,11 +10138,7 @@ const Rest = () => {
               configuration:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/t94J.svg"
-              intrinsicWidth={480}
-              intrinsicHeight={390}
-            />
+            <Image src="/build-img/svgo-svg/t94J.svg" />
             <Pause />
             <OuterP>
               To parse the above figure, understand
@@ -11128,11 +10216,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/3j-T.svg"
-              intrinsicWidth={880}
-              intrinsicHeight={880}
-            />
+            <Image src="/build-img/svgo-svg/3j-T.svg" />
             <Pause />
             <OuterP>
               The particles shoot of to infinity in short

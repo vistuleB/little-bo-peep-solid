@@ -6,23 +6,13 @@ const env = loadEnv(mode, process.cwd(), "");
 
 // Priority: process.env (CLI) > .env file
 const viteEnv = process.env.VITE_ENV || env.VITE_ENV;
-const mathJAXVersion = process.env.MATHJAX_VERSION || env.MATHJAX_VERSION || "4";
+const mathJAXVersion = process.env.MATHJAX_VERSION || env.MATHJAX_VERSION;
 const isAuthorMode = (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
-const mathJaxDebugAttributes =
-  (process.env.MATHJAX_DEBUG_ATTRIBUTES || env.MATHJAX_DEBUG_ATTRIBUTES) ===
-    "true" || isAuthorMode;
 const isOfflineMode = (process.env.OFFLINE_MODE || env.OFFLINE_MODE) === "true";
-const prerenderMathJax =
-  (process.env.PRERENDER_MATHJAX || env.PRERENDER_MATHJAX || "true") === "true";
-const prerenderMathJaxCacheVersion =
-  process.env.PRERENDER_MATHJAX_CACHE_VERSION ||
-  env.PRERENDER_MATHJAX_CACHE_VERSION ||
-  String(Date.now());
 
 export default defineConfig({
   ssr: false,
   server: {
-    publicURL: process.env.PUBLIC_URL,
     prerender: {
       crawlLinks: true,
     },
@@ -34,14 +24,9 @@ export default defineConfig({
   vite: {
     define: {
       "import.meta.env.VITE_AUTHOR_MODE": JSON.stringify(isAuthorMode),
-      "import.meta.env.MATHJAX_DEBUG_ATTRIBUTES": mathJaxDebugAttributes,
       "import.meta.env.VITE_ENV": JSON.stringify(viteEnv),
       "import.meta.env.OFFLINE_MODE": isOfflineMode,
       "import.meta.env.MATHJAX_VERSION": JSON.stringify(mathJAXVersion),
-      "import.meta.env.PRERENDER_MATHJAX": prerenderMathJax,
-      "import.meta.env.PRERENDER_MATHJAX_CACHE_VERSION": JSON.stringify(
-        prerenderMathJaxCacheVersion,
-      ),
     },
   },
 });

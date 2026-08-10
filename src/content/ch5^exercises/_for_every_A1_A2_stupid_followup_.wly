@@ -1,0 +1,81 @@
+|> Exercise
+    handle=_for_every_A1_A2_stupid_followup_
+
+    If we attempt to express
+    $$
+    A_1\sin x + A_2\cos x
+    $$
+    in the form
+    $$
+    W\cdot\sin(x + \psi)
+    $$
+    then what does the relationship
+    between $A_1$, $A_2$, $W$ and $\psi$ become?
+
+    (NB: We have flipped ‘$\cos$’ and
+    ‘$\sin$’ in the first expression, compared
+    to Exercise 34, and reducing to that exercise is
+    likely to produce confusion.
+    Solving from scratch is recommended.)
+
+    |> Solution
+
+        Expanding
+
+        $$
+        \sin(x + \psi)
+        $$
+
+        by the angle-sum formula gives
+
+        $$
+        \sin x\cos \psi + \cos x\sin \psi
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_polar_discovery2_cloud.svg
+            offset_x=8em
+
+        whereby multiplying by $W$ and collecting coefficients
+        of $\sin x$, $\cos x$ gives
+        $$
+        (W\cdot\cos \psi)\cdot\sin x + (W\cdot\sin \psi)\cdot\cos x
+        $$
+        and equating to
+        $$
+        A_1\cdot\sin x + A_2\cdot\cos x
+        $$
+        gives the system of equations
+        $$
+        W\cdot\cos \psi = A_1
+        $$
+        $$
+        W\cdot\sin \psi = A_2
+        $$
+        which is to say that, for this specific arrangement of
+        the variables,
+        $$
+        (W, \,\psi)
+        $$
+        are the __exact__ polar coordinates of $(A_1, A_2)$!!!
+
+        |> Pause
+
+        _Example 1._
+        By this result,
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                \sin(x) + \cos(x) = \sqrt{2}\cdot\sin(x + \eta/2)
+                $$
+
+        since
+        $$
+        (\sqrt{2}, \,\eta/2)
+        $$
+        are the (hum: “the”) polar coordinates of $(1, 1)$.
+

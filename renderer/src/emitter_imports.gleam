@@ -2,11 +2,11 @@ import gleam/dict.{type Dict}
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/result
-import vxml/blame.{Ext}
-import vxml/io_lines.{type OutputLine, OutputLine}
+import blame.{Ext}
+import io_lines.{type OutputLine, OutputLine}
 import vxml.{type VXML, V, T}
 import gleam/string
-import desugaring/core as core
+import infrastructure as infra
 import on
 
 pub type ExportedByFile {
@@ -33,8 +33,6 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("InlineImage", ExportedByFile(Some("InlineImage"), [])),
     #("List", ExportedByFile(None, ["List", "Item"])),
     #("Math", ExportedByFile(None, ["Math", "MathBlock"])),
-    #("MathJaxSvgExportTooltip", ExportedByFile(Some("MathJaxSvgExportTooltip"), [])),
-    #("OutChapterLink", ExportedByFile(Some("OutChapterLink"), [])),
     #("SectionDivider", ExportedByFile(None, ["SectionDivider"])),
     #("SectionsBreadcrumbs", ExportedByFile(Some("SectionsBreadcrumbs"), ["BreadcrumbItem"])),
     #("SideImage", ExportedByFile(None, ["ImageRight", "ImageLeft"])),
@@ -194,7 +192,7 @@ fn uppercase_tags_tree_walker(
   case vxml {
     V(_, tag, _, children) -> {
       let new_state = case take_root && string.starts_with(tag, string.uppercase(string.slice(tag, 0, 1))) {
-        True -> core.append_if_not_present(state, tag)
+        True -> infra.append_if_not_present(state, tag)
         False -> state
       }
       list.fold(children, new_state, fn(acc, child) {

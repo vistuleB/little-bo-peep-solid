@@ -1,49 +1,40 @@
 import { createEffect, createSignal, onMount } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
-  DESKTOP_TEXT_COLUMN_WIDTH,
+  DESKTOP_COLUMN_WIDTH,
   MOBILE_MAX_WIDTH,
-  MOBILE_TEXT_COLUMN_SIDE_INSET,
+  TEXT_X_PADDING,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
+import useScrollX from "~/hooks/useScrollX";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import HeaderBlob from "./HeaderBlob";
 import containerWidth from "~/hooks/useContainerWidth";
-import { decideRouteNavbarPosition } from "~/utils/routeTransitionPolicy";
 
 const Nav = () => {
   let { store } = useGlobalContext();
-  const navPosition = () =>
-    decideRouteNavbarPosition({
-      onMobile: store.innerWidth <= MOBILE_MAX_WIDTH,
-      routePhase: store.route_phase,
-      spinnerCurrentlyVisible: store.spinner_currently_visible,
-    });
-
+  useScrollX();
   return (
     <>
       <div
         class={twJoin(
-          "select-none w-full left-0 z-[60]",
-          navPosition() === "fixed" ? "!fixed" : "absolute",
+          "select-none w-full z-[60]",
+          store.innerWidth < MOBILE_MAX_WIDTH && "!fixed",
+          store.innerWidth >= MOBILE_MAX_WIDTH && "absolute",
         )}
         onClick={(e) => {
           e.stopPropagation();
-        }}
-      >
-        <div
-          class="relative select-none border-[var(--nav-border)] border-b bg-bg z-40 w-full left-0"
-          style={{ height: "var(--header-height)" }}
-        >
-          <Title navPosition={navPosition()} />
+        }}>
+        <div class="relative select-none border-[var(--nav-border)] border-b bg-bg z-40 w-full h-14 left-0">
+          <Title />
         </div>
       </div>
-      <div style={{ height: "var(--header-height)" }}></div>
+      <div class="h-14"></div>
     </>
   );
 };
 
-const Title = (props: { navPosition: "fixed" | "absolute" }) => {
+const Title = () => {
   const { getPage } = usePrevNextPage();
   const { store } = useGlobalContext();
   let headerBlob: HTMLAnchorElement | undefined;
@@ -63,18 +54,8 @@ const Title = (props: { navPosition: "fixed" | "absolute" }) => {
   });
 
   createEffect(() => {
-    if (!headerBlob || !imageLoaded()) return;
-    const onMobile = store.innerWidth <= MOBILE_MAX_WIDTH;
-    const columnLeft = onMobile
-      ? 0
-      : props.navPosition === "fixed"
-        ? (store.innerWidth - DESKTOP_TEXT_COLUMN_WIDTH) / 2
-        : (containerWidth() - DESKTOP_TEXT_COLUMN_WIDTH) / 2;
-    const leftPos = columnLeft + (onMobile ? MOBILE_TEXT_COLUMN_SIDE_INSET : 0);
-    headerBlob.style.left = `${leftPos}px`;
-  });
-
-  createEffect(() => {
+    const width = containerWidth();
+    const innerWidth = store.innerWidth;
     if (!headerBlob || !imageLoaded()) return;
     requestAnimationFrame(() => {
       // ur not necessarily on the same page anymore
@@ -85,6 +66,10 @@ const Title = (props: { navPosition: "fixed" | "absolute" }) => {
       const scale = 56 / headerBlobHeight;
       headerBlob.style.transform = `scale(${scale})`;
       headerBlob.style.opacity = "1";
+
+      const scaledWidth = headerBlob.offsetWidth * scale;
+      const leftPos = (width - scaledWidth) / 2;
+      headerBlob.style.left = `${leftPos}px`;
     });
   });
 
@@ -93,8 +78,7 @@ const Title = (props: { navPosition: "fixed" | "absolute" }) => {
       class="mr-auto absolute origin-top-left opacity-0"
       ref={headerBlob}
       href="/"
-      onClick={() => getPage("/")}
-    >
+      onClick={() => getPage("/")}>
       <HeaderBlob />
     </a>
   );

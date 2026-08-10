@@ -1,0 +1,96 @@
+|> Exercise
+    handle=_ab_inequality_
+    
+    Prove that
+
+    |> Boxed
+        $$
+        \huge a^2 + b^2 \geq 2ab
+        $$
+
+    for all $a, b \in \rr$.
+
+    |> Solution
+
+        !! This is a one-line proof (oops 
+        !! |> del
+        !!     two
+        !! three lines):
+        We have
+
+        $$
+        \begin{aligned}
+        & a^2 + b^2 \geq 2ab \\
+        \iff & \up{1.5} a^2 - 2ab + b^2 \geq 0 \\
+        \iff & \up{1.5} (a - b)^2 \geq 0
+        \end{aligned}
+        $$
+
+        where the last inequality is true because the
+        square of any real number is nonnegative, and,
+        therefore, the first inequality is true. (Recall
+        that 
+        $$
+        \te{“}\!\!\iff\!\!\te{”}
+        $$
+        means “if and only if”.)
+
+        !! Where we recall that
+        !! $$
+        !! \te{“}\!\iff\!\te{”}
+        !! $$
+        !! means “if and only if”, and where the last
+        !! inequality is true because the square of anything
+        !! (certainly of any real number) is nonnegative.
+
+        !! |> SolutionNote
+
+        !!     This inequality has a kind of geometric
+        !!     proof:
+
+        |> SolutionNote
+
+            One can also note that
+
+            !! $$
+            !! \begin{aligned}
+            !! & a^2 + b^2 = 2ab \\
+            !! \iff & \up{1.5} a^2 - 2ab + b^2 = 0 \\
+            !! \iff & \up{1.5} (a - b)^2 = 0 \\
+            !! \iff & \up{1.5} a = b
+            !! \end{aligned}
+            !! $$
+            $$
+            \begin{aligned}
+            & a^2 + b^2 > 2ab \\
+            \iff & \up{1.5} a^2 - 2ab + b^2 > 0 \\
+            \iff & \up{1.5} (a - b)^2 > 0 \\
+            \iff & \up{1.5} a \ne b
+            \end{aligned}
+            $$
+
+            which means that $a^2 + b^2$ is 
+
+            !! $$
+            !! a^2 + b^2
+            !! $$
+
+            __strictly greater__
+
+            than $2ab$ except in one case and in one case only:
+            the case that $a$ equals $b$.
+            (In which case, indeed, $a^2 + b^2 = 2a^2 = 2ab$.)
+            !! Note that
+
+            !! $$
+            !! a^2 + b^2 > 2ab
+            !! $$
+
+            !! if and only if
+
+            !! $$
+            !! (a - b)^2 > 0
+            !! $$
+
+            !! because we can replay the above derivation
+            !! with “$>$” instead of “$\geq$”. But

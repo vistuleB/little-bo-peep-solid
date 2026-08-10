@@ -1,0 +1,591 @@
+|> Section
+    handle=_ch1_start_
+    id=first-section
+
+    *Square roots.*
+    !! As “minus times minus
+    !! is plus” and “plus times plus is plus”
+    Due to the fact that “minus times minus is plus”
+    (the enemy of my enemy is my friend)
+    and that “plus times plus is plus”,
+    !! (the enemy of my enemy is my friend),
+    any nonzero number multiplied by itself
+    is positive. For example,
+    !! You might remember that “minus times minus
+    !! is plus” and that “plus times plus is plus”.
+    !! (Why? The enemy of my enemy is my friend.)
+    !! So any nonzero number multiplied by itself
+    !! is positive. For example,
+
+    $$
+    (-2) \times (-2) = 4
+    $$
+
+    !! (“minus times minus is plus”) 
+    is positive, 
+    !! as is $2 \times 2 = 4$.
+    while, of course,
+    $$
+    2 \times 2 = 4
+    $$
+    is positive as well. 
+    But $\sqrt{4}$
+    is, by definition, the unique _nonnegative_
+    solution to $x^2 = 4$.
+    Hence,
+
+    $$
+    \sqrt{(-2)^2} = 2
+    $$
+
+    |> ImageRight
+        src=images/svg_ch1_ch_minus_two_squared_cloud.svg
+        offset_x=5em
+
+    and, in particular, it is _not_ true that
+
+    $$
+    \sqrt{x^{2}} \rt{0.1} = \rt{0.1} x
+    $$
+
+    for every real number $x$. Instead we have
+
+    $$
+    \sqrt{x^{2}} \rt{0.1} = \rt{0.1} |x|
+    $$
+
+    for every real number $x$, where $|x|$
+    denotes the absolute value of $x$.
+    !! In words,
+
+    !! __the magnitude of a number is the
+    !! square root of its square__
+
+    !! where “magnitude” is a synonym of “absolute
+    !! value”. This fact is the “$1$-dimensional pythagorean
+    !! theorem”.
+    !! !! And we should emphasize that this
+    !! !! fact is not a mere algebraic curiosity, or
+    !! !! accident, it is a 1-dimensional form of the
+    !! !! Pythagorean theorem!
+
+    !! |> StarDivider
+
+    (NB: If ever you want to indicate both
+    solutions of the equation $x^2 = 4$ you
+    can always use the notation “$\pm \sqrt{4}$”.
+    This is what happens, for example, in the
+    maybe-well-known formula
+
+    $$
+    x = {-b \pm \sqrt{b^2 - 4ac} \over 2a}
+    $$
+
+    for the solutions to $x$ to $ax^2 + bx + c = 0$.)
+
+    !! |> Section
+    !!     *The square root of a number between 0 and 1.*
+    !! Next, we will ponder
+    !! We will 
+    !! One can ponder the value of
+
+|> Section
+    *Square roots (bis).*
+    !! *Square root of a number between 0 and 1.*
+    We next ponder the value of
+
+    $$
+    \sqrt{0.5}
+    $$
+
+    which is, by definition, the unique
+    nonnegative solution $x$ to
+
+    $$
+    x^2 = 0.5.
+    $$
+
+    As beginners, there's nothing wrong with
+    trying to solve this equation by trial and
+    error. With $x = {1\over 4}$, for example,
+    we find
+
+    $$
+    x^2 = {1\over 4}\times{1\over 4} = {1\over 16}
+    $$
+
+    so $x = {1\over 4}$ is not a solution of
+    the equation, being apparently too small.
+    Increasing $x$ to $x = {1\over 2}$, say, we
+    find
+
+    $$
+    x^2 = {1\over 2}\times{1\over 2} = {1\over 4}
+    $$
+
+    which is better, since $1/4$ is closer to $1/2$,
+    but still too small. Increasing $x$ by $1/4$
+    again, say, to $x = {3\over 4}$, we find
+
+    $$
+    x^2 = {3\over 4}\times{3\over 4} = {9\over 16}
+    $$
+
+    which—surprise!—is actually pretty close to
+    $1/2$, as $1/2 = 8/16$. And since $9/16 > 0.5$,
+    $\sqrt{0.5}$ must be a little _less_ than
+    ${3\over 4} = 0.75$.
+
+    In last resort, and in reasonably good
+    agreement with our observations, a calculator
+    reveals that
+
+    $$
+    \sqrt{0.5} = 0.7071067...
+    $$
+
+    where the decimals trail off with no pattern.
+    (This number is irrational.) Even so, the fact
+    that $\sqrt{0.5}$ is _greater_ than $0.5$ is
+    often perceived as counterintuitive.
+
+    You can think of it this way: multiplying a
+    value by $0.7071$, or approximately $\sqrt{0.5}$,
+    is like taking $70.71\%$ of that value—for
+    example, say,
+
+    $$
+    605 \cdot 0.7071 = 427.7955
+    $$
+
+    is $70.71\%$ of $605$, and so on—so if we
+    multiply _twice_ by $0.7071$ we obtain
+    “$70.71\%$ of $70.71\%$” and it just so happens
+    that “$70.71\%$ of $70.71\%$” is close to
+    $50\%$.
+
+    The point is: if “$X\%$ of $X\%$” equals $50\%$,
+    then, of course, $\rt{0.03}X > 50$—that much
+    seems logical—and, with a little thought, the
+    same phenomenon explains why $\sqrt{0.5} > 0.5$!
+
+
+|> Section
+
+    *Fractions and Division.*
+    An elementary fraction, or division, such as
+
+    $$
+    {50 \over 2}
+    $$
+
+    can be thought of in a few different ways:
+
+    |> List
+        marker=decimal
+        style=gap:2px;
+
+        Fifty halves (i.e., $50 \times {1\over 2}$).
+
+        The size obtained when something of size
+        fifty is divided into two equal parts
+        (answer: $25$).
+
+        The number of times that $2$ goes into $50$
+        (answer: $25$, because it takes twenty-five
+        $2$'s to make up $50$).
+
+    But $50/2$ is a ratio of integers, 
+    !! which makes things particularly nice! 
+    and for a ratio of
+    decimals, such as, say,
+
+    $$
+    \,{1 \over 0.01},
+    $$
+
+    our possible points of view are going to be
+    more restricted. Thankfully, though, we can
+    still characterize this fraction as the
+    answer to the question “how many times does
+    $0.01$ go into $1$?”, as in the third option
+    above—from which,
+
+    $$
+    {1 \over 0.01} \,=\,100
+    $$
+
+    because $0.01$ goes $100$ times into $1$. For
+    that matter,
+
+    $$
+    { 1 \over 0.001} = 1000,\qquad{1 \over 0.0001} = 10000,\quad\,\,\,\,\textrm{(etc)}
+    $$
+
+    by the same reasoning, which explains why
+    dividing by smaller and smaller numbers produces
+    larger and larger results. (Also, why dividing by $0$ is undefined.)
+    !! and by extension why dividing by $0$ is undefined.
+    !! (No amount of
+    !! multiplying the ‘$0$’ will give you the numerator
+    !! of the fraction, unless the numerator is $0$, in
+    !! which case _any_ amount will give you the numerator,
+    !! which is also no good in terms of reaching a defined
+    !! value.)
+
+    |> Pause
+
+    *Note.* In general, the ratio of two decimal
+    numbers can be turned into a ratio of integers
+    by multiplying the ratio top and bottom by a
+    suitable power of $10$. E.g.:
+
+    $$
+    {1.42 \over 0.8} = {100 \cdot 1.42 \over 100 \cdot 0.8} = {142 \over 80} = {71 \over 40}.
+    $$
+
+    This example was chosen randomly, and, if you
+    allow, we would like to see how large $71/40$
+    really is
+    (one second!):
+
+    $$
+    \begin{align}
+    {71 \over 40} \,&=\, {40 + 30 + 1 \over 40} \,=\, {40 \over 40} + {30 \over 40} + {1 \over 40}\\
+    \,&=\, 1 + {3 \over 4} + {1 \over 4}\!\cdot \!{1 \over 10}\up{1.5}\\
+    \,&=\, 1 + 0.75 + 0.025 = 1.775\up{1.5}
+    \end{align}
+    $$
+
+    ...so we find, among others, that $71$ is exactly
+    $77.5\%$ greater than $40$.
+    (Check yourself: $70$ is $75\%$ greater than $40$.)
+    !! (Interesting, no?)
+
+
+|> Section
+
+    *Distributivity.*
+    As you might already know a number that
+    multiplies a sum can be brought “inside” the
+    sum. For example,
+
+    $$
+    5(10 + 2) \,=\, 5\!\cdot\!10 \,+\, 5\!\cdot\!2
+    $$
+
+    (five times twelve equals fifty plus ten), or
+
+    $$
+    a(b + c) = ab + ac
+    $$
+
+    more generally. This property is known as the
+    _distributivity of multiplication over addition_,
+    or _distributivity_ for short.
+
+    (We might clarify that ‘$\cdot$’ means
+    “times”, i.e., the same as ‘$\times$’. Moreover,
+    when we write
+
+    $$
+    5\!\cdot\!10 \,+\, 5\!\cdot\!2
+    $$
+
+    we really mean
+
+    $$
+    (5\!\cdot\!10) + (5\!\cdot\!2)
+    $$
+
+    as opposed to something else, such as
+
+    $$
+    ((5\!\cdot\!10) + 5)\!\cdot\! 2,
+    $$
+
+    because multiplication takes precedence over
+    addition, absent parentheses.)
+
+    A little more generally, one has such identities
+    as
+
+    $$
+    (a + b)(C + D) \,=\, aC + bC + aD + bD
+    $$
+
+    |> ImageLeft
+        src=images/325.svg
+        offset_x=1.9em
+
+    that come from multiplying every term of the first
+    parenthesis with every term of the second
+    parenthesis. Indeed,
+
+
+    $$
+    (a + b)(C + D) = (a + b)C + (a + b)D
+    $$
+
+    by one application of distributivity, while
+
+    $$
+    (a + b)C = aC + bC
+    $$
+
+    $$
+    (a + b)D = aD + bD
+    $$
+
+    by distributivity again.
+
+    |> Example
+
+        One has
+
+        $$
+        \begin{aligned}
+        (10 + 2)(10 + 4) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4 \\
+        \,&=\, 100 \,+\, 40 \,+\, 20 \,+\, 8 \up{1.1}\\
+        \,&=\, 168 \up{1.1}
+        \end{aligned}
+        $$
+
+        so $12 \times 14 = 168$.
+
+    |> Example
+        handle=10_plus_3_squared
+
+        One has
+
+        $$
+        \begin{align}
+        (10 + 3)(10 + 3) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
+        \,&=\, 100 \,+\, 30 \,+\, 30 \,+\, 9 \up{1.1}\\
+        \,&=\, 169 \up{1.1}
+        \end{align}
+        $$
+
+        so $13 \times 13 = 169$.
+
+    (The fact that $13 \times 13$ is exactly one
+    greater than $12 \times 14$ is a bit curious
+    indeed.)
+
+    If we start from the afore-mentioned identity
+
+    $$
+    (a + b)(C + D) \,=\, aC + bC + aD + bD
+    $$
+
+    and set $C = a$, $D = b$, we find
+
+    $$
+    (a + b)(a + b) \,=\, aa + ba + ab + bb
+    $$
+
+    or, equivalently,
+
+    $$
+    (a + b)^2 = a^2 + 2ab + b^2
+    $$
+
+    since $(a + b)(a + b) = (a + b)^2$, $aa = a^2$
+    and $bb = b^2$.
+    
+    (This is the _binomial expansion
+    of degree two_, but such terminology is not very
+    important at this stage.)
+
+    |> Example
+
+        By the last formula (or “binomial expansion
+        of degree two”),
+
+        $$
+        \begin{align}
+        \up{1} (10 + 3)^2 \,&=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
+        \up{1} \,&=\, 100 + 60 + 9 \up{1.1}\\
+        \up{1} \,&=\, 169 \up{1.1}
+        \end{align}
+        $$
+
+        !! which agrees with Example 2.
+        obtaining the same result as Example >>10_plus_3_squared.
+
+    On the other hand, setting $C = a$, $D = -b$ in
+
+    $$
+    (a + b)(C + D) = aC + aD + bC + bD
+    $$
+
+    gives
+
+    $$
+    (a + b)(a + (-b)) = aa + a(-b) + ba + b(-b)
+    $$
+
+    or
+
+    $$
+    (a + b)(a - b) = aa - ab + ba - bb
+    $$
+
+    or
+
+    $$
+    (a + b)(a - b) = a^2 - b^2
+    $$
+
+    since $- ab + ba = 0$, $aa = a^2$, $bb = b^2$. Note that
+
+    $$
+    a^2 - b^2
+    $$
+
+    is
+
+    __a difference of squares__
+
+    whence _a difference of squares can always be
+    factored_. (Factored as $(a + b)(a - b)$, that
+    is.) (NB: “Factored” means “written as a product”.)
+
+    |> Example
+
+        Since
+
+        $$
+        19 = 100 - 81 = 10^2 - 9^2
+        $$
+
+        is a difference of squares, $19$ can be
+        factored. (On the other hand $19$ is a prime
+        number, but nevermind.)
+
+    |> Example
+
+        The expression
+
+        $$
+        1 - x^2
+        $$
+
+        can be factored, because
+
+        $$
+        1 = 1^2
+        $$
+
+        implies that
+
+        $$
+        1 - x^2
+        $$
+
+        truly is “a difference of squares”. And, indeed,
+
+        $$
+        1 - x^2 = (1 - x)(1 + x)
+        $$
+
+        as per “$\rt{0.04}a^2 - b^2 = (a - b)(a + b)$”.
+
+    In relation to distributivity, we should also
+    mention the simple but important fact that
+    multiplying a difference by $-1$ _reverses_ the
+    difference. That is,
+
+    $$
+    (-1)(a - b) \,=\, b - a
+    $$
+
+    or, for short,
+
+    $$
+    -(a - b) \,=\, b - a
+    $$
+
+    because, indeed,
+
+    $$
+    \begin{align}
+    (-1)(a - b) \,&=\, (-1)(a + (-b)) \\
+    \,&=\, (-1)a + (-1)(-b) \up{1.1} \\
+    \,&=\, -a + b \up{1.1}
+    \end{align}
+    $$
+
+    by distributivity (used in the second step).
+
+    |> Example
+
+        We have $-(10 - 3) = 3 - 10$.
+        (Because $-7 = -7$, as it would be, haha.)
+
+    |> StarDivider
+
+|> Section
+
+    *Epilogue.* Do you remember the near miss between
+
+    $$
+    12\cdot 14 \,=\, 168
+    $$
+
+    and
+
+    $$
+    13 \cdot 13 \,=\, 13^2 \,=\, 169
+    $$
+
+    ...? Well if you observe, additionally, that
+
+    $$
+    \begin{align}
+    11\,\cdot\,13 &= 12^2 - 1\\
+    10\,\cdot\,12 &= 11^2 - 1 \up{1.1}\\
+    9\,\cdot\,11 &= 10^2 - 1 \up{1.1}
+    \end{align}
+    $$
+
+    (etc) you might become suspicious of a pattern!
+    But the mystery is rather thin: we have
+
+    $$
+    (n - 1)(n + 1) \,=\, n^2 - 1
+    $$
+
+    for _every_ real number $n$ because of the
+    formula
+
+    $$
+    (a - b)(a + b) \,=\, a^2 - b^2
+    $$
+
+    for a difference of squares!
+
+|> Section
+
+    *Vocabulary.*
+    A pair of algebraic expressions of the form
+
+    $$
+    a + b,\, a - b
+    $$
+
+    is called a _conjugate pair_. For example,
+
+    $$
+    n + 1,\, n - 1
+    $$
+
+    is a conjugate pair, as is
+
+    $$
+    \sqrt{3} + \sqrt{2},\,\, \sqrt{3} - \sqrt{2}
+    $$
+
+    and so on.
+    !! (Generally speaking, conjugate pairs
+    !! are good things to multiply together.)

@@ -1,0 +1,58 @@
+|> Exercise
+    handle=_rat_fundraising_4_
+
+    Conjecture a general formula for
+    $$
+    (f \circ g)'(t)
+    $$
+    for arbitrary (differentiable, say) functions
+    $f, g : \rr \ra \rr$. (If it helps, interpret $f$
+    and $g$ exactly as in the scenario of the fundraising
+    race, cf$.$ Exercises 34-37.)
+
+    |> Solution
+
+        The sought-for formula is
+
+        $$
+        g'(t)\cdot f'(g(t))
+        $$
+
+        because—to come back to the example of the
+        fundraising race—one must multiply the meters-per-second
+        velocity at time $t$ (that is, $g'(t)$) by the dollars-per-meter
+        earnings rate at position $g(t)$ (that is, $f'(g(t))$) to obtain
+        the final dollars-per-second earning rate at time $t$
+        (that is, $(f \circ g)'(t)$).
+
+        (For example, the solution to Exercise 36 can actually
+        be written
+
+        $$
+        g'(2) \cdot f'(g(2))
+        $$
+
+        since, indeed, $g(2) = 3.333...$. [Remember that we ended
+        up multiplying $g'(2) = {5\over 3}\te{m/s}$ by
+        $f'(3.333...) = {1\over 10}\te{\$/s}$—the “$3.333...$” is
+        $g(2)$.])
+
+        Nb: This result is known as the _chain rule_.
+
+        |> Pause
+        _Note 1._ Said _chain rule_
+        is more commonly written...
+        $$
+        (f \circ g)'(x) = f'(g(x))g'(x)
+        $$
+        ...with “$g'(x)$” last. (And “$x$” instead of “$t$”.)
+
+        |> Pause
+        _Note 2._ One can also write the chain rule very succinctly like so...
+
+        $$
+        (f \circ g)' = (f' \circ g)g'
+        $$
+
+        ...where the right-hand-side is the product of $g'$ and $f' \circ g$.
+

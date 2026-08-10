@@ -8,7 +8,7 @@ import {
   ParentProps,
 } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
-import { HEADER_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
+import { HAMBURGER_MENU_HEIGHT, MOBILE_MAX_WIDTH } from "~/constants";
 import { Component } from "solid-js";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import { twJoin } from "tailwind-merge";
@@ -16,7 +16,6 @@ import SharedProps from "./types/SharedProps";
 import OutlinedText from "./OutlinedText";
 import { useLocalStorage } from "solidjs-hooks";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
-import typesetMathJaxElements from "~/utils/typesetMathJax";
 
 const screen_width_to_achieve_max_size = 1500;
 const screen_width_to_achieve_min_size = 1280;
@@ -51,7 +50,7 @@ const calculate_values = () => {
       (store.innerWidth - screen_width_to_achieve_min_size) /
         (screen_width_to_achieve_max_size - screen_width_to_achieve_min_size),
       0,
-      1,
+      1
     );
 
   const font_size = () =>
@@ -61,7 +60,7 @@ const calculate_values = () => {
     linear_interpolation(
       min_size_line_wrap_width_pct,
       max_size_line_wrap_width_pct,
-      progress(),
+      progress()
     );
 
   const line_height = () =>
@@ -71,14 +70,14 @@ const calculate_values = () => {
     linear_interpolation(
       closing_circle_min_size_stroke_width,
       closing_circle_max_size_stroke_width,
-      progress(),
+      progress()
     );
 
   const closing_circle_radius = () =>
     linear_interpolation(
       min_size_closing_circle_radius,
       max_size_closing_circle_radius,
-      progress(),
+      progress()
     );
 
   const top_margin = () =>
@@ -88,7 +87,7 @@ const calculate_values = () => {
     linear_interpolation(
       min_size_left_margin,
       max_size_left_margin,
-      progress(),
+      progress()
     );
 
   const default_visible_state = () =>
@@ -123,7 +122,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
 
   const [visible, setVisible] = useLocalStorage(
     "sections-breadcrumbs-visible",
-    default_visible_state(),
+    default_visible_state()
   );
   const [hasBeenClosed, setHasBeenClosed] = createSignal(false);
   const really_visible = () => visible() && store.have_been_outside_home;
@@ -131,7 +130,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
   const [outSideHovered, setOutSideHovered] = createSignal(false);
   let children_list = children(() => props.children).toArray();
 
-  const top_margin_when_not_sticky = () => HEADER_HEIGHT + top_margin();
+  const top_margin_when_not_sticky = () => HAMBURGER_MENU_HEIGHT + top_margin();
   const sticky = () =>
     store.scrollY > top_margin_when_not_sticky() - top_margin();
 
@@ -149,7 +148,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
   onMount(() => {
     const isMouseOverElement = (
       element: HTMLElement | null,
-      { x, y }: MouseEvent,
+      { x, y }: MouseEvent
     ) => {
       if (!element) return false;
 
@@ -171,10 +170,9 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
       setOutSideHovered(true);
     };
 
-    void typesetMathJaxElements([ref]).then(() => {
-      ref?.querySelectorAll(".math").forEach((math) => {
-        (math as HTMLElement).style.opacity = "1";
-      });
+    (window as any).MathJax.typesetPromise([ref]);
+    ref?.querySelectorAll(".math").forEach((math) => {
+      (math as HTMLElement).style.opacity = "1";
     });
 
     document.body.addEventListener("mouseover", handler);
@@ -192,7 +190,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
           width: "150px",
           height: "50px",
           position: "fixed",
-          top: (sticky() ? 0 : HEADER_HEIGHT - store.scrollY) + "px",
+          top: (sticky() ? 0 : HAMBURGER_MENU_HEIGHT - store.scrollY) + "px",
           left: "0",
           "z-index": 20,
         }}
@@ -205,7 +203,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
           width: "150px",
           height: "200px",
           position: "fixed",
-          top: (sticky() ? 0 : HEADER_HEIGHT - store.scrollY) + "px",
+          top: (sticky() ? 0 : HAMBURGER_MENU_HEIGHT - store.scrollY) + "px",
           left: "0",
           "z-index": 10,
         }}
@@ -260,7 +258,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
                 }}
                 class={twJoin(
                   prevDisabled() && "!text-stone-300 cursor-default",
-                  "underline cursor-pointer",
+                  "underline cursor-pointer"
                 )}
               >
                 &lt;&lt;prev
@@ -272,7 +270,7 @@ const SectionsBreadcrumbs = (props: ParentProps) => {
                 }}
                 class={twJoin(
                   nextDisabled() && "!text-stone-300 cursor-default",
-                  "underline cursor-pointer",
+                  "underline cursor-pointer"
                 )}
               >
                 next&gt;&gt;
@@ -302,7 +300,7 @@ export const BreadcrumbItem = (props: ParentProps & SharedProps) => {
 };
 
 const CloseCircleIcon: Component<JSX.SvgSVGAttributes<SVGSVGElement>> = (
-  props,
+  props
 ) => {
   const {
     closing_circle_stroke_width: strokeWidth,

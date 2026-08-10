@@ -1,0 +1,22 @@
+|> Exercise
+    handle=_no_solutions_by_complete_square_
+
+    Show that
+    $$
+    x^2 + 10x + 30 = 0
+    $$
+    (cf$.$ Exercise >>_complete_square_1_) has no solutions $x \in \rr$.
+
+    |> Solution
+
+        The equation is equivalent to
+        $$
+        (x + 5)^2 + 5 = 0
+        $$
+        by Exercise >>_complete_square_1_, but this implies
+        $$
+        (x + 5)^2 = -5
+        $$
+        which is an equation with no solution over
+        the reals because the square of a real number
+        is nonnegative.

@@ -1,0 +1,42 @@
+|> Exercise
+    handle=_0_point_2_radians_
+
+    Which of these angles is $0.2$ radians?
+
+    |> Image
+        src=images/svg_ch5_ex_0_2_radians_guess.svg
+
+    |> Solution
+
+        An angle is
+        $$
+        0.2
+        $$
+        radians if the length of the subtended arc is
+        $$
+        20\%
+        $$
+        the length of the radius;
+        proceeding by elimination—many things are obviously
+        not $20\%$ of the radius—that's this one:
+
+        |> Image
+            style=margin-top:1em;margin-bottom:0em;
+            src=images/svg_ch5_ex_0_2_radians_guess_answer.svg
+
+        |> StarDivider
+
+        |> SolutionNote
+            If you zoom in
+            a little bit
+            you can actually see
+            “$100\%$”,
+            “$20\%$”
+            written in fine print:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:0em;
+                src=images/svg_ch5_ex_0_2_radians_guess_joke_v1.svg
+
+            (&#8201;Joking.)
+

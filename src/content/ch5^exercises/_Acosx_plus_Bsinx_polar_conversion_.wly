@@ -1,0 +1,68 @@
+|> Exercise
+    handle=_Acosx_plus_Bsinx_as_sinusoid_
+
+    Show that for all $A, B \in \rr$ there exists
+    $W$, $\psi \in \rr$ such that
+
+    $$
+    A\cos x + B\sin x = W\cdot\cos(x - \psi)
+    $$
+
+    for all $x \in \rr$.
+
+    |> Solution
+
+        Starting from the desired endpoint, note that
+
+        $$
+        \cos(x - \psi) = \cos x\cos\psi + \sin x \sin \psi
+        $$
+
+        by the “angle-difference formula” (cf. Exercise >>_unit_dot_product_geometric_interpretation_) so
+
+        $$
+        W\cdot\cos(x - \psi)
+        $$
+
+        equals
+
+        $$
+        (W\cos\psi)\cdot\cos x + (W\sin\psi)\cdot\sin x
+        $$
+
+        where we suggestively group the terms to underscore
+        that all we need to do in order to “win” is to satisfy 
+        the equations 
+
+        $$
+        \begin{aligned}
+        A &=         W\cos\psi,\\
+        B &= \up{1.5}W\rt{0.1}\sin\psi\,
+        \end{aligned}
+        $$
+
+        and this can be done simply by setting $(W, \psi)$ to
+        be the polar coordinates of the cartesian point $(A, B) \in \rr^2$!
+        I.e., put
+
+        $$
+        W = \sqrt{A^2 + B^2}
+        $$
+
+        and...
+
+        $$
+        \psi = \begin{cases}
+        \arctan(B/A)&\te{if }\, A \ne 0, \,\te{else} \\
+        \up{1.2}\te{arccot}(A/B) &\te{if }\, B \ne 0, \,\te{else} \\
+        \up{1.2}\rm{anything} &\te{if }\, A = 0, B = 0
+        \end{cases}
+        $$
+
+        ...where we copy-paste a formula from the chapter. 
+        (Or just 
+        |> span
+            class=code-cartouche
+            psi = atan2(B, A)
+        \ if we were writing python.\*) (\*Indeed,
+        “$\psi$” is “psi”.)

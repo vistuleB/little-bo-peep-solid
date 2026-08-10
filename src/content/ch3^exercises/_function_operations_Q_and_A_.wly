@@ -1,0 +1,63 @@
+|> Exercise
+    handle=_function_operations_Q_and_A_
+
+    If $f$ and $g$ are functions then we define
+    (and not just us but people in general)
+    $$
+    f + g
+    $$
+    to be
+    $$
+    t \ra f(t) + g(t)
+    $$
+    (use ‘$x$’ if you like),
+    i.e., to be the function that applies $f$
+    and $g$ separately and then takes the sum,
+    and we define
+    $$
+    fg
+    $$
+    to be
+    $$
+    z \ra f(z)g(z)
+    $$
+    (use ‘$t$’ if you like, hehe),
+    i.e., to be the function that applies $f$ and
+    $g$ separately and then takes the product.
+    (These definitions are similar to how we define
+    $$
+    f \circ g
+    $$
+    to be
+    $$
+    u \ra f(g(u))
+    $$
+    for the symbol “$\circ$”, except that now we
+    are defining the _sum_ and _product_ of functions,
+    instead of their _composition_, namely.)
+
+    Given these definitions, which of the following
+    equalities hold, in general for all functions $f$,
+    $g$ and $h$?
+    $$f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))$$
+    $$f \circ (g + h) = (x \ra f(g(x) + h(x)))$$
+    $$(g + h) \circ f = (x \ra h(f(x)) + g(f(x)))$$
+    $$(g + h) \circ f = (x \ra (g + h)(f(x)))$$
+
+    |> Solution
+
+        The first equality is false because the
+        right-hand side is actually
+        $$
+        (f \circ g) + (f \circ h)
+        $$
+        not $f \circ (g + h)$; the second equality is
+        true; the third equality is true even though you
+        would expect the right-hand side to be written
+        $$
+        (x \ra g(f(x)) + h(f(x)))
+        $$
+        with “$g$” and “$h$” switched (but addition is
+        commutative, so it doesn't matter); the fourth
+        equality is true: it is the definition of “$\circ$”.
+

@@ -1,0 +1,153 @@
+|> Exercise
+    handle=_circular_motion_from_x_coordinate_
+
+    If a particle in $\rr^2$ (= “in the plane”)
+    has $x$-coordinate
+    $$
+    A\cdot\cos(Bt + C) + D
+    $$
+    at time $t$ what is the most likely motion
+    that the particle is undergoing? In that
+    case, what is the geometric meaning of the
+    constants $A$, $B$, $C$, $D$?
+
+    |> Solution
+
+        The simplest motion that would produce such
+        an $x$-coordinate (according to subjective human
+        standards of simplicity, admittedly) is circular
+        motion at uniform speed. In this case:
+        
+        |> List
+            style=padding-left:2em;gap:0.2em;
+
+            $A$ is the radius of the circle
+
+            $D$ is the $x$-coordinate of the circle's center
+
+        And either:
+        
+        |> List
+            style=padding-left:2em;
+
+            $B$ is the counterclockwise
+            _angular speed_/_angular frequency_ (radians per
+            unit time) and $C$ is the counterclockwise
+            starting angle ($t = 0$) of the particle, as
+            measured from a translate of the positive $x$
+            axis going through the center of the circle
+
+        Or:
+        
+        |> List
+            style=padding-left:2em;
+            
+            $B$ is the _clockwise_
+            angular speed/angular frequency of the particle
+            and $C$ is the _clockwise_ starting angle
+            of the particle, as measured from a translate of
+            the positive $x$ axis going through the center
+            of the circle
+
+        In more detail, every time
+
+        $$
+        t
+        $$
+
+        increases by $1$,
+
+        $$
+        Bt + C
+        $$
+
+        increases by $B$, but
+
+        $$
+        Bt + C
+        $$
+
+        is an amount of radians, because anything
+        fed to ‘cos’ is an amount of radians; and so
+        $B$ ends up being the
+
+        __radian increase per unit time,__
+
+        or angular speed, of the particle.
+
+        However, said “increase” in radians can be
+        associated to either clockwise or a
+        counterclockwise motion, there is no telling.
+        (Quite aside from the fact that $B$ might be
+        negative.) Indeed, while we have a tendency to
+        think of $\cos(x)$ as
+
+        __the $x$-coordinate of a point $x$ units
+        |> br
+        counterclockwise from $(1, 0)$ on the unit circle__
+
+        $\cos(x)$ is also
+
+        __the $x$-coordinate of a point $x$ units
+        |> br
+        clockwise from $(1, 0)$ on the unit circle__
+
+        [“counterclockwise” $\ra$ “clockwise”].
+        Per the one interpretation of ‘cos’,
+
+        $$
+        Bt + C
+        $$
+
+        is an amount of counterclockwise radians; per
+        the other,
+
+        $$
+        Bt + C
+        $$
+
+        is an amount of _clockwise_ radians. 
+        This accounts for
+        the two solutions listed above. (But it can
+        only be one of those two solutions, having made
+        the “Occam's razor” assumption that the
+        particle is traveling at uniform speed around
+        a circle.) (Nb: In particular, “uniform speed”
+        precludes sudden reversals of direction at either
+        end of the circle, if you were at all thinking
+        of that, for speed would be undefined at
+        those points where direction is reversed!)
+
+        |> SolutionNote
+
+            The following
+            diagram illustrates the two possibilities:
+
+            |> Image
+                src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg
+
+            !! (Or... ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+            !! |> Image
+            !!     src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_counterclockwise_version.svg
+
+            !! ...to put everything in terms of
+            !! counterclockwise-ness.) 
+
+        |> SolutionNote
+
+            If you harbor any doubts about there being no more
+            than two solutions, picture this diagram...
+
+            |> Image
+                src=images/svg_ch5_ex_Bt_plus_C_black_on_white.svg
+
+            ...and imagine the vertical line scanning
+            to the left and to the right again as it
+            tracks the $x$-coordinate of a particle going
+            around the circle, unseen. Then there is one
+            clockwise particle that tracks with the line,
+            and one counterclockwise particle that tracks
+            with the line, but no more, insofar as
+            non-direction-reversing particles are
+            concerned!

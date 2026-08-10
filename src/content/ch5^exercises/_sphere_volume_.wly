@@ -1,0 +1,275 @@
+|> Exercise
+    handle=_sphere_volume_
+
+    Give a formula for the volume of a sphere of
+    radius $r$ using the fact that the volume of
+    a cone is “one third base times height”.
+
+    |> Solution
+
+        The basic idea is that we can view the
+        sphere as being made up of many cones:
+
+        |> Image
+            src=images/svg_ch5_ex_sphere_volume_idea.svg
+
+        When we add up the volume
+
+        $$
+        {1\over 3}\times \rm{base} \times \rm{height}
+        $$
+
+        over all these cones, each height is nearly $r$,
+        so what we really need is the sum of
+
+        $$
+        {1\over 3}\times \rm{base}
+        $$
+
+        over all the cones, which comes out to
+
+        $$
+        {1\over 3}\times ({\rm sphere\,\,area})
+        $$
+
+        because the sum of all the areas of the bases
+        is the sphere area. (Everything speaking
+        approximately, for many fine cones, in the
+        limit of our imagination as they become
+        infinitely fine.) (*Where each ‘base’ stands
+        for the shaved-off, “flattened” version of the
+        base.) So multiplying the height $r$ back in,
+        we find
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                V = {1\over 3}\times ({\rm sphere\,\,area}) \times r = {8\over 3}\eta\rt{.1}r^3
+                $$
+
+        for the volume $V$ of the sphere, using the fact that
+        the sphere area $A$ is
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                A = 8\eta\rt{.05}r^2
+                $$
+
+        by Exercise 49.
+
+        !! |> SolutionNote
+
+        !!     To formalize the argument, consider that
+        !!     we can approximate the volume of the sphere
+        !!     by finitely many cones with triangular bases,
+        !!     by triangulating the surface of the sphere:
+
+        !!     |> Image
+        !!         src=images/svg_ch5_ex_sphere_tetrahedrons.svg
+
+        !!     Note that a cone with a triangular base is
+        !!     just a
+
+        !!     __tetrahedron__
+
+        !!     |> ImageLeft
+        !!         src=images/svg_ch5_ex_sphere_volume_cones_cloud.svg
+
+        !!     where “tetrahedron” means “four-sided shape”.
+        !!     (There is only 1 way to pull off a four-sided
+        !!     shape in 3D: to make all sides triangles.)
+        !!     So the volume of the sphere is approximated
+        !!     by the sum of the volumes of the tetrahedrons,
+        !!     a.k.a. cones.
+
+        !!     Define the
+
+        !!     __mesh size__
+
+        !!     of such a set of tetrahedrons to be the largest
+        !!     sidelength of any tetrahedron base.
+
+        !!     (The smaller the mesh size, the more pointed
+        !!     the tetrahedrons.)
+
+        !!     For the current
+        !!     discussion we take it for granted that as the
+        !!     mesh size shrinks, the sum of the volumes of
+        !!     the cones (= tetrahedrons) converges to the
+        !!     volume of sphere.
+
+        !!     (Or take the limit, as the mesh size shrinks,
+        !!     of the sum of the volume of the tetrahedrons
+        !!     to be the _definition_ of the “volume of the
+        !!     sphere”—that's just as well, since we don't have
+        !!     any other competing notion of “volume of the sphere”,
+        !!     at the moment.)
+
+        !!     Here is a closer look at a single tetrahedron
+        !!     ($h_i$ is the height of the tetrahedron):
+
+        !!     |> Image
+        !!         src=images/svg_ch5_ex_sphere_volume_closeup.svg
+
+        !!     One observes that
+        !!     $$
+        !!     B_i \leq A_i
+        !!     $$
+        !!     where
+        !!     $$
+        !!     B_i
+        !!     $$
+        !!     is the base of the tetrahedron and
+        !!     $$
+        !!     A_i
+        !!     $$
+        !!     is the projection of the base onto the surface
+        !!     of the sphere from the center of the sphere, and
+        !!     that
+        !!     $$
+        !!     h_i \leq r
+        !!     $$
+        !!     where
+        !!     $
+        !!     h_i
+        !!     $
+        !!     is the height of the tetrahedron, and $r$ is the
+        !!     radius of sphere. On the other hand, it is not hard
+        !!     to convince oneself that
+        !!     $$
+        !!     B_i \geq 0.9A_i
+        !!     $$
+        !!     and
+        !!     $$
+        !!     h_i \geq 0.9r
+        !!     $$
+        !!     for all of the tetrahedrons, if the mesh size is
+        !!     sufficiently small; even,
+        !!     $$
+        !!     B_i \geq 0.99A_i
+        !!     $$
+        !!     and
+        !!     $$
+        !!     h_i \geq 0.99r
+        !!     $$
+        !!     for all of the tetrahedrons simultaenously,
+        !!     _if the mesh size is sufficiently small_; even,
+        !!     $$
+        !!     B_i \geq 0.99999A_i
+        !!     $$
+        !!     and
+        !!     $$
+        !!     h_i \geq 0.99999r
+        !!     $$
+        !!     for all... if etc.
+
+        !!     (Or as mathematicians would put it: “for all $\e > 0$
+        !!     there exists an $s > 0$ such that
+        !!     $$
+        !!     B_i \geq (1-\e)A_i
+        !!     $$
+        !!     and
+        !!     $$
+        !!     h_i \geq (1-\e)r
+        !!     $$
+        !!     for all of the tetrahedrons, if the mesh size less than $s$.”)
+        !!     (“For all... there exists... such that... if... .”)
+
+        !!     This implies that
+        !!     $$
+        !!     \sum_{i=1}^N {1\over 3}B_ih_i
+        !!     $$
+        !!     [nb: fast-foward to Exercise 38 if you have never
+        !!     seen $\sum$-notation, but this basically reads
+        !!     “sum from $i$ equals $1$ up to $N$”] which is the
+        !!     total volume of the tetrahedrons, where $N$ denotes
+        !!     the number of tetrahedrons and $B_i$, $h_i$ are the
+        !!     base and height of the $i$-th tetrahedron, is
+        !!     sandwiched between
+
+        !!     $$
+        !!     \sum_{i=1}^N {1\over 3}A_i r
+        !!     $$
+
+        !!     |> ImageRight
+        !!         offset_x=5em
+        !!         src=images/svg_ch5_ex_sphere_volume_AiBi_cloud.svg
+
+        !!     above, and
+
+        !!     $$
+        !!     \sum_{i=1}^N {1\over 3}\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r
+        !!     $$
+
+        !!     |> ImageLeft
+        !!         offset_x= 2.5em
+        !!         src=images/svg_ch5_ex_sphere_volume_AiBi_other_cloud.svg
+
+        !!     below, for sufficiently small mesh size; but
+
+        !!     $$
+        !!     \sum_{i=1}^N A_i = A
+        !!     $$
+
+        !!     where $A = 8\eta\rt{.05}r^2$ is the total area
+        !!     of the sphere, and so
+
+        !!     $$
+        !!     \sum_{i=1}^N {1\over 3}B_ih_i
+        !!     $$
+
+        !!     is sandwiched between
+
+        !!     $$
+        !!     \sum_{i=1}^N {1\over 3}A_ir = {1\over 3}\cdot r\cdot \sum_{i=1}^N A_i = {1\over 3}Ar
+        !!     $$
+
+        !!     above, and
+
+        !!     $$
+        !!     \sum_{i=1}^N {1\over 3}\cdot 0.99999\cdot A_i\cdot 0.99999\cdot r = (0.99999)^2{1\over 3}Ar
+        !!     $$
+
+        !!     below; or, nicely put in a double inequality:
+
+        !!     |> center
+        !!         style=margin-top:1em;margin-bottom:1em;
+        !!         |> div
+        !!             style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+        !!             $$
+        !!             {1\over 3}Ar \geq \sum_{i=1}^N {1\over 3}B_ih_i \geq (0.99999)^2{1\over 3}Ar
+        !!             $$
+
+        !!     ...but we could replace “$0.99999$” by any other
+        !!     constant less that $1$ [yah no: because of the square,
+        !!     we need to say “between $0$ and $1$”] by further
+        !!     shrinking the size of the mesh, which implies that
+
+        !!     $$
+        !!     \sum_{i=1}^N {1\over 3}B_ih_i
+        !!     $$
+
+        !!     must converge to
+
+        !!     $$
+        !!     {1\over 3}Ar
+        !!     $$
+
+        !!     as the mesh size goes to zero—it cannot converge to
+        !!     something greater than, nor less than, this number!
+
+        !!     !! (And
+
+        !!     !! $$
+        !!     !! {1\over 3}Ar = {1\over 3}\cdot 8\eta\rt{.05}r^2\cdot r = {8\over 3}\eta\rt{.05}r^3
+        !!     !! $$
+
+        !!     !! not to forget.)

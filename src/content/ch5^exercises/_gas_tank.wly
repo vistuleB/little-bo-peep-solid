@@ -1,0 +1,139 @@
+|> Exercise
+    handle=_gas_tank_
+
+    An access staircase goes up the side of a
+    hemispheric gas tank. It keeps a constant angle
+    of $45^\circ$ to vertical at its inside edge 
+    until it reaches $45^\circ$ up the tank, at which
+    point it makes a beeline for the top:
+
+    |> Image
+        src=images/svg_ch5_ex_gas_sphere.svg
+
+    How long, roughly, is the inside handrail
+    of the staircase as a function of the radius
+    of the tank?
+
+    |> Solution
+
+        Putting $r$ for the radius, the answer is
+
+        $$
+        \approx r(1 + \eta/2)
+        $$
+
+        where
+
+        $$
+        r\cdot 1=r
+        $$
+
+        accounts for the first (lower) portion of the
+        handrail, and
+
+        $$
+        r\cdot(\eta/2)
+        $$
+
+        accounts for the upper portion of the handrail.
+        (Ignoring that the handrail doesn't quite
+        follow through to the tippy-top of the gas tank,
+        per the picture.)
+
+        To reason about the lower portion of the handrail
+        imagine a butterly that follows up the
+        handrail by flying straight up and
+        straight over, then straight up and straight
+        over again, etc, like so:
+
+        |> Image
+            src=images/svg_ch5_ex_gas_sphere_butterfly.svg
+
+        The total length of the handrail is the sum of
+        all the diagonal segments (in dotted white) above.
+        Because the diagonal segment has length
+
+        $$
+        \sqrt{2}h
+        $$
+
+        for a leg in which the butterly goes up by $h$, the
+        total length of the diagonal segments is
+
+        $$
+        \sqrt{2}
+        $$
+
+        times the total amount that the butterfly goes up
+        for the first half of the handrail. But this
+        amount—call it $H$—is
+
+        $$
+        r\cdot\sin(45^\circ) = r\cdot {1\over \sqrt{2}} = {r\over \sqrt{2}}
+        $$
+
+        as illustrated here:
+
+        |> Image
+            src=images/svg_ch5_ex_gas_sphere_profile.svg
+
+        And therefore the sum of the white diagonal segments
+        is
+
+        $$
+        \sqrt{2}\cdot H = \sqrt{2}\cdot {r\over \sqrt{2}} = r
+        $$
+
+        ...just $r$, as we said. 
+
+        On the other hand, the upper portion of the handrail
+        has length
+
+        $$
+        r\cdot(\eta/2)
+        $$
+
+        (modulo the kerfuffle at the top) simply by the fact
+        that, in a circle of radius $r$, an angle of $\alpha$
+        radians subtends an arc of length $r\alpha$:
+
+        |> Image
+            src=images/svg_ch5_ex_gas_sphere_profile_2.svg
+
+        ...and hence the _total_ length of the handrail
+        is...
+
+        $$
+        \approx r + r\cdot\eta/2 = r(1 + \eta/2)
+        $$
+
+        ...as claimed.
+
+        |> SolutionNote
+
+            Another way to think about the length of the lower
+            portion of the handrail is via the green triangle 
+            depicted below, that drops down  onto the handrail
+            like a curtain, starting at the top of the lower
+            portion of the handrail:
+
+            |> Image
+                src=images/svg_ch5_ex_gas_sphere_green_2_1_45.svg
+
+            If we “unroll” the triangle onto a vertical plane
+            while keeping its left edge vertical we find a 
+            triangle with a straight lower edge at $45^\circ$
+            to horizontal, because that is the property of the
+            handrail to maintain this angle everywhere:
+
+            |> Image
+                src=images/svg_ch5_ex_gas_sphere_triangle_out_flat.svg
+
+            Hence the length of the lower half of the handrail
+            is
+
+            $$
+            \large \sqrt{2}H 
+            $$
+
+            with $H = r/\sqrt{2}$ as previously defined.

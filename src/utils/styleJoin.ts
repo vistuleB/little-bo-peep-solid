@@ -1,24 +1,27 @@
-type StyleValue = string | number | null | undefined;
-type StyleObject = Record<string, StyleValue>;
-type StyleInput = string | StyleObject | undefined;
+type StyleObject = Partial<Record<keyof CSSStyleDeclaration, string | number | null | undefined>>;
 
-const toKebabCase = (property: string) =>
-  property.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
+const styleDictionaryToString = (styles: StyleObject): string => {
+    return Object.entries(
+        styles
+    ).filter(
+        ([_, value]) => value != null && value != undefined
+    ).map(
+        ([key, value]) => `${
+            key == 'marginLeft' ? 'margin-left'
+            : key == 'marginRight' ? 'margin-right'
+            : key == 'marginTop' ?
+             'margin-top'
+            : key == 'marginBottom' ? 'margin-bottom'
+            : key
+        }:${value}`
+    ).join(';')
+};
 
-const styleObjectToString = (styles: StyleObject) =>
-  Object.entries(styles)
-    .filter(([, value]) => value !== null && value !== undefined)
-    .map(([property, value]) => `${toKebabCase(property)}:${value}`)
-    .join(";");
-
-const styleToString = (style: StyleInput) =>
-  typeof style === "string"
-    ? style.replace(/;+\s*$/, "")
-    : style
-      ? styleObjectToString(style)
-      : "";
-
-const styleJoin = (...styles: StyleInput[]) =>
-  styles.map(styleToString).filter(Boolean).join(";");
+const styleJoin = (
+    styles: StyleObject,
+    also: string | { [key: string]: string; } | undefined,
+):string => {
+    return styleDictionaryToString(styles) + ';' + also;
+}
 
 export default styleJoin;

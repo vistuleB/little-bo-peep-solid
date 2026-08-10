@@ -1,0 +1,147 @@
+|> Exercise
+    handle=_guesstimate_cos_10x_parabolic_
+
+    Guesstimate a function with this graph (we can
+    tell you that the large-scale curve is a
+    parabola):
+
+    |> Image
+        style=margin-top:0.8em;margin-bottom:1em;
+        src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg
+
+    |> Solution
+
+        Having intimated that the answer is the sum of
+        a parabola and of some cosine deviant, let us
+        focus on the parabolic portion first, that would
+        namely be roughly this purple curve:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg
+
+        [Nb:
+
+        __parabolic__
+
+        is a synonym of
+
+        __quadratic__
+
+        or
+
+        __degree $\mathit{2}$ polynomial__
+
+        i.e., a function of the form
+        $$
+        x \ra a_2x^2 + a_1x + a_0
+        $$
+        for constants $a_2$, $a_1$, $a_0 \in \rr$, cf. Chapter >>functions.]
+
+        As the parabola is symmetric about the $y$ axis it will
+        be of the form
+        $$
+        y = Ax^2 + C
+        $$
+        for some constants $A$, $C \in \rr$.
+        (And specifically
+        without a
+        “$Bx$”
+        term, that would break symmetry.)
+
+        The value
+        $$
+        C
+        $$
+        is easy because it is the value of the parabola at
+        $x = 0$, which in this case appears to be $y = -3$:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg
+
+        ...so...
+        $$
+        C = -3
+        $$
+
+        (we say). For $A$,
+        note that the parabola appears to have value $y \approx 3$
+        at $x = \pm 12$, resulting in an increase of $\approx 6$
+        between $x = 0$ and $x = \pm 12$:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg
+
+        That increase being entirely due to the term
+        $Ax^2$, we get
+        $$
+        A \cdot 12^2 \approx 6
+        $$
+        (in more detail,
+        $$
+        A\cdot 12^2 - A\cdot 0^2 \approx 6
+        $$
+        but $A\cdot 0^2$ goes away), meaning
+        $$
+        A \approx {6\over 12^2} = {1\over 24}
+        $$
+        meaning that the quadratic portion of the function is
+        $$
+        {x^2\over 24} - 3
+        $$
+        per this estimate.
+
+        The other portion of the answer—what is left
+        after the parabola is subtracted—is a cosine-like
+        function (or _sinusoid_) whose amplitude (the
+        height of a bump) is roughly $0.5$, which is half the
+        amplitude of
+        sine/cosine:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg
+
+        Moreover at $x = 0$ we find
+        more or less exactly
+        the _bottom_ of a
+        bump,
+        so altogether
+        we can use a function of the form
+        $$
+        -0.5\cos(Bx)
+        $$
+        to model this sinusoid,
+        where the multiplication by $0.5$ gives us
+        the desired amplitude and where the ‘$-$’ gives
+        us an anti-bump (“trough”?) instead of a bump at $x = 0$;
+        on the other hand the value $B$ will control the amount of
+        horizontal compression inside the curve; specifically,
+        $$
+        B = 1
+        $$
+        will give a curve that goes through one full cycle
+        per interval of length $4\eta$,
+        while, in general, an arbitrary value of $B$ will give a
+        curve that goes $B$ full cycles
+        per interval of length $4\eta$ (the larger $B$ is,
+        the more “frenzied” the curve);
+        in our case, it seems that $B \approx 20$:
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg
+
+        So an estimate for the
+        second function
+        would be...
+        $$
+        -0.5\cos(20x)
+        $$
+        ...giving us...
+        $$
+        -0.5\cos(20x) + {x^2\over 24} - 3
+        $$
+        ...for our final answer, after adding the parabola back.

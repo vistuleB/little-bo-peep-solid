@@ -1,0 +1,95 @@
+|> Exercise
+    handle=_gas_tank_decimal_approximation_
+    Give a decimal approximation to
+    $$
+    r(1 + \eta/2)
+    $$
+    for $r = 100$m, accurate within $\pm 5\%$. (No calculators.)
+
+    |> Solution
+
+        Since
+
+        $$
+        \eta \approx {11\over 7}
+        $$
+
+        within 1/1000th, we have
+
+        $$
+        \begin{align*}
+        \   r(1 + \eta/2)\,\, \approx&\,\,\,\dn{1.3}\up{0.0} r\left(1 + {11\over 14}\right)\\
+        \                           =&\,\,\,\dn{1.3}\up{1.3} r\left({14 + 11\over 14}\right)\\
+        \                           =&\,\,\,\dn{1.3}\up{1.3} r\cdot {25\over 14}\\
+        \                           =&\,\,\,\dn{1.3}\up{1.3} r\cdot {28 - 3\over 14}\\
+        \                           =&\,\,\,\dn{1.3}\up{1.3} r\left(2 - {3\over 14}\right)\\
+        \                     \approx&\,\,\,\dn{1.3}\up{1.3} r\left(2 - {3\over 15}\right)\\
+        \                           =&\,\,\,\dn{1.3}\up{1.3} r\left(2 - {1\over 5}\right)\\
+        \                           =&\,\,\,\dn{1.3}\up{1.3} r(2 - 0.2)\\
+        \                           =&\,\,\,\dn{0.0}\up{1.3} 1.8r
+        \end{align*}
+        $$
+
+        leading to an approximation of
+
+        $$
+        \approx 180\te{m}
+        $$
+        for $r = 100$m.
+        For a different, coarser approach, one can
+        even use
+        $$
+        \eta \approx {10.5\over 7} = 1.5
+        $$
+        which gives
+        $$
+        1 + \eta/2 \approx 1.75
+        $$
+        and a final approximation of
+        $$
+        \approx 175\te{m}
+        $$
+        for $r = 100$m.
+
+        |> SolutionNote
+
+            The two approximations given produce
+            1$\%$ and 2$\%$ of error, respectively, 
+            or $\approx 0.8\%$ and $\approx 1.9\%$, 
+            more exactly, respectively. (For the
+            second approximation,
+
+            $$
+            1.5
+            $$
+
+            is nearly 5$\%$ less than $\eta/2$ right
+            off the bat, but the fraction represented
+            by this error is diluted by the fact that
+            we add 1.)
+
+        |> SolutionNote
+
+            The true value is $178.5$m, as 
+
+            $$
+            \eta/2 = 0.785\dots
+            $$
+
+            and some, as
+
+            $$
+            \eta = 1.570\dots
+            $$
+
+            and some. (Note that half of $0.07$ is $0.035$,
+            and that $0.75 + 0.035 = 0.785$.) (PS: In fact,
+            doing the division
+
+            $$
+            1.57/2
+            $$
+
+            “by head” constitutes another perfectly valid
+            method of approximation, if you can remember
+            that $\eta = 1.570\dots$.)

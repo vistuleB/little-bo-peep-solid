@@ -1,0 +1,333 @@
+|> Exercise
+    handle=_composition_order_2_
+
+    Same question as Exercise >>_composition_order_1_, but for
+    “$f \circ (g \circ h)$” instead of
+    “$(f \circ g) \circ h$”.
+
+    |> Solution
+
+        We will again evaluate the “outer”
+        composition operator first and the “inner”
+        composition operator second, where the “outer”
+        composition operator is the one that is fewer
+        pairs of parentheses away from the outside
+        world:
+
+        |> Image
+            src=images/svg_inner_outer_1_1em.svg
+
+        So the first step is...
+
+        |> div
+            style=font-size:1.1em;margin:0.8em 0em;
+
+            $$
+            ((f \circ g) \circ h)(x) = (f \circ g)(h(x))
+            $$
+
+        ...by setting $r = f \circ g$, $s = h$ in
+        the definitional equation, and the second step
+        is...
+
+        |> div
+            style=font-size:1.1em;margin:0.8em 0em;
+
+            $$
+            (f \circ g)(h(x)) = \f(g(h(x)))
+            $$
+
+        ...by setting $r = f$, $s = g$, and with
+        ‘$h(x)$’ in place of ‘$x$’.
+
+        |> SolutionNote
+
+            The fact that
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                (f \circ (g \circ h))(x)
+                $$
+
+            and
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                ((f \circ g) \circ h)(x)
+                $$
+
+            both evaluate to
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                f(g(h(x)))
+                $$
+
+            actually implies that
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                f \circ (g \circ h)
+                $$
+
+            and
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                (f \circ g) \circ h
+                $$
+
+            are the same function; this function is namely
+            the function that maps $x$ to $f(g(h(x)))$ for
+            all $x$ (or
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                x \ra f(g(h(x)))
+                $$
+
+            in lambda notation).
+
+        |> SolutionNote
+        
+            Because of this, we can write
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                f \circ g \circ h
+                $$
+
+            without any parentheses. (The point is: either
+            way you parenthesize it you obtain the same
+            function, so why bother?)
+
+        |> SolutionNote
+
+            The fact that
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                {(a + b) + c = a + (b + c)}
+                $$
+
+            for all numbers $a$, $b$, $c$ is known as the
+
+            __associativity__
+
+            of addition; likewise, the fact that
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                (ab)c = a(bc)
+                $$
+
+            for all numbers $a$, $b$, $c$ is known as the
+
+            __associativity__
+
+            of multiplication; and again likewise,
+            the fact that
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                {(f \circ g) \circ h  =  f \circ (g \circ h)}
+                $$
+
+            for all functions $f$, $g$, $h$ is known
+            as the
+
+            __associativity__
+
+            |> ImageRight
+                src=images/svg_ch3_ex_associativity_cloud.svg
+
+            of function composition.
+
+        |> SolutionNote
+
+            One of the best ways to explain _&_ understand
+            the associativity of function composition
+            uses this picture:
+
+            |> Image
+                width=550px
+                src=images/svg_ch3_truth_be_said.svg
+
+            In the above $A$, $B$, $C$, $D$ are sets
+            while the arrows encode functions $f$, $g$
+            and $h$ that, respectively in reverse order,
+            go from $D$ to $C$, $C$ to $B$, and $B$ to $A$.
+            For example,
+
+            _|$\Large h($
+            |> InlineImage
+                src=images/svg_ch3_composition_icon_clubs.svg
+                width=1rem
+                top=-3px
+            $\Large{}) =$
+            |> InlineImage
+                src=images/svg_ch3_composition_icon_die_3.svg
+                width=1.25rem
+                top=-3px
+                margin-left=.5rem
+                margin-right=.5rem
+            |_
+
+            because the arrow that originates at 
+            |> InlineImage
+                src=images/svg_ch3_composition_icon_clubs.svg
+                width=1rem
+                top=-4px
+            \ in set $D$ lands at 
+            |> InlineImage
+                src=images/svg_ch3_composition_icon_die_3.svg
+                width=1.25rem
+                top=-4px
+            \ in set $C$, and
+
+            _|
+            $\Large g(h($
+            |> InlineImage
+                src=images/svg_ch3_composition_icon_clubs.svg
+                width=1rem
+                top=-3px
+            $\Large{})) =$
+            |> InlineImage
+                src=images/svg_ch3_composition_icon_fence.svg
+                width=2.3rem
+                top=-4px
+                margin-left=.5rem
+                margin-right=.5rem
+            |_
+
+            because, pursuing that path onwards, the arrow
+            that originates at 
+            |> InlineImage
+                src=images/svg_ch3_composition_icon_die_3.svg
+                width=1.25rem
+                top=-4px
+            \ in set $C$ lands at 
+            |> InlineImage
+                src=images/svg_ch3_composition_icon_fence.svg
+                width=2.3rem
+                top=-4px
+            \ in set $B$, etc.
+
+            Under this representation one can “compute”
+            $f \circ g \circ h$ by gluing arrows end-to-end.
+            First, say, obliviate set $C$ in the middle
+            right, then do the same with set $B$ in the
+            middle left:
+
+            |> Image
+                src=images/svg_ch3_truth_be_said_right_first.svg
+                width=1600px
+
+            We can also get rid of $B$ first, $C$ second:
+
+            |> Image
+                src=images/svg_ch3_truth_be_said_left_first.svg
+                width=1600px
+
+            The first order of computation corresponds
+            to the parenthetization “$f \circ (g \circ h)$”
+            while the second corresponds to the
+            parenthetization “$(f \circ g) \circ h$”.
+            Intuitively, the reason they come out the
+            same (in “step 6”, bottom left) is because
+            each final arrow in the last diagram comes
+            from a path-of-arrows in the original
+            diagram, and the order in which the
+            waypoints along a path are “straightened”
+            (or “collapsed”) does not affect the origin
+            or destination of the final arrow.
+
+        |> SolutionNote
+
+            The last series of diagrams might leave one
+            with the impression that the composition of
+            two or more functions can be “precomputed”
+            by looking ahead along the path of yellow arrows.
+            Just so you know: computers do not generically
+            do this. Indeed, computers are not given
+            functions as tables of input-output values to
+            know by heart but rather as “recipes” (synonyms:
+            algorithms, code, programs) that allow them
+            to compute an output for any given input.
+            Moreover, there is no general way of flattening
+            two recipes into a single, shorter one—when
+            composing two functions the computer has, in
+            general, no choice but to diligently apply
+            each recipe in order—the first function first,
+            the second function second.
+
+        |> SolutionNote
+            handle=_function_equality_note_
+
+            We have taken for granted the fact that two
+            functions $f$ and $g$ are “equal” if and only
+            if they produce the same outupt for every
+            input but this is a actually subtle thing
+            that has to do with how functions are defined
+            “under the hood”. Specifically, mathematicians
+            view functions as 
+            |> del
+                long
+            \ 
+            |> del
+                lists of
+            \ sets of ordered pairs; for example—conceptual
+            cold water shock ahead—
+
+            $$
+            {\textrm{VX-11/78A} = \{(0, 3.5), (1, 2.5)\}}
+            $$
+
+            because VX-11/78A maps $0$ to $3.5$ and maps
+            $1$ to $2.5$. (The presence of an ordered pair
+
+            |> div
+                style=font-size:1.1em;margin:0.8em 0em;
+
+                $$
+                (a, b)
+                $$
+
+            means that input $a$ produces output $b$.) So
+            two functions are equal if and only if they
+            are equal
+
+            __as sets of ordered pairs__
+
+            because the set of ordered pairs is the
+            underlying “thing” that the function is. In
+            particular, there is no notion of a “formula”
+            or of a “procedure” being attached to a
+            function, that might cause two functions to
+            be considered unequal even if they produce the
+            same output on every input—producing the same
+            output on every input implies that the 
+            |> del
+                list of
+            \ set of ordered pairs is equal, and, perforce,
+            that the two functions are equal!!

@@ -1,0 +1,48 @@
+|> Exercise
+    handle=_where_is_the_pythagorean_identity_
+    Where or how, if at all, is the
+    __pythagorean identity__
+    apparent in the four graphs of Exercise >>_four_graphs_?
+
+    |> Solution
+        Imagine wooden cutouts made from $\sin^2$, $\cos^2$:
+        !! Imagine turning the graphs $y = \sin^2(x)$
+        !! and $y = \cos^2(x)$ into wooden cutouts:
+
+        |> Image
+            style=margin-top:1.1em;margin-bottom:1.1em;
+            src=images/svg_ch5_ex_pythagorean_graphs_sin2.svg
+        |> Image
+            style=margin-top:1.1em;margin-bottom:1.1em;
+            src=images/svg_ch5_ex_pythagorean_graphs_cos2.svg
+
+        It seems that if we would vertically flip
+        one of the cutouts 
+        (in this case $y = \cos^2(x)$),
+        !! (in this case $\cos^2$),
+        it would perfectly fit on top of the other to make the
+        constant function $y = 1$:
+
+        |> Image
+            style=margin-top:1.1em;margin-bottom:1.1em;
+            src=images/svg_ch5_ex_pythagorean_graphs_compounded.svg
+
+        !! This is not only appearances, but is indeed the case: 
+        This is no illusion: 
+        it occurs because 
+        !! it occurs because 
+        !! of the pythagorean identity, as
+        !! the latter states that 
+        $$
+        \cos^2(x) + \sin^2(x) = 1
+        $$
+        for all $x \in \rr$, 
+        !! which is exactly what is
+        !! required for the two functions to stack up to
+        !! $y = 1$!
+        !! which is
+        i.e., because of 
+        the pythagorean identity!
+        !! is required for the two functions two stack up to
+        !! $y = 1$!
+        !! i.e., because !

@@ -1,0 +1,41 @@
+|> Exercise
+    handle=_circular_motion_amplitude_2_
+
+    How can we generate the following set of
+    curves by rotating points around a circle,
+    and tracking their $x$-coordinates? (This
+    graph is an exact $2$&#x200b;$\times$ [“two
+    x”] vertical dilation of the graph in 
+    Exercise >>_four_particles_.) Should we use 
+    a circle of radius $2$, or make the points 
+    go twice as fast? Or both? Or something else
+    yet?
+
+    |> Image
+        src=images/svg_ch4_scaled_cosine_curves.svg
+
+    |> Solution
+
+        The values oscillate between $+2$ and
+        $-2$, so we need a circle of radius $2$
+        to generate these curves. Also the
+        values go through one cycle in the same
+        amount of time as the particles of
+        Exercise >>_four_particles_, but the circle has twice the
+        circumference (having twice the radius),
+        so the particles are going twice as fast!
+        (I.e.: speed 2, since the particles of
+        Exercise >>_four_particles_ have unit speed.)
+
+        |> SolutionNote
+
+            In this and in the previous exercise the
+            units of time and distance are “anonymous”:
+            distance could be meters, kilometers, or
+            anything, and time could be seconds, hours,
+            etc—it doesn't matter. Either way,
+
+            __unit speed__
+
+            means that one unit of distance is traveled
+            per unit of time, whatever the units are.

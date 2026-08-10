@@ -1,4 +1,4 @@
-import { onCleanup, onMount } from "solid-js";
+import { onMount } from "solid-js";
 
 const useBreadcrumbs = () => {
   const highlight = (section_id: string) => {
@@ -40,75 +40,67 @@ const useBreadcrumbs = () => {
     to_highlight?.classList.add("highlighted");
   };
 
-  onMount(() => {
-    let observer: IntersectionObserver | undefined;
-    const initializeObserver = () => {
-      const sections = document.querySelectorAll("section");
-      const sectionVisibility = new Map();
+  onMount(async () => {
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // to be safe
+    const sections = document.querySelectorAll("section");
+    const sectionVisibility = new Map();
 
-      sections.forEach((section) => {
-        sectionVisibility.set(section.id, {
-          element: section,
-          isVisible: false,
+    sections.forEach((section) => {
+      sectionVisibility.set(section.id, { element: section, isVisible: false });
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let anyVisible = false;
+
+        entries.forEach((entry) => {
+          const sectionId = entry.target.id;
+          sectionVisibility.set(sectionId, {
+            ...sectionVisibility.get(sectionId),
+            isVisible: entry.isIntersecting,
+          });
         });
-      });
 
-      observer = new IntersectionObserver(
-        (entries) => {
-          let anyVisible = false;
+        // Find the first visible section (prioritize top-most)
+        for (const [sectionId, data] of sectionVisibility) {
+          if (data.isVisible) {
+            highlight(sectionId);
+            anyVisible = true;
+            break;
+          }
+        }
 
-          entries.forEach((entry) => {
-            const sectionId = entry.target.id;
-            sectionVisibility.set(sectionId, {
-              ...sectionVisibility.get(sectionId),
-              isVisible: entry.isIntersecting,
-            });
+        // If no section is visible, find closest to viewport top
+        if (!anyVisible) {
+          let closestSection: HTMLElement | null = null;
+          let minDistance = Infinity;
+
+          sections.forEach((section) => {
+            const rect = section.getBoundingClientRect();
+            const distance = Math.abs(rect.top);
+
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestSection = section as HTMLElement;
+            }
           });
 
-          // Find the first visible section (prioritize top-most)
-          for (const [sectionId, data] of sectionVisibility) {
-            if (data.isVisible) {
-              highlight(sectionId);
-              anyVisible = true;
-              break;
-            }
-          }
+          if (closestSection) highlight((closestSection as HTMLElement).id);
+        }
+      },
+      {
+        threshold: 0,
+        rootMargin: "-45% 0px -45% 0px",
+      },
+    );
 
-          // If no section is visible, find closest to viewport top
-          if (!anyVisible) {
-            let closestSection: HTMLElement | null = null;
-            let minDistance = Infinity;
-
-            sections.forEach((section) => {
-              const rect = section.getBoundingClientRect();
-              const distance = Math.abs(rect.top);
-
-              if (distance < minDistance) {
-                minDistance = distance;
-                closestSection = section as HTMLElement;
-              }
-            });
-
-            if (closestSection) highlight((closestSection as HTMLElement).id);
-          }
-        },
-        {
-          threshold: 0,
-          rootMargin: "-45% 0px -45% 0px",
-        },
-      );
-
-      sections.forEach((section) => {
-        observer?.observe(section);
-      });
-    };
-
-    const initializationTimeout = window.setTimeout(initializeObserver, 1000);
-
-    onCleanup(() => {
-      window.clearTimeout(initializationTimeout);
-      observer?.disconnect();
+    sections.forEach((section) => {
+      observer.observe(section);
     });
+
+    // commented out L83 b/c Solid was generating an annoying warning
+    //     'cleanups created outside a `createRoot` or `render` will never be run'
+    // onCleanup(() => observer.disconnect());
   });
 };
 

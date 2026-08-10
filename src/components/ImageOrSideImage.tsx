@@ -14,21 +14,15 @@ function ImageOrSideImage(
     ImageOrSideImageProp,
 ) {
   let { store } = useGlobalContext();
-  const localUrl = () => props.local_url || "";
 
   const ImageTag = (
     <img
       ref={props.ref}
       onLoad={props.onLoad}
       onClick={props.onClick}
-      onTransitionEnd={props.onTransitionEnd}
       src={props.src}
-      width={props.width}
-      height={props.height}
-      loading={props.loading}
       alt={props.alt || ""}
       class={twJoin(
-        "block",
         props.class,
         store.show_areas &&
           (props.side_image
@@ -41,20 +35,12 @@ function ImageOrSideImage(
   );
 
   return (
-    <span class="relative inline-block">
-      <Show when={props.local_url} fallback={ImageTag}>
-        {ImageTag}
-        <span class="t-3003 t-3003-i">
-          <span class="t-3003-i-url">
-            <span class="t-3003-i-path">{props.local_url}</span>
-            {"\u00a0\u00a0"}
-            <span class="t-3003-i-copy" data-copy-src={localUrl()}>
-              ⧉
-            </span>
-          </span>
-        </span>
-      </Show>
-    </span>
+    <Show when={props.local_url} fallback={ImageTag}>
+      {ImageTag}
+      <span class="t-3003 t-3003-i">
+        <span class="t-3003-i-url">{props.local_url}</span>
+      </span>
+    </Show>
   );
 }
 

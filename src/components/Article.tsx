@@ -1,17 +1,12 @@
-import { onCleanup, onMount, ParentProps } from "solid-js";
+import { ParentProps } from "solid-js";
 import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
 import { ExerciseGroupRegistryProvider } from "~/store/ExerciseGroupRegistryProvider";
-import ElevatorArrows from "./ElevatorArrows";
+import PageTopBottomArrows from "./PageTopBottomArrows";
 import Page from "./Page";
-import PageUpPageDownButtons from "./PageUpPageDownButtons";
-import { useGlobalContext } from "~/store/StoreProvider";
-import { recordFirstContentPaint } from "~/utils/routeLoading";
-import { useLocation } from "@solidjs/router";
-import { ensurePrerenderedMathJaxRouteCache } from "~/utils/prerenderedMathJax";
+import PageUpDownArrows from "./PageUpDownArrows";
 
 type ArticleProps = {
   id?: string;
-  path?: string;
   pageNecessaryMargin?: number;
   maxElementWidth?: number;
   nextPage?: string;
@@ -19,47 +14,23 @@ type ArticleProps = {
 };
 
 const Article = (props: ParentProps & ArticleProps) => {
-  onMount(() => {
-    if (props.path) ensurePrerenderedMathJaxRouteCache(props.path);
-  });
-
   return (
-    <ExerciseGroupRegistryProvider>
-      <Page
-        pageNecessaryMargin={props.pageNecessaryMargin}
-        maxElementWidth={props.maxElementWidth}
-        nextPage={props.nextPage}
-        prevPage={props.prevPage}
-      >
+    <Page
+      pageNecessaryMargin={props.pageNecessaryMargin}
+      maxElementWidth={props.maxElementWidth}
+      nextPage={props.nextPage}
+      prevPage={props.prevPage}>
+      <ExerciseGroupRegistryProvider>
         <span id={props.id} class="id_span"></span>
         <ArticleScrollCoordinator>{props.children}</ArticleScrollCoordinator>
-      </Page>
-      <ElevatorArrows />
-      <PageUpPageDownButtons />
-    </ExerciseGroupRegistryProvider>
+        <PageTopBottomArrows />
+        <PageUpDownArrows />
+      </ExerciseGroupRegistryProvider>
+    </Page>
   );
 };
 
 const ArticleScrollCoordinator = (props: ParentProps) => {
-  const { store, set_store } = useGlobalContext();
-  const location = useLocation();
-  const routePath = location.pathname;
-  let firstFrame = 0;
-  let secondFrame = 0;
-
-  onMount(() => {
-    firstFrame = requestAnimationFrame(() => {
-      secondFrame = requestAnimationFrame(() => {
-        recordFirstContentPaint(routePath, store, set_store);
-      });
-    });
-  });
-
-  onCleanup(() => {
-    cancelAnimationFrame(firstFrame);
-    cancelAnimationFrame(secondFrame);
-  });
-
   useCheckedSavedScroll();
   return <>{props.children}</>;
 };

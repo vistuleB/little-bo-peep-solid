@@ -1,0 +1,41 @@
+|> Exercise
+    handle=_cosine_rule_
+
+    What is the dotted line distance as a function
+    of $a$, $b$, and $\theta$?
+
+    |> Image
+        src=images/e5_cosine_rule_statement.svg
+
+    |> Solution
+
+        Recalling the “polar distance” formula
+
+        $$
+        \sqrt{r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)}
+        $$
+
+        of Exercise >>_polar_distance_,
+        the answer is
+
+        $$
+        \sqrt{a^2 + b^2 - 2ab\cos\theta}
+        $$
+        
+        by putting $r_1 = a$, $r_2 = b$ and $\theta_1 - \theta_2 = \theta$
+        in that formula.
+        
+        |> SolutionNote
+
+            This result is known as the _cosine rule_.
+            Like the “polar distance” formula from Exercise >>_polar_distance_,
+            to which it is equivalent, it is a generalization
+            of the Pythagorean theorem. This becomes extra clear if we rewrite it
+            as....
+
+            |> Boxed
+                $$
+                c^2 = a^2 + b^2 - 2ab\cdot\cos\theta
+                $$
+
+            ....with ‘$c$’ the length of the dotted segment.

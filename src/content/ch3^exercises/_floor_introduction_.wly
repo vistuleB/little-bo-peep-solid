@@ -1,0 +1,62 @@
+|> Exercise
+    handle=_floor_introduction_
+
+    The _floor_ of a real number $x$, written
+
+    $$
+    \lfloor x \rfloor,
+    $$
+
+    is the greatest integer less than or equal
+    to $x$. (Start at $x$ and travel left on the
+    number line until you meet an integer; but if
+    $x$ is already an integer, stay there; the
+    place you land is $\lfloor x \rfloor$.)
+
+    Sketch the graph $y = \floor{x}$.
+
+    Secondly, find a formula for a function whose
+    graph looks like this, where you are allowed
+    to use “$\floor{x}$” in your formula:
+
+    |> Image
+        src=images/svg_ch3_ex_factory_roof_graph.svg
+
+    |> Solution
+
+        As $x$ grows, so does $\floor{x}$, but
+        $\floor{x}$ only “levels up” each time that $x$
+        reaches a new integer, and flatlines
+        otherwise; this gives rise to the following
+        staircase-shaped graph:
+
+        |> Image
+            src=images/svg_ch3_ex_factory_roof_floor_graph.svg
+
+        (For example, $\floor{1} = 1$ because the
+        greatest integer less than or equal to $1$
+        is $1$, $\floor{-0.5} = -1$ because the greatest
+        integer less than or equal to $-0.5$ is $-1$,
+        and so on.)
+
+        For the second part note that the following
+        two displacements, excerpted from the “factory
+        roof” graph in the statement, are equal:
+
+        |> Image
+            src=images/svg_ch3_ex_factory_roof_with_displacement_arrows.svg
+
+        The red dot to the left of $x$ has $x$-coordinate
+        $\floor{x}$, so the horizontal displacement is
+        $$
+        x - \floor{x}
+        $$
+        so the equation of the graph is
+        $$
+        y = x - \floor{x}
+        $$
+        because the $y$-coordinate _is_ the
+        vertical displacement, given that the vertical
+        displacement starts at $y = 0$, and because
+        the vertical and horizontal displacements are
+        equal.

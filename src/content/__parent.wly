@@ -1,22 +1,63 @@
 |> Book
+    |> HeaderBlob
+        !! TEST 1 : 'Little Bo Peep' SVG
+        !! |> img
+        !!     style=padding-top:0.65em;padding-bottom:0.4em;
+        !!     src=public/header-blob.svg
+
+        !! TEST 2: two vertically stacked 'Little Bo Peep' SVGs
+        !! |> img
+        !!     style=padding-block:1em;
+        !!     src=public/header-blob.svg
+        !! |> img
+        !!     style=padding-block:1em;
+        !!     src=public/header-blob.svg
+
+        !! TEST 3: one <p> w/ many <br>
+        !! |> p
+        !!     Little Bo Peep
+        !!     |> br 
+        !!     Little Bo Peep
+        !!     |> br
+        !!     Little Bo Peep
+        !!     |> br
+        !!     Little Bo Peep
+
+        !! TEST 4: several <p>
+        !! |> p
+        !!     Little Bo Peep
+        !! |> p 
+        !!     Little Bo Peep
+        !! |> p
+        !!     Little Bo Peep
+        !! |> p
+        !!     Little Bo Peep
+
+        !! TEST 5: Loading Image
+        |> img
+            src=non-build-img/dark_calculus.png
+
     |> ChapterSelection
+        !! bootcamps:
         >>sets         >>_bt2_start_  >>_bt2_exercises_
         >>powers       >>_bt1_start_
         !! >>playground
+
+        !! chapters:
         >>refreshers   >>_ch1_start_  >>_ch1_exercises_
         >>slopes       >>_ch2_start_  >>_ch2_exercises_
-        >>functions    >>_ch3_start_  >>_ch3_exercises_
+        >>functions    >>_ch3_start_
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
-        >>chain        >>_ch6_start_  >>_ch6_exercises_
+        >>chain        >>_ch6_start_
+
+        !! appendices:
         !! >>exercise-graveyard  >>exercise-graveyard-start
 
     |> In
         chapter=>>playground
-        >>_solution_math_test_
-        !! >>grid-component
-        !! >>mathblock-component
-        >>side-image-component
+        >>grid-component
+        >>table-component
 
     |> In
         chapter=>>powers
@@ -42,7 +83,7 @@
     |> In
         chapter=>>refreshers
         >>_true_false_
-        >>_approximate_1_over_n_minus_1_over_n_plus_1_
+        >>_approximate_1_over_n_minus_1_over_n+1_
 
     |> In
         chapter=>>slopes
@@ -83,11 +124,10 @@
         >>_correct_incorrect_or_nonsensical_
         >>_complete_the_missing_units_
         >>_how_many_bumps_
-        >>_how_many_up_and_down_bumps_
         >>_reorder_derivatives_
         >>_narrow_and_less_narrow_bends_
         >>_first_law_of_differentiation_
-        >>_scalar_times_function_definition_
+        >>_define_product_of_constant_and_function_
         >>_four_particles_
         >>_sum_rule_summary_
         >>_difference_quotient_illustration_
@@ -122,7 +162,7 @@
         >>_blueprints_top_and_side_
         >>_blueprints_open_thin_door_
         >>_powers_of_secant_
-        >>_isosets_of_xy_
+        >>_isosets_of_xy_v5_
         >>_long_division_11_over_7_
         >>_long_division_22_over_7_
         >>_long_division_15542486476949_777_
@@ -130,7 +170,7 @@
         >>_complement_of_complement_
         >>_rotate_central_90_
         >>_ratio_A_over_B_tan^2_
-        >>_ratio_A_over_B_1_plus_tan^2_
+        >>_ratio_A_over_B_1_+_tan^2_
         >>_archimedean_projection_new_ver_
         >>_rank_the_7_slices_
         >>_sphere_area_formula_from_archimedean_property_
@@ -153,12 +193,11 @@
         >>_sine_rule_
         >>_secant_cosecant_intersections_
         >>_tan_cot_on_unit_circle_
-        >>_geometric_construction_of_1_over_A_
+        >>_geometric_construction_of_1_over_A_new_ver_
         >>_x_square_x_cube_construction_
         >>_sqrt_xy_construction_
         >>_project_i_and_j_
         >>_unit_dot_product_geometric_interpretation_
-        >>_project_i_and_j_and_k_
         >>_four_graphs_
         >>_where_is_the_pythagorean_identity_
         >>_more_closely_related_to_sin2x_or_
@@ -168,23 +207,8 @@
         >>_Acosx_plus_Bsinx_as_sinusoid_
         >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
 
-    |> In
-        chapter=>>chain
-        >>_dimensional_f_f_
-        >>_dimensional_f_g_f_
-        >>_dimensional_big_composition_
-        >>_dimensional_z_combinations_
-        >>_possible_to_form_signature_
-        >>_lorentz_factor_dimensionality_
-        >>_physicist_choose_to_write_
-        >>_dimensional_analysis_of_product_rule_
-        >>_dimensional_reciprocal_rule_
-        >>_guess_reciprocal_name_
-        >>_dimensional_omega_
-        >>_dimensionality_t_over_v_
-        >>_dimensionality_xv_over_c^2_
-        >>_dimensional_inverse_rule_
-        >>_dimensional_f^-1_g_f_
+
+
 
 
         !! ch5 exercise 'cycles':
@@ -232,6 +256,7 @@
         !!    - sum formulas for tan & cot
 
     |> In
+        content=selection
         chapter=>>exercise-graveyard
 
         !! unused exercises from Chapter 3:
@@ -243,10 +268,10 @@
         >>_pacman_1_
         >>_pacman_2_
         >>_associativity_of_function_addition_
-        !! >>_rat_fundraising_1_
-        !! >>_rat_fundraising_2_
-        !! >>_rat_fundraising_3_
-        !! >>_rat_fundraising_3_
+        >>_rat_fundraising_1_
+        >>_rat_fundraising_2_
+        >>_rat_fundraising_3_
+        >>_rat_fundraising_3_
         >>_circular_motion_2_3_velocity_vector_sketch_
         >>_circular_motion_2_3_acceleration_vector_sketch_
         >>_circular_motion_3_2_all_sketch_
@@ -267,20 +292,20 @@
         >>_cosx_to_cos^2x_via_graph_
         >>_sin2x_to_sinx_cosx_
         >>_sinx_to_sinx_cosx_
-        >>_cosx_to_cosx_plus_sinx_
+        >>_cosx_to_cosx_+_sinx_
         >>_cosx_sinx_to_cos^2x_
         >>_scalar_times_vector_definition_
         >>_for_every_A1_A2_
         >>_for_every_A1_A2_stupid_followup_
-        >>_proof_1_plus_tan^2_eq_sec^2_
-        >>_proof_1_plus_tan^2_eq_sec^2_backward_
+        >>_proof_1_+_tan^2_eq_sec^2_
+        >>_proof_1_+_tan^2_eq_sec^2_backward_
         >>_axes_intersections_60_degrees_
         >>_blueprints_open_bomb_shelter_door_
         >>_double_pre_processing_steps_
         >>_double_post_processing_spteps_
-        >>_cos_of_x_plus_0_point_1_
-        >>_map_cosx_to_cos_Bx_plus_C_
-        >>_what_seq_sin_Bx_plus_C_
+        >>_cos_of_x_+_0_point_1_
+        >>_map_cosx_to_cos_Bx+C_
+        >>_what_seq_sin_Bx+C_
         >>_can_B1B2_be_rewritten_
         >>_max_cosx_plus_sinx_new_ver_
         >>_max_cosx_plus_sinx_
@@ -288,14 +313,3 @@
 
     |> In
         chapter=>>classical-circle-theorems
-
-    |> HeaderBlob
-        !! TEST 1 : 'Little Bo Peep' SVG
-        !! |> img
-        !!     style=padding-top:0.65em;padding-bottom:0.4em;
-        !!     src=public/header-blob.svg
-
-        !! TEST 5: Loading Image
-        |> img
-            src=non-build-img/loading_screen.png
-            !! src=non-build-img/K12.svg

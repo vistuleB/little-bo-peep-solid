@@ -1,0 +1,93 @@
+|> Exercise
+    handle=_difference_quotient_illustration_
+
+    The fraction
+
+    $$
+    {f(x+h) - f(x) \over h}
+    $$
+
+    where $f : \rr \ra \rr$ is called a _difference
+    quotient_. Add elements to the diagram below such
+    that both the numerator and denominator of the
+    quotient can be found in the diagram, and thereby
+    explain the geometric meaning
+    of this quotient.
+
+    |> Image
+        src=images/svg_ch4_newton_quotient_unfinished.svg
+        style=margin-top:0.4em
+
+    |> Solution
+
+        The teacher would like to see:
+
+        |> Image
+            src=images/svg_ch4_newton_quotient_finished.svg
+
+        Thus
+
+        $$
+        {f(x + h) - f(x)\over h}
+        $$
+
+        is seen to have the form _rise over run_,
+        and is more precisely equal to the slope
+        of the pale brown line going through the
+        point
+
+        $$
+        (x, f(x))
+        $$
+
+        at one end, and
+
+        $$
+        (x + h, f(x + h))
+        $$
+
+        !! |> ImageRight
+        !!     offset_y=-0.5em
+        !!     src=images/svg_ch4_new_quatient_x_fxplush_cloud.svg
+
+        at the other end. 
+        !! (This is also the case
+        !! if $h$ is negative, by the way.)
+
+        !! |> Pause
+            
+        !! _Vocabulary #1._ A fraction of this form is called
+        !! a _difference quotient_.
+
+        |> Pause
+
+        _Vocabulary._
+        The pale brown line is sometimes known as
+        the _secant_ [through $(x, f(x))$, $(x+h, f(x+h))$].
+        “Secant” is a general term for “line passing
+        through two specified points on another
+        curve”.
+
+        |> SolutionNote
+            handle=_difference_quotient_limit_
+            If we let $h$ drop to $0$, and if $f$ is
+            differentiable at $x$, the
+            difference-quotient-a.k.a.-slope-of-the-secant
+            approaches
+
+            $$
+            f'(x)
+            $$
+
+            because the secant approaches the tangent,
+            in that case, and the slope of the secant
+            is also, perforce, approaching the slope
+            of the tangent, which is $f'(x)$. 
+            (But you
+            cannot directly set $h = 0$, because
+
+            $$
+            {f(x+0)-f(x)\over 0} = {0 \over 0}
+            $$
+
+            is undefined.)

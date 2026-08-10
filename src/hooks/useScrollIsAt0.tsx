@@ -1,10 +1,9 @@
 import { createEffect, onMount, onCleanup } from "solid-js";
-import { useLocation, useSearchParams } from "@solidjs/router";
+import { useSearchParams } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 
 const useScrollIsAt0 = () => {
   const { store, set_store } = useGlobalContext();
-  const location = useLocation();
   const [searchParams] = useSearchParams();
   const route = () => store.route;
 
@@ -30,7 +29,7 @@ const useScrollIsAt0 = () => {
   // handle route changes and localStorage logic
   createEffect(() => {
     const article = route().split("/").pop();
-    if (searchParams.id || location.hash) {
+    if (searchParams.id) {
       set_store("scroll_is_at_0", false);
     } else {
       const savedScroll = Number(

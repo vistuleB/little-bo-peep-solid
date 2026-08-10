@@ -22,7 +22,6 @@ export default function __Bootcamp2__() {
       pageNecessaryMargin={270}
       maxElementWidth={1200}
       id="_20_h.a.i_"
-      path="/article/bootcamp2"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -103,11 +102,7 @@ export default function __Bootcamp2__() {
           :
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/anTr.svg"
-          intrinsicWidth={500}
-          intrinsicHeight={125}
-        />
+        <Image src="/build-img/svgo-svg/anTr.svg" />
         <Pause />
         <OuterP>
           The whole expression is read {" "}
@@ -133,6 +128,15 @@ export default function __Bootcamp2__() {
           .
         </OuterP>
       </Section>
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -230,11 +234,9 @@ export default function __Bootcamp2__() {
           $$
           <ImageLeft
             src="/build-img/svgo-svg/DSem.svg"
-            offsetY="-0.2em"
-            offsetX="4em"
-            atLeastAsWide={true}
-            intrinsicWidth={200}
-            intrinsicHeight={110}
+            offset_y="-0.2em"
+            offset_x="4em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -372,8 +374,6 @@ export default function __Bootcamp2__() {
           <ImageLeft
             src="/build-img/svgo-svg/rdZz.svg"
             line={2}
-            intrinsicWidth={530}
-            intrinsicHeight={380}
           />
         </OuterP>
         <Pause />
@@ -547,15 +547,6 @@ export default function __Bootcamp2__() {
         </OuterP>
       </Section>
       <Pause />
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const visibleRestSections = useShowMore(8);
-  return <>
-    {visibleRestSections() > 0 && <>
       <Section id="section-3">
         <OuterP>
           <b>
@@ -770,8 +761,6 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -892,8 +881,6 @@ const Rest = () => {
           {" "} (Or for some other base.)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -1081,8 +1068,6 @@ const Rest = () => {
           ...!
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -1297,11 +1282,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one billion is a thousand million
-          <ImageLeft
-            src="/build-img/svgo-svg/55Oe.svg"
-            intrinsicWidth={250}
-            intrinsicHeight={100}
-          />
+          <ImageLeft src="/build-img/svgo-svg/55Oe.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1310,11 +1291,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a thousand billion
-          <ImageLeft
-            src="/build-img/svgo-svg/tAeJ.svg"
-            intrinsicWidth={250}
-            intrinsicHeight={100}
-          />
+          <ImageLeft src="/build-img/svgo-svg/tAeJ.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1323,11 +1300,7 @@ const Rest = () => {
         <Pause />
         <CentralDisplayItalic>
           one trillion is a million million
-          <ImageRight
-            src="/build-img/svgo-svg/xlFe.svg"
-            intrinsicWidth={300}
-            intrinsicHeight={100}
-          />
+          <ImageRight src="/build-img/svgo-svg/xlFe.svg" />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
@@ -1341,8 +1314,6 @@ const Rest = () => {
           {" "} sentence.
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -1480,11 +1451,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/VZCO.svg"
-          intrinsicWidth={100}
-          intrinsicHeight={55}
-        />
+        <Image src="/build-img/svgo-svg/VZCO.svg" />
         <Pause />
         <OuterP>
           Likewise, the standard decimal expansion for {" "}
@@ -1501,11 +1468,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/A20h.svg"
-          intrinsicWidth={100}
-          intrinsicHeight={55}
-        />
+        <Image src="/build-img/svgo-svg/A20h.svg" />
         <Pause />
         <OuterP>
           ...and so on, which is a possible trick to check
@@ -1727,8 +1690,6 @@ const Rest = () => {
           {" "} (“nm” = “nanometer”).
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1920,8 +1881,6 @@ const Rest = () => {
           being a single 0/1 value.)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -2134,10 +2093,8 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/nMNN.svg"
-              offsetX="0em"
-              atLeastAsWide={true}
-              intrinsicWidth={250}
-              intrinsicHeight={150}
+              offset_x="0em"
+              compensate_offset_x_for_large_text_columns={true}
             />
           </MathBlock>
           <Pause />
@@ -2160,12 +2117,9 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 7 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}
-        mode="dual"
         show_curlicue={true}
         id="_19_h.a.i_"
       >
@@ -2246,11 +2200,7 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/KJqj.svg"
-                intrinsicWidth={400}
-                intrinsicHeight={80}
-              />
+              <Image src="/build-img/svgo-svg/KJqj.svg" />
               <Pause />
               <OuterP>
                 Half of twelve hundredths is six hundredths, and
@@ -2265,11 +2215,7 @@ const Rest = () => {
                 {" "} thousandths:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/SBDm.svg"
-                intrinsicWidth={450}
-                intrinsicHeight={150}
-              />
+              <Image src="/build-img/svgo-svg/SBDm.svg" />
               <Pause />
               <OuterP>
                 ...so {" "}
@@ -2975,11 +2921,7 @@ const Rest = () => {
               hoping for:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/FF0n.svg"
-              intrinsicWidth={450}
-              intrinsicHeight={245}
-            />
+            <Image src="/build-img/svgo-svg/FF0n.svg" />
             <Pause />
             <OuterP>
               The point is that the second equality uses the identity
@@ -3017,11 +2959,7 @@ const Rest = () => {
               is as follows (minus fine print):
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/5e0k.svg"
-              intrinsicWidth="672.44"
-              intrinsicHeight="613.41"
-            />
+            <Image src="/build-img/svgo-svg/5e0k.svg" />
             <Pause />
             <OuterP>
               The first law can be recognized as “additivity of exponents”
@@ -3551,11 +3489,9 @@ const Rest = () => {
               $$
               <ImageRight
                 src="/build-img/svgo-svg/bESG.svg"
-                offsetY="-0.5em"
-                offsetX="0.5em"
-                atLeastAsWide={true}
-                intrinsicWidth={440}
-                intrinsicHeight={250}
+                offset_y="-0.5em"
+                offset_x="0.5em"
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />

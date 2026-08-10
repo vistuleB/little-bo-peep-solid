@@ -1,18 +1,17 @@
 import { createSignal, onCleanup, ParentProps, createEffect } from "solid-js";
 import { twJoin, twMerge } from "tailwind-merge";
 import {
-  HEADER_HEIGHT,
-  HEADER_BUTTONS_SCROLLY_END_FADE,
-  HEADER_BUTTONS_SCROLLY_START_FADE,
-  HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY,
-  HEADER_BOTTOM_BORDER_SCROLLY_START_FADE,
-  HEADER_BOTTOM_BORDER_SCROLLY_END_FADE,
+  HAMBURGER_MENU_HEIGHT,
+  HAMBURGER_MENU_SCROLLY_END_FADE,
+  HAMBURGER_MENU_SCROLLY_START_FADE,
+  HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY,
+  BOTTOM_BORDER_SCROLLY_START_FADE,
+  BOTTOM_BORDER_SCROLLY_END_FADE,
   MOBILE_MAX_WIDTH,
 } from "../constants";
 import useOnMobile from "../hooks/useOnMobile";
 import { useGlobalContext } from "../store/StoreProvider";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
-import { decideRouteNavbarPosition } from "~/utils/routeTransitionPolicy";
 
 const HeaderButtons = () => {
   return (
@@ -32,60 +31,33 @@ const ButtonsContainer = (props: ParentProps) => {
   const [buttonOpacity, setButtonOpacity] = createSignal(1);
   const [borderOpacity, setBorderOpacity] = createSignal(1);
 
-  const currentScrollY = () => window.scrollY;
-
-  const calcButtonOpacity = (scrollY = currentScrollY()) => {
+  const calcButtonOpacity = () => {
     return Math.min(
       1.0,
       Math.max(
         0,
         1.0 -
-          (scrollY - HEADER_BUTTONS_SCROLLY_START_FADE) /
-            (HEADER_BUTTONS_SCROLLY_END_FADE -
-              HEADER_BUTTONS_SCROLLY_START_FADE),
-      ),
+          (store.scrollY - HAMBURGER_MENU_SCROLLY_START_FADE) /
+            (HAMBURGER_MENU_SCROLLY_END_FADE -
+              HAMBURGER_MENU_SCROLLY_START_FADE)
+      )
     );
   };
 
-  const calcBorderOpacity = (scrollY = currentScrollY()) => {
+  const calcBorderOpacity = () => {
     return Math.min(
       1.0,
       Math.max(
         0,
         1.0 -
-          (scrollY - HEADER_BOTTOM_BORDER_SCROLLY_START_FADE) /
-            (HEADER_BOTTOM_BORDER_SCROLLY_END_FADE -
-              HEADER_BOTTOM_BORDER_SCROLLY_START_FADE),
-      ),
+          (store.scrollY - BOTTOM_BORDER_SCROLLY_START_FADE) /
+            (BOTTOM_BORDER_SCROLLY_END_FADE - BOTTOM_BORDER_SCROLLY_START_FADE)
+      )
     );
   };
-
-  const navbarPosition = () =>
-    decideRouteNavbarPosition({
-      onMobile: on_mobile(),
-      routePhase: store.route_phase,
-      spinnerCurrentlyVisible: store.spinner_currently_visible,
-    });
-
-  const navbarVisible = () =>
-    navbarPosition() === "fixed" || currentScrollY() < HEADER_HEIGHT;
-
-  const controlsPinnedVisible = () =>
-    open() ||
-    on_mobile() ||
-    (store.spinner_currently_visible && navbarVisible()) ||
-    store.scroll_is_at_0;
-
-  const borderPinnedVisible = () =>
-    on_mobile() ||
-    (store.spinner_currently_visible && navbarVisible()) ||
-    store.scroll_is_at_0;
-
-  const nearTopDesktopBorderVisible = () =>
-    !on_mobile() && !open() && currentScrollY() < 2 * HEADER_HEIGHT;
 
   const finalButtonOpacity = () => {
-    return controlsPinnedVisible()
+    return open() || on_mobile() || store.scroll_is_at_0
       ? 1
       : store.saved_scroll_finished
         ? buttonOpacity()
@@ -93,9 +65,7 @@ const ButtonsContainer = (props: ParentProps) => {
   };
 
   const finalBorderOpacity = () => {
-    if (store.route_scroll_in_progress) return 0;
-
-    return borderPinnedVisible() || nearTopDesktopBorderVisible()
+    return on_mobile() || store.scroll_is_at_0
       ? 1
       : store.saved_scroll_finished
         ? borderOpacity()
@@ -103,9 +73,8 @@ const ButtonsContainer = (props: ParentProps) => {
   };
 
   const handleScroll = () => {
-    const scrollY = currentScrollY();
-    setButtonOpacity(calcButtonOpacity(scrollY));
-    setBorderOpacity(calcBorderOpacity(scrollY));
+    setButtonOpacity(calcButtonOpacity());
+    setBorderOpacity(calcBorderOpacity());
   };
 
   createEffect(() => {
@@ -119,8 +88,13 @@ const ButtonsContainer = (props: ParentProps) => {
   return (
     <>
       <div
-        class="fixed right-0 z-[70]"
-        style={{ height: "var(--header-height)" }}
+        class={twJoin(
+          "fixed right-0 h-14",
+          !on_mobile() &&
+            !open() &&
+            store.scrollY < 2 * HAMBURGER_MENU_HEIGHT &&
+            "border-b border-[var(--nav-border)]"
+        )}
       >
         {/* the large-height background */}
         <div
@@ -129,7 +103,7 @@ const ButtonsContainer = (props: ParentProps) => {
             right: "0px",
             width: "100%",
             height:
-              currentScrollY() <= HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY &&
+              store.scrollY <= HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY &&
               !on_mobile() &&
               store.scrollX + store.innerWidth >=
                 store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2
@@ -170,7 +144,7 @@ const LeftArrowButton = () => {
       () => {
         setPressedTimeout(false);
       },
-      on_mobile() ? 50 : 20,
+      on_mobile() ? 50 : 20
     );
   };
 
@@ -185,7 +159,7 @@ const LeftArrowButton = () => {
         !on_mobile() && "mr-2",
         // this used to be "mr-4" when we had Hamburg menu:
         on_mobile() && "mr-3",
-        prevDisabled() && "cursor-default",
+        prevDisabled() && "cursor-default"
       )}
       onClick={(e) => {
         e.stopPropagation();
@@ -214,7 +188,7 @@ const LeftArrowButton = () => {
             ? "stroke-[var(--arrow-pressed)]"
             : !prevDisabled()
               ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
-              : "stroke-stone-300",
+              : "stroke-stone-300"
         )}
         style=""
         // style="box-sizing:inherit;"
@@ -237,7 +211,7 @@ const RightArrowButton = () => {
       () => {
         setPressedTimeout(false);
       },
-      on_mobile() ? 50 : 20,
+      on_mobile() ? 50 : 20
     );
   };
 
@@ -252,7 +226,7 @@ const RightArrowButton = () => {
         !on_mobile() && "mr-3",
         // this used to be "mr-4" when we were still showing the hamburger menu:
         on_mobile() && "mr-3",
-        nextDisabled() && "cursor-default",
+        nextDisabled() && "cursor-default"
       )}
       onClick={(e) => {
         e.stopPropagation();
@@ -280,7 +254,7 @@ const RightArrowButton = () => {
             ? "stroke-[var(--arrow-pressed)]"
             : !nextDisabled()
               ? "stroke-[rgb(30,30,30)] hover:stroke-stone-600"
-              : "stroke-stone-300",
+              : "stroke-stone-300"
         )}
         style=""
       />

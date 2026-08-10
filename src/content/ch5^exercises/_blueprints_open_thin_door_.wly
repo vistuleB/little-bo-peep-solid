@@ -1,0 +1,126 @@
+|> Exercise
+    handle=_blueprints_open_thin_door_
+
+    Given the following sketch, to what angle
+    can the door be opened before it hits against
+    the roof? (Hint: You will need to Google “how
+    to use arctan”, or “how to convert from Cartesian
+    to polar coordinates”.)
+
+    |> Image
+        src=images/svg_ch5_ex_opening_door.svg
+
+    And:
+    
+    |> List
+        style=padding-left:2.2em;gap:0.2em;
+
+        all distances are in inches
+
+        assume half an inch from the edge of the door
+        to the center of its hinge
+
+        assume the door has negligible thicknesss
+
+    |> Solution
+
+        The “key intermediate length” to compute is
+        the distance 
+        !! marked below, 
+        from the hinge-edge of the door to
+        the ceiling near the top of the door:
+
+        |> Image
+            src=images/svg_ch5_ex_opening_door_soln0.svg
+
+        !! We start by computing these lengths in the
+        !! original plane of the $2$-dimensional drawing:
+        For this we need the lengths marked ‘2’ and
+        ‘4’ below, each of which requires a separate
+        mini-computation, including deducing the width 
+        of the door (length ‘3’) in order to deduce the length marked ‘4’
+        (we will also reuse length ‘3’ below|):
+
+        |> Image
+            src=images/svg_ch5_ex_opening_door_soln1.svg
+
+        (Nb: One can also compute the length marked ‘2’ as
+        $$
+        {42\over \tan(23^\circ)}
+        $$
+        since $\cot = 1/\tan$, or
+        $$
+        42\cdot \tan(67^\circ)
+        $$
+        since $67^\circ = 90^\circ - 23^\circ$ is the complement
+        of $23^\circ$.)
+
+        Next, as
+
+        $$
+        0.5
+        $$
+
+        is the distance from the side of the door to its
+        hinge, the door swings at a radius of
+
+        $$
+        38.5
+        $$
+
+        and the distance between the hinge's center
+        and the ceiling, measured horizontally at the top
+        of the door, is
+
+        $$
+        30.945 - 0.5 = 30.445...
+        $$
+
+        by subtracting from the length marked ‘5’.
+        We can draw the following overhead sketch of the situation
+        (not to scale, and keeping to $3$ digits of accuracy):
+
+        |> Image
+            src=images/svg_ch5_ex_opening_door_overhead.svg
+
+        Here
+
+        $$
+        \arctan
+        $$
+
+        is a function that you can find notated as
+
+        $$
+        \te{“}\tan^{-1}\te{”}
+        $$
+
+        on your calculator (a questionable choice of notation,
+        because it is _not_ the same as $1/\tan = \cot$), and
+        sometimes known as
+
+        __tangent inverse__
+
+        by the gallery, converts a fraction of the form
+
+        $$
+        {\te{opposite}\over\te{adjacent}}
+        $$
+
+        into the corresponding angle whose tangent equals that
+        fraction.
+
+        The final answer to the problem is...
+
+        |> center
+            style=margin-top:1em;margin-bottom:1em;
+            |> div
+                style=display:inline-block;border:1px solid red;padding:1em 1em;
+
+                $$
+                90^\circ + 52.26^\circ = 142.26^\circ
+                $$
+
+        ...because $\alpha$ only constitutes the amount of rotation
+        past $90^\circ$, per the drawing.
+

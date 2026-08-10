@@ -1,0 +1,183 @@
+|> Exercise
+    handle=_guesstimate_sinusoid_
+
+    Guesstimate a function with this graph:
+
+    |> Image
+        src=images/svg_ch5_ex_big_wave.svg
+
+    |> Solution
+
+        First we estimate a function for the large-scale
+        curve in purple:
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple.svg
+
+        It appears to be a linear function (line through
+        $(0, 0)$ sloping down) plus a sinusoid. To
+        estimate the slope of the linear function we can
+        take two points in like relation to the sinusoid,
+        draw a line between them and estimate the slope:
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_blue_with_1_4.svg
+
+        This makes the linear function portion of the purple
+        curve
+
+        $$
+        y = -{1\over 4}x
+        $$
+
+        or thereabouts.
+
+        To model the sinusoid portion of the large-scale
+        purple curve we need more measurements, such as
+        the total height of the sinusoid from top of
+        bump to bottom of trough; we can add a third “bottom
+        of trough” dot, in same relation to the top of
+        bumps (but we won't actually draw this dot or else
+        we won't be able to see where we're measuring):
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_blue_with_height.svg
+
+        So it appears that the sinusoid has a total height
+        of $\approx 4$ from top of bump to bottom of trough.
+
+        (And in case you're confused by what we're trying
+        to do,
+        let us re-explain that we are trying
+        to measure the vertical width of this blue band...
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_blue_with_band.svg
+
+        ...that, indeed, seems near $4$.)
+
+        What this means is that if we remove the linear
+        portion
+
+        $$
+        y = -{1\over 4}x
+        $$
+
+        from the purple curve, what we will find is a
+        sinusoid whose individual bumps have height $\approx 2$;
+        something like this (we switch the color to aquamarine, so
+        that “purple curve” retains its unique meaning):
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_sinusoid_only.svg
+
+        This graph has the form
+        $$
+        y = -2\sin(Bx)
+        $$
+        for some value of $B \in \rr$ that, chosen correctly,
+        will give us the desired “wavelength”. (Note that
+        $$
+        y = -\sin(x)
+        $$
+        has graph...
+
+        |> Image
+            style=margin-top:0.8em;margin-bottom:1em;
+            src=images/svg_ch5_ex_big_wave_minus_sin_x.svg
+
+        ...and that
+        $$
+        y = -2\sin(x)
+        $$
+        has graph...
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_minus_2sin_x.svg
+
+        ...and, from there, all that remains is to
+        “slow down” the oscillation to match the
+        aquamarine graph—the “slowing down” is what
+        $B$ is for.)
+
+        To know how much $B$ must be, we must measure
+        the cycle length (it is, admittedly, hard to
+        accurately determine the position of the top
+        of each large-scale bump, but we do our best by
+        basing ourselves off of what appear to be identical
+        patterns in the small-scale oscillations at
+        the top of each large-scale bump):
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_blue_period_measurement.svg
+
+        As
+
+        $$
+        12.6 \approx 12.56 = 2\times 6.28 \approx 2\cdot 4\eta
+        $$
+
+        the period of the large-scale sinusoid is near
+        twice the period of sin or cos; i.e., we need to
+        “slow down”
+
+        $$
+        -2\sin(x)
+        $$
+
+        by a factor $2$, i.e., put
+
+        $$
+        B = 0.5
+        $$
+
+        i.e., use
+
+        $$
+        y = -2\sin(0.5x)
+        $$
+
+        for the large-scale sinusoid. (Aquamarine graph.)
+
+        (So far we have
+
+        $$
+        -{1\over 4}x - 2\sin(0.5x)
+        $$
+
+        for our approximation to the purple curve, putting
+        the linear and sinusoidal parts together. Now we
+        move on from the purple curve.)
+
+        It remains to add in the small-scale oscillation
+        from the original curve; we can do the tedious
+        part first, and count the number cycles in an
+        interval of length $4\eta \approx 6.28$:
+
+        |> Image
+            src=images/svg_ch5_ex_big_wave_purple_small_scale_bump_count.svg
+
+        So the small-scale oscillation is running
+        at $\approx 19$ times the frequency of an ordinary
+        sine or cosine, and we can model the small-scale
+        oscillation by
+
+        $$
+        x \ra -0.5\sin(19x)
+        $$
+
+        since, like the large-scale oscillation from the
+        purple curve, it shares the same phase as $-\sin(x)$,
+        and since, like the small-scale oscillation from
+        Exercise >>_guesstimate_cos_10x_parabolic_, it has
+        an amplitude of $\approx 0.5$.
+
+        Altogether, we get
+
+        $$
+        y = -{1\over 4}x - 2\sin(0.5x) - 0.5\sin(19x)
+        $$
+
+        as our “guesstimate”, while adding the linear
+        function, the large-scale sinusoid, and the small-scale
+        sinusoid together!

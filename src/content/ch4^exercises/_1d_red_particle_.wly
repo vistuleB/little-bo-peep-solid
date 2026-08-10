@@ -1,0 +1,148 @@
+|> Exercise
+    work=in
+    handle=_1d_red_particle_
+
+    Imagine a single particle in a one-dimensional
+    world, whose velocity equals its position; at $t = 0$,
+    the particle is sitting at $x = 1$:
+
+    |> Image
+        src=images/svg_ch4_ex_one_particle_at_1.svg
+
+    If we play time backward, will the particle
+    ever reach $x = 0$?
+
+    |> Solution
+
+        Going back in time, examine how long it would take
+        the particle to cross each of the intervals defined by
+        the following geometric progression\* (\*see Note >>_geometric_progression_):
+
+        |> Image
+            src=images/svg_ch4_ex_one_particle_interval_subdivision.svg
+
+        The interval from $0.5$ to $1$ takes _at least_
+
+        $$
+        {0.5 \over 1} = 0.5
+        $$
+
+        |> ImageLeft
+            src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
+            offset_x=10em
+
+        time to cross, because the maximum speed of the particle
+        inside of that interval is $1$. Similarly, the interval from
+
+        $$
+        x = 0.25
+        $$
+
+        to
+
+        $$
+        x = 0.5
+        $$
+
+        takes _at least_
+
+        $$
+        {0.25 \over 0.5} = 0.5
+        $$
+
+        !! |> ImageLeft
+        !!     src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
+        !!     offset_x=10em
+
+        time to cross, because the maximum speed of the particle
+        inside of that interval is $0.5$.
+        Again, the interval from
+
+        $$
+        x = 0.125
+        $$
+
+        to
+
+        $$
+        x = 0.25
+        $$
+
+        takes _at least_
+
+        $$
+        {0.125 \over 0.25} = 0.5
+        $$
+
+        !! |> ImageLeft
+        !!     src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
+        !!     offset_x=10em
+
+        time to cross, because the maximum speed of the particle
+        inside of that interval is $0.25$—etc—each interval
+        takes at least $$0.5$$ units of time to cross, but there are infinitely
+        many such intervals, so it takes infinitely much time to
+        crawl back to $0$. (I.e., the particle never makes it to
+        $x = 0$, no matter how far back in time we look.)
+
+        !! $$
+        !! 0.5
+        !! $$
+
+        !! units of time to cross, because the length of each
+        !! interval is half of the maximum speed within the interval!
+        !! But there are infinitely many intervals, and, therefore,
+        !! it takes
+
+        !! __at least__
+
+        !! infinitely much time to make it to $x = 0$, where the
+        !! “infinitely” comes from adding infinitely many $0.5$'s
+        !! together! (In other words, the particle never makes it to
+        !! $x = 0$, no matter how far back in time you look.)
+
+        |> SolutionNote
+            handle=_geometric_progression_
+
+            A so-called
+
+            __geometric progression__
+
+            is a sequence of numbers in which each number
+            is a fixed multiple of the previous number.
+            For example,
+
+            $$
+            100,\, 300,\, 900,\, 2700
+            $$
+
+            is a (finite) geometric progression, because each number
+            is the previous number multiplied by $3$,
+            and
+
+            $$
+            1,\, 0.5,\, 0.25,\, 0.125,\, 0.0625,\, \ldots
+            $$
+
+            is an (infinite) geometric progression, because each number
+            is the previous multiplied by $0.5$. A so-called
+
+            __arithmetic progression__
+
+            is a sequence of numbers in which each number
+            adds a fixed quantity to the previous. For example,
+
+            $$
+            900, 1000, 1100, 1200, 1300, \dots
+            $$
+
+            is an infinite arithmetic progression in which each number
+            adds $100$ to the previous, and
+            
+            $$
+            -5.5, -6, -6.5, -7
+            $$
+
+            is a finite arithmetic progression in which each number
+            adds $-0.5$ to the previous.
+

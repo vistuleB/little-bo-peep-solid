@@ -1,0 +1,42 @@
+|> Exercise
+    handle=_axes_intersections_60_degrees_
+
+    In the following drawing at what
+    coordinates does the tangent to the circle
+    intersect the axes, as marked by the purple
+    triangles?
+
+    |> Image
+        src=images/svg_ch5_ex_60_tangent.svg
+
+    |> Solution
+
+        First we note that the $x$- and $y$-coordinates of
+        the point of tangency are  $1/2$ and
+        $\sqrt{0.75} = {\sqrt{3}\over 2}$, being $\cos(60^\circ)$
+        and $\sin(60^\circ)$ respectively:
+
+        |> Image
+            src=images/svg_ch5_ex_60_tangent_with_coordinates.svg
+
+        But by Exercise 43 this implies that the coordinate
+        of the intersectionj of the tangent is
+
+        |> ImageRight
+            src=images/svg_ch5_ex_60_tangent_sec_cloud.svg
+
+        $$
+        {1\over 1/2} = 2
+        $$
+
+        with the $x$ axis, and
+
+        |> ImageRight
+            src=images/svg_ch5_ex_60_tangent_csc_cloud.svg
+
+        $$
+        {1\over \sqrt{3}/2} = {2\over \sqrt{3}}
+        $$
+
+        with the $y$ axis, reasoning symmetrically.
+

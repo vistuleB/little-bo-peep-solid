@@ -1,0 +1,30 @@
+|> Exercise
+    handle=_two_solutions_by_complete_square_
+    Show that
+    $$
+    x^2 + 10x - 30 = 0
+    $$
+    has two solutions $x \in \rr$.
+
+    |> Solution
+
+        The equation can be written
+        $$
+        (x + 5)^2 - 55 = 0
+        $$
+        because $(x + 5)^2 = x^2 + 10x + 25$
+        and $25 - 55 = -30$. Passing $55$ to the
+        other side, we find
+        $$
+        (x + 5)^2 = 55
+        $$
+        which holds if and only if
+        $$
+        \,x + 5 = \pm\sqrt{55}
+        $$
+        or
+        $$
+        \,x = -5 \pm\sqrt{55}
+        $$
+        constituting two distinct solutions.
+

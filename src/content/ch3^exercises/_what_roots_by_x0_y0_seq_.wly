@@ -1,0 +1,58 @@
+|> Exercise
+    handle=_what_roots_by_x0_y0_seq_
+
+    Let $x_0 \in \rr$, $y_0 \in \rr$ and
+    $a \in \rr$ with $y_0 \geq 0$, $a \ne 0.$
+    If you apply these transformations...
+
+    __1. vertical translation by $-y_0$__
+
+    __2. horizontal translation by $x_0$__
+
+    __3. vertical scaling by $a$__
+
+    ...to the curve $y = x^2$, what are the
+    roots of the final curve that you obtain?
+    (Nb: _Roots_ are values of $x$ such
+    that $y = 0$.)
+
+    |> Solution
+
+        Start by noting that the point
+        $(\sqrt{y_0}, y_0)$ is on the curve $y = x^2$,
+        as well as the point $(-\sqrt{y_0}, y_0)$,
+        because
+        $(\sqrt{y_0})^2 = (-\sqrt{y_0})^2 =$ $y_0;$
+        here is a sketch of the situation before
+        anything happens:
+
+        |> Image
+            src=images/svg_ch3_ex_x0_y0_step0.svg
+            width=660px
+
+        After vertically translating by $-y_0$
+        the roots will therefore be at $x = \pm\sqrt{y_0}$:
+
+        |> Image
+            src=images/svg_ch3_ex_x0_y0_step1.svg
+            width=660px
+
+        Then after horizontally translating by $x_0$
+        the roots mosey over to $x = x_0\pm\sqrt{y_0}$:
+
+        |> Image
+            src=images/svg_ch3_ex_x0_y0_step2.svg
+            width=660px
+
+        Lastly, vertical scaling does not affect
+        the position of the roots, because it
+        stretches the graph _about_ the $x$
+        axis (here $a \approx 1.7$):
+
+        |> Image
+            src=images/svg_ch3_ex_x0_y0_step3.svg
+            width=660px
+
+        So the roots are at: $x = x_0 \pm \sqrt{y_0}$.
+        (Like we found them after the second step.)
+

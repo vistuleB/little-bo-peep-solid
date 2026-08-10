@@ -1,0 +1,65 @@
+|> Exercise
+    handle=_spherical_to_cartesian_coordinates_2_
+
+    If, 
+    in Exercise >>_spherical_to_cartesian_coordinates_1_,
+    we modify the definition of the angle $\phi$
+    to be $P$'s elevation above the $xy$-plane,
+    $\phi \in [-\eta, \eta]$,
+    as illustrated below, 
+    how are the corresponding change-of-coordinate 
+    formulas affected?
+
+    |> Image
+        src=images/svg_ch5_ex_spherical_coordinates_otherway_statement.svg
+
+    |> Solution
+
+        Since
+        $$
+        \phi \in [-\eta, \eta]
+        $$
+        one has
+        $$
+        \cos(\phi) \geq 0
+        $$
+        and
+        $$
+        R\cos(\phi) \geq 0
+        $$
+        from which $R\cos(\phi)$ becomes the 
+        length of
+        $P$'s projection onto the $xy$-plane,
+        similarly to $R\sin(\phi)$ being that
+        length in Exercise >>_spherical_to_cartesian_coordinates_1_,
+        while on the other the other hand,
+        $$
+        R\sin(\phi)
+        $$
+        is a signed quantity equal to $z$, similarly
+        to $R\cos(\phi)$ in Exercise >>_spherical_to_cartesian_coordinates_1_:
+
+        |> Image
+            src=images/svg_ch5_ex_spherical_coordinates_otherway_Rcos_phi.svg
+
+        The coordinate transformations are
+        thus obtained by interchanging “$\sin(\phi)$” and
+        “$\cos(\phi)$” in the formulas of Exercise >>_spherical_to_cartesian_coordinates_1_,
+        giving us:
+        !! The coordinate transformation is thus...
+
+        |> Boxed
+            style=margin-bottom:0em;
+            $$
+            x = R\cos(\phi)\cos(\theta)
+            $$
+
+            $$
+            y = R\cos(\phi)\sin(\theta)
+            $$
+
+            $$
+            z = R\sin(\phi)
+            $$
+
+        |> StarDivider

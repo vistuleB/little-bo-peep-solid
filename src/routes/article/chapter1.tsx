@@ -22,7 +22,6 @@ export default function __Chapter1__() {
       pageNecessaryMargin={800}
       maxElementWidth={500}
       id="_25_h.a.i_"
-      path="/article/chapter1"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -31,26 +30,31 @@ export default function __Chapter1__() {
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
+          <InChapterLink href="?id=section-1">
+            square roots (bis)
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-2">
             fractions and division
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-2">
+        <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-3">
             distributivity
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-3">
+        <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-4">
             epilogue
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-4">
+        <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-5">
             vocabulary
           </InChapterLink>
         </BreadcrumbItem>
-        <BreadcrumbItem id="breadcrumb-5">
+        <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=exercises">
             exercises
           </InChapterLink>
@@ -117,11 +121,9 @@ export default function __Chapter1__() {
           \sqrt&#123;(-2)^2&#125; = 2
           $$
           <ImageRight
-            src="/build-img/svgo-svg/ypXE.svg"
-            offsetX="-2em"
-            atLeastAsWide={true}
-            intrinsicWidth={360}
-            intrinsicHeight={160}
+            src="/build-img/svgo-svg/Z39o.svg"
+            offset_x="5em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -216,8 +218,24 @@ export default function __Chapter1__() {
             .)
           </NoBreak>
         </OuterP>
-        <OuterP class="indent-10">
-          Next, we will ponder
+      </Section>
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return <>
+    {showMore() && <>
+      <Pause />
+      <Section id="section-1">
+        <OuterP>
+          <b>
+            Square roots (bis).
+          </b>
+          {" "}
+          We next ponder the value of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -530,15 +548,6 @@ export default function __Chapter1__() {
           </NoBreak>
         </OuterP>
       </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const visibleRestSections = useShowMore(5);
-  return <>
-    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -738,11 +747,11 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;align*&#125;
+          \begin&#123;align&#125;
           &#123;71 \over 40&#125; \,&amp;=\, &#123;40 + 30 + 1 \over 40&#125; \,=\, &#123;40 \over 40&#125; + &#123;30 \over 40&#125; + &#123;1 \over 40&#125;\\
           \,&amp;=\, 1 + &#123;3 \over 4&#125; + &#123;1 \over 4&#125;\!\cdot \!&#123;1 \over 10&#125;\up&#123;1.5&#125;\\
           \,&amp;=\, 1 + 0.75 + 0.025 = 1.775\up&#123;1.5&#125;
-          \end&#123;align*&#125;
+          \end&#123;align&#125;
           $$
         </MathBlock>
         <Pause />
@@ -781,8 +790,6 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -886,11 +893,9 @@ const Rest = () => {
           (a + b)(C + D) \,=\, aC + bC + aD + bD
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/-TtU.svg"
-            offsetX="-1em"
-            atLeastAsWide={true}
-            intrinsicWidth={350}
-            intrinsicHeight={250}
+            src="/build-img/svgo-svg/QC6w.svg"
+            offset_x="1.9em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -967,11 +972,11 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \begin&#123;align*&#125;
+            \begin&#123;align&#125;
             (10 + 3)(10 + 3) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
             \,&amp;=\, 100 \,+\, 30 \,+\, 30 \,+\, 9 \up&#123;1.1&#125;\\
             \,&amp;=\, 169 \up&#123;1.1&#125;
-            \end&#123;align*&#125;
+            \end&#123;align&#125;
             $$
           </MathBlock>
           <Pause />
@@ -1086,11 +1091,11 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \begin&#123;align*&#125;
+            \begin&#123;align&#125;
             \up&#123;1&#125; (10 + 3)^2 \,&amp;=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
             \up&#123;1&#125; \,&amp;=\, 100 + 60 + 9 \up&#123;1.1&#125;\\
             \up&#123;1&#125; \,&amp;=\, 169 \up&#123;1.1&#125;
-            \end&#123;align*&#125;
+            \end&#123;align&#125;
             $$
           </MathBlock>
           <Pause />
@@ -1337,11 +1342,11 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;align*&#125;
+          \begin&#123;align&#125;
           (-1)(a - b) \,&amp;=\, (-1)(a + (-b)) \\
           \,&amp;=\, (-1)a + (-1)(-b) \up&#123;1.1&#125; \\
           \,&amp;=\, -a + b \up&#123;1.1&#125;
-          \end&#123;align*&#125;
+          \end&#123;align&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1376,8 +1381,6 @@ const Rest = () => {
         <Pause />
         <StarDivider />
       </Section>
-    </>}
-    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -1409,11 +1412,11 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;align*&#125;
+          \begin&#123;align&#125;
           11\,\cdot\,13 &amp;= 12^2 - 1\\
           10\,\cdot\,12 &amp;= 11^2 - 1 \up&#123;1.1&#125;\\
           9\,\cdot\,11 &amp;= 10^2 - 1 \up&#123;1.1&#125;
-          \end&#123;align*&#125;
+          \end&#123;align&#125;
           $$
         </MathBlock>
         <Pause />
@@ -1451,8 +1454,6 @@ const Rest = () => {
           for a difference of squares!
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -1497,12 +1498,9 @@ const Rest = () => {
           and so on.
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 4 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}
-        mode="dual"
         show_curlicue={true}
         id="_24_h.a.i_"
       >
@@ -1652,20 +1650,18 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp;\,\, (\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
               =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\qquad\\
               =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \\
               =&amp; \,\, \up&#123;1.4&#125; (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;)\\
               =&amp; \,\, \up&#123;1.4&#125; 2
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/rgbH.svg"
-                offsetY="23.5%"
-                atLeastAsWide={true}
-                intrinsicWidth={346}
-                intrinsicHeight={142}
+                offset_y="23.5%"
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />
@@ -1675,20 +1671,18 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
                   &amp;\,\, (\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
                  =&amp;\,\, \up&#123;1.4&#125; \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\\
                  =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;)\\
                  =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.65&#125;2&#125; \times \sqrt[2]&#123;\up&#123;0.65&#125;2&#125;\\
                  =&amp;\,\, \up&#123;1.4&#125; 2
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/Trg3.svg"
-                offsetY="23.5%"
-                atLeastAsWide={true}
-                intrinsicWidth={444}
-                intrinsicHeight={126}
+                offset_y="23.5%"
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />
@@ -2041,12 +2035,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp; &#123;1 \over 0.95&#125; &gt; 1.05\\
               \iff &amp; 1 &gt; 1.05 \cdot 0.95\up&#123;1.4&#125;\\
               \iff &amp; 1 &gt; (1 + 0.05)(1 - 0.05)\up&#123;1.4&#125;\\
               \iff &amp; 1 &gt; 1 - 0.05^2\up&#123;1.4&#125;
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2394,12 +2388,12 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp;\, \left(1 - &#123;1 \over 2&#125;\right) \\
               + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right) \\
               \hline
               = \,&amp;\, \left(1 - &#123;1 \over 3&#125;\right)
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2410,13 +2404,13 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
               \hline
               = \,&amp;\, \left(1 - &#123;1 \over 4&#125;\right)
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2426,14 +2420,14 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
               \hline
               = \,&amp;\, \left(1 - &#123;1 \over 5&#125;\right)
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2455,7 +2449,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
@@ -2463,7 +2457,7 @@ const Rest = () => {
               + \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
               + \,&amp;\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2520,19 +2514,17 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &#123;1 \over n&#125; - &#123;1 \over n+1&#125; &amp;= &#123;1 \over n&#125;\cdot&#123;n+1 \over n+1&#125;\, - \,
               &#123;1 \over n+1&#125;\cdot&#123;n \over n&#125;\up&#123;1.5&#125;\\
               &amp;= &#123;n+1 \over n(n+1)&#125; - &#123;n \over n(n+1)&#125;\up&#123;1.5&#125;\\
               &amp;= &#123;1 \over n(n+1)&#125;\up&#123;1.5&#125;
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
               <ImageRight
                 src="/build-img/svgo-svg/omps.svg"
-                offsetY="-0.5em"
-                atLeastAsWide={true}
-                intrinsicWidth="497.212"
-                intrinsicHeight="317.105"
+                offset_y="-0.5em"
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />
@@ -2562,7 +2554,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
               + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
@@ -2571,7 +2563,7 @@ const Rest = () => {
               + \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
               + \,&amp;\, \,\,\,\,\,\,\,\,\dots\up&#123;1.3&#125;\dn&#123;1&#125;\\ \hline
               = \,&amp;\, 1\up&#123;1.5&#125;
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2750,11 +2742,10 @@ const Rest = () => {
               &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
               $$
               <ImageRight
+                offset_x="5rem"
                 src="/build-img/svgo-svg/Xx87.svg"
-                offsetX="-1em"
-                atLeastAsWide={true}
-                intrinsicWidth="362.474"
-                intrinsicHeight="177.616"
+                squiggle={false}
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />
@@ -2767,11 +2758,10 @@ const Rest = () => {
               &#123;1 \over n^2&#125;
               $$
               <ImageRight
+                offset_x="10rem"
                 src="/build-img/svgo-svg/jBCw.svg"
-                offsetX="-1em"
-                atLeastAsWide={true}
-                intrinsicWidth="362.474"
-                intrinsicHeight="177.616"
+                squiggle={false}
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />
@@ -2804,19 +2794,17 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125; &amp;= &#123;1 \over n^2&#125; \cdot &#123;n+1 \over n+1&#125; - &#123;1 \over n(n+1)&#125; \cdot
               &#123;n \over n&#125;\\
               &amp;= &#123;n+1 \over n^2(n+1)&#125; - &#123;n \over n^2(n+1)&#125;\up&#123;1.5&#125;\\
               &amp;= &#123;1 \over n^2(n+1)&#125;\up&#123;1.5&#125;
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
               <ImageRight
                 src="/build-img/svgo-svg/4oJD.svg"
-                offsetY="-0.5em"
-                atLeastAsWide={true}
-                intrinsicWidth="606.819"
-                intrinsicHeight="317.105"
+                offset_y="-0.5em"
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />

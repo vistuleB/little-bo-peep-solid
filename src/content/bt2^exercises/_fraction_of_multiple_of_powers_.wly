@@ -1,0 +1,22 @@
+|> Exercise
+    handle=_evaluate_fraction_of_multiples_of_powers_of_10_
+
+    Evaluate:
+    $$
+    \Large {10^6 \cdot 10^{-12} \cdot 10^{10} \over 10^{-4}\cdot 10^{-4}}
+    $$
+
+    |> Solution
+        We have
+        $$
+        \Large {10^6 \cdot 10^{-12} \cdot 10^{10} \over 10^{-4}\cdot 10^{-4}} = {10^{6-12+10} \over 10^{-4 -4}} = {10^4 \over 10^{-8}}
+        $$
+        and
+        $$
+        \Large {10^4 \over 10^{-8}} = 10^4 \cdot {1 \over 10^{-8}} = 10^4\cdot 10^{-(-8)}
+        $$
+        and
+        $$
+        \Large 10^4\cdot 10^{-(-8)} = 10^4\cdot 10^8 = 10^{4 + 8} = 10^{12}
+        $$
+        so the answer is $10^{12}$.

@@ -1,0 +1,91 @@
+|> Exercise
+    handle=_use_previous_two_AB_
+
+    Use the results of the previous two exercises
+    to find the value(s) of $x$ such that
+    $Ax^2 + Bx = 0$ for constants $A$, $B$ such
+    that $A \ne 0$.
+
+    |> Solution
+
+        Well,
+        $$
+        Ax^2 + Bx = 0
+        $$
+        obviously has solution $x = 0$ to start
+        with, so we _don't need_ the previous
+        exercises for one of the roots at least—actually,
+        $$
+        Ax^2 + Bx = x(Ax + B)
+        $$
+        so the equation is equivalent to
+        $$
+        x(Ax + B) = 0
+        $$
+        and so one of the roots is
+        $$
+        x = 0
+        $$
+        and the other root is the value of $x$
+        such that
+        $$
+        Ax + B = 0
+        $$
+        which is $x = -B/A$. (In order for the product
+        $$
+        x(Ax + B)
+        $$
+        to be $0$ you either need the first term to
+        be $0$, leading us to $x = 0$, or the second
+        term to be $0$, leading us to $Ax + B = 0$—the
+        product of two things is $0$ if and only if
+        one of the two things is $0$.)
+
+        So the roots are $x = 0$ and $x = -B/A$.
+
+        To complete the problem _as we were asked_,
+        however, we will use the fact that $y = Ax^2 + Bx$
+        is obtained from $y = x^2$ by the following
+        sequence of transformations (cf. Exercise >>_what_seq_AB_):
+
+        __1. vertical translation by $-{B^2 \over 4A^2}$__
+
+        __2. horizontal translation by $-{B \over 2A}$__
+
+        __3. vertical scaling by $A$__
+
+        (We put the vertical translation first.)
+        By Exercise >>_what_roots_by_x0_y0_seq_, the 
+        roots of $y = Ax^2 + Bx$ are thus at
+        $$
+        \tag{A}
+        x = -{B\over 2A} \pm \sqrt{B^2 \over 4A^2}
+        $$
+        which looks a little different than our
+        previous result of $x = 0$ and $x = -B/A$
+        until you realize that
+        $$
+        \pm \sqrt{B^2 \over 4A^2} = \pm {B \over 2A}
+        $$
+        (because
+        $$
+        \left({B \over 2A}\right)^{\!2} = {B^2 \over 4A^2}
+        $$
+        and even though ${B\over 2A}$ could be
+        negative, the “$\pm$” on either side of
+        the equation means that the _set_ of values
+        on either side of the equation is the same),
+        so that (A) becomes
+        $$
+        x = -{B\over 2A} \pm {B \over 2A}
+        $$
+        and, on the one hand,
+        $$
+        -{B\over 2A} + {B \over 2A} = 0
+        $$
+        while, on the other hand,
+        $$
+        -{B\over 2A} - {B \over 2A} = -{2B\over 2A} = -{B\over A}
+        $$
+        so here too we find that the roots are $x = 0$
+        and $x = -B/A$. (It must be the right answer!)

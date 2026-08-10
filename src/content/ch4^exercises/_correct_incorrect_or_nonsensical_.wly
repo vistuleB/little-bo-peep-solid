@@ -1,0 +1,87 @@
+|> Exercise
+    handle=_correct_incorrect_or_nonsensical_
+
+    Is the following equation correct, incorrect,
+    or nonsensical?
+
+    $$
+    (x \ra x + 1) \,+\, (u \ra 2u + 1) \,=\, (t \ra 3t + 2)
+    $$
+
+    |> Solution
+
+        The equation makes sense and is true.
+        Syntactically,
+
+        $$
+        (x \ra x + 1) \,+\, (u \ra 2u + 1)
+        $$
+
+        is a
+
+        __sum of functions__
+
+        because $x \ra x + 1$ and $u \ra 2u + 1$ are
+        both functions. Now by definition, the sum
+
+        $$
+        f + g
+        $$
+
+        of functions $f$ and $g$ is the function
+
+        $$
+        x \ra f(x) + g(x)
+        $$
+
+        that maps a number to the sum of the individual
+        values of the functions. So—for example—
+
+        $$
+        \begin{align}
+        & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(5) \\
+        =& \,\,\,(x \ra x + 1)(5) + (u \ra 2u + 1)(5) \up{1.5} \\
+        =& \,\,\,(5 + 1) + (2\cdot 5 + 1) \up{1.5} \\
+        =& \,\,\,3\cdot 5 + 2 = 17 \up{1.5}
+        \end{align}
+        $$
+
+        and—with a general input $t$—
+
+        $$
+        \begin{align}
+        & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(t) \\
+        =& \,\,\,(x \ra x + 1)(t) + (u \ra 2u + 1)(t) \up{1.5} \\
+        =& \,\,\,(t + 1) + (2t + 1) \up{1.5} \\
+        =& \,\,\,3t + 2 \up{1.5}
+        \end{align}
+        $$
+
+        which implies that, indeed,
+
+        $$
+        (x \ra x + 1) \,+\, (u \ra 2u + 1)
+        $$
+
+        is the function that maps each real number $t$ to $3t + 2$,
+        i.e., is equal to the function $t \ra 3t + 2$. (!!)
+
+        |> Pause
+
+        _Note 1._
+        One can also do the main computation with $x$
+        in place of $t$:
+
+        $$
+        \begin{align}
+        & \,\,\,((x \ra x + 1) \,+\, (u \ra 2u + 1))(x) \\
+        =& \,\,\,(x \ra x + 1)(x) + (u \ra 2u + 1)(x) \up{1.5} \\
+        =& \,\,\,(x + 1) + (2x + 1) \up{1.5} \\
+        =& \,\,\,3x + 2 \up{1.5}
+        \end{align}
+        $$
+
+        Here we have two different $x$'s: the $x$ that
+        denotes the input, and the $x$ that is used as
+        a placeholder to describe how the first function
+        acts.

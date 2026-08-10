@@ -14,6 +14,7 @@ const Table = (props: ParentProps & SharedProps) => {
   const { store } = useGlobalContext();
   let [scale, set_scale] = createSignal(1.0);
   let [scaled_down, set_scaled_down] = createSignal(false);
+  let [recent_click, set_recent_click] = createSignal(false);
   let [after_first_load, set_after_first_load] = createSignal(false);
   let table_ref: HTMLTableElement | undefined;
 
@@ -67,6 +68,7 @@ const Table = (props: ParentProps & SharedProps) => {
         class={twJoin(
           props.class,
           "scrollbar-hidden sm:overflow-x-visible m-auto h-[inherit]",
+          // recent_click() && "bg-reddish",
           after_first_load() && "transition-img",
         )}
         ref={table_ref}
@@ -75,9 +77,12 @@ const Table = (props: ParentProps & SharedProps) => {
           set_scaled_down(newScaledDown);
           set_after_first_load(true);
           set_scale(newScaledDown ? scaled_down_scale() : 1);
+          set_recent_click(true);
+          setTimeout(() => {
+            set_recent_click(false);
+          }, 100);
         }}
-        style={`transform:scale(${scale()});margin-top:${(tableHeight() * (scale() - 1)) / 2}px;margin-bottom:${(tableHeight() * (scale() - 1)) / 2}px;`}
-      >
+        style={`transform:scale(${scale()});margin-top:${(tableHeight() * (scale() - 1)) / 2}px;margin-bottom:${(tableHeight() * (scale() - 1)) / 2}px;`}>
         {props.children}
       </table>
     </div>

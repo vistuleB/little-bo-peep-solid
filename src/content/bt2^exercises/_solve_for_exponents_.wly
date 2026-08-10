@@ -1,0 +1,128 @@
+|> Exercise
+    handle=_solve_for_a_b_c_
+
+    Find integers $a$, $b$ and $c$ such that
+    $$
+    \Large v^aF^b\mu^c\rho = 1
+    $$
+    where $v$, $F$, $\mu$ and $\rho$ are defined as below.
+    $$
+    \Large v = {L \over T}
+    $$
+    $$
+    \Large F = {ML \over T^2}
+    $$
+    $$
+    \Large \mu = {M \over TL }
+    $$
+    $$
+    \Large \rho = {M \over L^3}
+    $$
+
+    |> Solution
+
+        Firstly we can rewrite $v$, $F$, $\mu$, $\rho$
+        in the canonical form $M^xL^yT^z$
+        for integers $x$, $y$, $z$ (as in Exercise
+        >>_M_L_T_rewrite_):
+        $$
+        \Large v = LT^{-1} \vphantom{\rho = ML^{-3}}
+        $$
+        $$
+        \Large F = MLT^{-2} \vphantom{\rho = ML^{-3}}
+        $$
+        $$
+        \Large \mu = MT^{-1}L^{-1} \vphantom{\rho = ML^{-3}}
+        $$
+        $$
+        \Large \rho = ML^{-3}
+        $$
+        (Ok.) Nextly, we compute $v^a$, $F^b$, $\mu^c$
+        by applying the fourth law of exponents (note e.g.
+        that $(T^{-1})^a = T^{(-1)a} = T^{-a}$, etc):
+        $$
+        \Large v^a = L^aT^{-a} \vphantom{\rho = ML^{-3}}
+        $$
+        $$
+        \Large F^b = M^{b}L^bT^{-2b} \vphantom{\rho = ML^{-3}}
+        $$
+        $$
+        \Large \mu^c = M^cT^{-c}L^{-c} \vphantom{\rho = ML^{-3}}
+        $$
+        $$
+        \Large \rho = ML^{-3}
+        $$
+        (In the last line we just restated $\rho$.)
+        Then $v^aF^b\mu^c\rho$ becomes
+        $$
+        \Large M^{b+c+1}L^{a+b-c-3}T^{-a-2b-c}
+        $$
+        by multiplying everything together and using
+        additivity of exponents. (E.g., $M^bM^cM = M^{b+c+1}$,
+        and so on.) This expression equals
+        $$
+        \Large 1
+        $$
+        independently of the values of $M$, $L$, $T$
+        if and only if...
+
+        __the three exponents are zero__
+
+        ...(!!!) which means that we need to find values
+        $a$, $b$ and $c$ such that these three equations...
+        $$
+        \Large b + c + 1 = 0
+        $$
+        $$
+        \Large a + b - c - 3 = 0
+        $$
+        $$
+        \Large -a -2b - c = 0
+        $$
+        ...are satisfied! Adding the second and
+        third equation together, we find
+        $$
+        \Large -b -2c -3 = 0
+        $$
+        |> ImageRight
+            src=images/svg_bt2_ex_equation_addition_cloud.svg
+            offset_y=-0.5em
+            offset_x= 0.5em
+        and adding this last equation to the first
+        equation above, we find
+        $$
+        \Large -c -2 = 0
+        $$
+        which implies that $-c = 2$, i.e., that $c = -2$.
+        Plugging $c = -2$ into the first of our three
+        equations, we find
+        $$
+        \Large b + (-2) + 1 = 0
+        $$
+        or
+        $$
+        \Large b - 1 = 0
+        $$
+        which implies that $b = 1$. Lastly, plugging
+        $b = 1$, $c = -2$ in our second equation above
+        gives us
+        $$
+        \Large a + 1 - (-2) - 3 = 0
+        $$
+        which implies that $a = 0$ since $1-(-2)-3 = 0$.
+        (One can finally check that
+        setting $a=0$, $b = 1$, $c=-2$ satisfies that
+        third equation, $-a-2b-c=0$, which it does.)
+
+        In summary, the solution is $a = 0$, $b = 1$,
+        $c = -2$; we have discovered that
+        $$
+        \Large v^0 F^1 \mu^{-2} \rho = 1
+        $$
+        under the given definitions of $v$, $F$, $\mu$
+        and $\rho$, or which is to say, we have discovered
+        that
+        $$
+        \Large F\mu^{-2}\rho = 1
+        $$
+        (since $v^0 = 1$, $F^1 = F$).
