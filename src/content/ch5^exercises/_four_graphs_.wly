@@ -1,0 +1,97 @@
+|> Exercise
+    handle=_four_graphs_
+
+    Which function is most plausibly associated to
+    which graph?
+
+    |> table
+        class=slice
+        style=border-collapse:collapse;font-size:100%;text-align:center;margin:auto;margin-top:1em;margin-bottom:1.5em;
+        |> colgroup
+            |> col
+                width=200
+            |> col
+                width=200
+        |> tbody
+            |> tr
+                style=border-bottom:1px solid black;
+                |> td
+                    style=padding:0.5em 0;border-right:1px solid black
+                    $x \ra \sin x \cdot \cos x$
+
+                |> td
+                    style=padding:0.5em 0;
+                    $x \ra \cos^2 x$
+
+            |> tr
+                |> td
+                    style=padding:0.5em 0;border-right:1px solid black
+                    $x \ra \sin^2 x$
+
+                |> td
+                    style=padding:0.5em 0;
+                    $x \ra \sin x + \cos x$
+
+    |> Image
+        src=images/svg_ch5_ex_four_graphs.svg
+
+    |> Solution
+        Since
+        $$
+        x \ra \sin^2 x
+        $$
+        $$
+        x \ra \cos^2 x
+        $$
+        are nonnegative [the square of a number
+        is nonnegative]
+        these functions must either be
+        the top right or bottom left graphs, as the
+        other two graphs weave in and out of negative territory;
+        given additionally that
+        $$
+        \,\cos(0) = 1,
+        $$
+        $$
+        \sin(0) = 0
+        $$
+        we can further deduce that
+        $$
+        x \ra \sin^2 x
+        $$
+        can only be the top right graph, and
+        $$
+        x \ra \cos^2 x 
+        $$
+        can only be the bottom left graph; moreover, since
+        $$
+        |\sin x \cdot \cos x| \leq 1
+        $$
+        for all $x \in \rr$ (as the product of
+        two numbers that are between $-1$ and $1$ is
+        itself between $-1$ and $1$), whereas the
+        top left graph is at times greater than $1$
+        and at times less than $-1$,
+        !! steps outside the band $|y| \leq 1$, 
+        the last standing possibility is...
+
+        |> Image
+            src=images/svg_ch5_ex_four_graphs_labeled.svg
+
+        ...this one! 
+
+        |> SolutionNote
+            These are in fact the actual graphs of
+            the stated functions, not just “plausible” graphs.
+            
+        |> SolutionNote
+            It is
+            indeed quite striking that all of these
+            functions seem to be _sinusoids_, given the
+            appearance of their graphs. (A “sinusoid” is 
+            formally defined as a function of the form
+            $x \ra A\cdot \sin(Bx + C) + D$ for some 
+            constants $A$, $B$, $C$, $D \in \rr$.)
+            There is _a priori_ no good reason for this.
+            !! A priori, there is no good reason for this!
+

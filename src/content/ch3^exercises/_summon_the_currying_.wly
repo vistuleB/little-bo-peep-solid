@@ -1,0 +1,102 @@
+|> Exercise
+    handle=_summon_the_currying_
+
+    Summon your senses of extrapolation _&_
+    imagination to evaluate this expression:
+    $$
+    (f \ra x \ra h \ra {f(x+h) - f(x)\over h})(x \ra x^2)(5)(0.1)
+    $$
+    (Hint: The answer is a specific real number.)
+
+    |> Solution
+
+        ...in an expression such as...
+        $$
+        (x \ra x^3)(6)
+        $$
+        ...we pair the $x$ with $6$...
+
+        |> Image
+            src=images/svg_ch3_connection_x_6.svg
+
+        ...and $6$ becomes the value to use for $x$
+        in “$x^3$”:
+
+        |> Image
+            src=images/svg_ch3_connection_x_6_in_computation.svg
+
+        ...; in an expression such as...
+        $$
+        (x \ra y \ra x^3y)(6)
+        $$
+        ...we also pair the $x$ with $6$...
+
+        |> Image
+            src=images/svg_ch3_connection_x_6_again.svg
+
+        ...and $6$ becomes the value to use for $x$
+        in “$y \ra x^3y$”:
+
+        |> Image
+            src=images/svg_ch3_connection_x_6_again_in_computation.svg
+
+        ...(in this case the result is not a number,
+        but a function—a function is a mathematical
+        object like another, after all); in an
+        expression such as...
+
+        $$
+        (x \ra y \ra x^3y)(6)(8)
+        $$
+
+        ...we pair the $x$ with $6$ and the $y$ with $8$...
+
+        |> Image
+            src=images/svg_ch3_connection_x_y_6_8.svg
+
+        ...and $6$ and $8$ become respectively the
+        values to use for $x$ and $y$ in “$x^3y$”:
+
+        |> Image
+            src=images/svg_ch3_connection_x_y_6_8_in_computation.svg
+
+        ...; now in an expression such as...
+
+        $$
+        (f \ra x \ra h \ra {f(x+h) - f(x)\over h})(x \ra x^2)(5)(0.1)
+        $$
+
+        ...we pair the $f$ with $x \ra x^2$, the
+        $x$ with $5$, and the $h$ with $0.1$...
+
+        |> Image
+            src=images/svg_ch3_connection_f_x_h.svg
+
+        ...and $x \ra x^2$, $5$ and $0.1$ become
+        respectively the values to use for $f$, $x$
+        and $h$ in “${f(x + h) - f(x)\over h}$”:
+
+        |> Image
+            src=images/svg_ch3_connection_f_x_h_in_computation.svg
+
+        ...; evaluating...
+        $$
+        {(x \ra x^2)(5 + 0.1) - (x \ra x^2)(5) \over 0.1}
+        $$
+        ...we...
+        $$
+        {(x \ra x^2)(5.1) - (x \ra x^2)(5) \over 0.1}
+        $$
+        ...get...
+        $$
+        {5.1^2 - 5^2 \over 0.1}
+        $$
+        ...this...
+        $$
+        {26.01 - 25 \over 0.1}
+        $$
+        ..._thiiis_...
+        $$
+        {1.01 \over 0.1} = 1.01 \times 10 = 10.1
+        $$
+        ...result! (The answer is: ten point one.)

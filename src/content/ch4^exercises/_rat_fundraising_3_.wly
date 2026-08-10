@@ -1,0 +1,84 @@
+|> Exercise
+    handle=_rat_fundraising_3_
+
+    Continuing with the fundraising rat as in the
+    previous two exercises, assume that the functions
+    $f$ and $g$ have these graphs:
+
+    |> Image
+        src=images/svg_ch4_f_g_actual_exercise_f.svg
+
+    |> Image
+        src=images/svg_ch4_f_g_actual_exercise_g.svg
+
+    In this case what is $(f \circ g)'(2)$?
+
+    |> Solution
+
+        At $t = 2$s the rat is running at a velocity of
+
+        $$
+        {5\over 3\up{1}}[{\te{m/s}}]
+        $$
+
+        by the slope of this line segment on $y = g(t)$:
+
+        |> Image
+            src=images/svg_ch4_f_g_actual_exercise_g_with_slope.svg
+
+        Moreover at $t = 2$s the rat
+        has reached
+        $2 \cdot (5/3) = 10/3 = 3.\overline{33}$m,
+        where the dollars-per-meter earnings
+        rate is one-tenth of a dollar per meter, by
+        the slope of this segment on the graph $y = f(x)$:
+
+        |> Image
+            src=images/svg_ch4_f_g_actual_exercise_f_with_slope.svg
+
+        Multiplying the $5/3$ meters-per-second velocity
+        by the $1/10$ dollars-per-meter rate gives
+        us the dollars-per-second rate at $t = 2$s (our
+        final answer—recall that $(f \circ g)'(2)$ is
+        the dollars-per-second rate at $t = 2$s, by Exercise 35):
+
+        $$
+        \left({5\over 3\up{1}}\left[{\te{m} \over \te{s}}\right]\right) \times \left({1 \over 10\up{1}}\left[{\te{\$} \over \te{m}}\right]\right) = {5\over 30\up{1}}\left[{\te{\$} \over \te{s}}\right].
+        $$
+
+        |> ImageRight
+            src=images/svg_ch4_f_g_actual_exercise_cloud.svg
+
+        Or since
+        $$
+        {5 \over 3} = 1.6666...
+        $$
+        that would be
+        $$
+        {0.1666...}[\te{\$/s}]
+        $$
+        in decimal, i.e.,
+        |> span
+            style=font-family:Clicker Script;font-size:1.3em;
+
+            ~sixteen~
+        point $666...$ cents per second.
+
+        |> Pause
+        _Postscript._
+        It turns out that
+
+        $$
+        {5 \over 30} = {1 \over 6}
+        $$
+
+        as we weren't really paying attention to the
+        possibility of simplifying the fraction. In
+        particular,
+
+        $$
+        {1 \over 6} = 0.1666...
+        $$
+
+        as, indeed, $0.1666...$ is half of $0.333...$!
+

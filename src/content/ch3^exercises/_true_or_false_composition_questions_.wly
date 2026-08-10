@@ -1,0 +1,28 @@
+|> Exercise
+    handle=_true_or_false_composition_questions_
+
+    True or false ($f$ and $g$ are functions):
+
+    |> Grid
+        cols=2
+        mobile-cols=1
+        center-on-overflow=true
+        place-items=start
+        with-padding=false
+        column-first=true
+
+        i. $f \circ g = (x \ra f(g(x)))$
+
+        ii. $g \circ f = (x \ra f(g(x)))$
+
+        iii. $f \circ g = (x \ra g(f(x)))$
+
+        iv. $g \circ f = (x \ra g(f(x)))$
+
+    |> Solution
+
+        The true statements are i, iv, because
+        $f \circ g$ is the function that maps an
+        input $x$ to $f(g(x))$, and symmetrically
+        for $g \circ f$.
+

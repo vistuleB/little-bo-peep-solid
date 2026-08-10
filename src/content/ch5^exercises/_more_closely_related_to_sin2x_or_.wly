@@ -1,0 +1,77 @@
+|> Exercise
+    handle=_more_closely_related_to_sin2x_or_
+
+    Based on the graphs of Exercise >>_four_graphs_,
+    or some other logic,
+    does it seem more likely that 
+    $x \ra \cos^2 x$, $x \ra \sin^2 x$ and $x \ra \cos x\sin x$ 
+    are more closely related to
+    $$
+    \sin(x/2)
+    $$
+    and/or $\cos(x/2)$,
+    or to
+    $$
+    \sin(2x)
+    $$
+    and/or $\cos(2x)$?
+
+    |> Solution
+
+        One can see from the graphs of $\cos^2$, $\sin^2$
+        and $\sin\cdot\cos$ that these functions cycle “twice as
+        fast” as sine or cosine, just like $x \ra \sin(2x)$
+        and $x\ra \cos(2x)$ cycle twice as fast. The answer is
+        therefore: the latter. (I.e., “$\sin(2x)$ and/or $\cos(2x)$”.)
+        !! “$\sin(2x)$ and/or $\cos(2x)$”.
+        !! $\sin$ or $\cos$.
+
+        |> SolutionNote
+
+            More mathematically, say that $f : \rr \ra \rr$
+
+            __has period $T$__
+
+            or
+
+            __is periodic mod $T$__
+
+            for some number $T \in \rr$ if
+
+            $$
+            f(x + T) = f(x)
+            $$
+
+            for all $x \in \dom f$. Then $\sin$, $\cos$ are
+
+            __periodic mod $4\eta$__
+
+            while $\sin^2$, $\cos^2$ and $\sin\cos$ are not
+            only periodic mod $4\eta$ but accomplish the further
+            feat of being
+
+            __periodic mod $2\eta$__
+
+            since, for example,
+
+            $$
+            \sin(x + 2\eta)\cos(x + 2\eta) = (-\sin x)(-\cos x) = \sin x\cos x
+            $$
+            |> ImageLeft
+                src=images/e5_more_closely_related_to_sin2x_or_left_2eta_cloud.svg
+            !! |> ImageRight
+            !!     src=images/e5_more_closely_related_to_sin2x_or_right_2eta_cloud.svg
+
+            for all $x \in \rr$, which establishes the periodicity of $\sin\cdot\cos$ mod
+            $2\eta$, etc.
+
+            !! |> Image
+            !!     src=images/e5_more_closely_related_to_sin2x_or_bottom_cloud.svg
+            !!     style=margin-top:-1em
+
+            !! $$
+            !! -4\eta\,-2\eta\,0\,2\eta\,4\eta
+            !! $$
+
+        !! |> SolutionNote
+        !!     Hello world...

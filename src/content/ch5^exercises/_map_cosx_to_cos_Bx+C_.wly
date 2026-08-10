@@ -1,0 +1,87 @@
+|> Exercise
+    handle=_map_cosx_to_cos_Bx+C_
+
+    More generally, how is the graph of
+    $$
+    x \ra \cos(Bx + C)
+    $$
+    related to the graph of $\cos$, for constants
+    $B$, $C \in \rr$?
+
+    |> Solution
+
+        As in the solution to Exercise 37 place
+        $\cos(x + C)$ as an intermediate function between
+        $\cos(x)$ and $\cos(Bx + C)$:
+
+        $$
+        \cos(x)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \cos(x + C)
+        $$
+        $$
+        \downarrow
+        $$
+        $$
+        \cos(Bx + C)
+        $$
+
+        The first step effects a tranlation to the left by $C$,
+        the second step (since it replaces $x$ by $Bx$) effects
+        a horizontal compression by a factor $B$ (speed-up by
+        factor $B$), so the following pair of steps, in order,
+        takes the graph $y = \cos(x)$ to the graph $y = \cos(Bx + C)$:
+
+        __1. horizontal translation by $-C$__
+        __2. horizontal scaling by $1/B$__
+
+        |> StarDivider
+
+        |> SolutionNote
+
+            Alternately, like Note 1 of Exercise 37, we can
+            stop at $\cos(Bx)$ as an intermediate point:
+
+            $$
+            \cos(x)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \cos(Bx)
+            $$
+            $$
+            \downarrow
+            $$
+            $$
+            \cos(B(x + C/B)) = \cos(Bx + C)
+            $$
+
+            This gives us the following alternate sequence:
+            __1. horizontal scaling by $1/B$__
+            __2. horizontal translation by $-C/B$__
+            ...which is different-but-equivalent, but
+            generally considered inferior
+            by virtue of involving the more complicated translation
+            term, $-C/B$!
+
+        |> SolutionNote
+
+            One says that translation and scaling  are
+            __non-commutative__
+            because it matters which of the two operations is performed
+            first. If it didn't matter,
+            then both of our solutions would involve the
+            same amount of translation, but they don't!
+
+            (Also:
+            __translation and scaling don't commute__
+            or
+            __transation doesn't commute with scaling__
+            ...all good sentences to use in the wild!)
+

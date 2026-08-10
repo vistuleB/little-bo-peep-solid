@@ -1,0 +1,85 @@
+|> Exercise
+    handle=_periodicity_mod_2eta_
+
+    Prove that $\cos\cdot\sin$, $\cos^2$, and $\sin^2$
+    are periodic mod $2\eta$, where a function $f$ is
+    “periodic mod $T$” if
+
+    $$
+    {f(x + T) = f(x)}
+    $$
+
+    for all $x \in \rr$.
+
+    |> Solution
+
+        We have
+        $$
+        \begin{align}
+        &amp;\,\,\, (\cos\cdot\sin)(x + 2\eta)\\
+        =&\,\,\, \up{1.2}\cos(x + 2\eta)\cdot\sin(x + 2\eta)\\
+        =&\,\,\, \up{1.2}(-\cos(x))\cdot(-\sin(x))\\
+        =&\,\,\, \up{1.2}\cos(x)\cdot\sin(x)\\
+        =&\,\,\, \up{1.2}(\cos\cdot\sin)(x)
+        \end{align}
+        $$
+        for all $x \in \rr$, using the fact that
+        $$
+        \cos(x + 2\eta) = -\cos(x)
+        $$
+        and
+        $$
+        \sin(x + 2\eta) = -\sin(x)
+        $$
+        for all $x \in \rr$, and, likewise,
+        $$
+        \begin{align}
+        &amp;\,\,\, \cos^2(x + 2\eta)\\
+        =&\,\,\, \up{1.2}\cos(x + 2\eta)\cdot\cos(x + 2\eta)\\
+        =&\,\,\, \up{1.2}(-\cos(x))\cdot(-\cos(x))\\
+        =&\,\,\, \up{1.2}\cos(x)\cdot\cos(x)\\
+        =&\,\,\, \up{1.2}\cos^2(x)
+        \end{align}
+        $$
+        for all $x \in \rr$, and
+        $$
+        \begin{align}
+        &amp;\,\,\, \sin^2(x + 2\eta)\\
+        =&\,\,\, \up{1.2}\sin(x + 2\eta)\cdot\sin(x + 2\eta)\\
+        =&\,\,\, \up{1.2}(-\sin(x))\cdot(-\sin(x))\\
+        =&\,\,\, \up{1.2}\sin(x)\cdot\sin(x)\\
+        =&\,\,\, \up{1.2}\sin^2(x)
+        \end{align}
+        $$
+        for all $x \in \rr$.
+
+        |> SolutionNote
+
+            Note that
+            $$
+            \te{“}\cos\cdot\sin\te{”}
+            $$
+            is a shorthand for
+            $$
+            \te{“}\rt{0.1}x \ra \cos(x)\sin(x)\rt{0.1}\te{”}
+            $$
+            (“the function that maps ...”), just as
+            $$
+            fg
+            $$
+            is a shorthand for [or really: “defined as”]
+            $$
+            x\ra f(x)g(x)
+            $$
+            more generally for all functions $f$, $g$. So when we plug
+            in an input to “$\cos\cdot\sin$”, as in...
+            $$
+            (\cos\cdot\sin)(x+2\eta)
+            $$
+            ...it unfolds to...
+            $$
+            \cos(x + 2\eta)\cdot\sin(x+2\eta)
+            $$
+            ...per the definition of function multiplication. (Etc.)
+            (We mean: likewise for “$\sin^2$” and “$\cos^2$”.)
+

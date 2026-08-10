@@ -1,0 +1,156 @@
+|> Exercise
+    handle=_cosx_to_cos^2x_via_graph_
+
+    It also seems from the graphs that $y = \cos^2(x)$
+    is a _sinusoid_, i.e., some combination of a
+    scaling and translation of $y = \cos(x)$:
+
+    |> Image
+        src=images/svg_ch5_ex_cos_and_cos2_comparison.svg
+
+    If so, what scaling and translation operations,
+    more exactly, can be conjectured to relate the
+    two graphs? Can you prove this geometric relationship
+    by algebra?
+
+    |> Solution
+
+        Since $\cos^2$ is periodic mod $2\eta$ while
+        $\cos$ is periodic mod $4\eta$,
+        we need, at the very least, a horizontal compression by
+        a factor $2$ in order to map the bumps of $y = \cos(x)$
+        onto those of $y = \cos^2(x)$. From there we have to
+        readjust the range and amplitude of the curve, such as,
+        e.g., by translating up by $1$ and scaling vertically
+        by ${1\over 2}$ (or scaling vertically by ${1\over 2}$
+        and translating up by ${1\over 2}$, either way):
+
+        |> Image
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_transformations_1.svg
+
+        Algebraically, the three steps above turn
+        $\cos(x)$ into $\cos(2x)$, into $1 + \cos(2x)$,
+        into ${1 + \cos(2x)\over 2}$:
+
+        $$
+        \Large\cos(x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_step1_cloud.svg
+            offset_x=4em
+
+        $$
+        \Large\cos(2x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_step2_cloud.svg
+            offset_x=4em
+
+        $$
+        \Large 1 + \cos(2x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+
+        |> ImageRight
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_step3_cloud.svg
+            offset_x=4em
+
+        $$
+        \Large{1 + \cos(2x)\over 2}
+        $$
+        as substituting “$2x$” for “$x$” effects a horizontal
+        compression by $2$.
+        (See
+        the second case
+        of Exercise 27, in particular.)
+
+        (NB: If we do it the other way around,
+        putting the vertical scaling before the vertical
+        translation, we obtain “${1\over 2}\cos(2x)$”
+        as the third function and “${1\over 2} + {1\over 2}\cos(2x)$”
+        as the fourth function:
+
+        $$
+        \Large\cos(x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+        $$
+        \Large\cos(2x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+        $$
+        \Large{1\over 2}\cos(2x)
+        $$
+        $$
+        \Large\downarrow
+        $$
+        $$
+        \Large{1\over 2} + {1\over 2}\cos(2x)
+        $$
+        ...which is same-same since
+        ${1\over 2} + {1\over 2}\cos(2x) = {1 + \cos(2x)\over 2}$.)
+
+        The issue for the second part of the problem is
+        therefore to prove that...
+
+        |> Boxed
+            $$
+            {1 + \cos(2x)\over 2} = \cos^2(x)
+            $$
+
+        ...by algebraic means.
+
+        For this we again use the angle-sum formula
+
+        $$
+        \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+        $$
+
+        for $\cos$, but with $A = B = x$, namely
+
+        $$
+        \begin{align*}
+        \cos(2x)
+        &= \cos(x + x) \\
+        &= \up{1.6} \cos(x)\cos(x) - \sin(x)\sin(x) \\
+        &= \up{1.6} \cos^2(x) - \sin^2(x)
+        \end{align*}
+        $$
+
+        which gives us
+
+        $$
+        \begin{align*}
+        {1 + \cos(2x)\over 2}
+        &= \up{2.0} {1 + \cos^2(x) - \sin^2(x) \over 2} \\
+        &= \up{2.0} {(1 - \sin^2(x)) + \cos^2(x)\over 2} \\
+        &= \up{2.0} {\cos^2(x) + \cos^2(x)\over 2} \\
+        &= \up{2.0} {2\cos^2(x)\over 2} \\
+        &= \up{2.0} \cos^2(x)
+        \end{align*}
+        $$
+
+        |> ImageLeft
+            src=images/svg_ch5_ex_cos_and_cos2_comparison_pythagorean_cloud.svg
+            offset_x= 3.4em
+            offset_y=3%
+
+        ...as conjectured!
+        (In particular, $\cos^2(x)$ truly _is_ a
+        sinusoid, as a result of all this, surprisingly
+        enough.)
+

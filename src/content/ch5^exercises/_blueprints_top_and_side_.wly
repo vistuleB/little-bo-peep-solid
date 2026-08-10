@@ -1,0 +1,77 @@
+|> Exercise
+    handle=_blueprints_top_and_side_
+
+    Compute the vertical distance from $A$ to $A'$
+    from the following set of blueprints for a shed with
+    an angled inside wall (all distances in inches):
+
+    |> Image
+        src=images/svg_ch5_ex_floorplan.svg
+
+    |> Solution
+
+        We will compute the two green lengths, then the
+        red length, then the blue length, then add 130:
+
+        |> Image
+            src=images/svg_ch5_ex_floorplan_soln1.svg
+
+        Proceeding, the longer and smaller green lengths
+        are $112\rt{0.1} \cdot \sin(25.5^\circ\hlfbk)$
+        and $8\rt{0.1} \cdot \cos(25.5^\circ\hlfbk)$ inches,
+        respectively:
+
+        |> Image
+            src=images/svg_ch5_ex_floorplan_soln2.svg
+
+        The red length is therefore
+
+        $$
+        \begin{align*}
+        &\,\,268 - 8 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk) \\
+        \up{1.6} =&\,\,260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)
+        \end{align*}
+        $$
+
+        (inches) while the blue length is
+
+        $$
+        \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+        $$
+
+        (inches) and the final answer is
+
+        $$
+        130 + \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
+        $$
+
+        inches, which comes out to
+
+        $$
+        212.65
+        $$
+
+        |> ImageLeft
+            src=images/svg_ch5_ex_floorplan_computation_cloud.svg
+            offset_x=10em
+
+        minus some. (Approximating to $1/100$-th of an inch
+        should be good enough for a construction site.)
+
+        |> SolutionNote
+
+            Note that...
+            $$
+            \cos(25.5^\circ) = 0.90258\dots
+            $$
+            $$
+            \sin(25.5^\circ) = 0.43051\dots
+            $$
+            $$
+            \tan(22^\circ) = 0.40402\dots
+            $$
+            ...and if you are not finding these values, then make sure
+            that your calculator is in “degree mode”.
+            (Otherwise you have to manually
+            convert the arguments to radians.)
+

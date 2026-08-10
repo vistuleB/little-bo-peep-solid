@@ -1,4 +1,4 @@
-import { HEADER_HEIGHT } from "~/constants";
+import { HAMBURGER_MENU_HEIGHT } from "~/constants";
 import { Store, useGlobalContext } from "~/store/StoreProvider";
 import HamburgerPanelTitle from "./HamburgerPanelTitle";
 import HamburgerPanelAuthorSuppliedContents from "./HamburgerPanelAuthorSuppliedContents";
@@ -30,16 +30,14 @@ const HamburgerPanel = () => {
       onTouchStart={() => toggle_scroll("hidden")}
       onTouchEnd={() => toggle_scroll("auto")}
       style={{
-        top: "var(--header-height)",
-        "min-height": `calc(100vh - ${HEADER_HEIGHT - 1.0}px)`,
-        height: `calc(100vh - ${HEADER_HEIGHT}px)`,
+        "min-height": `calc(100vh - ${HAMBURGER_MENU_HEIGHT - 1.0}px)`,
+        height: `calc(100vh - ${HAMBURGER_MENU_HEIGHT}px)`,
         transform: `translateX(${menu_closed() ? "100%" : "0"})`,
       }}
       onClick={(e) => {
         e.stopPropagation();
       }}
-      class="text-xl leading-3 sm:leading-5 z-50 fixed right-0 scrollbar-hidden select-none overscroll-none w-[17rem] sm:w-[20rem] bg-stone-100 overflow-y-scroll translate-y-0 sm:translate-y-[-1px] pt-[0.6em] px-[1em] [&ul]:mb-[8px] [&ul]:p-0"
-    >
+      class="text-xl leading-3 sm:leading-5 z-50 fixed right-0 top-14 scrollbar-hidden select-none overscroll-none w-[17rem] sm:w-[20rem] bg-stone-100 overflow-y-scroll translate-y-0 sm:translate-y-[-1px] pt-[0.6em] px-[1em] [&ul]:mb-[8px] [&ul]:p-0">
       <HamburgerPanelAuthorSuppliedContents />
       {env === "DEV" || env === "LOCAL" ? (
         <>
@@ -84,8 +82,7 @@ const Option = (props: { label: string; state_key: keyof Store }) => {
   return (
     <div
       id="option-btn"
-      class="flex justify-between items-center text-2xl pb-1.5 sm:pb-2"
-    >
+      class="flex justify-between items-center text-2xl pb-1.5 sm:pb-2">
       <p>{props.label}</p>
       <Checkbox
         value={state()}
@@ -114,8 +111,7 @@ const ClearCache = () => {
     <div
       id="clear-cache-btn"
       onClick={handleClear}
-      class="flex justify-between items-center text-2xl pb-1.5 sm:pb-2 cursor-pointer hover:text-blue-600"
-    >
+      class="flex justify-between items-center text-2xl pb-1.5 sm:pb-2 cursor-pointer hover:text-blue-600">
       <p>Clear Cache/Cookies</p>
       <div class="w-5 h-5 flex items-center justify-center">
         <svg
@@ -123,8 +119,7 @@ const ClearCache = () => {
           height="16"
           viewBox="0 0 24 24"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+          xmlns="http://www.w3.org/2000/svg">
           <path
             d="M19 7L18.1327 19.1425C18.0579 20.1891 17.187 21 16.1378 21H7.86224C6.81296 21 5.94208 20.1891 5.86732 19.1425L5 7M10 11V17M14 11V17M15 7V4C15 3.44772 14.5523 3 14 3H10C9.44772 3 9 3.44772 9 4V7M4 7H20"
             stroke="currentColor"
@@ -152,30 +147,26 @@ const Checkbox = (props: {
         props.value
           ? "bg-[#c1ebff] hover:bg-[#9ac1d3]"
           : "bg-white hover:bg-[#f3f3f3]"
-      }`}
-    >
+      }`}>
       {props.value && (
         <svg
           width="14"
           height="9"
           viewBox="0 0 13 13"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+          xmlns="http://www.w3.org/2000/svg">
           <rect
             width="2.09"
             height="7.33987"
             rx="1.045"
             transform="matrix(0.460058 -0.887889 0.625737 0.780034 0 6.85571)"
-            fill="white"
-          ></rect>
+            fill="white"></rect>
           <rect
             width="2.09"
             height="13.38"
             rx="1.045"
             transform="matrix(0.529272 0.848452 -0.560655 0.828049 11.5157 0)"
-            fill="white"
-          ></rect>
+            fill="white"></rect>
         </svg>
       )}
     </div>

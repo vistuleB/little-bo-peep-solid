@@ -1,0 +1,56 @@
+|> Exercise
+    handle=_scalar_times_vector_definition_
+
+    Similarly to Exercise 9, suggest a definition for
+    the product
+
+    $$
+    c\cdot\vec{v}
+    $$
+
+    of a vector $\vec{v}$ by a real number $c$.
+
+    |> Solution
+
+        We define
+
+        $$
+        c \cdot (v_x, v_y) = (c\rt{0.1}v_x, c\rt{0.1}v_y)
+        $$
+
+        for the product of a real number $c$ with a
+        vector $\vec{v} = (v_x, v_y) \in \rr^2$.
+        (Similarly for a vector of higher dimension—those
+        exist too.)
+
+        In other words, the product takes the constant
+        $c$ “inside”, multiplying each coordinate of
+        the vector by $c$.
+
+        |> Pause
+
+        _Example 1._ We have
+        $$
+        2 \cdot (10, 3.333) = (20, 6.666),
+        $$
+        applying the definition with $c = 2$,
+        $\vec{v} = (10, 3.333)$.
+
+        |> Pause
+
+        _Example 2._ We have
+        $$
+        2 \cdot (a, b) = (2a, 2b),
+        $$
+        for all $a, b \in \rr$, for an example
+        that is half-algebraic, half-numerical.
+
+        |> SolutionNote
+
+            In some sense, the vector “wins” over the
+            number, in that their conjoint baby is a vector,
+            not a number.
+
+            !! |> Image
+            !!     style=background-color:rgb(226 232 240)
+            !!     src=images/svg_ch5_ex_c_times_vector_box.svg

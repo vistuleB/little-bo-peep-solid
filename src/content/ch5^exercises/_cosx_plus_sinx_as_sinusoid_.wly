@@ -1,0 +1,174 @@
+|> Exercise
+    handle=_cosx_plus_sinx_as_sinusoid_
+
+    A geometric interpretation of
+    $\cos x + \sin x$ is given in Exercise >>_max_cosx_plus_sinx_new_new_ver_
+    that, to recap, involves “raining down at $-45^\circ$”
+    onto the $x$ axis, as illustrated here:
+
+    |> Image
+        src=images/e5_cosx_plus_sinx_as_geometric_cos_1_v2.svg
+
+    Using this geometric insight, how can we express
+    $x \ra \cos x + \sin x$ as a function of the form
+
+    $$
+    x \ra A\cdot\cos(Bx + C) + D
+    $$
+
+    for some constants $A$, $B$, $C$, $D$? (Deduce the answer
+    using geometry, and, if you have the heart, verify using
+    algebra.)
+
+    |> Solution
+
+        Imagine a large ruler living below the $x$ axis,
+        off of which we read the values of $\cos x + \sin x$:
+
+        |> Image
+            src=images/e5_cosx_plus_sinx_as_geometric_cos_2.svg
+
+        (This ruler contains just the same numbers as the $x$
+        axis in the same place, but need only go from $-\sqrt{2}$
+        to $\sqrt{2}$, those being the minimum and maximum values
+        of $\theta \ra \cos\theta + \sin\theta$, as covered in Exercise >>_max_cosx_plus_sinx_new_new_ver_.)
+        Alternately, we could read values off of a ruler placed
+        at $45^\circ$ through the circle...
+
+        |> Image
+            src=images/e5_cosx_plus_sinx_as_geometric_cos_3.svg
+
+        ...and then later multiply by $\sqrt{2}$, to recover the
+        original “scale” of the horizontal ruler. However, the
+        value on the diagonal ruler is
+
+        $$
+        \cos(x - \eta/2)
+        $$
+
+        as one can see by rotating the entire diagram $45^\circ$
+        clockwise until that ruler aligns with the $x$ axis;
+        therefore,
+
+        |> Boxed
+            $$
+            \cos x + \sin x = \sqrt{2}\cdot\cos(x - \eta/2)
+            $$
+
+        ...where you can think of the left-hand side of the
+        equation as the value on the original “big” horizontal
+        ruler (from $-\sqrt{2}$ to $\sqrt{2}$), and the value on
+        the right-hand side as the coordinate read off of the “small
+        diagonal ruler” re-normalized by the factor $\sqrt{2}$.
+        Concretely,
+
+        $$
+        \begin{gathered}
+        A = \sqrt{2},\\
+        B = \up{1.3}1,\\
+        C = \up{1.3}-\eta/2,\\
+        D = \up{1.3}0,
+        \end{gathered}
+        $$
+
+        as those parameters appear in the problem statement.
+
+        Now for the ALGEBRAIC VERIFICATION 
+        that can accompany this geometric observation, we
+        use the angle-sum formula
+
+        $$
+        \cos(A + B) = \cos A\cos B - \sin A\sin B
+        $$
+        for cosine, giving us...
+        $$
+        \begin{aligned}
+        &\,\, \sqrt{2}\cdot \cos(x - \eta/2) \\
+        \up{1.6} =&\,\, \sqrt{2}\cdot(\cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2)) \\
+        \up{1.6} =&\,\, \sqrt{2}\cdot(\cos(x)\sqrt{0.5} - \sin(x)(-\sqrt{0.5})) \\
+        \up{1.6} =&\,\, \sqrt{2}\cdot\sqrt{0.5}\cdot(\cos x + \sin x) \\
+        \up{1.6} =&\,\, \sqrt{2 \cdot 0.5}\cdot(\cos x + \sin x) \\
+        \up{1.6} =&\,\, \sqrt{1}\cdot(\cos x + \sin x) \\
+        \up{1.6} =&\,\, \cos x + \sin x
+        \end{aligned}
+        $$
+        !! ...absolute corroboration!!!!
+        ...victory!!
+
+        |> SolutionNote
+
+            The fact that
+            $$
+            \sqrt{2}\cdot \sqrt{0.5} = 1
+            $$
+            can also be seen from the fact that
+            $$
+            \sqrt{0.5} = {1\over \sqrt{2}}
+            $$
+            previously discussed.
+
+        |> SolutionNote
+
+            If we admit
+
+            $$
+            \cos(A - B) = \cos A\cos B + \sin A\sin B
+            $$
+
+            (replace $B$ by $-B$ in the angle-sum formula
+            for cosine, and use the fact that $\cos(-B) = \cos B$,
+            $\sin(-B) = -\sin B$ for all $B\in \rr$) into the
+            “roster of known formulas”, the algebraic proof
+            becomes...
+
+            $$
+            \begin{aligned}
+            &\,\, \sqrt{2}\cdot \cos(x - \eta/2) \\
+            \up{1.6} =&\,\, \sqrt{2}\cdot(\cos(x)\cos(\eta/2) + \sin(x)\sin(\eta/2)) \\
+            \up{1.6} =&\,\, \sqrt{2}\cdot(\cos(x)\sqrt{0.5} + \sin(x)\sqrt{0.5}) \\
+            \up{1.6} =&\,\, \sqrt{2}\cdot\sqrt{0.5}\cdot(\cos x + \sin x) \\
+            \up{1.6} =&\,\, \cos x + \sin x
+            \end{aligned}
+            $$
+
+            ...a bit simpler, with fewer ‘$-$’ signs in particular.
+
+        |> SolutionNote
+
+            Note that the graph...
+
+            $$
+            y = \sqrt{2}\cos(x - \eta/2)
+            $$
+
+            ...as it is the graph of the composition...
+
+            |> Image
+                src=images/e5_cosx_plus_sinx_as_geometric_cos_composition.svg
+
+            ...(cf. Exercise >>_four_compositions_graphed_) 
+            can be obtained from...
+
+            $$
+            y = \cos x
+            $$
+
+            ...by...
+
+            __1. translating horizontally by $\eta/2$ to the right__
+
+            __2. dilating vertically by $\sqrt{2}$__
+
+            ...and, on the other hand, if we take a look at the
+            previously “annotated” graph of $x \ra \cos x + \sin x$
+            (cf. Exercise >>_max_cosx_plus_sinx_new_new_ver_)...
+
+            |> Image
+                src=images/e5_cosx_plus_sinx_with_max_min_info_radian_version_without_arrows.svg
+
+            ...it certainly _looks like_ this curve could be obtained by
+            translating the graph $y = \cos x$ horizontally by
+            $\eta/2$ and then scaling vertically by $\sqrt{2}$. 
+            And it _looks_ so because it _is_ so!
+            (We know that, now, because we have proved that $\cos x + \sin x = \sqrt{2}\cos(x - \eta/2)$
+            for all $x \in \rr$.)

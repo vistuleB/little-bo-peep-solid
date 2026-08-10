@@ -1,0 +1,50 @@
+|> Exercise
+    handle=_M_L_T_rewrite_
+
+    Rewrite each of these expressions...
+    $$
+    \Large {L \over T}
+    $$
+    $$
+    \Large {M (L/T) \over T}
+    $$
+    $$
+    \Large \left.{ML \over T^2 } \right/ \left({L^2} {(L/T) \over L}\right)
+    $$
+    ...in the form...
+    $$
+    \Large M^aL^bT^c
+    $$
+    ...for some integer exponents $a$, $b$, $c$.
+
+    |> Solution
+
+        We have (#1)
+        $$
+        \Large {L \over T} = LT^{-1} = M^0L^1T^{-1}
+        $$
+        since
+        $$
+        \Large {L \over T} = L\cdot {1\over T} = LT^{-1}
+        $$
+        and (#2)
+        $$
+        \Large {M (L/T) \over T} = MLT^{-2} = M^1L^1T^{-2}
+        $$
+        since
+        $$
+        \Large {L/T \over T} = {L\over T}\cdot{1 \over T} = {L \over T^2} = LT^{-2}
+        $$
+        and (#3)
+        $$
+        \Large \left.{ML \over T^2 } \right/ \left({L^2} {(L/T) \over L}\right) = ML^{-1}T^{-1} = M^1L^{-1}T^{-1}
+        $$
+        since
+        $$
+        \Large L^2{L/T\over L} = L^2{1/T \over 1} = {L^2\over T}
+        $$
+        and
+        $$
+        \Large \left.{ML \over T^2 } \right/ {L^2\over T} = {ML\over T^2}\cdot {T\over L^2} = {M \over TL} = MT^{-1}L^{-1}
+        $$
+        given that ${1\over T} = T^{-1}$, ${1\over L}=L^{-1}$.

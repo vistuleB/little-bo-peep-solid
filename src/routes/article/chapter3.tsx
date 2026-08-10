@@ -9,7 +9,6 @@ import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
 import { Item }  from "~/components/List";
 import { MathBlock, Math }  from "~/components/Math";
-import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
@@ -25,8 +24,7 @@ export default function __Chapter3__() {
       nextPage="/article/chapter4"
       pageNecessaryMargin={700}
       maxElementWidth={1500}
-      id="_56_h.a.i_"
-      path="/article/chapter3"
+      id="_55_h.a.i_"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -156,11 +154,7 @@ export default function __Chapter3__() {
           “input tube” and an “output tube”:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/tYyP.svg"
-          intrinsicWidth={380}
-          intrinsicHeight="194.762"
-        />
+        <Image src="/build-img/svgo-svg/tYyP.svg" />
         <Pause />
         <OuterP>
           An input goes in via the input tube, is
@@ -367,9 +361,9 @@ export default function __Chapter3__() {
 }
 
 const Rest = () => {
-  const visibleRestSections = useShowMore(13);
+  const showMore = useShowMore();
   return <>
-    {visibleRestSections() > 0 && <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -538,8 +532,6 @@ const Rest = () => {
           with other existing variable names.)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -656,8 +648,6 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -716,8 +706,6 @@ const Rest = () => {
           .)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -758,22 +746,14 @@ const Rest = () => {
           For example, here is a graph of VX-11/78A:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/46Oh.svg"
-          intrinsicWidth={387}
-          intrinsicHeight="282.8"
-        />
+        <Image src="/build-img/svgo-svg/46Oh.svg" />
         <Pause />
         <OuterP>
           The graph has only two points, because VX-78/11A
           is defined at only two values. One point is...
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/cPmR.svg"
-          intrinsicWidth="377.288"
-          intrinsicHeight={320}
-        />
+        <Image src="/build-img/svgo-svg/cPmR.svg" />
         <Pause />
         <OuterP>
           <NoBreak>
@@ -798,11 +778,7 @@ const Rest = () => {
           {" "} while the other point is...
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/XImO.svg"
-          intrinsicWidth="377.288"
-          intrinsicHeight={320}
-        />
+        <Image src="/build-img/svgo-svg/XImO.svg" />
         <Pause />
         <OuterP>
           <NoBreak>
@@ -854,11 +830,7 @@ const Rest = () => {
             </NoBreak>
           </OuterP>
           <Pause />
-          <Image
-            src="/build-img/svgo-svg/AAZw.svg"
-            intrinsicWidth={520}
-            intrinsicHeight="299.06931"
-          />
+          <Image src="/build-img/svgo-svg/AAZw.svg" />
           <Pause />
           <OuterP>
             Among all the points on this graph that we
@@ -872,11 +844,7 @@ const Rest = () => {
             </NoBreak>
           </OuterP>
           <Pause />
-          <Image
-            src="/build-img/svgo-svg/ZMm9.svg"
-            intrinsicWidth={520}
-            intrinsicHeight={325}
-          />
+          <Image src="/build-img/svgo-svg/ZMm9.svg" />
           <Pause />
           <OuterP>
             ...which finds itself on the graph, namely,
@@ -895,15 +863,11 @@ const Rest = () => {
             <ImageLeft
               src="/build-img/svgo-svg/-OE8.svg"
               line={-1}
-              offsetY="0em"
-              intrinsicWidth="500.723"
-              intrinsicHeight="125.248"
+              offset_y="0em"
             />
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -1057,9 +1021,9 @@ const Rest = () => {
           <Pause />
           <MathBlock>
             $$
-            \begin&#123;align*&#125;
+            \begin&#123;align&#125;
             \dom\, g &amp;\,=\, [1, \infty)
-            \end&#123;align*&#125;
+            \end&#123;align&#125;
             $$
           </MathBlock>
           <Pause />
@@ -1089,8 +1053,6 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -1225,8 +1187,6 @@ const Rest = () => {
           following the pattern above.
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1293,11 +1253,7 @@ const Rest = () => {
           For example, this particular graph...
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/s-jo.svg"
-          intrinsicWidth={365}
-          intrinsicHeight="249.26"
-        />
+        <Image src="/build-img/svgo-svg/s-jo.svg" />
         <Pause />
         <OuterP>
           is a function graph (or locally at least, from
@@ -1306,16 +1262,10 @@ const Rest = () => {
           graph...
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/cybh.svg"
-          intrinsicWidth={330}
-          intrinsicHeight="312.189"
-        >
+        <Image src="/build-img/svgo-svg/cybh.svg">
           <ImageRight
             src="/build-img/svgo-svg/1ANB.svg"
-            offsetX="2em"
-            intrinsicWidth={400}
-            intrinsicHeight="336.934"
+            offset_x="2em"
           />
         </Image>
         <Pause />
@@ -1333,8 +1283,6 @@ const Rest = () => {
         <Image
           src="/build-img/svgo-svg/hvxw.svg"
           class="pt-4 mb-3"
-          intrinsicWidth={430}
-          intrinsicHeight="199.257"
         />
         <Pause />
         <OuterP>
@@ -1360,11 +1308,7 @@ const Rest = () => {
             {" "} of unit radius...
           </OuterP>
           <Pause />
-          <Image
-            src="/build-img/svgo-svg/cyb_.svg"
-            intrinsicWidth={410}
-            intrinsicHeight={270}
-          />
+          <Image src="/build-img/svgo-svg/cyb_.svg" />
           <Pause />
           <OuterP>
             ...passes the vertical line test, and, hence,
@@ -1381,22 +1325,14 @@ const Rest = () => {
             This graph defines a function...
           </OuterP>
           <Pause />
-          <Image
-            src="/build-img/svgo-svg/LBjA.svg"
-            intrinsicWidth={540}
-            intrinsicHeight={250}
-          />
+          <Image src="/build-img/svgo-svg/LBjA.svg" />
           <Pause />
           <OuterP>
             ...because it passes the vertical line test,
             while this graph does not define a function...
           </OuterP>
           <Pause />
-          <Image
-            src="/build-img/svgo-svg/ywM5.svg"
-            intrinsicWidth={540}
-            intrinsicHeight={250}
-          />
+          <Image src="/build-img/svgo-svg/ywM5.svg" />
           <Pause />
           <OuterP>
             ...because it does {" "}
@@ -1408,8 +1344,6 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 7 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -1467,18 +1401,12 @@ const Rest = () => {
           {" "} as pictured here:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/VnBq.svg"
-          intrinsicWidth={500}
-          intrinsicHeight="342.704"
-        />
+        <Image src="/build-img/svgo-svg/VnBq.svg" />
         <Pause />
         <OuterP>
           (Pretty cool, no?)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 8 && <>
       <Pause />
       <Section id="section-10">
         <OuterP>
@@ -1680,8 +1608,6 @@ const Rest = () => {
           useful.)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 9 && <>
       <Pause />
       <Section id="section-11">
         <OuterP>
@@ -1780,8 +1706,6 @@ const Rest = () => {
           as a “function”, arrow or no arrow.
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 10 && <>
       <Pause />
       <Section id="section-12">
         <OuterP>
@@ -1898,7 +1822,7 @@ const Rest = () => {
           table:
         </OuterP>
         <Pause />
-        <MathBlock id="_33_h.a.i_">
+        <MathBlock>
           $$
           \begin&#123;array&#125;&#123;c|c|c&#125;
           \,\,\,\,\te&#123;degree&#125;\,\,\,\, &amp; \te&#123;name&#125; &amp; \,\,\,\,\te&#123;example&#125;\,\,\,\,\Rule&#123;0pt&#125;&#123;0.8em&#125;&#123;0.5em&#125; \\ \hline
@@ -1962,12 +1886,8 @@ const Rest = () => {
         <Image
           style="margin-top:-0.6em;margin-bottom:-0.4em"
           src="/build-img/svgo-svg/wfGL.svg"
-          intrinsicWidth={500}
-          intrinsicHeight={405}
         />
       </Section>
-    </>}
-    {visibleRestSections() > 11 && <>
       <Pause />
       <Section id="section-13">
         <OuterP>
@@ -2014,9 +1934,7 @@ const Rest = () => {
           $$
           <ImageRight
             src="/build-img/svgo-svg/RUvM.svg"
-            atLeastAsWide={true}
-            intrinsicWidth={700}
-            intrinsicHeight={200}
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -2064,11 +1982,9 @@ const Rest = () => {
           $$
           <ImageRight
             src="/build-img/svgo-svg/cqgI.svg"
-            offsetY="0.2em"
-            offsetX="-0.1em"
-            atLeastAsWide={true}
-            intrinsicWidth={700}
-            intrinsicHeight={200}
+            offset_y="0.2em"
+            offset_x="-0.1em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -2089,11 +2005,9 @@ const Rest = () => {
           $$
           <ImageRight
             src="/build-img/svgo-svg/Aq5Q.svg"
-            offsetX="0em"
-            offsetY="0.2em"
-            atLeastAsWide={true}
-            intrinsicWidth={700}
-            intrinsicHeight={200}
+            offset_x="0em"
+            offset_y="0.2em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -2112,17 +2026,14 @@ const Rest = () => {
           {" "} namely.
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 12 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}
-        mode="dual"
         show_curlicue={true}
-        id="_55_h.a.i_"
+        id="_54_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_34_h.a.i_">
+          <ExerciseStatement id="_33_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2163,7 +2074,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_35_h.a.i_">
+          <ExerciseStatement id="_34_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -2215,7 +2126,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={3}>
-          <ExerciseStatement id="_36_h.a.i_">
+          <ExerciseStatement id="_35_h.a.i_">
             <OuterP>
               <b>
                 Exercise 3.
@@ -2297,7 +2208,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={4}>
-          <ExerciseStatement id="_37_h.a.i_">
+          <ExerciseStatement id="_36_h.a.i_">
             <OuterP>
               <b>
                 Exercise 4.
@@ -2374,11 +2285,7 @@ const Rest = () => {
               {" "} in your formula:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/DEja.svg"
-              intrinsicWidth={580}
-              intrinsicHeight="248.057"
-            />
+            <Image src="/build-img/svgo-svg/DEja.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2408,11 +2315,7 @@ const Rest = () => {
               staircase-shaped graph:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Ymia.svg"
-              intrinsicWidth={580}
-              intrinsicHeight="582.018"
-            />
+            <Image src="/build-img/svgo-svg/Ymia.svg" />
             <Pause />
             <OuterP>
               (For example, {" "}
@@ -2457,11 +2360,7 @@ const Rest = () => {
               roof” graph in the statement, are equal:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Mfbc.svg"
-              intrinsicWidth={450}
-              intrinsicHeight="246.087"
-            />
+            <Image src="/build-img/svgo-svg/Mfbc.svg" />
             <Pause />
             <OuterP>
               The red dot to the left of {" "}
@@ -2530,7 +2429,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={5}>
-          <ExerciseStatement id="_38_h.a.i_">
+          <ExerciseStatement id="_37_h.a.i_">
             <OuterP>
               <b>
                 Exercise 5.
@@ -2549,11 +2448,7 @@ const Rest = () => {
               {" "} as a building block:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/9u3r.svg"
-              intrinsicWidth={680}
-              intrinsicHeight="236.662"
-            />
+            <Image src="/build-img/svgo-svg/9u3r.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2568,7 +2463,7 @@ const Rest = () => {
               </NoBreak>
               {" "} apply the function from {" "}
               <InChapterLink
-                href="/article/chapter3#_37_h.a.i_"
+                href="/article/chapter3#_36_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 4
@@ -2576,11 +2471,7 @@ const Rest = () => {
               &#8288;):
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Kgso.svg"
-              intrinsicWidth={680}
-              intrinsicHeight={720}
-            />
+            <Image src="/build-img/svgo-svg/Kgso.svg" />
             <Pause />
             <OuterP>
               Indeed, the two graphs featured above differ
@@ -2630,7 +2521,7 @@ const Rest = () => {
               {" "}
               (the formula for the function from {" "}
               <InChapterLink
-                href="/article/chapter3#_37_h.a.i_"
+                href="/article/chapter3#_36_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 4
@@ -2651,8 +2542,6 @@ const Rest = () => {
               <Image
                 src="/build-img/jpg/pc6h.jpg"
                 width="1400px"
-                intrinsicWidth={3840}
-                intrinsicHeight={2022}
               />
             </SolutionNote>
             <Pause />
@@ -2669,8 +2558,6 @@ const Rest = () => {
               <Image
                 src="/build-img/jpg/FUw3.jpg"
                 width="1400px"
-                intrinsicWidth={3840}
-                intrinsicHeight={2022}
               />
               <Pause />
               <OuterP>
@@ -2680,8 +2567,6 @@ const Rest = () => {
               <Image
                 src="/build-img/jpg/Gowo.jpg"
                 width="1400px"
-                intrinsicWidth={3840}
-                intrinsicHeight={2022}
               />
               <Pause />
               <OuterP>
@@ -2709,11 +2594,7 @@ const Rest = () => {
                 a function...
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/TgEh.svg"
-                intrinsicWidth={380}
-                intrinsicHeight="194.762"
-              />
+              <Image src="/build-img/svgo-svg/TgEh.svg" />
               <Pause />
               <OuterP>
                 ...(compared to the drawing at the top of the
@@ -2777,11 +2658,7 @@ const Rest = () => {
                 {" "} box, like so:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/FwQo.svg"
-                intrinsicWidth={470}
-                intrinsicHeight={180}
-              />
+              <Image src="/build-img/svgo-svg/FwQo.svg" />
               <Pause />
               <OuterP>
                 In other words, {" "}
@@ -2803,11 +2680,7 @@ const Rest = () => {
                 (To be perfectly clear,
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/5UVl.svg"
-                intrinsicWidth={640}
-                intrinsicHeight="120.492"
-              />
+              <Image src="/build-img/svgo-svg/5UVl.svg" />
               <Pause />
               <OuterP>
                 <Math>
@@ -3012,7 +2885,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={6}>
-          <ExerciseStatement id="_39_h.a.i_">
+          <ExerciseStatement id="_38_h.a.i_">
             <OuterP>
               <b>
                 Exercise 6.
@@ -3022,11 +2895,7 @@ const Rest = () => {
               like these:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/e9Dt.svg"
-              intrinsicWidth={620}
-              intrinsicHeight="826.662"
-            />
+            <Image src="/build-img/svgo-svg/e9Dt.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -3057,7 +2926,7 @@ const Rest = () => {
               because all we have to do is to multiply
               {" "}
               <InChapterLink
-                href="/article/chapter3#_38_h.a.i_"
+                href="/article/chapter3#_37_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 5
@@ -3083,7 +2952,7 @@ const Rest = () => {
             <OuterP>
               because the problem is similar to {" "}
               <InChapterLink
-                href="/article/chapter3#_38_h.a.i_"
+                href="/article/chapter3#_37_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 5
@@ -3101,21 +2970,13 @@ const Rest = () => {
               here:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/E5ox.svg"
-              intrinsicWidth={620}
-              intrinsicHeight="236.662"
-            />
+            <Image src="/build-img/svgo-svg/E5ox.svg" />
             <Pause />
             <OuterP>
               And that formula is...
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/mS6k.svg"
-              intrinsicWidth={620}
-              intrinsicHeight="670.662"
-            />
+            <Image src="/build-img/svgo-svg/mS6k.svg" />
             <Pause />
             <OuterP>
               ...iiiiiiiS...
@@ -3174,8 +3035,6 @@ const Rest = () => {
                   src="/build-img/svgo-svg/X25H.svg"
                   width="0.9em"
                   bottom="0.15em"
-                  intrinsicWidth={24}
-                  intrinsicHeight={24}
                 />
                 ” {" "}
               </NoBreak>
@@ -3186,8 +3045,6 @@ const Rest = () => {
                   src="/build-img/svgo-svg/7n38.svg"
                   width="0.9em"
                   bottom="0.15em"
-                  intrinsicWidth={24}
-                  intrinsicHeight={24}
                 />
                 ”, {" "}
               </NoBreak>
@@ -3230,7 +3087,7 @@ const Rest = () => {
           ref="rence"
           number={7}
         >
-          <ExerciseStatement id="_40_h.a.i_">
+          <ExerciseStatement id="_39_h.a.i_">
             <OuterP>
               <b>
                 Exercise 7.
@@ -3257,11 +3114,7 @@ const Rest = () => {
               is a function whose graph looks like so...
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/PlXB.svg"
-              intrinsicWidth="1044.726"
-              intrinsicHeight="173.523"
-            />
+            <Image src="/build-img/svgo-svg/PlXB.svg" />
             <Pause />
             <OuterP>
               ...then does the function...
@@ -3298,11 +3151,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/u0Dn.svg"
-              intrinsicWidth="1043.52"
-              intrinsicHeight="490.519"
-            />
+            <Image src="/build-img/svgo-svg/u0Dn.svg" />
             <Pause />
             <OuterP>
               By the first step, a
@@ -3374,7 +3223,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={8}>
-          <ExerciseStatement id="_41_h.a.i_">
+          <ExerciseStatement id="_40_h.a.i_">
             <OuterP>
               <b>
                 Exercise 8.
@@ -3495,10 +3344,9 @@ const Rest = () => {
               in (AA) yields
               <ImageLeft
                 src="/build-img/svgo-svg/o1Hy.svg"
+                popup={true}
                 line={1}
-                offsetX="1em"
-                intrinsicWidth={400}
-                intrinsicHeight={200}
+                offset_x="1em"
               />
             </OuterP>
             <div style="font-size:1.1em;margin:0.8em 0em;">
@@ -3552,16 +3400,12 @@ const Rest = () => {
                 into a single string of equalities:
               </OuterP>
               <Pause />
-              <Image
-                src="/build-img/svgo-svg/yd6x.svg"
-                intrinsicWidth={450}
-                intrinsicHeight={105}
-              />
+              <Image src="/build-img/svgo-svg/yd6x.svg" />
             </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={9}>
-          <ExerciseStatement id="_43_h.a.i_">
+          <ExerciseStatement id="_42_h.a.i_">
             <OuterP>
               <b>
                 Exercise 9.
@@ -3569,7 +3413,7 @@ const Rest = () => {
               {" "}
               Same question as {" "}
               <InChapterLink
-                href="/article/chapter3#_41_h.a.i_"
+                href="/article/chapter3#_40_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 8
@@ -3604,11 +3448,7 @@ const Rest = () => {
               world:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/9213.svg"
-              intrinsicWidth={330}
-              intrinsicHeight={105}
-            />
+            <Image src="/build-img/svgo-svg/9213.svg" />
             <Pause />
             <OuterP>
               So the first step is...
@@ -3896,11 +3736,7 @@ const Rest = () => {
               <Pause />
               <CentralDisplayItalic>
                 associativity
-                <ImageRight
-                  src="/build-img/svgo-svg/Y_jZ.svg"
-                  intrinsicWidth={550}
-                  intrinsicHeight={200}
-                />
+                <ImageRight src="/build-img/svgo-svg/Y_jZ.svg" />
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
@@ -3926,8 +3762,6 @@ const Rest = () => {
               <Image
                 width="550px"
                 src="/build-img/svgo-svg/ioa4.svg"
-                intrinsicWidth={800}
-                intrinsicHeight={550}
               />
               <Pause />
               <OuterP>
@@ -4019,8 +3853,6 @@ const Rest = () => {
                   src="/build-img/svgo-svg/2mo1.svg"
                   width="1rem"
                   top="-3px"
-                  intrinsicWidth="6.7"
-                  intrinsicHeight="7.5"
                 />
                 <Math>
                   $\Large&#123;&#125;) =$
@@ -4031,8 +3863,6 @@ const Rest = () => {
                   top="-3px"
                   marginLeft=".5rem"
                   marginRight=".5rem"
-                  intrinsicWidth="7.4"
-                  intrinsicHeight="7.2"
                 />
               </CentralDisplay>
               <Pause />
@@ -4042,8 +3872,6 @@ const Rest = () => {
                   src="/build-img/svgo-svg/2mo1.svg"
                   width="1rem"
                   top="-4px"
-                  intrinsicWidth="6.7"
-                  intrinsicHeight="7.5"
                 />
                 {" "} in set {" "}
                 <Math>
@@ -4054,8 +3882,6 @@ const Rest = () => {
                   src="/build-img/svgo-svg/5zgu.svg"
                   width="1.25rem"
                   top="-4px"
-                  intrinsicWidth="7.4"
-                  intrinsicHeight="7.2"
                 />
                 {" "} in set {" "}
                 <NoBreak>
@@ -4075,8 +3901,6 @@ const Rest = () => {
                   src="/build-img/svgo-svg/2mo1.svg"
                   width="1rem"
                   top="-3px"
-                  intrinsicWidth="6.7"
-                  intrinsicHeight="7.5"
                 />
                 <Math>
                   $\Large&#123;&#125;)) =$
@@ -4087,8 +3911,6 @@ const Rest = () => {
                   top="-4px"
                   marginLeft=".5rem"
                   marginRight=".5rem"
-                  intrinsicWidth="8.905"
-                  intrinsicHeight="4.1"
                 />
               </CentralDisplay>
               <Pause />
@@ -4099,8 +3921,6 @@ const Rest = () => {
                   src="/build-img/svgo-svg/5zgu.svg"
                   width="1.25rem"
                   top="-4px"
-                  intrinsicWidth="7.4"
-                  intrinsicHeight="7.2"
                 />
                 {" "} in set {" "}
                 <Math>
@@ -4111,8 +3931,6 @@ const Rest = () => {
                   src="/build-img/svgo-svg/Ixme.svg"
                   width="2.3rem"
                   top="-4px"
-                  intrinsicWidth="8.905"
-                  intrinsicHeight="4.1"
                 />
                 {" "} in set {" "}
                 <NoBreak>
@@ -4146,8 +3964,6 @@ const Rest = () => {
               <Image
                 src="/build-img/svgo-svg/FiSv.svg"
                 width="1600px"
-                intrinsicWidth="2474.612"
-                intrinsicHeight="1272.471"
               />
               <Pause />
               <OuterP>
@@ -4165,8 +3981,6 @@ const Rest = () => {
               <Image
                 src="/build-img/svgo-svg/WdCb.svg"
                 width="1600px"
-                intrinsicWidth="2474.612"
-                intrinsicHeight="1272.471"
               />
               <Pause />
               <OuterP>
@@ -4226,7 +4040,7 @@ const Rest = () => {
               </OuterP>
             </SolutionNote>
             <Pause />
-            <SolutionNote id="_42_h.a.i_">
+            <SolutionNote id="_41_h.a.i_">
               <OuterP>
                 <i>
                   Note 6.
@@ -4334,7 +4148,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={10}>
-          <ExerciseStatement id="_44_h.a.i_">
+          <ExerciseStatement id="_43_h.a.i_">
             <OuterP>
               <b>
                 Exercise 10.
@@ -4395,11 +4209,11 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
+              \begin&#123;align&#125;
               \,\,\,\,(x + 5)^2
               &amp;= x^2 + (2\cdot 5)x + 5^2 \\
               &amp;= \up&#123;1.4&#125; x^2 + 10x + 25
-              \end&#123;align*&#125;
+              \end&#123;align&#125;
               $$
             </MathBlock>
             <Pause />
@@ -4419,7 +4233,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={11}>
-          <ExerciseStatement id="_45_h.a.i_">
+          <ExerciseStatement id="_44_h.a.i_">
             <OuterP>
               <b>
                 Exercise 11.
@@ -4427,7 +4241,7 @@ const Rest = () => {
               {" "}
               Solve {" "}
               <InChapterLink
-                href="/article/chapter3#_44_h.a.i_"
+                href="/article/chapter3#_43_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
@@ -4647,7 +4461,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={12}>
-          <ExerciseStatement id="_46_h.a.i_">
+          <ExerciseStatement id="_45_h.a.i_">
             <OuterP>
               <b>
                 Exercise 12.
@@ -4671,7 +4485,7 @@ const Rest = () => {
               </NoBreak>
               {" "} {" "}
               <InChapterLink
-                href="/article/chapter3#_44_h.a.i_"
+                href="/article/chapter3#_43_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
@@ -4699,7 +4513,7 @@ const Rest = () => {
             <OuterP>
               by {" "}
               <InChapterLink
-                href="/article/chapter3#_44_h.a.i_"
+                href="/article/chapter3#_43_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
@@ -4721,7 +4535,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={13}>
-          <ExerciseStatement id="_47_h.a.i_">
+          <ExerciseStatement id="_46_h.a.i_">
             <OuterP>
               <b>
                 Exercise 13.
@@ -4810,7 +4624,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={14}>
-          <ExerciseStatement id="_48_h.a.i_">
+          <ExerciseStatement id="_47_h.a.i_">
             <OuterP>
               <b>
                 Exercise 14.
@@ -5312,7 +5126,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={15}>
-          <ExerciseStatement id="_49_h.a.i_">
+          <ExerciseStatement id="_48_h.a.i_">
             <OuterP>
               <b>
                 Exercise 15.
@@ -5438,8 +5252,6 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/kIUQ.svg"
               width="660px"
-              intrinsicWidth={610}
-              intrinsicHeight={340}
             />
             <Pause />
             <OuterP>
@@ -5460,8 +5272,6 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/gYAV.svg"
               width="660px"
-              intrinsicWidth={610}
-              intrinsicHeight={340}
             />
             <Pause />
             <OuterP>
@@ -5482,8 +5292,6 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/cfTn.svg"
               width="660px"
-              intrinsicWidth={620}
-              intrinsicHeight={340}
             />
             <Pause />
             <OuterP>
@@ -5510,8 +5318,6 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/L9MD.svg"
               width="660px"
-              intrinsicWidth={610}
-              intrinsicHeight={340}
             />
             <Pause />
             <OuterP>
@@ -5528,7 +5334,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={16}>
-          <ExerciseStatement id="_50_h.a.i_">
+          <ExerciseStatement id="_49_h.a.i_">
             <OuterP>
               <b>
                 Exercise 16.
@@ -5728,7 +5534,7 @@ const Rest = () => {
               {" "} by the following
               sequence of transformations (cf. {" "}
               <InChapterLink
-                href="/article/chapter3#_48_h.a.i_"
+                href="/article/chapter3#_47_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
@@ -5761,7 +5567,7 @@ const Rest = () => {
               (We put the vertical translation first.)
               By {" "}
               <InChapterLink
-                href="/article/chapter3#_49_h.a.i_"
+                href="/article/chapter3#_48_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 15
@@ -5881,7 +5687,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={17}>
-          <ExerciseStatement id="_51_h.a.i_">
+          <ExerciseStatement id="_50_h.a.i_">
             <OuterP>
               <b>
                 Exercise 17.
@@ -6127,7 +5933,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={18}>
-          <ExerciseStatement id="_52_h.a.i_">
+          <ExerciseStatement id="_51_h.a.i_">
             <OuterP>
               <b>
                 Exercise 18.
@@ -6205,7 +6011,7 @@ const Rest = () => {
             <OuterP>
               and, similarly to {" "}
               <InChapterLink
-                href="/article/chapter3#_48_h.a.i_"
+                href="/article/chapter3#_47_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
@@ -6269,7 +6075,7 @@ const Rest = () => {
               </NoBreak>
               {" "} of {" "}
               <InChapterLink
-                href="/article/chapter3#_48_h.a.i_"
+                href="/article/chapter3#_47_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
@@ -6280,7 +6086,7 @@ const Rest = () => {
             <OuterP class="indent-10">
               By direct analogy with {" "}
               <InChapterLink
-                href="/article/chapter3#_48_h.a.i_"
+                href="/article/chapter3#_47_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
@@ -6341,7 +6147,7 @@ const Rest = () => {
           </Solution>
         </Exercise>
         <Exercise number={19}>
-          <ExerciseStatement id="_53_h.a.i_">
+          <ExerciseStatement id="_52_h.a.i_">
             <OuterP>
               <b>
                 Exercise 19.
@@ -6494,7 +6300,7 @@ const Rest = () => {
             <OuterP>
               by {" "}
               <InChapterLink
-                href="/article/chapter3#_49_h.a.i_"
+                href="/article/chapter3#_48_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 15
@@ -6578,19 +6384,19 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 as briefly flashed by, e.g., in {" "}
-                <OutChapterLink
+                <a
                   href="/article/chapter1#_25_h.a.i_"
                   class="out-chapter-link"
                 >
                   Chapter 1
-                </OutChapterLink>
-                .
+                </a>
+                &#8288;.
               </OuterP>
             </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={20}>
-          <ExerciseStatement id="_54_h.a.i_">
+          <ExerciseStatement id="_53_h.a.i_">
             <OuterP>
               <b>
                 Exercise 20.
@@ -6639,11 +6445,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/WvHW.svg"
-              intrinsicWidth="92.755"
-              intrinsicHeight="43.071"
-            />
+            <Image src="/build-img/svgo-svg/WvHW.svg" />
             <Pause />
             <OuterP>
               ...and {" "}
@@ -6665,11 +6467,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/F0A4.svg"
-              intrinsicWidth="186.776"
-              intrinsicHeight="43.071"
-            />
+            <Image src="/build-img/svgo-svg/F0A4.svg" />
             <Pause />
             <OuterP>
               ...; in an expression such as...
@@ -6695,11 +6493,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Kg7y.svg"
-              intrinsicWidth="139.88"
-              intrinsicHeight="43.071"
-            />
+            <Image src="/build-img/svgo-svg/Kg7y.svg" />
             <Pause />
             <OuterP>
               ...and {" "}
@@ -6721,11 +6515,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/tRsN.svg"
-              intrinsicWidth="328.153"
-              intrinsicHeight="43.071"
-            />
+            <Image src="/build-img/svgo-svg/tRsN.svg" />
             <Pause />
             <OuterP>
               ...(in this case the result is not a number,
@@ -6762,11 +6552,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/HuXq.svg"
-              intrinsicWidth="162.11"
-              intrinsicHeight="43.071"
-            />
+            <Image src="/build-img/svgo-svg/HuXq.svg" />
             <Pause />
             <OuterP>
               ...and {" "}
@@ -6796,11 +6582,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/1gJS.svg"
-              intrinsicWidth="364.775"
-              intrinsicHeight="43.071"
-            />
+            <Image src="/build-img/svgo-svg/1gJS.svg" />
             <Pause />
             <OuterP>
               ...; now in an expression such as...
@@ -6849,11 +6631,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/1JTc.svg"
-              intrinsicWidth="388.081"
-              intrinsicHeight="62.066"
-            />
+            <Image src="/build-img/svgo-svg/1JTc.svg" />
             <Pause />
             <OuterP>
               ...and {" "}
@@ -6898,11 +6676,7 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/-AHn.svg"
-              intrinsicWidth="683.627"
-              intrinsicHeight="65.065"
-            />
+            <Image src="/build-img/svgo-svg/-AHn.svg" />
             <Pause />
             <OuterP>
               ...; evaluating...

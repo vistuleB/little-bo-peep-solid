@@ -1,0 +1,23 @@
+|> Exercise
+    handle=_kilometers_per_millimeter_
+
+    How many millimeters in a kilometer?
+    How many kilometers in a millimeter?
+
+    |> Solution
+
+        There are $10^3$ millimeters in a meter
+        (_milli_ = thousandth) and $10^3$ meters
+        in a kilometer, so there are
+        $10^3 \times 10^3 = 10^6$
+        millimeters in a kilometer.
+
+        From there, it automatically follows that
+        there are $1/10^6 = 10^{-6}$ kilometers in
+        a millimeter.
+
+        (Or you can run the reverse reasoning:
+        There are $10^{-3}$ kilometers in a meter,
+        and $10^{-3}$ meters in a millimeter,
+        so $10^{-3} \times 10^{-3} = 10^{-6}$
+        kilometers in a millimeter.)

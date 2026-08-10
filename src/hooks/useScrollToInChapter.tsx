@@ -1,5 +1,7 @@
 import { useContext } from "solid-js";
-import { StoreContext } from "~/store/ExercisesStoreProvider";
+import {
+  StoreContext,
+} from "~/store/ExercisesStoreProvider";
 import { useExerciseGroupRegistry } from "~/store/ExerciseGroupRegistryProvider";
 import elementPosOnPage from "../utils/elementPosOnPage";
 import smoothScrollTo from "../utils/smoothScrollTo";
@@ -119,7 +121,7 @@ const useScrollToInChapter = () => {
     return scrollTo;
   };
 
-  const scrollToInChapter = (
+  const scrollToInChapter = async (
     targetId: string,
     scrollDuration: number = 100,
   ) => {
@@ -127,7 +129,7 @@ const useScrollToInChapter = () => {
     target = exercisesEdgeCase(target);
 
     if (!isInsideElementWithClass("exercise", target)) {
-      return smoothScrollTo(
+      smoothScrollTo(
         firstSectionEdgeCase(target) ? 0 : addSafeMarginForLongTarget(target),
         store.animations ? scrollDuration : 0,
       );
@@ -145,12 +147,12 @@ const useScrollToInChapter = () => {
             return { ...exercise, solution_open: true };
           }
           return exercise;
-        }),
+        })
       );
     }
 
     if (groupCtx?.exercises_store.list_view) {
-      return smoothScrollTo(
+      smoothScrollTo(
         addSafeMarginForLongTarget(target),
         store.animations ? scrollDuration : 0,
       );
@@ -163,12 +165,12 @@ const useScrollToInChapter = () => {
       (target.getBoundingClientRect().top < 0 ||
         target.getBoundingClientRect().bottom > store.innerHeight)
     ) {
-      return smoothScrollTo(
+      smoothScrollTo(
         addSafeMarginForLongTarget(target),
         store.animations ? scrollDuration : 0,
       );
     }
-    return smoothScrollTo(window.scrollY, 0);
+    Promise.resolve();
   };
 
   return { scrollToInChapter, calculateTargetCenterOnPage };

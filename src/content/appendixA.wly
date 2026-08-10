@@ -1,0 +1,18 @@
+|> Section
+    handle=exercise-graveyard-start
+
+    *From Chapter 3*
+    |> Exercises
+        chapter=>>functions
+
+    |> StarDivider
+
+    *From Chapter 4*
+    |> Exercises
+        chapter=>>derivatives
+
+    |> StarDivider
+
+    *From Chapter 5*
+    |> Exercises
+        chapter=>>trigonometry

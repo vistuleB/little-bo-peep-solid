@@ -1,0 +1,50 @@
+|> Exercise
+    handle=_see_saw_with_units_
+
+    If we pretend that the graph of Exercise >>_see_saw_
+    depicts the 
+    |> del
+        distance that a car has traveled
+        as a function of time,
+    \ position of a car as a function of
+    time, with hours (hr) on the $x$-axis
+    and kilometers (km) on the $y$-axis, what
+    do the units become on the axes of the first
+    and second derivatives?
+
+    |> Solution
+
+        The units on the $y$ axis become kilometers,
+        kilometers per hour, and kilometers per
+        hours squared, including the first graph
+        (each time
+        another derivative is taken, divide the
+        units of the $y$ axis by the units of the
+        $x$ axis):
+
+        |> Image
+            src=images/svg_ch4_slope_one_half_see_saw_with_units.svg
+
+        |> Image
+            src=images/svg_ch4_slope_one_half_see_saw_with_units_derivative.svg
+
+        |> Image
+            src=images/svg_ch4_slope_one_half_see_saw_with_units_second_derivative.svg
+
+        |> StarDivider
+
+        |> SolutionNote
+            The second and third functions are respectively
+            the velocity and the acceleration of the car as
+            a function of time.
+
+        !! |> SolutionNote
+        !!     In a more physically realistic scenario the corners
+        !!     are rounded off a bit while the velocity and
+        !!     acceleration remain continuous, albeit with steep
+        !!     slopes and sharp peaks. (This...
+
+        !!     |> Image
+        !!         src=images/svg_ch4_ex_car_position_rounded.svg
+
+        !!     ...idea.)

@@ -1,0 +1,81 @@
+|> Exercise
+    handle=_double_pre_processing_steps_
+
+    Let $A, B \in \rr$, $f : \rr \ra \rr$.
+    Rewrite the two compositions below in the form
+
+    $$
+    x \ra \dots
+    $$
+
+    and describe how the graph of
+    each composition relates to the graph of 
+    $f$.
+
+    |> Image
+        src=images/svg_ch5_ex_double_pre_processing.svg
+
+    |> Solution
+
+        The first composition is
+        $$
+        x \ra f(B(x + A))
+        $$
+        per this illustration:
+
+        |> Image
+            src=images/svg_ch5_ex_double_pre_processing_stops_1.svg
+
+        The second composition is
+        $$
+        x \ra f(Bx + A)
+        $$
+        per this illustration:
+
+        |> Image
+            src=images/svg_ch5_ex_double_pre_processing_stops_2.svg
+
+        Insofar as the second part of the question,
+        recall that by Exercise 40, gluing this box...
+
+        |> Image
+            src=images/svg_ch5_ex_double_pre_processing_Bz_alone.svg
+
+        ...to the right of any function compresses
+        the graph of that function horizontally by a
+        factor $B$, whereas gluing this box...
+
+        |> Image
+            src=images/svg_ch5_ex_double_pre_processing_Au_alone.svg
+
+        ...to the right of any function translates the
+        graph of that function by $A$ to the left; so the 
+        graph of the first composition...
+
+        |> Image
+            src=images/svg_ch5_ex_double_pre_processing_Bz_mid.svg
+
+        ...where we glue the “$z \ra Bz$” box first and
+        the “$u \ra u + A$” box second (starting from $f$
+        as the “base box” onto which others are glued—because
+        the problem asks how the graph $y = f(x)$ is affected,
+        we have to start there), will be...
+
+        __the graph of $f$ horizontally compressed by $B$,
+        |> br
+        translated left by $A$__
+            
+        ...while the graph of the second composition...
+        
+        |> Image
+            src=images/svg_ch5_ex_double_pre_processing_Au_mid.svg
+
+        ...where we glue the boxes onto $f$ in the opposite
+        order, with the “$z \ra Bz$” box glued second and the 
+        “$u \ra u + A$” box glued first, will be...
+
+        __the graph of $f$ translated left by $A$,
+        |> br
+        horizontally compressed by $B$__
+
+        ...which is slightly different!

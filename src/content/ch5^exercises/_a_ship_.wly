@@ -1,0 +1,82 @@
+|> Exercise
+    handle=_a_ship_
+
+    A ship travels from the South pole of a watery
+    copy of the Earth to the North pole while maintaining
+    a constant compass bearing of $5^\circ$ North of East.
+    (See Fig.) What is the length of the curve traced by the
+    ship?
+
+    |> Image
+        src=images/svg_ch5_ex_spiral_sphere.svg
+
+    |> Solution
+        Imagine that a butterfly that only flies by
+        small steps East and North, alternately, follows 
+        with the boat:
+
+        |> Image
+            src=images/svg_ch5_ex_butterfly_fig.svg
+
+        (We replace
+
+        $$
+        \Huge 5^\circ
+        $$
+
+        by
+
+        $$
+        \Huge \alpha
+        $$
+
+        radians for more generality, that will make the
+        problem no more nor less easy.) The total of all the
+        small northward legs that the butterfly travels is
+
+        $$
+        20004\,\te{km}
+        $$
+
+        or one-half the so-called _meridional circumference_
+        of the Earth. But the total distance traveled
+        by the ship is
+
+        $$
+        \Huge \csc(\alpha)
+        $$
+
+        times the sum of all the butterly's northward legs:
+
+        |> Image
+            src=images/svg_ch5_ex_butterfly_fig_with_csc.svg
+
+        The total distance traveled by the ship
+        is therefore
+
+        $$
+        \Large 20004\,\te{km}\cdot \csc \alpha = {20004\,\te{km} \over \sin \alpha}
+        $$
+
+        that comes out to
+
+        $$
+        \Large \sim 229520\,\te{km}
+        $$
+
+        with $\alpha = 5^\circ$.
+
+        |> SolutionNote
+
+            In reality the butterly's triangle is
+            drawn on a spherical shell and it is
+            only because the triangle is very small
+            compared to the radius of the shell that
+            it resembles an ordinary triangle, without
+            quite being an ordinary triangle. But what
+            is important is that the _ratios_ of the
+            lengths of the butterly triangle approach
+            those of an ordinary right triangle of
+            angle $\alpha$ as we make the butterfly's
+            triangle sufficiently small. 
+            (Which is believable.)

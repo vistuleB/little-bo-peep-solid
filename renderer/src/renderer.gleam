@@ -1,20 +1,18 @@
 import argv
-import vxml/blame.{type Blame, Ext}
+import blame.{type Blame, Src}
 import desugaring as ds
 import emitter_imports as ei
 import gleam/dict.{type Dict}
 import gleam/io
-import gleam/int
 import gleam/list
-import gleam/option.{type Option, Some, None}
+import gleam/option.{Some, None}
 import gleam/string.{inspect as ins}
-import desugaring/core as core
-import vxml/io_lines.{type OutputLine, OutputLine}
+import infrastructure as infra
+import io_lines.{type OutputLine, OutputLine}
 import on
 import pipeline.{our_pipeline}
 import simplifile
 import vxml.{type VXML, V}
-import desugaring/writerly_defaults as wd
 
 type LBPFragmentClassifer {
   Article(String)
@@ -41,40 +39,39 @@ type LBPEmitterError {
   )
 }
 
-fn blame_us(loc: String) -> Blame {
-  Ext([], "renderer:" <> loc)
+fn blame_us(message: String) -> Blame {
+  Src([], message, -1, -1, False)
 }
 
 fn our_splitter(
   root: VXML,
 ) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
-  let articles = core.v_children_with_tags(root, ["Chapter", "Bootcamp", "Appendix"])
+  let articles = infra.v_children_with_tags(root, ["Chapter", "Bootcamp", "Appendix"])
   use toc_vxml <- on.error_ok(
-    core.v_unique_child_with_singleton_error(root, "TOC"),
+    infra.v_unique_child_with_singleton_error(root, "TOC"),
     on_error: fn(error) {
       case error {
-        core.LessThanOne -> Error(NoTOC)
-        core.MoreThanOne -> Error(MoreThanOneTOC)
+        infra.LessThanOne -> Error(NoTOC)
+        infra.MoreThanOne -> Error(MoreThanOneTOC)
       }
     },
   )
 
   use panel_vxml <- on.error_ok(
-    core.v_unique_child_with_singleton_error(root, "HamburgerPanelAuthorSuppliedContents"),
+    infra.v_unique_child_with_singleton_error(root, "HamburgerPanelAuthorSuppliedContents"),
     on_error: fn(error) {
       case error {
-        core.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
-        core.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
+        infra.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
+        infra.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
       }
     },
   )
 
-  let header_blob_vxml  = case core.v_unique_child_with_singleton_error(root, "HeaderBlob") {
+  let header_blob_vxml  = case infra.v_unique_child_with_singleton_error(root, "HeaderBlob") {
     Ok(value) -> Ok(value)
-    Error(core.LessThanOne) -> Ok(V(blame_us("default_header_blob"), "HeaderBlob", [], []))
-    Error(core.MoreThanOne) -> Error(MoreThanOneHeaderBlob)
+    Error(infra.LessThanOne) -> Ok(V(blame_us("our_splitter"), "", [], []))
+    Error(infra.MoreThanOne) -> Error(MoreThanOneHeaderBlob)
   }
-
   use header_blob_vxml <- on.ok(header_blob_vxml)
 
   Ok(
@@ -87,11 +84,10 @@ fn our_splitter(
       list.map(
         articles,
         fn(c) {
-          let #(c, vxml.Attr(_,_,path)) = core.v_assert_pop_attr(c, "path")
-          let #(c, vxml.Attr(_, _, number)) = core.v_assert_pop_attr(c, "number")
-          let #(c, vxml.Attr(_,_,category)) = core.v_assert_pop_attr(c, "category")
-          let c = core.v_set_tag(c, "Article")
-          let c = core.v_set_attr(c, blame_us("list.map(articles)"), "path", path)
+          let #(c, vxml.Attr(_,_,path)) = infra.v_assert_pop_attr(c, "path")
+          let #(c, vxml.Attr(_, _, number)) = infra.v_assert_pop_attr(c, "number")
+          let #(c, vxml.Attr(_,_,category)) = infra.v_assert_pop_attr(c, "category")
+          let c = infra.v_set_tag(c, "Article")
           ds.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
         }
       ),
@@ -100,26 +96,7 @@ fn our_splitter(
 }
 
 fn is_section(vxml: VXML) -> Bool {
-  core.is_v_and_tag_equals(vxml, "Section")
-}
-
-fn is_rest_split_attr(attr: vxml.Attr) -> Bool {
-  attr.key == "split_here" && attr.val == "Rest"
-}
-
-fn is_rest_split_section(vxml: VXML) -> Bool {
-  case vxml {
-    V(_, "Section", attrs, _) -> list.any(attrs, is_rest_split_attr)
-    _ -> False
-  }
-}
-
-fn remove_rest_split_attr(vxml: VXML) -> VXML {
-  case vxml {
-    V(_, "Section", attrs, _) ->
-      V(..vxml, attrs: list.filter(attrs, fn(attr) { !is_rest_split_attr(attr) }))
-    _ -> vxml
-  }
+  infra.is_v_and_tag_equals(vxml, "Section")
 }
 
 fn up_to_and_including_first_section(
@@ -137,84 +114,11 @@ fn up_to_and_including_first_section(
   }
 }
 
-fn up_to_rest_split_section(
-  previous: List(VXML),
-  upcoming: List(VXML),
-) -> Option(#(List(VXML), List(VXML))) {
-  case upcoming {
-    [] -> None
-    [first, ..rest] -> {
-      case is_rest_split_section(first) {
-        True -> Some(#(previous, [remove_rest_split_attr(first), ..rest]))
-        False -> up_to_rest_split_section([first, ..previous], rest)
-      }
-    }
-  }
-}
-
 fn split_vxml_to_first_section_and_rest(vxml: VXML) -> #(VXML, List(VXML)) {
   let assert V(b, t, a, children) = vxml
-  let #(before_rest, rest) = case up_to_rest_split_section([], children) {
-    Some(split) -> split
-    None -> up_to_and_including_first_section([], children)
-  }
-  let rest_tag = V(blame_us("to_first_section_and_rest"), "Rest", [], [])
+  let #(before_rest, rest) = up_to_and_including_first_section([], children)
+  let rest_tag = V(blame_us("rest tag"), "Rest", [], [])
   #(V(b, t, a, [rest_tag, ..before_rest] |> list.reverse), rest)
-}
-
-fn rest_section_batches(vxmls: List(VXML)) -> List(List(VXML)) {
-  rest_section_batches_loop(vxmls, [], [])
-}
-
-fn rest_section_batches_loop(
-  upcoming: List(VXML),
-  current: List(VXML),
-  previous_batches: List(List(VXML)),
-) -> List(List(VXML)) {
-  case upcoming {
-    [] -> {
-      case current {
-        [] -> list.reverse(previous_batches)
-        _ -> list.reverse([list.reverse(current), ..previous_batches])
-      }
-    }
-    [first, ..rest] -> {
-      let current = [first, ..current]
-      case is_section(first) {
-        True ->
-          rest_section_batches_loop(
-            rest,
-            [],
-            [list.reverse(current), ..previous_batches],
-          )
-        False -> rest_section_batches_loop(rest, current, previous_batches)
-      }
-    }
-  }
-}
-
-fn rest_batch_output_lines(
-  batches: List(List(VXML)),
-  index: Int,
-) -> List(OutputLine) {
-  case batches {
-    [] -> []
-    [batch, ..rest] ->
-      list.flatten([
-        [
-          OutputLine(
-            blame_us("rest_batch_a"),
-            4,
-            "{visibleRestSections() > " <> int.to_string(index) <> " && <>",
-          ),
-        ],
-        vxml.vxmls_to_jsx_output_lines(batch, 6, 2),
-        [
-          OutputLine(blame_us("rest_batch_b"), 4, "</>}"),
-        ],
-        rest_batch_output_lines(rest, index + 1),
-      ])
-  }
 }
 
 fn article_emitter(
@@ -223,7 +127,6 @@ fn article_emitter(
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
 
   let #(first_split, rest) = split_vxml_to_first_section_and_rest(fr.payload)
-  let rest_batches = rest_section_batches(rest)
   let assert Article(funcname) = fr.classifier
 
   use component_imports <- on.error_ok(
@@ -248,11 +151,13 @@ fn article_emitter(
         OutputLine(blame_us("article_emitter"), 0, "}"),
         OutputLine(blame_us("article_emitter"), 0, ""),
         OutputLine(blame_us("article_emitter"), 0, "const Rest = () => {"),
-        OutputLine(blame_us("article_emitter"), 2, "const visibleRestSections = useShowMore(" <> int.to_string(list.length(rest_batches)) <> ");"),
+        OutputLine(blame_us("article_emitter"), 2, "const showMore = useShowMore();"),
         OutputLine(blame_us("article_emitter"), 2, "return <>"),
+        OutputLine(blame_us("article_emitter"), 4, "{showMore() && <>"),
       ],
-      rest_batch_output_lines(rest_batches, 0),
+      vxml.vxmls_to_jsx_output_lines(rest, 6, 2),
       [
+        OutputLine(blame_us("article_emitter"), 4, "</>}"),
         OutputLine(blame_us("article_emitter"), 2, "</>;"),
         OutputLine(blame_us("article_emitter"), 0, "};"),
       ],
@@ -313,7 +218,7 @@ fn standard_component_emitter(
         OutputLine(blame_us("standard_component_emitter"), 0, "const " <> component_name <> " = () => {"),
         OutputLine(blame_us("standard_component_emitter"), 2, "return <>"),
       ],
-      vxml.vxmls_to_jsx_output_lines(fr.payload |> core.v_get_children, 4, 2),
+      vxml.vxmls_to_jsx_output_lines(fr.payload |> infra.v_get_children, 4, 2),
       [
         OutputLine(blame_us("standard_component_emitter"), 2, "</>;"),
         OutputLine(blame_us("standard_component_emitter"), 0, "};"),
@@ -431,7 +336,7 @@ pub fn main() {
       output_dir: output_dir,
       prettifier_behavior: ds.PrettifierOff,
     )
-    |> ds.amend_renderer_parameters_by_command_line_amendments(amendments)
+    |> ds.amend_renderer_paramaters_by_command_line_amendments(amendments)
 
   let options =
     ds.RendererOptions(
@@ -444,8 +349,8 @@ pub fn main() {
 
   let renderer =
     ds.Renderer(
-      assembler: wd.default_writerly_assembler(_, options),
-      parser: wd.default_writerly_parser,
+      assembler: ds.default_writerly_assembler(_, options),
+      parser: ds.default_writerly_parser,
       filterer: ds.default_filterer(_, options, ["In", "HeaderBlob", "ChapterSelection"]),
       pipeline: our_pipeline(only, dict.has_key(amendments.user_args, remove_unused_build_img_option), dict.has_key(amendments.user_args, author_mode)),
       splitter: our_splitter,

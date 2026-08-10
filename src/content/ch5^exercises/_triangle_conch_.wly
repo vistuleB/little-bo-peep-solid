@@ -1,0 +1,157 @@
+|> Exercise
+    handle=_triangle_conch_
+
+    Compute $A/B$ assuming all same-colored
+    triangles are similar and
+    with the help of a calculator:
+
+    |> Image
+        style=width:500px;margin-top:1em;margin-bottom:1em;
+        src=images/svg_ch5_ex_big_snail.svg
+
+    |> Solution
+
+        What we want is the multiplicative ratio that
+        would take us from the bottom to the top side of
+        this quadrilateral, so that we can multiply by that
+        ratio over and over again:
+
+        |> Image
+            src=images/svg_ch5_ex_big_snail_quad.svg
+
+        But the two triangles involved are
+
+        _|NOT RIGHT TRIANGLES|_
+
+        and we must break them into smaller parts that
+        _are_ right triangles in order to use trigonometric
+        functions. Specifically, as per this drawing:
+
+        |> Image
+            src=images/svg_ch5_ex_big_snail_quad_four_parts.svg
+
+        The multiplicative ratios that correspond to the
+        first and third arrows (in arrow-order from bottom
+        to top) are
+
+        $$
+        \sin(68^\circ\hlfbk)
+        $$
+        $$
+        \sin(59^\circ\hlfbk)
+        $$
+
+        because these are “hypotenuse-to-opposite” arrows,
+        while the multiplicative ratios that correspond to the
+        second and fourth arrows are
+
+        $$
+        \csc(71^\circ\hlfbk)
+        $$
+        $$
+        \csc(60^\circ\hlfbk)
+        $$
+
+        because these are the opposite (no pun intended),
+        i.e.,“opposite-to-hypotenuse” arrows. The “big grey
+        arrow” ratio from two diagrams ago is obtained by multiplying
+        these four small-arrow ratios together, or
+
+        $$
+        \sin(68^\circ\hlfbk)\times\csc(71^\circ\hlfbk)\times\sin(59^\circ\hlfbk)\times\csc(60^\circ\hlfbk)
+        $$
+
+        (that can also be written
+
+        $$
+        {\sin(68^\circ\hlfbk)\times\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\times\sin(60^\circ\hlfbk)}
+        $$
+
+        because $\csc = {1\over \sin}$) which, numerically, comes out to
+
+        $$
+        0.97057870529467...
+        $$
+
+        meaning that the top side of the quadrilateral tile is
+
+        $$
+        97\%
+        $$
+
+        and some the length of the bottom side; taking
+        the $36$-th power of $0.9705\dots$, because $36$ is the
+        number of times that the quadrilateral
+        repeats within the spiral, we find
+
+        $$
+        0.34127722635785...
+        $$
+
+        which is the desired ratio $A/B$, and which agrees with the
+        drawing, as $A$ seems plausibly to be about one-third of
+        $B$, from the drawing!
+
+        |> SolutionNote
+
+            While the final answer can be written
+
+            $$
+            (\sin(68^\circ\hlfbk)\cdot\csc(71^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk)\cdot\csc(60^\circ\hlfbk))^{36}
+            $$
+
+            or
+
+            $$
+            \left({\sin(68^\circ\hlfbk)\cdot\sin(59^\circ\hlfbk) \over \sin(71^\circ\hlfbk)\cdot\sin(60^\circ\hlfbk)}\right)^{\!36}
+            $$
+
+            teachers typically want to see such expressions
+            evualuated out, to make sure that you and your
+            calculator form a good team. (And, to be fair,
+            catching one's own calculator mistakes by virtue
+            of spotting a nonsensical number is a skill in
+            itself.)
+
+        |> SolutionNote
+
+            Instead of counting the number of times that the
+            quadrilateral appears in the double spiral by hand
+            one can
+            calculate the amount of rotation between one
+            quadrilateral and the next, which is this purple angle:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1em;
+                src=images/svg_ch5_ex_big_snail_quad_purple_angle_1.svg
+
+            The key to measuring this
+            angle is the concept of an “alternating angle”,
+            whereby $68^\circ$ reappears to the left of $71^\circ$,
+            here:
+
+            |> Image
+                style=margin-top:0.8em;margin-bottom:1em;
+                src=images/svg_ch5_ex_big_snail_quad_purple_angle_2.svg
+
+            Then we can calculate the purple angle as
+
+            $$
+            68^\circ + 71^\circ + 61^\circ - 180^\circ = 20^\circ
+            $$
+
+            meaning that each quadrilateral is rotated by $20^\circ$ from the
+            previous, and in one turn of the spiral there are
+
+            $$
+            {360^\circ\over 20^\circ} = 18
+            $$
+
+            quadrilaterals, or
+
+            $$
+            2 \times 18 = 36
+            $$
+
+            quadrilaterals for two turns!
+

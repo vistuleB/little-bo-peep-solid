@@ -1,0 +1,83 @@
+|> Exercise
+    handle=_express_the_associativity_etc_
+
+    Express the...
+    
+    |> List
+        style=padding-left:2.4em;gap:0.1em;
+
+        associativity of function composition
+        
+        associativity of function multiplication
+        
+        associativity of function addition
+        
+        commutativity of function multiplication
+        
+        commutativity of function addition
+
+    ...as well as the...
+    
+    |> List
+        style=padding-left:2.4em;gap:0.1em;
+
+        associativity of real number multiplication
+        
+        associativity of real number addition
+        
+        commutativity of real number multiplication
+    
+        commutativity of real number addition
+
+    ...in the form of self-contained, formal statements.
+
+    |> Solution
+
+        For the functions:
+        
+        |> List
+
+            |> Item
+                _the associativity of function multiplication is
+                the fact that $(f \circ g) \circ h = f \circ (g \circ h)$
+                for all functions $f$, $g$, $h$ such that
+                $h : D \ra C$, $g : C \ra B$, $f : B \ra A$
+                [for arbitrary sets $A$, $B$, $C$, $D$]_
+
+                |> ImageLeft
+                    src=images/svg_ch4_ex_f_g_h_A_B_C_D_cloud.svg
+                    offset_x=4em
+
+            _the associativity of function multiplication is
+            the fact that $f(gh) = (fg)h$ for all $f, g, h : \rr \ra \rr$_
+            
+            _the associativity of function addition is
+            the fact that $f + (g + h) = (f + g) + h$ for all $f, g, h : \rr \ra \rr$_
+            
+            _the commutativity of function multiplication is
+            the fact that $fg = gf$ for all $f, g : \rr \ra \rr$_
+            
+            _the commutativity of function addition is
+            the fact that $f + g = g + f$ for all $f, g : \rr \ra \rr$_
+
+        For the real numbers:
+        
+        |> List
+
+            _the associativity of [real number] multiplication is
+            the fact that $a(bc) = (ab)c$ for all $a, b, c \in \rr$_
+
+            _the associativity of [real number] addition is
+            the fact that $a + (b + c) = (a + b) + c$ for all $a, b, c \in \rr$_
+
+            _the commutativity of [real number] multiplication is
+            the fact that $ab = ba$ for all $a, b \in \rr$_
+
+            _the commutativity of [real number] addition is
+            the fact that $a + b = b + a$ for all $a, b \in \rr$_
+
+        |> SolutionNote
+            We never took the time to prove the associativity
+            of function addition, but it is easy to prove!
+            (For other proofs see Exercise 32, Exercise 33, as
+            well as Exercise 9, Chapter >>functions.)

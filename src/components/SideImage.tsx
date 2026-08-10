@@ -1,94 +1,60 @@
 import {
-  createSignal,
+  createEffect,
   mergeProps,
-  onCleanup,
-  onMount,
   ParentProps,
+  Show,
+  createSignal,
+  onMount,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import ImageOrSideImage from "./ImageOrSideImage";
+import { useGlobalContext } from "~/store/StoreProvider";
 import { useScale } from "~/store/ScaleProvider";
-import mainColumnWidth from "~/hooks/useMainColumnWidth";
-import styleJoin from "~/utils/styleJoin";
-import { useLazyImages } from "~/store/LazyImageProvider";
-
-const LINE_HEIGHT = 30;
-
-/*
-SideImage positions an out-of-flow image by aligning an image-side pivot to a
-parent-side anchor. The parent is the relatively positioned element that owns
-this component.
-
-Horizontal placement:
-- ImageRight anchors on the right edge of the parent rectangle and uses the
-  image's left-center point as its pivot.
-- ImageLeft anchors on the left edge of the parent rectangle and uses the
-  image's right-center point as its pivot.
-- atLeastAsWide widens the semantic parent rectangle, centered on the actual
-  parent, to at least the main text width before the anchor is chosen.
-- offsetX is then applied away from the parent; non-percent lengths are
-  multiplied by the parent scale, while percent lengths are relative to the
-  parent rectangle and are not multiplied.
-
-Vertical placement:
-- line = 0 anchors halfway down the parent rectangle.
-- line > 0 anchors (line - 0.5) unscaled line heights from the top.
-- line < 0 anchors (0.5 - abs(line)) unscaled line heights from the bottom.
-- offsetY is added after the line calculation; non-percent lengths are
-  multiplied by the parent scale, while percent lengths are relative to the
-  parent rectangle and are not multiplied.
-*/
+import { DESKTOP_COLUMN_WIDTH, MOBILE_MAX_WIDTH } from "~/constants";
+import useOnMobile from "../hooks/useOnMobile";
 
 type UserFacingSideImageProps = ParentProps &
   SharedProps & {
     src: string;
-    intrinsicWidth?: string | number;
-    intrinsicHeight?: string | number;
-    offsetX?: string | number;
-    offsetY?: string | number;
-    atLeastAsWide?: boolean;
-    line?: number | string;
-    childrenX?: string | number;
-    childrenY?: string | number;
+    offset_y?: string;
+    offset_x?: string;
+    compensate_offset_x_for_large_text_columns?: boolean;
+    line?: number;
+    squiggle?: boolean;
+    width?: string;
+    squiggle_y?: string | number;
+    children_y?: string | number;
+    children_x?: string | number;
+    clickable_on_desktop?: boolean;
     padding?: string | number;
+    popup?: boolean;
     local_url?: string;
   };
 
 type InternalSideImageProps = UserFacingSideImageProps & {
-  side: "left" | "right";
-  offsetX: string | number;
-  offsetY: string | number;
-  atLeastAsWide: boolean;
-  line: number | string;
+  side: string;
+  offset_x: string;
+  offset_y: string;
+  compensate_offset_x_for_large_text_columns: boolean;
+  line: number;
 };
 
 const SideImage = (props: InternalSideImageProps) => {
-  let parentRef: HTMLDivElement | undefined;
+  let container_ref: HTMLDivElement | undefined;
+  const { store } = useGlobalContext();
+  const show_squiggles = () => store.show_squiggles;
   const scale = useScale();
-  const lazy = useLazyImages();
-  const [parentWidth, setParentWidth] = createSignal(0);
-  const [parentMeasured, setParentMeasured] = createSignal(false);
-  const textWidth = () => mainColumnWidth();
-  const sideScale = () => scale().scale;
-  const offsetX = () => scaledCssLength(props.offsetX, sideScale());
-  const offsetY = () => scaledCssLength(props.offsetY, sideScale());
-  const widthInflationOffset = () =>
-    props.atLeastAsWide ? Math.max(0, (textWidth() - parentWidth()) / 2) : 0;
-  const intrinsicAspectRatio = () =>
-    props.intrinsicWidth && props.intrinsicHeight
-      ? `${props.intrinsicWidth} / ${props.intrinsicHeight}`
-      : undefined;
+  // was trying to solve a bug, didn't work, this can be re-simplified at some point (see also (*))
+  const [our_scale_copy, set_our_scale_copy] = createSignal(scale().scale);
+  const { on_mobile } = useOnMobile();
 
-  const maybeChildren = () => {
+  let maybeChildren = () => {
     if (props.children) {
       return (
         <div
           class="absolute z-10"
-          style={{
-            top: unscaledCssLength(props.childrenY),
-            left: unscaledCssLength(props.childrenX),
-          }}
+          style={`top: ${props.children_y}; left: ${props.children_x}`}
         >
           {props.children}
         </div>
@@ -97,76 +63,95 @@ const SideImage = (props: InternalSideImageProps) => {
     return <></>;
   };
 
+  createEffect(() => {
+    set_our_scale_copy(scale().scale);
+  });
+
   onMount(() => {
-    const measureParent = () => {
-      if (!parentRef) return;
-
-      setParentWidth(parentRef.getBoundingClientRect().width);
-      setParentMeasured(true);
-    };
-    const observer = new ResizeObserver(measureParent);
-
-    measureParent();
-    if (parentRef) observer.observe(parentRef);
-
-    onCleanup(() => observer.disconnect());
+    setTimeout(() => {
+      set_our_scale_copy(scale().scale);
+    }, 500);
+    setTimeout(() => {
+      set_our_scale_copy(scale().scale);
+    }, 2000);
   });
 
   return (
     <div
-      ref={parentRef}
+      ref={container_ref}
       class="absolute"
       style="left:0;top:0;width:100%;height:100%;background-color:none;margin:0;padding:0;pointer-events:none;"
     >
       <div
-        data-side-image
         style={{
-          left: getLeft(props.side, offsetX(), widthInflationOffset()),
-          right: getRight(props.side, offsetX(), widthInflationOffset()),
-          top: getTop(props.line, offsetY(), sideScale()),
-          transform: `translateY(-50%) scale(${sideScale()})`,
+          left: getLeft(
+            props.side,
+            props.offset_x,
+            our_scale_copy(),
+            store.innerWidth,
+            props.compensate_offset_x_for_large_text_columns,
+          ),
+          right: getRight(
+            props.side,
+            props.offset_x,
+            our_scale_copy(),
+            store.innerWidth,
+            props.compensate_offset_x_for_large_text_columns,
+          ),
+          top: getTop(props.line, props.offset_y, our_scale_copy()),
+          transform: `translateY(calc(-50%))`,
           padding: `${props.padding}`,
-          "transform-origin": getTransformOrigin(props.side),
+          "transform-origin": `0 top 0`,
+          scale: our_scale_copy(),
           "z-index": 20,
         }}
-        class={twJoin(
-          "flex shrink-0 lg:opacity-100 absolute w-max",
-          parentMeasured() && scale().after_first_click
-            ? "transition-[left,right,top,transform,opacity] duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-            : "transition-none",
-        )}
+        class="flex shrink-0 transition-opacity duration-300 lg:transition-none lg:opacity-100 absolute w-max"
       >
         <ImageOrSideImage
-          class={twJoin(props.class, "max-w-max", "cloud")}
-          style={styleJoin(
-            { aspectRatio: intrinsicAspectRatio() },
-            props.style,
-          )}
+          class={twJoin(props.class, !props.width && "max-w-max", "cloud")}
+          style={props.style}
           src={props.src}
-          loading={lazy ? "lazy" : undefined}
-          width={props.intrinsicWidth}
-          height={props.intrinsicHeight}
           side_image={true}
           local_url={props.local_url}
         />
         {maybeChildren()}
       </div>
+
+      {show_squiggles() && props.squiggle && (
+        <div
+          class="squiggle block sm:hidden absolute"
+          style={{
+            left: props.side === "right" ? "50%" : "0",
+            right: props.side === "right" ? "0" : "50%",
+            top: `${props.squiggle_y}`,
+            transform: "translate(-50%, -50%)",
+            padding: "2.6rem",
+          }}
+        >
+          <img
+            loading="lazy"
+            src="/images/squiggle.png"
+            class="h-11 min-w-[45px]"
+          />
+        </div>
+      )}
     </div>
   );
 };
 
 export const ImageRight = ({
   line = 0,
-  offsetX = "0px",
-  offsetY = "0px",
-  atLeastAsWide = false,
+  offset_x = "0px",
+  offset_y = "0px",
+  compensate_offset_x_for_large_text_columns = false,
   ...props
 }: UserFacingSideImageProps) => {
   let internalProps: InternalSideImageProps = mergeProps(props, {
     side: "right",
-    offsetX,
-    offsetY,
-    atLeastAsWide,
+    offset_x: offset_x,
+    offset_y: offset_y,
+    compensate_offset_x_for_large_text_columns:
+      compensate_offset_x_for_large_text_columns,
     line: line,
   });
 
@@ -175,16 +160,17 @@ export const ImageRight = ({
 
 export const ImageLeft = ({
   line = 0,
-  offsetX = "0px",
-  offsetY = "0px",
-  atLeastAsWide = false,
+  offset_x = "0px",
+  offset_y = "0px",
+  compensate_offset_x_for_large_text_columns = false,
   ...props
 }: UserFacingSideImageProps) => {
   let internalProps: InternalSideImageProps = mergeProps(props, {
     side: "left",
-    offsetX,
-    offsetY,
-    atLeastAsWide,
+    offset_x: offset_x,
+    offset_y: offset_y,
+    compensate_offset_x_for_large_text_columns:
+      compensate_offset_x_for_large_text_columns,
     line: line,
   });
 
@@ -192,62 +178,48 @@ export const ImageLeft = ({
 };
 
 const getLeft = (
-  side: "left" | "right",
-  offsetX: string,
-  widthInflationOffset: number,
+  side: string,
+  offset_x: string,
+  scale: number,
+  innerWidth: number,
+  compensate_offset_x: boolean,
 ): string => {
+  let text_width =
+    innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;
+  let added = compensate_offset_x
+    ? Math.max(0, (text_width - DESKTOP_COLUMN_WIDTH) / 2)
+    : 0;
   return side === "right"
-    ? `calc(100% + ${widthInflationOffset}px + (${offsetX}))`
+    ? `calc(100% + ${offset_x} * ${scale} + ${added}px * ${scale})`
     : "";
 };
 
 const getRight = (
-  side: "left" | "right",
-  offsetX: string,
-  widthInflationOffset: number,
+  side: string,
+  offset_x: string,
+  scale: number,
+  innerWidth: number,
+  compensate_offset_x: boolean,
 ): string => {
+  let column_width =
+    innerWidth > MOBILE_MAX_WIDTH ? DESKTOP_COLUMN_WIDTH : innerWidth;
+  let added = compensate_offset_x
+    ? Math.max(0, (column_width - DESKTOP_COLUMN_WIDTH) / 2)
+    : 0;
   return side === "left"
-    ? `calc(100% + ${widthInflationOffset}px + (${offsetX}))`
+    ? `calc(100% + ${offset_x} * ${scale} + ${added}px * ${scale})`
     : "";
 };
 
-const getTop = (
-  lineValue: number | string,
-  offsetY: string,
-  scale: number,
-): string => {
-  const line = Number(lineValue);
+const getTop = (line: number, offset_y: string, scale: number): string => {
+  let line_height = 30;
   let top = "";
   if (line > 0) {
-    top = `calc(0% + ${(line - 0.5) * LINE_HEIGHT * scale}px + (${offsetY}))`;
+    top = `calc(0% + ${(line - 0.5) * line_height}px * ${scale} + ${offset_y} * ${scale})`;
   } else if (line < 0) {
-    top = `calc(100% + ${(0.5 + line) * LINE_HEIGHT * scale}px + (${offsetY}))`;
+    top = `calc(100% + ${(0.5 + line) * line_height}px * ${scale} + ${offset_y} * ${scale})`;
   } else {
-    top = `calc(50% + (${offsetY}))`;
+    top = `calc(50% + ${offset_y} * ${scale})`;
   }
   return top;
-};
-
-const getTransformOrigin = (side: "left" | "right") =>
-  side === "right" ? "left center" : "right center";
-
-const unscaledCssLength = (
-  value: string | number | undefined,
-): string | undefined => {
-  if (value === undefined) return undefined;
-  if (value === 0) return "0px";
-
-  const stringValue = String(value).trim();
-  return stringValue === "0" ? "0px" : stringValue;
-};
-
-const scaledCssLength = (
-  value: string | number | undefined,
-  scale: number,
-): string => {
-  const length = unscaledCssLength(value) || "0px";
-  if (length.endsWith("%") || length === "0px") return length;
-  if (Math.abs(scale - 1) < 0.0001) return length;
-
-  return scale === 0 ? "0px" : `(${length}) / ${1 / scale}`;
 };

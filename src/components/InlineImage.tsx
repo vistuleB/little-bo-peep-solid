@@ -6,8 +6,6 @@ type InlineImageProps = SharedProps & {
   src: string;
   width?: string;
   height?: string;
-  intrinsicWidth?: string | number;
-  intrinsicHeight?: string | number;
   top?: string;
   right?: string;
   bottom?: string;
@@ -17,14 +15,6 @@ type InlineImageProps = SharedProps & {
 };
 
 const InlineImage = (props: InlineImageProps) => {
-  const intrinsicAspectRatio = () => {
-    if (props.width && props.height) return undefined;
-    if (!props.intrinsicWidth || !props.intrinsicHeight) return undefined;
-    return `${props.intrinsicWidth} / ${props.intrinsicHeight}`;
-  };
-
-  const useNativeDimensions = () => !props.width && !props.height;
-
   return (
     <>
       <ImageOrSideImage
@@ -32,9 +22,8 @@ const InlineImage = (props: InlineImageProps) => {
         class={`bg-cover inline-block relative ${props.class}`}
         style={styleJoin(
           {
-            width: props.width || (props.height ? "auto" : undefined),
-            height: props.height || (props.width ? "auto" : undefined),
-            aspectRatio: intrinsicAspectRatio(),
+            width: props.width,
+            height: props.height,
             top: props.top,
             right: props.right,
             bottom: props.bottom,
@@ -44,10 +33,7 @@ const InlineImage = (props: InlineImageProps) => {
           },
           props.style,
         )}
-        src={props.src}
-        width={useNativeDimensions() ? props.intrinsicWidth : undefined}
-        height={useNativeDimensions() ? props.intrinsicHeight : undefined}
-      ></ImageOrSideImage>
+        src={props.src}></ImageOrSideImage>
     </>
   );
 };

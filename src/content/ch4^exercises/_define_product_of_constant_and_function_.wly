@@ -1,0 +1,80 @@
+|> Exercise
+    ref=rence
+    handle=_define_product_of_constant_and_function_
+    The solution to the previous exercise
+    erroneously assumes that the product of a
+    constant and a function has been defined. It
+    has not! Keeping in mind that the _sum_
+    of two functions $f$, $g: \rr \ra \rr$
+
+    $$
+    f + g
+    $$
+
+    is defined by the equation
+
+    $$
+    f + g = (x \ra f(x) + g(x))
+    $$
+
+    while their composition is defined by
+
+    $$
+    f \circ g = (x \ra f(g(x)))
+    $$
+
+    and so on, what is the similar, most logical
+    definition for
+
+    $$
+    cf
+    $$
+
+    where $c \in \rr$ and $f : \rr \ra \rr$?
+
+    |> Solution
+
+        The “logical” definition is:
+
+        $$
+        cf = (x \ra cf(x))
+        $$
+
+        where the product “$cf(x)$” is an ordinary
+        multiplication between two real numbers,
+        because $c$ is a real number and $f(x)$ is
+        a real number! (In this way, the product of
+        a function by a real number “bootstraps”
+        off of the ordinary product of real numbers—this
+        is already similar to what happens for the
+        definition...
+
+        $$
+        fg = (x \ra f(x)g(x))
+        $$
+
+        of the product of two functions from $\rr$ to $\rr$,
+        or with the case of function addition, that
+        relies on real number addition.) BUT. There
+        is a MORE CLEVER way of doing the definition.
+        Which is to define
+
+        $$
+        cf = (x \ra c)f
+        $$
+
+        where the right-hand-side is _one function
+        times another_, i.e., _a product of functions_,
+        which is something that has ITSELF ALREADY BEEN
+        DEFINED. (!) (To wit, the definition of
+        function multiplication is that
+
+        $$
+        fg = (x \ra f(x)g(x))
+        $$
+
+        of course.) (Wait we just mentioned that
+        already.) Mathematicians LOVE to bootstrap off
+        an intermediate step, instead of going back to
+        the beginning, so the second way is clearly the
+        superior definition!!

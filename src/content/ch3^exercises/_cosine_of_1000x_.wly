@@ -1,0 +1,52 @@
+|> Exercise
+    ref=rence
+    handle=_cosine_of_1000x_
+
+    If
+    $$
+    \cos \dblcol \rr \ra \rr
+    $$
+    (the “hollow dot colon” means that $\dom \cos = \rr$)
+    is a function whose graph looks like so...
+
+    |> Image
+        src=images/svg_ch3_cosine.svg
+
+    ...then does the function...
+    $$
+    {x \ra \cos(1000x)}
+    $$
+    ...have a graph that looks like a bunch of very tight
+    bumps, or, instead, very flat _&_ spaced-out bumps??
+
+    |> Solution
+
+        Consider how to “read off” a value of $y = \cos(1000x)$
+        from the graph $y = \cos(x)$:
+
+        |> Image
+            src=images/svg_ch3_ex_cosine_1000x.svg
+
+        By the first step, a
+
+        __horizontal dilation by a factor 1000__
+
+        maps the first graph onto the second graph—i.e.,
+        a point
+        $$
+        (x, y)
+        $$
+        is on the first graph if and only the dilated
+        point
+        $$
+        (1000x, y)
+        $$
+        is on the second graph. The first graph is
+        therefore some very compressed thing, full of
+        scrunched bumps!
+
+        |> SolutionNote
+            One can also reason that a small change in $x$
+            results in a large change in $1000x$, so that
+            $\cos(1000x)$ must “cycle” much faster through
+            values than $\cos(x)$ does.

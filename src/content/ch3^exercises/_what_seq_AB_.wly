@@ -1,0 +1,170 @@
+|> Exercise
+    handle=_what_seq_AB_
+
+    What sequence of geometric transformations
+    (rotations, translations, scalings, etc)
+    maps the curve
+    $$
+    {y = x^2}
+    $$
+    onto
+    $$
+    {y = Ax^2 + Bx}
+    $$
+    for constants $A$, $B$ such that $A \ne 0$?
+
+    |> Solution
+
+        Write
+        $$
+        {Ax^2 + Bx}
+        $$
+        as
+        $$
+        {A\Big(x^2 + {B \over A}x\Big)}
+        $$
+        and then write
+        $$
+        {x^2 + {B \over A}x}
+        $$
+        as
+        $$
+        {\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}}
+        $$
+        so that, altogether,
+        $$
+        {Ax^2 + Bx}
+        $$
+        is rewritten
+        $$
+        {A\left[\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}\right]}
+        $$
+        that can be seen as descending from $y = x^2$
+        in three steps:
+        $$
+        {y = x^2}
+        $$
+        $$
+        {\downarrow}
+        $$
+        $$
+        {y = \,\Big(x + {B \over 2A}\Big)^2}
+        $$
+        $$
+        {\downarrow}
+        $$
+        $$
+        {y = \,\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}}
+        $$
+        $$
+        {\downarrow}
+        $$
+        $$
+        {y = A\left[\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}\right]}.
+        $$
+        Three steps, three geometric transformations!
+        The third step effects a
+
+        __vertical scaling by $A$__
+
+        i.e., vertically stretches the graph by
+        a factor $A$, because we multiply the
+        value of $y$ by $A$. The second step
+        effects a
+
+        __vertical translation by ${-{B^2 \over 4A^2}}$__
+
+        i.e., lowers the height of the entire
+        graph by ${B^2 \over 4A^2}$, because we add
+        $-{B^2 \over 4A^2}$ to the value of $y$.
+        The first step, on the other hand, is
+        entirely different: it is a
+
+        __preprocessing__
+
+        step, in that we mess with the input (i.e.,
+        $x$), instead of adding on (or “multiplying
+        on”) to the current value of $y$.
+
+        To understand how a preprocessing step
+        affects the shape of a graph, note that, more
+        generally, a graph of the form
+        $$
+        {y = f(x + a)}
+        $$
+        (for some constant $a$) “fetches” values on
+        the graph
+        $$
+        {y = f(x)}
+        $$
+        by going $a$ units to the right. The larger $a$
+        is, thus, the further
+        $$
+        {y = f(x + a)}
+        $$
+        drifts off to the left. For example,
+        $$
+        {y = f(x + 20)}
+        $$
+        has value $f(0)$ at $x = -20$, and if you replace
+        $20$ with something larger, that position (i.e.,
+        $x = -20$) drifts even further off to the left!
+        In any case, the graph $y = f(x + a)$ is the
+
+        __leftward__
+
+        translate by $a$ units of $y = f(x)$
+        and, as a consequence, the first step effects a
+
+        __leftward translation by ${B\over 2A}$__
+
+        of the curve $y = x^2$, or
+
+        __horizontal translation by $-{B\over 2A}$__
+
+        more elegantly put. (The second formulation
+        doesn't assume a particular orientation of the
+        $x$-axis, that's why it's “more elegantly put”,
+        in our opinion.)
+
+        To recapitulate, the three transformations
+        are, in order:
+
+        __1. horizontal translation by $-{B \over 2A}$__
+
+        __2. vertical translation by ${-{B^2 \over 4A^2}}$__
+
+        __3. vertical scaling by $A$__
+
+        |> SolutionNote
+
+            You could do the vertical translation
+            before the horizontal translation,
+            geometrically it comes out the same.
+            That order of geometric transformations
+            would correspond to the following sequence
+            of algebraic transformations:
+            $$
+            {y = x^2}
+            $$
+            $$
+            {\downarrow}
+            $$
+            $$
+            {y = x^2 - {B^2 \over 4A^2}}
+            $$
+            $$
+            {\downarrow}
+            $$
+            $$
+            {y = \,\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}}
+            $$
+            $$
+            {\downarrow}
+            $$
+            $$
+            {y = A\left[\Big(x + {B \over 2A}\Big)^2 - {B^2 \over 4A^2}\right]}
+            $$
+            ...in which the _second_ step is a
+            preprocessing step. (I.e., a step that
+            replaces “$x$” with something else.)

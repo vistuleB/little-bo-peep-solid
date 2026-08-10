@@ -1,0 +1,54 @@
+|> Exercise
+    handle=_proof_1_+_tan^2_eq_sec^2_
+
+    In general, $\sec(\theta)$ and $\tan(\theta)$
+    are defined for all $\theta$ such that
+
+    $$
+    \cos(\theta) \ne 0
+    $$
+
+    with the definitions being...
+
+    |> Boxed
+        $$
+        \,\tan(\theta) = {\sin(\theta)\over \cos(\theta)}\,
+        $$
+        $$
+        \,\sec(\theta) = {1\over \cos(\theta)}\,
+        $$
+
+    ...for all $\theta \in \rr$. (I.e., if the fraction is undefined,
+    then the function is undefined.)
+    Use these definitions
+    to prove that
+    $$
+    1 + \tan^2(\theta) = \sec^2(\theta)
+    $$
+    for all
+    $\theta \in \dom \tan = \dom \sec$.
+
+    |> Solution
+
+        Let $\theta \in \dom \tan = \dom \sec$. Then
+        $$
+        \cos(\theta) \ne 0
+        $$
+        and
+        $$
+        1 = {\cos(\theta)\over \cos(\theta)} = {\cos^2(\theta)\over \cos^2(\theta)}
+        $$
+        and, by the definitions,
+        $$
+        \begin{align}
+        1 + \tan^2(\theta)
+        \,\,&=\,\, 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
+        &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
+        &amp;=\,\, \up{2} {\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)} \\
+        &amp;=\,\, \up{2} {1\over \cos^2(\theta)} \\
+        &amp;=\,\, \up{2} \left({1\over \cos(\theta)}\right)^{\!2} \\
+        &amp;=\,\, \up{2} \sec^2(\theta)
+        \end{align}
+        $$
+        using the pythagorean identity in the fourth step.
+

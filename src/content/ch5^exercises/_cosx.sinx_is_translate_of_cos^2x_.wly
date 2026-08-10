@@ -1,0 +1,191 @@
+|> Exercise
+    handle=_cosx_sinx_to_cos^2x_
+
+    Given the graphs $y = \cos(x)\sin(x)$ and
+    $y = \cos^2(x)$...
+
+    |> Image
+        src=images/svg_ch5_ex_sinxcosx_and_cos2_comparison.svg
+
+    ...it _appears_ that one graph is a
+    translate of the other; if this were
+    really so, what would the exact amounts
+    of translation be? (Vertical _&_ horizontal.)
+    What algebraic identity would this imply? How to
+    prove this identity?
+
+    |> Solution
+
+        We know from Exercise 21 that the
+        bump immediately to the right of $(0, 0)$
+        on the graph $y = \cos(x)\sin(x)$ has
+        coordinates $(\eta/2, 0.5)$:
+
+        |> Image
+            src=images/svg_ch5_ex_sinxcosx_and_cos2_comparison_sinxcosx_max.svg
+
+        It might therefore be that a translation
+        of $-\eta/2$ units horizontally and
+        ${1\over 2}$ units vertically maps the graph
+        $y = \sin(x)\cos(x)$ onto the graph
+        $y = \cos^2(x)$:
+
+        |> Image
+            src=images/svg_ch5_ex_sinxcosx_and_cos2_comparison_zoomed_in.svg
+
+        If true, this would indicate that
+
+        |> Boxed
+            $$
+            \cos^2(x) = {1\over 2} + \cos(x + \eta/2)\sin(x + \eta/2)
+            $$
+
+        since replacing “$x$” by “$x + \eta/2$”
+        in $\sin(x)\cos(x)$ effects horizontal
+        translation of the graph by $-\eta/2$,
+        while adding ${1\over 2}$ to the result
+        effects a vertical translation by ${1\over 2}$.
+
+        To prove formula we use the angle-sum formulas;
+        specifically...
+
+        $$
+        \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+        $$
+        $$
+        \sin(A + B) = \cos(A)\sin(B) + \sin(A)\cos(B)
+        $$
+
+        ...(in case you had forgotten those); since
+        $$
+        \,\cos(\eta/2) = \sin(\eta/2) = \sqrt{0.5},
+        $$
+        we find:
+        $$
+        \begin{align*}
+        \cos(x + \eta/2) &= \cos(x)\cos(\eta/2) - \sin(x)\sin(\eta/2) \\
+        &= \up{1.6}\sqrt{0.5}\cdot(\cos(x) - \sin(x))
+        \end{align*}
+        $$
+        and:
+        $$
+        \begin{align*}
+        \sin(x + \eta/2) &= \cos(x)\sin(\eta/2) + \sin(x)\cos(\eta/2) \\
+        &= \up{1.6}\sqrt{0.5}\cdot(\cos(x) + \sin(x))
+        \end{align*}
+        $$
+        ...from which the product...
+        $$
+        \cos(x + \eta/2)\sin(x + \eta/2)
+        $$
+        ...becomes...
+        $$
+        \begin{align*}
+        &\sqrt{0.5}\cdot\sqrt{0.5}\cdot(\cos^2(x) - \sin^2(x)) \\
+        \up{1.6} =\,\,&{1\over 2}\cdot(\cos^2(x) - \sin^2(x)) \\
+        \up{1.6} =\,\,&{1\over 2}\cdot(\cos^2(x) - (1 - \cos^2(x))) \\
+        \up{1.6} =\,\,&{1\over 2}\cdot(2\cos^2(x) - 1) \\
+        \up{1.6} =\,\,&\cos^2(x) - {1\over 2} \\
+        \end{align*}
+        $$
+        ...by the difference-of-squares formula and
+        the pythagorean identity (often used together),
+        and adding ${1\over 2}$ gives $\cos^2(x)$, Q.E.D.!
+        (So $y = \cos^2(x)$ truly is the translate of
+        $y = \cos(x)\sin(x)$, _&_ vice-versa.)
+
+        |> SolutionNote
+
+            We can turn the identity around, mapping
+            $y = \cos^2(x)$ onto $y = \sin(x)\cos(x)$ via a
+            translation, instead of the other way around; this gives:
+
+            |> Boxed
+                $$
+                \,- {1\over 2} + \cos^2(x - \eta/2) = \cos(x)\sin(x).
+                $$
+
+            In more detail: replacing
+            “$x$” by “$x - \eta/2$” in $\cos^2(x)$ effects
+            horizontal translation by $+\eta/2$, and adding
+            $-{1\over 2}$
+            to the result effects a vertical translation by $-{1\over 2}$.
+            (I.e., we are using the
+            inverse amounts of translation that we used to map
+            $y = \cos(x)\sin(x)$ onto $y = \cos^2(x)$.)
+
+        |> SolutionNote
+
+            The identity from the previous note can also
+            be proved via the angle-sum formulas; since
+            $$
+            \cos(A + B) = \cos(A)\cos(B) - \sin(A)\sin(B)
+            $$
+            and
+            $$
+            \sin(-\eta/2) = -\sqrt{0.5}
+            $$
+            we have
+            $$
+            \begin{align*}
+            \cos(x - \eta/2) &= \cos(x)\cos(-\eta/2) - \sin(x)\sin(-\eta/2) \\
+            \up{1.6} &=\,\, \cos(x)\sqrt{0.5} - \sin(x)(-\sqrt{0.5}) \\
+            \up{1.6} &=\,\, \sqrt{0.5}\cdot(\cos(x) + \sin(x)) \\
+            \end{align*}
+            $$
+            from which
+            $$
+            \cos^2(x - \eta/2)
+            $$
+            becomes
+            $$
+            \begin{align*}
+            &\left(\sqrt{0.5}\cdot(\cos x + \sin x)\right)^2 \\
+            \up{1.6} =\,\,&{1\over 2}\cdot(\cos^2 x + 2\cos x\sin x +  \sin^2 x) \\
+            \up{1.6} =\,\,&{1\over 2}\cdot(1 + 2\cos x\sin x) \\
+            \up{1.6} =\,\,&{1\over 2} + \cos(x)\sin(x) \\
+            \end{align*}
+            $$
+            using the pythagorean identity in the third equality,
+            and
+            $$
+            \begin{align*}
+            & -{1\over 2} + \cos^2(x - \eta/2) \\
+            \up{1.7} =\,\,&-{1\over 2} + \left({1\over 2} + \cos(x)\sin(x)\right) \\
+            \up{1.7} =\,\,&\cos(x)\sin(x)
+            \end{align*}
+            $$
+            as claimed.
+
+        !! |> SolutionNote
+
+        !!     For an alternate perspective, the original
+        !!     identity would look like so, in a box diagram:
+
+        !!     |> Image
+        !!         src=images/svg_ch5_ex_sinxcosx_and_cos2_comparison_three_boxes.svg
+
+        !!     ...here
+
+        !!     $$
+        !!     w \ra w + {\eta\over 2}
+        !!     $$
+
+        !!     and
+
+        !!     $$
+        !!     u \ra u + {1\over 2}
+        !!     $$
+
+        !!     respectively effect a horizontal translation
+        !!     of $-\eta/2$ and a vertical translation of $1/2$,
+        !!     as pre- and post-processing steps respectively.
+        !!     (Cf. Exercise 28.)
+
+        !! (Or we might write...
+
+        !! $$
+        !! \cos^2 = (u \ra {1\over 2} + u) \,\circ\, \sin\cos \,\circ\, (w \ra w + {\eta\over 2})
+        !! $$
+
+        !! ...or...

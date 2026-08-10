@@ -1,0 +1,27 @@
+|> Exercise
+    work=ing
+    handle=_verbal_to_arithmetic_A_change_
+
+    If $A$ is a function of time, meaning
+    that we can write
+    “$A(0.2)$”
+    to denote “the value of $A$ at time $t = 0.2$”, etc,
+    then how to write
+
+    __the change in $A$ between $t = 11.199$ and
+    $t = 11.2$__
+
+    mathematically?
+    !! (No trick.)
+
+    |> Solution
+
+        This is
+
+        |> Boxed
+            $$
+            A(11.2) - A(11.199)
+            $$
+
+        or, literally, “the value of $A$ at $t = 11.2$ minus the value
+        of $A$ at $t = 11.199$”.

@@ -1,0 +1,44 @@
+|> Exercise
+    handle=_cycles_per_4eta_
+
+    Take a particle traveling around a
+    circle at constant speed. What is the
+    number of cycles [full revolutions] per
+    $4\eta$ units of time equal to, by
+    another name?
+
+    |> Solution
+
+        Let
+
+        $$
+        x
+        $$
+
+        be the number of cycles per $4\eta$ units
+        of time.
+
+        Since one cycle is $4\eta$ radians, we can,
+        instead of saying that the particle travels
+
+        __$x$ cycles per $4\eta$ units of time__
+
+        say that the particle travels
+
+        __$x\cdot 4\eta{}$ radians per $4\eta$ units of time__
+
+        or that the particle travels
+
+        __$x$ radians per $1$ unit of time__
+
+        dividing by $4\eta$. In other words, $x$ is the so-called
+
+        __angular speed__
+
+        or
+
+        __angular frequency__
+
+        of the particle. (That's the answer: “angular
+        speed”, or, equivalently, “angular frequency”.)
+

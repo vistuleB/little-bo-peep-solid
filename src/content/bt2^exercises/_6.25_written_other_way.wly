@@ -1,0 +1,28 @@
+|> Exercise
+    handle=_6_point_25_other_way_of_writing_
+
+    It so happens that
+    $$
+    \Large 6.25
+    $$
+    (i.e., the value of $100/16$) is also
+    famous for being equal to $2.5^2$. (You can
+    verify that
+    $$
+    \Large 25^2 = 625
+    $$
+    and, by shifting two decimal places, one
+    finds $2.5^2 = 6.25$.) Can you elucidate
+    why it would be that
+    $$
+    \Large {100 \over 16} = 2.5^2
+    $$
+    by using some kind of algebra?
+
+    |> Solution
+
+        One has
+        $$
+        \Large {100 \over 16} = {10^2 \over 4^2} = \left(\!{10\over 4}\!\right)^{\!\!2} = \left(\!{5\over 2}\!\right)^{\!\!2}
+        $$
+        and $5/2 = 2.5$. (Ta-daa!)

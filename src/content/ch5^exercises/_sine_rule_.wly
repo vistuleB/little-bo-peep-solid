@@ -1,0 +1,135 @@
+|> Exercise
+    handle=_sine_rule_
+
+    How to express the two sides marked ‘?’ as functions
+    of $\alpha$, $\beta$, $\gamma$ and $a$? (NB: You can 
+    trust the drawing's suggestion that $\beta > \eta$, $\gamma < \eta$, $\alpha < \eta$.)
+
+    |> Image
+        src=images/e5_sine_rule_statement.svg
+
+    |> Solution
+
+        The bottom length of ‘?’ is
+
+        $$
+        a\cdot\sin\gamma\cdot\csc\alpha
+        $$
+
+        or, equivalently,
+
+        $$
+        a\cdot {\sin \gamma\over \sin\alpha}
+        $$
+
+        !! as illustrated here:
+        by swinging from the side of length $a$ to a
+        “middle height”, to the bottom length (this is
+        entirely the same as 
+        !! what happened 
+        the solution technique of
+        Exercise >>_triangle_conch_):
+
+        |> Image
+            src=images/e5_sine_rule_sol1.svg
+
+        The top length of ‘?’, on the other hand,
+        is 
+
+        $$
+        a\cdot\sin\beta\cdot\csc\alpha
+        $$
+
+        or, equivalently,
+
+        $$
+        a\cdot{\sin\beta\over \sin\alpha}
+        $$
+
+        per a similar approach, while also using the fact that
+        $\sin(2\eta - x) = \sin(x)$ for all $x \in \rr$:
+
+        |> Image
+            src=images/e5_sine_rule_sol2_new_ver.svg
+
+        |> ImageRight
+            src=images/e5_sine_rule_sin_2b_cloud.svg
+            offset_x=-30%
+            offset_y=38%
+
+        That's it!
+
+        |> SolutionNote
+
+            One more generally has...
+
+            |> Boxed
+
+                !! $$
+                !! \begin{gather*}
+                !! {a\over b} = {\sin \alpha\over \sin\beta}\qquad{b\over a}  = {\sin \beta\over \sin\alpha}            \\
+                !! {a\over c} = {\sin \alpha\over \sin\gamma}\qquad{c\over a} = {\sin \gamma\over \sin\alpha} \up{2.2} \\
+                !! {b\over c} = {\sin \beta\over \sin\gamma}\qquad{c\over b}  = {\sin \gamma\over \sin\beta}   \up{2.2}
+                !! \end{gather*}
+                !! $$
+                $$
+                \begin{gather*}
+                {b\over a} = {\sin \beta\over \sin\alpha}           \qquad {a\over b} = {\sin \alpha\over \sin\beta} \\
+                {c\over a} = {\sin \gamma\over \sin\alpha} \up{2.2} \qquad {a\over c} = {\sin \alpha\over \sin\gamma}\\
+                {c\over b} = {\sin \gamma\over \sin\beta}  \up{2.2} \qquad {b\over c} = {\sin \beta\over \sin\gamma} \\
+                \end{gather*}
+                $$
+
+            ...(it's $6$ times the same equation, no use
+            looking at all of them) for a general triangle
+            of sidelengths $a$, $b$, $c$ as labeled here...
+
+            |> Image
+                src=images/e5_sine_rule_generic.svg
+
+            ...though we can condense these equations to...
+
+            |> Boxed
+                $$
+                \begin{gather*}
+                {a\over \sin\alpha} = {b\over \sin\beta}            \\
+                {a\over \sin\alpha} = {c\over \sin\gamma}  \up{2.2} \\
+                {b\over \sin\beta} = {c\over \sin\gamma}  \up{2.2}
+                \end{gather*}
+                $$
+
+            ...or even to a single line...
+
+            |> Boxed
+                $$
+                {a\over \sin\alpha} = {b\over \sin\beta} = {c\over \sin\gamma}
+                $$
+
+            ...through cross-multiplication/division!
+
+        |> SolutionNote
+
+            This result (e.g., the last boxed equation above)
+            is known as the _sine rule_.
+
+        |> SolutionNote
+
+            Amusingly (but not that we really care) the
+            same equations hold if we change the definitions
+            of $\alpha$, $\beta$, and $\gamma$ to be the
+            exterior angles of the triangle:
+
+            |> Image
+                src=images/e5_sine_rule_generic_exterior.svg
+
+            ...then each of $\sin \alpha$,
+            $\sin \beta$, $\sin \gamma$ changes sign 
+            _and only sign_ 
+            (
+            |> del
+                sine?
+            \ sign), leaving the original equations intact.
+
+            |> ImageRight
+                line=1.0
+                src=images/e5_sine_rule_sin_360_m_x_cloud.svg

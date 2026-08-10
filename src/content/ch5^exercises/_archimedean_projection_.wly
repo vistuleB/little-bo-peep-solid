@@ -1,0 +1,86 @@
+|> Exercise
+    handle=_archimedean_projection_
+
+    If a sphere is projected directly outward onto
+    a cylinder abutting the sphere at the equator, with each
+    point remaining at its height, as pictured in the
+    sketch and in the visualization below, by what factor are
+    areas stretched as a function of the latitude $\theta$?
+
+    |> Image
+        src=images/svg_ch5_ex_horizontal_projection_sphere_statement.svg
+
+    |> Solution
+
+        Areas are scaled by a factor of
+        $$
+        \sec(\theta) \cdot \cos(\theta) = 1
+        $$
+        because latitudes (circles that slice the sphere
+        horizontally) are stretched by a factor of
+
+        $$
+        \sec(\theta)
+        $$
+
+        |> ImageRight
+            offset_x=9em
+            src=images/svg_ch5_ex_horizontal_projection_sphere_sec_cloud.svg
+
+        by the projection, whereas longitudes (the other
+        ones, perpendicular to latitudes) are locally stretched
+        by a factor of...
+
+        $$
+        \cos(\theta)
+        $$
+
+        ...as depicted in this...
+
+        |> Image
+            src=images/svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg
+
+        ...sketch, and because the
+        overall scaling in area is the latitudinal
+        scaling factor times the longitudinal
+        scaling factor. (Area = width $\times$ height,
+        so you take the factor by which “width” scales,
+        times the factor by which “height” scales—presuming
+        your old “width” and “height” are still at right
+        angle to one another after the projection, which
+        is the case here: longitudes and latitudes, that
+        are perpendicular on the sphere, project to
+        lines and circles, respectively, that are
+        perpendicular on the cylinder.)
+
+        |> SolutionNote
+            As a consequence, 
+            the area of a shape on the sphere is equal to
+            the area of the projection of that shape onto
+            the cylinder, for any shape.
+            This (strange?) fact is known as the
+
+            __Archimedean property__
+        
+            of the sphere. 
+
+        |> SolutionNote
+            For example, the following two orange areas, one
+            on the sphere and one on the cylinder, are
+            equal, by the Archimedean property:
+
+            |> Image
+                src=images/svg_ch5_ex_horizontal_projection_sphere_orange_1.svg
+
+            For a more fun example, since all corresponding areas
+            on the sphere and on the cylinder are equal in
+            this example by the Archimedean property...
+
+            |> Image
+                src=images/svg_ch5_ex_horizontal_projection_sphere_orange_9.svg
+
+            ...it implies that the various “tube sections”
+            of either circle have equal areas on the cylinder,
+            even though dissimilar in shape, since those sections
+            have equal area to one another on the sphere!
+            (For each circle separately.)

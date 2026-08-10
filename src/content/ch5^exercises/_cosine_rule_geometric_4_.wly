@@ -1,0 +1,65 @@
+|> Exercise
+    work=ing
+    handle=_cosine_rule_geometric_4_
+
+    Find expressions for areas A—F and use these to
+    give a formula for $c$ in terms of $a$, $b$ and
+    $\theta_{ab}$:
+
+    |> Image
+        src=images/_e5_cosine_rule_geometric_4_statement_v2.svg
+
+    |> Solution
+
+        We can calculate each area as a plain “width $\times$ height”
+        while keeping in mind that $\cos\theta_{ac} < 0$ (or more exactly
+        that $\cos(2\eta - \theta_{ac}) = -\cos\theta_{ac}$),
+        similarly to exercises >>_cosine_rule_geometric_1_,
+        >>_cosine_rule_geometric_2_, and >>_cosine_rule_geometric_3_:
+
+        |> Image
+            src=images/_e5_cosine_rule_geometric_4_sol1.svg
+
+        !! I.e.,
+
+        !! $$
+        !! \begin{gathered}
+        !! \te{A} = \te{F} = ab\cos\theta_{ab}\\
+        !! \up{1.4}\te{B} = \te{E} = bc\cos\theta_{bc}\\
+        !! \up{1.4}\te{C} = \te{D} = -ac\cos\theta_{ac}
+        !! \end{gathered}
+        !! $$
+
+        From which...
+
+        $$
+        \Large c = \sqrt{c^2} = \sqrt{B - D} = \sqrt{E - C} = \sqrt{(b^2 - A) - (F - a^2)} = \sqrt{(b^2 - ab\cos\theta_{ab}) - (ab\cos\theta_{ab} - a^2)} = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+        $$
+
+        ...where we use the fact that
+
+        $$
+        \begin{gathered}
+        \te{B} = \te{E}\\
+        \up{1.4}\te{D} = \te{C}
+        \end{gathered}
+        $$
+
+        in the third equality, and the fact that
+
+        $$
+        \begin{gathered}
+        \te{E} = b^2 - A\\
+        \up{1.4}\te{C} = F - a^2
+        \end{gathered}
+        $$
+
+        in the fourth equality. The answer is therefore...
+
+        |> Boxed
+
+            $$
+            \Large c = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+            $$
+
+        ...as in exercises >>_cosine_rule_geometric_2_ and >>_cosine_rule_geometric_3_.

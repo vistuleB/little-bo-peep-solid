@@ -14,17 +14,14 @@ import {
 } from "~/store/ExercisesStoreProvider";
 import { OneExerciseStoreProvider } from "~/store/OneExerciseStoreProvider";
 import {
-  PREV_NEXT_EXERCISE_BUTTON_CORNER_RADIUS,
-  PREV_NEXT_EXERCISE_BUTTON_WIDTH,
+  PREV_NEXT_EXERCISE_BUTTON_RX,
+  PREV_NEXT_EXERCISE_BUTTON_W,
 } from "~/constants";
-
-export type ExercisesMode = "list-only" | "switcher-only" | "dual";
 
 type ExercisesProps = ParentProps &
   SharedProps & {
     at_end_of_page?: boolean;
     show_curlicue?: boolean;
-    mode?: ExercisesMode;
   };
 
 type ExerciseProps = ParentProps & {
@@ -36,30 +33,20 @@ export const Exercises = (props: ExercisesProps) => {
   const group_id = props.id ?? fallback_id;
   const at_end_of_page = props.at_end_of_page ?? false;
   const show_curlicue = props.show_curlicue ?? false;
-  const mode: ExercisesMode = props.mode ?? "dual";
   let children_list = children(() => props.children);
 
   return (
-    <ExercisesStoreProvider
-      group_id={group_id}
-      at_end_of_page={at_end_of_page}
-      mode={mode}
-    >
+    <ExercisesStoreProvider group_id={group_id} at_end_of_page={at_end_of_page}>
       {show_curlicue && (
         <Image
           id={`exo-${group_id}`}
-          src="/non-build-img/separator.png"
-          height="60px"
-          class="mt-[15px] mb-[40px]"
-        ></Image>
+          src="/non-build-img/exercises_banner.png"
+          height="100px"
+          class="mt-[15px] mb-[40px]"></Image>
       )}
-      {mode !== "list-only" && children_list.toArray().length > 1 && (
+      {children_list.toArray().length > 1 && (
         <>
-          <Switcher
-            exercises={children_list.toArray()}
-            group_id={group_id}
-            show_toggle={mode === "dual"}
-          />
+          <Switcher exercises={children_list.toArray()} group_id={group_id} />
           <div class="h-[31px]"></div>
         </>
       )}
@@ -103,8 +90,7 @@ const ExercisesGroup = (props: ExercisesGroupProps) => {
                 selected_exo() == index() + 1 || store.list_view
                   ? "opacity-100 h-auto overflow-visible transition-none"
                   : "opacity-0 h-0 overflow-hidden transition-opacity",
-              )}
-            >
+              )}>
               {child}
             </div>
           );
@@ -117,7 +103,6 @@ const ExercisesGroup = (props: ExercisesGroupProps) => {
 type SwitcherProps = {
   exercises: JSX.Element[];
   group_id: string;
-  show_toggle: boolean;
 };
 
 const Switcher = (props: SwitcherProps) => {
@@ -128,8 +113,8 @@ const Switcher = (props: SwitcherProps) => {
   // gap between left/right buttons
   let gap = 8.5;
 
-  let w = PREV_NEXT_EXERCISE_BUTTON_WIDTH;
-  let rx = PREV_NEXT_EXERCISE_BUTTON_CORNER_RADIUS;
+  let w = PREV_NEXT_EXERCISE_BUTTON_W;
+  let rx = PREV_NEXT_EXERCISE_BUTTON_RX;
 
   // left/right arrow
   let triangle_sidelength = 11.5;
@@ -159,41 +144,12 @@ const Switcher = (props: SwitcherProps) => {
     return store.selected_exo < props.exercises.length && !store.list_view;
   };
 
-  const activateOnEnterOrSpace = (event: KeyboardEvent, action: () => void) => {
-    if (event.key !== "Enter" && event.key !== " ") return;
-    event.preventDefault();
-    event.stopPropagation();
-    action();
-  };
-
-  const selectPrevious = () => {
-    if (left_on()) set_store("selected_exo", selected_exo() - 1);
-  };
-
-  const selectNext = () => {
-    if (right_on()) set_store("selected_exo", selected_exo() + 1);
-  };
-
-  const toggleListView = () => {
-    const new_list_view = !store.list_view;
-    set_store("list_view", new_list_view);
-    if (store.list_view && close_solutions_on_entering_list_view)
-      closeAllSolutions(set_store);
-    if (!store.list_view && close_solutions_on_exiting_list_view)
-      closeAllSolutions(set_store);
-  };
-
   return (
     <div class="m-auto">
       <div
         id={`exercises-btns-${props.group_id}`}
-        class="flex justify-center !text-xl gap-0 mt-[2px]"
-      >
+        class="flex justify-center !text-xl gap-0 mt-[2px]">
         <svg
-          role="button"
-          aria-label="Previous exercise"
-          aria-disabled={!left_on()}
-          tabIndex={left_on() ? 0 : -1}
           width={`${2 + w}`}
           height={`${2 + w}`}
           viewBox={`0 0 ${2 + w} ${2 + w}`}
@@ -205,38 +161,31 @@ const Switcher = (props: SwitcherProps) => {
           )}
           onClick={(e) => {
             e.stopPropagation();
-            selectPrevious();
-          }}
-          onKeyDown={(e) => activateOnEnterOrSpace(e, selectPrevious)}
-        >
+            if (left_on()) {
+              set_store("selected_exo", selected_exo() - 1);
+            }
+          }}>
           <path
             class={twJoin(
               left_on()
                 ? "active_exercises_button"
                 : "inactive_exercises_button",
             )}
-            d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-          ></path>
+            d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}></path>
           <path
             class={twJoin(
               left_on()
                 ? "active_exercises_button_arrow_fill"
                 : "inactive_exercises_button_arrow_fill",
             )}
-            d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}
-          ></path>
+            d={`M ${1 + triangle_tip_to_edge} ${1 + w / 2} l ${(triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z M ${1 + w - arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${-arrow_body_length} v ${-arrow_body_width} z`}></path>
         </svg>
         <svg
           width={`${gap}`}
           height={`${2 + w}`}
-          xmlns="http://www.w3.org/2000/svg"
-        ></svg>
+          xmlns="http://www.w3.org/2000/svg"></svg>
         <div class="relative w-fit">
           <svg
-            role="button"
-            aria-label="Next exercise"
-            aria-disabled={!right_on()}
-            tabIndex={right_on() ? 0 : -1}
             width={`${2 + w}`}
             height={`${2 + w}`}
             viewBox={`0 0 ${2 + w} ${2 + w}`}
@@ -248,57 +197,53 @@ const Switcher = (props: SwitcherProps) => {
             )}
             onClick={(e) => {
               e.stopPropagation();
-              selectNext();
-            }}
-            onKeyDown={(e) => activateOnEnterOrSpace(e, selectNext)}
-          >
+              if (right_on()) {
+                set_store("selected_exo", selected_exo() + 1);
+              }
+            }}>
             <path
               class={twJoin(
                 right_on()
                   ? "active_exercises_button"
                   : "inactive_exercises_button",
               )}
-              d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}
-            ></path>
+              d={`M 1 ${1 + rx}A ${rx} ${rx} 0 0 1 ${1 + rx} ${1}H ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w} ${1 + rx}V ${1 + w - rx}A ${rx} ${rx} 0 0 1 ${1 + w - rx} ${1 + w}H ${1 + rx}A ${rx} ${rx} 0 0 1 ${1} ${1 + w - rx}Z`}></path>
             <path
               class={twJoin(
                 right_on()
                   ? "active_exercises_button_arrow_fill"
                   : "inactive_exercises_button_arrow_fill",
               )}
-              d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}
-            ></path>
+              d={`M ${1 + w - triangle_tip_to_edge} ${1 + w / 2} l ${(-triangle_sidelength * Math.sqrt(3)) / 2} ${-0.5 * triangle_sidelength} v ${triangle_sidelength} z`}></path>
             <path
               class={twJoin(
                 right_on()
                   ? "active_exercises_button_arrow_fill"
                   : "inactive_exercises_button_arrow_fill",
               )}
-              d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}
-            ></path>
+              d={`M ${1 + arrow_start_to_edge} ${1 + w / 2 - arrow_body_width / 2} v ${arrow_body_width} h ${arrow_body_length} v ${-arrow_body_width} z`}></path>
           </svg>
-          {props.show_toggle && (
-            <svg
-              role="button"
-              aria-label="Toggle exercise list view"
-              tabIndex={0}
-              class={twJoin(
-                "toggle absolute cursor-pointer",
-                store.list_view ? "disabled" : "",
-              )}
-              style={`left:${w + toggle_gap}px;top:0px;`}
-              width={`${c2c + 2 * r1 + 2}`}
-              height={`${2 + w}`}
-              viewBox={`0 0 ${c2c + 2 * r1 + 2} ${2 + w}`}
-              xmlns="http://www.w3.org/2000/svg"
-              onClick={(e) => {
-                e.stopPropagation();
-                toggleListView();
-              }}
-              onKeyDown={(e) => activateOnEnterOrSpace(e, toggleListView)}
-            >
-              <path
-                d={`
+          <svg
+            class={twJoin(
+              "toggle absolute cursor-pointer",
+              store.list_view ? "disabled" : "",
+            )}
+            style={`left:${w + toggle_gap}px;top:0px;`}
+            width={`${c2c + 2 * r1 + 2}`}
+            height={`${2 + w}`}
+            viewBox={`0 0 ${c2c + 2 * r1 + 2} ${2 + w}`}
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={(e) => {
+              e.stopPropagation();
+              const new_list_view = !store.list_view;
+              set_store("list_view", new_list_view);
+              if (store.list_view && close_solutions_on_entering_list_view)
+                closeAllSolutions(set_store);
+              if (!store.list_view && close_solutions_on_exiting_list_view)
+                closeAllSolutions(set_store);
+            }}>
+            <path
+              d={`
                 M ${1 + r1 + c2c} ${w / 2 - r1}
                 a ${r1} ${r1} 0 0 1 ${r1} ${r1}
                 a ${r1} ${r1} 0 0 1 ${-r1} ${r1}
@@ -307,24 +252,21 @@ const Switcher = (props: SwitcherProps) => {
                 a ${r1} ${r1} 0 0 1 ${r1} ${-r1}
                 z
               `}
-                class={twJoin(
-                  store.list_view
-                    ? "inactive_exercises_button"
-                    : "active_exercises_button_toggle",
-                )}
-              ></path>
-              <circle
-                cx={`${toggle_cx()}`}
-                cy={`${w / 2}`}
-                r={`${r2}`}
-                class={twJoin(
-                  store.list_view
-                    ? "inactive_exercises_toggle_circle"
-                    : "active_exercises_toggle_circle",
-                )}
-              ></circle>
-            </svg>
-          )}
+              class={twJoin(
+                store.list_view
+                  ? "inactive_exercises_button"
+                  : "active_exercises_button_toggle",
+              )}></path>
+            <circle
+              cx={`${toggle_cx()}`}
+              cy={`${w / 2}`}
+              r={`${r2}`}
+              class={twJoin(
+                store.list_view
+                  ? "inactive_exercises_toggle_circle"
+                  : "active_exercises_toggle_circle",
+              )}></circle>
+          </svg>
         </div>
       </div>
     </div>

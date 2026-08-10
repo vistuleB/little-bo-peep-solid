@@ -1,0 +1,133 @@
+|> Exercise
+    handle=_x_square_x_cube_construction_
+
+    Given a number line with $0$, $1$
+    and a value $A > 0$ indicated,
+    how can we construct the values $A^2$ and $A^3$
+    as lengths, using only ruler and compass?
+
+    |> Solution
+
+        _Solution 1._ If $A > 1$,
+        start by constructing a perpendicular to the $x$ axis
+        (“the number line” = “the $x$ axis”) through $1$:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_1.svg
+
+        Take the intersection of this line with a
+        circle of center $(0, 0)$ of radius $A$:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_2_38deg.svg
+
+        This gives us an angle $\theta$ such that $\sec\theta = A$:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_3.svg
+
+        Now it suffices to apply one of the “powers of
+        secant” constructions to obtain powers of $A$,
+        for example either of:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_4.svg
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_5.svg
+            style=margin-bottom:0.5em;
+
+        (Either of these constructiongs requires constructing
+        perpendiculars, but we know how to do that.)
+
+        If $A < 1$, on the other hand,
+        do the same initial steps but with ‘$1$’ and ‘$A$’
+        reversed, resulting in an angle $\theta$ for
+        which $A = \cos\theta$:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_7.svg
+
+        We can then do a “powers of cosine” construction,
+        that is symmetric to powers of secant, to
+        find powers of $A$, for example:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_8.svg
+
+        Though in this case, it bears discussing how we
+        construct, say, this perpendicular:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_9.svg
+
+        ...because this perpendicular must 
+
+        __arrive__
+
+        perpendicularly at a given line, not
+
+        __depart__
+
+        perpendicularly from a given line. 
+        (In the order in which the construction unfolds,
+        this perpendicular “originates” from its upper end,
+        which is a situation that we have not encountered
+        yet.)
+        In this case, the procedure is to draw a circle,
+        in orange below, whose center is the 
+        starting point
+        of the
+        perpendicular, and that crosses the line-to-which-we-must-be-perpendicular
+        in two places:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_10.svg
+
+        Then use those crossings as the
+        centers of two more circles of equal radius...
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_11.svg
+
+        ...whose intersection gives us a second point
+        (even two more points, if we use a radius
+        different from the first orange circle), and the means to draw
+        the perpendicular itself.
+
+        |> Pause
+
+        _Solution 2._ Regardless of whether $A < 1$ or $A > 1$,
+        draw a perpendicular to the number line through $x = 1$
+        and use a compass to report $A$ onto this line
+        (here with $A < 1$):
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_13.svg
+
+        This defines a an angle $\theta$ such that $A = \tan\theta$:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_14.svg
+
+        Then we can use any construction for powers of
+        tan, for example this spiral construction:
+
+        |> Image
+            src=images/e5_x_square_x_cube_construction_15.svg
+
+        (Again, constructing the spiral means constructing
+        a sequence of perpendiculars, but we can do that!)
+
+        |> SolutionNote
+
+            If $A < 1$ there is a clever construction,
+            variant of solution 1, that one can use to
+            construct powers of $A$ using only one compass
+            stroke and one ruler stroke per power of $A$
+            (after setting up the angle $\theta$):
+
+            |> Image
+                src=images/e5_x_square_x_cube_construction_16_v6.svg
+
+            (No such thing exists for $A > 1$.)

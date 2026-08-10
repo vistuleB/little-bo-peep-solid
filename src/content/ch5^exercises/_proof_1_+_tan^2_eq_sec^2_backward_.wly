@@ -1,0 +1,32 @@
+|> Exercise
+    handle=_proof_1_+_tan^2_eq_sec^2_backward_
+
+    Run the computation of the
+    previous exercise backwards, starting with
+    $$
+    \sec^2(\theta)
+    $$
+    at the near end, and ending with $$1 + \tan^2(\theta)$$
+    at the far end. (No peeking back at the solution of
+    that exercise.)
+
+    |> Solution
+
+        Viz:
+
+        |> Boxed
+            $$
+            \begin{align}
+            \sec^2(\theta)
+            \,\,&=\,\, {1\over \cos^2(\theta)} \\
+            &amp;=\,\, \up{2} {\cos^2(\theta) + \sin^2(\theta)\over \cos^2(\theta)} \\
+            &amp;=\,\, \up{2} {\cos^2(\theta)\over \cos^2(\theta)} + {\sin^2(\theta)\over \cos^2(\theta)} \\
+            &amp;=\,\, \up{2} 1 + \left({\sin(\theta)\over \cos(\theta)}\right)^{\!2} \\
+            &amp;=\,\, \up{2}1 + \tan^2(\theta).
+            \end{align}
+            $$
+
+        (Ta-daa!) (It's slightly harder in this
+        direction, when you have to think of
+        turning the “$1$” into “$\cos^2(\theta) + \sin^2(\theta)$”,
+        instead of the other way around.)

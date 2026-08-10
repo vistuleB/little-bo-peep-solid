@@ -1,0 +1,20 @@
+|> Exercise
+    handle=_rat_fundraising_2_
+    What does $(f \circ g)'$ compute,
+    keeping the same setup as in Exercise 34?
+
+    |> Solution
+        It computes the dollars-per-second earnings rate
+        as a function of time. In full detail,
+
+        $$
+        (f \circ g)'(t)
+        $$
+
+        is the dollars-per-second rate which the rat is
+        fundraising at $t$ seconds after the start of the race.
+
+        |> SolutionNote
+            You don't need to know anything about “$f$”
+            or “$g$” to answer this question. You only need to
+            know what “$f \circ g$” is.

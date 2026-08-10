@@ -1,0 +1,322 @@
+|> Exercise
+    handle=_ABCD_roles_
+
+    Let
+
+    $$
+    f(x) = A\cos(Bx + C) + D
+    $$
+
+    and imagine that each of the constants
+    $A$, $B$, $C$ and $D$ is connected to a dial,
+    and we originally set $A$, $B$, $C$ and $D$
+    to $1$, $1$, $0$ and $0$, respectively.
+    Then, in the following order, we...
+
+    |> List
+        marker=decimal
+        style=padding-left:20%;
+
+        ...increase $C$ from $0$ to $1{}.33$; and
+
+        ...increase $B$ from $1$ to $2.33$; and
+
+        ...increase $A$ from $1$ to $3.33$; and
+
+        ...increase $D$ from $0$ to $4.33$.
+
+    How does the graph of $f$ react to each
+    of these changes, as they occur in sequence?
+
+    !!   (x -> x + C) circ (x -> Bx)
+    !! = (x -> Bx) circ (x -> x/B) circ (x -> x + C) circ (x -> Bx)
+    !! = (x -> Bx) circ (x -> (Bx + C) / B)
+    !! = (x -> Bx) circ (x -> x + C/B)
+
+    !!   (u -> u + D) circ (u -> Au)
+    !! = (u -> u + D) circ (u -> Au) circ (u -> u - D) circ (u -> u + D)
+    !! = (u -> A(u - D) + D) circ (u -> u + D)
+    !! = (u -> Au + D(1 - A)) circ (u -> u + D)
+
+    |> Solution
+
+        _Solution 1._ Reasoning by the analogy of
+        a particle going around a circle at uniform
+        speed (cf. Exercise >>_circular_motion_from_x_coordinate_):
+
+        |> List
+            style=padding-left:33px;padding-right:2em;
+
+            step 1: advances the initial position of
+            particle $C$ radians forward, so the
+            graph shifts _left_ by $C = 1.33$ units (so that
+            the value $y = \sin(C)$ finds itself at
+            $x = 0$)
+
+            step 2: speeds up the angular velocity of
+            the particle from $1$ radian per unit time
+            to $B = 2.33$ radians per unit time; this
+            can simply be thought of as a “speeding up
+            of time”, and compresses the graph horizontally
+            about the $y$ axis by a factor $2.33$ (while
+            keeping $y = \sin(C)$ at $x = 0$, as should be);
+
+            step 3: increases the radius of the circle
+            from $1$ to $A = 3.33$, which results in
+            a vertical dilation of the graph by a
+            factor $3.33$;
+
+            step 4: moves the coordinate (say,
+            $y$-coordinate, if we are thinking of $f$
+            as reading off the $y$-coordinate of the
+            particle) from $y = 0$ to $y = D = 4.33$, resulting
+            in a vertical translation upwards of the
+            graph by $4.33$ units!
+
+        |> Pause
+
+        _Solution 2._ One can understand
+
+        $$
+        f = x \ra A\sin(Bx + C) + D
+        $$
+
+        as a 5-fold composition (with functions
+        boxes going right to left):
+
+        |> Image
+            src=images/e5_ABCD_roles_general_comp.svg
+
+        In the initial setting of the variables
+        with $A = B = 1$ and $C = D = 0$
+        the four boxes on the periphery are the
+        identity*:
+
+        |> Image
+            src=images/e5_ABCD_roles_identity_comp.svg
+
+        (*When we say “the identity” we mean 
+
+        __the identity function__
+
+        which is the function $x \ra x$.)
+
+        As we dial $C$ up from $0$ to $1.33$,
+        !! some nonzero value, 
+        the box to the right of sin is
+        “brought online”:
+
+        |> Image
+            src=images/e5_ABCD_roles_identity_comp_C.svg
+
+        The effect of adding such a box to the
+        right of sin is to translate the
+        graph of sin to the left by $C$, as discussed
+        in Exercise >>_four_compositions_graphed_.
+        The second step in which $B$ is increased from
+        $1$ to $2.33$, brings the rightmost box online:
+
+        |> Image
+            src=images/e5_ABCD_roles_identity_comp_B.svg
+
+        Because this box is to the right of all
+        we have so far (which is $x \ra \sin(x + C)$),
+        it compresses the [current] graph horizontally by
+        a factor $B$, also as discussed in Exercise >>_four_compositions_graphed_;
+        step 3 brings the box immediately to the
+        left of sin online...
+
+        |> Image
+            src=images/e5_ABCD_roles_identity_comp_A.svg
+
+        ...which scales the graph-so-far vertically by a
+        factor $A$, as discussed in Exercise >>_four_compositions_graphed_,
+        and finally step 4 brings the leftmost box online...
+
+        |> Image
+            src=images/e5_ABCD_roles_identity_comp_D.svg
+
+        ...that vertically translates the entire graph,
+        as it stands, by $D$ units up, as again discussed
+        in Exercise >>_four_compositions_graphed_.
+
+        !! To recapitulate, starting from $y = \sin(x)$...
+
+        !! |> List
+        !!     style=padding-left:33px;padding-right:2em;
+
+        !!     step 1: translates the graph left by $1.33\,\,(= C)$
+            
+        !!     step 2: compresses the resulting graph horizontally by $2.33\,\,(= B)$ about the $y$ axis 
+
+        !!     step 3: dilates the resulting graph vertically by $3.33\,\,(= A)$ about the $x$ axis 
+
+        !!     step 4: translates the resulting graph up by $4.33\,\,(= D)$
+
+        !! ...and that's the end.
+
+        |> SolutionNote
+
+            Concerning the second solution, for simplicity of
+            analysis it's important
+            to bring the pre- and post-processing
+            functions online “from the inside out”,
+            gluing new boxes on to what's already there:
+
+            |> Image
+                src=images/e5_ABCD_roles_identity_comp_inside_out.svg
+
+            (Otherwise, things get more complicated.)
+            !! Otherwise, to give an example of what may
+            !! go wrong, say that we first bring the rightmost
+            !! box online:
+
+            !! |> Image
+            !!     src=images/e5_ABCD_roles_identity_comp_rightmost.svg
+
+            !! At this stage we have
+
+            !! $$
+            !! x \ra \sin(Bx)
+            !! $$
+
+            !! which is a copy of $\sin(x)$ horizontally
+            !! compressed by $B = 2.33$. Then if we bring
+            !! $x \ra x + C$ online...
+
+            !! |> Image
+            !!     src=images/e5_ABCD_roles_identity_comp_middle.svg
+
+            !! ...at this stage $x \ra x + C$ is
+            !! !! neither a pre-processing nor a post-processing function; 
+            !! NEITHER A PRE-PROCESSING NOR A POST-PROCESSING FUNCTION; 
+            !! the effect of adding this function is
+            !! NOT a translation of the graph by $C$ units in any
+            !! direction!; instead, the effect of inserting this
+            !! intermediate function into the chain is
+            !! that the graph is translated left by 
+
+            !! $$
+            !! C/B
+            !! $$
+
+            !! units, as we can verify by rewriting
+
+            !! $$
+            !! x \ra \sin(Bx + C)
+            !! $$
+
+            !! (the function above), as
+
+            !! $$
+            !! x \ra \sin(B(x + C/B))
+            !! $$
+
+            !! ...which corresponds to this modified assemblage
+            !! of boxes...
+
+            !! |> Image
+            !!     src=images/e5_ABCD_roles_identity_comp_rearranged.svg
+
+            !! ...and in which you can see that, after we
+            !! dial up $B$ (introducing the “$x \ra Bx$” box),
+            !! the effect of dialing up $C$ is to translate
+            !! the graph left by $C/B$ units. 
+            !! (The point is, if you
+
+            !! __translate-and-then-compress__
+
+            !! |> ImageRight
+            !!     src=images/e5_ABCD_roles_translate_and_then_compress_cloud.svg
+
+            !! or if you
+            
+            !! __compress-and-then-translate__
+
+            !! |> ImageRight
+            !!     src=images/e5_ABCD_roles_compress_and_then_translate_cloud_v2.svg
+
+            !! the two amounts of translation required are
+            !! not the same, to achieve the same end result—if
+            !! the translation comes second, it needs to
+            !! be compressed, because everything else has
+            !! already been compressed!) (And by the 
+            !! way things blow up even worse if you attempt
+            !! to dial $D$ up before dialing $A$ up, because if
+            !! you attempt the same distributivity trick on the
+            !! left-hand side to invert the order of the two boxes
+            !! there...
+
+            !! |> Image
+            !!     src=images/e5_ABCD_roles_identity_comp_rearranged_zz.svg
+
+            !! |> ImageLeft
+            !!     src=images/e5_ABCD_roles_Au_cloud.svg
+            !!     offset_x=2em
+
+            !! ...you find that after $D$ has been dialed up,
+            !! and it comes time to change $A$, there are TWO
+            !! boxes left that depend on $A$!—so long story
+            !! short, it becomes very difficult/annoying to
+            !! analyze the effect that changing $A$ has on the
+            !! graph, if we do it after $D$ is nonzero.)
+
+        |> SolutionNote
+
+            The problem uses ‘sin’ as an example but the
+            same reasoning (with boxes) applies to any
+            function. Namely, the graph
+
+            $$
+            y = A\cdot f(Bx + C) + D
+            $$
+
+            is the graph $y = f(x)$ translated left by
+            $C$, compressed (horizontally) by $B$,
+            scaled (vertically) by $A$, etc. (Well, “etc.”:
+            translated vertically by $D$.)
+
+            !! |> Image
+            !!     src=images/e5_ABCD_roles_mona_lisa_cloud.svg
+
+        |> SolutionNote
+
+            A function that can be written as
+
+            $$
+            x \ra A\sin(Bx + C) + D
+            $$
+
+            for some values of $A$, $B$, $C$, $D \in \rr$
+            is called a
+            
+            __sinusoid__
+
+            (if we switch ‘sin’ to ‘cos’ it gives the same
+            class of functions: $\sin(Bx + C) = \cos(Bx + C - \eta)$).
+
+            Moreover:
+
+            |> List
+                style=padding-left:33px;padding-right:2em;
+
+                $C$: may be referred to as the _phase_
+                of the sinuoid (but which is only uniquely determined
+                if you have decided whether your sinusoid is
+                written in terms of ‘cos’ or ‘sin’, and even
+                then only determined up to $360^\circ = 4\eta$,
+                or, even worse,
+                up to $180^\circ = 2\eta$ if negative values of $A$
+                are allowed)
+                
+                $A$: may be referred to as the _amplitude_ of the
+                sinusoid
+
+                $B$: may be referred to as the _angular speed_ or
+                _angular frequency_ of the sinusoid
+
+                $D$: may be referred to as the _vertical shift_
+                or _mean_
+                (mathematics) or as the _DC bias_ or _DC offset_ (engineering)
+                or as the _equilibrium position_ (physics) of
+                the sinusoid

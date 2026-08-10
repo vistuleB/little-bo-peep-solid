@@ -23,7 +23,6 @@ export default function __Chapter2__() {
       pageNecessaryMargin={650}
       maxElementWidth={900}
       id="_32_h.a.i_"
-      path="/article/chapter2"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -95,11 +94,7 @@ export default function __Chapter2__() {
           the values, see below):
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/2--j.svg"
-          intrinsicWidth={470}
-          intrinsicHeight={945}
-        />
+        <Image src="/tmp-images/c2_slope_examples.svg" />
         <Pause />
         <OuterP>
           To explain, the slope of a line is...
@@ -150,11 +145,7 @@ export default function __Chapter2__() {
           {" "} unit for each unit to the right:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/P_gw.svg"
-          intrinsicWidth={327}
-          intrinsicHeight={321}
-        />
+        <Image src="/tmp-images/c2_slope_1_example.svg" />
         <Pause />
         <OuterP>
           On the other hand, the line below has slope
@@ -177,11 +168,7 @@ export default function __Chapter2__() {
           with each unit to the right:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/0j6M.svg"
-          intrinsicWidth={340}
-          intrinsicHeight={329}
-        />
+        <Image src="/tmp-images/c2_slope_minus_0.5_example.svg" />
         <Pause />
         <OuterP>
           ...and so on.
@@ -193,9 +180,9 @@ export default function __Chapter2__() {
 }
 
 const Rest = () => {
-  const visibleRestSections = useShowMore(9);
+  const showMore = useShowMore();
   return <>
-    {visibleRestSections() > 0 && <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -219,11 +206,7 @@ const Rest = () => {
           {" "} on the line:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/v-HV.svg"
-          intrinsicWidth={405}
-          intrinsicHeight={390}
-        />
+        <Image src="/tmp-images/c2_vertical_change_over_horizontal_change_grey_cloud.svg" />
         <Pause />
         <MathBlock>
           $$
@@ -297,12 +280,10 @@ const Rest = () => {
           \te&#123;slope&#125; = &#123;y_2 - y_1 \over x_2 - x_1&#125;
           $$
           <ImageRight
-            src="/build-img/svgo-svg/EgBm.svg"
-            offsetY="-0.7em"
-            offsetX="3em"
-            atLeastAsWide={true}
-            intrinsicWidth={600}
-            intrinsicHeight={400}
+            src="/tmp-images/c2_slope_formula_cloud.svg"
+            offset_y="-0.7em"
+            offset_x="3em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -404,8 +385,6 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-3">
         <OuterP>
@@ -496,11 +475,9 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svg/za9i.svg"
+                  src="/tmp-images/c2_image_icon.svg"
                   width={50}
                   style="padding-top:7px;padding-bottom:7px;"
-                  intrinsicWidth="311.273"
-                  intrinsicHeight="247.518"
                 />
               </td>
               <td>
@@ -524,10 +501,8 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/a4fG.svg"
+                  src="/tmp-images/c2_plus_plus_slope.svg"
                   style="margin-top:7px;margin-bottom:7px;width:105px;"
-                  intrinsicWidth="453.802"
-                  intrinsicHeight="407.973"
                 />
               </td>
               <td>
@@ -551,11 +526,9 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/dHNp.svg"
+                  src="/tmp-images/c2_minus_minus_slope.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
-                  intrinsicWidth="471.106"
-                  intrinsicHeight="409.862"
                 />
               </td>
               <td>
@@ -579,11 +552,9 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/st9S.svg"
+                  src="/tmp-images/c2_plus_minus_slope.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
-                  intrinsicWidth="466.97"
-                  intrinsicHeight="418.406"
                 />
               </td>
               <td>
@@ -607,11 +578,9 @@ const Rest = () => {
               </td>
               <td>
                 <img
-                  src="/build-img/svgo-svg/dHNp.svg"
+                  src="/tmp-images/c2_minus_minus_slope.svg"
                   width={105}
                   style="margin-top:7px;margin-bottom:7px;"
-                  intrinsicWidth="471.106"
-                  intrinsicHeight="409.862"
                 />
               </td>
               <td>
@@ -643,11 +612,9 @@ const Rest = () => {
           {" "} swap
           places, or, namely, to show that the fractions
           <ImageRight
-            src="/build-img/svgo-svg/9GPK.svg"
+            src="/tmp-images/c2_swap_cloud.svg"
             line={3}
-            offsetX="-0.5em"
-            intrinsicWidth={400}
-            intrinsicHeight={200}
+            offset_x="-0.5em"
           />
         </OuterP>
         <Pause />
@@ -666,12 +633,10 @@ const Rest = () => {
           &#123;y_2 - y_1 \over x_2 - x_1&#125; = &#123;-(y_2 - y_1) \over -(x_2 - x_1)&#125; = &#123;y_1 - y_2 \over x_1 - x_2&#125;
           $$
           <ImageLeft
-            src="/build-img/svgo-svg/kzAf.svg"
-            offsetX="2.5em"
-            offsetY={0}
-            atLeastAsWide={true}
-            intrinsicWidth={300}
-            intrinsicHeight={500}
+            src="/tmp-images/c2_a_b_fraction_cloud.svg"
+            offset_x="2.5em"
+            offset_y="-60px"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -690,8 +655,6 @@ const Rest = () => {
           formula.
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -715,11 +678,7 @@ const Rest = () => {
           line:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/o4Yb.svg"
-          intrinsicWidth={355}
-          intrinsicHeight={270}
-        />
+        <Image src="/tmp-images/c2_vertical_line.svg" />
         <Pause />
         <OuterP>
           Indeed, vertical lines have {" "}
@@ -771,8 +730,6 @@ const Rest = () => {
           lines pass through any given point!
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -790,21 +747,15 @@ const Rest = () => {
           </NoBreak>
           <span class="nobreak">
             <InlineImage
-              src="/build-img/svgo-svg/OonE.svg"
+              src="/tmp-images/c2_inline_rise_over_run.svg"
               width="28px"
-              intrinsicWidth={61}
-              intrinsicHeight={62}
             />
             ”),
           </span>
           {" "} following such a picture:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/nL2k.svg"
-          intrinsicWidth={300}
-          intrinsicHeight="245.948"
-        />
+        <Image src="/tmp-images/c2_rise_over_run_1st_figure.svg" />
         <Pause />
         <OuterP>
           In this context, note that, in physics, a
@@ -843,11 +794,7 @@ const Rest = () => {
           also include this picture:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/x7mx.svg"
-          intrinsicWidth={300}
-          intrinsicHeight="245.258"
-        />
+        <Image src="/tmp-images/c2_rise_over_run_2nd_figure.svg" />
         <Pause />
         <OuterP>
           Then “rise” and “run” have their signs flipped,
@@ -917,8 +864,6 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -960,16 +905,10 @@ const Rest = () => {
           or “run equals rise over slope”. Or:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/DoAv.svg"
-          intrinsicWidth={340}
-          intrinsicHeight={415}
-        />
+        <Image src="/tmp-images/c2_flower_bed_1.svg" />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
       </Section>
-    </>}
-    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -999,11 +938,7 @@ const Rest = () => {
           the Cartesian plane. E.g.:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/LVCC.svg"
-          intrinsicWidth={644}
-          intrinsicHeight={680}
-        />
+        <Image src="/tmp-images/c2_line_equation_examples.svg" />
         <Pause />
         <OuterP>
           Note that, assuming said {" "}
@@ -1244,10 +1179,8 @@ const Rest = () => {
           similarly to the more familiar equation
           <ImageLeft
             src="/build-img/svgo-svg/3IFS.svg"
-            offsetY="-6em"
-            offsetX="1em"
-            intrinsicWidth={200}
-            intrinsicHeight="335.103"
+            offset_y="-6em"
+            offset_x="1em"
           />
         </OuterP>
         <Pause />
@@ -1326,13 +1259,9 @@ const Rest = () => {
           <ImageRight
             src="/build-img/svgo-svg/h7oS.svg"
             line={1}
-            intrinsicWidth={300}
-            intrinsicHeight={150}
           />
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 6 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>
@@ -1410,11 +1339,7 @@ const Rest = () => {
           in seconds:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/88nB.svg"
-          intrinsicWidth={423}
-          intrinsicHeight={325}
-        />
+        <Image src="/tmp-images/c2_meters_over_seconds_balloon.svg" />
         <Pause />
         <OuterP>
           The slope of the graph is {" "}
@@ -1546,11 +1471,7 @@ const Rest = () => {
           the same idea(s) in “applied” language:
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/s_jj.svg"
-          intrinsicWidth={512}
-          intrinsicHeight={460}
-        />
+        <Image src="/tmp-images/c2_flower_bed_2.svg" />
         <Pause />
         <StarDivider style="margin-top:-0.3em" />
         <Pause />
@@ -1626,10 +1547,8 @@ const Rest = () => {
             \frac&#123;4\te&#123;m&#125;&#125;&#123;0.75\te&#123;m&#125;/\te&#123;s&#125;&#125;\! = 5.3333...\te&#123;s&#125;
             $$
             <ImageRight
-              src="/build-img/svgo-svg/mtGc.svg"
-              atLeastAsWide={true}
-              intrinsicWidth={930}
-              intrinsicHeight={250}
+              src="/tmp-images/c2_units_cloud.svg"
+              compensate_offset_x_for_large_text_columns={true}
             />
           </MathBlock>
           <Pause />
@@ -1650,8 +1569,6 @@ const Rest = () => {
           </OuterP>
         </Example>
       </Section>
-    </>}
-    {visibleRestSections() > 7 && <>
       <Pause />
       <Section id="section-9">
         <OuterP>
@@ -1746,12 +1663,9 @@ const Rest = () => {
           velocity!
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 8 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}
-        mode="dual"
         show_curlicue={true}
         id="_31_h.a.i_"
       >
@@ -1783,24 +1697,18 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/build-img/svgo-svg/t-Sk.svg"
+              src="/tmp-images/c2_slope_two_and_minus_one_half.svg"
               class="relative w-fit"
-              intrinsicWidth={400}
-              intrinsicHeight={400}
             >
               <ImageRight
-                src="/build-img/svgo-svg/Y5Cw.svg"
-                offsetY="20%"
-                offsetX="-5%"
-                intrinsicWidth={340}
-                intrinsicHeight="154.789"
+                src="/tmp-images/c2_slope_two_and_minus_one_half_cloud_right.svg"
+                offset_y="20%"
+                offset_x="-5%"
               />
               <ImageLeft
-                src="/build-img/svgo-svg/P0MQ.svg"
-                offsetX="-25%"
-                offsetY="47%"
-                intrinsicWidth={340}
-                intrinsicHeight={180}
+                src="/tmp-images/c2_slope_two_and_minus_one_half_cloud_left.svg"
+                offset_x="-25%"
+                offset_y="47%"
               />
             </Image>
             <Pause />
@@ -1844,11 +1752,20 @@ const Rest = () => {
               </OuterP>
               <Pause />
               <Image
-                src="/build-img/svgo-svg/_wle.svg"
+                src="/tmp-images/c2_slope_p_minus_one_over_p.svg"
                 class="relative w-fit"
-                intrinsicWidth={400}
-                intrinsicHeight={400}
-              />
+              >
+                <ImageRight
+                  src="/tmp-images/c2_slope_p_minus_one_over_p_cloud_right.svg"
+                  offset_y="28%"
+                  offset_x="-5%"
+                />
+                <ImageLeft
+                  src="/tmp-images/c2_slope_p_minus_one_over_p_cloud_left.svg"
+                  offset_x="-18%"
+                  offset_y="44%"
+                />
+              </Image>
               <Pause />
               <StarDivider />
             </SolutionNote>
@@ -1897,11 +1814,9 @@ const Rest = () => {
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/eaW7.svg"
-                offsetX="10rem"
-                offsetY="0%"
-                atLeastAsWide={true}
-                intrinsicWidth={700}
-                intrinsicHeight={800}
+                offset_x="10rem"
+                offset_y="0%"
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />
@@ -2031,11 +1946,9 @@ const Rest = () => {
               $$
               <ImageRight
                 src="/build-img/svgo-svg/8ZCw.svg"
-                offsetX="2.5rem"
-                offsetY="0%"
-                atLeastAsWide={true}
-                intrinsicWidth={400}
-                intrinsicHeight="123.091"
+                offset_x="2.5rem"
+                offset_y="0%"
+                compensate_offset_x_for_large_text_columns={true}
               />
             </MathBlock>
             <Pause />
@@ -2142,11 +2055,7 @@ const Rest = () => {
               as the graph):
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/lnNr.svg"
-              intrinsicWidth={667}
-              intrinsicHeight={358}
-            />
+            <Image src="/build-img/svgo-svg/lnNr.svg" />
           </ExerciseStatement>
           <Solution>
             <OuterP>
@@ -2154,11 +2063,7 @@ const Rest = () => {
               velocity:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/u0yv.svg"
-              intrinsicWidth={623}
-              intrinsicHeight={420}
-            />
+            <Image src="/build-img/svgo-svg/u0yv.svg" />
             <Pause />
             <OuterP>
               On each interval, the velocity is rate of
@@ -2213,11 +2118,7 @@ const Rest = () => {
               {" "} An empty circle
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/Jp8B.svg"
-              intrinsicWidth={30}
-              intrinsicHeight="30.001"
-            />
+            <Image src="/build-img/svgo-svg/Jp8B.svg" />
             <Pause />
             <OuterP>
               indicates a “missing” value. Specifically, in
@@ -2362,11 +2263,7 @@ const Rest = () => {
               E.g.:
             </OuterP>
             <Pause />
-            <Image
-              src="/build-img/svgo-svg/gR1_.svg"
-              intrinsicWidth={500}
-              intrinsicHeight={250}
-            />
+            <Image src="/build-img/svgo-svg/gR1_.svg" />
             <Pause />
             <OuterP>
               The rise from the {" "}

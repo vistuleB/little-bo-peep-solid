@@ -1,73 +1,30 @@
-// Size values in pixels
 export const MOBILE_MAX_WIDTH = 900;
-export const DESKTOP_TEXT_COLUMN_WIDTH = 448;
-export const MOBILE_TEXT_COLUMN_SIDE_INSET = 22;
-export const HEADER_BUTTONS_SCROLLY_START_FADE = 800;
-export const HEADER_BUTTONS_SCROLLY_END_FADE = 2000;
-export const HEADER_BOTTOM_BORDER_SCROLLY_START_FADE = 300;
-export const HEADER_BOTTOM_BORDER_SCROLLY_END_FADE = 1000;
-export const HEADER_HEIGHT = 56;
-export const HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY = 80;
-export const SOLUTION_GREEN_DIV_HEIGHT = 500;
-export const PREV_NEXT_EXERCISE_BUTTON_WIDTH = 40.2;
-export const PREV_NEXT_EXERCISE_BUTTON_CORNER_RADIUS = 5;
-export const MATHJAX_INTERSECTION_ROOT_MARGIN = 300;
-export const ENABLE_SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD = true;
-export const SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_MS = 850;
-export const SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_ROOT_MARGIN =
-  "0px 0px 80px 0px";
-export const HORIZONTAL_SWIPE_MIN_DISTANCE = 60;
-export const HORIZONTAL_SWIPE_EDGE_EXCLUSION = 24;
-export const HORIZONTAL_SWIPE_MAX_REVERSAL = 45;
-export const HORIZONTAL_SWIPE_CENTER_TOLERANCE = 6;
-export const HORIZONTAL_PAN_ENTRY_DISTANCE = 12;
-export const HORIZONTAL_PAN_EDGE_OVERSHOOT = 54;
-export const HORIZONTAL_PAN_RECT_EDGE_TOLERANCE = 1;
-export const HORIZONTAL_PAN_RECENTER_TOLERANCE_MIN = 40;
-export const HORIZONTAL_PAN_RECENTER_TOLERANCE_VIEWPORT_RATIO = 0.08;
-export const CONSTRAIN_IMAGE_ON_PAN_RECENTER_TAP = true;
-export const PAN_RECENTER_CONSTRAIN_IMAGE_EVENT =
-  "lbp:pan-recenter-constrain-image";
-export const HORIZONTAL_PAGE_ARRIVAL_OFFSET_WITH_LOADING_SCREEN = 60;
-export const HORIZONTAL_PAGE_ARRIVAL_OFFSET_WITHOUT_LOADING_SCREEN = 85;
+export const DESKTOP_COLUMN_WIDTH = 488;
+export const TEXT_X_PADDING = 20;
+export const HAMBURGER_MENU_SCROLLY_START_FADE = 800;
+export const HAMBURGER_MENU_SCROLLY_END_FADE = 2000;
+export const BOTTOM_BORDER_SCROLLY_START_FADE = 300;
+export const BOTTOM_BORDER_SCROLLY_END_FADE = 1000;
+export const HAMBURGER_MENU_HEIGHT = 56;
+export const HAMBURGER_MENU_BACKGROUND_OFF_SCROLLY = 80;
+export const GREEN_DIV_HEIGHT = 500;
+export const PAGE_DEFAULT_MARGIN = 1500;
+export const PREV_NEXT_EXERCISE_BUTTON_W = 40.2;
+export const PREV_NEXT_EXERCISE_BUTTON_RX = 5;
 
-// Ratios
-export const MIN_UNCONSTRAIN_EXPANSION_RATIO = 1.5;
-export const ELEVATOR_STOP_DOWN_SKIP_TOP_VIEWPORT_RATIO = 0.7;
-export const ELEVATOR_STOP_UP_SKIP_BOTTOM_VIEWPORT_RATIO = 0.7;
-export const ELEVATOR_STOP_POSITION_VIEWPORT_RATIO = 0.5;
-
-// Time values
-export const ELEVATOR_ARROW_SCROLL_DURATION_MS = 100;
-export const FIRST_ROUTE_LOAD_GRACE_MS = 300;
-export const HORIZONTAL_PAGE_ARRIVAL_DURATION_MS = 440;
-export const HORIZONTAL_SWIPE_MAX_DURATION_MS = 550;
-export const HORIZONTAL_SWIPE_TERMINAL_SAMPLE_MS = 120;
-export const HORIZONTAL_SWIPE_MAX_RELEASE_PAUSE_MS = 100;
-export const FAST_ROUTE_LOAD_MS = 500;
-export const ROUTE_LOAD_MEMORY_TTL_MS = 5 * 60 * 1000;
-export const LOADING_SPINNER_DELAY_MS = 500;
-export const HASH_SCROLL_RESTORATION_DELAY_MS = 300;
-export const SAVED_SCROLL_RESTORATION_DELAY_MS = 100;
-export const IN_CHAPTER_SCROLL_DURATION_MS = 200;
-export const MATHJAX_INTERSECTION_FALLBACK_DELAY_MS = 500;
-
-// Other
-export const BATCH_SOLUTION_SCROLL_ANCHOR_FRAMES = 5;
-export const ENABLE_MATHJAX_INTERSECTION_FALLBACK = true;
-export const ENABLE_HORIZONTAL_SWIPE_ARRIVAL = true;
-export const HORIZONTAL_SWIPE_DIRECTION_RATIO = 1.2;
-export const HORIZONTAL_SWIPE_MIN_TERMINAL_VELOCITY = 0.12;
-
-export const setLayoutConstantsAsCssVars = () => {
+export const setContentsAsCssVars = () => {
   const root = document.documentElement;
   root.style.setProperty(
-    "--desktop-text-column-width",
-    `${DESKTOP_TEXT_COLUMN_WIDTH}px`,
+    "--hamburger-menu-height",
+    `${HAMBURGER_MENU_HEIGHT}px`,
   );
   root.style.setProperty(
-    "--mobile-text-column-side-inset",
-    `${MOBILE_TEXT_COLUMN_SIDE_INSET}px`,
+    "--desktop-text-column-width-with-padding",
+    `${DESKTOP_COLUMN_WIDTH}px`,
   );
-  root.style.setProperty("--header-height", `${HEADER_HEIGHT}px`);
+  root.style.setProperty(
+    "--desktop-text-column-padding",
+    `${TEXT_X_PADDING}px`,
+  );
+  root.style.setProperty("--mobile-max-width", `${MOBILE_MAX_WIDTH}px`);
 };

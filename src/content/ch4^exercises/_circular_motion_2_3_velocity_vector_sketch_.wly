@@ -1,0 +1,49 @@
+|> Exercise
+    handle=_circular_motion_2_3_velocity_vector_sketch_
+
+    Sketch the velocity vector of a particle
+    going at three times unit speed (“speed $3$” in common
+    parlance) clockwise around a circle of radius $2$.
+    What path does the velocity vector describe
+    over time? (I.e., if you cut-paste the velocity
+    vector back to the origin, so that its “tail”
+    is at $(0, 0)$, what curve does the far end of the
+    vector describe?) Over how much time?
+
+    |> Solution
+
+        The velocity vector is an arrow of length $3$
+        tangent to a circle of radius $2$, brushed
+        clockwise:
+
+        |> Image
+            src=images/svg_velocity_vector_radius_2_speed_3_sketch_1.svg
+
+        If we bring the tail of the vector back to
+        $(0, 0)$ we find an arrow of length $3$
+        tracing a circle of radius $3$:
+
+        |> Image
+            src=images/svg_velocity_vector_radius_2_speed_3_centered.svg
+
+        Lastly, the velocity vector does a full revolution
+        of the red circle in the same amount of time that
+        the particle does a full revolution of the blue circle,
+        which is
+
+        $$
+        {2\cdot (\te{circumference of a unit circle}) \over \te{3}}
+        $$
+
+        because the circumference of the blue circle
+        is twice the circumference of a unit circle,
+        and the particle is going at speed $3$.
+
+        |> Pause
+        _Note 1._
+        In such diagrams we recycle the axes
+        to plot quantities of several different
+        dimensions: positions (in blue, in this
+        case) have dimensions of length ([L]) while
+        velocities (in red, in this case) have
+        dimensions of length over time ([L/T]).

@@ -1,0 +1,8 @@
+|> Exercise
+    handle=_what_is_log_base_10_of_one_trillion_
+
+    What is the logarithm base $10$ of one trillion?
+
+    |> Solution
+
+        $12$, because one trillion is $10^{12}$.

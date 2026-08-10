@@ -1,0 +1,12 @@
+|> Exercise
+    handle=_what_is_log_base_10_of_product_of_powers_of_10_
+
+    What is the logarithm base $10$ of: _a trillion times a billion times a million times a thousand_?
+
+    |> Solution
+
+        Since
+        $$
+        \Large 10^{12}\times 10^{9}\times 10^{6}\times 10^3 = 10^{12+9+6+3}
+        $$
+        the answer is $12+9+6+3$, or $30$.

@@ -17,7 +17,6 @@ export default function __Bootcamp1__() {
       pageNecessaryMargin={160}
       maxElementWidth={800}
       id="_1_h.a.i_"
-      path="/article/bootcamp1"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -176,6 +175,15 @@ export default function __Bootcamp1__() {
           {" "} set, a set with no elements!
         </OuterP>
       </Section>
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const showMore = useShowMore();
+  return <>
+    {showMore() && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
@@ -383,15 +391,6 @@ export default function __Bootcamp1__() {
         </OuterP>
       </Section>
       <Pause />
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const visibleRestSections = useShowMore(6);
-  return <>
-    {visibleRestSections() > 0 && <>
       <Section id="section-3">
         <OuterP>
           <b>
@@ -517,8 +516,6 @@ const Rest = () => {
           empty set—the one and only!
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
       <Pause />
       <Section id="section-4">
         <OuterP>
@@ -551,8 +548,6 @@ const Rest = () => {
           and keep it safe.)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 2 && <>
       <Pause />
       <Section id="section-5">
         <OuterP>
@@ -603,10 +598,8 @@ const Rest = () => {
           $$
           <ImageRight
             src="/build-img/svgo-svg/dcQB.svg"
-            offsetX="3em"
-            atLeastAsWide={true}
-            intrinsicWidth={300}
-            intrinsicHeight={150}
+            offset_x="3em"
+            compensate_offset_x_for_large_text_columns={true}
           />
         </MathBlock>
         <Pause />
@@ -671,8 +664,6 @@ const Rest = () => {
           whole set each time.
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 3 && <>
       <Pause />
       <Section id="section-6">
         <OuterP>
@@ -930,8 +921,6 @@ const Rest = () => {
           means “and”.)
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 4 && <>
       <Pause />
       <Section id="section-7">
         <OuterP>
@@ -1107,8 +1096,6 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
       </Section>
-    </>}
-    {visibleRestSections() > 5 && <>
       <Pause />
       <Section id="section-8">
         <OuterP>

@@ -1,0 +1,39 @@
+|> Exercise
+    work=ing
+    handle=_cosine_rule_geometric_2_
+
+    Keeping the diagram of Exercise >>_cosine_rule_geometric_1_,
+    find a formula for $c$ in terms of $a$, $b$  
+    and $\theta_{ab}$.
+
+    |> Solution
+
+        By Exercise >>_cosine_rule_geometric_1_,
+        these rectangles have the same area:
+
+        |> Image
+            src=images/_e5_cosine_rule_geometric_2_sol1.svg
+
+        !! By symmetry, 
+        But by a similar argument,
+        these rectangles 
+        !! also 
+        can also be shown to have
+        have the same area:
+
+        |> Image
+            src=images/_e5_cosine_rule_geometric_2_sol2_v2.svg
+
+        This gives...
+
+        |> Image
+            src=images/_e5_cosine_rule_geometric_2_sol3.svg
+
+        ...thiiiis...
+
+        |> Boxed
+            $$
+            c = \sqrt{a^2 + b^2 - 2ab\cos\theta_{ab}}
+            $$
+
+        ...formula!

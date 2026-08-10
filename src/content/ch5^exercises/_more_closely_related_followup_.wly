@@ -1,0 +1,171 @@
+|> Exercise
+    handle=_more_closely_related_followup_
+
+    For each of $\cos^2$, $\sin^2$, and $\sin\cdot\cos$:
+
+    |> List
+        marker=decimal
+
+        Choose either $\cos(2x)$ or $\sin(2x)$ as a
+        “most closely related starting point”, according
+        to your sense of which of $\cos(2x)$ or $\sin(2x)$
+        is more closely related to the given function.
+
+        Conjecture a sequence of geometric transformations
+        of the plane that takes either $\cos(2x)$ or $\sin(2x)$,
+        depending on which you chose,
+        !! as “most closely related”,
+        onto the graph of the given function (be it $\cos\sin$,
+        $\cos^2$, or $\sin^2$).
+
+        Prove your conjecture by algebra.
+
+    |> Solution
+
+        For $\cos^2$ we take
+
+        $$
+        \cos(2x)
+        $$
+
+        as our starting point, since the graph of $\cos(2x)$
+        seems more closely related to the graph of $\cos^2(x)$
+        than $\sin(2x)$ is, by virtue of alignment of the bumps:
+
+        |> Image
+            src=images/e5_more_closely_related_followup_sol1.svg
+
+        Our conjecture, per appearance of the graphs, is that
+        $\cos^2$ is the graph of $\cos(2x)$...
+
+        __translated up by $1$, vertically
+        scaled by $1/2$__
+
+        |> ImageRight
+            src=images/e5_more_closely_related_followup_cloud1.svg
+
+        ...or is the graph of $\cos(2x)$...
+
+        __vertically scaled by $1/2$,
+        translated up by $1/2$__
+
+        |> ImageLeft
+            src=images/e5_more_closely_related_followup_cloud2.svg
+
+        ...equivalently; for the proof, the sum-formula
+        !! for the algebraic proof, we use the
+        !! fact that 
+
+        $$
+        \cos(A + B) = \cos A\cos B - \sin A\sin B
+        $$
+
+        implies
+
+        $$
+        \cos(2x) = \cos^2 x - \sin^2 x
+        $$
+
+        !! by putting $A = B = x$, 
+        from which
+
+        $$
+        \begin{aligned}
+        \phantom{=}&\,\,(\cos(2x) + 1)\cdot {1\over 2} \\
+        =&\,\,\up{1.4}(\cos^2 x - \sin^2 x + 1)\cdot {1\over 2} \\
+        =&\,\,\up{1.4}(\cos^2 x + \cos^2 x)\cdot {1\over 2} \\
+        =&\,\,\up{1.4}\cos^2 x
+        \end{aligned}
+        $$
+
+        |> ImageLeft
+            src=images/e5_more_closely_related_followup_cloud4.svg
+            offset_y=1.3em
+
+        which completes the proof, since
+        $$(\cos(2x) + 1)\cdot {1\over 2}$$
+        is $\cos(2x)$ translated up by $1$, scaled
+        vertically by ${1\over 2}$.
+
+        For $\sin^2$ we can similarly conjecture that
+        $\sin^2$ is the graph of $\cos(2x)$
+
+        __vertically scaled by $-1/2$,
+        translated up by $1/2$__
+
+        |> ImageLeft
+            src=images/e5_more_closely_related_followup_cloud3.svg
+
+        and, indeed,
+
+        $$
+        \begin{aligned}
+        \phantom{=}&\,\,-{1\over 2}\cos(2x) + {1\over 2}\\
+        =&\,\,\up{1.4}-{1\over 2}(\cos^2 x - \sin^2 x) + {1\over 2}\\
+        =&\,\,\up{1.4}{1\over 2}\sin^2 x + {1\over 2}(1 - \cos^2 x)\\
+        =&\,\,\up{1.4}{1\over 2}\sin^2 x + {1\over 2}\sin^2 x\\
+        =&\,\,\up{1.4}\sin^2 x
+        \end{aligned}
+        $$
+
+        |> ImageLeft
+            src=images/e5_more_closely_related_followup_cloud5.svg
+            offset_y=0.2em
+
+        which completes a proof.
+
+        For $\sin\cdot\cos$ it seems that $\sin(2x)$ is
+        more closely related:
+
+        |> Image
+            src=images/e5_more_closely_related_followup_sol3.svg
+
+        In fact, it seems that $\sin\cdot\cos$ is just $y = \sin(2x)$
+
+        __vertically scaled by $1/2$__
+
+        which, indeed ($\times 2$), can be verified from the fact that
+
+        $$
+        \sin(A + B) = \cos A\sin B + \sin A\cos B
+        $$
+
+        implies 
+
+        $$
+        \sin(2x) = 2\sin x\cos x
+        $$
+
+        by setting $A = B = x$, which implies
+
+        $$
+        {1\over 2}\sin(2x) = \sin x\cos x
+        $$
+
+        as per the conjecture!
+
+        |> SolutionNote
+
+            Here is a “pretty” rearrangement of the formulas
+            discovered above:
+
+            |> Boxed
+                $$
+                \begin{gathered}
+                \cos^2(x) = {1\over 2} + {1\over 2}\cos(2x) \\
+                \up{2.1}\sin^2(x) = {1\over 2} - {1\over 2}\cos(2x) \\
+                \up{2.1}\sin(x)\cos(x) = {1\over 2}\sin(2x)
+                \end{gathered}
+                $$
+
+
+            Another pretty arrangement:
+
+            |> Boxed
+                $$
+                \begin{gathered}
+                \cos^2(x) = {1 + \cos(2x) \over 2}\\
+                \up{2.1}\sin^2(x) = {1 - \cos(2x) \over 2} \\
+                \up{2.1}\sin(x)\cos(x) = {\sin(2x) \over 2 }
+                \end{gathered}
+                $$

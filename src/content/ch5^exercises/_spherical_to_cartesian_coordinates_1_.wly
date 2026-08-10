@@ -1,0 +1,112 @@
+|> Exercise
+    handle=_spherical_to_cartesian_coordinates_1_
+
+    A point $P \in \rr^3$ at distance $R$ from the
+    origin forms an angle $\phi$ with the positive
+    $z$ axis, while $P$'s projection onto the $xy$-plane
+    is at a counterclockwise angle $\theta$ from the
+    positive $x$ axis:
+
+    |> Image
+        src=images/svg_ch5_ex_spherical_coordinates_statement.svg
+
+    What are $x$, $y$ and $z$ in terms of $R$,
+    $\phi$ and $\theta$?
+
+    |> Solution
+
+        Since $\phi$ is an ordinary geometric angle
+        between two lines, (as opposed to: an oriented
+        angle, a.k.a., “signed angle”), we have
+
+        $$
+        0 \leq \phi \leq 2\eta
+        $$
+
+        |> ImageRight
+            src=images/e5_sperical_coordinates_180_cloud.svg
+            offset_x=4em
+
+        !! (or
+
+        !! $$
+        !! 0 \leq \phi \leq 180^\circ
+        !! $$
+
+        !! equivalently—and recall that 
+
+        !! $$
+        !! 180^\circ = 2\eta
+        !! $$
+
+        !! _as real numbers_, so there is absolutely no fudging
+        !! going on if we write it the second way), and
+        from which
+
+        $$
+        \sin(\phi) \geq 0
+        $$
+
+        !! and
+
+        !! $$
+        !! R\sin(\phi) \geq 0
+        !! $$
+
+        and from which $R\sin(\phi)$, as it appears in the 
+        following diagram, is the actual _length_ of
+        $P$'s projection onto the $xy$-plane:
+        
+        |> Image
+            src=images/svg_ch5_ex_spherical_coordinates_Rsin_phi.svg
+        
+        ...whereas $R\cos(\phi)$, as it appears above, is a
+
+        __signed length__
+
+        !! (or “coordinate”) (or “real number”, haha) 
+        as
+
+        $$
+        \cos(\phi)
+        $$
+
+        is negative for $\eta < \phi \leq 2\eta$, positive
+        for $0 \leq \phi < \eta$! But in any case that is what
+        we want, since $z$ switches from positive to negative
+        at $\phi = \eta$ just like $\cos(\phi)$,
+        giving us
+
+        $$
+        z = R\cos(\phi)
+        $$
+
+        and “one coordinate down”.
+       
+        For $x$ and $y$, then, we are left in a “classical”
+        situation of converting polar coordinates to Cartesian
+        coordinates in the $xy$-plane; only  the “$r$” of
+        polar coordinates is now “$R\sin(\phi)$” (but
+        which is nonnegative, happily, as noted):
+        
+        |> Image
+            src=images/svg_ch5_ex_spherical_coordinates_xy_plane.svg
+        
+        Or:
+        
+        |> Boxed
+            style=margin-bottom:-5px;
+
+            $$
+            x = R\sin(\phi)\cos(\theta)
+            $$
+
+            $$
+            y = R\sin(\phi)\sin(\theta)
+            $$
+
+            $$
+            z = R\cos(\phi)
+            $$
+        
+        |> StarDivider

@@ -1,0 +1,14 @@
+|> Exercise
+    handle=_define_abs_val_by_cases_
+    How can you define the absolute value
+    function using “definition by cases”?
+
+    |> Solution
+
+        The absolute value function is
+
+        $$
+        x \ra \begin{cases} x & \te{if $x \geq 0$,}\\ -x\!\!\up{1.2} & \te{if $x < 0$}\end{cases}
+        $$
+
+        because $-(-1) = 1$, $-(-5) = 5$, etc.

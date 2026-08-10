@@ -1,0 +1,97 @@
+|> Exercise
+    handle=_powers_of_cos_and_tan_
+
+    What do similar illustrations look like for
+    powers of cosine, and for powers of tangent?
+
+    |> Solution
+
+        For cosines we can copy the same figures as
+        for secant, but go “in the other direction”:
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_cos_bounce.svg
+        |> Image
+            style=margin-top:1.5em;
+            src=images/svg_ch5_ex_costan_powers_cos_snail.svg
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_cos_inverted_towers.svg
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_circles.svg
+
+        For ‘tan’ it is possible to produce spirals:
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_tan_48_big.svg
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_tan_48_big_other_spiral.svg
+
+        There is also a staircase possibility (nb:
+        the spirals will go inward, and the staircase
+        collapses to a point, if $\theta < \eta/2$):
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_tan_48_wedge.svg
+
+        We can also do as in the second spiral,
+        and put the powers of $\tan(\theta)$ on the
+        hypotenuses of the triangles...
+
+        |> Image
+            src=images/svg_ch5_ex_costan_powers_tan_48_other_wedge.svg
+
+        ...since the size ratio of successive triangles
+        is $\tan(\theta)$, by the first staircase drawing!
+        (In fact, we could have done this trick with
+        powers of sec/cos as well, relabeling some other
+        side of the triangle to be the power of $\cos$.)
+
+        |> SolutionNote
+
+            Here are some examples of what we suggest at the
+
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_cos_snail_other_way.svg
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_cos_towers_other_way.svg
+
+            (To reiterate, this works because the triangles are all similar,
+            and the size ratio of one triangle to the previous—specifically,
+            the ratio of the hypotenuses—is
+            $\cos(\theta)$.)
+
+        |> SolutionNote
+
+            To illustrate powers of
+            $$
+            \cot(\theta)
+            $$
+            one can start from the illustrations for
+            $$
+            \tan(\theta)
+            $$
+            and replace the complementary angle by ‘$\theta$’.
+            E.g.:
+
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_cot_48_big.svg
+
+            Likewise, to illustrate powers of
+            $$
+            \sin(\theta)
+            $$
+            one can start with an illustration for powers of
+            $\cos(\theta)$ and reverse the role of $\theta$ and
+            its complement. E.g., with our two variations of the
+            snail:
+
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_sin_snail.svg
+            |> Image
+                src=images/svg_ch5_ex_costan_powers_sin_snail_other_way.svg
+
+            (Likewise to switch from an illustration of $\sec$
+            to illustration of $\csc$ it suffices to move $\theta$
+            around, not that aliens will ever descend on Earth and
+            ask us these things.)

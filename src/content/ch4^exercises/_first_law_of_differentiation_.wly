@@ -1,0 +1,33 @@
+|> Exercise
+    ref=rence
+    handle=_first_law_of_differentiation_
+
+    If you scale the graph of a function $f$
+    vertically by a factor $2$—i.e., multiply
+    each output by $2$—is the derivative
+    also scaled by $2$?
+
+    |> Solution
+
+        Yes, this is the case. For a joke way
+        of seeing it, here is a graph of a
+        putative function $f$ before and after
+        scaling:
+
+        |> Image
+            src=images/svg_ch4_scaling_figure.svg
+
+        The second graph truly is the first
+        graph vertically scaled by a factor $2$
+        because the scale on the $y$ axis has
+        been doubled. (Hehe.) This means that the ratio
+
+        $$
+        {\te{rise}\over \te{run}}
+        $$
+
+        has doubled in the second graph, because
+        “rise” has doubled (each $y$-coordinate
+        is twice as large!), whereas “run” stays
+        the same. (So the slope of the tangent has
+        doubled, so the derivative is doubled.)

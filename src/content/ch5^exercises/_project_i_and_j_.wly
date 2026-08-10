@@ -1,0 +1,140 @@
+|> Exercise
+    handle=_project_i_and_j_
+
+    What are the orthogonal (= perpendicular) 
+    projections of the
+    vectors $(1, 0)$, $(0, 1)$ 
+    onto a $(-1, 1)$-ruler
+    placed at angle $\theta$ in the unit circle?
+
+    |> Image
+        src=images/e5_project_i_and_j_statement.svg
+
+    (I.e., find the ruler-readings
+    marked ‘1’ and ‘2’ above
+    as a function of the angle $\theta$.)
+
+    |> Solution
+
+        _Solution 1._ If we rotate the diagram by $-\theta$
+        to align the ruler with the $x$ axis the new angles
+        of the vectors are $-\theta$ and $\eta - \theta$
+        (changed from $0$ and $\eta$, respectively):
+        
+        |> Image
+            src=images/e5_project_i_and_j_sol1.svg
+
+        The ruler-readings are therefore
+        $$
+        \cos(-\theta) = \cos(\theta)
+        $$
+        and
+        $$
+        \cos(\eta - \theta) = \sin(\theta)
+        $$
+
+        respectively (in order ‘1’, ‘2’), making use of
+        basic identities. (See the section “Identities with $\eta$”
+        in this chapter.)
+
+        |> Pause
+
+        _Solution 2._ 
+        Recalling first...
+
+        |> Image
+            src=images/svg_ch5_ch_unit_circle_with_new_definition.svg
+
+        ...this figure from the chapter, we note that
+        there is an alternate
+        set of definitions for sin and cos that is 
+        based on clockwise instead of counterclockwise rotation:
+        
+        |> Image
+            src=images/e5_project_i_and_j_sol2.svg
+
+        Now comparing this set of definitions to
+        this figure...
+
+        |> Image
+            src=images/e5_project_i_and_j_sol3.svg
+
+        ...in which, by contrast to usual, angles are measured 
+
+        __positively clockwise__
+
+        (that's why it's “$\theta$” not “$-\theta$”) 
+        it becomes trivial to see that the two ruler-readings
+        are just $\cos(\theta)$ (‘1’) and $\sin(\theta)$ (‘2’).
+
+        |> Pause
+
+        _Solution 3._ 
+        More generally, when a unit
+        vector is projected onto a “unit ruler”,
+        we can switch the ruler _&_ vector positions
+        without affecting the ruler-reading:
+
+        |> Image
+            src=images/e5_project_i_and_j_sol4.svg
+
+        (Because what counts is the angle between the
+        “forward end” of the ruler and the forward end of
+        the vector, measured as an angle between $0^\circ$
+        and $180^\circ$, and this angle remains the same.)
+        If we apply this to the problem statement
+        the unique ruler is replaced by a unique vector
+        while the two vectors are each replaced by a ruler:
+
+        |> Image
+            src=images/e5_project_i_and_j_sol5_v2.svg
+
+        ...and in the new configuration, at bottom right, 
+        one can see by the original definitions of sin
+        and cos that the projections are
+        are $\cos(\theta)$ (‘1’), $\sin(\theta)$ (‘2’).
+
+        |> SolutionNote
+
+            The original definitions of sin and cos involve
+            a single point rotating around the unit circle projected
+            onto two fixed rulers, resulting in two
+            functions:
+
+            |> Image
+                src=images/e5_project_i_and_j_note1.svg
+
+            |> Pause
+
+            |> Image
+                src=images/e5_project_i_and_j_note1_sin_v2.svg
+
+            By contrast, this exercise shows that we can also view
+            sin and cos as the projections of two different fixed points onto
+            a single ruler, which is the rotating object:
+
+            |> Image
+                src=images/e5_project_i_and_j_note2.svg
+
+            |> Image
+                src=images/e5_project_i_and_j_note2_sin.svg
+
+            |> StarDivider
+
+            !! To paraphrase, according to the first definition,
+            !! sin and cos are
+
+            !! __the measurements obtained by virtue of being
+            !! at a certain position (angle) in the plane__
+
+            !! while according to the second definition, sin and cos
+            !! are 
+
+            !! __the measurements obtained by virtue of
+            !! measuring according to a certain direction in the plane__
+
+            !! where in the former case, to underscore the philosophical difference,
+            !! it is the thing being
+            !! measured that varies, while in the latter case,
+            !! it is the instrument of measurement that varies.
+

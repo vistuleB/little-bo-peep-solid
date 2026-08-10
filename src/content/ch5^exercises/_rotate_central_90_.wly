@@ -1,0 +1,50 @@
+|> Exercise
+    handle=_rotate_central_90_
+
+    Argue that, in the following figure, the
+    angle marked ‘?’ equals $\theta$, the angle at
+    the center of the circle:
+
+    |> Image
+        src=images/svg_ch5_ex_tangent_angle_v2.svg
+
+    |> Solution
+
+        The ending and starting half-lines of the
+        angle marked ‘?’ are both $90^\circ$ counterclockwise
+        from the ending and starting half-lines,
+        respectively, of the central angle:
+
+        |> Image
+            src=images/svg_ch5_ex_tangent_angle_explanation_v2.svg
+
+        The angle marked ‘?’ is therefore obtained
+        by a $90^\circ$ rotation (and then translation)
+        of the central angle, and is, therefore, equal
+        to the central angle $\theta$.
+
+        |> SolutionNote
+
+            This holds no matter which quadrant we
+            push $\theta$ to:
+
+            |> Image
+                src=images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg
+
+        |> SolutionNote
+
+            Here is an attempt at verbalization:
+
+            __the counterclockwise angle from the positive
+            $x$ axis to
+            the radial vector [of angle $\theta$]
+            equals the counterclockwise angle from the positive
+            $y$ axis to the counterclockwise tangent [of angle $\theta$]__
+
+            With the various terms illustrated here:
+
+            |> Image
+                src=images/svg_ch5_ex_tangent_angle_verbalization_explanation.svg
+
+            ...but if it was such a great verbalization we
+            wouldn't need to illustrate it, ergo, we failed!

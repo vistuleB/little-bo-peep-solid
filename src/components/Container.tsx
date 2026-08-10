@@ -4,12 +4,9 @@ import { useGlobalContext } from "~/store/StoreProvider";
 import mainColumnWidth from "~/hooks/useMainColumnWidth";
 import LoadingGraphic from "./LoadingGraphic";
 import containerWidth from "~/hooks/useContainerWidth";
-import { useLocation } from "@solidjs/router";
-import { swipeArrivalPreparation } from "~/utils/routeTransitionPolicy";
 
 const Container = (props: ParentProps) => {
   let { store } = useGlobalContext();
-  const location = useLocation();
 
   const marginWidth = () => (containerWidth() - mainColumnWidth()) / 2;
 
@@ -37,60 +34,30 @@ const Container = (props: ParentProps) => {
     );
   };
 
-  const preparingDeepSwipeArrival = () =>
-    swipeArrivalPreparation(store, location.pathname) === "deep" &&
-    store.horizontal_arrival_phase === "preparing";
-
-  const positioningSwipeDestination = () =>
-    swipeArrivalPreparation(store, location.pathname) !== "none" &&
-    (store.horizontal_arrival_phase === "positioning-destination" ||
-      store.horizontal_arrival_phase === "preparing") &&
-    store.horizontal_arrival_offset === 0;
-
-  const contentReady = () =>
-    (store.saved_scroll_finished || store.scroll_is_at_0) &&
-    !preparingDeepSwipeArrival() &&
-    !positioningSwipeDestination();
-
-  const centeredSceneLeft = () => (store.innerWidth - containerWidth()) / 2;
-
   return (
     <>
       <div
-        id="ContainerViewport"
-        class="relative overflow-x-hidden"
+        id="Container"
+        class="-z-10 relative overflow-hidden"
         style={{
-          width: "100vw",
-          background: "var(--background-rgb)",
-          "overscroll-behavior-x": "none",
-          "touch-action": "pan-y pinch-zoom",
-        }}
-      >
+          width: containerWidth() + "px",
+          opacity: store.saved_scroll_finished || store.scroll_is_at_0 ? 1 : 0,
+        }}>
+        <EarlyImages />
+        {/* <div class="relative"> */}
+        {store.show_areas &&
+          store.pageNecessaryMargin > 0 &&
+          marginShowAreaDivs()}
+        {store.show_areas && midLineDiv()}
+        <Nav />
+        {props.children}
+        {store.loading && <LoadingGraphic />}
+        {/* </div> */}
         <div
-          id="Container"
-          class="relative"
+          class="h-14"
           style={{
-            width: containerWidth() + "px",
-            "margin-left": centeredSceneLeft() + "px",
-          }}
-        >
-          <EarlyImages />
-          {store.show_areas &&
-            store.pageNecessaryMargin > 0 &&
-            marginShowAreaDivs()}
-          {store.show_areas && midLineDiv()}
-          <Nav />
-          <div style={{ opacity: contentReady() ? 1 : 0 }}>
-            {props.children}
-          </div>
-          <LoadingGraphic visible={store.spinner_currently_visible} />
-          <div
-            class="h-14"
-            style={{
-              background: store.show_areas ? "teal" : "#0000",
-            }}
-          ></div>
-        </div>
+            background: store.show_areas ? "teal" : "#0000",
+          }}></div>
       </div>
     </>
   );
@@ -99,6 +66,7 @@ const Container = (props: ParentProps) => {
 const EarlyImages = () => {
   return (
     <div style="overflow:hidden;position:absolute;top:0px;left:0px;pointer-events:none;width:1px;height:1px;">
+      <img src="/non-build-img/dark_calculus.png" style="position:absolute" />
       <img src="/build-img/svgo-svg/anTr.svg" style="position:absolute" />
       <img src="/build-img/svgo-svg/Z39o.svg" style="position:absolute" />
       <img src="/build-img/svgo-svg/9z9J.svg" style="position:absolute" />

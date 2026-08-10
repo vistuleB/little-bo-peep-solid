@@ -170,6 +170,7 @@
 
 
 !! |> Section
+!!     work=ing
 !!     *Function operation and units.* Taking the sum or
 !!     product, etc, of two functions imposes certain
 !!     constraints on their signatures in order for the operation
@@ -197,6 +198,7 @@
 !!     !! $$
 
 !! |> Section
+!!     work=ing
 !!     !! *Function operations.*
 !!     *The constraints imposed by function operations
 !!     on units.*
@@ -359,6 +361,7 @@
 !!     !! $$
 
 !! |> Section
+!!     work=ing
 !!     *The chain rule.* 
 !!     Starting slow, we invite you to verify the following
 !!     multiplication:
