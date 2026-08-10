@@ -338,7 +338,7 @@ Key architectural points:
 The Writerly/desugaring library lives at `../wly/` (sibling to this repo). It is referenced in
 `renderer/gleam.toml` as:
 ```toml
-vxml = { "path" = "../../wly/vxml" }
+vxml = ">= 1.0.3 and < 2.0.0"
 writerly = { "path" = "../../wly/writerly" }
 desugaring = { "path" = "../../wly/desugaring" }
 ```
