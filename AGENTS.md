@@ -348,15 +348,16 @@ Key architectural points:
 
 ## Writerly Repo Location
 
-The Writerly/desugaring library lives at `../wly/` (sibling to this repo). It is referenced in
+The Writerly/desugaring libraries live at `../wly/` (sibling to this repo).
+VXML is consumed as a published package. They are referenced in
 `renderer/gleam.toml` as:
 ```toml
-vxml = { "path" = "../../wly/vxml" }
+vxml = ">= 1.0.0 and < 2.0.0"
 writerly = { "path" = "../../wly/writerly" }
 desugaring = { "path" = "../../wly/desugaring" }
 ```
 
-When adding or modifying desugarers, check `../wly/desugaring/src/desugarer_library.gleam`
+When adding or modifying desugarers, check `../wly/desugaring/src/desugaring/desugarers.gleam`
 for the full `dl.*` API.
 
 ## Working branch

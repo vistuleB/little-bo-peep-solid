@@ -7,6 +7,8 @@
     "original-size": 14110,
     "compressed-size": 14095,
     "compression": "0.11%",
+    "intrinsic-width": "200",
+    "intrinsic-height": "110",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -18,6 +20,8 @@
     "original-size": 498,
     "compressed-size": 354,
     "compression": "28.92%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -29,6 +33,8 @@
     "original-size": 25587,
     "compressed-size": 6876,
     "compression": "73.13%",
+    "intrinsic-width": "520",
+    "intrinsic-height": "520",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -40,6 +46,8 @@
     "original-size": 35931,
     "compressed-size": 33218,
     "compression": "7.55%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -51,6 +59,8 @@
     "original-size": 8537,
     "compressed-size": 8537,
     "compression": "0.0%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -62,6 +72,8 @@
     "original-size": 283797,
     "compressed-size": 259267,
     "compression": "8.64%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -73,6 +85,8 @@
     "original-size": 333137,
     "compressed-size": 123081,
     "compression": "63.05%",
+    "intrinsic-width": "1080",
+    "intrinsic-height": "606",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -84,6 +98,8 @@
     "original-size": 65346,
     "compressed-size": 57366,
     "compression": "12.21%",
+    "intrinsic-width": "560",
+    "intrinsic-height": "395",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -95,6 +111,8 @@
     "original-size": 242777,
     "compressed-size": 21870,
     "compression": "90.99%",
+    "intrinsic-width": "850",
+    "intrinsic-height": "402.02762",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -106,6 +124,8 @@
     "original-size": 138984,
     "compressed-size": 135213,
     "compression": "2.71%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -117,6 +137,8 @@
     "original-size": 220734,
     "compressed-size": 50718,
     "compression": "77.02%",
+    "intrinsic-width": "660",
+    "intrinsic-height": "440",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -128,6 +150,8 @@
     "original-size": 12092,
     "compressed-size": 12017,
     "compression": "0.62%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -139,6 +163,8 @@
     "original-size": 233654,
     "compressed-size": 233654,
     "compression": "0.0%",
+    "intrinsic-width": "3840",
+    "intrinsic-height": "2022",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -150,6 +176,8 @@
     "original-size": 67778,
     "compressed-size": 16462,
     "compression": "75.71%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "175.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -161,6 +189,8 @@
     "original-size": 23820,
     "compressed-size": 23796,
     "compression": "0.1%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "245.948",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -172,6 +202,8 @@
     "original-size": 19237,
     "compressed-size": 9725,
     "compression": "49.45%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -183,6 +215,8 @@
     "original-size": 32776,
     "compressed-size": 31171,
     "compression": "4.9%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -194,6 +228,8 @@
     "original-size": 438901,
     "compressed-size": 130861,
     "compression": "70.18%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -205,6 +241,8 @@
     "original-size": 25848,
     "compressed-size": 25760,
     "compression": "0.34%",
+    "intrinsic-width": "327",
+    "intrinsic-height": "321",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -216,6 +254,8 @@
     "original-size": 36088,
     "compressed-size": 5536,
     "compression": "84.66%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "213",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -227,6 +267,8 @@
     "original-size": 304372,
     "compressed-size": 73821,
     "compression": "75.75%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "540",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -238,6 +280,8 @@
     "original-size": 431228,
     "compressed-size": 112546,
     "compression": "73.9%",
+    "intrinsic-width": "1080",
+    "intrinsic-height": "670",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -249,6 +293,8 @@
     "original-size": 45944,
     "compressed-size": 10389,
     "compression": "77.39%",
+    "intrinsic-width": "520",
+    "intrinsic-height": "220",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -260,6 +306,8 @@
     "original-size": 330525,
     "compressed-size": 207091,
     "compression": "37.34%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "440",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -271,6 +319,8 @@
     "original-size": 39819,
     "compressed-size": 27620,
     "compression": "30.64%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -282,6 +332,8 @@
     "original-size": 79852,
     "compressed-size": 41348,
     "compression": "48.22%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -293,6 +345,8 @@
     "original-size": 120105,
     "compressed-size": 29594,
     "compression": "75.36%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -304,6 +358,8 @@
     "original-size": 97364,
     "compressed-size": 75799,
     "compression": "22.15%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -315,6 +371,8 @@
     "original-size": 263343,
     "compressed-size": 253617,
     "compression": "3.69%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -326,6 +384,8 @@
     "original-size": 11704,
     "compressed-size": 8325,
     "compression": "28.87%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -337,6 +397,8 @@
     "original-size": 2724115,
     "compressed-size": 2044643,
     "compression": "24.94%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -348,6 +410,8 @@
     "original-size": 71428,
     "compressed-size": 62208,
     "compression": "12.91%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "405",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -359,6 +423,8 @@
     "original-size": 88762,
     "compressed-size": 42589,
     "compression": "52.02%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "215",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -370,6 +436,8 @@
     "original-size": 120833,
     "compressed-size": 13428,
     "compression": "88.89%",
+    "intrinsic-width": "460",
+    "intrinsic-height": "60",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -381,6 +449,8 @@
     "original-size": 101361,
     "compressed-size": 7471,
     "compression": "92.63%",
+    "intrinsic-width": "520",
+    "intrinsic-height": "175",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -392,6 +462,8 @@
     "original-size": 12155,
     "compressed-size": 10166,
     "compression": "16.36%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "160",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -403,6 +475,8 @@
     "original-size": 18474,
     "compressed-size": 13770,
     "compression": "25.46%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -414,6 +488,8 @@
     "original-size": 48580,
     "compressed-size": 47955,
     "compression": "1.29%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -425,6 +501,8 @@
     "original-size": 378517,
     "compressed-size": 104659,
     "compression": "72.35%",
+    "intrinsic-width": "650",
+    "intrinsic-height": "525",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -436,6 +514,8 @@
     "original-size": 111345,
     "compressed-size": 93223,
     "compression": "16.28%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -447,6 +527,8 @@
     "original-size": 98249,
     "compressed-size": 95600,
     "compression": "2.7%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -458,6 +540,8 @@
     "original-size": 216269,
     "compressed-size": 14392,
     "compression": "93.35%",
+    "intrinsic-width": "410",
+    "intrinsic-height": "460",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -469,6 +553,8 @@
     "original-size": 47108,
     "compressed-size": 34834,
     "compression": "26.06%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -480,6 +566,8 @@
     "original-size": 10627,
     "compressed-size": 4425,
     "compression": "58.36%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "330",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -491,6 +579,8 @@
     "original-size": 35316,
     "compressed-size": 9468,
     "compression": "73.19%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -502,6 +592,8 @@
     "original-size": 25867,
     "compressed-size": 19828,
     "compression": "23.35%",
+    "intrinsic-width": "510",
+    "intrinsic-height": "335",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -513,6 +605,8 @@
     "original-size": 449613,
     "compressed-size": 189116,
     "compression": "57.94%",
+    "intrinsic-width": "855",
+    "intrinsic-height": "362",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -524,6 +618,8 @@
     "original-size": 11337,
     "compressed-size": 4088,
     "compression": "63.94%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "130",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -535,6 +631,8 @@
     "original-size": 109455,
     "compressed-size": 14477,
     "compression": "86.77%",
+    "intrinsic-width": "340",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -546,6 +644,8 @@
     "original-size": 58523,
     "compressed-size": 42072,
     "compression": "28.11%",
+    "intrinsic-width": "610",
+    "intrinsic-height": "340",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -557,6 +657,8 @@
     "original-size": 168718,
     "compressed-size": 30527,
     "compression": "81.91%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "465",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -568,6 +670,8 @@
     "original-size": 16574,
     "compressed-size": 9376,
     "compression": "43.43%",
+    "intrinsic-width": "200",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -579,6 +683,8 @@
     "original-size": 313356,
     "compressed-size": 21369,
     "compression": "93.18%",
+    "intrinsic-width": "1240",
+    "intrinsic-height": "205",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -590,6 +696,8 @@
     "original-size": 21729,
     "compressed-size": 20758,
     "compression": "4.47%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -601,6 +709,8 @@
     "original-size": 8073,
     "compressed-size": 3390,
     "compression": "58.01%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -612,6 +722,8 @@
     "original-size": 71980,
     "compressed-size": 38075,
     "compression": "47.1%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "305",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -623,6 +735,8 @@
     "original-size": 28314,
     "compressed-size": 19740,
     "compression": "30.28%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "575",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -634,6 +748,8 @@
     "original-size": 67999,
     "compressed-size": 36552,
     "compression": "46.25%",
+    "intrinsic-width": "480",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -645,6 +761,8 @@
     "original-size": 21174,
     "compressed-size": 10130,
     "compression": "52.16%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -656,6 +774,8 @@
     "original-size": 595521,
     "compressed-size": 94639,
     "compression": "84.11%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "415",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -667,6 +787,8 @@
     "original-size": 53808,
     "compressed-size": 26129,
     "compression": "51.44%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -678,6 +800,8 @@
     "original-size": 21698,
     "compressed-size": 17766,
     "compression": "18.12%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -689,6 +813,8 @@
     "original-size": 91952,
     "compressed-size": 11584,
     "compression": "87.4%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "320",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -700,6 +826,8 @@
     "original-size": 11322,
     "compressed-size": 5715,
     "compression": "49.52%",
+    "intrinsic-width": "720",
+    "intrinsic-height": "220",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -711,6 +839,8 @@
     "original-size": 81679,
     "compressed-size": 80904,
     "compression": "0.95%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -722,6 +852,8 @@
     "original-size": 101473,
     "compressed-size": 94632,
     "compression": "6.74%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -733,6 +865,8 @@
     "original-size": 814487,
     "compressed-size": 104828,
     "compression": "87.13%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -744,6 +878,8 @@
     "original-size": 314690,
     "compressed-size": 213833,
     "compression": "32.05%",
+    "intrinsic-width": "410",
+    "intrinsic-height": "460",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -755,6 +891,8 @@
     "original-size": 34932,
     "compressed-size": 18663,
     "compression": "46.57%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "205",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -766,6 +904,8 @@
     "original-size": 104835,
     "compressed-size": 15178,
     "compression": "85.52%",
+    "intrinsic-width": "466.97",
+    "intrinsic-height": "418.406",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -777,6 +917,8 @@
     "original-size": 6284,
     "compressed-size": 4362,
     "compression": "30.59%",
+    "intrinsic-width": "240",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -788,6 +930,8 @@
     "original-size": 845,
     "compressed-size": 513,
     "compression": "39.29%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -799,6 +943,8 @@
     "original-size": 22834,
     "compressed-size": 10759,
     "compression": "52.88%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -810,6 +956,8 @@
     "original-size": 22747,
     "compressed-size": 22598,
     "compression": "0.66%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "245",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -821,6 +969,8 @@
     "original-size": 223071,
     "compressed-size": 147402,
     "compression": "33.92%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "280",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -832,6 +982,8 @@
     "original-size": 13727,
     "compressed-size": 4644,
     "compression": "66.17%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -843,6 +995,8 @@
     "original-size": 53765,
     "compressed-size": 40891,
     "compression": "23.94%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -854,6 +1008,8 @@
     "original-size": 379758,
     "compressed-size": 237135,
     "compression": "37.56%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "440",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -865,6 +1021,8 @@
     "original-size": 238174,
     "compressed-size": 97771,
     "compression": "58.95%",
+    "intrinsic-width": "755",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -876,6 +1034,8 @@
     "original-size": 33674,
     "compressed-size": 29352,
     "compression": "12.83%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "175",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -887,6 +1047,8 @@
     "original-size": 2207180,
     "compressed-size": 163881,
     "compression": "92.58%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -898,6 +1060,8 @@
     "original-size": 10094,
     "compressed-size": 3958,
     "compression": "60.79%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "185",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -909,6 +1073,8 @@
     "original-size": 31001,
     "compressed-size": 29404,
     "compression": "5.15%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -920,6 +1086,8 @@
     "original-size": 18856,
     "compressed-size": 18292,
     "compression": "2.99%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -931,6 +1099,8 @@
     "original-size": 53050,
     "compressed-size": 35964,
     "compression": "32.21%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -942,6 +1112,8 @@
     "original-size": 40651,
     "compressed-size": 12736,
     "compression": "68.67%",
+    "intrinsic-width": "660",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -953,6 +1125,8 @@
     "original-size": 1018,
     "compressed-size": 509,
     "compression": "50.0%",
+    "intrinsic-width": "6.7",
+    "intrinsic-height": "7.5",
     "used-last-build": true,
     "3chars": ["ch3","ch3","ch3"]
   },
@@ -964,6 +1138,8 @@
     "original-size": 123207,
     "compressed-size": 38271,
     "compression": "68.94%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -975,6 +1151,8 @@
     "original-size": 280,
     "compressed-size": 223,
     "compression": "20.36%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -986,6 +1164,8 @@
     "original-size": 52516,
     "compressed-size": 52189,
     "compression": "0.62%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -997,6 +1177,8 @@
     "original-size": 60134,
     "compressed-size": 22616,
     "compression": "62.39%",
+    "intrinsic-width": "520",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -1008,6 +1190,8 @@
     "original-size": 96951,
     "compressed-size": 32860,
     "compression": "66.11%",
+    "intrinsic-width": "930",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -1019,6 +1203,8 @@
     "original-size": 41622,
     "compressed-size": 41622,
     "compression": "0.0%",
+    "intrinsic-width": "580",
+    "intrinsic-height": "160",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1030,6 +1216,8 @@
     "original-size": 24903,
     "compressed-size": 24762,
     "compression": "0.57%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "258.022",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1041,6 +1229,8 @@
     "original-size": 11638,
     "compressed-size": 5914,
     "compression": "49.18%",
+    "intrinsic-width": "520",
+    "intrinsic-height": "299.06931",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -1052,6 +1242,8 @@
     "original-size": 13501,
     "compressed-size": 6330,
     "compression": "53.11%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "330",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1063,6 +1255,8 @@
     "original-size": 196,
     "compressed-size": 147,
     "compression": "25.0%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -1074,6 +1268,8 @@
     "original-size": 85396,
     "compressed-size": 16223,
     "compression": "81.0%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1085,6 +1281,8 @@
     "original-size": 45392,
     "compressed-size": 44511,
     "compression": "1.94%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1096,6 +1294,8 @@
     "original-size": 171604,
     "compressed-size": 94837,
     "compression": "44.73%",
+    "intrinsic-width": "650",
+    "intrinsic-height": "1145",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1107,6 +1307,8 @@
     "original-size": 364268,
     "compressed-size": 123195,
     "compression": "66.18%",
+    "intrinsic-width": "760",
+    "intrinsic-height": "590",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1118,6 +1320,8 @@
     "original-size": 1085,
     "compressed-size": 666,
     "compression": "38.62%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1129,6 +1333,8 @@
     "original-size": 78115,
     "compressed-size": 25937,
     "compression": "66.8%",
+    "intrinsic-width": "892.21315",
+    "intrinsic-height": "163.02727",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -1140,6 +1346,8 @@
     "original-size": 8335,
     "compressed-size": 3648,
     "compression": "56.23%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "175",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1151,6 +1359,8 @@
     "original-size": 24228,
     "compressed-size": 10754,
     "compression": "55.61%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1162,6 +1372,8 @@
     "original-size": 5375,
     "compressed-size": 4066,
     "compression": "24.35%",
+    "intrinsic-width": "139.88",
+    "intrinsic-height": "43.071",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -1173,6 +1385,8 @@
     "original-size": 13114,
     "compressed-size": 8094,
     "compression": "38.28%",
+    "intrinsic-width": "350",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1184,6 +1398,8 @@
     "original-size": 44099,
     "compressed-size": 34496,
     "compression": "21.78%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1195,6 +1411,8 @@
     "original-size": 62282,
     "compressed-size": 61864,
     "compression": "0.67%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1206,6 +1424,8 @@
     "original-size": 24303,
     "compressed-size": 20248,
     "compression": "16.69%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1217,6 +1437,8 @@
     "original-size": 205120,
     "compressed-size": 19966,
     "compression": "90.27%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1228,6 +1450,8 @@
     "original-size": 70063,
     "compressed-size": 67345,
     "compression": "3.88%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1239,6 +1463,8 @@
     "original-size": 105217,
     "compressed-size": 29661,
     "compression": "71.81%",
+    "intrinsic-width": "380",
+    "intrinsic-height": "330",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1250,6 +1476,8 @@
     "original-size": 33069,
     "compressed-size": 32870,
     "compression": "0.6%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1261,6 +1489,8 @@
     "original-size": 120614,
     "compressed-size": 44539,
     "compression": "63.07%",
+    "intrinsic-width": "640",
+    "intrinsic-height": "229",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1272,6 +1502,8 @@
     "original-size": 10175,
     "compressed-size": 8454,
     "compression": "16.91%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1283,6 +1515,8 @@
     "original-size": 50205,
     "compressed-size": 27360,
     "compression": "45.5%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1294,6 +1528,8 @@
     "original-size": 78649,
     "compressed-size": 42449,
     "compression": "46.03%",
+    "intrinsic-width": "660",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1305,6 +1541,8 @@
     "original-size": 10035,
     "compressed-size": 3991,
     "compression": "60.23%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "215",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1316,6 +1554,8 @@
     "original-size": 82361,
     "compressed-size": 51608,
     "compression": "37.34%",
+    "intrinsic-width": "560",
+    "intrinsic-height": "405",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1327,6 +1567,8 @@
     "original-size": 74892,
     "compressed-size": 74855,
     "compression": "0.05%",
+    "intrinsic-width": "620",
+    "intrinsic-height": "670.662",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -1338,6 +1580,8 @@
     "original-size": 123949,
     "compressed-size": 73693,
     "compression": "40.55%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "275",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -1349,6 +1593,8 @@
     "original-size": 81857,
     "compressed-size": 23662,
     "compression": "71.09%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1360,6 +1606,8 @@
     "original-size": 110365,
     "compressed-size": 107380,
     "compression": "2.7%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1371,6 +1619,8 @@
     "original-size": 4185,
     "compressed-size": 4185,
     "compression": "0.0%",
+    "intrinsic-width": "186.776",
+    "intrinsic-height": "43.071",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -1382,6 +1632,8 @@
     "original-size": 69029,
     "compressed-size": 24778,
     "compression": "64.1%",
+    "intrinsic-width": "520",
+    "intrinsic-height": "325",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -1393,6 +1645,8 @@
     "original-size": 22765,
     "compressed-size": 18426,
     "compression": "19.06%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1404,6 +1658,8 @@
     "original-size": 111534,
     "compressed-size": 11790,
     "compression": "89.43%",
+    "intrinsic-width": "640",
+    "intrinsic-height": "229",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1415,6 +1671,8 @@
     "original-size": 996580,
     "compressed-size": 537520,
     "compression": "46.06%",
+    "intrinsic-width": "1960",
+    "intrinsic-height": "1300",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1426,6 +1684,8 @@
     "original-size": 31266,
     "compressed-size": 31039,
     "compression": "0.73%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1437,6 +1697,8 @@
     "original-size": 45408,
     "compressed-size": 7869,
     "compression": "82.67%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1448,6 +1710,8 @@
     "original-size": 979,
     "compressed-size": 645,
     "compression": "34.12%",
+    "intrinsic-width": "18.75",
+    "intrinsic-height": "18.75",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1459,6 +1723,8 @@
     "original-size": 42548,
     "compressed-size": 41320,
     "compression": "2.89%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "945",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -1470,6 +1736,8 @@
     "original-size": 43989,
     "compressed-size": 43027,
     "compression": "2.19%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1481,6 +1749,8 @@
     "original-size": 63424,
     "compressed-size": 9311,
     "compression": "85.32%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1492,6 +1762,8 @@
     "original-size": 8338,
     "compressed-size": 8219,
     "compression": "1.43%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "175.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1503,6 +1775,8 @@
     "original-size": 7012,
     "compressed-size": 7009,
     "compression": "0.04%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1514,6 +1788,8 @@
     "original-size": 415797,
     "compressed-size": 138444,
     "compression": "66.7%",
+    "intrinsic-width": "3100",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1525,6 +1801,8 @@
     "original-size": 25311,
     "compressed-size": 21263,
     "compression": "15.99%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1536,6 +1814,8 @@
     "original-size": 160019,
     "compressed-size": 151984,
     "compression": "5.02%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1547,6 +1827,8 @@
     "original-size": 90798,
     "compressed-size": 30732,
     "compression": "66.15%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "145",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -1558,6 +1840,8 @@
     "original-size": 352846,
     "compressed-size": 88876,
     "compression": "74.81%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1569,6 +1853,8 @@
     "original-size": 91465,
     "compressed-size": 44080,
     "compression": "51.81%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "193",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1580,6 +1866,8 @@
     "original-size": 16054,
     "compressed-size": 15935,
     "compression": "0.74%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1591,6 +1879,8 @@
     "original-size": 185276,
     "compressed-size": 81365,
     "compression": "56.08%",
+    "intrinsic-width": "750",
+    "intrinsic-height": "460",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1602,6 +1892,8 @@
     "original-size": 105188,
     "compressed-size": 33777,
     "compression": "67.89%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1613,6 +1905,8 @@
     "original-size": 6635,
     "compressed-size": 6635,
     "compression": "0.0%",
+    "intrinsic-width": "364.775",
+    "intrinsic-height": "43.071",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -1624,6 +1918,8 @@
     "original-size": 14137,
     "compressed-size": 5471,
     "compression": "61.3%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "129",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1635,6 +1931,8 @@
     "original-size": 19089,
     "compressed-size": 5829,
     "compression": "69.46%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "210",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1646,6 +1944,8 @@
     "original-size": 145500,
     "compressed-size": 59503,
     "compression": "59.1%",
+    "intrinsic-width": "640",
+    "intrinsic-height": "520",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1657,6 +1957,8 @@
     "original-size": 191801,
     "compressed-size": 143277,
     "compression": "25.3%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "395",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1668,6 +1970,8 @@
     "original-size": 115631,
     "compressed-size": 37293,
     "compression": "67.75%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1679,6 +1983,8 @@
     "original-size": 1531,
     "compressed-size": 964,
     "compression": "37.03%",
+    "intrinsic-width": "18.75",
+    "intrinsic-height": "18.75",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1690,6 +1996,8 @@
     "original-size": 902,
     "compressed-size": 522,
     "compression": "42.13%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1701,6 +2009,8 @@
     "original-size": 312443,
     "compressed-size": 182088,
     "compression": "41.72%",
+    "intrinsic-width": "620",
+    "intrinsic-height": "435",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1712,6 +2022,8 @@
     "original-size": 64842,
     "compressed-size": 14846,
     "compression": "77.1%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "225",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1723,6 +2035,8 @@
     "original-size": 89778,
     "compressed-size": 16440,
     "compression": "81.69%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "410",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1734,6 +2048,8 @@
     "original-size": 105533,
     "compressed-size": 48847,
     "compression": "53.71%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "170",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1745,6 +2061,8 @@
     "original-size": 781,
     "compressed-size": 524,
     "compression": "32.91%",
+    "intrinsic-width": "18.75",
+    "intrinsic-height": "18.75",
     "used-last-build": true,
     "3chars": ["ch4","ch4"]
   },
@@ -1756,6 +2074,8 @@
     "original-size": 91307,
     "compressed-size": 27285,
     "compression": "70.12%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "205",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1767,6 +2087,8 @@
     "original-size": 178945,
     "compressed-size": 29311,
     "compression": "83.62%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "600",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1778,6 +2100,8 @@
     "original-size": 218408,
     "compressed-size": 122480,
     "compression": "43.92%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1789,6 +2113,8 @@
     "original-size": 236517,
     "compressed-size": 137569,
     "compression": "41.84%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "1145",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1800,6 +2126,8 @@
     "original-size": 60095,
     "compressed-size": 48417,
     "compression": "19.43%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "215",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1811,6 +2139,8 @@
     "original-size": 185086,
     "compressed-size": 127332,
     "compression": "31.2%",
+    "intrinsic-width": "680",
+    "intrinsic-height": "145",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -1822,6 +2152,8 @@
     "original-size": 28274,
     "compressed-size": 12573,
     "compression": "55.53%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1833,6 +2165,8 @@
     "original-size": 6692,
     "compressed-size": 6673,
     "compression": "0.28%",
+    "intrinsic-width": "580",
+    "intrinsic-height": "248.057",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -1844,6 +2178,8 @@
     "original-size": 190492,
     "compressed-size": 185229,
     "compression": "2.76%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1855,6 +2191,8 @@
     "original-size": 280,
     "compressed-size": 223,
     "compression": "20.36%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -1866,6 +2204,8 @@
     "original-size": 34230,
     "compressed-size": 33271,
     "compression": "2.8%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1877,6 +2217,8 @@
     "original-size": 20239,
     "compressed-size": 13254,
     "compression": "34.51%",
+    "intrinsic-width": "540",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -1888,6 +2230,8 @@
     "original-size": 772,
     "compressed-size": 510,
     "compression": "33.94%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1899,6 +2243,8 @@
     "original-size": 89683,
     "compressed-size": 88306,
     "compression": "1.54%",
+    "intrinsic-width": "560",
+    "intrinsic-height": "395",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -1910,6 +2256,8 @@
     "original-size": 335264,
     "compressed-size": 45116,
     "compression": "86.54%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "260",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1921,6 +2269,8 @@
     "original-size": 73987,
     "compressed-size": 29581,
     "compression": "60.02%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "120",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -1932,6 +2282,8 @@
     "original-size": 104317,
     "compressed-size": 14586,
     "compression": "86.02%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1943,6 +2295,8 @@
     "original-size": 65693,
     "compressed-size": 64515,
     "compression": "1.79%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1954,6 +2308,8 @@
     "original-size": 18864,
     "compressed-size": 6633,
     "compression": "64.84%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "225",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1965,6 +2321,8 @@
     "original-size": 206598,
     "compressed-size": 178251,
     "compression": "13.72%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -1976,6 +2334,8 @@
     "original-size": 237950,
     "compressed-size": 98899,
     "compression": "58.44%",
+    "intrinsic-width": "570",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1987,6 +2347,8 @@
     "original-size": 48749,
     "compressed-size": 15330,
     "compression": "68.55%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "135",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -1998,6 +2360,8 @@
     "original-size": 40491,
     "compressed-size": 39829,
     "compression": "1.63%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2009,6 +2373,8 @@
     "original-size": 103183,
     "compressed-size": 14441,
     "compression": "86.0%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2020,6 +2386,8 @@
     "original-size": 101657,
     "compressed-size": 23248,
     "compression": "77.13%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -2031,6 +2399,8 @@
     "original-size": 337514,
     "compressed-size": 111597,
     "compression": "66.94%",
+    "intrinsic-width": "720",
+    "intrinsic-height": "285",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2042,6 +2412,8 @@
     "original-size": 352262,
     "compressed-size": 338938,
     "compression": "3.78%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2053,6 +2425,8 @@
     "original-size": 310345,
     "compressed-size": 32043,
     "compression": "89.68%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "220",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2064,6 +2438,8 @@
     "original-size": 199292,
     "compressed-size": 194109,
     "compression": "2.6%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2075,6 +2451,8 @@
     "original-size": 88276,
     "compressed-size": 24572,
     "compression": "72.16%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2086,6 +2464,8 @@
     "original-size": 42182,
     "compressed-size": 29716,
     "compression": "29.55%",
+    "intrinsic-width": "780",
+    "intrinsic-height": "430",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2097,6 +2477,8 @@
     "original-size": 120616,
     "compressed-size": 74513,
     "compression": "38.22%",
+    "intrinsic-width": "490",
+    "intrinsic-height": "490",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2108,6 +2490,8 @@
     "original-size": 69955,
     "compressed-size": 31806,
     "compression": "54.53%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "255",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2119,6 +2503,8 @@
     "original-size": 332624,
     "compressed-size": 69567,
     "compression": "79.09%",
+    "intrinsic-width": "810",
+    "intrinsic-height": "580",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -2130,6 +2516,8 @@
     "original-size": 210518,
     "compressed-size": 122552,
     "compression": "41.79%",
+    "intrinsic-width": "460",
+    "intrinsic-height": "210",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2141,6 +2529,8 @@
     "original-size": 76205,
     "compressed-size": 18466,
     "compression": "75.77%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2152,6 +2542,8 @@
     "original-size": 74369,
     "compressed-size": 5750,
     "compression": "92.27%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2163,6 +2555,8 @@
     "original-size": 158116,
     "compressed-size": 56485,
     "compression": "64.28%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "170",
     "used-last-build": true,
     "3chars": ["ch4","ch4"]
   },
@@ -2174,6 +2568,8 @@
     "original-size": 31829,
     "compressed-size": 17946,
     "compression": "43.62%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "290",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2185,6 +2581,8 @@
     "original-size": 39667,
     "compressed-size": 39309,
     "compression": "0.9%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "320",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2196,6 +2594,8 @@
     "original-size": 146994,
     "compressed-size": 74101,
     "compression": "49.59%",
+    "intrinsic-width": "605",
+    "intrinsic-height": "690",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2207,6 +2607,8 @@
     "original-size": 1572,
     "compressed-size": 506,
     "compression": "67.81%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2218,6 +2620,8 @@
     "original-size": 20556,
     "compressed-size": 19464,
     "compression": "5.31%",
+    "intrinsic-width": "380",
+    "intrinsic-height": "194.762",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -2229,6 +2633,8 @@
     "original-size": 1565,
     "compressed-size": 501,
     "compression": "67.99%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2240,6 +2646,8 @@
     "original-size": 41480,
     "compressed-size": 17231,
     "compression": "58.46%",
+    "intrinsic-width": "346",
+    "intrinsic-height": "142",
     "used-last-build": true,
     "3chars": ["ch1"]
   },
@@ -2251,6 +2659,8 @@
     "original-size": 3826,
     "compressed-size": 1723,
     "compression": "54.97%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "182",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2262,6 +2672,8 @@
     "original-size": 16869,
     "compressed-size": 5800,
     "compression": "65.62%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "121",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2273,6 +2685,8 @@
     "original-size": 43031,
     "compressed-size": 16108,
     "compression": "62.57%",
+    "intrinsic-width": "350",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch1"]
   },
@@ -2284,6 +2698,8 @@
     "original-size": 235371,
     "compressed-size": 155149,
     "compression": "34.08%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2295,6 +2711,8 @@
     "original-size": 72436,
     "compressed-size": 69601,
     "compression": "3.91%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2306,6 +2724,8 @@
     "original-size": 105217,
     "compressed-size": 29734,
     "compression": "71.74%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2317,6 +2737,8 @@
     "original-size": 56767,
     "compressed-size": 18105,
     "compression": "68.11%",
+    "intrinsic-width": "480",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2328,6 +2750,8 @@
     "original-size": 37189,
     "compressed-size": 9739,
     "compression": "73.81%",
+    "intrinsic-width": "550",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -2339,6 +2763,8 @@
     "original-size": 223679,
     "compressed-size": 76804,
     "compression": "65.66%",
+    "intrinsic-width": "620",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2350,6 +2776,8 @@
     "original-size": 53491,
     "compressed-size": 15099,
     "compression": "71.77%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2361,6 +2789,8 @@
     "original-size": 22879,
     "compressed-size": 11452,
     "compression": "49.95%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "230",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2372,6 +2802,8 @@
     "original-size": 42148,
     "compressed-size": 14563,
     "compression": "65.45%",
+    "intrinsic-width": "640",
+    "intrinsic-height": "120.492",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -2383,6 +2815,8 @@
     "original-size": 74945,
     "compressed-size": 24988,
     "compression": "66.66%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2394,6 +2828,8 @@
     "original-size": 87946,
     "compressed-size": 23509,
     "compression": "73.27%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2405,6 +2841,8 @@
     "original-size": 19252,
     "compressed-size": 9341,
     "compression": "51.48%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "182",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2416,6 +2854,8 @@
     "original-size": 66626,
     "compressed-size": 27387,
     "compression": "58.89%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2427,6 +2867,8 @@
     "original-size": 25354,
     "compressed-size": 15125,
     "compression": "40.34%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2438,6 +2880,8 @@
     "original-size": 6330,
     "compressed-size": 6311,
     "compression": "0.3%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "280",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2449,6 +2893,8 @@
     "original-size": 41193,
     "compressed-size": 40910,
     "compression": "0.69%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2460,6 +2906,8 @@
     "original-size": 70489,
     "compressed-size": 13216,
     "compression": "81.25%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "225",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2471,6 +2919,8 @@
     "original-size": 103480,
     "compressed-size": 29215,
     "compression": "71.77%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "205",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2482,6 +2932,8 @@
     "original-size": 148332,
     "compressed-size": 144783,
     "compression": "2.39%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2493,6 +2945,8 @@
     "original-size": 82411,
     "compressed-size": 82320,
     "compression": "0.11%",
+    "intrinsic-width": "377.288",
+    "intrinsic-height": "320",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -2504,6 +2958,8 @@
     "original-size": 1113537,
     "compressed-size": 246916,
     "compression": "77.83%",
+    "intrinsic-width": "1300",
+    "intrinsic-height": "560",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2515,6 +2971,8 @@
     "original-size": 72894,
     "compressed-size": 15223,
     "compression": "79.12%",
+    "intrinsic-width": "453.802",
+    "intrinsic-height": "407.973",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -2526,6 +2984,8 @@
     "original-size": 9279,
     "compressed-size": 3860,
     "compression": "58.4%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "40",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2537,6 +2997,8 @@
     "original-size": 32743,
     "compressed-size": 18401,
     "compression": "43.8%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2548,6 +3010,8 @@
     "original-size": 248719,
     "compressed-size": 182161,
     "compression": "26.76%",
+    "intrinsic-width": "1350",
+    "intrinsic-height": "700",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2559,6 +3023,8 @@
     "original-size": 423552,
     "compressed-size": 58498,
     "compression": "86.19%",
+    "intrinsic-width": "460",
+    "intrinsic-height": "390",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2570,6 +3036,8 @@
     "original-size": 323848,
     "compressed-size": 323734,
     "compression": "0.04%",
+    "intrinsic-width": "180",
+    "intrinsic-height": "164.25",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2581,6 +3049,8 @@
     "original-size": 96216,
     "compressed-size": 15173,
     "compression": "84.23%",
+    "intrinsic-width": "330",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2592,6 +3062,8 @@
     "original-size": 120930,
     "compressed-size": 78692,
     "compression": "34.93%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "275",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2603,6 +3075,8 @@
     "original-size": 49334,
     "compressed-size": 11050,
     "compression": "77.6%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2614,6 +3088,8 @@
     "original-size": 106757,
     "compressed-size": 7366,
     "compression": "93.1%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -2625,6 +3101,8 @@
     "original-size": 286585,
     "compressed-size": 19580,
     "compression": "93.17%",
+    "intrinsic-width": "520",
+    "intrinsic-height": "520",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2636,6 +3114,8 @@
     "original-size": 63007,
     "compressed-size": 44243,
     "compression": "29.78%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "243",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2647,6 +3127,8 @@
     "original-size": 9114,
     "compressed-size": 2021,
     "compression": "77.83%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "182",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2658,6 +3140,8 @@
     "original-size": 120662,
     "compressed-size": 28153,
     "compression": "76.67%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2669,6 +3153,8 @@
     "original-size": 51359,
     "compressed-size": 15375,
     "compression": "70.06%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2680,6 +3166,8 @@
     "original-size": 76912,
     "compressed-size": 46376,
     "compression": "39.7%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2691,6 +3179,8 @@
     "original-size": 56440,
     "compressed-size": 21820,
     "compression": "61.34%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2702,6 +3192,8 @@
     "original-size": 55081,
     "compressed-size": 4928,
     "compression": "91.05%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2713,6 +3205,8 @@
     "original-size": 57324,
     "compressed-size": 14740,
     "compression": "74.29%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -2724,6 +3218,8 @@
     "original-size": 69871,
     "compressed-size": 57754,
     "compression": "17.34%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2735,6 +3231,8 @@
     "original-size": 1571,
     "compressed-size": 506,
     "compression": "67.79%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2746,6 +3244,8 @@
     "original-size": 129126,
     "compressed-size": 27374,
     "compression": "78.8%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "205",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2757,6 +3257,8 @@
     "original-size": 270494,
     "compressed-size": 262288,
     "compression": "3.03%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2768,6 +3270,8 @@
     "original-size": 3196,
     "compressed-size": 3188,
     "compression": "0.25%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2779,6 +3283,8 @@
     "original-size": 45822,
     "compressed-size": 33568,
     "compression": "26.74%",
+    "intrinsic-width": "754.5",
+    "intrinsic-height": "329.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2790,6 +3296,8 @@
     "original-size": 59360,
     "compressed-size": 57923,
     "compression": "2.42%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2801,6 +3309,8 @@
     "original-size": 190847,
     "compressed-size": 72746,
     "compression": "61.88%",
+    "intrinsic-width": "755",
+    "intrinsic-height": "95",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2812,6 +3322,8 @@
     "original-size": 1449,
     "compressed-size": 511,
     "compression": "64.73%",
+    "intrinsic-width": "7.4",
+    "intrinsic-height": "7.2",
     "used-last-build": true,
     "3chars": ["ch3","ch3","ch3"]
   },
@@ -2823,6 +3335,8 @@
     "original-size": 47020,
     "compressed-size": 15315,
     "compression": "67.43%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2834,6 +3348,8 @@
     "original-size": 112631,
     "compressed-size": 18438,
     "compression": "83.63%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2845,6 +3361,8 @@
     "original-size": 85448,
     "compressed-size": 40711,
     "compression": "52.36%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2856,6 +3374,8 @@
     "original-size": 68663,
     "compressed-size": 21025,
     "compression": "69.38%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2867,6 +3387,8 @@
     "original-size": 75463,
     "compressed-size": 9389,
     "compression": "87.56%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2878,6 +3400,8 @@
     "original-size": 114863,
     "compressed-size": 21199,
     "compression": "81.54%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -2889,6 +3413,8 @@
     "original-size": 85373,
     "compressed-size": 63156,
     "compression": "26.02%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "370",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2900,6 +3426,8 @@
     "original-size": 80540,
     "compressed-size": 17644,
     "compression": "78.09%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -2911,6 +3439,8 @@
     "original-size": 116567,
     "compressed-size": 16605,
     "compression": "85.75%",
+    "intrinsic-width": "340",
+    "intrinsic-height": "154.789",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -2922,6 +3452,8 @@
     "original-size": 242482,
     "compressed-size": 92018,
     "compression": "62.05%",
+    "intrinsic-width": "850",
+    "intrinsic-height": "446",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2933,6 +3465,8 @@
     "original-size": 90654,
     "compressed-size": 9121,
     "compression": "89.94%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "187",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2944,6 +3478,8 @@
     "original-size": 329870,
     "compressed-size": 56051,
     "compression": "83.01%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "333",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2955,6 +3491,8 @@
     "original-size": 8936,
     "compressed-size": 8887,
     "compression": "0.55%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "342.704",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -2966,6 +3504,8 @@
     "original-size": 242785,
     "compressed-size": 57023,
     "compression": "76.51%",
+    "intrinsic-width": "850",
+    "intrinsic-height": "516.71069",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -2977,6 +3517,8 @@
     "original-size": 32070,
     "compressed-size": 7528,
     "compression": "76.53%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "315",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2988,6 +3530,8 @@
     "original-size": 250629,
     "compressed-size": 171852,
     "compression": "31.43%",
+    "intrinsic-width": "620",
+    "intrinsic-height": "425",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -2999,6 +3543,8 @@
     "original-size": 17579,
     "compressed-size": 14394,
     "compression": "18.12%",
+    "intrinsic-width": "733.97",
+    "intrinsic-height": "178",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3010,6 +3556,8 @@
     "original-size": 84473,
     "compressed-size": 81588,
     "compression": "3.42%",
+    "intrinsic-width": "380",
+    "intrinsic-height": "194.762",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -3021,6 +3569,8 @@
     "original-size": 40868,
     "compressed-size": 22526,
     "compression": "44.88%",
+    "intrinsic-width": "650",
+    "intrinsic-height": "220",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3032,6 +3582,8 @@
     "original-size": 22091,
     "compressed-size": 10371,
     "compression": "53.05%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3043,6 +3595,8 @@
     "original-size": 1276,
     "compressed-size": 771,
     "compression": "39.58%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3054,6 +3608,8 @@
     "original-size": 1240653,
     "compressed-size": 58463,
     "compression": "95.29%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3065,6 +3621,8 @@
     "original-size": 1571,
     "compressed-size": 506,
     "compression": "67.79%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3076,6 +3634,8 @@
     "original-size": 178141,
     "compressed-size": 47962,
     "compression": "73.08%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "231",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3087,6 +3647,8 @@
     "original-size": 45408,
     "compressed-size": 7703,
     "compression": "83.04%",
+    "intrinsic-width": "360",
+    "intrinsic-height": "160",
     "used-last-build": true,
     "3chars": ["ch1"]
   },
@@ -3098,6 +3660,8 @@
     "original-size": 19229,
     "compressed-size": 17672,
     "compression": "8.1%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3109,6 +3673,8 @@
     "original-size": 24209,
     "compressed-size": 7355,
     "compression": "69.62%",
+    "intrinsic-width": "360",
+    "intrinsic-height": "191",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3120,6 +3686,8 @@
     "original-size": 43849,
     "compressed-size": 9137,
     "compression": "79.16%",
+    "intrinsic-width": "250",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -3131,6 +3699,8 @@
     "original-size": 24406,
     "compressed-size": 24181,
     "compression": "0.92%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3142,6 +3712,8 @@
     "original-size": 57696,
     "compressed-size": 16958,
     "compression": "70.61%",
+    "intrinsic-width": "550",
+    "intrinsic-height": "340",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3153,6 +3725,8 @@
     "original-size": 1003929,
     "compressed-size": 246580,
     "compression": "75.44%",
+    "intrinsic-width": "1300",
+    "intrinsic-height": "560",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3164,6 +3738,8 @@
     "original-size": 94705,
     "compressed-size": 29700,
     "compression": "68.64%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3175,6 +3751,8 @@
     "original-size": 52506,
     "compressed-size": 36157,
     "compression": "31.14%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "235",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -3186,6 +3764,8 @@
     "original-size": 36628,
     "compressed-size": 16334,
     "compression": "55.41%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3197,6 +3777,8 @@
     "original-size": 60625,
     "compressed-size": 60572,
     "compression": "0.09%",
+    "intrinsic-width": "620",
+    "intrinsic-height": "340",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -3208,6 +3790,8 @@
     "original-size": 121891,
     "compressed-size": 63014,
     "compression": "48.3%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "700",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3219,6 +3803,8 @@
     "original-size": 778,
     "compressed-size": 520,
     "compression": "33.16%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3230,6 +3816,8 @@
     "original-size": 89296,
     "compressed-size": 61516,
     "compression": "31.11%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -3241,6 +3829,8 @@
     "original-size": 63810,
     "compressed-size": 22150,
     "compression": "65.29%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3252,6 +3842,8 @@
     "original-size": 77608,
     "compressed-size": 37249,
     "compression": "52.0%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "305",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3263,6 +3855,8 @@
     "original-size": 275127,
     "compressed-size": 24872,
     "compression": "90.96%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3274,6 +3868,8 @@
     "original-size": 92393,
     "compressed-size": 27886,
     "compression": "69.82%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3285,6 +3881,8 @@
     "original-size": 34872,
     "compressed-size": 34736,
     "compression": "0.39%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3296,6 +3894,8 @@
     "original-size": 105397,
     "compressed-size": 41103,
     "compression": "61.0%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "170",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3307,6 +3907,8 @@
     "original-size": 633,
     "compressed-size": 425,
     "compression": "32.86%",
+    "intrinsic-width": "18.75",
+    "intrinsic-height": "18.75",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3318,6 +3920,8 @@
     "original-size": 338608,
     "compressed-size": 226770,
     "compression": "33.03%",
+    "intrinsic-width": "530",
+    "intrinsic-height": "530",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3329,6 +3933,8 @@
     "original-size": 7352,
     "compressed-size": 3151,
     "compression": "57.14%",
+    "intrinsic-width": "50",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3340,6 +3946,8 @@
     "original-size": 1251867,
     "compressed-size": 254319,
     "compression": "79.68%",
+    "intrinsic-width": "1550",
+    "intrinsic-height": "450",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3351,6 +3959,8 @@
     "original-size": 164532,
     "compressed-size": 160046,
     "compression": "2.73%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3362,6 +3972,8 @@
     "original-size": 22563,
     "compressed-size": 18246,
     "compression": "19.13%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "230",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3373,6 +3985,8 @@
     "original-size": 412127,
     "compressed-size": 128349,
     "compression": "68.86%",
+    "intrinsic-width": "1210",
+    "intrinsic-height": "333",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3384,6 +3998,8 @@
     "original-size": 122353,
     "compressed-size": 62937,
     "compression": "48.56%",
+    "intrinsic-width": "605",
+    "intrinsic-height": "690",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3395,6 +4011,8 @@
     "original-size": 38206,
     "compressed-size": 24746,
     "compression": "35.23%",
+    "intrinsic-width": "456",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3406,6 +4024,8 @@
     "original-size": 28556,
     "compressed-size": 12190,
     "compression": "57.31%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "260",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3417,6 +4037,8 @@
     "original-size": 70849,
     "compressed-size": 33298,
     "compression": "53.0%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "388",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3428,6 +4050,8 @@
     "original-size": 106159,
     "compressed-size": 58861,
     "compression": "44.55%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3439,6 +4063,8 @@
     "original-size": 85142,
     "compressed-size": 16400,
     "compression": "80.74%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3450,6 +4076,8 @@
     "original-size": 1510,
     "compressed-size": 492,
     "compression": "67.42%",
+    "intrinsic-width": "24",
+    "intrinsic-height": "24",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -3461,6 +4089,8 @@
     "original-size": 16634,
     "compressed-size": 14015,
     "compression": "15.74%",
+    "intrinsic-width": "362.474",
+    "intrinsic-height": "177.616",
     "used-last-build": true,
     "3chars": ["ch1"]
   },
@@ -3472,6 +4102,8 @@
     "original-size": 215690,
     "compressed-size": 213296,
     "compression": "1.11%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3483,6 +4115,8 @@
     "original-size": 38269,
     "compressed-size": 31252,
     "compression": "18.34%",
+    "intrinsic-width": "644",
+    "intrinsic-height": "680",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -3494,6 +4128,8 @@
     "original-size": 35313,
     "compressed-size": 32571,
     "compression": "7.76%",
+    "intrinsic-width": "590",
+    "intrinsic-height": "80",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3505,6 +4141,8 @@
     "original-size": 377857,
     "compressed-size": 111595,
     "compression": "70.47%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "615",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3516,6 +4154,8 @@
     "original-size": 329684,
     "compressed-size": 44820,
     "compression": "86.41%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3527,6 +4167,8 @@
     "original-size": 36438,
     "compressed-size": 36438,
     "compression": "0.0%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "408.207",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3538,6 +4180,8 @@
     "original-size": 6546,
     "compressed-size": 6527,
     "compression": "0.29%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "280",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3549,6 +4193,8 @@
     "original-size": 86373,
     "compressed-size": 36590,
     "compression": "57.64%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "320",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3560,6 +4206,8 @@
     "original-size": 68452,
     "compressed-size": 51176,
     "compression": "25.24%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3571,6 +4219,8 @@
     "original-size": 67692,
     "compressed-size": 49215,
     "compression": "27.3%",
+    "intrinsic-width": "405",
+    "intrinsic-height": "390",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -3582,6 +4232,8 @@
     "original-size": 69877,
     "compressed-size": 20349,
     "compression": "70.88%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3593,6 +4245,8 @@
     "original-size": 108089,
     "compressed-size": 58588,
     "compression": "45.8%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3604,6 +4258,8 @@
     "original-size": 187938,
     "compressed-size": 36735,
     "compression": "80.45%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3615,6 +4271,8 @@
     "original-size": 76704,
     "compressed-size": 24002,
     "compression": "68.71%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3626,6 +4284,8 @@
     "original-size": 154911,
     "compressed-size": 55682,
     "compression": "64.06%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "128",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3637,6 +4297,8 @@
     "original-size": 110203,
     "compressed-size": 26436,
     "compression": "76.01%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3648,6 +4310,8 @@
     "original-size": 57862,
     "compressed-size": 46280,
     "compression": "20.02%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "215",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3659,6 +4323,8 @@
     "original-size": 33469,
     "compressed-size": 17517,
     "compression": "47.66%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "236",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3670,6 +4336,8 @@
     "original-size": 79248,
     "compressed-size": 76536,
     "compression": "3.42%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3681,6 +4349,8 @@
     "original-size": 140709,
     "compressed-size": 65714,
     "compression": "53.3%",
+    "intrinsic-width": "530",
+    "intrinsic-height": "460",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3692,6 +4362,8 @@
     "original-size": 1133,
     "compressed-size": 720,
     "compression": "36.45%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3703,6 +4375,8 @@
     "original-size": 1247620,
     "compressed-size": 61161,
     "compression": "95.1%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3714,6 +4388,8 @@
     "original-size": 7038,
     "compressed-size": 3937,
     "compression": "44.06%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "120",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3725,6 +4401,8 @@
     "original-size": 42215,
     "compressed-size": 42159,
     "compression": "0.13%",
+    "intrinsic-width": "610",
+    "intrinsic-height": "340",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -3736,6 +4414,8 @@
     "original-size": 26480,
     "compressed-size": 14454,
     "compression": "45.42%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "340",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3747,6 +4427,8 @@
     "original-size": 1130940,
     "compressed-size": 87145,
     "compression": "92.29%",
+    "intrinsic-width": "780",
+    "intrinsic-height": "305",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3758,6 +4440,8 @@
     "original-size": 136186,
     "compressed-size": 16361,
     "compression": "87.99%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3769,6 +4453,8 @@
     "original-size": 55572,
     "compressed-size": 7339,
     "compression": "86.79%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "50",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -3780,6 +4466,8 @@
     "original-size": 172230,
     "compressed-size": 126104,
     "compression": "26.78%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "370",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3791,6 +4479,8 @@
     "original-size": 13237,
     "compressed-size": 4869,
     "compression": "63.22%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "225",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3802,6 +4492,8 @@
     "original-size": 94834,
     "compressed-size": 17531,
     "compression": "81.51%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3813,6 +4505,8 @@
     "original-size": 94253,
     "compressed-size": 45338,
     "compression": "51.9%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "706.523",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3824,6 +4518,8 @@
     "original-size": 188874,
     "compressed-size": 27250,
     "compression": "85.57%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3835,6 +4531,8 @@
     "original-size": 8272,
     "compressed-size": 8147,
     "compression": "1.51%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3846,6 +4544,8 @@
     "original-size": 67907,
     "compressed-size": 7497,
     "compression": "88.96%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3857,6 +4557,8 @@
     "original-size": 89750,
     "compressed-size": 89735,
     "compression": "0.02%",
+    "intrinsic-width": "340",
+    "intrinsic-height": "415",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -3868,6 +4570,8 @@
     "original-size": 32098,
     "compressed-size": 30572,
     "compression": "4.75%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3879,6 +4583,8 @@
     "original-size": 51922,
     "compressed-size": 51439,
     "compression": "0.93%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3890,6 +4596,8 @@
     "original-size": 54320,
     "compressed-size": 32204,
     "compression": "40.71%",
+    "intrinsic-width": "1850",
+    "intrinsic-height": "270",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3901,6 +4609,8 @@
     "original-size": 240074,
     "compressed-size": 100335,
     "compression": "58.21%",
+    "intrinsic-width": "570",
+    "intrinsic-height": "195",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3912,6 +4622,8 @@
     "original-size": 98285,
     "compressed-size": 96698,
     "compression": "1.61%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3923,6 +4635,8 @@
     "original-size": 244479,
     "compressed-size": 28585,
     "compression": "88.31%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3934,6 +4648,8 @@
     "original-size": 36231,
     "compressed-size": 16435,
     "compression": "54.64%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "540",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -3945,6 +4661,8 @@
     "original-size": 43106,
     "compressed-size": 11647,
     "compression": "72.98%",
+    "intrinsic-width": "456",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3956,6 +4674,8 @@
     "original-size": 961,
     "compressed-size": 624,
     "compression": "35.07%",
+    "intrinsic-width": "18.75",
+    "intrinsic-height": "18.75",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3967,6 +4687,8 @@
     "original-size": 75596,
     "compressed-size": 9459,
     "compression": "87.49%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -3978,6 +4700,8 @@
     "original-size": 97536,
     "compressed-size": 69538,
     "compression": "28.71%",
+    "intrinsic-width": "1000",
+    "intrinsic-height": "625",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -3989,6 +4713,8 @@
     "original-size": 361371,
     "compressed-size": 116927,
     "compression": "67.64%",
+    "intrinsic-width": "1250",
+    "intrinsic-height": "370.5058",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4000,6 +4726,8 @@
     "original-size": 30394,
     "compressed-size": 17035,
     "compression": "43.95%",
+    "intrinsic-width": "350",
+    "intrinsic-height": "280",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4011,6 +4739,8 @@
     "original-size": 19809,
     "compressed-size": 19787,
     "compression": "0.11%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["bt1"]
   },
@@ -4022,6 +4752,8 @@
     "original-size": 183445,
     "compressed-size": 174496,
     "compression": "4.88%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4033,6 +4765,8 @@
     "original-size": 50761,
     "compressed-size": 25797,
     "compression": "49.18%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "205",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4044,6 +4778,8 @@
     "original-size": 62327,
     "compressed-size": 61840,
     "compression": "0.78%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4055,6 +4791,8 @@
     "original-size": 119241,
     "compressed-size": 43439,
     "compression": "63.57%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "350",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -4066,6 +4804,8 @@
     "original-size": 21015,
     "compressed-size": 16194,
     "compression": "22.94%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "95",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4077,6 +4817,8 @@
     "original-size": 40707,
     "compressed-size": 40643,
     "compression": "0.16%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4088,6 +4830,8 @@
     "original-size": 4498,
     "compressed-size": 4497,
     "compression": "0.02%",
+    "intrinsic-width": "100",
+    "intrinsic-height": "55",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -4099,6 +4843,8 @@
     "original-size": 17604,
     "compressed-size": 5390,
     "compression": "69.38%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "130",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4110,6 +4856,8 @@
     "original-size": 22595,
     "compressed-size": 22596,
     "compression": "0.0%",
+    "intrinsic-width": "683.627",
+    "intrinsic-height": "65.065",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -4121,6 +4869,8 @@
     "original-size": 220780,
     "compressed-size": 212101,
     "compression": "3.93%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4132,6 +4882,8 @@
     "original-size": 7780,
     "compressed-size": 7733,
     "compression": "0.6%",
+    "intrinsic-width": "250",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -4143,6 +4895,8 @@
     "original-size": 268389,
     "compressed-size": 65358,
     "compression": "75.65%",
+    "intrinsic-width": "720",
+    "intrinsic-height": "455",
     "used-last-build": true,
     "3chars": ["ch5","ch5"]
   },
@@ -4154,6 +4908,8 @@
     "original-size": 394314,
     "compressed-size": 41945,
     "compression": "89.36%",
+    "intrinsic-width": "442",
+    "intrinsic-height": "945",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -4165,6 +4921,8 @@
     "original-size": 30985,
     "compressed-size": 9730,
     "compression": "68.6%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "225",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4176,6 +4934,8 @@
     "original-size": 59360,
     "compressed-size": 57923,
     "compression": "2.42%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4187,6 +4947,8 @@
     "original-size": 216812,
     "compressed-size": 22661,
     "compression": "89.55%",
+    "intrinsic-width": "460",
+    "intrinsic-height": "155",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4198,6 +4960,8 @@
     "original-size": 114223,
     "compressed-size": 33557,
     "compression": "70.62%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4209,6 +4973,8 @@
     "original-size": 16962,
     "compressed-size": 16962,
     "compression": "0.0%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4220,6 +4986,8 @@
     "original-size": 36449,
     "compressed-size": 14638,
     "compression": "59.84%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4231,6 +4999,8 @@
     "original-size": 378243,
     "compressed-size": 21948,
     "compression": "94.2%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4242,6 +5012,8 @@
     "original-size": 86626,
     "compressed-size": 11152,
     "compression": "87.13%",
+    "intrinsic-width": "240",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4253,6 +5025,8 @@
     "original-size": 62483,
     "compressed-size": 11893,
     "compression": "80.97%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4264,6 +5038,8 @@
     "original-size": 63136,
     "compressed-size": 27900,
     "compression": "55.81%",
+    "intrinsic-width": "480",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4275,6 +5051,8 @@
     "original-size": 103700,
     "compressed-size": 20132,
     "compression": "80.59%",
+    "intrinsic-width": "660",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4286,6 +5064,8 @@
     "original-size": 106573,
     "compressed-size": 64356,
     "compression": "39.61%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "270",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4297,6 +5077,8 @@
     "original-size": 33704,
     "compressed-size": 33489,
     "compression": "0.64%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4308,6 +5090,8 @@
     "original-size": 38658,
     "compressed-size": 11433,
     "compression": "70.43%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4319,6 +5103,8 @@
     "original-size": 223075,
     "compressed-size": 121805,
     "compression": "45.4%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "370",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4330,6 +5116,8 @@
     "original-size": 58538,
     "compressed-size": 20356,
     "compression": "65.23%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -4341,6 +5129,8 @@
     "original-size": 232184,
     "compressed-size": 232184,
     "compression": "0.0%",
+    "intrinsic-width": "3840",
+    "intrinsic-height": "2022",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -4352,6 +5142,8 @@
     "original-size": 275755,
     "compressed-size": 202997,
     "compression": "26.39%",
+    "intrinsic-width": "1500",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4363,6 +5155,8 @@
     "original-size": 46474,
     "compressed-size": 9103,
     "compression": "80.41%",
+    "intrinsic-width": "250",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4374,6 +5168,8 @@
     "original-size": 306825,
     "compressed-size": 88453,
     "compression": "71.17%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4385,6 +5181,8 @@
     "original-size": 84821,
     "compressed-size": 34626,
     "compression": "59.18%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4396,6 +5194,8 @@
     "original-size": 199929,
     "compressed-size": 38376,
     "compression": "80.81%",
+    "intrinsic-width": "606.819",
+    "intrinsic-height": "317.105",
     "used-last-build": true,
     "3chars": ["ch1"]
   },
@@ -4407,6 +5207,8 @@
     "original-size": 37423,
     "compressed-size": 37208,
     "compression": "0.57%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4418,6 +5220,8 @@
     "original-size": 185439,
     "compressed-size": 134539,
     "compression": "27.45%",
+    "intrinsic-width": "1492.16",
+    "intrinsic-height": "697.643",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4429,6 +5233,8 @@
     "original-size": 12329,
     "compressed-size": 10520,
     "compression": "14.67%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4440,6 +5246,8 @@
     "original-size": 141559,
     "compressed-size": 35920,
     "compression": "74.63%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "275",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4451,6 +5259,8 @@
     "original-size": 26528,
     "compressed-size": 9580,
     "compression": "63.89%",
+    "intrinsic-width": "456",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4462,6 +5272,8 @@
     "original-size": 8530,
     "compressed-size": 8511,
     "compression": "0.22%",
+    "intrinsic-width": "580",
+    "intrinsic-height": "582.018",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -4473,6 +5285,8 @@
     "original-size": 63980,
     "compressed-size": 53775,
     "compression": "15.95%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "303",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4484,6 +5298,8 @@
     "original-size": 45244,
     "compressed-size": 13175,
     "compression": "70.88%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4495,6 +5311,8 @@
     "original-size": 63353,
     "compressed-size": 61582,
     "compression": "2.8%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4506,6 +5324,8 @@
     "original-size": 184682,
     "compressed-size": 94612,
     "compression": "48.77%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "696.25",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4517,6 +5337,8 @@
     "original-size": 101583,
     "compressed-size": 23356,
     "compression": "77.01%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "295",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -4528,6 +5350,8 @@
     "original-size": 7954,
     "compressed-size": 7033,
     "compression": "11.58%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4539,6 +5363,8 @@
     "original-size": 93939,
     "compressed-size": 46472,
     "compression": "50.53%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "390",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4550,6 +5376,8 @@
     "original-size": 14518,
     "compressed-size": 4752,
     "compression": "67.27%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "60",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4561,6 +5389,8 @@
     "original-size": 43031,
     "compressed-size": 16108,
     "compression": "62.57%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4572,6 +5402,8 @@
     "original-size": 238474,
     "compressed-size": 15678,
     "compression": "93.43%",
+    "intrinsic-width": "755",
+    "intrinsic-height": "95",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4583,6 +5415,8 @@
     "original-size": 37257,
     "compressed-size": 14146,
     "compression": "62.03%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4594,6 +5428,8 @@
     "original-size": 2616,
     "compressed-size": 1702,
     "compression": "34.94%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "110",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4605,6 +5441,8 @@
     "original-size": 138333,
     "compressed-size": 60097,
     "compression": "56.56%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4616,6 +5454,8 @@
     "original-size": 5865,
     "compressed-size": 5860,
     "compression": "0.09%",
+    "intrinsic-width": "100",
+    "intrinsic-height": "55",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -4627,6 +5467,8 @@
     "original-size": 74793,
     "compressed-size": 24870,
     "compression": "66.75%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4638,6 +5480,8 @@
     "original-size": 7471,
     "compressed-size": 6069,
     "compression": "18.77%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4649,6 +5493,8 @@
     "original-size": 7182,
     "compressed-size": 7182,
     "compression": "0.0%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4660,6 +5506,8 @@
     "original-size": 33698,
     "compressed-size": 29375,
     "compression": "12.83%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4671,6 +5519,8 @@
     "original-size": 8654,
     "compressed-size": 8533,
     "compression": "1.4%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -4682,6 +5532,8 @@
     "original-size": 68365,
     "compressed-size": 23037,
     "compression": "66.3%",
+    "intrinsic-width": "1203.483",
+    "intrinsic-height": "361.683",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4693,6 +5545,8 @@
     "original-size": 128323,
     "compressed-size": 26220,
     "compression": "79.57%",
+    "intrinsic-width": "1261",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4704,6 +5558,8 @@
     "original-size": 83999,
     "compressed-size": 31237,
     "compression": "62.81%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4715,6 +5571,8 @@
     "original-size": 69909,
     "compressed-size": 38023,
     "compression": "45.61%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4726,6 +5584,8 @@
     "original-size": 166852,
     "compressed-size": 60341,
     "compression": "63.84%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4737,6 +5597,8 @@
     "original-size": 274137,
     "compressed-size": 39883,
     "compression": "85.45%",
+    "intrinsic-width": "1500",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4748,6 +5610,8 @@
     "original-size": 2374,
     "compressed-size": 2374,
     "compression": "0.0%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "110",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4759,6 +5623,8 @@
     "original-size": 70889,
     "compressed-size": 21177,
     "compression": "70.13%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4770,6 +5636,8 @@
     "original-size": 143112,
     "compressed-size": 119827,
     "compression": "16.27%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4781,6 +5649,8 @@
     "original-size": 39293,
     "compressed-size": 21521,
     "compression": "45.23%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4792,6 +5662,8 @@
     "original-size": 176219,
     "compressed-size": 38289,
     "compression": "78.27%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4803,6 +5675,8 @@
     "original-size": 49297,
     "compressed-size": 16027,
     "compression": "67.49%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "199.257",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -4814,6 +5688,8 @@
     "original-size": 238643,
     "compressed-size": 98411,
     "compression": "58.76%",
+    "intrinsic-width": "755",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4825,6 +5701,8 @@
     "original-size": 328811,
     "compressed-size": 19493,
     "compression": "94.07%",
+    "intrinsic-width": "520",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4836,6 +5714,8 @@
     "original-size": 4865,
     "compressed-size": 4811,
     "compression": "1.11%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "230",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4847,6 +5727,8 @@
     "original-size": 111775,
     "compressed-size": 48619,
     "compression": "56.5%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "395",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4858,6 +5740,8 @@
     "original-size": 46665,
     "compressed-size": 11060,
     "compression": "76.3%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4869,6 +5753,8 @@
     "original-size": 53971,
     "compressed-size": 17374,
     "compression": "67.81%",
+    "intrinsic-width": "650",
+    "intrinsic-height": "210",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -4880,6 +5766,8 @@
     "original-size": 280,
     "compressed-size": 220,
     "compression": "21.43%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -4891,6 +5779,8 @@
     "original-size": 33395,
     "compressed-size": 32905,
     "compression": "1.47%",
+    "intrinsic-width": "190",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4902,6 +5792,8 @@
     "original-size": 156681,
     "compressed-size": 39982,
     "compression": "74.48%",
+    "intrinsic-width": "460",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4913,6 +5805,8 @@
     "original-size": 74989,
     "compressed-size": 34480,
     "compression": "54.02%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "162",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4924,6 +5818,8 @@
     "original-size": 318080,
     "compressed-size": 192443,
     "compression": "39.5%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4935,6 +5831,8 @@
     "original-size": 37846,
     "compressed-size": 15341,
     "compression": "59.46%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4946,6 +5844,8 @@
     "original-size": 4871,
     "compressed-size": 4871,
     "compression": "0.0%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "80",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -4957,6 +5857,8 @@
     "original-size": 284948,
     "compressed-size": 74839,
     "compression": "73.74%",
+    "intrinsic-width": "720",
+    "intrinsic-height": "455",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -4968,6 +5870,8 @@
     "original-size": 98589,
     "compressed-size": 95095,
     "compression": "3.54%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4979,6 +5883,8 @@
     "original-size": 19909,
     "compressed-size": 7619,
     "compression": "61.73%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -4990,6 +5896,8 @@
     "original-size": 39513,
     "compressed-size": 39353,
     "compression": "0.4%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5001,6 +5909,8 @@
     "original-size": 841,
     "compressed-size": 376,
     "compression": "55.29%",
+    "intrinsic-width": "8.905",
+    "intrinsic-height": "4.1",
     "used-last-build": true,
     "3chars": ["ch3","ch3"]
   },
@@ -5012,6 +5922,8 @@
     "original-size": 144708,
     "compressed-size": 140999,
     "compression": "2.56%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5023,6 +5935,8 @@
     "original-size": 181167,
     "compressed-size": 174079,
     "compression": "3.91%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5034,6 +5948,8 @@
     "original-size": 29927,
     "compressed-size": 29927,
     "compression": "0.0%",
+    "intrinsic-width": "580",
+    "intrinsic-height": "160",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5045,6 +5961,8 @@
     "original-size": 38274,
     "compressed-size": 18415,
     "compression": "51.89%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5056,6 +5974,8 @@
     "original-size": 80519,
     "compressed-size": 49071,
     "compression": "39.06%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -5067,6 +5987,8 @@
     "original-size": 99704,
     "compressed-size": 99511,
     "compression": "0.19%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5078,6 +6000,8 @@
     "original-size": 57091,
     "compressed-size": 13678,
     "compression": "76.04%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5089,6 +6013,8 @@
     "original-size": 39810,
     "compressed-size": 38732,
     "compression": "2.71%",
+    "intrinsic-width": "860",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5100,6 +6026,8 @@
     "original-size": 199493,
     "compressed-size": 20987,
     "compression": "89.48%",
+    "intrinsic-width": "460",
+    "intrinsic-height": "288",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5111,6 +6039,8 @@
     "original-size": 5661,
     "compressed-size": 5661,
     "compression": "0.0%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5122,6 +6052,8 @@
     "original-size": 54349,
     "compressed-size": 37632,
     "compression": "30.76%",
+    "intrinsic-width": "860",
+    "intrinsic-height": "475",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5133,6 +6065,8 @@
     "original-size": 150960,
     "compressed-size": 13588,
     "compression": "91.0%",
+    "intrinsic-width": "1240",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5144,6 +6078,8 @@
     "original-size": 2175712,
     "compressed-size": 155392,
     "compression": "92.86%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5155,6 +6091,8 @@
     "original-size": 120798,
     "compressed-size": 12260,
     "compression": "89.85%",
+    "intrinsic-width": "460",
+    "intrinsic-height": "60",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5166,6 +6104,8 @@
     "original-size": 10776,
     "compressed-size": 10732,
     "compression": "0.41%",
+    "intrinsic-width": "330",
+    "intrinsic-height": "312.189",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -5177,6 +6117,8 @@
     "original-size": 7449,
     "compressed-size": 5381,
     "compression": "27.76%",
+    "intrinsic-width": "61",
+    "intrinsic-height": "62",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -5188,6 +6130,8 @@
     "original-size": 363392,
     "compressed-size": 329999,
     "compression": "9.19%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5199,6 +6143,8 @@
     "original-size": 37845,
     "compressed-size": 11674,
     "compression": "69.15%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "270",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5210,6 +6156,8 @@
     "original-size": 126640,
     "compressed-size": 31898,
     "compression": "74.81%",
+    "intrinsic-width": "290.51501",
+    "intrinsic-height": "375.13101",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5221,6 +6169,8 @@
     "original-size": 96641,
     "compressed-size": 24375,
     "compression": "74.78%",
+    "intrinsic-width": "640",
+    "intrinsic-height": "290",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -5232,6 +6182,8 @@
     "original-size": 6746,
     "compressed-size": 6675,
     "compression": "1.05%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -5243,6 +6195,8 @@
     "original-size": 106118,
     "compressed-size": 35016,
     "compression": "67.0%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5254,6 +6208,8 @@
     "original-size": 108506,
     "compressed-size": 106247,
     "compression": "2.08%",
+    "intrinsic-width": "560",
+    "intrinsic-height": "395",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5265,6 +6221,8 @@
     "original-size": 26808,
     "compressed-size": 20458,
     "compression": "23.69%",
+    "intrinsic-width": "510",
+    "intrinsic-height": "335",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5276,6 +6234,8 @@
     "original-size": 37344,
     "compressed-size": 9781,
     "compression": "73.81%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "270",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5287,6 +6247,8 @@
     "original-size": 122555,
     "compressed-size": 20387,
     "compression": "83.37%",
+    "intrinsic-width": "460",
+    "intrinsic-height": "59",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5298,6 +6260,8 @@
     "original-size": 324224,
     "compressed-size": 55382,
     "compression": "82.92%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "333",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5309,6 +6273,8 @@
     "original-size": 56714,
     "compressed-size": 56203,
     "compression": "0.9%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5320,6 +6286,8 @@
     "original-size": 23721,
     "compressed-size": 23646,
     "compression": "0.32%",
+    "intrinsic-width": "250",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -5331,6 +6299,8 @@
     "original-size": 132912,
     "compressed-size": 97103,
     "compression": "26.94%",
+    "intrinsic-width": "560",
+    "intrinsic-height": "435",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5342,6 +6312,8 @@
     "original-size": 9159,
     "compressed-size": 7274,
     "compression": "20.58%",
+    "intrinsic-width": "410",
+    "intrinsic-height": "270",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -5353,6 +6325,8 @@
     "original-size": 454037,
     "compressed-size": 312825,
     "compression": "31.1%",
+    "intrinsic-width": "180",
+    "intrinsic-height": "164.25",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -5364,6 +6338,8 @@
     "original-size": 79187,
     "compressed-size": 9800,
     "compression": "87.62%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5375,6 +6351,8 @@
     "original-size": 13763,
     "compressed-size": 7263,
     "compression": "47.23%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "245",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5386,6 +6364,8 @@
     "original-size": 54058,
     "compressed-size": 50416,
     "compression": "6.74%",
+    "intrinsic-width": "540",
+    "intrinsic-height": "515",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5397,6 +6377,8 @@
     "original-size": 94486,
     "compressed-size": 29646,
     "compression": "68.62%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "120",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5408,6 +6390,8 @@
     "original-size": 97059,
     "compressed-size": 29232,
     "compression": "69.88%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "105",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -5419,6 +6403,8 @@
     "original-size": 5713,
     "compressed-size": 2752,
     "compression": "51.83%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5430,6 +6416,8 @@
     "original-size": 472046,
     "compressed-size": 226396,
     "compression": "52.04%",
+    "intrinsic-width": "2474.612",
+    "intrinsic-height": "1272.471",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -5441,6 +6429,8 @@
     "original-size": 108274,
     "compressed-size": 58583,
     "compression": "45.89%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5452,6 +6442,8 @@
     "original-size": 495,
     "compressed-size": 352,
     "compression": "28.89%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5463,6 +6455,8 @@
     "original-size": 3447,
     "compressed-size": 3447,
     "compression": "0.0%",
+    "intrinsic-width": "92.755",
+    "intrinsic-height": "43.071",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -5474,6 +6468,8 @@
     "original-size": 56205,
     "compressed-size": 12783,
     "compression": "77.26%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5485,6 +6481,8 @@
     "original-size": 38087,
     "compressed-size": 38029,
     "compression": "0.15%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5496,6 +6494,8 @@
     "original-size": 5106,
     "compressed-size": 5087,
     "compression": "0.37%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "260",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5507,6 +6507,8 @@
     "original-size": 55200,
     "compressed-size": 43643,
     "compression": "20.94%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "215",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5518,6 +6520,8 @@
     "original-size": 115009,
     "compressed-size": 91429,
     "compression": "20.5%",
+    "intrinsic-width": "615",
+    "intrinsic-height": "568",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5529,6 +6533,8 @@
     "original-size": 69807,
     "compressed-size": 69761,
     "compression": "0.07%",
+    "intrinsic-width": "610",
+    "intrinsic-height": "340",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -5540,6 +6546,8 @@
     "original-size": 280,
     "compressed-size": 223,
     "compression": "20.36%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -5551,6 +6559,8 @@
     "original-size": 50949,
     "compressed-size": 50617,
     "compression": "0.65%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5562,6 +6572,8 @@
     "original-size": 103707,
     "compressed-size": 39925,
     "compression": "61.5%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "170",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5573,6 +6585,8 @@
     "original-size": 18069,
     "compressed-size": 7598,
     "compression": "57.95%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5584,6 +6598,8 @@
     "original-size": 18931,
     "compressed-size": 11143,
     "compression": "41.14%",
+    "intrinsic-width": "754.5",
+    "intrinsic-height": "329.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5595,6 +6611,8 @@
     "original-size": 148377,
     "compressed-size": 143697,
     "compression": "3.15%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5606,6 +6624,8 @@
     "original-size": 494086,
     "compressed-size": 222141,
     "compression": "55.04%",
+    "intrinsic-width": "2474.612",
+    "intrinsic-height": "1272.471",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -5617,6 +6637,8 @@
     "original-size": 60787,
     "compressed-size": 58294,
     "compression": "4.1%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5628,6 +6650,8 @@
     "original-size": 64484,
     "compressed-size": 17360,
     "compression": "73.08%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5639,6 +6663,8 @@
     "original-size": 1565,
     "compressed-size": 501,
     "compression": "67.99%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5650,6 +6676,8 @@
     "original-size": 69355,
     "compressed-size": 62471,
     "compression": "9.93%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5661,6 +6689,8 @@
     "original-size": 190039,
     "compressed-size": 64500,
     "compression": "66.06%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "308",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5672,6 +6702,8 @@
     "original-size": 223332,
     "compressed-size": 73472,
     "compression": "67.1%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "550",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -5683,6 +6715,8 @@
     "original-size": 365671,
     "compressed-size": 351676,
     "compression": "3.83%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5694,6 +6728,8 @@
     "original-size": 126060,
     "compressed-size": 124714,
     "compression": "1.07%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5705,6 +6741,8 @@
     "original-size": 115692,
     "compressed-size": 19324,
     "compression": "83.3%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5716,6 +6754,8 @@
     "original-size": 216331,
     "compressed-size": 68402,
     "compression": "68.38%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -5727,6 +6767,8 @@
     "original-size": 1032,
     "compressed-size": 1032,
     "compression": "0.0%",
+    "intrinsic-width": "311.273",
+    "intrinsic-height": "247.518",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -5738,6 +6780,8 @@
     "original-size": 53634,
     "compressed-size": 36737,
     "compression": "31.5%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "205",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5749,6 +6793,8 @@
     "original-size": 196,
     "compressed-size": 147,
     "compression": "25.0%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -5760,6 +6806,8 @@
     "original-size": 196,
     "compressed-size": 144,
     "compression": "26.53%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -5771,6 +6819,8 @@
     "original-size": 49787,
     "compressed-size": 9441,
     "compression": "81.04%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "230",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5782,6 +6832,8 @@
     "original-size": 169771,
     "compressed-size": 160678,
     "compression": "5.36%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5793,6 +6845,8 @@
     "original-size": 11352,
     "compressed-size": 5151,
     "compression": "54.62%",
+    "intrinsic-width": "380",
+    "intrinsic-height": "260",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5804,6 +6858,8 @@
     "original-size": 120815,
     "compressed-size": 5606,
     "compression": "95.36%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "70",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -5815,6 +6871,8 @@
     "original-size": 31810,
     "compressed-size": 30209,
     "compression": "5.03%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5826,6 +6884,8 @@
     "original-size": 185577,
     "compressed-size": 101600,
     "compression": "45.25%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "480",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5837,6 +6897,8 @@
     "original-size": 84745,
     "compressed-size": 9697,
     "compression": "88.56%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "315",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5848,6 +6910,8 @@
     "original-size": 79788,
     "compressed-size": 30016,
     "compression": "62.38%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "320",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5859,6 +6923,8 @@
     "original-size": 23052,
     "compressed-size": 22762,
     "compression": "1.26%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5870,6 +6936,8 @@
     "original-size": 106159,
     "compressed-size": 99300,
     "compression": "6.46%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5881,6 +6949,8 @@
     "original-size": 46016,
     "compressed-size": 44075,
     "compression": "4.22%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5892,6 +6962,8 @@
     "original-size": 132289,
     "compressed-size": 98017,
     "compression": "25.91%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "370",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5903,6 +6975,8 @@
     "original-size": 166587,
     "compressed-size": 103538,
     "compression": "37.85%",
+    "intrinsic-width": "540",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5914,6 +6988,8 @@
     "original-size": 944,
     "compressed-size": 616,
     "compression": "34.75%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5925,6 +7001,8 @@
     "original-size": 90261,
     "compressed-size": 84275,
     "compression": "6.63%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5936,6 +7014,8 @@
     "original-size": 47469,
     "compressed-size": 46522,
     "compression": "1.99%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5947,6 +7027,8 @@
     "original-size": 1572,
     "compressed-size": 506,
     "compression": "67.81%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5958,6 +7040,8 @@
     "original-size": 53518,
     "compressed-size": 47361,
     "compression": "11.5%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -5969,6 +7053,8 @@
     "original-size": 126895,
     "compressed-size": 29605,
     "compression": "76.67%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "265",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -5980,6 +7066,8 @@
     "original-size": 17224,
     "compressed-size": 7130,
     "compression": "58.6%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -5991,6 +7079,8 @@
     "original-size": 196,
     "compressed-size": 147,
     "compression": "25.0%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -6002,6 +7092,8 @@
     "original-size": 318320,
     "compressed-size": 93147,
     "compression": "70.74%",
+    "intrinsic-width": "1240",
+    "intrinsic-height": "205",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6013,6 +7105,8 @@
     "original-size": 986378,
     "compressed-size": 262245,
     "compression": "73.41%",
+    "intrinsic-width": "780",
+    "intrinsic-height": "1050",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6024,6 +7118,8 @@
     "original-size": 30543,
     "compressed-size": 28120,
     "compression": "7.93%",
+    "intrinsic-width": "480",
+    "intrinsic-height": "390",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6035,6 +7131,8 @@
     "original-size": 35051,
     "compressed-size": 34933,
     "compression": "0.34%",
+    "intrinsic-width": "530",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -6046,6 +7144,8 @@
     "original-size": 13032,
     "compressed-size": 12736,
     "compression": "2.27%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6057,6 +7157,8 @@
     "original-size": 79260,
     "compressed-size": 22764,
     "compression": "71.28%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "230",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6068,6 +7170,8 @@
     "original-size": 6722,
     "compressed-size": 4541,
     "compression": "32.45%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -6079,6 +7183,8 @@
     "original-size": 63538,
     "compressed-size": 9356,
     "compression": "85.27%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6090,6 +7196,8 @@
     "original-size": 193658,
     "compressed-size": 43635,
     "compression": "77.47%",
+    "intrinsic-width": "660",
+    "intrinsic-height": "530",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6101,6 +7209,8 @@
     "original-size": 68100,
     "compressed-size": 28621,
     "compression": "57.97%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6112,6 +7222,8 @@
     "original-size": 68131,
     "compressed-size": 29644,
     "compression": "56.49%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "255",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6123,6 +7235,8 @@
     "original-size": 48085,
     "compressed-size": 31334,
     "compression": "34.84%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -6134,6 +7248,8 @@
     "original-size": 15670,
     "compressed-size": 4215,
     "compression": "73.1%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6145,6 +7261,8 @@
     "original-size": 201998,
     "compressed-size": 192698,
     "compression": "4.6%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6156,6 +7274,8 @@
     "original-size": 42726,
     "compressed-size": 42188,
     "compression": "1.26%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6167,6 +7287,8 @@
     "original-size": 4169,
     "compressed-size": 4095,
     "compression": "1.78%",
+    "intrinsic-width": "387",
+    "intrinsic-height": "282.8",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -6178,6 +7300,8 @@
     "original-size": 56012,
     "compressed-size": 55741,
     "compression": "0.48%",
+    "intrinsic-width": "340",
+    "intrinsic-height": "329",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -6189,6 +7313,8 @@
     "original-size": 31634,
     "compressed-size": 24630,
     "compression": "22.14%",
+    "intrinsic-width": "510",
+    "intrinsic-height": "640",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6200,6 +7326,8 @@
     "original-size": 248981,
     "compressed-size": 32423,
     "compression": "86.98%",
+    "intrinsic-width": "330",
+    "intrinsic-height": "335",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6211,6 +7339,8 @@
     "original-size": 34379,
     "compressed-size": 30035,
     "compression": "12.64%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6222,6 +7352,8 @@
     "original-size": 254016,
     "compressed-size": 80053,
     "compression": "68.49%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "520",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6233,6 +7365,8 @@
     "original-size": 29726,
     "compressed-size": 21690,
     "compression": "27.03%",
+    "intrinsic-width": "510",
+    "intrinsic-height": "310",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6244,6 +7378,8 @@
     "original-size": 95347,
     "compressed-size": 94688,
     "compression": "0.69%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6255,6 +7391,8 @@
     "original-size": 50961,
     "compressed-size": 35539,
     "compression": "30.26%",
+    "intrinsic-width": "860",
+    "intrinsic-height": "475",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6266,6 +7404,8 @@
     "original-size": 66256,
     "compressed-size": 45380,
     "compression": "31.51%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "243",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6277,6 +7417,8 @@
     "original-size": 72462,
     "compressed-size": 15690,
     "compression": "78.35%",
+    "intrinsic-width": "471.106",
+    "intrinsic-height": "409.862",
     "used-last-build": true,
     "3chars": ["ch2","ch2"]
   },
@@ -6288,6 +7430,8 @@
     "original-size": 417782,
     "compressed-size": 86400,
     "compression": "79.32%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6299,6 +7443,8 @@
     "original-size": 146939,
     "compressed-size": 88954,
     "compression": "39.46%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "275",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6310,6 +7456,8 @@
     "original-size": 93738,
     "compressed-size": 9502,
     "compression": "89.86%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6321,6 +7469,8 @@
     "original-size": 60813,
     "compressed-size": 15219,
     "compression": "74.97%",
+    "intrinsic-width": "480",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6332,6 +7482,8 @@
     "original-size": 2233051,
     "compressed-size": 68524,
     "compression": "96.93%",
+    "intrinsic-width": "750",
+    "intrinsic-height": "552.632",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6343,6 +7495,8 @@
     "original-size": 280,
     "compressed-size": 223,
     "compression": "20.36%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -6354,6 +7508,8 @@
     "original-size": 81017,
     "compressed-size": 63468,
     "compression": "21.66%",
+    "intrinsic-width": "1000",
+    "intrinsic-height": "385",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6365,6 +7521,8 @@
     "original-size": 9348,
     "compressed-size": 4417,
     "compression": "52.75%",
+    "intrinsic-width": "387.198",
+    "intrinsic-height": "387.198",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6376,6 +7534,8 @@
     "original-size": 30698,
     "compressed-size": 23912,
     "compression": "22.11%",
+    "intrinsic-width": "740",
+    "intrinsic-height": "640",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6387,6 +7547,8 @@
     "original-size": 16482,
     "compressed-size": 6368,
     "compression": "61.36%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "130",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6398,6 +7560,8 @@
     "original-size": 53970,
     "compressed-size": 32804,
     "compression": "39.22%",
+    "intrinsic-width": "880",
+    "intrinsic-height": "880",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6409,6 +7573,8 @@
     "original-size": 57530,
     "compressed-size": 14656,
     "compression": "74.52%",
+    "intrinsic-width": "480",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6420,6 +7586,8 @@
     "original-size": 53174,
     "compressed-size": 41527,
     "compression": "21.9%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "220",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6431,6 +7599,8 @@
     "original-size": 60430,
     "compressed-size": 29154,
     "compression": "51.76%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "410",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6442,6 +7612,8 @@
     "original-size": 62223,
     "compressed-size": 62223,
     "compression": "0.0%",
+    "intrinsic-width": "672.44",
+    "intrinsic-height": "613.41",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -6453,6 +7625,8 @@
     "original-size": 1604,
     "compressed-size": 743,
     "compression": "53.68%",
+    "intrinsic-width": "30",
+    "intrinsic-height": "30.001",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -6464,6 +7638,8 @@
     "original-size": 749727,
     "compressed-size": 508883,
     "compression": "32.12%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6475,6 +7651,8 @@
     "original-size": 84915,
     "compressed-size": 84122,
     "compression": "0.93%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6486,6 +7664,8 @@
     "original-size": 238796,
     "compressed-size": 98513,
     "compression": "58.75%",
+    "intrinsic-width": "755",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6497,6 +7677,8 @@
     "original-size": 16115,
     "compressed-size": 6524,
     "compression": "59.52%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6508,6 +7690,8 @@
     "original-size": 4939,
     "compressed-size": 4939,
     "compression": "0.0%",
+    "intrinsic-width": "328.153",
+    "intrinsic-height": "43.071",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -6519,6 +7703,8 @@
     "original-size": 643219,
     "compressed-size": 32753,
     "compression": "94.91%",
+    "intrinsic-width": "540",
+    "intrinsic-height": "333",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6530,6 +7716,8 @@
     "original-size": 32504,
     "compressed-size": 28203,
     "compression": "13.23%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6541,6 +7729,8 @@
     "original-size": 191038,
     "compressed-size": 41548,
     "compression": "78.25%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6552,6 +7742,8 @@
     "original-size": 311845,
     "compressed-size": 47747,
     "compression": "84.69%",
+    "intrinsic-width": "460",
+    "intrinsic-height": "415",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6563,6 +7755,8 @@
     "original-size": 1510,
     "compressed-size": 484,
     "compression": "67.95%",
+    "intrinsic-width": "24",
+    "intrinsic-height": "24",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -6574,6 +7768,8 @@
     "original-size": 192021,
     "compressed-size": 186151,
     "compression": "3.06%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6585,6 +7781,8 @@
     "original-size": 16068,
     "compressed-size": 10958,
     "compression": "31.8%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -6596,6 +7794,8 @@
     "original-size": 10749,
     "compressed-size": 10749,
     "compression": "0.0%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6607,6 +7807,8 @@
     "original-size": 149171,
     "compressed-size": 39141,
     "compression": "73.76%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -6618,6 +7820,8 @@
     "original-size": 87405,
     "compressed-size": 51289,
     "compression": "41.32%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6629,6 +7833,8 @@
     "original-size": 164838,
     "compressed-size": 99786,
     "compression": "39.46%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "252",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6640,6 +7846,8 @@
     "original-size": 110574,
     "compressed-size": 20452,
     "compression": "81.5%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "575",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6651,6 +7859,8 @@
     "original-size": 13126,
     "compressed-size": 6640,
     "compression": "49.41%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6662,6 +7872,8 @@
     "original-size": 259765,
     "compressed-size": 58826,
     "compression": "77.35%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "123.091",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -6673,6 +7885,8 @@
     "original-size": 102302,
     "compressed-size": 32015,
     "compression": "68.71%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6684,6 +7898,8 @@
     "original-size": 11355,
     "compressed-size": 5112,
     "compression": "54.98%",
+    "intrinsic-width": "340",
+    "intrinsic-height": "285",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6695,6 +7911,8 @@
     "original-size": 23197,
     "compressed-size": 12800,
     "compression": "44.82%",
+    "intrinsic-width": "200",
+    "intrinsic-height": "335.103",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -6706,6 +7924,8 @@
     "original-size": 253366,
     "compressed-size": 31139,
     "compression": "87.71%",
+    "intrinsic-width": "395",
+    "intrinsic-height": "95",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6717,6 +7937,8 @@
     "original-size": 104473,
     "compressed-size": 101589,
     "compression": "2.76%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6728,6 +7950,8 @@
     "original-size": 205968,
     "compressed-size": 58486,
     "compression": "71.6%",
+    "intrinsic-width": "980",
+    "intrinsic-height": "384",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6739,6 +7963,8 @@
     "original-size": 220145,
     "compressed-size": 102617,
     "compression": "53.39%",
+    "intrinsic-width": "640",
+    "intrinsic-height": "610",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6750,6 +7976,8 @@
     "original-size": 38174,
     "compressed-size": 21049,
     "compression": "44.86%",
+    "intrinsic-width": "667",
+    "intrinsic-height": "358",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -6761,6 +7989,8 @@
     "original-size": 10712,
     "compressed-size": 4810,
     "compression": "55.1%",
+    "intrinsic-width": "360",
+    "intrinsic-height": "153",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6772,6 +8002,8 @@
     "original-size": 94052,
     "compressed-size": 11107,
     "compression": "88.19%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6783,6 +8015,8 @@
     "original-size": 31954,
     "compressed-size": 13894,
     "compression": "56.52%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "105",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6794,6 +8028,8 @@
     "original-size": 250213,
     "compressed-size": 104183,
     "compression": "58.36%",
+    "intrinsic-width": "488",
+    "intrinsic-height": "495",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6805,6 +8041,8 @@
     "original-size": 37201,
     "compressed-size": 18120,
     "compression": "51.29%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "222",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6816,6 +8054,8 @@
     "original-size": 731798,
     "compressed-size": 406816,
     "compression": "44.41%",
+    "intrinsic-width": "762.5",
+    "intrinsic-height": "805.41925",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6827,6 +8067,8 @@
     "original-size": 206649,
     "compressed-size": 14375,
     "compression": "93.04%",
+    "intrinsic-width": "410",
+    "intrinsic-height": "460",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6838,6 +8080,8 @@
     "original-size": 193079,
     "compressed-size": 185973,
     "compression": "3.68%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6849,6 +8093,8 @@
     "original-size": 80852,
     "compressed-size": 19402,
     "compression": "76.0%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "230",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6860,6 +8106,8 @@
     "original-size": 130369,
     "compressed-size": 54684,
     "compression": "58.05%",
+    "intrinsic-width": "480",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6871,6 +8119,8 @@
     "original-size": 279839,
     "compressed-size": 29342,
     "compression": "89.51%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "370",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6882,6 +8132,8 @@
     "original-size": 36297,
     "compressed-size": 28120,
     "compression": "22.53%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6893,6 +8145,8 @@
     "original-size": 9728,
     "compressed-size": 4158,
     "compression": "57.26%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "330",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -6904,6 +8158,8 @@
     "original-size": 100761,
     "compressed-size": 100032,
     "compression": "0.72%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6915,6 +8171,8 @@
     "original-size": 62544,
     "compressed-size": 34382,
     "compression": "45.03%",
+    "intrinsic-width": "550",
+    "intrinsic-height": "470",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6926,6 +8184,8 @@
     "original-size": 122218,
     "compressed-size": 13584,
     "compression": "88.89%",
+    "intrinsic-width": "444",
+    "intrinsic-height": "126",
     "used-last-build": true,
     "3chars": ["ch1"]
   },
@@ -6937,6 +8197,8 @@
     "original-size": 57946,
     "compressed-size": 55560,
     "compression": "4.12%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6948,6 +8210,8 @@
     "original-size": 280,
     "compressed-size": 220,
     "compression": "21.43%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -6959,6 +8223,8 @@
     "original-size": 7666,
     "compressed-size": 7647,
     "compression": "0.25%",
+    "intrinsic-width": "620",
+    "intrinsic-height": "236.662",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -6970,6 +8236,8 @@
     "original-size": 79248,
     "compressed-size": 76536,
     "compression": "3.42%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -6981,6 +8249,8 @@
     "original-size": 69164,
     "compressed-size": 67046,
     "compression": "3.06%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "70",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -6992,6 +8262,8 @@
     "original-size": 66365,
     "compressed-size": 14088,
     "compression": "78.77%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7003,6 +8275,8 @@
     "original-size": 125080,
     "compressed-size": 123821,
     "compression": "1.01%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7014,6 +8288,8 @@
     "original-size": 242383,
     "compressed-size": 38631,
     "compression": "84.06%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7025,6 +8301,8 @@
     "original-size": 125980,
     "compressed-size": 42389,
     "compression": "66.35%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "215",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7036,6 +8314,8 @@
     "original-size": 93691,
     "compressed-size": 30835,
     "compression": "67.09%",
+    "intrinsic-width": "497.212",
+    "intrinsic-height": "317.105",
     "used-last-build": true,
     "3chars": ["ch1"]
   },
@@ -7047,6 +8327,8 @@
     "original-size": 327114,
     "compressed-size": 20880,
     "compression": "93.62%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "550",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -7058,6 +8340,8 @@
     "original-size": 218100,
     "compressed-size": 146892,
     "compression": "32.65%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7069,6 +8353,8 @@
     "original-size": 24773,
     "compressed-size": 4116,
     "compression": "83.39%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7080,6 +8366,8 @@
     "original-size": 5056,
     "compressed-size": 5054,
     "compression": "0.04%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7091,6 +8379,8 @@
     "original-size": 62622,
     "compressed-size": 42690,
     "compression": "31.83%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7102,6 +8392,8 @@
     "original-size": 48143,
     "compressed-size": 47823,
     "compression": "0.66%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7113,6 +8405,8 @@
     "original-size": 13275,
     "compressed-size": 6162,
     "compression": "53.58%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "330",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7124,6 +8418,8 @@
     "original-size": 29523,
     "compressed-size": 29425,
     "compression": "0.33%",
+    "intrinsic-width": "380",
+    "intrinsic-height": "210",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7135,6 +8431,8 @@
     "original-size": 182771,
     "compressed-size": 166684,
     "compression": "8.8%",
+    "intrinsic-width": "512",
+    "intrinsic-height": "460",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -7146,6 +8444,8 @@
     "original-size": 126410,
     "compressed-size": 115923,
     "compression": "8.3%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7157,6 +8457,8 @@
     "original-size": 15582,
     "compressed-size": 12352,
     "compression": "20.73%",
+    "intrinsic-width": "362.474",
+    "intrinsic-height": "177.616",
     "used-last-build": true,
     "3chars": ["ch1"]
   },
@@ -7168,6 +8470,8 @@
     "original-size": 62638,
     "compressed-size": 21497,
     "compression": "65.68%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7179,6 +8483,8 @@
     "original-size": 24117,
     "compressed-size": 20094,
     "compression": "16.68%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7190,6 +8496,8 @@
     "original-size": 90092,
     "compressed-size": 89330,
     "compression": "0.85%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7201,6 +8509,8 @@
     "original-size": 35597,
     "compressed-size": 23286,
     "compression": "34.58%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "800",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -7212,6 +8522,8 @@
     "original-size": 104267,
     "compressed-size": 13925,
     "compression": "86.64%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7223,6 +8535,8 @@
     "original-size": 81807,
     "compressed-size": 19384,
     "compression": "76.31%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7234,6 +8548,8 @@
     "original-size": 51527,
     "compressed-size": 16698,
     "compression": "67.59%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -7245,6 +8561,8 @@
     "original-size": 71638,
     "compressed-size": 20455,
     "compression": "71.45%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7256,6 +8574,8 @@
     "original-size": 361098,
     "compressed-size": 141716,
     "compression": "60.75%",
+    "intrinsic-width": "1250",
+    "intrinsic-height": "379.0542",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7267,6 +8587,8 @@
     "original-size": 494898,
     "compressed-size": 128436,
     "compression": "74.05%",
+    "intrinsic-width": "560",
+    "intrinsic-height": "435",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7278,6 +8600,8 @@
     "original-size": 39611,
     "compressed-size": 39598,
     "compression": "0.03%",
+    "intrinsic-width": "305.007",
+    "intrinsic-height": "163.326",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7289,6 +8613,8 @@
     "original-size": 258132,
     "compressed-size": 38281,
     "compression": "85.17%",
+    "intrinsic-width": "510",
+    "intrinsic-height": "290",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7300,6 +8626,8 @@
     "original-size": 73232,
     "compressed-size": 22132,
     "compression": "69.78%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "280",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7311,6 +8639,8 @@
     "original-size": 128325,
     "compressed-size": 73355,
     "compression": "42.84%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "700",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7322,6 +8652,8 @@
     "original-size": 587,
     "compressed-size": 416,
     "compression": "29.13%",
+    "intrinsic-width": "18.75",
+    "intrinsic-height": "18.75",
     "used-last-build": true,
     "3chars": ["ch4","ch4"]
   },
@@ -7333,6 +8665,8 @@
     "original-size": 44057,
     "compressed-size": 16970,
     "compression": "61.48%",
+    "intrinsic-width": "360",
+    "intrinsic-height": "238",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7344,6 +8678,8 @@
     "original-size": 277521,
     "compressed-size": 42200,
     "compression": "84.79%",
+    "intrinsic-width": "1500",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7355,6 +8691,8 @@
     "original-size": 26893,
     "compressed-size": 15015,
     "compression": "44.17%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7366,6 +8704,8 @@
     "original-size": 242795,
     "compressed-size": 7554,
     "compression": "96.89%",
+    "intrinsic-width": "429",
+    "intrinsic-height": "398",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7377,6 +8717,8 @@
     "original-size": 10067,
     "compressed-size": 5944,
     "compression": "40.96%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7388,6 +8730,8 @@
     "original-size": 64219,
     "compressed-size": 38052,
     "compression": "40.75%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7399,6 +8743,8 @@
     "original-size": 422295,
     "compressed-size": 111662,
     "compression": "73.56%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "540",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7410,6 +8756,8 @@
     "original-size": 114739,
     "compressed-size": 96328,
     "compression": "16.05%",
+    "intrinsic-width": "560",
+    "intrinsic-height": "435",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7421,6 +8769,8 @@
     "original-size": 30370,
     "compressed-size": 8755,
     "compression": "71.17%",
+    "intrinsic-width": "560",
+    "intrinsic-height": "370",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7432,6 +8782,8 @@
     "original-size": 24797,
     "compressed-size": 4472,
     "compression": "81.97%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7443,6 +8795,8 @@
     "original-size": 137378,
     "compressed-size": 41684,
     "compression": "69.66%",
+    "intrinsic-width": "1240",
+    "intrinsic-height": "375",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7454,6 +8808,8 @@
     "original-size": 10931,
     "compressed-size": 4804,
     "compression": "56.05%",
+    "intrinsic-width": "340",
+    "intrinsic-height": "214",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7465,6 +8821,8 @@
     "original-size": 280,
     "compressed-size": 223,
     "compression": "20.36%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -7476,6 +8834,8 @@
     "original-size": 31783,
     "compressed-size": 28853,
     "compression": "9.22%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7487,6 +8847,8 @@
     "original-size": 383817,
     "compressed-size": 64001,
     "compression": "83.33%",
+    "intrinsic-width": "720",
+    "intrinsic-height": "415",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7498,6 +8860,8 @@
     "original-size": 33527,
     "compressed-size": 23254,
     "compression": "30.64%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7509,6 +8873,8 @@
     "original-size": 36480,
     "compressed-size": 36480,
     "compression": "0.0%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "408.207",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7520,6 +8886,8 @@
     "original-size": 154456,
     "compressed-size": 12286,
     "compression": "92.05%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7531,6 +8899,8 @@
     "original-size": 86327,
     "compressed-size": 63840,
     "compression": "26.05%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -7542,6 +8912,8 @@
     "original-size": 53330,
     "compressed-size": 52996,
     "compression": "0.63%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7553,6 +8925,8 @@
     "original-size": 253387,
     "compressed-size": 151568,
     "compression": "40.18%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "400",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7564,6 +8938,8 @@
     "original-size": 80830,
     "compressed-size": 47210,
     "compression": "41.59%",
+    "intrinsic-width": "660",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7575,6 +8951,8 @@
     "original-size": 131859,
     "compressed-size": 94265,
     "compression": "28.51%",
+    "intrinsic-width": "560",
+    "intrinsic-height": "435",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7586,6 +8964,8 @@
     "original-size": 105281,
     "compressed-size": 101836,
     "compression": "3.27%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7597,6 +8977,8 @@
     "original-size": 7506,
     "compressed-size": 7388,
     "compression": "1.57%",
+    "intrinsic-width": "1044.726",
+    "intrinsic-height": "173.523",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -7608,6 +8990,8 @@
     "original-size": 120720,
     "compressed-size": 118426,
     "compression": "1.9%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7619,6 +9003,8 @@
     "original-size": 92721,
     "compressed-size": 10478,
     "compression": "88.7%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7630,6 +9016,8 @@
     "original-size": 21947,
     "compressed-size": 14247,
     "compression": "35.08%",
+    "intrinsic-width": "377.288",
+    "intrinsic-height": "320",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -7641,6 +9029,8 @@
     "original-size": 104022,
     "compressed-size": 32338,
     "compression": "68.91%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7652,6 +9042,8 @@
     "original-size": 255059,
     "compressed-size": 250407,
     "compression": "1.82%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7663,6 +9055,8 @@
     "original-size": 53192,
     "compressed-size": 14548,
     "compression": "72.65%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7674,6 +9068,8 @@
     "original-size": 40390,
     "compressed-size": 38459,
     "compression": "4.78%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7685,6 +9081,8 @@
     "original-size": 12308,
     "compressed-size": 5926,
     "compression": "51.85%",
+    "intrinsic-width": "360",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7696,6 +9094,8 @@
     "original-size": 20024,
     "compressed-size": 13556,
     "compression": "32.3%",
+    "intrinsic-width": "540",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -7707,6 +9107,8 @@
     "original-size": 179007,
     "compressed-size": 27817,
     "compression": "84.46%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7718,6 +9120,8 @@
     "original-size": 82061,
     "compressed-size": 24967,
     "compression": "69.58%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7729,6 +9133,8 @@
     "original-size": 46862,
     "compressed-size": 46843,
     "compression": "0.04%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -7740,6 +9146,8 @@
     "original-size": 66136,
     "compressed-size": 18276,
     "compression": "72.37%",
+    "intrinsic-width": "360",
+    "intrinsic-height": "228",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7751,6 +9159,8 @@
     "original-size": 21767,
     "compressed-size": 11691,
     "compression": "46.29%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "485",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7762,6 +9172,8 @@
     "original-size": 162367,
     "compressed-size": 41959,
     "compression": "74.16%",
+    "intrinsic-width": "700",
+    "intrinsic-height": "335",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7773,6 +9185,8 @@
     "original-size": 18426,
     "compressed-size": 6401,
     "compression": "65.26%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7784,6 +9198,8 @@
     "original-size": 17483,
     "compressed-size": 14725,
     "compression": "15.78%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "246.087",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -7795,6 +9211,8 @@
     "original-size": 15228,
     "compressed-size": 9164,
     "compression": "39.82%",
+    "intrinsic-width": "130",
+    "intrinsic-height": "80",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7806,6 +9224,8 @@
     "original-size": 46612,
     "compressed-size": 35189,
     "compression": "24.51%",
+    "intrinsic-width": "655.542",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7817,6 +9237,8 @@
     "original-size": 32967,
     "compressed-size": 28629,
     "compression": "13.16%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7828,6 +9250,8 @@
     "original-size": 33750,
     "compressed-size": 21158,
     "compression": "37.31%",
+    "intrinsic-width": "355",
+    "intrinsic-height": "270",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -7839,6 +9263,8 @@
     "original-size": 201689,
     "compressed-size": 105093,
     "compression": "47.89%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "395",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7850,6 +9276,8 @@
     "original-size": 4725,
     "compressed-size": 4706,
     "compression": "0.4%",
+    "intrinsic-width": "450",
+    "intrinsic-height": "260",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7861,6 +9289,8 @@
     "original-size": 282321,
     "compressed-size": 50679,
     "compression": "82.05%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7872,6 +9302,8 @@
     "original-size": 216025,
     "compressed-size": 55388,
     "compression": "74.36%",
+    "intrinsic-width": "410",
+    "intrinsic-height": "480",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7883,6 +9315,8 @@
     "original-size": 1324143,
     "compressed-size": 984294,
     "compression": "25.67%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7894,6 +9328,8 @@
     "original-size": 2578904,
     "compressed-size": 33776,
     "compression": "98.69%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "255",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7905,6 +9341,8 @@
     "original-size": 7264,
     "compressed-size": 7245,
     "compression": "0.26%",
+    "intrinsic-width": "680",
+    "intrinsic-height": "236.662",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -7916,6 +9354,8 @@
     "original-size": 5334,
     "compressed-size": 5334,
     "compression": "0.0%",
+    "intrinsic-width": "162.11",
+    "intrinsic-height": "43.071",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -7927,6 +9367,8 @@
     "original-size": 12020,
     "compressed-size": 4686,
     "compression": "61.01%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -7938,6 +9380,8 @@
     "original-size": 304381,
     "compressed-size": 117692,
     "compression": "61.33%",
+    "intrinsic-width": "750",
+    "intrinsic-height": "350",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -7949,6 +9393,8 @@
     "original-size": 144550,
     "compressed-size": 85925,
     "compression": "40.56%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "275",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -7960,6 +9406,8 @@
     "original-size": 41492,
     "compressed-size": 41458,
     "compression": "0.08%",
+    "intrinsic-width": "250",
+    "intrinsic-height": "150",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -7971,6 +9419,8 @@
     "original-size": 164436,
     "compressed-size": 35265,
     "compression": "78.55%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "250",
     "used-last-build": true,
     "3chars": ["ch4","ch4"]
   },
@@ -7982,6 +9432,8 @@
     "original-size": 4591,
     "compressed-size": 4572,
     "compression": "0.41%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "261",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -7993,6 +9445,8 @@
     "original-size": 174406,
     "compressed-size": 58762,
     "compression": "66.31%",
+    "intrinsic-width": "550",
+    "intrinsic-height": "220",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8004,6 +9458,8 @@
     "original-size": 57098,
     "compressed-size": 13985,
     "compression": "75.51%",
+    "intrinsic-width": "420",
+    "intrinsic-height": "345",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8015,6 +9471,8 @@
     "original-size": 46560,
     "compressed-size": 46173,
     "compression": "0.83%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8026,6 +9484,8 @@
     "original-size": 57491,
     "compressed-size": 57491,
     "compression": "0.0%",
+    "intrinsic-width": "580",
+    "intrinsic-height": "160",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8037,6 +9497,8 @@
     "original-size": 138915,
     "compressed-size": 135208,
     "compression": "2.67%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8048,6 +9510,8 @@
     "original-size": 39963,
     "compressed-size": 38734,
     "compression": "3.08%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8059,6 +9523,8 @@
     "original-size": 69871,
     "compressed-size": 27742,
     "compression": "60.3%",
+    "intrinsic-width": "480",
+    "intrinsic-height": "380",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8070,6 +9536,8 @@
     "original-size": 122699,
     "compressed-size": 120149,
     "compression": "2.08%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8081,6 +9549,8 @@
     "original-size": 32187,
     "compressed-size": 16713,
     "compression": "48.08%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8092,6 +9562,8 @@
     "original-size": 303608,
     "compressed-size": 67514,
     "compression": "77.76%",
+    "intrinsic-width": "1080",
+    "intrinsic-height": "670",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8103,6 +9575,8 @@
     "original-size": 84072,
     "compressed-size": 19822,
     "compression": "76.42%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8114,6 +9588,8 @@
     "original-size": 10789,
     "compressed-size": 10789,
     "compression": "0.0%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8125,6 +9601,8 @@
     "original-size": 155148,
     "compressed-size": 150995,
     "compression": "2.68%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8136,6 +9614,8 @@
     "original-size": 66004,
     "compressed-size": 15772,
     "compression": "76.1%",
+    "intrinsic-width": "380",
+    "intrinsic-height": "130",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8147,6 +9627,8 @@
     "original-size": 138585,
     "compressed-size": 27332,
     "compression": "80.28%",
+    "intrinsic-width": "316.51501",
+    "intrinsic-height": "460",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8158,6 +9640,8 @@
     "original-size": 106854,
     "compressed-size": 75315,
     "compression": "29.52%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "410",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8169,6 +9653,8 @@
     "original-size": 40637,
     "compressed-size": 37287,
     "compression": "8.24%",
+    "intrinsic-width": "480",
+    "intrinsic-height": "440",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8180,6 +9666,8 @@
     "original-size": 30386,
     "compressed-size": 20153,
     "compression": "33.68%",
+    "intrinsic-width": "820",
+    "intrinsic-height": "435",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8191,6 +9679,8 @@
     "original-size": 8544,
     "compressed-size": 5532,
     "compression": "35.25%",
+    "intrinsic-width": "1500",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -8202,6 +9692,8 @@
     "original-size": 94450,
     "compressed-size": 94397,
     "compression": "0.06%",
+    "intrinsic-width": "530",
+    "intrinsic-height": "120",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8213,6 +9705,8 @@
     "original-size": 193551,
     "compressed-size": 51677,
     "compression": "73.3%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "280",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8224,6 +9718,8 @@
     "original-size": 13751,
     "compressed-size": 7593,
     "compression": "44.78%",
+    "intrinsic-width": "520",
+    "intrinsic-height": "520",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8235,6 +9731,8 @@
     "original-size": 75390,
     "compressed-size": 75358,
     "compression": "0.04%",
+    "intrinsic-width": "680",
+    "intrinsic-height": "720",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8246,6 +9744,8 @@
     "original-size": 85387,
     "compressed-size": 85373,
     "compression": "0.02%",
+    "intrinsic-width": "1043.52",
+    "intrinsic-height": "490.519",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8257,6 +9757,8 @@
     "original-size": 9479,
     "compressed-size": 9454,
     "compression": "0.26%",
+    "intrinsic-width": "733.97",
+    "intrinsic-height": "146.452",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8268,6 +9770,8 @@
     "original-size": 369708,
     "compressed-size": 98822,
     "compression": "73.27%",
+    "intrinsic-width": "540",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8279,6 +9783,8 @@
     "original-size": 124065,
     "compressed-size": 34080,
     "compression": "72.53%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "260",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8290,6 +9796,8 @@
     "original-size": 16244,
     "compressed-size": 4524,
     "compression": "72.15%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8301,6 +9809,8 @@
     "original-size": 280,
     "compressed-size": 223,
     "compression": "20.36%",
+    "intrinsic-width": "20",
+    "intrinsic-height": "20",
     "used-last-build": true,
     "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
@@ -8312,6 +9822,8 @@
     "original-size": 69077,
     "compressed-size": 18114,
     "compression": "73.78%",
+    "intrinsic-width": "330",
+    "intrinsic-height": "105",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8323,6 +9835,8 @@
     "original-size": 13331,
     "compressed-size": 13022,
     "compression": "2.32%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "125",
     "used-last-build": true,
     "3chars": ["bt2"]
   },
@@ -8334,6 +9848,8 @@
     "original-size": 24235,
     "compressed-size": 6512,
     "compression": "73.13%",
+    "intrinsic-width": "550",
+    "intrinsic-height": "340",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8345,6 +9861,8 @@
     "original-size": 45494,
     "compressed-size": 14472,
     "compression": "68.19%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -8356,6 +9874,8 @@
     "original-size": 49891,
     "compressed-size": 20295,
     "compression": "59.32%",
+    "intrinsic-width": "440",
+    "intrinsic-height": "240",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8367,6 +9887,8 @@
     "original-size": 28923,
     "compressed-size": 10496,
     "compression": "63.71%",
+    "intrinsic-width": "485",
+    "intrinsic-height": "245",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8378,6 +9900,8 @@
     "original-size": 122935,
     "compressed-size": 42712,
     "compression": "65.26%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "585",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -8389,6 +9913,8 @@
     "original-size": 91756,
     "compressed-size": 31455,
     "compression": "65.72%",
+    "intrinsic-width": "526",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8400,6 +9926,8 @@
     "original-size": 27871,
     "compressed-size": 21635,
     "compression": "22.37%",
+    "intrinsic-width": "510",
+    "intrinsic-height": "335",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8411,6 +9939,8 @@
     "original-size": 731709,
     "compressed-size": 201612,
     "compression": "72.45%",
+    "intrinsic-width": "760",
+    "intrinsic-height": "596.22009",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8422,6 +9952,8 @@
     "original-size": 15786,
     "compressed-size": 15687,
     "compression": "0.63%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8433,6 +9965,8 @@
     "original-size": 100578,
     "compressed-size": 99953,
     "compression": "0.62%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8444,6 +9978,8 @@
     "original-size": 41968,
     "compressed-size": 32290,
     "compression": "23.06%",
+    "intrinsic-width": "200",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8455,6 +9991,8 @@
     "original-size": 83904,
     "compressed-size": 69732,
     "compression": "16.89%",
+    "intrinsic-width": "1139.5",
+    "intrinsic-height": "406.5",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8466,6 +10004,8 @@
     "original-size": 46054,
     "compressed-size": 34963,
     "compression": "24.08%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "700",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8477,6 +10017,8 @@
     "original-size": 172280,
     "compressed-size": 123446,
     "compression": "28.35%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "320",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8488,6 +10030,8 @@
     "original-size": 200315,
     "compressed-size": 11435,
     "compression": "94.29%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "80",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8499,6 +10043,8 @@
     "original-size": 97308,
     "compressed-size": 96418,
     "compression": "0.91%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8510,6 +10056,8 @@
     "original-size": 146862,
     "compressed-size": 33804,
     "compression": "76.98%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "650",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8521,6 +10069,8 @@
     "original-size": 107236,
     "compressed-size": 103252,
     "compression": "3.72%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8532,6 +10082,8 @@
     "original-size": 109353,
     "compressed-size": 83840,
     "compression": "23.33%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8543,6 +10095,8 @@
     "original-size": 159403,
     "compressed-size": 35220,
     "compression": "77.91%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "370",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8554,6 +10108,8 @@
     "original-size": 105796,
     "compressed-size": 17791,
     "compression": "83.18%",
+    "intrinsic-width": "800",
+    "intrinsic-height": "200",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -8565,6 +10121,8 @@
     "original-size": 166711,
     "compressed-size": 62478,
     "compression": "62.52%",
+    "intrinsic-width": "900",
+    "intrinsic-height": "300",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8576,6 +10134,8 @@
     "original-size": 68374,
     "compressed-size": 12615,
     "compression": "81.55%",
+    "intrinsic-width": "500.723",
+    "intrinsic-height": "125.248",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8587,6 +10147,8 @@
     "original-size": 71345,
     "compressed-size": 31333,
     "compression": "56.08%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8598,6 +10160,8 @@
     "original-size": 103537,
     "compressed-size": 25219,
     "compression": "75.64%",
+    "intrinsic-width": "660",
+    "intrinsic-height": "360",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8609,6 +10173,8 @@
     "original-size": 146689,
     "compressed-size": 55831,
     "compression": "61.94%",
+    "intrinsic-width": "670",
+    "intrinsic-height": "280",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8620,6 +10186,8 @@
     "original-size": 987,
     "compressed-size": 610,
     "compression": "38.2%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8631,6 +10199,8 @@
     "original-size": 101074,
     "compressed-size": 64906,
     "compression": "35.78%",
+    "intrinsic-width": "750",
+    "intrinsic-height": "500",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8642,6 +10212,8 @@
     "original-size": 911,
     "compressed-size": 602,
     "compression": "33.92%",
+    "intrinsic-width": "18.75",
+    "intrinsic-height": "18.75",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8653,6 +10225,8 @@
     "original-size": 29326,
     "compressed-size": 29285,
     "compression": "0.14%",
+    "intrinsic-width": "300",
+    "intrinsic-height": "245.258",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -8664,6 +10238,8 @@
     "original-size": 61217,
     "compressed-size": 24207,
     "compression": "60.46%",
+    "intrinsic-width": "456",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch4","ch4"]
   },
@@ -8675,6 +10251,8 @@
     "original-size": 216416,
     "compressed-size": 141284,
     "compression": "34.72%",
+    "intrinsic-width": "500",
+    "intrinsic-height": "270",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8686,6 +10264,8 @@
     "original-size": 637707,
     "compressed-size": 185121,
     "compression": "70.97%",
+    "intrinsic-width": "1200",
+    "intrinsic-height": "320",
     "used-last-build": true,
     "3chars": ["ch4"]
   },
@@ -8697,6 +10277,8 @@
     "original-size": 303211,
     "compressed-size": 303211,
     "compression": "0.0%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8708,6 +10290,8 @@
     "original-size": 236086,
     "compressed-size": 236086,
     "compression": "0.0%",
+    "intrinsic-width": "3840",
+    "intrinsic-height": "2022",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8719,6 +10303,8 @@
     "original-size": 43609,
     "compressed-size": 16583,
     "compression": "61.97%",
+    "intrinsic-width": "423",
+    "intrinsic-height": "325",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -8730,6 +10316,8 @@
     "original-size": 1535940,
     "compressed-size": 50344,
     "compression": "96.72%",
+    "intrinsic-width": "540",
+    "intrinsic-height": "333",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8741,6 +10329,8 @@
     "original-size": 120664,
     "compressed-size": 28197,
     "compression": "76.63%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8752,6 +10342,8 @@
     "original-size": 209385,
     "compressed-size": 59654,
     "compression": "71.51%",
+    "intrinsic-width": "980",
+    "intrinsic-height": "450",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8763,6 +10355,8 @@
     "original-size": 113693,
     "compressed-size": 19905,
     "compression": "82.49%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8774,6 +10368,8 @@
     "original-size": 52453,
     "compressed-size": 32948,
     "compression": "37.19%",
+    "intrinsic-width": "623",
+    "intrinsic-height": "420",
     "used-last-build": true,
     "3chars": ["ch2"]
   },
@@ -8785,6 +10381,8 @@
     "original-size": 1082177,
     "compressed-size": 27635,
     "compression": "97.45%",
+    "intrinsic-width": "470",
+    "intrinsic-height": "415",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8796,6 +10394,8 @@
     "original-size": 611965,
     "compressed-size": 96682,
     "compression": "84.2%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "415",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8807,6 +10407,8 @@
     "original-size": 21577,
     "compressed-size": 21577,
     "compression": "0.0%",
+    "intrinsic-width": "388.081",
+    "intrinsic-height": "62.066",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8818,6 +10420,8 @@
     "original-size": 17864,
     "compressed-size": 17845,
     "compression": "0.11%",
+    "intrinsic-width": "620",
+    "intrinsic-height": "826.662",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8829,6 +10433,8 @@
     "original-size": 298298,
     "compressed-size": 40651,
     "compression": "86.37%",
+    "intrinsic-width": "430",
+    "intrinsic-height": "333",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8840,6 +10446,8 @@
     "original-size": 111138,
     "compressed-size": 110282,
     "compression": "0.77%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8851,6 +10459,8 @@
     "original-size": 91356,
     "compressed-size": 41305,
     "compression": "54.79%",
+    "intrinsic-width": "605",
+    "intrinsic-height": "690",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8862,6 +10472,8 @@
     "original-size": 178423,
     "compressed-size": 30082,
     "compression": "83.14%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "465",
     "used-last-build": true,
     "3chars": ["ch6"]
   },
@@ -8873,6 +10485,8 @@
     "original-size": 30702,
     "compressed-size": 20050,
     "compression": "34.69%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "336.934",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8884,6 +10498,8 @@
     "original-size": 66472,
     "compressed-size": 48286,
     "compression": "27.36%",
+    "intrinsic-width": "400",
+    "intrinsic-height": "100",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8895,6 +10511,8 @@
     "original-size": 222874,
     "compressed-size": 61738,
     "compression": "72.3%",
+    "intrinsic-width": "1080",
+    "intrinsic-height": "595",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8906,6 +10524,8 @@
     "original-size": 226081,
     "compressed-size": 62107,
     "compression": "72.53%",
+    "intrinsic-width": "",
+    "intrinsic-height": "",
     "used-last-build": false,
     "3chars": []
   },
@@ -8917,6 +10537,8 @@
     "original-size": 71276,
     "compressed-size": 21590,
     "compression": "69.71%",
+    "intrinsic-width": "456.029",
+    "intrinsic-height": "190",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8928,6 +10550,8 @@
     "original-size": 43979,
     "compressed-size": 39351,
     "compression": "10.52%",
+    "intrinsic-width": "320",
+    "intrinsic-height": "164",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8939,6 +10563,8 @@
     "original-size": 9603,
     "compressed-size": 9583,
     "compression": "0.21%",
+    "intrinsic-width": "365",
+    "intrinsic-height": "249.26",
     "used-last-build": true,
     "3chars": ["ch3"]
   },
@@ -8950,6 +10576,8 @@
     "original-size": 98589,
     "compressed-size": 30407,
     "compression": "69.16%",
+    "intrinsic-width": "600",
+    "intrinsic-height": "610",
     "used-last-build": true,
     "3chars": ["ch5"]
   },
@@ -8961,6 +10589,8 @@
     "original-size": 8692,
     "compressed-size": 8692,
     "compression": "0.0%",
+    "intrinsic-width": "1240",
+    "intrinsic-height": "180",
     "used-last-build": true,
     "3chars": ["ch4"]
   }

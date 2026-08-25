@@ -5,7 +5,7 @@ import desugaring/core.{type Pipeline} as core
 import desugaring/pipelines as pp
 import desugaring/desugarers as dl
 import vxml/blame.{Ext}
-import vxml.{V}
+import vxml.{type VXML, V}
 
 const p_cannot_contain = [
   "Appendix", "ArticleTitle", "Bootcamp", "BoxedText", "CentralDisplay",
@@ -30,6 +30,17 @@ const our_blame = Ext([], "pipeline.gleam")
 // dual | switcher-only | list-only
 const end_of_chapter_exercises_switcher_type = "dual"
 const exercise_graveyard_switcher_type = "list-only"
+
+fn first_vxml_is(vxmls: List(VXML), expected: String) -> Bool {
+  case vxmls {
+    [V(_, actual, _, _), ..] -> actual == expected
+    _ -> False
+  }
+}
+
+fn vxmls_contain(vxmls: List(VXML), expected: String) -> Bool {
+  list.any(vxmls, core.is_v_and_tag_equals(_, expected))
+}
 
 pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipeline {
   [
@@ -91,17 +102,17 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.prepend_counter_incrementing_attribute__outside(#("Chapter", "ChapterCounter", core.GoBack), ["Bootcamp", "Appendix"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Bootcamp", "BootcampCounter", core.GoBack), ["Chapter", "Appendix"]),
       dl.prepend_counter_incrementing_attribute__outside(#("Appendix", "AppendixCounter", core.GoBack), ["Chapter", "Bootcamp"]),
-      dl.prepend_counter_incrementing_attribute_if_fancy(#("Exercise", "ExerciseCounter", fn(_, ancestors, _, _, _) { core.first_is(ancestors, "Exercises") }, core.GoBack)),
+      dl.prepend_counter_incrementing_attribute_if_fancy(#("Exercise", "ExerciseCounter", fn(_, ancestors, _, _, _) { first_vxml_is(ancestors, "Exercises") }, core.GoBack)),
       dl.prepend_counter_incrementing_attribute(#("Example", "ExampleCounter", core.GoBack)),
       dl.prepend_counter_incrementing_attribute(#("SolutionNote", "SolutionNoteCounter", core.GoBack)),
       dl.prepend_counter_incrementing_attribute(#("Note", "NoteCounter", core.GoBack)),
       dl.prepend_counter_incrementing_attribute(#("Section", "SectionCounter", core.GoBack)),
       dl.append_attribute_if(#("Section", fn(section) { !core.v_has_attr_with_key(section, "id") }, "id", "section-::øøSectionCounter", core.Continue)),
       dl.append_attribute_if_fancy(#("Exercises", fn(_, _, _, _, following_siblings) { list.is_empty(following_siblings) }, "at_end_of_page", "true", core.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !core.contains(ancestors, "Appendix") && !core.v_has_attr_with_key(exercises, "mode") }, "mode", end_of_chapter_exercises_switcher_type, core.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercise", fn(_, ancestors, _, _, _) { core.first_is(ancestors, "Exercises") }, "number", "::øøExerciseCounter", core.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !core.contains(ancestors, "Appendix") }, "show_curlicue", "true", core.GoBack)),
-      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, _) { core.contains(ancestors, "Appendix") && !core.v_has_attr_with_key(exercises, "mode") }, "mode", exercise_graveyard_switcher_type, core.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !vxmls_contain(ancestors, "Appendix") && !core.v_has_attr_with_key(exercises, "mode") }, "mode", end_of_chapter_exercises_switcher_type, core.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercise", fn(_, ancestors, _, _, _) { first_vxml_is(ancestors, "Exercises") }, "number", "::øøExerciseCounter", core.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(_, ancestors, _, _, following_siblings) { list.is_empty(following_siblings) && !vxmls_contain(ancestors, "Appendix") }, "show_curlicue", "true", core.GoBack)),
+      dl.append_attribute_if_fancy(#("Exercises", fn(exercises, ancestors, _, _, _) { vxmls_contain(ancestors, "Appendix") && !core.v_has_attr_with_key(exercises, "mode") }, "mode", exercise_graveyard_switcher_type, core.GoBack)),
       dl.set_handle_value__outside(#("Chapter", "::øøChapterCounter", core.GoBack), ["Bootcamp"]),
       dl.set_handle_value__outside(#("Bootcamp", "::øøBootcampCounter", core.GoBack), ["Chapter"]),
       dl.set_handle_value__outside(#("Appendix", "::øøAppendixCounter", core.GoBack), ["Chapter", "Bootcamp"]),
@@ -114,8 +125,8 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       // dl.prepend_text_node(#("Section", "*§::øøSectionCounter.* ")),
       dl.prepend_text_node(#("SolutionNote", "_Note ::øøSolutionNoteCounter._")),
       dl.prepend_text_node(#("Note", "_Note ::øøNoteCounter._")),
-      dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise ::øøExerciseCounter.*", fn(_, ancestors, _, _, _) { core.first_is(ancestors, "Exercises") })),
-      dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise*", fn(_, ancestors, _, _, _) { !core.first_is(ancestors, "Exercises") })),
+      dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise ::øøExerciseCounter.*", fn(_, ancestors, _, _, _) { first_vxml_is(ancestors, "Exercises") })),
+      dl.prepend_text_node_if_fancy(#("Exercise", "*Exercise*", fn(_, ancestors, _, _, _) { !first_vxml_is(ancestors, "Exercises") })),
       dl.substitute_counters(),
       dl.handles_generate_v_definitions_from_t_definitions(),
       dl.handles_add_ids(),
@@ -231,7 +242,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.unwrap("Scope"),
       dl.delete_attribute__outside("type", ["List"]),
       dl.delete_attribute__batch(["counter", "handle", "t", "_", "title", "test"]),
-      dl.rename_attributes_by_function(core.kabob_case_to_camel_case),
+      dl.rename_attributes_by_function(core.kebab_case_to_camel_case),
     ],
     case author_mode {
       True -> [
