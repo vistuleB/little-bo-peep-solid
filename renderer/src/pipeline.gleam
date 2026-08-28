@@ -4,6 +4,7 @@ import gleam/option.{None, Some}
 import desugaring/core.{type Pipeline} as core
 import desugaring/pipelines as pp
 import desugaring/desugarers as dl
+import local_desugarers as local_dl
 import vxml/blame.{Ext}
 import vxml.{type VXML, V}
 
@@ -49,10 +50,10 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.delete("WriterlyComment"),
       dl.delete_attribute_if(fn(key, _) { string.starts_with(key, "!!")}),
       dl.wrap_if_not_child_of(#("Exercise", "Exercises", ["Exercises"])),
-      dl.lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes(),
-      dl.lbp_move_to_be_moved_to_grand_wrapper(),
-      dl.lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard(),
-      dl.lbp_select_content(),
+      local_dl.lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes(),
+      local_dl.lbp_move_to_be_moved_to_grand_wrapper(),
+      local_dl.lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard(),
+      local_dl.lbp_select_content(),
       dl.delete_first_child_occurrences_of_and_recurse("WriterlyBlankLine"),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Bootcamp", "ArticleTitle", "title"), ["Chapter"]),
       dl.auto_generate_child_if_missing_from_attribute__outside(#("Chapter", "ArticleTitle", "title"), ["Bootcamp"]),
@@ -75,7 +76,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.append_attribute(#("Book", "counter", "ChapterCounter", core.GoBack)),
       dl.append_attribute(#("Book", "counter", "BootcampCounter", core.GoBack)),
       dl.append_attribute(#("Book", "counter-uppercase", "AppendixCounter", core.GoBack)),
-      dl.append_attributes([
+      dl.append_attribute__batch([
         #("Chapter", "counter", "ExampleCounter"),
         #("Chapter", "counter", "NoteCounter"),
         #("Chapter", "counter", "SectionCounter"),
@@ -186,7 +187,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       dl.absorb_into_previous_sibling(["ImageRight", "ImageLeft"]),
       dl.append_attribute_if_child_of(#("ImageRight", "MathBlock", "at-least-as-wide", "true")),
       dl.append_attribute_if_child_of(#("ImageLeft", "MathBlock", "at-least-as-wide", "true")),
-      dl.append_attribute_to_second_of_kind__outside(#("p", "class", "indent-10"), ["CentralDisplay", "CentralDisplayItalic"]),
+      dl.append_attribute_if_preceded_by_same__outside(#("p", "class", "indent-10"), ["CentralDisplay", "CentralDisplayItalic"]),
       dl.add_between_all_pairs_2(#(
         [
           "MathBlock", "Example", "Note", "SolutionNote", "Image", "table", "Table",
@@ -233,11 +234,11 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       ]),
       dl.detokenize_href_surroundings(),
       dl.insert_word_joiner_into_adjacent_text_nodes(["a", "InChapterLink"]),
-      dl.lbp_generate_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
-      dl.lbp_generate_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
-      dl.lbp_generate_prev_next_attributes(),
+      local_dl.lbp_generate_table_of_contents(#("HamburgerPanelAuthorSuppliedContents", "HamburgerPanelTitle", "HamburgerPanelItem", None)),
+      local_dl.lbp_generate_table_of_contents(#("TOC", "TOCTitle", "TOCItem", Some("Spacer"))),
+      local_dl.lbp_generate_prev_next_attributes(),
       dl.auto_generate_child_if_missing_from_first_descendant_of_type(#("Section", "BreadcrumbTitle", "b")),
-      dl.lbp_generate_breadcrumbs(),
+      local_dl.lbp_generate_breadcrumbs(),
       dl.unwrap("BreadcrumbTitle"),
       dl.unwrap("Scope"),
       dl.delete_attribute__outside("type", ["List"]),
@@ -246,8 +247,8 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
     ],
     case author_mode {
       True -> [
-        dl.lbp_turn_lines_into_3003_spans("./src/content/", ["Math", "MathBlock"]),
-        dl.lbp_adorn_img_with_3003_spans(#("./", "")),
+        local_dl.lbp_turn_lines_into_3003_spans__outside("./src/content/", ["Math", "MathBlock"]),
+        local_dl.lbp_adorn_img_with_3003_spans(#("./", "")),
         dl.append_custom(#(
           "MathBlock",
           V(our_blame, "MathJaxSvgExportTooltip", [], []),
@@ -257,7 +258,7 @@ pub fn our_pipeline(only: Bool, remove_unused: Bool, author_mode: Bool) -> Pipel
       False -> []
     },
     [
-      dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, False)),
+      local_dl.lbp_img_build(#("..", "../public", "images", "build-img", "../image-map.json", !only && remove_unused, remove_unused, False)),
       dl.ensure_attribute_value_starts_with(#("src", "/")),
     ],
   ]

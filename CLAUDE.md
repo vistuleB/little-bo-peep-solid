@@ -236,7 +236,7 @@ The pipeline transforms the assembled VXML tree into JSX-ready VXML. Key stages 
 27. **Prev/next navigation** — `lbp_generate_prev_next_attributes()`
 28. **Breadcrumbs** — `lbp_generate_breadcrumbs()`
 29. **Attribute cleanup** — deletes `counter`, `handle`, `t`, `_`, `title`, `test`; renames remaining attributes to camelCase (`kabob_case_to_camel_case`)
-30. **Author mode** (when `--local`) — `lbp_turn_lines_into_3003_spans` and `lbp_adorn_img_with_3003_spans` add source-linking tooltips
+30. **Author mode** (when `--local`) — `lbp_turn_lines_into_3003_spans__outside` and `lbp_adorn_img_with_3003_spans` add source-linking tooltips
 31. **Image build** — `lbp_img_build` processes images in `images/` into `public/` via the `build-img` tool, updating `image-map.json`
 32. **src normalization** — `ensure_attribute_value_starts_with("src", "/")`
 

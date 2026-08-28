@@ -2,12 +2,16 @@ name = "renderer"
 version = "1.0.0"
 
 [dependencies]
-vxml = ">= 1.0.3 and < 2.0.0"
+vxml = ">= 1.0.5 and < 2.0.0"
 writerly = { "path" = "../../wly/writerly" }
 desugaring = { "path" = "../../wly/desugaring" }
 
 argv = ">= 1.0.2 and < 2.0.0"
+ansel = ">= 1.1.0 and < 2.0.0"
+filepath = ">= 1.1.2 and < 2.0.0"
 gleam_stdlib = ">= 0.34.0 and < 2.0.0"
+gleam_json = ">= 3.1.0 and < 4.0.0"
+gleam_regexp = ">= 1.0.0 and < 2.0.0"
 shellout = ">= 1.8.0 and < 2.0.0"
 simplifile = ">= 2.3.0 and < 3.0.0"
 xmlm = ">= 1.0.0 and < 2.0.0"

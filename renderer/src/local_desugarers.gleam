@@ -1,0 +1,52 @@
+import desugarers/lbp_adorn_img_with_3003_spans
+import desugarers/lbp_adorn_with_3003_spans
+import desugarers/lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes
+import desugarers/lbp_generate_breadcrumbs
+import desugarers/lbp_generate_prev_next_attributes
+import desugarers/lbp_generate_table_of_contents
+import desugarers/lbp_img_build
+import desugarers/lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard
+import desugarers/lbp_move_to_be_moved_to_grand_wrapper
+import desugarers/lbp_select_content
+import desugarers/lbp_turn_lines_into_3003_spans__outside
+import desugarers/lbp_wrap_with_3003_spans
+import desugaring/core
+
+pub const lbp_adorn_img_with_3003_spans = lbp_adorn_img_with_3003_spans.constructor
+
+pub const lbp_adorn_with_3003_spans = lbp_adorn_with_3003_spans.constructor
+
+pub const lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes = lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes.constructor
+
+pub const lbp_generate_breadcrumbs = lbp_generate_breadcrumbs.constructor
+
+pub const lbp_generate_prev_next_attributes = lbp_generate_prev_next_attributes.constructor
+
+pub const lbp_generate_table_of_contents = lbp_generate_table_of_contents.constructor
+
+pub const lbp_img_build = lbp_img_build.constructor
+
+pub const lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard = lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard.constructor
+
+pub const lbp_move_to_be_moved_to_grand_wrapper = lbp_move_to_be_moved_to_grand_wrapper.constructor
+
+pub const lbp_select_content = lbp_select_content.constructor
+
+pub const lbp_turn_lines_into_3003_spans__outside = lbp_turn_lines_into_3003_spans__outside.constructor
+
+pub const lbp_wrap_with_3003_spans = lbp_wrap_with_3003_spans.constructor
+
+pub const assertive_tests: List(fn() -> core.AssertiveTestCollection) = [
+  lbp_adorn_img_with_3003_spans.assertive_tests,
+  lbp_adorn_with_3003_spans.assertive_tests,
+  lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes.assertive_tests,
+  lbp_generate_breadcrumbs.assertive_tests,
+  lbp_generate_prev_next_attributes.assertive_tests,
+  lbp_generate_table_of_contents.assertive_tests,
+  lbp_img_build.assertive_tests,
+  lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard.assertive_tests,
+  lbp_move_to_be_moved_to_grand_wrapper.assertive_tests,
+  lbp_select_content.assertive_tests,
+  lbp_turn_lines_into_3003_spans__outside.assertive_tests,
+  lbp_wrap_with_3003_spans.assertive_tests,
+]

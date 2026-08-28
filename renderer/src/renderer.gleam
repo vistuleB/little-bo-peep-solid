@@ -444,6 +444,8 @@ pub fn main() {
       verbose: False,
       artifacts: True,
       profiling_table: None,
+      output_lines_table_default_blame_columns: 50,
+      output_lines_table_default_comment_columns: 0,
     )
     |> ds.amend_renderer_options_by_command_line_amendments(amendments)
 
