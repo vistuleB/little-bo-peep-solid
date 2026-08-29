@@ -1,20 +1,21 @@
 import argv
-import vxml/blame.{type Blame, Ext}
 import desugaring as ds
+import desugaring/core
+import desugaring/writerly_defaults as wd
 import emitter_imports as ei
 import gleam/dict.{type Dict}
-import gleam/io
 import gleam/int
+import gleam/io
 import gleam/list
-import gleam/option.{type Option, Some, None}
+import gleam/option.{type Option, None, Some}
 import gleam/string.{inspect as ins}
-import desugaring/core as core
-import vxml/io_lines.{type OutputLine, OutputLine}
+import local_desugarers
 import on
 import pipeline.{our_pipeline}
 import simplifile
 import vxml.{type VXML, V}
-import desugaring/writerly_defaults as wd
+import vxml/blame.{type Blame, Ext}
+import vxml/io_lines.{type OutputLine, OutputLine}
 
 type LBPFragmentClassifer {
   Article(String)
@@ -23,8 +24,11 @@ type LBPFragmentClassifer {
   HeaderBlob
 }
 
-type LBPFragment(z) = ds.OutputFragment(LBPFragmentClassifer, z)
-type BL = List(OutputLine)
+type LBPFragment(z) =
+  ds.OutputFragment(LBPFragmentClassifer, z)
+
+type BL =
+  List(OutputLine)
 
 type LBPSplitterError {
   NoTOC
@@ -35,10 +39,7 @@ type LBPSplitterError {
 }
 
 type LBPEmitterError {
-  UnknownComponentError(
-    component: String,
-    classifier: String,
-  )
+  UnknownComponentError(component: String, classifier: String)
 }
 
 fn blame_us(loc: String) -> Blame {
@@ -48,7 +49,8 @@ fn blame_us(loc: String) -> Blame {
 fn our_splitter(
   root: VXML,
 ) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
-  let articles = core.v_children_with_tags(root, ["Chapter", "Bootcamp", "Appendix"])
+  let articles =
+    core.v_children_with_tags(root, ["Chapter", "Bootcamp", "Appendix"])
   use toc_vxml <- on.error_ok(
     core.v_unique_child_with_singleton_error(root, "TOC"),
     on_error: fn(error) {
@@ -60,18 +62,25 @@ fn our_splitter(
   )
 
   use panel_vxml <- on.error_ok(
-    core.v_unique_child_with_singleton_error(root, "HamburgerPanelAuthorSuppliedContents"),
+    core.v_unique_child_with_singleton_error(
+      root,
+      "HamburgerPanelAuthorSuppliedContents",
+    ),
     on_error: fn(error) {
       case error {
         core.LessThanOne -> Error(NoHamburgerPanelAuthorSuppliedContents)
-        core.MoreThanOne -> Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
+        core.MoreThanOne ->
+          Error(MoreThanOneHamburgerPanelAuthorSuppliedContents)
       }
     },
   )
 
-  let header_blob_vxml  = case core.v_unique_child_with_singleton_error(root, "HeaderBlob") {
+  let header_blob_vxml = case
+    core.v_unique_child_with_singleton_error(root, "HeaderBlob")
+  {
     Ok(value) -> Ok(value)
-    Error(core.LessThanOne) -> Ok(V(blame_us("default_header_blob"), "HeaderBlob", [], []))
+    Error(core.LessThanOne) ->
+      Ok(V(blame_us("default_header_blob"), "HeaderBlob", [], []))
     Error(core.MoreThanOne) -> Error(MoreThanOneHeaderBlob)
   }
 
@@ -81,20 +90,30 @@ fn our_splitter(
     list.flatten([
       [
         ds.OutputFragment(TOC, "routes/index.tsx", toc_vxml),
-        ds.OutputFragment(HamburgerPanelAuthorSuppliedContents, "components/HamburgerPanelAuthorSuppliedContents.tsx", panel_vxml),
-        ds.OutputFragment(HeaderBlob, "components/HeaderBlob.tsx", header_blob_vxml),
+        ds.OutputFragment(
+          HamburgerPanelAuthorSuppliedContents,
+          "components/HamburgerPanelAuthorSuppliedContents.tsx",
+          panel_vxml,
+        ),
+        ds.OutputFragment(
+          HeaderBlob,
+          "components/HeaderBlob.tsx",
+          header_blob_vxml,
+        ),
       ],
-      list.map(
-        articles,
-        fn(c) {
-          let #(c, vxml.Attr(_,_,path)) = core.v_assert_pop_attr(c, "path")
-          let #(c, vxml.Attr(_, _, number)) = core.v_assert_pop_attr(c, "number")
-          let #(c, vxml.Attr(_,_,category)) = core.v_assert_pop_attr(c, "category")
-          let c = core.v_set_tag(c, "Article")
-          let c = core.v_set_attr(c, blame_us("list.map(articles)"), "path", path)
-          ds.OutputFragment(Article("__" <> category <> number <> "__"), "routes" <> path <> ".tsx", c)
-        }
-      ),
+      list.map(articles, fn(c) {
+        let #(c, vxml.Attr(_, _, path)) = core.v_assert_pop_attr(c, "path")
+        let #(c, vxml.Attr(_, _, number)) = core.v_assert_pop_attr(c, "number")
+        let #(c, vxml.Attr(_, _, category)) =
+          core.v_assert_pop_attr(c, "category")
+        let c = core.v_set_tag(c, "Article")
+        let c = core.v_set_attr(c, blame_us("list.map(articles)"), "path", path)
+        ds.OutputFragment(
+          Article("__" <> category <> number <> "__"),
+          "routes" <> path <> ".tsx",
+          c,
+        )
+      }),
     ]),
   )
 }
@@ -117,14 +136,17 @@ fn is_rest_split_section(vxml: VXML) -> Bool {
 fn remove_rest_split_attr(vxml: VXML) -> VXML {
   case vxml {
     V(_, "Section", attrs, _) ->
-      V(..vxml, attrs: list.filter(attrs, fn(attr) { !is_rest_split_attr(attr) }))
+      V(
+        ..vxml,
+        attrs: list.filter(attrs, fn(attr) { !is_rest_split_attr(attr) }),
+      )
     _ -> vxml
   }
 }
 
 fn up_to_and_including_first_section(
   previous: List(VXML),
-  upcoming: List(VXML)
+  upcoming: List(VXML),
 ) -> #(List(VXML), List(VXML)) {
   case upcoming {
     [] -> #(previous, [])
@@ -182,11 +204,10 @@ fn rest_section_batches_loop(
       let current = [first, ..current]
       case is_section(first) {
         True ->
-          rest_section_batches_loop(
-            rest,
-            [],
-            [list.reverse(current), ..previous_batches],
-          )
+          rest_section_batches_loop(rest, [], [
+            list.reverse(current),
+            ..previous_batches
+          ])
         False -> rest_section_batches_loop(rest, current, previous_batches)
       }
     }
@@ -221,25 +242,34 @@ fn article_emitter(
   fr: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
-
   let #(first_split, rest) = split_vxml_to_first_section_and_rest(fr.payload)
   let rest_batches = rest_section_batches(rest)
   let assert Article(funcname) = fr.classifier
 
   use component_imports <- on.error_ok(
     fr.payload
-    |> ei.uppercase_tags
-    |> ei.imports_output_lines_for_symbols(imports_lookup),
-    on_error: fn(s) {Error(UnknownComponentError(s, ins(fr.classifier) <> "pp"))},
+      |> ei.uppercase_tags
+      |> ei.imports_output_lines_for_symbols(imports_lookup),
+    on_error: fn(s) {
+      Error(UnknownComponentError(s, ins(fr.classifier) <> "pp"))
+    },
   )
 
   let lines =
     list.flatten([
       component_imports,
       [
-        OutputLine(blame_us("article_emitter"), 0, "import useShowMore from \"~/hooks/useShowMore\";"),
+        OutputLine(
+          blame_us("article_emitter"),
+          0,
+          "import useShowMore from \"~/hooks/useShowMore\";",
+        ),
         OutputLine(blame_us("article_emitter"), 0, ""),
-        OutputLine(blame_us("article_emitter"), 0, "export default function " <> funcname <> "() {"),
+        OutputLine(
+          blame_us("article_emitter"),
+          0,
+          "export default function " <> funcname <> "() {",
+        ),
         OutputLine(blame_us("article_emitter"), 2, "return ("),
       ],
       vxml.vxml_to_jsx_output_lines(first_split, 4, 2),
@@ -248,7 +278,13 @@ fn article_emitter(
         OutputLine(blame_us("article_emitter"), 0, "}"),
         OutputLine(blame_us("article_emitter"), 0, ""),
         OutputLine(blame_us("article_emitter"), 0, "const Rest = () => {"),
-        OutputLine(blame_us("article_emitter"), 2, "const visibleRestSections = useShowMore(" <> int.to_string(list.length(rest_batches)) <> ");"),
+        OutputLine(
+          blame_us("article_emitter"),
+          2,
+          "const visibleRestSections = useShowMore("
+            <> int.to_string(list.length(rest_batches))
+            <> ");",
+        ),
         OutputLine(blame_us("article_emitter"), 2, "return <>"),
       ],
       rest_batch_output_lines(rest_batches, 0),
@@ -267,22 +303,30 @@ fn toc_emitter(
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
   use component_imports <- on.error_ok(
     fr.payload
-    |> ei.uppercase_tags
-    |> ei.imports_output_lines_for_symbols(imports_lookup),
-    on_error: fn(s) {Error(UnknownComponentError(s, ins(fr.classifier)))},
+      |> ei.uppercase_tags
+      |> ei.imports_output_lines_for_symbols(imports_lookup),
+    on_error: fn(s) { Error(UnknownComponentError(s, ins(fr.classifier))) },
   )
 
   let lines =
     list.flatten([
       component_imports,
       [
-        OutputLine(blame_us("toc_emitter"), 0, "import useNoScrollRestoration from \"~/hooks/useNoScrollRestoration\";"),
+        OutputLine(
+          blame_us("toc_emitter"),
+          0,
+          "import useNoScrollRestoration from \"~/hooks/useNoScrollRestoration\";",
+        ),
         OutputLine(blame_us("toc_emitter"), 0, ""),
-        OutputLine(blame_us("toc_emitter"), 0, "export default function __Home__() {"),
+        OutputLine(
+          blame_us("toc_emitter"),
+          0,
+          "export default function __Home__() {",
+        ),
         OutputLine(blame_us("toc_emitter"), 2, "useNoScrollRestoration();"),
         OutputLine(blame_us("toc_emitter"), 2, "return ("),
       ],
-      vxml.vxml_to_jsx_output_lines(fr.payload , 4, 2),
+      vxml.vxml_to_jsx_output_lines(fr.payload, 4, 2),
       [
         OutputLine(blame_us("toc_emitter"), 2, ");"),
         OutputLine(blame_us("toc_emitter"), 0, "};"),
@@ -300,9 +344,9 @@ fn standard_component_emitter(
 ) -> Result(LBPFragment(BL), LBPEmitterError) {
   use component_imports <- on.error_ok(
     fr.payload
-    |> ei.uppercase_tags_in_children
-    |> ei.imports_output_lines_for_symbols(imports_lookup),
-    on_error: fn(s) {Error(UnknownComponentError(s, ins(fr.classifier)))},
+      |> ei.uppercase_tags_in_children
+      |> ei.imports_output_lines_for_symbols(imports_lookup),
+    on_error: fn(s) { Error(UnknownComponentError(s, ins(fr.classifier))) },
   )
 
   let lines =
@@ -310,7 +354,11 @@ fn standard_component_emitter(
       component_imports,
       [
         OutputLine(blame_us("standard_component_emitter"), 0, ""),
-        OutputLine(blame_us("standard_component_emitter"), 0, "const " <> component_name <> " = () => {"),
+        OutputLine(
+          blame_us("standard_component_emitter"),
+          0,
+          "const " <> component_name <> " = () => {",
+        ),
         OutputLine(blame_us("standard_component_emitter"), 2, "return <>"),
       ],
       vxml.vxmls_to_jsx_output_lines(fr.payload |> core.v_get_children, 4, 2),
@@ -318,7 +366,11 @@ fn standard_component_emitter(
         OutputLine(blame_us("standard_component_emitter"), 2, "</>;"),
         OutputLine(blame_us("standard_component_emitter"), 0, "};"),
         OutputLine(blame_us("standard_component_emitter"), 0, ""),
-        OutputLine(blame_us("standard_component_emitter"), 0, "export default " <> component_name <> ";"),
+        OutputLine(
+          blame_us("standard_component_emitter"),
+          0,
+          "export default " <> component_name <> ";",
+        ),
       ],
     ])
 
@@ -332,29 +384,53 @@ fn our_emitter(
   case fragment.classifier {
     Article(_) -> article_emitter(fragment, imports_lookup)
     TOC -> toc_emitter(fragment, imports_lookup)
-    HamburgerPanelAuthorSuppliedContents -> standard_component_emitter(fragment, imports_lookup, "HamburgerPanelAuthorSuppliedContents")
-    HeaderBlob -> standard_component_emitter(fragment, imports_lookup, "HeaderBlob")
+    HamburgerPanelAuthorSuppliedContents ->
+      standard_component_emitter(
+        fragment,
+        imports_lookup,
+        "HamburgerPanelAuthorSuppliedContents",
+      )
+    HeaderBlob ->
+      standard_component_emitter(fragment, imports_lookup, "HeaderBlob")
   }
 }
 
 const remove_unused_build_img_option = "--clean"
+
 const author_mode = "--local"
 
-fn cli_usage_supplementary() {
-  let margin = "   "
-  io.println(margin <> author_mode)
-  io.println(margin <> "  -> generate author-facing version with source-linking tooltips")
-  io.println("")
-  io.println(margin <> remove_unused_build_img_option)
-  io.println(margin <> "  -> remove unused images from image-map and build-img directory")
-  io.println("")
-  io.println(margin <> "--last-command")
-  io.println(margin <> "  -> run the same arguments as the previous command (from local")
-  io.println(margin <> "     .last-command file)")
-  io.println("")
+fn cli_usage_supplementary() -> String {
+  let margin = string.repeat(" ", ds.help_message_margin)
+  [
+    margin <> author_mode,
+    margin <> "  -> generate author-facing version with source-linking tooltips",
+    "",
+    margin <> remove_unused_build_img_option,
+    margin <> "  -> remove unused images from image-map and build-img directory",
+    "",
+    margin <> "--last-command",
+    margin <> "  -> run the same arguments as the previous command (from local",
+    margin <> "     .last-command file)",
+    "",
+    margin <> "--renumber",
+    margin <> "  -> renumber local desugarer blame references",
+    "",
+    margin <> "--generate / --regenerate",
+    margin <> "  -> regenerate src/local_desugarers.gleam",
+    "",
+    margin <> "--desugarers",
+    margin <> "  -> renumber blames, regenerate the local library, and run",
+    margin <> "     all local desugarer tests",
+    "",
+    margin <> "--desugarer-tests / --test-desugarers [<name> ...]",
+    margin <> "  -> test all local desugarers, or only those named",
+    "",
+  ]
+  |> string.join("\n")
 }
 
 pub fn main() {
+  io.println("")
   let args = argv.load().arguments
 
   let #(args, use_last_command) = case list.contains(args, "--last-command") {
@@ -368,20 +444,21 @@ pub fn main() {
   assert !list.contains(args, "--last-command")
 
   let args = case use_last_command {
-    True -> case simplifile.read(".last-command") {
-      Ok(contents) -> {
-        string.split(contents, " ")
-        |> list.map(string.trim)
-        |> list.filter(fn(s) { !string.is_empty(s) })
-        |> list.append(args)
+    True ->
+      case simplifile.read(".last-command") {
+        Ok(contents) -> {
+          string.split(contents, " ")
+          |> list.map(string.trim)
+          |> list.filter(fn(s) { !string.is_empty(s) })
+          |> list.append(args)
+        }
+        Error(_) -> {
+          panic as "unable to find '.last-command'"
+        }
       }
-      Error(_) -> {
-        panic as "unable to find '.last-command'"
-      }
-    }
     False -> args
   }
-  
+
   let args_string = string.join(args, " ")
 
   let #(args, echo_args) = case list.contains(args, "--echo-args") {
@@ -392,33 +469,36 @@ pub fn main() {
     False -> #(args, False)
   }
 
-  use _ <- on.stay(case args {
-    ["--help"] | ["-help"] | ["-h"] -> {
-      ds.basic_cli_usage("\n'gleam run' command line options (basic):")
-      cli_usage_supplementary()
-      on.Return(Nil)
-    }
+  let #(args, help_requested) =
+    ds.handle_help_requests(args, cli_usage_supplementary)
+  use _ <- on.stay(case help_requested {
+    True -> on.Return(Nil)
+    False -> on.Stay(Nil)
+  })
 
-    ["--esoteric"] -> {
-      ds.advanced_cli_usage("\n'gleam run' command line options (esoteric):")
-      on.Return(Nil)
-    }
-
-    ["--track-help"] -> {
-      ds.track_cli_usage("\n'gleam run -- --track' command line options:")
-      on.Return(Nil)
-    }
-
-    _ -> on.Stay(Nil)
+  use #(args, maintenance_requested) <- on.error_ok(
+    ds.handle_maintenance_requests(args, local_desugarers.assertive_tests),
+    fn(error) {
+      io.println("maintenance error: " <> error)
+      io.println("")
+    },
+  )
+  use _ <- on.stay(case maintenance_requested {
+    True -> on.Return(Nil)
+    False -> on.Stay(Nil)
   })
 
   use amendments <- on.error_ok(
-    ds.process_command_line_arguments(args, [remove_unused_build_img_option, author_mode]),
+    ds.process_command_line_arguments(args, [
+      remove_unused_build_img_option,
+      author_mode,
+    ]),
     fn(error) {
-      io.println("")
       io.println("command line error: " <> ins(error))
-      ds.basic_cli_usage("\n'gleam run' command line options (basic):")
-      cli_usage_supplementary()
+      io.println("")
+      ds.basic_cli_usage("'gleam run' command line options (basic):")
+      cli_usage_supplementary() |> io.print
+      io.println("")
     },
   )
 
@@ -453,8 +533,16 @@ pub fn main() {
     ds.Renderer(
       assembler: wd.default_writerly_assembler(_, options),
       parser: wd.default_writerly_parser,
-      filterer: ds.default_filterer(_, options, ["In", "HeaderBlob", "ChapterSelection"]),
-      pipeline: our_pipeline(only, dict.has_key(amendments.user_args, remove_unused_build_img_option), dict.has_key(amendments.user_args, author_mode)),
+      filterer: ds.default_filterer(_, options, [
+        "In",
+        "HeaderBlob",
+        "ChapterSelection",
+      ]),
+      pipeline: our_pipeline(
+        only,
+        dict.has_key(amendments.user_args, remove_unused_build_img_option),
+        dict.has_key(amendments.user_args, author_mode),
+      ),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
       writer: ds.default_writer,
@@ -468,59 +556,63 @@ pub fn main() {
     Ok(files) -> list.map(files, fn(f) { article_dir <> "/" <> f })
     _ -> panic
   }
-  let constant_paths = [
-    output_dir <> "/routes/index.tsx",
-    output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx",
-    output_dir <> "/components/HeaderBlob.tsx",
-  ]
-  |> list.filter(fn(f) { case simplifile.is_file(f) {
-    Ok(value) -> value
-    Error(_) -> panic
-  }})
-  let previously_existing_artifacts = article_paths |> list.append(constant_paths)
-
-  io.println("")
+  let constant_paths =
+    [
+      output_dir <> "/routes/index.tsx",
+      output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx",
+      output_dir <> "/components/HeaderBlob.tsx",
+    ]
+    |> list.filter(fn(f) {
+      case simplifile.is_file(f) {
+        Ok(value) -> value
+        Error(_) -> panic
+      }
+    })
+  let previously_existing_artifacts =
+    article_paths |> list.append(constant_paths)
 
   // actual running of renderer
   use artifacts_printed_this_run <- on.error_ok(
     ds.run_renderer(renderer, parameters, options),
     fn(_) {
       io.println("")
-      io.println("[error running <" <> "gleam run -- " <> string.join(args, " ") <> ">]")
+      io.println(
+        "[error running <" <> "gleam run -- " <> string.join(args, " ") <> ">]",
+      )
       io.println("")
-    }
+    },
   )
 
-  let artifacts_printed_this_run = 
+  let artifacts_printed_this_run =
     list.map(artifacts_printed_this_run, fn(p) { output_dir <> "/" <> p })
 
   // compute defunct_artifacts, newbie_artifacts
-  let defunct_artifacts = 
+  let defunct_artifacts =
     previously_existing_artifacts
     |> list.filter(fn(z) { !list.contains(artifacts_printed_this_run, z) })
 
-  let newbie_artifacts = 
+  let newbie_artifacts =
     artifacts_printed_this_run
     |> list.filter(fn(z) { !list.contains(previously_existing_artifacts, z) })
 
   // delete defunct artifacts & announce deletion
-  case defunct_artifacts { [] -> Nil _ -> io.println("") }
-  list.each(  
-    defunct_artifacts,
-    fn(path) {
-      case simplifile.delete(path) {
-        Ok(_) -> io.println("deleted " <> path)
-        Error(_) -> panic
-      }
+  case defunct_artifacts {
+    [] -> Nil
+    _ -> io.println("")
+  }
+  list.each(defunct_artifacts, fn(path) {
+    case simplifile.delete(path) {
+      Ok(_) -> io.println("deleted " <> path)
+      Error(_) -> panic
     }
-  )
+  })
 
   // announce creation of newly created artifacts
-  case newbie_artifacts { [] -> Nil _ -> io.println("") }
-  list.each(
-    newbie_artifacts,
-    fn(path) { io.println("created " <> path) },
-  )
+  case newbie_artifacts {
+    [] -> Nil
+    _ -> io.println("")
+  }
+  list.each(newbie_artifacts, fn(path) { io.println("created " <> path) })
 
   // echo cli args, if was requested:
   case echo_args {
@@ -536,4 +628,5 @@ pub fn main() {
     Ok(_) -> Nil
     _ -> io.println("Warning: unable to write args_string to .last-command")
   }
+  io.println("")
 }

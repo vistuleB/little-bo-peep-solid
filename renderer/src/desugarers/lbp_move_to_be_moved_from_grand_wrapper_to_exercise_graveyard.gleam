@@ -28,20 +28,18 @@ pub fn constructor() -> Desugarer {
 type InnerParam =
   Nil
 
-fn inner_param_to_transform(inner: InnerParam) -> core.DesugarerTransform {
+fn inner_param_to_transform(_inner: InnerParam) -> core.DesugarerTransform {
+  let nodemap: n2t.EarlyReturnOneToOneEnterExitStatefulWithWarningsNodemap(
+    State,
+  ) =
+    n2t.EarlyReturnOneToOneEnterExitStatefulWithWarningsNodemap(
+      on_enter: on_enter,
+      on_exit: on_exit,
+      on_text: t_transform,
+    )
   n2t.early_return_one_to_one_enter_exit_stateful_with_warnings_nodemap_2_desugarer_transform(
-    nodemap_factory(inner),
+    nodemap,
     #(False, [] |> dict.from_list),
-  )
-}
-
-fn nodemap_factory(
-  _inner: InnerParam,
-) -> n2t.EarlyReturnOneToOneEnterExitStatefulWithWarningsNodemap(State) {
-  n2t.EarlyReturnOneToOneEnterExitStatefulWithWarningsNodemap(
-    on_enter: on_enter,
-    on_exit: on_exit,
-    on_text: t_transform,
   )
 }
 

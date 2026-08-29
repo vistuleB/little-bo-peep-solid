@@ -1140,21 +1140,17 @@ fn v_after(
   }
 }
 
-fn nodemap_factory(
-  inner: InnerParam,
-) -> n2t.FancyOneToOneEnterExitStatefulWithWarningsNodemap(State) {
-  n2t.FancyOneToOneEnterExitStatefulWithWarningsNodemap(
-    on_enter: fn(vxml, _, _, _, _, state) { v_before(vxml, state, inner) },
-    on_exit: fn(vxml, ancestors, _, _, _, _, latest_state) {
-      v_after(vxml, ancestors, latest_state, inner)
-    },
-    on_text: fn(vxml, _, _, _, _, state) { Ok(#(vxml, state, [])) },
-  )
-}
-
 fn inner_param_to_transform(inner: InnerParam) -> DesugarerTransform {
   let image_map = load_image_map(inner.image_map_path)
-  nodemap_factory(inner)
+  let nodemap: n2t.FancyOneToOneEnterExitStatefulWithWarningsNodemap(State) =
+    n2t.FancyOneToOneEnterExitStatefulWithWarningsNodemap(
+      on_enter: fn(vxml, _, _, _, _, state) { v_before(vxml, state, inner) },
+      on_exit: fn(vxml, ancestors, _, _, _, _, latest_state) {
+        v_after(vxml, ancestors, latest_state, inner)
+      },
+      on_text: fn(vxml, _, _, _, _, state) { Ok(#(vxml, state, [])) },
+    )
+  nodemap
   |> n2t.fancy_one_to_one_enter_exit_stateful_with_warnings_nodemap_2_desugarer_transform(
     image_map,
   )

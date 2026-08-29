@@ -46,16 +46,11 @@ fn inner_param_to_transform(
   inner: InnerParam,
   outside: List(String),
 ) -> DesugarerTransform {
-  nodemap_factory(inner)
+  let nodemap: n2t.EarlyReturnOneToManyNoErrorNodemap = nodemap(_, inner)
+  nodemap
   |> n2t.early_return_one_to_many_no_error_nodemap_2_desugarer_transform_with_forbidden(
     outside,
   )
-}
-
-fn nodemap_factory(
-  inner: InnerParam,
-) -> n2t.EarlyReturnOneToManyNoErrorNodemap {
-  nodemap(_, inner)
 }
 
 fn nodemap(vxml: VXML, inner: InnerParam) -> #(List(VXML), TrafficLight) {
@@ -79,7 +74,7 @@ const container_classname = "t-3003-c"
 
 const tooltip_classname = "t-3003"
 
-const b = bl.Des([], name, 82)
+const b = bl.Des([], name, 77)
 
 const newline_t = T(b, [Line(b, ""), Line(b, "")])
 
