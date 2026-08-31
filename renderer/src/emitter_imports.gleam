@@ -1,13 +1,13 @@
+import desugaring/core
 import gleam/dict.{type Dict}
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/result
+import gleam/string
+import on
+import vxml.{type VXML, T, V}
 import vxml/blame.{Ext}
 import vxml/io_lines.{type OutputLine, OutputLine}
-import vxml.{type VXML, V, T}
-import gleam/string
-import desugaring/core as core
-import on
 
 pub type ExportedByFile {
   ExportedByFile(default: Option(String), other: List(String))
@@ -23,8 +23,14 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("ArticleTitle", ExportedByFile(Some("ArticleTitle"), [])),
     #("Boxed", ExportedByFile(Some("Boxed"), [])),
     #("BoxedText", ExportedByFile(Some("BoxedText"), [])),
-    #("Delimiters", ExportedByFile(None, ["CentralDisplay", "CentralDisplayItalic"])),
-    #("Exercises", ExportedByFile(None, ["Exercises", "Exercise", "ExerciseStatement"])),
+    #(
+      "Delimiters",
+      ExportedByFile(None, ["CentralDisplay", "CentralDisplayItalic"]),
+    ),
+    #(
+      "Exercises",
+      ExportedByFile(None, ["Exercises", "Exercise", "ExerciseStatement"]),
+    ),
     #("Grid", ExportedByFile(Some("Grid"), [])),
     #("HamburgerPanelItem", ExportedByFile(Some("HamburgerPanelItem"), [])),
     #("HamburgerPanelTitle", ExportedByFile(Some("HamburgerPanelTitle"), [])),
@@ -33,10 +39,16 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("InlineImage", ExportedByFile(Some("InlineImage"), [])),
     #("List", ExportedByFile(None, ["List", "Item"])),
     #("Math", ExportedByFile(None, ["Math", "MathBlock"])),
-    #("MathJaxSvgExportTooltip", ExportedByFile(Some("MathJaxSvgExportTooltip"), [])),
+    #(
+      "MathJaxSvgExportTooltip",
+      ExportedByFile(Some("MathJaxSvgExportTooltip"), []),
+    ),
     #("OutChapterLink", ExportedByFile(Some("OutChapterLink"), [])),
     #("SectionDivider", ExportedByFile(None, ["SectionDivider"])),
-    #("SectionsBreadcrumbs", ExportedByFile(Some("SectionsBreadcrumbs"), ["BreadcrumbItem"])),
+    #(
+      "SectionsBreadcrumbs",
+      ExportedByFile(Some("SectionsBreadcrumbs"), ["BreadcrumbItem"]),
+    ),
     #("SideImage", ExportedByFile(None, ["ImageRight", "ImageLeft"])),
     #("Solution", ExportedByFile(Some("Solution"), [])),
     #("Spacer", ExportedByFile(None, ["Spacer"])),
@@ -48,7 +60,19 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("TOCItem", ExportedByFile(Some("TOCItem"), [])),
     #("TOCTitle", ExportedByFile(Some("TOCTitle"), [])),
     #("OuterP", ExportedByFile(Some("OuterP"), [])),
-    #("Wrappers", ExportedByFile(None, ["Section", "Note", "SolutionNote", "Example", "NoBreak", "InTextWarning", "Pause", "WriterlyBlankLine"])),
+    #(
+      "Wrappers",
+      ExportedByFile(None, [
+        "Section",
+        "Note",
+        "SolutionNote",
+        "Example",
+        "NoBreak",
+        "InTextWarning",
+        "Pause",
+        "WriterlyBlankLine",
+      ]),
+    ),
   ])
 }
 
@@ -57,28 +81,22 @@ pub type ImportSource {
   Other(String)
 }
 
-pub fn imports_lookup_dictionary_from_exports(exports: Dict(String, ExportedByFile)) -> Dict(String, ImportSource) {
-  dict.fold(
-    exports,
-    dict.new(),
-    fn(acc, file, file_exports) {
-      let acc = case file_exports.default {
-        None -> acc
-        Some(component) -> {
-          let assert False = dict.has_key(acc, component)
-          dict.insert(acc, component, Default(file))
-        }
+pub fn imports_lookup_dictionary_from_exports(
+  exports: Dict(String, ExportedByFile),
+) -> Dict(String, ImportSource) {
+  dict.fold(exports, dict.new(), fn(acc, file, file_exports) {
+    let acc = case file_exports.default {
+      None -> acc
+      Some(component) -> {
+        let assert False = dict.has_key(acc, component)
+        dict.insert(acc, component, Default(file))
       }
-      list.fold(
-        file_exports.other,
-        acc,
-        fn (acc, component) {
-          let assert False = dict.has_key(acc, component)
-          dict.insert(acc, component, Other(file))
-        }
-      )
     }
-  )
+    list.fold(file_exports.other, acc, fn(acc, component) {
+      let assert False = dict.has_key(acc, component)
+      dict.insert(acc, component, Other(file))
+    })
+  })
 }
 
 fn glob_imports(
@@ -88,7 +106,7 @@ fn glob_imports(
   list.try_fold(
     symbols,
     dict.new(),
-    fn (acc : Dict(String, ImportedFromFile), symbol) {
+    fn(acc: Dict(String, ImportedFromFile), symbol) {
       case dict.get(imports_lookup, symbol) {
         Error(_) -> {
           Error(symbol)
@@ -96,11 +114,15 @@ fn glob_imports(
         Ok(Default(file)) -> {
           case dict.get(acc, file) {
             Ok(what_were_importing_so_far_from_this_file) -> {
-              let assert None = what_were_importing_so_far_from_this_file.default
+              let assert None =
+                what_were_importing_so_far_from_this_file.default
               Ok(dict.insert(
                 acc,
                 file,
-                ImportedFromFile(..what_were_importing_so_far_from_this_file, default: Some(symbol))
+                ImportedFromFile(
+                  ..what_were_importing_so_far_from_this_file,
+                  default: Some(symbol),
+                ),
               ))
             }
             Error(_) -> {
@@ -118,7 +140,13 @@ fn glob_imports(
               Ok(dict.insert(
                 acc,
                 file,
-                ImportedFromFile(..what_were_importing_so_far_from_this_file, other: [symbol, ..what_were_importing_so_far_from_this_file.other])
+                ImportedFromFile(
+                  ..what_were_importing_so_far_from_this_file,
+                  other: [
+                    symbol,
+                    ..what_were_importing_so_far_from_this_file.other
+                  ],
+                ),
               ))
             }
             Error(_) -> {
@@ -131,13 +159,14 @@ fn glob_imports(
           }
         }
       }
-    }
+    },
   )
   |> result.map(dict.to_list)
 }
 
 fn import_line(file: String, imported: ImportedFromFile) -> String {
-  let assert True = option.is_some(imported.default) || !list.is_empty(imported.other)
+  let assert True =
+    option.is_some(imported.default) || !list.is_empty(imported.other)
   "import"
   <> case imported.default {
     None -> ""
@@ -145,22 +174,25 @@ fn import_line(file: String, imported: ImportedFromFile) -> String {
   }
   <> case option.is_some(imported.default) && !list.is_empty(imported.other) {
     True -> ", "
-    False -> case list.is_empty(imported.other) {
-      True -> " "
-      False -> ""
-    }
+    False ->
+      case list.is_empty(imported.other) {
+        True -> " "
+        False -> ""
+      }
   }
   <> case list.is_empty(imported.other) {
     True -> ""
-    False -> " { " <> list.index_fold(
-      imported.other,
-      "",
-      fn (acc, symbol, index) {
-        acc <> case index == 0 {
+    False ->
+      " { "
+      <> list.index_fold(imported.other, "", fn(acc, symbol, index) {
+        acc
+        <> case index == 0 {
           True -> ""
           False -> ", "
-        } <> symbol
-      }) <> " } "
+        }
+        <> symbol
+      })
+      <> " } "
   }
   <> " from \"~/components/"
   <> file
@@ -169,22 +201,20 @@ fn import_line(file: String, imported: ImportedFromFile) -> String {
 
 pub fn imports_output_lines_for_symbols(
   symbols: List(String),
-  imports_lookup: Dict(String, ImportSource)
+  imports_lookup: Dict(String, ImportSource),
 ) -> Result(List(OutputLine), String) {
   let blame = Ext([], "emitter_imports")
   use globbed <- on.ok(glob_imports(symbols, imports_lookup))
-  list.map(
-    globbed,
-    fn(globbed_symbols_for_file) {
-      let #(file, imported_from_file) = globbed_symbols_for_file
-      let line = import_line(file, imported_from_file)
-      OutputLine(blame, 0, line)
-    }
-  )
+  list.map(globbed, fn(globbed_symbols_for_file) {
+    let #(file, imported_from_file) = globbed_symbols_for_file
+    let line = import_line(file, imported_from_file)
+    OutputLine(blame, 0, line)
+  })
   |> Ok
 }
 
-type TreeWalkingState = List(String)
+type TreeWalkingState =
+  List(String)
 
 fn uppercase_tags_tree_walker(
   state: TreeWalkingState,
@@ -193,7 +223,10 @@ fn uppercase_tags_tree_walker(
 ) -> TreeWalkingState {
   case vxml {
     V(_, tag, _, children) -> {
-      let new_state = case take_root && string.starts_with(tag, string.uppercase(string.slice(tag, 0, 1))) {
+      let new_state = case
+        take_root
+        && string.starts_with(tag, string.uppercase(string.slice(tag, 0, 1)))
+      {
         True -> core.append_if_not_present(state, tag)
         False -> state
       }

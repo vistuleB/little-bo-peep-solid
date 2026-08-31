@@ -1,8 +1,8 @@
+import desugarers/lbp_grand_wrapper_move_nodes_to_wrapper
 import desugaring/authoring
 import desugaring/core.{
   type Desugarer, type DesugaringError, type DesugaringWarning, DesugaringError,
 }
-import desugarers/lbp_grand_wrapper_move_nodes_to_wrapper
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/string
