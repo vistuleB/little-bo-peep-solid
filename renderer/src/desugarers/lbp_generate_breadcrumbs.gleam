@@ -204,6 +204,7 @@ fn desugarer_blame(line_no: Int) {
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
 // 🏖️🏖️ Desugarer 🏖️🏖️
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
+
 /// Generates LBP breadcrumb elements from the document's
 /// chapter, bootcamp, appendix, and table-of-contents layout.
 pub fn constructor() -> Desugarer {
@@ -216,6 +217,7 @@ pub fn constructor() -> Desugarer {
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
 // 🌊🌊🌊 tests 🌊🌊🌊🌊
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
+
 fn assertive_tests_data() -> List(core.AssertiveTestDataNoParam) {
   []
 }

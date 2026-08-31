@@ -150,6 +150,7 @@ pub const name = "lbp_generate_prev_next_attributes"
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
 // 🏖️🏖️ Desugarer 🏖️🏖️
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
+
 /// Adds previous and next navigation attributes to LBP
 /// chapters, bootcamps, appendices, and the table of contents.
 pub fn constructor() -> Desugarer {
@@ -162,6 +163,7 @@ pub fn constructor() -> Desugarer {
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
 // 🌊🌊🌊 tests 🌊🌊🌊🌊
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
+
 fn assertive_tests_data() -> List(core.AssertiveTestDataNoParam) {
   []
 }

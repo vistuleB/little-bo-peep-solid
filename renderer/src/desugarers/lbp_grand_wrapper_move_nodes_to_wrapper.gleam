@@ -133,6 +133,7 @@ fn desugarer_blame(line_no: Int) {
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
 // 🏖️🏖️ Desugarer 🏖️🏖️
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
+
 /// Collects selected nodes during traversal and moves them
 /// into a named child of a root `GrandWrapper`.
 pub fn constructor(param: Param(a)) -> Desugarer {

@@ -114,6 +114,7 @@ fn desugarer_blame(line_no: Int) {
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
 // 🏖️🏖️ Desugarer 🏖️🏖️
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
+
 /// Collects exercise-graveyard metadata into attributes on
 /// the document's `GrandWrapper`.
 pub fn constructor() -> Desugarer {

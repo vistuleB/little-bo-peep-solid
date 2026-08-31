@@ -158,6 +158,7 @@ pub const name = "lbp_source_provenance_append_img_spans"
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
 // 🏖️🏖️ Desugarer 🏖️🏖️
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
+
 /// Wraps LBP image markup in the spans required by the
 /// 3003 interface, including copy and source-link controls.
 pub fn constructor(param: Param) -> Desugarer {
@@ -172,6 +173,7 @@ pub fn constructor(param: Param) -> Desugarer {
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
 // 🌊🌊🌊 tests 🌊🌊🌊🌊
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
+
 fn assertive_tests_data() -> List(core.AssertiveTestData(Param)) {
   [
     core.AssertiveTestData(

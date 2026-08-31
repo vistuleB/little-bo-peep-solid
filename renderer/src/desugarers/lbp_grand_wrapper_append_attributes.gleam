@@ -121,6 +121,7 @@ fn desugarer_blame(line_no: Int) {
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
 // 🏖️🏖️ Desugarer 🏖️🏖️
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
+
 /// Collects attributes while traversing the tree and appends
 /// them to a root `GrandWrapper`, creating one when necessary.
 pub fn constructor(param: Param(a)) -> Desugarer {
