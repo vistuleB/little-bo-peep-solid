@@ -7,7 +7,7 @@ import gleam/list
 import vxml.{type Attr, type VXML, Attr, Line, T, V}
 import vxml/blame as bl
 
-pub const name = "lbp_wrap_with_3003_spans"
+pub const name = "lbp_source_provenance_wrap"
 
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
 // 🏖️🏖️ Desugarer 🏖️🏖️

@@ -153,7 +153,7 @@ type Param =
 type InnerParam =
   #(String, String, List(Attr), List(Attr))
 
-pub const name = "lbp_adorn_img_with_3003_spans"
+pub const name = "lbp_source_provenance_append_img_spans"
 
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
 // 🏖️🏖️ Desugarer 🏖️🏖️

@@ -3,7 +3,7 @@ import desugaring/core.{
   type Desugarer, type DesugaringError, type DesugaringWarning,
   DesugaringWarning,
 }
-import desugaring/desugarers/grand_wrapper_append_attributes
+import desugarers/lbp_grand_wrapper_append_attributes
 import gleam/list
 import gleam/result
 import gleam/string
@@ -119,7 +119,7 @@ fn desugarer_blame(line_no: Int) {
 pub fn constructor() -> Desugarer {
   authoring.no_param_desugarer(
     name: name,
-    transform: grand_wrapper_append_attributes.constructor(#(
+    transform: lbp_grand_wrapper_append_attributes.constructor(#(
       Nil,
       v_before,
       v_after,

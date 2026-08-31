@@ -2,7 +2,7 @@ import desugaring/authoring
 import desugaring/core.{
   type Desugarer, type DesugaringError, type DesugaringWarning, DesugaringError,
 }
-import desugaring/desugarers/grand_wrapper_move_nodes_to_wrapper
+import desugarers/lbp_grand_wrapper_move_nodes_to_wrapper
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/string
@@ -20,7 +20,7 @@ pub const name = "lbp_move_to_be_moved_to_grand_wrapper"
 pub fn constructor() -> Desugarer {
   authoring.no_param_desugarer(
     name: name,
-    transform: grand_wrapper_move_nodes_to_wrapper.constructor(#(
+    transform: lbp_grand_wrapper_move_nodes_to_wrapper.constructor(#(
       #(None, []),
       v_before_1,
       v_after_1,

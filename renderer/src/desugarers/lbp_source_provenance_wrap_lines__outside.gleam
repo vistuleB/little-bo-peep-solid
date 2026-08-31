@@ -10,7 +10,7 @@ import on
 import vxml.{type Line, type VXML, Attr, Line, T, V}
 import vxml/blame as bl
 
-pub const name = "lbp_turn_lines_into_3003_spans__outside"
+pub const name = "lbp_source_provenance_wrap_lines__outside"
 
 // 🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️🏖️
 // 🏖️🏖️ Desugarer 🏖️🏖️
