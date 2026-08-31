@@ -471,10 +471,6 @@ pub fn main() {
 
   let #(args, help_requested) =
     ds.handle_help_requests(args, cli_usage_supplementary)
-  use _ <- on.stay(case help_requested {
-    True -> on.Return(Nil)
-    False -> on.Stay(Nil)
-  })
 
   use #(args, maintenance_requested) <- on.error_ok(
     ds.handle_maintenance_requests(args, local_desugarers.assertive_tests),
@@ -483,7 +479,8 @@ pub fn main() {
       io.println("")
     },
   )
-  use _ <- on.stay(case maintenance_requested {
+
+  use _ <- on.stay(case maintenance_requested || help_requested {
     True -> on.Return(Nil)
     False -> on.Stay(Nil)
   })
@@ -548,7 +545,6 @@ pub fn main() {
       writer: ds.default_writer,
       prettifier: ds.default_prettier_prettifier,
     )
-    |> ds.amend_renderer_by_command_line_amendments(amendments)
 
   // computation of 'existing_artifacts'
   let article_dir = output_dir <> "/routes/article"
