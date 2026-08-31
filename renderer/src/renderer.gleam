@@ -48,7 +48,7 @@ fn blame_us(loc: String) -> Blame {
 
 fn our_splitter(
   root: VXML,
-) -> Result(List(LBPFragment(VXML)), LBPSplitterError) {
+) -> Result(#(List(LBPFragment(VXML)), ds.Feedback), LBPSplitterError) {
   let articles =
     core.v_children_with_tags(root, ["Chapter", "Bootcamp", "Appendix"])
   use toc_vxml <- on.error_ok(
@@ -86,7 +86,7 @@ fn our_splitter(
 
   use header_blob_vxml <- on.ok(header_blob_vxml)
 
-  Ok(
+  Ok(#(
     list.flatten([
       [
         ds.OutputFragment(TOC, "routes/index.tsx", toc_vxml),
@@ -115,7 +115,8 @@ fn our_splitter(
         )
       }),
     ]),
-  )
+    ds.NoFeedback,
+  ))
 }
 
 fn is_section(vxml: VXML) -> Bool {
@@ -380,8 +381,8 @@ fn standard_component_emitter(
 fn our_emitter(
   fragment: LBPFragment(VXML),
   imports_lookup: Dict(String, ei.ImportSource),
-) -> Result(LBPFragment(BL), LBPEmitterError) {
-  case fragment.classifier {
+) -> Result(#(LBPFragment(BL), ds.Feedback), LBPEmitterError) {
+  use fragment <- on.ok(case fragment.classifier {
     Article(_) -> article_emitter(fragment, imports_lookup)
     TOC -> toc_emitter(fragment, imports_lookup)
     HamburgerPanelAuthorSuppliedContents ->
@@ -392,7 +393,8 @@ fn our_emitter(
       )
     HeaderBlob ->
       standard_component_emitter(fragment, imports_lookup, "HeaderBlob")
-  }
+  })
+  Ok(#(fragment, ds.NoFeedback))
 }
 
 const remove_unused_build_img_option = "--clean"
