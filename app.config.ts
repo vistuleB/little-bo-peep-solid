@@ -6,8 +6,11 @@ const env = loadEnv(mode, process.cwd(), "");
 
 // Priority: process.env (CLI) > .env file
 const viteEnv = process.env.VITE_ENV || env.VITE_ENV;
-const mathJAXVersion = process.env.MATHJAX_VERSION || env.MATHJAX_VERSION || "4";
-const isAuthorMode = (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
+const mathJAXVersion =
+  process.env.MATHJAX_VERSION || env.MATHJAX_VERSION || "4";
+const isAuthorMode =
+  mode !== "production" &&
+  (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
 const mathJaxDebugAttributes =
   (process.env.MATHJAX_DEBUG_ATTRIBUTES || env.MATHJAX_DEBUG_ATTRIBUTES) ===
     "true" || isAuthorMode;
