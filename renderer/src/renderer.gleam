@@ -471,23 +471,7 @@ pub fn main() {
     False -> #(args, False)
   }
 
-  let #(args, help_requested) =
-    ds.handle_help_requests(args, cli_usage_supplementary)
-
-  use #(args, maintenance_requested) <- on.error_ok(
-    ds.handle_maintenance_requests(args, local_desugarers.assertive_tests),
-    fn(error) {
-      io.println("maintenance error: " <> error)
-      io.println("")
-    },
-  )
-
-  use _ <- on.stay(case maintenance_requested || help_requested {
-    True -> on.Return(Nil)
-    False -> on.Stay(Nil)
-  })
-
-  use amendments <- on.error_ok(
+  use arguments <- on.error_ok(
     ds.process_command_line_arguments(args, [
       remove_unused_build_img_option,
       author_mode,
@@ -501,9 +485,25 @@ pub fn main() {
     },
   )
 
+  let help_requested =
+    ds.handle_help_requests(arguments, cli_usage_supplementary)
+
+  use maintenance_requested <- on.error_ok(
+    ds.handle_maintenance_requests(arguments, local_desugarers.assertive_tests),
+    fn(error) {
+      io.println("maintenance error: " <> error)
+      io.println("")
+    },
+  )
+
+  use _ <- on.stay(case maintenance_requested || help_requested {
+    True -> on.Return(Nil)
+    False -> on.Stay(Nil)
+  })
+
   let exports_dict = ei.lbp_exports_dictionary()
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
-  let only = amendments.only_key_vals != [] || amendments.only_paths != []
+  let only = arguments.only_key_vals != [] || arguments.only_paths != []
   let output_dir = "../src"
 
   let _ = Some(1)
@@ -515,7 +515,7 @@ pub fn main() {
       output_dir: output_dir,
       prettifier_behavior: ds.PrettifierOff,
     )
-    |> ds.amend_renderer_parameters_by_command_line_amendments(amendments)
+    |> ds.amend_renderer_parameters_by_arguments(arguments)
 
   let options =
     ds.RendererOptions(
@@ -526,7 +526,7 @@ pub fn main() {
       output_lines_table_default_blame_columns: 50,
       output_lines_table_default_comment_columns: 0,
     )
-    |> ds.amend_renderer_options_by_command_line_amendments(amendments)
+    |> ds.amend_renderer_options_by_arguments(arguments)
 
   let renderer =
     ds.Renderer(
@@ -539,8 +539,8 @@ pub fn main() {
       ]),
       pipeline: our_pipeline(
         only,
-        dict.has_key(amendments.user_args, remove_unused_build_img_option),
-        dict.has_key(amendments.user_args, author_mode),
+        dict.has_key(arguments.user_args, remove_unused_build_img_option),
+        dict.has_key(arguments.user_args, author_mode),
       ),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
