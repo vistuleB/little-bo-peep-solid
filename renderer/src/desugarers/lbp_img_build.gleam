@@ -6,6 +6,7 @@ import desugaring/core.{
 }
 import desugaring/nodemaps_2_transform as n2t
 import desugaring/tables as pr
+import desugaring/testing
 import either_or.{Either}
 import filepath
 import gleam/bit_array
@@ -1184,14 +1185,10 @@ fn compile_svg_patterns() -> SvgPatterns {
 // 🌊🌊🌊 tests 🌊🌊🌊🌊
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
 
-fn assertive_tests_data() -> List(core.AssertiveTestData(Param)) {
+fn assertive_tests_data() -> List(testing.AssertiveTestData(Param)) {
   []
 }
 
 pub fn assertive_tests() {
-  core.assertive_test_collection_from_data(
-    name,
-    assertive_tests_data(),
-    constructor,
-  )
+  testing.collection(name, assertive_tests_data(), constructor)
 }

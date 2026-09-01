@@ -4,6 +4,7 @@ import desugaring/core.{
   type Desugarer, type DesugaringError, type DesugaringWarning,
   DesugaringWarning,
 }
+import desugaring/testing
 import gleam/list
 import gleam/result
 import gleam/string
@@ -133,9 +134,9 @@ pub fn constructor() -> Desugarer {
 // 🌊🌊🌊 tests 🌊🌊🌊🌊
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
 
-fn assertive_tests_data() -> List(core.AssertiveTestDataNoParam) {
+fn assertive_tests_data() -> List(testing.AssertiveTestDataNoParam) {
   [
-    core.AssertiveTestDataNoParam(
+    testing.data_no_param(
       source: "
         <> Book
           <> In
@@ -177,9 +178,5 @@ fn assertive_tests_data() -> List(core.AssertiveTestDataNoParam) {
 }
 
 pub fn assertive_tests() {
-  core.assertive_test_collection_from_data_no_param(
-    name,
-    assertive_tests_data(),
-    constructor,
-  )
+  testing.collection_no_param(name, assertive_tests_data(), constructor)
 }

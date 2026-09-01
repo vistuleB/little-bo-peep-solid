@@ -4,6 +4,7 @@ import desugaring/core.{
   type TrafficLight, Continue, GoBack,
 }
 import desugaring/nodemaps_2_transform as n2t
+import desugaring/testing
 import gleam/list
 import gleam/string.{inspect as ins}
 import on
@@ -168,13 +169,13 @@ fn edit_first_t_descendant(
 // 🌊🌊🌊 tests 🌊🌊🌊🌊
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
 
-fn assertive_tests_data() -> List(core.AssertiveTestDataWithOutside(Param)) {
+fn assertive_tests_data() -> List(testing.AssertiveTestDataWithOutside(Param)) {
   [
     // note: 'tst.source' is the filename assigned by the
     // assertive test runner, which is why
     // '../path/to/content/tst.source' shows up in the expected
     // output
-    core.AssertiveTestDataWithOutside(
+    testing.data_with_outside(
       param: "../path/to/content/",
       outside: ["TOC"],
       source: "
@@ -216,9 +217,5 @@ fn assertive_tests_data() -> List(core.AssertiveTestDataWithOutside(Param)) {
 }
 
 pub fn assertive_tests() {
-  core.assertive_test_collection_from_data_with_outside(
-    name,
-    assertive_tests_data(),
-    constructor,
-  )
+  testing.collection_with_outside(name, assertive_tests_data(), constructor)
 }

@@ -4,6 +4,7 @@ import desugaring/core.{
   type DesugaringWarning, DesugaringWarning,
 }
 import desugaring/nodemaps_2_transform as n2t
+import desugaring/testing
 import gleam/list
 import gleam/result
 import gleam/string
@@ -246,7 +247,7 @@ fn v_before_2(
   Ok(#(Nil, attrs, warnings, core.GoBack))
 }
 
-fn assertive_tests_data() -> List(core.AssertiveTestData(Param(Nil))) {
+fn assertive_tests_data() -> List(testing.AssertiveTestData(Param(Nil))) {
   // a,
   // // v_before
   // fn(a, VXML) -> Result(#(a, List(Attr), List(DesugaringWarning), core.TrafficLight), DesugaringError),
@@ -255,7 +256,7 @@ fn assertive_tests_data() -> List(core.AssertiveTestData(Param(Nil))) {
   // // t
   // fn(a, VXML) -> Result(#(a, List(Attr), List(DesugaringWarning)), DesugaringError),
   [
-    core.AssertiveTestData(
+    testing.data(
       param: #(Nil, v_before_1, v_after_1, t_1),
       source: "
         <> root
@@ -269,7 +270,7 @@ fn assertive_tests_data() -> List(core.AssertiveTestData(Param(Nil))) {
               chapter=>>notme
       ",
     ),
-    core.AssertiveTestData(
+    testing.data(
       param: #(Nil, v_before_1, v_after_1, t_1),
       source: "
         <> GrandWrapper
@@ -284,7 +285,7 @@ fn assertive_tests_data() -> List(core.AssertiveTestData(Param(Nil))) {
               chapter=>>notme
       ",
     ),
-    core.AssertiveTestData(
+    testing.data(
       param: #(Nil, v_before_1, v_after_1, t_1),
       source: "
         <> root
@@ -303,7 +304,7 @@ fn assertive_tests_data() -> List(core.AssertiveTestData(Param(Nil))) {
               chapter=>>exercise-graveyard
       ",
     ),
-    core.AssertiveTestData(
+    testing.data(
       param: #(Nil, v_before_1, v_after_1, t_1),
       source: "
         <> GrandWrapper
@@ -323,7 +324,7 @@ fn assertive_tests_data() -> List(core.AssertiveTestData(Param(Nil))) {
               chapter=>>exercise-graveyard
       ",
     ),
-    core.AssertiveTestData(
+    testing.data(
       param: #(Nil, v_before_2, v_after_1, t_1),
       source: "
         <> GrandWrapper
@@ -372,9 +373,5 @@ fn assertive_tests_data() -> List(core.AssertiveTestData(Param(Nil))) {
 }
 
 pub fn assertive_tests() {
-  core.assertive_test_collection_from_data(
-    name,
-    assertive_tests_data(),
-    constructor,
-  )
+  testing.collection(name, assertive_tests_data(), constructor)
 }

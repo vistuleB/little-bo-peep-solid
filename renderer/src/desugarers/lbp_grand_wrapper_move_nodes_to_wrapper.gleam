@@ -4,6 +4,7 @@ import desugaring/core.{
   type DesugaringWarning,
 }
 import desugaring/nodemaps_2_transform as n2t
+import desugaring/testing
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/string
@@ -219,7 +220,9 @@ fn t_1(
   Ok(#(doomed_handles, Ok(vxml), []))
 }
 
-fn assertive_tests_data() -> List(core.AssertiveTestData(Param(List(String)))) {
+fn assertive_tests_data() -> List(
+  testing.AssertiveTestData(Param(List(String))),
+) {
   // a,
   // // v_before
   // fn(a, VXML) -> Result(#(a, List(Attr), List(DesugaringWarning), core.TrafficLight), DesugaringError),
@@ -228,7 +231,7 @@ fn assertive_tests_data() -> List(core.AssertiveTestData(Param(List(String)))) {
   // // t
   // fn(a, VXML) -> Result(#(a, List(Attr), List(DesugaringWarning)), DesugaringError),
   [
-    // core.AssertiveTestData(
+    // testing.AssertiveTestData(
     //   param: #(
     //     [],
     //     v_before_1,
@@ -247,7 +250,7 @@ fn assertive_tests_data() -> List(core.AssertiveTestData(Param(List(String)))) {
     //         <> SomeGuy
     //   ",
     // ),
-    core.AssertiveTestData(
+    testing.data(
       param: #([], v_before_1, v_after_1, t_1, "NodesBeingMoved"),
       source: "
         <> GrandWrapper
@@ -281,9 +284,5 @@ fn assertive_tests_data() -> List(core.AssertiveTestData(Param(List(String)))) {
 }
 
 pub fn assertive_tests() {
-  core.assertive_test_collection_from_data(
-    name,
-    assertive_tests_data(),
-    constructor,
-  )
+  testing.collection(name, assertive_tests_data(), constructor)
 }
