@@ -1,6 +1,3 @@
-import desugaring as ds
-import desugaring/core
-import desugaring/writerly_defaults as wd
 import emitter_imports as ei
 import gleam/dict.{type Dict}
 import gleam/int
@@ -14,6 +11,9 @@ import simplifile
 import vxml.{type VXML, V}
 import vxml/blame.{type Blame, Ext}
 import vxml/io_lines.{type OutputLine, OutputLine}
+import vxml_pipeline as ds
+import vxml_pipeline/core
+import vxml_pipeline/writerly_defaults as wd
 
 type LBPFragmentClassifer {
   Article(String)

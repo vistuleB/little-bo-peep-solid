@@ -1,13 +1,13 @@
-import desugaring/authoring
-import desugaring/core.{
-  type Desugarer, type DesugarerTransform, type DesugaringError,
-}
-import desugaring/nodemaps_2_transform as n2t
-import desugaring/testing
 import gleam/option.{None, Some}
 import gleam/string
 import vxml.{type Attr, type VXML, Attr, Line, T, V}
 import vxml/blame as bl
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{
+  type Desugarer, type DesugarerTransform, type DesugaringError,
+}
+import vxml_pipeline/nodemaps_2_transform as n2t
+import vxml_pipeline/testing
 
 const b = bl.Des([], name, 11)
 

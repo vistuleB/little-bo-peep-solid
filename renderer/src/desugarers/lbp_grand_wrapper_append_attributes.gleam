@@ -1,16 +1,16 @@
-import desugaring/authoring
-import desugaring/core.{
-  type Desugarer, type DesugarerTransform, type DesugaringError,
-  type DesugaringWarning, DesugaringWarning,
-}
-import desugaring/nodemaps_2_transform as n2t
-import desugaring/testing
 import gleam/list
 import gleam/result
 import gleam/string
 import on
 import vxml.{type Attr, type Line, type VXML, Attr, T, V}
 import vxml/blame as bl
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{
+  type Desugarer, type DesugarerTransform, type DesugaringError,
+  type DesugaringWarning, DesugaringWarning,
+}
+import vxml_pipeline/nodemaps_2_transform as n2t
+import vxml_pipeline/testing
 
 fn on_enter(
   vxml: VXML,

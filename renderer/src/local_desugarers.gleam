@@ -12,7 +12,7 @@ import desugarers/lbp_source_provenance_append_img_spans
 import desugarers/lbp_source_provenance_append_span
 import desugarers/lbp_source_provenance_wrap
 import desugarers/lbp_source_provenance_wrap_lines__outside
-import desugaring/testing
+import vxml_pipeline/testing
 
 pub const lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes = lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes.constructor
 

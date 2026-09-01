@@ -1,4 +1,3 @@
-import desugaring/core
 import gleam/dict.{type Dict}
 import gleam/list
 import gleam/option.{type Option, None, Some}
@@ -8,6 +7,7 @@ import on
 import vxml.{type VXML, T, V}
 import vxml/blame.{Ext}
 import vxml/io_lines.{type OutputLine, OutputLine}
+import vxml_pipeline/core
 
 pub type ExportedByFile {
   ExportedByFile(default: Option(String), other: List(String))

@@ -1,11 +1,11 @@
-import desugaring/core.{type Pipeline}
-import desugaring/delimited_syntax as syntax
-import desugaring/desugarers as dl
 import gleam/list
 import gleam/option.{None, Some}
 import local_desugarers as local_dl
 import vxml.{type VXML, V}
 import vxml/blame.{Ext}
+import vxml_pipeline/core.{type Pipeline}
+import vxml_pipeline/delimited_syntax as syntax
+import vxml_pipeline/desugarers as dl
 import writerly
 
 const p_cannot_contain = [

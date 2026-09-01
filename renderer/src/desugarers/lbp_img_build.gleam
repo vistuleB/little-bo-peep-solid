@@ -1,12 +1,4 @@
 import ansel/image
-import desugaring/authoring
-import desugaring/core.{
-  type Desugarer, type DesugarerTransform, type DesugaringError,
-  type DesugaringWarning, DesugaringError, DesugaringWarning,
-}
-import desugaring/nodemaps_2_transform as n2t
-import desugaring/tables as pr
-import desugaring/testing
 import either_or.{Either}
 import filepath
 import gleam/bit_array
@@ -27,6 +19,14 @@ import shellout
 import simplifile
 import vxml.{type Attr, type VXML, Attr, V}
 import vxml/blame.{type Blame} as bl
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{
+  type Desugarer, type DesugarerTransform, type DesugaringError,
+  type DesugaringWarning, DesugaringError, DesugaringWarning,
+}
+import vxml_pipeline/nodemaps_2_transform as n2t
+import vxml_pipeline/tables as pr
+import vxml_pipeline/testing
 
 pub const name = "lbp_img_build"
 

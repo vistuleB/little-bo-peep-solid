@@ -1,12 +1,12 @@
-import desugaring/authoring
-import desugaring/core.{
-  type Desugarer, type DesugarerTransform, type DesugaringError,
-}
-import desugaring/nodemaps_2_transform as n2t
-import desugaring/testing
 import gleam/list
 import vxml.{type Attr, type VXML, Attr, Line, T, V}
 import vxml/blame as bl
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{
+  type Desugarer, type DesugarerTransform, type DesugaringError,
+}
+import vxml_pipeline/nodemaps_2_transform as n2t
+import vxml_pipeline/testing
 
 pub const name = "lbp_source_provenance_wrap"
 

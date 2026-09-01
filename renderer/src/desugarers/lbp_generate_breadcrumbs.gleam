@@ -1,15 +1,15 @@
-import desugaring/authoring
-import desugaring/core.{
-  type Desugarer, type DesugarerTransform, type DesugaringError, DesugaringError,
-}
-import desugaring/nodemaps_2_transform as n2t
-import desugaring/testing
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/result
 import gleam/string.{inspect as ins}
 import on
 import vxml.{type Line, type VXML, Attr, Line, T, V}
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{
+  type Desugarer, type DesugarerTransform, type DesugaringError, DesugaringError,
+}
+import vxml_pipeline/nodemaps_2_transform as n2t
+import vxml_pipeline/testing
 
 fn reversed_lines_super_trim_end_and_remove_ending_period(
   lines: List(Line),

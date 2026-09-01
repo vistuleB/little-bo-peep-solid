@@ -1,14 +1,14 @@
 import desugarers/lbp_grand_wrapper_move_nodes_to_wrapper
-import desugaring/authoring
-import desugaring/core.{
-  type Desugarer, type DesugaringError, type DesugaringWarning, DesugaringError,
-}
-import desugaring/testing
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/string
 import on
 import vxml.{type VXML, Attr, V}
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{
+  type Desugarer, type DesugaringError, type DesugaringWarning, DesugaringError,
+}
+import vxml_pipeline/testing
 
 pub const name = "lbp_move_to_be_moved_to_grand_wrapper"
 

@@ -1,11 +1,11 @@
 import argv
-import desugaring as ds
 import gleam/dict
 import gleam/io
 import gleam/string
 import local_desugarers
 import on
 import renderer
+import vxml_pipeline as ds
 
 const echo_args_option = "--echo-args"
 

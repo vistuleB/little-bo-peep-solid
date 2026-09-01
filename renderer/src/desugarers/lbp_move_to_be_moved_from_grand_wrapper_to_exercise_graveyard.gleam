@@ -1,15 +1,15 @@
-import desugaring/authoring
-import desugaring/core.{
-  type Desugarer, type DesugarerTransform, type DesugaringError,
-  type DesugaringWarning, DesugaringWarning,
-}
-import desugaring/nodemaps_2_transform as n2t
-import desugaring/testing
 import gleam/dict.{type Dict}
 import gleam/list
 import gleam/option.{Some}
 import on
 import vxml.{type VXML, V}
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{
+  type Desugarer, type DesugarerTransform, type DesugaringError,
+  type DesugaringWarning, DesugaringWarning,
+}
+import vxml_pipeline/nodemaps_2_transform as n2t
+import vxml_pipeline/testing
 
 pub const name = "lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard"
 

@@ -1,15 +1,15 @@
 import desugarers/lbp_grand_wrapper_append_attributes
-import desugaring/authoring
-import desugaring/core.{
-  type Desugarer, type DesugaringError, type DesugaringWarning,
-  DesugaringWarning,
-}
-import desugaring/testing
 import gleam/list
 import gleam/result
 import gleam/string
 import on
 import vxml.{type Attr, type Line, type VXML, Attr, T, V}
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{
+  type Desugarer, type DesugaringError, type DesugaringWarning,
+  DesugaringWarning,
+}
+import vxml_pipeline/testing
 
 fn harvest_handle_attrs_from_line(
   line: Line,

@@ -1,11 +1,11 @@
-import desugaring/authoring
-import desugaring/core.{type Desugarer, type DesugaringError, DesugaringError}
-import desugaring/nodemaps_2_transform as n2t
-import desugaring/testing
 import gleam/list
 import gleam/string.{inspect as ins}
 import on
 import vxml.{type VXML, Attr, V}
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{type Desugarer, type DesugaringError, DesugaringError}
+import vxml_pipeline/nodemaps_2_transform as n2t
+import vxml_pipeline/testing
 
 fn prepend_link(vxml: VXML, link_value: String, link_key: String) -> VXML {
   core.v_prepend_attr(vxml, Attr(vxml.blame, link_key, link_value))

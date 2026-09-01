@@ -1,10 +1,3 @@
-import desugaring/authoring
-import desugaring/core.{
-  type Desugarer, type DesugarerTransform, type DesugaringError,
-  type DesugaringWarning, DesugaringError, DesugaringWarning,
-}
-import desugaring/nodemaps_2_transform as n2t
-import desugaring/testing
 import gleam/dict.{type Dict}
 import gleam/int
 import gleam/list
@@ -15,6 +8,13 @@ import gleam/string
 import on
 import vxml.{type VXML, V}
 import vxml/blame as bl
+import vxml_pipeline/authoring
+import vxml_pipeline/core.{
+  type Desugarer, type DesugarerTransform, type DesugaringError,
+  type DesugaringWarning, DesugaringError, DesugaringWarning,
+}
+import vxml_pipeline/nodemaps_2_transform as n2t
+import vxml_pipeline/testing
 
 pub const name = "lbp_select_content"
 
