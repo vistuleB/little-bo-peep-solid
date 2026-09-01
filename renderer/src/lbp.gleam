@@ -1,10 +1,13 @@
 import argv
 import desugaring as ds
+import gleam/dict
 import gleam/io
 import gleam/string
 import local_desugarers
 import on
 import renderer
+
+const echo_args_option = "--echo-args"
 
 fn cli_usage_supplementary() -> String {
   let margin = string.repeat(" ", ds.help_message_margin)
@@ -43,7 +46,7 @@ pub fn main() {
     ds.process_command_line_arguments(args, [
       renderer.clean_option,
       renderer.author_mode_option,
-      renderer.echo_args_option,
+      echo_args_option,
     ]),
     handle_cli_error,
   )
@@ -65,7 +68,15 @@ pub fn main() {
 
   use _ <- on.error_ok(ds.write_to_dot_last_command(args), handle_cli_error)
 
-  renderer.render(arguments, args)
+  renderer.render(arguments)
+
+  case dict.has_key(arguments.user_args, echo_args_option) {
+    False -> Nil
+    True -> {
+      io.println("end <gleam run -- " <> string.join(args, " ") <> ">")
+      io.println("")
+    }
+  }
 }
 
 fn handle_cli_error(error: ds.CLIError) -> Nil {

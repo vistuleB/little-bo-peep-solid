@@ -399,19 +399,11 @@ pub const clean_option = "--clean"
 
 pub const author_mode_option = "--local"
 
-pub const echo_args_option = "--echo-args"
-
-pub fn render(arguments: ds.ParsedCLIArguments, args: List(String)) -> Nil {
-  let args_string = string.join(args, " ")
-  let echo_args = dict.has_key(arguments.user_args, echo_args_option)
-
+pub fn render(arguments: ds.ParsedCLIArguments) -> Nil {
   let exports_dict = ei.lbp_exports_dictionary()
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
   let only = arguments.only_key_vals != [] || arguments.only_paths != []
   let output_dir = "../src"
-
-  let _ = Some(1)
-  let _ = None
 
   let parameters =
     ds.RendererParameters(
@@ -476,10 +468,8 @@ pub fn render(arguments: ds.ParsedCLIArguments, args: List(String)) -> Nil {
   // actual running of renderer
   use artifacts_printed_this_run <- on.error_ok(
     ds.run_renderer(renderer, parameters, options),
-    fn(_) {
-      io.println(
-        "[error running <" <> "gleam run -- " <> string.join(args, " ") <> ">]",
-      )
+    fn(error) {
+      io.println("renderer error: " <> ins(error))
       io.println("")
     },
   )
@@ -513,14 +503,5 @@ pub fn render(arguments: ds.ParsedCLIArguments, args: List(String)) -> Nil {
   case newbie_artifacts {
     [] -> Nil
     _ -> io.println("")
-  }
-
-  // echo cli args, if was requested:
-  case echo_args {
-    False -> Nil
-    True -> {
-      io.println("end <gleam run -- " <> args_string <> ">")
-      io.println("")
-    }
   }
 }
