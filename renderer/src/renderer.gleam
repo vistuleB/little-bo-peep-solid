@@ -1,4 +1,3 @@
-import argv
 import desugaring as ds
 import desugaring/core
 import desugaring/writerly_defaults as wd
@@ -9,7 +8,6 @@ import gleam/io
 import gleam/list
 import gleam/option.{type Option, None, Some}
 import gleam/string.{inspect as ins}
-import local_desugarers
 import on
 import pipeline.{our_pipeline}
 import simplifile
@@ -397,72 +395,15 @@ fn our_emitter(
   Ok(#(fragment, ds.NoFeedback))
 }
 
-const remove_unused_build_img_option = "--clean"
+pub const clean_option = "--clean"
 
-const author_mode = "--local"
+pub const author_mode_option = "--local"
 
-fn cli_usage_supplementary() -> String {
-  let margin = string.repeat(" ", ds.help_message_margin)
-  [
-    margin <> author_mode,
-    margin <> "  -> generate author-facing version with source-linking tooltips",
-    "",
-    margin <> remove_unused_build_img_option,
-    margin <> "  -> remove unused images from image-map and build-img directory",
-    "",
-    margin <> "--renumber",
-    margin <> "  -> renumber local desugarer blame references",
-    "",
-    margin <> "--generate / --regenerate",
-    margin <> "  -> regenerate src/local_desugarers.gleam",
-    "",
-    margin <> "--desugarers",
-    margin <> "  -> renumber blames, regenerate the local library, and run",
-    margin <> "     all local desugarer tests",
-    "",
-    margin <> "--desugarer-tests / --test-desugarers [<name> ...]",
-    margin <> "  -> test all local desugarers, or only those named",
-    "",
-  ]
-  |> string.join("\n")
-}
+pub const echo_args_option = "--echo-args"
 
-pub fn main() {
-  io.println("")
-
-  let args = argv.load().arguments
-
-  use args <- on.error_ok(ds.read_from_dot_last_command(args), handle_cli_error)
-
+pub fn render(arguments: ds.ParsedCLIArguments, args: List(String)) -> Nil {
   let args_string = string.join(args, " ")
-
-  use arguments <- on.error_ok(
-    ds.process_command_line_arguments(args, [
-      remove_unused_build_img_option,
-      author_mode,
-      "--echo-args",
-    ]),
-    handle_cli_error,
-  )
-
-  let echo_args = dict.has_key(arguments.user_args, "--echo-args")
-
-  use help_requested <- on.error_ok(
-    ds.handle_help_requests(arguments, cli_usage_supplementary),
-    handle_cli_error,
-  )
-
-  use maintenance_requested <- on.error_ok(
-    ds.handle_maintenance_requests(arguments, local_desugarers.assertive_tests),
-    handle_cli_error,
-  )
-
-  use _ <- on.stay(case maintenance_requested || help_requested {
-    True -> on.Return(Nil)
-    False -> on.Stay(Nil)
-  })
-
-  use _ <- on.error_ok(ds.write_to_dot_last_command(args), handle_cli_error)
+  let echo_args = dict.has_key(arguments.user_args, echo_args_option)
 
   let exports_dict = ei.lbp_exports_dictionary()
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
@@ -502,8 +443,8 @@ pub fn main() {
       ]),
       pipeline: our_pipeline(
         only,
-        dict.has_key(arguments.user_args, remove_unused_build_img_option),
-        dict.has_key(arguments.user_args, author_mode),
+        dict.has_key(arguments.user_args, clean_option),
+        dict.has_key(arguments.user_args, author_mode_option),
       ),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
@@ -536,7 +477,6 @@ pub fn main() {
   use artifacts_printed_this_run <- on.error_ok(
     ds.run_renderer(renderer, parameters, options),
     fn(_) {
-      io.println("")
       io.println(
         "[error running <" <> "gleam run -- " <> string.join(args, " ") <> ">]",
       )
@@ -557,38 +497,30 @@ pub fn main() {
     |> list.filter(fn(z) { !list.contains(previously_existing_artifacts, z) })
 
   // delete defunct artifacts & announce deletion
-  case defunct_artifacts {
-    [] -> Nil
-    _ -> io.println("")
-  }
   list.each(defunct_artifacts, fn(path) {
     case simplifile.delete(path) {
       Ok(_) -> io.println("deleted " <> path)
       Error(_) -> panic
     }
   })
+  case defunct_artifacts {
+    [] -> Nil
+    _ -> io.println("")
+  }
 
   // announce creation of newly created artifacts
+  list.each(newbie_artifacts, fn(path) { io.println("created " <> path) })
   case newbie_artifacts {
     [] -> Nil
     _ -> io.println("")
   }
-  list.each(newbie_artifacts, fn(path) { io.println("created " <> path) })
 
   // echo cli args, if was requested:
   case echo_args {
     False -> Nil
     True -> {
-      io.println("")
-      io.print("end <gleam run -- " <> args_string <> ">")
+      io.println("end <gleam run -- " <> args_string <> ">")
       io.println("")
     }
   }
-
-  io.println("")
-}
-
-fn handle_cli_error(error: ds.CLIError) -> Nil {
-  io.println("command line error: " <> ds.cli_error_message(error))
-  io.println("")
 }
