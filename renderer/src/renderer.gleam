@@ -410,10 +410,6 @@ fn cli_usage_supplementary() -> String {
     margin <> remove_unused_build_img_option,
     margin <> "  -> remove unused images from image-map and build-img directory",
     "",
-    margin <> "--last-command",
-    margin <> "  -> run the same arguments as the previous command (from local",
-    margin <> "     .last-command file)",
-    "",
     margin <> "--renumber",
     margin <> "  -> renumber local desugarer blame references",
     "",
@@ -433,73 +429,40 @@ fn cli_usage_supplementary() -> String {
 
 pub fn main() {
   io.println("")
+
   let args = argv.load().arguments
 
-  let #(args, use_last_command) = case list.contains(args, "--last-command") {
-    True -> {
-      let args = list.filter(args, fn(s) { s != "--last-command" })
-      #(args, True)
-    }
-    False -> #(args, False)
-  }
-
-  assert !list.contains(args, "--last-command")
-
-  let args = case use_last_command {
-    True ->
-      case simplifile.read(".last-command") {
-        Ok(contents) -> {
-          string.split(contents, " ")
-          |> list.map(string.trim)
-          |> list.filter(fn(s) { !string.is_empty(s) })
-          |> list.append(args)
-        }
-        Error(_) -> {
-          panic as "unable to find '.last-command'"
-        }
-      }
-    False -> args
-  }
+  use args <- on.error_ok(ds.read_from_dot_last_command(args), handle_cli_error)
 
   let args_string = string.join(args, " ")
-
-  let #(args, echo_args) = case list.contains(args, "--echo-args") {
-    True -> {
-      let args = list.filter(args, fn(s) { s != "--echo-args" })
-      #(args, True)
-    }
-    False -> #(args, False)
-  }
 
   use arguments <- on.error_ok(
     ds.process_command_line_arguments(args, [
       remove_unused_build_img_option,
       author_mode,
+      "--echo-args",
     ]),
-    fn(error) {
-      io.println("command line error: " <> ins(error))
-      io.println("")
-      ds.basic_cli_usage("'gleam run' command line options (basic):")
-      cli_usage_supplementary() |> io.print
-      io.println("")
-    },
+    handle_cli_error,
   )
 
-  let help_requested =
-    ds.handle_help_requests(arguments, cli_usage_supplementary)
+  let echo_args = dict.has_key(arguments.user_args, "--echo-args")
+
+  use help_requested <- on.error_ok(
+    ds.handle_help_requests(arguments, cli_usage_supplementary),
+    handle_cli_error,
+  )
 
   use maintenance_requested <- on.error_ok(
     ds.handle_maintenance_requests(arguments, local_desugarers.assertive_tests),
-    fn(error) {
-      io.println("maintenance error: " <> error)
-      io.println("")
-    },
+    handle_cli_error,
   )
 
   use _ <- on.stay(case maintenance_requested || help_requested {
     True -> on.Return(Nil)
     False -> on.Stay(Nil)
   })
+
+  use _ <- on.error_ok(ds.write_to_dot_last_command(args), handle_cli_error)
 
   let exports_dict = ei.lbp_exports_dictionary()
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
@@ -622,9 +585,10 @@ pub fn main() {
     }
   }
 
-  case simplifile.write(".last-command", args_string) {
-    Ok(_) -> Nil
-    _ -> io.println("Warning: unable to write args_string to .last-command")
-  }
+  io.println("")
+}
+
+fn handle_cli_error(error: ds.CLIError) -> Nil {
+  io.println("command line error: " <> ds.cli_error_message(error))
   io.println("")
 }

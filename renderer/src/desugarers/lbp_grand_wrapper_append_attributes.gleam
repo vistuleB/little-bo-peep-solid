@@ -160,7 +160,7 @@ fn v_before_1(
     core.attrs_have_key_val(attrs, "chapter", ">>exercise-graveyard"),
     fn() { Ok(#(Nil, [], [], core.GoBack)) },
   )
-  Ok(#(Nil, [Attr(desugarer_blame(162), "hey", "hello")], [], core.GoBack))
+  Ok(#(Nil, [Attr(desugarer_blame(163), "hey", "hello")], [], core.GoBack))
 }
 
 fn v_after_1(
@@ -190,7 +190,7 @@ fn harvest_handle_attrs_from_line(
             line.blame,
             "handle contains space or '>': " <> stuff,
           ))
-        False -> Ok(Attr(desugarer_blame(192), "source", ">>" <> stuff))
+        False -> Ok(Attr(desugarer_blame(193), "source", ">>" <> stuff))
       }
     }
     _ -> Error(DesugaringWarning(line.blame, "'>>' not found in text node"))
