@@ -1,6 +1,6 @@
 import desugaring/core.{type Pipeline}
+import desugaring/delimited_syntax as syntax
 import desugaring/desugarers as dl
-import desugaring/pipelines as pp
 import gleam/list
 import gleam/option.{None, Some}
 import local_desugarers as local_dl
@@ -69,14 +69,18 @@ pub fn our_pipeline(
       ),
     ],
     [
-      dl.table_section_header("pp.create_mathblock_elements"),
-      ..pp.create_mathblock_elements([core.DoubleDollar], core.DoubleDollar, [
-        "WriterlyBlankLine",
-      ])
+      dl.table_section_header("syntax.create_mathblock_elements"),
+      ..syntax.create_mathblock_elements(
+        [core.DoubleDollar],
+        core.DoubleDollar,
+        [
+          "WriterlyBlankLine",
+        ],
+      )
     ],
     [
-      dl.table_section_header("pp.create_math_elements"),
-      ..pp.create_math_elements(
+      dl.table_section_header("syntax.create_math_elements"),
+      ..syntax.create_math_elements(
         [core.SingleDollar],
         core.SingleDollar,
         core.BackslashParenthesis,
@@ -84,8 +88,11 @@ pub fn our_pipeline(
       )
     ],
     [
-      dl.table_section_header("pp.markdown_link_splitting"),
-      ..pp.markdown_link_splitting(["WriterlyBlankLine"], ["MathBlock", "Math"])
+      dl.table_section_header("syntax.markdown_link_pipeline"),
+      ..syntax.markdown_link_pipeline(["WriterlyBlankLine"], [
+        "MathBlock",
+        "Math",
+      ])
     ],
     [
       dl.find_replace__outside(#("\\$", "$"), ["Math", "MathBlock"]),
@@ -295,8 +302,10 @@ pub fn our_pipeline(
       // (end cleaning)
     ],
     [
-      dl.table_section_header("pp.barbaric_symmetric_delim_splitting __"),
-      ..pp.barbaric_symmetric_delim_splitting(
+      dl.table_section_header(
+        "syntax.permissive_symmetric_delimiter_pipeline __",
+      ),
+      ..syntax.permissive_symmetric_delimiter_pipeline(
         "__",
         "__",
         "CentralDisplayItalic",
@@ -305,9 +314,9 @@ pub fn our_pipeline(
       )
     ],
     [
-      dl.table_section_header("pp.asymmetric_delim_splitting"),
+      dl.table_section_header("syntax.asymmetric_delimiter_pipeline"),
       dl.table_marker(),
-      ..pp.asymmetric_delim_splitting(
+      ..syntax.asymmetric_delimiter_pipeline(
         "_\\|",
         "\\|_",
         "_|",
@@ -322,8 +331,10 @@ pub fn our_pipeline(
       dl.free_children(#("CentralDisplayItalic", "p")),
     ],
     [
-      dl.table_section_header("pp.barbaric_symmetric_delim_splitting _"),
-      ..pp.barbaric_symmetric_delim_splitting(
+      dl.table_section_header(
+        "syntax.permissive_symmetric_delimiter_pipeline _",
+      ),
+      ..syntax.permissive_symmetric_delimiter_pipeline(
         "_",
         "_",
         "i",
@@ -332,8 +343,10 @@ pub fn our_pipeline(
       )
     ],
     [
-      dl.table_section_header("pp.barbaric_symmetric_delim_splitting *"),
-      ..pp.barbaric_symmetric_delim_splitting(
+      dl.table_section_header(
+        "syntax.permissive_symmetric_delimiter_pipeline *",
+      ),
+      ..syntax.permissive_symmetric_delimiter_pipeline(
         "\\*",
         "*",
         "b",

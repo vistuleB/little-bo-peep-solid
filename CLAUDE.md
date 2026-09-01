@@ -211,9 +211,9 @@ The pipeline transforms the assembled VXML tree into JSX-ready VXML. Key stages 
 2. **Exercise grouping** — `wrap_if_not_child_of("Exercise", "Exercises")` ensures every loose `Exercise` is wrapped in an `Exercises` container; then `lbp_*` desugarers reorganize exercises into per-chapter "graveyards" and re-attach them via `In` nodes
 3. **Content selection** — `lbp_select_content()` filters which chapters/exercises are included based on the `ChapterSelection` / `In` declarations in `__parent.wly`
 4. **Auto-generate titles** — `auto_generate_child_if_missing_from_attribute__outside` for `Chapter`, `Bootcamp`, `Appendix` → `ArticleTitle`
-5. **Math block parsing** — `pp.create_mathblock_elements` (`$$` delimiters)
-6. **Inline math parsing** — `pp.create_math_elements` (`$` delimiters)
-7. **Markdown link splitting** — `pp.markdown_link_splitting` (skips math)
+5. **Math block parsing** — `syntax.create_mathblock_elements` (`$$` delimiters)
+6. **Inline math parsing** — `syntax.create_math_elements` (`$` delimiters)
+7. **Markdown link splitting** — `syntax.markdown_link_pipeline` (skips math)
 8. **Escaped dollar sign** — `find_replace__outside("\\$", "$")`
 9. **Counters** — appends counter attributes to `Book`, `Chapter`, `Bootcamp`, `Appendix`, `Exercises`, `Section`, `Example`, `Note`, `SolutionNote`, `Exercise`; increments: `ChapterCounter`, `BootcampCounter`, `AppendixCounter`, `ExampleCounter`, `NoteCounter`, `SectionCounter`, `ExerciseCounter`, `SolutionNoteCounter`
 10. **Path/banner/number attributes** — `append_attribute__outside` injects `path`, `banner`, `number`, `category` onto `Chapter`, `Bootcamp`, `Appendix`
@@ -224,7 +224,7 @@ The pipeline transforms the assembled VXML tree into JSX-ready VXML. Key stages 
 15. **List wrapping** — `wrap_children_avoiding("List", "Item", "WriterlyBlankLine")`
 16. **Blank line / p cleanup** (first pass)
 17. **Central display splitting** — `__...__` → `CentralDisplayItalic`; `_|...|_` → `CentralDisplay`; `free_children` frees any `p` inside these
-18. **Italic/bold splitting** — `barbaric_symmetric_delim_splitting` for `_..._` → `i` and `*...*` → `b`
+18. **Italic/bold splitting** — `permissive_symmetric_delimiter_pipeline` for `_..._` → `i` and `*...*` → `b`
 19. **Escaped delimiters** — `find_replace__outside("\\*","*")`, `find_replace__outside("\\_","_")`
 20. **p cleanup** (second pass) — trim, delete empty, unwrap if no inline children, unwrap inside `td`/`li`, rename `p` to `Item` if inside `Grid`
 21. **Exercise statement wrapping** — `wrap_children_up_to("Exercise", "Solution", "ExerciseStatement")`
