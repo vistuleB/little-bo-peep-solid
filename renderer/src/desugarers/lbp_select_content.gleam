@@ -89,7 +89,7 @@ fn exercise_filterer_nodemap(
   }
 }
 
-fn create_handles_rank_dict(handles: List(String)) -> Dict(String, Int) {
+fn create_writerly_handles_rank_dict(handles: List(String)) -> Dict(String, Int) {
   handles
   |> list.index_map(fn(handle, idx) { #(handle, idx) })
   |> dict.from_list
@@ -158,7 +158,7 @@ fn set_exercises_to(
       )
     _ -> panic as "nodemap walk returned list with > 1 node (???)"
   })
-  let exercises_dict = create_handles_rank_dict(handles)
+  let exercises_dict = create_writerly_handles_rank_dict(handles)
   let exercise_comparer = fn(a: VXML, b: VXML) -> order.Order {
     let assert V(_, "Exercise", attrs_a, _) = a
     let assert V(_, "Exercise", attrs_b, _) = b
@@ -214,7 +214,7 @@ fn at_root(
     )),
   )
 
-  let handles_of_selected_chapters = {
+  let writerly_handles_of_selected_chapters = {
     let assert V(_, _, _, children) = chapter_selection_node
     children
     |> list.flat_map(core.descendant_lines)
@@ -229,7 +229,7 @@ fn at_root(
   }
 
   use #(chapters, warnings) <- on.ok(
-    list.try_fold(handles_of_selected_chapters, #([], []), fn(acc, handle) {
+    list.try_fold(writerly_handles_of_selected_chapters, #([], []), fn(acc, handle) {
       use chapter <- on.error_ok(
         dict.get(handle_2_chapter_dict, handle),
         on_error: fn(_) {

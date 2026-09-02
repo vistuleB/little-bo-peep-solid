@@ -139,7 +139,7 @@ Key structural tags in `.wly` source:
 
 Handles (e.g. `handle=refreshers`, referenced as `>>refreshers`) are used for cross-referencing
 chapters, exercises, and sections. The pipeline resolves them into links via
-`dl.handles_add_ids` + `dl.handles_substitute_and_fix_nonlocal_id_links`.
+`dl.writerly_handles_add_ids` + `dl.writerly_handles_substitute_and_fix_nonlocal_id_links`.
 
 Files and directories whose names start with `#` are Writerly comments (ignored by the assembler).
 The `>>` prefix is the Writerly handle reference syntax.
@@ -218,7 +218,7 @@ The pipeline transforms the assembled VXML tree into JSX-ready VXML. Key stages 
 9. **Counters** — appends counter attributes to `Book`, `Chapter`, `Bootcamp`, `Appendix`, `Exercises`, `Section`, `Example`, `Note`, `SolutionNote`, `Exercise`; increments: `ChapterCounter`, `BootcampCounter`, `AppendixCounter`, `ExampleCounter`, `NoteCounter`, `SectionCounter`, `ExerciseCounter`, `SolutionNoteCounter`
 10. **Path/banner/number attributes** — `append_attribute__outside` injects `path`, `banner`, `number`, `category` onto `Chapter`, `Bootcamp`, `Appendix`
 11. **Counter text injection** — `prepend_text_node` for `Example`, `Note`, `SolutionNote`, `Exercise`
-12. **Handle system** — `set_handle_value` → `handles_add_ids` → `handles_generate_dictionary_and_id_list` → `handles_substitute_and_fix_nonlocal_id_links` (turns `>>handle` references into `<InChapterLink>` or `<a>` cross-links)
+12. **Handle system** — `set_handle_value` → `writerly_handles_add_ids` → `writerly_handles_generate_dictionary_and_id_list` → `writerly_handles_substitute_and_fix_nonlocal_id_links` (turns `>>handle` references into `<InChapterLink>` or `<a>` cross-links)
 13. **Table markup** — `table_marker()`
 14. **Paragraph grouping** — `group_consecutive_children__outside("p", p_cannot_contain)`
 15. **List wrapping** — `wrap_children_avoiding("List", "Item", "WriterlyBlankLine")`

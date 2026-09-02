@@ -35,7 +35,7 @@ fn desugarer_blame(line_no: Int) {
   authoring.blame(name, line_no)
 }
 
-fn harvest_handles_2b_cut_from_grand_wrapper(vxml: VXML) -> List(String) {
+fn harvest_writerly_handles_2b_cut_from_grand_wrapper(vxml: VXML) -> List(String) {
   let assert V(_, "GrandWrapper", attrs, _) = vxml
   attrs
   |> list.map(fn(attr) {
@@ -54,16 +54,16 @@ fn v_before_1(
   DesugaringError,
 ) {
   let assert V(blame, tag, attrs, _) = vxml
-  let #(chapter_handle, handles_2b_cut) = state
+  let #(chapter_handle, writerly_handles_2b_cut) = state
 
   // try to load state.1
-  let handles_2b_cut = case tag {
+  let writerly_handles_2b_cut = case tag {
     "GrandWrapper" -> {
       assert chapter_handle == None
-      assert handles_2b_cut == []
-      harvest_handles_2b_cut_from_grand_wrapper(vxml)
+      assert writerly_handles_2b_cut == []
+      harvest_writerly_handles_2b_cut_from_grand_wrapper(vxml)
     }
-    _ -> handles_2b_cut
+    _ -> writerly_handles_2b_cut
   }
 
   // try to load state.0
@@ -80,7 +80,7 @@ fn v_before_1(
     _ -> Ok(chapter_handle)
   })
 
-  let state = #(chapter_handle, handles_2b_cut)
+  let state = #(chapter_handle, writerly_handles_2b_cut)
 
   // maybe we don't have a handle or we're not one of the handles to be cut
   let #(attr, attrs) = core.attrs_extract_first(attrs, "handle")
@@ -88,7 +88,7 @@ fn v_before_1(
     Ok(#(state, Ok(vxml), [], core.Continue))
   })
   let handle_name = string.trim(attr.val)
-  use <- on.false_true(list.contains(handles_2b_cut, handle_name), fn() {
+  use <- on.false_true(list.contains(writerly_handles_2b_cut, handle_name), fn() {
     case tag {
       "Section" | "Exercise" -> Ok(#(state, Ok(vxml), [], core.GoBack))
       _ -> Ok(#(state, Ok(vxml), [], core.Continue))

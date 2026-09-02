@@ -200,7 +200,7 @@
     signature”) ends, for the five main function operations:
 
     |> Image
-        handle=table_1_1 Table 1.1
+        handle=table_1_1 <<Table 1.1>>
         src=tmp-images/c6_flowers_here_bob_v2.svg
 
     |> StarDivider
@@ -220,7 +220,7 @@
     and defined by formulas here:
 
     |> Image
-        handle=table_1_2 Table 1.2
+        handle=table_1_2 <<Table 1.2>>
         !! src=images/c6_flowers_here_two_more.svg
         src=tmp-images/c6_flowers_here_two_more_v3.svg
 

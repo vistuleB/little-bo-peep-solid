@@ -46,6 +46,7 @@ pub fn our_pipeline(
     [
       dl.identity(),
       dl.delete("WriterlyComment"),
+      dl.concatenate_text_nodes(),
       dl.delete_attribute_if(fn(key, _) {
         writerly.is_commented_attribute_key(key)
       }),
@@ -128,40 +129,40 @@ pub fn our_pipeline(
         #("Exercises", "counter", "ExerciseCounter"),
         #("Solution", "counter", "SolutionNoteCounter"),
       ]),
-      dl.prepend_counter_incrementing_attribute__outside(
+      dl.counters_prepend_incrementing_attribute__outside(
         #("Chapter", "ChapterCounter", core.GoBack),
         ["Bootcamp", "Appendix"],
       ),
-      dl.prepend_counter_incrementing_attribute__outside(
+      dl.counters_prepend_incrementing_attribute__outside(
         #("Bootcamp", "BootcampCounter", core.GoBack),
         ["Chapter", "Appendix"],
       ),
-      dl.prepend_counter_incrementing_attribute__outside(
+      dl.counters_prepend_incrementing_attribute__outside(
         #("Appendix", "AppendixCounter", core.GoBack),
         ["Chapter", "Bootcamp"],
       ),
-      dl.prepend_counter_incrementing_attribute_if_fancy(#(
+      dl.counters_prepend_incrementing_attribute_if_fancy(#(
         "Exercise",
         "ExerciseCounter",
         fn(_, ancestors, _, _, _) { first_vxml_is(ancestors, "Exercises") },
         core.GoBack,
       )),
-      dl.prepend_counter_incrementing_attribute(#(
+      dl.counters_prepend_incrementing_attribute(#(
         "Example",
         "ExampleCounter",
         core.GoBack,
       )),
-      dl.prepend_counter_incrementing_attribute(#(
+      dl.counters_prepend_incrementing_attribute(#(
         "SolutionNote",
         "SolutionNoteCounter",
         core.GoBack,
       )),
-      dl.prepend_counter_incrementing_attribute(#(
+      dl.counters_prepend_incrementing_attribute(#(
         "Note",
         "NoteCounter",
         core.GoBack,
       )),
-      dl.prepend_counter_incrementing_attribute(#(
+      dl.counters_prepend_incrementing_attribute(#(
         "Section",
         "SectionCounter",
         core.GoBack,
@@ -218,27 +219,39 @@ pub fn our_pipeline(
         exercise_graveyard_switcher_type,
         core.GoBack,
       )),
-      dl.set_handle_value__outside(
+      dl.writerly_handles_set_value__outside(
         #("Chapter", "::øøChapterCounter", core.GoBack),
         ["Bootcamp"],
       ),
-      dl.set_handle_value__outside(
+      dl.writerly_handles_set_value__outside(
         #("Bootcamp", "::øøBootcampCounter", core.GoBack),
         ["Chapter"],
       ),
-      dl.set_handle_value__outside(
+      dl.writerly_handles_set_value__outside(
         #("Appendix", "::øøAppendixCounter", core.GoBack),
         ["Chapter", "Bootcamp"],
       ),
-      dl.set_handle_value(#("Example", "::øøExampleCounter", core.GoBack)),
-      dl.set_handle_value(#("Exercise", "::øøExerciseCounter", core.GoBack)),
-      dl.set_handle_value(#("Note", "::øøNoteCounter", core.GoBack)),
-      dl.set_handle_value(#(
+      dl.writerly_handles_set_value(#(
+        "Example",
+        "::øøExampleCounter",
+        core.GoBack,
+      )),
+      dl.writerly_handles_set_value(#(
+        "Exercise",
+        "::øøExerciseCounter",
+        core.GoBack,
+      )),
+      dl.writerly_handles_set_value(#("Note", "::øøNoteCounter", core.GoBack)),
+      dl.writerly_handles_set_value(#(
         "SolutionNote",
         "::øøSolutionNoteCounter",
         core.GoBack,
       )),
-      dl.set_handle_value(#("Section", "::øøSectionCounter", core.GoBack)),
+      dl.writerly_handles_set_value(#(
+        "Section",
+        "::øøSectionCounter",
+        core.GoBack,
+      )),
       dl.prepend_text_node(#("Example", "*Example ::øøExampleCounter.*")),
       // dl.prepend_text_node(#("Section", "*§::øøSectionCounter.* ")),
       dl.prepend_text_node(#("SolutionNote", "_Note ::øøSolutionNoteCounter._")),
@@ -255,11 +268,11 @@ pub fn our_pipeline(
           !first_vxml_is(ancestors, "Exercises")
         }),
       ),
-      dl.substitute_counters(),
-      dl.handles_generate_v_definitions_from_t_definitions(),
-      dl.handles_add_ids(),
-      dl.handles_grand_wrapper_generate_dictionary("path"),
-      dl.handles_grand_wrapper_substitute(
+      dl.counters_substitute(),
+      dl.writerly_handles_generate_v_definitions_from_t_definitions(),
+      dl.writerly_handles_add_ids(),
+      dl.writerly_handles_grand_wrapper_generate_dictionary("path"),
+      dl.writerly_handles_grand_wrapper_substitute(
         #(
           "path",
           "InChapterLink",
@@ -270,7 +283,7 @@ pub fn our_pipeline(
           ["Math", "MathBlock"],
         ),
       ),
-      dl.unwrap("GrandWrapper"),
+      dl.writerly_handles_grand_wrapper_unwrap(),
       dl.cut_paste_attribute_from_self_to_child__outside(
         #("Bootcamp", "ArticleTitle", "banner"),
         ["Chapter"],

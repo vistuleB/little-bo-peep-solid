@@ -151,7 +151,7 @@ pub fn constructor(param: Param(a)) -> Desugarer {
 // 🌊🌊🌊 tests 🌊🌊🌊🌊
 // 🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊
 
-fn harvest_doomed_handles_from_grand_wrapper(vxml: VXML) -> List(String) {
+fn harvest_doomed_writerly_handles_from_grand_wrapper(vxml: VXML) -> List(String) {
   let assert V(_, "GrandWrapper", attrs, _) = vxml
   attrs
   |> list.filter(fn(attr) { attr.key == "source" })
@@ -176,7 +176,7 @@ fn v_before_1(
 ) {
   let assert V(_, tag, attrs, _) = vxml
   let doomed_handles = case tag {
-    "GrandWrapper" -> harvest_doomed_handles_from_grand_wrapper(vxml)
+    "GrandWrapper" -> harvest_doomed_writerly_handles_from_grand_wrapper(vxml)
     _ -> doomed_handles
   }
   use #(attr, attrs) <- on.ok(core.attrs_extract_unique_key_or_none(

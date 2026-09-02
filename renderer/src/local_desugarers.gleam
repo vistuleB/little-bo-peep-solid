@@ -1,3 +1,4 @@
+import desugarers/lbp_add_empty_handle_values
 import desugarers/lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes
 import desugarers/lbp_generate_breadcrumbs
 import desugarers/lbp_generate_prev_next_attributes
@@ -13,6 +14,8 @@ import desugarers/lbp_source_provenance_append_span
 import desugarers/lbp_source_provenance_wrap
 import desugarers/lbp_source_provenance_wrap_lines__outside
 import vxml_pipeline/testing
+
+pub const lbp_add_empty_handle_values = lbp_add_empty_handle_values.constructor
 
 pub const lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes = lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes.constructor
 
@@ -43,6 +46,7 @@ pub const lbp_source_provenance_wrap = lbp_source_provenance_wrap.constructor
 pub const lbp_source_provenance_wrap_lines__outside = lbp_source_provenance_wrap_lines__outside.constructor
 
 pub const assertive_tests: List(fn() -> testing.AssertiveTestCollection) = [
+  lbp_add_empty_handle_values.assertive_tests,
   lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes.assertive_tests,
   lbp_generate_breadcrumbs.assertive_tests,
   lbp_generate_prev_next_attributes.assertive_tests,
