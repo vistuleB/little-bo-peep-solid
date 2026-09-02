@@ -418,7 +418,7 @@ pub fn render(arguments: ds.ParsedCLIArguments) -> Nil {
       ..ds.vanilla_options(),
       verbose: False,
       artifacts: True,
-      profiling_table: None,
+      profiling_table: False,
       output_lines_table_default_blame_columns: 50,
       output_lines_table_default_comment_columns: 0,
     )

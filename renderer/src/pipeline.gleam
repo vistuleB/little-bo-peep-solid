@@ -26,6 +26,16 @@ const end_of_chapter_exercises_switcher_type = "dual"
 
 const exercise_graveyard_switcher_type = "list-only"
 
+const span_like_elements = [
+  "b",
+  "i",
+  "a",
+  "span",
+  "InChapterLink",
+  "InlineImage",
+  "Math",
+]
+
 fn first_vxml_is(vxmls: List(VXML), expected: String) -> Bool {
   case vxmls {
     [V(_, actual, _, _), ..] -> actual == expected
@@ -129,42 +139,19 @@ pub fn our_pipeline(
         #("Exercises", "counter", "ExerciseCounter"),
         #("Solution", "counter", "SolutionNoteCounter"),
       ]),
-      dl.counters_prepend_incrementing_attribute__outside(
-        #("Chapter", "ChapterCounter", core.GoBack),
-        ["Bootcamp", "Appendix"],
-      ),
-      dl.counters_prepend_incrementing_attribute__outside(
-        #("Bootcamp", "BootcampCounter", core.GoBack),
-        ["Chapter", "Appendix"],
-      ),
-      dl.counters_prepend_incrementing_attribute__outside(
-        #("Appendix", "AppendixCounter", core.GoBack),
-        ["Chapter", "Bootcamp"],
-      ),
-      dl.counters_prepend_incrementing_attribute_if_fancy(#(
+      dl.sigil_counters_prepend_incrementing_attribute__batch([
+        #("Chapter", "ChapterCounter"),
+        #("Bootcamp", "BootcampCounter"),
+        #("Appendix", "AppendixCounter"),
+        #("Example", "ExampleCounter"),
+        #("SolutionNote", "SolutionNoteCounter"),
+        #("Note", "NoteCounter"),
+        #("Section", "SectionCounter"),
+      ]),
+      dl.sigil_counters_prepend_incrementing_attribute_if_fancy(#(
         "Exercise",
         "ExerciseCounter",
         fn(_, ancestors, _, _, _) { first_vxml_is(ancestors, "Exercises") },
-        core.GoBack,
-      )),
-      dl.counters_prepend_incrementing_attribute(#(
-        "Example",
-        "ExampleCounter",
-        core.GoBack,
-      )),
-      dl.counters_prepend_incrementing_attribute(#(
-        "SolutionNote",
-        "SolutionNoteCounter",
-        core.GoBack,
-      )),
-      dl.counters_prepend_incrementing_attribute(#(
-        "Note",
-        "NoteCounter",
-        core.GoBack,
-      )),
-      dl.counters_prepend_incrementing_attribute(#(
-        "Section",
-        "SectionCounter",
         core.GoBack,
       )),
       dl.append_attribute_if(#(
@@ -231,29 +218,14 @@ pub fn our_pipeline(
         #("Appendix", "::øøAppendixCounter", core.GoBack),
         ["Chapter", "Bootcamp"],
       ),
-      dl.writerly_handles_set_value(#(
-        "Example",
-        "::øøExampleCounter",
-        core.GoBack,
-      )),
-      dl.writerly_handles_set_value(#(
-        "Exercise",
-        "::øøExerciseCounter",
-        core.GoBack,
-      )),
-      dl.writerly_handles_set_value(#("Note", "::øøNoteCounter", core.GoBack)),
-      dl.writerly_handles_set_value(#(
-        "SolutionNote",
-        "::øøSolutionNoteCounter",
-        core.GoBack,
-      )),
-      dl.writerly_handles_set_value(#(
-        "Section",
-        "::øøSectionCounter",
-        core.GoBack,
-      )),
+      dl.writerly_handles_set_value__batch([
+        #("Example", "::øøExampleCounter"),
+        #("Exercise", "::øøExerciseCounter"),
+        #("Note", "::øøNoteCounter"),
+        #("SolutionNote", "::øøSolutionNoteCounter"),
+        #("Section", "::øøSectionCounter"),
+      ]),
       dl.prepend_text_node(#("Example", "*Example ::øøExampleCounter.*")),
-      // dl.prepend_text_node(#("Section", "*§::øøSectionCounter.* ")),
       dl.prepend_text_node(#("SolutionNote", "_Note ::øøSolutionNoteCounter._")),
       dl.prepend_text_node(#("Note", "_Note ::øøNoteCounter._")),
       dl.prepend_text_node_if_fancy(
@@ -268,7 +240,7 @@ pub fn our_pipeline(
           !first_vxml_is(ancestors, "Exercises")
         }),
       ),
-      dl.counters_substitute(),
+      dl.sigil_counters_substitute__outside(["pre"]),
       dl.writerly_handles_generate_v_definitions_from_t_definitions(),
       dl.writerly_handles_add_ids(),
       dl.writerly_handles_grand_wrapper_generate_dictionary("path"),
@@ -379,18 +351,7 @@ pub fn our_pipeline(
       dl.delete_if_empty("p"),
       // (end cleaning)
       dl.unwrap_if_no_child_meets_condition(
-        #(
-          "p",
-          core.is_t_or_is_one_of(_, [
-            "b",
-            "i",
-            "a",
-            "span",
-            "InChapterLink",
-            "InlineImage",
-            "Math",
-          ]),
-        ),
+        #("p", core.is_t_or_is_one_of(_, span_like_elements)),
       ),
       dl.unwrap_if_descendant_of(#("p", ["td", "li"])),
       dl.rename_if_child_of(#("p", "Item", "Grid")),
@@ -431,7 +392,7 @@ pub fn our_pipeline(
         ["p"],
         "Pause",
       )),
-      dl.rename_if_child_of_one_of(
+      dl.rename_if_child_of_any(
         #("p", "OuterP", [
           "Section",
           "ExerciseStatement",
