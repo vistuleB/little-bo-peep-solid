@@ -4,7 +4,7 @@ import local_desugarers as local_dl
 import vxml.{type VXML, V}
 import vxml/blame.{Ext}
 import vxml_pipeline/core.{type Pipeline}
-import vxml_pipeline/delimited_syntax as syntax
+import vxml_pipeline/delimiter_pipelines as syntax
 import vxml_pipeline/desugarers as dl
 import writerly
 
@@ -80,22 +80,24 @@ pub fn our_pipeline(
       ),
     ],
     [
-      dl.table_section_header("syntax.create_mathblock_elements"),
-      ..syntax.create_mathblock_elements(
+      dl.table_section_header("syntax.math_block_pipeline"),
+      ..syntax.math_block_pipeline(
         [core.DoubleDollar],
         core.DoubleDollar,
         [
           "WriterlyBlankLine",
         ],
+        [],
       )
     ],
     [
-      dl.table_section_header("syntax.create_math_elements"),
-      ..syntax.create_math_elements(
+      dl.table_section_header("syntax.inline_math_pipeline"),
+      ..syntax.inline_math_pipeline(
         [core.SingleDollar],
         core.SingleDollar,
         core.BackslashParenthesis,
         ["WriterlyBlankLine"],
+        [],
       )
     ],
     [

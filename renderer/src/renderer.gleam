@@ -419,8 +419,8 @@ pub fn render(arguments: ds.ParsedCLIArguments) -> Nil {
       verbose: False,
       artifacts: True,
       profiling_table: False,
-      output_lines_table_default_blame_columns: 50,
-      output_lines_table_default_comment_columns: 0,
+      vxml_table_default_blame_columns: 50,
+      vxml_table_default_comment_columns: 0,
     )
     |> ds.amend_renderer_options_by_arguments(arguments)
 

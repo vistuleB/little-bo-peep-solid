@@ -230,7 +230,7 @@ The pipeline transforms the assembled VXML tree into JSX-ready VXML. Key stages 
 21. **Exercise statement wrapping** — `wrap_children_up_to("Exercise", "Solution", "ExerciseStatement")`
 22. **Image absorption** — `absorb_into_previous_sibling(["ImageRight","ImageLeft"])`
 23. **Pause insertion** — `add_between_all_pairs_2` and `add_before_but_not_before_first_child__batch` inserts `Pause` (spacers) between block elements
-24. **OuterP renaming** — `rename_if_child_of_one_of("p", "OuterP", [section-like containers])`
+24. **OuterP renaming** — `rename_if_child_of_any("p", "OuterP", [section-like containers])`
 25. **Link rearrangement** — `rearrange_links_4_pre_tokenized_src__batch` normalizes "Chapter N", "Exercise N of Chapter M" etc. link patterns
 26. **TOC / hamburger panel generation** — `lbp_generate_table_of_contents` for both `TOC` and `HamburgerPanelAuthorSuppliedContents`
 27. **Prev/next navigation** — `lbp_generate_prev_next_attributes()`
