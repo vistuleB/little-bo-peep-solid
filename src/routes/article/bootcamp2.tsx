@@ -231,7 +231,7 @@ export default function __Bootcamp2__() {
           <ImageLeft
             src="/build-img/svgo-svg/DSem.svg"
             offsetY="-0.2em"
-            offsetX="4em"
+            offsetX=" 4em"
             atLeastAsWide={true}
             intrinsicWidth={200}
             intrinsicHeight={110}
@@ -326,14 +326,14 @@ export default function __Bootcamp2__() {
             .
           </NoBreak>
           {" "}
-          Moreover, (&#8288;
+          Moreover, (&amp;#8288;
           <InChapterLink
             href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
-          &#8288;) actually holds for
+          &amp;#8288;) actually holds for
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -349,25 +349,25 @@ export default function __Bootcamp2__() {
             ,
           </NoBreak>
           {" "} which is mildly important. In more
-          detail, (&#8288;
+          detail, (&amp;#8288;
           <InChapterLink
             href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
-          &#8288;) holds for {" "}
+          &amp;#8288;) holds for {" "}
           <Math>
             $n = 0$
           </Math>
-          {" "} by inspection, and (&#8288;
+          {" "} by inspection, and (&amp;#8288;
           <InChapterLink
             href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
-          &#8288;)
+          &amp;#8288;)
           is equivalent to the identity
           <ImageLeft
             src="/build-img/svgo-svg/rdZz.svg"
@@ -390,9 +390,9 @@ export default function __Bootcamp2__() {
           <Math>
             $n$
           </Math>
-          {" "} if and only if it holds {" "}
+          {" "} if and only if it holds for
+          {" "}
           <NoBreak>
-            for
             <Math>
               $-n$
             </Math>
@@ -415,21 +415,21 @@ export default function __Bootcamp2__() {
             ”
           </NoBreak>
           {" "}
-          in (&#8288;
+          in (&amp;#8288;
           <InChapterLink
             href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
-          &#8288;) lands you right back on (&#8288;
+          &amp;#8288;) lands you right back on (&amp;#8288;
           <InChapterLink
             href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
-          &#8288;), due to the fact
+          &amp;#8288;), due to the fact
           that {" "}
           <NoBreak>
             <Math>
@@ -437,14 +437,14 @@ export default function __Bootcamp2__() {
             </Math>
             .)
           </NoBreak>
-          {" "} (So, namely, if (&#8288;
+          {" "} (So, namely, if (&amp;#8288;
           <InChapterLink
             href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
-          &#8288;) holds for all
+          &amp;#8288;) holds for all
           positive values of {" "}
           <NoBreak>
             <Math>
@@ -510,21 +510,21 @@ export default function __Bootcamp2__() {
         <Pause />
         <OuterP>
           ...and any one of these equations implies the other two.
-          Thus, either of (&#8288;
+          Thus, either of (&amp;#8288;
           <InChapterLink
             href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
-          &#8288;) and (&#8288;
+          &amp;#8288;) and (&amp;#8288;
           <InChapterLink
             href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
-          &#8288;)
+          &amp;#8288;)
           expresses the
         </OuterP>
         <Pause />
@@ -748,9 +748,9 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          in the sense that “all products start {" "}
+          in the sense that “all products start at
+          {" "}
           <NoBreak>
-            at
             <Math>
               $1$
             </Math>
@@ -807,13 +807,11 @@ const Rest = () => {
             $10$
           </Math>
           {" "} makes {" "}
-          <NoBreak>
-            <Math>
-              $13 + 14 = 27$
-            </Math>
-            multiplications
-          </NoBreak>
-          {" "} by {" "}
+          <Math>
+            $13 + 14 = 27$
+          </Math>
+          {" "}
+          multiplications by {" "}
           <NoBreak>
             <Math>
               $10$
@@ -1101,9 +1099,9 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} due to the fact
-          that many of our ancestors chose to count in {" "}
+          that many of our ancestors chose to count in base
+          {" "}
           <NoBreak>
-            base
             <Math>
               $10$
             </Math>
@@ -1490,13 +1488,11 @@ const Rest = () => {
         <Pause />
         <OuterP>
           Likewise, the standard decimal expansion for {" "}
-          <NoBreak>
-            <Math>
-              $10^&#123;-2&#125;$
-            </Math>
-            contains
-          </NoBreak>
-          {" "} exactly two {" "}
+          <Math>
+            $10^&#123;-2&#125;$
+          </Math>
+          {" "}
+          contains exactly two {" "}
           <NoBreak>
             <Math>
               $0$
@@ -1653,9 +1649,9 @@ const Rest = () => {
         <Pause />
         <OuterP>
           (Funny how the prefixes switch from
-          ending in ‘i’ to ending in ‘o’ {" "}
+          ending in ‘i’ to ending in ‘o’ after
+          {" "}
           <NoBreak>
-            after
             <Math>
               $10^&#123;-3&#125;$
             </Math>
@@ -1675,9 +1671,9 @@ const Rest = () => {
           are smaller than the smallest animal
           cells (human red blood cells, which
           are among the smallest animal cells,
-          have a diameter {" "}
+          have a diameter of
+          {" "}
           <NoBreak>
-            of
             <Math>
               $7$
             </Math>
@@ -2138,7 +2134,7 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/nMNN.svg"
-              offsetX="0em"
+              offsetX=" 0em"
               atLeastAsWide={true}
               intrinsicWidth={250}
               intrinsicHeight={150}
@@ -2475,15 +2471,13 @@ const Rest = () => {
                 $10^3$
               </Math>
               {" "} meters
-              in a kilometer, so there {" "}
-              <NoBreak>
-                are
-                <Math>
-                  $10^3 \times 10^3 = 10^6$
-                </Math>
-                millimeters
-              </NoBreak>
-              {" "} in a kilometer.
+              in a kilometer, so there are
+              {" "}
+              <Math>
+                $10^3 \times 10^3 = 10^6$
+              </Math>
+              {" "}
+              millimeters in a kilometer.
             </OuterP>
             <OuterP class="indent-10">
               From there, it automatically follows that
@@ -2507,13 +2501,11 @@ const Rest = () => {
               </Math>
               {" "} meters in a millimeter,
               so {" "}
-              <NoBreak>
-                <Math>
-                  $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
-                </Math>
-                kilometers
-              </NoBreak>
-              {" "} in a millimeter.)
+              <Math>
+                $10^&#123;-3&#125; \times 10^&#123;-3&#125; = 10^&#123;-6&#125;$
+              </Math>
+              {" "}
+              kilometers in a millimeter.)
             </OuterP>
           </Solution>
         </Exercise>
@@ -2586,9 +2578,9 @@ const Rest = () => {
               <Math>
                 $10\%$
               </Math>
-              {" "} of one trillion {" "}
+              {" "} of one trillion [cf.:
+              {" "}
               <NoBreak>
-                [cf.:
                 <Math>
                   $10^2 \times 10^9 = &#123;1 \over 10&#125;\times 10^&#123;12&#125;$
                 </Math>
@@ -2596,13 +2588,11 @@ const Rest = () => {
               </NoBreak>
               {" "}
               and one trillion is a quarter of {" "}
-              <NoBreak>
-                <Math>
-                  $4$
-                </Math>
-                trillion,
-              </NoBreak>
-              {" "} so the answer is {" "}
+              <Math>
+                $4$
+              </Math>
+              {" "}
+              trillion, so the answer is {" "}
               <NoBreak>
                 <Math>
                   $&#123;1\over 4&#125;\cdot 10\% = 2.5\%$
@@ -3002,14 +2992,14 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              stated earlier in the chapter as (&#8288;
+              stated earlier in the chapter as (&amp;#8288;
               <InChapterLink
                 href="#_2_h.a.i_"
                 class="in-chapter-link"
               >
                 A
               </InChapterLink>
-              &#8288;),
+              &amp;#8288;),
               while the third equality uses additivity of exponents,
               also stated earlier. (So: We are only using “known”
               facts, alongside some ordinary arithmetic.)
@@ -3328,20 +3318,16 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $\rho$
-                </Math>
-                in
-              </NoBreak>
-              {" "} the canonical form {" "}
-              <NoBreak>
-                <Math>
-                  $M^xL^yT^z$
-                </Math>
-                for
-              </NoBreak>
-              {" "} integers {" "}
+              <Math>
+                $\rho$
+              </Math>
+              {" "}
+              in the canonical form {" "}
+              <Math>
+                $M^xL^yT^z$
+              </Math>
+              {" "}
+              for integers {" "}
               <NoBreak>
                 <Math>
                   $x$
@@ -3359,14 +3345,14 @@ const Rest = () => {
               <Math>
                 $z$
               </Math>
-              {" "} (as in Exercise&#8288;
+              {" "} (as in {" "}
               <InChapterLink
                 href="#_17_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
-                14
+                Exercise 14
               </InChapterLink>
-              &#8288;):
+              &amp;#8288;):
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3409,13 +3395,11 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $\mu^c$
-                </Math>
-                by
-              </NoBreak>
-              {" "} applying the fourth law of exponents (note e.g.
+              <Math>
+                $\mu^c$
+              </Math>
+              {" "}
+              by applying the fourth law of exponents (note e.g.
               that {" "}
               <NoBreak>
                 <Math>
@@ -3507,13 +3491,11 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $T$
-                </Math>
-                if
-              </NoBreak>
-              {" "} and only if...
+              <Math>
+                $T$
+              </Math>
+              {" "}
+              if and only if...
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -3521,9 +3503,9 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              ...(!!!) which means that we need to find {" "}
+              ...(!!!) which means that we need to find values
+              {" "}
               <NoBreak>
-                values
                 <Math>
                   $a$
                 </Math>
@@ -3570,7 +3552,7 @@ const Rest = () => {
               <ImageRight
                 src="/build-img/svgo-svg/bESG.svg"
                 offsetY="-0.5em"
-                offsetX="0.5em"
+                offsetX=" 0.5em"
                 atLeastAsWide={true}
                 intrinsicWidth={440}
                 intrinsicHeight={250}
@@ -3636,9 +3618,9 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "} Lastly, {" "}
+              {" "} Lastly, plugging
+              {" "}
               <NoBreak>
-                plugging
                 <Math>
                   $b = 1$
                 </Math>
@@ -3715,6 +3697,8 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 <Math>
                   $c = -2$
@@ -3746,13 +3730,11 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $\mu$
-                </Math>
-                and
-              </NoBreak>
-              {" "} {" "}
+              <Math>
+                $\mu$
+              </Math>
+              {" "}
+              and {" "}
               <NoBreak>
                 <Math>
                   $\rho$

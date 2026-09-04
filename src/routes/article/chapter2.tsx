@@ -157,9 +157,9 @@ export default function __Chapter2__() {
         />
         <Pause />
         <OuterP>
-          On the other hand, the line below has {" "}
+          On the other hand, the line below has slope
+          {" "}
           <NoBreak>
-            slope
             <Math>
               $-0.5$
             </Math>
@@ -356,11 +356,11 @@ const Rest = () => {
           (In {" "}
           <InChapterLink
             href="#_26_h.a.i_"
-            class="in-chapter-link"
+            class="in-chapter-link "
           >
             Example 1
           </InChapterLink>
-          &#8288;, understand that
+          &amp;#8288;, understand that
         </OuterP>
         <Pause />
         <MathBlock>
@@ -737,13 +737,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          can also occur another way, namely if the {" "}
-          <NoBreak>
-            points
-            <Math>
-              $(x_1, y_1)$
-            </Math>
-          </NoBreak>
+          can also occur another way, namely if the points
+          {" "}
+          <Math>
+            $(x_1, y_1)$
+          </Math>
           {" "} and {" "}
           <Math>
             $(x_2, y_2)$
@@ -879,6 +877,8 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
+          {" "}
+          {" "}
           <Math>
             $\Delta y$
           </Math>
@@ -1034,9 +1034,9 @@ const Rest = () => {
           <Math>
             $b$
           </Math>
-          {" "} is the height of the line {" "}
+          {" "} is the height of the line at
+          {" "}
           <NoBreak>
-            at
             <Math>
               $x = 0$
             </Math>
@@ -1100,17 +1100,17 @@ const Rest = () => {
           <Math>
             $b$
           </Math>
-          {" "} or to the {" "}
+          {" "} or to the point
+          {" "}
           <NoBreak>
-            point
             <Math>
               $(0,b)$
             </Math>
             ,
           </NoBreak>
-          {" "} depending.) On the other hand, {" "}
+          {" "} depending.) On the other hand, at
+          {" "}
           <NoBreak>
-            at
             <Math>
               $x = 1$
             </Math>
@@ -1138,9 +1138,9 @@ const Rest = () => {
           <Math>
             $x = 0$
           </Math>
-          {" "} {" "}
+          {" "} and
+          {" "}
           <NoBreak>
-            and
             <Math>
               $x = 1$
             </Math>
@@ -1154,21 +1154,19 @@ const Rest = () => {
           <Math>
             $a$
           </Math>
-          {" "} each {" "}
-          <NoBreak>
-            time
-            <Math>
-              $x$
-            </Math>
-          </NoBreak>
+          {" "} each time
+          {" "}
+          <Math>
+            $x$
+          </Math>
           {" "} increases by 1, so, by our own definition of
           slope—the increase in {" "}
           <Math>
             $y$
           </Math>
-          {" "} per unit increase {" "}
+          {" "} per unit increase in
+          {" "}
           <NoBreak>
-            in
             <Math>
               $x$
             </Math>
@@ -1247,7 +1245,7 @@ const Rest = () => {
           <ImageLeft
             src="/build-img/svgo-svg/3IFS.svg"
             offsetY="-6em"
-            offsetX="1em"
+            offsetX=" 1em"
             intrinsicWidth={200}
             intrinsicHeight="335.103"
           />
@@ -1314,13 +1312,11 @@ const Rest = () => {
             -intercept
           </NoBreak>
           {" "} {" "}
-          <NoBreak>
-            <Math>
-              $3$
-            </Math>
-            and
-          </NoBreak>
-          {" "} slope {" "}
+          <Math>
+            $3$
+          </Math>
+          {" "}
+          and slope {" "}
           <NoBreak>
             <Math>
               $-1$
@@ -1491,13 +1487,11 @@ const Rest = () => {
             $\te&#123;m&#125;/\te&#123;s&#125;$
           </Math>
           {" "} or {" "}
-          <NoBreak>
-            <Math>
-              $\te&#123;km&#125;/\te&#123;s&#125;$
-            </Math>
-            or
-          </NoBreak>
-          {" "} km/hour, etc, depends on the exact units involved.)
+          <Math>
+            $\te&#123;km&#125;/\te&#123;s&#125;$
+          </Math>
+          {" "}
+          or km/hour, etc, depends on the exact units involved.)
         </OuterP>
         <OuterP class="indent-10">
           Terminology-wise, slopes are often known as
@@ -1591,9 +1585,9 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            found in the second line of the table. {" "}
+            found in the second line of the table. (Indeed,
+            {" "}
             <NoBreak>
-              (Indeed,
               <Math>
                 $0.75$
               </Math>
@@ -1769,13 +1763,11 @@ const Rest = () => {
               </b>
               {" "}
               True or false: Lines of slope {" "}
-              <NoBreak>
-                <Math>
-                  $-&#123;1 \over 2&#125;$
-                </Math>
-                are
-              </NoBreak>
-              {" "} perpendicular to lines of slope {" "}
+              <Math>
+                $-&#123;1 \over 2&#125;$
+              </Math>
+              {" "}
+              are perpendicular to lines of slope {" "}
               <NoBreak>
                 <Math>
                   $2$
@@ -1869,13 +1861,11 @@ const Rest = () => {
                 Exercise 2.
               </b>
               {" "}
-              Find the general equation of a line of {" "}
-              <NoBreak>
-                slope
-                <Math>
-                  $p$
-                </Math>
-              </NoBreak>
+              Find the general equation of a line of slope
+              {" "}
+              <Math>
+                $p$
+              </Math>
               {" "} passing through a point {" "}
               <NoBreak>
                 <Math>
@@ -1926,13 +1916,11 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is the slope of the line segment {" "}
-              <NoBreak>
-                from
-                <Math>
-                  $(x_0,y_0)$
-                </Math>
-              </NoBreak>
+              is the slope of the line segment from
+              {" "}
+              <Math>
+                $(x_0,y_0)$
+              </Math>
               {" "} to {" "}
               <NoBreak>
                 <Math>
@@ -1941,13 +1929,11 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} and it is necessary
-              and sufficient for this segment to have {" "}
-              <NoBreak>
-                slope
-                <Math>
-                  $p$
-                </Math>
-              </NoBreak>
+              and sufficient for this segment to have slope
+              {" "}
+              <Math>
+                $p$
+              </Math>
               {" "} in order for the point {" "}
               <Math>
                 $(x,y)$
@@ -2030,13 +2016,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               which is satisfied by the point {" "}
-              <NoBreak>
-                <Math>
-                  $(x,y) = (x_0,y_0)$
-                </Math>
-                as
-              </NoBreak>
-              {" "} well as by every other point on the line.
+              <Math>
+                $(x,y) = (x_0,y_0)$
+              </Math>
+              {" "}
+              as well as by every other point on the line.
               This can be a final answer, and, pleasingly,
               has the form
             </OuterP>
@@ -2277,9 +2261,9 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              and similarly for the time interval {" "}
+              and similarly for the time interval from
+              {" "}
               <NoBreak>
-                from
                 <Math>
                   $2.5$
                 </Math>
@@ -2339,11 +2323,11 @@ const Rest = () => {
               in the solution to {" "}
               <InChapterLink
                 href="#_28_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 2
               </InChapterLink>
-              &#8288;, explain why
+              &amp;#8288;, explain why
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2361,13 +2345,11 @@ const Rest = () => {
                 -intercept
               </NoBreak>
               {" "} of the line of slope {" "}
-              <NoBreak>
-                <Math>
-                  $p$
-                </Math>
-                through
-              </NoBreak>
-              {" "} the point {" "}
+              <Math>
+                $p$
+              </Math>
+              {" "}
+              through the point {" "}
               <Math>
                 $(x_0,y_0)$
               </Math>
@@ -2395,13 +2377,11 @@ const Rest = () => {
                 -intercept
               </NoBreak>
               {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $(x_0, y_0)$
-                </Math>
-                is
-              </NoBreak>
-              {" "} {" "}
+              <Math>
+                $(x_0, y_0)$
+              </Math>
+              {" "}
+              is {" "}
               <NoBreak>
                 <Math>
                   $px_0$
@@ -2461,24 +2441,20 @@ const Rest = () => {
                 </Math>
                 -intercept
               </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                to
-                <Math>
-                  $(x_0, y_0)$
-                </Math>
-              </NoBreak>
+              {" "} to
+              {" "}
+              <Math>
+                $(x_0, y_0)$
+              </Math>
               {" "} regardless of the sign of {" "}
               <Math>
                 $p$
               </Math>
-              {" "} {" "}
-              <NoBreak>
-                or
-                <Math>
-                  $x_0$
-                </Math>
-              </NoBreak>
+              {" "} or
+              {" "}
+              <Math>
+                $x_0$
+              </Math>
               {" "} (because {" "}
               <Math>
                 $x_0$

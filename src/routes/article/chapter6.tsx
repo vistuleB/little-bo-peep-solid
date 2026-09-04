@@ -106,7 +106,8 @@ export default function __Chapter6__() {
         <Pause />
         <OuterP>
           is a category of units such as “time”, as
-          touched upon in the {" "}
+          touched upon in the 
+          {" "}
           <OutChapterLink
             class="out-chapter-link"
             href="/article/chapter2#section-9"
@@ -145,13 +146,11 @@ export default function __Chapter6__() {
             $\rr$
           </Math>
           {" "} to {" "}
-          <NoBreak>
-            <Math>
-              $\rr$
-            </Math>
-            we
-          </NoBreak>
-          {" "} write
+          <Math>
+            $\rr$
+          </Math>
+          {" "}
+          we write
         </OuterP>
         <Pause />
         <MathBlock>
@@ -400,13 +399,11 @@ const Rest = () => {
           of rotation is actually the direction {" "}
           <i>
             from the positive {" "}
-            <NoBreak>
-              <Math>
-                $x$
-              </Math>
-              axis
-            </NoBreak>
-            {" "} to the positive {" "}
+            <Math>
+              $x$
+            </Math>
+            {" "}
+            axis to the positive {" "}
             <Math>
               $y$
             </Math>
@@ -422,13 +419,11 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          What we mean is that if it was our custom to draw {" "}
-          <NoBreak>
-            the
-            <Math>
-              $y$
-            </Math>
-          </NoBreak>
+          What we mean is that if it was our custom to draw the
+          {" "}
+          <Math>
+            $y$
+          </Math>
           {" "} axis pointing downwards, but still draw the {" "}
           <Math>
             $x$
@@ -447,13 +442,11 @@ const Rest = () => {
         <OuterP>
           (This actually happens inside of SVG, the
           web standard for so-called “vector graphics”, in which the {" "}
-          <NoBreak>
-            <Math>
-              $y$
-            </Math>
-            axis
-          </NoBreak>
-          {" "} points downwards. In an SVG file, {" "}
+          <Math>
+            $y$
+          </Math>
+          {" "}
+          axis points downwards. In an SVG file, {" "}
           <span class="code-cartouche">
             rotate(10)
           </span>
@@ -502,13 +495,11 @@ const Rest = () => {
           <Math>
             $f$
           </Math>
-          {" "} {" "}
-          <NoBreak>
-            and
-            <Math>
-              $g$
-            </Math>
-          </NoBreak>
+          {" "} and
+          {" "}
+          <Math>
+            $g$
+          </Math>
           {" "} need to have the same units of input, i.e.,
         </OuterP>
         <Pause />
@@ -653,10 +644,11 @@ const Rest = () => {
             Chapter 
             4
           </OutChapterLink>
+          {" "}
           (see also {" "}
           <OutChapterLink
             href="/article/chapter4#_63_h.a.i_"
-            class="out-chapter-link"
+            class="out-chapter-link "
           >
             Exercise 6 of Chapter 4
           </OutChapterLink>
@@ -717,16 +709,9 @@ const Rest = () => {
           {" "}
           <OutChapterLink
             href="/article/chapter4#_63_h.a.i_"
-            class="out-chapter-link"
+            class="out-chapter-link "
           >
-            Exercise 6
-          </OutChapterLink>
-          of {" "}
-          <OutChapterLink
-            href="/article/chapter4#_89_h.a.i_"
-            class="out-chapter-link"
-          >
-            Chapter 4
+            Exercise 6 of Chapter 4
           </OutChapterLink>
           , that one needs to
           multiply the output units of {" "}
@@ -967,7 +952,7 @@ const Rest = () => {
           >
             Table 1.1
           </InChapterLink>
-          &#8288;,
+          &amp;#8288;,
           while the subsequent taking of a derivative doesn't
           impose any new constraints.
         </OuterP>
@@ -1083,13 +1068,11 @@ const Rest = () => {
         </OuterP>
         <OuterP class="indent-10">
           Assuming now that {" "}
-          <NoBreak>
-            <Math>
-              $f$
-            </Math>
-            and
-          </NoBreak>
-          {" "} {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "}
+          and {" "}
           <Math>
             $g$
           </Math>
@@ -1223,21 +1206,21 @@ const Rest = () => {
               Note on {" "}
               <InChapterLink
                 href="#_154_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Example 2
               </InChapterLink>
-              &#8288;.
+              &amp;#8288;.
             </i>
             {" "}
             In the case of {" "}
             <InChapterLink
               href="#_154_h.a.i_"
-              class="in-chapter-link"
+              class="in-chapter-link "
             >
               Example 2
             </InChapterLink>
-            &#8288;, the sum rule,
+            &amp;#8288;, the sum rule,
             which now reads
           </OuterP>
           <Pause />
@@ -1343,9 +1326,9 @@ const Rest = () => {
           <Pause />
           <OuterP>
             is not. One can best see this 
-            directly from the graphs {" "}
+            directly from the graphs of
+            {" "}
             <NoBreak>
-              of
               <Math>
                 $x_1$
               </Math>
@@ -1464,13 +1447,11 @@ const Rest = () => {
               $f$
             </Math>
             {" "} and {" "}
-            <NoBreak>
-              <Math>
-                $g$
-              </Math>
-              are
-            </NoBreak>
-            {" "} both differentiable at that specific {" "}
+            <Math>
+              $g$
+            </Math>
+            {" "}
+            are both differentiable at that specific {" "}
             <Math>
               $x_0$
             </Math>
@@ -1614,11 +1595,12 @@ const Rest = () => {
             As in {" "}
             <InChapterLink
               href="#_154_h.a.i_"
-              class="in-chapter-link"
+              class="in-chapter-link "
             >
               Example 2
             </InChapterLink>
-            &#8288;let
+            {" "}
+            let
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1646,13 +1628,11 @@ const Rest = () => {
               ,
             </NoBreak>
             {" "} {" "}
-            <NoBreak>
-              <Math>
-                $x_2$
-              </Math>
-              give
-            </NoBreak>
-            {" "} position measured in meters as a function of time measured in seconds.
+            <Math>
+              $x_2$
+            </Math>
+            {" "}
+            give position measured in meters as a function of time measured in seconds.
             Then
           </OuterP>
           <Pause />
@@ -1742,11 +1722,11 @@ const Rest = () => {
               Note on {" "}
               <InChapterLink
                 href="#_157_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Example 4
               </InChapterLink>
-              &#8288;.
+              &amp;#8288;.
             </i>
             {" "}
             It might be observed that
@@ -1772,11 +1752,11 @@ const Rest = () => {
             in {" "}
             <InChapterLink
               href="#_157_h.a.i_"
-              class="in-chapter-link"
+              class="in-chapter-link "
             >
               Example 4
             </InChapterLink>
-            &#8288;—one might conjecture that
+            &amp;#8288;—one might conjecture that
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1902,9 +1882,9 @@ const Rest = () => {
           <Math>
             $f$
           </Math>
-          {" "} {" "}
+          {" "} and
+          {" "}
           <NoBreak>
-            and
             <Math>
               $g$
             </Math>
@@ -1971,13 +1951,13 @@ const Rest = () => {
             ;
           </NoBreak>
           {" "}
-          and yet the {" "}
-          <NoBreak>
-            product
-            <Math>
-              $f'g'$
-            </Math>
-          </NoBreak>
+          and yet the product
+          {" "}
+          <Math>
+            $f'g'$
+          </Math>
+          {" "}
+          {" "}
           <i>
             cannot be formed
           </i>
@@ -2219,9 +2199,9 @@ const Rest = () => {
             <Math>
               $g(t_0)$
             </Math>
-            {" "} {" "}
+            {" "} into
+            {" "}
             <NoBreak>
-              into
               <Math>
                 $f'$
               </Math>
@@ -2399,11 +2379,11 @@ const Rest = () => {
             {" "} following {" "}
             <InChapterLink
               href="#_155_h.a.i_"
-              class="in-chapter-link"
+              class="in-chapter-link "
             >
               Example 3
             </InChapterLink>
-            &#8288;,
+            &amp;#8288;,
             relative to the sum rule.
           </OuterP>
         </Example>
@@ -2438,7 +2418,7 @@ const Rest = () => {
             >
               the chain rule
             </InChapterLink>
-            &#8288;,
+            &amp;#8288;,
             since {" "}
             <NoBreak>
               <Math>
@@ -2522,11 +2502,11 @@ const Rest = () => {
             by {" "}
             <InChapterLink
               href="#_158_h.a.i_"
-              class="in-chapter-link"
+              class="in-chapter-link "
             >
               Example 6
             </InChapterLink>
-            &#8288;,
+            &amp;#8288;,
             which
             looks visually compatible with the graph
             of {" "}
@@ -2549,7 +2529,7 @@ const Rest = () => {
               Note on {" "}
               <InChapterLink
                 href="#_159_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Example 7
               </InChapterLink>
@@ -2598,30 +2578,25 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            the angle of the wiper remains stuck between {" "}
-            <NoBreak>
-              <Math>
-                $-1\Rad \cong -57.29^\circ$
-              </Math>
-              at
-            </NoBreak>
-            {" "} one end {" "}
-            <NoBreak>
-              at
-              <Math>
-                $+1\Rad \cong 57.29^\circ$
-              </Math>
-              at
-            </NoBreak>
-            {" "} the
+            the angle of the wiper remains stuck between 
+            {" "}
+            <Math>
+              $-1\Rad \cong -57.29^\circ$
+            </Math>
+            {" "}
+            at one end at
+            {" "}
+            <Math>
+              $+1\Rad \cong 57.29^\circ$
+            </Math>
+            {" "}
+            at the
             other end, with the values of {" "}
-            <NoBreak>
-              <Math>
-                $\cos(\cos(x))$
-              </Math>
-              remaining
-            </NoBreak>
-            {" "} stuck between
+            <Math>
+              $\cos(\cos(x))$
+            </Math>
+            {" "}
+            remaining stuck between
           </OuterP>
           <Pause />
           <MathBlock>
@@ -2642,11 +2617,11 @@ const Rest = () => {
             sinusoid-like wave seen in {" "}
             <InChapterLink
               href="#_159_h.a.i_"
-              class="in-chapter-link"
+              class="in-chapter-link "
             >
               Example 7
             </InChapterLink>
-            &#8288;.
+            &amp;#8288;.
           </OuterP>
         </Example>
       </Section>
@@ -2710,9 +2685,9 @@ const Rest = () => {
           Whoo-hoo!
         </OuterP>
         <OuterP class="indent-10">
-          Relatedly to this idea of the original {" "}
+          Relatedly to this idea of the original “vanilla”
+          {" "}
           <NoBreak>
-            “vanilla”
             <Math>
               $xy$
             </Math>
@@ -2813,13 +2788,11 @@ const Rest = () => {
           <i>
             does
           </i>
-          {" "} have {" "}
-          <NoBreak>
-            units—equals
-            <Math>
-              $3$
-            </Math>
-          </NoBreak>
+          {" "} have units—equals
+          {" "}
+          <Math>
+            $3$
+          </Math>
           {" "} {" "}
           <i>
             seconds
@@ -2915,15 +2888,13 @@ const Rest = () => {
               >
                 Table 1.1
               </InChapterLink>
-              &#8288;.
+              &amp;#8288;.
               If {" "}
-              <NoBreak>
-                <Math>
-                  $g = f$
-                </Math>
-                this
-              </NoBreak>
-              {" "} implies {" "}
+              <Math>
+                $g = f$
+              </Math>
+              {" "}
+              this implies {" "}
               <Math>
                 $\A = \B$
               </Math>
@@ -3013,13 +2984,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               for some units A and B, as the output of {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                is
-              </NoBreak>
-              {" "} passed to {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}
+              is passed to {" "}
               <Math>
                 $g$
               </Math>
@@ -3087,11 +3056,11 @@ const Rest = () => {
               {" "} by {" "}
               <InChapterLink
                 href="#_160_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 1
               </InChapterLink>
-              &#8288;.
+              &amp;#8288;.
               But then
             </OuterP>
             <Pause />
@@ -3180,7 +3149,8 @@ const Rest = () => {
                 Exercise 4.
               </b>
               {" "}
-              What are the signatures of {" "}
+              What are the signatures of 
+              {" "}
               <NoBreak>
                 <Math>
                   $1/z$
@@ -3224,13 +3194,11 @@ const Rest = () => {
               </NoBreak>
               {" "}
               and {" "}
-              <NoBreak>
-                <Math>
-                  $z \circ z$
-                </Math>
-                if
-              </NoBreak>
-              {" "} {" "}
+              <Math>
+                $z \circ z$
+              </Math>
+              {" "}
+              if {" "}
               <NoBreak>
                 <Math>
                   $z  : [\lbs] \ra [\pounds]$
@@ -3249,13 +3217,11 @@ const Rest = () => {
                 Table 1.1
               </InChapterLink>
               {" "} with {" "}
-              <NoBreak>
-                <Math>
-                  $f = g = z$
-                </Math>
-                and
-              </NoBreak>
-              {" "} of {" "}
+              <Math>
+                $f = g = z$
+              </Math>
+              {" "}
+              and of {" "}
               <InChapterLink
                 href="#_153_h.a.i_"
                 class="in-chapter-link"
@@ -3319,13 +3285,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               is not a well-formed composition, and does not have
-              a well-defined signature, since the output units {" "}
-              <NoBreak>
-                of
-                <Math>
-                  $z$
-                </Math>
-              </NoBreak>
+              a well-defined signature, since the output units of
+              {" "}
+              <Math>
+                $z$
+              </Math>
               {" "} do not match the input units of {" "}
               <NoBreak>
                 <Math>
@@ -3373,16 +3337,9 @@ const Rest = () => {
                 is formally treated in {" "}
                 <OutChapterLink
                   href="/article/chapter4#_69_h.a.i_"
-                  class="out-chapter-link"
+                  class="out-chapter-link "
                 >
-                  Exercise 12
-                </OutChapterLink>
-                of {" "}
-                <OutChapterLink
-                  href="/article/chapter4#_89_h.a.i_"
-                  class="out-chapter-link"
-                >
-                  Chapter 4
+                  Exercise 12 of Chapter 4
                 </OutChapterLink>
                 .]
               </OuterP>
@@ -3438,13 +3395,16 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <NoBreak>
                 <Math>
                   $\beta : [\m/\s] \ra [\m^2/\s]$
                 </Math>
                 ,
               </NoBreak>
-              {" "} and {" "}
+              {" "} and 
+              {" "}
               <NoBreak>
                 <Math>
                   $\gamma : [\lbs] \ra [\s]$
@@ -3592,11 +3552,11 @@ const Rest = () => {
               (cf. {" "}
               <InChapterLink
                 href="#_165_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 6
               </InChapterLink>
-              &#8288;)
+              &amp;#8288;)
               would become
             </OuterP>
             <Pause />
@@ -3675,7 +3635,7 @@ const Rest = () => {
               {" "} {" "}
               <OutChapterLink
                 href="/article/chapter4#_77_h.a.i_"
-                class="out-chapter-link"
+                class="out-chapter-link "
               >
                 Chapter 4, Exercise 19
               </OutChapterLink>
@@ -3721,22 +3681,18 @@ const Rest = () => {
               >
                 Table 1.1
               </InChapterLink>
-              &#8288;,
-              and per the fact {" "}
-              <NoBreak>
-                that
-                <Math>
-                  $h'$
-                </Math>
-              </NoBreak>
+              &amp;#8288;,
+              and per the fact that
+              {" "}
+              <Math>
+                $h'$
+              </Math>
               {" "} has the same input units as {" "}
-              <NoBreak>
-                <Math>
-                  $h$
-                </Math>
-                for
-              </NoBreak>
-              {" "} any function {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "}
+              for any function {" "}
               <NoBreak>
                 <Math>
                   $h : \rr \ra \rr$
@@ -3781,21 +3737,19 @@ const Rest = () => {
             <OuterP>
               so these signatures are also sufficient to
               evaluate either side of the equation to the end, and,
+              moreover,
               {" "}
-              <NoBreak>
-                moreover,
-                <Math>
-                  $(fg)'$
-                </Math>
-                and
-              </NoBreak>
-              <NoBreak>
-                <Math>
-                  $f'g + g'f$
-                </Math>
-                are
-              </NoBreak>
-              {" "} found to have the same signature, concluding the 
+              <Math>
+                $(fg)'$
+              </Math>
+              {" "}
+              and
+              {" "}
+              <Math>
+                $f'g + g'f$
+              </Math>
+              {" "}
+              are found to have the same signature, concluding the 
               dimensional analysis. (= Both sides impose the same
               signature constraints, and evaluate to the same final
               signature.)
@@ -3889,7 +3843,7 @@ const Rest = () => {
               >
                 Table 1.2
               </InChapterLink>
-              &#8288;,
+              &amp;#8288;,
               and
             </OuterP>
             <Pause />
@@ -4054,22 +4008,18 @@ const Rest = () => {
               <Math>
                 $1/f$
               </Math>
-              {" "} {" "}
-              <NoBreak>
-                nor
-                <Math>
-                  $(1/f)'$
-                </Math>
-              </NoBreak>
+              {" "} nor
+              {" "}
+              <Math>
+                $(1/f)'$
+              </Math>
               {" "} 
               nor {" "}
-              <NoBreak>
-                <Math>
-                  $f'/f^2$
-                </Math>
-                are
-              </NoBreak>
-              {" "} defined, so those points are not our
+              <Math>
+                $f'/f^2$
+              </Math>
+              {" "}
+              are defined, so those points are not our
               concern.)
             </OuterP>
             <OuterP class="indent-10">
@@ -4095,7 +4045,7 @@ const Rest = () => {
               >
                 Table 1.2
               </InChapterLink>
-              &#8288;), giving
+              &amp;#8288;), giving
               us
             </OuterP>
             <Boxed>
@@ -4127,7 +4077,7 @@ const Rest = () => {
               to {" "}
               <InChapterLink
                 href="#_168_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 9
               </InChapterLink>
@@ -4423,11 +4373,11 @@ const Rest = () => {
               {" "}
               <InChapterLink
                 href="#_171_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 12
               </InChapterLink>
-              &#8288;.
+              &amp;#8288;.
             </OuterP>
           </Solution>
         </Exercise>
@@ -4449,13 +4399,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               stand for the “inverse” of a function {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                for
-              </NoBreak>
-              {" "} which such an inverse exists. 
+              <Math>
+                $f$
+              </Math>
+              {" "}
+              for which such an inverse exists. 
               This means that {" "}
               <Math>
                 $f$
@@ -4567,13 +4515,11 @@ const Rest = () => {
                   $f^&#123;-1&#125;$
                 </Math>
               </NoBreak>
-              {" "} is the function that composes {" "}
-              <NoBreak>
-                with
-                <Math>
-                  $f$
-                </Math>
-              </NoBreak>
+              {" "} is the function that composes with
+              {" "}
+              <Math>
+                $f$
+              </Math>
               {" "} 
               to produce the {" "}
               <i>
@@ -4656,13 +4602,11 @@ const Rest = () => {
                 $f^&#123;-1&#125;$
               </Math>
               {" "} is an output of {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                and
-              </NoBreak>
-              {" "} vice-versa.
+              <Math>
+                $f$
+              </Math>
+              {" "}
+              and vice-versa.
               Thus
             </OuterP>
             <Pause />
@@ -4674,13 +4618,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               and we seek to build a function of signature {" "}
-              <NoBreak>
-                <Math>
-                  $[\B] \ra [\A/\B]$
-                </Math>
-                from
-              </NoBreak>
-              {" "} these...
+              <Math>
+                $[\B] \ra [\A/\B]$
+              </Math>
+              {" "}
+              from these...
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4771,9 +4713,9 @@ const Rest = () => {
                   inverse rule
                 </i>
                 .
-                It is valid for all invertible, {" "}
+                It is valid for all invertible, differentiable
+                {" "}
                 <NoBreak>
-                  differentiable
                   <Math>
                     $f : \rr \ra \rr$
                   </Math>
@@ -4828,11 +4770,11 @@ const Rest = () => {
               {" "} (cf. {" "}
               <InChapterLink
                 href="#_173_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 14
               </InChapterLink>
-              &#8288;).
+              &amp;#8288;).
               What is the most general signature of {" "}
               <Math>
                 $f$
@@ -4891,7 +4833,8 @@ const Rest = () => {
                 $g$
               </Math>
               {" "} become inputs
-              of {" "}
+              of 
+              {" "}
               <NoBreak>
                 <Math>
                   $f^&#123;-1&#125;$

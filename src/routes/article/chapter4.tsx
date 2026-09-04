@@ -174,9 +174,9 @@ export default function __Chapter4__() {
           <Math>
             $y = f(x)$
           </Math>
-          {" "} {" "}
+          {" "} at
+          {" "}
           <NoBreak>
-            at
             <Math>
               $x = a$
             </Math>
@@ -193,9 +193,9 @@ export default function __Chapter4__() {
             <Math>
               $=$
             </Math>
-            “before”],
           </NoBreak>
-          {" "} {" "}
+          {" "}
+          “before”], {" "}
           <Math>
             $y = f'(x)$
           </Math>
@@ -237,13 +237,11 @@ export default function __Chapter4__() {
           </Math>
           {" "} has a sharp “corner”
           and no well-defined slope. By opposition, if
-          there is a well-defined tangent line {" "}
-          <NoBreak>
-            to
-            <Math>
-              $y = f(x)$
-            </Math>
-          </NoBreak>
+          there is a well-defined tangent line to
+          {" "}
+          <Math>
+            $y = f(x)$
+          </Math>
           {" "} at {" "}
           <Math>
             $x = a$
@@ -342,6 +340,8 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
+          {" "}
+          {" "}
           <NoBreak>
             <Math>
               $a &lt; b$
@@ -438,7 +438,7 @@ const Rest = () => {
         >
           <ImageRight
             src="/build-img/svgo-svg/WzTO.svg"
-            offsetY="5%"
+            offsetY="  5%"
             offsetX="-25%"
             intrinsicWidth={450}
             intrinsicHeight={400}
@@ -547,9 +547,9 @@ const Rest = () => {
             </Math>
             -value
           </NoBreak>
-          {" "} you find a slope {" "}
+          {" "} you find a slope of
+          {" "}
           <NoBreak>
-            of
             <Math>
               $0$
             </Math>
@@ -662,9 +662,9 @@ const Rest = () => {
           <Math>
             $A$
           </Math>
-          {" "} {" "}
+          {" "} is
+          {" "}
           <NoBreak>
-            is
             <Math>
               $A$
             </Math>
@@ -706,13 +706,11 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          ~ the derivative of the affine {" "}
-          <NoBreak>
-            function
-            <Math>
-              $y = ax + b$
-            </Math>
-          </NoBreak>
+          ~ the derivative of the affine function
+          {" "}
+          <Math>
+            $y = ax + b$
+          </Math>
           {" "} is the constant function {" "}
           <Math>
             $y = a$
@@ -909,13 +907,11 @@ const Rest = () => {
               <Math>
                 $x$
               </Math>
-              {" "} axis, meters on {" "}
-              <NoBreak>
-                the
-                <Math>
-                  $y$
-                </Math>
-              </NoBreak>
+              {" "} axis, meters on the
+              {" "}
+              <Math>
+                $y$
+              </Math>
               {" "} axis
             </p>
           </Item>
@@ -959,13 +955,11 @@ const Rest = () => {
               <Math>
                 $x$
               </Math>
-              {" "} axis, oranges on {" "}
-              <NoBreak>
-                the
-                <Math>
-                  $y$
-                </Math>
-              </NoBreak>
+              {" "} axis, oranges on the
+              {" "}
+              <Math>
+                $y$
+              </Math>
               {" "} axis
             </p>
           </Item>
@@ -1830,7 +1824,7 @@ const Rest = () => {
           Coming briefly back to {" "}
           <OutChapterLink
             href="/article/chapter3#_56_h.a.i_"
-            class="out-chapter-link"
+            class="out-chapter-link "
           >
             Chapter 3
           </OutChapterLink>
@@ -1898,7 +1892,7 @@ const Rest = () => {
           goes back to {" "}
           <OutChapterLink
             href="/article/chapter3#_38_h.a.i_"
-            class="out-chapter-link"
+            class="out-chapter-link "
           >
             Exercise 5 of Chapter 3
           </OutChapterLink>
@@ -1939,16 +1933,9 @@ const Rest = () => {
           of functions already appear in {" "}
           <OutChapterLink
             href="/article/chapter3#_51_h.a.i_"
-            class="out-chapter-link"
+            class="out-chapter-link "
           >
-            Exercise 17
-          </OutChapterLink>
-          of {" "}
-          <OutChapterLink
-            href="/article/chapter3#_56_h.a.i_"
-            class="out-chapter-link"
-          >
-            Chapter 3
+            Exercise 17 of Chapter 3
           </OutChapterLink>
           , also. (On the other hand, the
           quotient (i.e. {" "}
@@ -1958,9 +1945,9 @@ const Rest = () => {
             </Math>
             )
           </NoBreak>
-          {" "} and difference {" "}
+          {" "} and difference (i.e.,
+          {" "}
           <NoBreak>
-            (i.e.,
             <Math>
               $f - g$
             </Math>
@@ -2033,6 +2020,8 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
+              {" "}
+              {" "}
               <Math>
                 $-1/2$
               </Math>
@@ -2123,11 +2112,11 @@ const Rest = () => {
               derivative of the graph in {" "}
               <InChapterLink
                 href="#_58_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 1
               </InChapterLink>
-              &#8288;.
+              &amp;#8288;.
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -2177,11 +2166,12 @@ const Rest = () => {
               If we pretend that the graph of {" "}
               <InChapterLink
                 href="#_58_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 1
               </InChapterLink>
-              &#8288;depicts the {" "}
+              {" "}
+              depicts the {" "}
               <del>
                 distance that a car has traveled
                 as a function of time,
@@ -2222,13 +2212,11 @@ const Rest = () => {
               <Math>
                 $y$
               </Math>
-              {" "} axis by the units of {" "}
-              <NoBreak>
-                the
-                <Math>
-                  $x$
-                </Math>
-              </NoBreak>
+              {" "} axis by the units of the
+              {" "}
+              <Math>
+                $x$
+              </Math>
               {" "} axis):
             </OuterP>
             <Pause />
@@ -2415,13 +2403,11 @@ const Rest = () => {
               </i>
               {" "}
               One can also do the main computation with {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                in
-              </NoBreak>
-              {" "} place of {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              in place of {" "}
               <NoBreak>
                 <Math>
                   $t$
@@ -2491,27 +2477,21 @@ const Rest = () => {
             <OuterP>
               The pattern to respect is that, each time
               you take a derivative, the units on the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                axis
-              </NoBreak>
-              {" "} stay the same, while the units on {" "}
-              <NoBreak>
-                the
-                <Math>
-                  $y$
-                </Math>
-              </NoBreak>
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              axis stay the same, while the units on the
+              {" "}
+              <Math>
+                $y$
+              </Math>
               {" "} axis become divided by those on the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                axis.
-              </NoBreak>
-              {" "} This gives the unique solutions:
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              axis. This gives the unique solutions:
             </OuterP>
             <Pause />
             <Image
@@ -2988,13 +2968,11 @@ const Rest = () => {
               </b>
               {" "}
               If you scale the graph of a function {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                vertically
-              </NoBreak>
-              {" "} by a factor {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "}
+              vertically by a factor {" "}
               <NoBreak>
                 <Math>
                   $2$
@@ -3040,13 +3018,11 @@ const Rest = () => {
             <OuterP>
               The second graph truly is the first
               graph vertically scaled by a factor {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                because
-              </NoBreak>
-              {" "} the scale on the {" "}
+              <Math>
+                $2$
+              </Math>
+              {" "}
+              because the scale on the {" "}
               <Math>
                 $y$
               </Math>
@@ -3359,9 +3335,9 @@ const Rest = () => {
                 {" "}
                 When we examine the velocity of a
                 particle moving in the plane, we examine
-                the velocities of its shadow on {" "}
+                the velocities of its shadow on the
+                {" "}
                 <NoBreak>
-                  the
                   <Math>
                     $x$
                   </Math>
@@ -3452,9 +3428,9 @@ const Rest = () => {
                   </Math>
                   -
                 </NoBreak>
-                {" "} {" "}
+                {" "} and
+                {" "}
                 <NoBreak>
-                  and
                   <Math>
                     $y$
                   </Math>
@@ -3501,9 +3477,9 @@ const Rest = () => {
                   </Math>
                   -
                 </NoBreak>
-                {" "} {" "}
+                {" "} and
+                {" "}
                 <NoBreak>
-                  and
                   <Math>
                     $y$
                   </Math>
@@ -3523,13 +3499,11 @@ const Rest = () => {
                 cover exactly the length of the arrow
                 in that one unit of time, no more no less,
                 because the particle would cover {" "}
-                <NoBreak>
-                  <Math>
-                    $v_x$
-                  </Math>
-                  units
-                </NoBreak>
-                {" "} in {" "}
+                <Math>
+                  $v_x$
+                </Math>
+                {" "}
+                units in {" "}
                 <Math>
                   $x$
                 </Math>
@@ -3747,9 +3721,9 @@ const Rest = () => {
                 </NoBreak>
               </OuterP>
               <OuterP class="indent-10">
-                Concretely, if you graph {" "}
+                Concretely, if you graph the
+                {" "}
                 <NoBreak>
-                  the
                   <Math>
                     $x$
                   </Math>
@@ -3765,9 +3739,9 @@ const Rest = () => {
                   -coordinate
                 </NoBreak>
                 {" "}
-                will equal the value of the blue {" "}
+                will equal the value of the blue particle's
+                {" "}
                 <NoBreak>
-                  particle's
                   <Math>
                     $x$
                   </Math>
@@ -3826,9 +3800,9 @@ const Rest = () => {
                   $360^\circ$
                 </Math>
                 {" "} rotation of the particles
-                of Note 3,  with each curve being {" "}
+                of Note 3,  with each curve being an
+                {" "}
                 <NoBreak>
-                  an
                   <Math>
                     $x$
                   </Math>
@@ -3872,9 +3846,9 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                of the red particle, in the sense {" "}
+                of the red particle, in the sense that
+                {" "}
                 <NoBreak>
-                  that
                   <Math>
                     $x$
                   </Math>
@@ -4226,13 +4200,11 @@ const Rest = () => {
               <Math>
                 $t = 11.199$
               </Math>
-              {" "} {" "}
-              <NoBreak>
-                and
-                <Math>
-                  $t = 11.2$
-                </Math>
-              </NoBreak>
+              {" "} and
+              {" "}
+              <Math>
+                $t = 11.2$
+              </Math>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
@@ -4284,19 +4256,20 @@ const Rest = () => {
               By what should the change mentioned in {" "}
               <InChapterLink
                 href="#_74_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 16
               </InChapterLink>
-              &#8288;be divided by in order 
+              {" "}
+              be divided by in order 
               to obtain a difference quotient (cf. {" "}
               <InChapterLink
                 href="#_73_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 15
               </InChapterLink>
-              &#8288;)?
+              &amp;#8288;)?
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -4464,13 +4437,11 @@ const Rest = () => {
                   $x$
                 </Math>
                 {" "} and {" "}
-                <NoBreak>
-                  <Math>
-                    $x + h$
-                  </Math>
-                  are
-                </NoBreak>
-                {" "} interchanged, and {" "}
+                <Math>
+                  $x + h$
+                </Math>
+                {" "}
+                are interchanged, and {" "}
                 <Math>
                   $h$
                 </Math>
@@ -4498,11 +4469,11 @@ const Rest = () => {
               {" "} as in {" "}
               <InChapterLink
                 href="#_74_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 16
               </InChapterLink>
-              &#8288;,
+              &amp;#8288;,
               and assuming that {" "}
               <Math>
                 $A$
@@ -4575,18 +4546,11 @@ const Rest = () => {
               {" "} per {" "}
               <InChapterLink
                 href="#_72_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
-                Note 1
+                Note 1 of Exercise 15
               </InChapterLink>
-              &#8288;of {" "}
-              <InChapterLink
-                href="#_73_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 15
-              </InChapterLink>
-              &#8288;. (This is a
+              &amp;#8288;. (This is a
               difference quotient, notwitstanding the renaming of {" "}
               <NoBreak>
                 “
@@ -4657,24 +4621,20 @@ const Rest = () => {
                 $A$
               </Math>
               {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                that
-              </NoBreak>
-              {" "} are changing with time; {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}
+              that are changing with time; {" "}
               <Math>
                 $A$
               </Math>
               {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $B$
-                </Math>
-                have
-              </NoBreak>
-              {" "} some value at {" "}
+              <Math>
+                $B$
+              </Math>
+              {" "}
+              have some value at {" "}
               <NoBreak>
                 <Math>
                   $t_0$
@@ -4733,9 +4693,9 @@ const Rest = () => {
             <OuterP>
               that are crossing a hallway,
               and the hallway is surveyed by
-              a cat. One side of the hallway is {" "}
+              a cat. One side of the hallway is time
+              {" "}
               <NoBreak>
-                time
                 <Math>
                   $t_0$
                 </Math>
@@ -4760,13 +4720,11 @@ const Rest = () => {
                 $B$
               </Math>
               {" "} have decided to
-              cross the hallway one at a {" "}
-              <NoBreak>
-                time—first
-                <Math>
-                  $A$
-                </Math>
-              </NoBreak>
+              cross the hallway one at a time—first
+              {" "}
+              <Math>
+                $A$
+              </Math>
               {" "} will go, then {" "}
               <NoBreak>
                 <Math>
@@ -4788,7 +4746,7 @@ const Rest = () => {
               </NoBreak>
               {" "} line, to be clear):
               <ImageLeft
-                offsetX="0.5em"
+                offsetX=" 0.5em"
                 offsetY="-0.5em"
                 src="/build-img/svgo-svg/zR89.svg"
                 intrinsicWidth={750}
@@ -4870,13 +4828,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               changes in two increments: first as {" "}
-              <NoBreak>
-                <Math>
-                  $A$
-                </Math>
-                makes
-              </NoBreak>
-              {" "} it to the other side of the hallway,
+              <Math>
+                $A$
+              </Math>
+              {" "}
+              makes it to the other side of the hallway,
               and {" "}
               <Math>
                 $A$
@@ -4902,13 +4858,11 @@ const Rest = () => {
             <Pause />
             <OuterP>
               If we divide the above equation by {" "}
-              <NoBreak>
-                <Math>
-                  $\Delta&#123;&#125;t$
-                </Math>
-                and
-              </NoBreak>
-              {" "} let {" "}
+              <Math>
+                $\Delta&#123;&#125;t$
+              </Math>
+              {" "}
+              and let {" "}
               <Math>
                 $\Delta&#123;&#125;t$
               </Math>
@@ -4997,21 +4951,14 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "} (Cf. Note&#8288;
+              {" "} (Cf. {" "}
               <InChapterLink
                 href="#_72_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
-                1
+                Note 1 of Exercise 15
               </InChapterLink>
-              {" "} of {" "}
-              <InChapterLink
-                href="#_73_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 15
-              </InChapterLink>
-              &#8288;.)
+              &amp;#8288;.)
               (Nb: We assume differentiability, otherwise
               there is no conclusion to draw.)
             </OuterP>
@@ -5104,11 +5051,11 @@ const Rest = () => {
               (cf. {" "}
               <InChapterLink
                 href="#_72_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Note 1 of Exercise 15
               </InChapterLink>
-              &#8288;),
+              &amp;#8288;),
               so the whole term approaches
             </OuterP>
             <Boxed>
@@ -5515,6 +5462,8 @@ const Rest = () => {
               <Math>
                 $A_1, \dots, A_n$
               </Math>
+              {" "}
+              {" "}
               <Math>
                 $: \rr \ra \rr$
               </Math>
@@ -5544,11 +5493,11 @@ const Rest = () => {
               (cf. {" "}
               <InChapterLink
                 href="#_73_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 15
               </InChapterLink>
-              &#8288;)
+              &amp;#8288;)
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5573,10 +5522,10 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} per which
-              (&#8288;
+              (&amp;#8288;
               <InChapterLink
                 href="#_73_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 15
               </InChapterLink>
@@ -5610,13 +5559,11 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} ..., {" "}
-              <NoBreak>
-                <Math>
-                  $A_n$
-                </Math>
-                (including
-              </NoBreak>
-              {" "} {" "}
+              <Math>
+                $A_n$
+              </Math>
+              {" "}
+              (including {" "}
               <NoBreak>
                 <Math>
                   $A_i$
@@ -5638,13 +5585,11 @@ const Rest = () => {
                 $A_1(t_0 + h)$
               </Math>
               {" "} through {" "}
-              <NoBreak>
-                <Math>
-                  $A_&#123;i-1&#125;(t_0 + h)$
-                </Math>
-                at
-              </NoBreak>
-              {" "} the beginning of the product...
+              <Math>
+                $A_&#123;i-1&#125;(t_0 + h)$
+              </Math>
+              {" "}
+              at the beginning of the product...
             </OuterP>
             <Pause />
             <Image
@@ -5721,13 +5666,11 @@ const Rest = () => {
                 .
               </NoBreak>
               {" "} (These various
-              technicalities concerning a generic {" "}
-              <NoBreak>
-                function
-                <Math>
-                  $f : \rr \ra \rr$
-                </Math>
-              </NoBreak>
+              technicalities concerning a generic function
+              {" "}
+              <Math>
+                $f : \rr \ra \rr$
+              </Math>
               {" "} are mentioned in the solution
               to Exercise 17.) Similarly for {" "}
               <NoBreak>
@@ -5921,13 +5864,11 @@ const Rest = () => {
                   <i>
                     the associativity of function multiplication is
                     the fact that {" "}
-                    <NoBreak>
-                      <Math>
-                        $(f \circ g) \circ h = f \circ (g \circ h)$
-                      </Math>
-                      for
-                    </NoBreak>
-                    {" "} all functions {" "}
+                    <Math>
+                      $(f \circ g) \circ h = f \circ (g \circ h)$
+                    </Math>
+                    {" "}
+                    for all functions {" "}
                     <NoBreak>
                       <Math>
                         $f$
@@ -5945,9 +5886,9 @@ const Rest = () => {
                     <Math>
                       $h$
                     </Math>
-                    {" "} such {" "}
+                    {" "} such that
+                    {" "}
                     <NoBreak>
-                      that
                       <Math>
                         $h : D \ra C$
                       </Math>
@@ -5961,13 +5902,11 @@ const Rest = () => {
                       ,
                     </NoBreak>
                     {" "} {" "}
-                    <NoBreak>
-                      <Math>
-                        $f : B \ra A$
-                      </Math>
-                      [for
-                    </NoBreak>
-                    {" "} arbitrary sets {" "}
+                    <Math>
+                      $f : B \ra A$
+                    </Math>
+                    {" "}
+                    [for arbitrary sets {" "}
                     <NoBreak>
                       <Math>
                         $A$
@@ -6145,7 +6084,7 @@ const Rest = () => {
                 well as Exercise 9, {" "}
                 <OutChapterLink
                   href="/article/chapter3#_56_h.a.i_"
-                  class="out-chapter-link"
+                  class="out-chapter-link "
                 >
                   Chapter 3
                 </OutChapterLink>
@@ -6303,7 +6242,7 @@ const Rest = () => {
               same output under either function. See {" "}
               <OutChapterLink
                 href="/article/chapter3#_42_h.a.i_"
-                class="out-chapter-link"
+                class="out-chapter-link "
               >
                 Note 6, Exercise 9, Chapter 3
               </OutChapterLink>
@@ -6439,19 +6378,12 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                (if you recall that one) in Exercise
+                (if you recall that one) in {" "}
                 <OutChapterLink
                   href="/article/chapter3#_43_h.a.i_"
-                  class="out-chapter-link"
+                  class="out-chapter-link "
                 >
-                  9
-                </OutChapterLink>
-                {" "} of {" "}
-                <OutChapterLink
-                  href="/article/chapter3#_56_h.a.i_"
-                  class="out-chapter-link"
-                >
-                  Chapter 3
+                  Exercise 9 of Chapter 3
                 </OutChapterLink>
                 .
               </OuterP>
@@ -6543,11 +6475,11 @@ const Rest = () => {
               the following geometric progression* (*see {" "}
               <InChapterLink
                 href="#_81_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Note 1
               </InChapterLink>
-              &#8288;):
+              &amp;#8288;):
             </OuterP>
             <Pause />
             <Image
@@ -6696,9 +6628,9 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "} (I.e., the particle never makes it {" "}
+              {" "} (I.e., the particle never makes it to
+              {" "}
               <NoBreak>
-                to
                 <Math>
                   $x = 0$
                 </Math>
@@ -6848,13 +6780,11 @@ const Rest = () => {
               track the position of the blue particle and vice-versa,
               give a qualitative sketch of the
               position-as-a-function-of-time (time on the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                axis,
-              </NoBreak>
-              {" "} position on the {" "}
+              <Math>
+                $x$
+              </Math>
+              {" "}
+              axis, position on the {" "}
               <Math>
                 $y$
               </Math>
@@ -6924,13 +6854,11 @@ const Rest = () => {
               The “defining geometric relationship” is that
               the slope of one graph equals the value of the
               other graph at any point in time. (One could 
-              also name the fact that the graphs have {" "}
-              <NoBreak>
-                value
-                <Math>
-                  $\pm 1$
-                </Math>
-              </NoBreak>
+              also name the fact that the graphs have value
+              {" "}
+              <Math>
+                $\pm 1$
+              </Math>
               {" "} at {" "}
               <NoBreak>
                 <Math>
@@ -7008,11 +6936,11 @@ const Rest = () => {
                 particle of {" "}
                 <InChapterLink
                   href="#_82_h.a.i_"
-                  class="in-chapter-link"
+                  class="in-chapter-link "
                 >
                   Exercise 23
                 </InChapterLink>
-                &#8288;, whose
+                &amp;#8288;, whose
                 velocity is equal to its position and whose
                 position is {" "}
                 <Math>
@@ -7085,20 +7013,16 @@ const Rest = () => {
               {" "}
               Four particles are placed
               at intervals of {" "}
-              <NoBreak>
-                <Math>
-                  $90^\circ$
-                </Math>
-                around
-              </NoBreak>
-              {" "} a circle of radius {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                centered
-              </NoBreak>
-              {" "} at {" "}
+              <Math>
+                $90^\circ$
+              </Math>
+              {" "}
+              around a circle of radius {" "}
+              <Math>
+                $1$
+              </Math>
+              {" "}
+              centered at {" "}
               <Math>
                 $(2, 4)$
               </Math>
@@ -7116,9 +7040,9 @@ const Rest = () => {
               the position of the next particle clockwise
               around the circle, with this relationship
               maintained at all points in time.
-              If the configuration above shows {" "}
+              If the configuration above shows time
+              {" "}
               <NoBreak>
-                time
                 <Math>
                   $t = 0$
                 </Math>
@@ -7165,7 +7089,7 @@ const Rest = () => {
               <ImageRight
                 src="/build-img/svgo-svg/7A0o.svg"
                 offsetY="150px"
-                offsetX="-0.5em"
+                offsetX=" -0.5em"
                 intrinsicWidth={500}
                 intrinsicHeight={600}
               />
@@ -7326,11 +7250,11 @@ const Rest = () => {
               {" "}
               <InChapterLink
                 href="#_70_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 13
               </InChapterLink>
-              &#8288;, that obey a similar set of
+              &amp;#8288;, that obey a similar set of
               constraints
               (albeit with a different set of colors).
             </OuterP>
@@ -7340,13 +7264,11 @@ const Rest = () => {
               whose velocity is equal to its position,
               and will
               see their motion confined to an infinite
-              half-line {" "}
-              <NoBreak>
-                through
-                <Math>
-                  $(0, 0)$
-                </Math>
-              </NoBreak>
+              half-line through
+              {" "}
+              <Math>
+                $(0, 0)$
+              </Math>
               {" "} and {" "}
               <NoBreak>
                 <Math>
@@ -7405,13 +7327,11 @@ const Rest = () => {
             <OuterP class="indent-10">
               This means that if we introduce gradations
               to the afore-mentioned half-line through {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                and
-              </NoBreak>
-              {" "} {" "}
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "}
+              and {" "}
               <NoBreak>
                 <Math>
                   $(2, 4)$
@@ -7447,29 +7367,27 @@ const Rest = () => {
               particle from {" "}
               <InChapterLink
                 href="#_82_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 23
               </InChapterLink>
-              &#8288;,
+              &amp;#8288;,
               except that the current
               “UNO particle” has a slight head-start over the
               red particle from {" "}
               <InChapterLink
                 href="#_82_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 23
               </InChapterLink>
-              &#8288;, being
+              &amp;#8288;, being
               at position {" "}
-              <NoBreak>
-                <Math>
-                  $x = 2\sqrt&#123;5&#125;$
-                </Math>
-                instead
-              </NoBreak>
-              {" "} of at position {" "}
+              <Math>
+                $x = 2\sqrt&#123;5&#125;$
+              </Math>
+              {" "}
+              instead of at position {" "}
               <Math>
                 $x = 1$
               </Math>
@@ -7565,9 +7483,9 @@ const Rest = () => {
                 -coordinate
               </NoBreak>
               {" "} of
-              the purple-white particle {" "}
+              the purple-white particle at
+              {" "}
               <NoBreak>
-                at
                 <Math>
                   $t = 2$
                 </Math>
@@ -7632,9 +7550,9 @@ const Rest = () => {
             </CentralDisplay>
             <Pause />
             <OuterP>
-              because the rate of change of {" "}
+              because the rate of change of the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
@@ -9451,9 +9369,9 @@ const Rest = () => {
               <Math>
                 $t = -5$
               </Math>
-              {" "} {" "}
+              {" "} to
+              {" "}
               <NoBreak>
-                to
                 <Math>
                   $t \approx 1$
                 </Math>
@@ -9462,13 +9380,11 @@ const Rest = () => {
               {" "} further back in time would produce
               near-perfect counterclockwise circular motion,
               as the black particles rush up to {" "}
-              <NoBreak>
-                <Math>
-                  $(0, 0)$
-                </Math>
-                and
-              </NoBreak>
-              {" "} come to a near-halt rather fast,
+              <Math>
+                $(0, 0)$
+              </Math>
+              {" "}
+              and come to a near-halt rather fast,
               leaving only the residual motion of the white
               particles!
             </OuterP>
@@ -9512,11 +9428,11 @@ const Rest = () => {
                 the solution to {" "}
                 <InChapterLink
                   href="#_70_h.a.i_"
-                  class="in-chapter-link"
+                  class="in-chapter-link "
                 >
                   Exercise 13
                 </InChapterLink>
-                &#8288;,
+                &amp;#8288;,
                 but might be worth emphasizing,
               </OuterP>
               <Pause />
@@ -9576,11 +9492,11 @@ const Rest = () => {
               curve from {" "}
               <InChapterLink
                 href="#_70_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 13
               </InChapterLink>
-              &#8288;, known as the
+              &amp;#8288;, known as the
               {" "}
               <i>
                 cosine function
@@ -9589,7 +9505,7 @@ const Rest = () => {
               in {" "}
               <OutChapterLink
                 href="/article/chapter3#_40_h.a.i_"
-                class="out-chapter-link"
+                class="out-chapter-link "
               >
                 Chapter 3, Exercise 7
               </OutChapterLink>
@@ -9672,9 +9588,9 @@ const Rest = () => {
             <OuterP class="indent-10">
               However, the exact position of “cresting” is hard to
               determine because the graph flattens at that point,
-              and a more clever clue to pick up on is actually that the graph seems to go almost exactly {" "}
+              and a more clever clue to pick up on is actually that the graph seems to go almost exactly through
+              {" "}
               <NoBreak>
-                through
                 <Math>
                   $(t, x) = (11, 0)$
                 </Math>
@@ -9853,7 +9769,7 @@ const Rest = () => {
               {" "}
               <InChapterLink
                 href="#_70_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 13
               </InChapterLink>
@@ -9929,13 +9845,11 @@ const Rest = () => {
                 </Math>
                 ”?
               </NoBreak>
-              {" "} I.e., find a {" "}
-              <NoBreak>
-                function
-                <Math>
-                  $f$
-                </Math>
-              </NoBreak>
+              {" "} I.e., find a function
+              {" "}
+              <Math>
+                $f$
+              </Math>
               {" "} such that
             </OuterP>
             <Pause />
@@ -9969,7 +9883,7 @@ const Rest = () => {
               curves of {" "}
               <InChapterLink
                 href="#_73_h.a.i_"
-                class="in-chapter-link"
+                class="in-chapter-link "
               >
                 Exercise 15
               </InChapterLink>
@@ -10147,13 +10061,11 @@ const Rest = () => {
               </NoBreak>
               {" "} of
               a unit of time at each step, the same figure
-              becomes just a blur (still going {" "}
-              <NoBreak>
-                from
-                <Math>
-                  $t = 0$
-                </Math>
-              </NoBreak>
+              becomes just a blur (still going from
+              {" "}
+              <Math>
+                $t = 0$
+              </Math>
               {" "} to {" "}
               <NoBreak>
                 <Math>
@@ -10315,17 +10227,17 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the rate of change of {" "}
+              the rate of change of the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
                 -coordinate
               </NoBreak>
-              {" "} of the red particle is {" "}
+              {" "} of the red particle is the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
@@ -10350,17 +10262,17 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the rate of change of {" "}
+              the rate of change of the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
                 -coordinate
               </NoBreak>
-              {" "} of the blue particle is {" "}
+              {" "} of the blue particle is the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
@@ -10385,17 +10297,17 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the rate of change of {" "}
+              the rate of change of the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
                 -coordinate
               </NoBreak>
-              {" "} of the yellow particle is {" "}
+              {" "} of the yellow particle is the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
@@ -10420,9 +10332,9 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the rate of change of {" "}
+              the rate of change of the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
@@ -10456,17 +10368,17 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the rate of change of {" "}
+              the rate of change of the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
                 -coordinate
               </NoBreak>
-              {" "} of the purple particle is {" "}
+              {" "} of the purple particle is the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
@@ -10505,13 +10417,11 @@ const Rest = () => {
                 5 particles over time, each in their
                 color, you get a graph like so, in which
                 blue is the derivative of red, yellow is
-                the derivative of blue, etc; the {" "}
-                <NoBreak>
-                  function
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
+                the derivative of blue, etc; the function
+                {" "}
+                <Math>
+                  $f$
+                </Math>
                 {" "} can be taken to be any one of these
                 curves:
               </OuterP>
@@ -10529,9 +10439,9 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                There is nothing special {" "}
+                There is nothing special about
+                {" "}
                 <NoBreak>
-                  about
                   <Math>
                     $x$
                   </Math>
@@ -10574,9 +10484,9 @@ const Rest = () => {
                   Note 3.
                 </i>
                 {" "}
-                It is worth noting that, in fact, {" "}
+                It is worth noting that, in fact, the
+                {" "}
                 <NoBreak>
-                  the
                   <Math>
                     $x$
                   </Math>
@@ -10590,9 +10500,9 @@ const Rest = () => {
                   -coordinates
                 </NoBreak>
                 {" "} live separate
-                lives. The rate of change of {" "}
+                lives. The rate of change of each
+                {" "}
                 <NoBreak>
-                  each
                   <Math>
                     $x$
                   </Math>
@@ -10681,13 +10591,11 @@ const Rest = () => {
                 </i>
                 {" "} initial
                 position, or else you won't have {" "}
-                <NoBreak>
-                  <Math>
-                    $f \ne f'$
-                  </Math>
-                  etc)
-                </NoBreak>
-                {" "} and stipulate the same rules, namely
+                <Math>
+                  $f \ne f'$
+                </Math>
+                {" "}
+                etc) and stipulate the same rules, namely
                 that the
               </OuterP>
               <Pause />
@@ -10725,13 +10633,11 @@ const Rest = () => {
                 simulate—or compute by a formula, if you have
                 the know-how—their motion like above. The
                 five position
-                functions obtained are each a {" "}
-                <NoBreak>
-                  solution
-                  <Math>
-                    $f$
-                  </Math>
-                </NoBreak>
+                functions obtained are each a solution
+                {" "}
+                <Math>
+                  $f$
+                </Math>
                 {" "} to the problem. (But this solution will
                 typically look more chaotic than the curves
                 from Note 1.)
@@ -10797,13 +10703,11 @@ const Rest = () => {
               </b>
               {" "}
               If we seek a function {" "}
-              <NoBreak>
-                <Math>
-                  $f : \rr \ra \rr$
-                </Math>
-                such
-              </NoBreak>
-              {" "} that
+              <Math>
+                $f : \rr \ra \rr$
+              </Math>
+              {" "}
+              such that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -10958,9 +10862,9 @@ const Rest = () => {
               <Math>
                 $1$
               </Math>
-              {" "} is {" "}
+              {" "} is the
+              {" "}
               <NoBreak>
-                the
                 <Math>
                   $x$
                 </Math>
@@ -11011,13 +10915,11 @@ const Rest = () => {
               </NoBreak>
               {" "} of
               the particles over time, with time {" "}
-              <NoBreak>
-                <Math>
-                  $t = 0$
-                </Math>
-                corresponding
-              </NoBreak>
-              {" "} to the original configuration
+              <Math>
+                $t = 0$
+              </Math>
+              {" "}
+              corresponding to the original configuration
               depicted where particle 1 is at {" "}
               <NoBreak>
                 <Math>
@@ -11127,13 +11029,11 @@ const Rest = () => {
               goes wrong if we attempt to make the
               velocity vectors even more tangent to the
               unit circle. For example, if we start the
-              particles so that particle 5 is {" "}
-              <NoBreak>
-                at
-                <Math>
-                  $90^\circ$
-                </Math>
-              </NoBreak>
+              particles so that particle 5 is at
+              {" "}
+              <Math>
+                $90^\circ$
+              </Math>
               {" "} exactly from particle 1,
               particle 9 is at {" "}
               <Math>
@@ -11218,9 +11118,9 @@ const Rest = () => {
               so on, until all particles end up being
               “peeled off” from the circle, in due time;
               if you are so curious, the particle
-              trajectories end up like so (shown only {" "}
+              trajectories end up like so (shown only for
+              {" "}
               <NoBreak>
-                for
                 <Math>
                   $t \geq 0$
                 </Math>

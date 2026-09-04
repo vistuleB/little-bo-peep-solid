@@ -148,13 +148,11 @@ export default function __Bootcamp1__() {
         <Pause />
         <OuterP>
           is a set containing just the numbers {" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-            and
-          </NoBreak>
-          {" "} {" "}
+          <Math>
+            $1$
+          </Math>
+          {" "}
+          and {" "}
           <NoBreak>
             <Math>
               $3$
@@ -218,13 +216,11 @@ export default function __Bootcamp1__() {
           <Math>
             $\&#123;1, 2, 3\&#125;$
           </Math>
-          {" "} would answer “yes”, {" "}
-          <NoBreak>
-            but
-            <Math>
-              $\&#123; 1\&#125;$
-            </Math>
-          </NoBreak>
+          {" "} would answer “yes”, but
+          {" "}
+          <Math>
+            $\&#123; 1\&#125;$
+          </Math>
           {" "} would answer “no”, or
         </OuterP>
         <Pause />
@@ -350,9 +346,9 @@ export default function __Bootcamp1__() {
           <i>
             is
           </i>
-          {" "} an element of the {" "}
+          {" "} an element of the set
+          {" "}
           <NoBreak>
-            set
             <Math>
               $\&#123;1, 2\&#125;$
             </Math>
@@ -626,9 +622,9 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          answers “yes” to the question “do you {" "}
+          answers “yes” to the question “do you contain
+          {" "}
           <NoBreak>
-            contain
             <Math>
               $\&#123;\&#125;$
             </Math>
@@ -766,13 +762,11 @@ const Rest = () => {
           <Math>
             $A$
           </Math>
-          {" "} {" "}
-          <NoBreak>
-            and
-            <Math>
-              $B$
-            </Math>
-          </NoBreak>
+          {" "} and
+          {" "}
+          <Math>
+            $B$
+          </Math>
           {" "} is written
         </OuterP>
         <Pause />
@@ -810,13 +804,11 @@ const Rest = () => {
             $2$
           </Math>
           {" "} is the only element that is both in {" "}
-          <NoBreak>
-            <Math>
-              $\&#123;1, 2\&#125;$
-            </Math>
-            and
-          </NoBreak>
-          {" "} in {" "}
+          <Math>
+            $\&#123;1, 2\&#125;$
+          </Math>
+          {" "}
+          and in {" "}
           <NoBreak>
             <Math>
               $\&#123;2, 5\&#125;$
@@ -1062,9 +1054,9 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "} and less {" "}
+          {" "} and less than
+          {" "}
           <NoBreak>
-            than
             <Math>
               $b$
             </Math>
@@ -1190,13 +1182,11 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} that is, think of {" "}
-          <NoBreak>
-            <Math>
-              $\overline&#123;\rr&#125;$
-            </Math>
-            as
-          </NoBreak>
-          {" "} being the closed interval
+          <Math>
+            $\overline&#123;\rr&#125;$
+          </Math>
+          {" "}
+          as being the closed interval
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1245,13 +1235,11 @@ const Rest = () => {
           </NoBreak>
           {" "} in
           case you're curious. In fact, one has {" "}
-          <NoBreak>
-            <Math>
-              $a + \infty = \infty$
-            </Math>
-            for
-          </NoBreak>
-          {" "} any {" "}
+          <Math>
+            $a + \infty = \infty$
+          </Math>
+          {" "}
+          for any {" "}
           <NoBreak>
             <Math>
               $a \ne -\infty$
