@@ -356,7 +356,7 @@ const Rest = () => {
           (In {" "}
           <InChapterLink
             href="#_26_h.a.i_"
-            class="in-chapter-link "
+            class="in-chapter-link"
           >
             Example 1
           </InChapterLink>
@@ -2323,7 +2323,7 @@ const Rest = () => {
               in the solution to {" "}
               <InChapterLink
                 href="#_28_h.a.i_"
-                class="in-chapter-link "
+                class="in-chapter-link"
               >
                 Exercise 2
               </InChapterLink>

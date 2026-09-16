@@ -442,10 +442,6 @@ pub fn our_pipeline(
           "<a href=0>Note _0_ of Exercise _1_</a>",
         ),
         #(
-          "Note <a href=0>_0_</a> of Exercise <a href=1>_1_</a>",
-          "<a href=0>Note _0_ of Exercise _1_</a>",
-        ),
-        #(
           "Exercise <a href=1>_1_</a> of Chapter <a href=2>_2_</a>",
           "<a href=1>Exercise _1_ of Chapter _2_</a>",
         ),

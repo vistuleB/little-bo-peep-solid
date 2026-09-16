@@ -3348,7 +3348,7 @@ const Rest = () => {
               {" "} (as in {" "}
               <InChapterLink
                 href="#_17_h.a.i_"
-                class="in-chapter-link "
+                class="in-chapter-link"
               >
                 Exercise 14
               </InChapterLink>
