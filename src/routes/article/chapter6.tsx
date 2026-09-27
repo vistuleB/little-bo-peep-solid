@@ -22,7 +22,7 @@ export default function __Chapter6__() {
       nextPage=""
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
-      id="_176_h.a.i_"
+      id="_175_h.a.i_"
       path="/article/chapter6"
     >
       <SectionsBreadcrumbs>
@@ -160,43 +160,20 @@ export default function __Chapter6__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          to indicate that inputs passed to {" "}
+          to indicate that {" "}
           <Math>
             $f$
           </Math>
-          {" "} have semantics
-          of units A while outputs returned by {" "}
-          <Math>
-            $f$
-          </Math>
-          {" "} have semantics
-          of units B. 
-          For example,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          h : [\te&#123;kg&#125;] \ra [^\circ\te&#123;F&#125;]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          indicates that {" "}
-          <Math>
-            $h$
-          </Math>
-          {" "} is a function for which the inputs
-          denote kilograms and for which the outputs denote degrees
-          fahrenheit. We refer to 
-          the ordered pair {" "}
+          {" "} takes inputs in units A and returns
+          outputs in units B. The ordered pair {" "}
           <NoBreak>
             <Math>
               $(\A, \B)$
             </Math>
             ,
           </NoBreak>
+          {" "} written
           {" "}
-          as encoded by the notation {" "}
           <NoBreak>
             “
             <Math>
@@ -204,8 +181,7 @@ export default function __Chapter6__() {
             </Math>
             ”,
           </NoBreak>
-          {" "}
-          as the
+          {" "} is the
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -491,32 +467,16 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          This means that for the sum to make sense, {" "}
+          For the sum to make sense, {" "}
           <Math>
             $f$
           </Math>
-          {" "} and
-          {" "}
+          {" "} and {" "}
           <Math>
             $g$
           </Math>
-          {" "} need to have the same units of input, i.e.,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\A] &amp;\ra [\te&#123;C&#125;] \up&#123;1.35&#125;
-          \end&#123;aligned&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          would be the most general signature 
-          that one could hope for, in order for the sum to not
-          be nonsencial; but this is not stringent enough yet,
-          since we actually need
+          {" "} must have the same
+          input units and the same output units:
         </OuterP>
         <Pause />
         <MathBlock>
@@ -529,23 +489,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          in order not to add apples to oranges, 
-          at the output end, either, i.e., to avoid
-          {" "}
-          <NoBreak>
-            “
-            <Math>
-              $f(x) =$
-            </Math>
-          </NoBreak>
-          {" "} apples”, {" "}
-          <NoBreak>
-            “
-            <Math>
-              $g(x) =$
-            </Math>
-          </NoBreak>
-          {" "} oranges”.
+          We cannot add apples to oranges at the output end, either.
         </OuterP>
         <OuterP class="indent-10">
           By contrast, when multiplying two functions we can
@@ -576,32 +520,22 @@ const Rest = () => {
             The unary function operations.
           </b>
           {" "}
-          We will add two more not-yet-much-discussed
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          unary
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          function operations to our list of officially
-          considered function operations, being {" "}
+          Two unary function operations are {" "}
           <i>
             negation
           </i>
-          {" "}
-          and {" "}
+          {" "} and {" "}
           <i>
             reciprocal
           </i>
-          , 
+          ,
           written {" "}
           <NoBreak>
             “
             <Math>
               $-\f$
             </Math>
-            “
+            ”
           </NoBreak>
           {" "} and {" "}
           <NoBreak>
@@ -611,8 +545,7 @@ const Rest = () => {
             </Math>
             ”,
           </NoBreak>
-          {" "}
-          and defined by formulas here:
+          {" "} and defined here:
         </OuterP>
         <Pause />
         <Image
@@ -676,62 +609,8 @@ const Rest = () => {
         <Pause />
         <OuterP>
           for any units A, B.
-          By the same token,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f' : [\tC] \ra [\tD]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          if and only if
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f : [\tC] \ra [\tC\tD]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          for any units C, D. 
-          (Think of the fact, as in part {" "}
-          <NoBreak>
-            “
-            <Math>
-              $h$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} of
-          {" "}
-          <OutChapterLink
-            href="/article/chapter4#_63_h.a.i_"
-            class="out-chapter-link"
-          >
-            Exercise 6 of Chapter 4
-          </OutChapterLink>
-          , that one needs to
-          multiply the output units of {" "}
-          <Math>
-            $h''$
-          </Math>
-          {" "} by the
-          units of input units of {" "}
-          <Math>
-            $h''$
-          </Math>
-          {" "} in order to recover the output
-          units of {" "}
-          <NoBreak>
-            <Math>
-              $h'$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} etc.)
+          Conversely, multiply the derivative's output units by its
+          input units to recover the original output units.
         </OuterP>
       </Section>
     </>}
@@ -774,39 +653,32 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          Though similarly, the
-          unary function
-          operations from {" "}
+          The unary operations in {" "}
           <InChapterLink
             class="in-chapter-link"
             href="#_153_h.a.i_"
           >
             Table 1.2
           </InChapterLink>
-          {" "} 
-          can be viewed as operators, taking one function
-          as input and producing one function as output:
-        </OuterP>
-        <Pause />
-        <Image
-          src="/build-img/svgo-svg/2YHQ.svg"
-          intrinsicWidth={520}
-          intrinsicHeight={500}
-        />
-        <Pause />
-        <OuterP>
-          The other function operations from Table 1.1
-          are also operators, albeit
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          binary
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          operators since they take two instead of one
-          functions as input. For example, function addition
-          can be depicted as a two-input-tube-flying-saucer:
+          {" "} likewise take
+          one function as input. An operator can also take two functions
+          as inputs: function addition takes {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $g$
+          </Math>
+          {" "} and returns
+          the single function {" "}
+          <NoBreak>
+            <Math>
+              $f + g$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Here it is as a two-input-tube-flying-saucer:
         </OuterP>
         <Pause />
         <Image
@@ -816,47 +688,46 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          In this fashion, the complete list of all
-          operators that we have dealt with so far, similarly
-          presented by order of appearance in this chapter, would be
-          the following:
-        </OuterP>
-        <Pause />
-        <Image
-          src="/build-img/svgo-svg/Mq0V.svg"
-          intrinsicWidth={600}
-          intrinsicHeight={585}
-        />
-        <Pause />
-        <OuterP>
-          (We recycle {" "}
+          The two inputs to this operator are the functions {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
           <NoBreak>
-            ‘
             <Math>
-              $-$
+              $g$
             </Math>
-            ’
+            .
           </NoBreak>
-          {" "} for two
-          different operators—a unary one and a binary one.)
-          (Or as programmers would say, we have
           {" "}
-          <i>
-            overloaded
-          </i>
-          {" "} {" "}
+          The resulting function {" "}
+          <Math>
+            $f + g$
+          </Math>
+          {" "} still takes one number {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} as input,
+          returning {" "}
           <NoBreak>
-            ‘
             <Math>
-              $-$
+              $f(x) + g(x)$
             </Math>
-            ’.)
+            .
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          The following figure summarizes the interaction
-          between the various operators and function signatures,
-          in a similar vein of diagram:
+          Operators that take two inputs are called
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          binary
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          operators, as with the operations in Table 1.1.
+          This figure summarizes how the operators act on signatures:
         </OuterP>
         <Pause />
         <Image
@@ -905,157 +776,15 @@ const Rest = () => {
             .
           </NoBreak>
           {" "}
-          We can apply
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          dimensional analysis
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          to the sum rule, which is to say that we would
-          like to “check the units” on the rule, which is to
-          say that for two functions with signatures for which
-          the left-hand side makes sense, the right-hand side should
-          also make sense and vice-versa,
-          and the right-hand side should also yield the same
-          final signature as the left-hand side.
+          To “check the units”, both sides must impose the same signature
+          constraints and yield the same final signature.
         </OuterP>
         <OuterP class="indent-10">
-          On the left-hand side,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f + g
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          imposes signatures of the form
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
-          \end&#123;aligned&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          as listed in {" "}
-          <InChapterLink
-            href="#_152_h.a.i_"
-            class="in-chapter-link"
-          >
-            Table 1.1
-          </InChapterLink>
-          &#8288;,
-          while the subsequent taking of a derivative doesn't
-          impose any new constraints.
-        </OuterP>
-        <OuterP class="indent-10">
-          On the right-hand side,
-          we start by adopting the agnostic point of view that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\C] &amp;\ra [\D] \up&#123;1.35&#125;
-          \end&#123;aligned&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          for some arbitrary units {" "}
-          <NoBreak>
-            <Math>
-              $\A$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $\B$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $\C$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $\D$
-            </Math>
-            ;
-          </NoBreak>
-          {" "} then,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;aligned&#125;
-          f' : [\A] &amp;\ra [\B/\A] \\
-          g' : [\C] &amp;\ra [\D/\C] \up&#123;1.35&#125;
-          \end&#123;aligned&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          and the fact that we are taking the sum
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f' + g'
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          implies
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \A\,\,\, = \,\,\,\C
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \left[&#123;\B\over\A&#125;\right]\! =\! \left[&#123;\D\over\C&#125;\right]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          by Table 1.1 again, which, together, imply
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;aligned&#125;
-          \,\A &amp;= \C, \\
-          \B &amp;= \D \up&#123;1.35&#125;
-          \end&#123;aligned&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          ...and we recover the same constraints on {" "}
+          On the left, {" "}
+          <Math>
+            $f + g$
+          </Math>
+          {" "} requires {" "}
           <Math>
             $f$
           </Math>
@@ -1063,72 +792,65 @@ const Rest = () => {
           <Math>
             $g$
           </Math>
-          {" "} as
-          exist on the left-hand side!
-        </OuterP>
-        <OuterP class="indent-10">
-          Assuming now that {" "}
+          {" "} to have the same
+          input and output units; differentiation adds no constraints.
+          On the right, if {" "}
           <Math>
-            $f$
+            $f : [\A] \ra [\B]$
           </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $g : [\C] \ra [\D]$
+            </Math>
+            ,
+          </NoBreak>
           {" "}
-          and {" "}
+          adding {" "}
           <Math>
-            $g$
+            $f'$
           </Math>
-          {" "} have the form
+          {" "} and {" "}
+          <Math>
+            $g'$
+          </Math>
+          {" "} requires
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \A = \C, \qquad \B/\A = \D/\C,
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          hence {" "}
+          <Math>
+            $\B = \D$
+          </Math>
+          {" "} as well: the same constraints!
+          With {" "}
+          <NoBreak>
+            <Math>
+              $f, g : [\A] \ra [\B]$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} we have
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \begin&#123;aligned&#125;
-          f : [\A] &amp;\ra [\B] \\
-          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
+          (f + g)' &amp;: [\A] \ra [\tB/\tA] \\
+          f' + g' &amp;: [\A] \ra [\tB/\tA] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          as required by either side of the equation, we have
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;gathered&#125;
-          f + g : [\A] \ra [\B] \\
-          (f + g)' : [\A] \ra [\tB/\tA] \up&#123;1.35&#125; \\
-          f' :  [\A] \ra [\tB/\tA] \up&#123;1.35&#125; \\
-          g' :  [\A] \ra [\tB/\tA] \up&#123;1.35&#125; \\
-          f' + g' :  [\A] \ra [\tB/\tA] \up&#123;1.35&#125;
-          \end&#123;gathered&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          by the rules according to which signatures 
-          respond to the sum and differentiation operators,
-          but in particular
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (f + g)'
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          is found to have the same signature as
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f' + g'
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          which indicates that the sum “checks out” insofar
-          as units are concerned: nothing untoward has been found!
+          The sum rule “checks out” insofar as units are concerned:
+          nothing untoward has been found!
         </OuterP>
         <Pause />
         <Example id="_154_h.a.i_">
@@ -1137,120 +859,32 @@ const Rest = () => {
               Example 2.
             </b>
             {" "}
-            If
+            Let {" "}
+            <Math>
+              $x_1, x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]$
+            </Math>
+            {" "} be differentiable
+            functions giving position in meters as a function of time in seconds.
+            Then
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            x_1, x_2 : \rr \ra \rr
+            \begin&#123;aligned&#125;
+            (x_1 + x_2)' &amp;: [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;] \\
+            x_1' + x_2' &amp;: [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;] \up&#123;1.35&#125;
+            \end&#123;aligned&#125;
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            are two differentiable functions that give 
-            position measured in meters as a function of time 
-            measured in seconds,
-            i.e., two differentiable functions of the form
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            x_1,\rt&#123;0.2&#125; x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            where ‘s’ is seconds and ‘m’ is meters as usual,
-            then
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \begin&#123;gathered&#125;
-            \,x_1 + x_2   : [\te&#123;s&#125;] \ra [\te&#123;m&#125;] \\
-            \,(x_1 + x_2)' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;]\up&#123;1.35&#125; \\
-            \,x_1'      : [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;] \up&#123;1.35&#125; \\
-            \,x_2'      : [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;] \up&#123;1.35&#125; \\
-            \,x_1' + x_2' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;] \up&#123;1.35&#125;
-            \end&#123;gathered&#125;
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            and, in particular,
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            (x_1 + x_2)'
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            has the same signature as
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            x_1' + x_2'
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            as in the general analysis of the sum rule with arbitrary
-            units A and B from above.
-          </OuterP>
-          <Pause />
-          <OuterP>
-            <i>
-              Note on {" "}
-              <InChapterLink
-                href="#_154_h.a.i_"
-                class="in-chapter-link"
-              >
-                Example 2
-              </InChapterLink>
-              &#8288;.
-            </i>
-            {" "}
-            In the case of {" "}
-            <InChapterLink
-              href="#_154_h.a.i_"
-              class="in-chapter-link"
-            >
-              Example 2
-            </InChapterLink>
-            &#8288;, the sum rule,
-            which now reads
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \,(x_1 + x_2)' = x_1' + x_2',
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            can be verbalized by saying that
-          </OuterP>
-          <Pause />
-          <CentralDisplayItalic>
-            the rate of change of a sum of two 
-            coordinates is the sum of their rates of change
-          </CentralDisplayItalic>
-          <Pause />
-          <OuterP>
-            or
+            Here the sum rule says that
           </OuterP>
           <Pause />
           <CentralDisplayItalic>
             the velocity of a sum of two points
             is the sum of their velocities
           </CentralDisplayItalic>
-          <Pause />
-          <OuterP>
-            since in this case the “rate of change” is a velocity.
-          </OuterP>
         </Example>
         <Pause />
         <Example id="_155_h.a.i_">
@@ -1489,26 +1123,17 @@ const Rest = () => {
           whence this equation's moniker.
         </OuterP>
         <OuterP class="indent-10">
-          For a dimensional analysis of this equation, 
-          note that, on the left-hand side,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          fg
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          restricts {" "}
+          Both sides require the same input units for {" "}
           <Math>
             $f$
           </Math>
           {" "} and {" "}
-          <Math>
-            $g$
-          </Math>
-          {" "} to signatures of the form
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            :
+          </NoBreak>
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1521,9 +1146,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          for some units A, B, C, per Table 1.1., which is also 
-          the most general type of signature that is compatible with the right-hand side.
-          This is “so far so good”!
+          So far so good! But their output units differ.
         </OuterP>
         <OuterP class="indent-10">
           However,
@@ -1560,20 +1183,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          as is easy to check, and
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          [\tA] \ra [\tB\tC/\tA^2] \ne [\tA] \ra [\tB\tC/\tA]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          so the rule
-          cannot be correct: different units are produced
-          by either side of the equation, for the same
-          functions {" "}
+          The rule cannot be correct: the two sides produce different
+          units for the same functions {" "}
           <Math>
             $f$
           </Math>
@@ -1599,40 +1210,13 @@ const Rest = () => {
             >
               Example 2
             </InChapterLink>
+            &#8288;, let
             {" "}
-            let
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            x_1,\rt&#123;0.1&#125; x_2 : \rr \ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            have signature
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \,x_1,\rt&#123;0.1&#125; x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            so that {" "}
-            <NoBreak>
-              <Math>
-                $x_1$
-              </Math>
-              ,
-            </NoBreak>
-            {" "} {" "}
             <Math>
-              $x_2$
+              $x_1, x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]$
             </Math>
-            {" "}
-            give position measured in meters as a function of time measured in seconds.
+            {" "} give position in meters
+            as a function of time in seconds.
             Then
           </OuterP>
           <Pause />
@@ -1729,34 +1313,18 @@ const Rest = () => {
               &#8288;.
             </i>
             {" "}
-            It might be observed that
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            x_1'x_2'
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            has the same dimensions (signature) as
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            (x_1x_2)''
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            in {" "}
-            <InChapterLink
-              href="#_157_h.a.i_"
-              class="in-chapter-link"
-            >
-              Example 4
-            </InChapterLink>
-            &#8288;—one might conjecture that
+            {" "}
+            <Math>
+              $x_1'x_2'$
+            </Math>
+            {" "} has the same signature as {" "}
+            <NoBreak>
+              <Math>
+                $(x_1x_2)''$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} but
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1766,37 +1334,8 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            from this observation, and one would be wrong—which is to
-            show that dimensional analysis is quick to debunk an incorrect
-            equation but, in the contravening case, 
-            cannot be trusted as a proof—nonetheless,
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            x_1'x_2'
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            <i>
-              does show up as a term
-            </i>
-            {" "} in the “true”
-            formula for {" "}
-            <NoBreak>
-              <Math>
-                $(x_1x_2)''$
-              </Math>
-              ,
-            </NoBreak>
-            {" "} so, in some sense,
-            dimensional analysis is not {" "}
-            <i>
-              entirely
-            </i>
-            {" "} wrong,
-            even here!
+            is still wrong. Dimensional analysis can debunk an equation;
+            matching dimensions cannot prove it.
           </OuterP>
         </Example>
       </Section>
@@ -1809,7 +1348,7 @@ const Rest = () => {
             The chain rule.
           </b>
           {" "}
-          We would we like a formula for
+          We would like a formula for
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1845,53 +1384,16 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          To begin with,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (f\circ g)'
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          requires {" "}
-          <Math>
-            $f$
-          </Math>
-          {" "} and {" "}
+          Composition requires the output units of {" "}
           <Math>
             $g$
           </Math>
-          {" "} of the form
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;aligned&#125;
-          f &amp;: [\tB] \ra [\tC] \\
-          g &amp;: [\tA] \ra [\tB] \up&#123;1.35&#125;
-          \end&#123;aligned&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          (cf. Table 1.1)
-          for some units A, B, C, 
-          so these are the “initial constraints” on {" "}
+          {" "} to match the input
+          units of {" "}
           <Math>
             $f$
           </Math>
-          {" "} and
-          {" "}
-          <NoBreak>
-            <Math>
-              $g$
-            </Math>
-            .
-          </NoBreak>
-          {" "} The “lego pieces” then
-          have the following signatures:
+          {" "} (Table 1.1). Our “lego pieces” therefore have signatures
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1993,61 +1495,35 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          (a product of functions),
-          which makes sense since on the one hand
+          This product makes sense because
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          (f'\circ g)
+          \begin&#123;aligned&#125;
+          f'\circ g &amp;: [\tA] \ra [\tC/\tB] \\
+          g' &amp;: [\tA] \ra [\tB/\tA] \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          is a well-formed composition of signature
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          [\tA] \ra [\tC/\tB]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          whereas {" "}
-          <Math>
-            $g'$
-          </Math>
-          {" "} has signature
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          [\tA] \ra [\tB/\tA]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          so that the product of the two has signature
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          [\tA] \ra [\tC/\tA]
-          $$
+          and multiplying their outputs gives the desired units {" "}
+          <NoBreak>
+            <Math>
+              $\tC/\tA$
+            </Math>
+            .
+          </NoBreak>
           <ImageRight
             src="/build-img/svgo-svg/zysM.svg"
             offsetX="0em"
-            atLeastAsWide={true}
             intrinsicWidth={500}
             intrinsicHeight={300}
           />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          as desired! It turns out that this is the
-          correct formula, i.e., 
-          we truly do have..
+        </OuterP>
+        <OuterP class="indent-10">
+          It turns out that this is the correct formula:
         </OuterP>
         <Boxed>
           <MathBlock>
@@ -2100,84 +1576,44 @@ const Rest = () => {
           />
           <Pause />
           <OuterP>
-            is running a fundraising race where one function
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            f : \rr \ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            gives the amount of money raised in dollars as a function
-            of the position 
-            meters, whereas 
-            another function
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            g : \rr \ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            gives the rat's position in meters
-            as a function of time elapsed since the
-            start of the race, measured in seconds.
-            I.e.,
+            is running a fundraising race. Let {" "}
+            <Math>
+              $f$
+            </Math>
+            {" "} give the money raised
+            in dollars as a function of position in meters, and {" "}
+            <Math>
+              $g$
+            </Math>
+            {" "} give
+            the rat's position as a function of elapsed time in seconds:
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             \begin&#123;gathered&#125;
             f : [\te&#123;m&#125;] \ra [\te&#123;\$&#125;] \\
-            g : [\te&#123;s&#125;] \ra [\te&#123;m&#125;] \up&#123;1.35&#125; 
+            g : [\te&#123;s&#125;] \ra [\te&#123;m&#125;] \up&#123;1.35&#125;
             \end&#123;gathered&#125;
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            and
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            f\circ g : [\te&#123;s&#125;] \ra [\te&#123;\$&#125;]
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            gives the money raised, in dollars, as a
-            function of time elapsed, in seconds.
-            Perforce,
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            (f\circ g)': [\te&#123;s&#125;] \ra [\te&#123;\$&#125;/\te&#123;s&#125;]
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            gives the fundraising rate, in dollars per second,
-            as a function of time, in seconds.
-          </OuterP>
-          <OuterP class="indent-10">
-            Also note that
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            f' : [\te&#123;m&#125;] \ra [\te&#123;\$&#125;/\te&#123;m&#125;]
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            gives the
-            fundraising rate in dollars per meter as a function
-            of the position, in meters.
+            Then {" "}
+            <Math>
+              $f\circ g$
+            </Math>
+            {" "} gives money raised as a function of time, and
+            {" "}
+            <Math>
+              $(f\circ g)'$
+            </Math>
+            {" "} gives the fundraising rate in dollars per second.
+            Meanwhile, {" "}
+            <Math>
+              $f'$
+            </Math>
+            {" "} gives the dollars-per-meter rate at each position.
           </OuterP>
           <OuterP class="indent-10">
             Then, at {" "}
@@ -2239,49 +1675,25 @@ const Rest = () => {
           />
           <Pause />
           <OuterP>
-            Also since
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            f'(g(t_0)) = (f'\circ g)(t_0)
-            $$
-            <ImageRight
-              src="/build-img/svgo-svg/g4I6.svg"
-              offsetX="-1em"
-              atLeastAsWide={true}
-              intrinsicWidth={250}
-              intrinsicHeight={100}
-            />
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            we can write the same equation as
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            (f \circ g)'(t_0) = (f'\circ g)(t_0)g'(t_0)
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            or, abstracting the input {" "}
+            Since {" "}
+            <NoBreak>
+              <Math>
+                $f'(g(t_0)) = (f'\circ g)(t_0)$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} this is the chain rule
+            {" "}
             <Math>
-              $t_0$
+              $(f \circ g)' = (f'\circ g)g'$
             </Math>
-            {" "} away, as
-          </OuterP>
-          <Boxed>
-            <MathBlock>
-              $$
-              (f \circ g)' = (f'\circ g)g'
-              $$
-            </MathBlock>
-          </Boxed>
-          <OuterP>
-            which is the chain rule as originally stated
-            above.
+            {" "} evaluated at {" "}
+            <NoBreak>
+              <Math>
+                $t_0$
+              </Math>
+              .
+            </NoBreak>
           </OuterP>
           <Pause />
           <OuterP>
@@ -2418,57 +1830,36 @@ const Rest = () => {
             >
               the chain rule
             </InChapterLink>
-            &#8288;,
-            since {" "}
+            &#8288;, since {" "}
             <NoBreak>
               <Math>
                 $\cos' = -\sin$
               </Math>
-              ,
+              .
             </NoBreak>
-            {" "} or
+            {" "}
+            Cancelling the minus signs gives
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            (\cos \circ \cos)'(x) = ((-\sin) \circ \cos)(x)\cdot(-\sin)(x)
+            (\cos \circ \cos)' = (\sin \circ \cos)\sin,
             $$
           </MathBlock>
           <Pause />
           <OuterP>
-            evaluating at an input {" "}
+            or, evaluated at {" "}
             <NoBreak>
               <Math>
                 $x$
               </Math>
               ,
             </NoBreak>
-            {" "} 
-            or
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x)
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            when evaluating the {" "}
-            <NoBreak>
-              ‘
-              <Math>
-                $\circ$
-              </Math>
-              ’
-            </NoBreak>
-            {" "} and cancelling the minus signs,
-            or
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            (\cos \circ \cos)' = (\sin \circ \cos)\sin
+            (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x).
             $$
             <ImageRight
               src="/build-img/svgo-svg/e_hV.svg"
@@ -2477,10 +1868,6 @@ const Rest = () => {
               intrinsicHeight={200}
             />
           </MathBlock>
-          <Pause />
-          <OuterP>
-            cancelling signs from the outset.
-          </OuterP>
         </Example>
         <Pause />
         <Example id="_159_h.a.i_">
@@ -2568,60 +1955,47 @@ const Rest = () => {
           />
           <Pause />
           <OuterP>
-            Specifically, since
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            -1 \leq \cos(t) \leq 1
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            the angle of the wiper remains stuck between 
-            {" "}
-            <Math>
-              $-1\Rad \cong -57.29^\circ$
-            </Math>
-            {" "}
-            at one end at
-            {" "}
-            <Math>
-              $+1\Rad \cong 57.29^\circ$
-            </Math>
-            {" "}
-            at the
-            other end, with the values of {" "}
-            <Math>
-              $\cos(\cos(x))$
-            </Math>
-            {" "}
-            remaining stuck between
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            \cos(\pm 1) = \cos(\pm 57.29\ldots^\circ) \approx 0.54
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            and {" "}
+            Since {" "}
             <NoBreak>
               <Math>
-                $\cos(0) = 1$
+                $-1 \leq \cos(t) \leq 1$
               </Math>
               ,
             </NoBreak>
-            {" "} producing the compressed
-            sinusoid-like wave seen in {" "}
-            <InChapterLink
-              href="#_159_h.a.i_"
-              class="in-chapter-link"
-            >
-              Example 7
-            </InChapterLink>
-            &#8288;.
+            {" "} the wiper's angle stays between
+            {" "}
+            <Math>
+              $-1\Rad$
+            </Math>
+            {" "} and {" "}
+            <Math>
+              $+1\Rad$
+            </Math>
+            {" "} (about {" "}
+            <NoBreak>
+              <Math>
+                $\pm57.29^\circ$
+              </Math>
+              ),
+            </NoBreak>
+            {" "} so its {" "}
+            <NoBreak>
+              <Math>
+                $x$
+              </Math>
+              -coordinate
+            </NoBreak>
+            {" "} ranges from
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \cos(\pm1) \approx 0.54 \quad\te&#123;to&#125;\quad \cos(0) = 1,
+            $$
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            producing the compressed sinusoid-like wave above.
           </OuterP>
         </Example>
       </Section>
@@ -2685,24 +2059,14 @@ const Rest = () => {
           Whoo-hoo!
         </OuterP>
         <OuterP class="indent-10">
-          Relatedly to this idea of the original “vanilla”
-          {" "}
-          <NoBreak>
-            <Math>
-              $xy$
-            </Math>
-            -plane
-          </NoBreak>
-          {" "} having dimensionless axes, you may
-          have seen people label axes this way, writing
-          “time/s” instead of “time {" "}
+          Relatedly, you may have seen axes labelled “time/s” instead
+          of “time {" "}
           <NoBreak>
             <Math>
               $[\te&#123;s&#125;]$
             </Math>
-            ”,
+            ”:
           </NoBreak>
-          {" "} e.g.:
         </OuterP>
         <Pause />
         <Image
@@ -2713,99 +2077,34 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          The idea behind this notation is that the plane
-          itself is a dimensionless object, so by doing
+          Dividing time by the unit “s” takes out the units, leaving a pure
+          number that fits in the dimensionless plane. For example, the
+          coordinate {" "}
+          <Math>
+            $3$
+          </Math>
+          {" "} means
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          &#123;\te&#123;time&#125;\over\te&#123;s&#125;&#125;
+          3 = &#123;\te&#123;time&#125;\over\te&#123;s&#125;&#125; \quad\Longrightarrow\quad \te&#123;time&#125; = 3\te&#123;s&#125;.
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          where “time” is a time measurement in seconds,
-          we have “taken the units out of the measurement”
-          and obtained a “pure number” that “fits” inside
-          the plane; (!); for example, this {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $3$
-            </Math>
-            ’
-          </NoBreak>
-          {" "} here...
-        </OuterP>
-        <Pause />
-        <Image
-          src="/build-img/svgo-svg/_SJ0.svg"
-          intrinsicWidth={600}
-          intrinsicHeight={465}
-        />
-        <Pause />
-        <OuterP>
-          ...is really a {" "}
-          <Math>
-            $3$
-          </Math>
-          {" "} without any units—the “pure” {" "}
+          The coordinate is the pure number {" "}
           <NoBreak>
             <Math>
               $3$
             </Math>
-            —because
+            ;
           </NoBreak>
-          {" "}
-          the entire plane is dimensionless, but
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          3 = &#123;\te&#123;time&#125;\over \te&#123;s&#125;&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          with no (i.e., dimensionless) units
-          on the left implies
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          3\te&#123;s&#125; = \te&#123;time&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          or “time equals {" "}
+          {" "} the time is {" "}
           <Math>
             $3$
           </Math>
-          {" "} seconds”, i.e., that vertical
-          slice of the plane corresponds to the moment when
-          the “time” variable—which {" "}
-          <i>
-            does
-          </i>
-          {" "} have units—equals
-          {" "}
-          <Math>
-            $3$
-          </Math>
-          {" "} {" "}
-          <i>
-            seconds
-          </i>
-          , not just {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $3$
-            </Math>
-            ’,
-          </NoBreak>
-          {" "} the pure number!!
+          {" "} seconds!
         </OuterP>
       </Section>
     </>}
@@ -2815,7 +2114,7 @@ const Rest = () => {
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_175_h.a.i_"
+        id="_174_h.a.i_"
       >
         <Exercise number={1}>
           <ExerciseStatement id="_160_h.a.i_">
@@ -2858,74 +2157,19 @@ const Rest = () => {
               is necessary and sufficient.
             </OuterP>
             <OuterP class="indent-10">
-              Formally, the general composition
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f \circ g
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              requires signatures of the form
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              f : [\B] \ra [\C] \\
-              \up&#123;1.6&#125;g : [\A] \ra [\B]
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              for some units A, B, C, as per {" "}
-              <InChapterLink
-                href="#_152_h.a.i_"
-                class="in-chapter-link"
-              >
-                Table 1.1
-              </InChapterLink>
-              &#8288;.
-              If {" "}
+              The output of {" "}
               <Math>
-                $g = f$
+                $f$
               </Math>
-              {" "}
-              this implies {" "}
-              <Math>
-                $\A = \B$
-              </Math>
-              {" "} because both are the inputs
-              of {" "}
+              {" "} is fed back into {" "}
               <NoBreak>
                 <Math>
-                  $f = g$
+                  $f$
                 </Math>
                 ,
               </NoBreak>
-              {" "} as well as {" "}
-              <Math>
-                $\B = \C$
-              </Math>
-              {" "} because both are
-              the outputs of {" "}
-              <NoBreak>
-                <Math>
-                  $f = g$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} collapsing A, B, C to a
-              single unit {" "}
-              <NoBreak>
-                <Math>
-                  $\A = \B = \C = \A$
-                </Math>
-                .
-              </NoBreak>
+              {" "} so its output
+              units must match its input units.
             </OuterP>
           </Solution>
         </Exercise>
@@ -3714,10 +2958,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               are at least necessary on either side of the equation.
-              Then, evaluating further, one finds
-            </OuterP>
-            <OuterP class="indent-10">
-              But then one finds, in order, that
+              Evaluating in order:
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3735,24 +2976,14 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              so these signatures are also sufficient to
-              evaluate either side of the equation to the end, and,
-              moreover,
-              {" "}
-              <Math>
-                $(fg)'$
-              </Math>
-              {" "}
-              and
-              {" "}
-              <Math>
-                $f'g + g'f$
-              </Math>
-              {" "}
-              are found to have the same signature, concluding the 
-              dimensional analysis. (= Both sides impose the same
-              signature constraints, and evaluate to the same final
-              signature.)
+              Thus both sides impose the same signature constraints and
+              yield {" "}
+              <NoBreak>
+                <Math>
+                  $[\A] \ra [\tB\tC/\tA]$
+                </Math>
+                .
+              </NoBreak>
             </OuterP>
           </Solution>
         </Exercise>
@@ -3798,170 +3029,55 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The expression
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;1\over f&#125;\right)'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              does not on its own impose any restrictions on
-              the signature of {" "}
+              For a generic signature {" "}
               <NoBreak>
                 <Math>
-                  $f$
+                  $f : [\tA] \ra [\tB]$
                 </Math>
                 ,
               </NoBreak>
-              {" "} so we can consider
+              {" "} we have
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              f : [\tA] \ra [\tB]
+              \left(&#123;1\over f&#125;\right)' : [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right].
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              of generic signature. Then
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1\over f&#125; : [\tA] \ra \left[&#123;1\over\tB&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as in the second half of {" "}
-              <InChapterLink
-                href="#_153_h.a.i_"
-                class="in-chapter-link"
-              >
-                Table 1.2
-              </InChapterLink>
-              &#8288;,
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;1\over f&#125;\right)' : [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              per the usual effect of differentiation on units.
-            </OuterP>
-            <OuterP class="indent-10">
-              In order to achieve the signature
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              using
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\tA] \ra [\tB]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f' : [\tA] \ra \left[&#123;\tB\over \tA&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              as building blocks we can start with {" "}
+              Since {" "}
               <Math>
                 $f'$
               </Math>
-              {" "} and divide
-              by {" "}
+              {" "} has output units {" "}
               <NoBreak>
                 <Math>
-                  $f^2$
+                  $\tB/\tA$
                 </Math>
-                .
+                ,
               </NoBreak>
-              {" "} 
-              (In fact, this is the only combination that works, modulo
-              multiplication by a dimensionless constant.)
-              Specifically, since
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\tA] \ra [\tB]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              we have
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f^2 : [\tA] \ra [\tB^2]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1\over f^2&#125; : [\tA] \ra \left[&#123;1\over\tB^2&#125;\right]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              multiplying {" "}
+              {" "} dividing it by {" "}
               <Math>
-                $f'$
+                $f^2$
               </Math>
-              {" "} by {" "}
-              <Math>
-                $&#123;1\over f^2&#125;$
-              </Math>
-              {" "} gives us a function
-              of signature
+              {" "}
+              gives the desired signature:
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              [\tA] \ra \left[&#123;\tB\over \,\tA^&#123;\vphantom&#123;2&#125;&#125;&#125;\cdot&#123;1\over\tB^2&#125;\right]\,\, = \,\,[\tA] \ra \left[&#123;1\over\tA\tB&#125;\right]
+              &#123;f'\over f^2&#125; : [\tA] \ra \left[&#123;\tB/\tA\over\tB^2&#125;\right]
+              = [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right].
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              as desired, which makes
-            </OuterP>
-            <Boxed>
-              <MathBlock>
-                $$
-                &#123;f'\over f^2&#125;
-                $$
-              </MathBlock>
-            </Boxed>
-            <OuterP>
-              a plausible conjecture.
+              This makes {" "}
+              <Math>
+                $f'/f^2$
+              </Math>
+              {" "} a plausible conjecture.
             </OuterP>
             <OuterP class="indent-10">
               However, we know from Exercise X that
@@ -4023,22 +3139,8 @@ const Rest = () => {
               concern.)
             </OuterP>
             <OuterP class="indent-10">
-              Since our conjecture is at least “consistently
-              wrong”—by which we mean that our formula {" "}
-              <i>
-                always
-              </i>
-              {" "} has the wrong sign—a plausible fix
-              is just to negate the expression (and indeed
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              negation
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              is one of the things we can do to a function
-              without changing its signature, per {" "}
+              Our conjecture is “consistently wrong”—it has the wrong sign.
+              Negation leaves its signature unchanged (&#8288;
               <InChapterLink
                 href="#_153_h.a.i_"
                 class="in-chapter-link"
@@ -4046,7 +3148,6 @@ const Rest = () => {
                 Table 1.2
               </InChapterLink>
               &#8288;), giving
-              us
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -4064,6 +3165,31 @@ const Rest = () => {
                 .
               </NoBreak>
             </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}
+                The formula is correct. As it takes its place in the
+                mathematical pantheon, what name should it have?
+                Just as we have the {" "}
+                <i>
+                  sum rule
+                </i>
+                {" "} and {" "}
+                <i>
+                  product rule
+                </i>
+                , this
+                is the {" "}
+                <i>
+                  reciprocal rule
+                </i>
+                . (!)
+              </OuterP>
+            </SolutionNote>
           </Solution>
         </Exercise>
         <Exercise number={10}>
@@ -4071,91 +3197,6 @@ const Rest = () => {
             <OuterP>
               <b>
                 Exercise 10.
-              </b>
-              {" "}
-              The formula given at the end of the solution
-              to {" "}
-              <InChapterLink
-                href="#_168_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 9
-              </InChapterLink>
-              {" "} happens to be the true,
-              “correct” formula for {" "}
-              <NoBreak>
-                <Math>
-                  $(&#123;1\over f&#125;)'$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} for a differentiable
-              function {" "}
-              <NoBreak>
-                <Math>
-                  $f$
-                </Math>
-                .
-              </NoBreak>
-              {" "} What {" "}
-              <i>
-                name
-              </i>
-              {" "} do
-              we expect this formula to have, as it takes its place
-              in the mathematical pantheon?
-            </OuterP>
-          </ExerciseStatement>
-          <Solution>
-            <OuterP>
-              Just as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f + g)' = f' + g'
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)' = f'g + fg'
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              are known as the {" "}
-              <i>
-                sum rule
-              </i>
-              {" "} and {" "}
-              <i>
-                product rule
-              </i>
-              ,
-              so is
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;1\over f&#125;\right)' = -&#123;f'\over f^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              also a “rule”, the {" "}
-              <i>
-                reciprocal rule
-              </i>
-              . (!)
-            </OuterP>
-          </Solution>
-        </Exercise>
-        <Exercise number={11}>
-          <ExerciseStatement id="_170_h.a.i_">
-            <OuterP>
-              <b>
-                Exercise 11.
               </b>
               {" "}
               If the expression
@@ -4248,11 +3289,11 @@ const Rest = () => {
             />
           </Solution>
         </Exercise>
-        <Exercise number={12}>
-          <ExerciseStatement id="_171_h.a.i_">
+        <Exercise number={11}>
+          <ExerciseStatement id="_170_h.a.i_">
             <OuterP>
               <b>
-                Exercise 12.
+                Exercise 11.
               </b>
               {" "}
               If {" "}
@@ -4287,11 +3328,11 @@ const Rest = () => {
             </MathBlock>
           </Solution>
         </Exercise>
-        <Exercise number={13}>
-          <ExerciseStatement id="_172_h.a.i_">
+        <Exercise number={12}>
+          <ExerciseStatement id="_171_h.a.i_">
             <OuterP>
               <b>
-                Exercise 13.
+                Exercise 12.
               </b>
               {" "}
               If {" "}
@@ -4372,20 +3413,20 @@ const Rest = () => {
               which has dimensions of time by
               {" "}
               <InChapterLink
-                href="#_171_h.a.i_"
+                href="#_170_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 12
+                Exercise 11
               </InChapterLink>
               &#8288;.
             </OuterP>
           </Solution>
         </Exercise>
-        <Exercise number={14}>
-          <ExerciseStatement id="_173_h.a.i_">
+        <Exercise number={13}>
+          <ExerciseStatement id="_172_h.a.i_">
             <OuterP>
               <b>
-                Exercise 14.
+                Exercise 13.
               </b>
               {" "}
               Let
@@ -4475,91 +3516,6 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              (In another view...
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/wL23.svg"
-              intrinsicWidth={470}
-              intrinsicHeight={180}
-            />
-            <Pause />
-            <OuterP>
-              <NoBreak>
-                ...
-                <Math>
-                  $f^&#123;-1&#125;$
-                </Math>
-              </NoBreak>
-              {" "} is the box that undoes the work
-              of {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} and vice-versa, in another view...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;gathered&#125;
-              (f^&#123;-1&#125; \circ f\rt&#123;0.05&#125;) = (x \ra x)\\
-              \up&#123;1.6&#125;(f \circ f^&#123;-1&#125;) = (x \ra x)
-              \end&#123;gathered&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <NoBreak>
-                ...
-                <Math>
-                  $f^&#123;-1&#125;$
-                </Math>
-              </NoBreak>
-              {" "} is the function that composes with
-              {" "}
-              <Math>
-                $f$
-              </Math>
-              {" "} 
-              to produce the {" "}
-              <i>
-                identity function
-              </i>
-              {" "} {" "}
-              <Math>
-                $x \ra x$
-              </Math>
-              {" "} and vice-versa,
-              and in another view...
-            </OuterP>
-            <Pause />
-            <Image
-              src="/build-img/svgo-svg/wzGl.svg"
-              intrinsicWidth={440}
-              intrinsicHeight={350}
-            />
-            <Pause />
-            <OuterP>
-              <NoBreak>
-                ...
-                <Math>
-                  $f^&#123;-1&#125;$
-                </Math>
-              </NoBreak>
-              {" "} is the function whose graph is the
-              mirror image of {" "}
-              <Math>
-                $y = f(x)$
-              </Math>
-              {" "} about the line {" "}
-              <NoBreak>
-                <Math>
-                  $x = y$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
               Use dimensional analysis to conjecture a
               formula for the derivative of the inverse,
               i.e., a formula of the form
@@ -4617,34 +3573,11 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              and we seek to build a function of signature {" "}
+              Taking the reciprocal of {" "}
               <Math>
-                $[\B] \ra [\A/\B]$
+                $f'$
               </Math>
-              {" "}
-              from these...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f : [\A] \ra [\B]\\
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f' : [\A] \ra \left[&#123;\B \over \A&#125;\right]\\
-              $$
-            </MathBlock>
-            <Pause />
-            <MathBlock>
-              $$
-              f^&#123;-1&#125; : [\B] \ra [\A]
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              ...ingredients; note that
+              {" "} gives
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4654,9 +3587,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              gives us
-              the output units A/B at least, but the input 
-              units are wrong; (should be “B”);
+              with the right output units, but the wrong input units (A instead of B);
               however we can “slot in” the correct input units 
               to {" "}
               <Math>
@@ -4730,17 +3661,7 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                The formula can be stated also in terms of what 
-                it implies for a specific input (maybe we should put {" "}
-                <NoBreak>
-                  ‘
-                  <Math>
-                    $y$
-                  </Math>
-                  ’
-                </NoBreak>
-                {" "}
-                here for the input, but anyway):
+                At a specific input:
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -4752,11 +3673,11 @@ const Rest = () => {
             </SolutionNote>
           </Solution>
         </Exercise>
-        <Exercise number={15}>
-          <ExerciseStatement id="_174_h.a.i_">
+        <Exercise number={14}>
+          <ExerciseStatement id="_173_h.a.i_">
             <OuterP>
               <b>
-                Exercise 15.
+                Exercise 14.
               </b>
               {" "}
               Let {" "}
@@ -4769,10 +3690,10 @@ const Rest = () => {
               </Math>
               {" "} (cf. {" "}
               <InChapterLink
-                href="#_173_h.a.i_"
+                href="#_172_h.a.i_"
                 class="in-chapter-link"
               >
-                Exercise 14
+                Exercise 13
               </InChapterLink>
               &#8288;).
               What is the most general signature of {" "}

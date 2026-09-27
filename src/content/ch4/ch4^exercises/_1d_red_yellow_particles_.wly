@@ -54,8 +54,7 @@
             |> br
             and whose position is $1$ at time $t = 0$__
 
-            is an alternate characterization of the blue particle
-            that does not invoke the yellow particle, and
+            characterizes the blue particle without invoking the yellow particle, and
             likewise
 
             __a particle whose velocity is minus its
@@ -77,8 +76,7 @@
             |> Image
                 src=images/svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg
 
-            ...the detailed reasoning, as also indicated on the
-            figure, being that a mirror symmetry through
+            ...because a mirror symmetry through
             the $y$ axis flips the sign of the slope without
             affecting the value of $y$, so that an equality of
             the form “$y = \te{slope}$” becomes “$y = -\te{slope}$”,

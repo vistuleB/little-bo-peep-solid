@@ -29,7 +29,7 @@
         Here is the long division, pursued up to
         the “$10^{-3}$” column of the quotient,
         including one last remainder computation
-        that occurs pursuant to adding the digit in
+        after adding the digit in
         the “$10^{-3}$” column of the quotient (this
         is what the problem statement refers to as
         the “last remainder”):

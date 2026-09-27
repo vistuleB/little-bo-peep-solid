@@ -24,14 +24,11 @@
         The derivative crests each time the
         slope of the original function reaches a
         steepest point before de-sloping again, 
-        giving us—at the macro level from what
-        our eyes can see, barring mini-variations
-        of the slope that would give mini-bumps
-        atop each bump—six “up bumps” for
+        giving us—barring unseen mini-variations in slope that produce mini-bumps—six “up bumps” for
         the derivative and,
         reasoning symmetrically, five “down bumps”:
 
         |> Image
             src=images/from_yaml__many_bumps_soln1.svg
 
-        (So the answer is: $6$ and $5$, respectively.)
+

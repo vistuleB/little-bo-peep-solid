@@ -62,9 +62,7 @@
 
         |> SolutionNote
 
-            Since the two solutions compute
-            answers to the same question,
-            one can in particular deduce that
+            Since both solutions answer the same question, we deduce that
 
             |> Boxed
                 $$

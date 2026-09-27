@@ -34,8 +34,7 @@
         x \ra f(x) + g(x)
         $$
 
-        that maps a number to the sum of the individual
-        values of the functions. So—for example—
+        that maps an input to the sum of the functions’ outputs. So—for example—
 
         $$
         \begin{align*}
@@ -57,14 +56,13 @@
         \end{align*}
         $$
 
-        which implies that, indeed,
+        so
 
         $$
         (x \ra x + 1) \,+\, (u \ra 2u + 1)
         $$
 
-        is the function that maps each real number $t$ to $3t + 2$,
-        i.e., is equal to the function $t \ra 3t + 2$. (!!)
+        is the function $t \ra 3t + 2$. (!!)
 
         |> Pause
 
@@ -82,8 +80,7 @@
         $$
 
         Here we have two different $x$'s:
-        the $x$ that is used as a placeholder to describe 
-        what the first function does, and the $x$ that denotes
+        the placeholder $x$ describing the first function, and the $x$ that denotes
         the “outermost” input to the sum of the two functions. (These are
         really separate, and the “placeholder” $x$ could be
         any symbol.)

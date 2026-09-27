@@ -39,8 +39,7 @@
     $$
 
     is the slope of the graph $y = f(x)$ at
-    $x = a$. And—surprise!—each pair of graphs
-    above is a pair of the form $y = f(x)$ [$=$
+    $x = a$. And—surprise!—each pair above has the form $y = f(x)$ [$=$
     “before”], $y = f'(x)$ [$=$ “after”].
     (Meaning, the “after” graph records the slope
     of the “before” graph.) 
@@ -51,16 +50,13 @@
 
     Note that $f'\!$ (read “$f$ prime”) remains
     undefined where $y = f(x)$ has a sharp “corner”
-    and no well-defined slope. By opposition, if
-    there is a well-defined tangent line to
-    $y = f(x)$ at $x = a$ the slope of this
-    tangent line supplies the value of $f'(a)$:
+    and no well-defined slope. By opposition, if there is a well-defined tangent line to
+    $y = f(x)$ at $x = a$ its slope gives $f'(a)$:
 
     |> Image
         src=images/svg_ch4_ch_explanation2.svg
 
-    In fact, we can
-    succinctly describe the derivative by...
+    We can summarize this by...
 
     $$
     f'(a) = \te{[slope of tangent line to $y = f(x)$ at $x = a$]}
@@ -69,16 +65,12 @@
     ...with the understanding that $f'(a)$ is
     undefined if a tangent line does not exist
     or if the tangent is vertical.
-    Also note that
-    the endpoint of a curve does not count
-    as having a tangent, and leaves a missing
-    value for the derivative:
+    An endpoint does not count as having a tangent, leaving the derivative undefined:
 
     |> Image
         src=images/svg_ch4_ch_one_sided_tangent.svg
 
-    In other words, what one might describe as
-    “half-tangents” do not actually count as tangents!
+    In other words, “half-tangents” do not count as tangents!
 
 |> Section
     *Vocabulary.*
@@ -99,14 +91,14 @@
 
 |> Section
     *Sketching a Derivative.*
-    Say that you would like to sketch the derivative
+    Say you want to sketch the derivative
     of the “before” function from the last “before”/“after” pair above:
     !! (the one with the closed endpoints):
 
     |> Image
         src=images/derivative_sketching_method_1_step_0.svg
 
-    One method is simply to eyeball the slope at
+    One method is to eyeball the slope at
     a few points along the curve, plot these
     values and interpolate:
 
@@ -126,10 +118,8 @@
 
     ...voilà!
 
-    An alternate approach is to start by
-    determining intervals on which the derivative
-    is positive and negative, and then to
-    interpolate via the largest (respectively,
+    Alternatively, determine intervals on which the derivative
+    is positive and negative, then interpolate via the largest (respectively,
     smallest) value of the derivative in each
     interval:
 
@@ -148,7 +138,7 @@
 |> Section
 
     *Derivative of a constant function.*
-    A constant function is a function of the form
+    A constant function has the form
     $$
     x \ra B
     $$
@@ -177,7 +167,7 @@
 
     __zero function__
 
-    we can summarize the situation by saying that
+    we can say
 
     __~ the derivative of a constant function
     is the zero function ~__
@@ -191,7 +181,7 @@
 |> Section
 
     *Derivative of an affine function.*
-    An affine function is a function of the form
+    An affine function has the form
     $$
     x \ra Ax + B
     $$
@@ -206,13 +196,9 @@
     |> ImageLeft
         src=images/svg_ch4_ch_affine_derivative_cloud.svg
 
-    because the slope of a line of slope $A$ is
-    $A$, no matter where you place yourself on the
-    line. In particular, $B$ plays no role in the
-    derivative! ($\rt{0.2}$Just like in the case of a
-    constant function, the derivative leaves no
-    trace of $B$'s value—and for the same reason
-    that $B$ effects a vertical translation, which
+    because the slope is $A$ everywhere on the line. In particular, $B$ plays no role in the
+    derivative! ($\rt{0.2}$As with a constant function, the derivative leaves no
+    trace of $B$'s value—because $B$ effects a vertical translation, which
     does not change the slope of anything.)
 
     In words:
@@ -231,7 +217,6 @@
 
     |> Example
 
-        One has
         $$
         (x \ra 3x + 1)' = (x \ra 3)
         $$
@@ -243,7 +228,6 @@
 
     |> Example
 
-        One has
         $$
         (x \ra 12 - x)' = (x \ra -1)
         $$
@@ -271,8 +255,7 @@
     \te{$x$ axis units for $f'$}\, = \rt{0.02}\,\te{$x$ axis units for $f$}
     $$
 
-    because an input for $\f'$ is, originally,
-    an input for $\f$.
+    because an input for $\f'$ is an input for $\f$.
 
     For example, if the “before” graph has units
     of...
@@ -317,8 +300,7 @@
 
     ...and so on.
 
-    Units might additionally prompt us to refer
-    to $f'$ as the
+    Units might also prompt us to call $f'$ the
 
     __rate of change__
 
@@ -326,10 +308,7 @@
 
     __instantaneous__
 
-    rate of change of $f$. The latter bit of
-    emphasis has to do with the fact that, in a
-    general graph, the slope of the tangent
-    keeps changing from point to point.
+    rate of change of $f$. The latter emphasizes that the tangent’s slope can change from point to point.
 
 |> Section
 
@@ -351,8 +330,7 @@
     \end{align*}
     $$
 
-    these being, namely, the _third_, _fourth_
-    and _fifth_ derivatives of $f$. One can also
+    the _third_, _fourth_ and _fifth_ derivatives of $f$. One can also
     write
 
     $$
@@ -372,13 +350,9 @@
     f'''''''
     $$
 
-    but with the advantage that you don't have to
-    squint and start re-counting the apostrophes
-    several times over.
+    without having to squint and re-count the apostrophes several times.
 
     |> Example
-
-        We have
 
         $$
         (x \ra 3x + 1)'' = (x \ra 0)
@@ -388,19 +362,19 @@
             src=images/svg_ch4_3x_plus_one_and_second_cloud.svg
             offset-y=0.1em
 
-    because, firstly,
+    because
 
     $$
     (x \ra 3x + 1)' = (x \ra 3)
     $$
 
-    and, secondly,
+    and
 
     $$
     (x \ra 3)' = (x \ra 0)
     $$
 
-    so that, from start to finish,
+    so, from start to finish,
 
     $$
     (x \ra 3x + 1)'' =  ((x \ra 3x + 1)')' = (x \ra 3)' = (x \ra 0)
@@ -432,8 +406,7 @@
 |> Section
 
     *Geometric interpretation of the second derivative.*
-    The sign of the second derivative—whether
-    it is positive or negative—indicates whether
+    The sign of the second derivative indicates whether
     a graph is “bending upwards” or “bending
     downwards”. Upward-bending graphs have a positive
     second derivative, whereas downward-bending graphs
@@ -477,10 +450,7 @@
 
     then the slope is decreasing at [the absolute
     value of] that rate, which could result in
-    a sharp bend downwards in the graph (unless
-    you are near vertical already, once again,
-    because verticality can disguise the presence
-    of a significant change in slope, once again).
+    a sharp bend downwards in the graph (unless you are near vertical already, once again).
 
 
 |> Section
@@ -561,8 +531,7 @@
 
     (!) as a function of time.
 
-    Note that the units on the $y$ axis of the
-    second derivative are given by
+    The second derivative’s $y$-axis units are
 
     $$
     {\te{$y$ axis units for $f'$} \over \te{$x$ axis units for $f'$}} =
@@ -586,16 +555,13 @@
     = {\te{m} \over \te{s}\!{\,}^2}
     $$
 
-    which produces the above-mentioned units of
-    the second derivative. Also note that a ratio of
-    the form
+    giving the second derivative’s units. A ratio of the form
 
     $$
     {\te{difference in velocity} \over \te{amount of time}}
     $$
 
-    is, indeed, an acceleration, in that acceleration
-    is defined as “the increase in velocity per unit
+    is an acceleration, defined as “the increase in velocity per unit
     time”.
 
     To summarize:
@@ -629,8 +595,7 @@
 
     |> Example
 
-        Over a period of $10$s, an object that is
-        accelerating at a constant rate of
+        Over $10$s, an object accelerating at a constant rate of
 
         $$
         2{\te{m}/\te{s}\!{\,}^2}
@@ -659,8 +624,7 @@
 |> Section
 
     *The jerk.*
-    The rate of change of acceleration has a
-    name as well, being known as the
+    The rate of change of acceleration is called the
 
     __jerk__
 
@@ -700,10 +664,7 @@
     in a train or subway car, etc—the
     “constant” qualifier
     implies a buttery-smooth, “non-jerky” experience!
-    (And therefore, vice-versa, some “jerk” implies a
-    non-constant acceleration, i.e., some nonzero
-    _rate of change_ of the acceleration, i.e.,
-    nonzero _jerk_ in the mathematical sense.)
+
     !! , if you think about it, implies
     !! a non-jerky experience!
 
@@ -758,8 +719,7 @@
 
     *Postscript: Sums, Products, Quotients,
     and Differences of Functions.*
-    Coming briefly back to Chapter >>functions#decoy:0##-related
-    matters, if
+    Returning briefly to Chapter >>functions#decoy:0, if
 
     $$
     f, g : \rr \ra \rr
@@ -784,16 +744,14 @@
     f - g = (x \ra f(x) - g(x))
     $$
 
-    with each equation being a _definition_.
+    each equation being a _definition_.
     The notation
 
     $$
     f \circ g
     $$
 
-    goes back to Exercise >>_factory_roof_functions_1_ of Chapter >>functions, with
-    the little circle “$\circ$” being known as
-    the _composition operator_, while the sum
+    goes back to Exercise >>_factory_roof_functions_1_ of Chapter >>functions, with the little circle “$\circ$” called the _composition operator_, while the sum
 
     $$
     f + g
@@ -806,7 +764,7 @@
     $$
 
     of functions already appear in Exercise >>_function_operations_Q_and_A_
-    of Chapter >>functions, also. (On the other hand, the
+    of Chapter >>functions. (On the other hand, the
     quotient (i.e. $f/g$) and difference (i.e.,
     $f - g$) of functions are defined above for
     the first time, even if the definitions might

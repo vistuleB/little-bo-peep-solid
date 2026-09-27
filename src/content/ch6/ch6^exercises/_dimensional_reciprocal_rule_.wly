@@ -13,95 +13,21 @@
 
     |> Solution
 
-        The expression
+        For a generic signature $f : [\tA] \ra [\tB]$, we have
 
         $$
-        \left({1\over f}\right)'
+        \left({1\over f}\right)' : [\tA] \ra \left[{1\over\tA\tB}\right].
         $$
 
-        does not on its own impose any restrictions on
-        the signature of $f$, so we can consider
+        Since $f'$ has output units $\tB/\tA$, dividing it by $f^2$
+        gives the desired signature:
 
         $$
-        f : [\tA] \ra [\tB]
+        {f'\over f^2} : [\tA] \ra \left[{\tB/\tA\over\tB^2}\right]
+        = [\tA] \ra \left[{1\over\tA\tB}\right].
         $$
 
-        of generic signature. Then
-
-        $$
-        {1\over f} : [\tA] \ra \left[{1\over\tB}\right]
-        $$
-
-        as in the second half of >>table_1_2,
-        and
-
-        $$
-        \left({1\over f}\right)' : [\tA] \ra \left[{1\over\tA\tB}\right]
-        $$
-
-        !! dividing the output units by the input units.
-        !! which divides the output
-        !! units by the input units.
-        per the usual effect of differentiation on units.
-
-        In order to achieve the signature 
-
-        $$
-        [\tA] \ra \left[{1\over\tA\tB}\right]
-        $$
-
-        using
-
-        $$
-        f : [\tA] \ra [\tB]
-        $$
-
-        and
-
-        $$
-        f' : [\tA] \ra \left[{\tB\over \tA}\right]
-        $$
-
-        as building blocks we can start with $f'$ and divide
-        by $f^2$. 
-        (In fact, this is the only combination that works, modulo
-        multiplication by a dimensionless constant.)
-        Specifically, since
-
-        $$
-        f : [\tA] \ra [\tB]
-        $$
-
-        we have
-        
-        $$
-        f^2 : [\tA] \ra [\tB^2]
-        $$
-
-        and
-
-        $$
-        {1\over f^2} : [\tA] \ra \left[{1\over\tB^2}\right]
-        $$
-
-        multiplying $f'$ by ${1\over f^2}$ gives us a function
-        of signature
-
-        $$
-        !! {f'\over f^2} : 
-        [\tA] \ra \left[{\tB\over \,\tA^{\vphantom{2}}}\cdot{1\over\tB^2}\right]\,\, = \,\,[\tA] \ra \left[{1\over\tA\tB}\right]
-        $$
-
-        as desired, which makes
-
-        |> Boxed
-            $$
-            !! f'\cdot {1\over f^2} = {f'\over f^2}
-            !! \left({1\over f}\right)' = {f'\over f^2}
-            {f'\over f^2}
-            $$
-
-        a plausible conjecture.
+        This makes $f'/f^2$ a plausible conjecture.
 
         However, we know from Exercise X that
 
@@ -128,15 +54,8 @@
         !! only “bad sign” for our conjecture is being the
         !! sign itself, right now!)
 
-        Since our conjecture is at least “consistently
-        wrong”—by which we mean that our formula _always_ has the wrong sign—a plausible fix
-        is just to negate the expression (and indeed
-
-        __negation__
-
-        is one of the things we can do to a function
-        without changing its signature, per >>table_1_2), giving
-        us 
+        Our conjecture is “consistently wrong”—it has the wrong sign.
+        Negation leaves its signature unchanged (>>table_1_2), giving
 
         |> Boxed
             $$
@@ -144,3 +63,9 @@
             $$
 
         as an “educated guess” for a formula for $({1\over f})'$.
+
+        |> SolutionNote
+            The formula is correct. As it takes its place in the
+            mathematical pantheon, what name should it have?
+            Just as we have the _sum rule_ and _product rule_, this
+            is the _reciprocal rule_. (!)

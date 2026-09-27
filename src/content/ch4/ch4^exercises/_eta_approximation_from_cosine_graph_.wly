@@ -7,19 +7,14 @@
     in Chapter >>functions#decoy:3, Exercise >>_cosine_of_1000x_#decoy:15).
     Knowing that this function is the $x$-coordinate of a
     point rotating at unit speed around a unit
-    circle what is an approximation to the
-    circumference of a unit circle that can be
-    deduced by looking (closely) at the graph?
+    circle what approximation to its circumference can you deduce by looking (closely) at the graph?
 
     |> Image
         src=images/svg_ch4_cosine_for_eta.svg
 
     |> Solution
 
-        Because the particle is going at unit speed the
-        circumference of the unit circle is equal to the
-        amount of time it takes the particle to complete one
-        revolution of the circle—that is, for example, the
+        Because the particle is going at unit speed the circumference equals the time for one revolution—that is, for example, the
         time covered by the yellow interval below, from crest
         to crest*:
 
@@ -47,7 +42,7 @@
 
         However, the exact position of “cresting” is hard to
         determine because the graph flattens at that point,
-        and a more clever clue to pick up on is actually that the graph seems to go almost exactly through
+        and a better clue is that the graph seems to go almost exactly through
         $(t, x) = (11, 0)$:
         !! at which point it is jogging straight up:
         !! or thereabouts. However, but a bit of detective work

@@ -56,7 +56,7 @@
             step 2: speeds up the angular velocity of
             the particle from $1$ radian per unit time
             to $B = 2.33$ radians per unit time; this
-            can simply be thought of as a “speeding up
+            can be thought of as a “speeding up
             of time”, and compresses the graph horizontally
             about the $y$ axis by a factor $2.33$ (while
             keeping $y = \sin(C)$ at $x = 0$, as should be);

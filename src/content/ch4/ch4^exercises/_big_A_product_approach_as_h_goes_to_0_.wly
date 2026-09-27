@@ -16,8 +16,7 @@
 
     |> Solution
 
-        We can start with the fraction in the
-        middle of the product:
+        Start with the fraction in the middle:
 
         |> Image
             src=images/svg_ch4_big_product_fraction_outline.svg
@@ -36,9 +35,7 @@
         A_i'(t_0)
         $$
 
-        as $h$ approaches $0$, given also the assumption
-        that each of the functions $A_1$, ..., $A_n$
-        (including $A_i$) is differentiable at $t_0$.
+        as $h$ approaches $0$, since $A_i$ is differentiable at $t_0$.
 
         Next down in order of interesting-ness we presumably
         have the terms $A_1(t_0 + h)$ through $A_{i-1}(t_0 + h)$
@@ -90,8 +87,7 @@
         in the solution to Exercise 17, but that might
         have been.)
 
-        Lastly one has the tail end of the product,
-        where $h$ does not even appear:
+        Lastly, the tail of the product contains no $h$:
 
         |> Image
             src=images/svg_ch4_big_product_suffix_outline.svg

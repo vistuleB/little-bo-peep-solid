@@ -4550,8 +4550,7 @@ const Rest = () => {
           <Solution>
             <OuterP>
               It appears that the function is “a line plus
-              something”, in the sense of the following
-              diagram:
+              something”, as in this diagram:
             </OuterP>
             <Pause />
             <Image
@@ -5348,12 +5347,14 @@ const Rest = () => {
               {" "} is for.)
             </OuterP>
             <OuterP class="indent-10">
-              To know how much {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} must be, we must measure
-              the cycle length (it is, admittedly, hard to
+              To find {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} we measure the cycle length (it is, admittedly, hard to
               accurately determine the position of the top
               of each large-scale bump, but we do our best by
               basing ourselves off of what appear to be identical
@@ -5576,8 +5577,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              The multiplicative ratios that correspond to the
-              first and third arrows (in arrow-order from bottom
+              The multiplicative ratios for the first and third arrows (in arrow-order from bottom
               to top) are
             </OuterP>
             <Pause />
@@ -5903,9 +5903,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                If you zoom in
-                a little bit
-                you can actually see
+                If you zoom in a little you can see
                 {" "}
                 <NoBreak>
                   “
@@ -6341,7 +6339,7 @@ const Rest = () => {
                   ”
                 </NoBreak>
                 {" "}
-                is a notation used to denote vectors. (Feel free
+                denotes vectors. (Feel free
                 to choose your own notation.)
               </OuterP>
             </SolutionNote>
@@ -6954,8 +6952,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                The following
-                diagram illustrates the two possibilities:
+                This diagram illustrates the two possibilities:
               </OuterP>
               <Pause />
               <Image
@@ -7539,7 +7536,7 @@ const Rest = () => {
                 $A'$
               </Math>
               {" "}
-              from the following set of blueprints for a shed with
+              from these blueprints for a shed with
               an angled inside wall (all distances in inches):
             </OuterP>
             <Pause />
@@ -7827,7 +7824,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by subtracting from the length marked ‘5’.
-              We can draw the following overhead sketch of the situation
+              We can draw this overhead sketch
               (not to scale, and keeping to {" "}
               <Math>
                 $3$
@@ -7897,7 +7894,7 @@ const Rest = () => {
               fraction.
             </OuterP>
             <OuterP class="indent-10">
-              The final answer to the problem is...
+              The final answer is...
             </OuterP>
             <center style="margin-top:1em;margin-bottom:1em;">
               <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
@@ -8172,8 +8169,7 @@ const Rest = () => {
               <i>
                 Solution 1.
               </i>
-              {" "} For a geometric solution we start by
-              reminding to ourselves that if we plot all the solutions of
+              {" "} For a geometric solution we remind ourselves that if we plot all the solutions of
             </OuterP>
             <Pause />
             <MathBlock>
@@ -8469,7 +8465,7 @@ const Rest = () => {
           <Solution>
             <OuterP>
               Here is the division in American notation
-              overlayed on top of a “Plaza” wallpaper to
+              overlayed on a “Plaza” wallpaper to
               help demarcate the different columns of
               digits (in American notation each column
               of digits is associated to a power of {" "}
@@ -8996,8 +8992,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The divisions, pursued up to the point where
-              remainders repeat, look as follows:
+              The divisions, continued until remainders repeat, look as follows:
             </OuterP>
             <Pause />
             <Image
@@ -9117,7 +9112,7 @@ const Rest = () => {
               </NoBreak>
               {" "} column of the quotient,
               including one last remainder computation
-              that occurs pursuant to adding the digit in
+              after adding the digit in
               the {" "}
               <NoBreak>
                 “
@@ -10059,8 +10054,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} as well. One method of
-              deduction uses the fact that “the complement
+              {" "} as well. One method uses the fact that “the complement
               of my complement is myself”:
             </OuterP>
             <Pause />
@@ -10071,7 +10065,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              Another method of deduction uses the fact that,
+              Another method uses the fact that,
               together with the angle immediately to its left
               (which happens to be {" "}
               <NoBreak>
@@ -10162,8 +10156,7 @@ const Rest = () => {
                 $90^\circ$
               </Math>
               {" "} rotation (and then translation)
-              of the central angle, and is, therefore, equal
-              to the central angle {" "}
+              of the central angle, and therefore equals the central angle {" "}
               <NoBreak>
                 <Math>
                   $\theta$
@@ -10528,9 +10521,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                Since the two solutions compute
-                answers to the same question,
-                one can in particular deduce that
+                Since both solutions answer the same question, we deduce that
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -10896,8 +10887,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The basic idea is that we can view the
-              sphere as being made up of many cones:
+              We can view the sphere as made up of many cones:
             </OuterP>
             <Pause />
             <Image
@@ -11174,8 +11164,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              (modulo the kerfuffle at the top) simply by the fact
-              that, in a circle of radius {" "}
+              (modulo the kerfuffle at the top) because, in a circle of radius {" "}
               <NoBreak>
                 <Math>
                   $r$
@@ -11363,8 +11352,7 @@ const Rest = () => {
                 m.
               </NoBreak>
               {" "}
-              For a different, coarser approach, one can
-              even use
+              For a coarser approach, one can even use
             </OuterP>
             <Pause />
             <MathBlock>
@@ -11742,7 +11730,7 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                due to the fact that the the long division of {" "}
+                because the long division of {" "}
                 <Math>
                   $11$
                 </Math>
@@ -12352,7 +12340,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              For reference again, the four functions are:
+              For reference, the four functions are:
             </OuterP>
             <Pause />
             <MathBlock>
@@ -12714,7 +12702,7 @@ const Rest = () => {
                     $B = 2.33$
                   </Math>
                   {" "} radians per unit time; this
-                  can simply be thought of as a “speeding up
+                  can be thought of as a “speeding up
                   of time”, and compresses the graph horizontally
                   about the {" "}
                   <Math>
@@ -13372,8 +13360,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It appears two places; it is the area of 
-              both of these rectangles:
+              It is the area of both these rectangles:
             </OuterP>
             <Pause />
             <Image
@@ -13383,7 +13370,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              In more detail, here is how {" "}
+              Here is how {" "}
               <NoBreak>
                 “
                 <Math>
@@ -14021,8 +14008,7 @@ const Rest = () => {
               />
             </OuterP>
             <OuterP class="indent-10">
-              Next, for the algebraic manipulation of the equations,
-              start by multiplying each equation {" "}
+              Next, multiply each equation {" "}
               <NoBreak>
                 in
                 <Math>
@@ -14190,7 +14176,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              As a preliminary, we first note that
+              First note that
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -14789,8 +14775,7 @@ const Rest = () => {
                 </InChapterLink>
                 &#8288;,
                 to which it is equivalent, it is a generalization
-                of the Pythagorean theorem. This becomes extra clear if we rewrite it
-                as....
+                of the Pythagorean theorem. This becomes clearer if we write....
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -15469,8 +15454,7 @@ const Rest = () => {
               <Math>
                 $\cot(\theta)$
               </Math>
-              {" "} as geometric quantities
-              that exist in relation to the unit circle,
+              {" "} as geometric quantities related to the unit circle,
               in all quadrants?
               (I.e., find “unit circle interpretations”
               of 
@@ -15743,7 +15727,7 @@ const Rest = () => {
                 Solution 1.
               </i>
               {" "}
-              The basic idea of this solution is to find
+              The idea is to find
               an angle {" "}
               <Math>
                 $\theta$
@@ -15903,7 +15887,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              (The reason that the whole procedure works is that
+              (The procedure works because
               this triangle...
             </OuterP>
             <Pause />
@@ -16153,7 +16137,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} which
-              gives rise to the following idea for a geometric construction
+              suggests this geometric construction
               of {" "}
               <NoBreak>
                 <Math>
@@ -16424,7 +16408,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              Now it suffices to apply one of the “powers of
+              Now apply one of the “powers of
               secant” constructions to obtain powers of {" "}
               <NoBreak>
                 <Math>
@@ -16549,8 +16533,7 @@ const Rest = () => {
               perpendicularly from a given line. 
               (In the order in which the construction unfolds,
               this perpendicular “originates” from its upper end,
-              which is a situation that we have not encountered
-              yet.)
+              a situation we have not encountered yet.)
               In this case, the procedure is to draw a circle,
               in orange below, whose center is the 
               starting point
@@ -17520,8 +17503,7 @@ const Rest = () => {
                 ”)
               </NoBreak>
               {" "} 
-              it becomes trivial to see that the two ruler-readings
-              are just {" "}
+              we see that the two ruler-readings are {" "}
               <Math>
                 $\cos(\theta)$
               </Math>
@@ -18431,7 +18413,7 @@ const Rest = () => {
               these functions must either be
               the top right or bottom left graphs, as the
               other two graphs weave in and out of negative territory;
-              given additionally that
+              given that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -18447,7 +18429,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              we can further deduce that
+              we deduce that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -18656,8 +18638,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              It seems that if we would vertically flip
-              one of the cutouts 
+              It seems that if we vertically flip one of the cutouts 
               (in this case {" "}
               <NoBreak>
                 <Math>
@@ -19101,7 +19082,7 @@ const Rest = () => {
               <Math>
                 $\sin(2x)$
               </Math>
-              {" "} is, by virtue of alignment of the bumps:
+              {" "} is, because the bumps align:
             </OuterP>
             <Pause />
             <Image
@@ -19902,7 +19883,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              ...and then later multiply by {" "}
+              ...and then multiply by {" "}
               <NoBreak>
                 <Math>
                   $\sqrt&#123;2&#125;$

@@ -27,21 +27,9 @@
     f : [\A] \ra [\B]
     $$
 
-    to indicate that inputs passed to $f$ have semantics
-    of units A while outputs returned by $f$ have semantics
-    of units B. 
-    For example,
-
-    $$
-    h : [\te{kg}] \ra [^\circ\te{F}]
-    $$
-
-    indicates that $h$ is a function for which the inputs
-    denote kilograms and for which the outputs denote degrees
-    fahrenheit. We refer to 
-    the ordered pair $(\A, \B)$,
-    as encoded by the notation “$[\A] \ra [\B]$”,
-    as the
+    to indicate that $f$ takes inputs in units A and returns
+    outputs in units B. The ordered pair $(\A, \B)$, written
+    “$[\A] \ra [\B]$”, is the
 
     __signature__
 
@@ -164,20 +152,8 @@
         src=images/c6_equal_inputs_v2.svg
         style=margin-bottom:-1.3em
 
-    This means that for the sum to make sense, $f$ and
-    $g$ need to have the same units of input, i.e.,
-
-    $$
-    \begin{aligned}
-    f : [\A] &\ra [\B] \\
-    g : [\A] &\ra [\te{C}] \up{1.35}
-    \end{aligned}
-    $$
-
-    would be the most general signature 
-    that one could hope for, in order for the sum to not
-    be nonsencial; but this is not stringent enough yet,
-    since we actually need
+    For the sum to make sense, $f$ and $g$ must have the same
+    input units and the same output units:
 
     $$
     \begin{aligned}
@@ -186,9 +162,7 @@
     \end{aligned}
     $$
 
-    in order not to add apples to oranges, 
-    at the output end, either, i.e., to avoid
-    “$f(x) =$ apples”, “$g(x) =$ oranges”.
+    We cannot add apples to oranges at the output end, either.
 
     By contrast, when multiplying two functions we can
     stomach the output units to be different since
@@ -209,15 +183,8 @@
 |> Section
 
     *The unary function operations.*
-    We will add two more not-yet-much-discussed
-
-    __unary__
-
-    function operations to our list of officially
-    considered function operations, being _negation_
-    and _reciprocal_, 
-    written “$-\f$“ and “$1/f$”,
-    and defined by formulas here:
+    Two unary function operations are _negation_ and _reciprocal_,
+    written “$-\f$” and “$1/f$”, and defined here:
 
     |> Image
         handle=table_1_2 <<Table 1.2>>
@@ -249,25 +216,9 @@
     f' : [\tA] \ra [\tB/\tA]
     $$
     for any units A, B.
-    By the same token, 
-    !! the “if and only if”-ness implies that
-    $$
-    f' : [\tC] \ra [\tD]
-    $$
-    if and only if
-    $$
-    f : [\tC] \ra [\tC\tD]
-    $$
-    for any units C, D. 
-    !! (Think that C is playing the
-    !! role of A, while D plays the role of B/A.)
-    (Think of the fact, as in part “$h$” of
-    Exercise >>_complete_the_missing_units_#decoy:6
-    of Chapter >>derivatives#decoy:4, that one needs to
-    multiply the output units of $h''$ by the
-    units of input units of $h''$ in order to recover the output
-    units of $h'$, etc.)
-    
+    Conversely, multiply the derivative's output units by its
+    input units to recover the original output units.
+
 |> Section
     *Operators.*
     On a conceptual note,
@@ -288,44 +239,24 @@
     |> Image
         src=images/c6_differentiation_operator_intro_v2.svg
 
-    Though similarly, the
-    unary function
-    operations from [Table 1.2](>>table_1_2) 
-    can be viewed as operators, taking one function
-    as input and producing one function as output:
+    The unary operations in [Table 1.2](>>table_1_2) likewise take
+    one function as input. An operator can also take two functions
+    as inputs: function addition takes $f$ and $g$ and returns
+    the single function $f + g$. Here it is as a two-input-tube-flying-saucer:
 
     |> Image
-        src=images/c6_negation_operator_v2.svg
+        src=images/c6_addition_operator_standalone_v2.svg
 
-    The other function operations from Table 1.1
-    are also operators, albeit
+    The two inputs to this operator are the functions $f$ and $g$.
+    The resulting function $f + g$ still takes one number $x$ as input,
+    returning $f(x) + g(x)$.
+
+    Operators that take two inputs are called
 
     __binary__
 
-    operators since they take two instead of one
-    functions as input. For example, function addition
-    can be depicted as a two-input-tube-flying-saucer:
-
-    |> Image
-        !! src=images/c6_addition_operator_standalone.svg
-        src=images/c6_addition_operator_standalone_v2.svg
-
-    In this fashion, the complete list of all
-    operators that we have dealt with so far, similarly
-    presented by order of appearance in this chapter, would be
-    the following:
-
-    |> Image
-        src=images/c6_all_our_operators_v2.svg
-
-    (We recycle ‘$-$’ for two
-    different operators—a unary one and a binary one.)
-    (Or as programmers would say, we have
-    _overloaded_ ‘$-$’.)
-
-    The following figure summarizes the interaction
-    between the various operators and function signatures,
-    in a similar vein of diagram:
+    operators, as with the operations in Table 1.1.
+    This figure summarizes how the operators act on signatures:
 
     |> Image
         src=images/c6_operators_acting_on_signatures_v2.svg
@@ -343,289 +274,49 @@
         $$
 
     for all differentiable functions $f$, $g : \rr \ra \rr$.
-    We can apply
+    To “check the units”, both sides must impose the same signature
+    constraints and yield the same final signature.
 
-    __dimensional analysis__
-
-    to the sum rule, which is to say that we would
-    like to “check the units” on the rule, which is to
-    say that for two functions with signatures for which
-    the left-hand side makes sense, the right-hand side should
-    also make sense and vice-versa,
-    and the right-hand side should also yield the same
-    final signature as the left-hand side.
-
-    On the left-hand side,
+    On the left, $f + g$ requires $f$ and $g$ to have the same
+    input and output units; differentiation adds no constraints.
+    On the right, if $f : [\A] \ra [\B]$ and $g : [\C] \ra [\D]$,
+    adding $f'$ and $g'$ requires
 
     $$
-    f + g
+    \A = \C, \qquad \B/\A = \D/\C,
     $$
 
-    imposes signatures of the form
+    hence $\B = \D$ as well: the same constraints!
+    With $f, g : [\A] \ra [\B]$, we have
 
     $$
     \begin{aligned}
-    f : [\A] &\ra [\B] \\
-    g : [\A] &\ra [\B] \up{1.35}
+    (f + g)' &: [\A] \ra [\tB/\tA] \\
+    f' + g' &: [\A] \ra [\tB/\tA] \up{1.35}
     \end{aligned}
     $$
 
-    as listed in >>table_1_1,
-    while the subsequent taking of a derivative doesn't
-    impose any new constraints. 
-
-    !! On the right-hand side,
-    !! the sum 
-
-    !! $$
-    !! f' + g'
-    !! $$
-
-    !! likewise imposes signatures of the form
-
-    !! $$
-    !! \begin{aligned}
-    !! f' : [\C] &\ra [\D] \\
-    !! g' : [\C] &\ra [\D] \up{1.35}
-    !! \end{aligned}
-    !! $$
-
-    !! on $f'$, $g'$ for some units C, D, but this implies
-
-    !! $$
-    !! \begin{aligned}
-    !! f : [\C] &\ra [\C\D] \\
-    !! g : [\C] &\ra [\C\D] \up{1.35}
-    !! \end{aligned}
-    !! $$
-
-    !! and basically again that $f$ and $g$ have the same
-    !! input and output units.
-
-
-
-
-
-    On the right-hand side,
-    we start by adopting the agnostic point of view that
-
-    $$
-    \begin{aligned}
-    f : [\A] &\ra [\B] \\
-    g : [\C] &\ra [\D] \up{1.35}
-    \end{aligned}
-    $$
-
-    for some arbitrary units $\A$, $\B$, $\C$, $\D$; then,
-
-    $$
-    \begin{aligned}
-    f' : [\A] &\ra [\B/\A] \\
-    g' : [\C] &\ra [\D/\C] \up{1.35}
-    \end{aligned}
-    $$
-
-    and the fact that we are taking the sum
-
-    $$
-    f' + g'
-    $$
-
-    implies 
-
-    $$
-    \A\,\,\, = \,\,\,\C
-    $$
-    and
-    $$
-    \left[{\B\over\A}\right]\! =\! \left[{\D\over\C}\right]
-    $$
-
-    !! [a.k.a., “the input units of $f'$ equal the input units
-    !! of $g'$ and the output units of $f'$ equal the output
-    !! units of $g'$”]
-    by Table 1.1 again, which, together, imply 
-
-    $$
-    \begin{aligned}
-    \,\A &= \C, \\
-    \B &= \D \up{1.35}
-    \end{aligned}
-    $$
-
-    ...and we recover the same constraints on $f$ and $g$ as
-    exist on the left-hand side!
-    
-    !! On the right-hand side,
-    !! we start by adopting the agnostic point of view that
-
-    !! $$
-    !! \begin{aligned}
-    !! f : [\A_f] &\ra [\B_f] \\
-    !! g : [\A_g] &\ra [\B_g] \up{1.35}
-    !! \end{aligned}
-    !! $$
-
-    !! for some arbitrary units $\A_f$, $\B_f$, $\A_g$, $\B_g$; then,
-
-    !! $$
-    !! \begin{aligned}
-    !! f' : [\A_f] &\ra [\B_f/\A_f] \\
-    !! g' : [\A_g] &\ra [\B_g/\A_g] \up{1.35}
-    !! \end{aligned}
-    !! $$
-
-    !! and the fact that we are taking the sum
-
-    !! $$
-    !! f' + g'
-    !! $$
-
-    !! implies 
-
-    !! $$
-    !! \begin{aligned}
-    !! \A_f &= \A_g \\
-    !! \B_f/\A_f &= \B_g/\A_g \up{1.35}
-    !! \end{aligned}
-    !! $$
-
-    !! [a.k.a., “the input units of $f'$ equal the input units
-    !! of $g'$ and the output units of $f'$ equal the output
-    !! units of $g'$”]
-    !! by Table 1.1 again, which, together, imply 
-
-    !! $$
-    !! \begin{aligned}
-    !! \A_f &= \A_g \\
-    !! \B_f &= \B_g \up{1.35}
-    !! \end{aligned}
-    !! $$
-
-    !! ...and we recover the same constraints on $f$ and $g$ as
-    !! exist on the left-hand side!
-
-
-    Assuming now that $f$
-    and $g$ have the form
-
-    $$
-    \begin{aligned}
-    f : [\A] &\ra [\B] \\
-    g : [\A] &\ra [\B] \up{1.35}
-    \end{aligned}
-    $$
-
-    as required by either side of the equation, we have
-
-    $$
-    \begin{gathered}
-    f + g : [\A] \ra [\B] \\
-    (f + g)' : [\A] \ra [\tB/\tA] \up{1.35} \\
-    f' :  [\A] \ra [\tB/\tA] \up{1.35} \\
-    g' :  [\A] \ra [\tB/\tA] \up{1.35} \\
-    f' + g' :  [\A] \ra [\tB/\tA] \up{1.35}
-    \end{gathered}
-    $$
-
-    by the rules according to which signatures 
-    respond to the sum and differentiation operators,
-    but in particular
-
-    $$
-    (f + g)'
-    $$
-
-    is found to have the same signature as
-
-    $$
-    f' + g'
-    $$
-
-    which indicates that the sum “checks out” insofar
-    as units are concerned: nothing untoward has been found!
+    The sum rule “checks out” insofar as units are concerned:
+    nothing untoward has been found!
 
     |> Example
         handle=_ms_x1_x2_example_
         
-        If 
+        Let $x_1, x_2 : [\te{s}] \ra [\te{m}]$ be differentiable
+        functions giving position in meters as a function of time in seconds.
+        Then
 
         $$
-        x_1, x_2 : \rr \ra \rr
+        \begin{aligned}
+        (x_1 + x_2)' &: [\te{s}] \ra [\te{m}/\te{s}] \\
+        x_1' + x_2' &: [\te{s}] \ra [\te{m}/\te{s}] \up{1.35}
+        \end{aligned}
         $$
 
-        are two differentiable functions that give 
-        position measured in meters as a function of time 
-        measured in seconds,
-        i.e., two differentiable functions of the form
-
-        $$
-        x_1,\rt{0.2} x_2 : [\te{s}] \ra [\te{m}]
-        $$
-
-        where ‘s’ is seconds and ‘m’ is meters as usual,
-        then
-
-        $$
-        \begin{gathered}
-        \,x_1 + x_2   : [\te{s}] \ra [\te{m}] \\
-        \,(x_1 + x_2)' : [\te{s}] \ra [\te{m}/\te{s}]\up{1.35} \\
-        \,x_1'      : [\te{s}] \ra [\te{m}/\te{s}] \up{1.35} \\
-        \,x_2'      : [\te{s}] \ra [\te{m}/\te{s}] \up{1.35} \\
-        \,x_1' + x_2' : [\te{s}] \ra [\te{m}/\te{s}] \up{1.35}
-        \end{gathered}
-        $$
-
-        !! $$
-        !! \Large
-        !! \begin{gathered}
-        !! f' : [\tA] \ra [\tB/\tA] \\
-        !! g' : [\tA] \ra [\tC/\tA] \up{1.35} \\
-        !! f'g' : [\tA] \ra [\tB\tC/\tA^2] \up{1.35} \\
-        !! !! (fg)' : [\tA] \ra [\tB\tC/\tA] \up{1.35} \\
-        !! \end{gathered}
-        !! $$
-
-        and, in particular,
-
-        $$
-        !! (x_1 + x_2)' : [\te{s}] \ra [\te{m}/\te{s}]
-        (x_1 + x_2)'
-        $$
-
-        has the same signature as
-        !! matches the signature of
-
-        $$
-        !! x_1' + x_2' : [\te{s}] \ra [\te{m}/\te{s}]
-        x_1' + x_2'
-        $$
-
-        as in the general analysis of the sum rule with arbitrary
-        units A and B from above.
-
-        |> Pause
-
-        _Note on Example >>_ms_x1_x2_example_#decoy:0._
-        In the case of Example >>_ms_x1_x2_example_, the sum rule,
-        which now reads
-
-        $$
-        \,(x_1 + x_2)' = x_1' + x_2',
-        $$
-
-        !! in that case, 
-        can be verbalized by saying that
-
-        __the rate of change of a sum of two 
-        coordinates is the sum of their rates of change__
-
-        or
+        Here the sum rule says that
 
         __the velocity of a sum of two points
         is the sum of their velocities__
-
-        since in this case the “rate of change” is a velocity.
 
     |> Example
         handle=differentiability_sum_rule_counterexample
@@ -709,14 +400,7 @@
     as we know from his notes,
     whence this equation's moniker.
 
-    For a dimensional analysis of this equation, 
-    note that, on the left-hand side,
-
-    $$
-    fg
-    $$
-
-    restricts $f$ and $g$ to signatures of the form
+    Both sides require the same input units for $f$ and $g$:
 
     $$
     \begin{aligned}
@@ -725,10 +409,7 @@
     \end{aligned}
     $$
 
-    for some units A, B, C, per Table 1.1., which is also 
-    the most general type of signature that is compatible with the right-hand side.
-    This is “so far so good”!
-    !! the type of signature that the right-hand side requires—so far so good!
+    So far so good! But their output units differ.
 
     However,
 
@@ -748,45 +429,15 @@
         src=images/c6_f_prime_g_prime_signature_cloud_v2.svg
         offset-x=0em
 
-    as is easy to check, and
-
-    $$
-    [\tA] \ra [\tB\tC/\tA^2] \ne [\tA] \ra [\tB\tC/\tA]
-    $$
-
-    so the rule
-    !! “the early afternoon product rule” 
-    cannot be correct: different units are produced
-    by either side of the equation, for the same
-    functions $f$ and $g$.
-    !! —paraphrasing, “the units don't
-    !! even work out”.
-    !! Paraphrasing, 
-    !! !! dimensional analysis has shown that
-
-    !! __the units aren't even the same__ 
-
-    !! on either side of the equation!
+    The rule cannot be correct: the two sides produce different
+    units for the same functions $f$ and $g$.
 
     |> Example
         handle=_second_x1x2_example_
 
-        As in Example >>_ms_x1_x2_example_
-        let
-
-        $$
-        x_1,\rt{0.1} x_2 : \rr \ra \rr
-        $$
-
-        have signature
-
-        $$
-        \,x_1,\rt{0.1} x_2 : [\te{s}] \ra [\te{m}]
-        $$
-
-        !! be two functions that 
-        so that $x_1$, $x_2$
-        give position measured in meters as a function of time measured in seconds.
+        As in Example >>_ms_x1_x2_example_, let
+        $x_1, x_2 : [\te{s}] \ra [\te{m}]$ give position in meters
+        as a function of time in seconds.
         Then
 
         $$
@@ -827,37 +478,14 @@
         |> Pause
 
         _Note on Example >>_second_x1x2_example_#decoy:0._
-        It might be observed that
-        
-        $$
-        x_1'x_2'
-        $$
-
-        has the same dimensions (signature) as
-
-        $$
-        (x_1x_2)''
-        $$
-
-        in Example >>_second_x1x2_example_—one might conjecture that
+        $x_1'x_2'$ has the same signature as $(x_1x_2)''$, but
 
         $$
         (x_1x_2)'' = x_1'x_2'
         $$
 
-        from this observation, and one would be wrong—which is to
-        show that dimensional analysis is quick to debunk an incorrect
-        equation but, in the contravening case, 
-        cannot be trusted as a proof—nonetheless,
-
-        $$
-        x_1'x_2'
-        $$
-
-        _does show up as a term_ in the “true”
-        formula for $(x_1x_2)''$, so, in some sense,
-        dimensional analysis is not _entirely_ wrong,
-        even here!
+        is still wrong. Dimensional analysis can debunk an equation;
+        matching dimensions cannot prove it.
 
 !! |> Section
 !!     *The product rule.*
@@ -928,7 +556,7 @@
     handle=chain_rule_discovery
 
     *The chain rule.*
-    We would we like a formula for
+    We would like a formula for
 
     $$
     (f \circ g)'
@@ -959,29 +587,8 @@
     !! |> Image
     !!     src=images/c6_spoiler_alert_diagonal.svg
 
-    To begin with,
-
-    $$
-    (f\circ g)'
-    $$
-
-    !! only makes sense, as mentioned in Table 1.1, for 
-    requires $f$ and $g$ of the form
-
-    $$
-    \begin{aligned}
-    f &: [\tB] \ra [\tC] \\
-    g &: [\tA] \ra [\tB] \up{1.35}
-    \end{aligned}
-    $$
-
-    (cf. Table 1.1)
-    for some units A, B, C, 
-    so these are the “initial constraints” on $f$ and
-    $g$. The “lego pieces” then
-    !! , as well as $(f \circ g)'$, 
-    have the following signatures:
-    !! for some units A, B, C, in which case
+    Composition requires the output units of $g$ to match the input
+    units of $f$ (Table 1.1). Our “lego pieces” therefore have signatures
 
     $$
     \begin{gathered}
@@ -1029,39 +636,22 @@
     (f'\circ g)g'
     $$
 
-    !! instead of $f'g'$, 
-    (a product of functions),
-    which makes sense since on the one hand
+    This product makes sense because
 
     $$
-    (f'\circ g)
+    \begin{aligned}
+    f'\circ g &: [\tA] \ra [\tC/\tB] \\
+    g' &: [\tA] \ra [\tB/\tA] \up{1.35}
+    \end{aligned}
     $$
 
-    is a well-formed composition of signature
-
-    $$
-    [\tA] \ra [\tC/\tB]
-    $$
-
-    whereas $g'$ has signature
-
-    $$
-    [\tA] \ra [\tB/\tA]
-    $$
-
-    so that the product of the two has signature
-
-    $$
-    [\tA] \ra [\tC/\tA]
-    $$
+    and multiplying their outputs gives the desired units $\tC/\tA$.
 
     |> ImageRight
         src=images/c6_chain_rule_units_cloud.svg
         offset-x=0em
 
-    as desired! It turns out that this is the
-    correct formula, i.e., 
-    we truly do have..
+    It turns out that this is the correct formula:
 
     |> Boxed
         $$
@@ -1077,85 +667,20 @@
         |> Image
             src=images/c6_solo_RAT.svg
 
-        is running a fundraising race where one function
-
-        $$
-        f : \rr \ra \rr
-        $$
-
-        gives the amount of money raised in dollars as a function
-        of the position 
-        meters, whereas 
-        another function
-
-        $$
-        g : \rr \ra \rr
-        $$
-
-        !! gives position-reached-in-meters-as-function-of-time-elapsed-in-seconds,
-        gives the rat's position in meters
-        as a function of time elapsed since the
-        start of the race, measured in seconds.
-        !! referring 
-        !! !! to the position of this particular rat and 
-        !! to the time elapsed since
-        !! the start of the race.
-        !! for this particular rat.
-        !! (the time since the start of race, that is).
-        I.e.,
+        is running a fundraising race. Let $f$ give the money raised
+        in dollars as a function of position in meters, and $g$ give
+        the rat's position as a function of elapsed time in seconds:
 
         $$
         \begin{gathered}
         f : [\te{m}] \ra [\te{\$}] \\
-        g : [\te{s}] \ra [\te{m}] \up{1.35} 
+        g : [\te{s}] \ra [\te{m}] \up{1.35}
         \end{gathered}
         $$
 
-        !! $$
-        !! f : [\te{m}] \ra [\te{\$}]
-        !! $$
-
-        !! and
-
-        !! $$
-        !! g : [\te{s}] \ra [\te{m}]
-        !! $$
-
-        and
-
-        $$
-        f\circ g : [\te{s}] \ra [\te{\$}]
-        $$
-
-        !! gives money-raised-dollars-as-a-function-of-time-elapsed-in-seconds.
-        gives the money raised, in dollars, as a
-        function of time elapsed, in seconds.
-        Perforce,
-
-        $$
-        (f\circ g)': [\te{s}] \ra [\te{\$}/\te{s}]
-        $$
-
-        !! gives the fundraising-rate-in-dollars-per-second-as-a-function-of-time-elapsed-in-seconds.
-        !! Also note that
-        gives the fundraising rate, in dollars per second,
-        !! as a function of time elapsed, measured in seconds, whereas
-        as a function of time, in seconds.
-
-        Also note that
-
-        $$
-        f' : [\te{m}] \ra [\te{\$}/\te{m}]
-        $$
-
-        gives the
-        fundraising rate in dollars per meter as a function
-        of the position, in meters.
-        !! (This could
-        !! vary by position: some parts of the course may be “worth”
-        !! more than others.)
-        !! fundraising-rate-in-dollars-per-meters-as-a-function-of-position-in-meters.
-        !! dollars-per-meters as a function of position.
+        Then $f\circ g$ gives money raised as a function of time, and
+        $(f\circ g)'$ gives the fundraising rate in dollars per second.
+        Meanwhile, $f'$ gives the dollars-per-meter rate at each position.
 
         Then, at $t_0$ seconds after the start of the race,
 
@@ -1181,60 +706,8 @@
             width=530px
             src=images/c6_explained_rat_equation.svg
 
-        Also since
-
-        !! $$
-        !! \begin{gathered}
-        !! (k\circ \ell)(x) = k(\ell(x)) \\
-        !! k(\ell(x)) = (k\circ \ell)(x)
-        !! \end{gathered}
-        !! $$
-
-        $$
-        f'(g(t_0)) = (f'\circ g)(t_0)
-        $$
-        |> ImageRight
-            src=images/c6_composition_reminder_cloud.svg
-            offset-x=-1em
-        
-        we can write the same equation as
-
-        $$
-        (f \circ g)'(t_0) = (f'\circ g)(t_0)g'(t_0)
-        $$
-
-        or, abstracting the input $t_0$ away, as
-
-        |> Boxed
-            $$
-            (f \circ g)' = (f'\circ g)g'
-            $$
-
-        which is the chain rule as originally stated
-        above.
-        !! —but to quickly recapitulate
-        !! the main point of this example, 
-        !! we have
-        !! three rates of change...
-
-        !! |> Image
-        !!     src=images/c6_three_units_with_arrows.svg
-
-        !! ...and the point is that 
-        !! we can obtain 
-        !! the former rate of change ($\left[{\te{\$}}\over\te{s}\right]$)
-        !! by multiplying the latter two rates
-        !! of change
-        !! ($\left[{\te{\$}}\over\te{m}\right]$ and $\left[{\te{m}}\over\te{s}\right]$),
-        !! we just have to be careful to evaluate $f'$
-        !! at the right “place”—we don't want to feed
-        !! $f'$ an amount of seconds when it is
-        !! expecting an amount of meters!
-
-        !! |> ImageRight
-        !!     src=images/c6_forbidden_fprime_of_t0_v2.svg
-        !!     line=-3
-        !!     offset-x=1em
+        Since $f'(g(t_0)) = (f'\circ g)(t_0)$, this is the chain rule
+        $(f \circ g)' = (f'\circ g)g'$ evaluated at $t_0$.
 
         |> Pause
 
@@ -1249,9 +722,9 @@
         as previously seen with “$t_0$” in place of “$x$”. 
         !! is a more granular version of the chain rule,
         In this case the assumption 
-        
+    
         __for $f$, $g : \rr \ra \rr$ differentiable__
-        
+    
         can be replaced by the more granular
 
         __for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
@@ -1269,6 +742,7 @@
         !! [“Postscript” after
         !! Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
 
+
     |> Example
         handle=cos_cos_chain_rule
 
@@ -1281,32 +755,22 @@
             src=images/c6_chain_rule_reminder_cloud.svg
             offset-x=2em
 
-        by [the chain rule](>>chain_rule_discovery),
-        since $\cos' = -\sin$, or
+        by [the chain rule](>>chain_rule_discovery), since $\cos' = -\sin$.
+        Cancelling the minus signs gives
 
         $$
-        (\cos \circ \cos)'(x) = ((-\sin) \circ \cos)(x)\cdot(-\sin)(x)
+        (\cos \circ \cos)' = (\sin \circ \cos)\sin,
         $$
 
-        evaluating at an input $x$, 
-        or
-        
-        $$
-        (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x)
-        $$
-
-        when evaluating the ‘$\circ$’ and cancelling the minus signs,
-        or
+        or, evaluated at $x$,
 
         $$
-        (\cos \circ \cos)' = (\sin \circ \cos)\sin
+        (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x).
         $$
 
         |> ImageRight
             src=images/c6_cancelling_signs_cloud.svg
 
-        cancelling signs from the outset.
-        
     |> Example
         handle=cos_cos_chain_rule_continued
         We have
@@ -1336,43 +800,14 @@
         |> Image
             src=images/c6_windshield_wiper.svg
 
-        Specifically, since
+        Since $-1 \leq \cos(t) \leq 1$, the wiper's angle stays between
+        $-1\Rad$ and $+1\Rad$ (about $\pm57.29^\circ$), so its $x$-coordinate ranges from
 
         $$
-        -1 \leq \cos(t) \leq 1
+        \cos(\pm1) \approx 0.54 \quad\te{to}\quad \cos(0) = 1,
         $$
 
-        the angle of the wiper remains stuck between 
-        $-1\Rad \cong -57.29^\circ$
-        at one end at
-        $+1\Rad \cong 57.29^\circ$
-        at the
-        other end, with the values of $\cos(\cos(x))$
-        remaining stuck between
-
-        $$
-        \cos(\pm 1) = \cos(\pm 57.29\ldots^\circ) \approx 0.54
-        $$
-
-        and $\cos(0) = 1$, producing the compressed
-        sinusoid-like wave seen in Example >>cos_cos_chain_rule_continued.
-
-        !! _Note on Example >>cos_cos_chain_rule_continued##_. 
-        !! Because
-
-        !! $$
-        !! -1 \leq \cos(x) \leq 1
-        !! $$
-        
-        !! the values of $\cos(\cos(x))$ remain stuck between
-
-        !! $$
-        !! \cos(\pm 1) = \cos(\pm 57.29\ldots^\circ) \approx 0.54
-        !! $$
-
-        !! and $\cos(0) = 1$ which produces the graph above,
-        !! that one can actually think of as the $x$-coordinate of a certain horizontal
-        !! windshield-wiper whose angle at time $t$ is $\cos(t)$:
+        producing the compressed sinusoid-like wave above.
 
 |> Section
     !! *Appendix: radians _&_ the dimensionless plane.*
@@ -1405,60 +840,19 @@
     unit!
     Whoo-hoo!
 
-    Relatedly to this idea of the original “vanilla”
-    $xy$-plane having dimensionless axes, you may
-    have seen people label axes this way, writing
-    “time/s” instead of “time $[\te{s}]$”, e.g.:
-
-    !! |> Image
-    !!     src=images/c6_dimensionless_plane_1_v3.svg
-    !!     style=margin-top:-1.4em
-
-    !! |> Image
-    !!     src=images/c6_dimensionless_plane_1_v2.svg
-    !!     style=margin-top:-1.4em
+    Relatedly, you may have seen axes labelled “time/s” instead
+    of “time $[\te{s}]$”:
 
     |> Image
         src=images/c6_dimensionless_plane_1_v1.svg
         style=margin-top:-0.5em
 
-    The idea behind this notation is that the plane
-    itself is a dimensionless object, so by doing
+    Dividing time by the unit “s” takes out the units, leaving a pure
+    number that fits in the dimensionless plane. For example, the
+    coordinate $3$ means
 
     $$
-    {\te{time}\over\te{s}}
+    3 = {\te{time}\over\te{s}} \quad\Longrightarrow\quad \te{time} = 3\te{s}.
     $$
 
-    where “time” is a time measurement in seconds,
-    we have “taken the units out of the measurement”
-    and obtained a “pure number” that “fits” inside
-    the plane; (!); for example, this ‘$3$’ here...
-
-    |> Image
-        src=images/c6_dimensionless_plane_1_v1_circled.svg
-
-    ...is really a $3$ without any units—the “pure” $3$—because
-    the entire plane is dimensionless, but 
-    !! following the axis label, we find...
-    !! if we take the axis label at its word, we have...
-    !! follow the semantics of the axis label, we find...
-
-    $$
-    3 = {\te{time}\over \te{s}}
-    $$
-
-    !! ...which implies...
-    !! which turns into
-    !! with a “pure $3$” 
-    with no (i.e., dimensionless) units
-    on the left implies
-
-    $$
-    3\te{s} = \te{time}
-    $$
-
-    or “time equals $3$ seconds”, i.e., that vertical
-    slice of the plane corresponds to the moment when
-    the “time” variable—which _does_ have units—equals
-    $3$ _seconds_, not just ‘$3$’, the pure number!!
-        
+    The coordinate is the pure number $3$; the time is $3$ seconds!

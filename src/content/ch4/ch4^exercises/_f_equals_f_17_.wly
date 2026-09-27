@@ -8,8 +8,8 @@
     f^{(17)} = f
     $$
 
-    and such that $f \ne 0$ (or: $f \ne (x \ra 0)$,
-    pedantically) and such that $f$ grows relatively
+    and $f \ne 0$ (or: $f \ne (x \ra 0)$,
+    pedantically) and $f$ grows relatively
     slowly in either the positive or negative direction
     of the number line, insofar as such things are
     concerned, what would our options be?
@@ -44,8 +44,7 @@
             src=images/svg_ch4_17_velocity_vector_1_cloud.svg
             offset-x=3rem
 
-        Maintaining this relationship at all
-        points in time, and given that the velocity
+        Maintaining this relationship at all times, and given that the velocity
         vectors point very slightly outward from
         the unit circle, and because all the
         symmetry and all the angles are maintained
@@ -145,8 +144,7 @@
         |> Image
             src=images/svg_ch4_17_other_start.svg
 
-        To parse the above figure, understand
-        that:
+        In this figure:
         
         |> List
             style=padding-left:1.2em;gap:0.4em;

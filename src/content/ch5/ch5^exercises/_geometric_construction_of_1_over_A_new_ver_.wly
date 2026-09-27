@@ -20,7 +20,7 @@
     |> Solution
 
         _Solution 1._
-        The basic idea of this solution is to find
+        The idea is to find
         an angle $\theta$ such that $A = \sec(\theta)$,
         if $|A| > 1$,
         or symmetrically, such that $A = \cos(\theta)$, if $|A| < 1$:
@@ -63,7 +63,7 @@
         |> Image
             src=images/e5_line_with_0_1_and_A_Agt1_step4.svg
 
-        (The reason that the whole procedure works is that
+        (The procedure works because
         this triangle...
 
         |> Image
@@ -142,7 +142,7 @@
         $$
 
         so if $\tan\theta = A$ then $\cot\theta = 1/A$, which
-        gives rise to the following idea for a geometric construction
+        suggests this geometric construction
         of $1/A$, shown here for $0 < A < 1$ (though it works for all $A \in \rr$):
 
         |> Image

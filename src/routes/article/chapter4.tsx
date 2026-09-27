@@ -182,8 +182,7 @@ export default function __Chapter4__() {
             </Math>
             .
           </NoBreak>
-          {" "} And—surprise!—each pair of graphs
-          above is a pair of the form {" "}
+          {" "} And—surprise!—each pair above has the form {" "}
           <Math>
             $y = f(x)$
           </Math>
@@ -236,8 +235,7 @@ export default function __Chapter4__() {
             $y = f(x)$
           </Math>
           {" "} has a sharp “corner”
-          and no well-defined slope. By opposition, if
-          there is a well-defined tangent line to
+          and no well-defined slope. By opposition, if there is a well-defined tangent line to
           {" "}
           <Math>
             $y = f(x)$
@@ -246,8 +244,7 @@ export default function __Chapter4__() {
           <Math>
             $x = a$
           </Math>
-          {" "} the slope of this
-          tangent line supplies the value of {" "}
+          {" "} its slope gives {" "}
           <NoBreak>
             <Math>
               $f'(a)$
@@ -263,8 +260,7 @@ export default function __Chapter4__() {
         />
         <Pause />
         <OuterP>
-          In fact, we can
-          succinctly describe the derivative by...
+          We can summarize this by...
         </OuterP>
         <Pause />
         <MathBlock>
@@ -281,10 +277,7 @@ export default function __Chapter4__() {
           {" "} is
           undefined if a tangent line does not exist
           or if the tangent is vertical.
-          Also note that
-          the endpoint of a curve does not count
-          as having a tangent, and leaves a missing
-          value for the derivative:
+          An endpoint does not count as having a tangent, leaving the derivative undefined:
         </OuterP>
         <Pause />
         <Image
@@ -294,8 +287,7 @@ export default function __Chapter4__() {
         />
         <Pause />
         <OuterP>
-          In other words, what one might describe as
-          “half-tangents” do not actually count as tangents!
+          In other words, “half-tangents” do not count as tangents!
         </OuterP>
       </Section>
       <Rest />
@@ -403,7 +395,7 @@ const Rest = () => {
             Sketching a Derivative.
           </b>
           {" "}
-          Say that you would like to sketch the derivative
+          Say you want to sketch the derivative
           of the “before” function from the last “before”/“after” pair above:
         </OuterP>
         <Pause />
@@ -414,7 +406,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          One method is simply to eyeball the slope at
+          One method is to eyeball the slope at
           a few points along the curve, plot these
           values and interpolate:
         </OuterP>
@@ -449,10 +441,8 @@ const Rest = () => {
           ...voilà!
         </OuterP>
         <OuterP class="indent-10">
-          An alternate approach is to start by
-          determining intervals on which the derivative
-          is positive and negative, and then to
-          interpolate via the largest (respectively,
+          Alternatively, determine intervals on which the derivative
+          is positive and negative, then interpolate via the largest (respectively,
           smallest) value of the derivative in each
           interval:
         </OuterP>
@@ -485,7 +475,7 @@ const Rest = () => {
             Derivative of a constant function.
           </b>
           {" "}
-          A constant function is a function of the form
+          A constant function has the form
         </OuterP>
         <Pause />
         <MathBlock>
@@ -576,7 +566,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          we can summarize the situation by saying that
+          we can say
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -605,7 +595,7 @@ const Rest = () => {
             Derivative of an affine function.
           </b>
           {" "}
-          An affine function is a function of the form
+          An affine function has the form
         </OuterP>
         <Pause />
         <MathBlock>
@@ -658,20 +648,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          because the slope of a line of slope {" "}
+          because the slope is {" "}
           <Math>
             $A$
           </Math>
-          {" "} is
-          {" "}
-          <NoBreak>
-            <Math>
-              $A$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} no matter where you place yourself on the
-          line. In particular, {" "}
+          {" "} everywhere on the line. In particular, {" "}
           <Math>
             $B$
           </Math>
@@ -682,10 +663,9 @@ const Rest = () => {
             <Math>
               $\rt&#123;0.2&#125;$
             </Math>
-            Just
+            As
           </NoBreak>
-          {" "} like in the case of a
-          constant function, the derivative leaves no
+          {" "} with a constant function, the derivative leaves no
           trace of {" "}
           <NoBreak>
             <Math>
@@ -693,8 +673,7 @@ const Rest = () => {
             </Math>
             's
           </NoBreak>
-          {" "} value—and for the same reason
-          that {" "}
+          {" "} value—because {" "}
           <Math>
             $B$
           </Math>
@@ -755,8 +734,6 @@ const Rest = () => {
             <b>
               Example 1.
             </b>
-            {" "}
-            One has
           </OuterP>
           <Pause />
           <MathBlock>
@@ -798,8 +775,6 @@ const Rest = () => {
             <b>
               Example 2.
             </b>
-            {" "}
-            One has
           </OuterP>
           <Pause />
           <MathBlock>
@@ -886,8 +861,7 @@ const Rest = () => {
           <Math>
             $\f'$
           </Math>
-          {" "} is, originally,
-          an input for {" "}
+          {" "} is an input for {" "}
           <NoBreak>
             <Math>
               $\f$
@@ -996,12 +970,11 @@ const Rest = () => {
           ...and so on.
         </OuterP>
         <OuterP class="indent-10">
-          Units might additionally prompt us to refer
-          to {" "}
+          Units might also prompt us to call {" "}
           <Math>
             $f'$
           </Math>
-          {" "} as the
+          {" "} the
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1031,10 +1004,7 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "} The latter bit of
-          emphasis has to do with the fact that, in a
-          general graph, the slope of the tangent
-          keeps changing from point to point.
+          {" "} The latter emphasizes that the tangent’s slope can change from point to point.
         </OuterP>
       </Section>
     </>}
@@ -1093,7 +1063,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          these being, namely, the {" "}
+          the {" "}
           <i>
             third
           </i>
@@ -1101,8 +1071,7 @@ const Rest = () => {
           <i>
             fourth
           </i>
-          {" "}
-          and {" "}
+          {" "} and {" "}
           <i>
             fifth
           </i>
@@ -1159,9 +1128,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          but with the advantage that you don't have to
-          squint and start re-counting the apostrophes
-          several times over.
+          without having to squint and re-count the apostrophes several times.
         </OuterP>
         <Pause />
         <Example>
@@ -1169,8 +1136,6 @@ const Rest = () => {
             <b>
               Example 3.
             </b>
-            {" "}
-            We have
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1188,7 +1153,7 @@ const Rest = () => {
         </Example>
         <Pause />
         <OuterP>
-          because, firstly,
+          because
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1198,7 +1163,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          and, secondly,
+          and
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1208,7 +1173,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          so that, from start to finish,
+          so, from start to finish,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1265,8 +1230,7 @@ const Rest = () => {
             Geometric interpretation of the second derivative.
           </b>
           {" "}
-          The sign of the second derivative—whether
-          it is positive or negative—indicates whether
+          The sign of the second derivative indicates whether
           a graph is “bending upwards” or “bending
           downwards”. Upward-bending graphs have a positive
           second derivative, whereas downward-bending graphs
@@ -1353,10 +1317,7 @@ const Rest = () => {
         <OuterP>
           then the slope is decreasing at [the absolute
           value of] that rate, which could result in
-          a sharp bend downwards in the graph (unless
-          you are near vertical already, once again,
-          because verticality can disguise the presence
-          of a significant change in slope, once again).
+          a sharp bend downwards in the graph (unless you are near vertical already, once again).
         </OuterP>
       </Section>
     </>}
@@ -1529,12 +1490,14 @@ const Rest = () => {
           (!) as a function of time.
         </OuterP>
         <OuterP class="indent-10">
-          Note that the units on the {" "}
-          <Math>
-            $y$
-          </Math>
-          {" "} axis of the
-          second derivative are given by
+          The second derivative’s {" "}
+          <NoBreak>
+            <Math>
+              $y$
+            </Math>
+            -axis
+          </NoBreak>
+          {" "} units are
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1582,9 +1545,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          which produces the above-mentioned units of
-          the second derivative. Also note that a ratio of
-          the form
+          giving the second derivative’s units. A ratio of the form
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1594,8 +1555,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          is, indeed, an acceleration, in that acceleration
-          is defined as “the increase in velocity per unit
+          is an acceleration, defined as “the increase in velocity per unit
           time”.
         </OuterP>
         <OuterP class="indent-10">
@@ -1669,15 +1629,14 @@ const Rest = () => {
               Example 6.
             </b>
             {" "}
-            Over a period of {" "}
+            Over {" "}
             <NoBreak>
               <Math>
                 $10$
               </Math>
               s,
             </NoBreak>
-            {" "} an object that is
-            accelerating at a constant rate of
+            {" "} an object accelerating at a constant rate of
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1728,8 +1687,7 @@ const Rest = () => {
             The jerk.
           </b>
           {" "}
-          The rate of change of acceleration has a
-          name as well, being known as the
+          The rate of change of acceleration is called the
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1801,18 +1759,6 @@ const Rest = () => {
           in a train or subway car, etc—the
           “constant” qualifier
           implies a buttery-smooth, “non-jerky” experience!
-          (And therefore, vice-versa, some “jerk” implies a
-          non-constant acceleration, i.e., some nonzero
-          {" "}
-          <i>
-            rate of change
-          </i>
-          {" "} of the acceleration, i.e.,
-          nonzero {" "}
-          <i>
-            jerk
-          </i>
-          {" "} in the mathematical sense.)
         </OuterP>
         <Pause />
         <OuterP>
@@ -1821,15 +1767,14 @@ const Rest = () => {
             and Differences of Functions.
           </b>
           {" "}
-          Coming briefly back to {" "}
+          Returning briefly to {" "}
           <OutChapterLink
             href="/article/chapter3#_56_h.a.i_"
             class="out-chapter-link"
           >
             Chapter 3
           </OutChapterLink>
-          -related
-          matters, if
+          , if
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1874,7 +1819,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          with each equation being a {" "}
+          each equation being a {" "}
           <i>
             definition
           </i>
@@ -1896,8 +1841,7 @@ const Rest = () => {
           >
             Exercise 5 of Chapter 3
           </OutChapterLink>
-          , with
-          the little circle {" "}
+          , with the little circle {" "}
           <NoBreak>
             “
             <Math>
@@ -1905,8 +1849,7 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "} being known as
-          the {" "}
+          {" "} called the {" "}
           <i>
             composition operator
           </i>
@@ -1937,7 +1880,7 @@ const Rest = () => {
           >
             Exercise 17 of Chapter 3
           </OutChapterLink>
-          , also. (On the other hand, the
+          . (On the other hand, the
           quotient (i.e. {" "}
           <NoBreak>
             <Math>
@@ -2081,16 +2024,14 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              As one can see, the slope is very negative
-              near {" "}
+              The slope is very negative near {" "}
               <NoBreak>
                 <Math>
                   $x = 0$
                 </Math>
                 ,
               </NoBreak>
-              {" "} on either side. So the answer is:
-              “very large negative”.
+              {" "} on either side.
             </OuterP>
           </Solution>
         </Exercise>
@@ -2140,8 +2081,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                Taking even further derivatives produces
-                the same graph back, over and over again.
+                Further derivatives produce the same graph, over and over again.
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -2206,18 +2146,21 @@ const Rest = () => {
               {" "} axis become kilometers,
               kilometers per hour, and kilometers per
               hours squared, including the first graph
-              (each time
-              another derivative is taken, divide the
-              units of the {" "}
-              <Math>
-                $y$
-              </Math>
-              {" "} axis by the units of the
-              {" "}
-              <Math>
-                $x$
-              </Math>
-              {" "} axis):
+              (for each derivative, divide the {" "}
+              <NoBreak>
+                <Math>
+                  $y$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "} units by the {" "}
+              <NoBreak>
+                <Math>
+                  $x$
+                </Math>
+                -axis
+              </NoBreak>
+              {" "} units):
             </OuterP>
             <Pause />
             <Image
@@ -2328,8 +2271,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              that maps a number to the sum of the individual
-              values of the functions. So—for example—
+              that maps an input to the sum of the functions’ outputs. So—for example—
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2365,7 +2307,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              which implies that, indeed,
+              so
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2375,19 +2317,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is the function that maps each real number {" "}
-              <Math>
-                $t$
-              </Math>
-              {" "} to {" "}
-              <NoBreak>
-                <Math>
-                  $3t + 2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              i.e., is equal to the function {" "}
+              is the function {" "}
               <NoBreak>
                 <Math>
                   $t \ra 3t + 2$
@@ -2436,12 +2366,11 @@ const Rest = () => {
                 's:
               </NoBreak>
               {" "}
-              the {" "}
+              the placeholder {" "}
               <Math>
                 $x$
               </Math>
-              {" "} that is used as a placeholder to describe 
-              what the first function does, and the {" "}
+              {" "} describing the first function, and the {" "}
               <Math>
                 $x$
               </Math>
@@ -2464,7 +2393,7 @@ const Rest = () => {
               </b>
               {" "}
               Complete the missing units for each strip
-              below, based on those units that are given:
+              below, using the given units:
             </OuterP>
             <Pause />
             <Image
@@ -2475,8 +2404,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The pattern to respect is that, each time
-              you take a derivative, the units on the {" "}
+              Each time you take a derivative, the units on the {" "}
               <Math>
                 $x$
               </Math>
@@ -2573,9 +2501,7 @@ const Rest = () => {
                 “dimensionless ratios” they would look at
                 you funny. Also percentages are a system of
                 notation, whereby the symbol “%” means
-                “divide the preceding number by 100 in
-                order to discover the numerical value of
-                the ratio I'm talking about”.) (To drive
+                “divide the preceding number by 100 to get the ratio’s numerical value”.) (To drive
                 it home: In Chinese, 
                 {" "}
                 <NoBreak>
@@ -2672,8 +2598,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               But nothing prevents the graph from
-              having small wobbles near the zones of maximum or
-              minimum slope out of the range of our eyesight,
+              having small wobbles near maximum or minimum slope, too small to see,
               meaning that each bump of the derivative contains
               micro-bumps, like small ripples atop a big wave!
               (Still, “four” is a good bet to achieve full marks.)
@@ -2706,10 +2631,7 @@ const Rest = () => {
               The derivative crests each time the
               slope of the original function reaches a
               steepest point before de-sloping again, 
-              giving us—at the macro level from what
-              our eyes can see, barring mini-variations
-              of the slope that would give mini-bumps
-              atop each bump—six “up bumps” for
+              giving us—barring unseen mini-variations in slope that produce mini-bumps—six “up bumps” for
               the derivative and,
               reasoning symmetrically, five “down bumps”:
             </OuterP>
@@ -2719,21 +2641,6 @@ const Rest = () => {
               intrinsicWidth={780}
               intrinsicHeight={430}
             />
-            <Pause />
-            <OuterP>
-              (So the answer is: {" "}
-              <Math>
-                $6$
-              </Math>
-              {" "} and {" "}
-              <NoBreak>
-                <Math>
-                  $5$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} respectively.)
-            </OuterP>
           </Solution>
         </Exercise>
         <Exercise
@@ -2793,8 +2700,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              Referring to this rearranged sequence,
-              the first graph, for example,
+              In this sequence, the first graph
               has a slope that starts at {" "}
               <Math>
                 $\sim\!-1$
@@ -2903,11 +2809,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              [a.k.a., second derivative] is the rate
-              of change  of the slope, and that will
-              be greatest at the first bend of the curve,
-              where the slope is changing at the fastest
-              rate:
+              [a.k.a., second derivative] is the rate of change of the slope, greatest at the first bend:
             </OuterP>
             <Pause />
             <Image
@@ -2999,7 +2901,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Yes, this is the case. For a joke way
+              Yes. For a joke way
               of seeing it, here is a graph of a
               putative function {" "}
               <Math>
@@ -3110,8 +3012,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              and so on, what is the similar, most logical
-              definition for
+              what is the corresponding definition for
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3154,22 +3055,20 @@ const Rest = () => {
                 </Math>
                 ”
               </NoBreak>
-              {" "} is an ordinary
-              multiplication between two real numbers,
-              because {" "}
+              {" "} is ordinary multiplication of the real numbers {" "}
               <Math>
                 $c$
               </Math>
-              {" "} is a real number and {" "}
-              <Math>
-                $f(x)$
-              </Math>
-              {" "} is
-              a real number! (In this way, the product of
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $f(x)$
+                </Math>
+                !
+              </NoBreak>
+              {" "} (In this way, the product of
               a function by a real number “bootstraps”
-              off of the ordinary product of real numbers—this
-              is already similar to what happens for the
-              definition...
+              off of the ordinary product of real numbers—as in the definition...
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3296,8 +3195,7 @@ const Rest = () => {
                 keeps oscillating between two fixed
                 values—the “most slanted up” and the
                 “most slanted down”—so their derivatives
-                were always going to have an oscillatory
-                pattern, as well.
+                were always going to oscillate too.
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -3468,7 +3366,7 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                of the particle at that moment in time.
+                of the particle at that moment.
                 More precisely, if you let the particle
                 drift at the exact same {" "}
                 <NoBreak>
@@ -3495,9 +3393,7 @@ const Rest = () => {
                 </Math>
                 {" "} that you
                 measured at the root of the arrow for
-                one unit of time, the particle would
-                cover exactly the length of the arrow
-                in that one unit of time, no more no less,
+                one unit of time, the particle would cover exactly the arrow’s length in that time,
                 because the particle would cover {" "}
                 <Math>
                   $v_x$
@@ -3615,13 +3511,7 @@ const Rest = () => {
               </OuterP>
               <OuterP class="indent-10">
                 (Nb: When we draw a vector as an arrow
-                we mean that the first coordinate of the
-                vector is equal to the horizontal
-                displacement from the tail of the arrow
-                to the head of the arrow, and likewise
-                that the second coordinate is equal to the
-                vertical displacement from the tail of the
-                arrow to the head of the arrow.)
+                we mean that the coordinates give the horizontal and vertical displacements from the arrow’s tail to its head.)
                 <ImageRight
                   src="/build-img/svgo-svg/BcYN.svg"
                   intrinsicWidth={750}
@@ -3677,50 +3567,6 @@ const Rest = () => {
               <Pause />
               <OuterP>
                 at any given moment in time. 
-                We can also say...
-              </OuterP>
-              <Pause />
-              <CentralDisplayItalic>
-                the rate of change of the {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  -coordinate
-                </NoBreak>
-                {" "}
-                of the red particle is the {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  -coordinate
-                </NoBreak>
-                {" "}
-                of the blue particle
-              </CentralDisplayItalic>
-              <Pause />
-              <OuterP>
-                ...because 
-                “rate of change of the {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  -coordinate”
-                </NoBreak>
-                {" "} is 
-                another way of saying (in fact,
-                the definition of)
-                “velocity in {" "}
-                <NoBreak>
-                  <Math>
-                    $x$
-                  </Math>
-                  ”.
-                </NoBreak>
-              </OuterP>
-              <OuterP class="indent-10">
                 Concretely, if you graph the
                 {" "}
                 <NoBreak>
@@ -3893,8 +3739,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              (that happens to be true for differentiable
-              functions {" "}
+              (true for differentiable functions {" "}
               <NoBreak>
                 <Math>
                   $f$
@@ -3983,11 +3828,7 @@ const Rest = () => {
                 difference
                 quotient
               </i>
-              . Add elements to the diagram below such
-              that both the numerator and denominator of the
-              quotient can be found in the diagram, and thereby
-              explain the geometric meaning
-              of this quotient.
+              . Add the numerator and denominator to the diagram below to explain the quotient’s geometric meaning.
             </OuterP>
             <Pause />
             <Image
@@ -4019,14 +3860,11 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              is seen to have the form {" "}
+              has the form {" "}
               <i>
                 rise over run
               </i>
-              ,
-              and is more precisely equal to the slope
-              of the pale brown line going through the
-              point
+              : the slope of the pale brown line through
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4036,18 +3874,14 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              at one end, and
+              and
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              (x + h, f(x + h))
+              (x + h, f(x + h)).
               $$
             </MathBlock>
-            <Pause />
-            <OuterP>
-              at the other end.
-            </OuterP>
             <Pause />
             <OuterP>
               <i>
@@ -4120,10 +3954,7 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                because the secant approaches the tangent,
-                in that case, and the slope of the secant
-                is also, perforce, approaching the slope
-                of the tangent, which is {" "}
+                because the secant approaches the tangent, and its slope approaches the tangent’s slope, {" "}
                 <NoBreak>
                   <Math>
                     $f'(x)$
@@ -4261,8 +4092,7 @@ const Rest = () => {
                 Exercise 16
               </InChapterLink>
               {" "}
-              be divided by in order 
-              to obtain a difference quotient (cf. {" "}
+              be divided to obtain a difference quotient (cf. {" "}
               <InChapterLink
                 href="#_73_h.a.i_"
                 class="in-chapter-link"
@@ -4291,8 +4121,7 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "} In more detail, we obtain the
-              fraction
+              {" "} The fraction
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4302,16 +4131,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              after dividing by {" "}
-              <NoBreak>
-                <Math>
-                  $0.001$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              which is a difference
-              quotient, having the form
+              is a difference quotient of the form
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4407,10 +4227,7 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                above; what this underscores is that this diagram
-                can be completed in either of two ways to illustrate
-                a difference quotient, shown by the two diagrams
-                immediately below:
+                above; so this diagram can illustrate a difference quotient in either of two ways, shown below:
               </OuterP>
               <Pause />
               <Image
@@ -4658,8 +4475,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              More specifically, we are interested in
-              the change in the value of the product
+              We are interested in the change in the product
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4669,7 +4485,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              over said course of time.
+              over this time.
             </OuterP>
             <OuterP class="indent-10">
               To introduce an unsolicited metaphor,
@@ -4981,8 +4797,7 @@ const Rest = () => {
               as per the definition of function multiplication. !!]
             </OuterP>
             <OuterP class="indent-10">
-              The first term on the right-hand side, for
-              its part, comes out to
+              The first term on the right becomes
               <ImageRight
                 src="/build-img/svgo-svg/5bqq.svg"
                 intrinsicWidth={900}
@@ -5075,18 +4890,8 @@ const Rest = () => {
                 <Math>
                   $0$
                 </Math>
-                ,
+                .
               </NoBreak>
-              {" "} reintroducing the {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $B(t_0)$
-                </Math>
-                ”
-              </NoBreak>
-              {" "}
-              back in.
             </OuterP>
             <OuterP class="indent-10">
               Lastly the second term on the right-hand side
@@ -5305,8 +5110,7 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                Keeping things alphabetical everywhere, the
-                same equation is more often written
+                Keeping things alphabetical, this is usually written
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -5478,8 +5282,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We can start with the fraction in the
-              middle of the product:
+              Start with the fraction in the middle:
             </OuterP>
             <Pause />
             <Image
@@ -5550,26 +5353,10 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} given also the assumption
-              that each of the functions {" "}
-              <NoBreak>
-                <Math>
-                  $A_1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} ..., {" "}
+              {" "} since {" "}
               <Math>
-                $A_n$
+                $A_i$
               </Math>
-              {" "}
-              (including {" "}
-              <NoBreak>
-                <Math>
-                  $A_i$
-                </Math>
-                )
-              </NoBreak>
               {" "} is differentiable at {" "}
               <NoBreak>
                 <Math>
@@ -5726,12 +5513,13 @@ const Rest = () => {
               have been.)
             </OuterP>
             <OuterP class="indent-10">
-              Lastly one has the tail end of the product,
-              where {" "}
-              <Math>
-                $h$
-              </Math>
-              {" "} does not even appear:
+              Lastly, the tail of the product contains no {" "}
+              <NoBreak>
+                <Math>
+                  $h$
+                </Math>
+                :
+              </NoBreak>
             </OuterP>
             <Pause />
             <Image
@@ -6078,7 +5866,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                We never took the time to prove the associativity
+                We never proved the associativity
                 of function addition, but it is easy to prove!
                 (For other proofs see Exercise 32, Exercise 33, as
                 well as Exercise 9, {" "}
@@ -6111,7 +5899,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               of function multiplication
-              in order to show that
+              to show that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -6129,7 +5917,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              or, namely, to show that
+              or
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -6188,55 +5976,19 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It is necessary and sufficient to show that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              ((fg)h)(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is the same as
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (f(gh))(u)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
+              It is necessary and sufficient to show that {" "}
+              <Math>
+                $((fg)h)(u) = (f(gh))(u)$
+              </Math>
+              {" "}
               for an arbitrary input {" "}
               <NoBreak>
                 <Math>
                   $u \in \rr$
                 </Math>
-                ,
+                .
               </NoBreak>
-              {" "} in order to
-              show that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (fg)h
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              and
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              f(gh)
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              are the same function. (Function equality is
+              {" "} (Function equality is
               based on input-output behavior: two functions are
               equal if and only if every input is mapped to the
               same output under either function. See {" "}
@@ -6405,20 +6157,15 @@ const Rest = () => {
               </MathBlock>
               <Pause />
               <OuterP>
-                without any parentheses at all: it
-                doesn't matter whether we think of this product
-                as {" "}
+                without parentheses: {" "}
                 <Math>
                   $(fg)h$
                 </Math>
-                {" "} or {" "}
-                <NoBreak>
-                  <Math>
-                    $f(gh)$
-                  </Math>
-                  ,
-                </NoBreak>
-                {" "} the result is the same.
+                {" "} and {" "}
+                <Math>
+                  $f(gh)$
+                </Math>
+                {" "} give the same result.
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -6517,8 +6264,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              time to cross, because the maximum speed of the particle
-              inside of that interval is {" "}
+              time to cross, because the particle’s maximum speed in that interval is {" "}
               <NoBreak>
                 <Math>
                   $1$
@@ -6558,8 +6304,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              time to cross, because the maximum speed of the particle
-              inside of that interval is {" "}
+              time to cross, because the particle’s maximum speed in that interval is {" "}
               <NoBreak>
                 <Math>
                   $0.5$
@@ -6600,8 +6345,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              time to cross, because the maximum speed of the particle
-              inside of that interval is {" "}
+              time to cross, because the particle’s maximum speed in that interval is {" "}
               <NoBreak>
                 <Math>
                   $0.25$
@@ -6653,8 +6397,7 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                is a sequence of numbers in which each number
-                is a fixed multiple of the previous number.
+                is a sequence in which each number is a fixed multiple of the previous.
                 For example,
               </OuterP>
               <Pause />
@@ -6896,8 +6639,7 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                is an alternate characterization of the blue particle
-                that does not invoke the yellow particle, and
+                characterizes the blue particle without invoking the yellow particle, and
                 likewise
               </OuterP>
               <Pause />
@@ -6962,8 +6704,7 @@ const Rest = () => {
               />
               <Pause />
               <OuterP>
-                ...the detailed reasoning, as also indicated on the
-                figure, being that a mirror symmetry through
+                ...because a mirror symmetry through
                 the {" "}
                 <Math>
                   $y$
@@ -7038,8 +6779,7 @@ const Rest = () => {
             <OuterP>
               The velocity of each particle is set to
               the position of the next particle clockwise
-              around the circle, with this relationship
-              maintained at all points in time.
+              around the circle, with this relationship maintained at all times.
               If the configuration above shows time
               {" "}
               <NoBreak>
@@ -7245,17 +6985,14 @@ const Rest = () => {
               <Math>
                 $1$
               </Math>
-              {" "} centered at the origin, just like
-              the particles discussed in the solution to
-              {" "}
+              {" "} centered at the origin, as in {" "}
               <InChapterLink
                 href="#_70_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 13
               </InChapterLink>
-              &#8288;, that obey a similar set of
-              constraints
+              {" "}
               (albeit with a different set of colors).
             </OuterP>
             <OuterP class="indent-10">
@@ -7965,13 +7702,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               ...and see if these definitions satisfy the constraints
-              of the problem! (We momentarily have two different
-              purple particles: the one from the problem statement,
-              and the one that we have just defined; but that's ok,
-              as long as we are aware of this small semantic
-              transgression, it is not such a big deal,
-              and we shall soon prove that these two
-              particles are one and the same.)
+              of the problem! (We momentarily have two purple particles: the original and the newly defined one. We shall prove they are the same.)
               For starters...
             </OuterP>
             <Pause />
@@ -9243,87 +8974,10 @@ const Rest = () => {
                   intrinsicHeight={20}
                 />
               </NoBreak>
-              {" "} as they appear in the problem statement! I.e.,
-              our newly-defined particles {" "}
-              <NoBreak>
-                <InlineImage
-                  class="ch4_inline_blackwhite_particles"
-                  src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
-                />
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <InlineImage
-                  class="ch4_inline_blackwhite_particles"
-                  src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
-                />
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <InlineImage
-                class="ch4_inline_blackwhite_particles"
-                src="/build-img/svgo-svg/Ya08.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
-              />
-              {" "} and {" "}
-              <InlineImage
-                class="ch4_inline_blackwhite_particles"
-                src="/build-img/svgo-svg/k4Y8.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
-              />
-              {" "} are in the desired place at {" "}
-              <NoBreak>
-                <Math>
-                  $t = 0$
-                </Math>
-                !
-              </NoBreak>
+              {" "} as they appear in the problem statement!
             </OuterP>
             <OuterP class="indent-10">
-              In other words, the proposed definitions of {" "}
-              <NoBreak>
-                <InlineImage
-                  class="ch4_inline_blackwhite_particles"
-                  src="/build-img/svgo-svg/9T47.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
-                />
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <InlineImage
-                  class="ch4_inline_blackwhite_particles"
-                  src="/build-img/svgo-svg/6ZK8.svg"
-                  intrinsicWidth={20}
-                  intrinsicHeight={20}
-                />
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <InlineImage
-                class="ch4_inline_blackwhite_particles"
-                src="/build-img/svgo-svg/Ya08.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
-              />
-              {" "} and {" "}
-              <InlineImage
-                class="ch4_inline_blackwhite_particles"
-                src="/build-img/svgo-svg/k4Y8.svg"
-                intrinsicWidth={20}
-                intrinsicHeight={20}
-              />
-              {" "} “work” in the sense of satisfying all the conditions
-              of the problem statement, and are, indeed, the
-              solution we seek.
+              The proposed definitions satisfy all the conditions of the problem.
             </OuterP>
             <OuterP class="indent-10">
               Qualitatively, this implies that the particles
@@ -9347,15 +9001,11 @@ const Rest = () => {
               whether that seems intuitive or not.
             </OuterP>
             <OuterP class="indent-10">
-              Concretely,
-              the particle trajectories
-              end up like so, locally around {" "}
-              <NoBreak>
-                <Math>
-                  $t = 0$
-                </Math>
-                :
-              </NoBreak>
+              The trajectories near {" "}
+              <Math>
+                $t = 0$
+              </Math>
+              {" "} look like so:
             </OuterP>
             <Pause />
             <Image
@@ -9424,8 +9074,7 @@ const Rest = () => {
                   Note 2.
                 </i>
                 {" "}
-                As half-mentioned in
-                the solution to {" "}
+                As half-mentioned in {" "}
                 <InChapterLink
                   href="#_70_h.a.i_"
                   class="in-chapter-link"
@@ -9433,7 +9082,6 @@ const Rest = () => {
                   Exercise 13
                 </InChapterLink>
                 &#8288;,
-                but might be worth emphasizing,
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
@@ -9519,9 +9167,7 @@ const Rest = () => {
               </NoBreak>
               {" "} of a
               point rotating at unit speed around a unit
-              circle what is an approximation to the
-              circumference of a unit circle that can be
-              deduced by looking (closely) at the graph?
+              circle what approximation to its circumference can you deduce by looking (closely) at the graph?
             </OuterP>
             <Pause />
             <Image
@@ -9532,10 +9178,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Because the particle is going at unit speed the
-              circumference of the unit circle is equal to the
-              amount of time it takes the particle to complete one
-              revolution of the circle—that is, for example, the
+              Because the particle is going at unit speed the circumference equals the time for one revolution—that is, for example, the
               time covered by the yellow interval below, from crest
               to crest*:
             </OuterP>
@@ -9588,7 +9231,7 @@ const Rest = () => {
             <OuterP class="indent-10">
               However, the exact position of “cresting” is hard to
               determine because the graph flattens at that point,
-              and a more clever clue to pick up on is actually that the graph seems to go almost exactly through
+              and a better clue is that the graph seems to go almost exactly through
               {" "}
               <NoBreak>
                 <Math>
@@ -9948,11 +9591,7 @@ const Rest = () => {
             <OuterP>
               tangent to the unit circle, and so the
               particles will leave the circle!
-              (But that's OK.) In one-tenth a unit
-              of time, for example, the particles would
-              travel approximately one-tenth their
-              velocity vectors, that would bring them
-              to approximately these new positions:
+              (But that's OK.) In one-tenth a unit of time, the particles would travel approximately one-tenth their velocity vectors, reaching approximately these positions:
             </OuterP>
             <Pause />
             <Image
@@ -10082,9 +9721,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              To visualize such a fine-grained
-              approximation we need to revert to drawing
-              the particles as points. In the following
+              To visualize this finer approximation, we draw the particles as points. In the following
               figure the colored paths are points that
               come from a {" "}
               <NoBreak>
@@ -10258,143 +9895,36 @@ const Rest = () => {
                 -coordinate
               </NoBreak>
               {" "} of the blue
-              particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the
-              {" "}
+              particle. Likewise, {" "}
               <NoBreak>
                 <Math>
-                  $x$
+                  $f''$
                 </Math>
-                -coordinate
+                ,
               </NoBreak>
-              {" "} of the blue particle is the
-              {" "}
+              {" "} {" "}
               <NoBreak>
                 <Math>
-                  $x$
+                  $f'''$
                 </Math>
-                -coordinate
+                ,
               </NoBreak>
-              {" "} of the yellow particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <Math>
-                $f''$
-              </Math>
-              {" "} is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the
-              yellow particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the yellow particle is the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the green particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <Math>
-                $f'''$
-              </Math>
-              {" "} is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the
-              green particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the green particle
-              is the {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the purple
-              particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
+              {" "} and {" "}
               <Math>
                 $f''''$
               </Math>
-              {" "} is the {" "}
+              {" "} are the {" "}
               <NoBreak>
                 <Math>
                   $x$
                 </Math>
-                -coordinate
+                -coordinates
               </NoBreak>
-              {" "} of the
-              purple particle; and since
-            </OuterP>
-            <Pause />
-            <CentralDisplayItalic>
-              the rate of change of the
               {" "}
+              of the yellow, green, and purple particles, and {" "}
               <NoBreak>
                 <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the purple particle is the
-              {" "}
-              <NoBreak>
-                <Math>
-                  $x$
-                </Math>
-                -coordinate
-              </NoBreak>
-              {" "} of the red particle
-            </CentralDisplayItalic>
-            <Pause />
-            <OuterP>
-              <Math>
-                $f''''' = f^&#123;(5)&#125;$
-              </Math>
-              {" "} equals {" "}
-              <NoBreak>
-                <Math>
-                  $f$
+                  $f^&#123;(5)&#125; = f$
                 </Math>
                 .
               </NoBreak>
@@ -10484,8 +10014,7 @@ const Rest = () => {
                   Note 3.
                 </i>
                 {" "}
-                It is worth noting that, in fact, the
-                {" "}
+                The {" "}
                 <NoBreak>
                   <Math>
                     $x$
@@ -10499,8 +10028,7 @@ const Rest = () => {
                   </Math>
                   -coordinates
                 </NoBreak>
-                {" "} live separate
-                lives. The rate of change of each
+                {" "} live separate lives. The rate of change of each
                 {" "}
                 <NoBreak>
                   <Math>
@@ -10717,7 +10245,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              and such that {" "}
+              and {" "}
               <Math>
                 $f \ne 0$
               </Math>
@@ -10729,7 +10257,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "}
-              pedantically) and such that {" "}
+              pedantically) and {" "}
               <Math>
                 $f$
               </Math>
@@ -10802,8 +10330,7 @@ const Rest = () => {
             </Image>
             <Pause />
             <OuterP>
-              Maintaining this relationship at all
-              points in time, and given that the velocity
+              Maintaining this relationship at all times, and given that the velocity
               vectors point very slightly outward from
               the unit circle, and because all the
               symmetry and all the angles are maintained
@@ -11053,8 +10580,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              To parse the above figure, understand
-              that:
+              In this figure:
             </OuterP>
             <Pause />
             <List style="padding-left:1.2em;gap:0.4em;">

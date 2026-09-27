@@ -9,14 +9,13 @@
 
     |> Solution
 
-        It is $\theta$, as well. One method of
-        deduction uses the fact that “the complement
+        It is $\theta$, as well. One method uses the fact that “the complement
         of my complement is myself”:
 
         |> Image
             src=images/svg_ch5_ex_angle_sum_180_followup_explanation.svg
 
-        Another method of deduction uses the fact that,
+        Another method uses the fact that,
         together with the angle immediately to its left
         (which happens to be $\eta - \theta$, because
         it is the complement of $\theta$ via the smallest

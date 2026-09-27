@@ -6,8 +6,7 @@
     (f + g)' = f' + g'
     $$
 
-    (that happens to be true for differentiable
-    functions $f$, $g$)?
+    (true for differentiable functions $f$, $g$)?
 
     |> Solution
 

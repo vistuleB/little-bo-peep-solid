@@ -120,8 +120,7 @@
 
         |> SolutionNote
 
-            The following
-            diagram illustrates the two possibilities:
+            This diagram illustrates the two possibilities:
 
             |> Image
                 src=images/svg_ch5_ex_Bt_plus_C_OccamsRazor_combined_clockwise_version.svg

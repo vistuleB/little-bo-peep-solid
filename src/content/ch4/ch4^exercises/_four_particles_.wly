@@ -30,8 +30,7 @@
             keeps oscillating between two fixed
             values—the “most slanted up” and the
             “most slanted down”—so their derivatives
-            were always going to have an oscillatory
-            pattern, as well.
+            were always going to oscillate too.
 
         |> SolutionNote
             Because “most slanted up” occurs when
@@ -101,14 +100,12 @@
 
             __speed__
 
-            of the particle at that moment in time.
+            of the particle at that moment.
             More precisely, if you let the particle
             drift at the exact same $x$- and
             $y$-velocities $v_x$ and $v_y$ that you
             measured at the root of the arrow for
-            one unit of time, the particle would
-            cover exactly the length of the arrow
-            in that one unit of time, no more no less,
+            one unit of time, the particle would cover exactly the arrow’s length in that time,
             because the particle would cover $v_x$
             units in $x$ and $v_y$ units in $y$.
             And speed being
@@ -156,13 +153,7 @@
             in the direction of travel.
 
             (Nb: When we draw a vector as an arrow
-            we mean that the first coordinate of the
-            vector is equal to the horizontal
-            displacement from the tail of the arrow
-            to the head of the arrow, and likewise
-            that the second coordinate is equal to the
-            vertical displacement from the tail of the
-            arrow to the head of the arrow.)
+            we mean that the coordinates give the horizontal and vertical displacements from the arrow’s tail to its head.)
 
             |> ImageRight
                 src=images/svg_ch4_cosine_curves_vector_illustration_cloud.svg
@@ -185,22 +176,6 @@
             is the position in $x$ of the blue particle__
 
             at any given moment in time. 
-            We can also say...
-            !! In modified language:
-            !! This also means:
-
-            __the rate of change of the $x$-coordinate
-            of the red particle is the $x$-coordinate
-            of the blue particle__
-
-            ...because 
-            “rate of change of the $x$-coordinate” is 
-            !! a different way of saying 
-            !! the same as
-            another way of saying (in fact,
-            the definition of)
-            “velocity in $x$”.
-
             Concretely, if you graph the
             $x$-coordinates of the red and blue
             particles on the same graph, the rate of

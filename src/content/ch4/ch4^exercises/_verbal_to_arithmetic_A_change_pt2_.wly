@@ -2,8 +2,7 @@
     handle=_verbal_to_arithmetic_A_change_pt2_
 
     By what should the change mentioned in Exercise >>_verbal_to_arithmetic_A_change_
-    be divided by in order 
-    to obtain a difference quotient (cf. Exercise >>_difference_quotient_illustration_)?
+    be divided to obtain a difference quotient (cf. Exercise >>_difference_quotient_illustration_)?
 
     |> Solution
 
@@ -13,16 +12,13 @@
         0.001
         $$
 
-        since $11.2 = 11.199 + 0.001$. In more detail, we obtain the
-        fraction 
+        since $11.2 = 11.199 + 0.001$. The fraction 
 
         $$
         {A(11.2) - A(11.199) \over 0.001}
         $$
 
-        after dividing by $0.001$,
-        which is a difference
-        quotient, having the form
+        is a difference quotient of the form
 
         $$
         {f(x + h) - f(x) \over h}
@@ -57,10 +53,7 @@
             $$
             h = 0.001
             $$
-            above; what this underscores is that this diagram
-            can be completed in either of two ways to illustrate
-            a difference quotient, shown by the two diagrams
-            immediately below:
+            above; so this diagram can illustrate a difference quotient in either of two ways, shown below:
 
             |> Image
                 src=images/_e5_verbal_to_arithmetic_note1.svg

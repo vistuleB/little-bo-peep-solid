@@ -34,9 +34,7 @@
         $$
 
         are at least necessary on either side of the equation.
-        Then, evaluating further, one finds
-
-        But then one finds, in order, that
+        Evaluating in order:
         !! $$
         !! \begin{gathered}
         !! fg : [\tA] \ra [\tB\tC] \\
@@ -60,13 +58,5 @@
         \end{gathered}
         $$
 
-        so these signatures are also sufficient to
-        evaluate either side of the equation to the end, and,
-        moreover,
-        $(fg)'$
-        and
-        $f'g + g'f$
-        are found to have the same signature, concluding the 
-        dimensional analysis. (= Both sides impose the same
-        signature constraints, and evaluate to the same final
-        signature.)
+        Thus both sides impose the same signature constraints and
+        yield $[\A] \ra [\tB\tC/\tA]$.

@@ -7,8 +7,7 @@
 
     |> Solution
 
-        The basic idea is that we can view the
-        sphere as being made up of many cones:
+        We can view the sphere as made up of many cones:
 
         |> Image
             src=images/svg_ch5_ex_sphere_volume_idea.svg

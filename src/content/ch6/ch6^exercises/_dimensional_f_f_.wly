@@ -15,24 +15,5 @@
         $$
         is necessary and sufficient.
 
-        Formally, the general composition
-
-        $$
-        f \circ g
-        $$
-
-        requires signatures of the form
-
-        $$
-        \begin{gathered}
-        f : [\B] \ra [\C] \\
-        \up{1.6}g : [\A] \ra [\B]
-        \end{gathered}
-        $$
-
-        for some units A, B, C, as per >>table_1_1.
-        If $g = f$
-        this implies $\A = \B$ because both are the inputs
-        of $f = g$, as well as $\B = \C$ because both are
-        the outputs of $f = g$, collapsing A, B, C to a
-        single unit $\A = \B = \C = \A$.
+        The output of $f$ is fed back into $f$, so its output
+        units must match its input units.

@@ -28,35 +28,35 @@
     |> Image
         src=images/e6_f_inverse_reversed.svg
 
-    (In another view...
+    !! (In another view...
 
-    |> Image
-        src=images/e6_f_inverse_box_view.svg
+    !! |> Image
+    !!     src=images/e6_f_inverse_box_view.svg
 
-    ...$f^{-1}$ is the box that undoes the work
-    of $f$ and vice-versa, in another view...
-
-    $$
-    \begin{gathered}
-    (f^{-1} \circ f\rt{0.05}) = (x \ra x)\\
-    \up{1.6}(f \circ f^{-1}) = (x \ra x)
-    \end{gathered}
-    $$
-
-    ...$f^{-1}$ is the function that composes with
-    $f$ 
-    to produce the _identity function_ $x \ra x$ and vice-versa,
-    and in another view...
-
-    |> Image
-        src=images/e6_f_inverse_upright.svg
-
-    ...$f^{-1}$ is the function whose graph is the
-    mirror image of $y = f(x)$ about the line $x = y$.)
+    !! ...$f^{-1}$ is the box that undoes the work
+    !! of $f$ and vice-versa, in another view...
 
     !! $$
-    !! y = f(x)\,y = f^{-1}(x)
+    !! \begin{gathered}
+    !! (f^{-1} \circ f\rt{0.05}) = (x \ra x)\\
+    !! \up{1.6}(f \circ f^{-1}) = (x \ra x)
+    !! \end{gathered}
     !! $$
+
+    !! ...$f^{-1}$ is the function that composes with
+    !! $f$ 
+    !! to produce the _identity function_ $x \ra x$ and vice-versa,
+    !! and in another view...
+
+    !! |> Image
+    !!     src=images/e6_f_inverse_upright.svg
+
+    !! ...$f^{-1}$ is the function whose graph is the
+    !! mirror image of $y = f(x)$ about the line $x = y$.)
+
+    !! !! $$
+    !! !! y = f(x)\,y = f^{-1}(x)
+    !! !! $$
 
     Use dimensional analysis to conjecture a
     formula for the derivative of the inverse,
@@ -91,58 +91,14 @@
         (f^{-1})' : [\tB] \ra \left[{\A\over \B}\right]
         $$
 
-        and we seek to build a function of signature $[\B] \ra [\A/\B]$
-        from these...
-        !! Given that
-
-        !! $$
-        !! f' : [\A] \ra \left[{\B \over \A}\right]
-        !! $$
-
-        !! we have
-
-        !! $$
-        !! {1\over f'} : [\A] \ra \left[{\A \over \B}\right]
-        !! $$
-
-        !! which matches the desired signature in all but
-
-        !! The ingredients available are:
-        !! from these...
-
-        !! $$
-        !! \begin{gathered}
-        !! f : [\A] \ra [\B]\\
-        !! \up{1.2}f' : [\A] \ra [\A/\B]\\
-        !! \up{1.2}f^{-1} : [\B] \ra [\C]
-        !! \end{gathered}
-        !! $$
-        !! $$
-        !! f' : [\A] \ra [\B/\A]\\
-        !! $$
-            
-        $$
-        f : [\A] \ra [\B]\\
-        $$
-        $$
-        f' : [\A] \ra \left[{\B \over \A}\right]\\
-        $$
-        $$
-        f^{-1} : [\B] \ra [\A]
-        $$
-
-        ...ingredients; note that
-        !! one idea is to take the function $1/f'$,
-        !! since 
+        Taking the reciprocal of $f'$ gives
 
         $$
         {1\over f'} : [\A] \ra \left[{\A \over \B}\right]
         $$
 
         !! since we get 
-        gives us
-        the output units A/B at least, but the input 
-        units are wrong; (should be “B”);
+        with the right output units, but the wrong input units (A instead of B);
         however we can “slot in” the correct input units 
         to $f'$ by pre-composing with $f^{-1}$, i.e.,
         observe that
@@ -176,9 +132,7 @@
         |> SolutionNote
 
             !! We can evaluate the formula at an input:
-            The formula can be stated also in terms of what 
-            it implies for a specific input (maybe we should put ‘$y$’
-            here for the input, but anyway):
+            At a specific input:
 
             |> Boxed
                 $$

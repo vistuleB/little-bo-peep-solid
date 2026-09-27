@@ -659,8 +659,8 @@
     "compression": "81.91%",
     "intrinsic-width": "600",
     "intrinsic-height": "465",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "e6_v_over_c_cancellation_cloud.svg": {
     "build-version": "svgo-svg/Z9Xf.svg",
@@ -1192,8 +1192,8 @@
     "compression": "62.39%",
     "intrinsic-width": "520",
     "intrinsic-height": "500",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "c2_units_cloud.svg": {
     "build-version": "svgo-svg/mtGc.svg",
@@ -1271,7 +1271,7 @@
     "intrinsic-width": "20",
     "intrinsic-height": "20",
     "used-last-build": true,
-    "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
+    "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
   "svg_ch5_ch_etaOver2_example_angle_version.svg": {
     "build-version": "svgo-svg/jn-F.svg",
@@ -3233,8 +3233,8 @@
     "compression": "74.29%",
     "intrinsic-width": "470",
     "intrinsic-height": "180",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_big_division_inside_8c.svg": {
     "build-version": "svgo-svg/mwDw.svg",
@@ -3714,8 +3714,8 @@
     "compression": "79.16%",
     "intrinsic-width": "250",
     "intrinsic-height": "100",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_pacman1_hor0.svg": {
     "build-version": "svgo-svg/hGqu.svg",
@@ -4832,8 +4832,8 @@
     "compression": "63.57%",
     "intrinsic-width": "440",
     "intrinsic-height": "350",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch5_ex_big_division_big_subtraction_a.svg": {
     "build-version": "svgo-svg/DL_-.svg",
@@ -6887,7 +6887,7 @@
     "intrinsic-width": "20",
     "intrinsic-height": "20",
     "used-last-build": true,
-    "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
+    "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
   "svg_ch4_circle_at_2_4_p1_inline.svg": {
     "build-version": "svgo-svg/9T47.svg",
@@ -6900,7 +6900,7 @@
     "intrinsic-width": "20",
     "intrinsic-height": "20",
     "used-last-build": true,
-    "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
+    "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
   "svg_ch5_ch_triangle_sequence_2.svg": {
     "build-version": "svgo-svg/VAIj.svg",
@@ -7186,7 +7186,7 @@
     "intrinsic-width": "20",
     "intrinsic-height": "20",
     "used-last-build": true,
-    "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
+    "3chars": ["ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4","ch4"]
   },
   "svg_ch4_cosine_for_eta_counting_quarter_turns.svg": {
     "build-version": "svgo-svg/9cV2.svg",
@@ -10045,8 +10045,8 @@
     "compression": "65.26%",
     "intrinsic-width": "600",
     "intrinsic-height": "585",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_three_one_dimensional_particles_red_and_blue_symmetry.svg": {
     "build-version": "svgo-svg/a0qL.svg",
