@@ -1,4 +1,5 @@
-import { createSignal, onCleanup, onMount } from "solid-js";
+import MobileElevator from "./MobileElevator";
+import { createSignal, onCleanup, onMount, Show } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
   DESKTOP_TEXT_COLUMN_WIDTH,
@@ -37,6 +38,9 @@ const Nav = () => {
           style={{ height: "var(--header-height)" }}
         >
           <Title navPosition={navPosition()} />
+          <Show when={store.innerWidth <= MOBILE_MAX_WIDTH}>
+            <MobileElevator />
+          </Show>
         </div>
       </div>
       <div style={{ height: "var(--header-height)" }}></div>

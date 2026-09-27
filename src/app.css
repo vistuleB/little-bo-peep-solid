@@ -767,3 +767,30 @@ img + .t-3003:hover {
 .header-wordmark > span {
   display: block;
 }
+
+/* The mobile elevator is centered on the viewport, independently of the title. */
+.mobile-elevator {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 44px;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  padding: 3px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.mobile-elevator img {
+  display: block;
+  width: 38px;
+  height: calc(var(--header-height) - 6px);
+  object-fit: contain;
+}
+.mobile-elevator:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: -2px;
+}
