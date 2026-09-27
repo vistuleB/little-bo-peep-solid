@@ -2699,7 +2699,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               to avoid a minus sign in the result.
-              (Subtracting in the opposite order is also correct.) The difference is:
+              The difference is:
             </OuterP>
             <Pause />
             <MathBlock>

@@ -54,37 +54,42 @@ export default createHandler(() => (
           {
             import.meta.env.VITE_ENV === "LOCAL" ? (
               <>
-                <link rel="icon" href="/favicon-local.svg" />
+                <link
+                  rel="icon"
+                  type="image/png"
+                  sizes="256x256"
+                  href="/favicon-tsc-local-v1-256.png"
+                />
                 <link
                   rel="apple-touch-icon"
                   sizes="180x180"
-                  href="/apple-touch-icon-local.png"
+                  href="/favicon-tsc-local-v1-180.png"
                 />
                 <link
                   rel="apple-touch-startup-image"
-                  href="/apple-touch-icon-local.png"
+                  href="/favicon-tsc-local-v1-180.png"
                 />
               </>
             ) : (
               <>
-                <link rel="icon" href="/favicon-dev.ico" />
+                <link
+                  rel="icon"
+                  type="image/png"
+                  sizes="256x256"
+                  href="/favicon-tsc-remote-v1-256.png"
+                />
                 <link
                   rel="apple-touch-icon"
                   sizes="180x180"
-                  href="/apple-touch-icon-dev.png"
+                  href="/favicon-tsc-remote-v1-180.png"
                 />
                 <link
                   rel="apple-touch-startup-image"
-                  href="/apple-touch-icon-dev.png"
-                />
-                <link
-                  rel="mask-icon"
-                  href="/safari-pinned-tab-dev.svg"
-                  color="#5bbad5"
+                  href="/favicon-tsc-remote-v1-180.png"
                 />
                 <link
                   rel="apple-touch-icon-precomposed"
-                  href="/apple-touch-icon-dev.png"
+                  href="/favicon-tsc-remote-v1-180.png"
                 />
                 <script
                   defer
