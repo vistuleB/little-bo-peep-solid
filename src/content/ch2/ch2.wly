@@ -2,9 +2,8 @@
     handle=_ch2_start_
 
     *Definition.* The _slope_ of a line is a
-    mathematical measure of how “steep” a line is.
-    Here are a few examples (for an explanation of
-    the values, see below):
+    measure of how “steep” the line is.
+    Here are a few examples:
 
     |> Image
         src=images/c2_slope_examples.svg
@@ -17,7 +16,7 @@
 
     ...assuming that numbers on the $y$-axis increase
     going up and that numbers on the $x$-axis increase
-    going right, as is usually the case. 
+    going right, as is usually the case.
     Or...
     !! one can say...
     !! One can also
@@ -29,7 +28,7 @@
 
     !! ...more elegant!
     !! ...which is more elegant!
-    ...is a different way of expressing the same idea.
+    ...expresses the same idea.
 
     For example, the line below has slope 1, because
     it goes up by $1$ unit for each unit to the right:
@@ -63,7 +62,7 @@
     horizontal change gives the per-horizontal-unit
     vertical change.
 
-    To attach a formula to this idea, if
+    If
 
     $$ A = (x_1, y_1) $$
 
@@ -91,7 +90,7 @@
         offset-y=-0.7em
         offset-x=3em
 
-    more succinctly. We call this equation the _slope formula_.
+    We call this equation the _slope formula_.
 
     |> Example
         handle=slope_example
@@ -111,7 +110,7 @@
     |> StarDivider
 
     !! (The main thing to understand about Example 1 is that
-    (In Example >>slope_example, understand that
+    (In Example >>slope_example,
     $$
     1 - 5
     $$
@@ -254,7 +253,7 @@
     In fact, we _should_ be able to algebraically
     verify that the slope formula gives the same
     answer if $(x_1, y_1)$ and $(x_2, y_2)$ swap
-    places, or, namely, to show that the fractions
+    places, that is, show that the fractions
 
     |> ImageRight
         src=images/c2_swap_cloud.svg
@@ -263,7 +262,7 @@
 
     $$ {y_2 - y_1 \over x_2 - x_1}\qquad\,\,\,\,\,\te{and}\,\,\,\,\,\qquad{y_1 - y_2 \over x_1 - x_2} $$
 
-    are somehow equal. But, indeed,
+    are somehow equal. Indeed,
 
     $$ {y_2 - y_1 \over x_2 - x_1} = {-(y_2 - y_1) \over -(x_2 - x_1)} = {y_1 - y_2 \over x_1 - x_2} $$
 
@@ -272,12 +271,7 @@
         offset-x=2.5em
         offset-y=0
 
-    which verifies this hypothesis. In particular,
-
-    $$ {y_2 - y_1 \over x_2 - x_1}\qquad\,\,\,\,\,\te{and}\,\,\,\,\,\qquad{y_1 - y_2 \over x_1 - x_2} $$
-
-    are equally valid incarnations of the slope
-    formula.
+    So both forms of the slope formula are equally valid.
 
 
 |> Section
@@ -287,7 +281,7 @@
 
     $$ x_2 - x_1 = 0 $$
 
-    the slope formula “breaks down” in the sense that
+    the slope formula “breaks down” because
     division by 0 is undefined. This occurs, e.g., if
     we attempt to measure the slope of a vertical
     line:
@@ -300,10 +294,9 @@
 
     $$ x_2 - x_1 = 0 $$
 
-    can also occur another way, namely if the points
+    also occurs if the points
     $(x_1, y_1)$ and $(x_2, y_2)$ coincide. In that
-    case, more precisely, the slope formula evaluates
-    to
+    case, the slope formula gives
 
     $$ \frac{y_2 - y_1}{x_2 - x_1} = \frac{0}{0} $$
 
@@ -327,16 +320,15 @@
     |> Image
         src=images/c2_rise_over_run_1st_figure.svg
 
-    In this context, note that, in physics, a
+    In physics, a
     one-dimensional displacement is measured as
 
     $$
     \left({\te{coordinate} \atop \te{at arrival}}\right)\,\, - \,\,\left({\te{coordinate} \atop \te{at start}}\right)
     $$
 
-    in accordance, namely, with the coordinate
-    differences “$x_2 - x_1\!$”, “$y_2 - y_1\!$”
-    that appear in the slope formula.
+    matching the coordinate differences
+    “$x_2 - x_1\!$”, “$y_2 - y_1\!$” in the slope formula.
 
     (In order not to discriminate, maybe we should
     also include this picture:
@@ -345,8 +337,7 @@
         src=images/c2_rise_over_run_2nd_figure.svg
 
     Then “rise” and “run” have their signs flipped,
-    but the ratio rise-over-run is the same, as
-    already mentioned.)
+    but the ratio rise-over-run is the same.)
 
     |> Pause
 
@@ -358,7 +349,7 @@
     $$
 
     where the foreign-looking symbols $\Delta x$,
-    $\Delta y$ can be thought of as shorthands for
+    $\Delta y$ stand for
     “$x_2 - x_1$”, “$y_2 - y_1$” respectively. (Or,
     a little more exactly, as shorthands for the
     phrases “change in $x$”, “change in $y$”.)
@@ -378,7 +369,7 @@
     $$
 
     or “rise equals slope times run”. After which,
-    dividing each side by “slope”, we find
+    for nonzero slope, dividing each side by “slope” gives
 
     $$
     \te{run} = {\te{rise} \over \te{slope}}
@@ -409,7 +400,7 @@
     |> Image
         src=images/c2_line_equation_examples.svg
 
-    Note that, assuming said $y = ax + b$, one has
+    For $y = ax + b$,
 
     $$y = a\cdot 0 + b = b$$
 
@@ -436,7 +427,7 @@
 
     so $y$ increases by $a$ between $x = 0$ and
     $x = 1$. In fact, $y$ increases by $a$ each time
-    $x$ increases by 1, so, by our own definition of
+    $x$ increases by 1, so, by our definition of
     slope—the increase in $y$ per unit increase in
     $x$—$a$ is the slope of $y = ax + b$!
 
@@ -472,8 +463,7 @@
     for a horizontal line, where $b \in \rr$ is a
     constant.
 
-    One should also bear in mind that an equation can
-    define a line without having either of the forms
+    An equation can also define a line without having either form
     “$y = ax + b$” or “$x = c$”. For example,
 
     $$x + y = 3$$
@@ -499,7 +489,7 @@
     {\te{$y$ axis units} \over \te{$x$ axis units}}
     $$
 
-    as should make sense, given that the slope is a
+    because slope is a
     change in $y$ divided by a change in $x$.
 
     For example, if the units on the $y$ axis are
@@ -510,9 +500,7 @@
     {\te{$y$ axis units} \over \te{$x$ axis units}} = {\te{m} \over \te{s}}
     $$
 
-    also known as _meters per second_. This is
-    precisely the case, for example, in the following
-    graph, that purports to plot the height of a
+    also known as _meters per second_. For example, the following graph purports to plot the height of a
     balloon, in meters, as a function of time elapsed,
     in seconds:
 
@@ -536,8 +524,7 @@
 
     __displacement over time__
 
-    and this is precisely the form of the ratio “rise
-    over run” for the current graph. (More generally,
+    which is “rise over run” for this graph. (More generally,
     we have
 
     _|“slope = velocity”|_
@@ -547,7 +534,7 @@
     slope turns out to be $\te{m}/\te{s}$ or $\te{km}/\te{s}$
     or km/hour, etc, depends on the exact units involved.)
 
-    Terminology-wise, slopes are often known as
+    Slopes are often called
 
     __rates of change__
 
@@ -563,10 +550,8 @@
     {\!\rt{0.15}\te{amount of change}\!\rt{0.1} \over \te{amount of time}}\rt{0.1}\te{”}$$
 
     where “amount of change” is short for “amount of
-    change on the $y$-axis”. By extension, taking all
-    three permutations of the slope formula into account
-    gives us this alternate triptych of equations, expressing
-    the same idea(s) in “applied” language:
+    change on the $y$-axis”. The three forms of the slope formula give this
+    triptych in “applied” language:
 
     |> Image
         src=images/c2_flower_bed_2.svg
@@ -593,14 +578,11 @@
         \end{array}
         $$
 
-        found in the second line of the table. (Indeed,
-        $0.75$m$/$s is the “rate of change” of the
-        balloon's height.)
+        found in the second line of the table.
 
     |> Example
 
-        The amount of time required
-        for the balloon to go up by (say) $4$m is
+        The time for the balloon to go up by (say) $4$m is
 
         $$
         \frac{4\te{m}}{0.75\te{m}/\te{s}}\! = 5.3333...\te{s}
@@ -632,16 +614,14 @@
 
     one could easily be tricked into thinking that a
     “dimension” is the same thing as a “unit”. In
-    fact, dimensions are broader categories, such as,
-    namely,
+    fact, dimensions are broader categories, such as
 
     __time__
     __length__
     __mass__
 
-    each of which covers _several different_ units.
-    For example, in the “time” dimension, one finds
-    individual units of the type
+    each of which covers _several_ units.
+    For example, the “time” dimension includes units such as
 
     __years, seconds, minutes, hours, days__
 

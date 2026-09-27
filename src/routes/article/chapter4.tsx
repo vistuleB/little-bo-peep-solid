@@ -6244,7 +6244,7 @@ const Rest = () => {
                 href="/article/chapter3#_42_h.a.i_"
                 class="out-chapter-link"
               >
-                Note 6, Exercise 9, Chapter 3
+                Note 5, Exercise 9, Chapter 3
               </OutChapterLink>
               .)
             </OuterP>

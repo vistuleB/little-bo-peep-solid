@@ -8,13 +8,12 @@
         Presumably, there are $1000$ “millibits”
         (whatever those are, we can go along with
         the joke here) in one bit. Since there are
-        eight bits in a byte, and a million bytes
-        in a gigabyte, this means that there would
-        be
+        eight bits in a byte, and a billion bytes
+        in a gigabyte, there would be
         $$
-        \Large 1000 \times 8 \times 10^6 = 8 \times 10^9
+        \Large 1000 \times 8 \times 10^9 = 8 \times 10^{12}
         $$
-        or $8$ billion “millibits” per gigabyte.
-        (But to reiterate, there is no such thing
+        or $8$ trillion “millibits” per gigabyte.
+        (But there is no such thing
         as a “millibit”; a bit is a _discrete_—i.e.,
         indivisible—unit of computer memory.)

@@ -117,8 +117,20 @@ td {
 }
 .mathblock .MathJax svg {
   display: block;
-  height: auto;
   margin-inline: auto;
+}
+.mathblock .MathJax svg:not([width="100%"]) {
+  height: auto;
+}
+
+/* MathJax positions equation tags against its full-width SVG. Keep that
+   viewport at the column width, rather than shrink-wrapping the equation. */
+.mathblock:has(.MathJax > svg[width="100%"]) {
+  width: 100% !important;
+  overflow-x: auto;
+}
+.mathblock .MathJax:has(> svg[width="100%"]) {
+  min-width: 100%;
 }
 .scrollbar-hidden::-webkit-scrollbar {
   width: 0;

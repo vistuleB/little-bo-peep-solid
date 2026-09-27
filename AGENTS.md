@@ -101,6 +101,14 @@ little-bo-peep-solid/
 
 ## Source (`src/content/`) layout
 
+### Preserve meaningful whitespace
+
+Trailing spaces in `.wly` files can be semantically meaningful, especially before
+inline elements such as `|> del` and after a backslash used to preserve a space
+(`\ `). Preserve these spaces when editing prose. Do not blanket-trim trailing
+whitespace, apply `rstrip()` to every line, or automatically remove spaces flagged
+by whitespace checks: doing so can join words across inline elements.
+
 Unlike the `dr` project (which uses numbered subdirectories for chapters), this project uses a
 **flat file** layout with naming conventions:
 

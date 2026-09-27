@@ -5,7 +5,7 @@
     $$
     \Large v^aF^b\mu^c\rho = 1
     $$
-    where $v$, $F$, $\mu$ and $\rho$ are defined as below.
+    where $v$, $F$, $\mu$ and $\rho$ are defined below.
     $$
     \Large v = {L \over T}
     $$
@@ -21,7 +21,7 @@
 
     |> Solution
 
-        Firstly we can rewrite $v$, $F$, $\mu$, $\rho$
+        First, rewrite $v$, $F$, $\mu$, $\rho$
         in the canonical form $M^xL^yT^z$
         for integers $x$, $y$, $z$ (as in Exercise
         >>_M_L_T_rewrite_):
@@ -52,7 +52,6 @@
         $$
         \Large \rho = ML^{-3}
         $$
-        (In the last line we just restated $\rho$.)
         Then $v^aF^b\mu^c\rho$ becomes
         $$
         \Large M^{b+c+1}L^{a+b-c-3}T^{-a-2b-c}
@@ -79,8 +78,7 @@
         $$
         \Large -a -2b - c = 0
         $$
-        ...are satisfied! Adding the second and
-        third equation together, we find
+        ...are satisfied! Adding the second and third equations gives
         $$
         \Large -b -2c -3 = 0
         $$
@@ -110,9 +108,7 @@
         \Large a + 1 - (-2) - 3 = 0
         $$
         which implies that $a = 0$ since $1-(-2)-3 = 0$.
-        (One can finally check that
-        setting $a=0$, $b = 1$, $c=-2$ satisfies that
-        third equation, $-a-2b-c=0$, which it does.)
+        (These values also satisfy the third equation, $-a-2b-c=0$.)
 
         In summary, the solution is $a = 0$, $b = 1$,
         $c = -2$; we have discovered that
@@ -120,8 +116,7 @@
         \Large v^0 F^1 \mu^{-2} \rho = 1
         $$
         under the given definitions of $v$, $F$, $\mu$
-        and $\rho$, or which is to say, we have discovered
-        that
+        and $\rho$, or simply
         $$
         \Large F\mu^{-2}\rho = 1
         $$

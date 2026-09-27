@@ -12,7 +12,7 @@
 
     without using “$\circ$”, using only the
     “definitional equation of function
-    composition”, which is namely
+    composition”, namely
 
     |> div
         style=font-size:1.1em;margin:1em 0em;
@@ -45,9 +45,8 @@
             (f \circ (g \circ h))(x) = \f((g \circ h)(x))
             $$
 
-        ...which already constitutes progress towards
-        our goal, since only one copy of “$\circ$”
-        exists on the right-hand side! But
+        ...progress: only one copy of “$\circ$”
+        remains on the right-hand side! But
 
         |> div
             style=font-size:1.1em;margin:0.8em 0em;
@@ -68,8 +67,7 @@
         ...and this completes the computation!
 
         |> SolutionNote
-            We can collect both steps of the computation
-            into a single string of equalities:
+            We can collect both steps into one string of equalities:
 
             |> Image
                 src=images/svg_first_victim_second_victim_1_1em.svg

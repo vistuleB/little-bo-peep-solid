@@ -192,9 +192,9 @@ export default function __Bootcamp1__() {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          as in, for example, the buttons and clock
+          for example, the buttons and clock
           display and door handle of a microwave oven)
-          of a set consists of just one functionality:
+          of a set offers just one operation:
           a set can answer questions of the form
         </OuterP>
         <Pause />
@@ -203,7 +203,6 @@ export default function __Bootcamp1__() {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          and nothing else.
           For example, you could ask a set
         </OuterP>
         <Pause />
@@ -241,7 +240,7 @@ export default function __Bootcamp1__() {
           both answer “no”.
         </OuterP>
         <OuterP class="indent-10">
-          Notation-wise, the expression
+          The expression
         </OuterP>
         <Pause />
         <MathBlock>
@@ -278,12 +277,12 @@ export default function __Bootcamp1__() {
             <Math>
               $x$
             </Math>
-            ?”
+            ?”.
           </NoBreak>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          equivalently. [One can also say
+          [One can also say
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -326,8 +325,7 @@ export default function __Bootcamp1__() {
         <Pause />
         <OuterP>
           depending on one's mood and/or tastes.]
-          As in all of mathematics, any such statement
-          evaluates to either “true” or “false”.
+          As in all of mathematics, such a statement is either true or false.
           For example,
         </OuterP>
         <Pause />
@@ -398,8 +396,7 @@ const Rest = () => {
             Set Equality.
           </b>
           {" "}
-          Two sets are deemed to be
-          equal if and only if they
+          Two sets are equal if and only if they
           answer the same to
           all “do you contain ...?” questions.
           For example, while
@@ -412,7 +409,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          might look superficially different from
+          might look different from
         </OuterP>
         <Pause />
         <MathBlock>
@@ -422,7 +419,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          these sets are actually one and the same,
+          these sets are one and the same,
           because they both answer “yes” to
         </OuterP>
         <Pause />
@@ -445,7 +442,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          might also look superficially different from
+          might also look different from
         </OuterP>
         <Pause />
         <MathBlock>
@@ -472,8 +469,8 @@ const Rest = () => {
         </OuterP>
         <OuterP class="indent-10">
           (These examples demonstrate that human notation
-          is redundant: there are several different ways of
-          writing down the same set. They also demonstrate
+          is redundant: there are several ways to
+          write the same set. They also demonstrate
           that sets do not keep track of the
         </OuterP>
         <Pause />
@@ -494,9 +491,7 @@ const Rest = () => {
           of the “API” of a set.)
         </OuterP>
         <OuterP class="indent-10">
-          Moreover, any empty set is equal to any other
-          empty set. Equality follows because both sets
-          answer all questions the same way: they both
+          Any two empty sets are equal because both
           answer “no” to everything. So there is
         </OuterP>
         <Pause />
@@ -536,19 +531,17 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          another available notation is
+          another notation is
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large \phi
+          \Large \varnothing
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          which is the Greek letter phi, read “fee”. (Or
-          “fie”? Hum.) (Or you can just say “the empty set”,
-          and keep it safe.)
+          read “the empty set”.
         </OuterP>
       </Section>
     </>}
@@ -560,9 +553,8 @@ const Rest = () => {
             Sets within sets.
           </b>
           {" "}
-          Sets can be nested much like Russian dolls. In
-          fact, the result of doing this might even look
-          like a little bit like a Russian doll (no?):
+          Sets can be nested much like Russian dolls.
+          The result might even look a little like a Russian doll (no?):
         </OuterP>
         <Pause />
         <MathBlock>
@@ -573,14 +565,14 @@ const Rest = () => {
         <Pause />
         <OuterP>
           The above is “a set containing a set containing
-          a set containing a set containing the empty set”.
+          a set containing the empty set”.
           Eschewing complete adherence to the Russian doll
           aesthetic, we could also write
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \Large \&#123;\&#123;\&#123;\phi\&#125;\&#125;\&#125;
+          \Large \&#123;\&#123;\&#123;\varnothing\&#125;\&#125;\&#125;
           $$
         </MathBlock>
         <Pause />
@@ -588,13 +580,13 @@ const Rest = () => {
           for the same thing, given that {" "}
           <NoBreak>
             <Math>
-              $\phi = \&#123;\&#125;$
+              $\varnothing = \&#123;\&#125;$
             </Math>
             .
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          Mind you, concerning this example, that
+          Mind you,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -612,7 +604,7 @@ const Rest = () => {
         <Pause />
         <OuterP>
           because a box containing an empty box is not the
-          same thing as an empty box! Specifically,
+          same as an empty box! Specifically,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -633,7 +625,7 @@ const Rest = () => {
           {" "} (a.k.a., “do you contain {" "}
           <NoBreak>
             <Math>
-              $\phi$
+              $\varnothing$
             </Math>
             ?”)
           </NoBreak>
@@ -680,7 +672,7 @@ const Rest = () => {
             Set union and set intersection.
           </b>
           {" "}
-          The so-called {" "}
+          The {" "}
           <i>
             union
           </i>
@@ -703,8 +695,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          and consists of the set
-          of all things that are either in {" "}
+          and is the set of elements either in {" "}
           <Math>
             $A$
           </Math>
@@ -741,8 +732,7 @@ const Rest = () => {
           <Math>
             $5$
           </Math>
-          {" "} are the only elements to find
-          themselves either in {" "}
+          {" "} are the only elements in {" "}
           <Math>
             $\&#123;1, 2\&#125;$
           </Math>
@@ -754,7 +744,7 @@ const Rest = () => {
             .
           </NoBreak>
           {" "}
-          The so-called {" "}
+          The {" "}
           <i>
             intersection
           </i>
@@ -777,7 +767,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          and consists of the set of all things that are both
+          and is the set of elements both
           in {" "}
           <Math>
             $A$
@@ -851,8 +841,7 @@ const Rest = () => {
         <OuterP>
           because that's how we defined “union”. (Replace
           “or” by “and” to get a definition of intersection.)
-          In fact, a logician would define the union of two
-          sets by an abstruse expression of the type
+          A logician would define union by an abstruse expression like
         </OuterP>
         <Pause />
         <MathBlock>
@@ -916,7 +905,7 @@ const Rest = () => {
             ”
           </NoBreak>
           {" "} means “or”. (You can figure out the
-          similar definition for the intersection of two sets
+          corresponding definition of intersection
           if we tell you that
         </OuterP>
         <Pause />
@@ -982,12 +971,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          which contains only those integers that are greater
-          than {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} (i.e., {" "}
+          which contains exactly the positive integers (i.e., {" "}
           <NoBreak>
             <Math>
               $\nn = \&#123;1, 2, 3, \ldots \&#125;$
@@ -996,9 +980,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          Secondly—and this pretty much wraps it up for those
-          sets  that are commonly seen in calculus—you will
-          encounter {" "}
+          You will also encounter {" "}
           <i>
             intervals
           </i>
@@ -1085,27 +1067,17 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          (which is an {" "}
+          (an {" "}
           <i>
             open
           </i>
-          {" "} interval, by the way) means
+          {" "} interval) means
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
           the set of real numbers with no bound below,
-          and no bound above
+          and no bound above.
         </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          which is all of {" "}
-          <NoBreak>
-            <Math>
-              $\rr$
-            </Math>
-            .
-          </NoBreak>
-        </OuterP>
       </Section>
     </>}
     {visibleRestSections() > 5 && <>
@@ -1117,7 +1089,7 @@ const Rest = () => {
           </b>
           {" "}
           If you take a more advanced course, you might
-          encounter the so-called {" "}
+          encounter the {" "}
           <i>
             set of extended real numbers
           </i>
@@ -1132,13 +1104,10 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          and which consists of all the numbers in {" "}
-          <NoBreak>
-            <Math>
-              $\rr$
-            </Math>
-            ,
-          </NoBreak>
+          consisting of the numbers in {" "}
+          <Math>
+            $\rr$
+          </Math>
           {" "} plus
           the formal symbols {" "}
           <NoBreak>
@@ -1154,9 +1123,8 @@ const Rest = () => {
             <Math>
               $\infty$
             </Math>
-            ”
+            ”:
           </NoBreak>
-          {" "} as well:
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1173,20 +1141,14 @@ const Rest = () => {
           <Math>
             $\overline&#123;\rr&#125;$
           </Math>
-          {" "} as a kind “closed interval”
+          {" "} as a “closed interval”
           version of {" "}
           <NoBreak>
             <Math>
               $\rr$
             </Math>
-            ,
+            :
           </NoBreak>
-          {" "} that is, think of {" "}
-          <Math>
-            $\overline&#123;\rr&#125;$
-          </Math>
-          {" "}
-          as being the closed interval
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1211,8 +1173,7 @@ const Rest = () => {
           .
         </OuterP>
         <OuterP class="indent-10">
-          E.g. (to give you a brief flavor, before we move on
-          forever from the topic), the value of something like
+          E.g., the value of something like
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1234,7 +1195,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} in
-          case you're curious. In fact, one has {" "}
+          case you're curious. In fact, {" "}
           <Math>
             $a + \infty = \infty$
           </Math>

@@ -21,8 +21,6 @@
 
     |> Solution
 
-        The answers are:
-
         |> Grid
             cols=2
             mobile-cols=1

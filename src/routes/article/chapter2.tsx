@@ -90,9 +90,8 @@ export default function __Chapter2__() {
             slope
           </i>
           {" "} of a line is a
-          mathematical measure of how “steep” a line is.
-          Here are a few examples (for an explanation of
-          the values, see below):
+          measure of how “steep” the line is.
+          Here are a few examples:
         </OuterP>
         <Pause />
         <Image
@@ -128,7 +127,7 @@ export default function __Chapter2__() {
             -axis
           </NoBreak>
           {" "} increase
-          going right, as is usually the case. 
+          going right, as is usually the case.
           Or...
         </OuterP>
         <Pause />
@@ -139,7 +138,7 @@ export default function __Chapter2__() {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          ...is a different way of expressing the same idea.
+          ...expresses the same idea.
         </OuterP>
         <OuterP class="indent-10">
           For example, the line below has slope 1, because
@@ -237,7 +236,7 @@ const Rest = () => {
           vertical change.
         </OuterP>
         <OuterP class="indent-10">
-          To attach a formula to this idea, if
+          If
         </OuterP>
         <Pause />
         <MathBlock>
@@ -307,7 +306,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          more succinctly. We call this equation the {" "}
+          We call this equation the {" "}
           <i>
             slope formula
           </i>
@@ -360,7 +359,7 @@ const Rest = () => {
           >
             Example 1
           </InChapterLink>
-          &#8288;, understand that
+          &#8288;,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -641,7 +640,7 @@ const Rest = () => {
             $(x_2, y_2)$
           </Math>
           {" "} swap
-          places, or, namely, to show that the fractions
+          places, that is, show that the fractions
           <ImageRight
             src="/build-img/svgo-svg/9GPK.svg"
             line={3}
@@ -658,7 +657,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          are somehow equal. But, indeed,
+          are somehow equal. Indeed,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -676,18 +675,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          which verifies this hypothesis. In particular,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;y_2 - y_1 \over x_2 - x_1&#125;\qquad\,\,\,\,\,\te&#123;and&#125;\,\,\,\,\,\qquad&#123;y_1 - y_2 \over x_1 - x_2&#125;
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          are equally valid incarnations of the slope
-          formula.
+          So both forms of the slope formula are equally valid.
         </OuterP>
       </Section>
     </>}
@@ -709,7 +697,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          the slope formula “breaks down” in the sense that
+          the slope formula “breaks down” because
           division by 0 is undefined. This occurs, e.g., if
           we attempt to measure the slope of a vertical
           line:
@@ -737,7 +725,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          can also occur another way, namely if the points
+          also occurs if the points
           {" "}
           <Math>
             $(x_1, y_1)$
@@ -747,8 +735,7 @@ const Rest = () => {
             $(x_2, y_2)$
           </Math>
           {" "} coincide. In that
-          case, more precisely, the slope formula evaluates
-          to
+          case, the slope formula gives
         </OuterP>
         <Pause />
         <MathBlock>
@@ -807,7 +794,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          In this context, note that, in physics, a
+          In physics, a
           one-dimensional displacement is measured as
         </OuterP>
         <Pause />
@@ -818,8 +805,8 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          in accordance, namely, with the coordinate
-          differences {" "}
+          matching the coordinate differences
+          {" "}
           <NoBreak>
             “
             <Math>
@@ -835,8 +822,7 @@ const Rest = () => {
             </Math>
             ”
           </NoBreak>
-          {" "}
-          that appear in the slope formula.
+          {" "} in the slope formula.
         </OuterP>
         <OuterP class="indent-10">
           (In order not to discriminate, maybe we should
@@ -851,8 +837,7 @@ const Rest = () => {
         <Pause />
         <OuterP>
           Then “rise” and “run” have their signs flipped,
-          but the ratio rise-over-run is the same, as
-          already mentioned.)
+          but the ratio rise-over-run is the same.)
         </OuterP>
         <Pause />
         <OuterP>
@@ -882,7 +867,7 @@ const Rest = () => {
           <Math>
             $\Delta y$
           </Math>
-          {" "} can be thought of as shorthands for
+          {" "} stand for
           {" "}
           <NoBreak>
             “
@@ -947,7 +932,7 @@ const Rest = () => {
         <Pause />
         <OuterP>
           or “rise equals slope times run”. After which,
-          dividing each side by “slope”, we find
+          for nonzero slope, dividing each side by “slope” gives
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1006,14 +991,13 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          Note that, assuming said {" "}
+          For {" "}
           <NoBreak>
             <Math>
               $y = ax + b$
             </Math>
             ,
           </NoBreak>
-          {" "} one has
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1159,7 +1143,7 @@ const Rest = () => {
           <Math>
             $x$
           </Math>
-          {" "} increases by 1, so, by our own definition of
+          {" "} increases by 1, so, by our definition of
           slope—the increase in {" "}
           <Math>
             $y$
@@ -1266,8 +1250,7 @@ const Rest = () => {
           constant.
         </OuterP>
         <OuterP class="indent-10">
-          One should also bear in mind that an equation can
-          define a line without having either of the forms
+          An equation can also define a line without having either form
           {" "}
           <NoBreak>
             “
@@ -1365,7 +1348,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          as should make sense, given that the slope is a
+          because slope is a
           change in {" "}
           <Math>
             $y$
@@ -1403,9 +1386,7 @@ const Rest = () => {
           <i>
             meters per second
           </i>
-          . This is
-          precisely the case, for example, in the following
-          graph, that purports to plot the height of a
+          . For example, the following graph purports to plot the height of a
           balloon, in meters, as a function of time elapsed,
           in seconds:
         </OuterP>
@@ -1462,8 +1443,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          and this is precisely the form of the ratio “rise
-          over run” for the current graph. (More generally,
+          which is “rise over run” for this graph. (More generally,
           we have
         </OuterP>
         <Pause />
@@ -1494,7 +1474,7 @@ const Rest = () => {
           or km/hour, etc, depends on the exact units involved.)
         </OuterP>
         <OuterP class="indent-10">
-          Terminology-wise, slopes are often known as
+          Slopes are often called
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1540,10 +1520,8 @@ const Rest = () => {
             </Math>
             -axis”.
           </NoBreak>
-          {" "} By extension, taking all
-          three permutations of the slope formula into account
-          gives us this alternate triptych of equations, expressing
-          the same idea(s) in “applied” language:
+          {" "} The three forms of the slope formula give this
+          triptych in “applied” language:
         </OuterP>
         <Pause />
         <Image
@@ -1585,22 +1563,7 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            found in the second line of the table. (Indeed,
-            {" "}
-            <NoBreak>
-              <Math>
-                $0.75$
-              </Math>
-              m
-            </NoBreak>
-            <NoBreak>
-              <Math>
-                $/$
-              </Math>
-              s
-            </NoBreak>
-            {" "} is the “rate of change” of the
-            balloon's height.)
+            found in the second line of the table.
           </OuterP>
         </Example>
         <Pause />
@@ -1610,8 +1573,7 @@ const Rest = () => {
               Example 4.
             </b>
             {" "}
-            The amount of time required
-            for the balloon to go up by (say) {" "}
+            The time for the balloon to go up by (say) {" "}
             <NoBreak>
               <Math>
                 $4$
@@ -1691,8 +1653,7 @@ const Rest = () => {
         <OuterP>
           one could easily be tricked into thinking that a
           “dimension” is the same thing as a “unit”. In
-          fact, dimensions are broader categories, such as,
-          namely,
+          fact, dimensions are broader categories, such as
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1710,11 +1671,10 @@ const Rest = () => {
         <OuterP>
           each of which covers {" "}
           <i>
-            several different
+            several
           </i>
           {" "} units.
-          For example, in the “time” dimension, one finds
-          individual units of the type
+          For example, the “time” dimension includes units such as
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1778,8 +1738,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              This is true, as illustrated by the following
-              pair of lines:
+              True, as this pair of lines illustrates:
             </OuterP>
             <Pause />
             <Image
@@ -1805,12 +1764,12 @@ const Rest = () => {
             </Image>
             <Pause />
             <OuterP>
-              In more detail, the two triangles are related
+              The two triangles are related
               by a {" "}
               <Math>
                 $90^\circ$
               </Math>
-              {" "} rotation and so, likewise,
+              {" "} rotation and so
               are the lines defined by their hypotenuses!
             </OuterP>
             <Pause />
@@ -1879,9 +1838,16 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              A point {" "}
+              For {" "}
+              <NoBreak>
+                <Math>
+                  $x \ne x_0$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} a point {" "}
               <Math>
-                $(x,y) \ne (x_0,y_0)$
+                $(x,y)$
               </Math>
               {" "} is on the
               line of slope {" "}
@@ -1897,7 +1863,7 @@ const Rest = () => {
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/eaW7.svg"
-                offsetX="10rem"
+                offsetX="0rem"
                 offsetY="0%"
                 atLeastAsWide={true}
                 intrinsicWidth={700}
@@ -1928,18 +1894,18 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} and it is necessary
-              and sufficient for this segment to have slope
-              {" "}
-              <Math>
-                $p$
-              </Math>
-              {" "} in order for the point {" "}
+              {" "} and {" "}
               <Math>
                 $(x,y)$
               </Math>
-              {" "} to be on
-              the line!
+              {" "} is on the line
+              exactly when this segment has slope {" "}
+              <NoBreak>
+                <Math>
+                  $p$
+                </Math>
+                !
+              </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
               Unfortunately, the equation
@@ -1984,7 +1950,7 @@ const Rest = () => {
               </NoBreak>
               {" "} which is
               not a valid equality because the right-hand
-              side is an undefined quantity.)
+              side is undefined.)
             </OuterP>
             <OuterP class="indent-10">
               Instead, multiplying
@@ -2040,7 +2006,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              which can also make it easy to remember!
+              which makes it easy to remember!
             </OuterP>
             <Pause />
             <OuterP>
@@ -2048,7 +2014,7 @@ const Rest = () => {
                 Note 1.
               </i>
               {" "}
-              The answer we gave is more often written
+              The answer is more often written
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2072,16 +2038,11 @@ const Rest = () => {
               <Math>
                 $y$
               </Math>
-              {" "} isolated on the left-hand side. From
-              there one can also distribute {" "}
-              <NoBreak>
-                <Math>
-                  $p(x-x_0)$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              obtaining (after putting {" "}
+              {" "} isolated on the left-hand side. Expanding {" "}
+              <Math>
+                $p(x-x_0)$
+              </Math>
+              {" "} gives (after putting {" "}
               <NoBreak>
                 “
                 <Math>
@@ -2161,14 +2122,13 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              On each interval, the velocity is rate of
+              On each interval, the velocity is the rate of
               change of the height, i.e., the {" "}
               <i>
                 slope
               </i>
               {" "} of
-              the height. For example, the rate of change
-              of the height is
+              the height graph. For example, it is
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2193,17 +2153,7 @@ const Rest = () => {
                 s,
               </NoBreak>
               {" "} where the mosquito
-              goes up by one meter during a one second
-              period, so the vertical velocity is {" "}
-              <NoBreak>
-                1m
-                <Math>
-                  $/$
-                </Math>
-                s
-              </NoBreak>
-              {" "}
-              for that time interval, etc.
+              goes up by one meter in one second.
             </OuterP>
             <Pause />
             <OuterP>
@@ -2220,8 +2170,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              indicates a “missing” value. Specifically, in
-              our case, the vertical velocity is {" "}
+              indicates a “missing” value. Here, the vertical velocity is {" "}
               <i>
                 undefined
               </i>
@@ -2236,7 +2185,7 @@ const Rest = () => {
                 Note 2.
               </i>
               {" "}
-              For the time interval from {" "}
+              From {" "}
               <NoBreak>
                 <Math>
                   $2$
@@ -2261,7 +2210,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              and similarly for the time interval from
+              and similarly from
               {" "}
               <NoBreak>
                 <Math>
@@ -2353,7 +2302,7 @@ const Rest = () => {
               <Math>
                 $(x_0,y_0)$
               </Math>
-              {" "} by using a drawing
+              {" "} using a drawing
               and “rise equals slope times run”.
             </OuterP>
           </ExerciseStatement>
@@ -2388,8 +2337,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} as found by “rise equals slope times
-              run”, implying that
+              {" "} by “rise equals slope times run”, so
             </OuterP>
             <Pause />
             <MathBlock>

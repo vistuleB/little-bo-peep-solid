@@ -34,14 +34,13 @@
 
     __the interface offered to the outside world__
 
-    as in, for example, the buttons and clock
+    for example, the buttons and clock
     display and door handle of a microwave oven)
-    of a set consists of just one functionality:
+    of a set offers just one operation:
     a set can answer questions of the form
 
     __do you contain ... ?__
 
-    and nothing else.
     For example, you could ask a set
 
     __do you contain 3?__
@@ -56,7 +55,7 @@
     !!  but $\{1, 2, 3\}$ would
     !! answer “yes”.
 
-    Notation-wise, the expression
+    The expression
 
     $$\Large x \in A$$
 
@@ -67,9 +66,9 @@
     or
 
     __$A$ answers “yes” to the
-    question “do you contain $x$?”__
+    question “do you contain $x$?”.__
 
-    equivalently. [One can also say
+    [One can also say
 
     __$x$ in $A$__
 
@@ -82,8 +81,7 @@
     __$x$ is an element of $A$__
 
     depending on one's mood and/or tastes.]
-    As in all of mathematics, any such statement
-    evaluates to either “true” or “false”.
+    As in all of mathematics, such a statement is either true or false.
     For example,
 
     $$\Large 1 \in \{1, 2\}$$
@@ -100,19 +98,18 @@
     split_here=Rest
 
     *Set Equality.*
-    Two sets are deemed to be
-    equal if and only if they
+    Two sets are equal if and only if they
     answer the same to
     all “do you contain ...?” questions.
     For example, while
     $$
     \Large\{2, 1\}
     $$
-    might look superficially different from
+    might look different from
     $$
     \Large\{1, 2\}
     $$
-    these sets are actually one and the same,
+    these sets are one and the same,
     because they both answer “yes” to
 
     __do you contain 1?__
@@ -122,7 +119,7 @@
     $$
     \Large\{1, 1, 2\}
     $$
-    might also look superficially different from
+    might also look different from
     $$
     \Large\{1, 2\}
     $$
@@ -135,8 +132,8 @@
     they are by definition the same.
 
     (These examples demonstrate that human notation
-    is redundant: there are several different ways of
-    writing down the same set. They also demonstrate
+    is redundant: there are several ways to
+    write the same set. They also demonstrate
     that sets do not keep track of the
 
     __order__
@@ -148,9 +145,7 @@
     of their elements. Such notions are simply not part
     of the “API” of a set.)
 
-    Moreover, any empty set is equal to any other
-    empty set. Equality follows because both sets
-    answer all questions the same way: they both
+    Any two empty sets are equal because both
     answer “no” to everything. So there is
 
     __one__
@@ -169,37 +164,34 @@
     $$
     \Large \{\}
     $$
-    another available notation is
+    another notation is
     $$
-    \Large \phi
+    \Large \varnothing
     $$
-    which is the Greek letter phi, read “fee”. (Or
-    “fie”? Hum.) (Or you can just say “the empty set”,
-    and keep it safe.)
+    read “the empty set”.
 
 |> Section
 
     *Sets within sets.*
-    Sets can be nested much like Russian dolls. In
-    fact, the result of doing this might even look
-    like a little bit like a Russian doll (no?):
+    Sets can be nested much like Russian dolls.
+    The result might even look a little like a Russian doll (no?):
 
     $$
     \Large \{\{\{\{\}\}\}\}
     $$
 
     The above is “a set containing a set containing
-    a set containing a set containing the empty set”.
+    a set containing the empty set”.
     Eschewing complete adherence to the Russian doll
     aesthetic, we could also write
 
     $$
-    \Large \{\{\{\phi\}\}\}
+    \Large \{\{\{\varnothing\}\}\}
     $$
 
-    for the same thing, given that $\phi = \{\}$.
+    for the same thing, given that $\varnothing = \{\}$.
 
-    Mind you, concerning this example, that
+    Mind you,
 
     $$
     \Large \{\{\} \} \ne \{\}
@@ -210,14 +202,14 @@
         offset-x=3em
 
     because a box containing an empty box is not the
-    same thing as an empty box! Specifically,
+    same as an empty box! Specifically,
 
     $$
     \Large \{ \{\} \}
     $$
 
     answers “yes” to the question “do you contain
-    $\{\}$?” (a.k.a., “do you contain $\phi$?”) whereas
+    $\{\}$?” (a.k.a., “do you contain $\varnothing$?”) whereas
 
     $$
     \Large \{\}
@@ -237,25 +229,23 @@
 |> Section
 
     *Set union and set intersection.*
-    The so-called _union_ of two sets $A$ and $B$ is
-    written $$\Large A \cup B$$ and consists of the set
-    of all things that are either in $A$ or in $B$. For
+    The _union_ of two sets $A$ and $B$ is
+    written $$\Large A \cup B$$ and is the set of elements either in $A$ or in $B$. For
     example,
 
     $$
     \Large \{1, 2\} \cup \{2, 5\} = \{1, 2, 5\}
     $$
 
-    as $1$, $2$ and $5$ are the only elements to find
-    themselves either in $\{1, 2\}$ or in $\{2, 5\}$.
-    The so-called _intersection_ of two sets $A$ and
+    as $1$, $2$ and $5$ are the only elements in $\{1, 2\}$ or in $\{2, 5\}$.
+    The _intersection_ of two sets $A$ and
     $B$ is written
 
     $$
     \Large A \cap B
     $$
 
-    and consists of the set of all things that are both
+    and is the set of elements both
     in $A$ and in $B$. For example,
 
     $$
@@ -285,8 +275,7 @@
 
     because that's how we defined “union”. (Replace
     “or” by “and” to get a definition of intersection.)
-    In fact, a logician would define the union of two
-    sets by an abstruse expression of the type
+    A logician would define union by an abstruse expression like
 
     $$
     \Large x \in (A \cup B) \iff (x \in A) \vee (x \in B)
@@ -299,7 +288,7 @@
 
     as “$\!\!\iff\!\!$” means “if and only if” and
     “$\vee$” means “or”. (You can figure out the
-    similar definition for the intersection of two sets
+    corresponding definition of intersection
     if we tell you that
 
     $$
@@ -329,12 +318,9 @@
     $$
     \Large\nn
     $$
-    which contains only those integers that are greater
-    than $0$ (i.e., $\nn = \{1, 2, 3, \ldots \}$).
+    which contains exactly the positive integers (i.e., $\nn = \{1, 2, 3, \ldots \}$).
 
-    Secondly—and this pretty much wraps it up for those
-    sets  that are commonly seen in calculus—you will
-    encounter _intervals_. For example,
+    You will also encounter _intervals_. For example,
 
     $$
     \Large [a, b]
@@ -364,26 +350,25 @@
     \Large (-\infty, \infty)
     $$
 
-    (which is an _open_ interval, by the way) means
+    (an _open_ interval) means
 
     __the set of real numbers with no bound below,
-    and no bound above__
+    and no bound above.__
 
-    which is all of $\rr$.
 
 |> Section
 
     *Sets not encountered in calculus.*
     If you take a more advanced course, you might
-    encounter the so-called _set of extended real numbers_,
+    encounter the _set of extended real numbers_,
     written
 
     $$
     \Large\overline{\rr}
     $$
 
-    and which consists of all the numbers in $\rr$, plus
-    the formal symbols “$-\infty$”, “$\infty$” as well:
+    consisting of the numbers in $\rr$ plus
+    the formal symbols “$-\infty$”, “$\infty$”:
 
     $$
     \Large\overline{\rr} = \rr \cup \{-\infty, \infty\}
@@ -391,9 +376,8 @@
 
     (I.e., ...well, you get it!)
 
-    You can view $\overline{\rr}$ as a kind “closed interval”
-    version of $\rr$, that is, think of $\overline{\rr}$
-    as being the closed interval
+    You can view $\overline{\rr}$ as a “closed interval”
+    version of $\rr$:
 
     $$
     \Large [-\infty, \infty]
@@ -404,15 +388,14 @@
     Does all this have any “real meaning”? Good question!
     The answer is: _not until you give it one_.
 
-    E.g. (to give you a brief flavor, before we move on
-    forever from the topic), the value of something like
+    E.g., the value of something like
 
     $$
     \Large 0.5+ \infty
     $$
 
     must be _defined_. (It is defined to be $\infty$, in
-    case you're curious. In fact, one has $a + \infty = \infty$
+    case you're curious. In fact, $a + \infty = \infty$
     for any $a \ne -\infty$.) And some things remain
     explicitly _undefined_. For example, the expression
 

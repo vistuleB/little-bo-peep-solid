@@ -1,0 +1,113 @@
+|> Exercise
+    handle=_composition_order_2_v2_
+
+    As in Exercise >>_composition_order_1_, rewrite
+
+    $$
+    ((f \circ g) \circ h)(x)
+    $$
+
+    without “$\circ$”, using only the defining equation
+    $(r \circ s)(x) = r(s(x))$.
+
+    |> Solution
+
+        First remove the “outer” composition operator:
+
+        |> Image
+            src=images/svg_inner_outer_1_1em.svg
+
+        Set $r = f \circ g$ and $s = h$ in the defining equation:
+
+        |> div
+            style=font-size:1.1em;margin:0.8em 0em;
+
+            $$
+            ((f \circ g) \circ h)(x) = (f \circ g)(h(x)).
+            $$
+
+        Now apply the same rule with $r = f$, $s = g$, and
+        $h(x)$ in place of $x$:
+
+        |> div
+            style=font-size:1.1em;margin:0.8em 0em;
+
+            $$
+            (f \circ g)(h(x)) = \f(g(h(x))).
+            $$
+
+        Both copies of “$\circ$” are gone!
+
+        |> SolutionNote
+
+            This is the same answer as in the preceding exercise.
+            Either grouping gives the function $x \ra f(g(h(x)))$:
+
+            $$
+            (f \circ g) \circ h = f \circ (g \circ h).
+            $$
+
+            Both sides are defined for exactly the same inputs:
+            those for which $h(x)$, then $g(h(x))$, then
+            $f(g(h(x)))$ are defined.
+
+            This property is called the _associativity_ of function
+            composition. Addition and multiplication are associative too:
+            $(a+b)+c = a+(b+c)$ and $(ab)c = a(bc)$.
+
+            So we can write $f \circ g \circ h$ without parentheses.
+            Either grouping gives the same function, so why bother?
+
+        |> SolutionNote
+
+            Here is what associativity looks like:
+
+            |> Image
+                width=550px
+                src=images/svg_ch3_truth_be_said.svg
+
+            The arrows represent $h$ from $D$ to $C$, $g$ from $C$
+            to $B$, and $f$ from $B$ to $A$. Start at an input in
+            $D$ and follow the arrows through $C$ and $B$ to its
+            final output in $A$.
+
+            To compose functions, glue their arrows end-to-end.
+            We can first bypass $C$, forming $g \circ h$, then
+            bypass $B$. This gives $f \circ (g \circ h)$:
+
+            |> Image
+                src=images/svg_ch3_truth_be_said_right_first.svg
+                width=1600px
+
+            Or first bypass $B$, forming $f \circ g$, then
+            bypass $C$. This gives $(f \circ g) \circ h$:
+
+            |> Image
+                src=images/svg_ch3_truth_be_said_left_first.svg
+                width=1600px
+
+            Same paths, same destinations! Removing the waypoints
+            in a different order doesn't change where a path ends.
+
+        |> SolutionNote
+            handle=_function_equality_note_v2_
+
+            *Optional: what makes two functions equal?*
+
+            We have used the rule that two functions are equal
+            if they have the same domain and give the same output
+            for every input in it. Different formulas don't necessarily
+            mean different functions.
+
+            One way to make this precise—conceptual cold water shock
+            ahead—is to define a function as a _set of ordered pairs_:
+
+            $$
+            {\textrm{VX-11/78A} = \{(0, 3.5), (1, 2.5)\}}.
+            $$
+
+            Each pair records an input and its output: this function
+            maps $0$ to $3.5$ and $1$ to $2.5$, and has no other inputs.
+            Functions with the same inputs and outputs contain exactly
+            the same pairs, so they are the same set—and the same function.
+            No formula or recipe is attached that could make them unequal!

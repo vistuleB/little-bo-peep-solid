@@ -6,9 +6,7 @@
 
     |> Solution
 
-        Put an unknown “$U$” for the first set
-        of dots and an unknown “$V$” for the
-        second set of dots. Then
+        Put unknowns “$U$” and “$V$” for the two sets of dots. Then
         $$
         (x + U)^2 + V = x^2 + 10x + 30
         $$
@@ -17,14 +15,8 @@
         $$
         x^2 + 2Ux + U^2 + V = x^2 + 10x + 30.
         $$
-        In order for this equation to hold as an
-        equality between polynomials (i.e., for all
-        $x$) the coefficients of $x^2$ on both
-        sides of the equation must be equal, the
-        coefficients of $x$ on both sides of the
-        equation must be equal, and the constant
-        terms on boths of the equation must be
-        equal—this gives us
+        For this equation to hold for all $x$, corresponding
+        coefficients must match on both sides:
         $$
         1 = 1
         $$
@@ -47,13 +39,5 @@
         $V = 30 - 25 = 5$.
         So $U = V = 5$, as previously found.
         (But now we know that the solution is _unique_,
-        because the only number $U$ that satisfies
-        $$
-        2U = 10
-        $$
-        is $U = 5$, and the only number $V$ that
-        satisfies
-        $$
-        25 + V = 30
-        $$
-        is $V = 5$.)
+        because $2U = 10$ forces $U = 5$,
+        and $25 + V = 30$ forces $V = 5$.)

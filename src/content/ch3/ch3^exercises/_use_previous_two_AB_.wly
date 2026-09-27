@@ -26,12 +26,11 @@
         $$
         x = 0
         $$
-        and the other root is the value of $x$
-        such that
+        and the other root satisfies
         $$
         Ax + B = 0
         $$
-        which is $x = -B/A$. (In order for the product
+        which is $x = -B/A$. (For the product
         $$
         x(Ax + B)
         $$
@@ -39,9 +38,7 @@
         be $0$, leading us to $x = 0$, or the second
         term to be $0$, leading us to $Ax + B = 0$—the
         product of two things is $0$ if and only if
-        one of the two things is $0$.)
-
-        So the roots are $x = 0$ and $x = -B/A$.
+        at least one factor is $0$.)
 
         To complete the problem _as we were asked_,
         however, we will use the fact that $y = Ax^2 + Bx$
@@ -55,7 +52,7 @@
         __3. vertical scaling by $A$__
 
         (We put the vertical translation first.)
-        By Exercise >>_what_roots_by_x0_y0_seq_, the 
+        By Exercise >>_what_roots_by_x0_y0_seq_, the
         roots of $y = Ax^2 + Bx$ are thus at
         $$
         \tag{A}
@@ -74,7 +71,7 @@
         and even though ${B\over 2A}$ could be
         negative, the “$\pm$” on either side of
         the equation means that the _set_ of values
-        on either side of the equation is the same),
+        on either side is the same),
         so that (A) becomes
         $$
         x = -{B\over 2A} \pm {B \over 2A}

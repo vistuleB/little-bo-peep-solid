@@ -482,6 +482,13 @@ export const MathBlock = (props: MathBlockProps) => {
     const svg = ref?.querySelector<SVGSVGElement>(".MathJax svg");
     if (!ref || !svg) return false;
 
+    // Tagged displays use a percentage-width SVG to place tags at the
+    // column edge. Its width is a layout viewport, not an intrinsic size.
+    if (svg.getAttribute("width") === "100%") {
+      constrainedContent.notifyHeightChangeAcrossFrames();
+      return true;
+    }
+
     const previousRefWidth = ref.style.width;
     const previousSvgMaxWidth = svg.style.maxWidth;
     let measuredWidth = 0;
