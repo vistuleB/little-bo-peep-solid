@@ -65,9 +65,9 @@ export default function __Chapter1__() {
             Square roots.
           </b>
           {" "}
-          Due to the fact that “minus times minus is plus”
+          Because “minus times minus is plus”
           (the enemy of my enemy is my friend)
-          and that “plus times plus is plus”,
+          and “plus times plus is plus”,
           any nonzero number multiplied by itself
           is positive. For example,
         </OuterP>
@@ -80,7 +80,7 @@ export default function __Chapter1__() {
         <Pause />
         <OuterP>
           is positive, 
-          while, of course,
+          while
         </OuterP>
         <Pause />
         <MathBlock>
@@ -126,7 +126,7 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          and, in particular, it is {" "}
+          and it is {" "}
           <i>
             not
           </i>
@@ -147,7 +147,7 @@ export default function __Chapter1__() {
             </Math>
             .
           </NoBreak>
-          {" "} Instead we have
+          {" "} Instead,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -178,13 +178,16 @@ export default function __Chapter1__() {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          (NB: If ever you want to indicate both
-          solutions of the equation {" "}
-          <Math>
-            $x^2 = 4$
-          </Math>
+          (NB: If you want to indicate both
+          solutions of {" "}
+          <NoBreak>
+            <Math>
+              $x^2 = 4$
+            </Math>
+            ,
+          </NoBreak>
           {" "} you
-          can always use the notation {" "}
+          can use the notation {" "}
           <NoBreak>
             “
             <Math>
@@ -266,8 +269,8 @@ export default function __Chapter1__() {
           <Math>
             $x = &#123;1\over 4&#125;$
           </Math>
-          {" "} is not a solution of
-          the equation, being apparently too small.
+          {" "} is not a solution,
+          being apparently too small.
           Increasing {" "}
           <Math>
             $x$
@@ -275,11 +278,11 @@ export default function __Chapter1__() {
           {" "} to {" "}
           <NoBreak>
             <Math>
-              $x = &#123;1\over 2&#125;$
+              $&#123;1\over 2&#125;$
             </Math>
             ,
           </NoBreak>
-          {" "} say, we
+          {" "} we
           find
         </OuterP>
         <Pause />
@@ -311,10 +314,10 @@ export default function __Chapter1__() {
             $1/4$
           </Math>
           {" "}
-          again, say, to {" "}
+          again to {" "}
           <NoBreak>
             <Math>
-              $x = &#123;3\over 4&#125;$
+              $&#123;3\over 4&#125;$
             </Math>
             ,
           </NoBreak>
@@ -328,7 +331,7 @@ export default function __Chapter1__() {
         </MathBlock>
         <Pause />
         <OuterP>
-          which—surprise!—is actually pretty close to
+          which—surprise!—is pretty close to
           {" "}
           <NoBreak>
             <Math>
@@ -420,7 +423,7 @@ export default function __Chapter1__() {
             $70.71\%$
           </Math>
           {" "} of that value—for
-          example, say,
+          example,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -439,9 +442,9 @@ export default function __Chapter1__() {
             <Math>
               $605$
             </Math>
-            ,
+            —so
           </NoBreak>
-          {" "} and so on—so if we
+          {" "} if we
           multiply {" "}
           <i>
             twice
@@ -556,7 +559,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          can be thought of in a few different ways:
+          can be thought of in a few ways:
         </OuterP>
         <Pause />
         <List
@@ -589,7 +592,7 @@ const Rest = () => {
           </Item>
           <Item>
             <p>
-              The number of times that {" "}
+              The number of times {" "}
               <Math>
                 $2$
               </Math>
@@ -613,7 +616,7 @@ const Rest = () => {
                 </Math>
                 's
               </NoBreak>
-              {" "} to make up {" "}
+              {" "} to make {" "}
               <NoBreak>
                 <Math>
                   $50$
@@ -631,7 +634,7 @@ const Rest = () => {
           </Math>
           {" "} is a ratio of integers, 
           and for a ratio of
-          decimals, such as, say,
+          decimals, such as
         </OuterP>
         <Pause />
         <MathBlock>
@@ -708,7 +711,7 @@ const Rest = () => {
           </b>
           {" "} In general, the ratio of two decimal
           numbers can be turned into a ratio of integers
-          by multiplying the ratio top and bottom by a
+          by multiplying top and bottom by a
           suitable power of {" "}
           <NoBreak>
             <Math>
@@ -747,7 +750,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          ...so we find, among others, that {" "}
+          ...so we find that {" "}
           <Math>
             $71$
           </Math>
@@ -790,7 +793,7 @@ const Rest = () => {
             Distributivity.
           </b>
           {" "}
-          As you might already know a number that
+          A number that
           multiplies a sum can be brought “inside” the
           sum. For example,
         </OuterP>
@@ -825,9 +828,8 @@ const Rest = () => {
           {" "} for short.
         </OuterP>
         <OuterP class="indent-10">
-          (We might clarify that {" "}
           <NoBreak>
-            ‘
+            (‘
             <Math>
               $\cdot$
             </Math>
@@ -853,7 +855,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          we really mean
+          we mean
         </OuterP>
         <Pause />
         <MathBlock>
@@ -863,7 +865,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          as opposed to something else, such as
+          as opposed to
         </OuterP>
         <Pause />
         <MathBlock>
@@ -931,8 +933,6 @@ const Rest = () => {
             <b>
               Example 1.
             </b>
-            {" "}
-            One has
           </OuterP>
           <Pause />
           <MathBlock>
@@ -961,8 +961,6 @@ const Rest = () => {
             <b>
               Example 2.
             </b>
-            {" "}
-            One has
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1000,7 +998,7 @@ const Rest = () => {
           indeed.)
         </OuterP>
         <OuterP class="indent-10">
-          If we start from the afore-mentioned identity
+          If we start from the identity
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1080,8 +1078,7 @@ const Rest = () => {
               Example 3.
             </b>
             {" "}
-            By the last formula (or “binomial expansion
-            of degree two”),
+            By the last formula,
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1279,7 +1276,7 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            truly is “a difference of squares”. And, indeed,
+            is “a difference of squares”. And
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1301,9 +1298,7 @@ const Rest = () => {
         </Example>
         <Pause />
         <OuterP>
-          In relation to distributivity, we should also
-          mention the simple but important fact that
-          multiplying a difference by {" "}
+          Multiplying a difference by {" "}
           <Math>
             $-1$
           </Math>
@@ -1332,7 +1327,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          because, indeed,
+          because
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1489,13 +1484,9 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          \sqrt&#123;3&#125; + \sqrt&#123;2&#125;,\,\, \sqrt&#123;3&#125; - \sqrt&#123;2&#125;
+          \sqrt&#123;3&#125; + \sqrt&#123;2&#125;,\,\, \sqrt&#123;3&#125; - \sqrt&#123;2&#125;.
           $$
         </MathBlock>
-        <Pause />
-        <OuterP>
-          and so on.
-        </OuterP>
       </Section>
     </>}
     {visibleRestSections() > 4 && <>
@@ -1580,11 +1571,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Part by part:
-            </OuterP>
-            <Pause />
-            <OuterP>
-              a. (True) We have
+              a. (True)
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1604,7 +1591,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <OuterP>
-              b. (True) We have
+              b. (True)
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1628,7 +1615,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <OuterP>
-              c. (True) In fact,
+              c. (True)
               {" "}
               <Math>
                 $\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;$
@@ -1646,8 +1633,7 @@ const Rest = () => {
                 </Math>
                 .
               </NoBreak>
-              {" "} To
-              convince yourself, note that
+              {" "} Indeed,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1693,16 +1679,6 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              so {" "}
-              <NoBreak>
-                <Math>
-                  $(\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 =
-                  (\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 = 2$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <OuterP class="indent-10">
               Technically, however, a number {" "}
               <Math>
                 $x$
@@ -1733,7 +1709,7 @@ const Rest = () => {
               this equation as well!
             </OuterP>
             <OuterP class="indent-10">
-              The last step, therefore, is to note that
+              Finally,
               {" "}
               <Math>
                 $\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;$
@@ -1748,8 +1724,8 @@ const Rest = () => {
               <i>
                 nonnegative
               </i>
-              {" "} numbers (taken as obvious),
-              and which implies that they are the {" "}
+              {" "} (taken as obvious),
+              so they are the {" "}
               <i>
                 unique
                 nonnegative
@@ -1803,8 +1779,7 @@ const Rest = () => {
               <i>
                 Note 1.
               </i>
-              {" "} One can also proceed by “direct
-              verification”:
+              {" "} Or by “direct verification”:
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1815,13 +1790,12 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              (This, together with the fact that
-              {" "}
+              (Since {" "}
               <Math>
                 $&#123;\sqrt&#123;2&#125; \over 2&#125;$
               </Math>
-              {" "} is not negative,
-              establishes that {" "}
+              {" "} is nonnegative,
+              this establishes that {" "}
               <NoBreak>
                 <Math>
                   $&#123;\sqrt&#123;2&#125; \over 2&#125; =
@@ -1878,16 +1852,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              (The point being: we already know that
-              {" "}
-              <Math>
-                $&#123;\sqrt&#123;2&#125; \over 2&#125; = \sqrt&#123;0.5&#125;$
-              </Math>
-              {" "} by part d.)
-            </OuterP>
-            <Pause />
-            <OuterP>
-              f. (True) We have
+              f. (True)
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1944,7 +1909,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              Among which, the fact that
+              In particular,
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1954,15 +1919,14 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              can be particularly useful to know! For
+              is useful! For
               example, if a 1-millimeter-thick napkin is
               folded {" "}
               <Math>
                 $50$
               </Math>
-              {" "} times over, doubling the width
-              each time, one obtains something of
-              thickness
+              {" "} times, doubling the thickness
+              each time, its thickness becomes
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2003,40 +1967,11 @@ const Rest = () => {
                 $150$
               </Math>
               {" "} million kilometers.
-              (The point being: that we could go from the
-              relatively mysterious
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;“&#125;2^&#123;50&#125;\fw\te&#123;mm&#125;\te&#123;”&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to the relatively less mysterious
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;“&#125;\fw10^&#123;15&#125;\te&#123;mm&#125;\te&#123;”&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              thanks to the fact that {" "}
-              <NoBreak>
-                <Math>
-                  $2^&#123;10&#125; \approx 10^3$
-                </Math>
-                .)
-              </NoBreak>
             </OuterP>
             <Pause />
             <OuterP>
-              g. (True) As an inequality can be multiplied
-              on both sides by a positive number while
-              preserving the inequality, one has
+              g. (True) Multiplying both sides by a positive
+              number preserves the inequality:
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2129,7 +2064,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over 0.99&#125;
+              1.01
               $$
             </MathBlock>
             <Pause />
@@ -2149,7 +2084,7 @@ const Rest = () => {
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over 0.999&#125;
+              1.001
               $$
             </MathBlock>
             <Pause />
@@ -2173,12 +2108,11 @@ const Rest = () => {
                 $-1$
               </Math>
               {" "}
-              (note how each additional multiplication by {" "}
+              (each multiplication by {" "}
               <Math>
                 $-1$
               </Math>
-              {" "}
-              simply changes the sign of the previous result):
+              {" "} changes the sign):
             </OuterP>
             <Pause />
             <Grid
@@ -2263,24 +2197,19 @@ const Rest = () => {
             </Grid>
             <Pause />
             <OuterP>
-              (Etc.) Obviously, even powers of {" "}
+              (Etc.) Even powers of {" "}
               <Math>
                 $(-1)$
               </Math>
-              {" "} are
-              equal to {" "}
+              {" "} equal {" "}
               <NoBreak>
                 <Math>
                   $1$
                 </Math>
-                ,
+                ;
               </NoBreak>
-              {" "} while odd powers of {" "}
-              <Math>
-                $(-1)$
-              </Math>
-              {" "} are
-              equal to {" "}
+              {" "}
+              odd powers equal {" "}
               <NoBreak>
                 <Math>
                   $-1$
@@ -2306,7 +2235,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <OuterP>
-              i. (False) We have
+              i. (False)
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2368,18 +2297,17 @@ const Rest = () => {
               </Math>
               {" "} on the number line. This hare runs
               forward by one unit and backwards by half a
-              unit, stopping at the number
+              unit, stopping at
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              1 - &#123;1\over 2&#125;
+              1 - &#123;1\over 2&#125;.
               $$
             </MathBlock>
             <Pause />
             <OuterP>
-              by virtue of this back-and-forth movement.
-              The hare then proceeds to run forward by
+              The hare then runs forward by
               {" "}
               <i>
                 half
@@ -2439,13 +2367,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               and so on.
-              Clearly, the successive positions at which
-              the hare stops are approaching the number {" "}
+              The hare’s successive stopping positions approach {" "}
               <Math>
                 $1$
               </Math>
               {" "}
-              from the left, pointing to the fact that the
+              from the left, suggesting that the
               {" "}
               <i>
                 infinite
@@ -2493,29 +2420,15 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              of the sum? (By the way, this {" "}
-              <NoBreak>
-                <Math>
-                  $n$
-                </Math>
-                -th
-              </NoBreak>
-              {" "} term
-              is the difference
-              {" "}
-              <Math>
-                $&#123;1 \over 99&#125; - &#123;1 \over 100&#125;$
-              </Math>
-              {" "} for {" "}
+              of the sum? (For {" "}
               <NoBreak>
                 <Math>
                   $n = 99$
                 </Math>
                 ,
               </NoBreak>
-              {" "}
-              which is how we came to be reminded of this
-              infinite sum in the first place.) Well...
+              {" "} this is our original
+              difference.) Well...
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2615,7 +2528,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              means, in particular, that
+              means that
               {" "}
               <Math>
                 $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
@@ -2679,15 +2592,14 @@ const Rest = () => {
                 Exercise 2.
               </b>
               {" "}
-              In the solution to {" "}
+              The solution to {" "}
               <InChapterLink
                 href="#_22_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 1
               </InChapterLink>
-              {" "} it
-              is observed that the difference
+              {" "} shows that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2759,7 +2671,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              (as previously computed) is smaller than
+              is smaller than
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2776,7 +2688,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              we will compute the difference
+              we compute
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2786,20 +2698,8 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              as opposed to the “other” difference
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over n(n+1)&#125; - &#123;1 \over n^2&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
               to avoid a minus sign in the result.
-              (Computing the second difference and having
-              a minus sign does not constitute a mistake,
-              however.) Having said this, the difference is:
+              (Subtracting in the opposite order is also correct.) The difference is:
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2839,13 +2739,9 @@ const Rest = () => {
             <Pause />
             <OuterP>
               since {" "}
-              <Math>
-                $n^2(n+1) \approx n^3$
-              </Math>
-              {" "} for large {" "}
               <NoBreak>
                 <Math>
-                  $n$
+                  $n^2(n+1) \approx n^3$
                 </Math>
                 .
               </NoBreak>

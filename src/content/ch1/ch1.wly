@@ -3,9 +3,9 @@
     id=first-section
 
     *Square roots.*
-    Due to the fact that “minus times minus is plus”
+    Because “minus times minus is plus”
     (the enemy of my enemy is my friend)
-    and that “plus times plus is plus”,
+    and “plus times plus is plus”,
     any nonzero number multiplied by itself
     is positive. For example,
 
@@ -16,7 +16,7 @@
     !! (“minus times minus is plus”) 
     is positive, 
     !! as is $2 \times 2 = 4$.
-    while, of course,
+    while
     $$
     2 \times 2 = 4
     $$
@@ -34,13 +34,13 @@
         src=images/c1_sqrt_-2^2_cloud.svg
         offset-x=-2em
 
-    and, in particular, it is _not_ true that
+    and it is _not_ true that
 
     $$
     \sqrt{x^{2}} \rt{0.1} = \rt{0.1} x
     $$
 
-    for every real number $x$. Instead we have
+    for every real number $x$. Instead,
 
     $$
     \sqrt{x^{2}} \rt{0.1} = \rt{0.1} |x|
@@ -63,9 +63,9 @@
 
     !! |> StarDivider
 
-    (NB: If ever you want to indicate both
-    solutions of the equation $x^2 = 4$ you
-    can always use the notation “$\pm \sqrt{4}$”.
+    (NB: If you want to indicate both
+    solutions of $x^2 = 4$, you
+    can use the notation “$\pm \sqrt{4}$”.
     This is what happens, for example, in the
     maybe-well-known formula
 
@@ -106,9 +106,9 @@
     x^2 = {1\over 4}\times{1\over 4} = {1\over 16}
     $$
 
-    so $x = {1\over 4}$ is not a solution of
-    the equation, being apparently too small.
-    Increasing $x$ to $x = {1\over 2}$, say, we
+    so $x = {1\over 4}$ is not a solution,
+    being apparently too small.
+    Increasing $x$ to ${1\over 2}$, we
     find
 
     $$
@@ -117,13 +117,13 @@
 
     which is better, since $1/4$ is closer to $1/2$,
     but still too small. Increasing $x$ by $1/4$
-    again, say, to $x = {3\over 4}$, we find
+    again to ${3\over 4}$, we find
 
     $$
     x^2 = {3\over 4}\times{3\over 4} = {9\over 16}
     $$
 
-    which—surprise!—is actually pretty close to
+    which—surprise!—is pretty close to
     $1/2$, as $1/2 = 8/16$. And since $9/16 > 0.5$,
     $\sqrt{0.5}$ must be a little _less_ than
     ${3\over 4} = 0.75$.
@@ -144,13 +144,13 @@
     You can think of it this way: multiplying a
     value by $0.7071$, or approximately $\sqrt{0.5}$,
     is like taking $70.71\%$ of that value—for
-    example, say,
+    example,
 
     $$
     605 \cdot 0.7071 = 427.7955
     $$
 
-    is $70.71\%$ of $605$, and so on—so if we
+    is $70.71\%$ of $605$—so if we
     multiply _twice_ by $0.7071$ we obtain
     “$70.71\%$ of $70.71\%$” and it just so happens
     that “$70.71\%$ of $70.71\%$” is close to
@@ -171,7 +171,7 @@
     {50 \over 2}
     $$
 
-    can be thought of in a few different ways:
+    can be thought of in a few ways:
 
     |> List
         marker=decimal
@@ -183,14 +183,14 @@
         fifty is divided into two equal parts
         (answer: $25$).
 
-        The number of times that $2$ goes into $50$
+        The number of times $2$ goes into $50$
         (answer: $25$, because it takes twenty-five
-        $2$'s to make up $50$).
+        $2$'s to make $50$).
 
     But $50/2$ is a ratio of integers, 
     !! which makes things particularly nice! 
     and for a ratio of
-    decimals, such as, say,
+    decimals, such as
 
     $$
     \,{1 \over 0.01},
@@ -229,7 +229,7 @@
 
     *Note.* In general, the ratio of two decimal
     numbers can be turned into a ratio of integers
-    by multiplying the ratio top and bottom by a
+    by multiplying top and bottom by a
     suitable power of $10$. E.g.:
 
     $$
@@ -249,7 +249,7 @@
     \end{align*}
     $$
 
-    ...so we find, among others, that $71$ is exactly
+    ...so we find that $71$ is exactly
     $77.5\%$ greater than $40$.
     (Check yourself: $70$ is $75\%$ greater than $40$.)
     !! (Interesting, no?)
@@ -258,7 +258,7 @@
 |> Section
 
     *Distributivity.*
-    As you might already know a number that
+    A number that
     multiplies a sum can be brought “inside” the
     sum. For example,
 
@@ -276,7 +276,7 @@
     _distributivity of multiplication over addition_,
     or _distributivity_ for short.
 
-    (We might clarify that ‘$\cdot$’ means
+    (‘$\cdot$’ means
     “times”, i.e., the same as ‘$\times$’. Moreover,
     when we write
 
@@ -284,13 +284,13 @@
     5\!\cdot\!10 \,+\, 5\!\cdot\!2
     $$
 
-    we really mean
+    we mean
 
     $$
     (5\!\cdot\!10) + (5\!\cdot\!2)
     $$
 
-    as opposed to something else, such as
+    as opposed to
 
     $$
     ((5\!\cdot\!10) + 5)\!\cdot\! 2,
@@ -333,8 +333,6 @@
 
     |> Example
 
-        One has
-
         $$
         \begin{aligned}
         (10 + 2)(10 + 4) \,&=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4 \\
@@ -347,8 +345,6 @@
 
     |> Example
         handle=10_plus_3_squared
-
-        One has
 
         $$
         \begin{align*}
@@ -364,7 +360,7 @@
     greater than $12 \times 14$ is a bit curious
     indeed.)
 
-    If we start from the afore-mentioned identity
+    If we start from the identity
 
     $$
     (a + b)(C + D) \,=\, aC + bC + aD + bD
@@ -391,8 +387,7 @@
 
     |> Example
 
-        By the last formula (or “binomial expansion
-        of degree two”),
+        By the last formula,
 
         $$
         \begin{align*}
@@ -475,7 +470,7 @@
         1 - x^2
         $$
 
-        truly is “a difference of squares”. And, indeed,
+        is “a difference of squares”. And
 
         $$
         1 - x^2 = (1 - x)(1 + x)
@@ -483,9 +478,7 @@
 
         as per “$\rt{0.04}a^2 - b^2 = (a - b)(a + b)$”.
 
-    In relation to distributivity, we should also
-    mention the simple but important fact that
-    multiplying a difference by $-1$ _reverses_ the
+    Multiplying a difference by $-1$ _reverses_ the
     difference. That is,
 
     $$
@@ -498,7 +491,7 @@
     -(a - b) \,=\, b - a
     $$
 
-    because, indeed,
+    because
 
     $$
     \begin{align*}
@@ -575,9 +568,7 @@
     is a conjugate pair, as is
 
     $$
-    \sqrt{3} + \sqrt{2},\,\, \sqrt{3} - \sqrt{2}
+    \sqrt{3} + \sqrt{2},\,\, \sqrt{3} - \sqrt{2}.
     $$
-
-    and so on.
     !! (Generally speaking, conjugate pairs
     !! are good things to multiply together.)

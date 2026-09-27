@@ -27,11 +27,8 @@
         i. ${100 \over \up{0.5}99} < {101 \over \up{0.5}100}$
 
     |> Solution
-        Part by part:
 
-        |> Pause
-
-        a. (True) We have
+        a. (True)
 
         $$
         0.9^2 = {9 \over 10}\cdot{9 \over 10} = {81 \over 100} = 0.81
@@ -41,7 +38,7 @@
 
         |> Pause
 
-        b. (True) We have
+        b. (True)
 
         $$
         0.1^2 = {1 \over 10} \cdot {1 \over 10} = {1 \over 100} = 0.01,
@@ -51,11 +48,10 @@
 
         |> Pause
 
-        c. (True) In fact,
+        c. (True)
         $\sqrt[2]{\up{0.75}\sqrt[3]{2}}$
         and $\sqrt[3]{\up{0.75}\sqrt[2]{2}}$ are
-        both equal to $\sqrt[6]{\up{0.6}2}$. To
-        convince yourself, note that
+        both equal to $\sqrt[6]{\up{0.6}2}$. Indeed,
 
         $$
         \begin{align*}
@@ -87,9 +83,6 @@
             src=images/true_false_sixth_root_of_two_cloud2.svg
             offset-y=23.5%
 
-        so $(\sqrt[2]{\up{0.76}\sqrt[3]{2}}\rt{0.1})^6 =
-        (\sqrt[3]{\up{0.76}\sqrt[2]{2}}\rt{0.1})^6 = 2$.
-
         Technically, however, a number $x$ such that
 
         $$
@@ -100,11 +93,11 @@
         because $x = -\sqrt[6]{\up{0.6}2}$ satisfies
         this equation as well!
 
-        The last step, therefore, is to note that
+        Finally,
         $\sqrt[2]{\up{0.76}\sqrt[3]{2}}$ and
         $\sqrt[3]{\up{0.76}\sqrt[2]{2}}$ are both
-        _nonnegative_ numbers (taken as obvious),
-        and which implies that they are the _unique
+        _nonnegative_ (taken as obvious),
+        so they are the _unique
         nonnegative_ solution to $x^6 = 2$.
 
         |> Pause
@@ -126,17 +119,15 @@
 
         |> Pause
 
-        _Note 1._ One can also proceed by “direct
-        verification”:
+        _Note 1._ Or by “direct verification”:
 
         $$
         \left({\sqrt{2} \over 2}\right)^{\!2} = {\sqrt{2} \over 2}\cdot{\sqrt{2} \over 2}
         = {\sqrt{2}\cdot\sqrt{2} \over 4} = {2 \over 4} = 0.5.
         $$
 
-        (This, together with the fact that
-        ${\sqrt{2} \over 2}$ is not negative,
-        establishes that ${\sqrt{2} \over 2} =
+        (Since ${\sqrt{2} \over 2}$ is nonnegative,
+        this establishes that ${\sqrt{2} \over 2} =
         \sqrt{0.5}$.)
 
         |> Pause
@@ -163,12 +154,9 @@
         {1 \over \sqrt{2}} = {\sqrt{2} \over \sqrt{2} \cdot \sqrt{2}} = {\sqrt{2} \over 2}.
         $$
 
-        (The point being: we already know that
-        ${\sqrt{2} \over 2} = \sqrt{0.5}$ by part d.)
-
         |> Pause
 
-        f. (True) We have
+        f. (True)
 
         $$
         2^{30} = 2^{10} \times 2^{10} \times 2^{10} = (2^{10})^3
@@ -204,17 +192,16 @@
         \end{array}
         $$
 
-        Among which, the fact that
+        In particular,
 
         $$
         2^{10} \approx 10^3
         $$
 
-        can be particularly useful to know! For
+        is useful! For
         example, if a 1-millimeter-thick napkin is
-        folded $50$ times over, doubling the width
-        each time, one obtains something of
-        thickness
+        folded $50$ times, doubling the thickness
+        each time, its thickness becomes
 
         $$
         2^{50}\fw\te{mm} = (2^{10})^5\fw\te{mm} \approx (10^3)^5\fw\te{mm} = 10^{15}\fw\te{mm}.
@@ -240,26 +227,11 @@
         or _one billion_ kilometers. By
         comparison, the distance from the Earth to
         the Sun is a mere $150$ million kilometers.
-        (The point being: that we could go from the
-        relatively mysterious
-
-        $$
-        \te{“}2^{50}\fw\te{mm}\te{”}
-        $$
-
-        to the relatively less mysterious
-
-        $$
-        \te{“}\fw10^{15}\te{mm}\te{”}
-        $$
-
-        thanks to the fact that $2^{10} \approx 10^3$.)
 
         |> Pause
 
-        g. (True) As an inequality can be multiplied
-        on both sides by a positive number while
-        preserving the inequality, one has
+        g. (True) Multiplying both sides by a positive
+        number preserves the inequality:
 
         $$
         \begin{align*}
@@ -294,7 +266,7 @@
         ${1 \over 1 - \epsilon}$. For example,
 
         $$
-        {1 \over 0.99}
+        1.01
         $$
 
         is a good approximation to
@@ -306,7 +278,7 @@
         while
 
         $$
-        {1 \over 0.999}
+        1.001
         $$
 
         is a good approximation to
@@ -320,8 +292,7 @@
         |> Pause
 
         h. (True) Here are the first few powers of $-1$
-        (note how each additional multiplication by $-1$
-        simply changes the sign of the previous result):
+        (each multiplication by $-1$ changes the sign):
 
         |> Grid
             cols=3
@@ -357,14 +328,13 @@
 
             $ -1 $
 
-        (Etc.) Obviously, even powers of $(-1)$ are
-        equal to $1$, while odd powers of $(-1)$ are
-        equal to $-1$. As $101$ is odd, $(-1)^{101}$
+        (Etc.) Even powers of $(-1)$ equal $1$;
+        odd powers equal $-1$. As $101$ is odd, $(-1)^{101}$
         is $-1$.
 
         |> Pause
 
-        i. (False) We have
+        i. (False)
 
         $$
         {100 \over 99} = {99 + 1 \over 99} = 1 + {1 \over 99}
@@ -394,14 +364,13 @@
         visualize this sum, picture a hare poised at
         $x = 0$ on the number line. This hare runs
         forward by one unit and backwards by half a
-        unit, stopping at the number
+        unit, stopping at
 
         $$
-        1 - {1\over 2}
+        1 - {1\over 2}.
         $$
 
-        by virtue of this back-and-forth movement.
-        The hare then proceeds to run forward by
+        The hare then runs forward by
         _half_ a unit and back by a _third_ of a unit,
         stopping at
 
@@ -441,9 +410,8 @@
         $$
 
         and so on.
-        Clearly, the successive positions at which
-        the hare stops are approaching the number $1$
-        from the left, pointing to the fact that the
+        The hare’s successive stopping positions approach $1$
+        from the left, suggesting that the
         _infinite_ sum
 
         $$
@@ -465,11 +433,8 @@
         {1 \over n} - {1 \over n+1}
         $$
 
-        of the sum? (By the way, this $n$-th term
-        is the difference
-        ${1 \over 99} - {1 \over 100}$ for $n = 99$,
-        which is how we came to be reminded of this
-        infinite sum in the first place.) Well...
+        of the sum? (For $n = 99$, this is our original
+        difference.) Well...
 
         $$
         \begin{align*}
@@ -535,7 +500,7 @@
         {1 \over n} - {1 \over n+1} = {1 \over n(n+1)}
         $$
 
-        means, in particular, that
+        means that
         ${1 \over n} - {1 \over n+1}$ is roughly
         ${1 \over n^2}$ for large $n$, which is
         sometimes handy to know. For example,

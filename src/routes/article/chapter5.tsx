@@ -173,7 +173,7 @@ export default function __Chapter5__() {
             Exercise 7 of Chapter 3
           </OutChapterLink>
           ,
-          e.g.. It is the one that has this graph:
+          e.g.. It has this graph:
         </OuterP>
         <Pause />
         <Image
@@ -216,7 +216,6 @@ export default function __Chapter5__() {
         />
         <Pause />
         <OuterP>
-          As far as standard definitions go, {" "}
           <Math>
             $\cos(x)$
           </Math>
@@ -369,16 +368,11 @@ export default function __Chapter5__() {
             ,
           </NoBreak>
           {" "} {" "}
-          <Math>
-            $\cos(-3) \approx -0.99$
-          </Math>
-          {" "}
-          (or something close to {" "}
           <NoBreak>
             <Math>
-              $-1$
+              $\cos(-3) \approx -0.99$
             </Math>
-            ):
+            :
           </NoBreak>
         </OuterP>
         <Pause />
@@ -567,7 +561,7 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          In another possible definition,
+          In another definition,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -619,8 +613,8 @@ export default function __Chapter5__() {
         />
         <Pause />
         <OuterP>
-          In more detail, if you tilt your head  sideways,
-          you will see that the {" "}
+          If you tilt your head sideways,
+          the {" "}
           <Math>
             $x$
           </Math>
@@ -737,8 +731,7 @@ const Rest = () => {
             Derivatives.
           </b>
           {" "}
-          Continuing the last topic,
-          we can
+          We can
           add two more particles to the diagram that
           defines ‘sin’ and ‘cos’ via {" "}
           <NoBreak>
@@ -823,7 +816,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          which is also known simply as
+          also known as
         </OuterP>
         <Pause />
         <CentralDisplay>
@@ -1063,8 +1056,6 @@ const Rest = () => {
               ”.
             </NoBreak>
           </b>
-          {" "}
-          One has
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1149,9 +1140,7 @@ const Rest = () => {
           {" "} in some
           cases—but in case something goes wrong, here
           is a cheat sheet that does some of the thinking
-          for you
-          (or help you compare your way of seeing
-          things to the author's way of seeing things):
+          for you:
         </OuterP>
         <Pause />
         <Image
@@ -1282,7 +1271,7 @@ const Rest = () => {
           as seen in the previous section.
         </OuterP>
         <OuterP class="indent-10">
-          In fact, one can make the further observation that
+          More generally,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1382,18 +1371,17 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          similarly to the just-introduced convention)
-          means
+          ) means
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          (\cos(x))^2
+          (\cos(x))^2,
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          which is a special case of the fact that
+          a special case of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1411,7 +1399,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "}
-          which is itself a special case of the fact that
+          itself a special case of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1644,17 +1632,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "}
-          and symmetrically for the opposite difference. (I.e.,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \,\cos^2 \theta - \sin^2 \theta,
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          this one.) Etc.
+          and symmetrically for the opposite difference. Etc.
         </OuterP>
       </Section>
     </>}
@@ -2210,9 +2188,8 @@ const Rest = () => {
           in radians) in the second quadrant, and so on.
         </OuterP>
         <OuterP class="indent-10">
-          For the remaining values we rely on the
-          existence of the following two equilateral
-          triangles:
+          For the remaining values we use these two
+          equilateral triangles:
         </OuterP>
         <Pause />
         <Image
@@ -2222,7 +2199,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          The first triangle implies that the the unique
+          The first triangle implies that the unique
           point on the unit circle with {" "}
           <NoBreak>
             <Math>
@@ -2276,8 +2253,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          (surprise!), the two points in question must be
-          the afore-shown
+          (surprise!), the two points must be
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2330,7 +2306,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          by conclusion; or
+          or
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2498,9 +2474,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          But say now that
-          we re-scale the circle to have some arbitrary
-          radius {" "}
+          But say we re-scale the circle to radius {" "}
           <NoBreak>
             <Math>
               $r$
@@ -2612,12 +2586,12 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          P = (r\cos(\theta), r\sin(\theta))
+          P = (r\cos(\theta), r\sin(\theta)).
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          or namely with the property that:
+          That is:
         </OuterP>
         <Pause />
         <List style="padding-left:1.8em;">
@@ -2846,16 +2820,6 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}
-          (It's right there in the promise of what
-          it means to be a valid polar coordinate
-          {" "}
-          <NoBreak>
-            <Math>
-              $(r, \theta)$
-            </Math>
-            .)
-          </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
           Conversely, to recover the polar
@@ -3057,11 +3021,14 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          If we assume {" "}
-          <Math>
-            $0 \leq \theta \leq \eta$
-          </Math>
-          {" "} then both
+          If {" "}
+          <NoBreak>
+            <Math>
+              $0 \leq \theta \leq \eta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} both
           {" "}
           <Math>
             $r\cos(\theta)$
@@ -3120,7 +3087,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          The arrows are meant to indicate that {" "}
+          The arrows indicate that {" "}
           <Math>
             $\cos(\theta)$
           </Math>
@@ -3263,9 +3230,8 @@ const Rest = () => {
         <OuterP>
           Therefore, if we snap a scaled copy of the
           smaller triangle onto the remaining non-hypotenuse
-          side of the bigger triangle, we end up with a
-          flush side consisting of a single straight
-          segment (you can also think in terms of
+          side of the bigger triangle, we get a single
+          straight side (you can also think in terms of
           angles that add up to {" "}
           <NoBreak>
             <Math>
@@ -3282,7 +3248,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          We finish off the diagram by setting the
+          We finish by setting the
           hypotenuse of the original big triangle to
           have length {" "}
           <NoBreak>
@@ -3300,8 +3266,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          This completes the diagram. Note that it is
-          possible for the sum of {" "}
+          The sum of {" "}
           <Math>
             $\theta_1$
           </Math>
@@ -3309,8 +3274,7 @@ const Rest = () => {
           <Math>
             $\theta_2$
           </Math>
-          {" "}
-          to be greater than {" "}
+          {" "} can exceed {" "}
           <NoBreak>
             <Math>
               $\eta$
@@ -3489,8 +3453,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          This last claim follows from the following
-          diagram:
+          This follows from the diagram:
         </OuterP>
         <Pause />
         <Image
@@ -3616,9 +3579,6 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}
-          This constitutes the proof of the Abercrombie
-          inequality.
         </OuterP>
         <OuterP class="indent-10">
           One can polish a few more details by noting that:
@@ -3876,8 +3836,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          For the second inequality, we have to start
-          by noting that
+          For the second inequality, note that
         </OuterP>
         <Pause />
         <MathBlock>
@@ -3977,9 +3936,9 @@ const Rest = () => {
             The angle-sum formulas.
           </b>
           {" "}
-          In the “famous diagram” from above there
-          are a total of four different ways to
-          reach an outer edge by means of ‘cos’
+          In the “famous diagram” there
+          are four ways to
+          reach an outer edge using ‘cos’
           and ‘sin’ arrows while starting from the
           edge of length {" "}
           <NoBreak>
@@ -4162,8 +4121,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          The point of remembering these patterns
-          is that, on their own, these patterns are
+          These patterns alone are
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -4171,7 +4129,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          to reconstruct the full formulas from scratch!
+          to reconstruct the formulas from scratch!
           (Well, a lot of students remember the formulas
           that way, at least.)
         </OuterP>
@@ -4185,8 +4143,8 @@ const Rest = () => {
             The missing arrows.
           </b>
           {" "}
-          ‘sin’ and ‘cos’ only constitute two out
-          of six ratios that exist among the sides
+          ‘sin’ and ‘cos’ give only two of the six ratios
+          between the sides
           of a right triangle. The four “missing ratios”
           are hereby drawn:
         </OuterP>
@@ -4198,8 +4156,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          In fact, there is a dedicated, named function
-          that computes each of the six ratios. We shall
+          Each of the six ratios has a named function. We shall
           now reveal the names of the four missing
           functions (!!):
         </OuterP>
@@ -4543,15 +4500,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          is a number close to {" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} instead of being
-          a number close to {" "}
+          is close to {" "}
+          <Math>
+            $1$
+          </Math>
+          {" "} instead of {" "}
           <NoBreak>
             <Math>
               $0$
@@ -4560,7 +4513,7 @@ const Rest = () => {
           </NoBreak>
           {" "} it means that your
           calculator is in “degree mode”—it has treated
-          as {" "}
+          {" "}
           <Math>
             $1.57$
           </Math>

@@ -122,15 +122,17 @@ const ButtonsContainer = (props: ParentProps) => {
 
   return (
     <>
-      <LeftHeaderControl
-        opacity={finalButtonOpacity()}
-        borderOpacity={finalBorderOpacity()}
-        tallBackground={
-          currentScrollY() <= HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY &&
-          !on_mobile() &&
-          store.scrollX <= store.scrollWidth / 2 - MOBILE_MAX_WIDTH / 2
-        }
-      />
+      {!on_mobile() && (
+        <LeftHeaderControl
+          opacity={finalButtonOpacity()}
+          borderOpacity={finalBorderOpacity()}
+          tallBackground={
+            currentScrollY() <= HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY &&
+            !on_mobile() &&
+            store.scrollX <= store.scrollWidth / 2 - MOBILE_MAX_WIDTH / 2
+          }
+        />
+      )}
       <HeaderControlSurface
         side="right"
         opacity={finalButtonOpacity()}

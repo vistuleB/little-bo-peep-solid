@@ -9,7 +9,6 @@ import {
 import { twJoin } from "tailwind-merge";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import HeaderBlob from "./HeaderBlob";
-import { leftHeaderWidth } from "./LeftHeaderControl";
 import containerWidth from "~/hooks/useContainerWidth";
 import { decideRouteNavbarPosition } from "~/utils/routeTransitionPolicy";
 
@@ -86,10 +85,7 @@ const Title = (props: { navPosition: "fixed" | "absolute" }) => {
       : props.navPosition === "fixed"
         ? (store.innerWidth - DESKTOP_TEXT_COLUMN_WIDTH) / 2
         : (containerWidth() - DESKTOP_TEXT_COLUMN_WIDTH) / 2;
-    return (
-      columnLeft +
-      (onMobile ? MOBILE_TEXT_COLUMN_SIDE_INSET + leftHeaderWidth() : 0)
-    );
+    return columnLeft + (onMobile ? MOBILE_TEXT_COLUMN_SIDE_INSET : 0);
   };
 
   return (

@@ -1,4 +1,4 @@
-export const mobileMarginRight = "-6px";
+export const mobileMarginRight = "-5.5px";
 export const desktopLeftMargin = "15px";
 export const mobileLeftMargin = "-2px";
 
