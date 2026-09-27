@@ -451,8 +451,8 @@
     "compression": "92.63%",
     "intrinsic-width": "520",
     "intrinsic-height": "175",
-    "used-last-build": true,
-    "3chars": ["ch6"]
+    "used-last-build": false,
+    "3chars": []
   },
   "svg_ch4_cosine_curves.svg": {
     "build-version": "svgo-svg/_2ki.svg",

@@ -214,24 +214,12 @@ export default function __Chapter6__() {
           </MathBlock>
           <Pause />
           <OuterP>
-            then
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            z : \rr \ra \rr
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            is a function whose inputs denote pounds, the measure
-            of weight, 
-            and whose outputs denote pounds {" "}
+            then its inputs denote pounds, the measure of weight,
+            and its outputs pounds {" "}
             <i>
               sterling
             </i>
-            , the measure
-            of wealth.
+            , the measure of wealth.
           </OuterP>
         </Example>
       </Section>
@@ -251,49 +239,12 @@ const Rest = () => {
             Dimensionless units.
           </b>
           {" "}
-          There is a special unit that we denote
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \Large [1]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          that stands for a “dimensionless unit” or “dimensionless
-          ratio” that, conceptually, arises when a quantity
-          is divided by a like-dimensioned quantity. For example,
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          radians
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          are defined as “length over length” in the {" "}
-          <NoBreak>
-            <Math>
-              $xy$
-            </Math>
-            -plane—specifically,
-          </NoBreak>
-          {" "}
-          arc length divided by radius—and are one example
-          of quantities that carry units of {" "}
-          <NoBreak>
-            “
-            <Math>
-              $[1]$
-            </Math>
-            ”.
-          </NoBreak>
-          {" "}
-          The outputs of sin, cos, etc, are other examples
-          of dimensionless quantities,
-          being ratios of the form
-          “opposite over adjacent”, etc.
-          Thus
+          We write {" "}
+          <Math>
+            $[1]$
+          </Math>
+          {" "} for dimensionless units, as when a quantity
+          is divided by a like-dimensioned quantity. Thus
         </OuterP>
         <Pause />
         <MathBlock>
@@ -303,29 +254,9 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          where the first {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $[1]$
-            </Math>
-            ’
-          </NoBreak>
-          {" "} 
-          stands for a ratio of a curved length
-          divided by a straight length—the radian—and the second
-          {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $[1]$
-            </Math>
-            ’
-          </NoBreak>
-          {" "} stands for a ratio
-          of one straight length by another*—the afore-mentioned
-          “opposite over adjacent”. (Or “adjacent over hypotenuse”,
-          in the case of cosine!)
+          takes a ratio of arc length to radius—the radian—and returns
+          a ratio of adjacent length to hypotenuse*. Both are “length over length”.
+          The outputs of sin, tan, etc., are dimensionless for the same reason.
           <ImageLeft
             src="/build-img/svgo-svg/aIgf.svg"
             intrinsicWidth={600}
@@ -496,10 +427,8 @@ const Rest = () => {
           stomach the output units to be different since
           composite units such as “kilowatt-hour”, “worker-years”, etc,
           exist, and likewise when dividing. 
-          The following table summarizes the constraints
-          that appear at the
-          input (“component signatures”) and output (“resultant
-          signature”) ends, for the five main function operations:
+          The table gives the required component signatures and the
+          resultant signature for each of the five main function operations:
         </OuterP>
         <Pause />
         <Image
@@ -1146,10 +1075,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          So far so good! But their output units differ.
-        </OuterP>
-        <OuterP class="indent-10">
-          However,
+          So far so good! But
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1203,31 +1129,19 @@ const Rest = () => {
               Example 4.
             </b>
             {" "}
-            As in {" "}
+            With {" "}
+            <Math>
+              $x_1, x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]$
+            </Math>
+            {" "} as in
+            {" "}
             <InChapterLink
               href="#_154_h.a.i_"
               class="in-chapter-link"
             >
               Example 2
             </InChapterLink>
-            &#8288;, let
-            {" "}
-            <Math>
-              $x_1, x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]$
-            </Math>
-            {" "} give position in meters
-            as a function of time in seconds.
-            Then
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            x_1x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2]
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            and
+            &#8288;,
           </OuterP>
           <Pause />
           <MathBlock>
@@ -1348,52 +1262,49 @@ const Rest = () => {
             The chain rule.
           </b>
           {" "}
-          We would like a formula for
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (f \circ g)'
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          similar to the sum rule,
-          and we can try guessing such a formula using
-          dimensional analysis.
-        </OuterP>
-        <OuterP class="indent-10">
-          To be clear, such a formula should use only the
-          “atomic components”
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f,\,g,\,f',\,g'
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          on its right-hand side. These are the “lego pieces”
-          from which we seek to assemble {" "}
+          Can we use dimensional analysis to {" "}
+          <i>
+            guess
+          </i>
+          {" "} a formula for
+          {" "}
           <NoBreak>
             <Math>
               $(f \circ g)'$
             </Math>
+            ?
+          </NoBreak>
+          {" "} Our “lego pieces” are {" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $f'$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $g'$
+            </Math>
             .
           </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          Composition requires the output units of {" "}
-          <Math>
-            $g$
-          </Math>
-          {" "} to match the input
-          units of {" "}
-          <Math>
-            $f$
-          </Math>
-          {" "} (Table 1.1). Our “lego pieces” therefore have signatures
+          {" "}
+          With the composition's input and output units matched (Table 1.1),
+          their signatures are
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1408,35 +1319,20 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          Or in more amusing pictorial form (where we
-          schizophrenically put input tubes on the left, again):
-        </OuterP>
-        <Pause />
-        <Image
-          src="/build-img/svgo-svg/YZvS.svg"
-          intrinsicWidth={520}
-          intrinsicHeight={175}
-        />
-        <Pause />
-        <OuterP>
-          From these pieces we seek to assemble a function
-          of signature
+          Our target is {" "}
+          <NoBreak>
+            <Math>
+              $(f\circ g)' : [\tA] \ra [\tC/\tA]$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          Since
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          [\tA] \ra [\tC/\tA]
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          which is not a signature of any of the lego pieces;
-          but since
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          [\tC/\tA] = \left[&#123;\tC\over \tB&#125;\right]\cdot\left[&#123;\tB\over\tA&#125;\right]
+          [\tC/\tA] = \left[&#123;\tC\over \tB&#125;\right]\cdot\left[&#123;\tB\over\tA&#125;\right],
           $$
         </MathBlock>
         <Pause />
@@ -1450,52 +1346,28 @@ const Rest = () => {
             <Math>
               $g'$
             </Math>
-            ;
+            .
           </NoBreak>
-          {" "}
-          and yet the product
-          {" "}
+          {" "} But their input units differ!
+          Feeding {" "}
           <Math>
-            $f'g'$
+            $g$
           </Math>
-          {" "}
-          {" "}
-          <i>
-            cannot be formed
-          </i>
-          {" "} since {" "}
+          {" "} into {" "}
           <Math>
             $f'$
           </Math>
-          {" "} and {" "}
-          <Math>
-            $g'$
-          </Math>
-          {" "} have different
-          input units!; 
-          the answer is to pre-process inputs to {" "}
-          <Math>
-            $f'$
-          </Math>
-          {" "} via {" "}
-          <NoBreak>
-            <Math>
-              $g$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          i.e., take
+          {" "} fixes that: try
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          (f'\circ g)g'
+          (f'\circ g)g'.
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          This product makes sense because
+          The signatures are
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1508,7 +1380,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          and multiplying their outputs gives the desired units {" "}
+          Both accept A, and their output units multiply to {" "}
           <NoBreak>
             <Math>
               $\tC/\tA$
@@ -1599,73 +1471,37 @@ const Rest = () => {
           </MathBlock>
           <Pause />
           <OuterP>
-            Then {" "}
-            <Math>
-              $f\circ g$
-            </Math>
-            {" "} gives money raised as a function of time, and
-            {" "}
-            <Math>
-              $(f\circ g)'$
-            </Math>
-            {" "} gives the fundraising rate in dollars per second.
-            Meanwhile, {" "}
-            <Math>
-              $f'$
-            </Math>
-            {" "} gives the dollars-per-meter rate at each position.
-          </OuterP>
-          <OuterP class="indent-10">
-            Then, at {" "}
+            At {" "}
             <Math>
               $t_0$
             </Math>
-            {" "} seconds after the start of the race,
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            f'(g(t_0))
-            $$
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            is the dollars-per-meter rate at which the rat is
-            fundraising, as we have fed the rat's position {" "}
+            {" "} seconds, the fundraising rate {" "}
             <Math>
-              $g(t_0)$
+              $(f\circ g)'(t_0)$
             </Math>
-            {" "} into
-            {" "}
+            {" "} is in dollars per second.
+            To obtain it, multiply the dollars-per-meter rate at the rat's
+            position, {" "}
             <NoBreak>
               <Math>
-                $f'$
+                $f'(g(t_0))$
               </Math>
-              .
+              ,
             </NoBreak>
-          </OuterP>
-          <OuterP class="indent-10">
-            As for the dollars-per-second rate, one can obtain
-            that by multiplying the dollars-per-meter rate by the
-            rat's meters-per-second velocity, i.e., by taking the product
+            {" "} by its meters-per-second velocity, {" "}
+            <NoBreak>
+              <Math>
+                $g'(t_0)$
+              </Math>
+              :
+            </NoBreak>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            f'(g(t_0))g'(t_0)
+            (f\circ g)'(t_0) = f'(g(t_0))g'(t_0).
             $$
           </MathBlock>
-          <Pause />
-          <OuterP>
-            which is indeed {" "}
-            <NoBreak>
-              <Math>
-                $(f\circ g)'(t_0)$
-              </Math>
-              .
-            </NoBreak>
-            {" "} That is:
-          </OuterP>
           <Pause />
           <Image
             width="530px"
@@ -1675,112 +1511,30 @@ const Rest = () => {
           />
           <Pause />
           <OuterP>
-            Since {" "}
-            <NoBreak>
-              <Math>
-                $f'(g(t_0)) = (f'\circ g)(t_0)$
-              </Math>
-              ,
-            </NoBreak>
-            {" "} this is the chain rule
-            {" "}
-            <Math>
-              $(f \circ g)' = (f'\circ g)g'$
-            </Math>
-            {" "} evaluated at {" "}
-            <NoBreak>
-              <Math>
-                $t_0$
-              </Math>
-              .
-            </NoBreak>
-          </OuterP>
-          <Pause />
-          <OuterP>
             <i>
               Note.
             </i>
-            {" "} Another common way to write the chain rule is
-          </OuterP>
-          <Boxed>
-            <MathBlock>
-              $$
-              (f \circ g)'(x) = f'(g(x))g'(x)
-              $$
-            </MathBlock>
-          </Boxed>
-          <OuterP>
-            as previously seen with {" "}
-            <NoBreak>
-              “
-              <Math>
-                $t_0$
-              </Math>
-              ”
-            </NoBreak>
-            {" "} in place of {" "}
-            <NoBreak>
-              “
-              <Math>
-                $x$
-              </Math>
-              ”.
-            </NoBreak>
-            {" "} 
-            In this case the assumption
-          </OuterP>
-          <Pause />
-          <CentralDisplayItalic>
-            for {" "}
-            <NoBreak>
-              <Math>
-                $f$
-              </Math>
-              ,
-            </NoBreak>
-            {" "} {" "}
-            <Math>
-              $g : \rr \ra \rr$
-            </Math>
-            {" "} differentiable
-          </CentralDisplayItalic>
-          <Pause />
-          <OuterP>
-            can be replaced by the more granular
-          </OuterP>
-          <Pause />
-          <CentralDisplayItalic>
-            for {" "}
-            <NoBreak>
-              <Math>
-                $f, g : \rr \ra \rr$
-              </Math>
-              ,
-            </NoBreak>
-            {" "} {" "}
-            <Math>
-              $x \in \rr$
-            </Math>
-            {" "} such that {" "}
+            {" "} This equation only requires {" "}
             <Math>
               $g$
             </Math>
-            {" "} is 
-            differentiable at {" "}
+            {" "} to be differentiable
+            at {" "}
             <Math>
-              $x$
+              $t_0$
             </Math>
             {" "} and {" "}
             <Math>
               $f$
             </Math>
-            {" "} differentiable at {" "}
-            <Math>
-              $g(x)$
-            </Math>
-          </CentralDisplayItalic>
-          <Pause />
-          <OuterP>
+            {" "} to be differentiable at {" "}
+            <NoBreak>
+              <Math>
+                $g(t_0)$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}
             similarly to the {" "}
             <InChapterLink
               class="in-chapter-link"
