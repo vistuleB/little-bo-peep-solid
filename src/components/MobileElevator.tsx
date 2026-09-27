@@ -8,7 +8,7 @@ import LeftHeaderBlob from "./LeftHeaderBlob";
 export default function MobileElevator() {
   const { store } = useGlobalContext();
   const location = useLocation();
-  const { goUp, goDown } = useElevatorNavigation();
+  const { goUp, goDown } = useElevatorNavigation(450);
   const [cycle, setCycle] = createSignal({ path: location.pathname, phase: 0 });
   const phase = () => (cycle().path === location.pathname ? cycle().phase : 0);
   const next = () =>

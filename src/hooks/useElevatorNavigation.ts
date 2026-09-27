@@ -9,7 +9,7 @@ import smoothScrollTo from "~/utils/smoothScrollTo";
 
 type ExerciseStop = { anchorY: number; scrollY: number };
 
-export default function useElevatorNavigation() {
+export default function useElevatorNavigation(scrollDurationMs?: number) {
   const { store } = useGlobalContext();
   const groupAnchorY = (group: HTMLElement) =>
     window.scrollY + group.getBoundingClientRect().top;
@@ -53,7 +53,7 @@ export default function useElevatorNavigation() {
     const scrollTo = stop?.scrollY ?? 0;
     smoothScrollTo(
       scrollTo,
-      store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0,
+      scrollDurationMs ?? (store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0),
     );
   };
 
@@ -63,7 +63,7 @@ export default function useElevatorNavigation() {
 
     smoothScrollTo(
       scrollTo,
-      store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0,
+      scrollDurationMs ?? (store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0),
     );
   };
 
