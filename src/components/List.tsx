@@ -25,15 +25,15 @@ interface ListProps extends SharedProps {
 
 const markerMap: Record<ListMarkerType, string> = {
   "disc": "list-disc",
-  "decimal": "list-custom-marker list-custom-decimal",
-  "lower-alpha": "list-custom-marker list-custom-lower-alpha",
-  "upper-alpha": "list-custom-marker list-custom-upper-alpha",
-  "lower-roman": "list-custom-marker list-custom-lower-roman",
-  "upper-roman": "list-custom-marker list-custom-upper-roman",
-  "lower-alpha-paren": "list-custom-marker list-custom-lower-alpha",
-  "upper-alpha-paren": "list-custom-marker list-custom-upper-alpha",
-  "lower-roman-paren": "list-custom-marker list-custom-lower-roman",
-  "upper-roman-paren": "list-custom-marker list-custom-upper-roman",
+  "decimal": "list-marker list-type-decimal",
+  "lower-alpha": "list-marker list-type-lower-alpha",
+  "upper-alpha": "list-marker list-type-upper-alpha",
+  "lower-roman": "list-marker list-type-lower-roman",
+  "upper-roman": "list-marker list-type-upper-roman",
+  "lower-alpha-paren": "list-marker list-type-lower-alpha",
+  "upper-alpha-paren": "list-marker list-type-upper-alpha",
+  "lower-roman-paren": "list-marker list-type-lower-roman",
+  "upper-roman-paren": "list-marker list-type-upper-roman",
 };
 
 export const List = (props: ParentProps & ListProps) => {
@@ -53,6 +53,11 @@ export const List = (props: ParentProps & ListProps) => {
     return ".";
   };
 
+  const customMarker = () =>
+    props.marker?.endsWith("-paren") ||
+    props.markerPrefix !== undefined ||
+    props.markerSuffix !== undefined;
+
   const defaultMarkerFont = "Baskerville Regular";
 
   return (
@@ -66,6 +71,7 @@ export const List = (props: ParentProps & ListProps) => {
           "pl-10 pr-4", // was "px-4 ml-6" until recently
           "flex flex-col",
           markerMap[props.marker ?? "disc"],
+          props.marker !== "disc" && customMarker() && "list-custom-marker",
         )}
       >
         {props.children}

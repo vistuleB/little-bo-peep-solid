@@ -677,38 +677,49 @@ img + .t-3003:hover {
 
 /* List */
 
-/* Custom list markers with prefix/suffix support */
-.list-custom-marker {
-  list-style: none;
-}
-
-.list-custom-marker li::marker {
+/* Native markers work in Safari, which does not support ::marker content. */
+.list-marker > li::marker {
   font-family: var(--marker-font-family);
 }
 
-.list-custom-decimal li::marker {
-  content: var(--marker-prefix, "") counter(list-item, decimal)
-    var(--marker-suffix, ".") "\2009\2009";
+.list-type-decimal { list-style-type: decimal; }
+.list-type-lower-alpha { list-style-type: lower-alpha; }
+.list-type-upper-alpha { list-style-type: upper-alpha; }
+.list-type-lower-roman { list-style-type: lower-roman; }
+.list-type-upper-roman { list-style-type: upper-roman; }
+
+/* Custom punctuation uses a separate counter scoped to each list. */
+.list-custom-marker {
+  list-style: none;
+  counter-reset: custom-list-item;
 }
 
-.list-custom-lower-alpha li::marker {
-  content: var(--marker-prefix, "") counter(list-item, lower-alpha)
-    var(--marker-suffix, ".") "\2009\2009";
+.list-custom-marker > li {
+  counter-increment: custom-list-item;
 }
 
-.list-custom-upper-alpha li::marker {
-  content: var(--marker-prefix, "") counter(list-item, upper-alpha)
-    var(--marker-suffix, ".") "\2009\2009";
+.list-custom-marker > li::before {
+  position: absolute;
+  right: 100%;
+  padding-right: 0.4em;
+  white-space: nowrap;
+  font-family: var(--marker-font-family);
 }
 
-.list-custom-lower-roman li::marker {
-  content: var(--marker-prefix, "") counter(list-item, lower-roman)
-    var(--marker-suffix, ".") "\2009\2009";
+.list-custom-marker.list-type-decimal > li::before {
+  content: var(--marker-prefix, "") counter(custom-list-item, decimal) var(--marker-suffix, ".");
 }
-
-.list-custom-upper-roman li::marker {
-  content: var(--marker-prefix, "") counter(list-item, upper-roman)
-    var(--marker-suffix, ".") "\2009\2009";
+.list-custom-marker.list-type-lower-alpha > li::before {
+  content: var(--marker-prefix, "") counter(custom-list-item, lower-alpha) var(--marker-suffix, ".");
+}
+.list-custom-marker.list-type-upper-alpha > li::before {
+  content: var(--marker-prefix, "") counter(custom-list-item, upper-alpha) var(--marker-suffix, ".");
+}
+.list-custom-marker.list-type-lower-roman > li::before {
+  content: var(--marker-prefix, "") counter(custom-list-item, lower-roman) var(--marker-suffix, ".");
+}
+.list-custom-marker.list-type-upper-roman > li::before {
+  content: var(--marker-prefix, "") counter(custom-list-item, upper-roman) var(--marker-suffix, ".");
 }
 
 .text-column {
