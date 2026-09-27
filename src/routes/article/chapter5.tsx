@@ -4408,7 +4408,7 @@ const Rest = () => {
           />
           <Pause />
           <OuterP>
-            [&amp;#8288;
+            [&#8288;
             <InChapterLink
               href="#_90_h.a.i_"
               class="in-chapter-link"
@@ -4636,12 +4636,12 @@ const Rest = () => {
                   affine
                 </i>
               </a>
-              &amp;#8288;, cf. {" "}
+              &#8288;, cf. {" "}
               <a href="&gt;&gt;linear_vs_affine#decoy:0">
                 Chapter 
                 3
               </a>
-              &amp;#8288;).
+              &#8288;).
             </OuterP>
             <OuterP class="indent-10">
               As for the “something”—the bumpy one—it appears
@@ -4703,7 +4703,7 @@ const Rest = () => {
                 <Math>
                   $10$
                 </Math>
-                &amp;#x200b;
+                &#x200b;
               </NoBreak>
               <NoBreak>
                 <Math>
@@ -5535,7 +5535,7 @@ const Rest = () => {
               >
                 Exercise 2
               </InChapterLink>
-              &amp;#8288;, it has
+              &#8288;, it has
               an amplitude of {" "}
               <NoBreak>
                 <Math>
@@ -7374,7 +7374,7 @@ const Rest = () => {
               >
                 Exercise 10
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               we modify the definition of the angle {" "}
               <Math>
                 $\phi$
@@ -7479,7 +7479,7 @@ const Rest = () => {
               >
                 Exercise 10
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               while on the other the other hand,
             </OuterP>
             <Pause />
@@ -7509,7 +7509,7 @@ const Rest = () => {
               >
                 Exercise 10
               </InChapterLink>
-              &amp;#8288;:
+              &#8288;:
             </OuterP>
             <Pause />
             <Image
@@ -7544,7 +7544,7 @@ const Rest = () => {
               >
                 Exercise 10
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               giving us:
             </OuterP>
             <Boxed style="margin-bottom:0em;">
@@ -9144,8 +9144,8 @@ const Rest = () => {
             <MathBlock>
               $$
               \begin&#123;array&#125;&#123;c|cc&#125;
-              \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;amp;\,1&amp;amp;2&amp;amp;3&amp;amp;4&amp;amp;5&amp;amp;6&amp;amp;7&amp;amp;8&amp;amp;9 \\ \hline
-              \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;amp;\,777&amp;amp;1554&amp;amp;2331&amp;amp;3108&amp;amp;3885&amp;amp;4662&amp;amp;5439&amp;amp;6216&amp;amp;6993
+              \up&#123;1&#125;\dn&#123;0.5&#125; n            &amp;\,1&amp;2&amp;3&amp;4&amp;5&amp;6&amp;7&amp;8&amp;9 \\ \hline
+              \up&#123;1&#125;\dn&#123;0.5&#125; n \cdot 777\,&amp;\,777&amp;1554&amp;2331&amp;3108&amp;3885&amp;4662&amp;5439&amp;6216&amp;6993
               \\
               \end&#123;array&#125;
               $$
@@ -10635,7 +10635,7 @@ const Rest = () => {
               >
                 Example 6
               </InChapterLink>
-              &amp;#8288;.)
+              &#8288;.)
               For reference, a profile view of the Lambert projection
               is also given below.
             </OuterP>
@@ -10675,7 +10675,7 @@ const Rest = () => {
               >
                 Example 6
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               whereas longitudes (the other
               ones, perpendicular to latitudes) are locally stretched
               by a factor of...
@@ -12713,7 +12713,7 @@ const Rest = () => {
               >
                 Exercise 9
               </InChapterLink>
-              &amp;#8288;):
+              &#8288;):
             </OuterP>
             <Pause />
             <List style="padding-left:33px;padding-right:2em;">
@@ -12963,7 +12963,7 @@ const Rest = () => {
               >
                 Exercise 33
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
               The second step in which {" "}
               <Math>
                 $B$
@@ -13014,7 +13014,7 @@ const Rest = () => {
               >
                 Exercise 33
               </InChapterLink>
-              &amp;#8288;;
+              &#8288;;
               step 3 brings the box immediately to the
               left of sin online...
             </OuterP>
@@ -13041,7 +13041,7 @@ const Rest = () => {
               >
                 Exercise 33
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               and finally step 4 brings the leftmost box online...
             </OuterP>
             <Pause />
@@ -13065,7 +13065,7 @@ const Rest = () => {
               >
                 Exercise 33
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -13496,7 +13496,7 @@ const Rest = () => {
               >
                 Exercise 36
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               find a formula for {" "}
               <Math>
                 $c$
@@ -13531,7 +13531,7 @@ const Rest = () => {
               >
                 Exercise 36
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               these rectangles have the same area:
             </OuterP>
             <Pause />
@@ -13720,7 +13720,7 @@ const Rest = () => {
               >
                 Exercise 37
               </InChapterLink>
-              &amp;#8288;!
+              &#8288;!
             </OuterP>
           </Solution>
         </Exercise>
@@ -13790,7 +13790,7 @@ const Rest = () => {
               >
                 36
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               {" "}
               <InChapterLink
                 href="#_127_h.a.i_"
@@ -13798,14 +13798,14 @@ const Rest = () => {
               >
                 37
               </InChapterLink>
-              &amp;#8288;, and {" "}
+              &#8288;, and {" "}
               <InChapterLink
                 href="#_128_h.a.i_"
                 class="in-chapter-link"
               >
                 38
               </InChapterLink>
-              &amp;#8288;:
+              &#8288;:
             </OuterP>
             <Pause />
             <Image
@@ -13875,7 +13875,7 @@ const Rest = () => {
               >
                 38
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
             </OuterP>
           </Solution>
         </Exercise>
@@ -14786,7 +14786,7 @@ const Rest = () => {
               >
                 Exercise 41
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               the answer is
             </OuterP>
             <Pause />
@@ -14834,7 +14834,7 @@ const Rest = () => {
                 >
                   Exercise 41
                 </InChapterLink>
-                &amp;#8288;,
+                &#8288;,
                 to which it is equivalent, it is a generalization
                 of the Pythagorean theorem. This becomes extra clear if we rewrite it
                 as....
@@ -14960,7 +14960,7 @@ const Rest = () => {
               >
                 Exercise 4
               </InChapterLink>
-              &amp;#8288;):
+              &#8288;):
             </OuterP>
             <Pause />
             <Image
@@ -15293,7 +15293,7 @@ const Rest = () => {
                   >
                     Exercise 19
                   </InChapterLink>
-                  &amp;#8288;,
+                  &#8288;,
                   {" "}
                   <InChapterLink
                     href="#_110_h.a.i_"
@@ -15301,7 +15301,7 @@ const Rest = () => {
                   >
                     Exercise 20
                   </InChapterLink>
-                  &amp;#8288;).
+                  &#8288;).
                 </p>
               </Item>
             </List>
@@ -15847,7 +15847,7 @@ const Rest = () => {
               >
                 Exercise 44
               </InChapterLink>
-              &amp;#8288;.)
+              &#8288;.)
               We now proceed with
               step-by-step
               compass-and-ruler 
@@ -16168,7 +16168,7 @@ const Rest = () => {
               >
                 Exercise 45
               </InChapterLink>
-              &amp;#8288;):
+              &#8288;):
             </OuterP>
             <Pause />
             <Image
@@ -17034,7 +17034,7 @@ const Rest = () => {
               >
                 Exercise 23
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               however, we have
             </OuterP>
             <Pause />
@@ -17162,7 +17162,7 @@ const Rest = () => {
               >
                 Exercise 20
               </InChapterLink>
-              &amp;#8288;):
+              &#8288;):
             </OuterP>
             <Pause />
             <Image
@@ -18667,7 +18667,7 @@ const Rest = () => {
               >
                 Exercise 52
               </InChapterLink>
-              &amp;#8288;?
+              &#8288;?
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -18769,7 +18769,7 @@ const Rest = () => {
               >
                 Exercise 52
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               or some other logic,
               does it seem more likely that 
               {" "}
@@ -19933,7 +19933,7 @@ const Rest = () => {
               >
                 Exercise 56
               </InChapterLink>
-              &amp;#8288;.)
+              &#8288;.)
               Alternately, we could read values off of a ruler placed
               at {" "}
               <Math>
@@ -20199,7 +20199,7 @@ const Rest = () => {
                 >
                   Exercise 33
                 </InChapterLink>
-                &amp;#8288;) 
+                &#8288;) 
                 can be obtained from...
               </OuterP>
               <Pause />
@@ -20242,7 +20242,7 @@ const Rest = () => {
                 >
                   Exercise 56
                 </InChapterLink>
-                &amp;#8288;)...
+                &#8288;)...
               </OuterP>
               <Pause />
               <Image
@@ -20360,7 +20360,7 @@ const Rest = () => {
               >
                 Exercise 50
               </InChapterLink>
-              &amp;#8288;) so
+              &#8288;) so
             </OuterP>
             <Pause />
             <MathBlock>
@@ -20471,7 +20471,7 @@ const Rest = () => {
               >
                 Exercise 58
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
             </OuterP>
           </ExerciseStatement>
           <Solution>

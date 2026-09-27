@@ -1102,7 +1102,7 @@ const Rest = () => {
             >
               Example 2
             </InChapterLink>
-            &amp;#8288;.
+            &#8288;.
           </OuterP>
         </Example>
         <Pause />
@@ -2848,115 +2848,6 @@ const Rest = () => {
                   $n$
                 </Math>
                 .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                Example 1.
-              </i>
-              {" "} Above, we estimated
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              to be roughly {" "}
-              <NoBreak>
-                <Math>
-                  $1/100 = 0.01$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} but {" "}
-              <Math>
-                $1/100$
-              </Math>
-              {" "} is
-              bigger than the actual value of
-              {" "}
-              <Math>
-                $&#123;1 \over 10\cdot 11&#125; = &#123;1 \over 110&#125;$
-              </Math>
-              {" "} by
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 10^2\cdot 11&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              or close to {" "}
-              <NoBreak>
-                <Math>
-                  $1/10^3 = 0.001$
-                </Math>
-                .
-              </NoBreak>
-              {" "}
-              (So
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is about {" "}
-              <NoBreak>
-                <Math>
-                  $0.01$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} while making an error of about
-              {" "}
-              <NoBreak>
-                <Math>
-                  $0.001$
-                </Math>
-                .)
-              </NoBreak>
-              {" "} (In fact,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 10^2\cdot 11&#125;
-              $$
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              is {" "}
-              <i>
-                less
-              </i>
-              {" "} than {" "}
-              <NoBreak>
-                <Math>
-                  $1/10^3$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} so the error is {" "}
-              <i>
-                less
-              </i>
-              {" "}
-              than {" "}
-              <NoBreak>
-                <Math>
-                  $0.001$
-                </Math>
-                .)
               </NoBreak>
             </OuterP>
           </Solution>

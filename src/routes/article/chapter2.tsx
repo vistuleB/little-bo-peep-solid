@@ -360,7 +360,7 @@ const Rest = () => {
           >
             Example 1
           </InChapterLink>
-          &amp;#8288;, understand that
+          &#8288;, understand that
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2327,7 +2327,7 @@ const Rest = () => {
               >
                 Exercise 2
               </InChapterLink>
-              &amp;#8288;, explain why
+              &#8288;, explain why
             </OuterP>
             <Pause />
             <MathBlock>

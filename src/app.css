@@ -727,3 +727,31 @@ img + .t-3003:hover {
   border-radius: 0.4em;
   padding: 0.1em 0.3em;
 }
+
+@font-face {
+  font-family: "Allura";
+  src: url("/fonts/Allura-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Header assets keep intrinsic dimensions; Nav owns their rendered scale. */
+.header-blob-content img {
+  max-width: none;
+}
+
+.header-wordmark {
+  position: relative;
+  top: 2px;
+  padding: 4px 0;
+  font-family: "Allura", "Snell Roundhand", cursive;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.header-wordmark > span {
+  display: block;
+}

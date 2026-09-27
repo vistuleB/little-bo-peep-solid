@@ -20,6 +20,7 @@ type LBPFragmentClassifer {
   TOC
   HamburgerPanelAuthorSuppliedContents
   HeaderBlob
+  LeftHeaderBlob
 }
 
 type LBPFragment(z) =
@@ -32,6 +33,7 @@ type LBPSplitterError {
   NoTOC
   MoreThanOneTOC
   MoreThanOneHeaderBlob
+  MoreThanOneLeftHeaderBlob
   NoHamburgerPanelAuthorSuppliedContents
   MoreThanOneHamburgerPanelAuthorSuppliedContents
 }
@@ -84,6 +86,15 @@ fn our_splitter(
 
   use header_blob_vxml <- on.ok(header_blob_vxml)
 
+  use left_header_blob_vxml <- on.ok(
+    case core.v_unique_child_with_singleton_error(root, "LeftHeaderBlob") {
+      Ok(value) -> Ok(value)
+      Error(core.LessThanOne) ->
+        Ok(V(blame_us("default_left_header_blob"), "LeftHeaderBlob", [], []))
+      Error(core.MoreThanOne) -> Error(MoreThanOneLeftHeaderBlob)
+    },
+  )
+
   Ok(#(
     list.flatten([
       [
@@ -97,6 +108,11 @@ fn our_splitter(
           HeaderBlob,
           "components/HeaderBlob.tsx",
           header_blob_vxml,
+        ),
+        ds.OutputFragment(
+          LeftHeaderBlob,
+          "components/LeftHeaderBlob.tsx",
+          left_header_blob_vxml,
         ),
       ],
       list.map(articles, fn(c) {
@@ -391,6 +407,45 @@ fn our_emitter(
       )
     HeaderBlob ->
       standard_component_emitter(fragment, imports_lookup, "HeaderBlob")
+    LeftHeaderBlob -> {
+      use emitted <- on.ok(standard_component_emitter(
+        fragment,
+        imports_lookup,
+        "LeftHeaderBlob",
+      ))
+      let margin =
+        fragment.payload
+        |> core.v_val_of_first_attr_with_key("marginRight")
+        |> option.unwrap("0px")
+      let desktop_left_margin =
+        fragment.payload
+        |> core.v_val_of_first_attr_with_key("desktopLeftMargin")
+        |> option.unwrap("0px")
+      let mobile_left_margin =
+        fragment.payload
+        |> core.v_val_of_first_attr_with_key("mobileLeftMargin")
+        |> option.unwrap("0px")
+      Ok(
+        ds.OutputFragment(..emitted, payload: [
+          OutputLine(
+            blame_us("left_header_blob_emitter"),
+            0,
+            "export const mobileMarginRight = " <> ins(margin) <> ";",
+          ),
+          OutputLine(
+            blame_us("left_header_blob_emitter"),
+            0,
+            "export const desktopLeftMargin = " <> ins(desktop_left_margin) <> ";",
+          ),
+          OutputLine(
+            blame_us("left_header_blob_emitter"),
+            0,
+            "export const mobileLeftMargin = " <> ins(mobile_left_margin) <> ";",
+          ),
+          ..emitted.payload
+        ]),
+      )
+    }
   })
   Ok(#(fragment, ds.NoFeedback))
 }
@@ -431,6 +486,7 @@ pub fn render(arguments: ds.ParsedCLIArguments) -> Nil {
       filterer: ds.default_filterer(_, options, [
         "In",
         "HeaderBlob",
+        "LeftHeaderBlob",
         "ChapterSelection",
       ]),
       pipeline: our_pipeline(
@@ -455,6 +511,7 @@ pub fn render(arguments: ds.ParsedCLIArguments) -> Nil {
       output_dir <> "/routes/index.tsx",
       output_dir <> "/components/HamburgerPanelAuthorSuppliedContents.tsx",
       output_dir <> "/components/HeaderBlob.tsx",
+      output_dir <> "/components/LeftHeaderBlob.tsx",
     ]
     |> list.filter(fn(f) {
       case simplifile.is_file(f) {

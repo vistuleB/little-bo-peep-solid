@@ -291,12 +291,27 @@
         chapter=>>classical-circle-theorems
 
     |> HeaderBlob
-        !! TEST 1 : 'Little Bo Peep' SVG
-        !! |> img
-        !!     style=padding-top:0.65em;padding-bottom:0.4em;
-        !!     src=public/header-blob.svg
-
-        !! TEST 5: Loading Image
         |> img
-            src=non-build-img/loading_screen.png
-            !! src=non-build-img/K12.svg
+            src=non-build-img/toilet_v71.png
+            alt=toilet scroll calculus
+
+    !! Previous text-only HeaderBlob (Allura)
+    !! |> HeaderBlob
+    !!     |> div
+    !!         class=header-wordmark
+    !!
+    !!         |> span
+    !!             toilet
+    !!         |> span
+    !!             scroll
+    !!         |> span
+    !!             calculus
+
+    |> LeftHeaderBlob
+        margin-right=-6px
+        desktop-left-margin=15px
+        mobile-left-margin=-2px
+
+        |> img
+            src=non-build-img/toilet-watercolor-v2-cropped.png
+            alt=Watercolor toilet

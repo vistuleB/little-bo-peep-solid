@@ -952,7 +952,7 @@ const Rest = () => {
           >
             Table 1.1
           </InChapterLink>
-          &amp;#8288;,
+          &#8288;,
           while the subsequent taking of a derivative doesn't
           impose any new constraints.
         </OuterP>
@@ -1210,7 +1210,7 @@ const Rest = () => {
               >
                 Example 2
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
             </i>
             {" "}
             In the case of {" "}
@@ -1220,7 +1220,7 @@ const Rest = () => {
             >
               Example 2
             </InChapterLink>
-            &amp;#8288;, the sum rule,
+            &#8288;, the sum rule,
             which now reads
           </OuterP>
           <Pause />
@@ -1726,7 +1726,7 @@ const Rest = () => {
               >
                 Example 4
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
             </i>
             {" "}
             It might be observed that
@@ -1756,7 +1756,7 @@ const Rest = () => {
             >
               Example 4
             </InChapterLink>
-            &amp;#8288;—one might conjecture that
+            &#8288;—one might conjecture that
           </OuterP>
           <Pause />
           <MathBlock>
@@ -2383,7 +2383,7 @@ const Rest = () => {
             >
               Example 3
             </InChapterLink>
-            &amp;#8288;,
+            &#8288;,
             relative to the sum rule.
           </OuterP>
         </Example>
@@ -2418,7 +2418,7 @@ const Rest = () => {
             >
               the chain rule
             </InChapterLink>
-            &amp;#8288;,
+            &#8288;,
             since {" "}
             <NoBreak>
               <Math>
@@ -2506,7 +2506,7 @@ const Rest = () => {
             >
               Example 6
             </InChapterLink>
-            &amp;#8288;,
+            &#8288;,
             which
             looks visually compatible with the graph
             of {" "}
@@ -2621,7 +2621,7 @@ const Rest = () => {
             >
               Example 7
             </InChapterLink>
-            &amp;#8288;.
+            &#8288;.
           </OuterP>
         </Example>
       </Section>
@@ -2888,7 +2888,7 @@ const Rest = () => {
               >
                 Table 1.1
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
               If {" "}
               <Math>
                 $g = f$
@@ -3060,7 +3060,7 @@ const Rest = () => {
               >
                 Exercise 1
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
               But then
             </OuterP>
             <Pause />
@@ -3556,7 +3556,7 @@ const Rest = () => {
               >
                 Exercise 6
               </InChapterLink>
-              &amp;#8288;)
+              &#8288;)
               would become
             </OuterP>
             <Pause />
@@ -3681,7 +3681,7 @@ const Rest = () => {
               >
                 Table 1.1
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               and per the fact that
               {" "}
               <Math>
@@ -3843,7 +3843,7 @@ const Rest = () => {
               >
                 Table 1.2
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               and
             </OuterP>
             <Pause />
@@ -4045,7 +4045,7 @@ const Rest = () => {
               >
                 Table 1.2
               </InChapterLink>
-              &amp;#8288;), giving
+              &#8288;), giving
               us
             </OuterP>
             <Boxed>
@@ -4377,7 +4377,7 @@ const Rest = () => {
               >
                 Exercise 12
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
             </OuterP>
           </Solution>
         </Exercise>
@@ -4774,7 +4774,7 @@ const Rest = () => {
               >
                 Exercise 14
               </InChapterLink>
-              &amp;#8288;).
+              &#8288;).
               What is the most general signature of {" "}
               <Math>
                 $f$

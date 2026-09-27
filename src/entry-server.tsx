@@ -41,10 +41,10 @@ export default createHandler(() => (
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             name="description"
-            content="Baskerville Calculus, an interactive calculus textbook."
+            content="Toilet Scroll Calculus, an interactive calculus textbook."
           />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Baskerville Calculus" />
+          <meta property="og:title" content="Toilet Scroll Calculus" />
           <meta
             property="og:description"
             content="An interactive calculus textbook."
@@ -130,7 +130,7 @@ export default createHandler(() => (
             defer={true}
           />
 
-          <title>Baskerville Calculus</title>
+          <title>Toilet Scroll Calculus</title>
 
           {assets}
         </head>

@@ -1,13 +1,15 @@
-import { createEffect, createSignal, onMount } from "solid-js";
+import { createSignal, onCleanup, onMount } from "solid-js";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
   DESKTOP_TEXT_COLUMN_WIDTH,
+  HEADER_HEIGHT,
   MOBILE_MAX_WIDTH,
   MOBILE_TEXT_COLUMN_SIDE_INSET,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import HeaderBlob from "./HeaderBlob";
+import { leftHeaderWidth } from "./LeftHeaderControl";
 import containerWidth from "~/hooks/useContainerWidth";
 import { decideRouteNavbarPosition } from "~/utils/routeTransitionPolicy";
 
@@ -46,56 +48,79 @@ const Nav = () => {
 const Title = (props: { navPosition: "fixed" | "absolute" }) => {
   const { getPage } = usePrevNextPage();
   const { store } = useGlobalContext();
-  let headerBlob: HTMLAnchorElement | undefined;
-  const [imageLoaded, setImageLoaded] = createSignal(false);
+  let content!: HTMLDivElement;
+  const [size, setSize] = createSignal({ width: 0, height: 0 });
+  const scale = () => (size().height > 0 ? HEADER_HEIGHT / size().height : 0);
 
   onMount(() => {
-    const img = headerBlob?.querySelector("img");
-    if (!img) {
-      setImageLoaded(true);
-      return;
-    }
-    if (img.complete) {
-      setImageLoaded(true);
-    } else {
-      img.addEventListener("load", () => setImageLoaded(true), { once: true });
-    }
+    let frame = 0;
+    // Measure an intrinsic-sized, unscaled layout box, independent of the route.
+    const measure = () => {
+      const width = content.offsetWidth;
+      const height = content.offsetHeight;
+      setSize((previous) =>
+        previous.width === width && previous.height === height
+          ? previous
+          : { width, height },
+      );
+    };
+    const observer = new ResizeObserver(() => {
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        measure();
+      });
+    });
+    observer.observe(content);
+    measure();
+    onCleanup(() => {
+      observer.disconnect();
+      cancelAnimationFrame(frame);
+    });
   });
 
-  createEffect(() => {
-    if (!headerBlob || !imageLoaded()) return;
+  const left = () => {
     const onMobile = store.innerWidth <= MOBILE_MAX_WIDTH;
     const columnLeft = onMobile
       ? 0
       : props.navPosition === "fixed"
         ? (store.innerWidth - DESKTOP_TEXT_COLUMN_WIDTH) / 2
         : (containerWidth() - DESKTOP_TEXT_COLUMN_WIDTH) / 2;
-    const leftPos = columnLeft + (onMobile ? MOBILE_TEXT_COLUMN_SIDE_INSET : 0);
-    headerBlob.style.left = `${leftPos}px`;
-  });
-
-  createEffect(() => {
-    if (!headerBlob || !imageLoaded()) return;
-    requestAnimationFrame(() => {
-      // ur not necessarily on the same page anymore
-      // because of the requestAnimationFrame (0.001% chance):
-      if (!headerBlob) return;
-      const headerBlobHeight = headerBlob.offsetHeight;
-      if (headerBlobHeight <= 0) return;
-      const scale = 56 / headerBlobHeight;
-      headerBlob.style.transform = `scale(${scale})`;
-      headerBlob.style.opacity = "1";
-    });
-  });
+    return (
+      columnLeft +
+      (onMobile ? MOBILE_TEXT_COLUMN_SIDE_INSET + leftHeaderWidth() : 0)
+    );
+  };
 
   return (
     <a
-      class="mr-auto absolute origin-top-left opacity-0"
-      ref={headerBlob}
+      class="absolute"
+      data-header-blob
+      style={{
+        left: `${left()}px`,
+        top: "0px",
+        width: `${size().width * scale()}px`,
+        height: `${HEADER_HEIGHT}px`,
+        opacity: size().height > 0 ? 1 : 0,
+      }}
       href="/"
       onClick={() => getPage("/")}
     >
-      <HeaderBlob />
+      <div
+        ref={content}
+        class="header-blob-content"
+        style={{
+          position: "absolute",
+          top: "0px",
+          left: "0px",
+          width: "max-content",
+          display: "flow-root",
+          "transform-origin": "top left",
+          transform: `scale(${scale()})`,
+        }}
+      >
+        <HeaderBlob />
+      </div>
     </a>
   );
 };

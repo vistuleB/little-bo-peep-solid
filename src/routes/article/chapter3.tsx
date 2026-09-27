@@ -1447,7 +1447,7 @@ const Rest = () => {
           0^x =
           \begin&#123;cases&#125; 0 &amp; \te&#123;if &#125; x &gt; 0\\
           1 &amp; \te&#123;if &#125; x = 0\\
-          \te&#123;undefined&#125; &amp; \te&#123;if &#125;x &amp;lt; 0 \end&#123;cases&#125;
+          \te&#123;undefined&#125; &amp; \te&#123;if &#125;x &lt; 0 \end&#123;cases&#125;
           $$
         </MathBlock>
         <Pause />
@@ -2573,7 +2573,7 @@ const Rest = () => {
               >
                 Exercise 4
               </InChapterLink>
-              &amp;#8288;):
+              &#8288;):
             </OuterP>
             <Pause />
             <Image
@@ -2635,7 +2635,7 @@ const Rest = () => {
               >
                 Exercise 4
               </InChapterLink>
-              &amp;#8288;).
+              &#8288;).
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -3062,7 +3062,7 @@ const Rest = () => {
               >
                 Exercise 5
               </InChapterLink>
-              &amp;#8288;'s formula by {" "}
+              &#8288;'s formula by {" "}
               <NoBreak>
                 <Math>
                   $2$
@@ -3574,7 +3574,7 @@ const Rest = () => {
               >
                 Exercise 8
               </InChapterLink>
-              &amp;#8288;, but for
+              &#8288;, but for
               {" "}
               <NoBreak>
                 “
@@ -4676,7 +4676,7 @@ const Rest = () => {
               >
                 Exercise 10
               </InChapterLink>
-              &amp;#8288;) has no solutions {" "}
+              &#8288;) has no solutions {" "}
               <NoBreak>
                 <Math>
                   $x \in \rr$
@@ -4704,7 +4704,7 @@ const Rest = () => {
               >
                 Exercise 10
               </InChapterLink>
-              &amp;#8288;, but this implies
+              &#8288;, but this implies
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5733,7 +5733,7 @@ const Rest = () => {
               >
                 Exercise 14
               </InChapterLink>
-              &amp;#8288;):
+              &#8288;):
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
@@ -5766,7 +5766,7 @@ const Rest = () => {
               >
                 Exercise 15
               </InChapterLink>
-              &amp;#8288;, the 
+              &#8288;, the 
               roots of {" "}
               <Math>
                 $y = Ax^2 + Bx$
@@ -6210,7 +6210,7 @@ const Rest = () => {
               >
                 Exercise 14
               </InChapterLink>
-              &amp;#8288;, write
+              &#8288;, write
             </OuterP>
             <Pause />
             <MathBlock>
@@ -6274,7 +6274,7 @@ const Rest = () => {
               >
                 Exercise 14
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               that also has a minus sign out front.)
             </OuterP>
             <OuterP class="indent-10">
@@ -6285,7 +6285,7 @@ const Rest = () => {
               >
                 Exercise 14
               </InChapterLink>
-              &amp;#8288;, the three
+              &#8288;, the three
               transformations are thus...
             </OuterP>
             <Pause />
@@ -6499,7 +6499,7 @@ const Rest = () => {
               >
                 Exercise 15
               </InChapterLink>
-              &amp;#8288;. {" "}
+              &#8288;. {" "}
               <Math>
                 $\rightarrow$
               </Math>

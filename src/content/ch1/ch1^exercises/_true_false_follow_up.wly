@@ -73,35 +73,35 @@
 
         since $n^2(n+1) \approx n^3$ for large $n$.
 
-        |> Pause
+        !! |> Pause
 
-        _Example 1._ Above, we estimated
+        !! _Example 1._ Above, we estimated
 
-        $$
-        {1 \over 10} - {1 \over 11}
-        $$
+        !! $$
+        !! {1 \over 10} - {1 \over 11}
+        !! $$
 
-        to be roughly $1/100 = 0.01$, but $1/100$ is
-        bigger than the actual value of
-        ${1 \over 10\cdot 11} = {1 \over 110}$ by
+        !! to be roughly $1/100 = 0.01$, but $1/100$ is
+        !! bigger than the actual value of
+        !! ${1 \over 10\cdot 11} = {1 \over 110}$ by
 
-        $$
-        {1 \over 10^2\cdot 11}
-        $$
+        !! $$
+        !! {1 \over 10^2\cdot 11}
+        !! $$
 
-        or close to $1/10^3 = 0.001$.
-        (So
+        !! or close to $1/10^3 = 0.001$.
+        !! (So
 
-        $$
-        {1 \over 10} - {1 \over 11}
-        $$
+        !! $$
+        !! {1 \over 10} - {1 \over 11}
+        !! $$
 
-        is about $0.01$, while making an error of about
-        $0.001$.) (In fact,
+        !! is about $0.01$, while making an error of about
+        !! $0.001$.) (In fact,
 
-        $$
-        {1 \over 10^2\cdot 11}
-        $$
+        !! $$
+        !! {1 \over 10^2\cdot 11}
+        !! $$
 
-        is _less_ than $1/10^3$, so the error is _less_
-        than $0.001$.)
+        !! is _less_ than $1/10^3$, so the error is _less_
+        !! than $0.001$.)

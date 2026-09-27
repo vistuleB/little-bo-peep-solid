@@ -2116,7 +2116,7 @@ const Rest = () => {
               >
                 Exercise 1
               </InChapterLink>
-              &amp;#8288;.
+              &#8288;.
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -4269,7 +4269,7 @@ const Rest = () => {
               >
                 Exercise 15
               </InChapterLink>
-              &amp;#8288;)?
+              &#8288;)?
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -4473,7 +4473,7 @@ const Rest = () => {
               >
                 Exercise 16
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               and assuming that {" "}
               <Math>
                 $A$
@@ -4550,7 +4550,7 @@ const Rest = () => {
               >
                 Note 1 of Exercise 15
               </InChapterLink>
-              &amp;#8288;. (This is a
+              &#8288;. (This is a
               difference quotient, notwitstanding the renaming of {" "}
               <NoBreak>
                 “
@@ -4958,7 +4958,7 @@ const Rest = () => {
               >
                 Note 1 of Exercise 15
               </InChapterLink>
-              &amp;#8288;.)
+              &#8288;.)
               (Nb: We assume differentiability, otherwise
               there is no conclusion to draw.)
             </OuterP>
@@ -5055,7 +5055,7 @@ const Rest = () => {
               >
                 Note 1 of Exercise 15
               </InChapterLink>
-              &amp;#8288;),
+              &#8288;),
               so the whole term approaches
             </OuterP>
             <Boxed>
@@ -5497,7 +5497,7 @@ const Rest = () => {
               >
                 Exercise 15
               </InChapterLink>
-              &amp;#8288;)
+              &#8288;)
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5522,7 +5522,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} per which
-              (&amp;#8288;
+              (&#8288;
               <InChapterLink
                 href="#_73_h.a.i_"
                 class="in-chapter-link"
@@ -6479,7 +6479,7 @@ const Rest = () => {
               >
                 Note 1
               </InChapterLink>
-              &amp;#8288;):
+              &#8288;):
             </OuterP>
             <Pause />
             <Image
@@ -6940,7 +6940,7 @@ const Rest = () => {
                 >
                   Exercise 23
                 </InChapterLink>
-                &amp;#8288;, whose
+                &#8288;, whose
                 velocity is equal to its position and whose
                 position is {" "}
                 <Math>
@@ -7254,7 +7254,7 @@ const Rest = () => {
               >
                 Exercise 13
               </InChapterLink>
-              &amp;#8288;, that obey a similar set of
+              &#8288;, that obey a similar set of
               constraints
               (albeit with a different set of colors).
             </OuterP>
@@ -7371,7 +7371,7 @@ const Rest = () => {
               >
                 Exercise 23
               </InChapterLink>
-              &amp;#8288;,
+              &#8288;,
               except that the current
               “UNO particle” has a slight head-start over the
               red particle from {" "}
@@ -7381,7 +7381,7 @@ const Rest = () => {
               >
                 Exercise 23
               </InChapterLink>
-              &amp;#8288;, being
+              &#8288;, being
               at position {" "}
               <Math>
                 $x = 2\sqrt&#123;5&#125;$
@@ -9432,7 +9432,7 @@ const Rest = () => {
                 >
                   Exercise 13
                 </InChapterLink>
-                &amp;#8288;,
+                &#8288;,
                 but might be worth emphasizing,
               </OuterP>
               <Pause />
@@ -9496,7 +9496,7 @@ const Rest = () => {
               >
                 Exercise 13
               </InChapterLink>
-              &amp;#8288;, known as the
+              &#8288;, known as the
               {" "}
               <i>
                 cosine function

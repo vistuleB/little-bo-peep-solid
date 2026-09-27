@@ -192,7 +192,10 @@ fn at_root(
     list.partition(others, core.is_v_and_tag_equals(_, "In"))
 
   let #(to_keep, others) =
-    list.partition(others, core.is_v_and_tag_equals(_, "HeaderBlob"))
+    list.partition(
+      others,
+      core.is_v_and_tag_is_one_of(_, ["HeaderBlob", "LeftHeaderBlob"]),
+    )
 
   use handle_2_chapter_dict <- on.ok(
     chapters

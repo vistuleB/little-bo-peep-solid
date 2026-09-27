@@ -14,6 +14,9 @@ import { useGlobalContext } from "../store/StoreProvider";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
 import { decideRouteNavbarPosition } from "~/utils/routeTransitionPolicy";
 
+import LeftHeaderControl from "./LeftHeaderControl";
+import HeaderControlSurface from "./HeaderControlSurface";
+
 const HeaderButtons = () => {
   return (
     <ButtonsContainer>
@@ -32,7 +35,7 @@ const ButtonsContainer = (props: ParentProps) => {
   const [buttonOpacity, setButtonOpacity] = createSignal(1);
   const [borderOpacity, setBorderOpacity] = createSignal(1);
 
-  const currentScrollY = () => window.scrollY;
+  const [currentScrollY, setCurrentScrollY] = createSignal(window.scrollY);
 
   const calcButtonOpacity = (scrollY = currentScrollY()) => {
     return Math.min(
@@ -103,7 +106,8 @@ const ButtonsContainer = (props: ParentProps) => {
   };
 
   const handleScroll = () => {
-    const scrollY = currentScrollY();
+    const scrollY = window.scrollY;
+    setCurrentScrollY(scrollY);
     setButtonOpacity(calcButtonOpacity(scrollY));
     setBorderOpacity(calcBorderOpacity(scrollY));
   };
@@ -118,40 +122,30 @@ const ButtonsContainer = (props: ParentProps) => {
 
   return (
     <>
-      <div
-        class="fixed right-0 z-[70]"
-        style={{ height: "var(--header-height)" }}
+      <LeftHeaderControl
+        opacity={finalButtonOpacity()}
+        borderOpacity={finalBorderOpacity()}
+        tallBackground={
+          currentScrollY() <= HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY &&
+          !on_mobile() &&
+          store.scrollX <= store.scrollWidth / 2 - MOBILE_MAX_WIDTH / 2
+        }
+      />
+      <HeaderControlSurface
+        side="right"
+        opacity={finalButtonOpacity()}
+        borderOpacity={finalBorderOpacity()}
+        tallBackground={
+          currentScrollY() <= HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY &&
+          !on_mobile() &&
+          store.scrollX + store.innerWidth >=
+            store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2
+        }
+        contentClass="flex items-center justify-center h-8"
+        contentStyle={{ "box-sizing": "content-box", padding: "11.5px 12px" }}
       >
-        {/* the large-height background */}
-        <div
-          style={{
-            position: "absolute",
-            right: "0px",
-            width: "100%",
-            height:
-              currentScrollY() <= HEADER_BUTTONS_BACKGROUND_OFF_SCROLLY &&
-              !on_mobile() &&
-              store.scrollX + store.innerWidth >=
-                store.scrollWidth / 2 + MOBILE_MAX_WIDTH / 2
-                ? "10rem"
-                : "100%",
-            background: "var(--background-rgb)",
-            "z-index": "-1",
-            opacity: finalButtonOpacity(),
-          }}
-        ></div>
-        <div
-          class="select-none flex items-center justify-center h-8 hover:!opacity-100 border-b"
-          style={{
-            "box-sizing": "content-box",
-            padding: "11.5px 12px",
-            opacity: finalButtonOpacity(),
-            "border-color": `rgba(var(--nav-border-r), var(--nav-border-g), var(--nav-border-b), ${finalBorderOpacity()})`,
-          }}
-        >
-          {props.children}
-        </div>
-      </div>
+        {props.children}
+      </HeaderControlSurface>
     </>
   );
 };

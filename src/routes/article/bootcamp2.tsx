@@ -326,14 +326,14 @@ export default function __Bootcamp2__() {
             .
           </NoBreak>
           {" "}
-          Moreover, (&amp;#8288;
+          Moreover, (&#8288;
           <InChapterLink
             href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
-          &amp;#8288;) actually holds for
+          &#8288;) actually holds for
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -349,25 +349,25 @@ export default function __Bootcamp2__() {
             ,
           </NoBreak>
           {" "} which is mildly important. In more
-          detail, (&amp;#8288;
+          detail, (&#8288;
           <InChapterLink
             href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
-          &amp;#8288;) holds for {" "}
+          &#8288;) holds for {" "}
           <Math>
             $n = 0$
           </Math>
-          {" "} by inspection, and (&amp;#8288;
+          {" "} by inspection, and (&#8288;
           <InChapterLink
             href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
-          &amp;#8288;)
+          &#8288;)
           is equivalent to the identity
           <ImageLeft
             src="/build-img/svgo-svg/rdZz.svg"
@@ -415,21 +415,21 @@ export default function __Bootcamp2__() {
             ”
           </NoBreak>
           {" "}
-          in (&amp;#8288;
+          in (&#8288;
           <InChapterLink
             href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
-          &amp;#8288;) lands you right back on (&amp;#8288;
+          &#8288;) lands you right back on (&#8288;
           <InChapterLink
             href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
-          &amp;#8288;), due to the fact
+          &#8288;), due to the fact
           that {" "}
           <NoBreak>
             <Math>
@@ -437,14 +437,14 @@ export default function __Bootcamp2__() {
             </Math>
             .)
           </NoBreak>
-          {" "} (So, namely, if (&amp;#8288;
+          {" "} (So, namely, if (&#8288;
           <InChapterLink
             href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
-          &amp;#8288;) holds for all
+          &#8288;) holds for all
           positive values of {" "}
           <NoBreak>
             <Math>
@@ -510,21 +510,21 @@ export default function __Bootcamp2__() {
         <Pause />
         <OuterP>
           ...and any one of these equations implies the other two.
-          Thus, either of (&amp;#8288;
+          Thus, either of (&#8288;
           <InChapterLink
             href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
-          &amp;#8288;) and (&amp;#8288;
+          &#8288;) and (&#8288;
           <InChapterLink
             href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
-          &amp;#8288;)
+          &#8288;)
           expresses the
         </OuterP>
         <Pause />
@@ -2992,14 +2992,14 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              stated earlier in the chapter as (&amp;#8288;
+              stated earlier in the chapter as (&#8288;
               <InChapterLink
                 href="#_2_h.a.i_"
                 class="in-chapter-link"
               >
                 A
               </InChapterLink>
-              &amp;#8288;),
+              &#8288;),
               while the third equality uses additivity of exponents,
               also stated earlier. (So: We are only using “known”
               facts, alongside some ordinary arithmetic.)
@@ -3352,7 +3352,7 @@ const Rest = () => {
               >
                 Exercise 14
               </InChapterLink>
-              &amp;#8288;):
+              &#8288;):
             </OuterP>
             <Pause />
             <MathBlock>
