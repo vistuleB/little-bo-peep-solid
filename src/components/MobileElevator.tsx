@@ -1,14 +1,22 @@
-import { createSignal } from "solid-js";
+import { createSignal, onCleanup, Show } from "solid-js";
 import { useLocation } from "@solidjs/router";
 import { useGlobalContext } from "~/store/StoreProvider";
 import useElevatorNavigation from "~/hooks/useElevatorNavigation";
 import { mobileElevatorStep } from "~/utils/mobileElevatorCycle";
 import LeftHeaderBlob from "./LeftHeaderBlob";
+import type { SmoothScrollController } from "~/utils/smoothScrollTo";
 
 export default function MobileElevator() {
   const { store } = useGlobalContext();
   const location = useLocation();
-  const { goUp, goDown } = useElevatorNavigation(450);
+  const { goUp, goDown } = useElevatorNavigation(900);
+  const [scrollDirection, setScrollDirection] = createSignal<"up" | "down">();
+  let activeScroll: SmoothScrollController | undefined;
+  onCleanup(() => {
+    const scroll = activeScroll;
+    activeScroll = undefined;
+    scroll?.cancel();
+  });
   const [cycle, setCycle] = createSignal({ path: location.pathname, phase: 0 });
   const phase = () => (cycle().path === location.pathname ? cycle().phase : 0);
   const next = () =>
@@ -36,13 +44,25 @@ export default function MobileElevator() {
         );
         if (root.scrollHeight <= window.innerHeight + 1) return;
         setCycle({ path: location.pathname, phase: step.nextPhase });
-        if (step.direction === "down") goDown();
-        else goUp();
+        setScrollDirection(step.direction);
+        const scroll = step.direction === "down" ? goDown() : goUp();
+        activeScroll = scroll;
+        void scroll.finished.then(() => {
+          // An interrupted scroll must not hide a newer tap's indicator.
+          if (activeScroll !== scroll) return;
+          activeScroll = undefined;
+          setScrollDirection(undefined);
+        });
       }}
     >
       <span aria-hidden="true">
         <LeftHeaderBlob />
       </span>
+      <Show when={scrollDirection()}>
+        <span class="mobile-elevator-direction" aria-hidden="true">
+          {scrollDirection() === "down" ? "↓" : "↑"}
+        </span>
+      </Show>
     </button>
   );
 }

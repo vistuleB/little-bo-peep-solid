@@ -51,7 +51,7 @@ export default function useElevatorNavigation(scrollDurationMs?: number) {
   const goUp = () => {
     const stop = previousExerciseStop();
     const scrollTo = stop?.scrollY ?? 0;
-    smoothScrollTo(
+    return smoothScrollTo(
       scrollTo,
       scrollDurationMs ?? (store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0),
     );
@@ -61,7 +61,7 @@ export default function useElevatorNavigation(scrollDurationMs?: number) {
     const stop = nextExerciseStop();
     const scrollTo = stop?.scrollY ?? document.body.scrollHeight;
 
-    smoothScrollTo(
+    return smoothScrollTo(
       scrollTo,
       scrollDurationMs ?? (store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0),
     );

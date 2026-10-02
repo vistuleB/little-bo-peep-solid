@@ -805,3 +805,13 @@ img + .t-3003:hover {
   outline: 2px solid currentColor;
   outline-offset: -2px;
 }
+.mobile-elevator-direction {
+  position: absolute;
+  left: 100%;
+  margin-left: 2px;
+  font-family: sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  color: #222;
+  pointer-events: none;
+}
