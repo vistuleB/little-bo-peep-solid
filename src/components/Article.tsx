@@ -8,9 +8,11 @@ import PageUpPageDownButtons from "./PageUpPageDownButtons";
 import { useGlobalContext } from "~/store/StoreProvider";
 import { recordFirstContentPaint } from "~/utils/routeLoading";
 import { useLocation } from "@solidjs/router";
+import { ensurePrerenderedMathJaxRouteCache } from "~/utils/prerenderedMathJax";
 
 type ArticleProps = {
   id?: string;
+  path?: string;
   pageNecessaryMargin?: number;
   maxElementWidth?: number;
   nextPage?: string;
@@ -18,21 +20,25 @@ type ArticleProps = {
 };
 
 const Article = (props: ParentProps & ArticleProps) => {
+  onMount(() => {
+    if (props.path) ensurePrerenderedMathJaxRouteCache(props.path);
+  });
+
   return (
-    <Page
-      pageNecessaryMargin={props.pageNecessaryMargin}
-      maxElementWidth={props.maxElementWidth}
-      nextPage={props.nextPage}
-      prevPage={props.prevPage}
-    >
-      <ExerciseGroupRegistryProvider>
+    <ExerciseGroupRegistryProvider>
+      <Page
+        pageNecessaryMargin={props.pageNecessaryMargin}
+        maxElementWidth={props.maxElementWidth}
+        nextPage={props.nextPage}
+        prevPage={props.prevPage}
+      >
         <span id={props.id} class="id_span"></span>
         <ArticleScrollCoordinator>{props.children}</ArticleScrollCoordinator>
-        <ElevatorArrows />
-        <PageUpPageDownButtons />
-        <Minimap />
-      </ExerciseGroupRegistryProvider>
-    </Page>
+      </Page>
+      <ElevatorArrows />
+      <PageUpPageDownButtons />
+      <Minimap />
+    </ExerciseGroupRegistryProvider>
   );
 };
 

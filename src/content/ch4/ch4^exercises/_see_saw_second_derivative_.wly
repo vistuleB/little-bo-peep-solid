@@ -19,8 +19,7 @@
             src=images/svg_ch4_slope_one_half_see_saw_second_derivative.svg
 
         |> SolutionNote
-            Taking even further derivatives produces
-            the same graph back, over and over again.
+            Further derivatives produce the same graph, over and over again.
 
         |> SolutionNote
             “first derivative” is a synonym of “derivative”.

@@ -119,6 +119,7 @@ const SideImage = (props: InternalSideImageProps) => {
       style="left:0;top:0;width:100%;height:100%;background-color:none;margin:0;padding:0;pointer-events:none;"
     >
       <div
+        data-side-image
         style={{
           left: getLeft(props.side, offsetX(), widthInflationOffset()),
           right: getRight(props.side, offsetX(), widthInflationOffset()),

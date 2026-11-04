@@ -16,8 +16,7 @@
     Sketch the graph $y = \floor{x}$.
 
     Secondly, find a formula for a function whose
-    graph looks like this, where you are allowed
-    to use “$\floor{x}$” in your formula:
+    graph looks like this, using “$\floor{x}$”:
 
     |> Image
         src=images/svg_ch3_ex_factory_roof_graph.svg
@@ -27,7 +26,7 @@
         As $x$ grows, so does $\floor{x}$, but
         $\floor{x}$ only “levels up” each time that $x$
         reaches a new integer, and flatlines
-        otherwise; this gives rise to the following
+        otherwise; this gives the
         staircase-shaped graph:
 
         |> Image
@@ -55,8 +54,5 @@
         $$
         y = x - \floor{x}
         $$
-        because the $y$-coordinate _is_ the
-        vertical displacement, given that the vertical
-        displacement starts at $y = 0$, and because
-        the vertical and horizontal displacements are
-        equal.
+        because the $y$-coordinate _is_ the vertical displacement
+        from $y = 0$, equal to the horizontal displacement.

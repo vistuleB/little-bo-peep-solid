@@ -77,7 +77,7 @@
             the fact that $a + b = b + a$ for all $a, b \in \rr$_
 
         |> SolutionNote
-            We never took the time to prove the associativity
+            We never proved the associativity
             of function addition, but it is easy to prove!
             (For other proofs see Exercise 32, Exercise 33, as
             well as Exercise 9, Chapter >>functions.)

@@ -16,8 +16,7 @@
             style=margin-top:1.1em;margin-bottom:1.1em;
             src=images/svg_ch5_ex_pythagorean_graphs_cos2.svg
 
-        It seems that if we would vertically flip
-        one of the cutouts 
+        It seems that if we vertically flip one of the cutouts 
         (in this case $y = \cos^2(x)$),
         !! (in this case $\cos^2$),
         it would perfectly fit on top of the other to make the

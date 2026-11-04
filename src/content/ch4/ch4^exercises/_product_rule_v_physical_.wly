@@ -18,14 +18,13 @@
     |> Image
         src=images/svg_ch4_RATS_timeline_with_A_B.svg
 
-    More specifically, we are interested in
-    the change in the value of the product
+    We are interested in the change in the product
 
     $$
     \Large AB
     $$
 
-    over said course of time.
+    over this time.
 
     To introduce an unsolicited metaphor,
     imagine $A$ and $B$ as
@@ -139,8 +138,7 @@
 
         as per the definition of function multiplication. !!]
 
-        The first term on the right-hand side, for
-        its part, comes out to
+        The first term on the right becomes
 
         |> ImageRight
             src=images/svg_ch4_RATS_first_term_cloud.svg
@@ -178,8 +176,7 @@
             B(t_0)A'(t_0)
             $$
 
-        as $\Delta t$ approaches $0$, reintroducing the “$B(t_0)$”
-        back in.
+        as $\Delta t$ approaches $0$.
 
         Lastly the second term on the right-hand side
         comes out to
@@ -271,8 +268,7 @@
             ...as $\Delta t$ goes to $0$.
 
         |> SolutionNote
-            Keeping things alphabetical everywhere, the
-            same equation is more often written
+            Keeping things alphabetical, this is usually written
 
             |> Boxed
                 $$

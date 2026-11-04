@@ -27,6 +27,7 @@ export default function __Chapter5__() {
       pageNecessaryMargin={1500}
       maxElementWidth={1000}
       id="_151_h.a.i_"
+      path="/article/chapter5"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -172,7 +173,7 @@ export default function __Chapter5__() {
             Exercise 7 of Chapter 3
           </OutChapterLink>
           ,
-          e.g.. It is the one that has this graph:
+          e.g.. It has this graph:
         </OuterP>
         <Pause />
         <Image
@@ -215,7 +216,6 @@ export default function __Chapter5__() {
         />
         <Pause />
         <OuterP>
-          As far as standard definitions go, {" "}
           <Math>
             $\cos(x)$
           </Math>
@@ -368,16 +368,11 @@ export default function __Chapter5__() {
             ,
           </NoBreak>
           {" "} {" "}
-          <Math>
-            $\cos(-3) \approx -0.99$
-          </Math>
-          {" "}
-          (or something close to {" "}
           <NoBreak>
             <Math>
-              $-1$
+              $\cos(-3) \approx -0.99$
             </Math>
-            ):
+            :
           </NoBreak>
         </OuterP>
         <Pause />
@@ -566,7 +561,7 @@ export default function __Chapter5__() {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          In another possible definition,
+          In another definition,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -618,8 +613,8 @@ export default function __Chapter5__() {
         />
         <Pause />
         <OuterP>
-          In more detail, if you tilt your head  sideways,
-          you will see that the {" "}
+          If you tilt your head sideways,
+          the {" "}
           <Math>
             $x$
           </Math>
@@ -736,8 +731,7 @@ const Rest = () => {
             Derivatives.
           </b>
           {" "}
-          Continuing the last topic,
-          we can
+          We can
           add two more particles to the diagram that
           defines ‘sin’ and ‘cos’ via {" "}
           <NoBreak>
@@ -822,7 +816,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          which is also known simply as
+          also known as
         </OuterP>
         <Pause />
         <CentralDisplay>
@@ -831,7 +825,7 @@ const Rest = () => {
             <Math>
               $-\!\sin$
             </Math>
-            ”
+            ”#negation-of-a-function-first-mention##&lt;&lt;
           </NoBreak>
         </CentralDisplay>
         <Pause />
@@ -1062,8 +1056,6 @@ const Rest = () => {
               ”.
             </NoBreak>
           </b>
-          {" "}
-          One has
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1146,11 +1138,9 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "} in some
-          —casesbut in case something goes wrong, here
+          cases—but in case something goes wrong, here
           is a cheat sheet that does some of the thinking
-          for you
-          (or help you compare your way of seeing
-          things to the author's way of seeing things):
+          for you:
         </OuterP>
         <Pause />
         <Image
@@ -1281,7 +1271,7 @@ const Rest = () => {
           as seen in the previous section.
         </OuterP>
         <OuterP class="indent-10">
-          In fact, one can make the further observation that
+          More generally,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1381,18 +1371,17 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          similarly to the just-introduced convention)
-          means
+          ) means
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          (\cos(x))^2
+          (\cos(x))^2,
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          which is a special case of the fact that
+          a special case of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1410,7 +1399,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "}
-          which is itself a special case of the fact that
+          itself a special case of
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1643,17 +1632,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "}
-          and symmetrically for the opposite difference. (I.e.,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \,\cos^2 \theta - \sin^2 \theta,
-          $$
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          this one.) Etc.
+          and symmetrically for the opposite difference. Etc.
         </OuterP>
       </Section>
     </>}
@@ -2209,9 +2188,8 @@ const Rest = () => {
           in radians) in the second quadrant, and so on.
         </OuterP>
         <OuterP class="indent-10">
-          For the remaining values we rely on the
-          existence of the following two equilateral
-          triangles:
+          For the remaining values we use these two
+          equilateral triangles:
         </OuterP>
         <Pause />
         <Image
@@ -2221,7 +2199,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          The first triangle implies that the the unique
+          The first triangle implies that the unique
           point on the unit circle with {" "}
           <NoBreak>
             <Math>
@@ -2275,8 +2253,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          (surprise!), the two points in question must be
-          the afore-shown
+          (surprise!), the two points must be
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2329,7 +2306,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          by conclusion; or
+          or
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2497,9 +2474,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          But say now that
-          we re-scale the circle to have some arbitrary
-          radius {" "}
+          But say we re-scale the circle to radius {" "}
           <NoBreak>
             <Math>
               $r$
@@ -2611,12 +2586,12 @@ const Rest = () => {
         <Pause />
         <MathBlock>
           $$
-          P = (r\cos(\theta), r\sin(\theta))
+          P = (r\cos(\theta), r\sin(\theta)).
           $$
         </MathBlock>
         <Pause />
         <OuterP>
-          or namely with the property that:
+          That is:
         </OuterP>
         <Pause />
         <List style="padding-left:1.8em;">
@@ -2845,16 +2820,6 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}
-          (It's right there in the promise of what
-          it means to be a valid polar coordinate
-          {" "}
-          <NoBreak>
-            <Math>
-              $(r, \theta)$
-            </Math>
-            .)
-          </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
           Conversely, to recover the polar
@@ -3056,11 +3021,14 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          If we assume {" "}
-          <Math>
-            $0 \leq \theta \leq \eta$
-          </Math>
-          {" "} then both
+          If {" "}
+          <NoBreak>
+            <Math>
+              $0 \leq \theta \leq \eta$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} both
           {" "}
           <Math>
             $r\cos(\theta)$
@@ -3119,7 +3087,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          The arrows are meant to indicate that {" "}
+          The arrows indicate that {" "}
           <Math>
             $\cos(\theta)$
           </Math>
@@ -3262,9 +3230,8 @@ const Rest = () => {
         <OuterP>
           Therefore, if we snap a scaled copy of the
           smaller triangle onto the remaining non-hypotenuse
-          side of the bigger triangle, we end up with a
-          flush side consisting of a single straight
-          segment (you can also think in terms of
+          side of the bigger triangle, we get a single
+          straight side (you can also think in terms of
           angles that add up to {" "}
           <NoBreak>
             <Math>
@@ -3281,7 +3248,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          We finish off the diagram by setting the
+          We finish by setting the
           hypotenuse of the original big triangle to
           have length {" "}
           <NoBreak>
@@ -3299,8 +3266,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          This completes the diagram. Note that it is
-          possible for the sum of {" "}
+          The sum of {" "}
           <Math>
             $\theta_1$
           </Math>
@@ -3308,8 +3274,7 @@ const Rest = () => {
           <Math>
             $\theta_2$
           </Math>
-          {" "}
-          to be greater than {" "}
+          {" "} can exceed {" "}
           <NoBreak>
             <Math>
               $\eta$
@@ -3488,8 +3453,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          This last claim follows from the following
-          diagram:
+          This follows from the diagram:
         </OuterP>
         <Pause />
         <Image
@@ -3615,9 +3579,6 @@ const Rest = () => {
             </Math>
             .
           </NoBreak>
-          {" "}
-          This constitutes the proof of the Abercrombie
-          inequality.
         </OuterP>
         <OuterP class="indent-10">
           One can polish a few more details by noting that:
@@ -3875,8 +3836,7 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          For the second inequality, we have to start
-          by noting that
+          For the second inequality, note that
         </OuterP>
         <Pause />
         <MathBlock>
@@ -3976,9 +3936,9 @@ const Rest = () => {
             The angle-sum formulas.
           </b>
           {" "}
-          In the “famous diagram” from above there
-          are a total of four different ways to
-          reach an outer edge by means of ‘cos’
+          In the “famous diagram” there
+          are four ways to
+          reach an outer edge using ‘cos’
           and ‘sin’ arrows while starting from the
           edge of length {" "}
           <NoBreak>
@@ -4161,8 +4121,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          The point of remembering these patterns
-          is that, on their own, these patterns are
+          These patterns alone are
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -4170,7 +4129,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          to reconstruct the full formulas from scratch!
+          to reconstruct the formulas from scratch!
           (Well, a lot of students remember the formulas
           that way, at least.)
         </OuterP>
@@ -4184,8 +4143,8 @@ const Rest = () => {
             The missing arrows.
           </b>
           {" "}
-          ‘sin’ and ‘cos’ only constitute two out
-          of six ratios that exist among the sides
+          ‘sin’ and ‘cos’ give only two of the six ratios
+          between the sides
           of a right triangle. The four “missing ratios”
           are hereby drawn:
         </OuterP>
@@ -4197,8 +4156,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          In fact, there is a dedicated, named function
-          that computes each of the six ratios. We shall
+          Each of the six ratios has a named function. We shall
           now reveal the names of the four missing
           functions (!!):
         </OuterP>
@@ -4409,7 +4367,7 @@ const Rest = () => {
           <OuterP>
             [&#8288;
             <InChapterLink
-              href="/article/chapter5#_90_h.a.i_"
+              href="#_90_h.a.i_"
               class="in-chapter-link"
             >
               Example 6
@@ -4542,15 +4500,11 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          is a number close to {" "}
-          <NoBreak>
-            <Math>
-              $1$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} instead of being
-          a number close to {" "}
+          is close to {" "}
+          <Math>
+            $1$
+          </Math>
+          {" "} instead of {" "}
           <NoBreak>
             <Math>
               $0$
@@ -4559,7 +4513,7 @@ const Rest = () => {
           </NoBreak>
           {" "} it means that your
           calculator is in “degree mode”—it has treated
-          as {" "}
+          {" "}
           <Math>
             $1.57$
           </Math>
@@ -4596,8 +4550,7 @@ const Rest = () => {
           <Solution>
             <OuterP>
               It appears that the function is “a line plus
-              something”, in the sense of the following
-              diagram:
+              something”, as in this diagram:
             </OuterP>
             <Pause />
             <Image
@@ -4637,7 +4590,8 @@ const Rest = () => {
               </a>
               &#8288;, cf. {" "}
               <a href="&gt;&gt;linear_vs_affine#decoy:0">
-                Chapter 3
+                Chapter 
+                3
               </a>
               &#8288;).
             </OuterP>
@@ -5393,12 +5347,14 @@ const Rest = () => {
               {" "} is for.)
             </OuterP>
             <OuterP class="indent-10">
-              To know how much {" "}
-              <Math>
-                $B$
-              </Math>
-              {" "} must be, we must measure
-              the cycle length (it is, admittedly, hard to
+              To find {" "}
+              <NoBreak>
+                <Math>
+                  $B$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} we measure the cycle length (it is, admittedly, hard to
               accurately determine the position of the top
               of each large-scale bump, but we do our best by
               basing ourselves off of what appear to be identical
@@ -5528,7 +5484,7 @@ const Rest = () => {
               and since, like the small-scale oscillation from
               {" "}
               <InChapterLink
-                href="/article/chapter5#_92_h.a.i_"
+                href="#_92_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 2
@@ -5621,8 +5577,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              The multiplicative ratios that correspond to the
-              first and third arrows (in arrow-order from bottom
+              The multiplicative ratios for the first and third arrows (in arrow-order from bottom
               to top) are
             </OuterP>
             <Pause />
@@ -5948,9 +5903,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                If you zoom in
-                a little bit
-                you can actually see
+                If you zoom in a little you can see
                 {" "}
                 <NoBreak>
                   “
@@ -6117,7 +6070,7 @@ const Rest = () => {
               $$
               <ImageLeft
                 src="/build-img/svgo-svg/_riK.svg"
-                offsetX="7.75em"
+                offsetX=" 7.75em"
                 atLeastAsWide={true}
                 intrinsicWidth={300}
                 intrinsicHeight={250}
@@ -6386,7 +6339,7 @@ const Rest = () => {
                   ”
                 </NoBreak>
                 {" "}
-                is a notation used to denote vectors. (Feel free
+                denotes vectors. (Feel free
                 to choose your own notation.)
               </OuterP>
             </SolutionNote>
@@ -6999,8 +6952,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                The following
-                diagram illustrates the two possibilities:
+                This diagram illustrates the two possibilities:
               </OuterP>
               <Pause />
               <Image
@@ -7367,7 +7319,7 @@ const Rest = () => {
               If, 
               in {" "}
               <InChapterLink
-                href="/article/chapter5#_100_h.a.i_"
+                href="#_100_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
@@ -7472,7 +7424,7 @@ const Rest = () => {
               {" "} being that
               length in {" "}
               <InChapterLink
-                href="/article/chapter5#_100_h.a.i_"
+                href="#_100_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
@@ -7502,7 +7454,7 @@ const Rest = () => {
               </Math>
               {" "} in {" "}
               <InChapterLink
-                href="/article/chapter5#_100_h.a.i_"
+                href="#_100_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
@@ -7537,7 +7489,7 @@ const Rest = () => {
               </NoBreak>
               {" "} in the formulas of {" "}
               <InChapterLink
-                href="/article/chapter5#_100_h.a.i_"
+                href="#_100_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 10
@@ -7584,7 +7536,7 @@ const Rest = () => {
                 $A'$
               </Math>
               {" "}
-              from the following set of blueprints for a shed with
+              from these blueprints for a shed with
               an angled inside wall (all distances in inches):
             </OuterP>
             <Pause />
@@ -7872,7 +7824,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by subtracting from the length marked ‘5’.
-              We can draw the following overhead sketch of the situation
+              We can draw this overhead sketch
               (not to scale, and keeping to {" "}
               <Math>
                 $3$
@@ -7942,7 +7894,7 @@ const Rest = () => {
               fraction.
             </OuterP>
             <OuterP class="indent-10">
-              The final answer to the problem is...
+              The final answer is...
             </OuterP>
             <center style="margin-top:1em;margin-bottom:1em;">
               <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
@@ -8217,8 +8169,7 @@ const Rest = () => {
               <i>
                 Solution 1.
               </i>
-              {" "} For a geometric solution we start by
-              reminding to ourselves that if we plot all the solutions of
+              {" "} For a geometric solution we remind ourselves that if we plot all the solutions of
             </OuterP>
             <Pause />
             <MathBlock>
@@ -8514,7 +8465,7 @@ const Rest = () => {
           <Solution>
             <OuterP>
               Here is the division in American notation
-              overlayed on top of a “Plaza” wallpaper to
+              overlayed on a “Plaza” wallpaper to
               help demarcate the different columns of
               digits (in American notation each column
               of digits is associated to a power of {" "}
@@ -9041,8 +8992,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The divisions, pursued up to the point where
-              remainders repeat, look as follows:
+              The divisions, continued until remainders repeat, look as follows:
             </OuterP>
             <Pause />
             <Image
@@ -9162,7 +9112,7 @@ const Rest = () => {
               </NoBreak>
               {" "} column of the quotient,
               including one last remainder computation
-              that occurs pursuant to adding the digit in
+              after adding the digit in
               the {" "}
               <NoBreak>
                 “
@@ -10104,8 +10054,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} as well. One method of
-              deduction uses the fact that “the complement
+              {" "} as well. One method uses the fact that “the complement
               of my complement is myself”:
             </OuterP>
             <Pause />
@@ -10116,7 +10065,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              Another method of deduction uses the fact that,
+              Another method uses the fact that,
               together with the angle immediately to its left
               (which happens to be {" "}
               <NoBreak>
@@ -10207,8 +10156,7 @@ const Rest = () => {
                 $90^\circ$
               </Math>
               {" "} rotation (and then translation)
-              of the central angle, and is, therefore, equal
-              to the central angle {" "}
+              of the central angle, and therefore equals the central angle {" "}
               <NoBreak>
                 <Math>
                   $\theta$
@@ -10573,9 +10521,7 @@ const Rest = () => {
                   Note 1.
                 </i>
                 {" "}
-                Since the two solutions compute
-                answers to the same question,
-                one can in particular deduce that
+                Since both solutions answer the same question, we deduce that
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -10628,7 +10574,7 @@ const Rest = () => {
               Lambert projection of a sphere onto a cylinder?
               (Cf. {" "}
               <InChapterLink
-                href="/article/chapter5#_90_h.a.i_"
+                href="#_90_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 6
@@ -10668,7 +10614,7 @@ const Rest = () => {
             <OuterP>
               as covered in {" "}
               <InChapterLink
-                href="/article/chapter5#_90_h.a.i_"
+                href="#_90_h.a.i_"
                 class="in-chapter-link"
               >
                 Example 6
@@ -10941,8 +10887,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The basic idea is that we can view the
-              sphere as being made up of many cones:
+              We can view the sphere as made up of many cones:
             </OuterP>
             <Pause />
             <Image
@@ -11219,8 +11164,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              (modulo the kerfuffle at the top) simply by the fact
-              that, in a circle of radius {" "}
+              (modulo the kerfuffle at the top) because, in a circle of radius {" "}
               <NoBreak>
                 <Math>
                   $r$
@@ -11408,8 +11352,7 @@ const Rest = () => {
                 m.
               </NoBreak>
               {" "}
-              For a different, coarser approach, one can
-              even use
+              For a coarser approach, one can even use
             </OuterP>
             <Pause />
             <MathBlock>
@@ -11787,7 +11730,7 @@ const Rest = () => {
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                due to the fact that the the long division of {" "}
+                because the long division of {" "}
                 <Math>
                   $11$
                 </Math>
@@ -12380,7 +12323,7 @@ const Rest = () => {
               How would the graphs of the four compositions
               in {" "}
               <InChapterLink
-                href="/article/chapter5#_122_h.a.i_"
+                href="#_122_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 32
@@ -12397,7 +12340,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              For reference again, the four functions are:
+              For reference, the four functions are:
             </OuterP>
             <Pause />
             <MathBlock>
@@ -12706,7 +12649,7 @@ const Rest = () => {
               a particle going around a circle at uniform
               speed (cf. {" "}
               <InChapterLink
-                href="/article/chapter5#_99_h.a.i_"
+                href="#_99_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 9
@@ -12759,7 +12702,7 @@ const Rest = () => {
                     $B = 2.33$
                   </Math>
                   {" "} radians per unit time; this
-                  can simply be thought of as a “speeding up
+                  can be thought of as a “speeding up
                   of time”, and compresses the graph horizontally
                   about the {" "}
                   <Math>
@@ -12956,7 +12899,7 @@ const Rest = () => {
               {" "} as discussed
               in {" "}
               <InChapterLink
-                href="/article/chapter5#_123_h.a.i_"
+                href="#_123_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 33
@@ -13007,7 +12950,7 @@ const Rest = () => {
               </NoBreak>
               {" "} also as discussed in {" "}
               <InChapterLink
-                href="/article/chapter5#_123_h.a.i_"
+                href="#_123_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 33
@@ -13034,7 +12977,7 @@ const Rest = () => {
               </NoBreak>
               {" "} as discussed in {" "}
               <InChapterLink
-                href="/article/chapter5#_123_h.a.i_"
+                href="#_123_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 33
@@ -13058,7 +13001,7 @@ const Rest = () => {
               {" "} units up, as again discussed
               in {" "}
               <InChapterLink
-                href="/article/chapter5#_123_h.a.i_"
+                href="#_123_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 33
@@ -13417,8 +13360,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It appears two places; it is the area of 
-              both of these rectangles:
+              It is the area of both these rectangles:
             </OuterP>
             <Pause />
             <Image
@@ -13428,7 +13370,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              In more detail, here is how {" "}
+              Here is how {" "}
               <NoBreak>
                 “
                 <Math>
@@ -13489,7 +13431,7 @@ const Rest = () => {
               {" "}
               Keeping the diagram of {" "}
               <InChapterLink
-                href="/article/chapter5#_126_h.a.i_"
+                href="#_126_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 36
@@ -13524,7 +13466,7 @@ const Rest = () => {
             <OuterP>
               By {" "}
               <InChapterLink
-                href="/article/chapter5#_126_h.a.i_"
+                href="#_126_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 36
@@ -13713,7 +13655,7 @@ const Rest = () => {
             <OuterP class="indent-10">
               So we obtain the same formula as in {" "}
               <InChapterLink
-                href="/article/chapter5#_127_h.a.i_"
+                href="#_127_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 37
@@ -13783,7 +13725,7 @@ const Rest = () => {
               {" "}
               similarly to exercises {" "}
               <InChapterLink
-                href="/article/chapter5#_126_h.a.i_"
+                href="#_126_h.a.i_"
                 class="in-chapter-link"
               >
                 36
@@ -13791,14 +13733,14 @@ const Rest = () => {
               &#8288;,
               {" "}
               <InChapterLink
-                href="/article/chapter5#_127_h.a.i_"
+                href="#_127_h.a.i_"
                 class="in-chapter-link"
               >
                 37
               </InChapterLink>
               &#8288;, and {" "}
               <InChapterLink
-                href="/article/chapter5#_128_h.a.i_"
+                href="#_128_h.a.i_"
                 class="in-chapter-link"
               >
                 38
@@ -13861,14 +13803,14 @@ const Rest = () => {
             <OuterP>
               ...as in exercises {" "}
               <InChapterLink
-                href="/article/chapter5#_127_h.a.i_"
+                href="#_127_h.a.i_"
                 class="in-chapter-link"
               >
                 37
               </InChapterLink>
               {" "} and {" "}
               <InChapterLink
-                href="/article/chapter5#_128_h.a.i_"
+                href="#_128_h.a.i_"
                 class="in-chapter-link"
               >
                 38
@@ -14066,8 +14008,7 @@ const Rest = () => {
               />
             </OuterP>
             <OuterP class="indent-10">
-              Next, for the algebraic manipulation of the equations,
-              start by multiplying each equation {" "}
+              Next, multiply each equation {" "}
               <NoBreak>
                 in
                 <Math>
@@ -14235,7 +14176,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              As a preliminary, we first note that
+              First note that
             </OuterP>
             <Boxed>
               <MathBlock>
@@ -14779,7 +14720,7 @@ const Rest = () => {
             <OuterP>
               of {" "}
               <InChapterLink
-                href="/article/chapter5#_131_h.a.i_"
+                href="#_131_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 41
@@ -14827,15 +14768,14 @@ const Rest = () => {
                 .
                 Like the “polar distance” formula from {" "}
                 <InChapterLink
-                  href="/article/chapter5#_131_h.a.i_"
+                  href="#_131_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 41
                 </InChapterLink>
                 &#8288;,
                 to which it is equivalent, it is a generalization
-                of the Pythagorean theorem. This becomes extra clear if we rewrite it
-                as....
+                of the Pythagorean theorem. This becomes clearer if we write....
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -14953,7 +14893,7 @@ const Rest = () => {
               the solution technique of
               {" "}
               <InChapterLink
-                href="/article/chapter5#_94_h.a.i_"
+                href="#_94_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 4
@@ -15286,7 +15226,7 @@ const Rest = () => {
                   {" "} as well
                   (cf. {" "}
                   <InChapterLink
-                    href="/article/chapter5#_109_h.a.i_"
+                    href="#_109_h.a.i_"
                     class="in-chapter-link"
                   >
                     Exercise 19
@@ -15294,7 +15234,7 @@ const Rest = () => {
                   &#8288;,
                   {" "}
                   <InChapterLink
-                    href="/article/chapter5#_110_h.a.i_"
+                    href="#_110_h.a.i_"
                     class="in-chapter-link"
                   >
                     Exercise 20
@@ -15514,8 +15454,7 @@ const Rest = () => {
               <Math>
                 $\cot(\theta)$
               </Math>
-              {" "} as geometric quantities
-              that exist in relation to the unit circle,
+              {" "} as geometric quantities related to the unit circle,
               in all quadrants?
               (I.e., find “unit circle interpretations”
               of 
@@ -15788,7 +15727,7 @@ const Rest = () => {
                 Solution 1.
               </i>
               {" "}
-              The basic idea of this solution is to find
+              The idea is to find
               an angle {" "}
               <Math>
                 $\theta$
@@ -15840,7 +15779,7 @@ const Rest = () => {
             <OuterP>
               (Cf. {" "}
               <InChapterLink
-                href="/article/chapter5#_134_h.a.i_"
+                href="#_134_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 44
@@ -15948,7 +15887,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              (The reason that the whole procedure works is that
+              (The procedure works because
               this triangle...
             </OuterP>
             <Pause />
@@ -16153,7 +16092,7 @@ const Rest = () => {
               can be
               found here and here, by {" "}
               <InChapterLink
-                href="/article/chapter5#_135_h.a.i_"
+                href="#_135_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 45
@@ -16161,7 +16100,7 @@ const Rest = () => {
               {" "}
               (this figure is just a recap of {" "}
               <InChapterLink
-                href="/article/chapter5#_135_h.a.i_"
+                href="#_135_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 45
@@ -16198,7 +16137,7 @@ const Rest = () => {
                 ,
               </NoBreak>
               {" "} which
-              gives rise to the following idea for a geometric construction
+              suggests this geometric construction
               of {" "}
               <NoBreak>
                 <Math>
@@ -16469,7 +16408,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              Now it suffices to apply one of the “powers of
+              Now apply one of the “powers of
               secant” constructions to obtain powers of {" "}
               <NoBreak>
                 <Math>
@@ -16594,8 +16533,7 @@ const Rest = () => {
               perpendicularly from a given line. 
               (In the order in which the construction unfolds,
               this perpendicular “originates” from its upper end,
-              which is a situation that we have not encountered
-              yet.)
+              a situation we have not encountered yet.)
               In this case, the procedure is to draw a circle,
               in orange below, whose center is the 
               starting point
@@ -17027,7 +16965,7 @@ const Rest = () => {
             <OuterP>
               As seen in {" "}
               <InChapterLink
-                href="/article/chapter5#_113_h.a.i_"
+                href="#_113_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 23
@@ -17151,11 +17089,11 @@ const Rest = () => {
               <Math>
                 $\theta$
               </Math>
-              {" "} at lower —leftif we label it
-              —suchis also repeated middle top right (this is
+              {" "} at lower left—if we label it
+              such—is also repeated middle top right (this is
               the content of {" "}
               <InChapterLink
-                href="/article/chapter5#_110_h.a.i_"
+                href="#_110_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 20
@@ -17565,8 +17503,7 @@ const Rest = () => {
                 ”)
               </NoBreak>
               {" "} 
-              it becomes trivial to see that the two ruler-readings
-              are just {" "}
+              we see that the two ruler-readings are {" "}
               <Math>
                 $\cos(\theta)$
               </Math>
@@ -17801,7 +17738,7 @@ const Rest = () => {
             <OuterP>
               As established in {" "}
               <InChapterLink
-                href="/article/chapter5#_139_h.a.i_"
+                href="#_139_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 49
@@ -18241,7 +18178,7 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <Image
-              src="/tmp-images/e5_ruler_sphere_z_switched_combined.svg"
+              src="/build-img/svgo-svg/k0fx.svg"
               intrinsicWidth={1200}
               intrinsicHeight={700}
             />
@@ -18476,7 +18413,7 @@ const Rest = () => {
               these functions must either be
               the top right or bottom left graphs, as the
               other two graphs weave in and out of negative territory;
-              given additionally that
+              given that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -18492,7 +18429,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              we can further deduce that
+              we deduce that
             </OuterP>
             <Pause />
             <MathBlock>
@@ -18660,7 +18597,7 @@ const Rest = () => {
             <OuterP>
               apparent in the four graphs of {" "}
               <InChapterLink
-                href="/article/chapter5#_142_h.a.i_"
+                href="#_142_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 52
@@ -18701,8 +18638,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              It seems that if we would vertically flip
-              one of the cutouts 
+              It seems that if we vertically flip one of the cutouts 
               (in this case {" "}
               <NoBreak>
                 <Math>
@@ -18762,7 +18698,7 @@ const Rest = () => {
               {" "}
               Based on the graphs of {" "}
               <InChapterLink
-                href="/article/chapter5#_142_h.a.i_"
+                href="#_142_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 52
@@ -19146,7 +19082,7 @@ const Rest = () => {
               <Math>
                 $\sin(2x)$
               </Math>
-              {" "} is, by virtue of alignment of the bumps:
+              {" "} is, because the bumps align:
             </OuterP>
             <Pause />
             <Image
@@ -19491,7 +19427,7 @@ const Rest = () => {
               </Math>
               {" "} from {" "}
               <InChapterLink
-                href="/article/chapter5#_142_h.a.i_"
+                href="#_142_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 52
@@ -19800,7 +19736,7 @@ const Rest = () => {
               </Math>
               {" "} is given in {" "}
               <InChapterLink
-                href="/article/chapter5#_146_h.a.i_"
+                href="#_146_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 56
@@ -19926,7 +19862,7 @@ const Rest = () => {
               </NoBreak>
               {" "} as covered in {" "}
               <InChapterLink
-                href="/article/chapter5#_146_h.a.i_"
+                href="#_146_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 56
@@ -19947,7 +19883,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              ...and then later multiply by {" "}
+              ...and then multiply by {" "}
               <NoBreak>
                 <Math>
                   $\sqrt&#123;2&#125;$
@@ -20190,9 +20126,9 @@ const Rest = () => {
               />
               <Pause />
               <OuterP>
-                (...cf. {" "}
+                ...(cf. {" "}
                 <InChapterLink
-                  href="/article/chapter5#_123_h.a.i_"
+                  href="#_123_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 33
@@ -20235,7 +20171,7 @@ const Rest = () => {
                 {" "}
                 (cf. {" "}
                 <InChapterLink
-                  href="/article/chapter5#_146_h.a.i_"
+                  href="#_146_h.a.i_"
                   class="in-chapter-link"
                 >
                   Exercise 56
@@ -20353,7 +20289,7 @@ const Rest = () => {
             <OuterP>
               by the “angle-difference formula” (cf. {" "}
               <InChapterLink
-                href="/article/chapter5#_140_h.a.i_"
+                href="#_140_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 50
@@ -20457,14 +20393,14 @@ const Rest = () => {
               {" "}
               Relate {" "}
               <InChapterLink
-                href="/article/chapter5#_147_h.a.i_"
+                href="#_147_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 57
               </InChapterLink>
               {" "} to {" "}
               <InChapterLink
-                href="/article/chapter5#_148_h.a.i_"
+                href="#_148_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 58
@@ -20476,7 +20412,7 @@ const Rest = () => {
             <OuterP>
               {" "}{" "}
               <InChapterLink
-                href="/article/chapter5#_147_h.a.i_"
+                href="#_147_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 57
@@ -20505,7 +20441,7 @@ const Rest = () => {
               of
               {" "}
               <InChapterLink
-                href="/article/chapter5#_148_h.a.i_"
+                href="#_148_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 58

@@ -12,16 +12,14 @@
     \Large 25^2 = 625
     $$
     and, by shifting two decimal places, one
-    finds $2.5^2 = 6.25$.) Can you elucidate
-    why it would be that
+    finds $2.5^2 = 6.25$.) Can you explain why
     $$
     \Large {100 \over 16} = 2.5^2
     $$
-    by using some kind of algebra?
+    using algebra?
 
     |> Solution
 
-        One has
         $$
         \Large {100 \over 16} = {10^2 \over 4^2} = \left(\!{10\over 4}\!\right)^{\!\!2} = \left(\!{5\over 2}\!\right)^{\!\!2}
         $$

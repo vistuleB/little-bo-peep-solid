@@ -12,7 +12,7 @@
     __3. vertical scaling by $a$__
 
     ...to the curve $y = x^2$, what are the
-    roots of the final curve that you obtain?
+    roots of the final curve?
     (Nb: _Roots_ are values of $x$ such
     that $y = 0$.)
 
@@ -54,5 +54,4 @@
             width=660px
 
         So the roots are at: $x = x_0 \pm \sqrt{y_0}$.
-        (Like we found them after the second step.)
 

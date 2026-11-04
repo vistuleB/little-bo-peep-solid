@@ -65,8 +65,7 @@
         __positively clockwise__
 
         (that's why it's “$\theta$” not “$-\theta$”) 
-        it becomes trivial to see that the two ruler-readings
-        are just $\cos(\theta)$ (‘1’) and $\sin(\theta)$ (‘2’).
+        we see that the two ruler-readings are $\cos(\theta)$ (‘1’) and $\sin(\theta)$ (‘2’).
 
         |> Pause
 

@@ -8,14 +8,14 @@
     $$
 
     of function multiplication
-    in order to show that
+    to show that
 
     $$
     (fg)h = f(gh)
     $$
 
     for all functions $f, g, h : \rr \ra \rr$,
-    or, namely, to show that
+    or
 
     __($f$ times $g$) times $h$__
 
@@ -27,32 +27,8 @@
 
     |> Solution
 
-        It is necessary and sufficient to show that
-
-        $$
-        ((fg)h)(u)
-        $$
-
-        is the same as
-
-        $$
-        (f(gh))(u)
-        $$
-
-        for an arbitrary input $u \in \rr$, in order to
-        show that
-
-        $$
-        (fg)h
-        $$
-
-        and
-
-        $$
-        f(gh)
-        $$
-
-        are the same function. (Function equality is
+        It is necessary and sufficient to show that $((fg)h)(u) = (f(gh))(u)$
+        for an arbitrary input $u \in \rr$. (Function equality is
         based on input-output behavior: two functions are
         equal if and only if every input is mapped to the
         same output under either function. See Note >>_function_equality_note_,
@@ -132,6 +108,4 @@
             $$
             fgh
             $$
-            without any parentheses at all: it
-            doesn't matter whether we think of this product
-            as $(fg)h$ or $f(gh)$, the result is the same.
+            without parentheses: $(fg)h$ and $f(gh)$ give the same result.

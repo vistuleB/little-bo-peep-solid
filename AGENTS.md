@@ -101,6 +101,14 @@ little-bo-peep-solid/
 
 ## Source (`src/content/`) layout
 
+### Preserve meaningful whitespace
+
+Trailing spaces in `.wly` files can be semantically meaningful, especially before
+inline elements such as `|> del` and after a backslash used to preserve a space
+(`\ `). Preserve these spaces when editing prose. Do not blanket-trim trailing
+whitespace, apply `rstrip()` to every line, or automatically remove spaces flagged
+by whitespace checks: doing so can join words across inline elements.
+
 Unlike the `dr` project (which uses numbered subdirectories for chapters), this project uses a
 **flat file** layout with naming conventions:
 
@@ -139,7 +147,7 @@ Key structural tags in `.wly` source:
 
 Handles (e.g. `handle=refreshers`, referenced as `>>refreshers`) are used for cross-referencing
 chapters, exercises, and sections. The pipeline resolves them into links via
-`dl.handles_add_ids` + `dl.handles_substitute_and_fix_nonlocal_id_links`.
+`dl.writerly_handles_add_ids` + `dl.writerly_handles_substitute_and_fix_nonlocal_id_links`.
 
 Files and directories whose names start with `#` are Writerly comments (ignored by the assembler).
 The `>>` prefix is the Writerly handle reference syntax.
@@ -211,32 +219,32 @@ The pipeline transforms the assembled VXML tree into JSX-ready VXML. Key stages 
 2. **Exercise grouping** — `wrap_if_not_child_of("Exercise", "Exercises")` ensures every loose `Exercise` is wrapped in an `Exercises` container; then `lbp_*` desugarers reorganize exercises into per-chapter "graveyards" and re-attach them via `In` nodes
 3. **Content selection** — `lbp_select_content()` filters which chapters/exercises are included based on the `ChapterSelection` / `In` declarations in `__parent.wly`
 4. **Auto-generate titles** — `auto_generate_child_if_missing_from_attribute__outside` for `Chapter`, `Bootcamp`, `Appendix` → `ArticleTitle`
-5. **Math block parsing** — `pp.create_mathblock_elements` (`$$` delimiters)
-6. **Inline math parsing** — `pp.create_math_elements` (`$` delimiters)
-7. **Markdown link splitting** — `pp.markdown_link_splitting` (skips math)
+5. **Math block parsing** — `syntax.create_mathblock_elements` (`$$` delimiters)
+6. **Inline math parsing** — `syntax.create_math_elements` (`$` delimiters)
+7. **Markdown link splitting** — `syntax.markdown_link_pipeline` (skips math)
 8. **Escaped dollar sign** — `find_replace__outside("\\$", "$")`
 9. **Counters** — appends counter attributes to `Book`, `Chapter`, `Bootcamp`, `Appendix`, `Exercises`, `Section`, `Example`, `Note`, `SolutionNote`, `Exercise`; increments: `ChapterCounter`, `BootcampCounter`, `AppendixCounter`, `ExampleCounter`, `NoteCounter`, `SectionCounter`, `ExerciseCounter`, `SolutionNoteCounter`
 10. **Path/banner/number attributes** — `append_attribute__outside` injects `path`, `banner`, `number`, `category` onto `Chapter`, `Bootcamp`, `Appendix`
 11. **Counter text injection** — `prepend_text_node` for `Example`, `Note`, `SolutionNote`, `Exercise`
-12. **Handle system** — `set_handle_value` → `handles_add_ids` → `handles_generate_dictionary_and_id_list` → `handles_substitute_and_fix_nonlocal_id_links` (turns `>>handle` references into `<InChapterLink>` or `<a>` cross-links)
+12. **Handle system** — `set_handle_value` → `writerly_handles_add_ids` → `writerly_handles_generate_dictionary_and_id_list` → `writerly_handles_substitute_and_fix_nonlocal_id_links` (turns `>>handle` references into `<InChapterLink>` or `<a>` cross-links)
 13. **Table markup** — `table_marker()`
 14. **Paragraph grouping** — `group_consecutive_children__outside("p", p_cannot_contain)`
 15. **List wrapping** — `wrap_children_avoiding("List", "Item", "WriterlyBlankLine")`
 16. **Blank line / p cleanup** (first pass)
 17. **Central display splitting** — `__...__` → `CentralDisplayItalic`; `_|...|_` → `CentralDisplay`; `free_children` frees any `p` inside these
-18. **Italic/bold splitting** — `barbaric_symmetric_delim_splitting` for `_..._` → `i` and `*...*` → `b`
+18. **Italic/bold splitting** — `permissive_symmetric_delimiter_pipeline` for `_..._` → `i` and `*...*` → `b`
 19. **Escaped delimiters** — `find_replace__outside("\\*","*")`, `find_replace__outside("\\_","_")`
 20. **p cleanup** (second pass) — trim, delete empty, unwrap if no inline children, unwrap inside `td`/`li`, rename `p` to `Item` if inside `Grid`
 21. **Exercise statement wrapping** — `wrap_children_up_to("Exercise", "Solution", "ExerciseStatement")`
 22. **Image absorption** — `absorb_into_previous_sibling(["ImageRight","ImageLeft"])`
 23. **Pause insertion** — `add_between_all_pairs_2` and `add_before_but_not_before_first_child__batch` inserts `Pause` (spacers) between block elements
-24. **OuterP renaming** — `rename_if_child_of_one_of("p", "OuterP", [section-like containers])`
+24. **OuterP renaming** — `rename_if_child_of_any("p", "OuterP", [section-like containers])`
 25. **Link rearrangement** — `rearrange_links_4_pre_tokenized_src__batch` normalizes "Chapter N", "Exercise N of Chapter M" etc. link patterns
 26. **TOC / hamburger panel generation** — `lbp_generate_table_of_contents` for both `TOC` and `HamburgerPanelAuthorSuppliedContents`
 27. **Prev/next navigation** — `lbp_generate_prev_next_attributes()`
 28. **Breadcrumbs** — `lbp_generate_breadcrumbs()`
 29. **Attribute cleanup** — deletes `counter`, `handle`, `t`, `_`, `title`, `test`; renames remaining attributes to camelCase (`kabob_case_to_camel_case`)
-30. **Author mode** (when `--local`) — `lbp_turn_lines_into_3003_spans` and `lbp_adorn_img_with_3003_spans` add source-linking tooltips
+30. **Author mode** (when `--local`) — `lbp_turn_lines_into_3003_spans__outside` and `lbp_adorn_img_with_3003_spans` add source-linking tooltips
 31. **Image build** — `lbp_img_build` processes images in `images/` into `public/` via the `build-img` tool, updating `image-map.json`
 32. **src normalization** — `ensure_attribute_value_starts_with("src", "/")`
 
@@ -309,6 +317,19 @@ Key architectural points:
 - `src/components/HeaderBlob.tsx` — **generated file**
 - All other `src/components/*.tsx` files — **manual** — edit these to change how tags render
 
+### Solid lifecycle rules
+
+- `createEffect` is reactive: every signal or store value read anywhere in its callback,
+  including through helper functions, becomes a dependency.
+- Returning a function from `createEffect` does **not** register cleanup. Solid treats the
+  return value as the previous value for the next execution. Use `onCleanup(() => ...)`.
+- Use `onMount` for work that must run once per component instance, including initial scroll
+  restoration.
+- Before placing navigation, scrolling, timers, or event-listener setup in `createEffect`,
+  identify every reactive dependency and verify that rerunning is intentional.
+- For route-transition bugs, retain diagnostic attribution until the behavior is verified on
+  the target device; timing correlation alone is not sufficient.
+
 ### Environment variables (`.env` / `app.config.ts`)
 
 | Variable | Values | Effect |
@@ -335,15 +356,16 @@ Key architectural points:
 
 ## Writerly Repo Location
 
-The Writerly/desugaring library lives at `../wly/` (sibling to this repo). It is referenced in
+The Writerly/desugaring libraries live at `../wly/` (sibling to this repo).
+VXML is consumed as a published package. They are referenced in
 `renderer/gleam.toml` as:
 ```toml
-vxml = { "path" = "../../wly/vxml" }
+vxml = ">= 1.0.0 and < 2.0.0"
 writerly = { "path" = "../../wly/writerly" }
 desugaring = { "path" = "../../wly/desugaring" }
 ```
 
-When adding or modifying desugarers, check `../wly/desugaring/src/desugarer_library.gleam`
+When adding or modifying desugarers, check `../wly/desugaring/src/desugaring/desugarers.gleam`
 for the full `dl.*` API.
 
 ## Working branch

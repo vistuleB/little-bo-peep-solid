@@ -8,11 +8,7 @@
     $$
 
     where $f : \rr \ra \rr$ is called a _difference
-    quotient_. Add elements to the diagram below such
-    that both the numerator and denominator of the
-    quotient can be found in the diagram, and thereby
-    explain the geometric meaning
-    of this quotient.
+    quotient_. Add the numerator and denominator to the diagram below to explain the quotient’s geometric meaning.
 
     |> Image
         src=images/svg_ch4_newton_quotient_unfinished.svg
@@ -31,26 +27,22 @@
         {f(x + h) - f(x)\over h}
         $$
 
-        is seen to have the form _rise over run_,
-        and is more precisely equal to the slope
-        of the pale brown line going through the
-        point
+        has the form _rise over run_: the slope of the pale brown line through
 
         $$
         (x, f(x))
         $$
 
-        at one end, and
+        and
 
         $$
-        (x + h, f(x + h))
+        (x + h, f(x + h)).
         $$
 
         !! |> ImageRight
         !!     offset-y=-0.5em
         !!     src=images/svg_ch4_new_quatient_x_fxplush_cloud.svg
 
-        at the other end. 
         !! (This is also the case
         !! if $h$ is negative, by the way.)
 
@@ -79,10 +71,7 @@
             f'(x)
             $$
 
-            because the secant approaches the tangent,
-            in that case, and the slope of the secant
-            is also, perforce, approaching the slope
-            of the tangent, which is $f'(x)$. 
+            because the secant approaches the tangent, and its slope approaches the tangent’s slope, $f'(x)$. 
             (But you
             cannot directly set $h = 0$, because
 

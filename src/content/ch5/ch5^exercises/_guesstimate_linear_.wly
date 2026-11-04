@@ -11,8 +11,7 @@
     |> Solution
 
         It appears that the function is “a line plus
-        something”, in the sense of the following
-        diagram:
+        something”, as in this diagram:
 
         |> Image
             src=images/svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg

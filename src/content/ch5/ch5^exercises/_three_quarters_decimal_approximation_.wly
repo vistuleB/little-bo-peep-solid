@@ -86,7 +86,7 @@
 
             __too small__
 
-            due to the fact that the the long division of $11$ by
+            because the long division of $11$ by
             $7$ is terminated early. But if we pursue the division
             for just one more step, which adds a ‘$1$’ to the
             quotient...

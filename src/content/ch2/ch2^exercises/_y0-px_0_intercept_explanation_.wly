@@ -9,7 +9,7 @@
     $$
 
     is the $y$-intercept of the line of slope $p$
-    through the point $(x_0,y_0)$ by using a drawing
+    through the point $(x_0,y_0)$ using a drawing
     and “rise equals slope times run”.
 
     |> Solution
@@ -20,8 +20,7 @@
             src=images/c2_y_intercept_explanation.svg
 
         The rise from the $y$-intercept to $(x_0, y_0)$
-        is $px_0$, as found by “rise equals slope times
-        run”, implying that
+        is $px_0$, by “rise equals slope times run”, so
 
         $$
         y_0 - px_0

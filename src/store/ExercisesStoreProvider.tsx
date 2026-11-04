@@ -86,7 +86,7 @@ export const ExercisesStoreProvider: ParentComponent<{
 };
 
 export const useExercisesStateHelpers = () => {
-  const { set_exercises_store } = useExercisesContext();
+  const { exercises_store, set_exercises_store } = useExercisesContext();
 
   const initExercisesState = (length: number) => {
     set_exercises_store(
@@ -102,20 +102,16 @@ export const useExercisesStateHelpers = () => {
     index: number,
     update_obj: {
       field: keyof ExerciseState;
-      value: any;
+      value: ExerciseState[keyof ExerciseState];
     },
   ) => {
-    set_exercises_store("exercises", (prev) =>
-      prev.map((exercise, i) => {
-        if (i === index) {
-          return {
-            ...exercise,
-            [update_obj.field]: update_obj.value,
-          };
-        }
-        return exercise;
-      }),
-    );
+    if (
+      exercises_store.exercises[index]?.[update_obj.field] === update_obj.value
+    ) {
+      return;
+    }
+
+    set_exercises_store("exercises", index, update_obj.field, update_obj.value);
   };
 
   return {

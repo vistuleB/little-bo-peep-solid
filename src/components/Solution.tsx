@@ -7,19 +7,25 @@ import {
   onMount,
   Setter,
   Show,
+  untrack,
 } from "solid-js";
 import SharedProps from "./types/SharedProps";
 import {
   BATCH_SOLUTION_SCROLL_ANCHOR_FRAMES,
   DESKTOP_TEXT_COLUMN_WIDTH,
+  ENABLE_SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD,
   SOLUTION_GREEN_DIV_HEIGHT,
   MOBILE_MAX_WIDTH,
   PREV_NEXT_EXERCISE_BUTTON_WIDTH,
   PREV_NEXT_EXERCISE_BUTTON_CORNER_RADIUS,
+  SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_MS,
+  SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_ROOT_MARGIN,
 } from "~/constants";
 import { twJoin } from "tailwind-merge";
 
 const SOLUTION_BUTTON_INLINE_PADDING = 20;
+const SOLUTION_MATH_PREPARATION_MIN_DELAY_MS = 2500;
+const MAX_ANIMATED_SOLUTION_HEIGHT = 800;
 import { Spacer } from "./Spacer";
 import { useGlobalContext } from "~/store/StoreProvider";
 import {
@@ -35,7 +41,14 @@ import useScrollToInChapter from "~/hooks/useScrollToInChapter";
 import { useOneExerciseContext } from "~/store/OneExerciseStoreProvider";
 import { LazyImageProvider } from "~/store/LazyImageProvider";
 import { useExerciseGroupRegistry } from "~/store/ExerciseGroupRegistryProvider";
-import typesetMathJaxElements from "~/utils/typesetMathJax";
+import {
+  createSolutionMathJaxController,
+  prepareSolutionMathJax,
+  SolutionMathJaxProvider,
+} from "~/store/SolutionMathJaxProvider";
+import mainColumnWidth from "~/hooks/useMainColumnWidth";
+
+const SOLUTION_HEIGHT_RECHECK_DELAYS = [50, 500, 1200];
 
 type SolutionProps = ParentProps &
   SharedProps & {
@@ -63,7 +76,149 @@ const SpaceBeforeBackupArrow = () => (
   <Spacer height="var(--document-before-backup-arrow-space)" />
 );
 
-const SolutionHeightChangeListener = (props: { resetter: () => void }) => {
+const scheduleAnimationFrame = (callback: () => void) => {
+  const frame = requestAnimationFrame(callback);
+  return () => cancelAnimationFrame(frame);
+};
+
+const scheduleDelayedCallbacks = (
+  callback: () => void,
+  delays: number[],
+  shouldRun: () => boolean = () => true,
+) => {
+  const timeouts = delays.map((delay) =>
+    window.setTimeout(() => {
+      if (shouldRun()) callback();
+    }, delay),
+  );
+  return () => timeouts.forEach((timeout) => window.clearTimeout(timeout));
+};
+
+const resetNowAndScheduleRechecks = (
+  resetter: () => void,
+  shouldRun: () => boolean,
+  delays = SOLUTION_HEIGHT_RECHECK_DELAYS,
+) => {
+  resetter();
+  return scheduleDelayedCallbacks(resetter, delays, shouldRun);
+};
+
+type SolutionViewportDwellPreloadEntry = {
+  element: HTMLElement;
+  preload: () => void;
+  triggered: boolean;
+  timeout?: number;
+};
+
+const solutionViewportDwellPreloadEntries = new Map<
+  Element,
+  SolutionViewportDwellPreloadEntry
+>();
+let solutionViewportDwellPreloadObserver: IntersectionObserver | undefined;
+
+const solutionViewportDwellPreloadIsMobile = () =>
+  window.innerWidth <= MOBILE_MAX_WIDTH;
+
+const solutionViewportDwellPreloadElementIsVisible = (element: HTMLElement) => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.width > 0 &&
+    rect.height > 0 &&
+    rect.bottom > 0 &&
+    rect.top < window.innerHeight &&
+    rect.right > 0 &&
+    rect.left < window.innerWidth
+  );
+};
+
+const clearSolutionViewportDwellPreloadTimeout = (
+  entry: SolutionViewportDwellPreloadEntry,
+) => {
+  if (entry.timeout === undefined) return;
+  window.clearTimeout(entry.timeout);
+  entry.timeout = undefined;
+};
+
+const ensureSolutionViewportDwellPreloadObserver = () => {
+  if (solutionViewportDwellPreloadObserver) {
+    return solutionViewportDwellPreloadObserver;
+  }
+
+  solutionViewportDwellPreloadObserver = new IntersectionObserver(
+    (observedEntries) => {
+      observedEntries.forEach((observedEntry) => {
+        const entry = solutionViewportDwellPreloadEntries.get(
+          observedEntry.target,
+        );
+        if (!entry) return;
+        if (entry.triggered) return;
+
+        if (
+          observedEntry.isIntersecting &&
+          solutionViewportDwellPreloadIsMobile()
+        ) {
+          if (entry.timeout !== undefined) return;
+          entry.timeout = window.setTimeout(() => {
+            entry.timeout = undefined;
+            if (
+              entry.element.isConnected &&
+              solutionViewportDwellPreloadIsMobile() &&
+              solutionViewportDwellPreloadElementIsVisible(entry.element)
+            ) {
+              entry.triggered = true;
+              entry.preload();
+            }
+          }, SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_MS);
+          return;
+        }
+
+        clearSolutionViewportDwellPreloadTimeout(entry);
+      });
+    },
+    {
+      rootMargin: SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD_ROOT_MARGIN,
+    },
+  );
+
+  return solutionViewportDwellPreloadObserver;
+};
+
+const registerSolutionViewportDwellMathJaxPreload = (
+  element: HTMLElement,
+  preload: () => void,
+) => {
+  if (
+    !ENABLE_SOLUTION_VIEWPORT_DWELL_MATHJAX_PRELOAD ||
+    !solutionViewportDwellPreloadIsMobile()
+  ) {
+    return () => {};
+  }
+
+  const entry: SolutionViewportDwellPreloadEntry = {
+    element,
+    preload,
+    triggered: false,
+  };
+  solutionViewportDwellPreloadEntries.set(element, entry);
+  ensureSolutionViewportDwellPreloadObserver().observe(element);
+
+  return () => {
+    clearSolutionViewportDwellPreloadTimeout(entry);
+    solutionViewportDwellPreloadObserver?.unobserve(element);
+    solutionViewportDwellPreloadEntries.delete(element);
+    if (solutionViewportDwellPreloadEntries.size === 0) {
+      solutionViewportDwellPreloadObserver?.disconnect();
+      solutionViewportDwellPreloadObserver = undefined;
+    }
+  };
+};
+
+const SolutionHeightChangeListener = (props: {
+  resetter: () => void;
+  open: Accessor<boolean>;
+}) => {
+  let previousMainColumnWidth: number | undefined;
+  let resizeFrame: number | undefined;
   const context = useHeightChangeListenerContext();
 
   createEffect(() => {
@@ -73,11 +228,39 @@ const SolutionHeightChangeListener = (props: { resetter: () => void }) => {
     window.setTimeout(props.resetter, 50);
   });
 
+  createEffect(() => {
+    if (!props.open()) {
+      previousMainColumnWidth = undefined;
+      return;
+    }
+
+    const width = mainColumnWidth();
+    if (previousMainColumnWidth === undefined) {
+      previousMainColumnWidth = width;
+      return;
+    }
+    if (width === previousMainColumnWidth) return;
+
+    previousMainColumnWidth = width;
+    if (resizeFrame !== undefined) return;
+    resizeFrame = requestAnimationFrame(() => {
+      resizeFrame = undefined;
+      if (props.open()) props.resetter();
+    });
+  });
+
+  onCleanup(() => {
+    if (resizeFrame !== undefined) cancelAnimationFrame(resizeFrame);
+  });
+
   return <></>;
 };
 
 export const Solution = (props: SolutionProps) => {
   let ref: HTMLDivElement | undefined;
+  let observed_math_preparation: Promise<boolean> | undefined;
+  let prepare_math_timeout: number | undefined;
+  const solutionMathJax = createSolutionMathJaxController();
 
   let { store: global_store } = useGlobalContext();
   const {
@@ -110,70 +293,94 @@ export const Solution = (props: SolutionProps) => {
   const [solution_content_mounted, set_solution_content_mounted] =
     createSignal(false);
 
-  const handleResize = () => {
-    set_content_height(ref?.clientHeight || 0);
-  };
-
   const reset_content_height_etc = () => {
     props.re_calculate_height; // re-calc on change
     if (ref?.clientHeight) {
+      const height = ref.clientHeight;
       set_content_height(ref?.clientHeight || 0);
       updateExerciseByIndex(solution_number - 1, {
         field: "transition_duration",
-        value: global_store.animations
-          ? Math.min(ref?.clientHeight, 1000) * 0.8
-          : 0,
+        value:
+          global_store.animations && height <= MAX_ANIMATED_SOLUTION_HEIGHT
+            ? height * 0.8
+            : 0,
       });
     }
   };
 
-  const mount_solution_content = () => {
-    if (solution_content_mounted()) return;
+  const prepare_solution_math = () => {
+    const preparation = untrack(() => prepareSolutionMathJax(solutionMathJax));
+    if (preparation === observed_math_preparation) return;
+    observed_math_preparation = preparation;
+    void preparation
+      .then((succeeded) => {
+        if (!succeeded) return;
+        reset_content_height_etc();
+        requestAnimationFrame(reset_content_height_etc);
+      })
+      .finally(() => {
+        if (observed_math_preparation === preparation) {
+          observed_math_preparation = undefined;
+        }
+      });
+  };
+
+  const schedule_solution_math = (
+    delayMs = Math.max(
+      transition_duration() + 100,
+      SOLUTION_MATH_PREPARATION_MIN_DELAY_MS,
+    ),
+  ) => {
+    if (prepare_math_timeout !== undefined) {
+      window.clearTimeout(prepare_math_timeout);
+    }
+
+    prepare_math_timeout = window.setTimeout(() => {
+      prepare_math_timeout = undefined;
+      if (solution_content_mounted()) prepare_solution_math();
+    }, delayMs);
+  };
+
+  const mount_solution_content = (prepareMath = true, mathDelayMs?: number) => {
+    if (solution_content_mounted()) {
+      if (prepareMath) schedule_solution_math(mathDelayMs);
+      return;
+    }
     set_solution_content_mounted(true);
     requestAnimationFrame(() => {
       reset_content_height_etc();
-      void typesetMathJaxElements([ref]);
+      if (prepareMath) schedule_solution_math(mathDelayMs);
     });
   };
 
   createEffect(() => {
     if (!solution_open()) return;
     mount_solution_content();
+    const cancelFrame = scheduleAnimationFrame(reset_content_height_etc);
+    onCleanup(cancelFrame);
   });
 
-  createEffect(() => {
-    reset_content_height_etc();
-    setTimeout(() => {
-      if (solution_open()) {
-        reset_content_height_etc();
-      }
-    }, 50);
-    setTimeout(() => {
-      if (solution_open()) {
-        reset_content_height_etc();
-      }
-    }, 500);
-    setTimeout(() => {
-      if (solution_open()) {
-        reset_content_height_etc();
-      }
-    }, 1200);
-  });
-
-  createEffect(() => {
-    if (solution_open()) {
-      window.addEventListener("scroll", handleResize);
-      setTimeout(() => {
-        set_bot_div(false);
-      }, transition_duration());
-    } else {
-      window.removeEventListener("scroll", handleResize);
-      setTimeout(() => {
-        set_bot_div(true);
-      }, transition_duration());
+  onCleanup(() => {
+    if (prepare_math_timeout !== undefined) {
+      window.clearTimeout(prepare_math_timeout);
     }
+  });
 
-    onCleanup(() => window.removeEventListener("scroll", handleResize));
+  createEffect(() => {
+    const cancelRechecks = resetNowAndScheduleRechecks(
+      reset_content_height_etc,
+      solution_open,
+    );
+    onCleanup(cancelRechecks);
+  });
+
+  createEffect(() => {
+    const nextBotDiv = !solution_open();
+    const timeout = window.setTimeout(() => {
+      set_bot_div(nextBotDiv);
+    }, transition_duration());
+
+    onCleanup(() => window.clearTimeout(timeout));
   });
 
   createEffect(() => {
@@ -197,22 +404,27 @@ export const Solution = (props: SolutionProps) => {
     // green div transition
     if (solution_fully_opened() || !solution_open()) {
       set_green_div_transition(transition_duration());
-      setTimeout(() => {
+      const timeout = window.setTimeout(() => {
         set_green_div_transition(0);
       }, transition_duration());
+      onCleanup(() => window.clearTimeout(timeout));
     }
   });
 
   onMount(() => {
     set_solution_fully_opened(solution_open());
-    setTimeout(() => {
+    const timeout = window.setTimeout(() => {
       set_solution_fully_opened(solution_open());
     }, 100);
+    onCleanup(() => window.clearTimeout(timeout));
   });
 
   return (
     <HeightChangeListenerProvider>
-      <SolutionHeightChangeListener resetter={reset_content_height_etc} />
+      <SolutionHeightChangeListener
+        resetter={reset_content_height_etc}
+        open={solution_open}
+      />
       <SpaceBetweenStatementAndSolutionButton />
       <SolutionButton
         handle={handle}
@@ -243,11 +455,15 @@ export const Solution = (props: SolutionProps) => {
           style={{
             position: solution_fully_opened() ? "relative" : "absolute",
           }}
-          class={twJoin(" bottom-0 w-full")}
+          class={twJoin("exercise_solution bottom-0 w-full")}
         >
           <ExtraSpaceBetweenSolutionButtonAndSolutionWhenSolutionShowing />
           <Show when={solution_content_mounted()}>
-            {() => <LazyImageProvider>{props.children}</LazyImageProvider>}
+            {() => (
+              <SolutionMathJaxProvider controller={solutionMathJax}>
+                <LazyImageProvider>{props.children}</LazyImageProvider>
+              </SolutionMathJaxProvider>
+            )}
           </Show>
         </div>
         <div
@@ -299,7 +515,7 @@ type SolutionBtnProps = {
   solution_number: number;
   set_solution_fully_opened: Setter<boolean>;
   set_solution_transition: Setter<number>;
-  mount_solution_content: () => void;
+  mount_solution_content: (prepareMath?: boolean, mathDelayMs?: number) => void;
   resetter: () => void;
 };
 
@@ -316,6 +532,28 @@ const SolutionButton = (props: SolutionBtnProps) => {
     store.exercises[props.solution_number - 1]?.transition_duration + 50;
   const { set_handle, set_solution_fully_opened, set_solution_transition } =
     props;
+  let cancelScheduledResetters: (() => void) | undefined;
+  let transitionTimeout: number | undefined;
+
+  const clearButtonTimeouts = () => {
+    cancelScheduledResetters?.();
+    cancelScheduledResetters = undefined;
+    if (transitionTimeout !== undefined) {
+      window.clearTimeout(transitionTimeout);
+      transitionTimeout = undefined;
+    }
+  };
+
+  onCleanup(clearButtonTimeouts);
+
+  onMount(() => {
+    if (!buttonRef) return;
+    const unregister = registerSolutionViewportDwellMathJaxPreload(
+      buttonRef,
+      () => props.mount_solution_content(true, 0),
+    );
+    onCleanup(unregister);
+  });
 
   const preserveButtonPosition = (update: () => void) => {
     const topBefore = buttonRef?.getBoundingClientRect().top;
@@ -367,11 +605,12 @@ const SolutionButton = (props: SolutionBtnProps) => {
         solution_open={solution_open}
         onPointerMove={(event) => {
           if (event.pointerType === "mouse") {
-            props.mount_solution_content();
+            props.mount_solution_content(true, 0);
           }
         }}
         onClick={(event) => {
           event.stopPropagation();
+          clearButtonTimeouts();
 
           if (event.metaKey) {
             const open = !solution_open();
@@ -404,9 +643,11 @@ const SolutionButton = (props: SolutionBtnProps) => {
             value: !solution_open(),
           });
 
-          props.resetter();
-          setTimeout(props.resetter, 50);
-          setTimeout(props.resetter, transition_duration());
+          cancelScheduledResetters = resetNowAndScheduleRechecks(
+            props.resetter,
+            () => true,
+            [50, transition_duration()],
+          );
 
           if (store.list_view) {
             // update localstorage for the solution . as useExercises hook only updates the selectedExo which works only in carousel view
@@ -418,7 +659,7 @@ const SolutionButton = (props: SolutionBtnProps) => {
           }
 
           // *** solution transition should be not 0 only when button is clicked ***
-          setTimeout(() => {
+          transitionTimeout = window.setTimeout(() => {
             set_solution_transition(0);
           }, transition_duration());
         }}
@@ -445,16 +686,19 @@ export const BackupArrow = (props: BackupArrowProps) => {
   let rx = PREV_NEXT_EXERCISE_BUTTON_CORNER_RADIUS;
 
   const { calculateTargetCenterOnPage } = useScrollToInChapter();
-  const selectedExercise = () => {
-    const section = document.querySelector(
+  const exercisesSection = () =>
+    document.querySelector<HTMLElement>(
       `[data-exercise-group-id="${group_id}"]`,
     );
+  const selectedExercise = () => {
+    const section = exercisesSection();
     return (section ?? document)
       .querySelectorAll(".exo-statement")
       .item(
         exercises_store.list_view ? 0 : exercises_store.selected_exo - 1,
       ) as HTMLElement;
   };
+  const backupTarget = () => selectedExercise() ?? exercisesSection();
 
   let h = w;
   let triangle_sidelength = 11.5;
@@ -482,16 +726,28 @@ export const BackupArrow = (props: BackupArrowProps) => {
         viewBox={`0 0 ${2 + w} ${2 + w}`}
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        role="button"
+        tabindex="0"
         class="tab cursor-pointer z-10"
-        onClick={() => {
+        onClick={(event) => {
+          event.stopPropagation();
+          const target = backupTarget();
           if (store.innerWidth > MOBILE_MAX_WIDTH) {
             smoothScrollTo(
-              calculateTargetCenterOnPage(selectedExercise()) + 50,
+              calculateTargetCenterOnPage(target) + 50,
               store.animations ? 100 : 0,
             );
           } else {
-            document?.getElementById(`exo-${group_id}`)?.scrollIntoView();
+            smoothScrollTo(
+              calculateTargetCenterOnPage(target) + 50,
+              store.animations ? 100 : 0,
+            );
           }
+        }}
+        onKeyDown={(event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          event.currentTarget.click();
         }}
       >
         <path

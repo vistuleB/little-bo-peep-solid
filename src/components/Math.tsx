@@ -1,23 +1,40 @@
 import {
   createEffect,
   Accessor,
+  children as resolveChildren,
+  createMemo,
   createSignal,
+  mergeProps,
   onCleanup,
   onMount,
   ParentProps,
   Setter,
+  Show,
 } from "solid-js";
 import {
   ENABLE_MATHJAX_INTERSECTION_FALLBACK,
   MATHJAX_INTERSECTION_FALLBACK_DELAY_MS,
   MATHJAX_INTERSECTION_ROOT_MARGIN,
-  MOBILE_MAX_WIDTH,
-  MOBILE_TEXT_COLUMN_SIDE_INSET,
 } from "~/constants";
 import { useGlobalContext } from "~/store/StoreProvider";
 import SharedProps from "./types/SharedProps";
 import { twJoin } from "tailwind-merge";
 import typesetMathJaxElements from "~/utils/typesetMathJax";
+import {
+  SolutionMathJaxEntry,
+  SolutionMathJaxController,
+  useSolutionMathJax,
+} from "~/store/SolutionMathJaxProvider";
+import { ScaleProvider } from "~/store/ScaleProvider";
+import useConstrainedContent from "~/hooks/useConstrainedContent";
+import styleJoin from "~/utils/styleJoin";
+import getPrerenderedMathJax, {
+  ensurePrerenderedMathJaxRouteCache,
+  getPrerenderedMathJaxRouteCacheStatus,
+  getPrerenderedMathJaxDebug,
+  PrerenderedMathKind,
+  subscribePrerenderedMathJaxCache,
+} from "~/utils/prerenderedMathJax";
 
 const mathJaxRootMargin = `${MATHJAX_INTERSECTION_ROOT_MARGIN}px`;
 
@@ -43,12 +60,15 @@ const nearMathJaxObserverViewport = (el: HTMLElement) => {
   );
 };
 
-const completeTypeset = (entry: MathJaxFallbackEntry) => {
+const completeTypeset = (
+  entry: MathJaxFallbackEntry,
+  updateScrollHeight = true,
+) => {
   if (!entry.active || !entry.ref.isConnected || entry.visible()) return false;
 
-  entry.setVisible(true);
-  entry.setScrollHeight();
   entry.afterTypeset?.();
+  entry.setVisible(true);
+  if (updateScrollHeight) entry.setScrollHeight();
   return true;
 };
 
@@ -135,100 +155,177 @@ const unregisterMathJaxFallback = (entry: MathJaxFallbackEntry | undefined) => {
   mathJaxFallbackEntries.delete(entry);
 };
 
-export const Math = (props: ParentProps) => {
-  let ref: HTMLSpanElement | undefined;
-  const [visible, setVisible] = createSignal(false);
-  const { store, set_store } = useGlobalContext();
+const registerSolutionMathJax = (
+  controller: SolutionMathJaxController | undefined,
+  entry: MathJaxFallbackEntry | undefined,
+) => {
+  if (!controller || !entry) return;
 
-  onMount(() => {
-    const setScrollHeight = () =>
-      set_store("scrollHeight", document.body.scrollHeight);
-    const routeReady = () =>
-      !store.spinner_currently_visible &&
-      !store.route_scroll_in_progress &&
-      store.horizontal_arrival_phase === "idle" &&
-      store.route_phase === "idle" &&
-      store.saved_scroll_finished;
-    const mathJaxEntry = ref
-      ? {
-          ref,
-          visible,
-          setVisible,
-          setScrollHeight,
-          routeReady,
-          typesetting: false,
-          active: true,
-        }
-      : undefined;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && mathJaxEntry && routeReady()) {
-          typesetMath(mathJaxEntry);
-          observer.disconnect();
-        }
-      },
-      {
-        rootMargin: mathJaxRootMargin,
-      },
-    );
-    if (ref) observer.observe(ref);
+  const solutionEntry: SolutionMathJaxEntry = {
+    ref: entry.ref,
+    pending: () => entry.active && !entry.visible() && !entry.typesetting,
+    setTypesetting: (typesetting) => {
+      entry.typesetting = typesetting;
+    },
+    complete: (updateScrollHeight = true) => {
+      completeTypeset(entry, updateScrollHeight);
+    },
+    updateScrollHeight: entry.setScrollHeight,
+  };
+  controller.entries.add(solutionEntry);
+  return () => controller.entries.delete(solutionEntry);
+};
 
-    registerMathJaxFallback(mathJaxEntry);
+const nonTextChildren = (value: unknown): unknown => {
+  if (value === null || value === undefined || value === false)
+    return undefined;
+  if (typeof value === "string" || typeof value === "number") return undefined;
+  if (Array.isArray(value)) return value.map(nonTextChildren);
+  return value;
+};
 
-    createEffect(() => {
-      if (
-        mathJaxEntry &&
-        routeReady() &&
-        nearMathJaxObserverViewport(mathJaxEntry.ref)
-      ) {
-        typesetMath(mathJaxEntry);
-        observer.disconnect();
-      }
-    });
+type PrerenderedMathJaxDebug = ReturnType<typeof getPrerenderedMathJaxDebug>;
 
-    onCleanup(() => {
-      if (mathJaxEntry) mathJaxEntry.active = false;
-      observer.disconnect();
-      unregisterMathJaxFallback(mathJaxEntry);
-    });
+const prerenderedMathJaxStatus = (debug: PrerenderedMathJaxDebug) =>
+  debug.enabled ? (debug.hit ? "hit" : "miss") : "off";
+
+const mathJaxDebugAttributes = (
+  debug: Accessor<PrerenderedMathJaxDebug>,
+  routeCacheStatus: Accessor<string>,
+  renderedBy: Accessor<string>,
+) => {
+  if (!import.meta.env.MATHJAX_DEBUG_ATTRIBUTES) return {};
+
+  const prerenderDebug = debug();
+  return {
+    "data-prerendered-mathjax": prerenderedMathJaxStatus(prerenderDebug),
+    "data-prerendered-mathjax-cache": prerenderDebug.cacheLoaded
+      ? "loaded"
+      : "missing",
+    "data-prerendered-mathjax-route-cache": routeCacheStatus(),
+    "data-prerendered-mathjax-key": prerenderDebug.key,
+    "data-prerendered-mathjax-key-present": prerenderDebug.keyPresent
+      ? "true"
+      : "false",
+    "data-prerendered-mathjax-available-keys": prerenderDebug.availableKeys,
+    "data-mathjax-rendered": renderedBy(),
+  };
+};
+
+const currentPathname = () =>
+  typeof window === "undefined" ? "" : window.location.pathname;
+
+const usePrerenderedMathJaxCache = (
+  kind: PrerenderedMathKind,
+  resolvedChildren: Accessor<unknown>,
+) => {
+  const [routeCacheVersion, setRouteCacheVersion] = createSignal(0);
+
+  const entry = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJax(kind, resolvedChildren());
   });
+
+  const debug = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJaxDebug(kind, resolvedChildren());
+  });
+
+  const routeCacheStatus = createMemo(() => {
+    routeCacheVersion();
+    return getPrerenderedMathJaxRouteCacheStatus(currentPathname());
+  });
+
+  const subscribeCurrentRoute = () => {
+    ensurePrerenderedMathJaxRouteCache(window.location.pathname);
+    return subscribePrerenderedMathJaxCache(() =>
+      setRouteCacheVersion((version) => version + 1),
+    );
+  };
+
+  return { entry, debug, routeCacheStatus, subscribeCurrentRoute };
+};
+
+type InlineMathContainerProps = ParentProps<{
+  debug: Accessor<PrerenderedMathJaxDebug>;
+  renderedBy: Accessor<string>;
+  routeCacheStatus: Accessor<string>;
+  setRef: (element: HTMLSpanElement) => void;
+  revealed: Accessor<boolean>;
+  html?: string;
+}>;
+
+const InlineMathContainer = (props: InlineMathContainerProps) => {
+  if (props.html !== undefined) {
+    return (
+      <span
+        class="math transition-opacity"
+        {...mathJaxDebugAttributes(
+          props.debug,
+          props.routeCacheStatus,
+          props.renderedBy,
+        )}
+        style={{ opacity: props.revealed() ? "1" : "0" }}
+        ref={props.setRef}
+        innerHTML={props.html}
+      />
+    );
+  }
 
   return (
     <span
-      class="transition-opacity"
-      style={{ opacity: visible() ? "1" : "0" }}
-      ref={ref}
+      class="math transition-opacity"
+      {...mathJaxDebugAttributes(
+        props.debug,
+        props.routeCacheStatus,
+        props.renderedBy,
+      )}
+      style={{ opacity: props.revealed() ? "1" : "0" }}
+      ref={props.setRef}
     >
       {props.children}
     </span>
   );
 };
 
-export const MathBlock = (props: SharedProps & ParentProps) => {
-  let ref: HTMLDivElement | undefined;
+const InlineMath = (props: ParentProps) => {
+  let ref: HTMLSpanElement | undefined;
+  const resolvedChildren = resolveChildren(() => props.children);
+  const prerenderedMathJax = usePrerenderedMathJaxCache(
+    "inline",
+    resolvedChildren,
+  );
+  const [liveRendered, setLiveRendered] = createSignal(false);
+  const [liveHtml, setLiveHtml] = createSignal("");
+  const activePrerenderedMathJax = () =>
+    liveRendered() ? undefined : prerenderedMathJax.entry();
+  const [revealed, setRevealed] = createSignal(
+    Boolean(prerenderedMathJax.entry()),
+  );
   const { store, set_store } = useGlobalContext();
-  const [visible, setVisible] = createSignal(false);
-  const [scaledDown, setScaledDown] = createSignal(false);
-  const [originalWidth, setOriginalWidth] = createSignal(0);
-  const [localInnerWidthCopy, setLocalInnerWidthCopy] = createSignal(0);
-  let firstMeasureOfOriginalWidth = 0;
-
-  const availableViewportWidth = (viewportWidth: number) =>
-    viewportWidth -
-    (viewportWidth <= MOBILE_MAX_WIDTH ? MOBILE_TEXT_COLUMN_SIDE_INSET * 2 : 0);
-
-  const handleClick = () => {
-    setScaledDown(!scaledDown());
+  const solutionMathJax = useSolutionMathJax();
+  const setRef = (element: HTMLSpanElement) => {
+    ref = element;
   };
 
-  const shouldBeScaledDown = () => {
-    if (ref && originalWidth() > 0) {
-      return originalWidth() > availableViewportWidth(localInnerWidthCopy());
+  createEffect(() => {
+    if (activePrerenderedMathJax()) {
+      setRevealed(true);
+    } else if (!liveRendered()) {
+      setRevealed(false);
     }
-    return false;
-  };
+  });
+
+  const renderedBy = () =>
+    activePrerenderedMathJax()
+      ? "prerendered"
+      : liveRendered()
+        ? "live"
+        : "pending";
 
   onMount(() => {
+    const unsubscribePrerenderedMathJaxCache =
+      prerenderedMathJax.subscribeCurrentRoute();
     const setScrollHeight = () =>
       set_store("scrollHeight", document.body.scrollHeight);
     const routeReady = () =>
@@ -237,25 +334,24 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
       store.horizontal_arrival_phase === "idle" &&
       store.route_phase === "idle" &&
       store.saved_scroll_finished;
-    const measureOriginalWidth: () => boolean = () => {
-      let svg = null;
-      if (ref) {
-        svg = ref.querySelector("svg");
-        svg?.classList.add("transition-all");
-        if (svg) {
-          setOriginalWidth(svg.getBoundingClientRect().width);
-        }
-      }
-      return svg != null;
-    };
+
+    if (prerenderedMathJax.entry()) {
+      setRevealed(true);
+      setScrollHeight();
+      return;
+    }
+
     const mathJaxEntry = ref
       ? {
           ref,
-          visible,
-          setVisible,
+          visible: revealed,
+          setVisible: setRevealed,
           setScrollHeight,
           routeReady,
-          afterTypeset: measureOriginalWidth,
+          afterTypeset: () => {
+            setLiveHtml(ref?.innerHTML || "");
+            setLiveRendered(true);
+          },
           typesetting: false,
           active: true,
         }
@@ -265,32 +361,24 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
         if (entry.isIntersecting && mathJaxEntry && routeReady()) {
           typesetMath(mathJaxEntry);
           observer.disconnect();
-          if (!measureOriginalWidth()) {
-            console.log("failed to measure width once");
-            setTimeout(() => {
-              if (!measureOriginalWidth()) {
-                console.log("failed to measure width twice");
-                console.error("failed to measure width twice");
-              }
-            }, 50);
-          }
         }
       },
       {
         rootMargin: mathJaxRootMargin,
       },
     );
+    if (ref && !solutionMathJax) observer.observe(ref);
 
-    if (ref) {
-      observer.observe(ref);
-    }
+    if (!solutionMathJax) registerMathJaxFallback(mathJaxEntry);
 
-    setTimeout(measureOriginalWidth, 50);
-
-    registerMathJaxFallback(mathJaxEntry);
+    const unregisterSolutionMathJax = registerSolutionMathJax(
+      solutionMathJax,
+      mathJaxEntry,
+    );
 
     createEffect(() => {
       if (
+        !solutionMathJax &&
         mathJaxEntry &&
         routeReady() &&
         nearMathJaxObserverViewport(mathJaxEntry.ref)
@@ -300,50 +388,272 @@ export const MathBlock = (props: SharedProps & ParentProps) => {
       }
     });
 
-    const handleResize = () => {
-      let oldInnerWidth = localInnerWidthCopy();
-      let newInnerWidth = window.innerWidth;
-      setLocalInnerWidthCopy(newInnerWidth);
-      if (newInnerWidth != oldInnerWidth) setScaledDown(shouldBeScaledDown());
-    };
-
-    handleResize(); // should result in call to setScaledDown()
-    window.addEventListener("resize", handleResize);
-
     onCleanup(() => {
+      unsubscribePrerenderedMathJaxCache();
       if (mathJaxEntry) mathJaxEntry.active = false;
       observer.disconnect();
       unregisterMathJaxFallback(mathJaxEntry);
-      window.removeEventListener("resize", handleResize);
+      unregisterSolutionMathJax?.();
     });
   });
 
+  return (
+    <Show
+      when={activePrerenderedMathJax()}
+      keyed
+      fallback={
+        <Show
+          when={liveRendered()}
+          fallback={
+            <InlineMathContainer
+              debug={prerenderedMathJax.debug}
+              renderedBy={renderedBy}
+              routeCacheStatus={prerenderedMathJax.routeCacheStatus}
+              setRef={setRef}
+              revealed={revealed}
+            >
+              {resolvedChildren()}
+            </InlineMathContainer>
+          }
+        >
+          <InlineMathContainer
+            debug={prerenderedMathJax.debug}
+            renderedBy={renderedBy}
+            routeCacheStatus={prerenderedMathJax.routeCacheStatus}
+            setRef={setRef}
+            revealed={revealed}
+            html={liveHtml()}
+          />
+        </Show>
+      }
+    >
+      {(entry) => (
+        <InlineMathContainer
+          debug={prerenderedMathJax.debug}
+          html={entry.html}
+          renderedBy={renderedBy}
+          routeCacheStatus={prerenderedMathJax.routeCacheStatus}
+          setRef={setRef}
+          revealed={revealed}
+        />
+      )}
+    </Show>
+  );
+};
+
+export { InlineMath as Math };
+
+type MathBlockProps = SharedProps &
+  ParentProps & {
+    constrained?: boolean;
+  };
+
+export const MathBlock = (props: MathBlockProps) => {
+  const merged = mergeProps({ constrained: true }, props);
+  let ref: HTMLDivElement | undefined;
+  const resolvedChildren = resolveChildren(() => merged.children);
+  const prerenderedMathJax = usePrerenderedMathJaxCache(
+    "display",
+    resolvedChildren,
+  );
+  const [liveRendered, setLiveRendered] = createSignal(false);
+  const activePrerenderedMathJax = () =>
+    liveRendered() ? undefined : prerenderedMathJax.entry();
+  const { store, set_store } = useGlobalContext();
+  const [visible, setVisible] = createSignal(
+    Boolean(prerenderedMathJax.entry()),
+  );
+  const [naturalWidth, setNaturalWidth] = createSignal(0);
+  const constrainedContent = useConstrainedContent({
+    naturalWidth,
+    initiallyConstrained: merged.constrained,
+  });
+  const solutionMathJax = useSolutionMathJax();
+
+  const targetWidth = () => naturalWidth() * constrainedContent.targetScale();
+
+  const scale = createMemo(() => ({
+    scale: constrainedContent.targetScale(),
+    name: merged.id || "MathBlock",
+    after_first_click: constrainedContent.afterFirstClick(),
+  }));
+
+  const measureNaturalWidth = () => {
+    const svg = ref?.querySelector<SVGSVGElement>(".MathJax svg");
+    if (!ref || !svg) return false;
+
+    // Tagged displays use a percentage-width SVG to place tags at the
+    // column edge. Its width is a layout viewport, not an intrinsic size.
+    if (svg.getAttribute("width") === "100%") {
+      constrainedContent.notifyHeightChangeAcrossFrames();
+      return true;
+    }
+
+    const previousRefWidth = ref.style.width;
+    const previousSvgMaxWidth = svg.style.maxWidth;
+    let measuredWidth = 0;
+    try {
+      ref.style.width = "max-content";
+      svg.style.maxWidth = "none";
+      measuredWidth = svg.getBoundingClientRect().width;
+    } finally {
+      ref.style.width = previousRefWidth;
+      svg.style.maxWidth = previousSvgMaxWidth;
+    }
+
+    if (measuredWidth > 0) {
+      setNaturalWidth(measuredWidth);
+      constrainedContent.notifyHeightChangeAcrossFrames();
+    }
+    return measuredWidth > 0;
+  };
+
   createEffect(() => {
-    if (scaledDown()) {
-      ref?.style.setProperty(
-        "width",
-        availableViewportWidth(store.innerWidth) + "px",
-      );
+    if (!activePrerenderedMathJax()) return;
+    setVisible(true);
+    window.requestAnimationFrame(measureNaturalWidth);
+  });
+
+  const renderedBy = () =>
+    activePrerenderedMathJax()
+      ? "prerendered"
+      : liveRendered()
+        ? "live"
+        : visible()
+          ? "live"
+          : "pending";
+
+  const handleClick = (event: MouseEvent) => {
+    const target = event.target;
+    if (target instanceof Element && target.closest("[data-side-image]")) {
+      event.stopPropagation();
       return;
     }
-    ref?.style.setProperty(
-      "width",
-      ref && originalWidth() > 0 ? originalWidth() + "px" : "auto",
+    constrainedContent.handleClick(event);
+  };
+
+  onMount(() => {
+    const unsubscribePrerenderedMathJaxCache =
+      prerenderedMathJax.subscribeCurrentRoute();
+    const setScrollHeight = () =>
+      set_store("scrollHeight", document.body.scrollHeight);
+    const routeReady = () =>
+      !store.spinner_currently_visible &&
+      !store.route_scroll_in_progress &&
+      store.horizontal_arrival_phase === "idle" &&
+      store.route_phase === "idle" &&
+      store.saved_scroll_finished;
+    if (activePrerenderedMathJax()) {
+      setVisible(true);
+      window.requestAnimationFrame(() => {
+        measureNaturalWidth();
+        setScrollHeight();
+      });
+      return;
+    }
+
+    const mathJaxEntry = ref
+      ? {
+          ref,
+          visible,
+          setVisible,
+          setScrollHeight,
+          routeReady,
+          afterTypeset: () => {
+            setLiveRendered(true);
+            measureNaturalWidth();
+          },
+          typesetting: false,
+          active: true,
+        }
+      : undefined;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && mathJaxEntry && routeReady()) {
+          typesetMath(mathJaxEntry);
+          observer.disconnect();
+        }
+      },
+      {
+        rootMargin: mathJaxRootMargin,
+      },
     );
+
+    if (ref && !solutionMathJax) {
+      observer.observe(ref);
+    }
+
+    if (!solutionMathJax) registerMathJaxFallback(mathJaxEntry);
+
+    const unregisterSolutionMathJax = registerSolutionMathJax(
+      solutionMathJax,
+      mathJaxEntry,
+    );
+
+    createEffect(() => {
+      if (
+        !solutionMathJax &&
+        mathJaxEntry &&
+        routeReady() &&
+        nearMathJaxObserverViewport(mathJaxEntry.ref)
+      ) {
+        typesetMath(mathJaxEntry);
+        observer.disconnect();
+      }
+    });
+
+    onCleanup(() => {
+      unsubscribePrerenderedMathJaxCache();
+      if (mathJaxEntry) mathJaxEntry.active = false;
+      observer.disconnect();
+      unregisterMathJaxFallback(mathJaxEntry);
+      unregisterSolutionMathJax?.();
+    });
   });
 
   return (
-    <div
-      id={props.id}
-      class={twJoin(
-        "mathblock transition-all",
-        store.show_areas && "mathblock-background-divide",
-      )}
-      style={{ opacity: visible() ? "1" : "0" }}
-      onClick={handleClick}
-      ref={ref}
-    >
-      {props.children}
-    </div>
+    <ScaleProvider scale={scale}>
+      <div
+        id={merged.id}
+        {...mathJaxDebugAttributes(
+          prerenderedMathJax.debug,
+          prerenderedMathJax.routeCacheStatus,
+          renderedBy,
+        )}
+        data-horizontal-inspectable={
+          constrainedContent.constrained() ? undefined : "true"
+        }
+        class={twJoin(
+          "mathblock",
+          merged.class,
+          constrainedContent.transitionsEnabled()
+            ? [
+                "transition-[width]",
+                "duration-500",
+                "ease-[cubic-bezier(0.4,0,0.2,1)]",
+              ]
+            : "transition-opacity",
+          store.show_areas && "mathblock-background-divide",
+        )}
+        style={styleJoin(merged.style, {
+          opacity: visible() ? "1" : "0",
+          width: targetWidth() ? `${targetWidth()}px` : "fit-content",
+          maxWidth: "none",
+          boxSizing: "border-box",
+        })}
+        onClick={handleClick}
+        onTransitionEnd={constrainedContent.handleTransitionEnd}
+        ref={ref}
+      >
+        {activePrerenderedMathJax() ? (
+          <>
+            <div innerHTML={activePrerenderedMathJax()?.html} />
+            {nonTextChildren(resolvedChildren())}
+          </>
+        ) : (
+          resolvedChildren()
+        )}
+      </div>
+    </ScaleProvider>
   );
 };

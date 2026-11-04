@@ -76,11 +76,7 @@
 
         tangent to the unit circle, and so the
         particles will leave the circle!
-        (But that's OK.) In one-tenth a unit
-        of time, for example, the particles would
-        travel approximately one-tenth their
-        velocity vectors, that would bring them
-        to approximately these new positions:
+        (But that's OK.) In one-tenth a unit of time, the particles would travel approximately one-tenth their velocity vectors, reaching approximately these positions:
 
         |> Image
             src=images/svg_ch4_5_euler_after_1_10th.svg
@@ -135,9 +131,7 @@
         |> Image
             src=images/svg_ch4_5_euler_after_100_100th_blur.svg
 
-        To visualize such a fine-grained
-        approximation we need to revert to drawing
-        the particles as points. In the following
+        To visualize this finer approximation, we draw the particles as points. In the following
         figure the colored paths are points that
         come from a “${1\over 100}$th” approximation,
         while the orange dots are the old positions
@@ -202,35 +196,8 @@
         $x$-coordinate of the blue particle__
 
         $f'$ is the $x$-coordinate of the blue
-        particle; and since
-
-        __the rate of change of the
-        $x$-coordinate of the blue particle is the
-        $x$-coordinate of the yellow particle__
-
-        $f''$ is the $x$-coordinate of the
-        yellow particle; and since
-
-        __the rate of change of the
-        $x$-coordinate of the yellow particle is the
-        $x$-coordinate of the green particle__
-
-        $f'''$ is the $x$-coordinate of the
-        green particle; and since
-
-        __the rate of change of the
-        $x$-coordinate of the green particle
-        is the $x$-coordinate of the purple
-        particle__
-
-        $f''''$ is the $x$-coordinate of the
-        purple particle; and since
-
-        __the rate of change of the
-        $x$-coordinate of the purple particle is the
-        $x$-coordinate of the red particle__
-
-        $f''''' = f^{(5)}$ equals $f$.
+        particle. Likewise, $f''$, $f'''$, and $f''''$ are the $x$-coordinates
+        of the yellow, green, and purple particles, and $f^{(5)} = f$.
 
         |> SolutionNote
             If you graph the $x$-coordinates of the
@@ -252,9 +219,7 @@
             at time $t$.
 
         |> SolutionNote
-            It is worth noting that, in fact, the
-            $x$- and $y$-coordinates live separate
-            lives. The rate of change of each
+            The $x$- and $y$-coordinates live separate lives. The rate of change of each
             $x$-coordinate is some other $x$-coordinate,
             and the rate of change of each $y$-coordinate
             is some other $y$-coordinate—you could

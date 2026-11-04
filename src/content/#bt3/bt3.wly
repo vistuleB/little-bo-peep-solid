@@ -1,0 +1,578 @@
+|> Section
+    handle=_bt3_start_
+
+    *Along a line.*
+    The distance from $2$ to $5$ on the number line is
+
+    $$
+    5 - 2 = 3.
+    $$
+
+    The distance from $5$ to $2$ is also $3$.
+    We have turned around, but the road has not gotten any shorter.
+
+    |> Image
+        src=images/bt3/number_line.svg
+        width=530px
+        alt=Points at 2 and 5 on a number line, separated by three units.
+
+    For two numbers $a$, $b$, the distance is
+
+    $$
+    |b-a|
+    $$
+
+    where the absolute-value bars remove a minus sign, if
+    there is one. For example, the distance from $-2$ to $5$ is
+
+    $$
+    |5-(-2)| = |7| = 7,
+    $$
+
+    while the distance from $5$ to $-2$ is
+
+    $$
+    |-2-5| = |-7| = 7.
+    $$
+
+    (Same road.) Notice that the _change_ in coordinate
+    does care which way we go. Distance has less to say.
+
+|> Section
+
+    *A small shortcut.*
+    Suppose you walk $4$ meters east and then $3$ meters north.
+    You have walked
+
+    $$
+    4 + 3 = 7\te{ meters}.
+    $$
+
+    But how far are you from where you started?
+
+    |> Image
+        src=images/bt3/shortcut.svg
+        width=530px
+        alt=A right triangle with horizontal leg 4, vertical leg 3, and a diagonal shortcut.
+
+    The dashed route is the one you walked. The straight
+    segment is the distance we are asking about. If this
+    is somebody's lawn, the distinction could matter.
+
+    We cannot get the length of the straight segment just
+    by adding $4$ and $3$. In fact, its length is $5$ meters.
+    To explain where the $5$ comes from, we need a theorem.
+
+|> Section
+    split_here=Rest
+    handle=distance_pythagoras
+
+    *The Pythagorean theorem.*
+    In a right triangle, the side opposite the right angle
+    is called the _hypotenuse_. The other two sides are
+    called the _legs_. If the legs have lengths $a$, $b$
+    and the hypotenuse has length $c$, then
+
+    $$
+    a^2+b^2=c^2.
+    $$
+
+    This is the _Pythagorean theorem_. The little square
+    in the corner of the diagram means “right angle”, i.e.,
+    $90^\circ$:
+
+    |> Image
+        src=images/bt3/triangle.svg
+        width=500px
+        alt=A right triangle with legs a and b and hypotenuse c; the right angle is marked.
+
+    In our walking example,
+
+    $$
+    c^2=4^2+3^2=16+9=25,
+    $$
+
+    so $c=5$. (Not $-5$, because $c$ is a length.)
+    Generally,
+
+    $$
+    c=\sqrt{a^2+b^2}.
+    $$
+
+    The instruction is: square the two leg lengths, add
+    the results, and take a square root. The order is
+    important. Adding first would give us the length of
+    our walk again, after a small algebraic excursion.
+
+    Also, the right angle is doing some work here. If
+    you hold two sticks of lengths $3$ and $4$ together
+    at one end and open and close the angle between them,
+    the distance between their free ends changes. It is
+    $5$ when the sticks are perpendicular.
+
+|> Section
+
+    *Why squares?*
+    Here is a way to see the theorem. Make four copies
+    of the same right triangle and arrange them inside
+    a square of side $a+b$:
+
+    |> Image
+        src=images/bt3/area_proof.svg
+        width=560px
+        alt=Four congruent right triangles inside a square of side a plus b, leaving a central square of side c.
+
+    The empty region in the middle is another square.
+    Each of its sides is a hypotenuse, of length $c$;
+    each of its angles is a right angle, because the two
+    acute angles of our triangle add up to $90^\circ$.
+    (At each inner corner, those two angles and the
+    angle of the empty region make a straight angle.)
+
+    The area of the big square is
+
+    $$
+    (a+b)^2.
+    $$
+
+    The four triangles together have area
+
+    $$
+    4\cdot{ab\over2}=2ab.
+    $$
+
+    Subtract them. The area left in the middle is
+
+    $$
+    c^2=(a+b)^2-2ab=a^2+b^2.
+    $$
+
+    ...and that is the theorem. The squares in the formula
+    can be taken quite literally: they are areas.
+
+|> Section
+
+    *Finding a different side.*
+    A ladder $5$ meters long leans against a vertical
+    wall. Its foot is $2$ meters from the wall, on level
+    ground. How high up the wall does it reach?
+
+    |> Image
+        src=images/bt3/ladder.svg
+        width=470px
+        alt=A ladder of length 5 leans against a wall, with its foot 2 from the wall and height h.
+
+    The ladder is the hypotenuse, so
+
+    $$
+    h^2+2^2=5^2,
+    $$
+
+    which gives
+
+    $$
+    h=\sqrt{25-4}=\sqrt{21}\approx4.58\te{ meters}.
+    $$
+
+    This time we _subtracted_ the squares. There is no
+    new theorem to remember; we simply solved the old
+    equation for a different side.
+
+    It also explains why a $5$-meter ladder cannot reach
+    a height of $6$ meters. The calculation would ask for
+    a foot-to-wall distance whose square is $25-36=-11$.
+    The ladder declines.
+
+|> Section
+
+    *Scaling, and one irrational diagonal.*
+    If a right triangle has sides $3$, $4$, $5$, then
+    doubling the whole drawing gives sides $6$, $8$, $10$.
+    Indeed,
+
+    $$
+    6^2+8^2=36+64=100=10^2.
+    $$
+
+    More generally, multiplying all lengths by a positive
+    factor $k$ multiplies their squares by $k^2$, so
+
+    $$
+    (ka)^2+(kb)^2=k^2(a^2+b^2)=(kc)^2.
+    $$
+
+    The theorem survives being photocopied at a different size.
+
+    A square of side $1$, meanwhile, has diagonal
+
+    $$
+    \sqrt{1^2+1^2}=\sqrt2\approx1.4142.
+    $$
+
+    |> Image
+        src=images/bt3/unit_square.svg
+        width=400px
+        alt=A unit square with diagonal labeled square root of 2.
+
+    There is nothing wrong with leaving the answer as
+    $\sqrt2$. That is its exact length. The decimal is
+    useful if you are cutting something, but not more exact.
+
+    By scaling, a square of side $s>0$ has diagonal
+    $s\sqrt2$. Conversely, a square whose diagonal is $1$
+    has side $1/\sqrt2$. The same picture works in both directions.
+
+|> Section
+    handle=distance_coordinates
+
+    *Two points in the plane.*
+    Let
+
+    $$
+    A=(-2,1),\qquad B=(4,4).
+    $$
+
+    To get from $A$ to $B$, the horizontal change is $6$
+    and the vertical change is $3$. We can draw our
+    right triangle wherever the points happen to be:
+
+    |> Image
+        src=images/bt3/coordinates.svg
+        width=560px
+        alt=Points A at minus 2 comma 1 and B at 4 comma 4, with horizontal change 6 and vertical change 3.
+
+    So the distance is
+
+    $$
+    \sqrt{6^2+3^2}=\sqrt{45}=3\sqrt5\approx6.71.
+    $$
+
+    For general points $A=(x_1,y_1)$, $B=(x_2,y_2)$,
+    this becomes
+
+    $$
+    d(A,B)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.
+    $$
+
+    Here $d(A,B)$ is just a name for “the distance from
+    $A$ to $B$”. The coordinate differences might be
+    negative, but their squares are the squares of the
+    leg lengths anyway. For example, going backwards
+    in our picture gives
+
+    $$
+    \sqrt{(-6)^2+(-3)^2}=\sqrt{45}
+    $$
+
+    again. No extra sign management required.
+
+    If the points are on the same horizontal line, the
+    formula reduces to
+
+    $$
+    \sqrt{(x_2-x_1)^2}=|x_2-x_1|.
+    $$
+
+    Our number-line formula has come back. The triangle
+    is flat now, but the distance formula still works.
+    It even works when both points are the same point,
+    giving a distance of $0$.
+
+    _Note._ We are using perpendicular coordinate axes
+    with the same unit of length on both axes. A graph
+    of meters against seconds does not give a physical
+    distance by squaring and adding the two coordinate
+    changes. Meters-squared plus seconds-squared is an
+    unusual shopping list.
+
+|> Section
+
+    *A circle is a distance instruction.*
+    A circle of radius $r>0$ centered at $(h,k)$ consists
+    of all points $(x,y)$ whose distance from $(h,k)$ is $r$:
+
+    $$
+    \sqrt{(x-h)^2+(y-k)^2}=r.
+    $$
+
+    Squaring both sides gives the more usual equation
+
+    $$
+    (x-h)^2+(y-k)^2=r^2.
+    $$
+
+    |> Image
+        src=images/bt3/circle.svg
+        width=470px
+        alt=A circle centered at h comma k, with a radius r to a point x comma y and its horizontal and vertical components.
+
+    For example,
+
+    $$
+    (x-2)^2+(y+1)^2=9
+    $$
+
+    describes the circle of radius $3$ centered at
+    $(2,-1)$. The “$y+1$” is “$y-(-1)$” in a small disguise.
+
+    Replacing “$=$” by “$<$” gives the _inside_ of the
+    circle, without its boundary; replacing it by “$\leq$”
+    includes the boundary as well. This filled-in region
+    is called a _disk_. (A circle is its rim.)
+
+    |> Example
+
+        The equation
+
+        $$
+        x^2+y^2-4x+2y=4
+        $$
+
+        also describes a circle. To see it, collect the
+        $x$ terms and the $y$ terms, then complete the squares:
+
+        $$
+        (x-2)^2+(y+1)^2=9.
+        $$
+
+        The new left-hand side expands to the old one
+        plus $4+1=5$, so we also added $5$ on the right.
+        It is the same circle as before,
+        wearing a less informative equation.
+
+|> Section
+
+    *One more direction.*
+    A rectangular box has side lengths $2$, $3$, $6$.
+    What is the distance between opposite corners?
+
+    |> Image
+        src=images/bt3/box.svg
+        width=560px
+        alt=A rectangular box with side lengths 2, 3, and 6; a base diagonal q and a space diagonal d are drawn.
+
+    First find the diagonal $q$ across the bottom:
+
+    $$
+    q^2=2^2+3^2=13.
+    $$
+
+    Then $q$ and the vertical edge of length $6$ make
+    another right triangle, whose hypotenuse is the
+    diagonal $d$ through the box:
+
+    $$
+    d^2=q^2+6^2=13+36=49.
+    $$
+
+    So $d=7$. We used the theorem twice, and didn't
+    even need to work out $q$ itself. Its square was enough.
+
+    The same reasoning gives
+
+    $$
+    d=\sqrt{a^2+b^2+c^2}
+    $$
+
+    for a box with perpendicular edge lengths $a$, $b$, $c$,
+    or
+
+    $$
+    d(A,B)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2+(z_2-z_1)^2}
+    $$
+
+    for points $A=(x_1,y_1,z_1)$, $B=(x_2,y_2,z_2)$
+    in ordinary three-dimensional coordinates.
+    A unit cube, for example, has a face diagonal of
+    $\sqrt2$ and a corner-to-opposite-corner diagonal of
+    $\sqrt3$. Different diagonals, different jobs.
+
+|> Section
+
+    *Leaving the square root for later.*
+    Suppose we want to know which of two points is
+    closer to the origin:
+
+    $$
+    A=(5,1),\qquad B=(4,3).
+    $$
+
+    Their squared distances are $26$ and $25$, respectively,
+    so $B$ is closer. We did not need to calculate
+    $\sqrt{26}$: the square root of the larger nonnegative
+    number is larger.
+
+    Likewise, to check whether two distances are equal,
+    we can check whether their _squares_ are equal.
+    This works because distances are nonnegative. For
+    arbitrary signed numbers, equality of squares would
+    not be enough: $(-3)^2=3^2$, for example.
+
+    There is a small trap, though. Squared distance is
+    not distance. If one distance doubles, its square
+    quadruples. And a $3$-unit walk followed by a $4$-unit
+    walk has length $7$, not $\sqrt{3^2+4^2}$.
+    Squaring is useful bookkeeping, with its own rules.
+
+|> Section
+    handle=distance_equal_distances
+
+    *Equally far from two points.*
+    Where could you stand so that you are equally far
+    from $A=(-2,0)$ and $B=(2,0)$?
+
+    The origin is one possibility. So is any point
+    directly above or below it:
+
+    |> Image
+        src=images/bt3/bisector.svg
+        width=530px
+        alt=Two fixed points at minus 2 comma 0 and 2 comma 0, and their vertical perpendicular bisector with a point P equally far from both.
+
+    To check whether we have missed any points, write
+    $P=(x,y)$ and equate the squared distances:
+
+    $$
+    (x+2)^2+y^2=(x-2)^2+y^2.
+    $$
+
+    Expanding gives
+
+    $$
+    x^2+4x+4+y^2=x^2-4x+4+y^2,
+    $$
+
+    from which $8x=0$, i.e., $x=0$. No restriction on $y$!
+    The answer is the entire vertical line $x=0$.
+
+    This line is called the _perpendicular bisector_ of
+    the segment $AB$: it cuts the segment in half and
+    meets it at a right angle. The same description works
+    for any two distinct points, by moving, rotating,
+    and resizing this picture. Resizing multiplies both
+    distances by the same factor, so equal distances
+    remain equal.
+
+    Something worth noticing about the algebra: all the
+    squared terms disappeared. Each squared distance
+    contained the same $x^2+y^2$, so subtraction removed it.
+
+|> Section
+
+    *The same question, less conveniently placed.*
+    Now take $A=(1,2)$ and $B=(5,4)$. Equating squared
+    distances from $(x,y)$ gives
+
+    $$
+    (x-1)^2+(y-2)^2=(x-5)^2+(y-4)^2.
+    $$
+
+    Expand and cancel as before:
+
+    $$
+    -2x-4y+5=-10x-8y+41,
+    $$
+
+    so
+
+    $$
+    2x+y=9.
+    $$
+
+    Again, a line! As a quick check, the midpoint
+    $(3,3)$ is on this line, because $2\cdot3+3=9$.
+    Its slope is $-2$, while the slope from $A$ to $B$
+    is $1/2$, in agreement with perpendicularity.
+
+    We can even tell which side of the line is closer
+    to which point. The same expansion gives
+
+    $$
+    d(P,A)^2-d(P,B)^2=4(2x+y-9).
+    $$
+
+    Thus $P$ is closer to $A$ when $2x+y<9$, closer to
+    $B$ when $2x+y>9$, and tied when $2x+y=9$.
+    A comparison of two square roots has become a test
+    of which side of a straight line you are on.
+
+|> Section
+    handle=distance_midpoint
+
+    *Two distances at once.*
+    Return to $A=(-2,0)$, $B=(2,0)$, and put $P=(x,y)$
+    anywhere in the plane. This time, _add_ the squared
+    distances instead of subtracting:
+
+    $$
+    \begin{aligned}
+    d(P,A)^2+d(P,B)^2
+    &=(x+2)^2+y^2+(x-2)^2+y^2\\
+    &=2x^2+2y^2+8.
+    \end{aligned}
+    $$
+
+    The $4x$ and $-4x$ cancel. Moreover, $x^2+y^2$ is
+    the squared distance from $P$ to the midpoint
+    $M=(0,0)$, so
+
+    $$
+    d(P,A)^2+d(P,B)^2=2d(P,M)^2+8.
+    $$
+
+    |> Image
+        src=images/bt3/midpoint.svg
+        width=530px
+        alt=Points A and B with midpoint M, and a point P joined to all three; PM measures the excess in the sum of squared distances.
+
+    In particular, the sum on the left is smallest when
+    $P=M$, because this makes $d(P,M)^2=0$. Moving away
+    from the midpoint makes the sum larger, by exactly
+    twice the square of how far you moved.
+
+    _Note._ This is about the sum of the _squares_ of
+    two distances. The sum of the distances themselves
+    behaves differently: every point on the segment
+    $AB$ has distances adding up to $4$. For example,
+    at the midpoint they are $2+2$; at $A$ they are $0+4$.
+    But the sums of squares are $8$ and $16$, respectively.
+    The squaring rewards a more even split.
+
+|> Section
+
+    *Postscript: a movable midpoint.*
+    Nothing depended on the particular number $2$.
+    Replacing the endpoints by $(-a,0)$ and $(a,0)$,
+    with $a>0$, gives
+
+    $$
+    d(P,A)^2+d(P,B)^2=2d(P,M)^2+2a^2.
+    $$
+
+    Since $d(A,B)=2a$, we have $2a^2=d(A,B)^2/2$.
+    Therefore, for any two distinct points $A$, $B$
+    and their midpoint $M$,
+
+    $$
+    d(P,A)^2+d(P,B)^2
+    =2d(P,M)^2+{d(A,B)^2\over2}.
+    $$
+
+    We can move and rotate the picture again, which
+    explains the “any”. If $P$, $A$, $B$ happen to form
+    a triangle, the segment $PM$ is called a _median_
+    of that triangle. So this also gives its length:
+
+    $$
+    d(P,M)^2={d(P,A)^2+d(P,B)^2\over2}-{d(A,B)^2\over4}.
+    $$
+
+    For example, if $PA=5$, $PB=7$ and $AB=8$, then
+
+    $$
+    PM^2={25+49\over2}-{64\over4}=37-16=21,
+    $$
+
+    and $PM=\sqrt{21}$. No right angle was promised
+    in this triangle. The right angles were back in
+    the coordinate calculation, quietly doing their job.

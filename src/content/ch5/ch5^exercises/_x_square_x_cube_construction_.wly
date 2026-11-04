@@ -26,7 +26,7 @@
         |> Image
             src=images/e5_x_square_x_cube_construction_3.svg
 
-        Now it suffices to apply one of the “powers of
+        Now apply one of the “powers of
         secant” constructions to obtain powers of $A$,
         for example either of:
 
@@ -72,8 +72,7 @@
         perpendicularly from a given line. 
         (In the order in which the construction unfolds,
         this perpendicular “originates” from its upper end,
-        which is a situation that we have not encountered
-        yet.)
+        a situation we have not encountered yet.)
         In this case, the procedure is to draw a circle,
         in orange below, whose center is the 
         starting point

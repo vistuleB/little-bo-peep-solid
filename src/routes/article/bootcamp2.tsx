@@ -22,6 +22,7 @@ export default function __Bootcamp2__() {
       pageNecessaryMargin={270}
       maxElementWidth={1200}
       id="_20_h.a.i_"
+      path="/article/bootcamp2"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
@@ -94,7 +95,7 @@ export default function __Bootcamp2__() {
           <i>
             base
           </i>
-          {" "} (of the power); the number at the top
+          ; the number at the top
           is called the {" "}
           <i>
             exponent
@@ -109,7 +110,7 @@ export default function __Bootcamp2__() {
         />
         <Pause />
         <OuterP>
-          The whole expression is read {" "}
+          The expression is read {" "}
           <Math>
             $\mathit&#123;10&#125;$
           </Math>
@@ -124,8 +125,7 @@ export default function __Bootcamp2__() {
             </Math>
             ,
           </NoBreak>
-          {" "} and the
-          general process of taking a power is called {" "}
+          {" "} and taking a power is called {" "}
           <i>
             exponentiation
           </i>
@@ -230,7 +230,7 @@ export default function __Bootcamp2__() {
           <ImageLeft
             src="/build-img/svgo-svg/DSem.svg"
             offsetY="-0.2em"
-            offsetX="4em"
+            offsetX=" 4em"
             atLeastAsWide={true}
             intrinsicWidth={200}
             intrinsicHeight={110}
@@ -250,8 +250,7 @@ export default function __Bootcamp2__() {
           <i>
             zero times
           </i>
-          ,
-          as per the exponent, which is zero) by the first definition, while
+          ) by the first definition, while
         </OuterP>
         <Pause />
         <MathBlock>
@@ -317,7 +316,7 @@ export default function __Bootcamp2__() {
             </Math>
             ,
           </NoBreak>
-          {" "} which gives an alternate means of computing {" "}
+          {" "} giving another way to compute {" "}
           <NoBreak>
             <Math>
               $10^&#123;-n&#125;$
@@ -327,12 +326,12 @@ export default function __Bootcamp2__() {
           {" "}
           Moreover, (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_2_h.a.i_"
+            href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
-          &#8288;) actually holds for
+          &#8288;) holds for
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -350,7 +349,7 @@ export default function __Bootcamp2__() {
           {" "} which is mildly important. In more
           detail, (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_2_h.a.i_"
+            href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
@@ -361,7 +360,7 @@ export default function __Bootcamp2__() {
           </Math>
           {" "} by inspection, and (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_2_h.a.i_"
+            href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
@@ -397,7 +396,7 @@ export default function __Bootcamp2__() {
             </Math>
             .
           </NoBreak>
-          {" "} (By which we mean: replacing {" "}
+          {" "} (Replacing {" "}
           <NoBreak>
             “
             <Math>
@@ -416,50 +415,45 @@ export default function __Bootcamp2__() {
           {" "}
           in (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_3_h.a.i_"
+            href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
           &#8288;) lands you right back on (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_3_h.a.i_"
+            href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
-          &#8288;), due to the fact
-          that {" "}
+          &#8288;), because {" "}
           <NoBreak>
             <Math>
               $-&#123;(-n)&#125; = n$
             </Math>
             .)
           </NoBreak>
-          {" "} (So, namely, if (&#8288;
+          {" "} (So if (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_3_h.a.i_"
+            href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
           </InChapterLink>
           &#8288;) holds for all
-          positive values of {" "}
-          <NoBreak>
-            <Math>
-              $\hspace&#123;0.05em&#125;n$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} then it holds
-          for all negative values of {" "}
+          positive {" "}
           <NoBreak>
             <Math>
               $n$
             </Math>
             ,
           </NoBreak>
-          {" "} as well.)
+          {" "} it holds for all negative {" "}
+          <Math>
+            $n$
+          </Math>
+          {" "} too.)
         </OuterP>
         <Pause />
         <OuterP>
@@ -498,7 +492,7 @@ export default function __Bootcamp2__() {
             $b$
           </Math>
           {" "} are reciprocal,
-          then these equations are satisfied...
+          then...
         </OuterP>
         <Pause />
         <MathBlock>
@@ -511,14 +505,14 @@ export default function __Bootcamp2__() {
           ...and any one of these equations implies the other two.
           Thus, either of (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_2_h.a.i_"
+            href="#_2_h.a.i_"
             class="in-chapter-link"
           >
             A
           </InChapterLink>
           &#8288;) and (&#8288;
           <InChapterLink
-            href="/article/bootcamp2#_3_h.a.i_"
+            href="#_3_h.a.i_"
             class="in-chapter-link"
           >
             AA
@@ -625,22 +619,7 @@ const Rest = () => {
             $0$
           </Math>
           {" "} twice”, but this
-          is undefined. Hence {" "}
-          <NoBreak>
-            <Math>
-              $0^&#123;-1&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $0^&#123;-2&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} etc, remain
-          undefined.
+          is undefined.
         </OuterP>
         <OuterP class="indent-10">
           Also (in case you're wondering) {" "}
@@ -723,12 +702,11 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          Note that mathematicians sometimes refer
-          to a power with an exponent of {" "}
+          Mathematicians sometimes call a power with exponent {" "}
           <Math>
             $0$
           </Math>
-          {" "} as an
+          {" "} an
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -777,8 +755,6 @@ const Rest = () => {
           <b>
             Additivity of exponents.
           </b>
-          {" "}
-          If you think about it,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -853,8 +829,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          and which is sometimes paraphrased by saying
-          that
+          sometimes paraphrased as
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -888,7 +863,6 @@ const Rest = () => {
             </Math>
             ”.
           </NoBreak>
-          {" "} (Or for some other base.)
         </OuterP>
       </Section>
     </>}
@@ -900,7 +874,7 @@ const Rest = () => {
             The third law of exponents.
           </b>
           {" "}
-          Also, if you think about it,
+          Also,
         </OuterP>
         <Pause />
         <MathBlock>
@@ -956,7 +930,7 @@ const Rest = () => {
           of exponents”.
         </OuterP>
         <OuterP class="indent-10">
-          On this subject, note that if one writes
+          If one writes
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1097,8 +1071,7 @@ const Rest = () => {
             </Math>
             ,
           </NoBreak>
-          {" "} due to the fact
-          that many of our ancestors chose to count in base
+          {" "} because many of our ancestors chose to count in base
           {" "}
           <NoBreak>
             <Math>
@@ -1262,9 +1235,6 @@ const Rest = () => {
           </tbody>
         </Table>
         <Pause />
-        <OuterP>
-          One can note that
-        </OuterP>
         <Pause />
         <CentralDisplayItalic>
           one million is a thousand thousand
@@ -1291,7 +1261,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          by additivity of exponents. Similarly, note that
+          by additivity of exponents. Similarly,
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1330,9 +1300,9 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          as can be seen, for example, by replacing “billion”
+          as seen by replacing “billion”
           with “thousand million” in the previous sentence and
-          then further replacing “thousand thousand” with “million”
+          then replacing “thousand thousand” with “million”
           in {" "}
           <i>
             that
@@ -1457,7 +1427,7 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  one trillionth
+                  one billionth
                 </i>
               </td>
             </tr>
@@ -1465,7 +1435,7 @@ const Rest = () => {
         </Table>
         <Pause />
         <OuterP>
-          In passing, note how the standard decimal expansion
+          Notice how the standard decimal expansion
           for {" "}
           <Math>
             $10^&#123;-1&#125;$
@@ -1507,8 +1477,7 @@ const Rest = () => {
         />
         <Pause />
         <OuterP>
-          ...and so on, which is a possible trick to check
-          one's work and avoid mistakes.
+          ...and so on, a trick for checking one's work.
         </OuterP>
         <OuterP class="indent-10">
           However, there also exist negative exponent
@@ -1533,7 +1502,7 @@ const Rest = () => {
             $10^&#123;-3&#125;$
           </Math>
           {" "} meters, i.e., one thousandth of
-          a meter, because “milli” happens to be the prefix
+          a meter, because “milli” is the prefix
           for {" "}
           <NoBreak>
             <Math>
@@ -1714,9 +1683,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          happen to be smaller than the diameter
-          of DNA, with DNA having a diameter of
-          about {" "}
+          are smaller than the diameter of DNA, about {" "}
           <NoBreak>
             <Math>
               $2.5$
@@ -1736,7 +1703,7 @@ const Rest = () => {
           </b>
           {" "}
           There exists a similar set of prefixes
-          for positve powers of {" "}
+          for positive powers of {" "}
           <NoBreak>
             <Math>
               $10$
@@ -1893,8 +1860,7 @@ const Rest = () => {
             </Math>
           </NoBreak>
           {" "} “tera” = trillion].
-          (In case you don't know, by the way,
-          a
+          (A
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1903,7 +1869,7 @@ const Rest = () => {
         <Pause />
         <OuterP>
           is a unit of computer memory
-          that is equal to {" "}
+          equal to {" "}
           <Math>
             $8$
           </Math>
@@ -1930,7 +1896,7 @@ const Rest = () => {
           {" "}
           Every positive number can be uniquely
           written as “ten to the power something”.
-          This “something” will heretofore be called
+          This “something” is called
           the {" "}
           <i>
             logarithm base {" "}
@@ -1939,7 +1905,7 @@ const Rest = () => {
             </Math>
           </i>
           {" "} of that
-          (positive) number.
+          number.
         </OuterP>
         <OuterP class="indent-10">
           For example,
@@ -1952,12 +1918,7 @@ const Rest = () => {
         </MathBlock>
         <Pause />
         <OuterP>
-          can be uniquely written as “ten to the power
-          something”. To wit, {" "}
-          <Math>
-            $100$
-          </Math>
-          {" "} is, of course,
+          is
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
@@ -1968,7 +1929,7 @@ const Rest = () => {
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          and this means that
+          so
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2133,7 +2094,7 @@ const Rest = () => {
             $$
             <ImageRight
               src="/build-img/svgo-svg/nMNN.svg"
-              offsetX="0em"
+              offsetX=" 0em"
               atLeastAsWide={true}
               intrinsicWidth={250}
               intrinsicHeight={150}
@@ -2202,7 +2163,6 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} one has
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2222,10 +2182,6 @@ const Rest = () => {
               \Large 2^&#123;-4&#125; = &#123;2^&#123;-3&#125;\over 2&#125; = &#123;0.125 \over 2&#125; = 0.0625
               $$
             </MathBlock>
-            <Pause />
-            <OuterP>
-              respectively.
-            </OuterP>
             <Pause />
             <SolutionNote>
               <OuterP>
@@ -2301,10 +2257,6 @@ const Rest = () => {
             </OuterP>
           </ExerciseStatement>
           <Solution>
-            <OuterP>
-              We have
-            </OuterP>
-            <Pause />
             <MathBlock>
               $$
               \Large &#123;1 \over 16&#125; = &#123;1 \over 2\cdot 2\cdot 2\cdot 2&#125; = 2^&#123;-4&#125; = 0.0625
@@ -2322,26 +2274,21 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              and that's all there is to it! (Or you could repeatedly divide {" "}
+              and that's all there is to it! (Or divide {" "}
               <Math>
                 $100$
               </Math>
               {" "} by {" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              until you reach {" "}
+              <Math>
+                $2$
+              </Math>
+              {" "} four times to get {" "}
               <NoBreak>
                 <Math>
                   $6.25$
                 </Math>
-                ,
+                .)
               </NoBreak>
-              {" "} after the fourth division.)
             </OuterP>
           </Solution>
         </Exercise>
@@ -2415,8 +2362,8 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              directly leads us to “hundred million”
-              without having to use exponents, since ten
+              gives “hundred million”
+              without exponents, since ten
               times ten is a hundred and since a thousand
               times a thousand is a million.
             </OuterP>
@@ -2437,8 +2384,7 @@ const Rest = () => {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              after rearrangement, which can be seen to
-              equal one trillion because “ten ten ten” is
+              after rearrangement, which equals one trillion because “ten ten ten” is
               a thousand.)
             </OuterP>
           </Solution>
@@ -2479,8 +2425,7 @@ const Rest = () => {
               millimeters in a kilometer.
             </OuterP>
             <OuterP class="indent-10">
-              From there, it automatically follows that
-              there are {" "}
+              So there are {" "}
               <Math>
                 $1/10^6 = 10^&#123;-6&#125;$
               </Math>
@@ -2488,7 +2433,7 @@ const Rest = () => {
               a millimeter.
             </OuterP>
             <OuterP class="indent-10">
-              (Or you can run the reverse reasoning:
+              (Or reason in reverse:
               There are {" "}
               <Math>
                 $10^&#123;-3&#125;$
@@ -2523,10 +2468,6 @@ const Rest = () => {
             </OuterP>
           </ExerciseStatement>
           <Solution>
-            <OuterP>
-              We have
-            </OuterP>
-            <Pause />
             <MathBlock>
               $$
               \Large 1\textrm&#123;mm&#125; = 10^&#123;-6&#125;\textrm&#123;km&#125;
@@ -2545,13 +2486,7 @@ const Rest = () => {
             <Pause />
             <OuterP>
               by direct substitution. (You can do that with
-              units.) The answer is therefore: {" "}
-              <NoBreak>
-                <Math>
-                  $10^&#123;18&#125;$
-                </Math>
-                .
-              </NoBreak>
+              units.)
             </OuterP>
           </Solution>
         </Exercise>
@@ -2749,10 +2684,6 @@ const Rest = () => {
             </MathBlock>
           </ExerciseStatement>
           <Solution>
-            <OuterP>
-              We have
-            </OuterP>
-            <Pause />
             <MathBlock>
               $$
               \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; = &#123;10^&#123;6-12+10&#125; \over 10^&#123;-4 -4&#125;&#125; = &#123;10^4 \over 10^&#123;-8&#125;&#125;
@@ -2778,16 +2709,6 @@ const Rest = () => {
               \Large 10^4\cdot 10^&#123;-(-8)&#125; = 10^4\cdot 10^8 = 10^&#123;4 + 8&#125; = 10^&#123;12&#125;
               $$
             </MathBlock>
-            <Pause />
-            <OuterP>
-              so the answer is {" "}
-              <NoBreak>
-                <Math>
-                  $10^&#123;12&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
           </Solution>
         </Exercise>
         <Exercise number={11}>
@@ -2817,14 +2738,13 @@ const Rest = () => {
               {" "} “millibits”
               (whatever those are, we can go along with
               the joke here) in one bit. Since there are
-              eight bits in a byte, and a million bytes
-              in a gigabyte, this means that there would
-              be
+              eight bits in a byte, and a billion bytes
+              in a gigabyte, there would be
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \Large 1000 \times 8 \times 10^6 = 8 \times 10^9
+              \Large 1000 \times 8 \times 10^9 = 8 \times 10^&#123;12&#125;
               $$
             </MathBlock>
             <Pause />
@@ -2833,8 +2753,8 @@ const Rest = () => {
               <Math>
                 $8$
               </Math>
-              {" "} billion “millibits” per gigabyte.
-              (But to reiterate, there is no such thing
+              {" "} trillion “millibits” per gigabyte.
+              (But there is no such thing
               as a “millibit”; a bit is a {" "}
               <i>
                 discrete
@@ -2895,8 +2815,7 @@ const Rest = () => {
                 </Math>
                 .)
               </NoBreak>
-              {" "} Can you elucidate
-              why it would be that
+              {" "} Can you explain why
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2906,14 +2825,10 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              by using some kind of algebra?
+              using algebra?
             </OuterP>
           </ExerciseStatement>
           <Solution>
-            <OuterP>
-              One has
-            </OuterP>
-            <Pause />
             <MathBlock>
               $$
               \Large &#123;100 \over 16&#125; = &#123;10^2 \over 4^2&#125; = \left(\!&#123;10\over 4&#125;\!\right)^&#123;\!\!2&#125; = \left(\!&#123;5\over 2&#125;\!\right)^&#123;\!\!2&#125;
@@ -2961,7 +2876,7 @@ const Rest = () => {
                 .
               </NoBreak>
               {" "} (You can take for granted any
-              identity that is stated in this {" "}
+              identity stated in this {" "}
               <del>
                 chapter
               </del>
@@ -2981,7 +2896,7 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              The point is that the second equality uses the identity
+              The second equality uses the identity
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2991,9 +2906,9 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              stated earlier in the chapter as (&#8288;
+              stated earlier as (&#8288;
               <InChapterLink
-                href="/article/bootcamp2#_2_h.a.i_"
+                href="#_2_h.a.i_"
                 class="in-chapter-link"
               >
                 A
@@ -3023,10 +2938,10 @@ const Rest = () => {
             />
             <Pause />
             <OuterP>
-              The first law can be recognized as “additivity of exponents”
+              The first law is “additivity of exponents”
               while the second law
-              is the above-mentioned generalization of this exercise's result.
-              (Nb: Concerning the next-to-last law, note that, {" "}
+              is the generalization of this exercise's result.
+              (For the next-to-last law, {" "}
               <i>
                 by definition
               </i>
@@ -3125,7 +3040,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We have (#1)
+              (#1)
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3266,7 +3181,7 @@ const Rest = () => {
               <Math>
                 $\rho$
               </Math>
-              {" "} are defined as below.
+              {" "} are defined below.
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3295,7 +3210,7 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Firstly we can rewrite {" "}
+              First, rewrite {" "}
               <NoBreak>
                 <Math>
                   $v$
@@ -3346,7 +3261,7 @@ const Rest = () => {
               </Math>
               {" "} (as in {" "}
               <InChapterLink
-                href="/article/bootcamp2#_17_h.a.i_"
+                href="#_17_h.a.i_"
                 class="in-chapter-link"
               >
                 Exercise 14
@@ -3434,14 +3349,6 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              (In the last line we just restated {" "}
-              <NoBreak>
-                <Math>
-                  $\rho$
-                </Math>
-                .)
-              </NoBreak>
-              {" "}
               Then {" "}
               <Math>
                 $v^aF^b\mu^c\rho$
@@ -3540,8 +3447,7 @@ const Rest = () => {
             </MathBlock>
             <Pause />
             <OuterP>
-              ...are satisfied! Adding the second and
-              third equation together, we find
+              ...are satisfied! Adding the second and third equations gives
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3551,7 +3457,7 @@ const Rest = () => {
               <ImageRight
                 src="/build-img/svgo-svg/bESG.svg"
                 offsetY="-0.5em"
-                offsetX="0.5em"
+                offsetX=" 0.5em"
                 atLeastAsWide={true}
                 intrinsicWidth={440}
                 intrinsicHeight={250}
@@ -3652,34 +3558,13 @@ const Rest = () => {
                 .
               </NoBreak>
               {" "}
-              (One can finally check that
-              setting {" "}
-              <NoBreak>
-                <Math>
-                  $a=0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <NoBreak>
-                <Math>
-                  $b = 1$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} {" "}
-              <Math>
-                $c=-2$
-              </Math>
-              {" "} satisfies that
-              third equation, {" "}
+              (These values also satisfy the third equation, {" "}
               <NoBreak>
                 <Math>
                   $-a-2b-c=0$
                 </Math>
-                ,
+                .)
               </NoBreak>
-              {" "} which it does.)
             </OuterP>
             <OuterP class="indent-10">
               In summary, the solution is {" "}
@@ -3740,8 +3625,7 @@ const Rest = () => {
                 </Math>
                 ,
               </NoBreak>
-              {" "} or which is to say, we have discovered
-              that
+              {" "} or simply
             </OuterP>
             <Pause />
             <MathBlock>

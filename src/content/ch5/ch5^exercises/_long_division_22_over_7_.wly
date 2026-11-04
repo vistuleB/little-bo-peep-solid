@@ -9,8 +9,7 @@
 
     |> Solution
 
-        The divisions, pursued up to the point where
-        remainders repeat, look as follows:
+        The divisions, continued until remainders repeat, look as follows:
 
         |> Image
             src=images/svg_ch5_ex_22_and_33_and_44_over_7_combined_longhands.svg

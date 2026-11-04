@@ -6,8 +6,7 @@
 
     |> Solution
 
-        This is true, as illustrated by the following
-        pair of lines:
+        True, as this pair of lines illustrates:
 
         |> Image
             src=images/c2_slope_two_and_minus_one_half.svg
@@ -23,8 +22,8 @@
             offset-x=-25%
             offset-y=47%
 
-        In more detail, the two triangles are related
-        by a $90^\circ$ rotation and so, likewise,
+        The two triangles are related
+        by a $90^\circ$ rotation and so
         are the lines defined by their hypotenuses!
 
         |> SolutionNote

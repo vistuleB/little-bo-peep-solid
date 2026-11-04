@@ -30,7 +30,7 @@
 
         as our starting point, since the graph of $\cos(2x)$
         seems more closely related to the graph of $\cos^2(x)$
-        than $\sin(2x)$ is, by virtue of alignment of the bumps:
+        than $\sin(2x)$ is, because the bumps align:
 
         |> Image
             src=images/e5_more_closely_related_followup_sol1.svg

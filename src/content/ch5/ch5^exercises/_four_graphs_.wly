@@ -48,14 +48,14 @@
         these functions must either be
         the top right or bottom left graphs, as the
         other two graphs weave in and out of negative territory;
-        given additionally that
+        given that
         $$
         \,\cos(0) = 1,
         $$
         $$
         \sin(0) = 0
         $$
-        we can further deduce that
+        we deduce that
         $$
         x \ra \sin^2 x
         $$

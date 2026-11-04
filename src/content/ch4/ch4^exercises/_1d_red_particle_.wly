@@ -31,8 +31,7 @@
             src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
             offset-x=10em
 
-        time to cross, because the maximum speed of the particle
-        inside of that interval is $1$. Similarly, the interval from
+        time to cross, because the particle’s maximum speed in that interval is $1$. Similarly, the interval from
 
         $$
         x = 0.25
@@ -54,8 +53,7 @@
         !!     src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
         !!     offset-x=10em
 
-        time to cross, because the maximum speed of the particle
-        inside of that interval is $0.5$.
+        time to cross, because the particle’s maximum speed in that interval is $0.5$.
         Again, the interval from
 
         $$
@@ -78,8 +76,7 @@
         !!     src=images/svg_ch4_one_particle_speed_equals_time_cloud.svg
         !!     offset-x=10em
 
-        time to cross, because the maximum speed of the particle
-        inside of that interval is $0.25$—etc—each interval
+        time to cross, because the particle’s maximum speed in that interval is $0.25$—etc—each interval
         takes at least $$0.5$$ units of time to cross, but there are infinitely
         many such intervals, so it takes infinitely much time to
         crawl back to $0$. (I.e., the particle never makes it to
@@ -108,8 +105,7 @@
 
             __geometric progression__
 
-            is a sequence of numbers in which each number
-            is a fixed multiple of the previous number.
+            is a sequence in which each number is a fixed multiple of the previous.
             For example,
 
             $$

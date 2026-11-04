@@ -25,11 +25,7 @@
 
         __the rate of change of the rate of change__
 
-        [a.k.a., second derivative] is the rate
-        of change  of the slope, and that will
-        be greatest at the first bend of the curve,
-        where the slope is changing at the fastest
-        rate:
+        [a.k.a., second derivative] is the rate of change of the slope, greatest at the first bend:
 
         |> Image
             src=images/svg_ch4_narrow_and_less_narrow_bends_curviest.svg

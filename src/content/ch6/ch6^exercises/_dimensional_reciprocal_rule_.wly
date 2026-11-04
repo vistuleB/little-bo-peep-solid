@@ -1,0 +1,71 @@
+|> Exercise
+    handle=_dimensional_reciprocal_rule_
+    Use dimensional analysis to
+    conjecture a formula for
+
+    $$
+    \large\left({1\over f}\right)'
+    $$
+
+    for $f : \rr \ra \rr$ differentiable. 
+    (The “building blocks” that appear in the formula
+    should be $f$, $f'$.)
+
+    |> Solution
+
+        For a generic signature $f : [\tA] \ra [\tB]$, we have
+
+        $$
+        \left({1\over f}\right)' : [\tA] \ra \left[{1\over\tA\tB}\right].
+        $$
+
+        Since $f'$ has output units $\tB/\tA$, dividing it by $f^2$
+        gives the desired signature:
+
+        $$
+        {f'\over f^2} : [\tA] \ra \left[{\tB/\tA\over\tB^2}\right]
+        = [\tA] \ra \left[{1\over\tA\tB}\right].
+        $$
+
+        This makes $f'/f^2$ a plausible conjecture.
+
+        However, we know from Exercise X that
+
+        $$
+        \left({1\over f}\right)'
+        $$
+
+        should have opposite sign to $f'$, whereas
+
+        $$
+        {f'\over f^2}
+        $$
+
+        does _not_ have opposite sign, since $f^2$ is
+        nonnegative. (Nb: When $f = 0$ neither $1/f$ nor
+        $(1/f)'$ 
+        nor $f'/f^2$
+        are defined, so those points are not our
+        concern.)
+        !! positive. (Or zero, in which case _neither_
+        !! $(1/f)'$ nor $f'/f^2$ are defined, which is
+        !! another “good sign” for our conjecture.) 
+        !! (The
+        !! only “bad sign” for our conjecture is being the
+        !! sign itself, right now!)
+
+        Our conjecture is “consistently wrong”—it has the wrong sign.
+        Negation leaves its signature unchanged (>>table_1_2), giving
+
+        |> Boxed
+            $$
+            \left({1\over f}\right)' = -{f'\over f^2}
+            $$
+
+        as an “educated guess” for a formula for $({1\over f})'$.
+
+        |> SolutionNote
+            The formula is correct. As it takes its place in the
+            mathematical pantheon, what name should it have?
+            Just as we have the _sum rule_ and _product rule_, this
+            is the _reciprocal rule_. (!)

@@ -18,8 +18,7 @@
         |> Image
             src=images/svg_ch4_ex_position_by_time_find_the_order_answer.svg
 
-        Referring to this rearranged sequence,
-        the first graph, for example,
+        In this sequence, the first graph
         has a slope that starts at $\sim\!-1$ and
         ends at $\sim\!1$, while those are the
         values at which 

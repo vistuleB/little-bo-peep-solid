@@ -19,19 +19,16 @@
         |> Image
             src=images/64.svg
 
-        On each interval, the velocity is rate of
+        On each interval, the velocity is the rate of
         change of the height, i.e., the _slope_ of
-        the height. For example, the rate of change
-        of the height is
+        the height graph. For example, it is
 
         $$
         {1\te{m} \over 1\te{s}} = 1\te{m}/\te{s}
         $$
 
         between $-4$s and $-3$s, where the mosquito
-        goes up by one meter during a one second
-        period, so the vertical velocity is 1m$/$s
-        for that time interval, etc.
+        goes up by one meter in one second.
 
         |> Pause
 
@@ -42,8 +39,7 @@
         |> Image
             src=images/svg_empty_circle_alone.svg
 
-        indicates a “missing” value. Specifically, in
-        our case, the vertical velocity is _undefined_
+        indicates a “missing” value. Here, the vertical velocity is _undefined_
         wherever the graph of the height has a sharp
         corner. (Because the slope of the graph is not
         well-defined at such corners.)
@@ -51,12 +47,12 @@
         |> Pause
 
         _Note 2._
-        For the time interval from $2$s to $2.5$s, the
+        From $2$s to $2.5$s, the
         slope is
 
         $$ {-2\rt{0.05}\te{m} \over 0.5\rt{0.05}\te{s}} = -\rt{0.07}4\rt{0.1}\te{m}/\te{s} $$
 
-        and similarly for the time interval from
+        and similarly from
         $2.5$s to $3$s the slope is
 
         $$ {2\rt{0.05}\te{m} \over 0.5\rt{0.05}\te{s}} = 4\rt{0.1}\te{m}/\te{s} $$

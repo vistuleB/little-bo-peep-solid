@@ -12,11 +12,10 @@
         $10^3 \times 10^3 = 10^6$
         millimeters in a kilometer.
 
-        From there, it automatically follows that
-        there are $1/10^6 = 10^{-6}$ kilometers in
+        So there are $1/10^6 = 10^{-6}$ kilometers in
         a millimeter.
 
-        (Or you can run the reverse reasoning:
+        (Or reason in reverse:
         There are $10^{-3}$ kilometers in a meter,
         and $10^{-3}$ meters in a millimeter,
         so $10^{-3} \times 10^{-3} = 10^{-6}$

@@ -86,9 +86,7 @@
         $x$), instead of adding on (or “multiplying
         on”) to the current value of $y$.
 
-        To understand how a preprocessing step
-        affects the shape of a graph, note that, more
-        generally, a graph of the form
+        More generally, a graph of the form
         $$
         {y = f(x + a)}
         $$
@@ -113,8 +111,8 @@
 
         __leftward__
 
-        translate by $a$ units of $y = f(x)$
-        and, as a consequence, the first step effects a
+        translate by $a$ units of $y = f(x)$,
+        so the first step effects a
 
         __leftward translation by ${B\over 2A}$__
 
@@ -141,9 +139,7 @@
             You could do the vertical translation
             before the horizontal translation,
             geometrically it comes out the same.
-            That order of geometric transformations
-            would correspond to the following sequence
-            of algebraic transformations:
+            That order corresponds to these algebraic transformations:
             $$
             {y = x^2}
             $$

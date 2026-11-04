@@ -1,0 +1,28 @@
+|> Exercise
+    handle=_guess_reciprocal_name_
+    The formula given at the end of the solution
+    to Exercise >>_dimensional_reciprocal_rule_ happens to be the true,
+    “correct” formula for $({1\over f})'$, for a differentiable
+    function $f$. What _name_ do
+    we expect this formula to have, as it takes its place
+    in the mathematical pantheon?
+
+    |> Solution
+
+        Just as
+
+        $$
+        (f + g)' = f' + g'
+        $$
+        $$
+        (fg)' = f'g + fg'
+        $$
+
+        are known as the _sum rule_ and _product rule_,
+        so is
+
+        $$
+        \left({1\over f}\right)' = -{f'\over f^2}
+        $$
+
+        also a “rule”, the _reciprocal rule_. (!)

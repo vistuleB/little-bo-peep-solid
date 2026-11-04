@@ -10,25 +10,23 @@
 
     |> Solution
 
-        We would like to argue the correctness of
-        the following two-step process (divide the
+        Consider this two-step process (divide the
         input by $2$, apply the function from Exercise
         >>_floor_introduction_):
 
         |> Image
             src=images/svg_ch3_ex_factory_roof_stretched_solution.svg
 
-        Indeed, the two graphs featured above differ
+        Indeed, the two graphs differ
         only by a horizontal dilation; dividing the
         input by $2$ “undoes” the dilation, at which
         point it suffices to apply the function pictured
-        in the second graph; having declared our method
-        correct, the answer is thus...
+        in the second graph. The answer is...
         $$
         {x/2 - \lfloor x/2 \rfloor}
         $$
         ...as obtained by substituting “$x/2$” (the halved
-        input) for of “$x$” in “$\,x - \lfloor x \rfloor$”
+        input) for “$x$” in “$\,x - \lfloor x \rfloor$”
         (the formula for the function from Exercise >>_floor_introduction_).
 
         |> SolutionNote
@@ -54,10 +52,10 @@
                 width=1400px
 
             The above features the
-            
+
             __composition__
-            
-            of functions $f$ and $g$; in more detail, if we 
+
+            of functions $f$ and $g$; in more detail, if we
             switch the “input tube” and “output tube” sides of
             a function...
 
@@ -65,7 +63,7 @@
                 src=images/svg_ch3_f_box_inverted.svg
 
             ...(compared to the drawing at the top of the
-            chapter), then the composition of 
+            chapter), then the composition of
             $f$ and $g$, written
 
             $$
@@ -79,14 +77,14 @@
             !! (mathematicians have to invent a notation for
             !! everything—the little circle “$\circ$” is called
             !! the _composition operator_,
-            !! by the way) 
-            is the function that you get by
+            !! by the way)
+            is the function obtained by
             gluing $g$'s box to the right of $\f$'s box, like so:
 
             |> Image
                 src=images/svg_ch3_ex_f_box_g_box.svg
 
-            In other words, $g$'s output is passed on to $-f$
+            In other words, $g$'s output is passed on to $f$
             for further processing. (A certain movie called
             “The Human Centipede” comes to mind.)
 
@@ -99,8 +97,7 @@
             above assemblage of “$g$ first, $f$ second”.)
 
         |> SolutionNote
-            A formal definition of “$f \circ g$” can be given
-            as
+            Formally,
 
             |> Boxed
                 $$
@@ -114,7 +111,7 @@
                 f \circ g = (x \ra f(g(x)))
                 $$
 
-            where one can also clarify that
+            with domain
 
             |> Boxed
                 $$

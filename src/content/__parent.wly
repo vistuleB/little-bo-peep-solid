@@ -2,6 +2,7 @@
     |> ChapterSelection
         >>sets         >>_bt2_start_  >>_bt2_exercises_
         >>powers       >>_bt1_start_
+        !! >>distance     >>_bt3_start_
         !! >>playground
         >>refreshers   >>_ch1_start_  >>_ch1_exercises_
         >>slopes       >>_ch2_start_  >>_ch2_exercises_
@@ -13,8 +14,9 @@
 
     |> In
         chapter=>>playground
-        >>grid-component
-        >>mathblock-component
+        >>_solution_math_test_
+        !! >>grid-component
+        !! >>mathblock-component
         >>side-image-component
 
     |> In
@@ -169,20 +171,21 @@
 
     |> In
         chapter=>>chain
-        !! >>_dimensional_f_f_
+        >>_dimensional_f_f_
+        >>_dimensional_f_g_f_
         >>_dimensional_big_composition_
         >>_dimensional_z_combinations_
-        !! >>_dimensional_f_f_f_
-        >>_dimensional_f_g_f_
-        !! >>_dimensional_cos_f_
+        >>_possible_to_form_signature_
         >>_lorentz_factor_dimensionality_
         >>_physicist_choose_to_write_
         >>_dimensional_analysis_of_product_rule_
-        >>_hello_world_
-        >>_guess_reciprocal_name_
+        >>_dimensional_reciprocal_rule_
+        !! >>_guess_reciprocal_name_ — folded into the preceding solution note
         >>_dimensional_omega_
         >>_dimensionality_t_over_v_
-        >>_biz_
+        >>_dimensionality_xv_over_c^2_
+        >>_dimensional_inverse_rule_
+        >>_dimensional_f^-1_g_f_
 
 
         !! ch5 exercise 'cycles':
@@ -230,7 +233,6 @@
         !!    - sum formulas for tan & cot
 
     |> In
-        content=selection
         chapter=>>exercise-graveyard
 
         !! unused exercises from Chapter 3:
@@ -289,42 +291,27 @@
         chapter=>>classical-circle-theorems
 
     |> HeaderBlob
-        !! TEST 1 : 'Little Bo Peep' SVG
-        !! |> img
-        !!     style=padding-top:0.65em;padding-bottom:0.4em;
-        !!     src=public/header-blob.svg
-
-        !! TEST 2: two vertically stacked 'Little Bo Peep' SVGs
-        !! |> img
-        !!     style=padding-block:1em;
-        !!     src=public/header-blob.svg
-        !! |> img
-        !!     style=padding-block:1em;
-        !!     src=public/header-blob.svg
-
-        !! TEST 3: one <p> w/ many <br>
-        !! |> p
-        !!     Little Bo Peep
-        !!     |> br 
-        !!     Little Bo Peep
-        !!     |> br
-        !!     Little Bo Peep
-        !!     |> br
-        !!     Little Bo Peep
-
-        !! TEST 4: several <p>
-        !! |> p
-        !!     Little Bo Peep
-        !! |> p 
-        !!     Little Bo Peep
-        !! |> p
-        !!     Little Bo Peep
-        !! |> p
-        !!     Little Bo Peep
-
-        !! TEST 5: Loading Image
-        !! |> div
-        !!     style=height:54px;width:200px;background-color:#333
         |> img
-            src=non-build-img/loading_screen.png
-            !! src=non-build-img/K12.svg
+            src=non-build-img/toilet_v78.png
+            alt=toilet scroll calculus
+
+    !! Previous text-only HeaderBlob (Allura)
+    !! |> HeaderBlob
+    !!     |> div
+    !!         class=header-wordmark
+    !!
+    !!         |> span
+    !!             toilet
+    !!         |> span
+    !!             scroll
+    !!         |> span
+    !!             calculus
+
+    |> LeftHeaderBlob
+        margin-right=-5.5px
+        desktop-left-margin=15px
+        mobile-left-margin=-2px
+
+        |> img
+            src=non-build-img/toilet-watercolor-v2-cropped.png
+            alt=Watercolor toilet

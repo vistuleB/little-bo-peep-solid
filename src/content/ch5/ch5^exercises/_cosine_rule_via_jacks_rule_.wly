@@ -62,8 +62,7 @@
             src=images/_e5_cosine_rule_via_jacks_JACK_logo_.svg
             style=transform:translate(0,-3px)
 
-        Next, for the algebraic manipulation of the equations,
-        start by multiplying each equation in$\rt{0.1}$ Jack's rule
+        Next, multiply each equation in$\rt{0.1}$ Jack's rule
         by its own right-hand side, obtaining...
 
         $$

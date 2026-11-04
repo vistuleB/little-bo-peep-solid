@@ -27,8 +27,7 @@
             src=images/how_many_bumps_derivative_v2.svg
 
         But nothing prevents the graph from
-        having small wobbles near the zones of maximum or
-        minimum slope out of the range of our eyesight,
+        having small wobbles near maximum or minimum slope, too small to see,
         meaning that each bump of the derivative contains
         micro-bumps, like small ripples atop a big wave!
         (Still, “four” is a good bet to achieve full marks.)

@@ -18,7 +18,5 @@
         |> Image
             src=images/svg_ch4_one_over_x.svg
 
-        As one can see, the slope is very negative
-        near $x = 0$, on either side. So the answer is:
-        “very large negative”.
+        The slope is very negative near $x = 0$, on either side.
 

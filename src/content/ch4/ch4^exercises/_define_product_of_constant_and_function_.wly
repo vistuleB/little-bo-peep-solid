@@ -23,8 +23,7 @@
     f \circ g = (x \ra f(g(x)))
     $$
 
-    and so on, what is the similar, most logical
-    definition for
+    what is the corresponding definition for
 
     $$
     cf
@@ -40,14 +39,9 @@
         cf = (x \ra cf(x))
         $$
 
-        where the product “$cf(x)$” is an ordinary
-        multiplication between two real numbers,
-        because $c$ is a real number and $f(x)$ is
-        a real number! (In this way, the product of
+        where the product “$cf(x)$” is ordinary multiplication of the real numbers $c$ and $f(x)$! (In this way, the product of
         a function by a real number “bootstraps”
-        off of the ordinary product of real numbers—this
-        is already similar to what happens for the
-        definition...
+        off of the ordinary product of real numbers—as in the definition...
 
         $$
         fg = (x \ra f(x)g(x))

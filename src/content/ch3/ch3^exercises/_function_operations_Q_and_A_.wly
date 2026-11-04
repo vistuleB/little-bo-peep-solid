@@ -37,7 +37,7 @@
     instead of their _composition_, namely.)
 
     Given these definitions, which of the following
-    equalities hold, in general for all functions $f$,
+    equalities hold for all functions $f$,
     $g$ and $h$?
     $$f \circ (g + h) = (x \ra f(g(x)) + f(h(x)))$$
     $$f \circ (g + h) = (x \ra f(g(x) + h(x)))$$
@@ -47,7 +47,7 @@
     |> Solution
 
         The first equality is false because the
-        right-hand side is actually
+        right-hand side is
         $$
         (f \circ g) + (f \circ h)
         $$

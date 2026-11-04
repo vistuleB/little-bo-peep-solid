@@ -11,8 +11,7 @@
 
     The velocity of each particle is set to
     the position of the next particle clockwise
-    around the circle, with this relationship
-    maintained at all points in time.
+    around the circle, with this relationship maintained at all times.
     If the configuration above shows time
     $t = 0$, how will the positions of the
     particles evolve? Discuss both positive and
@@ -111,10 +110,7 @@
 
         In this case the white particles will
         rotate at unit speed around their circle of
-        radius $1$ centered at the origin, just like
-        the particles discussed in the solution to
-        Exercise >>_four_particles_, that obey a similar set of
-        constraints
+        radius $1$ centered at the origin, as in Exercise >>_four_particles_
         (albeit with a different set of colors).
 
         The black particles, for their part,
@@ -416,13 +412,7 @@
             $_y$
 
         ...and see if these definitions satisfy the constraints
-        of the problem! (We momentarily have two different
-        purple particles: the one from the problem statement,
-        and the one that we have just defined; but that's ok,
-        as long as we are aware of this small semantic
-        transgression, it is not such a big deal,
-        and we shall soon prove that these two
-        particles are one and the same.)
+        of the problem! (We momentarily have two purple particles: the original and the newly defined one. We shall prove they are the same.)
         For starters...
 
         |> CentralDisplay
@@ -967,52 +957,9 @@
             |> InlineImage
                 class=ch4_inline_blackwhite_particles
                 src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-        \ as they appear in the problem statement! I.e.,
-        our newly-defined particles 
-        |> NoBreak
-            |> InlineImage
-                class=ch4_inline_blackwhite_particles
-                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
-            ,
-        \ 
-        |> NoBreak
-            |> InlineImage
-                class=ch4_inline_blackwhite_particles
-                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
-            ,
-        \ 
-        |> InlineImage
-            class=ch4_inline_blackwhite_particles
-            src=images/svg_ch4_circle_at_2_4_p3_inline.svg
-        \ and 
-        |> InlineImage
-            class=ch4_inline_blackwhite_particles
-            src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-        \ are in the desired place at $t = 0$!
+        \ as they appear in the problem statement!
 
-        In other words, the proposed definitions of 
-        |> NoBreak
-            |> InlineImage
-                class=ch4_inline_blackwhite_particles
-                src=images/svg_ch4_circle_at_2_4_p1_inline.svg
-            ,
-        \ 
-        |> NoBreak
-            |> InlineImage
-                class=ch4_inline_blackwhite_particles
-                src=images/svg_ch4_circle_at_2_4_p2_inline.svg
-            ,
-        \ 
-        |> InlineImage
-            class=ch4_inline_blackwhite_particles
-            src=images/svg_ch4_circle_at_2_4_p3_inline.svg
-        \ and 
-        |> InlineImage
-            class=ch4_inline_blackwhite_particles
-            src=images/svg_ch4_circle_at_2_4_p4_inline.svg
-        \ “work” in the sense of satisfying all the conditions
-        of the problem statement, and are, indeed, the
-        solution we seek.
+        The proposed definitions satisfy all the conditions of the problem.
 
         Qualitatively, this implies that the particles
         can be understood as four particles rotating at
@@ -1023,9 +970,7 @@
         at constant distance from one another for all $t$,
         whether that seems intuitive or not.
 
-        Concretely,
-        the particle trajectories
-        end up like so, locally around $t = 0$:
+        The trajectories near $t = 0$ look like so:
 
         |> Image
             src=images/svg_ch4_circle_at_2_4_solution_curves.svg
@@ -1051,9 +996,7 @@
 
         |> SolutionNote
 
-            As half-mentioned in
-            the solution to Exercise >>_four_particles_,
-            but might be worth emphasizing,
+            As half-mentioned in Exercise >>_four_particles_,
 
             __speed__
 

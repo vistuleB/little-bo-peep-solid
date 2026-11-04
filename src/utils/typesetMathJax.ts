@@ -1,10 +1,44 @@
 type MathJaxWindow = Window & {
+  __LBP_MATHJAX_SETUP_LOADED__?: boolean;
+  __LBP_MATHJAX_READY__?: boolean;
   MathJax?: {
+    startup?: {
+      promise?: Promise<unknown>;
+    };
     typesetPromise?: (elements: HTMLElement[]) => Promise<unknown>;
   };
 };
 
+const MATHJAX_READY_TIMEOUT_MS = 10000;
+const MATHJAX_READY_POLL_MS = 50;
+
 let typesetQueue: Promise<void> = Promise.resolve();
+
+const wait = (ms: number) =>
+  new Promise<void>((resolve) => window.setTimeout(resolve, ms));
+
+const waitForMathJax = async () => {
+  const startedAt = Date.now();
+  const mathJaxWindow = window as MathJaxWindow;
+
+  while (Date.now() - startedAt < MATHJAX_READY_TIMEOUT_MS) {
+    const mathJax = mathJaxWindow.MathJax;
+    if (mathJaxWindow.__LBP_MATHJAX_SETUP_LOADED__ && mathJax?.typesetPromise) {
+      if (mathJax.startup?.promise && !mathJaxWindow.__LBP_MATHJAX_READY__) {
+        try {
+          await mathJax.startup.promise;
+        } catch (error) {
+          console.error("MathJax startup failed", error);
+          return mathJax;
+        }
+      }
+      return mathJax;
+    }
+    await wait(MATHJAX_READY_POLL_MS);
+  }
+
+  return mathJaxWindow.MathJax;
+};
 
 const typesetMathJax = async (
   elements: Array<HTMLElement | null | undefined>,
@@ -17,7 +51,7 @@ const typesetMathJax = async (
   if (requestedElements.length === 0) return false;
 
   const run = async () => {
-    const mathJax = (window as MathJaxWindow).MathJax;
+    const mathJax = await waitForMathJax();
     const connectedElements = requestedElements.filter(
       (element) => element.isConnected,
     );

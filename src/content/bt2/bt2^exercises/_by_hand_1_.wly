@@ -4,7 +4,7 @@
     Compute $2^{-2}$, $2^{-3}$ and $2^{-4}$ by hand.
 
     |> Solution
-        Since $2^{-1} = 1/2 = 0.5$, one has
+        Since $2^{-1} = 1/2 = 0.5$,
         $$
         \Large 2^{-2} = {2^{-1}\over 2} = {0.5 \over 2} = 0.25
         $$
@@ -14,7 +14,6 @@
         $$
         \Large 2^{-4} = {2^{-3}\over 2} = {0.125 \over 2} = 0.0625
         $$
-        respectively.
 
         |> SolutionNote
 

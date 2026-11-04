@@ -27,9 +27,7 @@
         |> StarDivider
 
         |> SolutionNote
-            If you zoom in
-            a little bit
-            you can actually see
+            If you zoom in a little you can see
             “$100\%$”,
             “$20\%$”
             written in fine print:

@@ -1,8 +1,7 @@
 |> Exercise
     handle=_what_seq_AB_C_
 
-    What sequence of geometric transformations
-    of length no more than 3 maps
+    What sequence of at most three geometric transformations maps
     $$
     y = x^2
     $$
@@ -40,11 +39,8 @@
         A\left[\Big(x + {B \over 2A}\Big)^2 - {B^2 - 4AC\over 4A^2}\right]
         $$
         by putting things on a common denominator.
-        (We have endeavored to keep the minus sign
-        out front of the common denominator fraction
-        in order to maintain the most similarity with
-        the term “$-{B^2\over 4A}$” of Exercise >>_what_seq_AB_,
-        that also has a minus sign out front.)
+        (We keep the minus sign out front to match
+        Exercise >>_what_seq_AB_.)
 
         By direct analogy with Exercise >>_what_seq_AB_, the three
         transformations are thus...

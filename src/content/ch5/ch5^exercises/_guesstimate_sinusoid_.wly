@@ -100,8 +100,7 @@
         aquamarine graph—the “slowing down” is what
         $B$ is for.)
 
-        To know how much $B$ must be, we must measure
-        the cycle length (it is, admittedly, hard to
+        To find $B$, we measure the cycle length (it is, admittedly, hard to
         accurately determine the position of the top
         of each large-scale bump, but we do our best by
         basing ourselves off of what appear to be identical

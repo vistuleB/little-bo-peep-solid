@@ -2,17 +2,14 @@
     handle=_composition_order_2_
 
     Same question as Exercise >>_composition_order_1_, but for
-    “$f \circ (g \circ h)$” instead of
-    “$(f \circ g) \circ h$”.
+    “$(f \circ g) \circ h$” instead of
+    “$f \circ (g \circ h)$”.
 
     |> Solution
 
-        We will again evaluate the “outer”
-        composition operator first and the “inner”
-        composition operator second, where the “outer”
-        composition operator is the one that is fewer
-        pairs of parentheses away from the outside
-        world:
+        We again evaluate the “outer” composition operator
+        first, then the “inner” one. The outer operator
+        is fewer pairs of parentheses away from the outside world:
 
         |> Image
             src=images/svg_inner_outer_1_1em.svg
@@ -69,7 +66,7 @@
                 f(g(h(x)))
                 $$
 
-            actually implies that
+            implies that
 
             |> div
                 style=font-size:1.1em;margin:0.8em 0em;
@@ -87,9 +84,7 @@
                 (f \circ g) \circ h
                 $$
 
-            are the same function; this function is namely
-            the function that maps $x$ to $f(g(h(x)))$ for
-            all $x$ (or
+            are the same function: it maps $x$ to $f(g(h(x)))$ (or
 
             |> div
                 style=font-size:1.1em;margin:0.8em 0em;
@@ -101,7 +96,7 @@
             in lambda notation).
 
         |> SolutionNote
-        
+
             Because of this, we can write
 
             |> div
@@ -111,8 +106,7 @@
                 f \circ g \circ h
                 $$
 
-            without any parentheses. (The point is: either
-            way you parenthesize it you obtain the same
+            without any parentheses. (Either way you parenthesize it you obtain the same
             function, so why bother?)
 
         |> SolutionNote
@@ -165,9 +159,7 @@
 
         |> SolutionNote
 
-            One of the best ways to explain _&_ understand
-            the associativity of function composition
-            uses this picture:
+            The associativity of function composition can be explained via this figure:
 
             |> Image
                 width=550px
@@ -253,41 +245,40 @@
             to the parenthetization “$f \circ (g \circ h)$”
             while the second corresponds to the
             parenthetization “$(f \circ g) \circ h$”.
-            Intuitively, the reason they come out the
-            same (in “step 6”, bottom left) is because
-            each final arrow in the last diagram comes
+            Intuitively, they come out the same
+            (in “step 6”, bottom left) because
+            each final arrow comes
             from a path-of-arrows in the original
             diagram, and the order in which the
             waypoints along a path are “straightened”
             (or “collapsed”) does not affect the origin
             or destination of the final arrow.
 
-        |> SolutionNote
+        !! |> SolutionNote
 
-            The last series of diagrams might leave one
-            with the impression that the composition of
-            two or more functions can be “precomputed”
-            by looking ahead along the path of yellow arrows.
-            Just so you know: computers do not generically
-            do this. Indeed, computers are not given
-            functions as tables of input-output values to
-            know by heart but rather as “recipes” (synonyms:
-            algorithms, code, programs) that allow them
-            to compute an output for any given input.
-            Moreover, there is no general way of flattening
-            two recipes into a single, shorter one—when
-            composing two functions the computer has, in
-            general, no choice but to diligently apply
-            each recipe in order—the first function first,
-            the second function second.
+        !!     The last series of diagrams might leave one
+        !!     with the impression that the composition of
+        !!     two or more functions can be “precomputed”
+        !!     by looking ahead along the path of yellow arrows.
+        !!     Just so you know: computers do not generically
+        !!     do this. Indeed, computers are not given
+        !!     functions as tables of input-output values to
+        !!     know by heart but rather as “recipes” (synonyms:
+        !!     algorithms, code, programs) that allow them
+        !!     to compute an output for any given input.
+        !!     Moreover, there is no general way of flattening
+        !!     two recipes into a single, shorter one—when
+        !!     composing two functions the computer has, in
+        !!     general, no choice but to diligently apply
+        !!     each recipe in order.
 
         |> SolutionNote
             handle=_function_equality_note_
 
-            We have taken for granted the fact that two
+            We have taken for granted that two
             functions $f$ and $g$ are “equal” if and only
-            if they produce the same outupt for every
-            input but this is a actually subtle thing
+            if they produce the same output for every
+            input but this is actually a subtle thing
             that has to do with how functions are defined
             “under the hood”. Specifically, mathematicians
             view functions as 

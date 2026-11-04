@@ -14,7 +14,7 @@ function resolveMathJAXEnv(): string {
       return "https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js";
 
     case "4-false":
-      return "https://cdn.jsdelivr.net/npm/mathjax@4/tex-svg.js";
+      return "https://cdn.jsdelivr.net/npm/mathjax@4.1.3/tex-svg.js";
 
     default:
       console.warn("Cannot parse MATHJAX related env");
@@ -26,6 +26,12 @@ function resolveMathJAXEnv(): string {
   }
 }
 
+function resolvePreviewImageURL(): string {
+  const publicURL = process.env.PUBLIC_URL?.replace(/\/$/, "");
+  const path = "/images/lbp_preview.png";
+  return publicURL ? `${publicURL}${path}` : path;
+}
+
 export default createHandler(() => (
   <StartServer
     document={({ assets, children, scripts }) => (
@@ -33,40 +39,57 @@ export default createHandler(() => (
         <head>
           <meta charset="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="description"
+            content="Toilet Scroll Calculus, an interactive calculus textbook."
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Toilet Scroll Calculus" />
+          <meta
+            property="og:description"
+            content="An interactive calculus textbook."
+          />
+          <meta property="og:image" content={resolvePreviewImageURL()} />
+          <meta name="twitter:card" content="summary_large_image" />
           {
             import.meta.env.VITE_ENV === "LOCAL" ? (
               <>
-                <link rel="icon" href="/favicon-local.svg" />
+                <link
+                  rel="icon"
+                  type="image/png"
+                  sizes="256x256"
+                  href="/favicon-tsc-local-v1-256.png"
+                />
                 <link
                   rel="apple-touch-icon"
                   sizes="180x180"
-                  href="/apple-touch-icon-local.png"
+                  href="/favicon-tsc-local-v1-180.png"
                 />
                 <link
                   rel="apple-touch-startup-image"
-                  href="/apple-touch-icon-local.png"
+                  href="/favicon-tsc-local-v1-180.png"
                 />
               </>
             ) : (
               <>
-                <link rel="icon" href="/favicon-dev.ico" />
+                <link
+                  rel="icon"
+                  type="image/png"
+                  sizes="256x256"
+                  href="/favicon-tsc-remote-v1-256.png"
+                />
                 <link
                   rel="apple-touch-icon"
                   sizes="180x180"
-                  href="/apple-touch-icon-dev.png"
+                  href="/favicon-tsc-remote-v1-180.png"
                 />
                 <link
                   rel="apple-touch-startup-image"
-                  href="/apple-touch-icon-dev.png"
-                />
-                <link
-                  rel="mask-icon"
-                  href="/safari-pinned-tab-dev.svg"
-                  color="#5bbad5"
+                  href="/favicon-tsc-remote-v1-180.png"
                 />
                 <link
                   rel="apple-touch-icon-precomposed"
-                  href="/apple-touch-icon-dev.png"
+                  href="/favicon-tsc-remote-v1-180.png"
                 />
                 <script
                   defer
@@ -100,23 +123,19 @@ export default createHandler(() => (
             // )
           }
 
-          <meta
-            name="viewport"
-            content="width=device-width,initial-scale=1.0,minimum-scale=1"
-          />
           <meta name="format-detection" content="telephone=no" />
           <script
             innerHTML={`window.env = { VITE_ENV: "${import.meta.env.VITE_ENV}" };`}
           />
           <script src="/extras.js" defer={true} />
-          <script src="/mathjax_setup.js" defer={true} />
+          <script src="/mathjax_setup.js" />
           <script
             type="text/javascript"
             src={resolveMathJAXEnv()}
             defer={true}
           />
 
-          <title>Little Bo Peep</title>
+          <title>Toilet Scroll Calculus</title>
 
           {assets}
         </head>

@@ -1,3 +1,5 @@
+window.__LBP_MATHJAX_SETUP_LOADED__ = false;
+
 window.MathJax = {
   svg: {
     mtextInheritFont: true,
@@ -69,6 +71,12 @@ window.MathJax = {
       tD: ["\\text{D}"],
       tE: ["\\text{E}"],
       tF: ["\\text{F}"],
+      A: ["\\text{A}"],
+      B: ["\\text{B}"],
+      C: ["\\text{C}"],
+      D: ["\\text{D}"],
+      E: ["\\text{E}"],
+      F: ["\\text{F}"],
       s: ["\\text{s}"],
       m: ["\\text{m}"],
       Rad: ["\\text{Rad}"],
@@ -79,6 +87,7 @@ window.MathJax = {
       uB: ["[\\text{B}]"],
       uC: ["[\\text{C}]"],
       uD: ["[\\text{D}]"],
+      pounds: ["\\rt{0.1}\\text{£}\\rt{0.1}"],
     }, // end Macros
   },
   options: {
@@ -88,6 +97,7 @@ window.MathJax = {
     ready: () => {
       MathJax.startup.defaultReady();
       MathJax.startup.promise.then(() => {
+        window.__LBP_MATHJAX_READY__ = true;
         // document.querySelectorAll(".hidden-on-startup").forEach((elem) => {
         //   elem.classList.remove("hidden-on-startup");
         //   elem.classList.add("animate-appear");
@@ -96,6 +106,8 @@ window.MathJax = {
     },
   },
 };
+
+window.__LBP_MATHJAX_SETUP_LOADED__ = true;
 
 // document.getElementsByTagName("body").item(0).style.opacity = 0;
 // MathJax.Hub.Register.StartupHook("End", function () {

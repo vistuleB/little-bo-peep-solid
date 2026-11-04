@@ -38,7 +38,7 @@
         |> Image
             src=images/e5_cosx_plus_sinx_as_geometric_cos_3.svg
 
-        ...and then later multiply by $\sqrt{2}$, to recover the
+        ...and then multiply by $\sqrt{2}$, to recover the
         original “scale” of the horizontal ruler. However, the
         value on the diagonal ruler is
 

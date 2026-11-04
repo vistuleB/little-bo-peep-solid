@@ -115,10 +115,7 @@ const useCheckedSavedScroll = () => {
   const isCurrentSwipeTopArrival = () =>
     swipeArrivalPreparation(store, routePath) === "top";
 
-  const arrivalStartX = () => {
-    const centeredX = (document.body.scrollWidth - window.innerWidth) / 2;
-    return centeredX;
-  };
+  const arrivalStartX = () => 0;
 
   const completeRestoration = (onScroll: () => void) => {
     if (!active) return;
@@ -163,33 +160,36 @@ const useCheckedSavedScroll = () => {
 
   const [scroll, set_scroll] = createSignal<number | null>(null);
 
-  createEffect(() => {
-    const updateScroll = () => {
-      if (untrack(() => store.suppress_scroll_memory)) return;
-      set_scroll(window.scrollY);
-    };
+  const updateScroll = () => {
+    if (untrack(() => store.suppress_scroll_memory)) return;
+    set_scroll(window.scrollY);
+  };
 
-    const restoreScroll = async () => {
-      if (!active) return;
-      const savedScroll = Number(localStorage.getItem(scrollKey) || "0");
-      set_scroll(savedScroll);
+  const restoreScroll = async () => {
+    if (!active) return;
+    const savedScroll = Number(localStorage.getItem(scrollKey) || "0");
+    set_scroll(savedScroll);
 
-      set_store("route_scroll_in_progress", true);
-      if (!(await waitForRouteContentMount())) return;
-      if (!(await waitForRequiredRestMounting())) return;
-      if (!active) return;
-      window.scrollTo(arrivalStartX(), savedScroll);
-      completeRestoration(updateScroll);
-    };
+    set_store("route_scroll_in_progress", true);
+    if (!(await waitForRouteContentMount())) return;
+    if (!(await waitForRequiredRestMounting())) return;
+    if (!active) return;
+    window.scrollTo(arrivalStartX(), savedScroll);
+    completeRestoration(updateScroll);
+  };
+
+  // This must remain mount-only. Making it reactive can restore and horizontally
+  // center the retained outgoing route when swipe-navigation state changes.
+  onMount(() => {
     restoreTimeout = window.setTimeout(
       restoreScroll,
       isCurrentSwipeTopArrival() ? 0 : SAVED_SCROLL_RESTORATION_DELAY_MS,
     );
+  });
 
-    return () => {
-      cancelPendingRestoration();
-      window.removeEventListener("scroll", updateScroll);
-    };
+  onCleanup(() => {
+    cancelPendingRestoration();
+    window.removeEventListener("scroll", updateScroll);
   });
 
   createEffect(() => {
@@ -202,7 +202,7 @@ const useCheckedSavedScroll = () => {
       localStorage.setItem(scrollKey, currentScroll.toString());
     });
 
-    return () => cancelAnimationFrame(storageFrame);
+    onCleanup(() => cancelAnimationFrame(storageFrame));
   });
 };
 

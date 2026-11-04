@@ -1,0 +1,64 @@
+import desugarers/lbp_add_empty_handle_values
+import desugarers/lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes
+import desugarers/lbp_generate_breadcrumbs
+import desugarers/lbp_generate_prev_next_attributes
+import desugarers/lbp_generate_table_of_contents
+import desugarers/lbp_grand_wrapper_append_attributes
+import desugarers/lbp_grand_wrapper_move_nodes_to_wrapper
+import desugarers/lbp_img_build
+import desugarers/lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard
+import desugarers/lbp_move_to_be_moved_to_grand_wrapper
+import desugarers/lbp_select_content
+import desugarers/lbp_source_provenance_append_img_spans
+import desugarers/lbp_source_provenance_append_span
+import desugarers/lbp_source_provenance_wrap
+import desugarers/lbp_source_provenance_wrap_lines__outside
+import vxml_pipeline/testing
+
+pub const lbp_add_empty_handle_values = lbp_add_empty_handle_values.constructor
+
+pub const lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes = lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes.constructor
+
+pub const lbp_generate_breadcrumbs = lbp_generate_breadcrumbs.constructor
+
+pub const lbp_generate_prev_next_attributes = lbp_generate_prev_next_attributes.constructor
+
+pub const lbp_generate_table_of_contents = lbp_generate_table_of_contents.constructor
+
+pub const lbp_grand_wrapper_append_attributes = lbp_grand_wrapper_append_attributes.constructor
+
+pub const lbp_grand_wrapper_move_nodes_to_wrapper = lbp_grand_wrapper_move_nodes_to_wrapper.constructor
+
+pub const lbp_img_build = lbp_img_build.constructor
+
+pub const lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard = lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard.constructor
+
+pub const lbp_move_to_be_moved_to_grand_wrapper = lbp_move_to_be_moved_to_grand_wrapper.constructor
+
+pub const lbp_select_content = lbp_select_content.constructor
+
+pub const lbp_source_provenance_append_img_spans = lbp_source_provenance_append_img_spans.constructor
+
+pub const lbp_source_provenance_append_span = lbp_source_provenance_append_span.constructor
+
+pub const lbp_source_provenance_wrap = lbp_source_provenance_wrap.constructor
+
+pub const lbp_source_provenance_wrap_lines__outside = lbp_source_provenance_wrap_lines__outside.constructor
+
+pub const assertive_tests: List(fn() -> testing.AssertiveTestCollection) = [
+  lbp_add_empty_handle_values.assertive_tests,
+  lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes.assertive_tests,
+  lbp_generate_breadcrumbs.assertive_tests,
+  lbp_generate_prev_next_attributes.assertive_tests,
+  lbp_generate_table_of_contents.assertive_tests,
+  lbp_grand_wrapper_append_attributes.assertive_tests,
+  lbp_grand_wrapper_move_nodes_to_wrapper.assertive_tests,
+  lbp_img_build.assertive_tests,
+  lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard.assertive_tests,
+  lbp_move_to_be_moved_to_grand_wrapper.assertive_tests,
+  lbp_select_content.assertive_tests,
+  lbp_source_provenance_append_img_spans.assertive_tests,
+  lbp_source_provenance_append_span.assertive_tests,
+  lbp_source_provenance_wrap.assertive_tests,
+  lbp_source_provenance_wrap_lines__outside.assertive_tests,
+]

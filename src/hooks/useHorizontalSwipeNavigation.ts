@@ -1,6 +1,5 @@
 import { onCleanup, onMount } from "solid-js";
 import {
-  HORIZONTAL_SWIPE_CENTER_TOLERANCE,
   HORIZONTAL_SWIPE_DIRECTION_RATIO,
   HORIZONTAL_SWIPE_EDGE_EXCLUSION,
   HORIZONTAL_SWIPE_MAX_DURATION_MS,
@@ -14,16 +13,36 @@ import {
 type HorizontalSwipeNavigationOptions = {
   onSwipeLeft: () => void;
   onSwipeRight: () => void;
+  navigationEnabled?: () => boolean;
+  onGestureStart?: (gesture: HorizontalGestureStart) => void;
+  onGestureMove?: (gesture: HorizontalGestureMove) => boolean | void;
   onGestureEnd?: (result: HorizontalGestureEnd) => void;
+  onGestureCancel?: () => void;
+  // Return true when the tap was consumed and its synthesized click must not
+  // reach the original target.
+  onTap?: (target: EventTarget | null) => boolean | void;
+};
+
+export type HorizontalGestureStart = {
+  clientX: number;
+  clientY: number;
+};
+
+export type HorizontalGestureMove = {
+  deltaX: number;
+  deltaY: number;
 };
 
 export type HorizontalGestureEnd = {
   swipeInitiated: boolean;
   projectedTerminalVelocity: number;
   releasePauseMs: number;
+  deltaX: number;
+  deltaY: number;
 };
 
 type Gesture = {
+  tracking: boolean;
   valid: boolean;
   startX: number;
   startY: number;
@@ -31,6 +50,7 @@ type Gesture = {
   horizontalTravel: number;
   startedAt: number;
   samples: GestureSample[];
+  swipeEligible: boolean;
 };
 
 type GestureSample = {
@@ -39,6 +59,7 @@ type GestureSample = {
 };
 
 const emptyGesture = (): Gesture => ({
+  tracking: false,
   valid: false,
   startX: 0,
   startY: 0,
@@ -46,23 +67,40 @@ const emptyGesture = (): Gesture => ({
   horizontalTravel: 0,
   startedAt: 0,
   samples: [],
+  swipeEligible: false,
 });
+
+const TAP_MAX_DISTANCE = 8;
+const SYNTHETIC_CLICK_MAX_DELAY_MS = 750;
 
 const useHorizontalSwipeNavigation = (
   options: HorizontalSwipeNavigationOptions,
 ) => {
   let gesture = emptyGesture();
+  let consumedTapUntil = 0;
 
-  const pageIsHorizontallyCentered = () => {
-    const centeredX = (document.body.scrollWidth - window.innerWidth) / 2;
-    return (
-      Math.abs(window.scrollX - centeredX) <= HORIZONTAL_SWIPE_CENTER_TOLERANCE
-    );
+  const cancelGesture = () => {
+    const wasTracking = gesture.tracking;
+    gesture = emptyGesture();
+    if (wasTracking) options.onGestureCancel?.();
+  };
+
+  const handleClick = (event: MouseEvent) => {
+    if (performance.now() > consumedTapUntil) {
+      return;
+    }
+
+    consumedTapUntil = 0;
+    event.preventDefault();
+    event.stopImmediatePropagation();
   };
 
   const handleTouchStart = (event: TouchEvent) => {
+    // A later physical gesture must never inherit suppression intended for
+    // the synthetic click belonging to the previous tap.
+    consumedTapUntil = 0;
     if (event.touches.length !== 1) {
-      gesture = emptyGesture();
+      cancelGesture();
       return;
     }
 
@@ -73,32 +111,50 @@ const useHorizontalSwipeNavigation = (
       touch.clientX < window.innerWidth - HORIZONTAL_SWIPE_EDGE_EXCLUSION;
 
     gesture = {
-      valid:
-        startedAwayFromBrowserNavigationEdges && pageIsHorizontallyCentered(),
+      tracking: true,
+      valid: startedAwayFromBrowserNavigationEdges,
       startX: touch.clientX,
       startY: touch.clientY,
       lastX: touch.clientX,
       horizontalTravel: 0,
       startedAt,
       samples: [{ x: touch.clientX, at: startedAt }],
+      swipeEligible: options.navigationEnabled?.() ?? true,
     };
+
+    if (gesture.valid) {
+      options.onGestureStart?.({
+        clientX: touch.clientX,
+        clientY: touch.clientY,
+      });
+    }
   };
 
   const handleTouchMove = (event: TouchEvent) => {
-    if (!gesture.valid || event.touches.length !== 1) {
-      gesture.valid = false;
+    if (!gesture.tracking) return;
+    if (event.touches.length !== 1) {
+      cancelGesture();
       return;
     }
+    if (!gesture.valid) return;
 
     const currentX = event.touches[0].clientX;
     gesture.samples.push({ x: currentX, at: performance.now() });
     gesture.horizontalTravel += Math.abs(currentX - gesture.lastX);
     gesture.lastX = currentX;
+    const keepSwipeEligible = options.onGestureMove?.({
+      deltaX: currentX - gesture.startX,
+      deltaY: event.touches[0].clientY - gesture.startY,
+    });
+    if (keepSwipeEligible === false) {
+      gesture.swipeEligible = false;
+    }
   };
 
   const handleTouchEnd = (event: TouchEvent) => {
-    if (!gesture.valid || event.changedTouches.length !== 1) {
-      gesture = emptyGesture();
+    if (!gesture.tracking) return;
+    if (event.changedTouches.length !== 1) {
+      cancelGesture();
       return;
     }
 
@@ -106,6 +162,10 @@ const useHorizontalSwipeNavigation = (
     const deltaX = touch.clientX - gesture.startX;
     const deltaY = touch.clientY - gesture.startY;
     const horizontalDistance = Math.abs(deltaX);
+    const isTap =
+      horizontalDistance <= TAP_MAX_DISTANCE &&
+      Math.abs(deltaY) <= TAP_MAX_DISTANCE;
+    const gestureWasValid = gesture.valid;
     const endedAt = performance.now();
     const duration = endedAt - gesture.startedAt;
     const reversalDistance = gesture.horizontalTravel - horizontalDistance;
@@ -133,6 +193,7 @@ const useHorizontalSwipeNavigation = (
     const releasePause = finalSample ? endedAt - finalSample.at : Infinity;
 
     const isSwipe =
+      gesture.swipeEligible &&
       horizontalDistance >= HORIZONTAL_SWIPE_MIN_DISTANCE &&
       duration <= HORIZONTAL_SWIPE_MAX_DURATION_MS &&
       horizontalDistance >=
@@ -142,19 +203,23 @@ const useHorizontalSwipeNavigation = (
       reversalDistance <= HORIZONTAL_SWIPE_MAX_REVERSAL;
 
     gesture = emptyGesture();
-    options.onGestureEnd?.({
-      swipeInitiated: isSwipe,
-      projectedTerminalVelocity,
-      releasePauseMs: releasePause,
-    });
+    if (gestureWasValid) {
+      options.onGestureEnd?.({
+        swipeInitiated: isSwipe,
+        projectedTerminalVelocity,
+        releasePauseMs: releasePause,
+        deltaX,
+        deltaY,
+      });
+    }
+    if (isTap && options.onTap?.(event.target) === true) {
+      consumedTapUntil = performance.now() + SYNTHETIC_CLICK_MAX_DELAY_MS;
+    }
+    if (!gestureWasValid) return;
     if (!isSwipe) return;
 
     if (deltaX < 0) options.onSwipeLeft();
     else options.onSwipeRight();
-  };
-
-  const cancelGesture = () => {
-    gesture = emptyGesture();
   };
 
   onMount(() => {
@@ -164,12 +229,18 @@ const useHorizontalSwipeNavigation = (
     document.addEventListener("touchmove", handleTouchMove, { passive: true });
     document.addEventListener("touchend", handleTouchEnd, { passive: true });
     document.addEventListener("touchcancel", cancelGesture, { passive: true });
+    window.addEventListener("click", handleClick, { capture: true });
+    window.addEventListener("blur", cancelGesture);
+    window.addEventListener("pagehide", cancelGesture);
 
     onCleanup(() => {
       document.removeEventListener("touchstart", handleTouchStart);
       document.removeEventListener("touchmove", handleTouchMove);
       document.removeEventListener("touchend", handleTouchEnd);
       document.removeEventListener("touchcancel", cancelGesture);
+      window.removeEventListener("click", handleClick, { capture: true });
+      window.removeEventListener("blur", cancelGesture);
+      window.removeEventListener("pagehide", cancelGesture);
     });
   });
 };
