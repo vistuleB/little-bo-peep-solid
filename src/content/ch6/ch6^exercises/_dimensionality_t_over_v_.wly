@@ -6,10 +6,10 @@
 
     |> Solution
 
-        It is time, since velocity has dimensions
+        Since velocity has dimensions
         “distance over time”, which cancels the “distance”
-        dimension on top:
+        dimension on top, it is “time”:
 
         $$
-        {\te{DISTANCE}\over\te{SPEED}} = {\te{DISTANCE}\over \left({\te{DISTANCE} \over {\te{TIME}}}\right)} = {\te{DISTANCE}}\cdot {\te{TIME}\over \te{DISTANCE}} = \te{TIME}.
+        {\te{DISTANCE}\over\te{SPEED}} = {\te{DISTANCE}\over \left({\te{DISTANCE} \over {\te{TIME}}}\right)} = {\te{DISTANCE}}\cdot {\te{TIME}\over \te{DISTANCE}} = \te{TIME}
         $$

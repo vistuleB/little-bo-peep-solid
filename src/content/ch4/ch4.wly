@@ -18,6 +18,10 @@
     style=height:1.4em
 
 |> Section
+    |> CodexSuggestions
+
+        Keep this chapter focused on reading derivatives: slopes, signs, domains, units, and successive derivatives. The particle-system material has moved to Motion in Two Dimensions; the finite-change and differentiation-rule exercises have moved to The Product Rule. Preserve the resulting lightness rather than refill the chapter. Exercise-selection suggestions are collected at the end of the main text and beside the closing exercises.
+
     *Definitions.*
     The _derivative_ of a function
 
@@ -492,6 +496,10 @@
 
 |> Section
 
+    |> CodexSuggestions
+
+        Keep this basic position/velocity/acceleration interpretation here: it gives second derivatives and their units a concrete meaning. The new chapter can start where two coordinate rates must be combined, without repeating this introduction.
+
     *The second derivative of position.*
     A graph of the form...
 
@@ -717,6 +725,10 @@
 
     |> Pause
 
+    |> CodexSuggestions
+
+        Keep these definitions available here: the formal-properties exercises and the final lambda-function callback depend on them. Moving the product rule does not require moving the definition of function multiplication.
+
     *Postscript: Sums, Products, Quotients,
     and Differences of Functions.*
     Returning briefly to Chapter >>functions#decoy:0, if
@@ -769,3 +781,24 @@
     $f - g$) of functions are defined above for
     the first time, even if the definitions might
     _seem_ familiar!)
+
+    |> CodexSuggestion
+
+        *Exercise selection: keep the finish line visible.* Numbering here refers to the current draft. Keep Exercises 1–5: the seesaw, reciprocal slopes, second derivative, units of position, and the “correct, incorrect, or nonsensical” lambda equation. They are short and vary the kind of thinking required. Keep Exercise 6 if the units strip offers a useful independent check after Exercise 4; if it feels lengthy in use, reduce the number of strips rather than add further explanation.
+
+    |> CodexSuggestion
+
+        *Where to shorten further.* Exercises 7 and 8 form a bump-counting pair. They are not identical, but Exercise 8 is the first optional omission I would test: keep the simpler count in Exercise 7 and see whether the chapter already gives enough practice distinguishing upward and downward behaviour. Keep Exercise 9’s identification of successive derivatives and Exercise 10’s distinction between greatest slope and greatest rate of change of slope. These can finish the graphical work. Do not add another reconstruction exercise or a general true/false battery just to replace the removed material.
+
+    |> CodexSuggestion
+
+        *Add a small domain thread.* Ask “What is the simplest non-differentiable function you can think of?” Leave “simplest” open; square root and absolute value are natural answers under this chapter’s endpoint convention. Follow by restricting absolute value to the real line with zero removed and asking whether the new function is differentiable. Ask for its derivative without cases. Place this small pair before the formal-properties exercises, so the later identity-function question is a callback rather than a first introduction. Keep the solutions short; do not turn unusual one-point domains into an extra lesson.
+
+    |> CodexSuggestion
+
+        *Keep the formal ending, then a callback.* Keep current Exercises 11–12 (original E21–22) together and substantially intact: state the properties as self-contained claims, then prove associativity of function multiplication from its definition. Their repetition serves the book’s abstraction thread. Follow them with a small selection from the candidate pool, not all seven candidates. This lets the final activity return to short computations and recognition after the proof.
+
+    |> CodexSuggestion
+
+        *Choose from the pool, rather than assign the pool.* My preferred shortlist is B, D, and E: distinguish the jobs of id, recognize absolute value and a restricted identity behind compositions, then express the absolute-value derivative in terms of id. Use C as an alternative to B if identifying the neutral element for each operation is the more interesting task; avoid automatically assigning both. A is useful reserve practice but repeats Chapter 3. F is a reserve domain check if D and the punctured-domain question leave that distinction unclear. Defer G to The Product Rule rather than import a square-derivative prerequisite into this chapter. The pool’s current Exercise 13 is an editorial container, not one giant student exercise.
+

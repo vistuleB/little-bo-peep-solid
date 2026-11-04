@@ -1,0 +1,154 @@
+|> Section
+    handle=_bt3_start_
+
+    |> CodexSuggestion
+
+        *Distance.*
+
+        First of three passes through the same sequence: two dimensions, three dimensions, $n$ dimensions, then one dimension. Start with the Pythagorean theorem itself and a right-triangle picture. Use a three-four-five example before deriving the distance formula between $(a,b)$ and $(x,y)$:
+
+        $$
+        \sqrt{(x-a)^2+(y-b)^2}.
+        $$
+
+        Make the coordinate differences visible as the triangle's legs. Work in coordinates throughout; do not assume vector notation or vector fluency.
+
+    |> CodexSuggestion
+
+        *Distance in three dimensions.* Apply the Pythagorean theorem twice: first in the horizontal plane, then with the vertical difference. Show how this gives the distance between $(a,b,c)$ and $(x,y,z)$:
+
+        $$
+        \sqrt{(x-a)^2+(y-b)^2+(z-c)^2}.
+        $$
+
+        A box-diagonal picture and a small numerical example should carry the explanation. Keep the connection to the two-dimensional calculation explicit.
+
+    |> CodexSuggestion
+
+        *Distance in $n$ dimensions.* Introduce points as lists of $n$ coordinates. Extend the pattern, writing out the terms rather than requiring summation notation:
+
+        $$
+        \sqrt{(x_1-a_1)^2+(x_2-a_2)^2+\cdots+(x_n-a_n)^2}.
+        $$
+
+        Explain what the subscripts label. The numerical calculation should remain familiar even when the points cannot be pictured.
+
+    |> CodexSuggestion
+
+        *Distance in one dimension.* End this first pass by reducing the formula to
+
+        $$
+        \sqrt{(x-a)^2}=|x-a|.
+        $$
+
+        Return to the number line and distinguish distance from the signed coordinate difference. The one-dimensional case belongs last: absolute value emerges as the familiar version of the same distance formula.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Circles and spheres.*
+
+        Second pass through $2,3,n,1$. Reuse distance to describe all points at a fixed distance $r$ from a center. Take $r>0$ throughout this pass.
+
+        In two dimensions, turn the distance formula into the circle equation
+
+        $$
+        (x-a)^2+(y-b)^2=r^2.
+        $$
+
+        Include the origin-centered circle and explicitly identify the unit circle:
+
+        $$
+        x^2+y^2=1.
+        $$
+
+        Emphasize that the equation describes a circumference, not the filled disk.
+
+    |> CodexSuggestion
+
+        *A sphere in three dimensions.* Repeat the same fixed-distance question to obtain
+
+        $$
+        (x-a)^2+(y-b)^2+(z-c)^2=r^2.
+        $$
+
+        Include the unit sphere $x^2+y^2+z^2=1$. Again distinguish the surface from the solid interior, without turning terminology into a detour.
+
+    |> CodexSuggestion
+
+        *A sphere in $n$ dimensions.* Continue the coordinate pattern:
+
+        $$
+        (x_1-a_1)^2+(x_2-a_2)^2+\cdots+(x_n-a_n)^2=r^2.
+        $$
+
+        Include the origin-centered unit case. Say “a sphere in $n$ dimensions” to avoid the competing convention under which an “$n$-sphere” lies in $n+1$ dimensions.
+
+    |> CodexSuggestion
+
+        *A sphere in one dimension.* Ask what the same equation becomes on the number line:
+
+        $$
+        (x-a)^2=r^2.
+        $$
+
+        Its two solutions are $a-r$ and $a+r$: exactly the points at distance $r$ from $a$. The origin-centered unit case is $x^2=1$, giving $-1$ and $1$. Let this be the small surprise that closes the second pass; formal “zero-sphere” terminology is unnecessary here.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Vector lengths.*
+
+        Third pass through $2,3,n,1$. Introduce a vector concretely as an arrow with coordinate components, and explain those components before introducing the norm bars. Relate its length to the distance from the origin to its endpoint.
+
+        In two dimensions, for $u=(u_1,u_2)$,
+
+        $$
+        \|u\|=\sqrt{u_1^2+u_2^2}.
+        $$
+
+        Introduce “norm” as the name for this length. Use a coordinate example so that the new notation does not obscure an already familiar calculation.
+
+    |> CodexSuggestion
+
+        *Vector length in three dimensions.* For $u=(u_1,u_2,u_3)$,
+
+        $$
+        \|u\|=\sqrt{u_1^2+u_2^2+u_3^2}.
+        $$
+
+        Connect this directly to the three-dimensional distance formula, with one endpoint at the origin. The reader is reusing that result, not learning another independent formula.
+
+    |> CodexSuggestion
+
+        *Vector length in $n$ dimensions.* For $u=(u_1,\ldots,u_n)$,
+
+        $$
+        \|u\|=\sqrt{u_1^2+u_2^2+\cdots+u_n^2}.
+        $$
+
+        Keep the coordinate expansion visible. Do not jump here to identities involving $\|u-v\|$ or assume fluency with vector algebra.
+
+    |> CodexSuggestion
+
+        *Vector length in one dimension.* A single coordinate $x$ gives
+
+        $$
+        \|x\|=\sqrt{x^2}=|x|.
+        $$
+
+        Close by recognizing absolute value as one-dimensional length. The three stories have returned to the same familiar object from different directions: distance between points, points at a prescribed distance, and length of a vector.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Exercise possibilities.*
+
+        Keep exercises at the end of the bootcamp. Choose a small selection that revisits all three stories: compute a three-dimensional distance; recognize a circle or sphere's center and radius; describe the one-dimensional fixed-distance set; compute a vector's length, including one with negative components. Include a case where changing signs leaves the length unchanged.
+
+    |> CodexSuggestion
+
+        Reserve, if still wanted: a coordinate-based pair of questions on the distance between two vector endpoints and whether two three-dimensional vectors are orthogonal. First expand the endpoint differences explicitly; only then identify that distance as $\|u-v\|$. A right-angle test can use the three lengths and the Pythagorean theorem. This is not part of the three-pass core, and should not require an unexplained norm identity or introduce the dot product in passing.

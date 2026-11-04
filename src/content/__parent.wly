@@ -2,15 +2,82 @@
     |> ChapterSelection
         >>sets         >>_bt2_start_  >>_bt2_exercises_
         >>powers       >>_bt1_start_
-        !! >>distance     >>_bt3_start_
+        >>distance     >>_bt3_start_
         !! >>playground
         >>refreshers   >>_ch1_start_  >>_ch1_exercises_
         >>slopes       >>_ch2_start_  >>_ch2_exercises_
         >>functions    >>_ch3_start_  >>_ch3_exercises_
         >>derivatives  >>_ch4_start_  >>_ch4_exercises_
+        >>motion       >>_motion_start_  >>_motion_exercises_
         >>trigonometry >>_ch5_start_  >>_ch5_exercises_
+        >>product_rule_chapter >>_product_chapter_start_ >>_product_chapter_exercises_
         >>chain        >>_ch6_start_  >>_ch6_exercises_
+        >>square_derivative >>_square_derivative_start_
+        >>leibniz >>_leibniz_start_
+        >>vectors >>_vectors_start_
+        >>linearity >>_linearity_start_
+        >>trigonometry_two >>_trigonometry_two_start_ >>_trigonometry_two_exercises_
         !! >>exercise-graveyard  >>exercise-graveyard-start
+
+    |> In
+        chapter=>>distance
+
+    |> In
+        chapter=>>leibniz
+
+    |> In
+        chapter=>>square_derivative
+
+    |> In
+        chapter=>>vectors
+
+    |> In
+        chapter=>>linearity
+
+    |> In
+        chapter=>>trigonometry_two
+        >>_guesstimate_cos_10x_linear_
+        >>_guesstimate_cos_10x_parabolic_
+        >>_guesstimate_sinusoid_
+        >>_spherical_to_cartesian_coordinates_1_
+        >>_spherical_to_cartesian_coordinates_2_
+        >>_blueprints_top_and_side_
+        >>_blueprints_open_thin_door_
+        >>_cosine_rule_geometric_1_
+        >>_cosine_rule_geometric_2_
+        >>_cosine_rule_geometric_3_
+        >>_cosine_rule_geometric_4_
+        >>_cosine_rule_via_jacks_rule_
+        >>_polar_distance_
+        >>_cosine_rule_
+        >>_sine_rule_
+        >>_project_i_and_j_
+        >>_unit_dot_product_geometric_interpretation_
+        >>_project_i_and_j_and_k_
+        >>_more_closely_related_followup_
+        >>_cosx_plus_sinx_as_sinusoid_
+        >>_Acosx_plus_Bsinx_as_sinusoid_
+        >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
+        >>_draw_the_sandwich_
+        >>_rotate_central_90_
+        >>_archimedean_projection_new_ver_
+        >>_rank_the_7_slices_
+        >>_sphere_area_formula_from_archimedean_property_
+        >>_sphere_volume_
+        >>_vector_addition_definition_
+        >>_isosets_of_xy_
+        >>_complement_calculation_
+        >>_complement_of_complement_
+        >>_ratio_A_over_B_tan^2_
+        >>_ratio_A_over_B_1_plus_tan^2_
+        >>_gas_tank_
+        >>_gas_tank_decimal_approximation_
+        >>_a_ship_
+        >>_secant_cosecant_intersections_
+        >>_tan_cot_on_unit_circle_
+        >>_geometric_construction_of_1_over_A_
+        >>_x_square_x_cube_construction_
+        >>_sqrt_xy_construction_
 
     |> In
         chapter=>>playground
@@ -87,19 +154,26 @@
         >>_how_many_up_and_down_bumps_
         >>_reorder_derivatives_
         >>_narrow_and_less_narrow_bends_
-        >>_first_law_of_differentiation_
-        >>_scalar_times_function_definition_
-        >>_four_particles_
-        >>_sum_rule_summary_
-        >>_difference_quotient_illustration_
         !! >>_difference_quotient_nutshell_
-        >>_verbal_to_arithmetic_A_change_
-        >>_verbal_to_arithmetic_A_change_pt2_
-        >>_change_in_f_
-        >>_product_rule_
-        >>_big_A_product_approach_as_h_goes_to_0_
         >>_express_the_associativity_etc_
         >>_associativity_of_function_multiplication_
+        >>_lambda_callback_candidates_
+
+    |> In
+        chapter=>>product_rule_chapter
+        >>_verbal_to_arithmetic_A_change_
+        >>_verbal_to_arithmetic_A_change_pt2_
+        >>_difference_quotient_illustration_
+        >>_reciprocal_sine_difference_quotient_
+        >>_change_in_f_
+        >>_first_law_of_differentiation_
+        >>_scalar_times_function_definition_
+        >>_sum_rule_summary_
+        >>_product_rule_
+        >>_big_A_product_approach_as_h_goes_to_0_
+
+    |> In
+        chapter=>>motion
         >>_1d_red_particle_
         >>_1d_blue_yellow_particles_
         >>_four_particles_at_2_4_
@@ -109,83 +183,49 @@
 
     |> In
         chapter=>>trigonometry
-        >>_guesstimate_cos_10x_linear_
-        >>_guesstimate_cos_10x_parabolic_
-        >>_guesstimate_sinusoid_
-        >>_triangle_conch_
         >>_0_point_2_radians_
+        !! >>_eta_and_4eta_as_ratios_
         >>_handdrawn_oval_P_position_
-        >>_eta_and_4eta_as_ratios_
-        >>_vector_addition_definition_
-        >>_circular_motion_from_x_coordinate_
-        >>_spherical_to_cartesian_coordinates_1_
-        >>_spherical_to_cartesian_coordinates_2_
-        >>_blueprints_top_and_side_
-        >>_blueprints_open_thin_door_
-        >>_powers_of_secant_
-        >>_isosets_of_xy_
+        >>_triangle_conch_
         >>_long_division_11_over_7_
         >>_long_division_22_over_7_
         >>_long_division_15542486476949_777_
-        >>_complement_calculation_
-        >>_complement_of_complement_
-        >>_rotate_central_90_
-        >>_ratio_A_over_B_tan^2_
-        >>_ratio_A_over_B_1_plus_tan^2_
-        >>_archimedean_projection_new_ver_
-        >>_rank_the_7_slices_
-        >>_sphere_area_formula_from_archimedean_property_
-        >>_sphere_volume_
-        >>_gas_tank_
-        >>_gas_tank_decimal_approximation_
         >>_three_quarters_decimal_approximation_
-        >>_a_ship_
+        >>_powers_of_secant_
         >>_four_compositions_expressed_
         >>_four_compositions_graphed_
+        >>_circular_motion_from_x_coordinate_
         >>_ABCD_roles_
-        >>_draw_the_sandwich_
-        >>_cosine_rule_geometric_1_
-        >>_cosine_rule_geometric_2_
-        >>_cosine_rule_geometric_3_
-        >>_cosine_rule_geometric_4_
-        >>_cosine_rule_via_jacks_rule_
-        >>_polar_distance_
-        >>_cosine_rule_
-        >>_sine_rule_
-        >>_secant_cosecant_intersections_
-        >>_tan_cot_on_unit_circle_
-        >>_geometric_construction_of_1_over_A_
-        >>_x_square_x_cube_construction_
-        >>_sqrt_xy_construction_
-        >>_project_i_and_j_
-        >>_unit_dot_product_geometric_interpretation_
-        >>_project_i_and_j_and_k_
         >>_four_graphs_
         >>_where_is_the_pythagorean_identity_
         >>_more_closely_related_to_sin2x_or_
-        >>_more_closely_related_followup_
         >>_max_cosx_plus_sinx_new_new_ver_
-        >>_cosx_plus_sinx_as_sinusoid_
-        >>_Acosx_plus_Bsinx_as_sinusoid_
-        >>_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_
 
     |> In
         chapter=>>chain
+        >>_dimensional_omega_
+        >>_dimensionality_t_over_v_
+        >>_lorentz_factor_dimensionality_
+        >>_physicist_choose_to_write_
+        >>_construct_dimensionless_output_
+        >>_construct_signature_square_
+        >>_construct_signature_impossible_
+        >>_construct_signature_reciprocal_
+        >>_inverse_graph_introduction_
+        >>_inverse_signatures_
+        >>_dimensionality_xv_over_c^2_
+        >>_dimensional_z_combinations_
         >>_dimensional_f_f_
         >>_dimensional_f_g_f_
         >>_dimensional_big_composition_
-        >>_dimensional_z_combinations_
-        >>_possible_to_form_signature_
-        >>_lorentz_factor_dimensionality_
-        >>_physicist_choose_to_write_
         >>_dimensional_analysis_of_product_rule_
         >>_dimensional_reciprocal_rule_
-        !! >>_guess_reciprocal_name_ — folded into the preceding solution note
-        >>_dimensional_omega_
-        >>_dimensionality_t_over_v_
-        >>_dimensionality_xv_over_c^2_
-        >>_dimensional_inverse_rule_
+        >>_inverse_rule_conjecture_
         >>_dimensional_f^-1_g_f_
+        !! >>_possible_to_form_signature_
+        !! >>_guess_reciprocal_name_ — folded into the preceding solution note
+        !! >>_dimensional_inverse_rule_
+
 
 
         !! ch5 exercise 'cycles':

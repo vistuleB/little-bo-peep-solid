@@ -5,7 +5,6 @@
 
     |> Grid
         cols=2
-        mobile-cols=1
         place-items=start
         with-padding=false
         column-first=true
@@ -23,7 +22,6 @@
 
         |> Grid
             cols=2
-            mobile-cols=1
             place-items=start
             with-padding=false
             column-first=true

@@ -1,0 +1,27 @@
+|> Exercise
+    handle=_inverse_signatures_
+
+    |> CodexSuggestion
+
+        If $f : [\A] \ra [\B]$ is invertible (cf. Exercise >>_inverse_graph_introduction_),
+        what are the signatures of
+
+        $$
+        f^{-1},\qquad f^{-1}\circ f,\qquad f\circ f^{-1},\qquad (f^{-1})'?
+        $$
+
+        (Assume the inverse is differentiable for the last part.)
+
+    |> Solution
+        |> CodexSuggestion
+
+            The inverse swaps the input and output units. Thus:
+
+            $$
+            \begin{aligned}
+            f^{-1} &: [\B] \ra [\A] \\
+            f^{-1}\circ f &: [\A] \ra [\A]\up{1.35} \\
+            f\circ f^{-1} &: [\B] \ra [\B]\up{1.35} \\
+            (f^{-1})' &: [\B] \ra [\A/\B]\up{1.35}
+            \end{aligned}
+            $$

@@ -8,7 +8,7 @@
     !! $$
     !! impose on the signatures of $f$ and $g$?
 
-    Let $f$ be an invertible function with inverse $f^{-1}$ (cf. Exercise >>_dimensional_inverse_rule_).
+    Let $f$ be an invertible function with inverse $f^{-1}$ (cf. Exercise >>_inverse_graph_introduction_).
     What is the most general signature of $f$ and $g$ for which the composition
     $$
     f^{-1} \circ g \circ f

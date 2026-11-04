@@ -9,10 +9,10 @@ import vxml_pipeline/desugarers as dl
 import writerly
 
 const p_cannot_contain = [
-  "Appendix", "ArticleTitle", "Bootcamp", "BoxedText", "CentralDisplay",
+  "Appendix", "ArticleTitle", "Bootcamp", "BoxedText", "CodexSuggestions", "CodexSuggestion", "CentralDisplay",
   "CentralDisplayItalic", "Chapter", "Example", "Exercise", "Exercises", "Grid",
   "Image", "ImageLeft", "ImageRight", "List", "MathBlock", "Note", "Pause",
-  "Scope", "Section", "Solution", "SolutionNote", "StarDivider", "TildeDivider",
+  "Scope", "Section", "Solution", "SolutionNote", "OldSolutionNote", "StarDivider", "TildeDivider",
   "Table", "TextParent", "WriterlyBlankLine", "center", "col", "colgroup", "div",
   "p", "li", "ol", "table", "thead", "tbody", "tr", "td", "section", "ul",
 ]
@@ -148,6 +148,7 @@ pub fn our_pipeline(
         #("Example", "ExampleCounter"),
         #("SolutionNote", "SolutionNoteCounter"),
         #("Note", "NoteCounter"),
+        #("OldSolutionNote", "NoteCounter"),
         #("Section", "SectionCounter"),
       ]),
       dl.sigil_counters_prepend_incrementing_attribute_if_fancy(#(
@@ -224,12 +225,14 @@ pub fn our_pipeline(
         #("Example", "::øøExampleCounter"),
         #("Exercise", "::øøExerciseCounter"),
         #("Note", "::øøNoteCounter"),
+        #("OldSolutionNote", "::øøNoteCounter"),
         #("SolutionNote", "::øøSolutionNoteCounter"),
         #("Section", "::øøSectionCounter"),
       ]),
       dl.prepend_text_node(#("Example", "*Example ::øøExampleCounter.*")),
       dl.prepend_text_node(#("SolutionNote", "_Note ::øøSolutionNoteCounter._")),
       dl.prepend_text_node(#("Note", "_Note ::øøNoteCounter._")),
+      dl.prepend_text_node(#("OldSolutionNote", "_Note ::øøNoteCounter._")),
       dl.prepend_text_node_if_fancy(
         #(
           "Exercise",
@@ -387,7 +390,7 @@ pub fn our_pipeline(
       ),
       dl.add_between_all_pairs_2(#(
         [
-          "MathBlock", "Example", "Note", "SolutionNote", "Image", "table",
+          "MathBlock", "Example", "Note", "SolutionNote", "OldSolutionNote", "Image", "table",
           "Table", "Grid", "CentralDisplayItalic", "CentralDisplay", "List",
           "StarDivider", "TildeDivider",
         ],
@@ -404,6 +407,7 @@ pub fn our_pipeline(
           "Bootcamp",
           "Appendix",
           "SolutionNote",
+          "OldSolutionNote",
         ]),
       ),
       // dl.add_between_tag_and_text_node(#("MathBlock", "Pause")),
@@ -418,6 +422,7 @@ pub fn our_pipeline(
         #("CentralDisplay", "Pause"),
         #("Image", "Pause"),
         #("SolutionNote", "Pause"),
+        #("OldSolutionNote", "Pause"),
         #("StarDivider", "Pause"),
         #("TildeDivider", "Pause"),
         #("Table", "Pause"),

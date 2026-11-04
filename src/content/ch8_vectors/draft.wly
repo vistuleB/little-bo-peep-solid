@@ -1,0 +1,63 @@
+|> Section
+    handle=_vectors_start_
+
+    |> CodexSuggestion
+
+        *Measuring along a direction.*
+
+        Build on the position and velocity pairs from Chapter >>motion. The new question is how much of one vector lies along another. Begin with a unit direction and signed projection, using a diagram in which the projection can be negative.
+
+        Bring the projection and dot-product exercises currently in Chapter >>trigonometry into this development when revising. Essential explanations should become main text rather than remain prerequisites hidden in solutions.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Two descriptions of the dot product.*
+
+        Connect the coordinate formula and geometric interpretation:
+
+        $$
+        u\cdot v=u_xv_x+u_yv_y=\|u\|\,\|v\|\cos\theta.
+        $$
+
+        Supply the geometric justification rather than merely displaying both formulas. Use projections onto coordinate directions to build it, without assuming the angle-sum formulas that will be developed later. Distinguish a signed component, its absolute value, and a projection vector.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *What the definition lets us do.*
+
+        Develop symmetry and linearity in each input from the coordinate definition. Include a short formal-statement exercise in the spirit of Chapter 4: specify the objects and assumptions, then prove one property.
+
+        Possible small questions: can two nonzero vectors have dot product zero? Is a projection onto a non-unit vector given by the same formula as for a unit vector? What stays unchanged if we rotate both vectors together? Work toward the projection vector $(u\cdot v)u/(u\cdot u)$ for $u\ne0$.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Differentiating a dot product.*
+
+        Derive the rule coordinate by coordinate:
+
+        $$
+        {d\over dt}(u\cdot v)=u'\cdot v+u\cdot v'.
+        $$
+
+        Then ask the reader to discover what constant length implies. Differentiating $v\cdot v$ shows $v\cdot v'=0$. Return to circular motion: its tangent velocity becomes an instance of a general fact rather than a separate geometric coincidence.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Distance and direction.*
+
+        Possible closing exercise or extension, for $r(t)\ne0$:
+
+        $$
+        {d\over dt}\|r\|={r\over\|r\|}\cdot r'.
+        $$
+
+        Relate this to the proposed absolute-value derivative $x/|x|$. The rate of change of distance from the origin is the radial component of velocity, while speed is $\|r'\|$. Ask for a motion with constant distance but nonzero speed. Keep the origin exception visible. This extension needs the square-root derivative and chain rule established beforehand.
+

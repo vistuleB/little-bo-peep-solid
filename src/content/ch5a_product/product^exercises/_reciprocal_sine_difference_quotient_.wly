@@ -1,0 +1,72 @@
+|> Exercise
+    handle=_reciprocal_sine_difference_quotient_
+
+    |> CodexSuggestion
+
+        *Draft: a small slope hiding in a reciprocal.* Let
+
+        $$
+        F(x)={1\over 10+\sin x}.
+        $$
+
+        a. Sketch or plot $F$ near $x=0$. What is $F(0)$? Is the function increasing or decreasing there? Zoom in vertically until its change is visible.
+
+        b. Calculate the secant slopes
+
+        $$
+        {F(h)-F(0)\over h}
+        $$
+
+        for $h=0.1,-0.1,0.01,-0.01,0.001,-0.001$. Use radians. What value do the slopes seem to approach?
+
+        c. Put the two fractions in $F(h)-F(0)$ over a common denominator. Use the resulting difference quotient to find $F'(0)$, without a rule for differentiating reciprocals or compositions.
+
+        d. Now look near $x=2\eta$, another point where $\sin x=0$. Predict the sign of the derivative, check it with a few secant slopes, and adapt your calculation to find its value. Compare the two graphs using the same scales.
+
+    |> Solution
+        |> CodexSuggestion
+
+            At $x=0$, $F(0)=1/10$. As the sine increases through zero, the denominator increases and its reciprocal decreases.
+
+            The secant slopes are approximately:
+
+            $$
+            \begin{array}{r|r}
+            h & (F(h)-F(0))/h\\ \hline
+            0.1 & -0.009884660\up{1.3}\\
+            -0.1 & -0.010084014\\
+            0.01 & -0.009989844\\
+            -0.01 & -0.010009843\\
+            0.001 & -0.009998998\\
+            -0.001 & -0.010000998
+            \end{array}
+            $$
+
+            The algebra explains the apparent limit of $-0.01$:
+
+            $$
+            \begin{aligned}
+            {F(h)-F(0)\over h}
+            &= {1\over h}\left({1\over 10+\sin h}-{1\over 10}\right)\\
+            &= -{\sin h\over h}\,{1\over 10(10+\sin h)}.\up{1.6}
+            \end{aligned}
+            $$
+
+            As $h$ tends to zero, $\sin h/h$ tends to $1$ (the derivative of sine at zero), while $10(10+\sin h)$ tends to $100$. Hence $F'(0)=-1/100$.
+
+            At $a=2\eta$, the same subtraction gives
+
+            $$
+            {F(a+h)-F(a)\over h}
+            =-{\sin(a+h)-\sin a\over h}\,{1\over 10(10+\sin(a+h))}.
+            $$
+
+            Here $\sin a=0$ again, but the sine has derivative $-1$, so $F'(2\eta)=1/100$. The two reciprocal graphs pass through the same height with opposite slopes.
+
+            |> Image
+                src=images/product_reciprocal_sine_secants.svg
+                width=840px
+
+        |> CodexSuggestion
+
+            *Editorial note.* We want an exercise that explores this derivative visually, numerically, and algebraically through the difference quotient. The interest is the small change near a zero of sine: subtracting reciprocals reverses the sign and introduces two denominators approaching 10, explaining the factor $1/100$ without quoting a differentiation rule. The graphs above are a first draft; consider giving the student a broad plot before the magnified views, or movable secants. Keep equal scales for the comparison and make the vertical magnification explicit. A later variation could replace 10 by a positive constant greater than 1 and ask how the slope changes, but do not turn this into a general reciprocal-rule derivation unless it earns its place. Cosine near $x=\eta$ is an alternative if the surrounding sequence makes it more convenient.

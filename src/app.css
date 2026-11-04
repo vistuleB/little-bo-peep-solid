@@ -24,7 +24,7 @@
 
 :root {
   zoom: 100%;
-  --document-font-size: 1.27rem;
+  --document-font-size: 1.25rem;
   --inline-math-scale: 1.03em;
   --display-math-scale: 1.06em;
   --document-pause-space: 1.5rem;
@@ -677,6 +677,31 @@ img + .t-3003:hover {
 
 /* List */
 
+.codex-suggestions {
+  box-sizing: border-box;
+  margin-block: 1.25rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid #cec3e1;
+  border-left: 4px solid #80639e;
+  border-radius: 6px;
+  background: #f0eaf7;
+  color: #463653;
+  font-family: system-ui, sans-serif;
+  font-size: 0.8em;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.codex-suggestions-label {
+  margin-bottom: 0.5rem;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+.codex-suggestions-content > p + p { margin-top: 0.65em; }
+.codex-suggestions-content p { text-indent: 0; }
+.codex-suggestions-content b { font-family: inherit; font-weight: 700; }
+.codex-suggestions-content i { font-family: inherit; font-style: italic; }
+
 /* Native markers work in Safari, which does not support ::marker content. */
 .list-marker > li::marker {
   font-family: var(--marker-font-family);
@@ -784,7 +809,7 @@ img + .t-3003:hover {
   position: absolute;
   top: 0;
   transform: translateX(-50%);
-  width: 44px;
+  width: 96px;
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -801,17 +826,35 @@ img + .t-3003:hover {
   height: calc(var(--header-height) - 6px);
   object-fit: contain;
 }
-.mobile-elevator:focus-visible {
+.mobile-elevator button:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: -2px;
 }
-.mobile-elevator-direction {
-  position: absolute;
-  left: 100%;
-  margin-left: 2px;
-  font-family: sans-serif;
-  font-size: 24px;
-  line-height: 1;
-  color: #222;
+.mobile-elevator-toilet {
   pointer-events: none;
+}
+.mobile-elevator button {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  stroke: #222;
+  touch-action: manipulation;
+}
+.mobile-elevator-down {
+  left: 0;
+  justify-content: flex-start;
+}
+.mobile-elevator-up {
+  right: 0;
+  justify-content: flex-end;
+}
+.mobile-elevator button svg {
+  width: 20px;
+  height: 24px;
+}
+.mobile-elevator button:active {
+  stroke: var(--arrow-pressed);
 }

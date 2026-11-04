@@ -5,6 +5,7 @@ import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises"
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
+import MathJaxSvgExportTooltip  from "~/components/MathJaxSvgExportTooltip";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
@@ -17,7 +18,7 @@ import useShowMore from "~/hooks/useShowMore";
 export default function __Bootcamp2__() {
   return (
     <Article
-      prevPage=""
+      prevPage="/article/bootcamp3"
       nextPage="/article/bootcamp1"
       pageNecessaryMargin={270}
       maxElementWidth={1200}
@@ -27,62 +28,122 @@ export default function __Bootcamp2__() {
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
           <InChapterLink href="?id=section-1">
-            terminology
+            <span class="t-3003-c">
+              terminology
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:4:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
-            integer powers of 10
+            <span class="t-3003-c">
+              integer powers of 10
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:17:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
-            other bases
+            <span class="t-3003-c">
+              other bases
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:121:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
-            additivity of exponents
+            <span class="t-3003-c">
+              additivity of exponents
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:173:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
-            the third law of exponents
+            <span class="t-3003-c">
+              the third law of exponents
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:201:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
           <InChapterLink href="?id=section-6">
-            famous powers of 10
+            <span class="t-3003-c">
+              famous powers of 10
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:248:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-6">
           <InChapterLink href="?id=section-7">
-            negative exponent prefixes
+            <span class="t-3003-c">
+              negative exponent prefixes
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:412:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-7">
           <InChapterLink href="?id=section-8">
-            positive exponent prefixes
+            <span class="t-3003-c">
+              positive exponent prefixes
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:642:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-8">
           <InChapterLink href="?id=section-9">
-            logarithms base 10
+            <span class="t-3003-c">
+              logarithms base 10
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:747:6
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-9">
           <InChapterLink href="?id=exercises">
-            exercises
+            <span class="t-3003-c">
+              exercises
+              <span class="t-3003">
+                ./src/content/bt2/bt2^exercises/__parent.wly:1:1
+              </span>
+            </span>
           </InChapterLink>
         </BreadcrumbItem>
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Bootcamp 2:">
-        Powers of 10
+        <span class="t-3003-c">
+          Powers of 10
+          <span class="t-3003">
+            ./src/content/bt2/__parent.wly:2:11
+          </span>
+        </span>
       </ArticleTitle>
       <Section id="section-1">
         <OuterP>
           <b>
-            Terminology.
+            <span class="t-3003-c">
+              Terminology.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:4:6
+              </span>
+            </span>
           </b>
           {" "}
           The expression below is called a {" "}
@@ -105,12 +166,18 @@ export default function __Bootcamp2__() {
         <Pause />
         <Image
           src="/build-img/svgo-svg/anTr.svg"
+          local_url="./images/svg_base_exponent.svg"
           intrinsicWidth={500}
           intrinsicHeight={125}
         />
         <Pause />
         <OuterP>
-          The expression is read {" "}
+          <span class="t-3003-c">
+            The expression is read {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:13:5
+            </span>
+          </span>
           <Math>
             $\mathit&#123;10&#125;$
           </Math>
@@ -136,7 +203,12 @@ export default function __Bootcamp2__() {
       <Section id="section-2">
         <OuterP>
           <b>
-            Integer powers of 10.
+            <span class="t-3003-c">
+              Integer powers of 10.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:17:6
+              </span>
+            </span>
           </b>
           {" "}
           We define
@@ -146,10 +218,16 @@ export default function __Bootcamp2__() {
           $$
           \Large 10^&#123;\hspace&#123;0.2ex&#125;n&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          as follows, if {" "}
+          <span class="t-3003-c">
+            as follows, if {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:22:5
+            </span>
+          </span>
           <Math>
             $n$
           </Math>
@@ -173,10 +251,16 @@ export default function __Bootcamp2__() {
           $$
           \Large 10^&#123;-n&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          as follows, if {" "}
+          <span class="t-3003-c">
+            as follows, if {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:27:5
+            </span>
+          </span>
           <Math>
             $n$
           </Math>
@@ -196,31 +280,40 @@ export default function __Bootcamp2__() {
           {" "} times.
         </OuterP>
         <OuterP class="indent-10">
-          For example,
+          <span class="t-3003-c">
+            For example,
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:30:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \Large 10^4 = 1 \times 10 \times 10 \times 10 \times 10 = 10000
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
           \Large 10^3 = 1 \times 10 \times 10 \times 10 = 1000
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
           \Large 10^2 = 1 \times 10 \times 10 = 100
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
           \Large 10^1 = 1 \times 10 = 10
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
@@ -232,13 +325,20 @@ export default function __Bootcamp2__() {
             offsetY="-0.2em"
             offsetX=" 4em"
             atLeastAsWide={true}
+            local_url="./images/svg_bt2_bt_alert_cloud.svg"
             intrinsicWidth={200}
             intrinsicHeight={110}
           />
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          (where, in the last line, {" "}
+          <span class="t-3003-c">
+            (where, in the last line, {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:53:5
+            </span>
+          </span>
           <Math>
             $1$
           </Math>
@@ -257,31 +357,45 @@ export default function __Bootcamp2__() {
           $$
           \Large 10^&#123;-1&#125; = 1\,/\,10 = 0.1
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
           \Large 10^&#123;-2&#125; = (1\,/\, 10)\,/\,10 = 0.01
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
           \Large 10^&#123;-3&#125; = ((1\,/\, 10)\,/\,10)\,/\,10 = 0.001
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
           \Large 10^&#123;-4&#125; = (((1\,/\, 10)\,/\,10)\,/\, 10)\,/\, 10 = 0.0001
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          by the second definition.
+          <span class="t-3003-c">
+            by the second definition.
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:66:5
+            </span>
+          </span>
         </OuterP>
         <OuterP class="indent-10">
-          As {" "}
+          <span class="t-3003-c">
+            As {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:68:5
+            </span>
+          </span>
           <Math>
             $n$
           </Math>
@@ -305,11 +419,17 @@ export default function __Bootcamp2__() {
             $$
             \Large 10^&#123;-n&#125; = &#123;1 \over 10^&#123;\hspace&#123;0.2ex&#125;n&#125;&#125;\tag&#123;A&#125;
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
         </TextParent>
         <Pause />
         <OuterP>
-          for every positive integer {" "}
+          <span class="t-3003-c">
+            for every positive integer {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:75:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $n$
@@ -335,11 +455,21 @@ export default function __Bootcamp2__() {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          every
+          <span class="t-3003-c">
+            every
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:78:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          integer {" "}
+          <span class="t-3003-c">
+            integer {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:80:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $n$
@@ -370,6 +500,7 @@ export default function __Bootcamp2__() {
           <ImageLeft
             src="/build-img/svgo-svg/rdZz.svg"
             line={2}
+            local_url="./images/svg_bt2_bt_10_to_the_minus_0_cloud.svg"
             intrinsicWidth={530}
             intrinsicHeight={380}
           />
@@ -380,11 +511,17 @@ export default function __Bootcamp2__() {
             $$
             \Large 10^&#123;-n&#125;10^n = 1 \tag&#123;AA&#125;
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
         </TextParent>
         <Pause />
         <OuterP>
-          which holds for {" "}
+          <span class="t-3003-c">
+            which holds for {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:92:5
+            </span>
+          </span>
           <Math>
             $n$
           </Math>
@@ -458,7 +595,12 @@ export default function __Bootcamp2__() {
         <Pause />
         <OuterP>
           <b>
-            Vocabulary.
+            <span class="t-3003-c">
+              Vocabulary.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:99:6
+              </span>
+            </span>
           </b>
           {" "}
           Numbers {" "}
@@ -476,10 +618,16 @@ export default function __Bootcamp2__() {
           $$
           \Large ab = 1
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          are {" "}
+          <span class="t-3003-c">
+            are {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:104:5
+            </span>
+          </span>
           <i>
             reciprocal
           </i>
@@ -499,10 +647,18 @@ export default function __Bootcamp2__() {
           $$
           \Large ab = 1 \qquad a = &#123;1 \over b&#125; \qquad b = &#123;1 \over a&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          ...and any one of these equations implies the other two.
+          <span class="t-3003-c">
+            ...and any one of these equations implies the other two.
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:109:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           Thus, either of (&#8288;
           <InChapterLink
             href="#_2_h.a.i_"
@@ -522,11 +678,21 @@ export default function __Bootcamp2__() {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          reciprocality
+          <span class="t-3003-c">
+            reciprocality
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:113:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          of {" "}
+          <span class="t-3003-c">
+            of {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:115:5
+            </span>
+          </span>
           <Math>
             $10^n$
           </Math>
@@ -552,7 +718,12 @@ const Rest = () => {
       <Section id="section-3">
         <OuterP>
           <b>
-            Other bases.
+            <span class="t-3003-c">
+              Other bases.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:121:6
+              </span>
+            </span>
           </b>
           {" "}
           Integer powers of other nonzero bases are defined
@@ -563,10 +734,16 @@ const Rest = () => {
           $$
           \Large 2^&#123;-2&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          is defined as {" "}
+          <span class="t-3003-c">
+            is defined as {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:127:5
+            </span>
+          </span>
           <Math>
             $1$
           </Math>
@@ -577,7 +754,12 @@ const Rest = () => {
           {" "} twice, etc.
         </OuterP>
         <OuterP class="indent-10">
-          However, a small quirk occurs for base {" "}
+          <span class="t-3003-c">
+            However, a small quirk occurs for base {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:129:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $0$
@@ -604,10 +786,16 @@ const Rest = () => {
           $$
           \Large 0^&#123;-2&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          would be {" "}
+          <span class="t-3003-c">
+            would be {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:135:5
+            </span>
+          </span>
           <NoBreak>
             “
             <Math>
@@ -622,7 +810,12 @@ const Rest = () => {
           is undefined.
         </OuterP>
         <OuterP class="indent-10">
-          Also (in case you're wondering) {" "}
+          <span class="t-3003-c">
+            Also (in case you're wondering) {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:138:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $0^0 = 1$
@@ -642,28 +835,37 @@ const Rest = () => {
           $$
           \Large 0^3 = 1 \times 0 \times 0 \times 0 = 0
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
           \Large 0^2 = 1 \times 0 \times 0 = 0
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
           \Large 0^1 = 1 \times 0 = 0
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <MathBlock>
           $$
           \Large 0^0 = 1 = 1
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          In other words, every positive power of {" "}
+          <span class="t-3003-c">
+            In other words, every positive power of {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:153:5
+            </span>
+          </span>
           <Math>
             $0$
           </Math>
@@ -702,7 +904,12 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          Mathematicians sometimes call a power with exponent {" "}
+          <span class="t-3003-c">
+            Mathematicians sometimes call a power with exponent {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:158:5
+            </span>
+          </span>
           <Math>
             $0$
           </Math>
@@ -710,23 +917,45 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          empty product
+          <span class="t-3003-c">
+            empty product
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:160:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          and they will repeatedly admonish that
+          <span class="t-3003-c">
+            and they will repeatedly admonish that
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:162:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          an empty product is {" "}
+          <span class="t-3003-c">
+            an empty product is {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:164:7
+            </span>
+          </span>
           <Math>
             $\mathit&#123;1&#125;$
           </Math>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          in the sense that “all products start at
+          <span class="t-3003-c">
+            in the sense that “all products start at
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:166:5
+            </span>
+          </span>
           {" "}
+          {" "}
+          {" "}{" "}
           <NoBreak>
             <Math>
               $1$
@@ -753,7 +982,12 @@ const Rest = () => {
       <Section id="section-4">
         <OuterP>
           <b>
-            Additivity of exponents.
+            <span class="t-3003-c">
+              Additivity of exponents.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:173:6
+              </span>
+            </span>
           </b>
         </OuterP>
         <Pause />
@@ -761,10 +995,16 @@ const Rest = () => {
           $$
           \Large 10^&#123;13&#125; \times 10^&#123;14&#125; = 10^&#123;\hspace&#123;0.1ex&#125;27&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          because {" "}
+          <span class="t-3003-c">
+            because {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:177:5
+            </span>
+          </span>
           <Math>
             $13$
           </Math>
@@ -795,17 +1035,28 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          More generally,
+          <span class="t-3003-c">
+            More generally,
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:181:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \Large 10^&#123;\hspace&#123;0.1ex&#125;n&#125; \times 10^&#123;\hspace&#123;0.1ex&#125;m&#125; = 10^&#123;\hspace&#123;0.1ex&#125;n + m&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          for all {" "}
+          <span class="t-3003-c">
+            for all {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:185:5
+            </span>
+          </span>
           <Math>
             $n$
           </Math>
@@ -825,19 +1076,39 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          additivity of exponents
+          <span class="t-3003-c">
+            additivity of exponents
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:188:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          sometimes paraphrased as
+          <span class="t-3003-c">
+            sometimes paraphrased as
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:190:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          the product of the powers is the power of the sum
+          <span class="t-3003-c">
+            the product of the powers is the power of the sum
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:192:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          where {" "}
+          <span class="t-3003-c">
+            where {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:194:5
+            </span>
+          </span>
           <i>
             the product of the powers
           </i>
@@ -871,7 +1142,12 @@ const Rest = () => {
       <Section id="section-5">
         <OuterP>
           <b>
-            The third law of exponents.
+            <span class="t-3003-c">
+              The third law of exponents.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:201:6
+              </span>
+            </span>
           </b>
           {" "}
           Also,
@@ -881,10 +1157,16 @@ const Rest = () => {
           $$
           \Large (10^&#123;13&#125;)^&#123;14&#125; = 10^&#123;13\cdot 14&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          because multiplying {" "}
+          <span class="t-3003-c">
+            because multiplying {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:206:5
+            </span>
+          </span>
           <Math>
             $14$
           </Math>
@@ -912,10 +1194,16 @@ const Rest = () => {
           $$
           \Large (10^n)^m = 10^&#123;nm&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          for all {" "}
+          <span class="t-3003-c">
+            for all {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:212:5
+            </span>
+          </span>
           <Math>
             $n$
           </Math>
@@ -930,18 +1218,29 @@ const Rest = () => {
           of exponents”.
         </OuterP>
         <OuterP class="indent-10">
-          If one writes
+          <span class="t-3003-c">
+            If one writes
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:215:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \Large a^&#123;b^&#123;c&#125;&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <NoBreak>
-            [“
+            <span class="t-3003-c">
+              [“
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:219:5
+              </span>
+            </span>
             <Math>
               $a$
             </Math>
@@ -965,11 +1264,17 @@ const Rest = () => {
           $$
           \Large a^&#123;\left(b^&#123;c&#125;\right)&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <NoBreak>
-            [“
+            <span class="t-3003-c">
+              [“
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:224:5
+              </span>
+            </span>
             <Math>
               $a$
             </Math>
@@ -996,11 +1301,17 @@ const Rest = () => {
           $$
           \Large (a^&#123;b&#125;)^&#123;c&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <NoBreak>
-            [“[
+            <span class="t-3003-c">
+              [“[
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:229:5
+              </span>
+            </span>
             <Math>
               $a$
             </Math>
@@ -1027,10 +1338,18 @@ const Rest = () => {
           $$
           \Large a^&#123;bc&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          by the third law of exponents, the second way already has
+          <span class="t-3003-c">
+            by the third law of exponents, the second way already has
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:234:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           “its own” notation, and therefore the convention is that...
         </OuterP>
         <Pause />
@@ -1038,20 +1357,32 @@ const Rest = () => {
           $$
           \Large a^&#123;b^c&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          ...absolutely always means...
+          <span class="t-3003-c">
+            ...absolutely always means...
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:239:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \Large a^&#123;\left(b^c\right)&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          ...!
+          <span class="t-3003-c">
+            ...!
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:243:5
+            </span>
+          </span>
         </OuterP>
       </Section>
     </>}
@@ -1060,7 +1391,12 @@ const Rest = () => {
       <Section id="section-6">
         <OuterP>
           <b>
-            Famous powers of 10.
+            <span class="t-3003-c">
+              Famous powers of 10.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:248:6
+              </span>
+            </span>
           </b>
           {" "}
           Many human languages have special names for
@@ -1081,7 +1417,14 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          In English, e.g., these are some of the “famous”
+          <span class="t-3003-c">
+            In English, e.g., these are some of the “famous”
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:253:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           powers of {" "}
           <NoBreak>
             <Math>
@@ -1110,7 +1453,12 @@ const Rest = () => {
                 </Math>
               </td>
               <td class="align-center">
-                name
+                <span class="t-3003-c">
+                  name
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2.wly:281:21
+                  </span>
+                </span>
               </td>
             </tr>
             <tr>
@@ -1126,7 +1474,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  one
+                  <span class="t-3003-c">
+                    one
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:294:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1143,7 +1496,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  ten
+                  <span class="t-3003-c">
+                    ten
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:308:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1160,7 +1518,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  hundred
+                  <span class="t-3003-c">
+                    hundred
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:321:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1177,7 +1540,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  thousand
+                  <span class="t-3003-c">
+                    thousand
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:334:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1194,7 +1562,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  million
+                  <span class="t-3003-c">
+                    million
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:347:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1211,7 +1584,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  billion
+                  <span class="t-3003-c">
+                    billion
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:360:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1228,7 +1606,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  trillion
+                  <span class="t-3003-c">
+                    trillion
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:373:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1237,70 +1620,127 @@ const Rest = () => {
         <Pause />
         <Pause />
         <CentralDisplayItalic>
-          one million is a thousand thousand
+          <span class="t-3003-c">
+            one million is a thousand thousand
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:377:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          because
+          <span class="t-3003-c">
+            because
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:378:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \Large 1000 \times 1000 = 1000\hspace&#123;0.3ex&#125;000
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          by counting zeroes, or, equivalently, because
+          <span class="t-3003-c">
+            by counting zeroes, or, equivalently, because
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:382:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \Large 10^3 \times 10^3 = 10^6
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          by additivity of exponents. Similarly,
+          <span class="t-3003-c">
+            by additivity of exponents. Similarly,
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:386:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          one billion is a thousand million
+          <span class="t-3003-c">
+            one billion is a thousand million
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:388:7
+            </span>
+          </span>
           <ImageLeft
             src="/build-img/svgo-svg/55Oe.svg"
+            local_url="./images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_6_cloud.svg"
             intrinsicWidth={250}
             intrinsicHeight={100}
           />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          and
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:393:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          one trillion is a thousand billion
+          <span class="t-3003-c">
+            one trillion is a thousand billion
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:393:11
+            </span>
+          </span>
           <ImageLeft
             src="/build-img/svgo-svg/tAeJ.svg"
+            local_url="./images/svg_bt2_bt_ten_to_the_3_times_ten_to_the_9_cloud.svg"
             intrinsicWidth={250}
             intrinsicHeight={100}
           />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          and also (while we're at it)
+          <span class="t-3003-c">
+            and also (while we're at it)
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:398:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          one trillion is a million million
+          <span class="t-3003-c">
+            one trillion is a million million
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:400:7
+            </span>
+          </span>
           <ImageRight
             src="/build-img/svgo-svg/xlFe.svg"
+            local_url="./images/svg_bt2_bt_ten_to_the_6_times_ten_to_the_6_cloud.svg"
             intrinsicWidth={300}
             intrinsicHeight={100}
           />
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          as seen by replacing “billion”
+          <span class="t-3003-c">
+            as seen by replacing “billion”
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:405:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           with “thousand million” in the previous sentence and
           then replacing “thousand thousand” with “million”
           in {" "}
@@ -1316,7 +1756,12 @@ const Rest = () => {
       <Section id="section-7">
         <OuterP>
           <b>
-            Negative exponent prefixes.
+            <span class="t-3003-c">
+              Negative exponent prefixes.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:412:6
+              </span>
+            </span>
           </b>
           {" "}
           For negative exponents we simply say “one tenth”
@@ -1343,7 +1788,12 @@ const Rest = () => {
                 </Math>
               </td>
               <td class="align-center">
-                name
+                <span class="t-3003-c">
+                  name
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2.wly:439:21
+                  </span>
+                </span>
               </td>
             </tr>
             <tr>
@@ -1359,7 +1809,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  one tenth
+                  <span class="t-3003-c">
+                    one tenth
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:452:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1376,7 +1831,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  one hundredth
+                  <span class="t-3003-c">
+                    one hundredth
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:465:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1393,7 +1853,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  one thousandth
+                  <span class="t-3003-c">
+                    one thousandth
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:478:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1410,7 +1875,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  one millionth
+                  <span class="t-3003-c">
+                    one millionth
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:491:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1427,7 +1897,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  one billionth
+                  <span class="t-3003-c">
+                    one billionth
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:504:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1435,7 +1910,14 @@ const Rest = () => {
         </Table>
         <Pause />
         <OuterP>
-          Notice how the standard decimal expansion
+          <span class="t-3003-c">
+            Notice how the standard decimal expansion
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:508:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           for {" "}
           <Math>
             $10^&#123;-1&#125;$
@@ -1451,12 +1933,18 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/VZCO.svg"
+          local_url="./images/svg_one_blue_one_image_equation.svg"
           intrinsicWidth={100}
           intrinsicHeight={55}
         />
         <Pause />
         <OuterP>
-          Likewise, the standard decimal expansion for {" "}
+          <span class="t-3003-c">
+            Likewise, the standard decimal expansion for {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:514:5
+            </span>
+          </span>
           <Math>
             $10^&#123;-2&#125;$
           </Math>
@@ -1472,32 +1960,65 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/A20h.svg"
+          local_url="./images/svg_two_blue_one_image_equation.svg"
           intrinsicWidth={100}
           intrinsicHeight={55}
         />
         <Pause />
         <OuterP>
-          ...and so on, a trick for checking one's work.
+          <span class="t-3003-c">
+            ...and so on, a trick for checking one's work.
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:520:5
+            </span>
+          </span>
         </OuterP>
         <OuterP class="indent-10">
-          However, there also exist negative exponent
+          <span class="t-3003-c">
+            However, there also exist negative exponent
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:522:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          prefixes
+          <span class="t-3003-c">
+            prefixes
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:524:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          that people use to qualify other measures. For
+          <span class="t-3003-c">
+            that people use to qualify other measures. For
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:526:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           example, a
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          millimeter
+          <span class="t-3003-c">
+            millimeter
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:529:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          is {" "}
+          <span class="t-3003-c">
+            is {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:531:5
+            </span>
+          </span>
           <Math>
             $10^&#123;-3&#125;$
           </Math>
@@ -1522,10 +2043,20 @@ const Rest = () => {
           <tbody>
             <tr>
               <td class="align-center">
-                power
+                <span class="t-3003-c">
+                  power
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2.wly:548:21
+                  </span>
+                </span>
               </td>
               <td class="align-center">
-                prefix
+                <span class="t-3003-c">
+                  prefix
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2.wly:552:21
+                  </span>
+                </span>
               </td>
             </tr>
             <tr>
@@ -1536,7 +2067,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  deci
+                  <span class="t-3003-c">
+                    deci
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:561:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1548,7 +2084,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  centi
+                  <span class="t-3003-c">
+                    centi
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:570:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1560,7 +2101,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  milli
+                  <span class="t-3003-c">
+                    milli
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:579:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1572,7 +2118,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  micro
+                  <span class="t-3003-c">
+                    micro
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:588:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1584,7 +2135,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  nano
+                  <span class="t-3003-c">
+                    nano
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:597:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1596,7 +2152,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  pico
+                  <span class="t-3003-c">
+                    pico
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:606:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1608,7 +2169,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  femto
+                  <span class="t-3003-c">
+                    femto
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:616:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1616,7 +2182,14 @@ const Rest = () => {
         </Table>
         <Pause />
         <OuterP>
-          (Funny how the prefixes switch from
+          <span class="t-3003-c">
+            (Funny how the prefixes switch from
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:620:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           ending in ‘i’ to ending in ‘o’ after
           {" "}
           <NoBreak>
@@ -1628,15 +2201,32 @@ const Rest = () => {
           {" "} (Well, anyway.)
         </OuterP>
         <OuterP class="indent-10">
-          To give an idea of scale,
+          <span class="t-3003-c">
+            To give an idea of scale,
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:624:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          micrometers
+          <span class="t-3003-c">
+            micrometers
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:626:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          are smaller than the smallest animal
+          <span class="t-3003-c">
+            are smaller than the smallest animal
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:628:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           cells (human red blood cells, which
           are among the smallest animal cells,
           have a diameter of
@@ -1679,11 +2269,21 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          nanometers
+          <span class="t-3003-c">
+            nanometers
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:636:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          are smaller than the diameter of DNA, about {" "}
+          <span class="t-3003-c">
+            are smaller than the diameter of DNA, about {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:638:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $2.5$
@@ -1699,7 +2299,12 @@ const Rest = () => {
       <Section id="section-8">
         <OuterP>
           <b>
-            Positive exponent prefixes.
+            <span class="t-3003-c">
+              Positive exponent prefixes.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:642:6
+              </span>
+            </span>
           </b>
           {" "}
           There exists a similar set of prefixes
@@ -1733,10 +2338,20 @@ const Rest = () => {
           <tbody>
             <tr>
               <td class="align-center">
-                power
+                <span class="t-3003-c">
+                  power
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2.wly:661:21
+                  </span>
+                </span>
               </td>
               <td class="align-center">
-                prefix
+                <span class="t-3003-c">
+                  prefix
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2.wly:665:21
+                  </span>
+                </span>
               </td>
             </tr>
             <tr>
@@ -1747,7 +2362,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  deca
+                  <span class="t-3003-c">
+                    deca
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:674:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1759,7 +2379,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  hecto
+                  <span class="t-3003-c">
+                    hecto
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:683:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1771,7 +2396,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  kilo
+                  <span class="t-3003-c">
+                    kilo
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:692:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1783,7 +2413,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  mega
+                  <span class="t-3003-c">
+                    mega
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:701:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1795,7 +2430,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  giga
+                  <span class="t-3003-c">
+                    giga
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:710:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1807,7 +2447,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  tera
+                  <span class="t-3003-c">
+                    tera
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:719:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1819,7 +2464,12 @@ const Rest = () => {
               </td>
               <td class="align-center">
                 <i>
-                  peta
+                  <span class="t-3003-c">
+                    peta
+                    <span class="t-3003">
+                      ./src/content/bt2/bt2.wly:728:22
+                    </span>
+                  </span>
                 </i>
               </td>
             </tr>
@@ -1827,16 +2477,33 @@ const Rest = () => {
         </Table>
         <Pause />
         <OuterP>
-          For example, a
+          <span class="t-3003-c">
+            For example, a
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:730:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          kilometer
+          <span class="t-3003-c">
+            kilometer
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:732:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          is a thousand meters
+          <span class="t-3003-c">
+            is a thousand meters
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:734:5
+            </span>
+          </span>
           {" "}
+          {" "}
+          {" "}{" "}
           <NoBreak>
             [b/
             <Math>
@@ -1848,11 +2515,21 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          terabyte
+          <span class="t-3003-c">
+            terabyte
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:738:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          is a trillion bytes {" "}
+          <span class="t-3003-c">
+            is a trillion bytes {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:740:5
+            </span>
+          </span>
           <NoBreak>
             [b/
             <Math>
@@ -1864,11 +2541,23 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          byte
+          <span class="t-3003-c">
+            byte
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:741:10
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          is a unit of computer memory
+          <span class="t-3003-c">
+            is a unit of computer memory
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:741:16
+            </span>
+          </span>
+          {" "}
+          {" "}
           equal to {" "}
           <Math>
             $8$
@@ -1891,7 +2580,12 @@ const Rest = () => {
       <Section id="section-9">
         <OuterP>
           <b>
-            Logarithms base 10.
+            <span class="t-3003-c">
+              Logarithms base 10.
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:747:6
+              </span>
+            </span>
           </b>
           {" "}
           Every positive number can be uniquely
@@ -1908,38 +2602,65 @@ const Rest = () => {
           number.
         </OuterP>
         <OuterP class="indent-10">
-          For example,
+          <span class="t-3003-c">
+            For example,
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:754:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \Large 100
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          is
+          <span class="t-3003-c">
+            is
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:758:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          ten to the power {" "}
+          <span class="t-3003-c">
+            ten to the power {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:760:7
+            </span>
+          </span>
           <Math>
             $\mathit&#123;2&#125;$
           </Math>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          so
+          <span class="t-3003-c">
+            so
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:762:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \Large 2
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          is the logarithm base {" "}
+          <span class="t-3003-c">
+            is the logarithm base {" "}
+            <span class="t-3003">
+              ./src/content/bt2/bt2.wly:766:5
+            </span>
+          </span>
           <Math>
             $10$
           </Math>
@@ -1957,18 +2678,33 @@ const Rest = () => {
             <b>
               Example 1.
             </b>
+            {" "}{" "}
             {" "}
-            It so happens that
+            {" "}
+            <span class="t-3003-c">
+              It so happens that
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:770:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             \Large 99 = 10^&#123;1.99563519...&#125;
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            under an extended definition of exponentiation that allows us to
+            <span class="t-3003-c">
+              under an extended definition of exponentiation that allows us to
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:774:9
+              </span>
+            </span>
+            {" "}
+            {" "}
             compute {" "}
             <Math>
               $10^x$
@@ -1988,10 +2724,16 @@ const Rest = () => {
             $$
             \Large 1.99563519...
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            is the logarithm base {" "}
+            <span class="t-3003-c">
+              is the logarithm base {" "}
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:780:9
+              </span>
+            </span>
             <Math>
               $10$
             </Math>
@@ -2010,28 +2752,47 @@ const Rest = () => {
             <b>
               Example 2.
             </b>
+            {" "}{" "}
             {" "}
-            It so happens that
+            {" "}
+            <span class="t-3003-c">
+              It so happens that
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:784:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             \Large 98 = 10^&#123;1.99122607...&#125;
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            under the same extended definition, so
+            <span class="t-3003-c">
+              under the same extended definition, so
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:788:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             \Large 1.99122607...
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            is the logarithm base {" "}
+            <span class="t-3003-c">
+              is the logarithm base {" "}
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:792:9
+              </span>
+            </span>
             <Math>
               $10$
             </Math>
@@ -2050,18 +2811,31 @@ const Rest = () => {
             <b>
               Example 3.
             </b>
+            {" "}{" "}
             {" "}
-            Since
+            {" "}
+            <span class="t-3003-c">
+              Since
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:796:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             \Large 0.1 = 10^&#123;-1&#125;
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            the logarithm base {" "}
+            <span class="t-3003-c">
+              the logarithm base {" "}
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:800:9
+              </span>
+            </span>
             <Math>
               $10$
             </Math>
@@ -2084,8 +2858,15 @@ const Rest = () => {
             <b>
               Example 4.
             </b>
+            {" "}{" "}
             {" "}
-            Since
+            {" "}
+            <span class="t-3003-c">
+              Since
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:804:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
@@ -2096,13 +2877,20 @@ const Rest = () => {
               src="/build-img/svgo-svg/nMNN.svg"
               offsetX=" 0em"
               atLeastAsWide={true}
+              local_url="./images/svg_bt2_bt_ten_to_the_minus_5_cloud.svg"
               intrinsicWidth={250}
               intrinsicHeight={150}
             />
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            the logarithm base {" "}
+            <span class="t-3003-c">
+              the logarithm base {" "}
+              <span class="t-3003">
+                ./src/content/bt2/bt2.wly:813:9
+              </span>
+            </span>
             <Math>
               $10$
             </Math>
@@ -2135,8 +2923,15 @@ const Rest = () => {
               <b>
                 Exercise 1.
               </b>
+              {" "}{" "}
               {" "}
-              Compute {" "}
+              {" "}
+              <span class="t-3003-c">
+                Compute {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_by_hand_1_.wly:4:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $2^&#123;-2&#125;$
@@ -2156,7 +2951,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since {" "}
+              <span class="t-3003-c">
+                Since {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_by_hand_1_.wly:7:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $2^&#123;-1&#125; = 1/2 = 0.5$
@@ -2169,18 +2969,21 @@ const Rest = () => {
               $$
               \Large 2^&#123;-2&#125; = &#123;2^&#123;-1&#125;\over 2&#125; = &#123;0.5 \over 2&#125; = 0.25
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large 2^&#123;-3&#125; = &#123;2^&#123;-2&#125;\over 2&#125; = &#123;0.25 \over 2&#125; = 0.125
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large 2^&#123;-4&#125; = &#123;2^&#123;-3&#125;\over 2&#125; = &#123;0.125 \over 2&#125; = 0.0625
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <SolutionNote>
@@ -2188,8 +2991,15 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                For the last computation, {" "}
+                {" "}
+                <span class="t-3003-c">
+                  For the last computation, {" "}
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2^exercises/_by_hand_1_.wly:20:13
+                  </span>
+                </span>
                 <Math>
                   $0.125$
                 </Math>
@@ -2203,12 +3013,20 @@ const Rest = () => {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/KJqj.svg"
+                local_url="./images/svg_0.125_twelve_5.svg"
                 intrinsicWidth={400}
                 intrinsicHeight={80}
               />
               <Pause />
               <OuterP>
-                Half of twelve hundredths is six hundredths, and
+                <span class="t-3003-c">
+                  Half of twelve hundredths is six hundredths, and
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2^exercises/_by_hand_1_.wly:26:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 half of {" "}
                 <Math>
                   $5$
@@ -2222,12 +3040,18 @@ const Rest = () => {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/SBDm.svg"
+                local_url="./images/svg_06_and_0025.svg"
                 intrinsicWidth={450}
                 intrinsicHeight={150}
               />
               <Pause />
               <OuterP>
-                ...so {" "}
+                <span class="t-3003-c">
+                  ...so {" "}
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2^exercises/_by_hand_1_.wly:32:13
+                  </span>
+                </span>
                 <Math>
                   $0.125/2$
                 </Math>
@@ -2248,8 +3072,15 @@ const Rest = () => {
               <b>
                 Exercise 2.
               </b>
+              {" "}{" "}
               {" "}
-              Compute {" "}
+              {" "}
+              <span class="t-3003-c">
+                Compute {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_by_hand_2_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $100/16$
               </Math>
@@ -2261,20 +3092,32 @@ const Rest = () => {
               $$
               \Large &#123;1 \over 16&#125; = &#123;1 \over 2\cdot 2\cdot 2\cdot 2&#125; = 2^&#123;-4&#125; = 0.0625
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              so
+              <span class="t-3003-c">
+                so
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_by_hand_2_.wly:11:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;100 \over 16&#125; = 100 \cdot &#123;1 \over 16&#125; = 100\cdot 0.0625 = 6.25
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and that's all there is to it! (Or divide {" "}
+              <span class="t-3003-c">
+                and that's all there is to it! (Or divide {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_by_hand_2_.wly:15:9
+                </span>
+              </span>
               <Math>
                 $100$
               </Math>
@@ -2298,8 +3141,15 @@ const Rest = () => {
               <b>
                 Exercise 3.
               </b>
+              {" "}{" "}
               {" "}
-              If “万” is Chinese for {" "}
+              {" "}
+              <span class="t-3003-c">
+                If “万” is Chinese for {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:4:5
+                </span>
+              </span>
               <i>
                 ten thousand
               </i>
@@ -2309,17 +3159,28 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              “万万” is “ten thousand ten thousand”, or
+              <span class="t-3003-c">
+                “万万” is “ten thousand ten thousand”, or
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:9:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large 10^4 \times 10^4 = 10^8
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or {" "}
+              <span class="t-3003-c">
+                or {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:13:9
+                </span>
+              </span>
               <i>
                 one hundred million
               </i>
@@ -2335,56 +3196,116 @@ const Rest = () => {
               $$
               \Large 10^4 \times 10^4 \times 10^4 = 10^&#123;12&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which is just one trillion.
+              <span class="t-3003-c">
+                which is just one trillion.
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:18:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                Notes.
+                <span class="t-3003-c">
+                  Notes.
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:22:10
+                  </span>
+                </span>
               </i>
               {" "}
               Rearranging
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              ten thousand ten thousand
+              <span class="t-3003-c">
+                ten thousand ten thousand
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:25:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              to
+              <span class="t-3003-c">
+                to
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:27:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              ten ten thousand thousand
+              <span class="t-3003-c">
+                ten ten thousand thousand
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:29:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              gives “hundred million”
+              <span class="t-3003-c">
+                gives “hundred million”
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:31:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               without exponents, since ten
               times ten is a hundred and since a thousand
               times a thousand is a million.
             </OuterP>
             <OuterP class="indent-10">
-              (Similarly,
+              <span class="t-3003-c">
+                (Similarly,
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:36:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              ten thousand ten thousand ten thousand
+              <span class="t-3003-c">
+                ten thousand ten thousand ten thousand
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:38:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              becomes
+              <span class="t-3003-c">
+                becomes
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:40:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              ten ten ten thousand thousand thousand
+              <span class="t-3003-c">
+                ten ten ten thousand thousand thousand
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:42:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              after rearrangement, which equals one trillion because “ten ten ten” is
+              <span class="t-3003-c">
+                after rearrangement, which equals one trillion because “ten ten ten” is
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_ten_thousand_.wly:44:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               a thousand.)
             </OuterP>
           </Solution>
@@ -2395,14 +3316,28 @@ const Rest = () => {
               <b>
                 Exercise 4.
               </b>
+              {" "}{" "}
               {" "}
-              How many millimeters in a kilometer?
+              {" "}
+              <span class="t-3003-c">
+                How many millimeters in a kilometer?
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_kilometers_per_millimeter_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               How many kilometers in a millimeter?
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              There are {" "}
+              <span class="t-3003-c">
+                There are {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_kilometers_per_millimeter_.wly:9:9
+                </span>
+              </span>
               <Math>
                 $10^3$
               </Math>
@@ -2425,7 +3360,12 @@ const Rest = () => {
               millimeters in a kilometer.
             </OuterP>
             <OuterP class="indent-10">
-              So there are {" "}
+              <span class="t-3003-c">
+                So there are {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_kilometers_per_millimeter_.wly:15:9
+                </span>
+              </span>
               <Math>
                 $1/10^6 = 10^&#123;-6&#125;$
               </Math>
@@ -2433,7 +3373,14 @@ const Rest = () => {
               a millimeter.
             </OuterP>
             <OuterP class="indent-10">
-              (Or reason in reverse:
+              <span class="t-3003-c">
+                (Or reason in reverse:
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_kilometers_per_millimeter_.wly:18:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               There are {" "}
               <Math>
                 $10^&#123;-3&#125;$
@@ -2459,8 +3406,15 @@ const Rest = () => {
               <b>
                 Exercise 5.
               </b>
+              {" "}{" "}
               {" "}
-              How many kilometers is {" "}
+              {" "}
+              <span class="t-3003-c">
+                How many kilometers is {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_kilometers_per_10^2_millimeters_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $10^&#123;24&#125;$
               </Math>
@@ -2472,20 +3426,34 @@ const Rest = () => {
               $$
               \Large 1\textrm&#123;mm&#125; = 10^&#123;-6&#125;\textrm&#123;km&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by the previous problem, so
+              <span class="t-3003-c">
+                by the previous problem, so
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_kilometers_per_10^2_millimeters_.wly:11:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large 10^&#123;24&#125; \textrm&#123;mm&#125; = 10^&#123;24&#125;\cdot 10^&#123;-6&#125;\textrm&#123;km&#125; = 10^&#123;18&#125;\textrm&#123;km&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by direct substitution. (You can do that with
+              <span class="t-3003-c">
+                by direct substitution. (You can do that with
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_kilometers_per_10^2_millimeters_.wly:15:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               units.)
             </OuterP>
           </Solution>
@@ -2496,8 +3464,15 @@ const Rest = () => {
               <b>
                 Exercise 6.
               </b>
+              {" "}{" "}
               {" "}
-              If the US yearly budget is {" "}
+              {" "}
+              <span class="t-3003-c">
+                If the US yearly budget is {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_US_year_budget_percentage_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $4$
               </Math>
@@ -2508,7 +3483,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              One hundred billion is {" "}
+              <span class="t-3003-c">
+                One hundred billion is {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_US_year_budget_percentage_.wly:10:9
+                </span>
+              </span>
               <Math>
                 $10\%$
               </Math>
@@ -2537,7 +3517,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               <i>
-                Postscript
+                <span class="t-3003-c">
+                  Postscript
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2^exercises/_US_year_budget_percentage_.wly:17:10
+                  </span>
+                </span>
               </i>
               :
               There is no such thing as “the U.S. budget”. A
@@ -2556,8 +3541,15 @@ const Rest = () => {
               <b>
                 Exercise 7.
               </b>
+              {" "}{" "}
               {" "}
-              What is the logarithm base {" "}
+              {" "}
+              <span class="t-3003-c">
+                What is the logarithm base {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_logarithm_base_10_of_10^12_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $10$
               </Math>
@@ -2570,7 +3562,12 @@ const Rest = () => {
                 <Math>
                   $12$
                 </Math>
-                ,
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2^exercises/_logarithm_base_10_of_10^12_.wly:8:13
+                  </span>
+                </span>
               </NoBreak>
               {" "} because one trillion is {" "}
               <NoBreak>
@@ -2588,8 +3585,15 @@ const Rest = () => {
               <b>
                 Exercise 8.
               </b>
+              {" "}{" "}
               {" "}
-              What is the logarithm base {" "}
+              {" "}
+              <span class="t-3003-c">
+                What is the logarithm base {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_logarithm_base_10_of_1_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $10$
               </Math>
@@ -2608,7 +3612,12 @@ const Rest = () => {
                 <Math>
                   $0$
                 </Math>
-                ,
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2^exercises/_logarithm_base_10_of_1_.wly:8:12
+                  </span>
+                </span>
               </NoBreak>
               {" "} because {" "}
               <NoBreak>
@@ -2626,8 +3635,15 @@ const Rest = () => {
               <b>
                 Exercise 9.
               </b>
+              {" "}{" "}
               {" "}
-              What is the logarithm base {" "}
+              {" "}
+              <span class="t-3003-c">
+                What is the logarithm base {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_logarithm_base_10_of_product_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $10$
               </Math>
@@ -2640,17 +3656,28 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_logarithm_base_10_of_product_.wly:8:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large 10^&#123;12&#125;\times 10^&#123;9&#125;\times 10^&#123;6&#125;\times 10^3 = 10^&#123;12+9+6+3&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              the answer is {" "}
+              <span class="t-3003-c">
+                the answer is {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_logarithm_base_10_of_product_.wly:12:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $12+9+6+3$
@@ -2673,14 +3700,22 @@ const Rest = () => {
               <b>
                 Exercise 10.
               </b>
+              {" "}{" "}
               {" "}
-              Evaluate:
+              {" "}
+              <span class="t-3003-c">
+                Evaluate:
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_fraction_of_multiple_of_powers_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
           </ExerciseStatement>
           <Solution>
@@ -2688,26 +3723,39 @@ const Rest = () => {
               $$
               \Large &#123;10^6 \cdot 10^&#123;-12&#125; \cdot 10^&#123;10&#125; \over 10^&#123;-4&#125;\cdot 10^&#123;-4&#125;&#125; = &#123;10^&#123;6-12+10&#125; \over 10^&#123;-4 -4&#125;&#125; = &#123;10^4 \over 10^&#123;-8&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_fraction_of_multiple_of_powers_.wly:13:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;10^4 \over 10^&#123;-8&#125;&#125; = 10^4 \cdot &#123;1 \over 10^&#123;-8&#125;&#125; = 10^4\cdot 10^&#123;-(-8)&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_fraction_of_multiple_of_powers_.wly:17:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large 10^4\cdot 10^&#123;-(-8)&#125; = 10^4\cdot 10^8 = 10^&#123;4 + 8&#125; = 10^&#123;12&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
           </Solution>
         </Exercise>
@@ -2717,8 +3765,15 @@ const Rest = () => {
               <b>
                 Exercise 11.
               </b>
+              {" "}{" "}
               {" "}
-              How many {" "}
+              {" "}
+              <span class="t-3003-c">
+                How many {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_millibits_per_gigabyte_.wly:4:5
+                </span>
+              </span>
               <i>
                 millibits
               </i>
@@ -2731,7 +3786,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Presumably, there are {" "}
+              <span class="t-3003-c">
+                Presumably, there are {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_millibits_per_gigabyte_.wly:8:9
+                </span>
+              </span>
               <Math>
                 $1000$
               </Math>
@@ -2746,10 +3806,16 @@ const Rest = () => {
               $$
               \Large 1000 \times 8 \times 10^9 = 8 \times 10^&#123;12&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or {" "}
+              <span class="t-3003-c">
+                or {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_millibits_per_gigabyte_.wly:16:9
+                </span>
+              </span>
               <Math>
                 $8$
               </Math>
@@ -2770,18 +3836,31 @@ const Rest = () => {
               <b>
                 Exercise 12.
               </b>
+              {" "}{" "}
               {" "}
-              It so happens that
+              {" "}
+              <span class="t-3003-c">
+                It so happens that
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_6.25_written_other_way.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large 6.25
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (i.e., the value of {" "}
+              <span class="t-3003-c">
+                (i.e., the value of {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_6.25_written_other_way.wly:8:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $100/16$
@@ -2804,10 +3883,18 @@ const Rest = () => {
               $$
               \Large 25^2 = 625
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and, by shifting two decimal places, one
+              <span class="t-3003-c">
+                and, by shifting two decimal places, one
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_6.25_written_other_way.wly:14:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               finds {" "}
               <NoBreak>
                 <Math>
@@ -2822,10 +3909,16 @@ const Rest = () => {
               $$
               \Large &#123;100 \over 16&#125; = 2.5^2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              using algebra?
+              <span class="t-3003-c">
+                using algebra?
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_6.25_written_other_way.wly:19:5
+                </span>
+              </span>
             </OuterP>
           </ExerciseStatement>
           <Solution>
@@ -2833,10 +3926,16 @@ const Rest = () => {
               $$
               \Large &#123;100 \over 16&#125; = &#123;10^2 \over 4^2&#125; = \left(\!&#123;10\over 4&#125;\!\right)^&#123;\!\!2&#125; = \left(\!&#123;5\over 2&#125;\!\right)^&#123;\!\!2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and {" "}
+              <span class="t-3003-c">
+                and {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_6.25_written_other_way.wly:26:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $5/2 = 2.5$
@@ -2853,18 +3952,31 @@ const Rest = () => {
               <b>
                 Exercise 13.
               </b>
+              {" "}{" "}
               {" "}
-              Prove that
+              {" "}
+              <span class="t-3003-c">
+                Prove that
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_10^n_over_10^m_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;10^n \over \up&#123;1&#125;10^m&#125; = 10^&#123;n-m&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for all integers {" "}
+              <span class="t-3003-c">
+                for all integers {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_10^n_over_10^m_.wly:8:5
+                </span>
+              </span>
               <Math>
                 $n$
               </Math>
@@ -2885,28 +3997,47 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Here is the “proof” that your professor is
+              <span class="t-3003-c">
+                Here is the “proof” that your professor is
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_10^n_over_10^m_.wly:16:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               hoping for:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/FF0n.svg"
+              local_url="./images/svg_start_end_proof.svg"
               intrinsicWidth={450}
               intrinsicHeight={245}
             />
             <Pause />
             <OuterP>
-              The second equality uses the identity
+              <span class="t-3003-c">
+                The second equality uses the identity
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_10^n_over_10^m_.wly:22:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;1 \over 10^m&#125; = 10^&#123;-m&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              stated earlier as (&#8288;
+              <span class="t-3003-c">
+                stated earlier as (&#8288;
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_10^n_over_10^m_.wly:26:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_2_h.a.i_"
                 class="in-chapter-link"
@@ -2921,7 +4052,12 @@ const Rest = () => {
             <Pause />
             <OuterP>
               <i>
-                Notes.
+                <span class="t-3003-c">
+                  Notes.
+                  <span class="t-3003">
+                    ./src/content/bt2/bt2^exercises/_10^n_over_10^m_.wly:33:10
+                  </span>
+                </span>
               </i>
               {" "}
               The identity proved in this exercise,
@@ -2933,12 +4069,20 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/5e0k.svg"
+              local_url="./images/svg_laws_exp.svg"
               intrinsicWidth="672.44"
               intrinsicHeight="613.41"
             />
             <Pause />
             <OuterP>
-              The first law is “additivity of exponents”
+              <span class="t-3003-c">
+                The first law is “additivity of exponents”
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_10^n_over_10^m_.wly:43:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               while the second law
               is the generalization of this exercise's result.
               (For the next-to-last law, {" "}
@@ -2952,20 +4096,32 @@ const Rest = () => {
               $$
               \Large \left(&#123;a\over b&#125;\right)^&#123;\!-1&#125; = &#123;1 \over \left( &#123;a \over b&#125;\right)&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and it so happens that
+              <span class="t-3003-c">
+                and it so happens that
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_10^n_over_10^m_.wly:50:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;1 \over \left( &#123;a \over b&#125;\right)&#125; = &#123;b \over a&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for all {" "}
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_10^n_over_10^m_.wly:54:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $a, b \ne 0$
@@ -2982,40 +4138,61 @@ const Rest = () => {
               <b>
                 Exercise 14.
               </b>
+              {" "}{" "}
               {" "}
-              Rewrite each of these expressions...
+              {" "}
+              <span class="t-3003-c">
+                Rewrite each of these expressions...
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;L \over T&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;M (L/T) \over T&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...in the form...
+              <span class="t-3003-c">
+                ...in the form...
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:14:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large M^aL^bT^c
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...for some integer exponents {" "}
+              <span class="t-3003-c">
+                ...for some integer exponents {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:18:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $a$
@@ -3040,77 +4217,124 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              (#1)
+              <span class="t-3003-c">
+                (#1)
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:22:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;L \over T&#125; = LT^&#123;-1&#125; = M^0L^1T^&#123;-1&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since
+              <span class="t-3003-c">
+                since
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:26:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;L \over T&#125; = L\cdot &#123;1\over T&#125; = LT^&#123;-1&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and (#2)
+              <span class="t-3003-c">
+                and (#2)
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:30:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;M (L/T) \over T&#125; = MLT^&#123;-2&#125; = M^1L^1T^&#123;-2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since
+              <span class="t-3003-c">
+                since
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:34:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large &#123;L/T \over T&#125; = &#123;L\over T&#125;\cdot&#123;1 \over T&#125; = &#123;L \over T^2&#125; = LT^&#123;-2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and (#3)
+              <span class="t-3003-c">
+                and (#3)
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:38:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large \left.&#123;ML \over T^2 &#125; \right/ \left(&#123;L^2&#125; &#123;(L/T) \over L&#125;\right) = ML^&#123;-1&#125;T^&#123;-1&#125; = M^1L^&#123;-1&#125;T^&#123;-1&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since
+              <span class="t-3003-c">
+                since
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:42:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large L^2&#123;L/T\over L&#125; = L^2&#123;1/T \over 1&#125; = &#123;L^2\over T&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:46:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large \left.&#123;ML \over T^2 &#125; \right/ &#123;L^2\over T&#125; = &#123;ML\over T^2&#125;\cdot &#123;T\over L^2&#125; = &#123;M \over TL&#125; = MT^&#123;-1&#125;L^&#123;-1&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              given that {" "}
+              <span class="t-3003-c">
+                given that {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_MLT_rewrite_.wly:50:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $&#123;1\over T&#125; = T^&#123;-1&#125;$
@@ -3133,8 +4357,15 @@ const Rest = () => {
               <b>
                 Exercise 15.
               </b>
+              {" "}{" "}
               {" "}
-              Find integers {" "}
+              {" "}
+              <span class="t-3003-c">
+                Find integers {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:4:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $a$
@@ -3156,10 +4387,16 @@ const Rest = () => {
               $$
               \Large v^aF^b\mu^c\rho = 1
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where {" "}
+              <span class="t-3003-c">
+                where {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:8:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $v$
@@ -3188,29 +4425,38 @@ const Rest = () => {
               $$
               \Large v = &#123;L \over T&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large F = &#123;ML \over T^2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large \mu = &#123;M \over TL &#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large \rho = &#123;M \over L^3&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              First, rewrite {" "}
+              <span class="t-3003-c">
+                First, rewrite {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:24:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $v$
@@ -3273,28 +4519,37 @@ const Rest = () => {
               $$
               \Large v = LT^&#123;-1&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large F = MLT^&#123;-2&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large \mu = MT^&#123;-1&#125;L^&#123;-1&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large \rho = ML^&#123;-3&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (Ok.) Nextly, we compute {" "}
+              <span class="t-3003-c">
+                (Ok.) Nextly, we compute {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:40:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $v^a$
@@ -3328,28 +4583,37 @@ const Rest = () => {
               $$
               \Large v^a = L^aT^&#123;-a&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large F^b = M^&#123;b&#125;L^bT^&#123;-2b&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large \mu^c = M^cT^&#123;-c&#125;L^&#123;-c&#125; \vphantom&#123;\rho = ML^&#123;-3&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large \rho = ML^&#123;-3&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              Then {" "}
+              <span class="t-3003-c">
+                Then {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:55:9
+                </span>
+              </span>
               <Math>
                 $v^aF^b\mu^c\rho$
               </Math>
@@ -3360,10 +4624,18 @@ const Rest = () => {
               $$
               \Large M^&#123;b+c+1&#125;L^&#123;a+b-c-3&#125;T^&#123;-a-2b-c&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by multiplying everything together and using
+              <span class="t-3003-c">
+                by multiplying everything together and using
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:59:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               additivity of exponents. (E.g., {" "}
               <NoBreak>
                 <Math>
@@ -3379,10 +4651,16 @@ const Rest = () => {
               $$
               \Large 1
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              independently of the values of {" "}
+              <span class="t-3003-c">
+                independently of the values of {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:65:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $M$
@@ -3405,12 +4683,24 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the three exponents are zero
+              <span class="t-3003-c">
+                the three exponents are zero
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:68:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              ...(!!!) which means that we need to find values
+              <span class="t-3003-c">
+                ...(!!!) which means that we need to find values
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:70:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
                   $a$
@@ -3432,22 +4722,30 @@ const Rest = () => {
               $$
               \Large b + c + 1 = 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large a + b - c - 3 = 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \Large -a -2b - c = 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...are satisfied! Adding the second and third equations gives
+              <span class="t-3003-c">
+                ...are satisfied! Adding the second and third equations gives
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:81:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3459,13 +4757,22 @@ const Rest = () => {
                 offsetY="-0.5em"
                 offsetX=" 0.5em"
                 atLeastAsWide={true}
+                local_url="./images/svg_bt2_ex_equation_addition_cloud.svg"
                 intrinsicWidth={440}
                 intrinsicHeight={250}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and adding this last equation to the first
+              <span class="t-3003-c">
+                and adding this last equation to the first
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:89:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               equation above, we find
             </OuterP>
             <Pause />
@@ -3473,10 +4780,16 @@ const Rest = () => {
               $$
               \Large -c -2 = 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which implies that {" "}
+              <span class="t-3003-c">
+                which implies that {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:94:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $-c = 2$
@@ -3503,20 +4816,32 @@ const Rest = () => {
               $$
               \Large b + (-2) + 1 = 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or
+              <span class="t-3003-c">
+                or
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:100:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large b - 1 = 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which implies that {" "}
+              <span class="t-3003-c">
+                which implies that {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:104:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $b = 1$
@@ -3543,10 +4868,16 @@ const Rest = () => {
               $$
               \Large a + 1 - (-2) - 3 = 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which implies that {" "}
+              <span class="t-3003-c">
+                which implies that {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:110:9
+                </span>
+              </span>
               <Math>
                 $a = 0$
               </Math>
@@ -3567,7 +4898,12 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              In summary, the solution is {" "}
+              <span class="t-3003-c">
+                In summary, the solution is {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:113:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $a = 0$
@@ -3596,10 +4932,16 @@ const Rest = () => {
               $$
               \Large v^0 F^1 \mu^&#123;-2&#125; \rho = 1
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              under the given definitions of {" "}
+              <span class="t-3003-c">
+                under the given definitions of {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:118:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $v$
@@ -3632,10 +4974,16 @@ const Rest = () => {
               $$
               \Large F\mu^&#123;-2&#125;\rho = 1
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (since {" "}
+              <span class="t-3003-c">
+                (since {" "}
+                <span class="t-3003">
+                  ./src/content/bt2/bt2^exercises/_solve_for_exponents_.wly:123:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $v^0 = 1$

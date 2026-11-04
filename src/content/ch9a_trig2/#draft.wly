@@ -1,0 +1,59 @@
+|> Section
+    handle=_trigonometry_two_start_
+
+    |> CodexSuggestion
+
+        *Polar coordinates.*
+
+        Move the general polar-coordinate conversion here when splitting Trig I. Begin with length and direction as an alternative description of a point:
+
+        $$
+        (x,y)=(r\cos\theta,r\sin\theta).
+        $$
+
+        Ask about the nonuniqueness of the angle and the special case of the origin. Rotation adds to the angle in this description, while it mixes the Cartesian coordinates. The coordinate-conversion map itself is nonlinear; distinguish that map from the linear rotation it helps describe.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Encode a rotation.*
+
+        Follow the two coordinate unit arrows through a rotation and obtain
+
+        $$
+        R_\theta=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix}.
+        $$
+
+        Each column should have a geometric explanation. Connect the equal lengths and perpendicularity to the preceding chapter. Check zero and quarter turns before introducing general angle identities.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Two rotations.*
+
+        Explain geometrically why $R_\alpha R_\beta=R_{\alpha+\beta}$, then multiply the encodings to obtain the angle-sum formulas. The formulas now describe composition rather than arrive as unrelated algebraic facts.
+
+        Possible short questions: which entry yields the sine formula? What happens if one angle is negative? Why do these rotations commute even though arbitrary linear maps need not?
+
+|> Section
+
+    |> CodexSuggestion
+
+        *A few consequences.*
+
+        Use equal angles to obtain double-angle formulas. Select exercises that connect $\cos^2t$, $\sin^2t$, and $\sin t\cos t$ to doubled-frequency waves. Reuse the existing graph-recognition and transformation exercises rather than add a large drill set.
+
+        The cosine rule can be revisited by expanding the squared length of a difference with the dot product. Distinguish that derivation from an application of an angle-sum identity; both now have a common geometric setting.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *One wave in disguise.*
+
+        Close with $A\cos t+B\sin t$. View it as the dot product of $(A,B)$ with a point moving around the unit circle. For $(A,B)\ne(0,0)$, write the coefficient pair in polar coordinates to obtain an amplitude $\sqrt{A^2+B^2}$ and a phase.
+
+        Rehouse the current sinusoid-combination exercises here. Ask for a geometric maximum before the algebraic rewriting, then connect the two answers. Handle the zero coefficient pair separately, where the function is zero and no phase is distinguished.
+

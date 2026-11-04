@@ -58,16 +58,16 @@ export default createHandler(() => (
                   rel="icon"
                   type="image/png"
                   sizes="256x256"
-                  href="/favicon-tsc-local-v1-256.png"
+                  href="/favicon_2-local.png?v=5"
                 />
                 <link
                   rel="apple-touch-icon"
                   sizes="180x180"
-                  href="/favicon-tsc-local-v1-180.png"
+                  href="/favicon_2-local-180.png?v=5"
                 />
                 <link
                   rel="apple-touch-startup-image"
-                  href="/favicon-tsc-local-v1-180.png"
+                  href="/favicon_2-local-180.png?v=5"
                 />
               </>
             ) : (
@@ -76,20 +76,20 @@ export default createHandler(() => (
                   rel="icon"
                   type="image/png"
                   sizes="256x256"
-                  href="/favicon-tsc-remote-v1-256.png"
+                  href="/favicon_2.png?v=5"
                 />
                 <link
                   rel="apple-touch-icon"
                   sizes="180x180"
-                  href="/favicon-tsc-remote-v1-180.png"
+                  href="/favicon_2-180.png?v=5"
                 />
                 <link
                   rel="apple-touch-startup-image"
-                  href="/favicon-tsc-remote-v1-180.png"
+                  href="/favicon_2-180.png?v=5"
                 />
                 <link
                   rel="apple-touch-icon-precomposed"
-                  href="/favicon-tsc-remote-v1-180.png"
+                  href="/favicon_2-180.png?v=5"
                 />
                 <script
                   defer

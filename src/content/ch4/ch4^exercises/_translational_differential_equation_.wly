@@ -12,7 +12,7 @@
 
     |> Solution
 
-        Recall the curves from Exercise >>_four_particles_:
+        Recall the curves from Example >>_four_particles_:
 
         |> Image
             src=images/svg_ch4_ex_cosine_recall.svg

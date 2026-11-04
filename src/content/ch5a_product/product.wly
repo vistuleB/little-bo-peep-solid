@@ -1,0 +1,16 @@
+|> Section
+    handle=_product_chapter_start_
+
+    |> CodexSuggestion
+
+        *Finite changes and products.*
+
+        Proposed chapter: use the existing finite-change and difference-quotient exercises to prepare the rats construction. The main question is how to account for a change in a product when both factors change. The intermediate state obtained by changing one factor at a time need never actually occur, yet it gives an exact decomposition.
+
+    |> CodexSuggestion
+
+        The exercises below have been moved unchanged from Chapter 4. A possible development is concrete change, elapsed time, secant slope, shrinking interval, then scaling and sum rules, followed by the product rule. Promote selected explanations to main text later. Keep this short: the purpose of the move is also to give Chapter 4 a visible finish line.
+
+    |> CodexSuggestion
+
+        Preserve the rats and their diagrams. Possible extensions: let B cross first and compare the exact decompositions; try three factors before the indexed generalization. Do not add a large differentiation drill set just to fill the chapter.

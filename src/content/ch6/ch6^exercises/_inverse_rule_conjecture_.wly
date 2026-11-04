@@ -1,0 +1,89 @@
+|> Exercise
+    handle=_inverse_rule_conjecture_
+
+    |> CodexSuggestion
+
+        Use dimensional analysis to conjecture a
+        formula for the derivative of the inverse,
+        i.e., a formula of the form
+
+        $$
+        (f^{-1})' = \ldots
+        $$
+
+        similar to the sum rule, product rule, etc.
+
+
+    |> Solution
+        |> CodexSuggestion
+
+
+            If
+
+            $$
+            f : [\tA] \ra [\tB]
+            $$
+
+            is a generic invertible function, then
+
+            $$
+            f^{-1} : [\tB] \ra [\tA]
+            $$
+
+            since an input of $f^{-1}$ is an output of $f$
+            and vice-versa.
+            Thus 
+            !! the function that we seek to build has signature
+
+            $$
+            (f^{-1})' : [\tB] \ra \left[{\A\over \B}\right]
+            $$
+
+            Taking the reciprocal of $f'$ gives
+
+            $$
+            {1\over f'} : [\A] \ra \left[{\A \over \B}\right]
+            $$
+
+            !! since we get 
+            with the right output units, but the wrong input units (A instead of B);
+            however we can “slot in” the correct input units 
+            to $f'$ by pre-composing with $f^{-1}$, i.e.,
+            observe that
+
+            $$
+            f' \circ f^{-1} : [\B] \ra \left[{\B\over \A}\right]
+            $$
+
+            ...giving us...
+
+            $$
+            {1\over f' \circ f^{-1}} : [\B] \ra \left[{\A\over \B}\right]
+            $$
+
+            ...the desired signature! Thus, a possibility is:
+
+            |> Boxed
+                $$
+                (f^{-1})' = {1\over f' \circ f^{-1}}
+                $$
+
+            |> StarDivider
+                style=margin-top:-1.3em
+
+            |> SolutionNote
+
+                The formula is (correct, and) known as the _inverse rule_.
+                It holds wherever $f'(f^{-1}(x)) \ne 0$, for invertible,
+                differentiable $f$.
+
+            |> SolutionNote
+
+                !! We can evaluate the formula at an input:
+                At a specific input:
+
+                |> Boxed
+                    $$
+                    (f^{-1})'(x) = {1\over f'(f^{-1}(x))}
+                    $$
+

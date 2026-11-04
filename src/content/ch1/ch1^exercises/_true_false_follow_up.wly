@@ -1,13 +1,13 @@
 |> Exercise
     handle=_approximate_1_over_n_minus_1_over_n_plus_1_
 
-    The solution to Exercise >>_true_false_ shows that
+    The fact that
 
     $$
     {1 \over n} - {1 \over n+1}
     $$
 
-    is _roughly_ $1/n^2$ for large $n$. But how
+    is _roughly_ $1/n^2$ for large $n$ is discussed in the solution to part i of Exercise >>_true_false_. But how
     far off is this exactly? (I.e., what is the
     difference between ${1 \over n} - {1 \over n+1}$
     and ${1 \over n^2}$?) And _roughly_ how much is

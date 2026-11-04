@@ -1,0 +1,12 @@
+|> Exercise
+    handle=_construct_dimensionless_output_
+
+    |> CodexSuggestion
+        Given a differentiable function $f : [\s] \ra [\s]$,
+        can you construct a function of signature $[\s] \ra [1]$?
+
+    |> Solution
+        |> CodexSuggestion
+            The derivative $f'$ has the required signature.
+
+            Alternatively, $f/f$ has this signature wherever $f$ is nonzero.

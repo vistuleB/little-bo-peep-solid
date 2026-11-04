@@ -20,7 +20,8 @@
     handle=_ch6_start_
 
     *Notation: function signatures.*
-    If $f$ is a function from $\rr$ to $\rr$
+    We associate units not only with numbers, but also with functions:
+    if $f$ is a function from $\rr$ to $\rr$,
     we write
 
     $$
@@ -141,14 +142,71 @@
         handle=table_1_1 <<Table 1.1>>
         src=tmp-images/c6_flowers_here_bob_v2.svg
 
+    |> CodexSuggestion
+
+        |> Example
+            handle=_function_multiplication_units_example_
+
+            If
+
+            $$
+            \begin{aligned}
+            p &: [\te{days}] \ra [\te{dollars}/\te{kg}] \\
+            m &: [\te{days}] \ra [\te{kg}]\up{1.35}
+            \end{aligned}
+            $$
+
+            then
+
+            $$
+            pm : [\te{days}] \ra [(\te{dollars}/\te{kg})\te{kg} = \te{dollars}]
+            $$
+
+            using $\A = \te{days}$, $\B = \te{dollars}/\te{kg}$,
+            $\C = \te{kg}$ in the “multiplication” cell of Table >>table_1_1.
+
+    |> CodexSuggestion
+
+        Note that Example >>_function_multiplication_units_example_ reflects a physical reality: if
+
+        $$
+        p(t)
+        $$
+
+        is the dollar-per-kilogram price of apples on day $t$, and
+
+        $$
+        m(t)
+        $$
+
+        is the number of kilograms of apples to buy on that day, then
+
+        $$
+        pm = (t \ra p(t)m(t))
+        $$
+
+        becomes the day-to-total-dollars-spent-on-apples-on-that-day function,
+        i.e., a function from “day” to “dollars”.
+
     |> StarDivider
         style=margin-top:-0.3em
 
 |> Section
 
+    !! Two more function operations are _negation_ and _reciprocal_.
+    !! These are separated out in a second table because they are
+    !! _unary_ operations, acting on a single function:
+
     *The unary function operations.*
-    Two unary function operations are _negation_ and _reciprocal_,
-    written “$-\f$” and “$1/f$”, and defined here:
+    We will add two more not-yet-much-discussed
+
+    __unary__
+
+    function operations to our list of officially
+    considered function operations, being _negation_
+    and _reciprocal_,
+    written “$-\f$” and “$1/f$” respectively—note that
+    the reciprocal of $f$ has a different signature than $f$:
 
     |> Image
         handle=table_1_2 <<Table 1.2>>
@@ -182,6 +240,21 @@
     for any units A, B.
     Conversely, multiply the derivative's output units by its
     input units to recover the original output units.
+
+    |> CodexSuggestion
+
+        |> Example
+            handle=_differentiation_position_velocity_units_example_
+
+            If $x : [\s] \ra [\m]$ is differentiable, then
+
+            $$
+            x' : [\s] \ra [\m/\s].
+            $$
+
+            If $x(t)$ is a particle's position in meters at time $t$
+            in seconds, then $x'(t)$ is its velocity in meters per second
+            at that time.
 
 |> Section
     *Operators.*
@@ -238,20 +311,210 @@
         $$
 
     for all differentiable functions $f$, $g : \rr \ra \rr$.
+    !! Shortened version retained for comparison:
+    !! To “check the units”, both sides must impose the same signature
+    !! constraints and yield the same final signature.
+
+    !! On the left, $f + g$ requires $f$ and $g$ to have the same
+    !! input and output units; differentiation adds no constraints.
+    !! On the right, if $f : [\A] \ra [\B]$ and $g : [\C] \ra [\D]$,
+    !! adding $f'$ and $g'$ requires
+
+    !! $$
+    !! \A = \C, \qquad \B/\A = \D/\C,
+    !! $$
+
+    !! hence $\B = \D$ as well: the same constraints.
+    !! With $f, g : [\A] \ra [\B]$, we have
+
+    !! $$
+    !! \begin{aligned}
+    !! (f + g)' &: [\A] \ra [\tB/\tA] \\
+    !! f' + g' &: [\A] \ra [\tB/\tA] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! The sum rule “checks out” insofar as units are concerned:
+    !! nothing untoward has been found!
+
+    !! Original opening retained for comparison:
+    !! We can apply
+
+    !! __dimensional analysis__
+
+    !! to the sum rule, which is to say that we would
+    !! like to “check the units” on the rule, which is to
+    !! say that for two functions with signatures for which
+    !! the left-hand side makes sense, the right-hand side should
+    !! also make sense and vice-versa,
+    !! and the right-hand side should also yield the same
+    !! final signature as the left-hand side.
+
     To “check the units”, both sides must impose the same signature
     constraints and yield the same final signature.
 
-    On the left, $f + g$ requires $f$ and $g$ to have the same
-    input and output units; differentiation adds no constraints.
-    On the right, if $f : [\A] \ra [\B]$ and $g : [\C] \ra [\D]$,
-    adding $f'$ and $g'$ requires
+    On the left-hand side,
 
     $$
-    \A = \C, \qquad \B/\A = \D/\C,
+    f + g
     $$
 
-    hence $\B = \D$ as well: the same constraints!
-    With $f, g : [\A] \ra [\B]$, we have
+    imposes signatures of the form
+
+    $$
+    \begin{aligned}
+    f : [\A] &\ra [\B] \\
+    g : [\A] &\ra [\B] \up{1.35}
+    \end{aligned}
+    $$
+
+    as listed in >>table_1_1,
+    while the subsequent taking of a derivative doesn't
+    impose any new constraints. 
+
+    !! On the right-hand side,
+    !! the sum 
+
+    !! $$
+    !! f' + g'
+    !! $$
+
+    !! likewise imposes signatures of the form
+
+    !! $$
+    !! \begin{aligned}
+    !! f' : [\C] &\ra [\D] \\
+    !! g' : [\C] &\ra [\D] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! on $f'$, $g'$ for some units C, D, but this implies
+
+    !! $$
+    !! \begin{aligned}
+    !! f : [\C] &\ra [\C\D] \\
+    !! g : [\C] &\ra [\C\D] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! and basically again that $f$ and $g$ have the same
+    !! input and output units.
+
+
+
+
+
+    On the right-hand side,
+    we start by adopting the agnostic point of view that
+
+    $$
+    \begin{aligned}
+    f : [\A] &\ra [\B] \\
+    g : [\C] &\ra [\D] \up{1.35}
+    \end{aligned}
+    $$
+
+    for some arbitrary units $\A$, $\B$, $\C$, $\D$; then,
+
+    $$
+    \begin{aligned}
+    f' : [\A] &\ra [\B/\A] \\
+    g' : [\C] &\ra [\D/\C] \up{1.35}
+    \end{aligned}
+    $$
+
+    and the fact that we are taking the sum
+
+    $$
+    f' + g'
+    $$
+
+    implies 
+
+    $$
+    \A\,\,\, = \,\,\,\C
+    $$
+    and
+    $$
+    \left[{\B\over\A}\right]\! =\! \left[{\D\over\C}\right]
+    $$
+
+    !! [a.k.a., “the input units of $f'$ equal the input units
+    !! of $g'$ and the output units of $f'$ equal the output
+    !! units of $g'$”]
+    by Table 1.1 again, which, together, imply 
+
+    $$
+    \begin{aligned}
+    \,\A &= \C, \\
+    \B &= \D \up{1.35}
+    \end{aligned}
+    $$
+
+    ...and we recover the same constraints on $f$ and $g$ as
+    exist on the left-hand side!
+    
+    !! On the right-hand side,
+    !! we start by adopting the agnostic point of view that
+
+    !! $$
+    !! \begin{aligned}
+    !! f : [\A_f] &\ra [\B_f] \\
+    !! g : [\A_g] &\ra [\B_g] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! for some arbitrary units $\A_f$, $\B_f$, $\A_g$, $\B_g$; then,
+
+    !! $$
+    !! \begin{aligned}
+    !! f' : [\A_f] &\ra [\B_f/\A_f] \\
+    !! g' : [\A_g] &\ra [\B_g/\A_g] \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! and the fact that we are taking the sum
+
+    !! $$
+    !! f' + g'
+    !! $$
+
+    !! implies 
+
+    !! $$
+    !! \begin{aligned}
+    !! \A_f &= \A_g \\
+    !! \B_f/\A_f &= \B_g/\A_g \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! [a.k.a., “the input units of $f'$ equal the input units
+    !! of $g'$ and the output units of $f'$ equal the output
+    !! units of $g'$”]
+    !! by Table 1.1 again, which, together, imply 
+
+    !! $$
+    !! \begin{aligned}
+    !! \A_f &= \A_g \\
+    !! \B_f &= \B_g \up{1.35}
+    !! \end{aligned}
+    !! $$
+
+    !! ...and we recover the same constraints on $f$ and $g$ as
+    !! exist on the left-hand side!
+
+
+    Assuming now that $f$
+    and $g$ have the form
+
+    $$
+    \begin{aligned}
+    f : [\A] &\ra [\B] \\
+    g : [\A] &\ra [\B] \up{1.35}
+    \end{aligned}
+    $$
+
+    as required by either side of the equation, we have
 
     $$
     \begin{aligned}
@@ -260,8 +523,11 @@
     \end{aligned}
     $$
 
-    The sum rule “checks out” insofar as units are concerned:
-    nothing untoward has been found!
+    For the second line, $f'$ and $g'$ each have signature
+    $[\A] \ra [\tB/\tA]$, and adding them preserves that signature.
+
+    So the sum rule “checks out” insofar
+    as units are concerned: nothing untoward has been found!
 
     |> Example
         handle=_ms_x1_x2_example_

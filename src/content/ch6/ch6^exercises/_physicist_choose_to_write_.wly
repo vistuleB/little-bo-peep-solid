@@ -38,17 +38,17 @@
         Besides wanting to “remind the general
         formula”, one reason is
         to keep expressions dimensionally consistent.
-        For example, the Lorentz factor reciprocal
+        For example, the Lorentz factor
 
         $$
-        \sqrt{1 - {v^2\over c^2}}
+        {1\over \sqrt{1 - {v^2\over c^2}}}
         $$
 
         (cf. Exercise >>_lorentz_factor_dimensionality_)
         would become
 
         $$
-        \sqrt{1 - v^2}
+        {1\over \sqrt{1 - v^2}}
         $$
 
         if 
@@ -59,9 +59,7 @@
         inconsistent: either a speed squared is being subtracted
         from a dimensionless ‘$1$’, or, in a last-ditch effort, we pretend
         that ‘$1$’ stands for ‘$c^2$’, which is also a speed squared,
-        but then the entire square root is a speed instead of
-        being dimensionless, as the Lorentz factor (or its
-        reciprocal) should be!
+        but then the entire expression has units of inverse speed
+        instead of being dimensionless, as the Lorentz factor should be!
         !! as it should be—failures on all sides!
         !! as the Lorentz factor should be—failures on all sides!
-

@@ -1,6 +1,10 @@
 |> Exercise
     handle=_associativity_of_function_multiplication_
 
+    |> CodexSuggestions
+
+        Keep directly after the formal-statements exercise: current Exercise 12 is original E22. Together they ask the reader to state a claim and unpack a definition to prove one instance. Keep the solution proportionate, then follow with the selected lambda-function callbacks. No additional theory is needed.
+
     Apply the definition
 
     $$

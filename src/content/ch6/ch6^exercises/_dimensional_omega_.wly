@@ -25,8 +25,7 @@
         \cos : [\rad] \ra [1]
         $$
 
-        rephrased (we have $[\rad] = [1]$, putting “radians” is a
-        matter of “author's choice” semantic emphasis), $\omega$ must have units of
+        rephrased (we have $[\rad] = [1]$), $\omega$ must have units of
 
         __radians per second__
 
@@ -38,4 +37,3 @@
 
         |> Image
             src=images/e6_bottom_radian_cloud.svg
-

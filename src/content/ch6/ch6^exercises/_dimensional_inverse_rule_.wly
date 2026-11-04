@@ -16,7 +16,7 @@
     |> Image
         src=images/e6_f_inverse_distinct.svg
 
-    ...and which means that we can invert the flow
+    This means that we can invert the flow
     of the function, treating $y$'s as inputs, and recovering a
     unique $x$ for each $y$ that is an output of $f$—this
     “inverse flow” function is what we write as “$f^{-1}$”:

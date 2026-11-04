@@ -34,7 +34,7 @@
         |> Image
             src=images/svg_ch4_pacman2_frankenstein_at_23_7.svg
 
-        The velocity vector (cf. Exercise >>_four_particles_) is therefore about
+        The velocity vector (cf. Example >>_four_particles_) is therefore about
 
         $$
         (4.8, 4.8)
@@ -42,7 +42,7 @@
 
         in units of $\te{c}\hlfbk/\hlfbk\te{s}$ at $t \approx 23.7$s,
         and the speed, being the length of the velocity
-        vector (cf. Exercise >>_four_particles_), is about
+        vector (cf. Example >>_four_particles_), is about
 
         $$
         \sqrt{4.8^2 + 4.8^2} = \sqrt{2} \times 4.8 = 6.788...

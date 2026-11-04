@@ -98,11 +98,10 @@
 
                 |> Pause
 
-                _*Case 1:*_ 3 cols, 2 on mobile, place-items="start"
+                _*Case 1:*_ Up to 3 cols, place-items="start"
 
                 |> Grid
                     cols=3
-                    mobile-cols=2
                     place-items=start
 
                     Item 1
@@ -284,12 +283,10 @@
 
                 |> Pause
 
-                _*Case 10:*_ custom mobile-cutoff=800 (switches to mobile layout at 800px)
+                _*Case 10:*_ Up to 4 cols, adapting to available space
 
                 |> Grid
                     cols=4
-                    mobile-cols=2
-                    mobile-cutoff=800
                     place-items=start
 
                     Item 1
@@ -328,11 +325,10 @@
 
                 |> Pause
 
-                _*Case 12:*_ column-first + mobile-cols (2 cols desktop, 1 on mobile)
+                _*Case 12:*_ column-first with up to 2 columns
 
                 |> Grid
                     cols=2
-                    mobile-cols=1
                     column-first=true
                     place-items=start
                     with-padding=false
@@ -368,13 +364,10 @@
 
                 |> Pause
 
-                _*Case 14:*_ 3 cols, 2 on mobile, mobile-cutoff=520, center-on-overflow=true (from >>_true_false_)
+                _*Case 14:*_ Up to 3 cols, centered items and final row (from >>_true_false_)
 
                 |> Grid
                     cols=3
-                    mobile-cols=2
-                    mobile-cutoff=520
-                    center-on-overflow=true
 
                     a. $0.9^2 < 0.9$
 
@@ -434,11 +427,10 @@
 
                 |> Pause
 
-                _*Case 16:*_ 2 cols, 1 on mobile, place-items=start, with-padding=false, column-first=true (from >>_evaluate_lambda_functions_)
+                _*Case 16:*_ Up to 2 cols, place-items=start, with-padding=false, column-first=true (from >>_evaluate_lambda_functions_)
 
                 |> Grid
                     cols=2
-                    mobile-cols=1
                     place-items=start
                     with-padding=false
                     column-first=true
@@ -457,7 +449,6 @@
 
                 |> Grid
                     cols=2
-                    mobile-cols=1
                     place-items=start
                     with-padding=false
                     column-first=true
@@ -472,12 +463,10 @@
 
                 |> Pause
 
-                _*Case 18:*_ 2 cols, 1 on mobile, center-on-overflow=true, place-items=start, with-padding=false, column-first=true (from >>_true_or_false_composition_questions_)
+                _*Case 18:*_ Up to 2 cols, place-items=start, with-padding=false, column-first=true (from >>_true_or_false_composition_questions_)
 
                 |> Grid
                     cols=2
-                    mobile-cols=1
-                    center-on-overflow=true
                     place-items=start
                     with-padding=false
                     column-first=true
@@ -492,11 +481,10 @@
 
                 |> Pause
 
-                _*Case 19:*_ 3 cols, 2 items in the final row, center-on-overflow=true
+                _*Case 19:*_ Up to 3 cols, centered incomplete final row
 
                 |> Grid
                     cols=3
-                    center-on-overflow=true
 
                     a. $0.9^2 < 0.9$
 

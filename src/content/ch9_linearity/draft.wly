@@ -1,0 +1,65 @@
+|> Section
+    handle=_linearity_start_
+
+    |> CodexSuggestion
+
+        *An encoding, first.*
+
+        Introduce a matrix as a record of the destinations of the horizontal and vertical unit arrows. If they go to $(a,c)$ and $(b,d)$, record those destinations as columns:
+
+        $$
+        \begin{pmatrix}a&b\\c&d\end{pmatrix}.
+        $$
+
+        Use repeated and scaled parallelogram edges to locate other points. Ask where $(2,3)$ must go before introducing matrix-vector multiplication. State the preservation of addition and scaling that makes two destinations sufficient; they would not determine an arbitrary transformation.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Release one constraint at a time.*
+
+        Explore uniform scaling, then independent scaling along the coordinate axes. Compare their encodings and count the independent choices. Introduce rotations as another one-parameter family, using the unit-circle knowledge from Trig I.
+
+        Treat parameter counts as questions about freedom, not a demand to list every named geometric transformation. Ask which entries are forced by choices already made.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Choose the scaling directions.*
+
+        Why must scaling happen along the coordinate axes? Let the reader choose tilted perpendicular axes and two positive scale factors. Initially use pictures and the two-arrow encoding, without an expression involving three matrix factors.
+
+        Investigate why the off-diagonal entries agree. This gives symmetricness a geometric interpretation. The converse, whether every real symmetric matrix scales along some perpendicular pair of directions, can be the substantial question of the chapter. Zero and negative scales can be admitted later to reveal collapses and reversals.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Same count, different freedoms.*
+
+        Compare scaling along tilted axes with scaling horizontally and vertically and then rotating the result. Both families generically have three parameters, but the second has perpendicular columns and need not be symmetric. Use dot products to formulate the perpendicularity test.
+
+        Possible light exercise: if the two scale factors agree, does the orientation of the scaling axes still matter? This exposes a redundant parameter and makes the degrees-of-freedom count more precise.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Doing one map after another.*
+
+        Follow the two original unit arrows through two successive transformations and encode their final destinations. Introduce matrix multiplication as the procedure already performed. Use one explicit example where reversing the order changes the result; explain associativity through grouping successive actions before an algebraic verification.
+
+        A possible final exploration releases the remaining constraint by allowing separate input and output rotations around a diagonal scaling. With signed scales allowed, every real two-by-two matrix can be represented this way. Treat this as a destination to investigate, not a prerequisite that must be fully proved before continuing.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *A question to carry forward.*
+
+        Which matrices encode rotations? Ask what their columns must satisfy: unit length, perpendicularity, and the appropriate orientation. Perpendicular unit columns alone also admit reflections.
+
+        Stop with a geometric characterization that the next chapter can turn into a sine-and-cosine formula. Determinants or full eigenvalue classification need not become additional requirements for finishing this chapter.
+

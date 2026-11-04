@@ -470,8 +470,6 @@ export const MathBlock = (props: MathBlockProps) => {
   });
   const solutionMathJax = useSolutionMathJax();
 
-  const targetWidth = () => naturalWidth() * constrainedContent.targetScale();
-
   const scale = createMemo(() => ({
     scale: constrainedContent.targetScale(),
     name: merged.id || "MathBlock",
@@ -490,18 +488,21 @@ export const MathBlock = (props: MathBlockProps) => {
     }
 
     const previousRefWidth = ref.style.width;
+    const previousRefMaxWidth = ref.style.maxWidth;
     const previousSvgMaxWidth = svg.style.maxWidth;
     let measuredWidth = 0;
     try {
       ref.style.width = "max-content";
+      ref.style.maxWidth = "none";
       svg.style.maxWidth = "none";
       measuredWidth = svg.getBoundingClientRect().width;
     } finally {
       ref.style.width = previousRefWidth;
+      ref.style.maxWidth = previousRefMaxWidth;
       svg.style.maxWidth = previousSvgMaxWidth;
     }
 
-    if (measuredWidth > 0) {
+    if (measuredWidth > 0 && Math.abs(measuredWidth - naturalWidth()) > 0.1) {
       setNaturalWidth(measuredWidth);
       constrainedContent.notifyHeightChangeAcrossFrames();
     }
@@ -529,8 +530,17 @@ export const MathBlock = (props: MathBlockProps) => {
       event.stopPropagation();
       return;
     }
+    measureNaturalWidth();
     constrainedContent.handleClick(event);
   };
+
+  onMount(() => {
+    // Font loading and responsive layout can change the intrinsic SVG size.
+    // Measurements inform click expansion and side images, not the CSS width.
+    const observer = new ResizeObserver(() => measureNaturalWidth());
+    if (ref) observer.observe(ref);
+    onCleanup(() => observer.disconnect());
+  });
 
   onMount(() => {
     const unsubscribePrerenderedMathJaxCache =
@@ -637,8 +647,12 @@ export const MathBlock = (props: MathBlockProps) => {
         )}
         style={styleJoin(merged.style, {
           opacity: visible() ? "1" : "0",
-          width: targetWidth() ? `${targetWidth()}px` : "fit-content",
-          maxWidth: "none",
+          // Let the browser resolve MathJax's font-relative SVG dimensions.
+          // A cached pixel width can shrink even a single glyph after fonts load.
+          width: "max-content",
+          maxWidth: constrainedContent.constrained()
+            ? "calc(100vw - 2 * var(--mobile-text-column-side-inset))"
+            : "none",
           boxSizing: "border-box",
         })}
         onClick={handleClick}

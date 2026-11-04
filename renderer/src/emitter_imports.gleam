@@ -23,6 +23,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     #("ArticleTitle", ExportedByFile(Some("ArticleTitle"), [])),
     #("Boxed", ExportedByFile(Some("Boxed"), [])),
     #("BoxedText", ExportedByFile(Some("BoxedText"), [])),
+    #("CodexSuggestions", ExportedByFile(Some("CodexSuggestions"), ["CodexSuggestion"])),
     #(
       "Delimiters",
       ExportedByFile(None, ["CentralDisplay", "CentralDisplayItalic"]),
@@ -66,6 +67,7 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
         "Section",
         "Note",
         "SolutionNote",
+        "OldSolutionNote",
         "Example",
         "NoBreak",
         "InTextWarning",

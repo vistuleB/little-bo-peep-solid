@@ -39,6 +39,10 @@ export const SolutionNote = (props: ParentProps & { id?: string }) => {
   return <div id={props.id}>{props.children}</div>;
 };
 
+// Notes promoted from exercise solutions into the main text. The renderer
+// gives their paragraphs OuterP wrappers, while figures keep their own layout.
+export const OldSolutionNote = SolutionNote;
+
 export const NoBreak = (props: ParentProps) => {
   return <span class="nobreak">{props.children}</span>;
 };

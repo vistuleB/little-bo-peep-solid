@@ -1,0 +1,14 @@
+|> Exercise
+    handle=_construct_signature_square_
+
+    |> CodexSuggestion
+        Can you construct a function of signature $[\s] \ra [\te{kg}]$
+        from functions
+
+        $$
+        f : [\s] \ra [\m], \qquad g : [\m^2] \ra [\te{kg}]?
+        $$
+
+    |> Solution
+        |> CodexSuggestion
+            Yes: $g \circ f^2$, since $f^2 : [\s] \ra [\m^2]$.

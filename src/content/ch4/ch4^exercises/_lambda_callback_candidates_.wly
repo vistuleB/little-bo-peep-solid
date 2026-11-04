@@ -1,0 +1,73 @@
+|> Exercise
+    handle=_lambda_callback_candidates_
+
+    |> CodexSuggestion
+
+        Selection to choose from, not a proposed requirement to do all of these. Current Exercise 13 is an editorial container following Exercises 11–12 (original E21–22). Preferred shortlist: B, D, E. C can replace B; A and F are reserves; G belongs later in The Product Rule. The shortlist assumes the small absolute-value/domain pair has been introduced earlier in these exercises. Keep all candidates available for selection now, but eventually present only the chosen short questions as the callback to “correct, incorrect, or nonsensical.” In the candidates below, $\mathrm{id}=(x\mapsto x)$, function products and powers are pointwise, and all inputs are real. State any domain restrictions.
+
+    |> CodexSuggestion
+
+        *Candidate A: two orders.* Rewrite each expression as a single lambda function:
+
+        $$
+        (x\mapsto x+1)\circ(u\mapsto u^2),\qquad
+        (u\mapsto u^2)\circ(x\mapsto x+1).
+        $$
+
+        Answer notes for selection: $t\mapsto t^2+1$ and $t\mapsto(t+1)^2$. Different bound-variable names should not become a separate obstacle. This is the most direct computational callback, but may repeat Chapter 3 too closely.
+
+    |> CodexSuggestion
+
+        *Candidate B: id has different jobs.* For $f:\mathbb R\to\mathbb R$, rewrite these as lambda functions, then identify which equal $f$:
+
+        $$
+        f\circ\mathrm{id},\qquad \mathrm{id}\circ f,\qquad
+        f+\mathrm{id},\qquad f\,\mathrm{id}.
+        $$
+
+        Answer notes: $x\mapsto f(x)$, $x\mapsto f(x)$, $x\mapsto f(x)+x$, and $x\mapsto xf(x)$. Only the first two equal $f$ for every $f$.
+
+    |> CodexSuggestion
+
+        *Candidate C: which identity?* Find a function that leaves every real-valued function on the real line unchanged when added to it. Then ask the same question for multiplication and for composition.
+
+        Answer notes: $x\mapsto0$, $x\mapsto1$, and $\mathrm{id}$, respectively. Ask for the defining equations if a closer callback to the formal-statements exercise is wanted. “Identity” belongs to an operation, not simply to an object.
+
+    |> CodexSuggestion
+
+        *Candidate D: recognize the function.* Let $s=(x\mapsto\sqrt{x})$ on the nonnegative reals. Give an ordinary name or description for each function, including its domain:
+
+        $$
+        s\circ\mathrm{id}^2,\qquad \mathrm{id}^2\circ s.
+        $$
+
+        Answer notes: absolute value on the real line; the identity restricted to the nonnegative reals. Here $\mathrm{id}^2$ is the pointwise square, not $\mathrm{id}\circ\mathrm{id}$. This candidate connects to both the absolute-value exercise and the importance of domains.
+
+    |> CodexSuggestion
+
+        *Candidate E: direction in terms of id.* Restrict $x\mapsto|x|$ to the real line with zero removed. Write its derivative using $\mathrm{id}$ and pointwise function operations, without cases or a lambda expression. Define $|f|=(x\mapsto|f(x)|)$ first, or ask the student to supply that definition.
+
+        Answer notes: $\mathrm{id}/|\mathrm{id}|$, with zero excluded. An alternative using Candidate D is $\mathrm{id}/(s\circ\mathrm{id}^2)$. Choose one notation rather than requiring both. The function retains the direction of a nonzero input and discards its magnitude.
+
+    |> CodexSuggestion
+
+        *Candidate F: the domain catches the cancellation.* Is
+
+        $$
+        {\mathrm{id}\over\mathrm{id}}=(x\mapsto1)
+        $$
+
+        correct if the function on the right is defined on all real numbers? If not, repair the statement.
+
+        Answer notes: the left side is undefined at zero. Restrict the right-hand domain to the nonzero reals. The two formulas agree wherever the quotient is defined, but that alone does not make the original functions equal.
+
+    |> CodexSuggestion
+
+        *Candidate G: the same symbols, two operations.* With $\mathrm{id}^2$ meaning pointwise square, identify these two functions:
+
+        $$
+        (\mathrm{id}^2)',\qquad (\mathrm{id}')^2.
+        $$
+
+        Answer notes: $2\mathrm{id}$ and the constant-one function. Use only if the derivative of the square function has already been established by this point; otherwise defer this candidate to The Product Rule. It could later contrast differentiation as an operator with pointwise multiplication.
+

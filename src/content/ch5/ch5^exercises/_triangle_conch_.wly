@@ -6,7 +6,8 @@
     with the help of a calculator:
 
     |> Image
-        style=width:500px;margin-top:1em;margin-bottom:1em;
+        width=600px
+        style=margin-top:1em;margin-bottom:1em;
         src=images/svg_ch5_ex_big_snail.svg
 
     |> Solution
@@ -153,4 +154,3 @@
             $$
 
             quadrilaterals for two turns!
-

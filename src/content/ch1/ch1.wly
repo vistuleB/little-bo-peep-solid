@@ -34,7 +34,7 @@
         src=images/c1_sqrt_-2^2_cloud.svg
         offset-x=-2em
 
-    and it is _not_ true that
+    and, in particular, it is _not_ true that
 
     $$
     \sqrt{x^{2}} \rt{0.1} = \rt{0.1} x

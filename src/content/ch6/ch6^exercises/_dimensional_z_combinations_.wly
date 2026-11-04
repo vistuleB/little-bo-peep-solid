@@ -50,7 +50,7 @@
 
         is not a well-formed composition, and does not have
         a well-defined signature, since the output units of
-        $z$ do not match the input units of $z$!
+        $z$ do not match the input units of $z$.
 
         !! as obtained from the rules for adding 
         !! for the function $z$ of >>table_1_1, as obtained by

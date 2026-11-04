@@ -1,6 +1,10 @@
 |> Exercise
     handle=_express_the_associativity_etc_
 
+    |> CodexSuggestions
+
+        Keep this exercise substantially intact: current Exercise 11 is original E21. Its repetition asks the reader to supply objects, assumptions, and quantifiers rather than merely recognize an identity. Keep the associativity proof immediately after it, then finish with a few short lambda-function callbacks. Do not split this into a longer sequence of new teaching exercises.
+
     Express the...
     
     |> List

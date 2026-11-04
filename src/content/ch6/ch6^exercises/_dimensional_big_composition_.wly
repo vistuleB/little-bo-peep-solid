@@ -15,7 +15,7 @@
 
     |> Solution
 
-        To start with, the presence of $f \circ f$ as a sub-expression
+        The presence of $f \circ f$ as a sub-expression
         imposes a restricted signature of the form
 
         $$
@@ -48,8 +48,8 @@
         [\tA] = [1]
         $$
 
-        ...$f$ to accept dimensionless inputs, and...
+        ...$f$ to accept dimensionless inputs, and finally
         
         $$f : [1] \ra [1]$$
 
-        ...since $f : [\tA] \ra [\tA]$.
+        since $f : [\tA] \ra [\tA]$.

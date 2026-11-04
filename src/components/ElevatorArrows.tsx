@@ -131,7 +131,7 @@ const adx = 8;
 const sep = 10;
 const un = 30 / 2;
 
-const DoubleUpArrowSVG = (props: { class?: string; style?: string }) => {
+export const DoubleUpArrowSVG = (props: { class?: string; style?: string }) => {
   const { store } = useGlobalContext();
 
   return (
@@ -157,7 +157,7 @@ const DoubleUpArrowSVG = (props: { class?: string; style?: string }) => {
   );
 };
 
-const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
+export const DoubleDownArrowSVG = (props: { class?: string; style?: string }) => {
   const { store } = useGlobalContext();
 
   return (

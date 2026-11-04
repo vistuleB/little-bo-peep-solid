@@ -1,0 +1,15 @@
+|> Exercise
+    handle=_construct_signature_reciprocal_
+
+    |> CodexSuggestion
+        Can you construct a function of signature $[\s] \ra [\te{kg}]$
+        from functions
+
+        $$
+        f : [\s] \ra [\m], \qquad g : [\m^{-1}] \ra [\te{kg}]?
+        $$
+
+    |> Solution
+        |> CodexSuggestion
+            Yes: $g \circ (1/f)$, wherever defined, since
+            $1/f : [\s] \ra [\m^{-1}]$.

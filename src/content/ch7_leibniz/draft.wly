@@ -1,0 +1,64 @@
+|> Section
+    handle=_leibniz_start_
+
+    |> CodexSuggestion
+
+        *Which rate?*
+
+        Proposed opening: write $y=f(x)$ and $dy/dx=f'(x)$ beside the same familiar graph. Begin with a change of notation that immediately earns its keep: if $x$ itself depends on time, $dy/dx$ and $dy/dt$ answer different questions. Use one concrete dependency chain throughout the opening rather than a catalogue of symbols.
+
+        Distinguish the function $f$ from the dependent quantity $y$. The existing lambda notation can make the distinction explicit when needed; avoid turning this into a long discussion of notation before using it.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Rates through an intermediate quantity.*
+
+        Revisit the chain rule as
+
+        $$
+        {dy\over dt}={dy\over dx}{dx\over dt}.
+        $$
+
+        Trace where each rate is evaluated. Use units as a check, connecting directly to the preceding chapter. Explain why the formula resembles cancellation without treating every derivative expression as an ordinary fraction. A short exercise could give three rates with different units and ask which two can be composed.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Holding one input fixed.*
+
+        Introduce partial derivatives through $z=xy$. Freeze $y$, then freeze $x$. Compare the resulting rates with a situation in which both vary with time:
+
+        $$
+        {\partial z\over\partial x}=y,\qquad {\partial z\over\partial y}=x,
+        \qquad {dz\over dt}=y{dx\over dt}+x{dy\over dt}.
+        $$
+
+        The last equality already follows from the product rule. This previews the multivariable chain rule without requiring its general proof here. Explicitly establish that a function can accept a pair of numbers before introducing the partial-derivative symbol.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *An ordinary derivative in disguise.*
+
+        Use the existing language of functions to express freezing an input:
+
+        $$
+        {\partial f\over\partial x}(a,b)=\bigl(x\mapsto f(x,b)\bigr)'(a).
+        $$
+
+        Possible exercise: for $f(x,y)=xy$, compare changing $x$ while $y$ is fixed with moving along $y=x$. Ask the student to write the two one-input functions before differentiating. The point is to identify which dependence is being considered.
+
+|> Section
+
+    |> CodexSuggestion
+
+        *Small notation exercises.*
+
+        Suggested closing exercises: distinguish $d/dx$ from $dy/dx$; distinguish a derivative function from its value at a point; compare $d^2y/dx^2$ with $(dy/dx)^2$; identify what is held fixed in each partial derivative.
+
+        Keep the answers short. Defer a full treatment of differentials as linear approximations until they can explain something beyond these rates. This chapter need not teach all of multivariable calculus.
+

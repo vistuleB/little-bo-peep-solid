@@ -6,7 +6,7 @@
     and tracking their $x$-coordinates? (This
     graph is an exact $2$&#x200b;$\times$ [“two
     x”] vertical dilation of the graph in 
-    Exercise >>_four_particles_.) Should we use 
+    Example >>_four_particles_.) Should we use 
     a circle of radius $2$, or make the points 
     go twice as fast? Or both? Or something else
     yet?
@@ -21,11 +21,11 @@
         to generate these curves. Also the
         values go through one cycle in the same
         amount of time as the particles of
-        Exercise >>_four_particles_, but the circle has twice the
+        Example >>_four_particles_, but the circle has twice the
         circumference (having twice the radius),
         so the particles are going twice as fast!
         (I.e.: speed 2, since the particles of
-        Exercise >>_four_particles_ have unit speed.)
+        Example >>_four_particles_ have unit speed.)
 
         |> SolutionNote
 

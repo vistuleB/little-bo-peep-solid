@@ -1,0 +1,590 @@
+|> Section
+    handle=_trigonometry_two_start_
+
+    *Polar coordinates.*
+    The so-called
+
+    __polar coordinates__
+
+    of a point $P$ in the plane are a pair of
+    numbers
+
+    $$
+    (r, \theta)
+    $$
+
+    with $r \geq 0$ such that
+
+    $$
+    P = (r\cos(\theta), r\sin(\theta)).
+    $$
+
+    That is:
+    
+    |> List
+        style=padding-left:1.8em;
+
+        $r$ is the distance from $P$ to the origin;
+        
+        $\theta$ is “the” counterclockwise angle
+        from the positive $x$ axis to the segment
+        $OP$, where $O$ is the origin;
+
+    ...even though $\theta$ is not unique,
+    because any multiple of $4\eta$ may be
+    added to $\theta$ without altering the
+    values of $\sin(\theta)$ or $\cos(\theta)$;
+    slightly worse even: if $r = 0$, then
+    $\theta$ may be anything. (Because in that
+    case
+
+    $$
+    P = (0, 0)
+    $$
+
+    and any value of $\theta$ will satisfy
+    the equation
+
+    $$
+    P = (0\cdot \cos\theta, 0\cdot \sin\theta)
+    $$
+
+    namely.)
+
+    NONETHELESS—even though the polar coordinates
+    of a point are not (not ever!) uniquely
+    determined, we say “the” polar coordinates of
+    a point, out of expediency!
+
+    |> Example
+
+        The pairs
+
+        $$
+        (\sqrt{2},\, -3.5\eta)
+        $$
+        $$
+        (\sqrt{2},\, 0.5\eta)
+        $$
+        $$
+        (\sqrt{2},\, 4.5\eta)
+        $$
+
+        count among the polar coordinates of the point
+        $(1, 1) \in \rr^2$.
+
+    |> Example
+
+        The pairs
+
+        $$
+        (\sqrt{2},\, -2.5\eta)
+        $$
+        $$
+        (\sqrt{2},\, 1.5\eta)
+        $$
+        $$
+        (\sqrt{2},\, 101.5\eta)
+        $$
+
+        count among the polar coordinates of the point
+        $(-1, 1) \in \rr^2$.
+
+|> Section
+
+    *Change-of-coordinate formulas.*
+    Definitionally, the equations
+
+    $$
+    \displaylines{x = r \cos(\theta)\\
+    \up{1.3}y = r \sin(\theta)}
+    $$
+
+    give the change-of-coordinate formulas
+    from a polar coordinate $(r, \theta)$
+    to a cartesian coordinate $(x, y)$.
+
+    Conversely, to recover the polar
+    coordinates $(r, \theta)$ from the cartesian
+    coordinates $(x, y)$, one has at least
+
+    $$
+    r = \sqrt{x^2 + y^2}
+    $$
+
+    by the Pythagorean theorem, but the
+    formula for $\theta$ is not so cheerful—out
+    of completeness, we can jot it down
+    anyway, for your entertainment:
+
+    $$
+    \theta = \begin{cases}
+    \arctan(y/x) & \te{if }\, x > 0 \\
+    \up{1.2}-\arctan(y/x) & \te{if }\, x < 0 \\
+    \up{1.2}\eta & \te{if }\, x = 0, y > 0 \\
+    \up{1.2}-\eta & \te{if }\, x = 0, y < 0 \\
+    \up{1.2}\rm{?} & \te{if }\, x = 0, y = 0
+    \end{cases}
+    $$
+
+    ...where “arctan” is
+    some-function-or-other-to-be-discussed-later.
+
+    |> Pause
+
+    _Note._
+    Popular programming languages such as
+    python offer a function named 
+    |> span
+        class=code-cartouche
+        atan2
+    \ that will compute the _argument_ (see
+    Vocabulary below) $\theta$ of a given pair
+    $(x, y)$ out of the box, without you having to
+    worry about which of $x$ or $y$ is $0$, etc.
+
+    But the call goes 
+    |> span
+        class=code-cartouche
+        atan2(y, x)
+    \ not 
+    |> span
+        class=code-cartouche
+        atan2(x, y)
+    \ by some bizareness. (Well, actually a
+    throwback to the fact that in this expression...
+
+    _|“$\arctan(y/x)$”|_
+
+    ...you hit “$y$” before “$x$”.)
+
+    |> Pause
+
+    _Vocabulary._
+    The first coordinate of a polar
+    coordinate—colloquially, “$r$”—is called the
+    _radius_ or the _norm_. The second coordinate
+    of a polar coordinate—colloquially, “$\theta$”—is
+    called the _angle_ or the _argument_.
+
+|> Section
+
+    *A famous diagram.*
+    There is a somewhat infamous diagram similar
+    to the diagrams of Examples >>_trig_right_triangle_example_1_ and >>_trig_right_triangle_example_2_ of Chapter >>trigonometry; to draw the
+    diagram, start with a “snail shell” stack of
+    two right triangles:
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_1.svg
+
+    Rotate a copy of the smaller
+    triangle by $90^\circ$ towards the bigger one;
+    we end up with two pairs of parallel sides:
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_2.svg
+
+    Therefore, if we snap a scaled copy of the
+    smaller triangle onto the remaining non-hypotenuse
+    side of the bigger triangle, we get a single
+    straight side (you can also think in terms of
+    angles that add up to $180^\circ$):
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_3.svg
+
+    We finish by setting the
+    hypotenuse of the original big triangle to
+    have length $1$:
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_4.svg
+
+    The sum of $\theta_1$ and $\theta_2$ can exceed $\eta$...
+
+    |> Image
+        src=images/svg_ch5_ch_snail_stack_greater_eta.svg
+
+    ...but, by construction, $\theta_1$ and
+    $\theta_2$ are individually in the range from
+    $0$ to $\eta$. (Being “proper angles” of right
+    triangles.) (You can now contemplate what the
+    “utility” of the diagram might be!)
+
+|> Section
+
+    *The angle-sum formulas.*
+    In the “famous diagram” there
+    are four ways to
+    reach an outer edge using ‘cos’
+    and ‘sin’ arrows while starting from the
+    edge of length $1$, reaching each of the
+    four other outer edges precisely once:
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_1.svg
+
+    (Note by the way that $0 \leq \theta_1 \leq \eta$,
+    $0 \leq \theta_2 \leq \eta$ because of
+    the way the figure is constructed, which
+    implies that $\sin(\theta_1\!\rt{0.1})$,
+    $\cos(\theta_1\!\rt{0.1})$,
+    $\sin(\theta_2\!\rt{0.1})$ and $\cos(\theta_2\!\rt{0.1})$
+    are all nonnegative, and that all their
+    products are nonnegative, as well.)
+
+    On the other hand, if we inscribe the
+    figure in the unit circle with the joint angle
+    $\theta_1 + \theta_2$ at the center, we find that
+
+    $$
+    \,\sin(\theta_1 + \theta_2)\,
+    $$
+
+    and
+
+    $$
+    \,\cos(\theta_1 + \theta_2)\,
+    $$
+
+    make an appearance as coordinates, and
+    that these coordinates can be expressed as
+    sums or differences of the four outer edges:
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_2.svg
+
+    (Or with $\theta_1 + \theta_2 > \eta$...
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_3.svg
+
+    ...works as well!)
+
+    In other words, we find...
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_formulas_flowers.svg
+
+    ...for $\theta_1$ and $\theta_2$ as may
+    appear in such a figure, i.e., for
+    $0 \leq \theta_1, \theta_2 \leq \eta$. In
+    fact, these two formulas hold for _all_
+    $\theta_1$, $\theta_2 \in \rr$. They are
+    known as the _angle-sum formulas_. Also
+    note the “pattern” of the angle-sum formulas:
+
+    |> Image
+        src=images/svg_ch5_ch_angle_sum_formulas_by_heart.svg
+
+    These patterns alone are
+
+    __enough__
+
+    to reconstruct the formulas from scratch!
+    (Well, a lot of students remember the formulas
+    that way, at least.)
+
+|> Section
+
+    *The Abercrombie inequality.*
+    Take an ordinary angle of aperture less than
+    $180^\circ\hlfbk$ with a circular arc drawn
+    inside and a line segment spanning the two
+    sides of the angle, clearing the arc:
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_statement.svg
+
+    The eponymous
+
+    __Abercrombie inequality__
+
+    states that
+    the length of the arc is less than or equal to the length of the segment, i.e., that
+
+    $$
+    A\leq S
+    $$
+
+    where $A$ is the length of the arc and $S$ is
+    the length of the segment, as in the figure.
+
+    !! in the language of the above figure.
+    !! , i.e., that 
+
+    The proof is that, if this were not the case,
+    the length $S$ of the segment would lie to left of the
+    length $A$ of the arc on the number line...
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_to_the_left.svg
+
+    ...and in the space between $S$ and $A$, we could then
+    find the length $P$ of a polygonal line
+    approximating the arc...
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_with_P.svg
+
+    ...because such polygonal lines can
+    approximate the arc arbitrarily closely, i.e.,
+    have lengths that come arbitrarily close to
+    “$A$” on the number line from the left.
+    (This constitutes our “axiomatic” belief
+    about the  nature of curved length.) But this
+    will be a contradiction, because we claim
+    that each segment of the polygonal line has
+    length less than its corresponding “shadow”
+    on the segment of length $S$:
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_shadows.svg
+
+    This follows from the diagram:
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_s1s2p1p2.svg
+
+    The point is that
+
+    $$
+    \overline{s_1s_2}\, > \,\overline{p_1p_2}
+    $$
+
+    because $s_1$ and $s_2$ are separated by a
+    pair of parallel lines that are at distance
+    $\overline{p_1p_2}$ from one another, and
+    because at least one of $s_1$, $s_2$ is
+    not on either of the parallel lines (or else
+    we would have $s_1 = p_1$, $s_2 = p_2$, and
+    the segment $s_1s_2$ would not clear the arc).
+
+    Therefore, each segment of $P$ has length
+    less than its corresponding “shadow segment”
+    on the crossover segment of length $S$, from
+    which $S > P$, from which this arrangement
+    of values...
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_to_the_left_second.svg
+
+    ...on the number line is 
+    false—we have achieved a so-called _contradiction_—from
+    which this original arrangement of values...
+
+    |> Image
+        src=images/svg_ch5_ch_abercrombie_to_the_left_third.svg
+
+    ...on the number line is an impossibility,
+    i.e., it must be that $S \geq A$.
+
+    One can polish a few more details by noting that:
+    
+    |> List
+        marker=lower-roman-paren
+        marker-font-family=Baskerville Bold
+        style=gap:1em;
+
+        the segment can be tangent to the
+        arc at one point, the proof will still go
+        through (so the segment does not need to
+        _strictly_ clear the arc);
+
+        as long as the angle is nonzero,
+        and the arc has nonzero radius, the
+        length of the segment will be STRICTLY
+        GREATER than the length of the arc,
+        not just greater-or-equal-to
+
+    (Point *(ii)* can be seen by
+    comparing the segment to a two-segment
+    assemblage that is shorter than the segment
+    itself, but still-as-long-as-the-arc, by virtue
+    of the original inequality.)
+
+|> Section
+
+    *The Gregorinovich sandwich.*
+    The “Gregorinovich sandwich”—sometimes
+    Gr_i_gorinovich—states that
+
+    $$
+    \sin(\theta) \,<\, \theta \,<\, {\sin(\theta)\over\cos(\theta)}
+    $$
+
+    for all $0 < \theta < \eta$.
+    The Gregorinovich sandwich is so-called because
+    it “sandwiches” $\theta$
+    between
+    $$
+    \sin(\theta)
+    $$
+    below, and
+    $$
+    {\sin(\theta)\over\cos(\theta)}
+    $$
+    above. (Indeed,
+    $$
+    {\sin(\theta)\over\cos(\theta)} > \sin(\theta)
+    $$
+    in the range $0 < \theta < \eta$
+    because dividing by
+    $$
+    \cos(\theta)
+    $$
+    makes you
+    _|BIGGER|_
+    when $0 < \cos(\theta) < 1$, which is the case
+    for $0 < \theta < \eta$—in fact, dividing by
+    $\cos(\theta)$ will make you
+    _|DRAMATICALLY BIGGER|_
+    when $\cos(\theta)$ is close to $0$, which is the
+    case when $\theta$ is close to $\eta$, $0 < \theta < \eta$.)
+
+    The first inequality
+
+    $$
+    \sin(\theta) \rt{0.1}<\rt{0.1} \theta
+    $$
+
+    follows by this illustration (using $0 < \theta < \eta$):
+
+    |> Image
+        src=images/svg_ch5_ch_fisher_first_ineq.svg
+
+    Namely, per the one slightly pedantic logic,
+
+    $$
+    \theta > L
+    $$
+
+    on the one hand, where $L$ is the length of
+    the dotted chord, and
+
+    $$
+    L > \sin(\theta)
+    $$
+
+    on the other hand. Together, this implies
+    $\theta \rt{0.1}>\rt{0.1} \sin(\theta)$.
+
+    For the second inequality, note that
+
+    $$
+    {\sin(\theta)\over \cos(\theta)} = {1\over \cos(\theta)}\cdot \sin(\theta)
+    $$
+
+    is the length that $\theta$ projects onto
+    the line $x = 1$:
+
+    |> Image
+        src=images/svg_ch5_ch_fisher_second_ineq.svg
+
+    Specifically,
+
+    $$
+    {1\over \cos(\theta)}
+    $$
+
+    turns the bottom segment of length $1$
+    into the pink hypotenuse, because just as ‘cos’
+    is the hypotenuse-to-adjacent multiplicative
+    factor, so is ‘$1/\!\cos$’ the adjacent-to-hypotenuse
+    multiplicative factor (don't be confused by the
+    presence of two possible triangles to which
+    this can be applied); then,
+
+    $$
+    \sin(\theta)
+    $$
+
+    brings one over to the right-hand segment
+    from the pink hypotenuse, being the
+    hypotenuse-to-opposite multiplicative
+    factor.
+
+    The fact that
+
+    $$
+    {\theta} \rt{0.1}<\rt{0.1} {\sin(\theta)\over \cos(\theta)}
+    $$
+
+    then follows from the “polished” version
+    of the Abercrombie inequality. (The version
+    that allows the segment to be tangent to the
+    arc, and that claims a strict inequality.)
+
+    (In fact, the identity $\tan = \sec \cdot \sin$
+    played a role in our proof of the
+    Gregorinovich sandwich.) (Indeed,
+
+    $$
+    \sin(\theta) < \theta < \tan(\theta)\rt{0.1}
+    $$
+
+    is another way of writing the Grigorinovich
+    sandwich.)
+
+|> Section
+
+    *Cartographic projections.*
+
+    |> Example
+        handle=_secant_example_
+
+        If the Earth [is modeled as] a sphere
+        of radius $1$ then, as stands to reason, the circle
+        of latitude $\theta$ has radius $\cos(\theta)$:
+
+        |> Image
+            width=480px
+            src=images/country_sphere_35_m45.svg
+
+        [Example >>_secant_example_ continued.] In particular, this means that 
+        in any cylindrical
+        projection\*\* of the Earth, such as the
+        “Lambert projection” depicted below
+        (that just sends each latitude out to
+        its own height), the radius of a latitude is dilated
+        by [a factor of] $\sec(\theta)$:
+
+        |> Image
+            width=480px
+            src=images/country_sphere_35_m45_sec_v3.svg
+            style=margin-bottom:-1em
+
+        ...because...
+
+        $$
+        \Huge \sec(\theta)\cdot\cos(\theta) = 1
+        $$
+
+        ...which means that “$\sec(\theta)$”
+        is the correct multiplicative factor
+        to take the Earth-radius to the
+        cylinder-radius. 
+        (Or just
+        think of the fact that $1/\cos(\theta) = \sec(\theta)$,
+        dividing one radius by the other.)
+
+    *\*\*Vocabulary.* A (so-called
+    _normal_) _cylindrical projection_
+    is a projection that maps the Earth to
+    a vertical cylinder abutting the Earth at the
+    equator while sending each latitude of the
+    Earth to a circle on the cylinder, etc;
+    besides the Lambert projection depicted
+    above, two more examples are the _central
+    cylindrical projection_ and the
+    _plate carée_:
+
+    |> Image
+        width=1300px
+        src=images/plate_caree_central_lambert_combination_with_use_saved.svg
+
+    (In the plate carée, at right, 
+    longitudes are “unrolled” onto the cylinder,
+    which preserves north-south distances.)
+
