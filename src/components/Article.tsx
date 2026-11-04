@@ -2,6 +2,7 @@ import { onCleanup, onMount, ParentProps } from "solid-js";
 import useCheckedSavedScroll from "~/hooks/useCheckedSavedScroll";
 import { ExerciseGroupRegistryProvider } from "~/store/ExerciseGroupRegistryProvider";
 import ElevatorArrows from "./ElevatorArrows";
+import Minimap from "./Minimap";
 import Page from "./Page";
 import PageUpPageDownButtons from "./PageUpPageDownButtons";
 import { useGlobalContext } from "~/store/StoreProvider";
@@ -29,6 +30,7 @@ const Article = (props: ParentProps & ArticleProps) => {
         <ArticleScrollCoordinator>{props.children}</ArticleScrollCoordinator>
         <ElevatorArrows />
         <PageUpPageDownButtons />
+        <Minimap />
       </ExerciseGroupRegistryProvider>
     </Page>
   );
