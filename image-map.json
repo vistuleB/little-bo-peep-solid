@@ -451,8 +451,8 @@
     "compression": "92.63%",
     "intrinsic-width": "520",
     "intrinsic-height": "175",
-    "used-last-build": false,
-    "3chars": []
+    "used-last-build": true,
+    "3chars": ["ch6"]
   },
   "svg_ch4_cosine_curves.svg": {
     "build-version": "svgo-svg/_2ki.svg",
@@ -4940,8 +4940,8 @@
     "3chars": []
   },
   "c6_all_those_x1x2_graphs.svg": {
-    "build-version": "svgo-svg/aASR3HOTyax4.svg",
-    "build-version-created-on": 1794154599,
+    "build-version": "svgo-svg/aASR3HOTyax4yax47CfYU7nJ.svg",
+    "build-version-created-on": 1794156591,
     "build-method": "svgo",
     "build-version-size": 48361,
     "original-size": 394438,

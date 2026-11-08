@@ -136,7 +136,7 @@ export default function __Chapter1__() {
             <span class="t-3003-c">
               epilogue: the dimensionless plane
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1024:6
+                ./src/content/ch6/ch6.wly:1045:6
               </span>
             </span>
           </InChapterLink>
@@ -1785,7 +1785,7 @@ const Rest = () => {
           </OuterP>
           <Pause />
           <Image
-            src="/build-img/svgo-svg/aASR3HOTyax4.svg"
+            src="/build-img/svgo-svg/aASR3HOTyax4yax47CfYU7nJ.svg"
             local_url="./images/c6_all_those_x1x2_graphs.svg"
             intrinsicWidth={442}
             intrinsicHeight={945}
@@ -1946,9 +1946,7 @@ const Rest = () => {
           distinction of making and correcting this
           guess 
           in the span 
-          of a single day,
-          as we know from his notes,
-          whence this equation's moniker.
+          of a single day.
         </OuterP>
         <OuterP class="indent-10">
           <span class="t-3003-c">
@@ -2228,56 +2226,80 @@ const Rest = () => {
             </span>
           </b>
           {" "}
-          Can we use dimensional analysis to {" "}
-          <i>
-            guess
-          </i>
-          {" "} a formula for
+          We would like a formula for
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (f \circ g)'
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            similar to the sum rule,
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:832:5
+            </span>
+          </span>
           {" "}
+          {" "}
+          and we can try guessing such a formula using
+          dimensional analysis.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            To be clear, such a formula should use only the
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:836:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          “atomic components”
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          f,\,g,\,f',\,g'
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            on its right-hand side. These are the “lego pieces”
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:843:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          from which we seek to assemble {" "}
           <NoBreak>
             <Math>
               $(f \circ g)'$
             </Math>
-            ?
-          </NoBreak>
-          {" "} Our “lego pieces” are {" "}
-          <NoBreak>
-            <Math>
-              $f$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $g$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $f'$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $g'$
-            </Math>
             .
           </NoBreak>
-          {" "}
-          With the composition's input and output units matched (&#8288;
-          <InChapterLink
-            href="#_1_h.a.i_"
-            class="in-chapter-link"
-          >
-            Table 1.1
-          </InChapterLink>
-          &#8288;),
-          their signatures are
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            Composition requires the output units of {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:857:5
+            </span>
+          </span>
+          <Math>
+            $g$
+          </Math>
+          {" "} to match the input
+          units of {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "} (Table 1.1). Our “lego pieces” therefore have signatures
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2294,24 +2316,57 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            Our target is {" "}
+            Or in more amusing pictorial form (where we
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:841:5
+              ./src/content/ch6/ch6.wly:870:5
             </span>
           </span>
-          <NoBreak>
-            <Math>
-              $(f\circ g)' : [\tA] \ra [\tC/\tA]$
-            </Math>
-            .
-          </NoBreak>
           {" "}
-          Since
+          {" "}
+          schizophrenically put input tubes on the left, again):
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/YZvS.svg"
+          local_url="./images/c6_lego_pieces.svg"
+          intrinsicWidth={520}
+          intrinsicHeight={175}
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            From these pieces we seek to assemble a function
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:876:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          of signature
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \left[&#123;\C\over \A&#125;\right] = \left[&#123;\tC\over \tB&#125;\right]\cdot\left[&#123;\tB\over\tA&#125;\right],
+          [\tA] \ra [\tC/\tA]
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            which is not a signature of any of the lego pieces;
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:883:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          but since
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          [\tC/\tA] = \left[&#123;\tC\over \tB&#125;\right]\cdot\left[&#123;\tB\over\tA&#125;\right]
           $$
           <MathJaxSvgExportTooltip />
         </MathBlock>
@@ -2320,7 +2375,7 @@ const Rest = () => {
           <span class="t-3003-c">
             we might multiply {" "}
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:849:5
+              ./src/content/ch6/ch6.wly:891:5
             </span>
           </span>
           <Math>
@@ -2331,40 +2386,20 @@ const Rest = () => {
             <Math>
               $g'$
             </Math>
-            ,
-          </NoBreak>
-          {" "} whose output units
-          are {" "}
-          <Math>
-            $\left[&#123;\tC\over \tB&#125;\right]$
-          </Math>
-          {" "} and {" "}
-          <NoBreak>
-            <Math>
-              $\left[&#123;\tB\over\tA&#125;\right]$
-            </Math>
-            ,
+            ;
           </NoBreak>
           {" "}
-          just what we need! Alas, the
-        </OuterP>
-        <Pause />
-        <CentralDisplayItalic>
-          <span class="t-3003-c">
-            input units
-            <span class="t-3003">
-              ./src/content/ch6/ch6.wly:853:7
-            </span>
-          </span>
-        </CentralDisplayItalic>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            of {" "}
-            <span class="t-3003">
-              ./src/content/ch6/ch6.wly:855:5
-            </span>
-          </span>
+          and yet the product
+          {" "}
+          <Math>
+            $f'g'$
+          </Math>
+          {" "}
+          {" "}
+          <i>
+            cannot be formed
+          </i>
+          {" "} since {" "}
           <Math>
             $f'$
           </Math>
@@ -2372,102 +2407,35 @@ const Rest = () => {
           <Math>
             $g'$
           </Math>
-          {" "} are different, we cannot! The
-          trick is to fix a piece of “adapter pipe” to the
-          front of {" "}
-          <NoBreak>
-            <Math>
-              $f'$
-            </Math>
-            :
-          </NoBreak>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          f' \circ g : [\A] \ra [\tC/\tB]
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            and
-            <span class="t-3003">
-              ./src/content/ch6/ch6.wly:863:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (f' \circ g)g' : [\A] \ra [\tC/\tA]
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            multyiplying
-            <span class="t-3003">
-              ./src/content/ch6/ch6.wly:869:5
-            </span>
-          </span>
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            has the same input units as {" "}
-            <span class="t-3003">
-              ./src/content/ch6/ch6.wly:871:5
-            </span>
-          </span>
+          {" "} have different
+          input units!; 
+          the answer is to pre-process inputs to {" "}
+          <Math>
+            $f'$
+          </Math>
+          {" "} via {" "}
           <NoBreak>
             <Math>
               $g$
             </Math>
             ,
           </NoBreak>
-          {" "} and the same output
-          units as {" "}
-          <NoBreak>
-            <Math>
-              $f'$
-            </Math>
-            ;
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            But their input units differ!
-            <span class="t-3003">
-              ./src/content/ch6/ch6.wly:878:5
-            </span>
-          </span>
           {" "}
-          {" "}
-          Feeding {" "}
-          <Math>
-            $g$
-          </Math>
-          {" "} into {" "}
-          <Math>
-            $f'$
-          </Math>
-          {" "} fixes that: try
+          i.e., take
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          (f'\circ g)g'.
+          (f'\circ g)g'
           $$
           <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            The signatures are
+            This product makes sense because
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:885:5
+              ./src/content/ch6/ch6.wly:906:5
             </span>
           </span>
         </OuterP>
@@ -2484,9 +2452,9 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            Both accept A, and their output units multiply to {" "}
+            and multiplying their outputs gives the desired units {" "}
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:894:5
+              ./src/content/ch6/ch6.wly:915:5
             </span>
           </span>
           <NoBreak>
@@ -2507,7 +2475,7 @@ const Rest = () => {
           <span class="t-3003-c">
             It turns out that this is the correct formula:
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:900:5
+              ./src/content/ch6/ch6.wly:921:5
             </span>
           </span>
         </OuterP>
@@ -2523,7 +2491,7 @@ const Rest = () => {
           <span class="t-3003-c">
             ...for all differentiable functions {" "}
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:907:5
+              ./src/content/ch6/ch6.wly:928:5
             </span>
           </span>
           <NoBreak>
@@ -2563,7 +2531,7 @@ const Rest = () => {
             <span class="t-3003-c">
               Say that a cute
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:911:9
+                ./src/content/ch6/ch6.wly:932:9
               </span>
             </span>
           </OuterP>
@@ -2579,7 +2547,7 @@ const Rest = () => {
             <span class="t-3003-c">
               is running a fundraising race. Let {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:916:9
+                ./src/content/ch6/ch6.wly:937:9
               </span>
             </span>
             <Math>
@@ -2608,7 +2576,7 @@ const Rest = () => {
             <span class="t-3003-c">
               At {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:927:9
+                ./src/content/ch6/ch6.wly:948:9
               </span>
             </span>
             <Math>
@@ -2656,7 +2624,7 @@ const Rest = () => {
               <span class="t-3003-c">
                 Note.
                 <span class="t-3003">
-                  ./src/content/ch6/ch6.wly:941:10
+                  ./src/content/ch6/ch6.wly:962:10
                 </span>
               </span>
             </i>
@@ -2711,7 +2679,7 @@ const Rest = () => {
             <span class="t-3003-c">
               We have
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:959:9
+                ./src/content/ch6/ch6.wly:980:9
               </span>
             </span>
           </OuterP>
@@ -2735,7 +2703,7 @@ const Rest = () => {
             <span class="t-3003-c">
               by {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:968:9
+                ./src/content/ch6/ch6.wly:989:9
               </span>
             </span>
             <InChapterLink
@@ -2766,7 +2734,7 @@ const Rest = () => {
             <span class="t-3003-c">
               or, evaluated at {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:975:9
+                ./src/content/ch6/ch6.wly:996:9
               </span>
             </span>
             <NoBreak>
@@ -2803,7 +2771,7 @@ const Rest = () => {
             <span class="t-3003-c">
               We have
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:986:9
+                ./src/content/ch6/ch6.wly:1007:9
               </span>
             </span>
           </OuterP>
@@ -2819,7 +2787,7 @@ const Rest = () => {
             <span class="t-3003-c">
               by {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:992:9
+                ./src/content/ch6/ch6.wly:1013:9
               </span>
             </span>
             <InChapterLink
@@ -2852,7 +2820,7 @@ const Rest = () => {
               <span class="t-3003-c">
                 Note on {" "}
                 <span class="t-3003">
-                  ./src/content/ch6/ch6.wly:1005:10
+                  ./src/content/ch6/ch6.wly:1026:10
                 </span>
               </span>
               <InChapterLink
@@ -2900,7 +2868,7 @@ const Rest = () => {
             <span class="t-3003-c">
               Since {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1013:9
+                ./src/content/ch6/ch6.wly:1034:9
               </span>
             </span>
             <NoBreak>
@@ -2946,7 +2914,7 @@ const Rest = () => {
             <span class="t-3003-c">
               producing the compressed sinusoid-like wave above.
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1020:9
+                ./src/content/ch6/ch6.wly:1041:9
               </span>
             </span>
           </OuterP>
@@ -2961,7 +2929,7 @@ const Rest = () => {
             <span class="t-3003-c">
               Epilogue: the dimensionless plane.
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1024:6
+                ./src/content/ch6/ch6.wly:1045:6
               </span>
             </span>
           </b>
@@ -2974,7 +2942,7 @@ const Rest = () => {
           <span class="t-3003-c">
             length subtended by the angle on the unit circle
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1028:7
+              ./src/content/ch6/ch6.wly:1049:7
             </span>
           </span>
         </CentralDisplayItalic>
@@ -2983,7 +2951,7 @@ const Rest = () => {
           <span class="t-3003-c">
             as opposed to
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1030:5
+              ./src/content/ch6/ch6.wly:1051:5
             </span>
           </span>
         </OuterP>
@@ -2992,7 +2960,7 @@ const Rest = () => {
           <span class="t-3003-c">
             arc length over radius
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1032:7
+              ./src/content/ch6/ch6.wly:1053:7
             </span>
           </span>
         </CentralDisplayItalic>
@@ -3001,7 +2969,7 @@ const Rest = () => {
           <span class="t-3003-c">
             where the latter is the more traditional definition.
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1034:5
+              ./src/content/ch6/ch6.wly:1055:5
             </span>
           </span>
           {" "}
@@ -3021,7 +2989,7 @@ const Rest = () => {
           <span class="t-3003-c">
             whereas under the first definition it sounds like
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1043:5
+              ./src/content/ch6/ch6.wly:1064:5
             </span>
           </span>
           {" "}
@@ -3050,7 +3018,7 @@ const Rest = () => {
           <span class="t-3003-c">
             Relatedly, you may have seen axes labelled “time/s” instead
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1053:5
+              ./src/content/ch6/ch6.wly:1074:5
             </span>
           </span>
           {" "}
@@ -3076,7 +3044,7 @@ const Rest = () => {
           <span class="t-3003-c">
             Dividing time by the unit “s” takes out the units, leaving a pure
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1060:5
+              ./src/content/ch6/ch6.wly:1081:5
             </span>
           </span>
           {" "}
@@ -3100,7 +3068,7 @@ const Rest = () => {
           <span class="t-3003-c">
             The coordinate is the pure number {" "}
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1068:5
+              ./src/content/ch6/ch6.wly:1089:5
             </span>
           </span>
           <NoBreak>
