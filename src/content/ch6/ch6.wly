@@ -855,7 +855,7 @@
     !!     src=images/c6_spoiler_alert_diagonal.svg
 
     Composition requires the output units of $g$ to match the input
-    units of $f$ (Table 1.1). Our “lego pieces” therefore have signatures
+    units of $f$ (Table 1.1). Our “lego pieces” have signatures
 
     $$
     \begin{gathered}
@@ -867,21 +867,31 @@
     \end{gathered}
     $$
 
-    Or in more amusing pictorial form (where we
-    schizophrenically put input tubes on the left, again):
+    whereas the target
 
-    |> Image
-        src=images/c6_lego_pieces.svg
+    $$
+    (f \circ g)'
+    $$ 
 
-    From these pieces we seek to assemble a function
-    of signature
+    has signature
 
     $$
     [\tA] \ra [\tC/\tA]
     $$
 
-    which is not a signature of any of the lego pieces;
-    but since
+    as is easy to check—this is not the signature
+    of any of the pieces, but since
+    !! Or in more amusing pictorial form (where we
+    !! schizophrenically put input tubes on the left, again):
+    !! |> Image
+    !!     src=images/c6_lego_pieces.svg
+    !! From these pieces we seek to assemble a function
+    !! of signature
+    !! $$
+    !! [\tA] \ra [\tC/\tA]
+    !! $$
+    !! which is not a signature of any of the lego pieces;
+    !! but since
 
     $$
     !! [\tC/\tA] = [\tC/\tB]\cdot[\tB/\tA]
@@ -894,22 +904,24 @@
     _cannot be formed_ since $f'$ and $g'$ have different
     input units!; 
     the answer is to pre-process inputs to $f'$ via $g$,
-    i.e., take:
+    i.e., take
  
     $$
-    (f'\circ g)g'.
+    (f'\circ g)g'
     $$
 
-    This product makes sense because
+    which product makes sense because
 
     $$
-    \begin{aligned}
-    f'\circ g &: [\tA] \ra [\tC/\tB] \\
-    g' &: [\tA] \ra [\tB/\tA] \up{1.35}
-    \end{aligned}
+    !! \begin{aligned}
+    \,f'\circ g : [\tA] \ra [\tC/\tB], \\
+    g' : [\tA] \ra [\tB/\tA] \up{1.35}
+    !! \end{aligned}
     $$
 
-    and multiplying their outputs gives the desired units $\tC/\tA$.
+    have the same input units $[\A]$,
+    and moreover, 
+    multiplying their outputs gives the desired output units $\tC/\tA$!
 
     |> ImageRight
         src=images/c6_chain_rule_units_cloud.svg
@@ -923,7 +935,7 @@
         $$
 
     ...for all differentiable functions $f$, $g : \rr \ra \rr$,
-    a formula known as the eponymous _chain rule_$\rt{0.1}$!!
+    a formula known as the _chain rule_$\rt{0.1}$.
 
     |> Example
         Say that a cute

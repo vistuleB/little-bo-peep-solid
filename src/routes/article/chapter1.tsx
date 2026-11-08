@@ -136,7 +136,7 @@ export default function __Chapter1__() {
             <span class="t-3003-c">
               epilogue: the dimensionless plane
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1045:6
+                ./src/content/ch6/ch6.wly:1054:6
               </span>
             </span>
           </InChapterLink>
@@ -2299,7 +2299,7 @@ const Rest = () => {
           <Math>
             $f$
           </Math>
-          {" "} (Table 1.1). Our “lego pieces” therefore have signatures
+          {" "} (Table 1.1). Our “lego pieces” have signatures
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2316,33 +2316,27 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            Or in more amusing pictorial form (where we
+            whereas the target
             <span class="t-3003">
               ./src/content/ch6/ch6.wly:870:5
             </span>
           </span>
-          {" "}
-          {" "}
-          schizophrenically put input tubes on the left, again):
         </OuterP>
         <Pause />
-        <Image
-          src="/build-img/svgo-svg/YZvS.svg"
-          local_url="./images/c6_lego_pieces.svg"
-          intrinsicWidth={520}
-          intrinsicHeight={175}
-        />
+        <MathBlock>
+          $$
+          (f \circ g)'
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            From these pieces we seek to assemble a function
+            has signature
             <span class="t-3003">
               ./src/content/ch6/ch6.wly:876:5
             </span>
           </span>
-          {" "}
-          {" "}
-          of signature
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2354,14 +2348,14 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            which is not a signature of any of the lego pieces;
+            as is easy to check—this is not the signature
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:883:5
+              ./src/content/ch6/ch6.wly:882:5
             </span>
           </span>
           {" "}
           {" "}
-          but since
+          of any of the pieces, but since
         </OuterP>
         <Pause />
         <MathBlock>
@@ -2375,7 +2369,7 @@ const Rest = () => {
           <span class="t-3003-c">
             we might multiply {" "}
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:891:5
+              ./src/content/ch6/ch6.wly:901:5
             </span>
           </span>
           <Math>
@@ -2433,35 +2427,42 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            This product makes sense because
+            which product makes sense because
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:906:5
+              ./src/content/ch6/ch6.wly:913:5
             </span>
           </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;aligned&#125;
-          f'\circ g &amp;: [\tA] \ra [\tC/\tB] \\
-          g' &amp;: [\tA] \ra [\tB/\tA] \up&#123;1.35&#125;
-          \end&#123;aligned&#125;
+          \,f'\circ g : [\tA] \ra [\tC/\tB], \\
+          g' : [\tA] \ra [\tB/\tA] \up&#123;1.35&#125;
           $$
           <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            and multiplying their outputs gives the desired units {" "}
+            have the same input units {" "}
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:915:5
+              ./src/content/ch6/ch6.wly:922:5
             </span>
           </span>
           <NoBreak>
             <Math>
+              $[\A]$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          and moreover, 
+          multiplying their outputs gives the desired output units {" "}
+          <NoBreak>
+            <Math>
               $\tC/\tA$
             </Math>
-            .
+            !
           </NoBreak>
           <ImageRight
             src="/build-img/svgo-svg/zysM.svg"
@@ -2475,7 +2476,7 @@ const Rest = () => {
           <span class="t-3003-c">
             It turns out that this is the correct formula:
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:921:5
+              ./src/content/ch6/ch6.wly:930:5
             </span>
           </span>
         </OuterP>
@@ -2491,7 +2492,7 @@ const Rest = () => {
           <span class="t-3003-c">
             ...for all differentiable functions {" "}
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:928:5
+              ./src/content/ch6/ch6.wly:937:5
             </span>
           </span>
           <NoBreak>
@@ -2508,7 +2509,7 @@ const Rest = () => {
             ,
           </NoBreak>
           {" "}
-          a formula known as the eponymous {" "}
+          a formula known as the {" "}
           <i>
             chain rule
           </i>
@@ -2516,7 +2517,7 @@ const Rest = () => {
             <Math>
               $\rt&#123;0.1&#125;$
             </Math>
-            !!
+            .
           </NoBreak>
         </OuterP>
         <Pause />
@@ -2531,7 +2532,7 @@ const Rest = () => {
             <span class="t-3003-c">
               Say that a cute
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:932:9
+                ./src/content/ch6/ch6.wly:941:9
               </span>
             </span>
           </OuterP>
@@ -2547,7 +2548,7 @@ const Rest = () => {
             <span class="t-3003-c">
               is running a fundraising race. Let {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:937:9
+                ./src/content/ch6/ch6.wly:946:9
               </span>
             </span>
             <Math>
@@ -2576,7 +2577,7 @@ const Rest = () => {
             <span class="t-3003-c">
               At {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:948:9
+                ./src/content/ch6/ch6.wly:957:9
               </span>
             </span>
             <Math>
@@ -2624,7 +2625,7 @@ const Rest = () => {
               <span class="t-3003-c">
                 Note.
                 <span class="t-3003">
-                  ./src/content/ch6/ch6.wly:962:10
+                  ./src/content/ch6/ch6.wly:971:10
                 </span>
               </span>
             </i>
@@ -2679,7 +2680,7 @@ const Rest = () => {
             <span class="t-3003-c">
               We have
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:980:9
+                ./src/content/ch6/ch6.wly:989:9
               </span>
             </span>
           </OuterP>
@@ -2703,7 +2704,7 @@ const Rest = () => {
             <span class="t-3003-c">
               by {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:989:9
+                ./src/content/ch6/ch6.wly:998:9
               </span>
             </span>
             <InChapterLink
@@ -2734,7 +2735,7 @@ const Rest = () => {
             <span class="t-3003-c">
               or, evaluated at {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:996:9
+                ./src/content/ch6/ch6.wly:1005:9
               </span>
             </span>
             <NoBreak>
@@ -2771,7 +2772,7 @@ const Rest = () => {
             <span class="t-3003-c">
               We have
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1007:9
+                ./src/content/ch6/ch6.wly:1016:9
               </span>
             </span>
           </OuterP>
@@ -2787,7 +2788,7 @@ const Rest = () => {
             <span class="t-3003-c">
               by {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1013:9
+                ./src/content/ch6/ch6.wly:1022:9
               </span>
             </span>
             <InChapterLink
@@ -2820,7 +2821,7 @@ const Rest = () => {
               <span class="t-3003-c">
                 Note on {" "}
                 <span class="t-3003">
-                  ./src/content/ch6/ch6.wly:1026:10
+                  ./src/content/ch6/ch6.wly:1035:10
                 </span>
               </span>
               <InChapterLink
@@ -2868,7 +2869,7 @@ const Rest = () => {
             <span class="t-3003-c">
               Since {" "}
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1034:9
+                ./src/content/ch6/ch6.wly:1043:9
               </span>
             </span>
             <NoBreak>
@@ -2914,7 +2915,7 @@ const Rest = () => {
             <span class="t-3003-c">
               producing the compressed sinusoid-like wave above.
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1041:9
+                ./src/content/ch6/ch6.wly:1050:9
               </span>
             </span>
           </OuterP>
@@ -2929,7 +2930,7 @@ const Rest = () => {
             <span class="t-3003-c">
               Epilogue: the dimensionless plane.
               <span class="t-3003">
-                ./src/content/ch6/ch6.wly:1045:6
+                ./src/content/ch6/ch6.wly:1054:6
               </span>
             </span>
           </b>
@@ -2942,7 +2943,7 @@ const Rest = () => {
           <span class="t-3003-c">
             length subtended by the angle on the unit circle
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1049:7
+              ./src/content/ch6/ch6.wly:1058:7
             </span>
           </span>
         </CentralDisplayItalic>
@@ -2951,7 +2952,7 @@ const Rest = () => {
           <span class="t-3003-c">
             as opposed to
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1051:5
+              ./src/content/ch6/ch6.wly:1060:5
             </span>
           </span>
         </OuterP>
@@ -2960,7 +2961,7 @@ const Rest = () => {
           <span class="t-3003-c">
             arc length over radius
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1053:7
+              ./src/content/ch6/ch6.wly:1062:7
             </span>
           </span>
         </CentralDisplayItalic>
@@ -2969,7 +2970,7 @@ const Rest = () => {
           <span class="t-3003-c">
             where the latter is the more traditional definition.
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1055:5
+              ./src/content/ch6/ch6.wly:1064:5
             </span>
           </span>
           {" "}
@@ -2989,7 +2990,7 @@ const Rest = () => {
           <span class="t-3003-c">
             whereas under the first definition it sounds like
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1064:5
+              ./src/content/ch6/ch6.wly:1073:5
             </span>
           </span>
           {" "}
@@ -3018,7 +3019,7 @@ const Rest = () => {
           <span class="t-3003-c">
             Relatedly, you may have seen axes labelled “time/s” instead
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1074:5
+              ./src/content/ch6/ch6.wly:1083:5
             </span>
           </span>
           {" "}
@@ -3044,7 +3045,7 @@ const Rest = () => {
           <span class="t-3003-c">
             Dividing time by the unit “s” takes out the units, leaving a pure
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1081:5
+              ./src/content/ch6/ch6.wly:1090:5
             </span>
           </span>
           {" "}
@@ -3068,7 +3069,7 @@ const Rest = () => {
           <span class="t-3003-c">
             The coordinate is the pure number {" "}
             <span class="t-3003">
-              ./src/content/ch6/ch6.wly:1089:5
+              ./src/content/ch6/ch6.wly:1098:5
             </span>
           </span>
           <NoBreak>
