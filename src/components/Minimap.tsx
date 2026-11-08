@@ -9,7 +9,6 @@ import {
 import { Portal } from "solid-js/web";
 import {
   DESKTOP_TEXT_COLUMN_WIDTH,
-  ELEVATOR_ARROW_SCROLL_DURATION_MS,
   HEADER_HEIGHT,
   MINIMAP_LINE_PX,
   MINIMAP_MEASURE_DEBOUNCE_MS,
@@ -17,12 +16,7 @@ import {
 } from "~/constants";
 import useOnMobile from "~/hooks/useOnMobile";
 import { useGlobalContext } from "~/store/StoreProvider";
-import {
-  minimapGeometry,
-  pageYFromMinimapY,
-  scrollYFromSliderTop,
-} from "~/utils/minimapGeometry";
-import smoothScrollTo from "~/utils/smoothScrollTo";
+import { minimapGeometry, pageYFromMinimapY } from "~/utils/minimapGeometry";
 
 type Kind = "text" | "title" | "math" | "image" | "exercises" | "section";
 type Rect = {
@@ -214,8 +208,11 @@ const MinimapBody = (props: {
   store: ReturnType<typeof useGlobalContext>["store"];
 }) => {
   const store = props.store;
-  const [dragging, setDragging] = createSignal(false);
   const [tip, setTip] = createSignal<SectionMark | null>(null);
+  // Scrub (hover) mode: while the pointer is over the minimap the minimap is
+  // frozen at `offset`, the page follows the cursor, and the slider keeps
+  // showing the anchor viewport. Leaving scrolls back to the anchor.
+  let scrub: { anchorY: number; offset: number } | null = null;
   let sections: SectionMark[] = [];
   const watchedImages = new WeakSet<HTMLImageElement>();
   let root!: HTMLDivElement;
@@ -235,13 +232,19 @@ const MinimapBody = (props: {
 
   const minimapHeight = () => Math.max(0, store.innerHeight - HEADER_HEIGHT);
   const geometry = () =>
-    minimapGeometry(
-      window.scrollY,
-      pageHeight,
-      store.innerHeight,
-      minimapHeight(),
-      sy,
-    );
+    scrub
+      ? {
+          offset: scrub.offset,
+          sliderTop: scrub.anchorY * sy - scrub.offset,
+          sliderHeight: store.innerHeight * sy,
+        }
+      : minimapGeometry(
+          window.scrollY,
+          pageHeight,
+          store.innerHeight,
+          minimapHeight(),
+          sy,
+        );
 
   const frame = () => {
     frameId = undefined;
@@ -360,56 +363,42 @@ const MinimapBody = (props: {
     ),
   );
 
-  let grabOffset = 0;
   const localY = (e: PointerEvent) =>
     e.clientY - root.getBoundingClientRect().top;
+  const clampScroll = (y: number) =>
+    Math.min(Math.max(0, pageHeight - store.innerHeight), Math.max(0, y));
 
+  const startScrub = () => {
+    scrub ??= { anchorY: window.scrollY, offset: geometry().offset };
+  };
+
+  // Click re-anchors to where the page currently is (under the cursor);
+  // the minimap stays frozen.
   const onPointerDown = (e: PointerEvent) => {
     if (e.button !== 0) return;
     e.preventDefault();
-    const y = localY(e);
-    const g = geometry();
-    if (y >= g.sliderTop && y <= g.sliderTop + g.sliderHeight) {
-      grabOffset = y - g.sliderTop;
-      setDragging(true);
-      try {
-        root.setPointerCapture(e.pointerId);
-      } catch {}
-      return;
-    }
-    const pageY = pageYFromMinimapY(y, g.offset, sy);
-    const target = Math.min(
-      Math.max(0, pageHeight - store.innerHeight),
-      Math.max(0, pageY - store.innerHeight / 2),
-    );
-    smoothScrollTo(
-      target,
-      store.animations ? ELEVATOR_ARROW_SCROLL_DURATION_MS : 0,
-    );
+    startScrub();
+    scrub!.anchorY = window.scrollY;
+    scheduleFrame();
   };
 
   const onPointerMove = (e: PointerEvent) => {
+    startScrub();
     const y = localY(e);
-    if (!dragging()) {
-      const pageY = pageYFromMinimapY(y, geometry().offset, sy);
-      const section = sections.findLast((s) => s.y <= pageY);
-      setTip(section ? { y, label: section.label } : null);
-      return;
-    }
-    setTip(null);
-    window.scrollTo(
-      window.scrollX,
-      scrollYFromSliderTop(
-        y - grabOffset,
-        pageHeight,
-        store.innerHeight,
-        minimapHeight(),
-        sy,
-      ),
-    );
+    const pageY = pageYFromMinimapY(y, scrub!.offset, sy);
+    const section = sections.findLast((s) => s.y <= pageY);
+    setTip(section ? { y, label: section.label } : null);
+    window.scrollTo(window.scrollX, clampScroll(pageY - store.innerHeight / 2));
   };
 
-  const endDrag = () => setDragging(false);
+  const onPointerLeave = () => {
+    setTip(null);
+    if (!scrub) return;
+    const { anchorY } = scrub;
+    scrub = null;
+    window.scrollTo(window.scrollX, anchorY);
+    scheduleFrame();
+  };
 
   return (
     <div
@@ -420,15 +409,14 @@ const MinimapBody = (props: {
         top: `${HEADER_HEIGHT}px`,
         width: `${MINIMAP_WIDTH}px`,
         height: `${minimapHeight()}px`,
-        "z-index": 30,
+        "z-index": 71, // above HeaderControlSurface (70) so its 10rem strip sits beneath
         "touch-action": "none",
         "border-left": "1px solid rgba(0,0,0,0.08)",
       }}
+      onPointerEnter={startScrub}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
-      onPointerUp={endDrag}
-      onPointerCancel={endDrag}
-      onPointerLeave={() => setTip(null)}>
+      onPointerLeave={onPointerLeave}>
       <canvas
         ref={canvas}
         class="block pointer-events-none"
@@ -436,10 +424,7 @@ const MinimapBody = (props: {
       />
       <div
         ref={slider}
-        class="absolute left-0 right-0 top-0 pointer-events-none"
-        style={{
-          background: dragging() ? "rgba(0,0,0,0.14)" : "rgba(0,0,0,0.08)",
-        }}
+        class="absolute left-0 right-0 top-0 pointer-events-none bg-black/[.08]"
       />
       <Show when={tip()}>
         {(t) => (
