@@ -40,10 +40,15 @@ Run `gleam run -- --help` for some other options.
 The `.env` OFFLINE_MODE=true option is for using a local copy of MathJax
 instead of downloading it from the CDN, possibly useful for offline work.
 
-Todo:
+From the repository root, copy the installed MathJax packages and the v4
+font components into `public/`:
 
-- Download MathJax v3.2.2 from [here](https://sourceforge.net/projects/mathjax.mirror/files/3.2.2/), rename/move the `es5` folder therein to a folder named `mathjax3` inside `public/`.
-- Download MathJax v4.x from [here](https://sourceforge.net/projects/mathjax.mirror/), rename/move the entire downloaded folder as `mathjax4` inside `public/`.
+```sh
+npm run build-local-mathjax
+```
+
+Run this again after updating MathJax dependencies. Offline mode sets the font
+loader to `/mathjax4/fonts`, so dynamically loaded symbols also stay local.
 
 Then try out the combos `MATHJAX_VERSION=3`, `=4` in `.env` together with `OFFLINE_MODE=true`.
 

@@ -1,6 +1,9 @@
 window.__LBP_MATHJAX_SETUP_LOADED__ = false;
 
 window.MathJax = {
+  ...(window.env?.OFFLINE_MODE === true
+    ? { loader: { paths: { fonts: "/mathjax4/fonts" } } }
+    : {}),
   svg: {
     mtextInheritFont: true,
     fontCache: window.env && window.env.VITE_ENV === "LOCAL" ? "local" : "global",

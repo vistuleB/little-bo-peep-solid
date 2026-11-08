@@ -1,18 +1,20 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
+import Boxed  from "~/components/Boxed";
+import { CodexSuggestion }  from "~/components/CodexSuggestions";
 import { CentralDisplayItalic }  from "~/components/Delimiters";
 import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises";
-import Grid  from "~/components/Grid";
+import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
-import { Item, List }  from "~/components/List";
-import { Math, MathBlock }  from "~/components/Math";
+import { MathBlock, Math }  from "~/components/Math";
 import MathJaxSvgExportTooltip  from "~/components/MathJaxSvgExportTooltip";
+import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import SectionsBreadcrumbs,  { BreadcrumbItem }  from "~/components/SectionsBreadcrumbs";
-import { ImageLeft, ImageRight }  from "~/components/SideImage";
+import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
 import { StarDivider }  from "~/components/StarDivider";
-import { Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
+import { SolutionNote, Example, NoBreak, Pause, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Chapter1__() {
@@ -20,18 +22,18 @@ export default function __Chapter1__() {
     <Article
       prevPage="/"
       nextPage="/article/chapter2"
-      pageNecessaryMargin={800}
-      maxElementWidth={500}
-      id="_26_h.a.i_"
+      pageNecessaryMargin={1500}
+      maxElementWidth={1000}
+      id="_30_h.a.i_"
       path="/article/chapter1"
     >
       <SectionsBreadcrumbs>
         <BreadcrumbItem id="breadcrumb-0">
-          <InChapterLink href="?id=first-section">
+          <InChapterLink href="?id=section-1">
             <span class="t-3003-c">
-              square roots
+              the topic
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:5:6
+                ./src/content/ch6/ch6.wly:2:6
               </span>
             </span>
           </InChapterLink>
@@ -39,9 +41,9 @@ export default function __Chapter1__() {
         <BreadcrumbItem id="breadcrumb-1">
           <InChapterLink href="?id=section-2">
             <span class="t-3003-c">
-              fractions and division
+              notation: function signatures
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:167:6
+                ./src/content/ch6/ch6.wly:22:6
               </span>
             </span>
           </InChapterLink>
@@ -49,9 +51,9 @@ export default function __Chapter1__() {
         <BreadcrumbItem id="breadcrumb-2">
           <InChapterLink href="?id=section-3">
             <span class="t-3003-c">
-              distributivity
+              dimensionless units
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:260:6
+                ./src/content/ch6/ch6.wly:54:6
               </span>
             </span>
           </InChapterLink>
@@ -59,29 +61,92 @@ export default function __Chapter1__() {
         <BreadcrumbItem id="breadcrumb-3">
           <InChapterLink href="?id=section-4">
             <span class="t-3003-c">
-              epilogue
+              restrictions imposed on signatures by function
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:515:6
+                ./src/content/ch6/ch6.wly:109:6
               </span>
             </span>
+            {" "}
+            {" "}
+            operations
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-4">
           <InChapterLink href="?id=section-5">
             <span class="t-3003-c">
-              vocabulary
+              the unary function operations
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:555:6
+                ./src/content/ch6/ch6.wly:202:6
               </span>
             </span>
           </InChapterLink>
         </BreadcrumbItem>
         <BreadcrumbItem id="breadcrumb-5">
+          <InChapterLink href="?id=section-6">
+            <span class="t-3003-c">
+              differentiation
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:224:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-6">
+          <InChapterLink href="?id=section-7">
+            <span class="t-3003-c">
+              operators
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:279:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-7">
+          <InChapterLink href="?id=section-8">
+            <span class="t-3003-c">
+              the sum rule
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:324:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-8">
+          <InChapterLink href="?id=section-9">
+            <span class="t-3003-c">
+              the “early afteroon product rule”
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:663:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-9">
+          <InChapterLink href="?id=section-10">
+            <span class="t-3003-c">
+              the chain rule
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:825:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-10">
+          <InChapterLink href="?id=section-11">
+            <span class="t-3003-c">
+              epilogue: the dimensionless plane
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1024:6
+              </span>
+            </span>
+          </InChapterLink>
+        </BreadcrumbItem>
+        <BreadcrumbItem id="breadcrumb-11">
           <InChapterLink href="?id=exercises">
             <span class="t-3003-c">
               exercises
               <span class="t-3003">
-                ./src/content/ch1/ch1^exercises/__parent.wly:1:1
+                ./src/content/ch6/ch6^exercises/__parent.wly:1:1
               </span>
             </span>
           </InChapterLink>
@@ -89,1202 +154,168 @@ export default function __Chapter1__() {
       </SectionsBreadcrumbs>
       <ArticleTitle banner="Chapter 1:">
         <span class="t-3003-c">
-          A Few Refreshers
+          Dimensional Analysis
           <span class="t-3003">
-            ./src/content/ch1/__parent.wly:2:11
+            ./src/content/ch6/__parent.wly:2:11
           </span>
         </span>
       </ArticleTitle>
-      <Section id="first-section">
+      <Section id="section-1">
         <OuterP>
           <b>
             <span class="t-3003-c">
-              Square roots.
+              The topic.
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:5:6
+                ./src/content/ch6/ch6.wly:2:6
               </span>
             </span>
           </b>
           {" "}
-          Because “minus times minus is plus”
-          (the enemy of my enemy is my friend)
-          and “plus times plus is plus”,
-          any nonzero number multiplied by itself
-          is positive. For example,
+          A
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          (-2) \times (-2) = 4
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            dimension
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:5:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            is positive, {" "}
+            is a category of units such as “time”, as
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:17:5
+              ./src/content/ch6/ch6.wly:7:5
             </span>
           </span>
           {" "}
           {" "}
-          while
+          touched upon in the 
+          {" "}
+          <a href="&gt;&gt;units_vs_dimensions">
+            Postcript to Chapter 
+            2
+          </a>
+          &#8288;.
+          The topic of
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          2 \times 2 = 4
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            dimensional analysis
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:12:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            is positive as well. {" "}
+            is that of analyzing the units within a mathematical {" "}
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:23:5
+              ./src/content/ch6/ch6.wly:14:5
             </span>
           </span>
           {" "}
           {" "}
-          But {" "}
-          <Math>
-            $\sqrt&#123;4&#125;$
-          </Math>
-          {" "}
-          is, by definition, the unique {" "}
-          <i>
-            nonnegative
-          </i>
-          {" "}
-          solution to {" "}
-          <NoBreak>
-            <Math>
-              $x^2 = 4$
-            </Math>
-            .
-          </NoBreak>
-          {" "}
-          Hence,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \sqrt&#123;(-2)^2&#125; = 2
-          $$
-          <ImageRight
-            src="/build-img/svgo-svg/ypXE.svg"
-            offsetX="-2em"
-            atLeastAsWide={true}
-            local_url="./images/c1_sqrt_-2^2_cloud.svg"
-            intrinsicWidth={360}
-            intrinsicHeight={160}
-          />
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            and, in particular, it is {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:37:5
-            </span>
-          </span>
-          <i>
-            not
-          </i>
-          {" "} true that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; x
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            for every real number {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:43:5
-            </span>
-          </span>
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            .
-          </NoBreak>
-          {" "} Instead,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \sqrt&#123;x^&#123;2&#125;&#125; \rt&#123;0.1&#125; = \rt&#123;0.1&#125; |x|
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            for every real number {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:49:5
-            </span>
-          </span>
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} where {" "}
-          <Math>
-            $|x|$
-          </Math>
-          {" "}
-          denotes the absolute value of {" "}
-          <NoBreak>
-            <Math>
-              $x$
-            </Math>
-            .
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            (NB: If you want to indicate both
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:66:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          solutions of {" "}
-          <NoBreak>
-            <Math>
-              $x^2 = 4$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} you
-          can use the notation {" "}
-          <NoBreak>
-            “
-            <Math>
-              $\pm \sqrt&#123;4&#125;$
-            </Math>
-            ”.
-          </NoBreak>
-          {" "}
-          This is what happens, for example, in the
-          maybe-well-known formula
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x = &#123;-b \pm \sqrt&#123;b^2 - 4ac&#125; \over 2a&#125;
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            for the solutions to {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:76:5
-            </span>
-          </span>
-          <Math>
-            $x$
-          </Math>
-          {" "} to {" "}
-          <NoBreak>
-            <Math>
-              $ax^2 + bx + c = 0$
-            </Math>
-            .)
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            Next, we will ponder
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:87:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \sqrt&#123;0.5&#125;
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            which is, by definition, the unique
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:93:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          nonnegative solution {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} to
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 = 0.5.
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            As beginners, there's nothing wrong with
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:100:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          trying to solve this equation by trial and
-          error. With {" "}
-          <NoBreak>
-            <Math>
-              $x = &#123;1\over 4&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} for example,
-          we find
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 = &#123;1\over 4&#125;\times&#123;1\over 4&#125; = &#123;1\over 16&#125;
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            so {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:109:5
-            </span>
-          </span>
-          <Math>
-            $x = &#123;1\over 4&#125;$
-          </Math>
-          {" "} is not a solution,
-          being apparently too small.
-          Increasing {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} to {" "}
-          <NoBreak>
-            <Math>
-              $&#123;1\over 2&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} we
-          find
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 = &#123;1\over 2&#125;\times&#123;1\over 2&#125; = &#123;1\over 4&#125;
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            which is better, since {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:118:5
-            </span>
-          </span>
-          <Math>
-            $1/4$
-          </Math>
-          {" "} is closer to {" "}
-          <NoBreak>
-            <Math>
-              $1/2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          but still too small. Increasing {" "}
-          <Math>
-            $x$
-          </Math>
-          {" "} by {" "}
-          <Math>
-            $1/4$
-          </Math>
-          {" "}
-          again to {" "}
-          <NoBreak>
-            <Math>
-              $&#123;3\over 4&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} we find
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          x^2 = &#123;3\over 4&#125;\times&#123;3\over 4&#125; = &#123;9\over 16&#125;
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            which—surprise!—is pretty close to
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:126:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          {" "}{" "}
-          <NoBreak>
-            <Math>
-              $1/2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} as {" "}
-          <NoBreak>
-            <Math>
-              $1/2 = 8/16$
-            </Math>
-            .
-          </NoBreak>
-          {" "} And since {" "}
-          <NoBreak>
-            <Math>
-              $9/16 &gt; 0.5$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          {" "}
-          <Math>
-            $\sqrt&#123;0.5&#125;$
-          </Math>
-          {" "} must be a little {" "}
-          <i>
-            less
-          </i>
-          {" "} than
-          {" "}
-          <NoBreak>
-            <Math>
-              $&#123;3\over 4&#125; = 0.75$
-            </Math>
-            .
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            In last resort, and in reasonably good
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:131:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          agreement with our observations, a calculator
-          reveals that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \sqrt&#123;0.5&#125; = 0.7071067...
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            where the decimals trail off with no pattern.
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:139:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          (This number is irrational.) Even so, the fact
-          that {" "}
-          <Math>
-            $\sqrt&#123;0.5&#125;$
-          </Math>
-          {" "} is {" "}
-          <i>
-            greater
-          </i>
-          {" "} than {" "}
-          <Math>
-            $0.5$
-          </Math>
-          {" "} is
-          often perceived as counterintuitive.
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            You can think of it this way: multiplying a
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:144:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          value by {" "}
-          <NoBreak>
-            <Math>
-              $0.7071$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} or approximately {" "}
-          <NoBreak>
-            <Math>
-              $\sqrt&#123;0.5&#125;$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          is like taking {" "}
-          <Math>
-            $70.71\%$
-          </Math>
-          {" "} of that value—for
-          example,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          605 \cdot 0.7071 = 427.7955
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            is {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:153:5
-            </span>
-          </span>
-          <Math>
-            $70.71\%$
-          </Math>
-          {" "} of {" "}
-          <NoBreak>
-            <Math>
-              $605$
-            </Math>
-            —so
-          </NoBreak>
-          {" "} if we
-          multiply {" "}
-          <i>
-            twice
-          </i>
-          {" "} by {" "}
-          <Math>
-            $0.7071$
-          </Math>
-          {" "} we obtain
-          {" "}
-          <NoBreak>
-            “
-            <Math>
-              $70.71\%$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
-          <NoBreak>
-            <Math>
-              $70.71\%$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} and it just so happens
-          that {" "}
-          <NoBreak>
-            “
-            <Math>
-              $70.71\%$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
-          <NoBreak>
-            <Math>
-              $70.71\%$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} is close to
-          {" "}
-          <NoBreak>
-            <Math>
-              $50\%$
-            </Math>
-            .
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            The point is: if {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:159:5
-            </span>
-          </span>
-          <NoBreak>
-            “
-            <Math>
-              $X\%$
-            </Math>
-          </NoBreak>
-          {" "} of {" "}
-          <NoBreak>
-            <Math>
-              $X\%$
-            </Math>
-            ”
-          </NoBreak>
-          {" "} equals {" "}
-          <NoBreak>
-            <Math>
-              $50\%$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          then, of course, {" "}
-          <NoBreak>
-            <Math>
-              $\rt&#123;0.03&#125;X &gt; 50$
-            </Math>
-            —that
-          </NoBreak>
-          {" "} much
-          seems logical—and, with a little thought, the
-          same phenomenon explains why {" "}
-          <NoBreak>
-            <Math>
-              $\sqrt&#123;0.5&#125; &gt; 0.5$
-            </Math>
-            !
-          </NoBreak>
+          expression to uncover contradictions (pointing
+          to upstream errors) and/or conversely to offer
+          validation.
         </OuterP>
       </Section>
-      <Rest />
-    </Article>
-  );
-}
-
-const Rest = () => {
-  const visibleRestSections = useShowMore(5);
-  return <>
-    {visibleRestSections() > 0 && <>
       <Pause />
       <Section id="section-2">
         <OuterP>
           <b>
             <span class="t-3003-c">
-              Fractions and Division.
+              Notation: function signatures.
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:167:6
+                ./src/content/ch6/ch6.wly:22:6
               </span>
             </span>
           </b>
           {" "}
-          An elementary fraction, or division, such as
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;50 \over 2&#125;
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            can be thought of in a few ways:
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:174:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <List
-          marker="decimal"
-          style="gap:2px;"
-        >
-          <Item>
-            <p>
-              <span class="t-3003-c">
-                Fifty halves (i.e., {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1.wly:180:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $50 \times &#123;1\over 2&#125;$
-                </Math>
-                <span class="t-3003-c">
-                  ).
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1.wly:180:51
-                  </span>
-                </span>
-              </NoBreak>
-            </p>
-          </Item>
-          <Item>
-            <p>
-              <span class="t-3003-c">
-                The size obtained when something of size
-                <span class="t-3003">
-                  ./src/content/ch1/ch1.wly:182:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              fifty is divided into two equal parts
-              (answer: {" "}
-              <NoBreak>
-                <Math>
-                  $25$
-                </Math>
-                <span class="t-3003-c">
-                  ).
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1.wly:184:22
-                  </span>
-                </span>
-              </NoBreak>
-            </p>
-          </Item>
-          <Item>
-            <p>
-              <span class="t-3003-c">
-                The number of times {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1.wly:186:9
-                </span>
-              </span>
-              <Math>
-                $2$
-              </Math>
-              <span class="t-3003-c">
-                {" "} goes into {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1.wly:186:32
-                </span>
-              </span>
-              <Math>
-                $50$
-              </Math>
-              {" "}{" "}
-              {" "}
-              {" "}
-              <span class="t-3003-c">
-                (answer: {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1.wly:187:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $25$
-                </Math>
-                <span class="t-3003-c">
-                  ,
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1.wly:187:22
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} because it takes twenty-five
-                <span class="t-3003">
-                  ./src/content/ch1/ch1.wly:187:22
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <NoBreak>
-                <Math>
-                  $2$
-                </Math>
-                <span class="t-3003-c">
-                  's
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1.wly:188:12
-                  </span>
-                </span>
-              </NoBreak>
-              <span class="t-3003-c">
-                {" "} to make {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1.wly:188:12
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $50$
-                </Math>
-                <span class="t-3003-c">
-                  ).
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1.wly:188:27
-                  </span>
-                </span>
-              </NoBreak>
-            </p>
-          </Item>
-        </List>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            But {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:190:5
-            </span>
-          </span>
+          We associate units not only with numbers, but also with functions:
+          if {" "}
           <Math>
-            $50/2$
+            $f$
           </Math>
-          {" "} is a ratio of integers, 
-          and for a ratio of
-          decimals, such as
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \,&#123;1 \over 0.01&#125;,
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            our possible points of view are going to be
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:199:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          more restricted. Thankfully, though, we can
-          still characterize this fraction as the
-          answer to the question “how many times does
-          {" "}
+          {" "} is a function from {" "}
           <Math>
-            $0.01$
+            $\rr$
           </Math>
-          {" "} go into {" "}
+          {" "} to {" "}
           <NoBreak>
             <Math>
-              $1$
+              $\rr$
             </Math>
-            ?”,
+            ,
           </NoBreak>
-          {" "} as in the third option
-          above—from which,
+          {" "}
+          we write
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          &#123;1 \over 0.01&#125; \,=\,100
+          f : [\A] \ra [\B]
           $$
           <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            because {" "}
+            to indicate that {" "}
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:210:5
+              ./src/content/ch6/ch6.wly:31:5
             </span>
           </span>
           <Math>
-            $0.01$
+            $f$
           </Math>
-          {" "} goes {" "}
-          <Math>
-            $100$
-          </Math>
-          {" "} times into {" "}
+          {" "} takes inputs in units A and returns
+          outputs in units B. The ordered pair {" "}
           <NoBreak>
             <Math>
-              $1$
+              $(\A, \B)$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} written
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $[\A] \ra [\B]$
+            </Math>
+            ”,
+          </NoBreak>
+          {" "} is the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            signature
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:35:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            of {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:37:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $f$
             </Math>
             .
           </NoBreak>
-          {" "} For
-          that matter,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123; 1 \over 0.001&#125; = 1000,\qquad&#123;1 \over 0.0001&#125; = 10000,\quad\,\,\,\,\textrm&#123;(etc)&#125;
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            by the same reasoning, which explains why
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:217:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          dividing by smaller and smaller numbers produces
-          larger and larger results. (Also, why dividing by {" "}
-          <Math>
-            $0$
-          </Math>
-          {" "} is undefined.)
-        </OuterP>
-        <Pause />
-        <OuterP>
-          <b>
-            <span class="t-3003-c">
-              Note.
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:230:6
-              </span>
-            </span>
-          </b>
-          {" "} In general, the ratio of two decimal
-          numbers can be turned into a ratio of integers
-          by multiplying top and bottom by a
-          suitable power of {" "}
-          <NoBreak>
-            <Math>
-              $10$
-            </Math>
-            .
-          </NoBreak>
-          {" "} E.g.:
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          &#123;1.42 \over 0.8&#125; = &#123;100 \cdot 1.42 \over 100 \cdot 0.8&#125; = &#123;142 \over 80&#125; = &#123;71 \over 40&#125;.
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            This example was chosen randomly, and, if you
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:239:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          allow, we would like to see how large {" "}
-          <Math>
-            $71/40$
-          </Math>
-          {" "}
-          really is
-          (one second!):
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;align*&#125;
-          &#123;71 \over 40&#125; \,&amp;=\, &#123;40 + 30 + 1 \over 40&#125; \,=\, &#123;40 \over 40&#125; + &#123;30 \over 40&#125; + &#123;1 \over 40&#125;\\
-          \,&amp;=\, 1 + &#123;3 \over 4&#125; + &#123;1 \over 4&#125;\!\cdot \!&#123;1 \over 10&#125;\up&#123;1.5&#125;\\
-          \,&amp;=\, 1 + 0.75 + 0.025 = 1.775\up&#123;1.5&#125;
-          \end&#123;align*&#125;
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            ...so we find that {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:252:5
-            </span>
-          </span>
-          <Math>
-            $71$
-          </Math>
-          {" "} is exactly
-          {" "}
-          <Math>
-            $77.5\%$
-          </Math>
-          {" "} greater than {" "}
-          <NoBreak>
-            <Math>
-              $40$
-            </Math>
-            .
-          </NoBreak>
-          {" "}
-          (Check yourself: {" "}
-          <Math>
-            $70$
-          </Math>
-          {" "} is {" "}
-          <Math>
-            $75\%$
-          </Math>
-          {" "} greater than {" "}
-          <NoBreak>
-            <Math>
-              $40$
-            </Math>
-            .)
-          </NoBreak>
-        </OuterP>
-      </Section>
-    </>}
-    {visibleRestSections() > 1 && <>
-      <Pause />
-      <Section id="section-3">
-        <OuterP>
-          <b>
-            <span class="t-3003-c">
-              Distributivity.
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:260:6
-              </span>
-            </span>
-          </b>
-          {" "}
-          A number that
-          multiplies a sum can be brought “inside” the
-          sum. For example,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          5(10 + 2) \,=\, 5\!\cdot\!10 \,+\, 5\!\cdot\!2
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            (five times twelve equals fifty plus ten), or
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:269:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          a(b + c) = ab + ac
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            more generally. This property is known as the
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:275:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          {" "}{" "}
-          <i>
-            distributivity of multiplication over addition
-          </i>
-          ,
-          or {" "}
-          <i>
-            distributivity
-          </i>
-          {" "} for short.
-        </OuterP>
-        <OuterP class="indent-10">
-          <NoBreak>
-            <span class="t-3003-c">
-              (‘
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:279:5
-              </span>
-            </span>
-            <Math>
-              $\cdot$
-            </Math>
-            ’
-          </NoBreak>
-          {" "} means
-          “times”, i.e., the same as {" "}
-          <NoBreak>
-            ‘
-            <Math>
-              $\times$
-            </Math>
-            ’.
-          </NoBreak>
-          {" "} Moreover,
-          when we write
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          5\!\cdot\!10 \,+\, 5\!\cdot\!2
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            we mean
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:287:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (5\!\cdot\!10) + (5\!\cdot\!2)
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            as opposed to
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:293:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          ((5\!\cdot\!10) + 5)\!\cdot\! 2,
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            because multiplication takes precedence over
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:299:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          addition, absent parentheses.)
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            A little more generally, one has such identities
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:302:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          as
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(C + D) \,=\, aC + bC + aD + bD
-          $$
-          <ImageLeft
-            src="/build-img/svgo-svg/-TtU.svg"
-            offsetX="-1em"
-            atLeastAsWide={true}
-            local_url="./images/c1_abCD_cloud.svg"
-            intrinsicWidth={350}
-            intrinsicHeight={250}
-          />
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            that come from multiplying every term of the first
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:313:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          parenthesis with every term of the second
-          parenthesis. Indeed,
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(C + D) = (a + b)C + (a + b)D
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            by one application of distributivity, while
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:322:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)C = aC + bC
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)D = aD + bD
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            by distributivity again.
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:332:5
-            </span>
-          </span>
         </OuterP>
         <Pause />
         <Example>
@@ -1292,188 +323,621 @@ const Rest = () => {
             <b>
               Example 1.
             </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              If
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:42:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
-            \begin&#123;aligned&#125;
-            (10 + 2)(10 + 4) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!4 \,+\, 2\!\cdot\!10 \,+\, 2\!\cdot\!4 \\
-            \,&amp;=\, 100 \,+\, 40 \,+\, 20 \,+\, 8 \up&#123;1.1&#125;\\
-            \,&amp;=\, 168 \up&#123;1.1&#125;
-            \end&#123;aligned&#125;
+            z : [\lbs] \ra [\pounds]
             $$
             <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
             <span class="t-3003-c">
-              so {" "}
+              then its inputs denote pounds, the measure of weight,
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:344:9
+                ./src/content/ch6/ch6.wly:48:9
               </span>
             </span>
-            <NoBreak>
-              <Math>
-                $12 \times 14 = 168$
-              </Math>
-              .
-            </NoBreak>
+            {" "}
+            {" "}
+            and its outputs pounds {" "}
+            <i>
+              sterling
+            </i>
+            , the measure of wealth.
           </OuterP>
         </Example>
+      </Section>
+      <Pause />
+      <Rest />
+    </Article>
+  );
+}
+
+const Rest = () => {
+  const visibleRestSections = useShowMore(10);
+  return <>
+    {visibleRestSections() > 0 && <>
+      <Section id="section-3">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Dimensionless units.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:54:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          We write {" "}
+          <Math>
+            $[1]$
+          </Math>
+          {" "} for dimensionless units, as when a quantity
+          is divided by a like-dimensioned quantity. Thus
+        </OuterP>
         <Pause />
-        <Example id="_22_h.a.i_">
+        <MathBlock>
+          $$
+          \large \cos : [1] \ra [1]
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            takes a ratio of arc length to radius—the radian—and returns
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:62:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          a ratio of adjacent length to hypotenuse*. Both are “length over length”.
+          The outputs of sin, tan, etc., are dimensionless for the same reason.
+          <ImageLeft
+            src="/build-img/svgo-svg/aIgf.svg"
+            local_url="./images/c6_radian_dimensionless_ratio_cloud_v2.svg"
+            intrinsicWidth={600}
+            intrinsicHeight={500}
+          />
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <i>
+            <span class="t-3003-c">
+              *Note.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:71:6
+              </span>
+            </span>
+          </i>
+          {" "} To be precise, these “lengths” are actually
+          coordinate changes that may be negative—except for the
+          hypotenuse-a.k.a.-radius, which is always positive—so they
+          are “signed lengths”, or {" "}
+          <i>
+            displacements
+          </i>
+          , more accurately. 
+          Likewise the radian carries a sign—the radian says “rotate by
+          this multiple of the radius, with {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $+$
+            </Math>
+            ’
+          </NoBreak>
+          {" "} for counterclockwise and {" "}
+          <NoBreak>
+            ‘
+            <Math>
+              $-$
+            </Math>
+            ’
+          </NoBreak>
+          {" "}
+          for clockwise**”.
+        </OuterP>
+        <Pause />
+        <OuterP>
+          <i>
+            <span class="t-3003-c">
+              **Second Note.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:81:6
+              </span>
+            </span>
+          </i>
+          {" "} To get into the weeds—re: clockwise
+          vs. counterclockwise—what counts as the “positive” direction
+          of rotation is actually the direction {" "}
+          <i>
+            from the positive {" "}
+            <Math>
+              $x$
+            </Math>
+            {" "}
+            axis to the positive {" "}
+            <Math>
+              $y$
+            </Math>
+            {" "} axis
+          </i>
+          :
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/edTN.svg"
+          local_url="./images/c6_true_counterclockwiseness_1.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={275}
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            What we mean is that if it was our custom to draw the
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:89:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          {" "}{" "}
+          <Math>
+            $y$
+          </Math>
+          {" "} axis pointing downwards, but still draw the {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} axis
+          pointing rightward, the “positive” direction of rotation
+          would be clockwise, not counterclockwise:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/0QSx.svg"
+          local_url="./images/c6_true_counterclockwiseness_2.svg"
+          intrinsicWidth={400}
+          intrinsicHeight={275}
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (This actually happens inside of SVG, the
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:97:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          web standard for so-called “vector graphics”, in which the {" "}
+          <Math>
+            $y$
+          </Math>
+          {" "}
+          axis points downwards. In an SVG file, {" "}
+          <span class="code-cartouche">
+            rotate(10)
+          </span>
+          {" "} rotates objects by {" "}
+          <NoBreak>
+            10
+            <Math>
+              $^\circ$
+            </Math>
+          </NoBreak>
+          {" "} {" "}
+          <i>
+            clockwise
+          </i>
+          .)
+          <ImageRight
+            src="/build-img/svgo-svg/BYVX.svg"
+            local_url="./images/c6_SVG_cloud.svg"
+            intrinsicWidth={1500}
+            intrinsicHeight={500}
+          />
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 1 && <>
+      <Pause />
+      <Section id="section-4">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Restrictions imposed on signatures by function
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:109:6
+              </span>
+            </span>
+            {" "}
+            {" "}
+            operations.
+          </b>
+          {" "}
+          When we add two functions, the same input is passed
+          to both functions:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/trfz.svg"
+          style="margin-bottom:-1.3em"
+          local_url="./images/c6_equal_inputs_v2.svg"
+          intrinsicWidth={300}
+          intrinsicHeight={50}
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            For the sum to make sense, {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:122:5
+            </span>
+          </span>
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $g$
+          </Math>
+          {" "} must have the same
+          input units and the same output units:
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;aligned&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            We cannot add apples to oranges at the output end, either.
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:132:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            By contrast, when multiplying two functions we can
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:134:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          stomach the output units to be different since
+          composite units such as “kilowatt-hour”, “worker-years”, etc,
+          exist, and likewise when dividing. 
+          The table gives the required component signatures and the
+          resultant signature for each of the five main function operations:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/tmp-images/c6_flowers_here_bob_v2.svg"
+          id="_1_h.a.i_"
+          local_url="./public/tmp-images/c6_flowers_here_bob_v2.svg"
+          intrinsicWidth={700}
+          intrinsicHeight={883}
+        />
+        <Pause />
+        <Example id="_2_h.a.i_">
           <OuterP>
             <b>
               Example 2.
             </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              If
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:148:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
-          <MathBlock>
+          <MathBlock style="margin-bottom:-0.8em;margin-top:-0.2em">
             $$
-            \begin&#123;align*&#125;
-            (10 + 3)(10 + 3) \,&amp;=\, 10\!\cdot\!10 \,+\, 10\!\cdot\!3 \,+\, 3\!\cdot\!10 \,+\, 3\!\cdot\!3\\
-            \,&amp;=\, 100 \,+\, 30 \,+\, 30 \,+\, 9 \up&#123;1.1&#125;\\
-            \,&amp;=\, 169 \up&#123;1.1&#125;
-            \end&#123;align*&#125;
+            \,p : [\underbrace&#123;\te&#123;days&#125;&#125;_&#123;\A&#125;] \ra [\underbrace&#123;\te&#123;dollars&#125;/\te&#123;kg&#125;&#125;_&#123;\B&#125;], \\
+            m : [\underbrace&#123;\te&#123;days&#125;&#125;_&#123;\A&#125;] \ra [\underbrace&#123;\te&#123;kg&#125;&#125;_&#123;\C&#125;]\up&#123;1.2&#125;
             $$
             <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
             <span class="t-3003-c">
-              so {" "}
+              then
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:357:9
+                ./src/content/ch6/ch6.wly:166:9
               </span>
             </span>
-            <NoBreak>
-              <Math>
-                $13 \times 13 = 169$
-              </Math>
-              .
-            </NoBreak>
+          </OuterP>
+          <Pause />
+          <MathBlock style="margin-bottom:-0.4em;margin-top:-0.1em">
+            $$
+            pm : [\underbrace&#123;\te&#123;days&#125;&#125;_&#123;\A&#125;] \ra [(\underbrace&#123;\te&#123;dollars&#125;/\te&#123;kg&#125;&#125;_&#123;\B&#125;)\underbrace&#123;\te&#123;kg&#125;&#125;_&#123;\C&#125; = \underbrace&#123;\te&#123;dollars&#125;&#125;_&#123;\B\C&#125;]
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              per the “multiplication” cell (second row, first column) of {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:179:9
+              </span>
+            </span>
+            <InChapterLink
+              href="#_1_h.a.i_"
+              class="in-chapter-link"
+            >
+              Table 1.1
+            </InChapterLink>
+            &#8288;.
           </OuterP>
         </Example>
         <Pause />
         <OuterP>
-          <span class="t-3003-c">
-            (The fact that {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:359:5
+          <i>
+            <span class="t-3003-c">
+              Note on {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:183:6
+              </span>
             </span>
-          </span>
-          <Math>
-            $13 \times 13$
-          </Math>
-          {" "} is exactly one
-          greater than {" "}
-          <Math>
-            $12 \times 14$
-          </Math>
-          {" "} is a bit curious
-          indeed.)
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            If we start from the identity
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:363:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(C + D) \,=\, aC + bC + aD + bD
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            and set {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:369:5
-            </span>
-          </span>
-          <NoBreak>
-            <Math>
-              $C = a$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $D = b$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} we find
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(a + b) \,=\, aa + ba + ab + bb
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            or, equivalently,
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:375:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)^2 = a^2 + 2ab + b^2
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            since {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:381:5
-            </span>
-          </span>
-          <NoBreak>
-            <Math>
-              $(a + b)(a + b) = (a + b)^2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <Math>
-            $aa = a^2$
-          </Math>
+            <InChapterLink
+              href="#_2_h.a.i_"
+              class="in-chapter-link"
+            >
+              Example 2
+            </InChapterLink>
+            &#8288;.
+          </i>
           {" "}
-          and {" "}
+          For example, if
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          p(t)
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is the dollars-per-kilogram price of apples on day {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:188:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
-              $bb = b^2$
+              $t$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          m(t)
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is the number of kilograms purchased on day {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:192:5
+            </span>
+          </span>
+          <Math>
+            $t$
+          </Math>
+          {" "} (of said apples), then
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (pm)(t) = p(t)m(t)
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            is the dollars {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:196:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          spent on apples on day {" "}
+          <NoBreak>
+            <Math>
+              $t$
             </Math>
             .
           </NoBreak>
         </OuterP>
-        <OuterP class="indent-10">
+      </Section>
+    </>}
+    {visibleRestSections() > 2 && <>
+      <Pause />
+      <Section id="section-5">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              The unary function operations.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:202:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          We will add two more not-yet-much-discussed
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
           <span class="t-3003-c">
-            (This is the {" "}
+            unary
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:384:5
+              ./src/content/ch6/ch6.wly:205:7
             </span>
           </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            function operations to our list of officially
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:207:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          considered function operations, being {" "}
           <i>
-            binomial expansion
-            of degree two
+            negation
           </i>
-          , but such terminology is not very
-          important at this stage.)
+          {" "}
+          and {" "}
+          <i>
+            reciprocal
+          </i>
+          ,
+          written {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\f$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} and {" "}
+          <NoBreak>
+            “
+            <Math>
+              $1/f$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} respectively
+          —note that
+          the reciprocal of {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "} has a different signature than {" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/tmp-images/c6_flowers_here_two_more_v3.svg"
+          id="_3_h.a.i_"
+          local_url="./public/tmp-images/c6_flowers_here_two_more_v3.svg"
+          intrinsicWidth={700}
+          intrinsicHeight={310}
+        />
+        <Pause />
+        <StarDivider style="margin-top:-0.3em" />
+      </Section>
+    </>}
+    {visibleRestSections() > 3 && <>
+      <Pause />
+      <Section
+        _handle="derivative_signature"
+        id="section-6"
+      >
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Differentiation.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:224:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          As reviewed in {" "}
+          <a href="&gt;&gt;units_of_the_derivative">
+            Chapter 
+            4
+          </a>
+          {" "}
+          (see also {" "}
+          <OutChapterLink
+            href="decoy-target-path#decoy-id"
+            class="out-chapter-link"
+          >
+            Exercise 6 of Chapter 4
+          </OutChapterLink>
+          ),
+          differentiation divides the units of the output
+          by the units of the input. 
+          In terms of signatures,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          f : [\tA] \ra [\tB]
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            if and only if
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:233:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          f' : [\tA] \ra [\tB/\tA]
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            for any units A, B.
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:237:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <Example>
@@ -1485,447 +949,467 @@ const Rest = () => {
             {" "}
             {" "}
             <span class="t-3003-c">
-              By the last formula,
+              If
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:390:9
+                ./src/content/ch6/ch6.wly:244:9
               </span>
             </span>
           </OuterP>
           <Pause />
-          <MathBlock>
+          <MathBlock style="margin-bottom:-0.4em;margin-top:-0.1em">
             $$
-            \begin&#123;align*&#125;
-            \up&#123;1&#125; (10 + 3)^2 \,&amp;=\, 10\!\cdot\!10 \,+\, 2\!\cdot\!3\!\cdot\!10 \,+\, 3\!\cdot\!3 \\
-            \up&#123;1&#125; \,&amp;=\, 100 + 60 + 9 \up&#123;1.1&#125;\\
-            \up&#123;1&#125; \,&amp;=\, 169 \up&#123;1.1&#125;
-            \end&#123;align*&#125;
+            x : [\underbrace&#123;\s&#125;_&#123;\A&#125;] \ra [\underbrace&#123;\m&#125;_&#123;\B&#125;]
             $$
             <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
             <span class="t-3003-c">
-              obtaining the same result as {" "}
+              (“s” = seconds, “m” = meters)
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:401:9
+                ./src/content/ch6/ch6.wly:252:9
               </span>
             </span>
-            <InChapterLink
-              href="#_22_h.a.i_"
-              class="in-chapter-link"
-            >
-              Example 2
-            </InChapterLink>
-            &#8288;.
+            {" "}
+            {" "}
+            is a differentiable function from {" "}
+            <Math>
+              $\rr$
+            </Math>
+            {" "} to {" "}
+            <Math>
+              $\rr$
+            </Math>
+            {" "} (e.g., the
+            horizontal position of an object as a function of time), then
+          </OuterP>
+          <Pause />
+          <MathBlock style="margin-bottom:-0.4em;margin-top:-0.1em">
+            $$
+            x' : [\underbrace&#123;\s&#125;_&#123;\A&#125;] \ra [\underbrace&#123;\m/\s&#125;_&#123;\B/\A&#125;]
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              gives a
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:263:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <CentralDisplayItalic>
+            <span class="t-3003-c">
+              meters per second
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:265:11
+              </span>
+            </span>
+          </CentralDisplayItalic>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              value, per the general rule above.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:267:9
+              </span>
+            </span>
           </OuterP>
         </Example>
-        <Pause />
+      </Section>
+    </>}
+    {visibleRestSections() > 4 && <>
+      <Pause />
+      <Section id="section-7">
         <OuterP>
-          <span class="t-3003-c">
-            On the other hand, setting {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:403:5
+          <b>
+            <span class="t-3003-c">
+              Operators.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:279:6
+              </span>
             </span>
-          </span>
-          <NoBreak>
-            <Math>
-              $C = a$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <Math>
-            $D = -b$
-          </Math>
-          {" "} in
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(C + D) = aC + aD + bC + bD
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            gives
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:409:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(a + (-b)) = aa + a(-b) + ba + b(-b)
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            or
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:415:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(a - b) = aa - ab + ba - bb
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            or
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:421:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (a + b)(a - b) = a^2 - b^2
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            since {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:427:5
-            </span>
-          </span>
-          <NoBreak>
-            <Math>
-              $- ab + ba = 0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $aa = a^2$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} {" "}
-          <NoBreak>
-            <Math>
-              $bb = b^2$
-            </Math>
-            .
-          </NoBreak>
-          {" "} Note that
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          a^2 - b^2
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            is
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:433:5
-            </span>
-          </span>
+          </b>
+          {" "}
+          On a conceptual note,
+          we can view differentiation
+          as a function-that-takes-functions-and-outputs-functions,
+          the “bigger fish” of the function world. As mathematicians
+          use the term
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
           <span class="t-3003-c">
-            a difference of squares
+            operator
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:435:7
+              ./src/content/ch6/ch6.wly:286:7
             </span>
           </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            whence {" "}
+            to denote a function that takes other functions as inputs,
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:437:5
+              ./src/content/ch6/ch6.wly:288:5
             </span>
           </span>
-          <i>
-            a difference of squares can always be
-            factored
-          </i>
-          . (Factored as {" "}
-          <NoBreak>
-            <Math>
-              $(a + b)(a - b)$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} that
-          is.) (NB: “Factored” means “written as a product”.)
+          {" "}
+          {" "}
+          we therefore speak of the
         </OuterP>
         <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 4.
-            </b>
-            {" "}{" "}
-            {" "}
-            {" "}
-            <span class="t-3003-c">
-              Since
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:443:9
-              </span>
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            differentiation operator
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:291:7
             </span>
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            19 = 100 - 81 = 10^2 - 9^2
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            <span class="t-3003-c">
-              is a difference of squares, {" "}
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:449:9
-              </span>
-            </span>
-            <Math>
-              $19$
-            </Math>
-            {" "} can be
-            factored. (On the other hand {" "}
-            <Math>
-              $19$
-            </Math>
-            {" "} is a prime
-            number, but nevermind.)
-          </OuterP>
-        </Example>
-        <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 5.
-            </b>
-            {" "}{" "}
-            {" "}
-            {" "}
-            <span class="t-3003-c">
-              The expression
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:455:9
-              </span>
-            </span>
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            1 - x^2
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            <span class="t-3003-c">
-              can be factored, because
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:461:9
-              </span>
-            </span>
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            1 = 1^2
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            <span class="t-3003-c">
-              implies that
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:467:9
-              </span>
-            </span>
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            1 - x^2
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            <span class="t-3003-c">
-              is “a difference of squares”. And
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:473:9
-              </span>
-            </span>
-          </OuterP>
-          <Pause />
-          <MathBlock>
-            $$
-            1 - x^2 = (1 - x)(1 + x)
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <OuterP>
-            <span class="t-3003-c">
-              as per {" "}
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:479:9
-              </span>
-            </span>
-            <NoBreak>
-              “
-              <Math>
-                $\rt&#123;0.04&#125;a^2 - b^2 = (a - b)(a + b)$
-              </Math>
-              ”.
-            </NoBreak>
-          </OuterP>
-        </Example>
+          </span>
+        </CentralDisplayItalic>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            Multiplying a difference by {" "}
+            depicted here as an eye-of-Godzilla flying saucer:
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:481:5
+              ./src/content/ch6/ch6.wly:293:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/Pl1U.svg"
+          local_url="./images/c6_differentiation_operator_intro_v2.svg"
+          intrinsicWidth={520}
+          intrinsicHeight={220}
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The unary operations in {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:298:5
+            </span>
+          </span>
+          <InChapterLink
+            class="in-chapter-link"
+            href="#_3_h.a.i_"
+          >
+            Table 1.2
+          </InChapterLink>
+          {" "} likewise take
+          one function as input. An operator can also take two functions
+          as inputs: function addition takes {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $g$
+          </Math>
+          {" "} and returns
+          the single function {" "}
+          <NoBreak>
+            <Math>
+              $f + g$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Here it is as a two-input-tube-flying-saucer:
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/A7d4.svg"
+          local_url="./images/c6_addition_operator_standalone_v2.svg"
+          intrinsicWidth={600}
+          intrinsicHeight={235}
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The two inputs to this operator are the functions {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:306:5
             </span>
           </span>
           <Math>
-            $-1$
+            $f$
           </Math>
-          {" "} {" "}
-          <i>
-            reverses
-          </i>
-          {" "} the
-          difference. That is,
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          The resulting function {" "}
+          <Math>
+            $f + g$
+          </Math>
+          {" "} still takes one number {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} as input,
+          returning {" "}
+          <NoBreak>
+            <Math>
+              $f(x) + g(x)$
+            </Math>
+            .
+          </NoBreak>
         </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (-1)(a - b) \,=\, b - a
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
+        <OuterP class="indent-10">
           <span class="t-3003-c">
-            or, for short,
+            Operators that take two inputs are called
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:488:5
+              ./src/content/ch6/ch6.wly:310:5
             </span>
           </span>
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          -(a - b) \,=\, b - a
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            binary
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:312:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            because
+            operators, as with the operations in Table 1.1.
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:494:5
+              ./src/content/ch6/ch6.wly:314:5
             </span>
           </span>
+          {" "}
+          {" "}
+          This figure summarizes how the operators act on signatures:
         </OuterP>
         <Pause />
-        <MathBlock>
-          $$
-          \begin&#123;align*&#125;
-          (-1)(a - b) \,&amp;=\, (-1)(a + (-b)) \\
-          \,&amp;=\, (-1)a + (-1)(-b) \up&#123;1.1&#125; \\
-          \,&amp;=\, -a + b \up&#123;1.1&#125;
-          \end&#123;align*&#125;
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
+        <Image
+          src="/build-img/svgo-svg/VuM1.svg"
+          local_url="./images/c6_operators_acting_on_signatures_v2.svg"
+          intrinsicWidth={810}
+          intrinsicHeight={580}
+        />
         <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            by distributivity (used in the second step).
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:504:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <Example>
-          <OuterP>
-            <b>
-              Example 6.
-            </b>
-            {" "}{" "}
-            {" "}
-            {" "}
-            <span class="t-3003-c">
-              We have {" "}
-              <span class="t-3003">
-                ./src/content/ch1/ch1.wly:508:9
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $-(10 - 3) = 3 - 10$
-              </Math>
-              .
-            </NoBreak>
-            {" "}
-            (Because {" "}
-            <NoBreak>
-              <Math>
-                $-7 = -7$
-              </Math>
-              ,
-            </NoBreak>
-            {" "} as it would be, haha.)
-          </OuterP>
-        </Example>
-        <Pause />
-        <StarDivider />
+        <StarDivider style="margin-top:-0.3em" />
       </Section>
     </>}
-    {visibleRestSections() > 2 && <>
+    {visibleRestSections() > 5 && <>
       <Pause />
-      <Section id="section-4">
+      <Section id="section-8">
         <OuterP>
           <b>
             <span class="t-3003-c">
-              Epilogue.
+              The sum rule.
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:515:6
+                ./src/content/ch6/ch6.wly:324:6
               </span>
             </span>
           </b>
-          {" "} Do you remember the near miss between
+          {" "}
+          The {" "}
+          <i>
+            sum rule
+          </i>
+          {" "} states that
+        </OuterP>
+        <Boxed>
+          <MathBlock>
+            $$
+            (f + g)' = f' + g'
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+        </Boxed>
+        <OuterP>
+          <span class="t-3003-c">
+            for all differentiable functions {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:332:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $g : \rr \ra \rr$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            To “check the units”, both sides must impose the same signature
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:372:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          constraints and yield the same final signature.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            On the left-hand side,
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:375:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          12\cdot 14 \,=\, 168
+          f + g
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            imposes signatures of the form
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:381:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;aligned&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            as listed in {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:390:5
+            </span>
+          </span>
+          <InChapterLink
+            href="#_1_h.a.i_"
+            class="in-chapter-link"
+          >
+            Table 1.1
+          </InChapterLink>
+          &#8288;,
+          while the subsequent taking of a derivative doesn't
+          impose any new constraints.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            On the right-hand side,
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:426:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          we start by adopting the agnostic point of view that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;aligned&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\C] &amp;\ra [\D] \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            for some arbitrary units {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:436:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $\A$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\B$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\C$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $\D$
+            </Math>
+            ;
+          </NoBreak>
+          {" "} then,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;aligned&#125;
+          f' : [\A] &amp;\ra [\B/\A] \\
+          g' : [\C] &amp;\ra [\D/\C] \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and the fact that we are taking the sum
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:445:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          f' + g'
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            implies
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:451:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \A\,\,\, = \,\,\,\C
           $$
           <MathJaxSvgExportTooltip />
         </MathBlock>
@@ -1934,162 +1418,1710 @@ const Rest = () => {
           <span class="t-3003-c">
             and
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:521:5
+              ./src/content/ch6/ch6.wly:456:5
             </span>
           </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          13 \cdot 13 \,=\, 13^2 \,=\, 169
+          \left[&#123;\B\over\A&#125;\right]\! =\! \left[&#123;\D\over\C&#125;\right]
           $$
           <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            ...? Well if you observe, additionally, that
+            by Table 1.1 again, which, together, imply
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:527:5
+              ./src/content/ch6/ch6.wly:464:5
             </span>
           </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \begin&#123;align*&#125;
-          11\,\cdot\,13 &amp;= 12^2 - 1\\
-          10\,\cdot\,12 &amp;= 11^2 - 1 \up&#123;1.1&#125;\\
-          9\,\cdot\,11 &amp;= 10^2 - 1 \up&#123;1.1&#125;
-          \end&#123;align*&#125;
+          \begin&#123;aligned&#125;
+          \,\A &amp;= \C, \\
+          \B &amp;= \D \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
           $$
           <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            (etc) you might become suspicious of a pattern!
+            ...and we recover the same constraints on {" "}
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:537:5
+              ./src/content/ch6/ch6.wly:473:5
             </span>
           </span>
-          {" "}
-          {" "}
-          But the mystery is rather thin: we have
-        </OuterP>
-        <Pause />
-        <MathBlock>
-          $$
-          (n - 1)(n + 1) \,=\, n^2 - 1
-          $$
-          <MathJaxSvgExportTooltip />
-        </MathBlock>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            for {" "}
-            <span class="t-3003">
-              ./src/content/ch1/ch1.wly:544:5
-            </span>
-          </span>
-          <i>
-            every
-          </i>
-          {" "} real number {" "}
           <Math>
-            $n$
+            $f$
           </Math>
-          {" "} because of the
-          formula
+          {" "} and {" "}
+          <Math>
+            $g$
+          </Math>
+          {" "} as
+          exist on the left-hand side!
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            Assuming now that {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:526:5
+            </span>
+          </span>
+          <Math>
+            $f$
+          </Math>
+          {" "}
+          and {" "}
+          <Math>
+            $g$
+          </Math>
+          {" "} have the form
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          (a - b)(a + b) \,=\, a^2 - b^2
+          \begin&#123;aligned&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
           $$
           <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            for a difference of squares!
+            as required by either side of the equation, we have
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:551:5
+              ./src/content/ch6/ch6.wly:536:5
             </span>
           </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;aligned&#125;
+          \,(f + g)' &amp;: [\A] \ra [\tB/\tA], \\
+          f' + g' &amp;: [\A] \ra [\tB/\tA]. \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            (For the second line, {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:545:5
+            </span>
+          </span>
+          <Math>
+            $f'$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $g'$
+          </Math>
+          {" "} each have signature
+          {" "}
+          <NoBreak>
+            <Math>
+              $[\A] \ra [\tB/\tA]$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} and adding them preserves that signature.)
+          So the sum rule “checks out” insofar
+          as units are concerned: 
+          both sides impose the same constraints on units, and
+          evaluate to the same signature!
+        </OuterP>
+        <Pause />
+        <Example id="_4_h.a.i_">
+          <OuterP>
+            <b>
+              Example 4.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              Let {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:556:9
+              </span>
+            </span>
+            <Math>
+              $x_1, x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]$
+            </Math>
+            {" "} be differentiable
+            functions giving position in meters as a function of time in seconds.
+            Then
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \,(x_1 + x_2)' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;], \\
+            \,\,x_1' + x_2' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;] \up&#123;1.35&#125;
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              as one can check by first constructing the
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:571:9
+              </span>
+            </span>
+            {" "}
+            {" "}
+            signature of {" "}
+            <NoBreak>
+              <Math>
+                $x_1 + x_2$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} the differentiating,
+            or vice-versa constructing the signatures of
+            {" "}
+            <Math>
+              $x_1'$
+            </Math>
+            {" "} and {" "}
+            <NoBreak>
+              <Math>
+                $x_2'$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} then adding.
+            In this case, the sum rule says that
+          </OuterP>
+          <Pause />
+          <CentralDisplayItalic>
+            <span class="t-3003-c">
+              the velocity of a sum of two points
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:576:11
+              </span>
+            </span>
+            {" "}
+            {" "}
+            is the sum of their velocities
+          </CentralDisplayItalic>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              with {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:578:9
+              </span>
+            </span>
+            <Math>
+              $(x_1+x_2)'$
+            </Math>
+            {" "}
+            being “the velocity of a sum
+            of two points” and {" "}
+            <Math>
+              $x_1'+x_2'$
+            </Math>
+            {" "} being “the sum
+            of their velocities”.
+          </OuterP>
+        </Example>
+        <Pause />
+        <Example id="_5_h.a.i_">
+          <OuterP>
+            <b>
+              Example 5.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              If
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:603:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            x_1, x_2 : \rr \ra \rr
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              are given by
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:609:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            x_1(t) = |t| = -x_2(t)
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              for all {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:615:9
+              </span>
+            </span>
+            <Math>
+              $t \in \rr$
+            </Math>
+            {" "} (meaning that
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            x_2(t) = -|t|
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              in the case of {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:621:9
+              </span>
+            </span>
+            <NoBreak>
+              <Math>
+                $x_2$
+              </Math>
+              )
+            </NoBreak>
+            {" "} then
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (x_1 + x_2)'
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              is defined
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:621:52
+              </span>
+            </span>
+            {" "}
+            {" "}
+            at {" "}
+            <Math>
+              $t = 0$
+            </Math>
+            {" "} but
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            x_1' + x_2'
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              is not. One can best see this {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:622:39
+              </span>
+            </span>
+            {" "}
+            {" "}
+            directly from the graphs of
+            {" "}
+            <NoBreak>
+              <Math>
+                $x_1$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} {" "}
+            <NoBreak>
+              <Math>
+                $x_2$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} {" "}
+            <NoBreak>
+              <Math>
+                $x_1'$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} {" "}
+            <NoBreak>
+              <Math>
+                $x_2'$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} etc:
+          </OuterP>
+          <Pause />
+          <Image
+            src="/build-img/svgo-svg/aASR3HOTyax4.svg"
+            local_url="./images/c6_all_those_x1x2_graphs.svg"
+            intrinsicWidth={442}
+            intrinsicHeight={945}
+          />
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              Thus
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:629:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (x_1 + x_2)' \ne x_1' + x_2'
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              but the “reason”, precisely, is that {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:635:9
+              </span>
+            </span>
+            <Math>
+              $x_1$
+            </Math>
+            {" "} and {" "}
+            <Math>
+              $x_2$
+            </Math>
+            {" "} are not
+            differentiable, as they
+            are not differentiable, specifically, at {" "}
+            <NoBreak>
+              <Math>
+                $t = 0$
+              </Math>
+              .
+            </NoBreak>
+            {" "}
+            (But this is why we say “for differentiable {" "}
+            <NoBreak>
+              <Math>
+                $f$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} {" "}
+            <NoBreak>
+              <Math>
+                $g$
+              </Math>
+              ”
+            </NoBreak>
+            {" "}
+            when we present the sum rule, or other such rules.)
+          </OuterP>
+        </Example>
+        <Pause />
+        <OuterP>
+          <i>
+            <span class="t-3003-c">
+              Postscript.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:645:6
+              </span>
+            </span>
+          </i>
+          {" "} Even if {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $g$
+          </Math>
+          {" "} are not
+          both differentiable it is still 
+          true, however, that
+        </OuterP>
+        <Boxed id="_6_h.a.i_">
+          <MathBlock>
+            $$
+            (f + g)'(x_0) = f'(x_0) + g'(x_0)
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+        </Boxed>
+        <OuterP>
+          <span class="t-3003-c">
+            at all points {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:655:5
+            </span>
+          </span>
+          <Math>
+            $x_0 \in \rr$
+          </Math>
+          {" "} {" "}
+          <i>
+            such that {" "}
+            <Math>
+              $f$
+            </Math>
+            {" "} and {" "}
+            <Math>
+              $g$
+            </Math>
+            {" "}
+            are both differentiable at that specific {" "}
+            <Math>
+              $x_0$
+            </Math>
+          </i>
+          —this gives
+          us a “point by point” version of the sum rule—more granular!
         </OuterP>
       </Section>
     </>}
-    {visibleRestSections() > 3 && <>
+    {visibleRestSections() > 6 && <>
       <Pause />
-      <Section id="section-5">
+      <Section id="section-9">
         <OuterP>
           <b>
             <span class="t-3003-c">
-              Vocabulary.
+              The “early afteroon product rule”.
               <span class="t-3003">
-                ./src/content/ch1/ch1.wly:555:6
+                ./src/content/ch6/ch6.wly:663:6
               </span>
             </span>
           </b>
           {" "}
-          A pair of algebraic expressions of the form
+          Gottfried Leibniz, co-inventor of calculus,
+          initially guessed that
+        </OuterP>
+        <Boxed>
+          <MathBlock>
+            $$
+            (fg)' = f'g'
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+        </Boxed>
+        <OuterP>
+          <span class="t-3003-c">
+            which is incorrect, though Leibniz also had the
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:673:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          distinction of making and correcting this
+          guess 
+          in the span 
+          of a single day,
+          as we know from his notes,
+          whence this equation's moniker.
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            Both sides require the same input units for {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:682:5
+            </span>
+          </span>
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            :
+          </NoBreak>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          a + b,\, a - b
+          \begin&#123;aligned&#125;
+          f : [\A] &amp;\ra [\B] \\
+          g : [\A] &amp;\ra [\C] \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
           $$
           <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            is called a {" "}
+            So far so good! But
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:562:5
+              ./src/content/ch6/ch6.wly:691:5
             </span>
           </span>
-          <i>
-            conjugate pair
-          </i>
-          . For example,
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          n + 1,\, n - 1
+          (fg)' : [\tA] \ra [\tB\tC/\tA]
           $$
+          <ImageLeft
+            src="/build-img/svgo-svg/jPk2.svg"
+            offsetX="0em"
+            atLeastAsWide={true}
+            local_url="./images/c6_fg_prime_signature_cloud_v2.svg"
+            intrinsicWidth={400}
+            intrinsicHeight={300}
+          />
           <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
           <span class="t-3003-c">
-            is a conjugate pair, as is
+            whereas
             <span class="t-3003">
-              ./src/content/ch1/ch1.wly:568:5
+              ./src/content/ch6/ch6.wly:700:5
             </span>
           </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
-          \sqrt&#123;3&#125; + \sqrt&#123;2&#125;,\,\, \sqrt&#123;3&#125; - \sqrt&#123;2&#125;.
+          f'g' : [\tA] \ra [\tB\tC/\tA^2]
           $$
+          <ImageRight
+            src="/build-img/svgo-svg/qX4a.svg"
+            offsetX="0em"
+            atLeastAsWide={true}
+            local_url="./images/c6_f_prime_g_prime_signature_cloud_v2.svg"
+            intrinsicWidth={450}
+            intrinsicHeight={300}
+          />
           <MathJaxSvgExportTooltip />
         </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The rule cannot be correct: the two sides produce different
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:709:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          units for the same functions {" "}
+          <Math>
+            $f$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Example id="_7_h.a.i_">
+          <OuterP>
+            <b>
+              Example 6.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              With {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:715:9
+              </span>
+            </span>
+            <Math>
+              $x_1, x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]$
+            </Math>
+            {" "} as in
+            {" "}
+            <InChapterLink
+              href="#_4_h.a.i_"
+              class="in-chapter-link"
+            >
+              Example 4
+            </InChapterLink>
+            &#8288;,
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (x_1x_2)' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2/\te&#123;s&#125;]
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              whereas
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:722:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            x_1'x_2' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2/\te&#123;s&#125;^2]
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              so there is no way these two quantities could
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:728:9
+              </span>
+            </span>
+            {" "}
+            {" "}
+            ever be equal, in general. (For example,
+            changing from counting time in seconds to
+            counting it in hours, while correspondingly
+            modifying {" "}
+            <Math>
+              $x_1$
+            </Math>
+            {" "} and {" "}
+            <Math>
+              $x_2$
+            </Math>
+            {" "} to reflect this
+            change, would multiply {" "}
+            <Math>
+              $(x_1x_2)'$
+            </Math>
+            {" "} by {" "}
+            <Math>
+              $3600$
+            </Math>
+            {" "} but
+            would multiply {" "}
+            <Math>
+              $x_1'x_2'$
+            </Math>
+            {" "} by {" "}
+            <NoBreak>
+              <Math>
+                $3600^2$
+              </Math>
+              —so
+            </NoBreak>
+            {" "} if by
+            some fluke the early afternoon product rule
+            held before this change it would certainly*
+            [*assuming {" "}
+            <NoBreak>
+              <Math>
+                $(x_1x_2)' \ne 0$
+              </Math>
+              ]
+            </NoBreak>
+            {" "} not hold after,
+            and therefore, the early afternoon product rule
+            cannot hold in general.)
+            <ImageLeft
+              src="/build-img/svgo-svg/U86u.svg"
+              offsetX="1em"
+              local_url="./images/c6_x1x2_3600_cloud.svg"
+              intrinsicWidth={800}
+              intrinsicHeight={550}
+            />
+          </OuterP>
+          <Pause />
+          <OuterP>
+            <i>
+              <span class="t-3003-c">
+                Note on {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6.wly:747:10
+                </span>
+              </span>
+              <InChapterLink
+                href="#_7_h.a.i_"
+                class="in-chapter-link"
+              >
+                Example 6
+              </InChapterLink>
+              &#8288;.
+            </i>
+            {" "}
+            {" "}
+            <Math>
+              $x_1'x_2'$
+            </Math>
+            {" "} has the same signature as {" "}
+            <NoBreak>
+              <Math>
+                $(x_1x_2)''$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} but
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (x_1x_2)'' = x_1'x_2'
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              is still wrong. Dimensional analysis can debunk an equation;
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:754:9
+              </span>
+            </span>
+            {" "}
+            {" "}
+            matching dimensions cannot prove it.
+          </OuterP>
+        </Example>
       </Section>
     </>}
-    {visibleRestSections() > 4 && <>
+    {visibleRestSections() > 7 && <>
+      <Pause />
+      <Section id="section-10">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              The chain rule.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:825:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          Can we use dimensional analysis to {" "}
+          <i>
+            guess
+          </i>
+          {" "} a formula for
+          {" "}
+          <NoBreak>
+            <Math>
+              $(f \circ g)'$
+            </Math>
+            ?
+          </NoBreak>
+          {" "} Our “lego pieces” are {" "}
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $f'$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $g'$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          With the composition's input and output units matched (&#8288;
+          <InChapterLink
+            href="#_1_h.a.i_"
+            class="in-chapter-link"
+          >
+            Table 1.1
+          </InChapterLink>
+          &#8288;),
+          their signatures are
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;gathered&#125;
+          f            :  [\tB] \ra [\tC] \\
+          g            :  [\tA] \ra [\tB] \up&#123;1.35&#125; \\
+          f'           :  [\tB] \ra [\tC/\tB] \up&#123;1.35&#125; \\
+          g'           :  [\tA] \ra [\tB/\tA] \up&#123;1.35&#125;
+          \end&#123;gathered&#125;
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Our target is {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:841:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $(f\circ g)' : [\tA] \ra [\tC/\tA]$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          Since
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \left[&#123;\C\over \A&#125;\right] = \left[&#123;\tC\over \tB&#125;\right]\cdot\left[&#123;\tB\over\tA&#125;\right],
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            we might multiply {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:849:5
+            </span>
+          </span>
+          <Math>
+            $f'$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $g'$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} whose output units
+          are {" "}
+          <Math>
+            $\left[&#123;\tC\over \tB&#125;\right]$
+          </Math>
+          {" "} and {" "}
+          <NoBreak>
+            <Math>
+              $\left[&#123;\tB\over\tA&#125;\right]$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          just what we need! Alas, the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            input units
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:853:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            of {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:855:5
+            </span>
+          </span>
+          <Math>
+            $f'$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $g'$
+          </Math>
+          {" "} are different, we cannot! The
+          trick is to fix a piece of “adapter pipe” to the
+          front of {" "}
+          <NoBreak>
+            <Math>
+              $f'$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          f' \circ g : [\A] \ra [\tC/\tB]
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:863:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (f' \circ g)g' : [\A] \ra [\tC/\tA]
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            multyiplying
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:869:5
+            </span>
+          </span>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            has the same input units as {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:871:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $g$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} and the same output
+          units as {" "}
+          <NoBreak>
+            <Math>
+              $f'$
+            </Math>
+            ;
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            But their input units differ!
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:878:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          Feeding {" "}
+          <Math>
+            $g$
+          </Math>
+          {" "} into {" "}
+          <Math>
+            $f'$
+          </Math>
+          {" "} fixes that: try
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          (f'\circ g)g'.
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The signatures are
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:885:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \begin&#123;aligned&#125;
+          f'\circ g &amp;: [\tA] \ra [\tC/\tB] \\
+          g' &amp;: [\tA] \ra [\tB/\tA] \up&#123;1.35&#125;
+          \end&#123;aligned&#125;
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Both accept A, and their output units multiply to {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:894:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $\tC/\tA$
+            </Math>
+            .
+          </NoBreak>
+          <ImageRight
+            src="/build-img/svgo-svg/zysM.svg"
+            offsetX="0em"
+            local_url="./images/c6_chain_rule_units_cloud.svg"
+            intrinsicWidth={500}
+            intrinsicHeight={300}
+          />
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            It turns out that this is the correct formula:
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:900:5
+            </span>
+          </span>
+        </OuterP>
+        <Boxed>
+          <MathBlock>
+            $$
+            (f \circ g)' = (f'\circ g)g'
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+        </Boxed>
+        <OuterP>
+          <span class="t-3003-c">
+            ...for all differentiable functions {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:907:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $f$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            <Math>
+              $g : \rr \ra \rr$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          a formula known as the eponymous {" "}
+          <i>
+            chain rule
+          </i>
+          <NoBreak>
+            <Math>
+              $\rt&#123;0.1&#125;$
+            </Math>
+            !!
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Example>
+          <OuterP>
+            <b>
+              Example 7.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              Say that a cute
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:911:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <Image
+            src="/build-img/svgo-svg/kL1E.svg"
+            local_url="./images/c6_solo_RAT.svg"
+            intrinsicWidth={180}
+            intrinsicHeight="164.25"
+          />
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              is running a fundraising race. Let {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:916:9
+              </span>
+            </span>
+            <Math>
+              $f$
+            </Math>
+            {" "} give the money raised
+            in dollars as a function of position in meters, and {" "}
+            <Math>
+              $g$
+            </Math>
+            {" "} give
+            the rat's position as a function of elapsed time in seconds:
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \begin&#123;gathered&#125;
+            f : [\te&#123;m&#125;] \ra [\te&#123;\$&#125;] \\
+            g : [\te&#123;s&#125;] \ra [\te&#123;m&#125;] \up&#123;1.35&#125;
+            \end&#123;gathered&#125;
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              At {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:927:9
+              </span>
+            </span>
+            <Math>
+              $t_0$
+            </Math>
+            {" "} seconds, the fundraising rate {" "}
+            <Math>
+              $(f\circ g)'(t_0)$
+            </Math>
+            {" "} is in dollars per second.
+            To obtain it, multiply the dollars-per-meter rate at the rat's
+            position, {" "}
+            <NoBreak>
+              <Math>
+                $f'(g(t_0))$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} by its meters-per-second velocity, {" "}
+            <NoBreak>
+              <Math>
+                $g'(t_0)$
+              </Math>
+              :
+            </NoBreak>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (f\circ g)'(t_0) = f'(g(t_0))g'(t_0).
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <Image
+            width="530px"
+            src="/build-img/svgo-svg/un6E.svg"
+            local_url="./images/c6_explained_rat_equation.svg"
+            intrinsicWidth={680}
+            intrinsicHeight={145}
+          />
+          <Pause />
+          <OuterP>
+            <i>
+              <span class="t-3003-c">
+                Note.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6.wly:941:10
+                </span>
+              </span>
+            </i>
+            {" "} This equation only requires {" "}
+            <Math>
+              $g$
+            </Math>
+            {" "} to be differentiable
+            at {" "}
+            <Math>
+              $t_0$
+            </Math>
+            {" "} and {" "}
+            <Math>
+              $f$
+            </Math>
+            {" "} to be differentiable at {" "}
+            <NoBreak>
+              <Math>
+                $g(t_0)$
+              </Math>
+              ,
+            </NoBreak>
+            {" "}
+            similarly to the {" "}
+            <InChapterLink
+              class="in-chapter-link"
+              href="#_6_h.a.i_"
+            >
+              postscript
+            </InChapterLink>
+            {" "} following {" "}
+            <InChapterLink
+              href="#_5_h.a.i_"
+              class="in-chapter-link"
+            >
+              Example 5
+            </InChapterLink>
+            &#8288;,
+            relative to the sum rule.
+          </OuterP>
+        </Example>
+        <Pause />
+        <Example id="_8_h.a.i_">
+          <OuterP>
+            <b>
+              Example 8.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              We have
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:959:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (\cos \circ \cos)' = ((-\sin) \circ \cos)(-\sin)
+            $$
+            <ImageLeft
+              src="/build-img/svgo-svg/_iNd.svg"
+              offsetX="2em"
+              atLeastAsWide={true}
+              local_url="./images/c6_chain_rule_reminder_cloud.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={300}
+            />
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              by {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:968:9
+              </span>
+            </span>
+            <InChapterLink
+              class="in-chapter-link"
+              href="#section-10"
+            >
+              the chain rule
+            </InChapterLink>
+            &#8288;, since {" "}
+            <NoBreak>
+              <Math>
+                $\cos' = -\sin$
+              </Math>
+              .
+            </NoBreak>
+            {" "}
+            Cancelling the minus signs gives
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (\cos \circ \cos)' = (\sin \circ \cos)\sin,
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              or, evaluated at {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:975:9
+              </span>
+            </span>
+            <NoBreak>
+              <Math>
+                $x$
+              </Math>
+              ,
+            </NoBreak>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x).
+            $$
+            <ImageRight
+              src="/build-img/svgo-svg/e_hV.svg"
+              atLeastAsWide={true}
+              local_url="./images/c6_cancelling_signs_cloud.svg"
+              intrinsicWidth={800}
+              intrinsicHeight={200}
+            />
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+        </Example>
+        <Pause />
+        <Example id="_9_h.a.i_">
+          <OuterP>
+            <b>
+              Example 9.
+            </b>
+            {" "}{" "}
+            {" "}
+            {" "}
+            <span class="t-3003-c">
+              We have
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:986:9
+              </span>
+            </span>
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            (\cos \circ \cos)'(2.5) = \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              by {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:992:9
+              </span>
+            </span>
+            <InChapterLink
+              href="#_8_h.a.i_"
+              class="in-chapter-link"
+            >
+              Example 8
+            </InChapterLink>
+            &#8288;,
+            which
+            looks visually compatible with the graph
+            of {" "}
+            <Math>
+              $x \ra \cos(\cos(x))$
+            </Math>
+            {" "} [nb: it should be the slope]:
+          </OuterP>
+          <Pause />
+          <Image
+            src="/build-img/svgo-svg/0dwB.svg"
+            local_url="./images/c6_sin_of_sin_graph.svg"
+            intrinsicWidth="892.21315"
+            intrinsicHeight="163.02727"
+          />
+          <Pause />
+          <StarDivider />
+          <Pause />
+          <OuterP>
+            <i>
+              <span class="t-3003-c">
+                Note on {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6.wly:1005:10
+                </span>
+              </span>
+              <InChapterLink
+                href="#_9_h.a.i_"
+                class="in-chapter-link"
+              >
+                Example 9
+              </InChapterLink>
+            </i>
+            . 
+            The values of {" "}
+            <Math>
+              $\cos(\cos(x))$
+            </Math>
+            {" "} can be throught of as
+            the {" "}
+            <NoBreak>
+              <Math>
+                $x$
+              </Math>
+              -coordinates
+            </NoBreak>
+            {" "} of a certain horizontal windshield-wiper
+            whose angle at time {" "}
+            <Math>
+              $t$
+            </Math>
+            {" "} is {" "}
+            <NoBreak>
+              <Math>
+                $\cos(t)$
+              </Math>
+              :
+            </NoBreak>
+          </OuterP>
+          <Pause />
+          <Image
+            src="/build-img/svgo-svg/khDb.svg"
+            local_url="./images/c6_windshield_wiper.svg"
+            intrinsicWidth={400}
+            intrinsicHeight={300}
+          />
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              Since {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1013:9
+              </span>
+            </span>
+            <NoBreak>
+              <Math>
+                $-1 \leq \cos(t) \leq 1$
+              </Math>
+              ,
+            </NoBreak>
+            {" "} the wiper's angle stays between
+            {" "}
+            <Math>
+              $-1\Rad$
+            </Math>
+            {" "} and {" "}
+            <Math>
+              $+1\Rad$
+            </Math>
+            {" "} (about {" "}
+            <NoBreak>
+              <Math>
+                $\pm57.29^\circ$
+              </Math>
+              ),
+            </NoBreak>
+            {" "} so its {" "}
+            <NoBreak>
+              <Math>
+                $x$
+              </Math>
+              -coordinate
+            </NoBreak>
+            {" "} ranges from
+          </OuterP>
+          <Pause />
+          <MathBlock>
+            $$
+            \cos(\pm1) \approx 0.54 \quad\te&#123;to&#125;\quad \cos(0) = 1,
+            $$
+            <MathJaxSvgExportTooltip />
+          </MathBlock>
+          <Pause />
+          <OuterP>
+            <span class="t-3003-c">
+              producing the compressed sinusoid-like wave above.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1020:9
+              </span>
+            </span>
+          </OuterP>
+        </Example>
+      </Section>
+    </>}
+    {visibleRestSections() > 8 && <>
+      <Pause />
+      <Section id="section-11">
+        <OuterP>
+          <b>
+            <span class="t-3003-c">
+              Epilogue: the dimensionless plane.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1024:6
+              </span>
+            </span>
+          </b>
+          {" "}
+          Imagine that we define the radian value of an
+          angle as
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            length subtended by the angle on the unit circle
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1028:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            as opposed to
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1030:5
+            </span>
+          </span>
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <span class="t-3003-c">
+            arc length over radius
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1032:7
+            </span>
+          </span>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            where the latter is the more traditional definition.
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1034:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          In the latter definition, 
+          the dimensions of the radian are
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          &#123;\te&#123;length&#125;\over\te&#123;length&#125;&#125; = \te&#123;dimensionless&#125;
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            whereas under the first definition it sounds like
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1043:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          the dimensions are simply “length”. BUT: “length”
+          {" "}
+          <i>
+            in what plane
+          </i>
+          ? The “original” plane in which the
+          unit circle is embedded has dimensionless axes! And
+          therefore {" "}
+          <i>
+            length itself
+          </i>
+          <Math>
+            $\rt&#123;0.2&#125;$
+          </Math>
+          {" "} in that plane is a dimensionless
+          quantity, not the usual “physical” notion of length!
+          So both cases assign radians to be a dimensionless 
+          unit!
+          Whoo-hoo!
+        </OuterP>
+        <OuterP class="indent-10">
+          <span class="t-3003-c">
+            Relatedly, you may have seen axes labelled “time/s” instead
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1053:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          of “time {" "}
+          <NoBreak>
+            <Math>
+              $[\te&#123;s&#125;]$
+            </Math>
+            ”:
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <Image
+          src="/build-img/svgo-svg/oqAL.svg"
+          style="margin-top:-0.5em"
+          local_url="./images/c6_dimensionless_plane_1_v1.svg"
+          intrinsicWidth={600}
+          intrinsicHeight={465}
+        />
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            Dividing time by the unit “s” takes out the units, leaving a pure
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1060:5
+            </span>
+          </span>
+          {" "}
+          {" "}
+          number that fits in the dimensionless plane. For example, the
+          coordinate {" "}
+          <Math>
+            $3$
+          </Math>
+          {" "} means
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          3 = &#123;\te&#123;time&#125;\over\te&#123;s&#125;&#125; \quad\Longrightarrow\quad \te&#123;time&#125; = 3\te&#123;s&#125;.
+          $$
+          <MathJaxSvgExportTooltip />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <span class="t-3003-c">
+            The coordinate is the pure number {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1068:5
+            </span>
+          </span>
+          <NoBreak>
+            <Math>
+              $3$
+            </Math>
+            !
+          </NoBreak>
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 9 && <>
       <Pause />
       <Exercises
         at_end_of_page={true}
         mode="dual"
         show_curlicue={true}
-        id="_25_h.a.i_"
+        id="_29_h.a.i_"
       >
         <Exercise number={1}>
-          <ExerciseStatement id="_23_h.a.i_">
+          <ExerciseStatement id="_10_h.a.i_">
             <OuterP>
               <b>
                 Exercise 1.
@@ -2098,1453 +3130,147 @@ const Rest = () => {
               {" "}
               {" "}
               <span class="t-3003-c">
-                True or false (and, if possible, explain):
+                If the expression
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:3:5
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:4:5
                 </span>
               </span>
             </OuterP>
             <Pause />
-            <Grid
-              cols={3}
-              style="font-family:'Baskerville Regular';"
-            >
-              <Item>
-                <span class="t-3003-c">
-                  a. {" "}
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:9:9
-                  </span>
+            <MathBlock>
+              $$
+              \Large \cos(\omega t)
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is to be dimensionally consistent,
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:10:5
                 </span>
-                <Math>
-                  $0.9^2 &lt; 0.9$
-                </Math>
-              </Item>
-              <Item>
-                <span class="t-3003-c">
-                  b. {" "}
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:11:9
-                  </span>
-                </span>
-                <Math>
-                  $\sqrt&#123;0.01&#125; = 0.1$
-                </Math>
-              </Item>
-              <Item>
-                <span class="t-3003-c">
-                  c. {" "}
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:13:9
-                  </span>
-                </span>
-                <Math>
-                  $\sqrt[2]&#123;\up&#123;0.8&#125;\sqrt[3]&#123;2&#125;&#125; = \sqrt[3]&#123;\up&#123;0.8&#125;\sqrt[2]&#123;2&#125;&#125;$
-                </Math>
-              </Item>
-              <Item>
-                <span class="t-3003-c">
-                  d. {" "}
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:15:9
-                  </span>
-                </span>
-                <Math>
-                  $&#123;\sqrt&#123;2&#125; \over \up&#123;0.55&#125;2&#125; = \sqrt&#123;0.5&#125;$
-                </Math>
-              </Item>
-              <Item>
-                <span class="t-3003-c">
-                  e. {" "}
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:17:9
-                  </span>
-                </span>
-                <Math>
-                  $&#123;1 \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;0.5&#125;$
-                </Math>
-              </Item>
-              <Item>
-                <span class="t-3003-c">
-                  f. {" "}
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:19:9
-                  </span>
-                </span>
-                <Math>
-                  $2^&#123;30&#125; &gt; 1000^3$
-                </Math>
-              </Item>
-              <Item>
-                <span class="t-3003-c">
-                  g. {" "}
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:21:9
-                  </span>
-                </span>
-                <Math>
-                  $&#123;1 \over 0.95&#125; &gt; 1.05$
-                </Math>
-              </Item>
-              <Item>
-                <span class="t-3003-c">
-                  h. {" "}
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:23:9
-                  </span>
-                </span>
-                <Math>
-                  $(-1)^&#123;101&#125; = -1$
-                </Math>
-              </Item>
-              <Item>
-                <span class="t-3003-c">
-                  i. {" "}
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:25:9
-                  </span>
-                </span>
-                <Math>
-                  $&#123;100 \over \up&#123;0.5&#125;99&#125; &lt; &#123;101 \over \up&#123;0.5&#125;100&#125;$
-                </Math>
-              </Item>
-            </Grid>
+              </span>
+              {" "}
+              {" "}
+              and if {" "}
+              <Math>
+                $t$
+              </Math>
+              {" "} has units of seconds, then what units
+              must {" "}
+              <Math>
+                $\omega$
+              </Math>
+              {" "} have?
+            </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
               <span class="t-3003-c">
-                a. True:
+                Since
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:29:9
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:16:9
                 </span>
               </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              0.9^2 = &#123;9 \over 10&#125;\cdot&#123;9 \over 10&#125; = &#123;81 \over 100&#125; = 0.81
+              \cos : [1] \ra [1]
               $$
               <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                and {" "}
+                or
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:35:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $0.81 &lt; 0.9$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                b. True:
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:39:9
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:22:9
                 </span>
               </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              0.1^2 = &#123;1 \over 10&#125; \cdot &#123;1 \over 10&#125; = &#123;1 \over 100&#125; = 0.01,
+              \cos : [\rad] \ra [1]
               $$
               <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                and {" "}
+                rephrased (we have {" "}
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:45:9
-                </span>
-              </span>
-              <Math>
-                $0.1$
-              </Math>
-              {" "} is nonnegative, so {" "}
-              <NoBreak>
-                <Math>
-                  $\sqrt&#123;0.01&#125; = 0.1$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                c. True:
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:49:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <Math>
-                $\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;$
-              </Math>
-              {" "}
-              and {" "}
-              <Math>
-                $\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;$
-              </Math>
-              {" "} are
-              both equal to {" "}
-              <NoBreak>
-                <Math>
-                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
-                </Math>
-                .
-              </NoBreak>
-              {" "} Indeed,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\,\, (\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
-              =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\qquad\\
-              =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125; \times \sqrt[2]&#123;\up&#123;0.75&#125;\sqrt[3]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \\
-              =&amp; \,\, \up&#123;1.4&#125; (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;) \times (\sqrt[3]&#123;\up&#123;0.64&#125;2&#125;\rt&#123;0.1&#125;)\\
-              =&amp; \,\, \up&#123;1.4&#125; 2
-              \end&#123;align*&#125;
-              $$
-              <ImageLeft
-                src="/build-img/svgo-svg/rgbH.svg"
-                offsetY="23.5%"
-                atLeastAsWide={true}
-                local_url="./images/true_false_sixth_root_of_two_cloud1.svg"
-                intrinsicWidth={346}
-                intrinsicHeight={142}
-              />
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:68:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-                  &amp;\,\, (\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.1&#125;)^6 \\
-                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\\
-                 =&amp;\,\, \up&#123;1.4&#125; (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;) \times (\gbk\sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125; \times \sqrt[3]&#123;\up&#123;0.75&#125;\sqrt[2]&#123;2&#125;&#125;\rt&#123;0.11&#125;)\\
-                 =&amp;\,\, \up&#123;1.4&#125; \sqrt[2]&#123;\up&#123;0.65&#125;2&#125; \times \sqrt[2]&#123;\up&#123;0.65&#125;2&#125;\\
-                 =&amp;\,\, \up&#123;1.4&#125; 2
-              \end&#123;align*&#125;
-              $$
-              <ImageLeft
-                src="/build-img/svgo-svg/Trg3.svg"
-                offsetY="23.5%"
-                atLeastAsWide={true}
-                local_url="./images/true_false_sixth_root_of_two_cloud2.svg"
-                intrinsicWidth={444}
-                intrinsicHeight={126}
-              />
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Technically, however, a number {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:84:9
-                </span>
-              </span>
-              <Math>
-                $x$
-              </Math>
-              {" "} such that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              x^6 = 2
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is not necessarily {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:90:9
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:28:9
                 </span>
               </span>
               <NoBreak>
                 <Math>
-                  $\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
+                  $[\rad] = [1]$
                 </Math>
-                ,
-              </NoBreak>
-              {" "}
-              because {" "}
-              <Math>
-                $x = -\sqrt[6]&#123;\up&#123;0.6&#125;2&#125;$
-              </Math>
-              {" "} satisfies
-              this equation as well!
-            </OuterP>
-            <OuterP class="indent-10">
-              <span class="t-3003-c">
-                Finally,
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:94:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <Math>
-                $\sqrt[2]&#123;\up&#123;0.76&#125;\sqrt[3]&#123;2&#125;&#125;$
-              </Math>
-              {" "} and
-              {" "}
-              <Math>
-                $\sqrt[3]&#123;\up&#123;0.76&#125;\sqrt[2]&#123;2&#125;&#125;$
-              </Math>
-              {" "} are both
-              {" "}
-              <i>
-                nonnegative
-              </i>
-              {" "} (taken as obvious),
-              so they are the {" "}
-              <i>
-                unique
-                nonnegative
-              </i>
-              {" "} solution to {" "}
-              <NoBreak>
-                <Math>
-                  $x^6 = 2$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                d. True: In general,
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:103:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; = \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                for all {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:109:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $x \geq 0$
-                </Math>
-                ,
+                ),
               </NoBreak>
               {" "} {" "}
               <Math>
-                $y &gt; 0$
+                $\omega$
               </Math>
-              {" "} (you need each
-              root to be defined), so
+              {" "} must have units of
             </OuterP>
             <Pause />
-            <MathBlock>
-              $$
-              &#123;\sqrt&#123;2&#125; \over 2&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;4&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;2 \over 4&#125; = \sqrt&#123;0.5&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                radians per second
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:30:11
+                </span>
+              </span>
+            </CentralDisplayItalic>
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                ...ta-daa!
+                or
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:116:9
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:32:9
                 </span>
               </span>
             </OuterP>
             <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Note 1.
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:120:10
-                  </span>
+            <CentralDisplayItalic>
+              <span class="t-3003-c">
+                per second
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:34:11
                 </span>
-              </i>
-              {" "} Or by “direct verification”:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;\sqrt&#123;2&#125; \over 2&#125;\right)^&#123;\!2&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;\cdot&#123;\sqrt&#123;2&#125; \over 2&#125;
-              = &#123;\sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125; \over 4&#125; = &#123;2 \over 4&#125; = 0.5.
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
+              </span>
+            </CentralDisplayItalic>
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                (Since {" "}
+                (equiv.) in order to cancel out the seconds in {" "}
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:127:9
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:36:9
                 </span>
               </span>
-              <Math>
-                $&#123;\sqrt&#123;2&#125; \over 2&#125;$
-              </Math>
-              {" "} is nonnegative,
-              this establishes that {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;\sqrt&#123;2&#125; \over 2&#125; =
-                  \sqrt&#123;0.5&#125;$
-                </Math>
-                .)
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                e. True: Using the
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:133:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
               <NoBreak>
                 “
                 <Math>
-                  $&#123;\sqrt&#123;x&#125; \over \sqrt&#123;y&#125;&#125; =
-                  \sqrt&#123;\up&#123;0.7&#125;x \over y&#125;$
+                  $t$
                 </Math>
-                ”
-              </NoBreak>
-              {" "} identity:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;1&#125; \over \sqrt&#123;2&#125;&#125; = \sqrt&#123;\up&#123;0.8&#125;1 \over 2&#125; = \sqrt&#123;0.5&#125;.
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Or by direct verification:
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:141:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \left(&#123;1 \over \sqrt&#123;2&#125;&#125;\right)^&#123;\!2&#125; = &#123;1 \over \sqrt&#123;2&#125;&#125;\cdot&#123;1 \over \sqrt&#123;2&#125;&#125;
-              = &#123;1 \over \sqrt&#123;2&#125;\cdot\sqrt&#123;2&#125;&#125; = &#123;1 \over 2&#125; = 0.5.
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                (And {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:148:9
-                </span>
-              </span>
-              <Math>
-                $1 \over \sqrt&#123;2&#125;$
-              </Math>
-              {" "} is nonnegative.)
-              Or by reducing to part d:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over \sqrt&#123;2&#125; \cdot \sqrt&#123;2&#125;&#125; = &#123;\sqrt&#123;2&#125; \over 2&#125;.
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                f. True:
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:157:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2^&#123;30&#125; = 2^&#123;10&#125; \times 2^&#123;10&#125; \times 2^&#123;10&#125; = (2^&#123;10&#125;)^3
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:163:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              (2^&#123;10&#125;)^3 = (1024)^3 &gt; 1000^3.
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Note 2.
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:171:10
-                  </span>
-                </span>
-              </i>
-              {" "}
-              The first ten or so powers of {" "}
-              <Math>
-                $2$
-              </Math>
-              {" "} are worth
-              knowing by heart (here's {" "}
-              <i>
-                eleven
-              </i>
-              {" "} powers, mind
-              you):
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;array&#125;&#123;c|c&#125;
-              \,\,\,\,n\,\,\,\, &amp; 2^n\dn&#123;0.3&#125; \\ \hline
-              0 &amp; 1 \up&#123;1.1&#125;\\
-              1 &amp; 2 \\
-              2 &amp; 4 \\
-              3 &amp; 8 \\
-              4 &amp; 16 \\
-              5 &amp; 32 \\
-              6 &amp; 64 \\
-              7 &amp; 128 \\
-              8 &amp; 256 \\
-              9 &amp; 512 \\
-              10 &amp; 1024
-              \end&#123;array&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                In particular,
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:193:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2^&#123;10&#125; \approx 10^3
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is useful! For
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:199:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              example, if a 1-millimeter-thick napkin is
-              folded {" "}
-              <Math>
-                $50$
-              </Math>
-              {" "} times, doubling the thickness
-              each time, its thickness becomes
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              2^&#123;50&#125;\fw\te&#123;mm&#125; = (2^&#123;10&#125;)^5\fw\te&#123;mm&#125; \approx (10^3)^5\fw\te&#123;mm&#125; = 10^&#123;15&#125;\fw\te&#123;mm&#125;.
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                As
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:208:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1\fw\te&#123;mm&#125; = 10^&#123;-6&#125;\fw\te&#123;km&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                this is
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:214:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              10^&#123;15&#125;\fw&#123;&#125;(10^&#123;-6&#125;\fw\te&#123;km&#125;) = 10^&#123;15-6&#125;\fw\te&#123;km&#125; = 10^&#123;9&#125;\fw\te&#123;km&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                or {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:225:9
-                </span>
-              </span>
-              <i>
-                one billion
-              </i>
-              {" "} kilometers. By
-              comparison, the distance from the Earth to
-              the Sun is a mere {" "}
-              <Math>
-                $150$
-              </Math>
-              {" "} million kilometers.
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                g. True: Multiplying both sides by a positive
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:231:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              number preserves the inequality:
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp; &#123;1 \over 0.95&#125; &gt; 1.05\\
-              \iff &amp; 1 &gt; 1.05 \cdot 0.95\up&#123;1.4&#125;\\
-              \iff &amp; 1 &gt; (1 + 0.05)(1 - 0.05)\up&#123;1.4&#125;\\
-              \iff &amp; 1 &gt; 1 - 0.05^2\up&#123;1.4&#125;
-              \end&#123;align*&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                (using the fact that {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:243:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $(1+x)(1-x) = 1-x^2$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} of
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \te&#123;“&#125;\,(a+b)(a-b) = a^2-b^2\,\te&#123;”&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                fame), and since the {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:249:9
-                </span>
-              </span>
-              <i>
-                last
-              </i>
-              {" "} inequality is true,
-              the {" "}
-              <i>
-                first
-              </i>
-              {" "} inequality is true! (Recall that
-              {" "}
-              <NoBreak>
-                “
-                <Math>
-                  $\!\iff\!$
-                </Math>
-                ”
-              </NoBreak>
-              {" "} means “if and only if”.)
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Note 3.
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:255:10
-                  </span>
-                </span>
-              </i>
-              {" "}
-              More generally, even though
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 1 - \epsilon&#125; &gt; 1 + \epsilon
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                for any small {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:262:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $\epsilon &gt; 0$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} the number
-              {" "}
-              <Math>
-                $1 + \epsilon$
-              </Math>
-              {" "} remains a good approximation to
-              {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1 \over 1 - \epsilon&#125;$
-                </Math>
-                .
-              </NoBreak>
-              {" "} For example,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1.01
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is a good approximation to
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:270:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 0.99&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                while
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:276:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1.001
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is a good approximation to
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:282:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 0.999&#125;,
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                etc.
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:288:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                h. True: Here are the first few powers of {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:292:9
-                </span>
-              </span>
-              <Math>
-                $-1$
-              </Math>
-              {" "}
-              (each multiplication by {" "}
-              <Math>
-                $-1$
-              </Math>
-              {" "} changes the sign):
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;array&#125;&#123;r@&#123;\;&#125;r@&#123;\;&#125;r&#125;
-              (-1)^1 = &amp; (-1) = &amp; -1\\[0.4em]
-              (-1)^2 = &amp; (-1)\times(-1) = &amp; 1\\[0.4em]
-              (-1)^3 = &amp; (-1)\times(-1)\times(-1) = &amp; -1\\[0.4em]
-              (-1)^4 = &amp; (-1)\times(-1)\times(-1)\times(-1) = &amp; 1\\[0.4em]
-              (-1)^5 = &amp; (-1)\times(-1)\times(-1)\times(-1)\times(-1) = &amp; -1
-              \end&#123;array&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                (Etc.) Even powers of {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:305:9
-                </span>
-              </span>
-              <Math>
-                $(-1)$
-              </Math>
-              {" "} equal {" "}
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                ;
-              </NoBreak>
-              {" "}
-              odd powers equal {" "}
-              <NoBreak>
-                <Math>
-                  $-1$
-                </Math>
-                .
-              </NoBreak>
-              {" "} As {" "}
-              <Math>
-                $101$
-              </Math>
-              {" "} is odd, {" "}
-              <Math>
-                $(-1)^&#123;101&#125;$
-              </Math>
-              {" "}
-              is {" "}
-              <NoBreak>
-                <Math>
-                  $-1$
-                </Math>
-                .
+                ”.
               </NoBreak>
             </OuterP>
             <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                i. False:
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:311:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;100 \over 99&#125; = &#123;99 + 1 \over 99&#125; = 1 + &#123;1 \over 99&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:317:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;101 \over 100&#125; = &#123;100 + 1 \over 100&#125; = 1 + &#123;1 \over 100&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                so the smaller of the two fractions is {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:323:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $&#123;101
-                  \over 100&#125;$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} since {" "}
-              <NoBreak>
-                <Math>
-                  $&#123;1 \over 100&#125; &lt; &#123;1 \over
-                  99&#125;$
-                </Math>
-                .
-              </NoBreak>
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Note 4.
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:329:10
-                  </span>
-                </span>
-              </i>
-              {" "}
-              The difference
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 99&#125; - &#123;1 \over 100&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is interesting in its own right, being
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:336:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              connected to a famous infinite sum. To
-              visualize this sum, picture a hare poised at
-              {" "}
-              <Math>
-                $x = 0$
-              </Math>
-              {" "} on the number line. This hare runs
-              forward by one unit and backwards by half a
-              unit, stopping at
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              1 - &#123;1\over 2&#125;.
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                The hare then runs forward by
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:347:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <i>
-                half
-              </i>
-              {" "} a unit and back by a {" "}
-              <i>
-                third
-              </i>
-              {" "} of a unit,
-              stopping at
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right) \\
-              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\dn&#123;1&#125;\\
-              \hline
-              = \,&amp;\, \left(1 - &#123;1 \over 3&#125;\right)\up&#123;1.5&#125;.
-              \end&#123;align*&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                Keeping with this pattern,
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:360:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              the hare then stops at
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\dn&#123;1&#125;\\
-              \hline
-              = \,&amp;\, \left(1 - &#123;1 \over 4&#125;\right)\up&#123;1.5&#125;
-              \end&#123;align*&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and then at
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:373:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
-              + \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\dn&#123;1&#125;\\
-              \hline
-              = \,&amp;\, \left(1 - &#123;1 \over 5&#125;\right)\up&#123;1.5&#125;
-              \end&#123;align*&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and so on.
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:386:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              The hare’s successive stopping positions approach {" "}
-              <Math>
-                $1$
-              </Math>
-              {" "}
-              from the left, suggesting that the
-              {" "}
-              <i>
-                infinite
-              </i>
-              {" "} sum
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\hfill\,\dots\dn&#123;1&#125;\hfill
-              \end&#123;align*&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is “equal” (in some sense) to {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:403:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $1$
-                </Math>
-                :
-              </NoBreak>
-              {" "} we can write
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\hfill\,\dots\dn&#123;1&#125;\hfill\\ \hline
-              \up&#123;1.5&#125;= \,&amp;\, 1
-              \end&#123;align*&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                But how much, exactly, is the {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:418:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $n$
-                </Math>
-                -th
-              </NoBreak>
-              {" "} term
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                of the sum? (For {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:424:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $n = 99$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} this is our original
-              difference.) Well...
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; &amp;= &#123;1 \over n&#125;\cdot&#123;n+1 \over n+1&#125;\, - \,
-              &#123;1 \over n+1&#125;\cdot&#123;n \over n&#125;\up&#123;1.5&#125;\\
-              &amp;= &#123;n+1 \over n(n+1)&#125; - &#123;n \over n(n+1)&#125;\up&#123;1.5&#125;\\
-              &amp;= &#123;1 \over n(n+1)&#125;\up&#123;1.5&#125;
-              \end&#123;align*&#125;
-              $$
-              <ImageRight
-                src="/build-img/svgo-svg/omps.svg"
-                offsetY="-0.5em"
-                atLeastAsWide={true}
-                local_url="./images/svg_ch1_ex_24.svg"
-                intrinsicWidth="497.212"
-                intrinsicHeight="317.105"
-              />
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                ...it's that much. (For example,
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:440:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 1&#125; - &#123;1 \over 2&#125; = &#123;1 \over 1 \cdot 2&#125; = &#123;1 \over 2&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:446:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 2&#125; - &#123;1 \over 3&#125; = &#123;1 \over 2 \cdot 3&#125; = &#123;1 \over 6&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                and so on.) So
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:452:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, \left(1 - &#123;1 \over 2&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 2&#125; - &#123;1 \over 3&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 3&#125; - &#123;1 \over 4&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 4&#125; - &#123;1 \over 5&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 5&#125; - &#123;1 \over 6&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\, \left(&#123;1 \over 6&#125; - &#123;1 \over 7&#125;\right)\\
-              \up&#123;1.5&#125;+ \,&amp;\hfill\,\dots\dn&#123;1&#125;\hfill\\ \hline
-              \up&#123;1.5&#125;= \,&amp;\, 1
-              \end&#123;align*&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                can be written
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:467:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              \begin&#123;align*&#125;
-              &amp;\, &#123;1 \over 1 \cdot 2&#125;\\
-              \up&#123;1.5&#125;+ \,&amp;\, &#123;1 \over 2 \cdot 3&#125;\\
-              \up&#123;1.5&#125;+ \,&amp;\, &#123;1 \over 3 \cdot 4&#125;\\
-              \up&#123;1.5&#125;+ \,&amp;\, &#123;1 \over 4 \cdot 5&#125;\\
-              \up&#123;1.5&#125;+ \,&amp;\, &#123;1 \over 5 \cdot 6&#125;\\
-              \up&#123;1.5&#125;+ \,&amp;\, &#123;1 \over 6 \cdot 7&#125;\\
-              \up&#123;1.5&#125;+ \,&amp;\hfill\,\dots\dn&#123;1&#125;\hfill\\ \hline
-              \up&#123;1.5&#125;= \,&amp;\, 1
-              \end&#123;align*&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                (or
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:482:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 2&#125; + &#123;1 \over 6&#125; + &#123;1 \over 12&#125; + &#123;1 \over 20&#125; + &#123;1 \over 30&#125; + \dots \,=\, 1
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                equivalently), which is not obvious at first
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:488:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              glance, and kind of interesting!
-            </OuterP>
-            <Pause />
-            <OuterP>
-              <i>
-                <span class="t-3003-c">
-                  Note 5.
-                  <span class="t-3003">
-                    ./src/content/ch1/ch1^exercises/_true_false_.wly:493:10
-                  </span>
-                </span>
-              </i>
-              {" "} The fact that
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                means that
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:499:9
-                </span>
-              </span>
-              {" "}
-              {" "}
-              {" "}{" "}
-              <Math>
-                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
-              </Math>
-              {" "} is roughly
-              {" "}
-              <Math>
-                $&#123;1 \over n^2&#125;$
-              </Math>
-              {" "} for large {" "}
-              <NoBreak>
-                <Math>
-                  $n$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} which is
-              sometimes handy to know. For example,
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 10&#125; - &#123;1 \over 11&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is approximately {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:508:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $1/10^2 = 0.01$
-                </Math>
-                ,
-              </NoBreak>
-              {" "} while
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over 100&#125; - &#123;1 \over 101&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is approximately {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_.wly:514:9
-                </span>
-              </span>
-              <NoBreak>
-                <Math>
-                  $1/100^2 = 0.01^2 = 0.0001$
-                </Math>
-                ,
-              </NoBreak>
-              {" "}
-              etc.
-            </OuterP>
+            <Image
+              src="/build-img/svgo-svg/5qHf.svg"
+              local_url="./images/e6_bottom_radian_cloud.svg"
+              intrinsicWidth={400}
+              intrinsicHeight={150}
+            />
           </Solution>
         </Exercise>
         <Exercise number={2}>
-          <ExerciseStatement id="_24_h.a.i_">
+          <ExerciseStatement id="_11_h.a.i_">
             <OuterP>
               <b>
                 Exercise 2.
@@ -3553,68 +3279,23 @@ const Rest = () => {
               {" "}
               {" "}
               <span class="t-3003-c">
-                The fact that
+                If {" "}
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_follow_up.wly:4:5
+                  ./src/content/ch6/ch6^exercises/_dimensionality_t_over_v_.wly:4:5
                 </span>
               </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125;
-              $$
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is {" "}
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_follow_up.wly:10:5
-                </span>
-              </span>
-              <i>
-                roughly
-              </i>
-              {" "} {" "}
               <Math>
-                $1/n^2$
+                $x$
               </Math>
-              {" "} for large {" "}
+              {" "} is position and {" "}
               <Math>
-                $n$
+                $v$
               </Math>
-              {" "} is discussed in the solution to part i of {" "}
-              <InChapterLink
-                href="#_23_h.a.i_"
-                class="in-chapter-link"
-              >
-                Exercise 1
-              </InChapterLink>
-              &#8288;. But how
-              far off is this exactly? (I.e., what is the
-              difference between {" "}
-              <Math>
-                $&#123;1 \over n&#125; - &#123;1 \over n+1&#125;$
-              </Math>
-              {" "}
-              and {" "}
+              {" "} is velocity, what is
+              the dimension of {" "}
               <NoBreak>
                 <Math>
-                  $&#123;1 \over n^2&#125;$
-                </Math>
-                ?)
-              </NoBreak>
-              {" "} And {" "}
-              <i>
-                roughly
-              </i>
-              {" "} how much is
-              this far-offness, for large {" "}
-              <NoBreak>
-                <Math>
-                  $n$
+                  $x/v$
                 </Math>
                 ?
               </NoBreak>
@@ -3623,119 +3304,1716 @@ const Rest = () => {
           <Solution>
             <OuterP>
               <span class="t-3003-c">
+                Since velocity has dimensions
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_t_over_v_.wly:9:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              “distance over time”, which cancels the “distance”
+              dimension on top, it is “time”:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;\te&#123;DISTANCE&#125;\over\te&#123;SPEED&#125;&#125; = &#123;\te&#123;DISTANCE&#125;\over \left(&#123;\te&#123;DISTANCE&#125; \over &#123;\te&#123;TIME&#125;&#125;&#125;\right)&#125; = &#123;\te&#123;DISTANCE&#125;&#125;\cdot &#123;\te&#123;TIME&#125;\over \te&#123;DISTANCE&#125;&#125; = \te&#123;TIME&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+          </Solution>
+        </Exercise>
+        <Exercise number={3}>
+          <ExerciseStatement id="_12_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 3.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_lorentz_factor_dimensionality_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $v$
+              </Math>
+              {" "} is a speed and {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} is the speed of light, what
+              is the dimension of the expression below?
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (Known as the {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_lorentz_factor_dimensionality_.wly:9:5
+                </span>
+              </span>
+              <i>
+                Lorentz factor
+              </i>
+              .)
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
                 Since
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_follow_up.wly:17:9
+                  ./src/content/ch6/ch6^exercises/_lorentz_factor_dimensionality_.wly:14:9
                 </span>
               </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over n&#125; - &#123;1 \over n+1&#125; = &#123;1 \over n(n+1)&#125;
-              $$
-              <ImageRight
-                src="/build-img/svgo-svg/Xx87.svg"
-                offsetX="-1em"
-                atLeastAsWide={true}
-                local_url="./images/svg_ch1_ex_25.svg"
-                intrinsicWidth="362.474"
-                intrinsicHeight="177.616"
-              />
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                is smaller than
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_follow_up.wly:27:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over n^2&#125;
-              $$
-              <ImageRight
-                src="/build-img/svgo-svg/jBCw.svg"
-                offsetX="-1em"
-                atLeastAsWide={true}
-                local_url="./images/svg_ch1_ex_26.svg"
-                intrinsicWidth="362.474"
-                intrinsicHeight="177.616"
-              />
-              <MathJaxSvgExportTooltip />
-            </MathBlock>
-            <Pause />
-            <OuterP>
-              <span class="t-3003-c">
-                we compute
-                <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_follow_up.wly:37:9
-                </span>
-              </span>
-            </OuterP>
-            <Pause />
-            <MathBlock>
-              $$
-              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125;
+              &#123;v \over c&#125;
               $$
               <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                to avoid a minus sign in the result.
+                is “speed over speed”, it is dimensionless,
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_follow_up.wly:43:9
+                  ./src/content/ch6/ch6^exercises/_lorentz_factor_dimensionality_.wly:20:9
                 </span>
               </span>
               {" "}
               {" "}
-              The difference is:
+              and since the sums, differences, squares,
+              square roots, and reciprocals of dimensionless
+              quantities are dimensionless, the entire
+              expression is dimensionless.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={4}>
+          <ExerciseStatement id="_13_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 4.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                If units of time and space are chosen
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_physicist_choose_to_write_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              such that {" "}
+              <Math>
+                $c = 1$
+              </Math>
+              {" "} where {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} is the speed of the light,
+              why might 
+              a physicist
+              still choose
+              to write expressions containing {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $c$
+                </Math>
+                ’?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Besides wanting to “remind the general
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_physicist_choose_to_write_.wly:38:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              formula”, one reason is
+              to keep expressions dimensionally consistent.
+              For example, the Lorentz factor
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              \begin&#123;align*&#125;
-              &#123;1 \over n^2&#125; - &#123;1 \over n(n+1)&#125; &amp;= &#123;1 \over n^2&#125; \cdot &#123;n+1 \over n+1&#125; - &#123;1 \over n(n+1)&#125; \cdot
-              &#123;n \over n&#125;\\
-              &amp;= &#123;n+1 \over n^2(n+1)&#125; - &#123;n \over n^2(n+1)&#125;\up&#123;1.5&#125;\\
-              &amp;= &#123;1 \over n^2(n+1)&#125;\up&#123;1.5&#125;
-              \end&#123;align*&#125;
+              &#123;1\over \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                (cf. {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_physicist_choose_to_write_.wly:47:9
+                </span>
+              </span>
+              <InChapterLink
+                href="#_12_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 3
+              </InChapterLink>
+              &#8288;)
+              would become
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;1\over \sqrt&#123;1 - v^2&#125;&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                if {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_physicist_choose_to_write_.wly:54:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              taking advantage of {" "}
+              <Math>
+                $c = 1$
+              </Math>
+              {" "} to
+              elide the {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $c$
+                </Math>
+                ’,
+              </NoBreak>
+              {" "} which
+              might be numerically correct and typographically more
+              expedient, but is dimensionally
+              inconsistent: either a speed squared is being subtracted
+              from a dimensionless {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’,
+              </NoBreak>
+              {" "} or, in a last-ditch effort, we pretend
+              that {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $1$
+                </Math>
+                ’
+              </NoBreak>
+              {" "} stands for {" "}
+              <NoBreak>
+                ‘
+                <Math>
+                  $c^2$
+                </Math>
+                ’,
+              </NoBreak>
+              {" "} which is also a speed squared,
+              but then the entire expression has units of inverse speed
+              instead of being dimensionless, as the Lorentz factor should be!
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={5}>
+          <ExerciseStatement id="_14_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 5.
+              </b>
+            </OuterP>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Given a differentiable function {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:5:9
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $f : [\s] \ra [\s]$
+                  </Math>
+                  <span class="t-3003-c">
+                    ,
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:5:60
+                    </span>
+                  </span>
+                </NoBreak>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  can you construct a function of signature {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:6:9
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $[\s] \ra [1]$
+                  </Math>
+                  <span class="t-3003-c">
+                    ?
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:6:65
+                    </span>
+                  </span>
+                </NoBreak>
+              </p>
+            </CodexSuggestion>
+          </ExerciseStatement>
+          <Solution>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  The derivative {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:10:13
+                  </span>
+                </span>
+                <Math>
+                  $f'$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} has the required signature.
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:10:32
+                  </span>
+                </span>
+              </p>
+              <p class="indent-10">
+                <span class="t-3003-c">
+                  Alternatively, {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:12:13
+                  </span>
+                </span>
+                <Math>
+                  $f/f$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} has this signature wherever {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:12:33
+                  </span>
+                </span>
+                <Math>
+                  $f$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} is nonzero.
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:12:65
+                  </span>
+                </span>
+              </p>
+            </CodexSuggestion>
+          </Solution>
+        </Exercise>
+        <Exercise number={6}>
+          <ExerciseStatement id="_15_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 6.
+              </b>
+            </OuterP>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Can you construct a function of signature {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_square_.wly:5:9
+                  </span>
+                </span>
+                <Math>
+                  $[\s] \ra [\te&#123;kg&#125;]$
+                </Math>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  from functions
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_square_.wly:6:9
+                  </span>
+                </span>
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                f : [\s] \ra [\m], \qquad g : [\m^2] \ra [\te&#123;kg&#125;]?
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+            </CodexSuggestion>
+          </ExerciseStatement>
+          <Solution>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Yes: {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_square_.wly:14:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $g \circ f^2$
+                  </Math>
+                  <span class="t-3003-c">
+                    ,
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_construct_signature_square_.wly:14:31
+                    </span>
+                  </span>
+                </NoBreak>
+                <span class="t-3003-c">
+                  {" "} since {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_square_.wly:14:31
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $f^2 : [\s] \ra [\m^2]$
+                  </Math>
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_construct_signature_square_.wly:14:62
+                    </span>
+                  </span>
+                </NoBreak>
+              </p>
+            </CodexSuggestion>
+          </Solution>
+        </Exercise>
+        <Exercise number={7}>
+          <ExerciseStatement id="_16_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 7.
+              </b>
+            </OuterP>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Can you construct a function of signature {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_impossible_.wly:5:9
+                  </span>
+                </span>
+                <Math>
+                  $[\s] \ra [\te&#123;kg&#125;]$
+                </Math>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  from functions
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_impossible_.wly:6:9
+                  </span>
+                </span>
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                f : [\s] \ra [\m], \qquad g : [\te&#123;kg&#125;^2] \ra [\te&#123;kg&#125;]?
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+            </CodexSuggestion>
+          </ExerciseStatement>
+          <Solution>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Impossible using the given function operations.
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_impossible_.wly:14:13
+                  </span>
+                </span>
+              </p>
+            </CodexSuggestion>
+          </Solution>
+        </Exercise>
+        <Exercise number={8}>
+          <ExerciseStatement id="_17_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 8.
+              </b>
+            </OuterP>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Can you construct a function of signature {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_reciprocal_.wly:5:9
+                  </span>
+                </span>
+                <Math>
+                  $[\s] \ra [\te&#123;kg&#125;]$
+                </Math>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  from functions
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_reciprocal_.wly:6:9
+                  </span>
+                </span>
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                f : [\s] \ra [\m], \qquad g : [\m^&#123;-1&#125;] \ra [\te&#123;kg&#125;]?
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+            </CodexSuggestion>
+          </ExerciseStatement>
+          <Solution>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Yes: {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_reciprocal_.wly:14:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $g \circ (1/f)$
+                  </Math>
+                  <span class="t-3003-c">
+                    ,
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_construct_signature_reciprocal_.wly:14:33
+                    </span>
+                  </span>
+                </NoBreak>
+                <span class="t-3003-c">
+                  {" "} wherever defined, since
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_construct_signature_reciprocal_.wly:14:33
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                {" "}{" "}
+                <NoBreak>
+                  <Math>
+                    $1/f : [\s] \ra [\m^&#123;-1&#125;]$
+                  </Math>
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_construct_signature_reciprocal_.wly:15:39
+                    </span>
+                  </span>
+                </NoBreak>
+              </p>
+            </CodexSuggestion>
+          </Solution>
+        </Exercise>
+        <Exercise number={9}>
+          <ExerciseStatement id="_18_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 9.
+              </b>
+            </OuterP>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Let
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:6:9
+                  </span>
+                </span>
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                f^&#123;-1&#125;
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  stand for the “inverse” of a function {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:12:9
+                  </span>
+                </span>
+                <Math>
+                  $f$
+                </Math>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  for which such an inverse exists. {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:13:9
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                This means that {" "}
+                <Math>
+                  $f$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} has the kind of graph
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:14:28
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                below, in which distinct {" "}
+                <NoBreak>
+                  <Math>
+                    $x$
+                  </Math>
+                  <span class="t-3003-c">
+                    's
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:15:37
+                    </span>
+                  </span>
+                </NoBreak>
+                <span class="t-3003-c">
+                  {" "} are mapped to
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:15:37
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                distinct {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  <span class="t-3003-c">
+                    's:
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:16:21
+                    </span>
+                  </span>
+                </NoBreak>
+              </p>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/bzLT.svg"
+                local_url="./images/e6_f_inverse_distinct.svg"
+                intrinsicWidth={450}
+                intrinsicHeight={295}
+              />
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  This means that we can invert the flow
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:21:9
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                of the function, treating {" "}
+                <NoBreak>
+                  <Math>
+                    $y$
+                  </Math>
+                  <span class="t-3003-c">
+                    's
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:22:38
+                    </span>
+                  </span>
+                </NoBreak>
+                <span class="t-3003-c">
+                  {" "} as inputs, and recovering a
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:22:38
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                unique {" "}
+                <Math>
+                  $x$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} for each {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:23:19
+                  </span>
+                </span>
+                <Math>
+                  $y$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} that is an output of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:23:32
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $f$
+                  </Math>
+                  <span class="t-3003-c">
+                    —this
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:23:57
+                    </span>
+                  </span>
+                </NoBreak>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  “inverse flow” function is what we write as {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:24:9
+                  </span>
+                </span>
+                <NoBreak>
+                  <span class="t-3003-c">
+                    “
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:24:9
+                    </span>
+                  </span>
+                  <Math>
+                    $f^&#123;-1&#125;$
+                  </Math>
+                  <span class="t-3003-c">
+                    ”:
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:24:62
+                    </span>
+                  </span>
+                </NoBreak>
+              </p>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/4pb6.svg"
+                local_url="./images/e6_f_inverse_reversed.svg"
+                intrinsicWidth={640}
+                intrinsicHeight={290}
+              />
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  The picture above shows {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:30:9
+                  </span>
+                </span>
+                <Math>
+                  $f^&#123;-1&#125;$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} with inputs on the vertical axis
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:30:41
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                and outputs on the horizontal axis. What would its “ordinary” graph
+                look like, with inputs on the horizontal axis and outputs on the vertical axis?
+              </p>
+            </CodexSuggestion>
+          </ExerciseStatement>
+          <Solution>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Each point {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:37:13
+                  </span>
+                </span>
+                <Math>
+                  $(x,y)$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} on the graph of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:37:31
+                  </span>
+                </span>
+                <Math>
+                  $f$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} becomes a point {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:37:51
+                  </span>
+                </span>
+                <Math>
+                  $(y,x)$
+                </Math>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  on the ordinary graph of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:38:13
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $f^&#123;-1&#125;$
+                  </Math>
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:38:46
+                    </span>
+                  </span>
+                </NoBreak>
+                <span class="t-3003-c">
+                  {" "} The two graphs are reflections
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:38:46
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                of each other across the line {" "}
+                <NoBreak>
+                  <Math>
+                    $y=x$
+                  </Math>
+                  <span class="t-3003-c">
+                    :
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:39:48
+                    </span>
+                  </span>
+                </NoBreak>
+              </p>
+              <Pause />
+              <Image
+                src="/build-img/svgo-svg/wzGl.svg"
+                local_url="./images/e6_f_inverse_upright.svg"
+                intrinsicWidth={440}
+                intrinsicHeight={350}
+              />
+            </CodexSuggestion>
+          </Solution>
+        </Exercise>
+        <Exercise number={10}>
+          <ExerciseStatement id="_19_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 10.
+              </b>
+            </OuterP>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  If {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:6:9
+                  </span>
+                </span>
+                <Math>
+                  $f : [\A] \ra [\B]$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} is invertible (cf. {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:6:31
+                  </span>
+                </span>
+                <InChapterLink
+                  href="#_18_h.a.i_"
+                  class="in-chapter-link"
+                >
+                  Exercise 9
+                </InChapterLink>
+                <span class="t-3003-c">
+                  &#8288;),
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:6:31
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                what are the signatures of
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                f^&#123;-1&#125;,\qquad f^&#123;-1&#125;\circ f,\qquad f\circ f^&#123;-1&#125;,\qquad (f^&#123;-1&#125;)'?
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  (Assume the inverse is differentiable for the last part.)
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:13:9
+                  </span>
+                </span>
+              </p>
+            </CodexSuggestion>
+          </ExerciseStatement>
+          <Solution>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  The inverse swaps the input and output units. Thus:
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:18:13
+                  </span>
+                </span>
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                \begin&#123;aligned&#125;
+                f^&#123;-1&#125; &amp;: [\B] \ra [\A] \\
+                f^&#123;-1&#125;\circ f &amp;: [\A] \ra [\A]\up&#123;1.35&#125; \\
+                f\circ f^&#123;-1&#125; &amp;: [\B] \ra [\B]\up&#123;1.35&#125; \\
+                (f^&#123;-1&#125;)' &amp;: [\B] \ra [\A/\B]\up&#123;1.35&#125;
+                \end&#123;aligned&#125;
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+            </CodexSuggestion>
+          </Solution>
+        </Exercise>
+        <Exercise number={11}>
+          <ExerciseStatement id="_20_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 11.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:4:5
+                </span>
+              </span>
+              <Math>
+                $x$
+              </Math>
+              {" "} is position, {" "}
+              <Math>
+                $v$
+              </Math>
+              {" "} is velocity,
+              and {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} is the speed of light, what are
+              the dimensions of {" "}
+              <NoBreak>
+                <Math>
+                  $xv/c^2$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The factor
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:10:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;v\over c&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is dimensionless since {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:16:9
+                </span>
+              </span>
+              <Math>
+                $v$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $c$
+              </Math>
+              {" "} both
+              have dimensions of speed (nb: velocity = speed,
+              insofar as dimensionality is concerned—one being
+              the absolute value of the other does not change
+              the units!),
+              so
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;xv\over c^2&#125; = &#123;v\over c&#125;\cdot&#123;x\over c&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                has the same dimensions as
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:27:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;x\over c&#125;
               $$
               <ImageRight
-                src="/build-img/svgo-svg/4oJD.svg"
-                offsetY="-0.5em"
-                atLeastAsWide={true}
-                local_url="./images/svg_ch1_ex_27.svg"
-                intrinsicWidth="606.819"
-                intrinsicHeight="317.105"
+                atLeastAsWide={false}
+                src="/build-img/svgo-svg/Z9Xf.svg"
+                offsetX="1em"
+                local_url="./images/e6_v_over_c_cancellation_cloud.svg"
+                intrinsicWidth={200}
+                intrinsicHeight={100}
               />
               <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
               <span class="t-3003-c">
-                which, for large {" "}
+                which has dimensions of time by
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_follow_up.wly:59:9
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:38:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <InChapterLink
+                href="#_11_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 2
+              </InChapterLink>
+              &#8288;.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={12}>
+          <ExerciseStatement id="_21_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 12.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What are the signatures of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_z_combinations_.wly:3:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
+              <NoBreak>
+                <Math>
+                  $1/z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z^2$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $-z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z + z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z/z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} {" "}
+              <NoBreak>
+                <Math>
+                  $z - z$
+                </Math>
+                ,
+              </NoBreak>
+              {" "}
+              and {" "}
+              <Math>
+                $z \circ z$
+              </Math>
+              {" "}
+              if {" "}
+              <NoBreak>
+                <Math>
+                  $z  : [\lbs] \ra [\pounds]$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Applying the rules of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_z_combinations_.wly:11:9
+                </span>
+              </span>
+              <InChapterLink
+                href="#_1_h.a.i_"
+                class="in-chapter-link"
+              >
+                Table 1.1
+              </InChapterLink>
+              {" "} with {" "}
+              <Math>
+                $f = g = z$
+              </Math>
+              {" "}
+              and of {" "}
+              <InChapterLink
+                href="#_3_h.a.i_"
+                class="in-chapter-link"
+              >
+                Table 1.2
+              </InChapterLink>
+              {" "} with {" "}
+              <NoBreak>
+                <Math>
+                  $f = z$
+                </Math>
+                :
+              </NoBreak>
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                (1/z) : [\lbs] \ra [1/\pounds]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                z^2 : [\lbs] \ra [\rt&#123;0.1&#125;\te&#123;£&#125;^2\rt&#123;0.1&#125;]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                (-z) : [\lbs] \ra [\pounds]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                (z + z) : [\lbs] \ra [\pounds]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                (z/z) : [\lbs] \ra [\rt&#123;0.1&#125;1\rt&#123;0.1&#125;]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                (z - z) : [\lbs] \ra [\pounds]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                On the other hand,
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_z_combinations_.wly:45:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              z \circ z
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is not a well-formed composition, and does not have
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_z_combinations_.wly:51:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              a well-defined signature, since the output units of
+              {" "}
+              <Math>
+                $z$
+              </Math>
+              {" "} do not match the input units of {" "}
+              <NoBreak>
+                <Math>
+                  $z$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Since
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_dimensional_z_combinations_.wly:61:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                -z = (-1)z,
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                z + z = 2z,
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <MathBlock>
+                $$
+                z - z = 0z
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  three of the cases considered are just special
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_dimensional_z_combinations_.wly:76:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                cases of multiplying the function by a 
+                constant. (Which does not change the signature, as long
+                as the constant is dimensionless.)
+              </OuterP>
+              <OuterP class="indent-10">
+                <span class="t-3003-c">
+                  [Nb: The multiplication of a function by a constant
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_dimensional_z_combinations_.wly:81:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                is formally treated in {" "}
+                <OutChapterLink
+                  href="decoy-target-path#decoy-id"
+                  class="out-chapter-link"
+                >
+                  Exercise 0 of Chapter 0
+                </OutChapterLink>
+                .]
+              </OuterP>
+            </SolutionNote>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 2.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  It is indeed true that
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_dimensional_z_combinations_.wly:91:13
+                  </span>
+                </span>
+              </OuterP>
+              <Pause />
+              <MathBlock>
+                $$
+                z - z = 0
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <OuterP>
+                <span class="t-3003-c">
+                  identically, but this is zero {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_dimensional_z_combinations_.wly:97:13
+                  </span>
+                </span>
+                <i>
+                  pounds
+                </i>
+                , you see?
+                [British.]
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={13}>
+          <ExerciseStatement id="_22_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 13.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What constraints does the composition
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_f_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ f
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                impose on the signature of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_f_.wly:8:5
                 </span>
               </span>
               <NoBreak>
                 <Math>
-                  $n$
+                  $f$
                 </Math>
-                ,
+                ?
               </NoBreak>
-              {" "} is roughly
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                A signature of the form
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_f_.wly:12:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
-              &#123;1 \over n^3&#125;
+              f : [\tA] \ra [\tA]
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is necessary and sufficient.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_f_.wly:16:9
+                </span>
+              </span>
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                The output of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_f_.wly:18:9
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "} is fed back into {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} so its output
+              units must match its input units.
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={14}>
+          <ExerciseStatement id="_23_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 14.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What constraints does the composition
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_g_f_.wly:4:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ g \circ f
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                impose on the signatures of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_g_f_.wly:8:5
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $g$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The composition requires {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_g_f_.wly:12:9
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} of the
+              form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              f : [\tA] \ra [\tB] \\
+              \up&#123;1.6&#125;g : [\tB] \ra [\tA]
+              \end&#123;gathered&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for some units A and B, as the output of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_g_f_.wly:22:9
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "}
+              is passed to {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} and the output of {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} is passed to {" "}
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={15}>
+          <ExerciseStatement id="_24_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 15.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                What constraints does the assemblage
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_big_composition_.wly:10:5
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f \circ &#123;f\over f\circ f&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                impose on the signature of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_big_composition_.wly:14:5
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ?
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                The presence of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_big_composition_.wly:18:9
+                </span>
+              </span>
+              <Math>
+                $f \circ f$
+              </Math>
+              {" "} as a sub-expression
+              imposes a restricted signature of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [\tA] \ra [\tA]
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                on {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_big_composition_.wly:26:9
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "} by {" "}
+              <InChapterLink
+                href="#_22_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 13
+              </InChapterLink>
+              &#8288;.
+              But then
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f\over f\circ f&#125; : [\tA] \ra [1]
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                because the output units at top and bottom of the fraction are
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_big_composition_.wly:33:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              both A, which cancels. (Or
+            </OuterP>
+            <Pause />
+            <Image
+              src="/build-img/svgo-svg/Udaw.svg"
+              local_url="./images/e6_some_quotient.svg"
+              intrinsicWidth={500}
+              intrinsicHeight={120}
+            />
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                where {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_big_composition_.wly:39:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $\tA/\tA = 1$
+                </Math>
+                .)
+              </NoBreak>
+              {" "} As
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f\over f\circ f&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is fed back to {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_big_composition_.wly:45:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $f$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} this forces...
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              [\tA] = [1]
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <NoBreak>
+                <span class="t-3003-c">
+                  ...
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_dimensional_big_composition_.wly:51:9
+                  </span>
+                </span>
+                <Math>
+                  $f$
+                </Math>
+              </NoBreak>
+              {" "} to accept dimensionless inputs, and finally
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f : [1] \ra [1]
               $$
               <MathJaxSvgExportTooltip />
             </MathBlock>
@@ -3744,16 +5022,857 @@ const Rest = () => {
               <span class="t-3003-c">
                 since {" "}
                 <span class="t-3003">
-                  ./src/content/ch1/ch1^exercises/_true_false_follow_up.wly:65:9
+                  ./src/content/ch6/ch6^exercises/_dimensional_big_composition_.wly:55:9
                 </span>
               </span>
               <NoBreak>
                 <Math>
-                  $n^2(n+1) \approx n^3$
+                  $f : [\tA] \ra [\tA]$
                 </Math>
                 .
               </NoBreak>
             </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={16}>
+          <ExerciseStatement id="_25_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 16.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Give a dimensional analysis of the (real,
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:3:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              “late afternoon”) product rule {" "}
+              <NoBreak>
+                (cf
+                <Math>
+                  $.$
+                </Math>
+              </NoBreak>
+              {" "} {" "}
+              <OutChapterLink
+                href="decoy-target-path#decoy-id"
+                class="out-chapter-link"
+              >
+                Chapter 4, Exercise 16
+              </OutChapterLink>
+              ):
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \Large (fg)' = f'g + fg'
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+            </Boxed>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                Products of the form
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:12:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              fg  \\
+              f'g\up&#123;1.9&#125; \\
+              fg'\up&#123;1.9&#125;
+              \end&#123;gathered&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                require {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:22:9
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} to have the same input units, but no more,
+              per the multiplication rule of {" "}
+              <InChapterLink
+                class="in-chapter-link"
+                href="#_1_h.a.i_"
+              >
+                Table 1.1
+              </InChapterLink>
+              &#8288;,
+              and per the fact that
+              {" "}
+              <Math>
+                $h'$
+              </Math>
+              {" "} has the same input units as {" "}
+              <Math>
+                $h$
+              </Math>
+              {" "}
+              for any function {" "}
+              <NoBreak>
+                <Math>
+                  $h : \rr \ra \rr$
+                </Math>
+                .
+              </NoBreak>
+              {" "} 
+              Therefore, signatures of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              f : [\tA] \ra [\tB] \\
+              g : [\tA] \ra [\tC] \up&#123;1.6&#125;
+              \end&#123;gathered&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                are at least necessary on either side of the equation.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:36:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              Evaluating in order:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              fg : [\tA] \ra [\tB\tC]                    \\
+              \up&#123;1.6&#125;(fg)' : [\tA] \ra [\tB\tC/\tA]     \\
+              \up&#123;1.6&#125;f' : [\tA] \ra [\tB/\tA]           \\
+              \up&#123;1.6&#125;g' : [\tA] \ra [\tC/\tA]           \\
+              \up&#123;1.6&#125;f'g : [\tA] \ra [\tB\tC/\tA]       \\
+              \up&#123;1.6&#125;fg' : [\tA] \ra [\tB\tC/\tA]       \\
+              \up&#123;1.6&#125;f'g + fg' : [\tA] \ra [\tB\tC/\tA]
+              \end&#123;gathered&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Thus both sides impose the same signature constraints and
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:61:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              yield {" "}
+              <NoBreak>
+                <Math>
+                  $[\A] \ra [\tB\tC/\tA]$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+          </Solution>
+        </Exercise>
+        <Exercise number={17}>
+          <ExerciseStatement id="_26_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 17.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Use dimensional analysis to
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:3:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              conjecture a formula for
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \large\left(&#123;1\over f&#125;\right)'
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:10:5
+                </span>
+              </span>
+              <Math>
+                $f : \rr \ra \rr$
+              </Math>
+              {" "} differentiable. 
+              (Build your formula out of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <NoBreak>
+                <Math>
+                  $f'$
+                </Math>
+                .)
+              </NoBreak>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                For a generic signature {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:15:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $f : [\tA] \ra [\tB]$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} we have
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;1\over f&#125;\right)' : [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right].
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                Since {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:21:9
+                </span>
+              </span>
+              <Math>
+                $f'$
+              </Math>
+              {" "} has output units {" "}
+              <NoBreak>
+                <Math>
+                  $\tB/\tA$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} dividing it by {" "}
+              <Math>
+                $f^2$
+              </Math>
+              {" "}
+              gives the desired signature:
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f'\over f^2&#125; : [\tA] \ra \left[&#123;\tB/\tA\over\tB^2&#125;\right]
+              = [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right].
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                This makes {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:29:9
+                </span>
+              </span>
+              <Math>
+                $f'/f^2$
+              </Math>
+              {" "} a plausible conjecture.
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                However, we know from Exercise X that
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:31:9
+                </span>
+              </span>
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \left(&#123;1\over f&#125;\right)'
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                should have opposite sign to {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:37:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $f'$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} whereas
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              &#123;f'\over f^2&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                does {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:43:9
+                </span>
+              </span>
+              <i>
+                not
+              </i>
+              {" "} have opposite sign, since {" "}
+              <Math>
+                $f^2$
+              </Math>
+              {" "} is
+              nonnegative. (Nb: When {" "}
+              <Math>
+                $f = 0$
+              </Math>
+              {" "} neither {" "}
+              <Math>
+                $1/f$
+              </Math>
+              {" "} nor
+              {" "}
+              <Math>
+                $(1/f)'$
+              </Math>
+              {" "} 
+              nor {" "}
+              <Math>
+                $f'/f^2$
+              </Math>
+              {" "}
+              are defined, so those points are not our
+              concern.)
+            </OuterP>
+            <OuterP class="indent-10">
+              <span class="t-3003-c">
+                Our conjecture is “consistently wrong”—it has the wrong sign.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:56:9
+                </span>
+              </span>
+              {" "}
+              {" "}
+              Negation leaves its signature unchanged (&#8288;
+              <InChapterLink
+                href="#_3_h.a.i_"
+                class="in-chapter-link"
+              >
+                Table 1.2
+              </InChapterLink>
+              &#8288;), giving
+            </OuterP>
+            <Boxed>
+              <MathBlock>
+                $$
+                \left(&#123;1\over f&#125;\right)' = -&#123;f'\over f^2&#125;
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+            </Boxed>
+            <OuterP>
+              <span class="t-3003-c">
+                as an “educated guess” for a formula for {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:64:9
+                </span>
+              </span>
+              <NoBreak>
+                <Math>
+                  $(&#123;1\over f&#125;)'$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <SolutionNote>
+              <OuterP>
+                <i>
+                  Note 1.
+                </i>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The formula is correct! It is called the {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:67:13
+                  </span>
+                </span>
+                <i>
+                  reciprocal rule
+                </i>
+                .
+              </OuterP>
+            </SolutionNote>
+          </Solution>
+        </Exercise>
+        <Exercise number={18}>
+          <ExerciseStatement id="_27_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 18.
+              </b>
+            </OuterP>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  Use dimensional analysis to conjecture a
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:6:9
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                formula for the derivative of the inverse,
+                i.e., a formula of the form
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                (f^&#123;-1&#125;)' = \ldots
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  similar to the sum rule, product rule, etc.
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:14:9
+                  </span>
+                </span>
+              </p>
+            </CodexSuggestion>
+          </ExerciseStatement>
+          <Solution>
+            <CodexSuggestion>
+              <p>
+                <span class="t-3003-c">
+                  If
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:21:13
+                  </span>
+                </span>
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                f : [\tA] \ra [\tB]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  is a generic invertible function, then
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:27:13
+                  </span>
+                </span>
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                f^&#123;-1&#125; : [\tB] \ra [\tA]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  since an input of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:33:13
+                  </span>
+                </span>
+                <Math>
+                  $f^&#123;-1&#125;$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} is an output of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:33:39
+                  </span>
+                </span>
+                <Math>
+                  $f$
+                </Math>
+                {" "}{" "}
+                {" "}
+                {" "}
+                <span class="t-3003-c">
+                  and vice-versa.
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:34:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                Thus
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                (f^&#123;-1&#125;)' : [\tB] \ra \left[&#123;\A\over \B&#125;\right]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  Taking the reciprocal of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:42:13
+                  </span>
+                </span>
+                <Math>
+                  $f'$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} gives
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:42:42
+                  </span>
+                </span>
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;1\over f'&#125; : [\A] \ra \left[&#123;\A \over \B&#125;\right]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  with the right output units, but the wrong input units (A instead of B);
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:49:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                however we can “slot in” the correct input units 
+                to {" "}
+                <Math>
+                  $f'$
+                </Math>
+                <span class="t-3003-c">
+                  {" "} by pre-composing with {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:51:20
+                  </span>
+                </span>
+                <NoBreak>
+                  <Math>
+                    $f^&#123;-1&#125;$
+                  </Math>
+                  <span class="t-3003-c">
+                    ,
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:51:51
+                    </span>
+                  </span>
+                </NoBreak>
+                <span class="t-3003-c">
+                  {" "} i.e.,
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:51:51
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                observe that
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                f' \circ f^&#123;-1&#125; : [\B] \ra \left[&#123;\B\over \A&#125;\right]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  ...giving us...
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:58:13
+                  </span>
+                </span>
+              </p>
+              <Pause />
+              <MathBlock>
+                $$
+                &#123;1\over f' \circ f^&#123;-1&#125;&#125; : [\B] \ra \left[&#123;\A\over \B&#125;\right]
+                $$
+                <MathJaxSvgExportTooltip />
+              </MathBlock>
+              <Pause />
+              <p>
+                <span class="t-3003-c">
+                  ...the desired signature! Thus, a possibility is:
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:64:13
+                  </span>
+                </span>
+              </p>
+              <Boxed>
+                <MathBlock>
+                  $$
+                  (f^&#123;-1&#125;)' = &#123;1\over f' \circ f^&#123;-1&#125;&#125;
+                  $$
+                  <MathJaxSvgExportTooltip />
+                </MathBlock>
+              </Boxed>
+              <Pause />
+              <StarDivider style="margin-top:-1.3em" />
+              <Pause />
+              <SolutionNote>
+                <OuterP>
+                  <i>
+                    Note 1.
+                  </i>
+                  {" "}{" "}
+                  {" "}
+                  {" "}
+                  <span class="t-3003-c">
+                    The formula is (correct, and) known as the {" "}
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:76:17
+                    </span>
+                  </span>
+                  <i>
+                    inverse rule
+                  </i>
+                  .
+                  It holds wherever {" "}
+                  <NoBreak>
+                    <Math>
+                      $f'(f^&#123;-1&#125;(x)) \ne 0$
+                    </Math>
+                    ,
+                  </NoBreak>
+                  {" "} for invertible,
+                  differentiable {" "}
+                  <NoBreak>
+                    <Math>
+                      $f$
+                    </Math>
+                    .
+                  </NoBreak>
+                </OuterP>
+              </SolutionNote>
+              <Pause />
+              <SolutionNote>
+                <OuterP>
+                  <i>
+                    Note 2.
+                  </i>
+                  {" "}{" "}
+                  {" "}
+                  {" "}
+                  <span class="t-3003-c">
+                    At a specific input:
+                    <span class="t-3003">
+                      ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:83:17
+                    </span>
+                  </span>
+                </OuterP>
+                <Boxed>
+                  <MathBlock>
+                    $$
+                    (f^&#123;-1&#125;)'(x) = &#123;1\over f'(f^&#123;-1&#125;(x))&#125;
+                    $$
+                    <MathJaxSvgExportTooltip />
+                  </MathBlock>
+                </Boxed>
+              </SolutionNote>
+            </CodexSuggestion>
+          </Solution>
+        </Exercise>
+        <Exercise number={19}>
+          <ExerciseStatement id="_28_h.a.i_">
+            <OuterP>
+              <b>
+                Exercise 19.
+              </b>
+              {" "}{" "}
+              {" "}
+              {" "}
+              <span class="t-3003-c">
+                Let {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f^-1_g_f_.wly:11:5
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "} be an invertible function with inverse {" "}
+              <Math>
+                $f^&#123;-1&#125;$
+              </Math>
+              {" "} (cf. {" "}
+              <InChapterLink
+                href="#_18_h.a.i_"
+                class="in-chapter-link"
+              >
+                Exercise 9
+              </InChapterLink>
+              &#8288;).
+              What is the most general signature of {" "}
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} for which the composition
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              f^&#123;-1&#125; \circ g \circ f
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                is well-formed?
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f^-1_g_f_.wly:16:5
+                </span>
+              </span>
+            </OuterP>
+          </ExerciseStatement>
+          <Solution>
+            <OuterP>
+              <span class="t-3003-c">
+                This pattern requires {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f^-1_g_f_.wly:27:9
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "} and {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} of the form
+            </OuterP>
+            <Pause />
+            <MathBlock>
+              $$
+              \begin&#123;gathered&#125;
+              f : [\tA] \ra [\tB] \\
+              \up&#123;1.6&#125;g : [\tB] \ra [\tB]
+              \end&#123;gathered&#125;
+              $$
+              <MathJaxSvgExportTooltip />
+            </MathBlock>
+            <Pause />
+            <OuterP>
+              <span class="t-3003-c">
+                since outputs of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f^-1_g_f_.wly:36:9
+                </span>
+              </span>
+              <Math>
+                $f$
+              </Math>
+              {" "} become inputs
+              of {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} and outputs of {" "}
+              <Math>
+                $g$
+              </Math>
+              {" "} become inputs
+              of 
+              {" "}
+              <NoBreak>
+                <Math>
+                  $f^&#123;-1&#125;$
+                </Math>
+                ,
+              </NoBreak>
+              {" "} where {" "}
+              <Math>
+                $f^&#123;-1&#125; : [\B] \ra [\A]$
+              </Math>
+              {" "} if {" "}
+              <NoBreak>
+                <Math>
+                  $f : [\A] \ra [\B]$
+                </Math>
+                .
+              </NoBreak>
+            </OuterP>
+            <Pause />
+            <Image
+              style="margin-top:-1em"
+              src="/build-img/svgo-svg/y-Ij.svg"
+              local_url="./images/e6_f_inverse_g_f_composition.svg"
+              intrinsicWidth={600}
+              intrinsicHeight={145}
+            />
           </Solution>
         </Exercise>
       </Exercises>

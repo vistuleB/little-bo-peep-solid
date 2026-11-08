@@ -125,7 +125,7 @@ export default createHandler(() => (
 
           <meta name="format-detection" content="telephone=no" />
           <script
-            innerHTML={`window.env = { VITE_ENV: "${import.meta.env.VITE_ENV}" };`}
+            innerHTML={`window.env = { VITE_ENV: "${import.meta.env.VITE_ENV}", OFFLINE_MODE: ${import.meta.env.OFFLINE_MODE} };`}
           />
           <script src="/extras.js" defer={true} />
           <script src="/mathjax_setup.js" />

@@ -142,60 +142,62 @@
         handle=table_1_1 <<Table 1.1>>
         src=tmp-images/c6_flowers_here_bob_v2.svg
 
-    |> CodexSuggestion
+    |> Example
+        handle=_function_multiplication_units_example_
 
-        |> Example
-            handle=_function_multiplication_units_example_
+        If
 
-            If
-
+        !! $$
+        !! \begin{aligned}
+        !! p &: [\te{days}] \ra [\te{dollars}/\te{kg}] \\
+        !! m &: [\te{days}] \ra [\te{kg}]\up{1.35}
+        !! \end{aligned}
+        !! $$
+        !! $$
+        !! \,p : [\te{days}] \ra [\te{dollars}/\te{kg}], \\
+        !! m : [\te{days}] \ra [\te{kg}]\up{1.35}
+        !! $$
+        |> MathBlock
+            style=margin-bottom:-0.8em;margin-top:-0.2em
             $$
-            \begin{aligned}
-            p &: [\te{days}] \ra [\te{dollars}/\te{kg}] \\
-            m &: [\te{days}] \ra [\te{kg}]\up{1.35}
-            \end{aligned}
+            \,p : [\underbrace{\te{days}}_{\A}] \ra [\underbrace{\te{dollars}/\te{kg}}_{\B}], \\
+            m : [\underbrace{\te{days}}_{\A}] \ra [\underbrace{\te{kg}}_{\C}]\up{1.2}
+            $$
+        then
+
+        !! $$
+        !! pm : [\te{days}] \ra [(\te{dollars}/\te{kg})\te{kg} = \te{dollars}]
+        !! $$
+        |> MathBlock
+            style=margin-bottom:-0.4em;margin-top:-0.1em
+            $$
+            pm : [\underbrace{\te{days}}_{\A}] \ra [(\underbrace{\te{dollars}/\te{kg}}_{\B})\underbrace{\te{kg}}_{\C} = \underbrace{\te{dollars}}_{\B\C}]
             $$
 
-            then
+        !! using $\A = \te{days}$, $\B = \te{dollars}/\te{kg}$,
+        !! $\C = \te{kg}$ in 
+        per the “multiplication” cell (second row, first column) of >>table_1_1.
+    !! |> StarDivider
+    !!     style=margin-top:-0.5em
 
-            $$
-            pm : [\te{days}] \ra [(\te{dollars}/\te{kg})\te{kg} = \te{dollars}]
-            $$
-
-            using $\A = \te{days}$, $\B = \te{dollars}/\te{kg}$,
-            $\C = \te{kg}$ in the “multiplication” cell of Table >>table_1_1.
-
-    |> CodexSuggestion
-
-        Note that Example >>_function_multiplication_units_example_ reflects a physical reality: if
-
-        $$
-        p(t)
-        $$
-
-        is the dollar-per-kilogram price of apples on day $t$, and
-
-        $$
-        m(t)
-        $$
-
-        is the number of kilograms of apples to buy on that day, then
-
-        $$
-        pm = (t \ra p(t)m(t))
-        $$
-
-        becomes the day-to-total-dollars-spent-on-apples-on-that-day function,
-        i.e., a function from “day” to “dollars”.
-
-    |> StarDivider
-        style=margin-top:-0.3em
+    _Note on Example >>_function_multiplication_units_example_##._
+    For example, if
+    $$
+    p(t)
+    $$
+    is the dollars-per-kilogram price of apples on day $t$, and 
+    $$
+    m(t)
+    $$
+    is the number of kilograms purchased on day $t$ (of said apples), then
+    $$
+    (pm)(t) = p(t)m(t)
+    $$
+    is the dollars 
+    !! (b/c $[(\te{dollars}/\te{kg})] \times [\te{kg}] = [\te{dollars}]$)
+    spent on apples on day $t$.
 
 |> Section
-
-    !! Two more function operations are _negation_ and _reciprocal_.
-    !! These are separated out in a second table because they are
-    !! _unary_ operations, acting on a single function:
 
     *The unary function operations.*
     We will add two more not-yet-much-discussed
@@ -205,7 +207,8 @@
     function operations to our list of officially
     considered function operations, being _negation_
     and _reciprocal_,
-    written “$-\f$” and “$1/f$” respectively—note that
+    written “$-\f$” and “$1/f$” respectively
+    —note that
     the reciprocal of $f$ has a different signature than $f$:
 
     |> Image
@@ -215,12 +218,6 @@
 
     |> StarDivider
         style=margin-top:-0.3em
-
-    !! [*See [Chapter >>trigonometry#decoy:5 §>>trigonometry-derivatives#decoy:2](>>negation-of-a-function-first-mention).]
-
-    !! $$
-    !! (-f)(x) = -f(x)\qquad(1/f)(x) = 1/f(x)
-    !! $$
 
 |> Section
     _handle=derivative_signature
@@ -238,23 +235,45 @@
     f' : [\tA] \ra [\tB/\tA]
     $$
     for any units A, B.
-    Conversely, multiply the derivative's output units by its
-    input units to recover the original output units.
+    !! Conversely, multiply the derivative's output units by its
+    !! input units to recover the original output units.
 
-    |> CodexSuggestion
+    |> Example
+        !! handle=_differentiation_position_velocity_units_example_
 
-        |> Example
-            handle=_differentiation_position_velocity_units_example_
-
-            If $x : [\s] \ra [\m]$ is differentiable, then
-
+        If 
+        
+        |> MathBlock
+            style=margin-bottom:-0.4em;margin-top:-0.1em
             $$
-            x' : [\s] \ra [\m/\s].
+            x : [\underbrace{\s}_{\A}] \ra [\underbrace{\m}_{\B}]
+            $$ 
+        
+        (“s” = seconds, “m” = meters)
+        is a differentiable function from $\rr$ to $\rr$ (e.g., the
+        horizontal position of an object as a function of time), then
+        !! , as seen in Chapter >>derivatives,
+
+        |> MathBlock
+            style=margin-bottom:-0.4em;margin-top:-0.1em
+            $$
+            x' : [\underbrace{\s}_{\A}] \ra [\underbrace{\m/\s}_{\B/\A}]
             $$
 
-            If $x(t)$ is a particle's position in meters at time $t$
-            in seconds, then $x'(t)$ is its velocity in meters per second
-            at that time.
+        gives a
+
+        __meters per second__
+
+        value, per the general rule above.
+        !! velocity of whichever object's position (or
+        !! ideal point) is given by $x$. 
+        !! as seen in 
+        !! measurement, as seen mentioned in Chapter >>derivatives.
+
+
+        !! If $x(t)$ is a particle's position in meters at time $t$
+        !! in seconds, then $x'(t)$ is its velocity in meters per second
+        !! at that time.
 
 |> Section
     *Operators.*
@@ -518,16 +537,18 @@
 
     $$
     \begin{aligned}
-    (f + g)' &: [\A] \ra [\tB/\tA] \\
-    f' + g' &: [\A] \ra [\tB/\tA] \up{1.35}
+    \,(f + g)' &: [\A] \ra [\tB/\tA], \\
+    f' + g' &: [\A] \ra [\tB/\tA]. \up{1.35}
     \end{aligned}
     $$
 
-    For the second line, $f'$ and $g'$ each have signature
-    $[\A] \ra [\tB/\tA]$, and adding them preserves that signature.
-
+    (For the second line, $f'$ and $g'$ each have signature
+    $[\A] \ra [\tB/\tA]$, and adding them preserves that signature.)
     So the sum rule “checks out” insofar
-    as units are concerned: nothing untoward has been found!
+    as units are concerned: 
+    !! nothing untoward has been found!
+    both sides impose the same constraints on units, and
+    evaluate to the same signature!
 
     |> Example
         handle=_ms_x1_x2_example_
@@ -536,17 +557,45 @@
         functions giving position in meters as a function of time in seconds.
         Then
 
+        !! $$
+        !! \begin{aligned}
+        !! (x_1 + x_2)' &: [\te{s}] \ra [\te{m}/\te{s}] \\
+        !! x_1' + x_2' &: [\te{s}] \ra [\te{m}/\te{s}] \up{1.35}
+        !! \end{aligned}
+        !! $$
         $$
-        \begin{aligned}
-        (x_1 + x_2)' &: [\te{s}] \ra [\te{m}/\te{s}] \\
-        x_1' + x_2' &: [\te{s}] \ra [\te{m}/\te{s}] \up{1.35}
-        \end{aligned}
+        \,(x_1 + x_2)' : [\te{s}] \ra [\te{m}/\te{s}], \\
+        \,\,x_1' + x_2' : [\te{s}] \ra [\te{m}/\te{s}] \up{1.35}
         $$
 
-        Here the sum rule says that
-
+        as one can check by first constructing the
+        signature of $x_1 + x_2$, the differentiating,
+        or vice-versa constructing the signatures of
+        $x_1'$ and $x_2'$, then adding.
+        In this case, the sum rule says that
         __the velocity of a sum of two points
         is the sum of their velocities__
+        with $(x_1+x_2)'$
+        being “the velocity of a sum
+        of two points” and $x_1'+x_2'$ being “the sum
+        of their velocities”.
+
+    !! _Note on Example >>_ms_x1_x2_example_##._
+    !! !! Physically speaking, 
+    !! In this case, the sum rule can be expressed
+    !! by saying that
+    !! _the velocity of a sum of two points
+    !! is the sum of their velocities_,
+    !! with $(x_1+x_2)'$
+    !! and $x_1'+x_2'$
+    !! being, respectively,  “the velocity of a sum
+    !! of two points” and “the sum
+    !! of their velocities”.
+    !! !! with $$(x_1+x_2)'$$ 
+    !! !! and $$x_1'+x_2'$$
+    !! !! being respectively  “the velocity of a sum
+    !! !! of two points” and “the sum
+    !! !! of their velocities”.
 
     |> Example
         handle=differentiability_sum_rule_counterexample
@@ -776,7 +825,7 @@
     *The chain rule.*
     Can we use dimensional analysis to _guess_ a formula for
     $(f \circ g)'$? Our “lego pieces” are $f$, $g$, $f'$, $g'$.
-    With the composition's input and output units matched (Table 1.1),
+    With the composition's input and output units matched (>>table_1_1),
     their signatures are
 
     $$
@@ -793,10 +842,40 @@
     Since
 
     $$
-    [\tC/\tA] = \left[{\tC\over \tB}\right]\cdot\left[{\tB\over\tA}\right],
+    !! [\tC/\tA] = \left[{\tC\over \tB}\right]\cdot\left[{\tB\over\tA}\right],
+    \left[{\C\over \A}\right] = \left[{\tC\over \tB}\right]\cdot\left[{\tB\over\tA}\right],
     $$
 
-    we might multiply $f'$ and $g'$. But their input units differ!
+    we might multiply $f'$ and $g'$, whose output units
+    are $\left[{\tC\over \tB}\right]$ and $\left[{\tB\over\tA}\right]$,
+    just what we need! Alas, the
+
+    __input units__
+
+    of $f'$ and $g'$ are different, we cannot! The
+    trick is to fix a piece of “adapter pipe” to the
+    front of $f'$:
+
+    $$
+    f' \circ g : [\A] \ra [\tC/\tB]
+    $$
+
+    and
+
+    $$
+    (f' \circ g)g' : [\A] \ra [\tC/\tA]
+    $$
+
+    multyiplying 
+
+    has the same input units as $g$, and the same output
+    units as $f'$; 
+    !! ($[\B]$ and $[\C]$, respectively),
+    !! precluding any sensible multiplication.
+
+
+
+    But their input units differ!
     Feeding $g$ into $f'$ fixes that: try
 
     $$
@@ -986,4 +1065,5 @@
     3 = {\te{time}\over\te{s}} \quad\Longrightarrow\quad \te{time} = 3\te{s}.
     $$
 
-    The coordinate is the pure number $3$; the time is $3$ seconds!
+    The coordinate is the pure number $3$!
+    !! ; the time is $3$ seconds!
