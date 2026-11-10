@@ -20,7 +20,7 @@ const env = import.meta.env.VITE_ENV;
 const targetIsInteractive = (target: EventTarget | null) =>
   target instanceof Element &&
   target.closest(
-    "a, button, input, textarea, select, .t-3003, [role='button'], [contenteditable='true']",
+    "a, button, input, textarea, select, .t-3003, .minimap, [role='button'], [contenteditable='true']",
   ) !== null;
 
 const constrainImageForPanRecenter = (target: EventTarget | null) => {
