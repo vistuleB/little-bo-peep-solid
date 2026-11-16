@@ -9,11 +9,11 @@
 
     |> Solution
 
-        A signature of the form 
+        The output of $f$ is fed back into $f$, so its output
+        units must match its input units, i.e.,
+        a signature of the form 
         $$
         f : [\tA] \ra [\tA]
         $$
         is necessary and sufficient.
 
-        The output of $f$ is fed back into $f$, so its output
-        units must match its input units.

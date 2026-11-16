@@ -1,6 +1,141 @@
 |> Section
     handle=_bt3_start_
 
+    *Right triangles.*
+    A
+
+    __right triangle__
+
+    is a triangle in which one of the angles is 
+    $90^\circ$. 
+    We use “” to mark a right angle:
+
+    !! For example, this is a right triangle:
+    !! the latter also being known as a
+
+    !! __right angle__
+
+    !! of that triangle. These are right triangles:
+
+    |> Image
+        src=tmp-images/ABC_right_triangle.svg
+
+    !! And this is not:
+
+    !! |> Image
+    !!     src=tmp-images/ABC_not_right_triangle.svg
+
+    !! (The “” mark is our way of indicating a
+    !! right angle.) 
+    !! ...so the above is a _right triangle_.
+    ...so the above is an example of a 
+    said ~_right triangle_~. (It has a right
+    angle.)
+
+    The first question that quibblers may have
+    is to know whether a flattened triangle with two
+    coinciding corners is also a right triangle or not:
+
+    |> Image
+        src=tmp-images/ABC_flattened.svg
+
+    The official answer is that this is
+
+    _|NOT|_
+
+    a right triangle (or for that matter in the
+    more extreme case with $\A = \B = \C$, either),
+    because angles at $\A = \B$ are not defined—you
+    need two segments with length $>0$, to define
+    an angle. 
+    In fact, to get a right angle you need two healthy
+    segments of length $>0$ on either side,
+    which
+    implies that all three corners are distinct...
+    
+    |> Image
+        src=tmp-images/ABC_flattened.svg
+
+    ...and that all three angles are well-defined.
+    It also implies that there is
+
+    !! |> Image
+    !!     src=tmp-images/ABC_healthy_right.svg
+
+    !! This implies there is
+
+    _|ONLY ONE|_
+
+    right angle in a right triangle, 
+    with the other two remaining angles being
+    $<90°$.
+    !! or at least
+    !! Euclideanly. 
+
+    (Or at least Euclideanly. If we depart from the Euclidean
+    realm, e.g., do geometry on a sphere, it is
+    easy to come up with triangles
+    that have more than one $90^\circ$ angle,
+    such as this one
+    here:
+
+    |> Image
+        src=tmp-images/spherical_3_90.svg
+
+    But
+    non-Euclidean geometry is not our topic here.)
+
+    Second point to know: the “two other” angles 
+    that are not the right angle sum to $90^\circ$,
+    because adding the right angle must sum
+    to $180^\circ$.
+
+|> Section
+    *The squares.* Observe this computation of the
+    area of a certain square:
+
+    |> Image
+        src=tmp-images/bt3_tapestry.svg
+
+    !! Because the area of the square is $2$, its
+    !! sidelength is $\sqrt{2}$.
+    !! If we tilt the square at a different angle
+    !! we can carry it out again, for a less trivial
+    !! instance:
+
+    !! The interest of doing the computation this 
+    !! roundabout way (as opposed to directly cutting
+    !! the square into 4 triangles 
+    !! |> InlineImage
+    !!     width=1.7em
+    !!     style=margin-block:-1em;vertical-align:middle
+    !!     src=tmp-images/bt3_tapestry_square_divided.svg
+    !! )
+    !! is that we can replicate the same subtract-the-corner-triangles
+    !! approach for a differently tilted square:
+
+    We could have cut up the square directly 
+    into four triangles of area $1/2$ 
+    |> NoBreak
+        (
+        |> InlineImage
+            width=1.7em
+            style=margin-block:-1em;vertical-align:middle
+            src=tmp-images/bt3_tapestry_square_divided.svg
+        )
+    \ but the interest of the above 
+    !! subtract-the-corner-triangles 
+    approach is that it
+    generalizes to a tilted square:
+
+    |> Image
+        src=tmp-images/bt3_tapestry2.svg
+
+    (Different square, different area—naturally!)
+    Or keeping the triangle legs as arbitrary variables
+    $a$ and $b$, which gives us a “general formula” for the
+    area:
+
     |> CodexSuggestion
 
         *Distance.*

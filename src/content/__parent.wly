@@ -214,14 +214,14 @@
         >>_inverse_graph_introduction_
         >>_inverse_signatures_
         >>_dimensionality_xv_over_c^2_
-        >>_dimensional_z_combinations_
+        !! >>_dimensional_z_combinations_
         >>_dimensional_f_f_
         >>_dimensional_f_g_f_
-        >>_dimensional_big_composition_
+        >>_dimensional_f^-1_g_f_
+        !! >>_dimensional_big_composition_
         >>_dimensional_analysis_of_product_rule_
         >>_dimensional_reciprocal_rule_
         >>_inverse_rule_conjecture_
-        >>_dimensional_f^-1_g_f_
         !! >>_possible_to_form_signature_
         !! >>_guess_reciprocal_name_ — folded into the preceding solution note
         !! >>_dimensional_inverse_rule_

@@ -1,5 +1,4 @@
 import { ParentProps } from "solid-js";
-import SectionsBreadcrumbs from "./SectionsBreadcrumbs";
 import Page from "./Page";
 
 const TOC = (
@@ -21,7 +20,6 @@ const TOC = (
         >
           <TitleSVG />
         </div>
-        <SectionsBreadcrumbs />
         {props.children}
       </div>
     </Page>

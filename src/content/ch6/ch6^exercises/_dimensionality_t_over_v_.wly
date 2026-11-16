@@ -13,3 +13,7 @@
         $$
         {\te{DISTANCE}\over\te{SPEED}} = {\te{DISTANCE}\over \left({\te{DISTANCE} \over {\te{TIME}}}\right)} = {\te{DISTANCE}}\cdot {\te{TIME}\over \te{DISTANCE}} = \te{TIME}
         $$
+
+        (The greater the velocity, the smaller the amount
+        of time.) (Remember: _position over velocity is time_;
+        or: _displacement over velocity is time_.)

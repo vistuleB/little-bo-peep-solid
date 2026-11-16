@@ -1,14 +1,15 @@
 |> Exercise
     handle=_construct_signature_impossible_
 
-    |> CodexSuggestion
-        Can you construct a function of signature $[\s] \ra [\te{kg}]$
-        from functions
-
-        $$
-        f : [\s] \ra [\m], \qquad g : [\te{kg}^2] \ra [\te{kg}]?
-        $$
+    Can one construct a function of signature $$[\s] \ra [\te{kg}]$$
+    from functions
+    $f : [\s] \ra [\m]$, $g : [\te{kg}^2] \ra [\te{kg}]$?
 
     |> Solution
-        |> CodexSuggestion
-            Impossible using the given function operations.
+        👎
+        It is impossible to manufacture a kilogram
+        out of thin air: the only thing that can come
+        upstream of $g$ is “more $g$”.
+        👎
+
+        !! Impossible using the given function operations.

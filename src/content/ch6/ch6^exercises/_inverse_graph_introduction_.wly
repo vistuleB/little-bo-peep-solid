@@ -1,42 +1,50 @@
 |> Exercise
     handle=_inverse_graph_introduction_
 
-    |> CodexSuggestion
+    Let
 
-        Let
+    $$
+    f^{-1}
+    $$
 
-        $$
-        f^{-1}
-        $$
+    stand for the “inverse” of a function $f$
+    for which such an inverse exists. 
+    Specifically, 
+    this means that $f$ maps distinct
+    inputs to distinct outputs, as in this graph:
+    !! this means that $f$ maps distinct
+    !! inputs to distinct outputs (no collisions):
+    !! This means that $f$ has the kind of graph
+    !! below, in which distinct $x$'s are mapped to
+    !! distinct $y$'s:
 
-        stand for the “inverse” of a function $f$
-        for which such an inverse exists. 
-        This means that $f$ has the kind of graph
-        below, in which distinct $x$'s are mapped to
-        distinct $y$'s:
+    |> Image
+        src=images/e6_f_inverse_distinct.svg
 
-        |> Image
-            src=images/e6_f_inverse_distinct.svg
+    The inverse $f^{-1}$ (no relation to “$1/f$”)
+    is the function that inverts the flow, treating $y$'s as inputs, and
+    $x$'s as outputs:
+    !! This means that we can invert the flow
+    !! of the function, treating $y$'s as inputs, and recovering a
+    !! unique $x$ for each $y$ that is an output of $f$—this
+    !! “inverse flow” function is what we write as “$f^{-1}$”:
 
-        This means that we can invert the flow
-        of the function, treating $y$'s as inputs, and recovering a
-        unique $x$ for each $y$ that is an output of $f$—this
-        “inverse flow” function is what we write as “$f^{-1}$”:
+    |> Image
+        src=images/e6_f_inverse_reversed.svg
 
-
-        |> Image
-            src=images/e6_f_inverse_reversed.svg
-
-        The picture above shows $f^{-1}$ with inputs on the vertical axis
-        and outputs on the horizontal axis. What would its “ordinary” graph
-        look like, with inputs on the horizontal axis and outputs on the vertical axis?
+    The picture above shows $f^{-1}$ with inputs on the vertical axis
+    and outputs on the horizontal axis. What does the “ordinary” graph
+    of $f^{-1}$ look like? (The one that had inputs on the horizontal axis and outputs on the vertical axis.)
 
     |> Solution
-        |> CodexSuggestion
 
-            Each point $(x,y)$ on the graph of $f$ becomes a point $(y,x)$
-            on the ordinary graph of $f^{-1}$. The two graphs are reflections
-            of each other across the line $y=x$:
+        The ordinary graph of $f^{-1}$ is the reflection
+        of the (also “ordinary”) graph of $f$ through the
+        line $x = y$:
 
-            |> Image
-                src=images/e6_f_inverse_upright.svg
+        !! Each point $(x,y)$ on the graph of $f$ becomes a point $(y,x)$
+        !! on the ordinary graph of $f^{-1}$. The two graphs are reflections
+        !! of each other across the line $y=x$:
+
+        |> Image
+            src=tmp-images/e6_f_inverse_upright.svg

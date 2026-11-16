@@ -1,4 +1,3 @@
-import { Math }  from "~/components/Math";
 import TOC  from "~/components/TOC";
 import TOCItem  from "~/components/TOCItem";
 import TOCTitle  from "~/components/TOCTitle";
@@ -8,36 +7,22 @@ export default function __Home__() {
   useNoScrollRestoration();
   return (
     <TOC
-      prevPage=""
-      nextPage="/article/chapter1"
+      prevPage="/article/bootcamp1"
+      nextPage=""
     >
-      <div id="chapter">
-        <TOCTitle label="Chapters" />
+      <div id="bootcamp">
+        <TOCTitle label="Bootcamps" />
         <ul>
           <TOCItem
             article_type={1}
-            href="chapter1"
+            href="bootcamp1"
           >
             <span class="t-3003-c">
-              Dimensional Analysis
+              The Pythagorean Theorem
               <span class="t-3003">
-                ./src/content/ch6/__parent.wly:2:11
+                ./src/content/bt3/__parent.wly:2:11
               </span>
             </span>
-          </TOCItem>
-          <TOCItem
-            article_type={2}
-            href="chapter2"
-          >
-            <span class="t-3003-c">
-              Derivative(s) of {" "}
-              <span class="t-3003">
-                ./src/content/ch6a_square/__parent.wly:2:11
-              </span>
-            </span>
-            <Math>
-              $x^2$
-            </Math>
           </TOCItem>
         </ul>
       </div>

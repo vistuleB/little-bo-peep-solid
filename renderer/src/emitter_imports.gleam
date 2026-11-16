@@ -46,10 +46,6 @@ pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
     ),
     #("OutChapterLink", ExportedByFile(Some("OutChapterLink"), [])),
     #("SectionDivider", ExportedByFile(None, ["SectionDivider"])),
-    #(
-      "SectionsBreadcrumbs",
-      ExportedByFile(Some("SectionsBreadcrumbs"), ["BreadcrumbItem"]),
-    ),
     #("SideImage", ExportedByFile(None, ["ImageRight", "ImageLeft"])),
     #("Solution", ExportedByFile(Some("Solution"), [])),
     #("Spacer", ExportedByFile(None, ["Spacer"])),

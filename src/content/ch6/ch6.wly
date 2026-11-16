@@ -28,8 +28,8 @@
     f : [\A] \ra [\B]
     $$
 
-    to indicate that $f$ takes inputs in units A and returns
-    outputs in units B. The ordered pair $(\A, \B)$, written
+    to indicate that $f$ takes inputs in units $\A$ and returns
+    outputs in units $\B$. The ordered pair $(\A, \B)$, written
     “$[\A] \ra [\B]$”, is the
 
     __signature__
@@ -641,13 +641,13 @@
         !! a necessary disclaimer to keep the statement accurate.)
 
     |> Pause
+        handle=postscript-on-x_0
 
     _Postscript._ Even if $f$ and $g$ are not
     both differentiable it is still 
     true, however, that
 
     |> Boxed
-        handle=postscript-on-x_0
         $$
         (f + g)'(x_0) = f'(x_0) + g'(x_0)
         $$
@@ -854,8 +854,9 @@
     !! |> Image
     !!     src=images/c6_spoiler_alert_diagonal.svg
 
-    Composition requires the output units of $g$ to match the input
-    units of $f$ (Table 1.1). Our “lego pieces” have signatures
+    !! Composition requires the output units of $g$ to match the input
+    !! units of $f$ (>>table_1_1). Our “lego pieces” have signatures
+    The “lego pieces” have generic signatures
 
     $$
     \begin{gathered}
@@ -867,7 +868,7 @@
     \end{gathered}
     $$
 
-    whereas the target
+    (cf. >>table_1_1), whereas the target
 
     $$
     (f \circ g)'
@@ -935,7 +936,7 @@
         $$
 
     ...for all differentiable functions $f$, $g : \rr \ra \rr$,
-    a formula known as the _chain rule_$\rt{0.1}$.
+    a formula known as the _chain rule_.
 
     |> Example
         Say that a cute
@@ -949,38 +950,127 @@
 
         $$
         \begin{gathered}
-        f : [\te{m}] \ra [\te{\$}] \\
-        g : [\te{s}] \ra [\te{m}] \up{1.35}
+        \,f : [\te{m}] \ra [\te{\$}], \\
+        \,g : [\te{s}] \ra [\te{m}]. \up{1.35}
         \end{gathered}
         $$
 
-        At $t_0$ seconds, the fundraising rate $(f\circ g)'(t_0)$ is in dollars per second.
-        To obtain it, multiply the dollars-per-meter rate at the rat's
-        position, $f'(g(t_0))$, by its meters-per-second velocity, $g'(t_0)$:
+        Then $$f\circ g$$ gives money raised as a function of time,
+        !! (time $\ra$ position $\ra$ money), 
+        and
+        $$(f\circ g)'$$ 
+        gives the fundraising rate in dollars per second.
+        !! gives the dollars-per-second fundraising rate.
+
+        Meanwhile, $$f'$$ gives the dollars-per-meter rate as
+        a function of position, so
+
+        !! Then, at $t_0$ seconds after the start of the race,
 
         $$
-        (f\circ g)'(t_0) = f'(g(t_0))g'(t_0).
+        f'(g(t_0))
         $$
+
+        is the dollars-per-meter rate at which the rat is
+        fundraising at time $t_0$, as we have fed the rat's position $g(t_0)$ into
+        $f'$.
+
+        As for the dollars-per-second rate, one can obtain
+        that by multiplying the dollars-per-meter rate by the
+        rat's meters-per-second velocity, i.e., by taking the product
+
+        $$
+        f'(g(t_0))g'(t_0)
+        $$
+
+        which is indeed $(f\circ g)'(t_0)$. I.e.:
 
         |> Image
             width=530px
             src=images/c6_explained_rat_equation.svg
 
+        Since $f'(g(t_0)) = (f'\circ g)(t_0)$, this is the chain rule
+        $(f \circ g)' = (f'\circ g)g'$ evaluated at $t_0$.
+
         |> Pause
 
-        _Note._ This equation only requires $g$ to be differentiable
-        at $t_0$ and $f$ to be differentiable at $g(t_0)$,
-        similarly to the [postscript](>>postscript-on-x_0) following Example >>differentiability_sum_rule_counterexample,
-        relative to the sum rule.
-        !! similarly to the sum rule. (Cf. the 
-        !! [note after Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).)
-        !! to the more granular version of the
-        !! sum rule, [given after Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
+        _Note._ Another common way to write the chain rule is
 
-        !! similarly to the 
-        !! !! which is like we did for the sum rule in the 
-        !! [“Postscript” after
-        !! Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
+        |> Boxed
+
+            $$
+            (f \circ g)'(x) = f'(g(x))g'(x)
+            $$
+
+        !! (compare with the last boxed equation),
+        as just seen with “$t_0$”
+        in place of “$x$”. 
+        !! This to be compared with
+        !! |> Boxed
+        !!     $$
+        !!     (f \circ g)' = (f' \circ g)g'
+        !!     $$
+        !! which is how we previously wrote the chain rule. 
+        !! (The version with $x$
+        !! is the “granular”, “point-by-point” version of
+        !! the chain rule.)
+        !! This is a more granular version of the chain rule.
+        In this case, the assumption 
+    
+        __for $f$, $g : \rr \ra \rr$ differentiable__
+    
+        can be replaced by the more surgical
+
+        __for $f, g : \rr \ra \rr$, $x \in \rr$ such that $g$ is 
+        differentiable at $x$ and $f$ differentiable at $g(x)$__
+
+        similarly to the [postscript following Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0),
+        relative to the sum rule.
+
+    !! |> Example
+    !!     Say that a cute
+
+    !!     |> Image
+    !!         src=images/c6_solo_RAT.svg
+
+    !!     is running a fundraising race. Let $f$ give the money raised
+    !!     in dollars as a function of position in meters, and $g$ give
+    !!     the rat's position as a function of elapsed time in seconds:
+
+    !!     $$
+    !!     \begin{gathered}
+    !!     f : [\te{m}] \ra [\te{\$}] \\
+    !!     g : [\te{s}] \ra [\te{m}] \up{1.35}
+    !!     \end{gathered}
+    !!     $$
+
+    !!     At $t_0$ seconds, the fundraising rate $(f\circ g)'(t_0)$ is in dollars per second.
+    !!     To obtain it, multiply the dollars-per-meter rate at the rat's
+    !!     position, $f'(g(t_0))$, by its meters-per-second velocity, $g'(t_0)$:
+
+    !!     $$
+    !!     (f\circ g)'(t_0) = f'(g(t_0))g'(t_0).
+    !!     $$
+
+    !!     |> Image
+    !!         width=530px
+    !!         src=images/c6_explained_rat_equation.svg
+
+    !!     |> Pause
+
+    !!     _Note._ This equation only requires $g$ to be differentiable
+    !!     at $t_0$ and $f$ to be differentiable at $g(t_0)$,
+    !!     similarly to the [postscript](>>postscript-on-x_0) following Example >>differentiability_sum_rule_counterexample,
+    !!     relative to the sum rule.
+    !!     !! similarly to the sum rule. (Cf. the 
+    !!     !! [note after Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).)
+    !!     !! to the more granular version of the
+    !!     !! sum rule, [given after Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
+
+    !!     !! similarly to the 
+    !!     !! !! which is like we did for the sum rule in the 
+    !!     !! [“Postscript” after
+    !!     !! Example >>differentiability_sum_rule_counterexample](>>postscript-on-x_0).
 
 
     |> Example
@@ -1008,8 +1098,8 @@
         (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x).
         $$
 
-        |> ImageRight
-            src=images/c6_cancelling_signs_cloud.svg
+        !! |> ImageRight
+        !!     src=images/c6_cancelling_signs_cloud.svg
 
     |> Example
         handle=cos_cos_chain_rule_continued
@@ -1022,7 +1112,8 @@
         by Example >>cos_cos_chain_rule,
         which
         looks visually compatible with the graph
-        of $x \ra \cos(\cos(x))$ [nb: it should be the slope]:
+        of $x \ra \cos(\cos(x))$:
+        !! [nb: it should be the slope]:
         !! since
         !! $(\cos \circ \cos)'(2.5)$ is supposed to be the slope
         !! of $y = \cos(\cos x)$ at $x = 2.5$:

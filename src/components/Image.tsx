@@ -1,5 +1,6 @@
 import {
   ParentProps,
+  batch,
   createMemo,
   createSignal,
   mergeProps,
@@ -90,13 +91,17 @@ const Image = (props: ImageProps) => {
   }));
 
   const handleImageLoad = () => {
-    const widthWasMissing = !naturalImageWidth();
-    const heightWasMissing = !naturalImageHeight();
+    // Renderer metadata reserves space before loading; the loaded asset is
+    // authoritative, including when an SVG was edited without regenerating.
+    const width = image_element.naturalWidth;
+    const height = image_element.naturalHeight;
+    if (width <= 0 || height <= 0) return;
 
-    if (widthWasMissing) setNaturalImageWidth(image_element.naturalWidth);
-    if (heightWasMissing) setNaturalImageHeight(image_element.naturalHeight);
-
-    if (widthWasMissing || heightWasMissing) {
+    if (width !== naturalImageWidth() || height !== naturalImageHeight()) {
+      batch(() => {
+        setNaturalImageWidth(width);
+        setNaturalImageHeight(height);
+      });
       constrainedContent.notifyHeightChangeAcrossFrames();
     }
   };
@@ -130,6 +135,7 @@ const Image = (props: ImageProps) => {
   };
 
   onMount(() => {
+    if (image_element.complete) handleImageLoad();
     const constrainFromPanRecenter = () => constrainedContent.constrain();
     imageWrapper.addEventListener(
       PAN_RECENTER_CONSTRAIN_IMAGE_EVENT,
@@ -160,8 +166,8 @@ const Image = (props: ImageProps) => {
             ref={image_element}
             src={merged.src}
             loading={lazy ? "lazy" : undefined}
-            width={useNativeDimensions() ? merged.intrinsicWidth : undefined}
-            height={useNativeDimensions() ? merged.intrinsicHeight : undefined}
+            width={useNativeDimensions() ? naturalImageWidth() || undefined : undefined}
+            height={useNativeDimensions() ? naturalImageHeight() || undefined : undefined}
             side_image={false}
             local_url={merged.local_url}
             onLoad={handleImageLoad}

@@ -483,13 +483,6 @@ pub fn our_pipeline(
         Some("Spacer"),
       )),
       local_dl.lbp_generate_prev_next_attributes(),
-      dl.auto_generate_child_if_missing_from_first_descendant_of_type(#(
-        "Section",
-        "BreadcrumbTitle",
-        "b",
-      )),
-      local_dl.lbp_generate_breadcrumbs(),
-      dl.unwrap("BreadcrumbTitle"),
       dl.unwrap("Scope"),
       dl.delete_attribute__outside("type", ["List"]),
       dl.delete_attribute__batch([

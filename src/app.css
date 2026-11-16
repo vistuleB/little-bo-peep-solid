@@ -91,6 +91,7 @@ i,
 em {
   font-family: "Baskerville Italic";
   font-style: normal;
+  font-size: 1.105em;
 }
 
 /* This is needed for .t-3003 tooltip to show above the image or content */
@@ -138,6 +139,19 @@ td {
 
 .scrollbar-hidden {
   scrollbar-width: none; /* Firefox */
+}
+
+.math,
+.mathblock {
+  font-family: "Baskerville Regular", serif;
+}
+
+.math {
+  font-size: 1.15em;
+}
+
+.mathblock {
+  font-size: 1.3em;
 }
 
 mjx-container {
@@ -415,28 +429,8 @@ table.first-line tr td:first-child {
   }
 }
 
-.breadcrumb,
-.breadcrumb-prev-next {
-  position: relative;
-  font-family: sans-serif;
-}
-
-.breadcrumb a {
-  text-indent: -1em;
-  padding-left: 1em;
-  display: block;
-}
-
-.breadcrumb:not(.highlighted):hover,
-.breadcrumb-prev-next span:hover,
 .panel-item:hover {
   color: #19124c;
-}
-
-.breadcrumb i,
-.breadcrumb em {
-  font-family: sans-serif;
-  font-style: italic;
 }
 
 .highlighted {

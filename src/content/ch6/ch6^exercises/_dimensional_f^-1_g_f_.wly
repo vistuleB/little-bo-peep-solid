@@ -1,6 +1,16 @@
 |> Exercise
     handle=_dimensional_f^-1_g_f_
 
+    What constraints does the composition
+
+    $$
+    f^{-1} \circ g \circ f
+    $$
+
+    impose on the signatures of $f$ and $g$,
+    assuming that $f$ is a function for which
+    an inverse exists? (Cf. Exercise >>_inverse_graph_introduction_.)
+
     !! Let $f$ be an invertible function with inverse $f^{-1}$.
     !! What constraints does the composition
     !! $$
@@ -8,12 +18,12 @@
     !! $$
     !! impose on the signatures of $f$ and $g$?
 
-    Let $f$ be an invertible function with inverse $f^{-1}$ (cf. Exercise >>_inverse_graph_introduction_).
-    What is the most general signature of $f$ and $g$ for which the composition
-    $$
-    f^{-1} \circ g \circ f
-    $$
-    is well-formed?
+    !! Let $f$ be an invertible function with inverse $f^{-1}$ (cf. Exercise >>_inverse_graph_introduction_).
+    !! What is the most general signature of $f$ and $g$ for which the composition
+    !! $$
+    !! f^{-1} \circ g \circ f
+    !! $$
+    !! is well-formed?
 
     !! For which signatures of $f$ and $g$ does the composition
     !! $$

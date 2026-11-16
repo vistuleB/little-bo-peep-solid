@@ -49,7 +49,7 @@
     !! and in another view...
 
     !! |> Image
-    !!     src=images/e6_f_inverse_upright.svg
+    !!     src=tmp-images/e6_f_inverse_upright.svg
 
     !! ...$f^{-1}$ is the function whose graph is the
     !! mirror image of $y = f(x)$ about the line $x = y$.)

@@ -1,12 +1,32 @@
 |> Exercise
     handle=_construct_dimensionless_output_
 
-    |> CodexSuggestion
-        Given a differentiable function $f : [\s] \ra [\s]$,
-        can you construct a function of signature $[\s] \ra [1]$?
+    Can one construct a function of signature 
+    $$[\s] \ra [1]$$
+    given a function $f : [\s] \ra [\s]$?
+
+    !! Given a differentiable function $f: [\s] \ra [\s]$
+    !! can one construct a function of signature $[\s] \ra [1]$?
 
     |> Solution
-        |> CodexSuggestion
-            The derivative $f'$ has the required signature.
 
-            Alternatively, $f/f$ has this signature wherever $f$ is nonzero.
+        Yes: the functions $f'$, $f/f$ (which is $1$ whenever $f \ne 0$,
+        else undefined), $\cos \circ f'$,
+        and others, all work—another exotic option is
+
+        $$
+        f^0
+        $$
+
+        which is identically $1$ on $\dom f$, that 
+        works becase
+        !! outputs the
+        !! requisite dimensionless units of $[1]$ because
+
+        $$
+        f^n : [\s] \ra [\s^n]
+        $$
+
+        more generally for all integers $n$. (And $[\s^0] = [1]$,
+        if one can make the latter an article of faith.)
+

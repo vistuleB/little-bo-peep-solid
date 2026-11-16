@@ -3,10 +3,11 @@
 
     If $v$ is a speed and $c$ is the speed of light, what
     is the dimension of the expression below?
+    (Known as the _Lorentz factor_.)
     $$
     {1\over \sqrt{1 - {v^2\over c^2}}}
     $$
-    (Known as the _Lorentz factor_.)
+    !! (Known as the _Lorentz factor_.)
     !! ...?
 
     |> Solution
@@ -20,8 +21,9 @@
         is “speed over speed”, it is dimensionless,
         and since the sums, differences, squares,
         square roots, and reciprocals of dimensionless
-        quantities are dimensionless, the entire
-        expression is dimensionless.
+        quantities are dimensionless, the 
+        Lorentz factor is dimensionless.
+        !! final expression is dimensionless.
 
         !! (Also dimensionless: “1 over dimensionless”
         !! is dimensionless.)

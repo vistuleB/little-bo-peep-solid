@@ -29,7 +29,7 @@ export const CentralDisplayItalic = (
     <div
       class={twJoin(
         props.class,
-        "text-column text-center block pl-[2em] pr-[2em]",
+        "central-display-italic text-column text-center block pl-[2em] pr-[2em]",
         store.show_areas && "bg-[#ebe3a0b0]"
       )}
       style={`${props.style ?? ""}`}
