@@ -2,6 +2,8 @@
 export const MOBILE_MAX_WIDTH = 900;
 export const DESKTOP_TEXT_COLUMN_WIDTH = 448;
 export const MOBILE_TEXT_COLUMN_SIDE_INSET = 22;
+// Chapter-click zones occupy this outer fraction of each text-to-screen margin.
+export const CHAPTER_CLICK_MARGIN_FRACTION = 2 / 3;
 export const HEADER_BUTTONS_SCROLLY_START_FADE = 800;
 export const HEADER_BUTTONS_SCROLLY_END_FADE = 2000;
 export const HEADER_BOTTOM_BORDER_SCROLLY_START_FADE = 300;

@@ -332,7 +332,7 @@
 
     |> HeaderBlob
         |> img
-            src=non-build-img/toilet_v78.png
+            src=non-build-img/toilet_v83.png
             alt=toilet scroll calculus
 
     !! Previous text-only HeaderBlob (Allura)

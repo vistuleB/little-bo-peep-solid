@@ -1,1222 +1,1202 @@
 import Article  from "~/components/Article";
 import ArticleTitle  from "~/components/ArticleTitle";
-import { CodexSuggestion }  from "~/components/CodexSuggestions";
-import { CentralDisplay, CentralDisplayItalic }  from "~/components/Delimiters";
-import Image  from "~/components/Image";
-import InlineImage  from "~/components/InlineImage";
+import { CentralDisplayItalic }  from "~/components/Delimiters";
 import { MathBlock, Math }  from "~/components/Math";
-import MathJaxSvgExportTooltip  from "~/components/MathJaxSvgExportTooltip";
 import OuterP  from "~/components/OuterP";
-import { NoBreak, Pause, Section }  from "~/components/Wrappers";
+import { ImageRight }  from "~/components/SideImage";
+import { Pause, NoBreak, Section }  from "~/components/Wrappers";
 import useShowMore from "~/hooks/useShowMore";
 
 export default function __Bootcamp1__() {
   return (
     <Article
-      prevPage=""
+      prevPage="/article/bootcamp2"
       nextPage="/"
       pageNecessaryMargin={160}
-      maxElementWidth={850}
+      maxElementWidth={800}
       id="_1_h.a.i_"
       path="/article/bootcamp1"
     >
       <ArticleTitle banner="Bootcamp 1:">
-        <span class="t-3003-c">
-          The Pythagorean Theorem
-          <span class="t-3003">
-            ./src/content/bt3/__parent.wly:2:11
-          </span>
-        </span>
+        Sets
       </ArticleTitle>
       <Section id="section-1">
         <OuterP>
           <b>
-            <span class="t-3003-c">
-              Right triangles.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:4:6
-              </span>
-            </span>
+            Notation.
           </b>
           {" "}
-          A
+          Curly braces typically denote the beginning
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\&#123;$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} and ending {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\&#125;$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} of a collection of
+          elements, otherwise known as a {" "}
+          <i>
+            set
+          </i>
+          .
+          For example, this is a set containing the
+          numbers {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $2$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $3$
+          </Math>
+          {" "} (and nothing else):
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\&#123;1, 2, 3\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          Or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\&#123;1\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a set containing just the number {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "}
+          and
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\&#123;1, 3\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a set containing just the numbers {" "}
+          <Math>
+            $1$
+          </Math>
+          {" "}
+          and {" "}
+          <NoBreak>
+            <Math>
+              $3$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} even
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\&#123;\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is an {" "}
+          <i>
+            empty
+          </i>
+          {" "} set, a set with no elements!
+        </OuterP>
+      </Section>
+      <Pause />
+      <Section id="section-2">
+        <OuterP>
+          <b>
+            What it does.
+          </b>
+          {" "}
+          The “API” (a computer science notion,
+          roughly meaning
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          <span class="t-3003-c">
-            right triangle
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:7:7
-            </span>
-          </span>
+          the interface offered to the outside world
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          <span class="t-3003-c">
-            is a triangle in which one of the angles is {" "}
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:9:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          {" "}{" "}
-          <NoBreak>
-            <Math>
-              $90^\circ$
-            </Math>
-            .
-          </NoBreak>
-          {" "} 
-          We use “” to mark a right angle:
+          for example, the buttons and clock
+          display and door handle of a microwave oven)
+          of a set offers just one operation:
+          a set can answer questions of the form
         </OuterP>
         <Pause />
-        <Image
-          src="/tmp-images/ABC_right_triangle.svg"
-          local_url="./public/tmp-images/ABC_right_triangle.svg"
-        />
+        <CentralDisplayItalic>
+          do you contain ... ?
+        </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          <span class="t-3003-c">
-            ...so the above is an example of a {" "}
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:31:5
-            </span>
-          </span>
+          For example, you could ask a set
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 3?
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          to which {" "}
+          <Math>
+            $\&#123;1, 2, 3\&#125;$
+          </Math>
+          {" "} would answer “yes”, but
           {" "}
-          {" "}
-          said ~
+          <Math>
+            $\&#123; 1\&#125;$
+          </Math>
+          {" "} would answer “no”, or
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 5?
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          to which {" "}
+          <Math>
+            $\&#123;1\&#125;$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $\&#123;1, 2, 3\&#125;$
+          </Math>
+          {" "} would
+          both answer “no”.
+        </OuterP>
+        <OuterP class="indent-10">
+          The expression
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large x \in A
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          means
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <Math>
+            $A$
+          </Math>
+          {" "} contains {" "}
+          <Math>
+            $x$
+          </Math>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          or
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <Math>
+            $A$
+          </Math>
+          {" "} answers “yes” to the
+          question “do you contain {" "}
+          <NoBreak>
+            <Math>
+              $x$
+            </Math>
+            ?”.
+          </NoBreak>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          [One can also say
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <Math>
+            $x$
+          </Math>
+          {" "} in {" "}
+          <Math>
+            $A$
+          </Math>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          or
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <Math>
+            $x$
+          </Math>
+          {" "} is in {" "}
+          <Math>
+            $A$
+          </Math>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          or
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          <Math>
+            $x$
+          </Math>
+          {" "} is an element of {" "}
+          <Math>
+            $A$
+          </Math>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          depending on one's mood and/or tastes.]
+          As in all of mathematics, such a statement is either true or false.
+          For example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large 1 \in \&#123;1, 2\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is true, because {" "}
+          <Math>
+            $1$
+          </Math>
+          {" "} {" "}
           <i>
-            right triangle
+            is
           </i>
-          ~. (It has a right
-          angle.)
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            The first question that quibblers may have
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:35:5
-            </span>
-          </span>
+          {" "} an element of the set
           {" "}
-          {" "}
-          is to know whether a flattened triangle with two
-          coinciding corners is also a right triangle or not:
-        </OuterP>
-        <Pause />
-        <Image
-          src="/tmp-images/ABC_flattened.svg"
-          local_url="./public/tmp-images/ABC_flattened.svg"
-        />
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            The official answer is that this is
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:42:5
-            </span>
-          </span>
-        </OuterP>
-        <Pause />
-        <CentralDisplay>
-          <span class="t-3003-c">
-            NOT
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:44:7
-            </span>
-          </span>
-        </CentralDisplay>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            a right triangle (or for that matter in the
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:46:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          more extreme case with {" "}
           <NoBreak>
             <Math>
-              $\A = \B = \C$
+              $\&#123;1, 2\&#125;$
             </Math>
             ,
           </NoBreak>
-          {" "} either),
-          because angles at {" "}
-          <Math>
-            $\A = \B$
-          </Math>
-          {" "} are not defined—you
-          need two segments with length {" "}
-          <NoBreak>
-            <Math>
-              $&gt;0$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} to define
-          an angle. 
-          In fact, to get a right angle you need two healthy
-          segments of length {" "}
-          <Math>
-            $&gt;0$
-          </Math>
-          {" "} on either side,
-          which
-          implies that all three corners are distinct...
+          {" "} whereas
         </OuterP>
         <Pause />
-        <Image
-          src="/tmp-images/ABC_flattened.svg"
-          local_url="./public/tmp-images/ABC_flattened.svg"
-        />
+        <MathBlock>
+          $$
+          \Large 3 \in \&#123;1, 2\&#125;
+          $$
+        </MathBlock>
         <Pause />
         <OuterP>
-          <span class="t-3003-c">
-            ...and that all three angles are well-defined.
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:59:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          It also implies that there is
-        </OuterP>
-        <Pause />
-        <CentralDisplay>
-          <span class="t-3003-c">
-            ONLY ONE
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:67:7
-            </span>
-          </span>
-        </CentralDisplay>
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            right angle in a right triangle, {" "}
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:69:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          with the other two remaining angles being
-          {" "}
-          <NoBreak>
-            <Math>
-              $&lt;90°$
-            </Math>
-            .
-          </NoBreak>
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            (Or at least Euclideanly. If we depart from the Euclidean
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:75:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          realm, e.g., do geometry on a sphere, it is
-          easy to come up with triangles
-          that have more than one {" "}
+          is false, because {" "}
           <Math>
-            $90^\circ$
+            $3$
           </Math>
-          {" "} angle,
-          such as this one
-          here:
-        </OuterP>
-        <Pause />
-        <Image
-          src="/tmp-images/spherical_3_90.svg"
-          local_url="./public/tmp-images/spherical_3_90.svg"
-        />
-        <Pause />
-        <OuterP>
-          <span class="t-3003-c">
-            But
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:85:5
-            </span>
-          </span>
+          {" "} {" "}
+          <i>
+            is not
+          </i>
           {" "}
-          {" "}
-          non-Euclidean geometry is not our topic here.)
-        </OuterP>
-        <OuterP class="indent-10">
-          <span class="t-3003-c">
-            Second point to know: the “two other” angles {" "}
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:88:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          that are not the right angle sum to {" "}
+          an element of the set {" "}
           <NoBreak>
             <Math>
-              $90^\circ$
-            </Math>
-            ,
-          </NoBreak>
-          {" "}
-          because adding the right angle must sum
-          to {" "}
-          <NoBreak>
-            <Math>
-              $180^\circ$
+              $\&#123;1, 2\&#125;$
             </Math>
             .
           </NoBreak>
         </OuterP>
       </Section>
+      <Pause />
       <Rest />
     </Article>
   );
 }
 
 const Rest = () => {
-  const visibleRestSections = useShowMore(4);
+  const visibleRestSections = useShowMore(6);
   return <>
     {visibleRestSections() > 0 && <>
-      <Pause />
-      <Section id="section-2">
+      <Section id="section-3">
         <OuterP>
           <b>
-            <span class="t-3003-c">
-              The squares.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:94:6
-              </span>
-            </span>
+            Set Equality.
           </b>
-          {" "} Observe this computation of the
-          area of a certain square:
+          {" "}
+          Two sets are equal if and only if they
+          answer the same to
+          all “do you contain ...?” questions.
+          For example, while
         </OuterP>
         <Pause />
-        <Image
-          src="/tmp-images/bt3_tapestry.svg"
-          local_url="./public/tmp-images/bt3_tapestry.svg"
-          intrinsicWidth={1000}
-          intrinsicHeight={500}
-        />
+        <MathBlock>
+          $$
+          \Large\&#123;2, 1\&#125;
+          $$
+        </MathBlock>
         <Pause />
         <OuterP>
-          <span class="t-3003-c">
-            We could have cut up the square directly {" "}
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:117:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          into four triangles of area {" "}
-          <Math>
-            $1/2$
-          </Math>
-          {" "} {" "}
-          <NoBreak>
-            (
-            <InlineImage
-              width="1.7em"
-              style="margin-block:-1em;vertical-align:middle"
-              src="/tmp-images/bt3_tapestry_square_divided.svg"
-              intrinsicWidth={130}
-              intrinsicHeight={130}
-            />
-            )
-          </NoBreak>
-          {" "} but the interest of the above 
-          approach is that it
-          generalizes to a tilted square:
+          might look different from
         </OuterP>
         <Pause />
-        <Image
-          src="/tmp-images/bt3_tapestry2.svg"
-          local_url="./public/tmp-images/bt3_tapestry2.svg"
-          intrinsicWidth={1000}
-          intrinsicHeight={520}
-        />
+        <MathBlock>
+          $$
+          \Large\&#123;1, 2\&#125;
+          $$
+        </MathBlock>
         <Pause />
         <OuterP>
-          <span class="t-3003-c">
-            (Different square, different area—naturally!)
-            <span class="t-3003">
-              ./src/content/bt3/bt3.wly:134:5
-            </span>
-          </span>
-          {" "}
-          {" "}
-          Or keeping the triangle legs as arbitrary variables
-          {" "}
-          <Math>
-            $a$
-          </Math>
-          {" "} and {" "}
-          <NoBreak>
-            <Math>
-              $b$
-            </Math>
-            ,
-          </NoBreak>
-          {" "} which gives us a “general formula” for the
-          area:
+          these sets are one and the same,
+          because they both answer “yes” to
         </OuterP>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Distance.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:141:10
-                </span>
-              </span>
-            </b>
-          </p>
-          <p class="indent-10">
-            <span class="t-3003-c">
-              First of three passes through the same sequence: two dimensions, three dimensions, {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:143:9
-              </span>
-            </span>
-            <Math>
-              $n$
-            </Math>
-            <span class="t-3003-c">
-              {" "} dimensions, then one dimension. Start with the Pythagorean theorem itself and a right-triangle picture. Use a three-four-five example before deriving the distance formula between {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:143:95
-              </span>
-            </span>
-            <Math>
-              $(a,b)$
-            </Math>
-            <span class="t-3003-c">
-              {" "} and {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:143:282
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $(x,y)$
-              </Math>
-              <span class="t-3003-c">
-                :
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:143:294
-                </span>
-              </span>
-            </NoBreak>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            \sqrt&#123;(x-a)^2+(y-b)^2&#125;.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Make the coordinate differences visible as the triangle's legs. Work in coordinates throughout; do not assume vector notation or vector fluency.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:149:9
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Distance in three dimensions.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:153:10
-                </span>
-              </span>
-            </b>
-            <span class="t-3003-c">
-              {" "} Apply the Pythagorean theorem twice: first in the horizontal plane, then with the vertical difference. Show how this gives the distance between {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:153:40
-              </span>
-            </span>
-            <Math>
-              $(a,b,c)$
-            </Math>
-            <span class="t-3003-c">
-              {" "} and {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:153:194
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $(x,y,z)$
-              </Math>
-              <span class="t-3003-c">
-                :
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:153:208
-                </span>
-              </span>
-            </NoBreak>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            \sqrt&#123;(x-a)^2+(y-b)^2+(z-c)^2&#125;.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              A box-diagonal picture and a small numerical example should carry the explanation. Keep the connection to the two-dimensional calculation explicit.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:159:9
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Distance in {" "}
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:163:10
-                </span>
-              </span>
-              <Math>
-                $n$
-              </Math>
-              <span class="t-3003-c">
-                {" "} dimensions.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:163:25
-                </span>
-              </span>
-            </b>
-            <span class="t-3003-c">
-              {" "} Introduce points as lists of {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:163:38
-              </span>
-            </span>
-            <Math>
-              $n$
-            </Math>
-            <span class="t-3003-c">
-              {" "} coordinates. Extend the pattern, writing out the terms rather than requiring summation notation:
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:163:71
-              </span>
-            </span>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            \sqrt&#123;(x_1-a_1)^2+(x_2-a_2)^2+\cdots+(x_n-a_n)^2&#125;.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Explain what the subscripts label. The numerical calculation should remain familiar even when the points cannot be pictured.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:169:9
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Distance in one dimension.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:173:10
-                </span>
-              </span>
-            </b>
-            <span class="t-3003-c">
-              {" "} End this first pass by reducing the formula to
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:173:37
-              </span>
-            </span>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            \sqrt&#123;(x-a)^2&#125;=|x-a|.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Return to the number line and distinguish distance from the signed coordinate difference. The one-dimensional case belongs last: absolute value emerges as the familiar version of the same distance formula.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:179:9
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 1?
+        </CentralDisplayItalic>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 2?
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          and answer “no” to all else. For that matter,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\&#123;1, 1, 2\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          might also look different from
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\&#123;1, 2\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          but since both sets answer “yes” to
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 1?
+        </CentralDisplayItalic>
+        <Pause />
+        <CentralDisplayItalic>
+          do you contain 2?
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          and answer “no” to all else,
+          they are by definition the same.
+        </OuterP>
+        <OuterP class="indent-10">
+          (These examples demonstrate that human notation
+          is redundant: there are several ways to
+          write the same set. They also demonstrate
+          that sets do not keep track of the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          order
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          nor of the
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          multiplicity
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          of their elements. Such notions are simply not part
+          of the “API” of a set.)
+        </OuterP>
+        <OuterP class="indent-10">
+          Any two empty sets are equal because both
+          answer “no” to everything. So there is
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          one
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          and only one empty set. Therefore, mathematicians
+          speak of
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          the
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          empty set—the one and only!
+        </OuterP>
       </Section>
     </>}
     {visibleRestSections() > 1 && <>
       <Pause />
-      <Section id="section-3">
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Circles and spheres.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:185:10
-                </span>
-              </span>
-            </b>
-          </p>
-          <p class="indent-10">
-            <span class="t-3003-c">
-              Second pass through {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:187:9
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $2,3,n,1$
-              </Math>
-              <span class="t-3003-c">
-                .
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:187:38
-                </span>
-              </span>
-            </NoBreak>
-            <span class="t-3003-c">
-              {" "} Reuse distance to describe all points at a fixed distance {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:187:38
-              </span>
-            </span>
-            <Math>
-              $r$
-            </Math>
-            <span class="t-3003-c">
-              {" "} from a center. Take {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:187:101
-              </span>
-            </span>
-            <Math>
-              $r&gt;0$
-            </Math>
-            <span class="t-3003-c">
-              {" "} throughout this pass.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:187:127
-              </span>
-            </span>
-          </p>
-          <p class="indent-10">
-            <span class="t-3003-c">
-              In two dimensions, turn the distance formula into the circle equation
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:189:9
-              </span>
-            </span>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            (x-a)^2+(y-b)^2=r^2.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Include the origin-centered circle and explicitly identify the unit circle:
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:195:9
-              </span>
-            </span>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            x^2+y^2=1.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Emphasize that the equation describes a circumference, not the filled disk.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:201:9
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                A sphere in three dimensions.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:205:10
-                </span>
-              </span>
-            </b>
-            <span class="t-3003-c">
-              {" "} Repeat the same fixed-distance question to obtain
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:205:40
-              </span>
-            </span>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            (x-a)^2+(y-b)^2+(z-c)^2=r^2.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Include the unit sphere {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:211:9
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $x^2+y^2+z^2=1$
-              </Math>
-              <span class="t-3003-c">
-                .
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:211:48
-                </span>
-              </span>
-            </NoBreak>
-            <span class="t-3003-c">
-              {" "} Again distinguish the surface from the solid interior, without turning terminology into a detour.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:211:48
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                A sphere in {" "}
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:215:10
-                </span>
-              </span>
-              <Math>
-                $n$
-              </Math>
-              <span class="t-3003-c">
-                {" "} dimensions.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:215:25
-                </span>
-              </span>
-            </b>
-            <span class="t-3003-c">
-              {" "} Continue the coordinate pattern:
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:215:38
-              </span>
-            </span>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            (x_1-a_1)^2+(x_2-a_2)^2+\cdots+(x_n-a_n)^2=r^2.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Include the origin-centered unit case. Say “a sphere in {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:221:9
-              </span>
-            </span>
-            <Math>
-              $n$
-            </Math>
-            <span class="t-3003-c">
-              {" "} dimensions” to avoid the competing convention under which an {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:221:68
-              </span>
-            </span>
-            <NoBreak>
-              <span class="t-3003-c">
-                “
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:221:68
-                </span>
-              </span>
-              <Math>
-                $n$
-              </Math>
-              <span class="t-3003-c">
-                -sphere”
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:221:134
-                </span>
-              </span>
-            </NoBreak>
-            <span class="t-3003-c">
-              {" "} lies in {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:221:134
-              </span>
-            </span>
-            <Math>
-              $n+1$
-            </Math>
-            <span class="t-3003-c">
-              {" "} dimensions.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:221:156
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                A sphere in one dimension.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:225:10
-                </span>
-              </span>
-            </b>
-            <span class="t-3003-c">
-              {" "} Ask what the same equation becomes on the number line:
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:225:37
-              </span>
-            </span>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            (x-a)^2=r^2.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Its two solutions are {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:231:9
-              </span>
-            </span>
-            <Math>
-              $a-r$
-            </Math>
-            <span class="t-3003-c">
-              {" "} and {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:231:36
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $a+r$
-              </Math>
-              <span class="t-3003-c">
-                :
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:231:46
-                </span>
-              </span>
-            </NoBreak>
-            <span class="t-3003-c">
-              {" "} exactly the points at distance {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:231:46
-              </span>
-            </span>
-            <Math>
-              $r$
-            </Math>
-            <span class="t-3003-c">
-              {" "} from {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:231:82
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $a$
-              </Math>
-              <span class="t-3003-c">
-                .
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:231:91
-                </span>
-              </span>
-            </NoBreak>
-            <span class="t-3003-c">
-              {" "} The origin-centered unit case is {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:231:91
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $x^2=1$
-              </Math>
-              <span class="t-3003-c">
-                ,
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:231:133
-                </span>
-              </span>
-            </NoBreak>
-            <span class="t-3003-c">
-              {" "} giving {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:231:133
-              </span>
-            </span>
-            <Math>
-              $-1$
-            </Math>
-            <span class="t-3003-c">
-              {" "} and {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:231:146
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $1$
-              </Math>
-              <span class="t-3003-c">
-                .
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:231:154
-                </span>
-              </span>
-            </NoBreak>
-            <span class="t-3003-c">
-              {" "} Let this be the small surprise that closes the second pass; formal “zero-sphere” terminology is unnecessary here.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:231:154
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
+      <Section id="section-4">
+        <OuterP>
+          <b>
+            Second notation for the empty set.
+          </b>
+          {" "}
+          While the empty set can be written
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          another notation is
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \varnothing
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          read “the empty set”.
+        </OuterP>
       </Section>
     </>}
     {visibleRestSections() > 2 && <>
       <Pause />
-      <Section id="section-4">
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Vector lengths.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:237:10
-                </span>
-              </span>
-            </b>
-          </p>
-          <p class="indent-10">
-            <span class="t-3003-c">
-              Third pass through {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:239:9
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $2,3,n,1$
-              </Math>
-              <span class="t-3003-c">
-                .
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:239:37
-                </span>
-              </span>
-            </NoBreak>
-            <span class="t-3003-c">
-              {" "} Introduce a vector concretely as an arrow with coordinate components, and explain those components before introducing the norm bars. Relate its length to the distance from the origin to its endpoint.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:239:37
-              </span>
-            </span>
-          </p>
-          <p class="indent-10">
-            <span class="t-3003-c">
-              In two dimensions, for {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:241:9
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $u=(u_1,u_2)$
-              </Math>
-              <span class="t-3003-c">
-                ,
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:241:45
-                </span>
-              </span>
-            </NoBreak>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            \|u\|=\sqrt&#123;u_1^2+u_2^2&#125;.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Introduce “norm” as the name for this length. Use a coordinate example so that the new notation does not obscure an already familiar calculation.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:247:9
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Vector length in three dimensions.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:251:10
-                </span>
-              </span>
-            </b>
-            <span class="t-3003-c">
-              {" "} For {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:251:45
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $u=(u_1,u_2,u_3)$
-              </Math>
-              <span class="t-3003-c">
-                ,
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:251:67
-                </span>
-              </span>
-            </NoBreak>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            \|u\|=\sqrt&#123;u_1^2+u_2^2+u_3^2&#125;.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Connect this directly to the three-dimensional distance formula, with one endpoint at the origin. The reader is reusing that result, not learning another independent formula.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:257:9
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Vector length in {" "}
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:261:10
-                </span>
-              </span>
-              <Math>
-                $n$
-              </Math>
-              <span class="t-3003-c">
-                {" "} dimensions.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:261:30
-                </span>
-              </span>
-            </b>
-            <span class="t-3003-c">
-              {" "} For {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:261:43
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $u=(u_1,\ldots,u_n)$
-              </Math>
-              <span class="t-3003-c">
-                ,
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:261:68
-                </span>
-              </span>
-            </NoBreak>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            \|u\|=\sqrt&#123;u_1^2+u_2^2+\cdots+u_n^2&#125;.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Keep the coordinate expansion visible. Do not jump here to identities involving {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:267:9
-              </span>
-            </span>
+      <Section id="section-5">
+        <OuterP>
+          <b>
+            Sets within sets.
+          </b>
+          {" "}
+          Sets can be nested much like Russian dolls.
+          The result might even look a little like a Russian doll (no?):
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;\&#123;\&#123;\&#123;\&#125;\&#125;\&#125;\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          The above is “a set containing a set containing
+          a set containing the empty set”.
+          Eschewing complete adherence to the Russian doll
+          aesthetic, we could also write
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;\&#123;\&#123;\varnothing\&#125;\&#125;\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          for the same thing, given that {" "}
+          <NoBreak>
             <Math>
-              $\|u-v\|$
+              $\varnothing = \&#123;\&#125;$
             </Math>
-            <span class="t-3003-c">
-              {" "} or assume fluency with vector algebra.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:267:98
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Vector length in one dimension.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:271:10
-                </span>
-              </span>
-            </b>
-            <span class="t-3003-c">
-              {" "} A single coordinate {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:271:42
-              </span>
-            </span>
+            .
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          Mind you,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;\&#123;\&#125; \&#125; \ne \&#123;\&#125;
+          $$
+          <ImageRight
+            src="/build-img/svgo-svg/dcQB.svg"
+            offsetX="3em"
+            atLeastAsWide={true}
+            intrinsicWidth={300}
+            intrinsicHeight={150}
+          />
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          because a box containing an empty box is not the
+          same as an empty box! Specifically,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123; \&#123;\&#125; \&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          answers “yes” to the question “do you contain
+          {" "}
+          <NoBreak>
             <Math>
-              $x$
+              $\&#123;\&#125;$
             </Math>
-            <span class="t-3003-c">
-              {" "} gives
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:271:66
-              </span>
-            </span>
-          </p>
-          <Pause />
-          <MathBlock>
-            $$
-            \|x\|=\sqrt&#123;x^2&#125;=|x|.
-            $$
-            <MathJaxSvgExportTooltip />
-          </MathBlock>
-          <Pause />
-          <p>
-            <span class="t-3003-c">
-              Close by recognizing absolute value as one-dimensional length. The three stories have returned to the same familiar object from different directions: distance between points, points at a prescribed distance, and length of a vector.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:277:9
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
+            ?”
+          </NoBreak>
+          {" "} (a.k.a., “do you contain {" "}
+          <NoBreak>
+            <Math>
+              $\varnothing$
+            </Math>
+            ?”)
+          </NoBreak>
+          {" "} whereas
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          answers “no” to the same question. (Indeed, while
+          the empty set {" "}
+          <i>
+            contains
+          </i>
+          {" "} nothing, it {" "}
+          <i>
+            is
+          </i>
+          {" "} something.)
+          Similarly,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;\&#123;\&#123;\&#125;\&#125; \&#125; \ne \&#123;\&#123;\&#125;\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          etc, etc: adding a new outer layer changes the
+          whole set each time.
+        </OuterP>
       </Section>
     </>}
     {visibleRestSections() > 3 && <>
       <Pause />
-      <Section id="section-5">
-        <CodexSuggestion>
-          <p>
-            <b>
-              <span class="t-3003-c">
-                Exercise possibilities.
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:283:10
-                </span>
-              </span>
-            </b>
-          </p>
-          <p class="indent-10">
-            <span class="t-3003-c">
-              Keep exercises at the end of the bootcamp. Choose a small selection that revisits all three stories: compute a three-dimensional distance; recognize a circle or sphere's center and radius; describe the one-dimensional fixed-distance set; compute a vector's length, including one with negative components. Include a case where changing signs leaves the length unchanged.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:285:9
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
-        <CodexSuggestion>
-          <p>
-            <span class="t-3003-c">
-              Reserve, if still wanted: a coordinate-based pair of questions on the distance between two vector endpoints and whether two three-dimensional vectors are orthogonal. First expand the endpoint differences explicitly; only then identify that distance as {" "}
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:289:9
-              </span>
-            </span>
-            <NoBreak>
-              <Math>
-                $\|u-v\|$
-              </Math>
-              <span class="t-3003-c">
-                .
-                <span class="t-3003">
-                  ./src/content/bt3/bt3.wly:289:270
-                </span>
-              </span>
-            </NoBreak>
-            <span class="t-3003-c">
-              {" "} A right-angle test can use the three lengths and the Pythagorean theorem. This is not part of the three-pass core, and should not require an unexplained norm identity or introduce the dot product in passing.
-              <span class="t-3003">
-                ./src/content/bt3/bt3.wly:289:270
-              </span>
-            </span>
-          </p>
-        </CodexSuggestion>
+      <Section id="section-6">
+        <OuterP>
+          <b>
+            Set union and set intersection.
+          </b>
+          {" "}
+          The {" "}
+          <i>
+            union
+          </i>
+          {" "} of two sets {" "}
+          <Math>
+            $A$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $B$
+          </Math>
+          {" "} is
+          written
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large A \cup B
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and is the set of elements either in {" "}
+          <Math>
+            $A$
+          </Math>
+          {" "} or in {" "}
+          <NoBreak>
+            <Math>
+              $B$
+            </Math>
+            .
+          </NoBreak>
+          {" "} For
+          example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;1, 2\&#125; \cup \&#123;2, 5\&#125; = \&#123;1, 2, 5\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          as {" "}
+          <NoBreak>
+            <Math>
+              $1$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} {" "}
+          <Math>
+            $2$
+          </Math>
+          {" "} and {" "}
+          <Math>
+            $5$
+          </Math>
+          {" "} are the only elements in {" "}
+          <Math>
+            $\&#123;1, 2\&#125;$
+          </Math>
+          {" "} or in {" "}
+          <NoBreak>
+            <Math>
+              $\&#123;2, 5\&#125;$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          The {" "}
+          <i>
+            intersection
+          </i>
+          {" "} of two sets {" "}
+          <Math>
+            $A$
+          </Math>
+          {" "} and
+          {" "}
+          <Math>
+            $B$
+          </Math>
+          {" "} is written
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large A \cap B
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          and is the set of elements both
+          in {" "}
+          <Math>
+            $A$
+          </Math>
+          {" "} and in {" "}
+          <NoBreak>
+            <Math>
+              $B$
+            </Math>
+            .
+          </NoBreak>
+          {" "} For example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \&#123;1, 2\&#125; \cap \&#123;2, 5\&#125; = \&#123;2\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          as {" "}
+          <Math>
+            $2$
+          </Math>
+          {" "} is the only element that is both in {" "}
+          <Math>
+            $\&#123;1, 2\&#125;$
+          </Math>
+          {" "}
+          and in {" "}
+          <NoBreak>
+            <Math>
+              $\&#123;2, 5\&#125;$
+            </Math>
+            .
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          Note that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large x \in (A \cup B)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          if and only if
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large x \in A
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          <i>
+            or
+          </i>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large x \in B
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          because that's how we defined “union”. (Replace
+          “or” by “and” to get a definition of intersection.)
+          A logician would define union by an abstruse expression like
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large x \in (A \cup B) \iff (x \in A) \vee (x \in B)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          read
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          an element {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} is in the thing I call {" "}
+          <NoBreak>
+            “
+            <Math>
+              $A \cup B$
+            </Math>
+            ”
+          </NoBreak>
+          {" "}
+          if and only if {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} is in {" "}
+          <Math>
+            $A$
+          </Math>
+          {" "} or {" "}
+          <Math>
+            $x$
+          </Math>
+          {" "} is in {" "}
+          <Math>
+            $B$
+          </Math>
+        </CentralDisplayItalic>
+        <Pause />
+        <OuterP>
+          as {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\!\!\iff\!\!$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} means “if and only if” and
+          {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\vee$
+            </Math>
+            ”
+          </NoBreak>
+          {" "} means “or”. (You can figure out the
+          corresponding definition of intersection
+          if we tell you that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large \wedge
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          means “and”.)
+        </OuterP>
+      </Section>
+    </>}
+    {visibleRestSections() > 4 && <>
+      <Pause />
+      <Section id="section-7">
+        <OuterP>
+          <b>
+            Sets encountered in calculus.
+          </b>
+          {" "}
+          In calculus, you will see sets such as {" "}
+          <i>
+            the real
+            numbers
+          </i>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\rr
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which is an infinite set containing all “ordinary”
+          decimal numbers, or such as {" "}
+          <i>
+            the integers
+          </i>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\zz
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which contains all “whole” numbers, including the
+          negative ones. You might also encounter
+          {" "}
+          <i>
+            the natural numbers
+          </i>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\nn
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          which contains exactly the positive integers (i.e., {" "}
+          <NoBreak>
+            <Math>
+              $\nn = \&#123;1, 2, 3, \ldots \&#125;$
+            </Math>
+            ).
+          </NoBreak>
+        </OuterP>
+        <OuterP class="indent-10">
+          You will also encounter {" "}
+          <i>
+            intervals
+          </i>
+          . For example,
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large [a, b]
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a {" "}
+          <i>
+            closed interval
+          </i>
+          , consisting of all (real)
+          numbers greater than or equal to {" "}
+          <NoBreak>
+            <Math>
+              $a$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} and less than
+          or equal to {" "}
+          <NoBreak>
+            <Math>
+              $b$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Or
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large [a, b)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          is a {" "}
+          <i>
+            half-open
+          </i>
+          {" "} interval, consisting of all real
+          numbers greater than or equal to {" "}
+          <NoBreak>
+            <Math>
+              $a$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} and less than
+          {" "}
+          <NoBreak>
+            <Math>
+              $b$
+            </Math>
+            .
+          </NoBreak>
+          {" "} Etc.
+        </OuterP>
+        <OuterP class="indent-10">
+          Note that
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large (-\infty, \infty) = \rr
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          since
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large (-\infty, \infty)
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (an {" "}
+          <i>
+            open
+          </i>
+          {" "} interval) means
+        </OuterP>
+        <Pause />
+        <CentralDisplayItalic>
+          the set of real numbers with no bound below,
+          and no bound above.
+        </CentralDisplayItalic>
+      </Section>
+    </>}
+    {visibleRestSections() > 5 && <>
+      <Pause />
+      <Section id="section-8">
+        <OuterP>
+          <b>
+            Sets not encountered in calculus.
+          </b>
+          {" "}
+          If you take a more advanced course, you might
+          encounter the {" "}
+          <i>
+            set of extended real numbers
+          </i>
+          ,
+          written
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\overline&#123;\rr&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          consisting of the numbers in {" "}
+          <Math>
+            $\rr$
+          </Math>
+          {" "} plus
+          the formal symbols {" "}
+          <NoBreak>
+            “
+            <Math>
+              $-\infty$
+            </Math>
+            ”,
+          </NoBreak>
+          {" "} {" "}
+          <NoBreak>
+            “
+            <Math>
+              $\infty$
+            </Math>
+            ”:
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large\overline&#123;\rr&#125; = \rr \cup \&#123;-\infty, \infty\&#125;
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          (I.e., ...well, you get it!)
+        </OuterP>
+        <OuterP class="indent-10">
+          You can view {" "}
+          <Math>
+            $\overline&#123;\rr&#125;$
+          </Math>
+          {" "} as a “closed interval”
+          version of {" "}
+          <NoBreak>
+            <Math>
+              $\rr$
+            </Math>
+            :
+          </NoBreak>
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large [-\infty, \infty]
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          with the two infinite endpoints {" "}
+          <i>
+            included
+          </i>
+          .
+        </OuterP>
+        <OuterP class="indent-10">
+          Does all this have any “real meaning”? Good question!
+          The answer is: {" "}
+          <i>
+            not until you give it one
+          </i>
+          .
+        </OuterP>
+        <OuterP class="indent-10">
+          E.g., the value of something like
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large 0.5+ \infty
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          must be {" "}
+          <i>
+            defined
+          </i>
+          . (It is defined to be {" "}
+          <NoBreak>
+            <Math>
+              $\infty$
+            </Math>
+            ,
+          </NoBreak>
+          {" "} in
+          case you're curious. In fact, {" "}
+          <Math>
+            $a + \infty = \infty$
+          </Math>
+          {" "}
+          for any {" "}
+          <NoBreak>
+            <Math>
+              $a \ne -\infty$
+            </Math>
+            .)
+          </NoBreak>
+          {" "} And some things remain
+          explicitly {" "}
+          <i>
+            undefined
+          </i>
+          . For example, the expression
+        </OuterP>
+        <Pause />
+        <MathBlock>
+          $$
+          \Large (-\infty) + \infty
+          $$
+        </MathBlock>
+        <Pause />
+        <OuterP>
+          has an {" "}
+          <i>
+            undefined
+          </i>
+          {" "} value—the same way, say, that
+          division by {" "}
+          <Math>
+            $0$
+          </Math>
+          {" "} is undefined in {" "}
+          <NoBreak>
+            <Math>
+              $\rr$
+            </Math>
+            .
+          </NoBreak>
+          {" "}
+          (Well, anyway, end of lesson.)
+        </OuterP>
       </Section>
     </>}
   </>;

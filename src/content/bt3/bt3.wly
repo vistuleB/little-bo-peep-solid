@@ -8,7 +8,9 @@
 
     is a triangle in which one of the angles is 
     $90^\circ$. 
-    We use “” to mark a right angle:
+    These are right triangles:
+    !! We use “” to mark a right angle:
+
 
     !! For example, this is a right triangle:
     !! the latter also being known as a
@@ -28,36 +30,48 @@
     !! (The “” mark is our way of indicating a
     !! right angle.) 
     !! ...so the above is a _right triangle_.
-    ...so the above is an example of a 
-    said ~_right triangle_~. (It has a right
-    angle.)
-
-    The first question that quibblers may have
-    is to know whether a flattened triangle with two
-    coinciding corners is also a right triangle or not:
+    !! ...so the above is an example of a 
+    !! said ~_right triangle_~. (It has a right
+    !! angle.)
+    !! These become progressively flatter, leading 
+    !! into the question of
+    There is also the question of 
+    whether a completely flattened triangle is
+    a right triangle, or not:
 
     |> Image
         src=tmp-images/ABC_flattened.svg
 
-    The official answer is that this is
+    The answer is that this is
 
     _|NOT|_
 
-    a right triangle (or for that matter in the
-    more extreme case with $\A = \B = \C$, either),
-    because angles at $\A = \B$ are not defined—you
-    need two segments with length $>0$, to define
-    an angle. 
-    In fact, to get a right angle you need two healthy
-    segments of length $>0$ on either side,
-    which
-    implies that all three corners are distinct...
-    
+    a right triangle 
+    (nor the “point triangle” with $\A = \B = \C$, for
+    that matter)
+    because angles at $\A = \B$ are not 
+    !! defined—you
+    !! need two segments with length $>0$, to define
+    !! an angle. In fact, as the right angle of a right triangle 
+    !! requires two sides of length $>0$ on either side
+    !! one can deduce that
+    defined. In fact, as the right angle
+    of a right triangle, or any other
+    angle, needs two sides of length $>0$ 
+    on either side to be well-defined, like so...
     |> Image
         src=tmp-images/ABC_flattened.svg
+    ...one can deduce that
 
-    ...and that all three angles are well-defined.
-    It also implies that there is
+    __all three sides__
+
+    of a right triangle have nonzero length,
+    and that
+
+    __all three angles__
+
+    of a right triangle are (well-defined, and)
+    nonzero, as well. This also implies that there is
 
     !! |> Image
     !!     src=tmp-images/ABC_healthy_right.svg
@@ -66,13 +80,12 @@
 
     _|ONLY ONE|_
 
-    right angle in a right triangle, 
-    with the other two remaining angles being
-    $<90°$.
-    !! or at least
-    !! Euclideanly. 
-
-    (Or at least Euclideanly. If we depart from the Euclidean
+    right angle in any right triangle, 
+    with the other two angles being
+    $<90°$,
+    or at least
+    Euclideanly. 
+    (If we depart from the Euclidean
     realm, e.g., do geometry on a sphere, it is
     easy to come up with triangles
     that have more than one $90^\circ$ angle,
@@ -82,13 +95,399 @@
     |> Image
         src=tmp-images/spherical_3_90.svg
 
-    But
-    non-Euclidean geometry is not our topic here.)
+    But non-Euclidean geometry is 
+    off-topic at the moment.)
+    !! not our topic here.)
 
-    Second point to know: the “two other” angles 
-    that are not the right angle sum to $90^\circ$,
-    because adding the right angle must sum
-    to $180^\circ$.
+    The second point to know about right triangles
+    is that the “two other” angles 
+    (that are not the right angle) sum to $90^\circ$,
+    because all three angles must sum to $180^\circ$
+    together. 
+    
+    !! For example, 
+    !! if one of these angles is $70^\circ$,
+    !! the other is $20^\circ = 90^\circ - 70^\circ$:
+    !! the angles could be $90^\circ$, $70^\circ$
+    !! and $20^\circ = 90^\circ - 70^\circ$:
+
+    !! |> Image
+    !!     src=tmp-images/spherical_3_90.svg
+
+    !! Or $90^\circ$, $71^\circ$, and $19^\circ = 90^\circ - 71^\circ$:
+    !! Or if it's $71^\circ$, the third is $19^\circ = 90^\circ - 71^\circ$:
+    !! Or $71^\circ$ pairs with $19^\circ = 90^\circ - 71^\circ$:
+
+    !! |> Image
+    !!     src=tmp-images/spherical_3_90.svg
+
+    !! (Etc.)
+
+    |> Pause
+    _Vocabulary #1._ The “non-right angles” of a right
+    triangle are called the _acute angles_ of the
+    triangle, because “acute” means “less than $90^\circ$”.
+    (Which they are.)
+
+    !! |> Pause
+    !! _Vocabulary #1._ Two angles that sum to $90^\circ$
+    !! are called _complementary_. The two non-right angles
+    !! of a right triangle are therefore complementary!
+
+    |> Pause
+    _Vocabulary #2._ Two angles that sum to $90^\circ$
+    are called _complementary_. The two acute angles of 
+    a right triangle are therefore _complementary_!!
+
+    !! |> Pause
+    !! _Vocabulary #3._ Two angles that sum to $180^\circ$
+    !! are called _supplementary_. 
+
+    !! |> Section
+    !! |> Pause
+
+    !! (Nb: If you have to choose between
+    !! remembering  
+
+    !! __complementary__
+
+    !! and
+
+    !! __supplementary__
+
+    !! then remember
+    
+    !! __complementary__
+    
+    !! and the associated
+    !! fact about the non-right angles of a right triangle.)
+
+    !! |> Example
+
+    !!     If one acute angle of a right triangle is $70^\circ$,
+    !!     then the other is $20^\circ = 90^\circ - 70^\circ$: 
+    !!     !! by the complementarity:
+
+    |> Example
+        handle=_theta_triangle_
+
+        !! If one non-right angle of a right triangle is $\theta$,
+        !! the other non-right angle is $90^\circ - \theta$, by complementarity:
+        If an acute angle (i.e., non-right angle) of a
+        right triangle is $\theta$,
+        the other one is $90^\circ - \theta$, by complementarity:
+
+    |> Example
+
+        If we drop a height from the right angle 
+        of the triangle of Example >>_theta_triangle_
+        to the opposite side, one more copy of 
+        “$\theta$” and one more copy of “$90^\circ - \theta$”
+        emerge in the drawing, by complementarity inside 
+        the two sub-right-triangles:
+
+        |> Pause
+
+        (In particular, the two sub-triangles are
+        similar to the original triangle, just at a
+        smaller scale: but this, we already know from
+        the fact that the height lands at $90^\circ$,
+        at which point two equal angles—and therefore,
+        the third—are locked into place.)
+
+    !! |> StarDivider
+
+|> Section
+
+    *“Hypotenuse” and “legs”.*
+    The side opposite the right angle of a
+    right triangle is called the _hypotenuse_.
+    It is the longest one. We refer to the
+    two other sides as _legs_:
+
+
+|> Section
+    *The insight.* Label the two legs of a 
+    right triangle as $a$ and $b$, the 
+    hypotenuse as $c$:
+
+    |> Pause
+
+    Obviously, at the back of our minds, we
+    sense that $c$ is uniquely determined (no
+    choice!) once $a$ and $b$ are determined.
+    But what is the formula? (Or is there any
+    “nice” formula at all? Maybe there isn't.)
+
+    The key insight is contained in this diagram:
+
+    |> Pause
+
+    The reason this diagram is a key insight is
+    that $c^2$, the area of this square...
+
+    |> Pause
+
+    ...is determined by these two other areas,
+    given here...
+
+    |> Pause
+
+    ...that are “$a$, $b$-stuff”: the area of the  
+    full square on the left, call it $\A_1$, is $(a+b)^2$...
+
+    |> Pause
+
+    ...while the area of the four triangles on
+    the right, that we may collectively call $\A_2$,
+    is $4\cdot{1\over 2}ab$...
+
+    |> Pause
+
+    ...so altogether,
+
+    $$
+    c^2 = \A_1 - \A_2 = (a+b)^2 - 4\cdot{1\over 2}ab
+    $$
+
+    or 
+
+    $$
+    c = \sqrt{(a+b)^2 - 4\cdot{1\over 2}ab}
+    $$
+
+    by taking a square root! Though, in reality,
+
+    $$
+    - 4\cdot{1\over 2}ab = -2ab
+    $$
+
+    and
+
+    $$
+    (a+b)^2 = a^2 + b^2 + 2ab
+    $$
+
+    leading to the amazingly simple...
+
+    |> Boxed
+        $$
+        c = \sqrt{a^2 + b^2}
+        $$
+
+    ...or..
+
+    |> Boxed
+        $$
+        \,\,c^2 = a^2 + b^2\,\,\up{1.1}\dn{0.3}
+        $$
+
+    ...after squaring again!!! The latter equation
+    is known as the _Pythagorean theorem_.
+
+    |> Pause
+
+    _Note on dimensions._
+    Note that in
+
+    $$
+    \te{“}c^2 = a^2 + b^2\te{”}
+    $$
+
+    we equate a length squared with a sum of lengths
+    squared—apples to apples, as should be—whereas in
+
+    $$
+    \te{“}c = \sqrt{a^2 + b^2}\te{”}
+    $$
+
+    we equate a length to a square root of sums of
+    lengths squared, which is also “apples to apples”.
+    (The square root of an apple squared is an apple.)
+
+|> Section
+
+    *The flat case.*
+    We spent some energy above
+    ranting against flat triangles being not right
+    triangles. Nonetheless—and as some might say,
+    “by continuity”—they respect the Pythagorean
+    theorem:
+
+    |> Pause
+
+    (If the mark of a right triangle is that it
+    respects the Pythagorean identity, then maybe
+    flat triangles are right triangles after all.)
+    (Actually, a triangle with $\A = \B$ is an
+    !! flat triangle is an
+
+    __orthogonal triangle__
+
+    !! which is an inside joke you needn't worry about.)
+    !! (It's hilarious, though, trust us.)
+    which is a small inside joke of kinds.)
+
+    |> Example
+
+        The hypotenuse of a right triangle with two
+        legs of length $1$ is $\sqrt{2}$:
+        !! If the two legs of a right triangle
+        !! are $1$, the third side 
+
+    !! |> Example
+
+    !!     The hypotenuse of a right triangle with two
+    !!     legs of length $3$ is $3\sqrt{2}$:
+
+    !! |> Example
+
+    !!     The hypotenuse of a right triangle with two
+    !!     legs of length $100$ is $100\sqrt{2}$:
+
+    |> Example
+
+        The hypotenuse of a right triangle with a
+        leg of length $1$ and a leg of length $2$
+        is $\sqrt{1^2 + 2^2} = \sqrt{5}$:
+
+|> Section
+
+    *Solving for a leg.*
+    The fundamental equation 
+
+    $$
+    !! c^2 = a^2 + b^2
+    a^2 + b^2 = c^2
+    $$
+
+    implies:
+
+    |> Boxed
+        $$
+        a^2 = c^2 - b^2
+        $$
+
+    |> Boxed
+        style=margin-top:0em
+        $$
+        b^2 = c^2 - a^2
+        $$
+    
+    !! can be rearranged to solve for either $a$ or
+    !! $b$, for example $a$:
+    Or:
+
+    |> Boxed
+        $$
+        a = \sqrt{c^2 - b^2}
+        $$
+
+    |> Boxed
+        style=margin-top:0em
+        $$
+        b = \sqrt{c^2 - a^2}
+        $$
+
+    Or:
+
+    |> Boxed
+        $$
+        \te{LEG1} = \sqrt{\te{HYPOTENUSE}^2 - \te{LEG2}^2}
+        $$
+
+    !! Or:
+
+    |> Boxed
+        style=margin-top:0em
+        $$
+        \te{LEG2} = \sqrt{\te{HYPOTENUSE}^2 - \te{LEG1}^2}
+        $$
+
+    !! It doesn't matter which is “leg1”, which is “leg2”.
+    !! ...while rearranging.
+    ...that are symmetric equations, it doesn't matter
+    which is “leg1”, which is “leg2”.
+
+    !! Thus, the Pythagorean theorem can also be used to 
+    !! compute a leg, knowing the hypotenuse and the other
+    !! leg.
+    !! other two sides.
+    !! one of the legs in terms of the hypotenuse 
+    !! and the other leg.
+
+    |> Example
+        handle=_ladder_example_
+
+        If a $6$m ladder is leaning against a wall with
+        its base $1$m from the edge of the wall, the ladder
+        reaches a height of
+
+        $$
+        \sqrt{(6\m)^2 - (1\m)^2} = \sqrt{36\m^2 - 1\m^2} = \sqrt{35\m^2} \approx 5.92\m
+        $$
+
+        by using the “$a = \sqrt{c^2-b^2}$” equation, with
+        $b = 1\m$, $c = 6\m$:
+
+        |> Pause
+
+        _Note on units in Example >>_ladder_example_##._
+        Please do pay attention to the fact that
+
+        $$
+        \sqrt{\m^2} = \m
+        $$
+
+        [“square root of meters squared equals meters”] in
+        this example. The answer should be a number of meters,
+        so this checks out.
+        !! , so that “units work out”.
+
+|> Section
+
+    *Distance formula in the plane.*
+    Take arbitrary points $P = (x_1,y_1)$, $Q = (x_2,y_2)$ in
+    the plane:
+    !! Imagine a right triangle whose corners are
+    !! given by coordinates $(x_1, y_1)$, $(x_2, y_2)$,
+    !! and, say, $(x_1, y_2)$:
+
+    |> Pause
+
+    Use 
+    !! $(x_1, y_1)$, $(x_2, y_2)$ 
+    $P$, $Q$ 
+    as the two corners
+    of an axis-aligned 
+    |> del
+        right
+    orthogonal
+    triangle:
+
+    |> Pause
+
+    Then, a few observations: 
+
+    - $c$, the hypotenuse of the triangle, is the 
+    distance from $(x_1, y_1)$ to $(x_2, y_2)$
+
+    - $a^2 = (x_2 - x_1)^2$ [regardless of whether
+    $x_1 < x_2$ or not: a minus sign in “$x_2 - x_1$” is washed away
+    by the square]
+
+    - $b^2 = (y_2 - y_1)^2$ [regardless of whether
+    $y_1 < y_2$ or not: a minus sign in “$y_2 - y_1$” is washed away
+    by the square]
+
+    |> Pause
+
+    Thus
+
+    $$
+    c = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+    $$ 
+
 
 |> Section
     *The squares.* Observe this computation of the

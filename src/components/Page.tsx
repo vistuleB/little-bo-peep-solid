@@ -1,4 +1,7 @@
 import { onMount, onCleanup, ParentProps } from "solid-js";
+import { Portal } from "solid-js/web";
+import { mainColumnWidthForViewport } from "~/hooks/useMainColumnWidth";
+import { pageClickAction, pageClickPolygons } from "~/utils/pageClickZones";
 import { useGlobalContext } from "~/store/StoreProvider";
 import useSetRoute from "~/hooks/useSetRoute";
 import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
@@ -10,11 +13,13 @@ import useHorizontalPageMotion from "~/hooks/useHorizontalPageMotion";
 import { useLocation } from "@solidjs/router";
 import { containerWidthForLayout } from "~/hooks/useContainerWidth";
 import {
+  CHAPTER_CLICK_MARGIN_FRACTION,
   CONSTRAIN_IMAGE_ON_PAN_RECENTER_TAP,
   PAN_RECENTER_CONSTRAIN_IMAGE_EVENT,
 } from "~/constants";
 
 const env = import.meta.env.VITE_ENV;
+const verticalClickZoneRatio = 0.25;
 
 const targetIsInteractive = (target: EventTarget | null) =>
   target instanceof Element &&
@@ -147,6 +152,16 @@ const Page = (props: ParentProps & PageProps) => {
   // **** handleClick ****
   // *********************
 
+  const clickGeometry = (scrollY = store.scrollY, scrollHeight = store.scrollHeight) => ({
+    width: store.innerWidth,
+    height: store.innerHeight,
+    sideWidth: Math.max(0, (store.innerWidth - mainColumnWidthForViewport(store.innerWidth)) / 2) * CHAPTER_CLICK_MARGIN_FRACTION,
+    verticalHeight: store.innerHeight * verticalClickZoneRatio,
+    canUp: scrollY !== 0,
+    canDown: scrollY + store.innerHeight < scrollHeight,
+  });
+  const debugPolygons = () => pageClickPolygons(clickGeometry());
+
   const handleClick = (e: MouseEvent) => {
     if (targetIsInteractive(e.target)) {
       return;
@@ -163,32 +178,15 @@ const Page = (props: ParentProps & PageProps) => {
       return;
     }
 
-    if (e.clientY <= store.innerHeight * 0.25 && window.scrollY != 0) {
-      window.scrollBy({ top: -store.innerHeight });
-      e.stopPropagation();
-      return;
-    }
-
-    if (
-      e.clientY >= store.innerHeight * 0.75 &&
-      window.scrollY + window.innerHeight < document.body.scrollHeight
-    ) {
-      window.scrollBy({ top: store.innerHeight });
-      e.stopPropagation();
-      return;
-    }
-
-    if (e.clientX < store.innerWidth * 0.1) {
-      getPrevPage();
-      e.stopPropagation();
-      return;
-    }
-
-    if (e.clientX > store.innerWidth * 0.9) {
-      getNextPage();
-      e.stopPropagation();
-      return;
-    }
+    const action = pageClickAction(e.clientX, e.clientY, clickGeometry(
+      window.scrollY, document.body.scrollHeight,
+    ));
+    if (!action) return;
+    if (action === "up") window.scrollBy({ top: -store.innerHeight });
+    else if (action === "down") window.scrollBy({ top: store.innerHeight });
+    else if (action === "prev") getPrevPage();
+    else getNextPage();
+    e.stopPropagation();
   };
 
   // ***********************
@@ -304,6 +302,39 @@ const Page = (props: ParentProps & PageProps) => {
       }}
     >
       {props.children}
+      {store.show_areas && !on_mobile() && !store.margin_mode && (
+        <Portal>
+          {/* Viewport-relative, outside the translated page; clicks pass through.
+              Interactive controls still take precedence within these zones. */}
+          {(["up", "down", "prev", "next"] as const).map((direction) => (
+            (direction === "up" ? clickGeometry().canUp : direction === "down" ? clickGeometry().canDown : true) && (
+              <div
+                aria-hidden="true"
+                data-debug-click-zone={direction}
+                style={{
+                  position: "fixed",
+                  inset: "0",
+                  "clip-path": debugPolygons()[direction],
+                  "pointer-events": "none",
+                  "z-index": 1001,
+                  background: { up: "#00aa7733", down: "#aa44dd33", prev: "#0080ff33", next: "#ff980033" }[direction],
+                }}
+              >
+                <span style={{
+                  position: "absolute",
+                  left: direction === "prev" ? `${clickGeometry().sideWidth / 2}px` : direction === "next" ? `${store.innerWidth - clickGeometry().sideWidth / 2}px` : "50%",
+                  top: direction === "up" ? "12.5%" : direction === "down" ? "87.5%" : "50%",
+                  transform: "translate(-50%, -50%)",
+                  "font-size": "12px",
+                  color: "#222",
+                }}>
+                  {{ up: "↑ page up", down: "↓ page down", prev: "← prev", next: "next →" }[direction]}
+                </span>
+              </div>
+            )
+          ))}
+        </Portal>
+      )}
     </div>
   );
 };
