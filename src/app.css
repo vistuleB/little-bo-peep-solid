@@ -779,6 +779,48 @@ img + .t-3003:hover {
   display: block;
 }
 
+/* Three independent assets; Nav scales this composition to the header height. */
+.header-logo-parts {
+  position: relative;
+  width: 300px;
+  height: 184px;
+}
+
+.header-logo-lettering {
+  position: absolute;
+  left: 0;
+  /* Allura's visible glyph bounds leave 6px at each edge after Nav's 56/184 scale. */
+  top: 22.59px;
+  color: #222;
+  font-family: "Allura", cursive;
+  font-size: 66px;
+  font-weight: 400;
+  /* Allura is a static font; a fine background-colored stroke trims its edges. */
+  -webkit-text-stroke: 0.60px var(--background-rgb);
+  line-height: 50.74px;
+  letter-spacing: 0;
+}
+
+.header-logo-lettering > span {
+  display: block;
+}
+
+.header-logo-roll {
+  position: absolute;
+  left: 110px;
+  top: 9px;
+  width: 132px;
+  height: auto;
+}
+
+.header-logo-phone {
+  position: absolute;
+  left: 204.57px;
+  top: 107px;
+  width: 91.69px;
+  height: auto;
+}
+
 /* The mobile elevator is centered on the viewport, independently of the title. */
 .mobile-elevator {
   position: absolute;

@@ -1,5 +1,6 @@
 import gleam/list
 import gleam/option.{None, Some}
+import gleam/string
 import local_desugarers as local_dl
 import vxml.{type VXML, V}
 import vxml/blame.{Ext}
@@ -495,7 +496,14 @@ pub fn our_pipeline(
         "title",
         "test",
       ]),
-      dl.rename_attributes_by_function(core.kebab_case_to_camel_case),
+      dl.rename_attributes_by_function(fn(name) {
+        case
+          string.starts_with(name, "aria-") || string.starts_with(name, "data-")
+        {
+          True -> name
+          False -> core.kebab_case_to_camel_case(name)
+        }
+      }),
     ],
     case author_mode {
       True -> [
