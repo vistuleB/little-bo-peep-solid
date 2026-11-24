@@ -10,6 +10,8 @@ Install the same Node (22.12+), npm, Gleam, Erlang/OTP and image-processing depe
 EDITOR_REPO_URL=git@github.com:vistuleB/little-bo-peep-solid.git npm run editor
 ```
 
+For persistent local configuration, put `EDITOR_REPO_URL` and optionally `EDITOR_DATA_DIR` and `EDITOR_TOKEN` in the ignored `.env.editor.local` file. `npm run editor` loads it; explicit shell variables take precedence. An existing data directory retains its configured Git remote, so use a fresh data directory when changing remotes.
+
 Open http://localhost:3019 and enter the token printed in the terminal. Without `EDITOR_TOKEN`, a fresh token is generated on each start. Drafts and successful previews persist in `.editor-data/`; browser edits and login sessions do not. Set `EDITOR_DATA_DIR` to use another directory. For safe local testing, point `EDITOR_REPO_URL` to a disposable bare Git repository rather than GitHub.
 
 A branch is a server draft of a remote branch. Refresh fetches remote state; Sync fetches, merges in a disposable worktree, pushes normally, then advances the draft. A conflict, missing remote, or rejected push leaves the draft editable. There is no force push and no mobile conflict editor. Ahead/behind values are relative to the last fetch; `?` means there is no remote comparison. No sync error is persisted.
