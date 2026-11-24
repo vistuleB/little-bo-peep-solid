@@ -245,7 +245,7 @@ const server = http.createServer(async (req, res) => {
               await ws.fetch();
               return { branches: await ws.branches() };
             case "/api/open":
-              await ws.open(data.branch);
+              await ws.select(data.branch);
               return { branches: await ws.branches() };
             case "/api/commit":
               return ws.commit(data.branch, data.revision, data.changes);

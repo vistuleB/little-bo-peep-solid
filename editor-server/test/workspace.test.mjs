@@ -128,3 +128,29 @@ test("commit, sync, divergence, conflict isolation, missing remote and restart",
     "still editable\n",
   );
 });
+
+test("branch recency persists and internal opens do not reorder the menu", async (t) => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "editor-recency-"));
+  t.after(() => fs.rm(root, { recursive: true, force: true }));
+  await fs.mkdir(path.join(root, "repo/.git"), { recursive: true });
+  const configure = (ws) => {
+    ws.remoteBranches = async () => ["alpha", "beta", "zeta"];
+    ws.git = async (args) => (args[0] === "rev-list" ? "0 0" : "revision");
+    return ws;
+  };
+  const ws = configure(new Workspace(root));
+  ws.state.branches.alpha = { ref: "alpha" };
+  ws.state.branches.zeta = { ref: "zeta" };
+  const names = async (w) => (await w.branches()).map((b) => b.name);
+  assert.deepEqual(await names(ws), ["alpha", "beta", "zeta"]);
+  await ws.select("zeta");
+  assert.deepEqual(await names(ws), ["zeta", "alpha", "beta"]);
+  await ws.select("alpha");
+  await ws.open("zeta");
+  assert.deepEqual(await names(ws), ["alpha", "zeta", "beta"]);
+  const restart = configure(new Workspace(root));
+  await restart.init();
+  assert.deepEqual(await names(restart), ["alpha", "zeta", "beta"]);
+  await restart.select("zeta");
+  assert.deepEqual(await names(restart), ["zeta", "alpha", "beta"]);
+});
