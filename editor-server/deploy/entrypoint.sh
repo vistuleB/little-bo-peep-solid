@@ -15,4 +15,9 @@ if [ -f /run/secrets/github_token ]; then
   chown editor:editor /tmp/editor-github-token
   chmod 600 /tmp/editor-github-token
 fi
+if [ -f /run/secrets/github_ssh_key ]; then
+  cp /run/secrets/github_ssh_key /tmp/editor-github-key
+  chown editor:editor /tmp/editor-github-key
+  chmod 600 /tmp/editor-github-key
+fi
 exec su-exec editor "$@"

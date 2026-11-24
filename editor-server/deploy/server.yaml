@@ -1,0 +1,66 @@
+name: tsc-editor
+services:
+  editor:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "127.0.0.1:3020:3019"
+    environment:
+      EDITOR_ORIGIN: "https://${EDITOR_DOMAIN:?Set EDITOR_DOMAIN}"
+      EDITOR_PREVIEW_DOMAIN: "${EDITOR_PREVIEW_DOMAIN:?Set EDITOR_PREVIEW_DOMAIN}"
+      EDITOR_REPO_URL: git@github.com:vistuleB/little-bo-peep-solid.git
+      EDITOR_GIT_NAME: Book editor
+      EDITOR_GIT_EMAIL: editor@toiletscrollcalculus.com
+      GIT_SSH_COMMAND: ssh -i /tmp/editor-github-key -o IdentitiesOnly=yes -o UserKnownHostsFile=/run/secrets/github_known_hosts -o StrictHostKeyChecking=yes
+    volumes:
+      - editor-data:/data
+    secrets:
+      - editor_token
+      - github_ssh_key
+      - github_known_hosts
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 3g
+    cpus: 2
+    logging:
+      driver: local
+      options:
+        max-size: 10m
+        max-file: "3"
+  caddy:
+    build:
+      context: .
+      dockerfile: Dockerfile.caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      EDITOR_DOMAIN: "${EDITOR_DOMAIN:?Set EDITOR_DOMAIN}"
+      EDITOR_PREVIEW_DOMAIN: "${EDITOR_PREVIEW_DOMAIN:?Set EDITOR_PREVIEW_DOMAIN}"
+    env_file:
+      - /opt/tsc-editor/secrets/porkbun.env
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+    depends_on:
+      editor:
+        condition: service_healthy
+    restart: unless-stopped
+    logging:
+      driver: local
+      options:
+        max-size: 10m
+        max-file: "3"
+secrets:
+  editor_token:
+    file: /opt/tsc-editor/secrets/editor-token
+  github_ssh_key:
+    file: /opt/tsc-editor/secrets/github_key
+  github_known_hosts:
+    file: /opt/tsc-editor/secrets/github_known_hosts
+volumes:
+  editor-data:
+  caddy-data:
+  caddy-config:

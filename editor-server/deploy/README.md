@@ -84,3 +84,62 @@ history and previews. These are not cold-build or full-book measurements.
 References: [Gleam container images](https://github.com/gleam-lang/gleam/pkgs/container/gleam),
 [Compose secrets](https://docs.docker.com/compose/how-tos/use-secrets/),
 [Compose volumes](https://docs.docker.com/reference/compose-file/volumes/).
+
+## Public editor on a VPS
+
+`server.yaml` is the HTTPS deployment, separate from the localhost rehearsal.
+It uses a repository-specific GitHub SSH deploy key and Caddy with Porkbun DNS
+validation for a wildcard preview certificate. The editor port is bound only to
+loopback; Caddy exposes ports 80 and 443. The editor has a 3 GiB memory limit to
+leave room for the host and proxy on a 4 GiB machine.
+
+The deployment checkout lives at `/opt/tsc-editor/app`. Prepare root-readable
+secrets under `/opt/tsc-editor/secrets` (directory mode 700, files mode 600):
+
+- `editor-token`: randomly generated sign-in token.
+- `github_key`: server-generated SSH private key; register its public key as a
+  read/write deploy key on the book repository.
+- `github_known_hosts`: GitHub host keys obtained from its authenticated HTTPS
+  metadata endpoint. Never disable host-key checking.
+- `porkbun.env`: `PORKBUN_API_KEY` and `PORKBUN_API_SECRET_KEY`. Restrict the key
+  to the book domain and DNS management; purchases are not needed. This file is
+  loaded only into the proxy, not into the editor/build container.
+
+The author can run `python3 editor-server/deploy/install-dns-credentials.py
+root@SERVER_IP` on their Mac to enter the Porkbun keys with hidden prompts and
+send them directly over SSH. This creates no local credential file.
+
+Put these non-secret settings in `/opt/tsc-editor/server.env`:
+
+```dotenv
+EDITOR_DOMAIN=edit.toiletscrollcalculus.com
+EDITOR_PREVIEW_DOMAIN=preview.toiletscrollcalculus.com
+```
+
+Create DNS A records for `edit` and `*.preview` pointing to the server. Leave
+the root domain and public book deployment unchanged. Enable Porkbun API access
+for this domain. Then, from the checkout:
+
+```sh
+docker compose --env-file /opt/tsc-editor/server.env -f editor-server/deploy/server.yaml config --quiet
+docker compose --env-file /opt/tsc-editor/server.env -f editor-server/deploy/server.yaml up --build -d
+```
+
+Do not print expanded Compose configuration: it contains proxy credentials.
+Named volumes retain editor data and certificates across updates. Never use
+`down --volumes` during an update. Updates use a reviewed Git commit, followed
+by `up --build -d`; book branch sync remains a separate operation in the UI.
+
+To exercise a full build without editing or pushing book content, run from the
+deployment checkout (the test reads the mounted token without displaying it):
+
+```sh
+docker compose --env-file /opt/tsc-editor/server.env -f editor-server/deploy/server.yaml exec -T editor node --input-type=module - < editor-server/deploy/smoke-server.mjs
+```
+
+The test writes `/data/deployment-smoke.log` and checks login enforcement, GitHub
+fetch, a full `develop` build, preview routing, goggles and API isolation. It
+does not replace an external HTTPS/browser check.
+
+The initial Hetzner instance is ARM64, CAX11, Helsinki. Provider backups were
+declined by the owner; commits remain server-only until successfully synced.
