@@ -15,7 +15,7 @@
       return { fragment, rects: [...range.getClientRects()] };
     });
   }
-  function trackSource() {
+  function trackSource(navigate = true) {
     const visible = fragments()
       .map(({ fragment, rects }) => ({
         fragment,
@@ -52,18 +52,34 @@
     // Short pages may have fewer than three distinct source locations.
     chosen ||= [...groups.values()].sort((a, b) => b.length - a.length)[0];
     if (!chosen) {
-      send({ action: "no-source" });
+      send({
+        action: navigate ? "no-source" : "tracking",
+        status: "none",
+        returnToSource: navigate,
+      });
       return;
     }
     const fragment = chosen.reduce((a, b) =>
       Number(a.dataset.wlyLine) <= Number(b.dataset.wlyLine) ? a : b,
     );
     send({
-      action: "source",
+      action: navigate ? "source" : "tracking",
+      status: "locked",
       file: fragment.dataset.wlyFile,
       line: Number(fragment.dataset.wlyLine),
       revision: fragment.dataset.wlyRevision,
     });
+  }
+  let tracking = false,
+    trackingTimer;
+  function scheduleTracking() {
+    if (!tracking) return;
+    clearTimeout(trackingTimer);
+    send({ action: "tracking", status: "searching" });
+    trackingTimer = setTimeout(() => {
+      trackingTimer = null;
+      trackSource(false);
+    }, 180);
   }
   let seekTimer;
   function seek(file, line) {
@@ -173,6 +189,12 @@
       event.data?.kind !== "writerly-editor"
     )
       return;
+    if (event.data.action === "tracking") {
+      tracking = !!event.data.enabled;
+      clearTimeout(trackingTimer);
+      if (tracking) scheduleTracking();
+      return;
+    }
     if (event.data.action === "track-source") {
       trackSource();
       return;
@@ -189,8 +211,12 @@
     enabled = !!event.data.goggles;
     draw();
   });
-  addEventListener("scroll", schedule, { passive: true });
-  addEventListener("resize", schedule);
+  const moved = () => {
+    schedule();
+    scheduleTracking();
+  };
+  addEventListener("scroll", moved, { passive: true });
+  addEventListener("resize", moved);
   let lastPath = location.pathname;
   // Typesetting and lazy sections can move source fragments without a scroll.
   setInterval(() => {
@@ -199,6 +225,7 @@
       send({ action: "location" });
     }
     if (enabled) schedule();
+    if (tracking && !trackingTimer) trackSource(false);
   }, 750);
   send({ action: "ready" });
 })();

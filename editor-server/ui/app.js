@@ -12,6 +12,7 @@ const state = {
   previewPath: null,
   goggles: false,
   followSource: false,
+  tracking: { status: "searching" },
   followPreview: false,
   pendingTarget: null,
   mode: "branches",
@@ -97,10 +98,21 @@ function update() {
   );
   $("#follow span").textContent = inPreview ? "🐌" : "🪁";
   const followLabel = inPreview
-    ? "Snail trail: tap Preview again to return to the source you are reading"
+    ? "Snail trail: Source follows the passage you are reading"
     : "Kite chase: Preview follows the visible editor line instead of its previous position";
-  $("#follow").title = followLabel;
-  $("#follow").setAttribute("aria-label", followLabel);
+  const tracking = state.tracking;
+  const status = inPreview && state.followSource ? tracking.status : "off";
+  $("#follow").dataset.tracking = status;
+  const detail =
+    status === "locked"
+      ? ` · ${tracking.file}:${tracking.line}`
+      : status === "searching"
+        ? " · Finding source…"
+        : status === "none"
+          ? " · No visible source found"
+          : "";
+  $("#follow").title = followLabel + detail;
+  $("#follow").setAttribute("aria-label", followLabel + detail);
   $("#goggles").disabled = !state.preview || !inPreview;
   $("#goggles").setAttribute("aria-pressed", String(state.goggles));
 }
@@ -130,6 +142,7 @@ function mode(value) {
     goggles(false);
     positionPreview();
   }
+  syncTracking();
   update();
 }
 async function refresh(fetchRemote = false) {
@@ -410,6 +423,17 @@ function positionPreview() {
     );
   }
 }
+function syncTracking() {
+  if (!state.preview) return;
+  $("#frame").contentWindow?.postMessage(
+    {
+      kind: "writerly-editor",
+      action: "tracking",
+      enabled: state.mode === "preview" && state.followSource,
+    },
+    state.preview.url,
+  );
+}
 function sendPreviewTarget() {
   if (!state.pendingTarget || !state.preview) return;
   $("#frame").contentWindow?.postMessage(
@@ -437,9 +461,18 @@ addEventListener("message", (event) => {
   if (event.data.action === "ready") {
     goggles(false);
     sendPreviewTarget();
+    syncTracking();
   }
-  if (event.data.action === "no-source")
-    notice("No visible source location found here.");
+  if (event.data.action === "tracking") {
+    state.tracking = event.data;
+    update();
+  }
+  if (event.data.action === "no-source") {
+    if (event.data.returnToSource) mode("source");
+    notice(
+      "No visible source location found here. Showing your last source position.",
+    );
+  }
   if (event.data.action === "source")
     perform(async () => {
       const file =
@@ -528,12 +561,17 @@ $("#branch-pill").onclick = () => mode("branches");
 $("nav").onclick = (event) => {
   const target = event.target.closest("[data-mode]");
   if (!target) return;
-  if (target.dataset.mode === "preview" && state.mode === "preview") {
-    if (state.followSource && state.preview)
-      $("#frame").contentWindow?.postMessage(
-        { kind: "writerly-editor", action: "track-source" },
-        state.preview.url,
-      );
+  if (target.dataset.mode === state.mode) return;
+  if (
+    target.dataset.mode === "source" &&
+    state.mode === "preview" &&
+    state.followSource &&
+    state.preview
+  ) {
+    $("#frame").contentWindow?.postMessage(
+      { kind: "writerly-editor", action: "track-source" },
+      state.preview.url,
+    );
     return;
   }
   mode(target.dataset.mode);
@@ -554,6 +592,8 @@ $("#goggles").onclick = () => goggles(!state.goggles);
 $("#follow").onclick = () => {
   if (state.mode === "preview") state.followSource = !state.followSource;
   else state.followPreview = !state.followPreview;
+  state.tracking = { status: "searching" };
+  syncTracking();
   update();
 };
 perform(boot);

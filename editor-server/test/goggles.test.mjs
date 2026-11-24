@@ -7,6 +7,7 @@ const script = await readFile(
   "utf8",
 );
 function preview(rows) {
+  let timer;
   const events = {},
     sent = [],
     scrolls = [];
@@ -46,12 +47,22 @@ function preview(rows) {
       events[name] = cb;
     },
     setInterval() {},
-    clearTimeout() {},
-    setTimeout() {},
+    clearTimeout() {
+      timer = null;
+    },
+    setTimeout(fn) {
+      timer = fn;
+      return 1;
+    },
   });
   return {
     sent,
     scrolls,
+    settle: () => {
+      const fn = timer;
+      timer = null;
+      fn?.();
+    },
     message: (data) =>
       events.message({
         source: parent,
@@ -95,4 +106,21 @@ test("editor to preview seeks the closest rendered source line", () => {
   ]);
   p.message({ action: "seek", file: "src/content/a.wly", line: 28 });
   assert.equal(p.scrolls[0].top, 272);
+});
+
+test("live tracking reports searching then locked without navigating, and stops when disabled", () => {
+  const p = preview([["a.wly", 5, 10]]);
+  p.message({ action: "tracking", enabled: true });
+  assert.equal(p.sent.at(-1).status, "searching");
+  p.settle();
+  assert.equal(p.sent.at(-1).action, "tracking");
+  assert.equal(p.sent.at(-1).status, "locked");
+  assert.equal(p.sent.at(-1).line, 5);
+  p.message({ action: "tracking", enabled: false });
+  p.settle();
+  assert.ok(!p.sent.some((message) => message.action === "source"));
+  const empty = preview([]);
+  empty.message({ action: "tracking", enabled: true });
+  empty.settle();
+  assert.equal(empty.sent.at(-1).status, "none");
 });
