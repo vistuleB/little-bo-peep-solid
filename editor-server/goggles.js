@@ -20,6 +20,7 @@
     // Never fall back to document-wide sampling while a route is loading.
     const content = document.querySelector("#PageCameraSurface");
     const bounds = content?.getBoundingClientRect();
+    const visibleTop = 54; // The header obscures the first 54px of the preview.
     const visible = (content ? fragments(content) : [])
       .map(({ fragment, rects }) => ({
         fragment,
@@ -28,7 +29,7 @@
             (r) =>
               r.width > 1 &&
               r.height > 1 &&
-              r.bottom > 0 &&
+              r.bottom > visibleTop &&
               r.top < innerHeight &&
               r.right > 0 &&
               r.left < innerWidth &&
