@@ -325,3 +325,84 @@ body.busy {
     padding: 24px;
   }
 }
+
+/* Two independently tappable wedges; the seam is 30 degrees from vertical. */
+nav {
+  position: relative;
+}
+#preview-tools {
+  position: absolute;
+  bottom: 100%;
+  right: 8px;
+  width: calc((100% - 16px) / 3);
+  height: 64px;
+  border: 1px solid #bdcdb9;
+  border-radius: 14px 14px 0 0;
+  overflow: hidden;
+  background: #f4f6f0;
+  box-shadow: 0 -3px 10px #203d2312;
+}
+#preview-tools button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  border-radius: 0;
+  padding: 0;
+  color: #50664f;
+  background: #f4f6f0;
+}
+#preview-tools button span {
+  font-size: 25px;
+  margin: 0;
+}
+#follow {
+  clip-path: polygon(
+    0 0,
+    calc(50% + 18.5px) 0,
+    calc(50% - 18.5px) 100%,
+    0 100%
+  );
+}
+#goggles {
+  clip-path: polygon(
+    calc(50% + 18.5px) 0,
+    100% 0,
+    100% 100%,
+    calc(50% - 18.5px) 100%
+  );
+}
+#follow span {
+  transform: translateX(-25%);
+}
+#goggles span {
+  transform: translateX(25%);
+}
+#preview-tools::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: 50%;
+  width: 1px;
+  background: #aabda5;
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+#preview-tools button[aria-pressed="true"] {
+  background: #cce3b8;
+}
+#preview-tools button:disabled {
+  opacity: 1;
+  background: #eeeee8;
+}
+#preview-tools button:disabled span {
+  opacity: 0.3;
+  filter: grayscale(1);
+}
+#preview-tools button:focus-visible {
+  outline: none;
+  background: #f3dea1;
+}
+#source .actions {
+  padding-right: calc((100% - 16px) / 3);
+}

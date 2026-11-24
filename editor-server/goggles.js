@@ -8,6 +8,92 @@
       { ...data, path: location.pathname, kind: "writerly-preview" },
       origin,
     );
+  function fragments() {
+    return [...document.querySelectorAll("[data-wly-file]")].map((fragment) => {
+      const range = document.createRange();
+      range.selectNodeContents(fragment);
+      return { fragment, rects: [...range.getClientRects()] };
+    });
+  }
+  function trackSource() {
+    const visible = fragments()
+      .map(({ fragment, rects }) => ({
+        fragment,
+        rect: rects
+          .filter(
+            (r) =>
+              r.width > 1 &&
+              r.height > 1 &&
+              r.bottom > 0 &&
+              r.top < innerHeight &&
+              r.right > 0 &&
+              r.left < innerWidth,
+          )
+          .sort((a, b) => a.top - b.top || a.left - b.left)[0],
+      }))
+      .filter((item) => item.rect)
+      .sort((a, b) => a.rect.top - b.rect.top || a.rect.left - b.rect.left);
+    const groups = new Map(),
+      seen = new Set();
+    let chosen;
+    for (const { fragment } of visible) {
+      const { wlyFile: file, wlyLine: line } = fragment.dataset;
+      const key = file + ":" + line;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const group = groups.get(file) || [];
+      group.push(fragment);
+      groups.set(file, group);
+      if (group.length === 3) {
+        chosen = group;
+        break;
+      }
+    }
+    // Short pages may have fewer than three distinct source locations.
+    chosen ||= [...groups.values()].sort((a, b) => b.length - a.length)[0];
+    if (!chosen) {
+      send({ action: "no-source" });
+      return;
+    }
+    const fragment = chosen.reduce((a, b) =>
+      Number(a.dataset.wlyLine) <= Number(b.dataset.wlyLine) ? a : b,
+    );
+    send({
+      action: "source",
+      file: fragment.dataset.wlyFile,
+      line: Number(fragment.dataset.wlyLine),
+      revision: fragment.dataset.wlyRevision,
+    });
+  }
+  let seekTimer;
+  function seek(file, line) {
+    clearTimeout(seekTimer);
+    const name = file.replace(/^src\/content\//, "").replace(/^\.\//, "");
+    let attempts = 0;
+    function locate() {
+      const candidates = fragments().filter(
+        ({ fragment, rects }) =>
+          fragment.dataset.wlyFile.replace(/^\.\//, "") === name &&
+          rects.some((r) => r.width && r.height),
+      );
+      candidates.sort(
+        (a, b) =>
+          Math.abs(Number(a.fragment.dataset.wlyLine) - line) -
+          Math.abs(Number(b.fragment.dataset.wlyLine) - line),
+      );
+      if (candidates.length) {
+        const rect = candidates[0].rects.find((r) => r.width && r.height);
+        scrollTo({
+          top: Math.max(0, scrollY + rect.top - 28),
+          behavior: "instant",
+        });
+        return;
+      }
+      if (++attempts < 8) seekTimer = setTimeout(locate, 400);
+      else send({ action: "no-source" });
+    }
+    locate();
+  }
   function draw() {
     if (!enabled) {
       layer?.remove();
@@ -87,6 +173,19 @@
       event.data?.kind !== "writerly-editor"
     )
       return;
+    if (event.data.action === "track-source") {
+      trackSource();
+      return;
+    }
+    if (event.data.action === "seek") {
+      if (
+        typeof event.data.file === "string" &&
+        Number.isInteger(event.data.line) &&
+        event.data.line > 0
+      )
+        seek(event.data.file, event.data.line);
+      return;
+    }
     enabled = !!event.data.goggles;
     draw();
   });
