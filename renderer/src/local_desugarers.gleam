@@ -1,5 +1,5 @@
 import desugarers/lbp_add_empty_handle_values
-import desugarers/lbp_no_indent
+import desugarers/lbp_editor_provenance
 import desugarers/lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes
 import desugarers/lbp_generate_breadcrumbs
 import desugarers/lbp_generate_prev_next_attributes
@@ -9,6 +9,7 @@ import desugarers/lbp_grand_wrapper_move_nodes_to_wrapper
 import desugarers/lbp_img_build
 import desugarers/lbp_move_to_be_moved_from_grand_wrapper_to_exercise_graveyard
 import desugarers/lbp_move_to_be_moved_to_grand_wrapper
+import desugarers/lbp_no_indent
 import desugarers/lbp_select_content
 import desugarers/lbp_source_provenance_append_img_spans
 import desugarers/lbp_source_provenance_append_span
@@ -51,6 +52,7 @@ pub const lbp_source_provenance_wrap_lines__outside = lbp_source_provenance_wrap
 pub const assertive_tests: List(fn() -> testing.AssertiveTestCollection) = [
   lbp_add_empty_handle_values.assertive_tests,
   lbp_no_indent.assertive_tests,
+  lbp_editor_provenance.assertive_tests,
   lbp_exercise_graveyard_generate_grand_wrapper_to_be_moved_attributes.assertive_tests,
   lbp_generate_breadcrumbs.assertive_tests,
   lbp_generate_prev_next_attributes.assertive_tests,
@@ -66,3 +68,5 @@ pub const assertive_tests: List(fn() -> testing.AssertiveTestCollection) = [
   lbp_source_provenance_wrap.assertive_tests,
   lbp_source_provenance_wrap_lines__outside.assertive_tests,
 ]
+
+pub const lbp_editor_provenance = lbp_editor_provenance.constructor

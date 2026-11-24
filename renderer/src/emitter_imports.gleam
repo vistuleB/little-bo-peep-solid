@@ -19,6 +19,7 @@ pub type ImportedFromFile {
 
 pub fn lbp_exports_dictionary() -> Dict(String, ExportedByFile) {
   dict.from_list([
+    #("SourceFragment", ExportedByFile(Some("SourceFragment"), [])),
     #("Article", ExportedByFile(Some("Article"), [])),
     #("ArticleTitle", ExportedByFile(Some("ArticleTitle"), [])),
     #("Boxed", ExportedByFile(Some("Boxed"), [])),

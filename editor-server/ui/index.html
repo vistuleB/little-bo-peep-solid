@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Toilet Scroll · Editor</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="brand">Toilet Scroll <small>EDITOR</small></div>
+        <button id="branch-pill">Choose a branch</button>
+      </header>
+      <p id="notice" hidden role="status"></p>
+      <section id="login">
+        <h1>Source editor</h1>
+        <p>Enter the token shown by the editing server.</p>
+        <form id="login-form">
+          <input
+            type="password"
+            id="token"
+            autocomplete="current-password"
+            aria-label="Editor token"
+          /><button class="primary">Sign in</button>
+        </form>
+      </section>
+      <main id="branches" hidden>
+        <div class="heading">
+          <h1>Branches</h1>
+          <button id="refresh">Refresh</button>
+        </div>
+        <p class="muted">Outgoing / incoming · last fetched state</p>
+        <div id="branch-list"></div>
+        <section id="build-settings" hidden>
+          <h2>Build</h2>
+          <div id="commands"></div>
+          <label class="command"
+            ><input type="radio" name="command" id="custom-radio" /><span
+              >Custom:</span
+            ><input id="custom-command" placeholder="gleam run" /></label
+          ><button id="build" class="primary">Build preview</button>
+        </section>
+        <details id="build-log">
+          <summary>Build log</summary>
+          <pre id="log">No build started this session.</pre>
+        </details>
+      </main>
+      <main id="source" hidden>
+        <button id="file-picker">Choose a .wly file ▾</button>
+        <div id="source-meta" class="muted"></div>
+        <textarea
+          id="editor"
+          spellcheck="false"
+          autocapitalize="off"
+          autocorrect="off"
+          aria-label="Writerly source"
+        ></textarea>
+        <div class="actions">
+          <button id="discard">Discard</button
+          ><button id="commit" class="primary">Commit changes</button
+          ><button id="source-build">Build</button>
+        </div>
+      </main>
+      <main id="preview" hidden>
+        <div class="heading">
+          <span id="preview-meta" class="muted"></span
+          ><button id="goggles" aria-pressed="false">Source goggles</button>
+        </div>
+        <p id="preview-empty">Build this branch to open its preview.</p>
+        <iframe id="frame" title="Book preview" hidden></iframe>
+      </main>
+      <nav hidden>
+        <button data-mode="branches">⑂<span>Branches</span></button
+        ><button data-mode="source">⌨<span>Source</span></button
+        ><button data-mode="preview">▤<span>Preview</span></button>
+      </nav>
+    </div>
+    <dialog id="files-dialog">
+      <div class="heading">
+        <h2>Files</h2>
+        <button id="close-files">Done</button>
+      </div>
+      <div id="recents"></div>
+      <input
+        type="search"
+        id="file-search"
+        placeholder="Find a .wly file"
+        aria-label="Filter files"
+      />
+      <div id="tree"></div>
+    </dialog>
+    <dialog id="decision">
+      <h2>Uncommitted changes</h2>
+      <p id="decision-text"></p>
+      <div>
+        <button id="decision-commit" class="primary">Commit & continue</button
+        ><button id="decision-discard">Discard & continue</button
+        ><button id="decision-cancel">Cancel</button>
+      </div>
+    </dialog>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

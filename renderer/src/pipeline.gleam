@@ -52,6 +52,7 @@ pub fn our_pipeline(
   only: Bool,
   remove_unused: Bool,
   author_mode: Bool,
+  editor_server: Bool,
 ) -> Pipeline {
   [
     [
@@ -506,6 +507,10 @@ pub fn our_pipeline(
         }
       }),
     ],
+    case editor_server {
+      True -> [local_dl.lbp_editor_provenance()]
+      False -> []
+    },
     case author_mode {
       True -> [
         local_dl.lbp_source_provenance_wrap_lines__outside("./src/content/", [

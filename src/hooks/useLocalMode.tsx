@@ -1,8 +1,8 @@
 import { onMount } from "solid-js";
 
-const useAuthorMode = () => {
+const useLocalMode = () => {
   // Only run in author mode
-  if (typeof window === "undefined" || !import.meta.env.VITE_AUTHOR_MODE) {
+  if (typeof window === "undefined" || import.meta.env.PLACE !== "LOCAL") {
     return;
   }
 
@@ -60,11 +60,9 @@ const useAuthorMode = () => {
         pointerDownHandled = false;
 
         const target = e.target;
-        const copyTarget = (target instanceof Element
-          ? target.closest(".t-3003-i-copy")
-          : null) as
-          | HTMLElement
-          | null;
+        const copyTarget = (
+          target instanceof Element ? target.closest(".t-3003-i-copy") : null
+        ) as HTMLElement | null;
         if (copyTarget && tooltip.contains(copyTarget)) {
           pointerDownHandled = true;
           e.preventDefault();
@@ -121,4 +119,4 @@ const useAuthorMode = () => {
   });
 };
 
-export default useAuthorMode;
+export default useLocalMode;

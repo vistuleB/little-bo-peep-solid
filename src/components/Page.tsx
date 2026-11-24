@@ -5,7 +5,7 @@ import useBreadcrumbs from "~/hooks/useBreadcrumbs";
 import useScrollIsAt0 from "~/hooks/useScrollIsAt0";
 import useOnMobile from "../hooks/useOnMobile";
 import usePrevNextPage from "~/hooks/usePrevNextPage";
-import useAuthorMode from "~/hooks/useAuthorMode";
+import useLocalMode from "~/hooks/useLocalMode";
 import useHorizontalSwipeNavigation from "~/hooks/useHorizontalSwipeNavigation";
 import useHorizontalPageMotion from "~/hooks/useHorizontalPageMotion";
 import { useLocation } from "@solidjs/router";
@@ -99,7 +99,7 @@ const Page = (props: ParentProps & PageProps) => {
   useScrollIsAt0();
   useSetRoute();
   useBreadcrumbs();
-  useAuthorMode();
+  useLocalMode();
 
   set_store("pageNecessaryMargin", props.pageNecessaryMargin || 0);
   set_store("maxElementWidth", props.maxElementWidth || 0);

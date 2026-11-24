@@ -7,6 +7,7 @@ import gleam/option.{type Option, None, Some}
 import gleam/string.{inspect as ins}
 import on
 import pipeline.{our_pipeline}
+import place
 import simplifile
 import vxml.{type VXML, V}
 import vxml/blame.{type Blame, Ext}
@@ -435,7 +436,9 @@ fn our_emitter(
           OutputLine(
             blame_us("left_header_blob_emitter"),
             0,
-            "export const desktopLeftMargin = " <> ins(desktop_left_margin) <> ";",
+            "export const desktopLeftMargin = "
+              <> ins(desktop_left_margin)
+              <> ";",
           ),
           OutputLine(
             blame_us("left_header_blob_emitter"),
@@ -455,6 +458,8 @@ pub const clean_option = "--clean"
 pub const author_mode_option = "--local"
 
 pub fn render(arguments: ds.ParsedCLIArguments) -> Nil {
+  let place =
+    place.resolve(dict.has_key(arguments.user_args, author_mode_option))
   let exports_dict = ei.lbp_exports_dictionary()
   let imports_lookup = ei.imports_lookup_dictionary_from_exports(exports_dict)
   let only = arguments.only_key_vals != [] || arguments.only_paths != []
@@ -492,7 +497,8 @@ pub fn render(arguments: ds.ParsedCLIArguments) -> Nil {
       pipeline: our_pipeline(
         only,
         dict.has_key(arguments.user_args, clean_option),
-        dict.has_key(arguments.user_args, author_mode_option),
+        place == "LOCAL",
+        place == "EDITOR_SERVER",
       ),
       splitter: our_splitter,
       emitter: our_emitter(_, imports_lookup),
@@ -526,8 +532,8 @@ pub fn render(arguments: ds.ParsedCLIArguments) -> Nil {
   use artifacts_printed_this_run <- on.error_ok(
     ds.run_renderer(renderer, parameters, options),
     fn(error) {
-      io.println("renderer error: " <> ins(error))
-      io.println("")
+      let message = "renderer error: " <> ins(error)
+      panic as message
     },
   )
 

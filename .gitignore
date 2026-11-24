@@ -46,3 +46,6 @@ api
 # Ignore MATHJAX local build files
 public/mathjax3
 public/mathjax4
+
+# Local editing-server clone and build snapshots
+.editor-data/

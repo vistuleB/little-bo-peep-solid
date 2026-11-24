@@ -8,7 +8,9 @@
     "test:html": "node scripts/audit-built-html.mjs",
     "build-prerendered-mathjax": "node scripts/prerender-mathjax.mjs",
     "start": "vinxi start",
-    "build-local-mathjax": "rm -rf public/mathjax3 public/mathjax4 && mkdir -p public/mathjax3 public/mathjax4 && cp -r node_modules/mathjax-full/es5/* public/mathjax3/ && cp -r node_modules/mathjax/* public/mathjax4/"
+    "build-local-mathjax": "rm -rf public/mathjax3 public/mathjax4 && mkdir -p public/mathjax3 public/mathjax4 && cp -r node_modules/mathjax-full/es5/* public/mathjax3/ && cp -r node_modules/mathjax/* public/mathjax4/",
+    "editor": "node editor-server/server.mjs",
+    "test:editor": "node --test editor-server/test/*.test.mjs"
   },
   "dependencies": {
     "@solidjs/meta": "^0.29.4",
