@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Toilet Scroll · authoring mockup</title>
+<link rel="stylesheet" href="mockup.css">
+</head>
+<body>
+<aside class="studio">
+  <div class="eyebrow">TOILET SCROLL CALCULUS</div>
+  <h1>From the page<br>to the source.</h1>
+  <p>Read, change a few lines, build.<br>375 × 667 · a smaller phone.</p>
+  <div class="studio-controls">
+    <div class="eyebrow">TRY THE INTERACTIONS</div>
+    <button data-scenario="goggles">01 <span>Read → goggles → edit</span> ↗</button>
+    <button data-scenario="tree">02 <span>Browse the file tree</span> ↗</button>
+    <button data-scenario="unbuilt">03 <span>A branch without a build</span> ↗</button>
+    <button data-scenario="failure">04 <span>A build that fails</span> ↗</button>
+    <label class="toggle"><input type="checkbox" id="keyboard-toggle"> Simulate the phone keyboard</label>
+  </div>
+  <p class="footnote">INTERACTIVE MOCKUP · NO BACKEND<br>Everything stays in memory. Reload to reset.<br>Files, Git operations and builds are simulated.</p>
+</aside>
+<main class="phone" aria-label="Authoring app mockup">
+  <div class="statusbar"><span>9:41</span><span class="camera"></span><span>▂▄▆ &nbsp;▰</span></div>
+  <header class="app-header">
+    <div class="brand"><span class="script">toilet scroll</span><span class="author-label">AUTHOR</span></div>
+    <button class="branch-pill" id="active-branch" title="Choose branch"></button>
+  </header>
+  <div id="screen" class="screen"></div>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <div id="actionbar" class="actionbar"></div>
+  <nav class="bottom-nav" aria-label="Main modes">
+    <button data-mode="branches"><span class="nav-icon">⑂</span>Branches</button>
+    <button data-mode="source"><span class="nav-icon">〈/〉</span>Source</button>
+    <button data-mode="preview"><span class="nav-icon">▤</span>Preview</button>
+  </nav>
+  <div class="keyboard" aria-label="Simulated keyboard">
+    <div class="keyboard-label">SIMULATED KEYBOARD <button id="hide-keyboard">Done ↓</button></div>
+    <div class="keys">q w e r t y u i o p</div><div class="keys">a s d f g h j k l</div><div class="keys">⇧ z x c v b n m ⌫</div><div class="keys">123 &nbsp; ◉ &nbsp; <span>space</span> &nbsp; return</div>
+  </div>
+  <div class="home-indicator"></div>
+  <div id="sheet-host"></div>
+</main>
+<script src="catalog.js"></script>
+<script src="mockup.js"></script>
+</body>
+</html>
