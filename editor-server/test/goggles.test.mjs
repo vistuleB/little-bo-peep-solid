@@ -89,13 +89,13 @@ function preview(rows, { contentPresent = true, headerHeight = 0 } = {}) {
 test("tracking uses first three distinct matching blames, ignoring off-screen and duplicate fragments", () => {
   const p = preview([
     ["off.wly", 1, -50],
-    ["header.wly", 1, 0],
-    ["a.wly", 40, 20],
-    ["a.wly", 40, 25],
-    ["b.wly", 3, 30],
-    ["a.wly", 20, 40],
-    ["a.wly", 30, 50],
-    ["a.wly", 2, 60],
+    ["header.wly", 1, 60],
+    ["a.wly", 40, 80],
+    ["a.wly", 40, 85],
+    ["b.wly", 3, 90],
+    ["a.wly", 20, 100],
+    ["a.wly", 30, 110],
+    ["a.wly", 2, 120],
   ]);
   p.message({ action: "track-source" });
   assert.equal(p.sent.at(-1).file, "a.wly");
@@ -103,9 +103,9 @@ test("tracking uses first three distinct matching blames, ignoring off-screen an
 });
 test("short previews fall back to the strongest match; empty previews report no source", () => {
   const p = preview([
-    ["header.wly", 1, 0],
-    ["a.wly", 7, 20],
-    ["a.wly", 5, 30],
+    ["header.wly", 1, 60],
+    ["a.wly", 7, 80],
+    ["a.wly", 5, 90],
   ]);
   p.message({ action: "track-source" });
   assert.equal(p.sent.at(-1).line, 5);
@@ -124,7 +124,7 @@ test("editor to preview seeks the closest rendered source line", () => {
 });
 
 test("live tracking reports searching then locked without navigating, and stops when disabled", () => {
-  const p = preview([["a.wly", 5, 10]]);
+  const p = preview([["a.wly", 5, 70]]);
   p.message({ action: "tracking", enabled: true });
   assert.equal(p.sent.at(-1).status, "searching");
   p.settle();
@@ -145,9 +145,9 @@ test("snail ignores header blames even when they would win the three-location vo
     ["__parent.wly", 10, 0, true],
     ["__parent.wly", 11, 10, true],
     ["__parent.wly", 12, 20, true],
-    ["bt3/bt3.wly", 30, 30],
-    ["bt3/bt3.wly", 31, 40],
-    ["bt3/bt3.wly", 32, 50],
+    ["bt3/bt3.wly", 30, 90],
+    ["bt3/bt3.wly", 31, 100],
+    ["bt3/bt3.wly", 32, 110],
   ]);
   p.message({ action: "track-source" });
   assert.equal(p.sent.at(-1).file, "bt3/bt3.wly");
@@ -166,4 +166,22 @@ test("kite reserves the rendered header height above the target", () => {
   const nearTop = preview([["a.wly", 1, 40]], { headerHeight: 84 });
   nearTop.message({ action: "seek", file: "src/content/a.wly", line: 1 });
   assert.equal(nearTop.scrolls[0].top, 0);
+});
+
+test("snail excludes the obscured top 54px for both live locks and source jumps", () => {
+  const rows = [
+    ["hidden.wly", 1, 10],
+    ["hidden.wly", 2, 30],
+    ["hidden.wly", 3, 44],
+    ["visible.wly", 20, 54],
+    ["visible.wly", 21, 70],
+    ["visible.wly", 22, 90],
+  ];
+  const p = preview(rows);
+  p.message({ action: "tracking", enabled: true });
+  p.settle();
+  assert.equal(p.sent.at(-1).file, "visible.wly");
+  p.message({ action: "track-source" });
+  assert.equal(p.sent.at(-1).file, "visible.wly");
+  assert.equal(p.sent.at(-1).line, 20);
 });
