@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomBytes, timingSafeEqual, createHash } from "node:crypto";
 import { Workspace } from "./workspace.mjs";
+import { GoogleLogin } from "./google-auth.mjs";
 import { Builds } from "./builds.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -22,6 +23,12 @@ const ws = new Workspace(
 );
 await ws.init();
 const builds = new Builds(ws);
+const googleLogin = new GoogleLogin({
+  clientId: process.env.EDITOR_GOOGLE_CLIENT_ID,
+  email: process.env.EDITOR_GOOGLE_EMAIL,
+  subjectFile: path.join(ws.root, "google-account.json"),
+});
+const sessionCookie = `editor_session=${session}; HttpOnly; SameSite=Strict; Path=/${previewProtocol === "https:" ? "; Secure" : ""}`;
 const hash = (text) => createHash("sha256").update(text).digest();
 const authenticated = (req) =>
   (req.headers.cookie || "")
@@ -136,12 +143,44 @@ const server = http.createServer(async (req, res) => {
       return json(res, 403, { error: "Unknown host" });
     res.setHeader(
       "Content-Security-Policy",
-      "default-src 'self'; script-src 'self'; style-src 'self'; frame-src " +
+      "default-src 'self'; script-src 'self' https://accounts.google.com/gsi/client; style-src 'self' https://accounts.google.com/gsi/style; connect-src 'self' https://accounts.google.com/gsi/; frame-src https://accounts.google.com/gsi/ " +
         `${previewProtocol}//*.${previewDomain}${previewPort ? ":" + previewPort : ""}; object-src 'none'; base-uri 'none'; frame-ancestors 'none'`,
     );
+    res.setHeader("Cross-Origin-Opener-Policy", "same-origin-allow-popups");
     if (url.pathname.startsWith("/api/")) {
+      if (url.pathname === "/api/auth-config" && req.method === "GET") {
+        if (!googleLogin.enabled)
+          return json(res, 200, { googleClientId: null });
+        const nonce = googleLogin.challenge();
+        res.setHeader(
+          "set-cookie",
+          `editor_google_nonce=${nonce}; HttpOnly; SameSite=Strict; Path=/api/; Max-Age=600${previewProtocol === "https:" ? "; Secure" : ""}`,
+        );
+        return json(res, 200, { googleClientId: googleLogin.clientId, nonce });
+      }
       if (req.method === "POST" && req.headers.origin !== origin)
         return json(res, 403, { error: "Origin rejected" });
+      if (url.pathname === "/api/login/google" && req.method === "POST") {
+        const data = await body(req);
+        const nonce = (req.headers.cookie || "")
+          .split(";")
+          .map((c) => c.trim())
+          .find((c) => c.startsWith("editor_google_nonce="))
+          ?.slice("editor_google_nonce=".length);
+        try {
+          await googleLogin.verify(data.credential, nonce);
+        } catch {
+          return json(res, 401, {
+            error:
+              "Google sign-in failed or this account is not allowed. Reload to try again; token sign-in is still available.",
+          });
+        }
+        res.setHeader("set-cookie", [
+          sessionCookie,
+          `editor_google_nonce=; HttpOnly; SameSite=Strict; Path=/api/; Max-Age=0${previewProtocol === "https:" ? "; Secure" : ""}`,
+        ]);
+        return json(res, 200, { ok: true });
+      }
       if (url.pathname === "/api/login" && req.method === "POST") {
         const data = await body(req);
         if (
@@ -149,14 +188,11 @@ const server = http.createServer(async (req, res) => {
           !timingSafeEqual(hash(data.token), hash(token))
         )
           return json(res, 401, { error: "Incorrect editor token" });
-        res.setHeader(
-          "set-cookie",
-          `editor_session=${session}; HttpOnly; SameSite=Strict; Path=/${previewProtocol === "https:" ? "; Secure" : ""}`,
-        );
+        res.setHeader("set-cookie", sessionCookie);
         return json(res, 200, { ok: true });
       }
       if (!authenticated(req))
-        return json(res, 401, { error: "Sign in with the editor token." });
+        return json(res, 401, { error: "Sign in to the editor." });
       if (req.method === "GET") {
         if (url.pathname === "/api/branches")
           return json(res, 200, { branches: await ws.branches() });

@@ -605,3 +605,38 @@ $("#clean-build-cache").onclick = () =>
       "Build cache cleared. The next build starts fresh. Source and previews are unchanged.",
     );
   });
+
+async function setupGoogleLogin() {
+  const config = await api("auth-config");
+  if (!config.googleClientId) return;
+  const script = document.createElement("script");
+  script.src = "https://accounts.google.com/gsi/client";
+  script.async = true;
+  script.onerror = () =>
+    notice(
+      "Google sign-in could not load. You can still use your editor token.",
+    );
+  script.onload = () => {
+    google.accounts.id.initialize({
+      client_id: config.googleClientId,
+      nonce: config.nonce,
+      auto_select: false,
+      callback: ({ credential }) =>
+        perform(async () => {
+          await api("login/google", { credential });
+          await boot();
+        }),
+    });
+    $("#google-signin").hidden = false;
+    $("#token-hint").textContent = "Or use your editor token:";
+    google.accounts.id.renderButton($("#google-signin"), {
+      type: "standard",
+      theme: "outline",
+      size: "large",
+      text: "signin_with",
+      width: 280,
+    });
+  };
+  document.head.append(script);
+}
+setupGoogleLogin().catch(() => {});

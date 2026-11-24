@@ -12,6 +12,8 @@ RUN ln -s ../lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm \
 WORKDIR /app
 RUN su-exec editor mix local.hex --force \
  && su-exec editor mix local.rebar --force
+COPY package.json package-lock.json /app/editor-server/
+RUN npm ci --prefix /app/editor-server --omit=dev --no-audit --no-fund
 COPY . /app/editor-server
 RUN chmod +x /app/editor-server/deploy/entrypoint.sh /app/editor-server/deploy/git-askpass.sh
 ENV EDITOR_HOST=0.0.0.0 EDITOR_PORT=3019 EDITOR_DATA_DIR=/data \
