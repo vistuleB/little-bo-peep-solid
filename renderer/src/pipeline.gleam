@@ -15,7 +15,7 @@ const p_cannot_contain = [
   "Image", "ImageLeft", "ImageRight", "List", "MathBlock", "Note", "Pause",
   "Scope", "Section", "Solution", "SolutionNote", "StarDivider", "TildeDivider",
   "Table", "TextParent", "WriterlyBlankLine", "center", "col", "colgroup", "div",
-  "p", "li", "ol", "table", "thead", "tbody", "tr", "td", "section", "ul",
+  "p", "li", "ol", "table", "thead", "tbody", "tr", "td", "section", "ul", "NoIndent",
 ]
 
 const cannot_contain_p = ["ArticleTitle", "MathBlock", "Math", "p"]
@@ -386,6 +386,7 @@ pub fn our_pipeline(
         #("p", "class", "indent-10"),
         ["CentralDisplay", "CentralDisplayItalic"],
       ),
+      local_dl.lbp_no_indent(),
       dl.add_between_all_pairs_2(#(
         [
           "MathBlock", "Example", "Note", "SolutionNote", "Image", "table",
