@@ -41,6 +41,7 @@
 
         |> Image
             src=images/svg_ch5_ex_spherical_coordinates_otherway_Rcos_phi.svg
+            svgo=false
 
         The coordinate transformations are
         thus obtained by interchanging “$\sin(\phi)$” and

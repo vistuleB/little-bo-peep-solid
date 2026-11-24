@@ -52,7 +52,7 @@ export default createHandler(() => (
           <meta property="og:image" content={resolvePreviewImageURL()} />
           <meta name="twitter:card" content="summary_large_image" />
           {
-            import.meta.env.VITE_ENV === "LOCAL" ? (
+            import.meta.env.PLACE === "LOCAL" ? (
               <>
                 <link
                   rel="icon"

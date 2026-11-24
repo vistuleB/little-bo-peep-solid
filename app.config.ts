@@ -1,5 +1,6 @@
 import { defineConfig } from "@solidjs/start/config";
 import { loadEnv } from "vite";
+import { resolvePlace } from "./config/place.mjs";
 
 const mode = process.env.NODE_ENV || "development";
 const env = loadEnv(mode, process.cwd(), "");
@@ -8,12 +9,11 @@ const env = loadEnv(mode, process.cwd(), "");
 const viteEnv = process.env.VITE_ENV || env.VITE_ENV;
 const mathJAXVersion =
   process.env.MATHJAX_VERSION || env.MATHJAX_VERSION || "4";
-const isAuthorMode =
-  mode !== "production" &&
-  (process.env.AUTHOR_MODE || env.AUTHOR_MODE) === "true";
+const place = resolvePlace({ ...env, ...process.env });
+const isLocalMode = place === "LOCAL";
 const mathJaxDebugAttributes =
   (process.env.MATHJAX_DEBUG_ATTRIBUTES || env.MATHJAX_DEBUG_ATTRIBUTES) ===
-    "true" || isAuthorMode;
+    "true" || isLocalMode;
 const isOfflineMode = (process.env.OFFLINE_MODE || env.OFFLINE_MODE) === "true";
 const prerenderMathJax =
   (process.env.PRERENDER_MATHJAX || env.PRERENDER_MATHJAX || "true") === "true";
@@ -31,12 +31,15 @@ export default defineConfig({
     },
   },
   // Only load middleware in author mode
-  ...(isAuthorMode && {
+  ...(isLocalMode && {
     middleware: "src/server/middleware.ts",
   }),
   vite: {
     define: {
-      "import.meta.env.VITE_AUTHOR_MODE": JSON.stringify(isAuthorMode),
+      "import.meta.env.PLACE": JSON.stringify(place),
+      "import.meta.env.EDITOR_REVISION": JSON.stringify(
+        process.env.EDITOR_REVISION || "",
+      ),
       "import.meta.env.MATHJAX_DEBUG_ATTRIBUTES": mathJaxDebugAttributes,
       "import.meta.env.VITE_ENV": JSON.stringify(viteEnv),
       "import.meta.env.OFFLINE_MODE": isOfflineMode,

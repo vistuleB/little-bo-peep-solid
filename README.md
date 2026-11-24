@@ -10,7 +10,7 @@ Create `.env` file in root folder with contents:
 
 ```
 VITE_ENV=DEV
-AUTHOR_MODE=true
+PLACE=LOCAL
 OFFLINE_MODE=false
 MATHJAX_VERSION=3
 ```
@@ -123,3 +123,6 @@ as the root folder of a VSCode workspace ("File -> Save Workspace as..."):
 ```
 
 Note that `content=selection` is included in the `--only` arguments so that various "control nodes" of `src/content/__parent.wly` are not filtered out, but selected instead. On the other hand `work=ing` is to select the current "transient zone of interest" for the author or the developer.
+## Editing server
+
+See [editor-server/README.md](editor-server/README.md) for the mobile source editor, Git sync and preview builds.

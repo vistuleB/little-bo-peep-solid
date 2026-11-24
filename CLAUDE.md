@@ -80,7 +80,7 @@ little-bo-peep-solid/
 │   │   ├── useShowMore.tsx     # Controls "show more" (lazy-load rest of article)
 │   │   ├── useExercises.tsx    # Exercise expand/collapse state
 │   │   ├── usePrevNextPage.ts  # Previous/next chapter navigation
-│   │   ├── useAuthorMode.tsx   # Reads VITE_AUTHOR_MODE env flag
+│   │   ├── useLocalMode.tsx   # Reads PLACE env flag
 │   │   ├── useBreadcrumbs.tsx
 │   │   └── ...
 │   ├── store/                  # Global SolidJS context providers
@@ -88,7 +88,7 @@ little-bo-peep-solid/
 │   │   ├── ExercisesStoreProvider.tsx
 │   │   └── ...
 │   └── server/
-│       └── middleware.ts       # Author-mode middleware (only loaded when AUTHOR_MODE=true)
+│       └── middleware.ts       # Author-mode middleware (only loaded when PLACE=LOCAL)
 │
 ├── images/                     # Source SVG/PNG images (input to build-img pipeline)
 ├── public/                     # Static assets served directly (generated images, MathJax, …)
@@ -181,7 +181,7 @@ npm run dev          # serves on localhost:3000
 Or configure via `.env`:
 ```
 VITE_ENV=DEV
-AUTHOR_MODE=true
+PLACE=LOCAL
 OFFLINE_MODE=false
 MATHJAX_VERSION=3
 ```
@@ -314,7 +314,7 @@ Key architectural points:
 | Variable | Values | Effect |
 |---|---|---|
 | `VITE_ENV` | `DEV` / `PROD` | General env flag, exposed to client |
-| `AUTHOR_MODE` | `true` / `false` | Enables source-linking tooltips; loads server middleware |
+| `PLACE` | `LOCAL` / `EDITOR_SERVER` / `APP_SERVER` | Selects desktop source links, editor provenance, or public app |
 | `OFFLINE_MODE` | `true` / `false` | Use local MathJax copy instead of CDN |
 | `MATHJAX_VERSION` | `3` / `4` | Which local MathJax version to use |
 
@@ -325,7 +325,7 @@ Key architectural points:
 | `useShowMore` | Controls lazy-loading of article sections after the first |
 | `useExercises` | Exercise expand/collapse state |
 | `usePrevNextPage` | Previous/next chapter navigation links |
-| `useAuthorMode` | Reads `VITE_AUTHOR_MODE` |
+| `useLocalMode` | Reads `PLACE` |
 | `useNoScrollRestoration` | Disables scroll restoration on the TOC page |
 | `useBreadcrumbs` | Current section breadcrumb trail |
 | `useContainerWidth` / `useMainColumnWidth` | Responsive layout width signals |

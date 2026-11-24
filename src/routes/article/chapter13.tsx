@@ -2054,7 +2054,7 @@ export default function __Chapter13__() {
               <span class="t-3003-c">
                 The coordinate transformations are
                 <span class="t-3003">
-                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_2_.wly:45:9
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_2_.wly:46:9
                 </span>
               </span>
               {" "}

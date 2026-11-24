@@ -331,9 +331,31 @@
         chapter=>>classical-circle-theorems
 
     |> HeaderBlob
-        |> img
-            src=non-build-img/toilet_v83.png
-            alt=toilet scroll calculus
+        |> div
+            class=header-logo-parts
+            role=img
+            aria-label=toilet scroll calculus
+
+            |> div
+                class=header-logo-lettering
+                aria-hidden=true
+
+                |> span
+                    toilet
+                |> span
+                    scroll
+                |> span
+                    calculus
+
+            |> img
+                class=header-logo-roll
+                src=non-build-img/header-roll-v1.png
+                alt=
+
+            |> img
+                class=header-logo-phone
+                src=non-build-img/header-phone-sigma-v1.svg
+                alt=
 
     !! Previous text-only HeaderBlob (Allura)
     !! |> HeaderBlob
