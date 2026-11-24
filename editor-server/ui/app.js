@@ -76,8 +76,10 @@ function update() {
     ? `${dirty().length ? dirty().length + " edited file(s)" : "Committed"} · ${state.revision?.slice(0, 8) || ""}`
     : "Choose an existing .wly file.";
   $("#commit").disabled = $("#discard").disabled = !dirty().length;
-  $("#source-build").disabled = $("#build").disabled =
-    !!state.job || !state.branch;
+  $("#clean-build-cache").disabled =
+    $("#source-build").disabled =
+    $("#build").disabled =
+      !!state.job || !state.branch;
   $("#file-picker").textContent = state.file || "Choose a .wly file ▾";
   $("#editor").disabled = !state.file;
   $("#build-settings").hidden = !state.branch;
@@ -489,3 +491,11 @@ $("#custom-command").oninput = () => {
 };
 $("#goggles").onclick = () => goggles(!state.goggles);
 perform(boot);
+
+$("#clean-build-cache").onclick = () =>
+  perform(async () => {
+    await api("clean-build-cache", { branch: state.branch });
+    notice(
+      "Build cache cleared. The next build starts fresh. Source and previews are unchanged.",
+    );
+  });

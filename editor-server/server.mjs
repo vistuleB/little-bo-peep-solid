@@ -201,6 +201,8 @@ const server = http.createServer(async (req, res) => {
         const data = await body(req);
         if (url.pathname === "/api/build")
           return json(res, 202, await builds.start(data.branch, data.command));
+        if (url.pathname === "/api/clean-build-cache")
+          return json(res, 200, await builds.clean(data.branch));
         const value = await ws.exclusive(async () => {
           switch (url.pathname) {
             case "/api/refresh":

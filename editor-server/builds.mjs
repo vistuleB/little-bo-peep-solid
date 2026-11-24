@@ -10,16 +10,43 @@ export class Builds {
     this.workspace = workspace;
     this.jobs = new Map();
   }
+  busy() {
+    return (
+      this.starting ||
+      this.cleaning ||
+      [...this.jobs.values()].some((job) =>
+        ["queued", "building"].includes(job.status),
+      )
+    );
+  }
+  async clean(branch) {
+    if (this.busy())
+      throw new Error("Wait for the current build or cache cleanup to finish.");
+    if (!Object.hasOwn(this.workspace.state.branches, branch))
+      throw new Error("Unknown branch.");
+    this.cleaning = true;
+    try {
+      const ws = this.workspace;
+      await ws.exclusive(async () => {
+        const dir = path.join(ws.root, "build-workspaces", idFor(branch));
+        if (await exists(path.join(dir, ".git")))
+          await ws.git(["worktree", "remove", "--force", dir]);
+        else await fs.rm(dir, { recursive: true, force: true });
+        await fs.rm(
+          path.join(ws.root, "build-cache", idFor(branch) + ".json"),
+          { force: true },
+        );
+      });
+      return { ok: true };
+    } finally {
+      this.cleaning = false;
+    }
+  }
   async start(branch, command) {
     const ws = this.workspace;
     buildArguments(command);
-    if (
-      this.starting ||
-      [...this.jobs.values()].some((j) =>
-        ["queued", "building"].includes(j.status),
-      )
-    )
-      throw new Error("A build is already running.");
+    if (this.busy())
+      throw new Error("A build or cache cleanup is already running.");
     this.starting = true;
     let revision;
     try {

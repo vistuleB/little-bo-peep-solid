@@ -51,3 +51,5 @@ The repository is trusted executable code: builds run its npm scripts and Gleam 
 ## Checks
 
 `npm run test:editor` uses a disposable local bare remote. It tests command rejection, optimistic commits, sync, divergent merges, conflict isolation, continued editing, missing branches, and restart persistence. No test pushes to GitHub.
+
+“Clean build cache” on the branch page removes only the selected branch’s detached build workspace and dependency cache stamp. It is unavailable during builds; the next build reinstalls dependencies. Source drafts, Git history, browser edits, and published previews are preserved.
