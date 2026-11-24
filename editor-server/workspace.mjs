@@ -125,7 +125,11 @@ export class Workspace {
         ...(await this.remoteBranches()),
         ...Object.keys(this.state.branches),
       ]),
-    ].sort();
+    ].sort(
+      (a, b) =>
+        (this.state.branches[b]?.lastUsed || 0) -
+          (this.state.branches[a]?.lastUsed || 0) || a.localeCompare(b),
+    );
     return Promise.all(
       names.map(async (name) => {
         const record = this.state.branches[name];
@@ -150,6 +154,7 @@ export class Workspace {
           behind,
           remoteMissing: !remoteExists,
           opened: !!record,
+          lastUsed: record?.lastUsed || null,
           command: record?.command || "gleam run",
           commands: record?.commands || ["gleam run"],
           preview: record?.preview || null,
@@ -157,6 +162,17 @@ export class Workspace {
         };
       }),
     );
+  }
+  // Only explicit UI selection counts as use. Internal opens for builds,
+  // source reads and background work must not reshuffle the menu.
+  async select(name) {
+    const record = await this.open(name);
+    record.lastUsed = Math.max(
+      Date.now(),
+      ...Object.values(this.state.branches).map((b) => (b.lastUsed || 0) + 1),
+    );
+    await this.save();
+    return record;
   }
   async open(name) {
     if (this.state.branches[name]) return this.state.branches[name];
