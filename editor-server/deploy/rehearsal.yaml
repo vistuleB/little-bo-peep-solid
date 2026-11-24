@@ -1,0 +1,6 @@
+services:
+  editor:
+    environment:
+      EDITOR_REPO_URL: /data/fixture/remote.git
+    volumes:
+      - ../../.editor-data/container-rehearsal:/fixture:ro
