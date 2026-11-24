@@ -149,12 +149,36 @@ export class Builds {
       }
       // Gleam checks source/dependency/compiler changes against its retained build cache.
       log("Using persistent Gleam build cache.\n");
-      await this.execute(
-        "gleam",
-        buildArguments(job.command),
-        path.join(dir, "renderer"),
-        options,
-      );
+      const rendererDir = path.join(dir, "renderer");
+      const render = () =>
+        this.execute(
+          "gleam",
+          buildArguments(job.command),
+          rendererDir,
+          options,
+        );
+      try {
+        await render();
+      } catch (error) {
+        // Gleam's package index can survive a partially deleted package cache.
+        // Retry only this cache-specific IO failure, never source/compiler errors.
+        if (
+          !error.message.includes("File IO failure") ||
+          !error.message.includes("No such file or directory") ||
+          !error.message.includes(
+            path.join(rendererDir, "build", "packages") + path.sep,
+          )
+        )
+          throw error;
+        log(
+          "\nIncomplete Gleam package cache; clearing it and retrying once.\n",
+        );
+        await fs.rm(path.join(rendererDir, "build"), {
+          recursive: true,
+          force: true,
+        });
+        await render();
+      }
       await this.execute("npm", ["run", "build"], dir, options);
       const manifest = await sourceManifest(dir, job);
       const publicDir = path.join(ws.root, "previews", job.id);
