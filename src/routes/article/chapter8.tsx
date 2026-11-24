@@ -6,6 +6,7 @@ import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises"
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
+import MathJaxSvgExportTooltip  from "~/components/MathJaxSvgExportTooltip";
 import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
@@ -25,23 +26,45 @@ export default function __Chapter8__() {
       path="/article/chapter8"
     >
       <ArticleTitle banner="Chapter 8:">
-        Dimensional Analysis
+        <span class="t-3003-c">
+          Dimensional Analysis
+          <span class="t-3003">
+            ./src/content/ch6/__parent.wly:2:11
+          </span>
+        </span>
       </ArticleTitle>
       <Section id="section-1">
         <OuterP>
           <b>
-            The topic.
+            <span class="t-3003-c">
+              The topic.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:2:6
+              </span>
+            </span>
           </b>
           {" "}
           A
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          dimension
+          <span class="t-3003-c">
+            dimension
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:5:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          is a category of units such as “time”, as
+          <span class="t-3003-c">
+            is a category of units such as “time”, as
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:7:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           touched upon in the 
           {" "}
           <OutChapterLink
@@ -56,11 +79,23 @@ export default function __Chapter8__() {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          dimensional analysis
+          <span class="t-3003-c">
+            dimensional analysis
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:12:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          is that of analyzing the units within a mathematical 
+          <span class="t-3003-c">
+            is that of analyzing the units within a mathematical {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:14:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           expression to uncover contradictions (pointing
           to upstream errors) and/or conversely to offer
           validation.
@@ -70,7 +105,12 @@ export default function __Chapter8__() {
       <Section id="section-2">
         <OuterP>
           <b>
-            Notation: function signatures.
+            <span class="t-3003-c">
+              Notation: function signatures.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:22:6
+              </span>
+            </span>
           </b>
           {" "}
           We associate units not only with numbers, but also with functions:
@@ -97,10 +137,16 @@ export default function __Chapter8__() {
           $$
           f : [\A] \ra [\B]
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          to indicate that {" "}
+          <span class="t-3003-c">
+            to indicate that {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:31:5
+            </span>
+          </span>
           <Math>
             $f$
           </Math>
@@ -136,11 +182,21 @@ export default function __Chapter8__() {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          signature
+          <span class="t-3003-c">
+            signature
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:35:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          of {" "}
+          <span class="t-3003-c">
+            of {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:37:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $f$
@@ -154,18 +210,33 @@ export default function __Chapter8__() {
             <b>
               Example 1.
             </b>
+            {" "}{" "}
             {" "}
-            If
+            {" "}
+            <span class="t-3003-c">
+              If
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:42:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             z : [\lbs] \ra [\pounds]
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            then its inputs denote pounds, the measure of weight,
+            <span class="t-3003-c">
+              then its inputs denote pounds, the measure of weight,
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:48:9
+              </span>
+            </span>
+            {" "}
+            {" "}
             and its outputs pounds {" "}
             <i>
               sterling
@@ -187,7 +258,12 @@ const Rest = () => {
       <Section id="section-3">
         <OuterP>
           <b>
-            Dimensionless units.
+            <span class="t-3003-c">
+              Dimensionless units.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:54:6
+              </span>
+            </span>
           </b>
           {" "}
           We write {" "}
@@ -202,14 +278,23 @@ const Rest = () => {
           $$
           \large \cos : [1] \ra [1]
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          takes a ratio of arc length to radius—the radian—and returns
+          <span class="t-3003-c">
+            takes a ratio of arc length to radius—the radian—and returns
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:62:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           a ratio of adjacent length to hypotenuse*. Both are “length over length”.
           The outputs of sin, tan, etc., are dimensionless for the same reason.
           <ImageLeft
             src="/build-img/svgo-svg/aIgf.svg"
+            local_url="./images/c6_radian_dimensionless_ratio_cloud_v2.svg"
             intrinsicWidth={600}
             intrinsicHeight={500}
           />
@@ -217,7 +302,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <i>
-            *Note.
+            <span class="t-3003-c">
+              *Note.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:71:6
+              </span>
+            </span>
           </i>
           {" "} To be precise, these “lengths” are actually
           coordinate changes that may be negative—except for the
@@ -250,7 +340,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <i>
-            **Second Note.
+            <span class="t-3003-c">
+              **Second Note.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:81:6
+              </span>
+            </span>
           </i>
           {" "} To get into the weeds—re: clockwise
           vs. counterclockwise—what counts as the “positive” direction
@@ -272,13 +367,21 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/edTN.svg"
+          local_url="./images/c6_true_counterclockwiseness_1.svg"
           intrinsicWidth={400}
           intrinsicHeight={275}
         />
         <Pause />
         <OuterP>
-          What we mean is that if it was our custom to draw the
+          <span class="t-3003-c">
+            What we mean is that if it was our custom to draw the
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:89:5
+            </span>
+          </span>
           {" "}
+          {" "}
+          {" "}{" "}
           <Math>
             $y$
           </Math>
@@ -293,12 +396,20 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/0QSx.svg"
+          local_url="./images/c6_true_counterclockwiseness_2.svg"
           intrinsicWidth={400}
           intrinsicHeight={275}
         />
         <Pause />
         <OuterP>
-          (This actually happens inside of SVG, the
+          <span class="t-3003-c">
+            (This actually happens inside of SVG, the
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:97:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           web standard for so-called “vector graphics”, in which the {" "}
           <Math>
             $y$
@@ -322,6 +433,7 @@ const Rest = () => {
           .)
           <ImageRight
             src="/build-img/svgo-svg/BYVX.svg"
+            local_url="./images/c6_SVG_cloud.svg"
             intrinsicWidth={1500}
             intrinsicHeight={500}
           />
@@ -333,7 +445,14 @@ const Rest = () => {
       <Section id="section-4">
         <OuterP>
           <b>
-            Restrictions imposed on signatures by function
+            <span class="t-3003-c">
+              Restrictions imposed on signatures by function
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:109:6
+              </span>
+            </span>
+            {" "}
+            {" "}
             operations.
           </b>
           {" "}
@@ -344,12 +463,18 @@ const Rest = () => {
         <Image
           src="/build-img/svgo-svg/trfz.svg"
           style="margin-bottom:-1.3em"
+          local_url="./images/c6_equal_inputs_v2.svg"
           intrinsicWidth={300}
           intrinsicHeight={50}
         />
         <Pause />
         <OuterP>
-          For the sum to make sense, {" "}
+          <span class="t-3003-c">
+            For the sum to make sense, {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:122:5
+            </span>
+          </span>
           <Math>
             $f$
           </Math>
@@ -368,13 +493,26 @@ const Rest = () => {
           g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          We cannot add apples to oranges at the output end, either.
+          <span class="t-3003-c">
+            We cannot add apples to oranges at the output end, either.
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:132:5
+            </span>
+          </span>
         </OuterP>
         <OuterP class="indent-10">
-          By contrast, when multiplying two functions we can
+          <span class="t-3003-c">
+            By contrast, when multiplying two functions we can
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:134:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           stomach the output units to be different since
           composite units such as “kilowatt-hour”, “worker-years”, etc,
           exist, and likewise when dividing. 
@@ -385,6 +523,7 @@ const Rest = () => {
         <Image
           src="/tmp-images/c6_flowers_here_bob_v2.svg"
           id="_119_h.a.i_"
+          local_url="./public/tmp-images/c6_flowers_here_bob_v2.svg"
           intrinsicWidth={700}
           intrinsicHeight={883}
         />
@@ -394,8 +533,15 @@ const Rest = () => {
             <b>
               Example 2.
             </b>
+            {" "}{" "}
             {" "}
-            If
+            {" "}
+            <span class="t-3003-c">
+              If
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:148:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock style="margin-bottom:-0.8em;margin-top:-0.2em">
@@ -403,20 +549,32 @@ const Rest = () => {
             \,p : [\underbrace&#123;\te&#123;days&#125;&#125;_&#123;\A&#125;] \ra [\underbrace&#123;\te&#123;dollars&#125;/\te&#123;kg&#125;&#125;_&#123;\B&#125;], \\
             m : [\underbrace&#123;\te&#123;days&#125;&#125;_&#123;\A&#125;] \ra [\underbrace&#123;\te&#123;kg&#125;&#125;_&#123;\C&#125;]\up&#123;1.2&#125;
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            then
+            <span class="t-3003-c">
+              then
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:166:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock style="margin-bottom:-0.4em;margin-top:-0.1em">
             $$
             pm : [\underbrace&#123;\te&#123;days&#125;&#125;_&#123;\A&#125;] \ra [(\underbrace&#123;\te&#123;dollars&#125;/\te&#123;kg&#125;&#125;_&#123;\B&#125;)\underbrace&#123;\te&#123;kg&#125;&#125;_&#123;\C&#125; = \underbrace&#123;\te&#123;dollars&#125;&#125;_&#123;\B\C&#125;]
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            per the “multiplication” cell (second row, first column) of {" "}
+            <span class="t-3003-c">
+              per the “multiplication” cell (second row, first column) of {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:179:9
+              </span>
+            </span>
             <InChapterLink
               href="#_119_h.a.i_"
               class="in-chapter-link"
@@ -429,7 +587,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <i>
-            Note on {" "}
+            <span class="t-3003-c">
+              Note on {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:183:6
+              </span>
+            </span>
             <InChapterLink
               href="#_120_h.a.i_"
               class="in-chapter-link"
@@ -446,10 +609,16 @@ const Rest = () => {
           $$
           p(t)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          is the dollars-per-kilogram price of apples on day {" "}
+          <span class="t-3003-c">
+            is the dollars-per-kilogram price of apples on day {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:188:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $t$
@@ -463,10 +632,16 @@ const Rest = () => {
           $$
           m(t)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          is the number of kilograms purchased on day {" "}
+          <span class="t-3003-c">
+            is the number of kilograms purchased on day {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:192:5
+            </span>
+          </span>
           <Math>
             $t$
           </Math>
@@ -477,10 +652,18 @@ const Rest = () => {
           $$
           (pm)(t) = p(t)m(t)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          is the dollars 
+          <span class="t-3003-c">
+            is the dollars {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:196:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           spent on apples on day {" "}
           <NoBreak>
             <Math>
@@ -496,18 +679,35 @@ const Rest = () => {
       <Section id="section-5">
         <OuterP>
           <b>
-            The unary function operations.
+            <span class="t-3003-c">
+              The unary function operations.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:202:6
+              </span>
+            </span>
           </b>
           {" "}
           We will add two more not-yet-much-discussed
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          unary
+          <span class="t-3003-c">
+            unary
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:205:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          function operations to our list of officially
+          <span class="t-3003-c">
+            function operations to our list of officially
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:207:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           considered function operations, being {" "}
           <i>
             negation
@@ -552,6 +752,7 @@ const Rest = () => {
         <Image
           src="/tmp-images/c6_flowers_here_two_more_v3.svg"
           id="_121_h.a.i_"
+          local_url="./public/tmp-images/c6_flowers_here_two_more_v3.svg"
           intrinsicWidth={700}
           intrinsicHeight={310}
         />
@@ -567,7 +768,12 @@ const Rest = () => {
       >
         <OuterP>
           <b>
-            Differentiation.
+            <span class="t-3003-c">
+              Differentiation.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:224:6
+              </span>
+            </span>
           </b>
           {" "}
           As reviewed in {" "}
@@ -596,20 +802,32 @@ const Rest = () => {
           $$
           f : [\tA] \ra [\tB]
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          if and only if
+          <span class="t-3003-c">
+            if and only if
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:233:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           f' : [\tA] \ra [\tB/\tA]
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          for any units A, B.
+          <span class="t-3003-c">
+            for any units A, B.
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:237:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <Example>
@@ -617,18 +835,33 @@ const Rest = () => {
             <b>
               Example 3.
             </b>
+            {" "}{" "}
             {" "}
-            If
+            {" "}
+            <span class="t-3003-c">
+              If
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:244:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock style="margin-bottom:-0.4em;margin-top:-0.1em">
             $$
             x : [\underbrace&#123;\s&#125;_&#123;\A&#125;] \ra [\underbrace&#123;\m&#125;_&#123;\B&#125;]
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            (“s” = seconds, “m” = meters)
+            <span class="t-3003-c">
+              (“s” = seconds, “m” = meters)
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:252:9
+              </span>
+            </span>
+            {" "}
+            {" "}
             is a differentiable function from {" "}
             <Math>
               $\rr$
@@ -645,18 +878,34 @@ const Rest = () => {
             $$
             x' : [\underbrace&#123;\s&#125;_&#123;\A&#125;] \ra [\underbrace&#123;\m/\s&#125;_&#123;\B/\A&#125;]
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            gives a
+            <span class="t-3003-c">
+              gives a
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:263:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <CentralDisplayItalic>
-            meters per second
+            <span class="t-3003-c">
+              meters per second
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:265:11
+              </span>
+            </span>
           </CentralDisplayItalic>
           <Pause />
           <OuterP>
-            value, per the general rule above.
+            <span class="t-3003-c">
+              value, per the general rule above.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:267:9
+              </span>
+            </span>
           </OuterP>
         </Example>
       </Section>
@@ -666,7 +915,12 @@ const Rest = () => {
       <Section id="section-7">
         <OuterP>
           <b>
-            Operators.
+            <span class="t-3003-c">
+              Operators.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:279:6
+              </span>
+            </span>
           </b>
           {" "}
           On a conceptual note,
@@ -677,30 +931,58 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          operator
+          <span class="t-3003-c">
+            operator
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:286:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          to denote a function that takes other functions as inputs,
+          <span class="t-3003-c">
+            to denote a function that takes other functions as inputs,
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:288:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           we therefore speak of the
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          differentiation operator
+          <span class="t-3003-c">
+            differentiation operator
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:291:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          depicted here as an eye-of-Godzilla flying saucer:
+          <span class="t-3003-c">
+            depicted here as an eye-of-Godzilla flying saucer:
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:293:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <Image
           src="/build-img/svgo-svg/Pl1U.svg"
+          local_url="./images/c6_differentiation_operator_intro_v2.svg"
           intrinsicWidth={520}
           intrinsicHeight={220}
         />
         <Pause />
         <OuterP>
-          The unary operations in {" "}
+          <span class="t-3003-c">
+            The unary operations in {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:298:5
+            </span>
+          </span>
           <InChapterLink
             class="in-chapter-link"
             href="#_121_h.a.i_"
@@ -730,12 +1012,18 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/A7d4.svg"
+          local_url="./images/c6_addition_operator_standalone_v2.svg"
           intrinsicWidth={600}
           intrinsicHeight={235}
         />
         <Pause />
         <OuterP>
-          The two inputs to this operator are the functions {" "}
+          <span class="t-3003-c">
+            The two inputs to this operator are the functions {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:306:5
+            </span>
+          </span>
           <Math>
             $f$
           </Math>
@@ -765,20 +1053,38 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          Operators that take two inputs are called
+          <span class="t-3003-c">
+            Operators that take two inputs are called
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:310:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          binary
+          <span class="t-3003-c">
+            binary
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:312:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          operators, as with the operations in Table 1.1.
+          <span class="t-3003-c">
+            operators, as with the operations in Table 1.1.
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:314:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           This figure summarizes how the operators act on signatures:
         </OuterP>
         <Pause />
         <Image
           src="/build-img/svgo-svg/VuM1.svg"
+          local_url="./images/c6_operators_acting_on_signatures_v2.svg"
           intrinsicWidth={810}
           intrinsicHeight={580}
         />
@@ -791,7 +1097,12 @@ const Rest = () => {
       <Section id="section-8">
         <OuterP>
           <b>
-            The sum rule.
+            <span class="t-3003-c">
+              The sum rule.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:324:6
+              </span>
+            </span>
           </b>
           {" "}
           The {" "}
@@ -805,10 +1116,16 @@ const Rest = () => {
             $$
             (f + g)' = f' + g'
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
         </Boxed>
         <OuterP>
-          for all differentiable functions {" "}
+          <span class="t-3003-c">
+            for all differentiable functions {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:332:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $f$
@@ -824,21 +1141,39 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          To “check the units”, both sides must impose the same signature
+          <span class="t-3003-c">
+            To “check the units”, both sides must impose the same signature
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:372:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           constraints and yield the same final signature.
         </OuterP>
         <OuterP class="indent-10">
-          On the left-hand side,
+          <span class="t-3003-c">
+            On the left-hand side,
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:375:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           f + g
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          imposes signatures of the form
+          <span class="t-3003-c">
+            imposes signatures of the form
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:381:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
@@ -848,10 +1183,16 @@ const Rest = () => {
           g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          as listed in {" "}
+          <span class="t-3003-c">
+            as listed in {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:390:5
+            </span>
+          </span>
           <InChapterLink
             href="#_119_h.a.i_"
             class="in-chapter-link"
@@ -863,7 +1204,14 @@ const Rest = () => {
           impose any new constraints.
         </OuterP>
         <OuterP class="indent-10">
-          On the right-hand side,
+          <span class="t-3003-c">
+            On the right-hand side,
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:426:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           we start by adopting the agnostic point of view that
         </OuterP>
         <Pause />
@@ -874,10 +1222,16 @@ const Rest = () => {
           g : [\C] &amp;\ra [\D] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          for some arbitrary units {" "}
+          <span class="t-3003-c">
+            for some arbitrary units {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:436:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $\A$
@@ -915,40 +1269,64 @@ const Rest = () => {
           g' : [\C] &amp;\ra [\D/\C] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          and the fact that we are taking the sum
+          <span class="t-3003-c">
+            and the fact that we are taking the sum
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:445:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           f' + g'
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          implies
+          <span class="t-3003-c">
+            implies
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:451:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \A\,\,\, = \,\,\,\C
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          and
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:456:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \left[&#123;\B\over\A&#125;\right]\! =\! \left[&#123;\D\over\C&#125;\right]
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          by Table 1.1 again, which, together, imply
+          <span class="t-3003-c">
+            by Table 1.1 again, which, together, imply
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:464:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
@@ -958,10 +1336,16 @@ const Rest = () => {
           \B &amp;= \D \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          ...and we recover the same constraints on {" "}
+          <span class="t-3003-c">
+            ...and we recover the same constraints on {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:473:5
+            </span>
+          </span>
           <Math>
             $f$
           </Math>
@@ -973,7 +1357,12 @@ const Rest = () => {
           exist on the left-hand side!
         </OuterP>
         <OuterP class="indent-10">
-          Assuming now that {" "}
+          <span class="t-3003-c">
+            Assuming now that {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:526:5
+            </span>
+          </span>
           <Math>
             $f$
           </Math>
@@ -992,10 +1381,16 @@ const Rest = () => {
           g : [\A] &amp;\ra [\B] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          as required by either side of the equation, we have
+          <span class="t-3003-c">
+            as required by either side of the equation, we have
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:536:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1005,10 +1400,16 @@ const Rest = () => {
           f' + g' &amp;: [\A] \ra [\tB/\tA]. \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          (For the second line, {" "}
+          <span class="t-3003-c">
+            (For the second line, {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:545:5
+            </span>
+          </span>
           <Math>
             $f'$
           </Math>
@@ -1036,8 +1437,15 @@ const Rest = () => {
             <b>
               Example 4.
             </b>
+            {" "}{" "}
             {" "}
-            Let {" "}
+            {" "}
+            <span class="t-3003-c">
+              Let {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:556:9
+              </span>
+            </span>
             <Math>
               $x_1, x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]$
             </Math>
@@ -1051,10 +1459,18 @@ const Rest = () => {
             \,(x_1 + x_2)' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;], \\
             \,\,x_1' + x_2' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;/\te&#123;s&#125;] \up&#123;1.35&#125;
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            as one can check by first constructing the
+            <span class="t-3003-c">
+              as one can check by first constructing the
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:571:9
+              </span>
+            </span>
+            {" "}
+            {" "}
             signature of {" "}
             <NoBreak>
               <Math>
@@ -1080,12 +1496,24 @@ const Rest = () => {
           </OuterP>
           <Pause />
           <CentralDisplayItalic>
-            the velocity of a sum of two points
+            <span class="t-3003-c">
+              the velocity of a sum of two points
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:576:11
+              </span>
+            </span>
+            {" "}
+            {" "}
             is the sum of their velocities
           </CentralDisplayItalic>
           <Pause />
           <OuterP>
-            with {" "}
+            <span class="t-3003-c">
+              with {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:578:9
+              </span>
+            </span>
             <Math>
               $(x_1+x_2)'$
             </Math>
@@ -1105,28 +1533,47 @@ const Rest = () => {
             <b>
               Example 5.
             </b>
+            {" "}{" "}
             {" "}
-            If
+            {" "}
+            <span class="t-3003-c">
+              If
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:603:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             x_1, x_2 : \rr \ra \rr
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            are given by
+            <span class="t-3003-c">
+              are given by
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:609:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             x_1(t) = |t| = -x_2(t)
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            for all {" "}
+            <span class="t-3003-c">
+              for all {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:615:9
+              </span>
+            </span>
             <Math>
               $t \in \rr$
             </Math>
@@ -1137,10 +1584,16 @@ const Rest = () => {
             $$
             x_2(t) = -|t|
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            in the case of {" "}
+            <span class="t-3003-c">
+              in the case of {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:621:9
+              </span>
+            </span>
             <NoBreak>
               <Math>
                 $x_2$
@@ -1154,10 +1607,18 @@ const Rest = () => {
             $$
             (x_1 + x_2)'
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            is defined
+            <span class="t-3003-c">
+              is defined
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:621:52
+              </span>
+            </span>
+            {" "}
+            {" "}
             at {" "}
             <Math>
               $t = 0$
@@ -1169,10 +1630,18 @@ const Rest = () => {
             $$
             x_1' + x_2'
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            is not. One can best see this 
+            <span class="t-3003-c">
+              is not. One can best see this {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:622:39
+              </span>
+            </span>
+            {" "}
+            {" "}
             directly from the graphs of
             {" "}
             <NoBreak>
@@ -1207,22 +1676,34 @@ const Rest = () => {
           <Pause />
           <Image
             src="/build-img/svgo-svg/aASR3HOTyax4yax47CfYU7nJ.svg"
+            local_url="./images/c6_all_those_x1x2_graphs.svg"
             intrinsicWidth={442}
             intrinsicHeight={945}
           />
           <Pause />
           <OuterP>
-            Thus
+            <span class="t-3003-c">
+              Thus
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:629:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             (x_1 + x_2)' \ne x_1' + x_2'
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            but the “reason”, precisely, is that {" "}
+            <span class="t-3003-c">
+              but the “reason”, precisely, is that {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:635:9
+              </span>
+            </span>
             <Math>
               $x_1$
             </Math>
@@ -1261,7 +1742,12 @@ const Rest = () => {
         <Pause id="_124_h.a.i_" />
         <OuterP>
           <i>
-            Postscript.
+            <span class="t-3003-c">
+              Postscript.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:646:6
+              </span>
+            </span>
           </i>
           {" "} Even if {" "}
           <Math>
@@ -1280,10 +1766,16 @@ const Rest = () => {
             $$
             (f + g)'(x_0) = f'(x_0) + g'(x_0)
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
         </Boxed>
         <OuterP>
-          at all points {" "}
+          <span class="t-3003-c">
+            at all points {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:655:5
+            </span>
+          </span>
           <Math>
             $x_0 \in \rr$
           </Math>
@@ -1313,7 +1805,12 @@ const Rest = () => {
       <Section id="section-9">
         <OuterP>
           <b>
-            The “early afteroon product rule”.
+            <span class="t-3003-c">
+              The “early afteroon product rule”.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:663:6
+              </span>
+            </span>
           </b>
           {" "}
           Gottfried Leibniz, co-inventor of calculus,
@@ -1324,17 +1821,30 @@ const Rest = () => {
             $$
             (fg)' = f'g'
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
         </Boxed>
         <OuterP>
-          which is incorrect, though Leibniz also had the
+          <span class="t-3003-c">
+            which is incorrect, though Leibniz also had the
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:673:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           distinction of making and correcting this
           guess 
           in the span 
           of a single day.
         </OuterP>
         <OuterP class="indent-10">
-          Both sides require the same input units for {" "}
+          <span class="t-3003-c">
+            Both sides require the same input units for {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:682:5
+            </span>
+          </span>
           <Math>
             $f$
           </Math>
@@ -1354,10 +1864,16 @@ const Rest = () => {
           g : [\A] &amp;\ra [\C] \up&#123;1.35&#125;
           \end&#123;aligned&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          So far so good! But
+          <span class="t-3003-c">
+            So far so good! But
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:691:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1368,13 +1884,20 @@ const Rest = () => {
             src="/build-img/svgo-svg/jPk2.svg"
             offsetX="0em"
             atLeastAsWide={true}
+            local_url="./images/c6_fg_prime_signature_cloud_v2.svg"
             intrinsicWidth={400}
             intrinsicHeight={300}
           />
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          whereas
+          <span class="t-3003-c">
+            whereas
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:700:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1385,13 +1908,22 @@ const Rest = () => {
             src="/build-img/svgo-svg/qX4a.svg"
             offsetX="0em"
             atLeastAsWide={true}
+            local_url="./images/c6_f_prime_g_prime_signature_cloud_v2.svg"
             intrinsicWidth={450}
             intrinsicHeight={300}
           />
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          The rule cannot be correct: the two sides produce different
+          <span class="t-3003-c">
+            The rule cannot be correct: the two sides produce different
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:709:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           units for the same functions {" "}
           <Math>
             $f$
@@ -1410,8 +1942,15 @@ const Rest = () => {
             <b>
               Example 6.
             </b>
+            {" "}{" "}
             {" "}
-            With {" "}
+            {" "}
+            <span class="t-3003-c">
+              With {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:715:9
+              </span>
+            </span>
             <Math>
               $x_1, x_2 : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]$
             </Math>
@@ -1430,20 +1969,34 @@ const Rest = () => {
             $$
             (x_1x_2)' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2/\te&#123;s&#125;]
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            whereas
+            <span class="t-3003-c">
+              whereas
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:722:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             x_1'x_2' : [\te&#123;s&#125;] \ra [\te&#123;m&#125;^2/\te&#123;s&#125;^2]
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            so there is no way these two quantities could
+            <span class="t-3003-c">
+              so there is no way these two quantities could
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:728:9
+              </span>
+            </span>
+            {" "}
+            {" "}
             ever be equal, in general. (For example,
             changing from counting time in seconds to
             counting it in hours, while correspondingly
@@ -1492,6 +2045,7 @@ const Rest = () => {
             <ImageLeft
               src="/build-img/svgo-svg/U86u.svg"
               offsetX="1em"
+              local_url="./images/c6_x1x2_3600_cloud.svg"
               intrinsicWidth={800}
               intrinsicHeight={550}
             />
@@ -1499,7 +2053,12 @@ const Rest = () => {
           <Pause />
           <OuterP>
             <i>
-              Note on {" "}
+              <span class="t-3003-c">
+                Note on {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6.wly:747:10
+                </span>
+              </span>
               <InChapterLink
                 href="#_125_h.a.i_"
                 class="in-chapter-link"
@@ -1527,10 +2086,18 @@ const Rest = () => {
             $$
             (x_1x_2)'' = x_1'x_2'
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            is still wrong. Dimensional analysis can debunk an equation;
+            <span class="t-3003-c">
+              is still wrong. Dimensional analysis can debunk an equation;
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:754:9
+              </span>
+            </span>
+            {" "}
+            {" "}
             matching dimensions cannot prove it.
           </OuterP>
         </Example>
@@ -1541,7 +2108,12 @@ const Rest = () => {
       <Section id="section-10">
         <OuterP>
           <b>
-            The chain rule.
+            <span class="t-3003-c">
+              The chain rule.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:825:6
+              </span>
+            </span>
           </b>
           {" "}
           We would like a formula for
@@ -1551,15 +2123,30 @@ const Rest = () => {
           $$
           (f \circ g)'
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          similar to the sum rule,
+          <span class="t-3003-c">
+            similar to the sum rule,
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:832:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           and we can try guessing such a formula using
           dimensional analysis.
         </OuterP>
         <OuterP class="indent-10">
-          To be clear, such a formula should use only the
+          <span class="t-3003-c">
+            To be clear, such a formula should use only the
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:836:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           “atomic components”
         </OuterP>
         <Pause />
@@ -1567,10 +2154,18 @@ const Rest = () => {
           $$
           f,\,g,\,f',\,g'
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          on its right-hand side. These are the “lego pieces”
+          <span class="t-3003-c">
+            on its right-hand side. These are the “lego pieces”
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:843:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           from which we seek to assemble {" "}
           <NoBreak>
             <Math>
@@ -1580,7 +2175,12 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          The “lego pieces” have generic signatures
+          <span class="t-3003-c">
+            The “lego pieces” have generic signatures
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:859:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1592,10 +2192,16 @@ const Rest = () => {
           g'           :  [\tA] \ra [\tB/\tA] \up&#123;1.35&#125;
           \end&#123;gathered&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          (cf. {" "}
+          <span class="t-3003-c">
+            (cf. {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:871:5
+            </span>
+          </span>
           <InChapterLink
             href="#_119_h.a.i_"
             class="in-chapter-link"
@@ -1609,20 +2215,34 @@ const Rest = () => {
           $$
           (f \circ g)'
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          has signature
+          <span class="t-3003-c">
+            has signature
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:877:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           [\tA] \ra [\tC/\tA]
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          as is easy to check—this is not the signature
+          <span class="t-3003-c">
+            as is easy to check—this is not the signature
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:883:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           of any of the pieces, but since
         </OuterP>
         <Pause />
@@ -1630,10 +2250,16 @@ const Rest = () => {
           $$
           [\tC/\tA] = \left[&#123;\tC\over \tB&#125;\right]\cdot\left[&#123;\tB\over\tA&#125;\right]
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          we might multiply {" "}
+          <span class="t-3003-c">
+            we might multiply {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:902:5
+            </span>
+          </span>
           <Math>
             $f'$
           </Math>
@@ -1684,10 +2310,16 @@ const Rest = () => {
           $$
           (f'\circ g)g'
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          which product makes sense because
+          <span class="t-3003-c">
+            which product makes sense because
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:914:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
@@ -1695,10 +2327,16 @@ const Rest = () => {
           \,f'\circ g : [\tA] \ra [\tC/\tB], \\
           g' : [\tA] \ra [\tB/\tA] \up&#123;1.35&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          have the same input units {" "}
+          <span class="t-3003-c">
+            have the same input units {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:923:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $[\A]$
@@ -1717,22 +2355,34 @@ const Rest = () => {
           <ImageRight
             src="/build-img/svgo-svg/zysM.svg"
             offsetX="0em"
+            local_url="./images/c6_chain_rule_units_cloud.svg"
             intrinsicWidth={500}
             intrinsicHeight={300}
           />
         </OuterP>
         <OuterP class="indent-10">
-          It turns out that this is the correct formula:
+          <span class="t-3003-c">
+            It turns out that this is the correct formula:
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:931:5
+            </span>
+          </span>
         </OuterP>
         <Boxed>
           <MathBlock>
             $$
             (f \circ g)' = (f'\circ g)g'
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
         </Boxed>
         <OuterP>
-          ...for all differentiable functions {" "}
+          <span class="t-3003-c">
+            ...for all differentiable functions {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:938:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $f$
@@ -1759,18 +2409,31 @@ const Rest = () => {
             <b>
               Example 7.
             </b>
+            {" "}{" "}
             {" "}
-            Say that a cute
+            {" "}
+            <span class="t-3003-c">
+              Say that a cute
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:942:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <Image
             src="/build-img/svgo-svg/kL1E.svg"
+            local_url="./images/c6_solo_RAT.svg"
             intrinsicWidth={180}
             intrinsicHeight="164.25"
           />
           <Pause />
           <OuterP>
-            is running a fundraising race. Let {" "}
+            <span class="t-3003-c">
+              is running a fundraising race. Let {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:947:9
+              </span>
+            </span>
             <Math>
               $f$
             </Math>
@@ -1790,20 +2453,34 @@ const Rest = () => {
             \,g : [\te&#123;s&#125;] \ra [\te&#123;m&#125;]. \up&#123;1.35&#125;
             \end&#123;gathered&#125;
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            Then
+            <span class="t-3003-c">
+              Then
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:958:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             f\circ g
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            gives money raised as a function of time,
+            <span class="t-3003-c">
+              gives money raised as a function of time,
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:958:26
+              </span>
+            </span>
+            {" "}
+            {" "}
             and
           </OuterP>
           <Pause />
@@ -1811,23 +2488,42 @@ const Rest = () => {
             $$
             (f\circ g)'
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            gives the fundraising rate in dollars per second.
+            <span class="t-3003-c">
+              gives the fundraising rate in dollars per second.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:962:9
+              </span>
+            </span>
           </OuterP>
           <OuterP class="indent-10">
-            Meanwhile,
+            <span class="t-3003-c">
+              Meanwhile,
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:965:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             f'
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            gives the dollars-per-meter rate as
+            <span class="t-3003-c">
+              gives the dollars-per-meter rate as
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:965:26
+              </span>
+            </span>
+            {" "}
+            {" "}
             a function of position, so
           </OuterP>
           <Pause />
@@ -1835,10 +2531,18 @@ const Rest = () => {
             $$
             f'(g(t_0))
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            is the dollars-per-meter rate at which the rat is
+            <span class="t-3003-c">
+              is the dollars-per-meter rate at which the rat is
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:974:9
+              </span>
+            </span>
+            {" "}
+            {" "}
             fundraising at time {" "}
             <NoBreak>
               <Math>
@@ -1860,7 +2564,14 @@ const Rest = () => {
             </NoBreak>
           </OuterP>
           <OuterP class="indent-10">
-            As for the dollars-per-second rate, one can obtain
+            <span class="t-3003-c">
+              As for the dollars-per-second rate, one can obtain
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:978:9
+              </span>
+            </span>
+            {" "}
+            {" "}
             that by multiplying the dollars-per-meter rate by the
             rat's meters-per-second velocity, i.e., by taking the product
           </OuterP>
@@ -1869,10 +2580,16 @@ const Rest = () => {
             $$
             f'(g(t_0))g'(t_0)
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            which is indeed {" "}
+            <span class="t-3003-c">
+              which is indeed {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:986:9
+              </span>
+            </span>
             <NoBreak>
               <Math>
                 $(f\circ g)'(t_0)$
@@ -1885,12 +2602,18 @@ const Rest = () => {
           <Image
             width="530px"
             src="/build-img/svgo-svg/un6E.svg"
+            local_url="./images/c6_explained_rat_equation.svg"
             intrinsicWidth={680}
             intrinsicHeight={145}
           />
           <Pause />
           <OuterP>
-            Since {" "}
+            <span class="t-3003-c">
+              Since {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:992:9
+              </span>
+            </span>
             <NoBreak>
               <Math>
                 $f'(g(t_0)) = (f'\circ g)(t_0)$
@@ -1913,7 +2636,12 @@ const Rest = () => {
           <Pause />
           <OuterP>
             <i>
-              Note.
+              <span class="t-3003-c">
+                Note.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6.wly:997:10
+                </span>
+              </span>
             </i>
             {" "} Another common way to write the chain rule is
           </OuterP>
@@ -1922,10 +2650,16 @@ const Rest = () => {
               $$
               (f \circ g)'(x) = f'(g(x))g'(x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
           </Boxed>
           <OuterP>
-            as just seen with {" "}
+            <span class="t-3003-c">
+              as just seen with {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1006:9
+              </span>
+            </span>
             <NoBreak>
               “
               <Math>
@@ -1947,57 +2681,124 @@ const Rest = () => {
           </OuterP>
           <Pause />
           <CentralDisplayItalic>
-            for {" "}
+            <span class="t-3003-c">
+              for {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1020:11
+              </span>
+            </span>
             <NoBreak>
               <Math>
                 $f$
               </Math>
-              ,
+              <span class="t-3003-c">
+                ,
+                <span class="t-3003">
+                  ./src/content/ch6/ch6.wly:1020:18
+                </span>
+              </span>
             </NoBreak>
-            {" "} {" "}
+            <span class="t-3003-c">
+              {" "} {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1020:18
+              </span>
+            </span>
             <Math>
               $g : \rr \ra \rr$
             </Math>
-            {" "} differentiable
+            <span class="t-3003-c">
+              {" "} differentiable
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1020:37
+              </span>
+            </span>
           </CentralDisplayItalic>
           <Pause />
           <OuterP>
-            can be replaced by the more surgical
+            <span class="t-3003-c">
+              can be replaced by the more surgical
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1022:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <CentralDisplayItalic>
-            for {" "}
+            <span class="t-3003-c">
+              for {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1024:11
+              </span>
+            </span>
             <NoBreak>
               <Math>
                 $f, g : \rr \ra \rr$
               </Math>
-              ,
+              <span class="t-3003-c">
+                ,
+                <span class="t-3003">
+                  ./src/content/ch6/ch6.wly:1024:35
+                </span>
+              </span>
             </NoBreak>
-            {" "} {" "}
+            <span class="t-3003-c">
+              {" "} {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1024:35
+              </span>
+            </span>
             <Math>
               $x \in \rr$
             </Math>
-            {" "} such that {" "}
+            <span class="t-3003-c">
+              {" "} such that {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1024:48
+              </span>
+            </span>
             <Math>
               $g$
             </Math>
-            {" "} is 
+            <span class="t-3003-c">
+              {" "} is {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1024:62
+              </span>
+            </span>
+            {" "}
+            {" "}
             differentiable at {" "}
             <Math>
               $x$
             </Math>
-            {" "} and {" "}
+            <span class="t-3003-c">
+              {" "} and {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1025:30
+              </span>
+            </span>
             <Math>
               $f$
             </Math>
-            {" "} differentiable at {" "}
+            <span class="t-3003-c">
+              {" "} differentiable at {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1025:38
+              </span>
+            </span>
             <Math>
               $g(x)$
             </Math>
           </CentralDisplayItalic>
           <Pause />
           <OuterP>
-            similarly to the {" "}
+            <span class="t-3003-c">
+              similarly to the {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1027:9
+              </span>
+            </span>
             <InChapterLink
               class="in-chapter-link"
               href="#_124_h.a.i_"
@@ -2015,8 +2816,15 @@ const Rest = () => {
             <b>
               Example 8.
             </b>
+            {" "}{" "}
             {" "}
-            We have
+            {" "}
+            <span class="t-3003-c">
+              We have
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1079:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
@@ -2027,13 +2835,20 @@ const Rest = () => {
               src="/build-img/svgo-svg/_iNd.svg"
               offsetX="2em"
               atLeastAsWide={true}
+              local_url="./images/c6_chain_rule_reminder_cloud.svg"
               intrinsicWidth={400}
               intrinsicHeight={300}
             />
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            by {" "}
+            <span class="t-3003-c">
+              by {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1088:9
+              </span>
+            </span>
             <InChapterLink
               class="in-chapter-link"
               href="#section-10"
@@ -2055,10 +2870,16 @@ const Rest = () => {
             $$
             (\cos \circ \cos)' = (\sin \circ \cos)\sin,
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            or, evaluated at {" "}
+            <span class="t-3003-c">
+              or, evaluated at {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1095:9
+              </span>
+            </span>
             <NoBreak>
               <Math>
                 $x$
@@ -2071,6 +2892,7 @@ const Rest = () => {
             $$
             (\cos \circ \cos)'(x) = \sin(\cos(x))\sin(x).
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
         </Example>
         <Pause />
@@ -2079,18 +2901,31 @@ const Rest = () => {
             <b>
               Example 9.
             </b>
+            {" "}{" "}
             {" "}
-            We have
+            {" "}
+            <span class="t-3003-c">
+              We have
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1106:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             (\cos \circ \cos)'(2.5) = \sin(\cos(2.5))\cdot \sin(2.5) = -0.429\ldots
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            by {" "}
+            <span class="t-3003-c">
+              by {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1112:9
+              </span>
+            </span>
             <InChapterLink
               href="#_126_h.a.i_"
               class="in-chapter-link"
@@ -2111,6 +2946,7 @@ const Rest = () => {
           <Pause />
           <Image
             src="/build-img/svgo-svg/0dwB.svg"
+            local_url="./images/c6_sin_of_sin_graph.svg"
             intrinsicWidth="892.21315"
             intrinsicHeight="163.02727"
           />
@@ -2119,7 +2955,12 @@ const Rest = () => {
           <Pause />
           <OuterP>
             <i>
-              Note on {" "}
+              <span class="t-3003-c">
+                Note on {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6.wly:1126:10
+                </span>
+              </span>
               <InChapterLink
                 href="#_127_h.a.i_"
                 class="in-chapter-link"
@@ -2156,12 +2997,18 @@ const Rest = () => {
           <Pause />
           <Image
             src="/build-img/svgo-svg/khDb.svg"
+            local_url="./images/c6_windshield_wiper.svg"
             intrinsicWidth={400}
             intrinsicHeight={300}
           />
           <Pause />
           <OuterP>
-            Since {" "}
+            <span class="t-3003-c">
+              Since {" "}
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1134:9
+              </span>
+            </span>
             <NoBreak>
               <Math>
                 $-1 \leq \cos(t) \leq 1$
@@ -2198,10 +3045,16 @@ const Rest = () => {
             $$
             \cos(\pm1) \approx 0.54 \quad\te&#123;to&#125;\quad \cos(0) = 1,
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            producing the compressed sinusoid-like wave above.
+            <span class="t-3003-c">
+              producing the compressed sinusoid-like wave above.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1141:9
+              </span>
+            </span>
           </OuterP>
         </Example>
       </Section>
@@ -2211,7 +3064,12 @@ const Rest = () => {
       <Section id="section-11">
         <OuterP>
           <b>
-            Epilogue: the dimensionless plane.
+            <span class="t-3003-c">
+              Epilogue: the dimensionless plane.
+              <span class="t-3003">
+                ./src/content/ch6/ch6.wly:1145:6
+              </span>
+            </span>
           </b>
           {" "}
           Imagine that we define the radian value of an
@@ -2219,19 +3077,41 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          length subtended by the angle on the unit circle
+          <span class="t-3003-c">
+            length subtended by the angle on the unit circle
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1149:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          as opposed to
+          <span class="t-3003-c">
+            as opposed to
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1151:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          arc length over radius
+          <span class="t-3003-c">
+            arc length over radius
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1153:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          where the latter is the more traditional definition.
+          <span class="t-3003-c">
+            where the latter is the more traditional definition.
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1155:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           In the latter definition, 
           the dimensions of the radian are
         </OuterP>
@@ -2240,10 +3120,18 @@ const Rest = () => {
           $$
           &#123;\te&#123;length&#125;\over\te&#123;length&#125;&#125; = \te&#123;dimensionless&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          whereas under the first definition it sounds like
+          <span class="t-3003-c">
+            whereas under the first definition it sounds like
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1164:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           the dimensions are simply “length”. BUT: “length”
           {" "}
           <i>
@@ -2265,7 +3153,14 @@ const Rest = () => {
           Whoo-hoo!
         </OuterP>
         <OuterP class="indent-10">
-          Relatedly, you may have seen axes labelled “time/s” instead
+          <span class="t-3003-c">
+            Relatedly, you may have seen axes labelled “time/s” instead
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1174:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           of “time {" "}
           <NoBreak>
             <Math>
@@ -2278,12 +3173,20 @@ const Rest = () => {
         <Image
           src="/build-img/svgo-svg/oqAL.svg"
           style="margin-top:-0.5em"
+          local_url="./images/c6_dimensionless_plane_1_v1.svg"
           intrinsicWidth={600}
           intrinsicHeight={465}
         />
         <Pause />
         <OuterP>
-          Dividing time by the unit “s” takes out the units, leaving a pure
+          <span class="t-3003-c">
+            Dividing time by the unit “s” takes out the units, leaving a pure
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1181:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           number that fits in the dimensionless plane. For example, the
           coordinate {" "}
           <Math>
@@ -2296,10 +3199,16 @@ const Rest = () => {
           $$
           3 = &#123;\te&#123;time&#125;\over\te&#123;s&#125;&#125; \quad\Longrightarrow\quad \te&#123;time&#125; = 3\te&#123;s&#125;.
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          The coordinate is the pure number {" "}
+          <span class="t-3003-c">
+            The coordinate is the pure number {" "}
+            <span class="t-3003">
+              ./src/content/ch6/ch6.wly:1189:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $3$
@@ -2323,18 +3232,33 @@ const Rest = () => {
               <b>
                 Exercise 1.
               </b>
+              {" "}{" "}
               {" "}
-              If the expression
+              {" "}
+              <span class="t-3003-c">
+                If the expression
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large \cos(\omega t)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is to be dimensionally consistent,
+              <span class="t-3003-c">
+                is to be dimensionally consistent,
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:10:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               and if {" "}
               <Math>
                 $t$
@@ -2349,27 +3273,44 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:16:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos : [1] \ra [1]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or
+              <span class="t-3003-c">
+                or
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:22:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos : [\rad] \ra [1]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              rephrased (we have {" "}
+              <span class="t-3003-c">
+                rephrased (we have {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:28:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $[\rad] = [1]$
@@ -2384,19 +3325,39 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              radians per second
+              <span class="t-3003-c">
+                radians per second
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:30:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              or
+              <span class="t-3003-c">
+                or
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:32:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              per second
+              <span class="t-3003-c">
+                per second
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:34:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              (equiv.) in order to cancel out the seconds in {" "}
+              <span class="t-3003-c">
+                (equiv.) in order to cancel out the seconds in {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_omega_.wly:36:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -2408,6 +3369,7 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/5qHf.svg"
+              local_url="./images/e6_bottom_radian_cloud.svg"
               intrinsicWidth={400}
               intrinsicHeight={150}
             />
@@ -2419,8 +3381,15 @@ const Rest = () => {
               <b>
                 Exercise 2.
               </b>
+              {" "}{" "}
               {" "}
-              If {" "}
+              {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_t_over_v_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $x$
               </Math>
@@ -2440,7 +3409,14 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since velocity has dimensions
+              <span class="t-3003-c">
+                Since velocity has dimensions
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_t_over_v_.wly:9:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               “distance over time”, which cancels the “distance”
               dimension on top, it is “time”:
             </OuterP>
@@ -2449,10 +3425,18 @@ const Rest = () => {
               $$
               &#123;\te&#123;DISTANCE&#125;\over\te&#123;SPEED&#125;&#125; = &#123;\te&#123;DISTANCE&#125;\over \left(&#123;\te&#123;DISTANCE&#125; \over &#123;\te&#123;TIME&#125;&#125;&#125;\right)&#125; = &#123;\te&#123;DISTANCE&#125;&#125;\cdot &#123;\te&#123;TIME&#125;\over \te&#123;DISTANCE&#125;&#125; = \te&#123;TIME&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (The greater the velocity, the smaller the amount
+              <span class="t-3003-c">
+                (The greater the velocity, the smaller the amount
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_t_over_v_.wly:17:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               of time.) (Remember: {" "}
               <i>
                 position over velocity is time
@@ -2472,8 +3456,15 @@ const Rest = () => {
               <b>
                 Exercise 3.
               </b>
+              {" "}{" "}
               {" "}
-              If {" "}
+              {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_lorentz_factor_dimensionality_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $v$
               </Math>
@@ -2494,21 +3485,35 @@ const Rest = () => {
               $$
               &#123;1\over \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_lorentz_factor_dimensionality_.wly:15:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;v \over c&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is “speed over speed”, it is dimensionless,
+              <span class="t-3003-c">
+                is “speed over speed”, it is dimensionless,
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_lorentz_factor_dimensionality_.wly:21:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               and since the sums, differences, squares,
               square roots, and reciprocals of dimensionless
               quantities are dimensionless, the 
@@ -2522,8 +3527,17 @@ const Rest = () => {
               <b>
                 Exercise 4.
               </b>
+              {" "}{" "}
               {" "}
-              If units of time and space are chosen
+              {" "}
+              <span class="t-3003-c">
+                If units of time and space are chosen
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_physicist_choose_to_write_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               such that {" "}
               <Math>
                 $c = 1$
@@ -2548,7 +3562,14 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Besides wanting to “remind the general
+              <span class="t-3003-c">
+                Besides wanting to “remind the general
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_physicist_choose_to_write_.wly:38:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               formula”, one reason is
               to keep expressions dimensionally consistent.
               For example, the Lorentz factor
@@ -2558,10 +3579,16 @@ const Rest = () => {
               $$
               &#123;1\over \sqrt&#123;1 - &#123;v^2\over c^2&#125;&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (cf. {" "}
+              <span class="t-3003-c">
+                (cf. {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_physicist_choose_to_write_.wly:47:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_130_h.a.i_"
                 class="in-chapter-link"
@@ -2576,10 +3603,18 @@ const Rest = () => {
               $$
               &#123;1\over \sqrt&#123;1 - v^2&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              if 
+              <span class="t-3003-c">
+                if {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_physicist_choose_to_write_.wly:54:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               taking advantage of {" "}
               <Math>
                 $c = 1$
@@ -2634,18 +3669,31 @@ const Rest = () => {
               <b>
                 Exercise 5.
               </b>
+              {" "}{" "}
               {" "}
-              Can one construct a function of signature
+              {" "}
+              <span class="t-3003-c">
+                Can one construct a function of signature
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               [\s] \ra [1]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              given a function {" "}
+              <span class="t-3003-c">
+                given a function {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:6:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $f : [\s] \ra [\s]$
@@ -2656,7 +3704,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Yes: the functions {" "}
+              <span class="t-3003-c">
+                Yes: the functions {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:13:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $f'$
@@ -2694,10 +3747,16 @@ const Rest = () => {
               $$
               f^0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which is identically {" "}
+              <span class="t-3003-c">
+                which is identically {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:21:9
+                </span>
+              </span>
               <Math>
                 $1$
               </Math>
@@ -2716,10 +3775,16 @@ const Rest = () => {
               $$
               f^n : [\s] \ra [\s^n]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              more generally for all integers {" "}
+              <span class="t-3003-c">
+                more generally for all integers {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_dimensionless_output_.wly:30:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $n$
@@ -2744,19 +3809,34 @@ const Rest = () => {
               <b>
                 Exercise 6.
               </b>
+              {" "}{" "}
               {" "}
-              Can one construct a function of signature
+              {" "}
+              <span class="t-3003-c">
+                Can one construct a function of signature
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_signature_square_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               [\s] \ra [\te&#123;kg&#125;]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              from functions
+              <span class="t-3003-c">
+                from functions
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_signature_square_.wly:5:5
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
                   $f : [\s] \ra [\m]$
@@ -2774,7 +3854,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Yes: one can take {" "}
+              <span class="t-3003-c">
+                Yes: one can take {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_signature_square_.wly:9:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $g \circ f^2$
@@ -2797,19 +3882,34 @@ const Rest = () => {
               <b>
                 Exercise 7.
               </b>
+              {" "}{" "}
               {" "}
-              Can one construct a function of signature
+              {" "}
+              <span class="t-3003-c">
+                Can one construct a function of signature
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_signature_impossible_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               [\s] \ra [\te&#123;kg&#125;]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              from functions
+              <span class="t-3003-c">
+                from functions
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_signature_impossible_.wly:5:5
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
                   $f : [\s] \ra [\m]$
@@ -2827,7 +3927,14 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              👎
+              <span class="t-3003-c">
+                👎
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_signature_impossible_.wly:9:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               It is impossible to manufacture a kilogram
               out of thin air: the only thing that can come
               upstream of {" "}
@@ -2852,19 +3959,34 @@ const Rest = () => {
               <b>
                 Exercise 8.
               </b>
+              {" "}{" "}
               {" "}
-              Can one construct a function of signature
+              {" "}
+              <span class="t-3003-c">
+                Can one construct a function of signature
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_signature_reciprocal_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               [\s] \ra [\te&#123;kg&#125;]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              from functions
+              <span class="t-3003-c">
+                from functions
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_signature_reciprocal_.wly:5:5
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
                   $f : [\s] \ra [\m]$
@@ -2882,7 +4004,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Yes: take {" "}
+              <span class="t-3003-c">
+                Yes: take {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_construct_signature_reciprocal_.wly:9:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $g \circ (1/f)$
@@ -2906,18 +4033,31 @@ const Rest = () => {
               <b>
                 Exercise 9.
               </b>
+              {" "}{" "}
               {" "}
-              Let
+              {" "}
+              <span class="t-3003-c">
+                Let
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               f^&#123;-1&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              stand for the “inverse” of a function {" "}
+              <span class="t-3003-c">
+                stand for the “inverse” of a function {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:10:5
+                </span>
+              </span>
               <Math>
                 $f$
               </Math>
@@ -2934,12 +4074,18 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/bzLT.svg"
+              local_url="./images/e6_f_inverse_distinct.svg"
               intrinsicWidth={450}
               intrinsicHeight={295}
             />
             <Pause />
             <OuterP>
-              The inverse {" "}
+              <span class="t-3003-c">
+                The inverse {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:24:5
+                </span>
+              </span>
               <Math>
                 $f^&#123;-1&#125;$
               </Math>
@@ -2972,12 +4118,18 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/4pb6.svg"
+              local_url="./images/e6_f_inverse_reversed.svg"
               intrinsicWidth={640}
               intrinsicHeight={290}
             />
             <Pause />
             <OuterP>
-              The picture above shows {" "}
+              <span class="t-3003-c">
+                The picture above shows {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:35:5
+                </span>
+              </span>
               <Math>
                 $f^&#123;-1&#125;$
               </Math>
@@ -2992,7 +4144,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The ordinary graph of {" "}
+              <span class="t-3003-c">
+                The ordinary graph of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_graph_introduction_.wly:41:9
+                </span>
+              </span>
               <Math>
                 $f^&#123;-1&#125;$
               </Math>
@@ -3013,6 +4170,7 @@ const Rest = () => {
             <Pause />
             <Image
               src="/tmp-images/e6_f_inverse_upright.svg"
+              local_url="./public/tmp-images/e6_f_inverse_upright.svg"
               intrinsicWidth={440}
               intrinsicHeight={350}
             />
@@ -3024,8 +4182,15 @@ const Rest = () => {
               <b>
                 Exercise 10.
               </b>
+              {" "}{" "}
               {" "}
-              If {" "}
+              {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $f : [\A] \ra [\B]$
               </Math>
@@ -3044,15 +4209,28 @@ const Rest = () => {
               $$
               f^&#123;-1&#125;,\qquad f^&#123;-1&#125;\circ f,\qquad f\circ f^&#123;-1&#125;,\qquad (f^&#123;-1&#125;)'?
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (Assume the inverse is differentiable for the last part.)
+              <span class="t-3003-c">
+                (Assume the inverse is differentiable for the last part.)
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:11:5
+                </span>
+              </span>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The inverse swaps the roles of inputs
+              <span class="t-3003-c">
+                The inverse swaps the roles of inputs
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:15:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               and outputs. Thus
             </OuterP>
             <Pause />
@@ -3060,10 +4238,16 @@ const Rest = () => {
               $$
               f^&#123;-1&#125; : [\B] \ra [\A]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:22:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3074,10 +4258,16 @@ const Rest = () => {
               (f^&#123;-1&#125;)' : [\B] \ra [\A/\B]\up&#123;1.35&#125;
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by the usual rules for signatures.
+              <span class="t-3003-c">
+                by the usual rules for signatures.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_signatures_.wly:33:9
+                </span>
+              </span>
             </OuterP>
           </Solution>
         </Exercise>
@@ -3087,8 +4277,15 @@ const Rest = () => {
               <b>
                 Exercise 11.
               </b>
+              {" "}{" "}
               {" "}
-              If {" "}
+              {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $x$
               </Math>
@@ -3113,17 +4310,28 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The factor
+              <span class="t-3003-c">
+                The factor
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:10:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;v\over c&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is dimensionless since {" "}
+              <span class="t-3003-c">
+                is dimensionless since {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:16:9
+                </span>
+              </span>
               <Math>
                 $v$
               </Math>
@@ -3143,10 +4351,16 @@ const Rest = () => {
               $$
               &#123;xv\over c^2&#125; = &#123;v\over c&#125;\cdot&#123;x\over c&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              has the same dimensions as
+              <span class="t-3003-c">
+                has the same dimensions as
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:27:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3157,14 +4371,23 @@ const Rest = () => {
                 atLeastAsWide={false}
                 src="/build-img/svgo-svg/Z9Xf.svg"
                 offsetX="1em"
+                local_url="./images/e6_v_over_c_cancellation_cloud.svg"
                 intrinsicWidth={200}
                 intrinsicHeight={100}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which has dimensions of time by
+              <span class="t-3003-c">
+                which has dimensions of time by
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensionality_xv_over_c^2_.wly:38:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <InChapterLink
                 href="#_129_h.a.i_"
                 class="in-chapter-link"
@@ -3181,18 +4404,31 @@ const Rest = () => {
               <b>
                 Exercise 12.
               </b>
+              {" "}{" "}
               {" "}
-              What constraints does the composition
+              {" "}
+              <span class="t-3003-c">
+                What constraints does the composition
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_f_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               f \circ f
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              impose on the signature of {" "}
+              <span class="t-3003-c">
+                impose on the signature of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_f_.wly:8:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $f$
@@ -3203,7 +4439,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The output of {" "}
+              <span class="t-3003-c">
+                The output of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_f_.wly:12:9
+                </span>
+              </span>
               <Math>
                 $f$
               </Math>
@@ -3223,10 +4464,16 @@ const Rest = () => {
               $$
               f : [\tA] \ra [\tA]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is necessary and sufficient.
+              <span class="t-3003-c">
+                is necessary and sufficient.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_f_.wly:18:9
+                </span>
+              </span>
             </OuterP>
           </Solution>
         </Exercise>
@@ -3236,18 +4483,31 @@ const Rest = () => {
               <b>
                 Exercise 13.
               </b>
+              {" "}{" "}
               {" "}
-              What constraints does the composition
+              {" "}
+              <span class="t-3003-c">
+                What constraints does the composition
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_g_f_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               f \circ g \circ f
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              impose on the signatures of {" "}
+              <span class="t-3003-c">
+                impose on the signatures of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_g_f_.wly:8:5
+                </span>
+              </span>
               <Math>
                 $f$
               </Math>
@@ -3262,7 +4522,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Signatures of the form
+              <span class="t-3003-c">
+                Signatures of the form
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_g_f_.wly:12:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3272,10 +4537,16 @@ const Rest = () => {
               \up&#123;1.6&#125;g : [\tB] \ra [\tA]
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              are necessary and sufficient, as {" "}
+              <span class="t-3003-c">
+                are necessary and sufficient, as {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f_g_f_.wly:21:9
+                </span>
+              </span>
               <Math>
                 $g$
               </Math>
@@ -3296,6 +4567,7 @@ const Rest = () => {
             <Image
               style="margin-top:-1em"
               src="/build-img/svgo-svg/KJbsrhymZLsTZLsTkuWLTFqc.svg"
+              local_url="./images/e6_f_g_f_composition.svg"
               intrinsicWidth={600}
               intrinsicHeight={145}
             />
@@ -3307,18 +4579,31 @@ const Rest = () => {
               <b>
                 Exercise 14.
               </b>
+              {" "}{" "}
               {" "}
-              What constraints does the composition
+              {" "}
+              <span class="t-3003-c">
+                What constraints does the composition
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f^-1_g_f_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               f^&#123;-1&#125; \circ g \circ f
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              impose on the signatures of {" "}
+              <span class="t-3003-c">
+                impose on the signatures of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f^-1_g_f_.wly:10:5
+                </span>
+              </span>
               <Math>
                 $f$
               </Math>
@@ -3347,7 +4632,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              This pattern requires {" "}
+              <span class="t-3003-c">
+                This pattern requires {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f^-1_g_f_.wly:37:9
+                </span>
+              </span>
               <Math>
                 $f$
               </Math>
@@ -3365,10 +4655,16 @@ const Rest = () => {
               \up&#123;1.6&#125;g : [\tB] \ra [\tB]
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since outputs of {" "}
+              <span class="t-3003-c">
+                since outputs of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_f^-1_g_f_.wly:46:9
+                </span>
+              </span>
               <Math>
                 $f$
               </Math>
@@ -3406,6 +4702,7 @@ const Rest = () => {
             <Image
               style="margin-top:-1em"
               src="/build-img/svgo-svg/y-Ijti0Amp5Bmp5BD4snWLKi.svg"
+              local_url="./images/e6_f_inverse_g_f_composition.svg"
               intrinsicWidth={600}
               intrinsicHeight={145}
             />
@@ -3417,8 +4714,17 @@ const Rest = () => {
               <b>
                 Exercise 15.
               </b>
+              {" "}{" "}
               {" "}
-              Give a dimensional analysis of the (real,
+              {" "}
+              <span class="t-3003-c">
+                Give a dimensional analysis of the (real,
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:3:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               “late afternoon”) product rule {" "}
               <NoBreak>
                 (cf
@@ -3440,12 +4746,18 @@ const Rest = () => {
                 $$
                 \Large (fg)' = f'g + fg'
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Products of the form
+              <span class="t-3003-c">
+                Products of the form
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:12:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3456,10 +4768,16 @@ const Rest = () => {
               fg'\up&#123;1.9&#125;
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              require {" "}
+              <span class="t-3003-c">
+                require {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:22:9
+                </span>
+              </span>
               <Math>
                 $f$
               </Math>
@@ -3504,10 +4822,18 @@ const Rest = () => {
               g : [\tA] \ra [\tC] \up&#123;1.6&#125;
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              are at least necessary on either side of the equation.
+              <span class="t-3003-c">
+                are at least necessary on either side of the equation.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:36:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               Evaluating in order:
             </OuterP>
             <Pause />
@@ -3523,10 +4849,18 @@ const Rest = () => {
               \up&#123;1.6&#125;f'g + fg' : [\tA] \ra [\tB\tC/\tA]
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              Thus both sides impose the same signature constraints and
+              <span class="t-3003-c">
+                Thus both sides impose the same signature constraints and
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_analysis_of_product_rule_.wly:61:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               yield {" "}
               <NoBreak>
                 <Math>
@@ -3543,8 +4877,17 @@ const Rest = () => {
               <b>
                 Exercise 16.
               </b>
+              {" "}{" "}
               {" "}
-              Use dimensional analysis to
+              {" "}
+              <span class="t-3003-c">
+                Use dimensional analysis to
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:3:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               conjecture a formula for
             </OuterP>
             <Pause />
@@ -3552,10 +4895,16 @@ const Rest = () => {
               $$
               \large\left(&#123;1\over f&#125;\right)'
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for {" "}
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:10:5
+                </span>
+              </span>
               <Math>
                 $f : \rr \ra \rr$
               </Math>
@@ -3575,7 +4924,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              For a generic signature {" "}
+              <span class="t-3003-c">
+                For a generic signature {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:15:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $f : [\tA] \ra [\tB]$
@@ -3589,10 +4943,16 @@ const Rest = () => {
               $$
               \left(&#123;1\over f&#125;\right)' : [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right].
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              Since {" "}
+              <span class="t-3003-c">
+                Since {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:21:9
+                </span>
+              </span>
               <Math>
                 $f'$
               </Math>
@@ -3616,27 +4976,44 @@ const Rest = () => {
               &#123;f'\over f^2&#125; : [\tA] \ra \left[&#123;\tB/\tA\over\tB^2&#125;\right]
               = [\tA] \ra \left[&#123;1\over\tA\tB&#125;\right].
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              This makes {" "}
+              <span class="t-3003-c">
+                This makes {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:29:9
+                </span>
+              </span>
               <Math>
                 $f'/f^2$
               </Math>
               {" "} a plausible conjecture.
             </OuterP>
             <OuterP class="indent-10">
-              However, we know from Exercise X that
+              <span class="t-3003-c">
+                However, we know from Exercise X that
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:31:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \left(&#123;1\over f&#125;\right)'
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              should have opposite sign to {" "}
+              <span class="t-3003-c">
+                should have opposite sign to {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:37:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $f'$
@@ -3650,10 +5027,16 @@ const Rest = () => {
               $$
               &#123;f'\over f^2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              does {" "}
+              <span class="t-3003-c">
+                does {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:43:9
+                </span>
+              </span>
               <i>
                 not
               </i>
@@ -3685,7 +5068,14 @@ const Rest = () => {
               concern.)
             </OuterP>
             <OuterP class="indent-10">
-              Our conjecture is “consistently wrong”—it has the wrong sign.
+              <span class="t-3003-c">
+                Our conjecture is “consistently wrong”—it has the wrong sign.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:56:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               Negation leaves its signature unchanged (&#8288;
               <InChapterLink
                 href="#_121_h.a.i_"
@@ -3700,10 +5090,16 @@ const Rest = () => {
                 $$
                 \left(&#123;1\over f&#125;\right)' = -&#123;f'\over f^2&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              as an “educated guess” for a formula for {" "}
+              <span class="t-3003-c">
+                as an “educated guess” for a formula for {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:64:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $(&#123;1\over f&#125;)'$
@@ -3717,8 +5113,15 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                The formula is correct! It is called the {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The formula is correct! It is called the {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_dimensional_reciprocal_rule_.wly:67:13
+                  </span>
+                </span>
                 <i>
                   reciprocal rule
                 </i>
@@ -3733,8 +5136,17 @@ const Rest = () => {
               <b>
                 Exercise 17.
               </b>
+              {" "}{" "}
               {" "}
-              Use dimensional analysis to conjecture a
+              {" "}
+              <span class="t-3003-c">
+                Use dimensional analysis to conjecture a
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               formula for the derivative of the inverse,
               i.e., a formula of the form
             </OuterP>
@@ -3743,35 +5155,58 @@ const Rest = () => {
               $$
               (f^&#123;-1&#125;)' = \ldots
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              similar to the sum rule, product rule, etc.
+              <span class="t-3003-c">
+                similar to the sum rule, product rule, etc.
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:12:5
+                </span>
+              </span>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              If
+              <span class="t-3003-c">
+                If
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:16:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               f : [\tA] \ra [\tB]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is a generic invertible function, then
+              <span class="t-3003-c">
+                is a generic invertible function, then
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:22:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               f^&#123;-1&#125; : [\tB] \ra [\tA]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since an input of {" "}
+              <span class="t-3003-c">
+                since an input of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:28:9
+                </span>
+              </span>
               <Math>
                 $f^&#123;-1&#125;$
               </Math>
@@ -3788,10 +5223,16 @@ const Rest = () => {
               $$
               (f^&#123;-1&#125;)' : [\tB] \ra \left[&#123;\A\over \B&#125;\right]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              Taking the reciprocal of {" "}
+              <span class="t-3003-c">
+                Taking the reciprocal of {" "}
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:37:9
+                </span>
+              </span>
               <Math>
                 $f'$
               </Math>
@@ -3802,10 +5243,18 @@ const Rest = () => {
               $$
               &#123;1\over f'&#125; : [\A] \ra \left[&#123;\A \over \B&#125;\right]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              with the right output units, but the wrong input units (A instead of B);
+              <span class="t-3003-c">
+                with the right output units, but the wrong input units (A instead of B);
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:44:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               however we can “slot in” the correct input units 
               to {" "}
               <Math>
@@ -3826,26 +5275,39 @@ const Rest = () => {
               $$
               f' \circ f^&#123;-1&#125; : [\B] \ra \left[&#123;\B\over \A&#125;\right]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...giving us...
+              <span class="t-3003-c">
+                ...giving us...
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:53:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;1\over f' \circ f^&#123;-1&#125;&#125; : [\B] \ra \left[&#123;\A\over \B&#125;\right]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...the desired signature! Thus, a possibility is:
+              <span class="t-3003-c">
+                ...the desired signature! Thus, a possibility is:
+                <span class="t-3003">
+                  ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:59:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 (f^&#123;-1&#125;)' = &#123;1\over f' \circ f^&#123;-1&#125;&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <Pause />
@@ -3856,8 +5318,15 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                The formula is (correct, and) known as the {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The formula is (correct, and) known as the {" "}
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:71:13
+                  </span>
+                </span>
                 <i>
                   inverse rule
                 </i>
@@ -3885,14 +5354,22 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
+                {" "}{" "}
                 {" "}
-                At a specific input:
+                {" "}
+                <span class="t-3003-c">
+                  At a specific input:
+                  <span class="t-3003">
+                    ./src/content/ch6/ch6^exercises/_inverse_rule_conjecture_.wly:78:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
                   $$
                   (f^&#123;-1&#125;)'(x) = &#123;1\over f'(f^&#123;-1&#125;(x))&#125;
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
             </SolutionNote>

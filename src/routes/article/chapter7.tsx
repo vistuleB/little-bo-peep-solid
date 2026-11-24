@@ -7,6 +7,7 @@ import { ExerciseStatement, Exercise, Exercises }  from "~/components/Exercises"
 import Image  from "~/components/Image";
 import InChapterLink  from "~/components/InChapterLink";
 import { MathBlock, Math }  from "~/components/Math";
+import MathJaxSvgExportTooltip  from "~/components/MathJaxSvgExportTooltip";
 import OuterP  from "~/components/OuterP";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
 import Solution  from "~/components/Solution";
@@ -26,27 +27,52 @@ export default function __Chapter7__() {
       path="/article/chapter7"
     >
       <ArticleTitle banner="Chapter 7:">
-        The Product Rule
+        <span class="t-3003-c">
+          The Product Rule
+          <span class="t-3003">
+            ./src/content/ch5a_product/__parent.wly:2:11
+          </span>
+        </span>
       </ArticleTitle>
       <Section id="section-1">
         <CodexSuggestion>
           <p>
             <b>
-              Finite changes and products.
+              <span class="t-3003-c">
+                Finite changes and products.
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product.wly:6:10
+                </span>
+              </span>
             </b>
           </p>
           <p class="indent-10">
-            Proposed chapter: use the existing finite-change and difference-quotient exercises to prepare the rats construction. The main question is how to account for a change in a product when both factors change. The intermediate state obtained by changing one factor at a time need never actually occur, yet it gives an exact decomposition.
+            <span class="t-3003-c">
+              Proposed chapter: use the existing finite-change and difference-quotient exercises to prepare the rats construction. The main question is how to account for a change in a product when both factors change. The intermediate state obtained by changing one factor at a time need never actually occur, yet it gives an exact decomposition.
+              <span class="t-3003">
+                ./src/content/ch5a_product/product.wly:8:9
+              </span>
+            </span>
           </p>
         </CodexSuggestion>
         <CodexSuggestion>
           <p>
-            The exercises below have been moved unchanged from Chapter 4. A possible development is concrete change, elapsed time, secant slope, shrinking interval, then scaling and sum rules, followed by the product rule. Promote selected explanations to main text later. Keep this short: the purpose of the move is also to give Chapter 4 a visible finish line.
+            <span class="t-3003-c">
+              The exercises below have been moved unchanged from Chapter 4. A possible development is concrete change, elapsed time, secant slope, shrinking interval, then scaling and sum rules, followed by the product rule. Promote selected explanations to main text later. Keep this short: the purpose of the move is also to give Chapter 4 a visible finish line.
+              <span class="t-3003">
+                ./src/content/ch5a_product/product.wly:12:9
+              </span>
+            </span>
           </p>
         </CodexSuggestion>
         <CodexSuggestion>
           <p>
-            Preserve the rats and their diagrams. Possible extensions: let B cross first and compare the exact decompositions; try three factors before the indexed generalization. Do not add a large differentiation drill set just to fill the chapter.
+            <span class="t-3003-c">
+              Preserve the rats and their diagrams. Possible extensions: let B cross first and compare the exact decompositions; try three factors before the indexed generalization. Do not add a large differentiation drill set just to fill the chapter.
+              <span class="t-3003">
+                ./src/content/ch5a_product/product.wly:16:9
+              </span>
+            </span>
           </p>
         </CodexSuggestion>
       </Section>
@@ -72,8 +98,15 @@ const Rest = () => {
               <b>
                 Exercise 1.
               </b>
+              {" "}{" "}
               {" "}
-              If {" "}
+              {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
@@ -104,38 +137,71 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the change in {" "}
+              <span class="t-3003-c">
+                the change in {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_.wly:10:7
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
-              {" "} between {" "}
+              <span class="t-3003-c">
+                {" "} between {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_.wly:10:24
+                </span>
+              </span>
               <Math>
                 $t = 11.199$
               </Math>
-              {" "} and
+              <span class="t-3003-c">
+                {" "} and
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_.wly:10:45
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $t = 11.2$
               </Math>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              mathematically?
+              <span class="t-3003-c">
+                mathematically?
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_.wly:13:5
+                </span>
+              </span>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              This is
+              <span class="t-3003-c">
+                This is
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_.wly:18:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 A(11.2) - A(11.199)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              or, literally, “the value of {" "}
+              <span class="t-3003-c">
+                or, literally, “the value of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_.wly:25:9
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
@@ -164,8 +230,15 @@ const Rest = () => {
               <b>
                 Exercise 2.
               </b>
+              {" "}{" "}
               {" "}
-              By what should the change mentioned in {" "}
+              {" "}
+              <span class="t-3003-c">
+                By what should the change mentioned in {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:4:5
+                </span>
+              </span>
               <InChapterLink
                 href="#_106_h.a.i_"
                 class="in-chapter-link"
@@ -185,17 +258,28 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              One should divide by
+              <span class="t-3003-c">
+                One should divide by
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:9:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               0.001
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since {" "}
+              <span class="t-3003-c">
+                since {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:15:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $11.2 = 11.199 + 0.001$
@@ -209,20 +293,32 @@ const Rest = () => {
               $$
               &#123;A(11.2) - A(11.199) \over 0.001&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is a difference quotient of the form
+              <span class="t-3003-c">
+                is a difference quotient of the form
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:21:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;f(x + h) - f(x) \over h&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              with {" "}
+              <span class="t-3003-c">
+                with {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:27:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $f = A$
@@ -252,8 +348,15 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                Very—
+                {" "}
+                <span class="t-3003-c">
+                  Very—
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:33:13
+                  </span>
+                </span>
                 <i>
                   very
                 </i>
@@ -264,10 +367,18 @@ const Rest = () => {
                 $$
                 &#123;A(11.199) - A(11.2) \over -0.001&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                is also a difference quotient, equal to the one
+                <span class="t-3003-c">
+                  is also a difference quotient, equal to the one
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:39:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 above in value if not in syntax; in this case
               </OuterP>
               <Pause />
@@ -275,62 +386,94 @@ const Rest = () => {
                 $$
                 x = 11.2
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                and
+                <span class="t-3003-c">
+                  and
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:44:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 h = -0.001
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                compared to
+                <span class="t-3003-c">
+                  compared to
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:48:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 x = 11.199
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                and
+                <span class="t-3003-c">
+                  and
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:52:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 h = 0.001
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                above; so this diagram can illustrate a difference quotient in either of two ways, shown below:
+                <span class="t-3003-c">
+                  above; so this diagram can illustrate a difference quotient in either of two ways, shown below:
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:56:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <Image
                 src="/build-img/svgo-svg/F0SL.svg"
+                local_url="./images/_e5_verbal_to_arithmetic_note1.svg"
                 intrinsicWidth={456}
                 intrinsicHeight={420}
               />
               <Pause />
               <Image
                 src="/build-img/svgo-svg/cWTG.svg"
+                local_url="./images/svg_ch4_newton_quotient_finished.svg"
                 intrinsicWidth={456}
                 intrinsicHeight={420}
               />
               <Pause />
               <Image
                 src="/build-img/svgo-svg/oADf.svg"
+                local_url="./images/_e5_verbal_to_arithmetic_note3.svg"
                 intrinsicWidth={456}
                 intrinsicHeight={420}
               />
               <Pause />
               <OuterP>
-                In the last diagram {" "}
+                <span class="t-3003-c">
+                  In the last diagram {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_verbal_to_arithmetic_A_change_pt2_.wly:74:13
+                  </span>
+                </span>
                 <Math>
                   $x$
                 </Math>
@@ -359,21 +502,37 @@ const Rest = () => {
             </OuterP>
             <CodexSuggestions>
               <p>
-                Moved here with the change-in-A and change-in-f exercises from Chapter 4. A possible order is concrete change, elapsed time, secant slope, then shrinking interval. Revisit the quotient’s units in dimensional analysis, perhaps as an exercise rather than another main-text explanation.
+                <span class="t-3003-c">
+                  Moved here with the change-in-A and change-in-f exercises from Chapter 4. A possible order is concrete change, elapsed time, secant slope, then shrinking interval. Revisit the quotient’s units in dimensional analysis, perhaps as an exercise rather than another main-text explanation.
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:6:9
+                  </span>
+                </span>
               </p>
             </CodexSuggestions>
             <OuterP>
-              The fraction
+              <span class="t-3003-c">
+                The fraction
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:8:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;f(x+h) - f(x) \over h&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where {" "}
+              <span class="t-3003-c">
+                where {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:14:5
+                </span>
+              </span>
               <Math>
                 $f : \rr \ra \rr$
               </Math>
@@ -388,33 +547,51 @@ const Rest = () => {
             <Image
               src="/build-img/svgo-svg/1hYI.svg"
               style="margin-top:0.4em"
+              local_url="./images/svg_ch4_newton_quotient_unfinished.svg"
               intrinsicWidth={456}
               intrinsicHeight={420}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The teacher would like to see:
+              <span class="t-3003-c">
+                The teacher would like to see:
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:23:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/cWTG.svg"
+              local_url="./images/svg_ch4_newton_quotient_finished.svg"
               intrinsicWidth={456}
               intrinsicHeight={420}
             />
             <Pause />
             <OuterP>
-              Thus
+              <span class="t-3003-c">
+                Thus
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:28:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;f(x + h) - f(x)\over h&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              has the form {" "}
+              <span class="t-3003-c">
+                has the form {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:34:9
+                </span>
+              </span>
               <i>
                 rise over run
               </i>
@@ -425,21 +602,33 @@ const Rest = () => {
               $$
               (x, f(x))
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:40:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (x + h, f(x + h)).
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
               <i>
-                Vocabulary.
+                <span class="t-3003-c">
+                  Vocabulary.
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:60:10
+                  </span>
+                </span>
               </i>
               {" "}
               The pale brown line is sometimes known as
@@ -472,8 +661,15 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                If we let {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If we let {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:69:13
+                  </span>
+                </span>
                 <Math>
                   $h$
                 </Math>
@@ -505,10 +701,16 @@ const Rest = () => {
                 $$
                 f'(x)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                because the secant approaches the tangent, and its slope approaches the tangent’s slope, {" "}
+                <span class="t-3003-c">
+                  because the secant approaches the tangent, and its slope approaches the tangent’s slope, {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:78:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $f'(x)$
@@ -531,10 +733,16 @@ const Rest = () => {
                 $$
                 &#123;f(x+0)-f(x)\over 0&#125; = &#123;0 \over 0&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                is undefined.)
+                <span class="t-3003-c">
+                  is undefined.)
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_illustrate_the_difference_quotient_v2_.wly:86:13
+                  </span>
+                </span>
               </OuterP>
             </SolutionNote>
           </Solution>
@@ -549,112 +757,249 @@ const Rest = () => {
             <CodexSuggestion>
               <p>
                 <b>
-                  Draft: a small slope hiding in a reciprocal.
+                  <span class="t-3003-c">
+                    Draft: a small slope hiding in a reciprocal.
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:6:10
+                    </span>
+                  </span>
                 </b>
-                {" "} Let
+                <span class="t-3003-c">
+                  {" "} Let
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:6:55
+                  </span>
+                </span>
               </p>
               <Pause />
               <MathBlock>
                 $$
                 F(x)=&#123;1\over 10+\sin x&#125;.
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <p>
-                a. Sketch or plot {" "}
+                <span class="t-3003-c">
+                  a. Sketch or plot {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:12:9
+                  </span>
+                </span>
                 <Math>
                   $F$
                 </Math>
-                {" "} near {" "}
+                <span class="t-3003-c">
+                  {" "} near {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:12:30
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $x=0$
                   </Math>
-                  .
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:12:41
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} What is {" "}
+                <span class="t-3003-c">
+                  {" "} What is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:12:41
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $F(0)$
                   </Math>
-                  ?
+                  <span class="t-3003-c">
+                    ?
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:12:57
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} Is the function increasing or decreasing there? Zoom in vertically until its change is visible.
+                <span class="t-3003-c">
+                  {" "} Is the function increasing or decreasing there? Zoom in vertically until its change is visible.
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:12:57
+                  </span>
+                </span>
               </p>
               <p class="indent-10">
-                b. Calculate the secant slopes
+                <span class="t-3003-c">
+                  b. Calculate the secant slopes
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:14:9
+                  </span>
+                </span>
               </p>
               <Pause />
               <MathBlock>
                 $$
                 &#123;F(h)-F(0)\over h&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <p>
-                for {" "}
+                <span class="t-3003-c">
+                  for {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:20:9
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $h=0.1,-0.1,0.01,-0.01,0.001,-0.001$
                   </Math>
-                  .
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:20:49
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} Use radians. What value do the slopes seem to approach?
+                <span class="t-3003-c">
+                  {" "} Use radians. What value do the slopes seem to approach?
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:20:49
+                  </span>
+                </span>
               </p>
               <p class="indent-10">
-                c. Put the two fractions in {" "}
+                <span class="t-3003-c">
+                  c. Put the two fractions in {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:22:9
+                  </span>
+                </span>
                 <Math>
                   $F(h)-F(0)$
                 </Math>
-                {" "} over a common denominator. Use the resulting difference quotient to find {" "}
+                <span class="t-3003-c">
+                  {" "} over a common denominator. Use the resulting difference quotient to find {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:22:48
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $F'(0)$
                   </Math>
-                  ,
+                  <span class="t-3003-c">
+                    ,
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:22:129
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} without a rule for differentiating reciprocals or compositions.
+                <span class="t-3003-c">
+                  {" "} without a rule for differentiating reciprocals or compositions.
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:22:129
+                  </span>
+                </span>
               </p>
               <p class="indent-10">
-                d. Now look near {" "}
+                <span class="t-3003-c">
+                  d. Now look near {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:24:9
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $x=2\eta$
                   </Math>
-                  ,
+                  <span class="t-3003-c">
+                    ,
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:24:35
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} another point where {" "}
+                <span class="t-3003-c">
+                  {" "} another point where {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:24:35
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $\sin x=0$
                   </Math>
-                  .
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:24:67
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} Predict the sign of the derivative, check it with a few secant slopes, and adapt your calculation to find its value. Compare the two graphs using the same scales.
+                <span class="t-3003-c">
+                  {" "} Predict the sign of the derivative, check it with a few secant slopes, and adapt your calculation to find its value. Compare the two graphs using the same scales.
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:24:67
+                  </span>
+                </span>
               </p>
             </CodexSuggestion>
           </ExerciseStatement>
           <Solution>
             <CodexSuggestion>
               <p>
-                At {" "}
+                <span class="t-3003-c">
+                  At {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:29:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $x=0$
                   </Math>
-                  ,
+                  <span class="t-3003-c">
+                    ,
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:29:21
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} {" "}
+                <span class="t-3003-c">
+                  {" "} {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:29:21
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $F(0)=1/10$
                   </Math>
-                  .
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:29:34
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} As the sine increases through zero, the denominator increases and its reciprocal decreases.
+                <span class="t-3003-c">
+                  {" "} As the sine increases through zero, the denominator increases and its reciprocal decreases.
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:29:34
+                  </span>
+                </span>
               </p>
               <p class="indent-10">
-                The secant slopes are approximately:
+                <span class="t-3003-c">
+                  The secant slopes are approximately:
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:31:13
+                  </span>
+                </span>
               </p>
               <Pause />
               <MathBlock>
@@ -669,15 +1014,26 @@ const Rest = () => {
                 -0.001 &amp; -0.010000998
                 \end&#123;array&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <p>
-                The algebra explains the apparent limit of {" "}
+                <span class="t-3003-c">
+                  The algebra explains the apparent limit of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:45:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $-0.01$
                   </Math>
-                  :
+                  <span class="t-3003-c">
+                    :
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:45:63
+                    </span>
+                  </span>
                 </NoBreak>
               </p>
               <Pause />
@@ -689,49 +1045,105 @@ const Rest = () => {
                 &amp;= -&#123;\sin h\over h&#125;\,&#123;1\over 10(10+\sin h)&#125;.\up&#123;1.6&#125;
                 \end&#123;aligned&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <p>
-                As {" "}
+                <span class="t-3003-c">
+                  As {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:55:13
+                  </span>
+                </span>
                 <Math>
                   $h$
                 </Math>
-                {" "} tends to zero, {" "}
+                <span class="t-3003-c">
+                  {" "} tends to zero, {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:55:19
+                  </span>
+                </span>
                 <Math>
                   $\sin h/h$
                 </Math>
-                {" "} tends to {" "}
+                <span class="t-3003-c">
+                  {" "} tends to {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:55:45
+                  </span>
+                </span>
                 <Math>
                   $1$
                 </Math>
-                {" "} (the derivative of sine at zero), while {" "}
+                <span class="t-3003-c">
+                  {" "} (the derivative of sine at zero), while {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:55:58
+                  </span>
+                </span>
                 <Math>
                   $10(10+\sin h)$
                 </Math>
-                {" "} tends to {" "}
+                <span class="t-3003-c">
+                  {" "} tends to {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:55:114
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $100$
                   </Math>
-                  .
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:55:129
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} Hence {" "}
+                <span class="t-3003-c">
+                  {" "} Hence {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:55:129
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $F'(0)=-1/100$
                   </Math>
-                  .
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:55:151
+                    </span>
+                  </span>
                 </NoBreak>
               </p>
               <p class="indent-10">
-                At {" "}
+                <span class="t-3003-c">
+                  At {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:57:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $a=2\eta$
                   </Math>
-                  ,
+                  <span class="t-3003-c">
+                    ,
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:57:25
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} the same subtraction gives
+                <span class="t-3003-c">
+                  {" "} the same subtraction gives
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:57:25
+                  </span>
+                </span>
               </p>
               <Pause />
               <MathBlock>
@@ -739,33 +1151,65 @@ const Rest = () => {
                 &#123;F(a+h)-F(a)\over h&#125;
                 =-&#123;\sin(a+h)-\sin a\over h&#125;\,&#123;1\over 10(10+\sin(a+h))&#125;.
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <p>
-                Here {" "}
+                <span class="t-3003-c">
+                  Here {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:64:13
+                  </span>
+                </span>
                 <Math>
                   $\sin a=0$
                 </Math>
-                {" "} again, but the sine has derivative {" "}
+                <span class="t-3003-c">
+                  {" "} again, but the sine has derivative {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:64:28
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $-1$
                   </Math>
-                  ,
+                  <span class="t-3003-c">
+                    ,
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:64:68
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} so {" "}
+                <span class="t-3003-c">
+                  {" "} so {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:64:68
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $F'(2\eta)=1/100$
                   </Math>
-                  .
+                  <span class="t-3003-c">
+                    .
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:64:90
+                    </span>
+                  </span>
                 </NoBreak>
-                {" "} The two reciprocal graphs pass through the same height with opposite slopes.
+                <span class="t-3003-c">
+                  {" "} The two reciprocal graphs pass through the same height with opposite slopes.
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:64:90
+                  </span>
+                </span>
               </p>
               <Pause />
               <Image
                 src="/build-img/svgo-svg/StUAXgSDnMgBnMgBcZqk9XqQ.svg"
                 width="840px"
+                local_url="./images/product_reciprocal_sine_secants.svg"
                 intrinsicWidth={840}
                 intrinsicHeight={390}
               />
@@ -773,17 +1217,37 @@ const Rest = () => {
             <CodexSuggestion>
               <p>
                 <b>
-                  Editorial note.
+                  <span class="t-3003-c">
+                    Editorial note.
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:72:14
+                    </span>
+                  </span>
                 </b>
-                {" "} We want an exercise that explores this derivative visually, numerically, and algebraically through the difference quotient. The interest is the small change near a zero of sine: subtracting reciprocals reverses the sign and introduces two denominators approaching 10, explaining the factor {" "}
+                <span class="t-3003-c">
+                  {" "} We want an exercise that explores this derivative visually, numerically, and algebraically through the difference quotient. The interest is the small change near a zero of sine: subtracting reciprocals reverses the sign and introduces two denominators approaching 10, explaining the factor {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:72:30
+                  </span>
+                </span>
                 <Math>
                   $1/100$
                 </Math>
-                {" "} without quoting a differentiation rule. The graphs above are a first draft; consider giving the student a broad plot before the magnified views, or movable secants. Keep equal scales for the comparison and make the vertical magnification explicit. A later variation could replace 10 by a positive constant greater than 1 and ask how the slope changes, but do not turn this into a general reciprocal-rule derivation unless it earns its place. Cosine near {" "}
+                <span class="t-3003-c">
+                  {" "} without quoting a differentiation rule. The graphs above are a first draft; consider giving the student a broad plot before the magnified views, or movable secants. Keep equal scales for the comparison and make the vertical magnification explicit. A later variation could replace 10 by a positive constant greater than 1 and ask how the slope changes, but do not turn this into a general reciprocal-rule derivation unless it earns its place. Cosine near {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:72:328
+                  </span>
+                </span>
                 <Math>
                   $x=\eta$
                 </Math>
-                {" "} is an alternative if the surrounding sequence makes it more convenient.
+                <span class="t-3003-c">
+                  {" "} is an alternative if the surrounding sequence makes it more convenient.
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_reciprocal_sine_difference_quotient_.wly:72:791
+                  </span>
+                </span>
               </p>
             </CodexSuggestion>
           </Solution>
@@ -797,8 +1261,15 @@ const Rest = () => {
               <b>
                 Exercise 5.
               </b>
+              {" "}{" "}
               {" "}
-              Keeping {" "}
+              {" "}
+              <span class="t-3003-c">
+                Keeping {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_change_in_f_.wly:5:5
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
@@ -829,10 +1300,18 @@ const Rest = () => {
               $$
               &#123; (\te&#123;change in &#125; A\te&#123; between &#125; t = t_0 \te&#123; and &#125; t = t_0 + r) \over r&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              written in “pure math”,
+              <span class="t-3003-c">
+                written in “pure math”,
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_change_in_f_.wly:13:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               and what does this fraction approach as {" "}
               <Math>
                 $r$
@@ -848,27 +1327,44 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The “pure math” version is
+              <span class="t-3003-c">
+                The “pure math” version is
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_change_in_f_.wly:18:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 &#123;A(t_0 + r) - A(t_0)\over r&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              which approaches
+              <span class="t-3003-c">
+                which approaches
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_change_in_f_.wly:25:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 A'(t_0)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              as {" "}
+              <span class="t-3003-c">
+                as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_change_in_f_.wly:32:9
+                </span>
+              </span>
               <Math>
                 $r$
               </Math>
@@ -917,8 +1413,15 @@ const Rest = () => {
               <b>
                 Exercise 6.
               </b>
+              {" "}{" "}
               {" "}
-              If you scale the graph of a function {" "}
+              {" "}
+              <span class="t-3003-c">
+                If you scale the graph of a function {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_first_law_of_differentiation_.wly:5:5
+                </span>
+              </span>
               <Math>
                 $f$
               </Math>
@@ -950,7 +1453,14 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Yes. For a joke way
+              <span class="t-3003-c">
+                Yes. For a joke way
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_first_law_of_differentiation_.wly:12:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               of seeing it, here is a graph of a
               putative function {" "}
               <Math>
@@ -962,12 +1472,20 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/lJqH.svg"
+              local_url="./images/svg_ch4_scaling_figure.svg"
               intrinsicWidth={670}
               intrinsicHeight={280}
             />
             <Pause />
             <OuterP>
-              The second graph truly is the first
+              <span class="t-3003-c">
+                The second graph truly is the first
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_first_law_of_differentiation_.wly:20:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               graph vertically scaled by a factor {" "}
               <Math>
                 $2$
@@ -985,10 +1503,18 @@ const Rest = () => {
               $$
               &#123;\te&#123;rise&#125;\over \te&#123;run&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              has doubled in the second graph, because
+              <span class="t-3003-c">
+                has doubled in the second graph, because
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_first_law_of_differentiation_.wly:29:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               “rise” has doubled (each {" "}
               <NoBreak>
                 <Math>
@@ -1012,8 +1538,17 @@ const Rest = () => {
               <b>
                 Exercise 7.
               </b>
+              {" "}{" "}
               {" "}
-              The solution to the previous exercise
+              {" "}
+              <span class="t-3003-c">
+                The solution to the previous exercise
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               erroneously assumes that the product of a
               constant and a function has been defined. It
               has not! Keeping in mind that the {" "}
@@ -1038,40 +1573,64 @@ const Rest = () => {
               $$
               f + g
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is defined by the equation
+              <span class="t-3003-c">
+                is defined by the equation
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:14:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               f + g = (x \ra f(x) + g(x))
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              while their composition is defined by
+              <span class="t-3003-c">
+                while their composition is defined by
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:20:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               f \circ g = (x \ra f(g(x)))
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              what is the corresponding definition for
+              <span class="t-3003-c">
+                what is the corresponding definition for
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:26:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               cf
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where {" "}
+              <span class="t-3003-c">
+                where {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:32:5
+                </span>
+              </span>
               <Math>
                 $c \in \rr$
               </Math>
@@ -1086,17 +1645,28 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The “logical” definition is:
+              <span class="t-3003-c">
+                The “logical” definition is:
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:36:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               cf = (x \ra cf(x))
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where the product {" "}
+              <span class="t-3003-c">
+                where the product {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:42:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -1124,10 +1694,16 @@ const Rest = () => {
               $$
               fg = (x \ra f(x)g(x))
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              of the product of two functions from {" "}
+              <span class="t-3003-c">
+                of the product of two functions from {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:50:9
+                </span>
+              </span>
               <Math>
                 $\rr$
               </Math>
@@ -1149,10 +1725,16 @@ const Rest = () => {
               $$
               cf = (x \ra c)f
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where the right-hand-side is {" "}
+              <span class="t-3003-c">
+                where the right-hand-side is {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:60:9
+                </span>
+              </span>
               <i>
                 one function
                 times another
@@ -1171,10 +1753,18 @@ const Rest = () => {
               $$
               fg = (x \ra f(x)g(x))
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              of course.) (Wait we just mentioned that
+              <span class="t-3003-c">
+                of course.) (Wait we just mentioned that
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_define_product_of_constant_and_function_.wly:70:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               already.) Mathematicians LOVE to bootstrap off
               an intermediate step, instead of going back to
               the beginning, so the second way is clearly the
@@ -1188,18 +1778,31 @@ const Rest = () => {
               <b>
                 Exercise 8.
               </b>
+              {" "}{" "}
               {" "}
-              What English-language aphorism might summarize the identity
+              {" "}
+              <span class="t-3003-c">
+                What English-language aphorism might summarize the identity
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (f + g)' = f' + g'
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (true for differentiable functions {" "}
+              <span class="t-3003-c">
+                (true for differentiable functions {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:9:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $f$
@@ -1217,34 +1820,75 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              One can say
+              <span class="t-3003-c">
+                One can say
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:13:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the derivative of the sum is the sum of the
+              <span class="t-3003-c">
+                the derivative of the sum is the sum of the
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:15:11
+                </span>
+              </span>
+              {" "}
+              {" "}
               derivatives
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              or
+              <span class="t-3003-c">
+                or
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:18:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the rate of change of the sum is the sum of
+              <span class="t-3003-c">
+                the rate of change of the sum is the sum of
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:20:11
+                </span>
+              </span>
+              {" "}
+              {" "}
               the rates of change
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              or (we made this one up)
+              <span class="t-3003-c">
+                or (we made this one up)
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:23:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              the rate of change of the aggregate is the sum
+              <span class="t-3003-c">
+                the rate of change of the aggregate is the sum
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:25:11
+                </span>
+              </span>
+              {" "}
+              {" "}
               of the rates of change of the components
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              (etc).
+              <span class="t-3003-c">
+                (etc).
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:28:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -1252,8 +1896,15 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                This identity is known as the {" "}
+                {" "}
+                <span class="t-3003-c">
+                  This identity is known as the {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_sum_rule_summary_.wly:32:13
+                  </span>
+                </span>
                 <i>
                   sum rule
                 </i>
@@ -1271,11 +1922,23 @@ const Rest = () => {
             </OuterP>
             <CodexSuggestions>
               <p>
-                The rats construction now follows the difference-quotient exercises in this chapter. Preserve the metaphor and diagrams. A possible short follow-up asks what changes if B crosses first; the intermediate decomposition changes but the derivative formula agrees. Before the general indexed product exercise, consider a three-factor case.
+                <span class="t-3003-c">
+                  The rats construction now follows the difference-quotient exercises in this chapter. Preserve the metaphor and diagrams. A possible short follow-up asks what changes if B crosses first; the intermediate decomposition changes but the derivative formula agrees. Before the general indexed product exercise, consider a three-factor case.
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:6:9
+                  </span>
+                </span>
               </p>
             </CodexSuggestions>
             <OuterP>
-              In this exercise we consider two points
+              <span class="t-3003-c">
+                In this exercise we consider two points
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:8:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               in time {" "}
               <Math>
                 $t_0$
@@ -1307,12 +1970,18 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/rzVH.svg"
+              local_url="./images/svg_ch4_RATS_timeline.svg"
               intrinsicWidth={450}
               intrinsicHeight={60}
             />
             <Pause />
             <OuterP>
-              We also consider quantities {" "}
+              <span class="t-3003-c">
+                We also consider quantities {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:17:5
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
@@ -1349,25 +2018,44 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/Axof.svg"
+              local_url="./images/svg_ch4_RATS_timeline_with_A_B.svg"
               intrinsicWidth={450}
               intrinsicHeight={200}
             />
             <Pause />
             <OuterP>
-              We are interested in the change in the product
+              <span class="t-3003-c">
+                We are interested in the change in the product
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:25:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large AB
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              over this time.
+              <span class="t-3003-c">
+                over this time.
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:31:5
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              To introduce an unsolicited metaphor,
+              <span class="t-3003-c">
+                To introduce an unsolicited metaphor,
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:33:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               imagine {" "}
               <Math>
                 $A$
@@ -1381,12 +2069,20 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/zn1D.svg"
+              local_url="./images/svg_ch4_RATS_rats.svg"
               intrinsicWidth={180}
               intrinsicHeight="164.25"
             />
             <Pause />
             <OuterP>
-              that are crossing a hallway,
+              <span class="t-3003-c">
+                that are crossing a hallway,
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:39:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               and the hallway is surveyed by
               a cat. One side of the hallway is time
               {" "}
@@ -1444,6 +2140,7 @@ const Rest = () => {
                 offsetX=" 0.5em"
                 offsetY="-0.5em"
                 src="/build-img/svgo-svg/zR89.svg"
+                local_url="./images/svg_ch4_RATS_corridor_cloud.svg"
                 intrinsicWidth={750}
                 intrinsicHeight="552.632"
               />
@@ -1451,59 +2148,135 @@ const Rest = () => {
             <TextParent>
               <ol style="margin:0 1.5em 0.5em 2em;list-style:auto;list-style-position:outside;">
                 <li style="margin-top:0.5em">
-                  when {" "}
+                  <span class="t-3003-c">
+                    when {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:65:17
+                    </span>
+                  </span>
                   <Math>
                     $A$
                   </Math>
-                  {" "} and {" "}
+                  <span class="t-3003-c">
+                    {" "} and {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:65:25
+                    </span>
+                  </span>
                   <Math>
                     $B$
                   </Math>
-                  {" "} are both still at {" "}
+                  <span class="t-3003-c">
+                    {" "} are both still at {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:65:33
+                    </span>
+                  </span>
                   <Math>
                     $t_0$
                   </Math>
                 </li>
                 <li style="margin-top:0.5em">
-                  when {" "}
+                  <span class="t-3003-c">
+                    when {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:69:17
+                    </span>
+                  </span>
                   <Math>
                     $A$
                   </Math>
-                  {" "} has made it to {" "}
+                  <span class="t-3003-c">
+                    {" "} has made it to {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:69:25
+                    </span>
+                  </span>
                   <NoBreak>
                     <Math>
                       $t_0 + \Delta&#123;&#125;t$
                     </Math>
-                    ,
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:69:58
+                      </span>
+                    </span>
                   </NoBreak>
+                  {" "}{" "}
                   {" "}
-                  and {" "}
+                  {" "}
+                  <span class="t-3003-c">
+                    and {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:70:17
+                    </span>
+                  </span>
                   <Math>
                     $B$
                   </Math>
-                  {" "} is still at {" "}
+                  <span class="t-3003-c">
+                    {" "} is still at {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:70:24
+                    </span>
+                  </span>
                   <Math>
                     $t_0$
                   </Math>
                 </li>
                 <li style="margin-top:0.5em">
                   <del>
-                    when {" "}
+                    <span class="t-3003-c">
+                      when {" "}
+                      <span class="t-3003">
+                        ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:75:21
+                      </span>
+                    </span>
                     <i>
-                      B
+                      <span class="t-3003-c">
+                        B
+                        <span class="t-3003">
+                          ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:75:27
+                        </span>
+                      </span>
                     </i>
-                    's tail is sticking out of the
+                    <span class="t-3003-c">
+                      's tail is sticking out of the
+                      <span class="t-3003">
+                        ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:75:29
+                      </span>
+                    </span>
+                    {" "}
+                    {" "}
                     cat's mouth, and
                   </del>
-                  {" "} when {" "}
+                  <span class="t-3003-c">
+                    {" "} when {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:77:18
+                    </span>
+                  </span>
                   <Math>
                     $A$
                   </Math>
-                  {" "} and {" "}
+                  <span class="t-3003-c">
+                    {" "} and {" "}
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:77:27
+                    </span>
+                  </span>
                   <Math>
                     $B$
                   </Math>
-                  {" "} have both made it
+                  <span class="t-3003-c">
+                    {" "} have both made it
+                    <span class="t-3003">
+                      ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:77:35
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
                   to {" "}
                   <Math>
                     $t_0 + \Delta&#123;&#125;t$
@@ -1512,17 +2285,28 @@ const Rest = () => {
               </ol>
             </TextParent>
             <OuterP>
-              Correspondingly, the product
+              <span class="t-3003-c">
+                Correspondingly, the product
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:80:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large AB
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              changes in two increments: first as {" "}
+              <span class="t-3003-c">
+                changes in two increments: first as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:86:5
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
@@ -1547,12 +2331,18 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/S2-s.svg"
+              local_url="./images/svg_ch4_RATS_equation.svg"
               intrinsicWidth={700}
               intrinsicHeight={128}
             />
             <Pause />
             <OuterP>
-              If we divide the above equation by {" "}
+              <span class="t-3003-c">
+                If we divide the above equation by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:95:5
+                </span>
+              </span>
               <Math>
                 $\Delta&#123;&#125;t$
               </Math>
@@ -1574,7 +2364,12 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Dividing by {" "}
+              <span class="t-3003-c">
+                Dividing by {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:101:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\Delta&#123;&#125;t$
@@ -1585,15 +2380,24 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/Im2x.svg"
+              local_url="./images/svg_ch4_RATS_equation_over_Dt.svg"
               intrinsicWidth={700}
               intrinsicHeight={170}
             />
             <Pause />
             <OuterP>
-              The first term on the left-hand side comes
+              <span class="t-3003-c">
+                The first term on the left-hand side comes
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:106:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               out to
               <ImageRight
                 src="/build-img/svgo-svg/xIsR.svg"
+                local_url="./images/svg_ch4_RATS_first_term_lhs_cloud.svg"
                 intrinsicWidth={900}
                 intrinsicHeight={300}
               />
@@ -1603,20 +2407,32 @@ const Rest = () => {
               $$
               &#123;(AB)(t_0 + \Delta t) - (AB)(t_0)\over \Delta t&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              when written out, which approaches
+              <span class="t-3003-c">
+                when written out, which approaches
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:116:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 (AB)'(t_0)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              as {" "}
+              <span class="t-3003-c">
+                as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:123:9
+                </span>
+              </span>
               <Math>
                 $\Delta t$
               </Math>
@@ -1636,10 +2452,16 @@ const Rest = () => {
               $$
               &#123;f(t_0 + \Delta&#123;&#125;t) - f(t_0)\over \Delta&#123;&#125;t&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              of a difference quotient, with {" "}
+              <span class="t-3003-c">
+                of a difference quotient, with {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:131:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $f = AB$
@@ -1658,7 +2480,12 @@ const Rest = () => {
               there is no conclusion to draw.)
             </OuterP>
             <OuterP class="indent-10">
-              [Nb: {" "}
+              <span class="t-3003-c">
+                [Nb: {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:136:9
+                </span>
+              </span>
               <Math>
                 $AB : \rr \ra \rr$
               </Math>
@@ -1670,15 +2497,27 @@ const Rest = () => {
               $$
               (AB)(t) = A(t)B(t)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as per the definition of function multiplication. !!]
+              <span class="t-3003-c">
+                as per the definition of function multiplication. !!]
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:143:9
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              The first term on the right becomes
+              <span class="t-3003-c">
+                The first term on the right becomes
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:145:9
+                </span>
+              </span>
               <ImageRight
                 src="/build-img/svgo-svg/5bqq.svg"
+                local_url="./images/svg_ch4_RATS_first_term_cloud.svg"
                 intrinsicWidth={900}
                 intrinsicHeight={300}
               />
@@ -1688,20 +2527,32 @@ const Rest = () => {
               $$
               &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0) - A(t_0)B(t_0) \over \Delta&#123;&#125;t&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              when written out, or
+              <span class="t-3003-c">
+                when written out, or
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:154:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               B(t_0)\cdot&#123;A(t_0 + \Delta&#123;&#125;t) - A(t_0) \over \Delta&#123;&#125;t&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by factoring {" "}
+              <span class="t-3003-c">
+                by factoring {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:160:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -1716,20 +2567,32 @@ const Rest = () => {
               $$
               &#123;A(t_0 + \Delta&#123;&#125;t) - A(t_0) \over \Delta&#123;&#125;t&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              approaches
+              <span class="t-3003-c">
+                approaches
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:166:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               A'(t_0)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as {" "}
+              <span class="t-3003-c">
+                as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:172:9
+                </span>
+              </span>
               <Math>
                 $\Delta t$
               </Math>
@@ -1757,10 +2620,16 @@ const Rest = () => {
                 $$
                 B(t_0)A'(t_0)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              as {" "}
+              <span class="t-3003-c">
+                as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:183:9
+                </span>
+              </span>
               <Math>
                 $\Delta t$
               </Math>
@@ -1773,10 +2642,18 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              Lastly the second term on the right-hand side
+              <span class="t-3003-c">
+                Lastly the second term on the right-hand side
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:185:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               comes out to
               <ImageRight
                 src="/build-img/svgo-svg/9OXS.svg"
+                local_url="./images/svg_ch4_RATS_second_term_cloud.svg"
                 intrinsicWidth={900}
                 intrinsicHeight={300}
               />
@@ -1786,20 +2663,32 @@ const Rest = () => {
               $$
               &#123;A(t_0 + \Delta&#123;&#125;t)B(t_0+\Delta&#123;&#125;t) - A(t_0+ \Delta&#123;&#125;t)B(t_0) \over \Delta&#123;&#125;t&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              when written out, or
+              <span class="t-3003-c">
+                when written out, or
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:195:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               A(t_0 + \Delta&#123;&#125;t)\cdot&#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by factoring out {" "}
+              <span class="t-3003-c">
+                by factoring out {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:202:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -1815,20 +2704,32 @@ const Rest = () => {
               $$
               &#123;B(t_0+\Delta&#123;&#125;t) - B(t_0) \over \Delta&#123;&#125;t&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              approaches
+              <span class="t-3003-c">
+                approaches
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:209:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               B'(t_0)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as {" "}
+              <span class="t-3003-c">
+                as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:215:9
+                </span>
+              </span>
               <Math>
                 $\Delta&#123;&#125;t$
               </Math>
@@ -1846,20 +2747,32 @@ const Rest = () => {
               $$
               A(t_0 + \Delta&#123;&#125;t)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              approaches
+              <span class="t-3003-c">
+                approaches
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:225:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               A(t_0)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              because, technically, the differentiability {" "}
+              <span class="t-3003-c">
+                because, technically, the differentiability {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:231:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $A$
@@ -1881,21 +2794,37 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              product-of-two-things-each-approaching-a-certain-value-approaches-the-product-of-the-two-approached-values
+              <span class="t-3003-c">
+                product-of-two-things-each-approaching-a-certain-value-approaches-the-product-of-the-two-approached-values
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:236:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              the whole term approaches
+              <span class="t-3003-c">
+                the whole term approaches
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:238:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 A(t_0)B'(t_0)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              as {" "}
+              <span class="t-3003-c">
+                as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:245:9
+                </span>
+              </span>
               <Math>
                 $\Delta t$
               </Math>
@@ -1918,28 +2847,47 @@ const Rest = () => {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                We deduce
+                {" "}
+                <span class="t-3003-c">
+                  We deduce
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:249:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
                   $$
                   (AB)'(t_0) = B(t_0)A'(t_0) + A(t_0)B'(t_0)
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                since, as the three terms inch closer and closer to
+                <span class="t-3003-c">
+                  since, as the three terms inch closer and closer to
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:256:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 (AB)'(t_0),\,\,B(t_0)A'(t_0)\,\,\,\te&#123; and &#125;\,\,\,A(t_0)B'(t_0)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                respectively as {" "}
+                <span class="t-3003-c">
+                  respectively as {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:262:13
+                  </span>
+                </span>
                 <Math>
                   $\Delta t$
                 </Math>
@@ -1964,12 +2912,18 @@ const Rest = () => {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/Im2x.svg"
+                local_url="./images/svg_ch4_RATS_equation_over_Dt.svg"
                 intrinsicWidth={700}
                 intrinsicHeight={170}
               />
               <Pause />
               <OuterP>
-                ...as {" "}
+                <span class="t-3003-c">
+                  ...as {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:272:13
+                  </span>
+                </span>
                 <Math>
                   $\Delta t$
                 </Math>
@@ -1988,18 +2942,31 @@ const Rest = () => {
                 <i>
                   Note 2.
                 </i>
+                {" "}{" "}
                 {" "}
-                Keeping things alphabetical, this is usually written
+                {" "}
+                <span class="t-3003-c">
+                  Keeping things alphabetical, this is usually written
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:275:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
                   $$
                   (AB)'(t_0) = A'(t_0)B(t_0) + A(t_0)B'(t_0)
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                with {" "}
+                <span class="t-3003-c">
+                  with {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:282:13
+                  </span>
+                </span>
                 <NoBreak>
                   “
                   <Math>
@@ -2039,10 +3006,16 @@ const Rest = () => {
                   $$
                   (AB)' = A'B + AB'
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                more shortly, for {" "}
+                <span class="t-3003-c">
+                  more shortly, for {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:292:13
+                  </span>
+                </span>
                 <Math>
                   $A, B : \rr \ra \rr$
                 </Math>
@@ -2053,10 +3026,16 @@ const Rest = () => {
                   $$
                   (fg)' = f'g + fg'
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                if we replace {" "}
+                <span class="t-3003-c">
+                  if we replace {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:299:13
+                  </span>
+                </span>
                 <NoBreak>
                   “
                   <Math>
@@ -2096,8 +3075,15 @@ const Rest = () => {
                 <i>
                   Note 3.
                 </i>
+                {" "}{" "}
                 {" "}
-                This result is known as the {" "}
+                {" "}
+                <span class="t-3003-c">
+                  This result is known as the {" "}
+                  <span class="t-3003">
+                    ./src/content/ch5a_product/product^exercises/_product_rule_v_physical_.wly:303:13
+                  </span>
+                </span>
                 <i>
                   product rule
                 </i>
@@ -2112,8 +3098,15 @@ const Rest = () => {
               <b>
                 Exercise 10.
               </b>
+              {" "}{" "}
               {" "}
-              What does...
+              {" "}
+              <span class="t-3003-c">
+                What does...
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2124,13 +3117,20 @@ const Rest = () => {
                 src="/build-img/svgo-svg/6ZYS.svg"
                 offsetX="2rem"
                 atLeastAsWide={true}
+                local_url="./images/svg_ch4_big_product_parchment_cloud.svg"
                 intrinsicWidth={700}
                 intrinsicHeight={500}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...approach as {" "}
+              <span class="t-3003-c">
+                ...approach as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:14:5
+                </span>
+              </span>
               <Math>
                 $h$
               </Math>
@@ -2161,17 +3161,30 @@ const Rest = () => {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Start with the fraction in the middle:
+              <span class="t-3003-c">
+                Start with the fraction in the middle:
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:19:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/c9db.svg"
+              local_url="./images/svg_ch4_big_product_fraction_outline.svg"
               intrinsicWidth={800}
               intrinsicHeight={120}
             />
             <Pause />
             <OuterP>
-              This is seen to be a Newton quotient
+              <span class="t-3003-c">
+                This is seen to be a Newton quotient
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:24:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               (cf. {" "}
               <InChapterLink
                 href="#_109_h.a.i_"
@@ -2186,10 +3199,16 @@ const Rest = () => {
               $$
               f(x + h) - f(x)\over h
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              with {" "}
+              <span class="t-3003-c">
+                with {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:31:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $f = A_i$
@@ -2218,10 +3237,16 @@ const Rest = () => {
               $$
               A_i'(t_0)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as {" "}
+              <span class="t-3003-c">
+                as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:38:9
+                </span>
+              </span>
               <Math>
                 $h$
               </Math>
@@ -2245,7 +3270,14 @@ const Rest = () => {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              Next down in order of interesting-ness we presumably
+              <span class="t-3003-c">
+                Next down in order of interesting-ness we presumably
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:40:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               have the terms {" "}
               <Math>
                 $A_1(t_0 + h)$
@@ -2260,20 +3292,36 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/B9Zl.svg"
+              local_url="./images/svg_ch4_big_product_prefix_outline.svg"
               intrinsicWidth={800}
               intrinsicHeight={100}
             />
             <Pause />
             <OuterP>
-              ...; here the
+              <span class="t-3003-c">
+                ...; here the
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:47:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              differentiability
+              <span class="t-3003-c">
+                differentiability
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:49:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              of {" "}
+              <span class="t-3003-c">
+                of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:51:9
+                </span>
+              </span>
               <Math>
                 $A_1$
               </Math>
@@ -2285,11 +3333,21 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              continuity
+              <span class="t-3003-c">
+                continuity
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:53:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              of {" "}
+              <span class="t-3003-c">
+                of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:55:9
+                </span>
+              </span>
               <Math>
                 $A_1$
               </Math>
@@ -2307,20 +3365,32 @@ const Rest = () => {
               $$
               A_1(t_0 + h)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              approaches
+              <span class="t-3003-c">
+                approaches
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:61:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               A_1(t_0)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as {" "}
+              <span class="t-3003-c">
+                as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:67:9
+                </span>
+              </span>
               <Math>
                 $h$
               </Math>
@@ -2360,20 +3430,32 @@ const Rest = () => {
               $$
               A_1(t_0 + h) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0 + h)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              approaches
+              <span class="t-3003-c">
+                approaches
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:77:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               A_1(t_0) \,\times\, \dots \,\times\, A_&#123;i-1&#125;(t_0)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as {" "}
+              <span class="t-3003-c">
+                as {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:83:9
+                </span>
+              </span>
               <Math>
                 $h$
               </Math>
@@ -2392,7 +3474,12 @@ const Rest = () => {
               have been.)
             </OuterP>
             <OuterP class="indent-10">
-              Lastly, the tail of the product contains no {" "}
+              <span class="t-3003-c">
+                Lastly, the tail of the product contains no {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:90:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $h$
@@ -2403,12 +3490,18 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/TQjR.svg"
+              local_url="./images/svg_ch4_big_product_suffix_outline.svg"
               intrinsicWidth={800}
               intrinsicHeight={100}
             />
             <Pause />
             <OuterP>
-              Because {" "}
+              <span class="t-3003-c">
+                Because {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:95:9
+                </span>
+              </span>
               <Math>
                 $h$
               </Math>
@@ -2416,11 +3509,21 @@ const Rest = () => {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              stays put
+              <span class="t-3003-c">
+                stays put
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:97:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              where it is, irrespective of the value of {" "}
+              <span class="t-3003-c">
+                where it is, irrespective of the value of {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:99:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $h$
@@ -2434,12 +3537,18 @@ const Rest = () => {
             <Pause />
             <Image
               src="/build-img/svgo-svg/hUGM.svg"
+              local_url="./images/svg_ch4_big_product_final_answer.svg"
               intrinsicWidth={700}
               intrinsicHeight={150}
             />
             <Pause />
             <OuterP>
-              ...with a lone {" "}
+              <span class="t-3003-c">
+                ...with a lone {" "}
+                <span class="t-3003">
+                  ./src/content/ch5a_product/product^exercises/_big_A_product_approach_as_h_goes_to_0_.wly:106:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>

@@ -16,7 +16,12 @@ export default function __Chapter9__() {
       path="/article/chapter9"
     >
       <ArticleTitle banner="Chapter 9:">
-        Derivative(s) of {" "}
+        <span class="t-3003-c">
+          Derivative(s) of {" "}
+          <span class="t-3003">
+            ./src/content/ch6a_square/__parent.wly:2:11
+          </span>
+        </span>
         <Math>
           $x^2$
         </Math>
@@ -25,7 +30,12 @@ export default function __Chapter9__() {
         <CodexSuggestion>
           <p>
             <b>
-              Placeholder.
+              <span class="t-3003-c">
+                Placeholder.
+                <span class="t-3003">
+                  ./src/content/ch6a_square/placeholder.wly:6:10
+                </span>
+              </span>
             </b>
           </p>
         </CodexSuggestion>

@@ -8,6 +8,7 @@ import InChapterLink  from "~/components/InChapterLink";
 import InlineImage  from "~/components/InlineImage";
 import { Item, List }  from "~/components/List";
 import { Math, MathBlock }  from "~/components/Math";
+import MathJaxSvgExportTooltip  from "~/components/MathJaxSvgExportTooltip";
 import OutChapterLink  from "~/components/OutChapterLink";
 import OuterP  from "~/components/OuterP";
 import { ImageRight, ImageLeft }  from "~/components/SideImage";
@@ -27,7 +28,12 @@ export default function __Chapter13__() {
       path="/article/chapter13"
     >
       <ArticleTitle banner="Chapter 13:">
-        Trigonometry II
+        <span class="t-3003-c">
+          Trigonometry II
+          <span class="t-3003">
+            ./src/content/ch9a_trig2/__parent.wly:2:11
+          </span>
+        </span>
       </ArticleTitle>
       <Pause />
       <Exercises id="_193_h.a.i_">
@@ -37,45 +43,79 @@ export default function __Chapter13__() {
               <b>
                 Exercise 1.
               </b>
+              {" "}{" "}
               {" "}
-              Guesstimate a function with this graph:
+              {" "}
+              <span class="t-3003-c">
+                Guesstimate a function with this graph:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_linear_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/L2CX.svg"
+              local_url="./images/e5_cosine_10x_plus_x_over_4.svg"
               intrinsicWidth="754.5"
               intrinsicHeight="329.5"
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It appears that the function is “a line plus
+              <span class="t-3003-c">
+                It appears that the function is “a line plus
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_linear_.wly:13:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               something”, as in this diagram:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/tYzo.svg"
+              local_url="./images/svg_ch5_ex_cosine_10x_plus_x_over_4_equation.svg"
               intrinsicWidth={1850}
               intrinsicHeight={270}
             />
             <Pause />
             <OuterP>
-              (Or in the technical sense of taking the sum
+              <span class="t-3003-c">
+                (Or in the technical sense of taking the sum
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_linear_.wly:19:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               of two functions, to be more exact—that is what
               the sum of two functions looks like, pictorialized!)
             </OuterP>
             <OuterP class="indent-10">
-              The line appears to be
+              <span class="t-3003-c">
+                The line appears to be
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_linear_.wly:23:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               y = &#123;1\over 4&#125;x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              making it a true {" "}
+              <span class="t-3003-c">
+                making it a true {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_linear_.wly:27:9
+                </span>
+              </span>
               <a href="&gt;&gt;linear_vs_affine#decoy:0">
                 <i>
                   linear
@@ -96,7 +136,14 @@ export default function __Chapter13__() {
               &#8288;).
             </OuterP>
             <OuterP class="indent-10">
-              As for the “something”—the bumpy one—it appears
+              <span class="t-3003-c">
+                As for the “something”—the bumpy one—it appears
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_linear_.wly:30:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               to just be a “sped up cosine”, and note that
               the graph goes through approximately {" "}
               <Math>
@@ -120,6 +167,7 @@ export default function __Chapter13__() {
               <ImageLeft
                 line={-2}
                 src="/build-img/svgo-svg/9sIf.svg"
+                local_url="./images/svg_ch5_ex_cosine_10x_plus_x_over_4_4eta_cloud.svg"
                 intrinsicWidth={400}
                 intrinsicHeight={150}
               />
@@ -127,12 +175,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/tW8i.svg"
+              local_url="./images/e5_cosine_10x_plus_x_over_4_bump_count.svg"
               intrinsicWidth="754.5"
               intrinsicHeight="329.5"
             />
             <Pause />
             <OuterP>
-              As cos goes through {" "}
+              <span class="t-3003-c">
+                As cos goes through {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_linear_.wly:47:9
+                </span>
+              </span>
               <i>
                 one
               </i>
@@ -171,10 +225,18 @@ export default function __Chapter13__() {
               $$
               y = \cos(10x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              from which the guesstimate for the initial function
+              <span class="t-3003-c">
+                from which the guesstimate for the initial function
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_linear_.wly:54:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               would be
             </OuterP>
             <Pause />
@@ -182,10 +244,16 @@ export default function __Chapter13__() {
               $$
               y = \cos(10x) + &#123;1\over 4&#125; x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              adding our two separate guesstimates together.
+              <span class="t-3003-c">
+                adding our two separate guesstimates together.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_linear_.wly:59:9
+                </span>
+              </span>
             </OuterP>
           </Solution>
         </Exercise>
@@ -195,8 +263,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 2.
               </b>
+              {" "}{" "}
               {" "}
-              Guesstimate a function with this graph (we can
+              {" "}
+              <span class="t-3003-c">
+                Guesstimate a function with this graph (we can
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               tell you that the large-scale curve is a
               parabola):
             </OuterP>
@@ -204,13 +281,21 @@ export default function __Chapter13__() {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/yMU3.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Having intimated that the answer is the sum of
+              <span class="t-3003-c">
+                Having intimated that the answer is the sum of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:14:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               a parabola and of some cosine deviant, let us
               focus on the parabolic portion first, that would
               namely be roughly this purple curve:
@@ -219,50 +304,97 @@ export default function __Chapter13__() {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/7pg9.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_parabola.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              [Nb:
+              <span class="t-3003-c">
+                [Nb:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:23:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              parabolic
+              <span class="t-3003-c">
+                parabolic
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:25:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              is a synonym of
+              <span class="t-3003-c">
+                is a synonym of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:27:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              quadratic
+              <span class="t-3003-c">
+                quadratic
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:29:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              or
+              <span class="t-3003-c">
+                or
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:31:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              degree {" "}
+              <span class="t-3003-c">
+                degree {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:33:11
+                </span>
+              </span>
               <Math>
                 $\mathit&#123;2&#125;$
               </Math>
-              {" "} polynomial
+              <span class="t-3003-c">
+                {" "} polynomial
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:33:30
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              i.e., a function of the form
+              <span class="t-3003-c">
+                i.e., a function of the form
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:35:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               x \ra a_2x^2 + a_1x + a_0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for constants {" "}
+              <span class="t-3003-c">
+                for constants {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:39:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $a_2$
@@ -293,7 +425,12 @@ export default function __Chapter13__() {
               .]
             </OuterP>
             <OuterP class="indent-10">
-              As the parabola is symmetric about the {" "}
+              <span class="t-3003-c">
+                As the parabola is symmetric about the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:41:9
+                </span>
+              </span>
               <Math>
                 $y$
               </Math>
@@ -305,10 +442,16 @@ export default function __Chapter13__() {
               $$
               y = Ax^2 + C
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for some constants {" "}
+              <span class="t-3003-c">
+                for some constants {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:46:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $A$
@@ -337,18 +480,31 @@ export default function __Chapter13__() {
               term, that would break symmetry.)
             </OuterP>
             <OuterP class="indent-10">
-              The value
+              <span class="t-3003-c">
+                The value
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:52:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               C
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is easy because it is the value of the parabola at
+              <span class="t-3003-c">
+                is easy because it is the value of the parabola at
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:56:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
                   $x = 0$
@@ -367,22 +523,34 @@ export default function __Chapter13__() {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/Wk9W.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_C_estimate.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              ...so...
+              <span class="t-3003-c">
+                ...so...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:63:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               C = -3
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (we say). For {" "}
+              <span class="t-3003-c">
+                (we say). For {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:68:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $A$
@@ -423,13 +591,21 @@ export default function __Chapter13__() {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/XW1g.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_A_estimate.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              That increase being entirely due to the term
+              <span class="t-3003-c">
+                That increase being entirely due to the term
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:77:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
                   $Ax^2$
@@ -443,20 +619,32 @@ export default function __Chapter13__() {
               $$
               A \cdot 12^2 \approx 6
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (in more detail,
+              <span class="t-3003-c">
+                (in more detail,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:82:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               A\cdot 12^2 - A\cdot 0^2 \approx 6
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              but {" "}
+              <span class="t-3003-c">
+                but {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:86:9
+                </span>
+              </span>
               <Math>
                 $A\cdot 0^2$
               </Math>
@@ -467,23 +655,42 @@ export default function __Chapter13__() {
               $$
               A \approx &#123;6\over 12^2&#125; = &#123;1\over 24&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              meaning that the quadratic portion of the function is
+              <span class="t-3003-c">
+                meaning that the quadratic portion of the function is
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:90:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;x^2\over 24&#125; - 3
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              per this estimate.
+              <span class="t-3003-c">
+                per this estimate.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:94:9
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              The other portion of the answer—what is left
+              <span class="t-3003-c">
+                The other portion of the answer—what is left
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:96:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               after the parabola is subtracted—is a cosine-like
               function (or {" "}
               <i>
@@ -505,12 +712,18 @@ export default function __Chapter13__() {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/MP5H.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_with_inset.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              Moreover at {" "}
+              <span class="t-3003-c">
+                Moreover at {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:107:9
+                </span>
+              </span>
               <Math>
                 $x = 0$
               </Math>
@@ -530,10 +743,18 @@ export default function __Chapter13__() {
               $$
               -0.5\cos(Bx)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              to model this sinusoid,
+              <span class="t-3003-c">
+                to model this sinusoid,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:116:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               where the multiplication by {" "}
               <Math>
                 $0.5$
@@ -568,10 +789,18 @@ export default function __Chapter13__() {
               $$
               B = 1
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              will give a curve that goes through one full cycle
+              <span class="t-3003-c">
+                will give a curve that goes through one full cycle
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:125:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               per interval of length {" "}
               <NoBreak>
                 <Math>
@@ -612,12 +841,20 @@ export default function __Chapter13__() {
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/FLx-.svg"
+              local_url="./images/svg_ch5_ex_cosine_minus_cos_20x_plus_quadratic_B_estimate.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              So an estimate for the
+              <span class="t-3003-c">
+                So an estimate for the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:137:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               second function
               would be...
             </OuterP>
@@ -626,20 +863,32 @@ export default function __Chapter13__() {
               $$
               -0.5\cos(20x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...giving us...
+              <span class="t-3003-c">
+                ...giving us...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:143:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               -0.5\cos(20x) + &#123;x^2\over 24&#125; - 3
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...for our final answer, after adding the parabola back.
+              <span class="t-3003-c">
+                ...for our final answer, after adding the parabola back.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_parabolic_.wly:147:9
+                </span>
+              </span>
             </OuterP>
           </Solution>
         </Exercise>
@@ -649,31 +898,54 @@ export default function __Chapter13__() {
               <b>
                 Exercise 3.
               </b>
+              {" "}{" "}
               {" "}
-              Guesstimate a function with this graph:
+              {" "}
+              <span class="t-3003-c">
+                Guesstimate a function with this graph:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/dt9I.svg"
+              local_url="./images/svg_ch5_ex_big_wave.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              First we estimate a function for the large-scale
+              <span class="t-3003-c">
+                First we estimate a function for the large-scale
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:11:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               curve in purple:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/3ZYf.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              It appears to be a linear function (line through
+              <span class="t-3003-c">
+                It appears to be a linear function (line through
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:17:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $(0, 0)$
               </Math>
@@ -685,12 +957,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/r7Qe.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_blue_with_1_4.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              This makes the linear function portion of the purple
+              <span class="t-3003-c">
+                This makes the linear function portion of the purple
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:26:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               curve
             </OuterP>
             <Pause />
@@ -698,13 +978,26 @@ export default function __Chapter13__() {
               $$
               y = -&#123;1\over 4&#125;x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or thereabouts.
+              <span class="t-3003-c">
+                or thereabouts.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:33:9
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              To model the sinusoid portion of the large-scale
+              <span class="t-3003-c">
+                To model the sinusoid portion of the large-scale
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:35:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               purple curve we need more measurements, such as
               the total height of the sinusoid from top of
               bump to bottom of trough; we can add a third “bottom
@@ -715,12 +1008,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/CZVO.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_blue_with_height.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              So it appears that the sinusoid has a total height
+              <span class="t-3003-c">
+                So it appears that the sinusoid has a total height
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:46:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               of {" "}
               <Math>
                 $\approx 4$
@@ -728,7 +1029,14 @@ export default function __Chapter13__() {
               {" "} from top of bump to bottom of trough.
             </OuterP>
             <OuterP class="indent-10">
-              (And in case you're confused by what we're trying
+              <span class="t-3003-c">
+                (And in case you're confused by what we're trying
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:49:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               to do,
               let us re-explain that we are trying
               to measure the vertical width of this blue band...
@@ -736,12 +1044,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/9l0x.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_blue_with_band.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              ...that, indeed, seems near {" "}
+              <span class="t-3003-c">
+                ...that, indeed, seems near {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:57:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $4$
@@ -750,7 +1064,14 @@ export default function __Chapter13__() {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              What this means is that if we remove the linear
+              <span class="t-3003-c">
+                What this means is that if we remove the linear
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:59:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               portion
             </OuterP>
             <Pause />
@@ -758,10 +1079,18 @@ export default function __Chapter13__() {
               $$
               y = -&#123;1\over 4&#125;x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              from the purple curve, what we will find is a
+              <span class="t-3003-c">
+                from the purple curve, what we will find is a
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:66:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               sinusoid whose individual bumps have height {" "}
               <NoBreak>
                 <Math>
@@ -776,22 +1105,34 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/I-bw.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_sinusoid_only.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              This graph has the form
+              <span class="t-3003-c">
+                This graph has the form
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:74:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               y = -2\sin(Bx)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for some value of {" "}
+              <span class="t-3003-c">
+                for some value of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:78:9
+                </span>
+              </span>
               <Math>
                 $B \in \rr$
               </Math>
@@ -803,41 +1144,67 @@ export default function __Chapter13__() {
               $$
               y = -\sin(x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              has graph...
+              <span class="t-3003-c">
+                has graph...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:83:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               style="margin-top:0.8em;margin-bottom:1em;"
               src="/build-img/svgo-svg/eM2n.svg"
+              local_url="./images/svg_ch5_ex_big_wave_minus_sin_x.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              ...and that
+              <span class="t-3003-c">
+                ...and that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:89:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               y = -2\sin(x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              has graph...
+              <span class="t-3003-c">
+                has graph...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:93:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/YfcA.svg"
+              local_url="./images/svg_ch5_ex_big_wave_minus_2sin_x.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              ...and, from there, all that remains is to
+              <span class="t-3003-c">
+                ...and, from there, all that remains is to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:98:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               “slow down” the oscillation to match the
               aquamarine graph—the “slowing down” is what
               {" "}
@@ -847,7 +1214,12 @@ export default function __Chapter13__() {
               {" "} is for.)
             </OuterP>
             <OuterP class="indent-10">
-              To find {" "}
+              <span class="t-3003-c">
+                To find {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:103:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $B$
@@ -864,22 +1236,36 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/So_Y.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_blue_period_measurement.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              As
+              <span class="t-3003-c">
+                As
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:113:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               12.6 \approx 12.56 = 2\times 6.28 \approx 2\cdot 4\eta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              the period of the large-scale sinusoid is near
+              <span class="t-3003-c">
+                the period of the large-scale sinusoid is near
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:119:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               twice the period of sin or cos; i.e., we need to
               “slow down”
             </OuterP>
@@ -888,10 +1274,16 @@ export default function __Chapter13__() {
               $$
               -2\sin(x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by a factor {" "}
+              <span class="t-3003-c">
+                by a factor {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:127:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $2$
@@ -905,38 +1297,70 @@ export default function __Chapter13__() {
               $$
               B = 0.5
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              i.e., use
+              <span class="t-3003-c">
+                i.e., use
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:133:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               y = -2\sin(0.5x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for the large-scale sinusoid. (Aquamarine graph.)
+              <span class="t-3003-c">
+                for the large-scale sinusoid. (Aquamarine graph.)
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:139:9
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              (So far we have
+              <span class="t-3003-c">
+                (So far we have
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:141:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               -&#123;1\over 4&#125;x - 2\sin(0.5x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for our approximation to the purple curve, putting
+              <span class="t-3003-c">
+                for our approximation to the purple curve, putting
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:147:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               the linear and sinusoidal parts together. Now we
               move on from the purple curve.)
             </OuterP>
             <OuterP class="indent-10">
-              It remains to add in the small-scale oscillation
+              <span class="t-3003-c">
+                It remains to add in the small-scale oscillation
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:151:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               from the original curve; we can do the tedious
               part first, and count the number cycles in an
               interval of length {" "}
@@ -950,12 +1374,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/yXJ4.svg"
+              local_url="./images/svg_ch5_ex_big_wave_purple_small_scale_bump_count.svg"
               intrinsicWidth="1139.5"
               intrinsicHeight="406.5"
             />
             <Pause />
             <OuterP>
-              So the small-scale oscillation is running
+              <span class="t-3003-c">
+                So the small-scale oscillation is running
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:159:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               at {" "}
               <Math>
                 $\approx 19$
@@ -969,10 +1401,18 @@ export default function __Chapter13__() {
               $$
               x \ra -0.5\sin(19x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since, like the large-scale oscillation from the
+              <span class="t-3003-c">
+                since, like the large-scale oscillation from the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:168:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               purple curve, it shares the same phase as {" "}
               <NoBreak>
                 <Math>
@@ -999,17 +1439,30 @@ export default function __Chapter13__() {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              Altogether, we get
+              <span class="t-3003-c">
+                Altogether, we get
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:174:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               y = -&#123;1\over 4&#125;x - 2\sin(0.5x) - 0.5\sin(19x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as our “guesstimate”, while adding the linear
+              <span class="t-3003-c">
+                as our “guesstimate”, while adding the linear
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_guesstimate_sinusoid_.wly:180:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               function, the large-scale sinusoid, and the small-scale
               sinusoid together!
             </OuterP>
@@ -1021,8 +1474,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 4.
               </b>
+              {" "}{" "}
               {" "}
-              A point {" "}
+              {" "}
+              <span class="t-3003-c">
+                A point {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $P \in \rr^3$
               </Math>
@@ -1069,12 +1529,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/FZVx.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_statement.svg"
               intrinsicWidth={410}
               intrinsicHeight={460}
             />
             <Pause />
             <OuterP>
-              What are {" "}
+              <span class="t-3003-c">
+                What are {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:13:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $x$
@@ -1112,7 +1578,12 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since {" "}
+              <span class="t-3003-c">
+                Since {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:18:9
+                </span>
+              </span>
               <Math>
                 $\phi$
               </Math>
@@ -1129,23 +1600,36 @@ export default function __Chapter13__() {
                 src="/build-img/svgo-svg/DuQk.svg"
                 offsetX="4em"
                 atLeastAsWide={true}
+                local_url="./images/e5_sperical_coordinates_180_cloud.svg"
                 intrinsicWidth={500}
                 intrinsicHeight={150}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              from which
+              <span class="t-3003-c">
+                from which
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:44:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sin(\phi) \geq 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and from which {" "}
+              <span class="t-3003-c">
+                and from which {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:56:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $R\sin(\phi)$
@@ -1176,12 +1660,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/giDO.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_Rsin_phi.svg"
               intrinsicWidth={410}
               intrinsicHeight={480}
             />
             <Pause />
             <OuterP>
-              ...whereas {" "}
+              <span class="t-3003-c">
+                ...whereas {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:63:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $R\cos(\phi)$
@@ -1192,21 +1682,37 @@ export default function __Chapter13__() {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              signed length
+              <span class="t-3003-c">
+                signed length
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:65:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              as
+              <span class="t-3003-c">
+                as
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:68:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(\phi)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is negative for {" "}
+              <span class="t-3003-c">
+                is negative for {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:74:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\eta &lt; \phi \leq 2\eta$
@@ -1246,13 +1752,24 @@ export default function __Chapter13__() {
               $$
               z = R\cos(\phi)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and “one coordinate down”.
+              <span class="t-3003-c">
+                and “one coordinate down”.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:84:9
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              For {" "}
+              <span class="t-3003-c">
+                For {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:86:9
+                </span>
+              </span>
               <Math>
                 $x$
               </Math>
@@ -1295,30 +1812,39 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/10Fl.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_xy_plane.svg"
               intrinsicWidth={380}
               intrinsicHeight={330}
             />
             <Pause />
             <OuterP>
-              Or:
+              <span class="t-3003-c">
+                Or:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_1_.wly:95:9
+                </span>
+              </span>
             </OuterP>
             <Boxed style="margin-bottom:-5px;">
               <MathBlock>
                 $$
                 x = R\sin(\phi)\cos(\theta)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
                 y = R\sin(\phi)\sin(\theta)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
                 z = R\cos(\phi)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <Pause />
@@ -1331,8 +1857,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 5.
               </b>
+              {" "}{" "}
               {" "}
-              If, 
+              {" "}
+              <span class="t-3003-c">
+                If, {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_2_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               in {" "}
               <InChapterLink
                 href="#_154_h.a.i_"
@@ -1376,43 +1911,67 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/haQ7.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_otherway_statement.svg"
               intrinsicWidth={410}
               intrinsicHeight={460}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_2_.wly:18:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \phi \in [-\eta, \eta]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              one has
+              <span class="t-3003-c">
+                one has
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_2_.wly:22:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(\phi) \geq 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_2_.wly:26:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               R\cos(\phi) \geq 0
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              from which {" "}
+              <span class="t-3003-c">
+                from which {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_2_.wly:30:9
+                </span>
+              </span>
               <Math>
                 $R\cos(\phi)$
               </Math>
@@ -1453,10 +2012,16 @@ export default function __Chapter13__() {
               $$
               R\sin(\phi)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is a signed quantity equal to {" "}
+              <span class="t-3003-c">
+                is a signed quantity equal to {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_2_.wly:39:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $z$
@@ -1480,12 +2045,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/3aFp.svg"
+              local_url="./images/svg_ch5_ex_spherical_coordinates_otherway_Rcos_phi.svg"
               intrinsicWidth={410}
               intrinsicHeight={460}
             />
             <Pause />
             <OuterP>
-              The coordinate transformations are
+              <span class="t-3003-c">
+                The coordinate transformations are
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_spherical_to_cartesian_coordinates_2_.wly:45:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               thus obtained by interchanging {" "}
               <NoBreak>
                 “
@@ -1518,18 +2091,21 @@ export default function __Chapter13__() {
                 $$
                 x = R\cos(\phi)\cos(\theta)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
                 y = R\cos(\phi)\sin(\theta)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
                 z = R\sin(\phi)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <Pause />
@@ -1542,8 +2118,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 6.
               </b>
+              {" "}{" "}
               {" "}
-              Compute the vertical distance from {" "}
+              {" "}
+              <span class="t-3003-c">
+                Compute the vertical distance from {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
@@ -1558,24 +2141,40 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/shI1.svg"
+              local_url="./images/svg_ch5_ex_floorplan.svg"
               intrinsicWidth={860}
               intrinsicHeight={475}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We will compute the two green lengths, then the
+              <span class="t-3003-c">
+                We will compute the two green lengths, then the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:13:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               red length, then the blue length, then add 130:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/nm64.svg"
+              local_url="./images/svg_ch5_ex_floorplan_soln1.svg"
               intrinsicWidth={860}
               intrinsicHeight={475}
             />
             <Pause />
             <OuterP>
-              Proceeding, the longer and smaller green lengths
+              <span class="t-3003-c">
+                Proceeding, the longer and smaller green lengths
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:19:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               are {" "}
               <Math>
                 $112\rt&#123;0.1&#125; \cdot \sin(25.5^\circ\hlfbk)$
@@ -1591,12 +2190,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/xKw8.svg"
+              local_url="./images/svg_ch5_ex_floorplan_soln2.svg"
               intrinsicWidth={860}
               intrinsicHeight={400}
             />
             <Pause />
             <OuterP>
-              The red length is therefore
+              <span class="t-3003-c">
+                The red length is therefore
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:27:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1606,30 +2211,48 @@ export default function __Chapter13__() {
               \up&#123;1.6&#125; =&amp;\,\,260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)
               \end&#123;align*&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (inches) while the blue length is
+              <span class="t-3003-c">
+                (inches) while the blue length is
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:36:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (inches) and the final answer is
+              <span class="t-3003-c">
+                (inches) and the final answer is
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:42:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               130 + \tan(22^\circ\hlfbk)\cdot[260 - 112\cdot\sin(25.5^\circ\hlfbk) - 8\cdot\cos(25.5^\circ\hlfbk)]
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              inches, which comes out to
+              <span class="t-3003-c">
+                inches, which comes out to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:48:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -1640,13 +2263,20 @@ export default function __Chapter13__() {
                 src="/build-img/svgo-svg/O1mN.svg"
                 offsetX="10em"
                 atLeastAsWide={true}
+                local_url="./images/svg_ch5_ex_floorplan_computation_cloud.svg"
                 intrinsicWidth={800}
                 intrinsicHeight={520}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              minus some. (Approximating to {" "}
+              <span class="t-3003-c">
+                minus some. (Approximating to {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:58:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $1/100$
@@ -1662,30 +2292,47 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                Note that...
+                {" "}
+                <span class="t-3003-c">
+                  Note that...
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:63:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \cos(25.5^\circ) = 0.90258\dots
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
                 \sin(25.5^\circ) = 0.43051\dots
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <MathBlock>
                 $$
                 \tan(22^\circ) = 0.40402\dots
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                ...and if you are not finding these values, then make sure
+                <span class="t-3003-c">
+                  ...and if you are not finding these values, then make sure
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_blueprints_top_and_side_.wly:73:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 that your calculator is in “degree mode”.
                 (Otherwise you have to manually
                 convert the arguments to radians.)
@@ -1699,8 +2346,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 7.
               </b>
+              {" "}{" "}
               {" "}
-              Given the following sketch, to what angle
+              {" "}
+              <span class="t-3003-c">
+                Given the following sketch, to what angle
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               can the door be opened before it hits against
               the roof? (Hint: You will need to Google “how
               to use arctan”, or “how to convert from Cartesian
@@ -1709,36 +2365,66 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/fgGT.svg"
+              local_url="./images/svg_ch5_ex_opening_door.svg"
               intrinsicWidth={500}
               intrinsicHeight={410}
             />
             <Pause />
             <OuterP>
-              And:
+              <span class="t-3003-c">
+                And:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:13:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <List style="padding-left:2.2em;gap:0.2em;">
               <Item>
                 <p>
-                  all distances are in inches
+                  <span class="t-3003-c">
+                    all distances are in inches
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:18:9
+                    </span>
+                  </span>
                 </p>
               </Item>
               <Item>
                 <p>
-                  assume half an inch from the edge of the door
+                  <span class="t-3003-c">
+                    assume half an inch from the edge of the door
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:20:9
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
                   to the center of its hinge
                 </p>
               </Item>
               <Item>
                 <p>
-                  assume the door has negligible thicknesss
+                  <span class="t-3003-c">
+                    assume the door has negligible thicknesss
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:23:9
+                    </span>
+                  </span>
                 </p>
               </Item>
             </List>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The “key intermediate length” to compute is
+              <span class="t-3003-c">
+                The “key intermediate length” to compute is
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:27:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               the distance 
               from the hinge-edge of the door to
               the ceiling near the top of the door:
@@ -1746,12 +2432,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/Tsmn.svg"
+              local_url="./images/svg_ch5_ex_opening_door_soln0.svg"
               intrinsicWidth={1200}
               intrinsicHeight={410}
             />
             <Pause />
             <OuterP>
-              For this we need the lengths marked ‘2’ and
+              <span class="t-3003-c">
+                For this we need the lengths marked ‘2’ and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:38:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               ‘4’ below, each of which requires a separate
               mini-computation, including deducing the width 
               of the door (length ‘3’) in order to deduce the length marked ‘4’
@@ -1760,22 +2454,34 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/odA8.svg"
+              local_url="./images/svg_ch5_ex_opening_door_soln1.svg"
               intrinsicWidth={1200}
               intrinsicHeight={410}
             />
             <Pause />
             <OuterP>
-              (Nb: One can also compute the length marked ‘2’ as
+              <span class="t-3003-c">
+                (Nb: One can also compute the length marked ‘2’ as
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:47:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;42\over \tan(23^\circ)&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since {" "}
+              <span class="t-3003-c">
+                since {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:51:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\cot = 1/\tan$
@@ -1789,10 +2495,16 @@ export default function __Chapter13__() {
               $$
               42\cdot \tan(67^\circ)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since {" "}
+              <span class="t-3003-c">
+                since {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:55:9
+                </span>
+              </span>
               <Math>
                 $67^\circ = 90^\circ - 23^\circ$
               </Math>
@@ -1806,17 +2518,30 @@ export default function __Chapter13__() {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              Next, as
+              <span class="t-3003-c">
+                Next, as
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:58:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               0.5
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is the distance from the side of the door to its
+              <span class="t-3003-c">
+                is the distance from the side of the door to its
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:64:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               hinge, the door swings at a radius of
             </OuterP>
             <Pause />
@@ -1824,10 +2549,18 @@ export default function __Chapter13__() {
               $$
               38.5
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and the distance between the hinge's center
+              <span class="t-3003-c">
+                and the distance between the hinge's center
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:71:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               and the ceiling, measured horizontally at the top
               of the door, is
             </OuterP>
@@ -1836,10 +2569,18 @@ export default function __Chapter13__() {
               $$
               30.945 - 0.5 = 30.445...
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by subtracting from the length marked ‘5’.
+              <span class="t-3003-c">
+                by subtracting from the length marked ‘5’.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:79:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               We can draw this overhead sketch
               (not to scale, and keeping to {" "}
               <Math>
@@ -1850,32 +2591,52 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/OO4Q.svg"
+              local_url="./images/svg_ch5_ex_opening_door_overhead.svg"
               intrinsicWidth={530}
               intrinsicHeight={460}
             />
             <Pause />
             <OuterP>
-              Here
+              <span class="t-3003-c">
+                Here
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:86:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \arctan
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is a function that you can find notated as
+              <span class="t-3003-c">
+                is a function that you can find notated as
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:92:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \te&#123;“&#125;\tan^&#123;-1&#125;\te&#123;”&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              on your calculator (a questionable choice of notation,
+              <span class="t-3003-c">
+                on your calculator (a questionable choice of notation,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:98:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               because it is {" "}
               <i>
                 not
@@ -1892,25 +2653,48 @@ export default function __Chapter13__() {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              tangent inverse
+              <span class="t-3003-c">
+                tangent inverse
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:102:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              by the gallery, converts a fraction of the form
+              <span class="t-3003-c">
+                by the gallery, converts a fraction of the form
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:104:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;\te&#123;opposite&#125;\over\te&#123;adjacent&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              into the corresponding angle whose tangent equals that
+              <span class="t-3003-c">
+                into the corresponding angle whose tangent equals that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:110:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               fraction.
             </OuterP>
             <OuterP class="indent-10">
-              The final answer is...
+              <span class="t-3003-c">
+                The final answer is...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:113:9
+                </span>
+              </span>
             </OuterP>
             <center style="margin-top:1em;margin-bottom:1em;">
               <div style="display:inline-block;border:1px solid red;padding:1em 1em;">
@@ -1918,11 +2702,17 @@ export default function __Chapter13__() {
                   $$
                   90^\circ + 52.26^\circ = 142.26^\circ
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </div>
             </center>
             <OuterP>
-              ...because {" "}
+              <span class="t-3003-c">
+                ...because {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_blueprints_open_thin_door_.wly:124:9
+                </span>
+              </span>
               <Math>
                 $\alpha$
               </Math>
@@ -1944,18 +2734,31 @@ export default function __Chapter13__() {
               <b>
                 Exercise 8.
               </b>
+              {" "}{" "}
               {" "}
-              In the figure below, where can
+              {" "}
+              <span class="t-3003-c">
+                In the figure below, where can
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_1_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large ab\cos\theta_&#123;ab&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              be found, if at all? (Note that {" "}
+              <span class="t-3003-c">
+                be found, if at all? (Note that {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_1_.wly:10:5
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -1969,23 +2772,35 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/oty_.svg"
+              local_url="./images/e5_cosine_rule_geometric_1_statement.svg"
               intrinsicWidth={600}
               intrinsicHeight={575}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It is the area of both these rectangles:
+              <span class="t-3003-c">
+                It is the area of both these rectangles:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_1_.wly:18:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/XjcR.svg"
+              local_url="./images/e5_cosine_rule_geometric_1_sol1_v2.svg"
               intrinsicWidth={600}
               intrinsicHeight={610}
             />
             <Pause />
             <OuterP>
-              Here is how {" "}
+              <span class="t-3003-c">
+                Here is how {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_1_.wly:23:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -2008,32 +2823,50 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/n3ZM.svg"
+              local_url="./images/e5_cosine_rule_geometric_1_sol34_combined.svg"
               intrinsicWidth={750}
               intrinsicHeight={350}
             />
             <Pause />
             <OuterP>
-              Thus the rectangles respectively have areas...
+              <span class="t-3003-c">
+                Thus the rectangles respectively have areas...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_1_.wly:32:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large a(b\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...and...
+              <span class="t-3003-c">
+                ...and...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_1_.wly:37:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large b(a\cdot \cos\theta_&#123;ab&#125;) = ab\cos\theta_&#123;ab&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...as claimed!
+              <span class="t-3003-c">
+                ...as claimed!
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_1_.wly:42:9
+                </span>
+              </span>
             </OuterP>
           </Solution>
         </Exercise>
@@ -2043,8 +2876,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 9.
               </b>
+              {" "}{" "}
               {" "}
-              Keeping the diagram of {" "}
+              {" "}
+              <span class="t-3003-c">
+                Keeping the diagram of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_2_.wly:4:5
+                </span>
+              </span>
               <InChapterLink
                 href="#_158_h.a.i_"
                 class="in-chapter-link"
@@ -2079,7 +2919,12 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              By {" "}
+              <span class="t-3003-c">
+                By {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_2_.wly:10:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_158_h.a.i_"
                 class="in-chapter-link"
@@ -2092,12 +2937,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/q6NB.svg"
+              local_url="./images/_e5_cosine_rule_geometric_2_sol1.svg"
               intrinsicWidth={600}
               intrinsicHeight={575}
             />
             <Pause />
             <OuterP>
-              But by a similar argument,
+              <span class="t-3003-c">
+                But by a similar argument,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_2_.wly:17:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               these rectangles 
               can also be shown to have
               have the same area:
@@ -2105,32 +2958,50 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/Sie8.svg"
+              local_url="./images/_e5_cosine_rule_geometric_2_sol2_v2.svg"
               intrinsicWidth={700}
               intrinsicHeight={335}
             />
             <Pause />
             <OuterP>
-              This gives...
+              <span class="t-3003-c">
+                This gives...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_2_.wly:26:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/Prt-.svg"
+              local_url="./images/_e5_cosine_rule_geometric_2_sol3.svg"
               intrinsicWidth={3100}
               intrinsicHeight={180}
             />
             <Pause />
             <OuterP>
-              ...thiiiis...
+              <span class="t-3003-c">
+                ...thiiiis...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_2_.wly:31:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 c = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              ...formula!
+              <span class="t-3003-c">
+                ...formula!
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_2_.wly:38:9
+                </span>
+              </span>
             </OuterP>
           </Solution>
         </Exercise>
@@ -2140,8 +3011,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 10.
               </b>
+              {" "}{" "}
               {" "}
-              Find expressions for areas A—F and use these to
+              {" "}
+              <span class="t-3003-c">
+                Find expressions for areas A—F and use these to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               give a formula for {" "}
               <Math>
                 $c$
@@ -2169,23 +3049,35 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/cigo.svg"
+              local_url="./images/_e5_cosine_rule_geometric_3_statement_v2.svg"
               intrinsicWidth={1080}
               intrinsicHeight={595}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Keeping in mind that
+              <span class="t-3003-c">
+                Keeping in mind that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:18:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(2\eta - x) = -\cos x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for all {" "}
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:24:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $x\in \rr$
@@ -2200,11 +3092,19 @@ export default function __Chapter13__() {
               $$
               \cos(2\eta - \theta_&#123;ab&#125;) = -\cos\theta_&#123;ab&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is a positive number in this diagram since
+              <span class="t-3003-c">
+                is a positive number in this diagram since
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:31:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $0 &lt; 2\eta - \theta_&#123;ab&#125; &lt; \eta$
               </Math>
@@ -2214,22 +3114,34 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/H_Um.svg"
+              local_url="./images/_e5_cosine_rule_geometric_3_sol1_v2.svg"
               intrinsicWidth={1080}
               intrinsicHeight={606}
             />
             <Pause />
             <OuterP>
-              Then
+              <span class="t-3003-c">
+                Then
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:44:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large c = \sqrt&#123;c^2&#125; = \sqrt&#123;\te&#123;D&#125; + \te&#123;C&#125;&#125; = \sqrt&#123;\te&#123;E&#125; + \te&#123;F&#125;&#125; = \sqrt&#123;(a^2 + \te&#123;B&#125;) + (b^2 + \te&#123;A&#125;)&#125; = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where we use the fact that
+              <span class="t-3003-c">
+                where we use the fact that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:50:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2239,10 +3151,16 @@ export default function __Chapter13__() {
               \up&#123;1.4&#125;\te&#123;C&#125; = \te&#123;F&#125;\,
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              in the third equality, and the fact that
+              <span class="t-3003-c">
+                in the third equality, and the fact that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:59:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2252,23 +3170,40 @@ export default function __Chapter13__() {
               \up&#123;1.4&#125;\te&#123;F&#125; = b^2 + \te&#123;A&#125;\,
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              in the fourth equality, and the fact that
+              <span class="t-3003-c">
+                in the fourth equality, and the fact that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:68:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \te&#123;A&#125; = \te&#123;B&#125; = -ab\cos\theta_&#123;ab&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              in the last equality.
+              <span class="t-3003-c">
+                in the last equality.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:74:9
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              So we obtain the same formula as in {" "}
+              <span class="t-3003-c">
+                So we obtain the same formula as in {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_3_.wly:76:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_159_h.a.i_"
                 class="in-chapter-link"
@@ -2285,8 +3220,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 11.
               </b>
+              {" "}{" "}
               {" "}
-              Find expressions for areas A—F and use these to
+              {" "}
+              <span class="t-3003-c">
+                Find expressions for areas A—F and use these to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_4_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               give a formula for {" "}
               <Math>
                 $c$
@@ -2314,13 +3258,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/hnrJ.svg"
+              local_url="./images/_e5_cosine_rule_geometric_4_statement_v2.svg"
               intrinsicWidth={1080}
               intrinsicHeight={670}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We can calculate each area as a plain “width {" "}
+              <span class="t-3003-c">
+                We can calculate each area as a plain “width {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_4_.wly:13:9
+                </span>
+              </span>
               <Math>
                 $\times$
               </Math>
@@ -2365,22 +3315,34 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/VpDU.svg"
+              local_url="./images/_e5_cosine_rule_geometric_4_sol1.svg"
               intrinsicWidth={1080}
               intrinsicHeight={670}
             />
             <Pause />
             <OuterP>
-              From which...
+              <span class="t-3003-c">
+                From which...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_4_.wly:32:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large c = \sqrt&#123;c^2&#125; = \sqrt&#123;B - D&#125; = \sqrt&#123;E - C&#125; = \sqrt&#123;(b^2 - A) - (F - a^2)&#125; = \sqrt&#123;(b^2 - ab\cos\theta_&#123;ab&#125;) - (ab\cos\theta_&#123;ab&#125; - a^2)&#125; = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...where we use the fact that
+              <span class="t-3003-c">
+                ...where we use the fact that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_4_.wly:38:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2390,10 +3352,16 @@ export default function __Chapter13__() {
               \up&#123;1.4&#125;\te&#123;D&#125; = \te&#123;C&#125;
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              in the third equality, and the fact that
+              <span class="t-3003-c">
+                in the third equality, and the fact that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_4_.wly:47:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -2403,20 +3371,32 @@ export default function __Chapter13__() {
               \up&#123;1.4&#125;\te&#123;C&#125; = F - a^2
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              in the fourth equality. The answer is therefore...
+              <span class="t-3003-c">
+                in the fourth equality. The answer is therefore...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_4_.wly:56:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 \Large c = \sqrt&#123;a^2 + b^2 - 2ab\cos\theta_&#123;ab&#125;&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              ...as in exercises {" "}
+              <span class="t-3003-c">
+                ...as in exercises {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_geometric_4_.wly:64:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_159_h.a.i_"
                 class="in-chapter-link"
@@ -2440,8 +3420,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 12.
               </b>
+              {" "}{" "}
               {" "}
-              Keeping a triangle with sides {" "}
+              {" "}
+              <span class="t-3003-c">
+                Keeping a triangle with sides {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:4:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $a$
@@ -2495,10 +3482,16 @@ export default function __Chapter13__() {
               a\cos\theta_&#123;ab&#125; + c\cos\theta_&#123;bc&#125; = b \up&#123;1.4&#125;
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...and then prove the {" "}
+              <span class="t-3003-c">
+                ...and then prove the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:17:5
+                </span>
+              </span>
               <i>
                 cosine rule
               </i>
@@ -2509,10 +3502,16 @@ export default function __Chapter13__() {
               $$
               c^2 = a^2 + b^2  - 2ab\cos\theta_&#123;ab&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...by manipulating the equations {" "}
+              <span class="t-3003-c">
+                ...by manipulating the equations {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:23:5
+                </span>
+              </span>
               <NoBreak>
                 in
                 <Math>
@@ -2524,7 +3523,12 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Because the equations {" "}
+              <span class="t-3003-c">
+                Because the equations {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:27:9
+                </span>
+              </span>
               <NoBreak>
                 in
                 <Math>
@@ -2559,23 +3563,35 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/YaSq.svg"
+              local_url="./images/_e5_cosine_rule_via_jacks_two_cases.svg"
               intrinsicWidth={600}
               intrinsicHeight={231}
             />
             <Pause />
             <OuterP>
-              In Case 1 we obviously have
+              <span class="t-3003-c">
+                In Case 1 we obviously have
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:39:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               c = a\cos\theta_&#123;ac&#125; + b\cos\theta_&#123;bc&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
               <NoBreak>
-                verifying
+                <span class="t-3003-c">
+                  verifying
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:45:9
+                  </span>
+                </span>
                 <Math>
                   $\rt&#123;0.1&#125;$
                 </Math>
@@ -2588,10 +3604,16 @@ export default function __Chapter13__() {
               $$
               -a\cos\theta_&#123;ab&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is positive—it's a {" "}
+              <span class="t-3003-c">
+                is positive—it's a {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:52:9
+                </span>
+              </span>
               <i>
                 length
               </i>
@@ -2603,10 +3625,16 @@ export default function __Chapter13__() {
               $$
               c = b\cos\theta_&#123;bc&#125; - (-a\cos\theta_&#123;ac&#125;) = b\cos\theta_&#123;bc&#125; + a\cos\theta_&#123;ac&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              again {" "}
+              <span class="t-3003-c">
+                again {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:59:9
+                </span>
+              </span>
               <NoBreak>
                 verifying
                 <Math>
@@ -2623,7 +3651,12 @@ export default function __Chapter13__() {
               />
             </OuterP>
             <OuterP class="indent-10">
-              Next, multiply each equation {" "}
+              <span class="t-3003-c">
+                Next, multiply each equation {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:65:9
+                </span>
+              </span>
               <NoBreak>
                 in
                 <Math>
@@ -2646,17 +3679,27 @@ export default function __Chapter13__() {
                 src="/build-img/svgo-svg/3Vd8.svg"
                 offsetX="0.5em"
                 atLeastAsWide={true}
+                local_url="./images/_e5_cosine_rule_via_jacks_multiplying_cloud_.svg"
                 intrinsicWidth={500}
                 intrinsicHeight={200}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...but then if we subtract the last two equations from
+              <span class="t-3003-c">
+                ...but then if we subtract the last two equations from
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:87:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               the first we obtain...
               <ImageLeft
                 src="/build-img/svgo-svg/739B.svg"
                 offsetX="0.5em"
+                local_url="./images/_e5_cosine_rule_via_jacks_equation_adding_cloud.svg"
                 intrinsicWidth={500}
                 intrinsicHeight={200}
               />
@@ -2666,10 +3709,16 @@ export default function __Chapter13__() {
               $$
               -2ab\cos\theta_&#123;ab&#125; = c^2 - a^2 - b^2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...which is the cosine rule, rearranged!
+              <span class="t-3003-c">
+                ...which is the cosine rule, rearranged!
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_via_jacks_rule_.wly:98:9
+                </span>
+              </span>
             </OuterP>
           </Solution>
         </Exercise>
@@ -2679,8 +3728,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 13.
               </b>
+              {" "}{" "}
               {" "}
-              Let points {" "}
+              {" "}
+              <span class="t-3003-c">
+                Let points {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $P_1$
               </Math>
@@ -2705,12 +3761,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/E-Fq.svg"
+              local_url="./images/e5_polar_P1P2.svg"
               intrinsicWidth={450}
               intrinsicHeight={300}
             />
             <Pause />
             <OuterP>
-              What is the distance from {" "}
+              <span class="t-3003-c">
+                What is the distance from {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:10:5
+                </span>
+              </span>
               <Math>
                 $P_1$
               </Math>
@@ -2754,21 +3816,35 @@ export default function __Chapter13__() {
               $$
               \theta_1 - \theta_2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or, even, only on
+              <span class="t-3003-c">
+                or, even, only on
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:18:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               |\theta_1 - \theta_2|
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as opposed to depending on the individual values of
+              <span class="t-3003-c">
+                as opposed to depending on the individual values of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:22:5
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $\theta_1$
               </Math>
@@ -2791,17 +3867,28 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              First note that
+              <span class="t-3003-c">
+                First note that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:30:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 \cos(A - B) = \cos A\cos B + \sin A\sin B
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              for all {" "}
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:37:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $A, B \in \rr$
@@ -2815,10 +3902,16 @@ export default function __Chapter13__() {
               $$
               \cos(A + B) = \cos A\cos B - \sin A\sin B
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for all {" "}
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:43:9
+                </span>
+              </span>
               <Math>
                 $A, B \in \rr$
               </Math>
@@ -2833,10 +3926,16 @@ export default function __Chapter13__() {
                           &amp;=\,\,\up&#123;1.4&#125; \cos A\cos B + \sin A\sin B
               \end&#123;aligned&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by {" "}
+              <span class="t-3003-c">
+                by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:53:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\cos(-x) = \cos(x)$
@@ -2852,22 +3951,42 @@ export default function __Chapter13__() {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              (There is a similar formula
+              <span class="t-3003-c">
+                (There is a similar formula
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:55:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 \sin(A - B) = -\cos A\sin B + \sin A\cos B
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              for the sine of a difference, but that one is hardly
+              <span class="t-3003-c">
+                for the sine of a difference, but that one is hardly
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:62:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               as important or useful, you should forget it even though
               we just boxed it.)
             </OuterP>
             <OuterP class="indent-10">
-              We now apply the Cartesian formula
+              <span class="t-3003-c">
+                We now apply the Cartesian formula
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:66:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               for distance
             </OuterP>
             <Pause />
@@ -2875,12 +3994,19 @@ export default function __Chapter13__() {
               $$
               \sqrt&#123;(x_1 - x_2)^2 + (y_1 - y_2)^2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              that will be good to slightly rewrite as
+              <span class="t-3003-c">
+                that will be good to slightly rewrite as
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:73:9
+                </span>
+              </span>
               <ImageLeft
                 src="/build-img/svgo-svg/Y5Rf.svg"
+                local_url="./images/e5_polar_P1P2_a_minus_b_squared_left_cloud.svg"
                 intrinsicWidth={400}
                 intrinsicHeight={100}
               />
@@ -2890,10 +4016,16 @@ export default function __Chapter13__() {
               $$
               \sqrt&#123;x_1^2 + x_2^2 + y_1^2 + y_2^2 - 2(x_1x_2 + y_1y_2)&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              to be applied with {" "}
+              <span class="t-3003-c">
+                to be applied with {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:86:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $(x_1, y_1) = P_1$
@@ -2917,10 +4049,18 @@ export default function __Chapter13__() {
               (x_2, y_2) = (r_2\cos\theta_2, r_2\sin\theta_2)\up&#123;1.4&#125;
               \end&#123;aligned&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by definition of polar coordinates,
+              <span class="t-3003-c">
+                by definition of polar coordinates,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:95:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               from which
             </OuterP>
             <Pause />
@@ -2931,40 +4071,66 @@ export default function __Chapter13__() {
               &amp;x_2^2 + y_2^2 = r_2^2\cos^2\theta_2 + r_2^2\sin^2\theta_2 = r_2^2(\cos^2\theta_2 + \sin^2\theta_2) = r_2^2\up&#123;1.4&#125;
               \end&#123;aligned&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:105:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               x_1^2 + x_2^2 + y_1^2 + y_2^2 = r_1^2 + r_2^2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (in fact, we know that
+              <span class="t-3003-c">
+                (in fact, we know that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:111:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               x_1^2 + y_1^2 = r_1^2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:117:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               x_2^2 + y_2^2 = r_2^2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              just by common lore of polar coordinates,
+              <span class="t-3003-c">
+                just by common lore of polar coordinates,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:126:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               but anyway), while
             </OuterP>
             <Pause />
@@ -2975,80 +4141,128 @@ export default function __Chapter13__() {
               y_1y_2 =\, r_1\sin\theta_1\cdot r_2\sin\theta_2 = r_1r_2\sin\theta_1\sin\theta_2\up&#123;1.5&#125;\,\,
               \end&#123;aligned&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              from which
+              <span class="t-3003-c">
+                from which
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:136:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               x_1x_2 + y_1y_2 = r_1r_2(\cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              but
+              <span class="t-3003-c">
+                but
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:142:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2 = \cos(\theta_1 - \theta_2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by the first remark, so
+              <span class="t-3003-c">
+                by the first remark, so
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:148:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               x_1y_1 + x_2y_2 = r_1r_2\cos(\theta_1 - \theta_2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and, altogether, the distance...
+              <span class="t-3003-c">
+                and, altogether, the distance...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:158:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sqrt&#123;x_1^2 + x_2^2 + y_1^2 + y_2^2 - 2(x_1x_2 + y_1y_2)&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...becomes...
+              <span class="t-3003-c">
+                ...becomes...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:164:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 \sqrt&#123;r_1^2 + r_2^2 - 2r_2r_2\cos(\theta_1 - \theta_2)&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              ...that, as can be seen, depends only on
+              <span class="t-3003-c">
+                ...that, as can be seen, depends only on
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:178:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \theta_1 - \theta_2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or, even, only on
+              <span class="t-3003-c">
+                or, even, only on
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:182:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               |\theta_1 - \theta_2|
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              since {" "}
+              <span class="t-3003-c">
+                since {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:186:9
+                </span>
+              </span>
               <Math>
                 $\cos(x) = \cos(-x) = \cos(|x|)$
               </Math>
@@ -3061,7 +4275,14 @@ export default function __Chapter13__() {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              A SECOND SOLUTION—first solution is over—starts
+              <span class="t-3003-c">
+                A SECOND SOLUTION—first solution is over—starts
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:191:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               by rotating {" "}
               <NoBreak>
                 <Math>
@@ -3111,12 +4332,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/RLiz.svg"
+              local_url="./images/e5_polar_P1P2_rotated.svg"
               intrinsicWidth={450}
               intrinsicHeight={230}
             />
             <Pause />
             <OuterP>
-              Since the rotation does not affect distances,
+              <span class="t-3003-c">
+                Since the rotation does not affect distances,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:200:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               the answer becomes the previous formula
             </OuterP>
             <Pause />
@@ -3124,10 +4353,16 @@ export default function __Chapter13__() {
               $$
               \sqrt&#123;x_1^2 + y_1^2 + x_2^2 + y_2^2 - 2(x_1y_1 + x_2y_2)&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              applied with
+              <span class="t-3003-c">
+                applied with
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:207:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3137,20 +4372,32 @@ export default function __Chapter13__() {
               (x_2, y_2) \,=\, P_2' \,=\, (r_2, 0)\up&#123;1.8&#125;
               \end&#123;gather&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which gives
+              <span class="t-3003-c">
+                which gives
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:216:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 \sqrt&#123;r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              again, since, namely,
+              <span class="t-3003-c">
+                again, since, namely,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:223:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -3162,10 +4409,18 @@ export default function __Chapter13__() {
               x_2y_2 = \up&#123;1.5&#125; r_1\cos(\theta_1 - \theta_2)\cdot 0 = 0
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              in this case, and this time we don't need to apply a fancy
+              <span class="t-3003-c">
+                in this case, and this time we don't need to apply a fancy
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:234:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               algebraic observation, or anything!
             </OuterP>
             <Pause />
@@ -3174,8 +4429,15 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                As a result, the {" "}
+                {" "}
+                <span class="t-3003-c">
+                  As a result, the {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:240:13
+                  </span>
+                </span>
                 <i>
                   distance squared
                 </i>
@@ -3195,6 +4457,7 @@ export default function __Chapter13__() {
                   $$
                   r_1^2 + r_2^2 - 2r_2r_2\cos(\theta_1 - \theta_2)
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
             </SolutionNote>
@@ -3204,28 +4467,47 @@ export default function __Chapter13__() {
                 <i>
                   Note 2.
                 </i>
+                {" "}{" "}
                 {" "}
-                The distance squared reduces to
+                {" "}
+                <span class="t-3003-c">
+                  The distance squared reduces to
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:252:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
                   $$
                   r_1^2 + r_2^2
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                and the ordinary distance reduces to
+                <span class="t-3003-c">
+                  and the ordinary distance reduces to
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:259:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
                   $$
                   \sqrt&#123;r_1^2 + r_2^2&#125;
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                if {" "}
+                <span class="t-3003-c">
+                  if {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:266:13
+                  </span>
+                </span>
                 <Math>
                   $P_1$
                 </Math>
@@ -3249,22 +4531,42 @@ export default function __Chapter13__() {
                 <i>
                   Note 3.
                 </i>
+                {" "}{" "}
                 {" "}
-                Comparing the two solutions actually shows that
+                {" "}
+                <span class="t-3003-c">
+                  Comparing the two solutions actually shows that
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:273:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
                   $$
                   \cos(\theta_1 - \theta_2) = \cos\theta_1\cos\theta_2 + \sin\theta_1\sin\theta_2
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                in and of itself. This is a “second proof” of the
+                <span class="t-3003-c">
+                  in and of itself. This is a “second proof” of the
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:280:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 angle-sum formula for cos.
               </OuterP>
               <OuterP class="indent-10">
-                (*Some would say {" "}
+                <span class="t-3003-c">
+                  (*Some would say {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_polar_distance_.wly:283:13
+                  </span>
+                </span>
                 <i>
                   first
                 </i>
@@ -3290,8 +4592,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 14.
               </b>
+              {" "}{" "}
               {" "}
-              What is the dotted line distance as a function
+              {" "}
+              <span class="t-3003-c">
+                What is the dotted line distance as a function
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               of {" "}
               <NoBreak>
                 <Math>
@@ -3317,23 +4628,35 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/1jJD.svg"
+              local_url="./images/e5_cosine_rule_statement.svg"
               intrinsicWidth={400}
               intrinsicHeight={175}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Recalling the “polar distance” formula
+              <span class="t-3003-c">
+                Recalling the “polar distance” formula
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_.wly:12:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sqrt&#123;r_1^2 + r_2^2 - 2r_1r_2\cos(\theta_1 - \theta_2)&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              of {" "}
+              <span class="t-3003-c">
+                of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_.wly:18:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_163_h.a.i_"
                 class="in-chapter-link"
@@ -3348,10 +4671,16 @@ export default function __Chapter13__() {
               $$
               \sqrt&#123;a^2 + b^2 - 2ab\cos\theta&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by putting {" "}
+              <span class="t-3003-c">
+                by putting {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_.wly:25:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $r_1 = a$
@@ -3375,8 +4704,15 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                This result is known as the {" "}
+                {" "}
+                <span class="t-3003-c">
+                  This result is known as the {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_.wly:30:13
+                  </span>
+                </span>
                 <i>
                   cosine rule
                 </i>
@@ -3397,10 +4733,16 @@ export default function __Chapter13__() {
                   $$
                   c^2 = a^2 + b^2 - 2ab\cdot\cos\theta
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                ....with {" "}
+                <span class="t-3003-c">
+                  ....with {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosine_rule_.wly:40:13
+                  </span>
+                </span>
                 <NoBreak>
                   ‘
                   <Math>
@@ -3419,8 +4761,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 15.
               </b>
+              {" "}{" "}
               {" "}
-              How to express the two sides marked ‘?’ as functions
+              {" "}
+              <span class="t-3003-c">
+                How to express the two sides marked ‘?’ as functions
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               of {" "}
               <NoBreak>
                 <Math>
@@ -3472,33 +4823,51 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/FCDD.svg"
+              local_url="./images/e5_sine_rule_statement.svg"
               intrinsicWidth={420}
               intrinsicHeight={182}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The bottom length of ‘?’ is
+              <span class="t-3003-c">
+                The bottom length of ‘?’ is
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:13:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               a\cdot\sin\gamma\cdot\csc\alpha
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or, equivalently,
+              <span class="t-3003-c">
+                or, equivalently,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:19:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               a\cdot &#123;\sin \gamma\over \sin\alpha&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by swinging from the side of length {" "}
+              <span class="t-3003-c">
+                by swinging from the side of length {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:26:9
+                </span>
+              </span>
               <Math>
                 $a$
               </Math>
@@ -3518,12 +4887,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/kTuA.svg"
+              local_url="./images/e5_sine_rule_sol1.svg"
               intrinsicWidth={420}
               intrinsicHeight={187}
             />
             <Pause />
             <OuterP>
-              The top length of ‘?’, on the other hand,
+              <span class="t-3003-c">
+                The top length of ‘?’, on the other hand,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:36:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               is
             </OuterP>
             <Pause />
@@ -3531,21 +4908,35 @@ export default function __Chapter13__() {
               $$
               a\cdot\sin\beta\cdot\csc\alpha
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or, equivalently,
+              <span class="t-3003-c">
+                or, equivalently,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:43:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               a\cdot&#123;\sin\beta\over \sin\alpha&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              per a similar approach, while also using the fact that
+              <span class="t-3003-c">
+                per a similar approach, while also using the fact that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:49:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $\sin(2\eta - x) = \sin(x)$
               </Math>
@@ -3560,6 +4951,7 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/EPyX.svg"
+              local_url="./images/e5_sine_rule_sol2_new_ver.svg"
               intrinsicWidth={420}
               intrinsicHeight={240}
             >
@@ -3567,13 +4959,19 @@ export default function __Chapter13__() {
                 src="/build-img/svgo-svg/k0X9.svg"
                 offsetX="-30%"
                 offsetY="38%"
+                local_url="./images/e5_sine_rule_sin_2b_cloud.svg"
                 intrinsicWidth={200}
                 intrinsicHeight={100}
               />
             </Image>
             <Pause />
             <OuterP>
-              That's it!
+              <span class="t-3003-c">
+                That's it!
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:60:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -3581,8 +4979,15 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                One more generally has...
+                {" "}
+                <span class="t-3003-c">
+                  One more generally has...
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:64:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -3593,10 +4998,16 @@ export default function __Chapter13__() {
                   &#123;c\over b&#125; = &#123;\sin \gamma\over \sin\beta&#125;  \up&#123;2.2&#125; \qquad &#123;b\over c&#125; = &#123;\sin \beta\over \sin\gamma&#125; \\
                   \end&#123;gather*&#125;
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                ...(it's {" "}
+                <span class="t-3003-c">
+                  ...(it's {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:83:13
+                  </span>
+                </span>
                 <Math>
                   $6$
                 </Math>
@@ -3625,12 +5036,18 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/VvH9.svg"
+                local_url="./images/e5_sine_rule_generic.svg"
                 intrinsicWidth={340}
                 intrinsicHeight={214}
               />
               <Pause />
               <OuterP>
-                ...though we can condense these equations to...
+                <span class="t-3003-c">
+                  ...though we can condense these equations to...
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:90:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -3641,20 +5058,32 @@ export default function __Chapter13__() {
                   &#123;b\over \sin\beta&#125; = &#123;c\over \sin\gamma&#125;  \up&#123;2.2&#125;
                   \end&#123;gather*&#125;
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                ...or even to a single line...
+                <span class="t-3003-c">
+                  ...or even to a single line...
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:101:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
                   $$
                   &#123;a\over \sin\alpha&#125; = &#123;b\over \sin\beta&#125; = &#123;c\over \sin\gamma&#125;
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                ...through cross-multiplication/division!
+                <span class="t-3003-c">
+                  ...through cross-multiplication/division!
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:108:13
+                  </span>
+                </span>
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -3663,8 +5092,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 2.
                 </i>
+                {" "}{" "}
                 {" "}
-                This result (e.g., the last boxed equation above)
+                {" "}
+                <span class="t-3003-c">
+                  This result (e.g., the last boxed equation above)
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:112:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 is known as the {" "}
                 <i>
                   sine rule
@@ -3678,8 +5116,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 3.
                 </i>
+                {" "}{" "}
                 {" "}
-                Amusingly (but not that we really care) the
+                {" "}
+                <span class="t-3003-c">
+                  Amusingly (but not that we really care) the
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:117:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 same equations hold if we change the definitions
                 of {" "}
                 <NoBreak>
@@ -3705,12 +5152,18 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/CquJ.svg"
+                local_url="./images/e5_sine_rule_generic_exterior.svg"
                 intrinsicWidth={340}
                 intrinsicHeight={285}
               />
               <Pause />
               <OuterP>
-                ...then each of {" "}
+                <span class="t-3003-c">
+                  ...then each of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sine_rule_.wly:125:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $\sin \alpha$
@@ -3743,6 +5196,7 @@ export default function __Chapter13__() {
                 <ImageRight
                   line="1.0"
                   src="/build-img/svgo-svg/NoGZ.svg"
+                  local_url="./images/e5_sine_rule_sin_360_m_x_cloud.svg"
                   intrinsicWidth={500}
                   intrinsicHeight={100}
                 />
@@ -3759,8 +5213,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 16.
               </b>
+              {" "}{" "}
               {" "}
-              What are the orthogonal (= perpendicular) 
+              {" "}
+              <span class="t-3003-c">
+                What are the orthogonal (= perpendicular) {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:5:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               projections of the
               vectors {" "}
               <NoBreak>
@@ -3791,12 +5254,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/QGG0.svg"
+              local_url="./images/e5_project_i_and_j_statement.svg"
               intrinsicWidth={450}
               intrinsicHeight={360}
             />
             <Pause />
             <OuterP>
-              (I.e., find the ruler-readings
+              <span class="t-3003-c">
+                (I.e., find the ruler-readings
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:14:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               marked ‘1’ and ‘2’ above
               as a function of the angle {" "}
               <NoBreak>
@@ -3810,7 +5281,12 @@ export default function __Chapter13__() {
           <Solution>
             <OuterP>
               <i>
-                Solution 1.
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:20:10
+                  </span>
+                </span>
               </i>
               {" "} If we rotate the diagram by {" "}
               <Math>
@@ -3847,32 +5323,52 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/DHtw.svg"
+              local_url="./images/e5_project_i_and_j_sol1.svg"
               intrinsicWidth={450}
               intrinsicHeight={360}
             />
             <Pause />
             <OuterP>
-              The ruler-readings are therefore
+              <span class="t-3003-c">
+                The ruler-readings are therefore
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:28:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(-\theta) = \cos(\theta)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:32:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(\eta - \theta) = \sin(\theta)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              respectively (in order ‘1’, ‘2’), making use of
+              <span class="t-3003-c">
+                respectively (in order ‘1’, ‘2’), making use of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:37:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               basic identities. (See the section “Identities with {" "}
               <NoBreak>
                 <Math>
@@ -3893,7 +5389,12 @@ export default function __Chapter13__() {
             <Pause />
             <OuterP>
               <i>
-                Solution 2.
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:43:10
+                  </span>
+                </span>
               </i>
               {" "} 
               Recalling first...
@@ -3901,12 +5402,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/h28T.svg"
+              local_url="./images/svg_ch5_ch_unit_circle_with_new_definition.svg"
               intrinsicWidth={720}
               intrinsicHeight={455}
             />
             <Pause />
             <OuterP>
-              ...this figure from {" "}
+              <span class="t-3003-c">
+                ...this figure from {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:49:9
+                </span>
+              </span>
               <OutChapterLink
                 href="/article/chapter6#_105_h.a.i_"
                 class="out-chapter-link"
@@ -3921,31 +5428,55 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/9QAk.svg"
+              local_url="./images/e5_project_i_and_j_sol2.svg"
               intrinsicWidth={720}
               intrinsicHeight={455}
             />
             <Pause />
             <OuterP>
-              Now comparing these definitions to
+              <span class="t-3003-c">
+                Now comparing these definitions to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:57:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               this figure...
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/__cS.svg"
+              local_url="./images/e5_project_i_and_j_sol3.svg"
               intrinsicWidth={450}
               intrinsicHeight={395}
             />
             <Pause />
             <OuterP>
-              ...in which, by contrast to usual, angles are measured
+              <span class="t-3003-c">
+                ...in which, by contrast to usual, angles are measured
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:63:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              positively clockwise
+              <span class="t-3003-c">
+                positively clockwise
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:65:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              (that's why it's {" "}
+              <span class="t-3003-c">
+                (that's why it's {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:67:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -3975,7 +5506,12 @@ export default function __Chapter13__() {
             <Pause />
             <OuterP>
               <i>
-                Solution 3.
+                <span class="t-3003-c">
+                  Solution 3.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:72:10
+                  </span>
+                </span>
               </i>
               {" "} 
               More generally, when a unit
@@ -3990,12 +5526,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/5XuI.svg"
+              local_url="./images/e5_project_i_and_j_sol4.svg"
               intrinsicWidth={900}
               intrinsicHeight={395}
             />
             <Pause />
             <OuterP>
-              (Because what counts is the angle between the
+              <span class="t-3003-c">
+                (Because what counts is the angle between the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:81:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               “forward end” of the ruler and the forward end of
               the vector, measured as an angle between {" "}
               <Math>
@@ -4017,12 +5561,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/Xur8.svg"
+              local_url="./images/e5_project_i_and_j_sol5_v2.svg"
               intrinsicWidth={900}
               intrinsicHeight={360}
             />
             <Pause />
             <OuterP>
-              ...and in the new configuration, at bottom right, 
+              <span class="t-3003-c">
+                ...and in the new configuration, at bottom right, {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:92:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               one can see by the original definitions of sin
               and cos that the projections are
               are {" "}
@@ -4041,8 +5593,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                The original definitions of sin and cos involve
+                {" "}
+                <span class="t-3003-c">
+                  The original definitions of sin and cos involve
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:99:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 a single point rotating around the unit circle projected
                 onto two fixed rulers, resulting in two
                 functions:
@@ -4051,12 +5612,20 @@ export default function __Chapter13__() {
               <Image
                 src="/build-img/svgo-svg/HbFF.svg"
                 style="margin:0.3em 0"
+                local_url="./images/e5_project_i_and_j_note1_v2.svg"
                 intrinsicWidth={1300}
                 intrinsicHeight={560}
               />
               <Pause />
               <OuterP>
-                By the result of this exercise, sin and cos can also be
+                <span class="t-3003-c">
+                  By the result of this exercise, sin and cos can also be
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:111:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 conceptualized in a dual fashion, via fixed points projected
                 onto a rotating ruler:
               </OuterP>
@@ -4064,21 +5633,41 @@ export default function __Chapter13__() {
               <Image
                 src="/build-img/svgo-svg/R1PW.svg"
                 style="margin:0.3em 0"
+                local_url="./images/e5_project_i_and_j_note2_v2.svg"
                 intrinsicWidth={1300}
                 intrinsicHeight={560}
               />
               <Pause />
               <OuterP>
-                (E.g.,
+                <span class="t-3003-c">
+                  (E.g.,
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:119:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                the positive part of the ruler goes
+                <span class="t-3003-c">
+                  the positive part of the ruler goes
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:121:15
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 to meet the point
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                if you think about how the sine function starts out, instead
+                <span class="t-3003-c">
+                  if you think about how the sine function starts out, instead
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_.wly:124:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 the point being the one to travel towards the positive part
                 of the ruler [onto which it is projected].)
               </OuterP>
@@ -4094,18 +5683,31 @@ export default function __Chapter13__() {
               <b>
                 Exercise 17.
               </b>
+              {" "}{" "}
               {" "}
-              Show that
+              {" "}
+              <span class="t-3003-c">
+                Show that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:5:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(\alpha - \beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for all {" "}
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:9:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\alpha$
@@ -4123,7 +5725,14 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We know (or should know, or are about to
+              <span class="t-3003-c">
+                We know (or should know, or are about to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:15:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               know) (or are about to {" "}
               <i>
                 believe
@@ -4135,11 +5744,19 @@ export default function __Chapter13__() {
               $$
               \cos(\alpha - \beta)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is the projection of a unit vector of angle
+              <span class="t-3003-c">
+                is the projection of a unit vector of angle
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:22:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $\alpha$
               </Math>
@@ -4154,12 +5771,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/k70-.svg"
+              local_url="./images/e5_unit_dot_product_sol1_v2.svg"
               intrinsicWidth={500}
               intrinsicHeight={395}
             />
             <Pause />
             <OuterP>
-              In what follows we will write {" "}
+              <span class="t-3003-c">
+                In what follows we will write {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:28:9
+                </span>
+              </span>
               <NoBreak>
                 ‘
                 <Math>
@@ -4190,12 +5813,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/EWAA.svg"
+              local_url="./images/e5_unit_dot_product_sol2.svg"
               intrinsicWidth={500}
               intrinsicHeight={370}
             />
             <Pause />
             <OuterP>
-              As established in {" "}
+              <span class="t-3003-c">
+                As established in {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:35:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_166_h.a.i_"
                 class="in-chapter-link"
@@ -4228,12 +5857,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/rAlI.svg"
+              local_url="./images/e5_unit_dot_product_sol3_v2.svg"
               intrinsicWidth={500}
               intrinsicHeight={370}
             />
             <Pause />
             <OuterP>
-              On the other hand, the vector {" "}
+              <span class="t-3003-c">
+                On the other hand, the vector {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:42:9
+                </span>
+              </span>
               <Math>
                 $(\cos\alpha, \sin\alpha)$
               </Math>
@@ -4266,12 +5901,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/q8lI.svg"
+              local_url="./images/e5_unit_dot_product_sol5_v2.svg"
               intrinsicWidth={500}
               intrinsicHeight={370}
             />
             <Pause />
             <OuterP>
-              The scaled copy of {" "}
+              <span class="t-3003-c">
+                The scaled copy of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:50:9
+                </span>
+              </span>
               <Math>
                 $\vecb&#123;i&#125;$
               </Math>
@@ -4292,12 +5933,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/vjt3.svg"
+              local_url="./images/e5_unit_dot_product_sol6_v2.svg"
               intrinsicWidth={500}
               intrinsicHeight={370}
             />
             <Pause />
             <OuterP>
-              Similarly, the scaled copy of {" "}
+              <span class="t-3003-c">
+                Similarly, the scaled copy of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:57:9
+                </span>
+              </span>
               <Math>
                 $\vecb&#123;j&#125;$
               </Math>
@@ -4321,34 +5968,56 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/KjPQ.svg"
+              local_url="./images/e5_unit_dot_product_sol7_v2.svg"
               intrinsicWidth={500}
               intrinsicHeight={370}
             />
             <Pause />
             <OuterP>
-              Moreover, the sum-of-projections is the
+              <span class="t-3003-c">
+                Moreover, the sum-of-projections is the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:64:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               projection-of-the-sum:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/cfa7.svg"
+              local_url="./images/e5_unit_dot_product_sol8_v2.svg"
               intrinsicWidth={500}
               intrinsicHeight={615}
             />
             <Pause />
             <OuterP>
-              This gives us
+              <span class="t-3003-c">
+                This gives us
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:70:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 \cos(\alpha-\beta) = \cos\alpha\cos\beta + \sin\alpha\sin\beta
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              since both sides compute the projection of
+              <span class="t-3003-c">
+                since both sides compute the projection of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_unit_dot_product_geometric_interpretation_.wly:77:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $(\cos \alpha, \sin \alpha)$
               </Math>
@@ -4371,18 +6040,31 @@ export default function __Chapter13__() {
               <b>
                 Exercise 18.
               </b>
+              {" "}{" "}
               {" "}
-              A unit vector
+              {" "}
+              <span class="t-3003-c">
+                A unit vector
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:5:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (x_1, y_1, z_1) \in \rr^3
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              [meaning: {" "}
+              <span class="t-3003-c">
+                [meaning: {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:11:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $x_1^2 + y_1^2 + z_1^2 = 1$
@@ -4423,12 +6105,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/jyl2.svg"
+              local_url="./images/e5_ruler_sphere_1_v2.svg"
               intrinsicWidth={605}
               intrinsicHeight={690}
             />
             <Pause />
             <OuterP>
-              Find the value of the projection—the place we land on the
+              <span class="t-3003-c">
+                Find the value of the projection—the place we land on the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:18:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               ruler, at {" "}
               <NoBreak>
                 <Math>
@@ -4483,7 +6173,12 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Putting
+              <span class="t-3003-c">
+                Putting
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:24:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4494,10 +6189,16 @@ export default function __Chapter13__() {
               \vk = (0,\, 0,\, 1)\,\up&#123;1.2&#125;
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              we have
+              <span class="t-3003-c">
+                we have
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:34:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -4508,31 +6209,53 @@ export default function __Chapter13__() {
               z_1\cdot\vk = (0,   \,0,   \,z_1)\up&#123;1.2&#125;\, 
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              giving
+              <span class="t-3003-c">
+                giving
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:44:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (x_1, y_1, z_1) = x_1\!\cdot\vi + y_1\!\cdot\vj + z_1\!\cdot\vk
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              because vectors are added component-wise. 
+              <span class="t-3003-c">
+                because vectors are added component-wise. {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:50:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               This sum can be illustrated:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/w_-r.svg"
+              local_url="./images/e5_ruler_sphere_decomp.svg"
               intrinsicWidth={605}
               intrinsicHeight={690}
             />
             <Pause />
             <OuterP>
-              As discussed in Note 1 of Exercise 11 we can
+              <span class="t-3003-c">
+                As discussed in Note 1 of Exercise 11 we can
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:56:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               translate vectors to anywhere in space while
               preserving their 
               projection onto the ruler. 
@@ -4568,12 +6291,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/vsD9.svg"
+              local_url="./images/e5_ruler_sphere_decomp3.svg"
               intrinsicWidth={800}
               intrinsicHeight={700}
             />
             <Pause />
             <OuterP>
-              However, the projection of {" "}
+              <span class="t-3003-c">
+                However, the projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:68:9
+                </span>
+              </span>
               <Math>
                 $z_1\vk$
               </Math>
@@ -4606,12 +6335,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/-iIq.svg"
+              local_url="./images/e5_ruler_sphere_z_scale.svg"
               intrinsicWidth={605}
               intrinsicHeight={690}
             />
             <Pause />
             <OuterP>
-              The projection of {" "}
+              <span class="t-3003-c">
+                The projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:79:9
+                </span>
+              </span>
               <Math>
                 $\vk$
               </Math>
@@ -4638,12 +6373,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/k0fx.svg"
+              local_url="./images/e5_ruler_sphere_z_switched_combined.svg"
               intrinsicWidth={1200}
               intrinsicHeight={700}
             />
             <Pause />
             <OuterP>
-              But the 
+              <span class="t-3003-c">
+                But the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:91:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               projection 
               of {" "}
               <Math>
@@ -4658,10 +6401,18 @@ export default function __Chapter13__() {
               $$
               z_2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by the fact that 
+              <span class="t-3003-c">
+                by the fact that {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:102:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               we are projecting onto the {" "}
               <Math>
                 $z$
@@ -4683,10 +6434,18 @@ export default function __Chapter13__() {
               $$
               z_2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as well,
+              <span class="t-3003-c">
+                as well,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:111:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               and the projection of {" "}
               <Math>
                 $z_1\vk$
@@ -4702,23 +6461,40 @@ export default function __Chapter13__() {
               $$
               z_1z_2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by scaling.
+              <span class="t-3003-c">
+                by scaling.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:118:9
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              Likewise,
+              <span class="t-3003-c">
+                Likewise,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:120:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               y_1y_2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              will be the projection of {" "}
+              <span class="t-3003-c">
+                will be the projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:126:9
+                </span>
+              </span>
               <Math>
                 $y_1\rt&#123;0.1&#125;\vj$
               </Math>
@@ -4737,10 +6513,16 @@ export default function __Chapter13__() {
               $$
               x_1x_2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              will be the projection of {" "}
+              <span class="t-3003-c">
+                will be the projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:133:9
+                </span>
+              </span>
               <Math>
                 $x_1\vi$
               </Math>
@@ -4758,10 +6540,16 @@ export default function __Chapter13__() {
                 $$
                 x_1x_2 + y_1y_2 + z_1z_2
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              is the projection of {" "}
+              <span class="t-3003-c">
+                is the projection of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_project_i_and_j_and_k_.wly:140:9
+                </span>
+              </span>
               <Math>
                 $(x_1, y_1, z_1)$
               </Math>
@@ -4802,8 +6590,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 19.
               </b>
+              {" "}{" "}
               {" "}
-              For each of {" "}
+              {" "}
+              <span class="t-3003-c">
+                For each of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:4:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\cos^2$
@@ -4829,50 +6624,110 @@ export default function __Chapter13__() {
             <List marker="decimal">
               <Item>
                 <p>
-                  Choose either {" "}
+                  <span class="t-3003-c">
+                    Choose either {" "}
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:9:9
+                    </span>
+                  </span>
                   <Math>
                     $\cos(2x)$
                   </Math>
-                  {" "} or {" "}
+                  <span class="t-3003-c">
+                    {" "} or {" "}
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:9:33
+                    </span>
+                  </span>
                   <Math>
                     $\sin(2x)$
                   </Math>
-                  {" "} as a
+                  <span class="t-3003-c">
+                    {" "} as a
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:9:47
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
                   “most closely related starting point”, according
                   to your sense of which of {" "}
                   <Math>
                     $\cos(2x)$
                   </Math>
-                  {" "} or {" "}
+                  <span class="t-3003-c">
+                    {" "} or {" "}
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:11:45
+                    </span>
+                  </span>
                   <Math>
                     $\sin(2x)$
                   </Math>
+                  {" "}{" "}
                   {" "}
-                  is more closely related to the given function.
+                  {" "}
+                  <span class="t-3003-c">
+                    is more closely related to the given function.
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:12:9
+                    </span>
+                  </span>
                 </p>
               </Item>
               <Item>
                 <p>
-                  Conjecture a sequence of geometric transformations
+                  <span class="t-3003-c">
+                    Conjecture a sequence of geometric transformations
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:14:9
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
                   of the plane that takes either {" "}
                   <Math>
                     $\cos(2x)$
                   </Math>
-                  {" "} or {" "}
+                  <span class="t-3003-c">
+                    {" "} or {" "}
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:15:50
+                    </span>
+                  </span>
                   <NoBreak>
                     <Math>
                       $\sin(2x)$
                     </Math>
-                    ,
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:15:64
+                      </span>
+                    </span>
                   </NoBreak>
+                  {" "}{" "}
                   {" "}
-                  depending on which you chose,
+                  {" "}
+                  <span class="t-3003-c">
+                    depending on which you chose,
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:16:9
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
                   onto the graph of the given function (be it {" "}
                   <NoBreak>
                     <Math>
                       $\cos\sin$
                     </Math>
-                    ,
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:18:63
+                      </span>
+                    </span>
                   </NoBreak>
                   {" "}
                   {" "}
@@ -4880,27 +6735,52 @@ export default function __Chapter13__() {
                     <Math>
                       $\cos^2$
                     </Math>
-                    ,
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:19:17
+                      </span>
+                    </span>
                   </NoBreak>
-                  {" "} or {" "}
+                  <span class="t-3003-c">
+                    {" "} or {" "}
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:19:17
+                    </span>
+                  </span>
                   <NoBreak>
                     <Math>
                       $\sin^2$
                     </Math>
-                    ).
+                    <span class="t-3003-c">
+                      ).
+                      <span class="t-3003">
+                        ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:19:30
+                      </span>
+                    </span>
                   </NoBreak>
                 </p>
               </Item>
               <Item>
                 <p>
-                  Prove your conjecture by algebra.
+                  <span class="t-3003-c">
+                    Prove your conjecture by algebra.
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:21:9
+                    </span>
+                  </span>
                 </p>
               </Item>
             </List>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              For {" "}
+              <span class="t-3003-c">
+                For {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:25:9
+                </span>
+              </span>
               <Math>
                 $\cos^2$
               </Math>
@@ -4911,10 +6791,16 @@ export default function __Chapter13__() {
               $$
               \cos(2x)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as our starting point, since the graph of {" "}
+              <span class="t-3003-c">
+                as our starting point, since the graph of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:31:9
+                </span>
+              </span>
               <Math>
                 $\cos(2x)$
               </Math>
@@ -4933,13 +6819,21 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/yO5U.svg"
+              local_url="./images/e5_more_closely_related_followup_sol1.svg"
               intrinsicWidth={600}
               intrinsicHeight={280}
             />
             <Pause />
             <OuterP>
-              Our conjecture, per appearance of the graphs, is that
+              <span class="t-3003-c">
+                Our conjecture, per appearance of the graphs, is that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:38:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $\cos^2$
               </Math>
@@ -4953,27 +6847,50 @@ export default function __Chapter13__() {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              translated up by {" "}
+              <span class="t-3003-c">
+                translated up by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:41:11
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $1$
                 </Math>
-                ,
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:41:31
+                  </span>
+                </span>
               </NoBreak>
-              {" "} vertically
+              <span class="t-3003-c">
+                {" "} vertically
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:41:31
+                </span>
+              </span>
+              {" "}
+              {" "}
               scaled by {" "}
               <Math>
                 $1/2$
               </Math>
               <ImageRight
                 src="/build-img/svgo-svg/EWxG.svg"
+                local_url="./images/e5_more_closely_related_followup_cloud1.svg"
                 intrinsicWidth={1500}
                 intrinsicHeight={300}
               />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              ...or is the graph of {" "}
+              <span class="t-3003-c">
+                ...or is the graph of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:47:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\cos(2x)$
@@ -4983,47 +6900,82 @@ export default function __Chapter13__() {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              vertically scaled by {" "}
+              <span class="t-3003-c">
+                vertically scaled by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:49:11
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $1/2$
                 </Math>
-                ,
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:49:37
+                  </span>
+                </span>
               </NoBreak>
+              {" "}{" "}
               {" "}
-              translated up by {" "}
+              {" "}
+              <span class="t-3003-c">
+                translated up by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:50:9
+                </span>
+              </span>
               <Math>
                 $1/2$
               </Math>
               <ImageLeft
                 src="/build-img/svgo-svg/Hkfc.svg"
+                local_url="./images/e5_more_closely_related_followup_cloud2.svg"
                 intrinsicWidth={1500}
                 intrinsicHeight={300}
               />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              ...equivalently; for the proof, the sum-formula
+              <span class="t-3003-c">
+                ...equivalently; for the proof, the sum-formula
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:55:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(A + B) = \cos A\cos B - \sin A\sin B
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              implies
+              <span class="t-3003-c">
+                implies
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:63:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(2x) = \cos^2 x - \sin^2 x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              from which
+              <span class="t-3003-c">
+                from which
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:70:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5039,23 +6991,36 @@ export default function __Chapter13__() {
                 src="/build-img/svgo-svg/ZFCF.svg"
                 offsetY="1.3em"
                 atLeastAsWide={true}
+                local_url="./images/e5_more_closely_related_followup_cloud4.svg"
                 intrinsicWidth={500}
                 intrinsicHeight={200}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which completes the proof, since
+              <span class="t-3003-c">
+                which completes the proof, since
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:85:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (\cos(2x) + 1)\cdot &#123;1\over 2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is {" "}
+              <span class="t-3003-c">
+                is {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:87:9
+                </span>
+              </span>
               <Math>
                 $\cos(2x)$
               </Math>
@@ -5076,7 +7041,12 @@ export default function __Chapter13__() {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              For {" "}
+              <span class="t-3003-c">
+                For {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:90:9
+                </span>
+              </span>
               <Math>
                 $\sin^2$
               </Math>
@@ -5092,27 +7062,50 @@ export default function __Chapter13__() {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              vertically scaled by {" "}
+              <span class="t-3003-c">
+                vertically scaled by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:93:11
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $-1/2$
                 </Math>
-                ,
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:93:38
+                  </span>
+                </span>
               </NoBreak>
+              {" "}{" "}
               {" "}
-              translated up by {" "}
+              {" "}
+              <span class="t-3003-c">
+                translated up by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:94:9
+                </span>
+              </span>
               <Math>
                 $1/2$
               </Math>
               <ImageLeft
                 src="/build-img/svgo-svg/mQFa.svg"
+                local_url="./images/e5_more_closely_related_followup_cloud3.svg"
                 intrinsicWidth={1500}
                 intrinsicHeight={300}
               />
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              and, indeed,
+              <span class="t-3003-c">
+                and, indeed,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:99:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5129,16 +7122,28 @@ export default function __Chapter13__() {
                 src="/build-img/svgo-svg/Xb68.svg"
                 offsetY="0.2em"
                 atLeastAsWide={true}
+                local_url="./images/e5_more_closely_related_followup_cloud5.svg"
                 intrinsicWidth={500}
                 intrinsicHeight={200}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which completes a proof.
+              <span class="t-3003-c">
+                which completes a proof.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:115:9
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              For {" "}
+              <span class="t-3003-c">
+                For {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:117:9
+                </span>
+              </span>
               <Math>
                 $\sin\cdot\cos$
               </Math>
@@ -5152,12 +7157,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/ADAv.svg"
+              local_url="./images/e5_more_closely_related_followup_sol3.svg"
               intrinsicWidth={600}
               intrinsicHeight={280}
             />
             <Pause />
             <OuterP>
-              In fact, it seems that {" "}
+              <span class="t-3003-c">
+                In fact, it seems that {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:123:9
+                </span>
+              </span>
               <Math>
                 $\sin\cdot\cos$
               </Math>
@@ -5168,14 +7179,24 @@ export default function __Chapter13__() {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              vertically scaled by {" "}
+              <span class="t-3003-c">
+                vertically scaled by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:125:11
+                </span>
+              </span>
               <Math>
                 $1/2$
               </Math>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              which, indeed {" "}
+              <span class="t-3003-c">
+                which, indeed {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:127:9
+                </span>
+              </span>
               <NoBreak>
                 (
                 <Math>
@@ -5190,20 +7211,32 @@ export default function __Chapter13__() {
               $$
               \sin(A + B) = \cos A\sin B + \sin A\cos B
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              implies
+              <span class="t-3003-c">
+                implies
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:133:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sin(2x) = 2\sin x\cos x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by setting {" "}
+              <span class="t-3003-c">
+                by setting {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:139:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $A = B = x$
@@ -5217,10 +7250,16 @@ export default function __Chapter13__() {
               $$
               &#123;1\over 2&#125;\sin(2x) = \sin x\cos x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as per the conjecture!
+              <span class="t-3003-c">
+                as per the conjecture!
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:145:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -5228,8 +7267,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                Here is a “pretty” rearrangement of the formulas
+                {" "}
+                <span class="t-3003-c">
+                  Here is a “pretty” rearrangement of the formulas
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:149:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 discovered above:
               </OuterP>
               <Boxed>
@@ -5241,10 +7289,16 @@ export default function __Chapter13__() {
                   \up&#123;2.1&#125;\sin(x)\cos(x) = &#123;1\over 2&#125;\sin(2x)
                   \end&#123;gathered&#125;
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                Another pretty arrangement:
+                <span class="t-3003-c">
+                  Another pretty arrangement:
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_more_closely_related_followup_.wly:162:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
@@ -5255,6 +7309,7 @@ export default function __Chapter13__() {
                   \up&#123;2.1&#125;\sin(x)\cos(x) = &#123;\sin(2x) \over 2 &#125;
                   \end&#123;gathered&#125;
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
             </SolutionNote>
@@ -5266,9 +7321,18 @@ export default function __Chapter13__() {
               <b>
                 Exercise 20.
               </b>
+              {" "}{" "}
               {" "}
-              A geometric interpretation of
               {" "}
+              <span class="t-3003-c">
+                A geometric interpretation of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $\cos x + \sin x$
               </Math>
@@ -5297,13 +7361,21 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/77pT.svg"
+              local_url="./images/e5_cosx_plus_sinx_as_geometric_cos_1_v2.svg"
               intrinsicWidth={700}
               intrinsicHeight={360}
             />
             <Pause />
             <OuterP>
-              Using this geometric insight, how can we express
+              <span class="t-3003-c">
+                Using this geometric insight, how can we express
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:12:5
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <Math>
                 $x \ra \cos x + \sin x$
               </Math>
@@ -5314,10 +7386,16 @@ export default function __Chapter13__() {
               $$
               x \ra A\cdot\cos(Bx + C) + D
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for some constants {" "}
+              <span class="t-3003-c">
+                for some constants {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:19:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $A$
@@ -5352,7 +7430,12 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Imagine a large ruler living below the {" "}
+              <span class="t-3003-c">
+                Imagine a large ruler living below the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:25:9
+                </span>
+              </span>
               <Math>
                 $x$
               </Math>
@@ -5368,12 +7451,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/US0B.svg"
+              local_url="./images/e5_cosx_plus_sinx_as_geometric_cos_2.svg"
               intrinsicWidth={700}
               intrinsicHeight={360}
             />
             <Pause />
             <OuterP>
-              (This ruler contains just the same numbers as the {" "}
+              <span class="t-3003-c">
+                (This ruler contains just the same numbers as the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:31:9
+                </span>
+              </span>
               <Math>
                 $x$
               </Math>
@@ -5416,12 +7505,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/DXtE.svg"
+              local_url="./images/e5_cosx_plus_sinx_as_geometric_cos_3.svg"
               intrinsicWidth={700}
               intrinsicHeight={360}
             />
             <Pause />
             <OuterP>
-              ...and then multiply by {" "}
+              <span class="t-3003-c">
+                ...and then multiply by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:41:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\sqrt&#123;2&#125;$
@@ -5437,10 +7532,16 @@ export default function __Chapter13__() {
               $$
               \cos(x - \eta/2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as one can see by rotating the entire diagram {" "}
+              <span class="t-3003-c">
+                as one can see by rotating the entire diagram {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:49:9
+                </span>
+              </span>
               <Math>
                 $45^\circ$
               </Math>
@@ -5457,10 +7558,18 @@ export default function __Chapter13__() {
                 $$
                 \cos x + \sin x = \sqrt&#123;2&#125;\cdot\cos(x - \eta/2)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              ...where you can think of the left-hand side of the
+              <span class="t-3003-c">
+                ...where you can think of the left-hand side of the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:58:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               equation as the value on the original “big” horizontal
               ruler (from {" "}
               <Math>
@@ -5495,13 +7604,26 @@ export default function __Chapter13__() {
               D = \up&#123;1.3&#125;0,
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as those parameters appear in the problem statement.
+              <span class="t-3003-c">
+                as those parameters appear in the problem statement.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:74:9
+                </span>
+              </span>
             </OuterP>
             <OuterP class="indent-10">
-              Now for the ALGEBRAIC VERIFICATION 
+              <span class="t-3003-c">
+                Now for the ALGEBRAIC VERIFICATION {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:76:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               that can accompany this geometric observation, we
               use the angle-sum formula
             </OuterP>
@@ -5510,10 +7632,16 @@ export default function __Chapter13__() {
               $$
               \cos(A + B) = \cos A\cos B - \sin A\sin B
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for cosine, giving us...
+              <span class="t-3003-c">
+                for cosine, giving us...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:83:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5528,10 +7656,16 @@ export default function __Chapter13__() {
               \up&#123;1.6&#125; =&amp;\,\, \cos x + \sin x
               \end&#123;aligned&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...victory!!
+              <span class="t-3003-c">
+                ...victory!!
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:96:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -5539,28 +7673,47 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                The fact that
+                {" "}
+                <span class="t-3003-c">
+                  The fact that
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:100:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \sqrt&#123;2&#125;\cdot \sqrt&#123;0.5&#125; = 1
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                can also be seen from the fact that
+                <span class="t-3003-c">
+                  can also be seen from the fact that
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:104:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \sqrt&#123;0.5&#125; = &#123;1\over \sqrt&#123;2&#125;&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                previously discussed.
+                <span class="t-3003-c">
+                  previously discussed.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:108:13
+                  </span>
+                </span>
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -5569,18 +7722,31 @@ export default function __Chapter13__() {
                 <i>
                   Note 2.
                 </i>
+                {" "}{" "}
                 {" "}
-                If we admit
+                {" "}
+                <span class="t-3003-c">
+                  If we admit
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:112:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \cos(A - B) = \cos A\cos B + \sin A\sin B
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                (replace {" "}
+                <span class="t-3003-c">
+                  (replace {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:118:13
+                  </span>
+                </span>
                 <Math>
                   $B$
                 </Math>
@@ -5623,10 +7789,16 @@ export default function __Chapter13__() {
                 \up&#123;1.6&#125; =&amp;\,\, \cos x + \sin x
                 \end&#123;aligned&#125;
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                ...a bit simpler, with fewer {" "}
+                <span class="t-3003-c">
+                  ...a bit simpler, with fewer {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:134:13
+                  </span>
+                </span>
                 <NoBreak>
                   ‘
                   <Math>
@@ -5643,28 +7815,47 @@ export default function __Chapter13__() {
                 <i>
                   Note 3.
                 </i>
+                {" "}{" "}
                 {" "}
-                Note that the graph...
+                {" "}
+                <span class="t-3003-c">
+                  Note that the graph...
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:138:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 y = \sqrt&#123;2&#125;\cos(x - \eta/2)
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                ...as it is the graph of the composition...
+                <span class="t-3003-c">
+                  ...as it is the graph of the composition...
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:144:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <Image
                 src="/build-img/svgo-svg/4t6F.svg"
+                local_url="./images/e5_cosx_plus_sinx_as_geometric_cos_composition.svg"
                 intrinsicWidth={395}
                 intrinsicHeight={95}
               />
               <Pause />
               <OuterP>
-                ...(cf. {" "}
+                <span class="t-3003-c">
+                  ...(cf. {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:149:13
+                  </span>
+                </span>
                 <OutChapterLink
                   href="/article/chapter6#_97_h.a.i_"
                   class="out-chapter-link"
@@ -5679,29 +7870,57 @@ export default function __Chapter13__() {
                 $$
                 y = \cos x
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                ...by...
+                <span class="t-3003-c">
+                  ...by...
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:156:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                1. translating horizontally by {" "}
+                <span class="t-3003-c">
+                  1. translating horizontally by {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:158:15
+                  </span>
+                </span>
                 <Math>
                   $\eta/2$
                 </Math>
-                {" "} to the right
+                <span class="t-3003-c">
+                  {" "} to the right
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:158:54
+                  </span>
+                </span>
               </CentralDisplayItalic>
               <Pause />
               <CentralDisplayItalic>
-                2. dilating vertically by {" "}
+                <span class="t-3003-c">
+                  2. dilating vertically by {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:160:15
+                  </span>
+                </span>
                 <Math>
                   $\sqrt&#123;2&#125;$
                 </Math>
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                ...and, on the other hand, if we take a look at the
+                <span class="t-3003-c">
+                  ...and, on the other hand, if we take a look at the
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:162:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 previously “annotated” graph of {" "}
                 <Math>
                   $x \ra \cos x + \sin x$
@@ -5719,12 +7938,18 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/8ykE.svg"
+                local_url="./images/e5_cosx_plus_sinx_with_max_min_info_radian_version_without_arrows.svg"
                 intrinsicWidth={600}
                 intrinsicHeight={170}
               />
               <Pause />
               <OuterP>
-                ...it certainly {" "}
+                <span class="t-3003-c">
+                  ...it certainly {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_cosx_plus_sinx_as_sinusoid_.wly:169:13
+                  </span>
+                </span>
                 <i>
                   looks like
                 </i>
@@ -5777,8 +8002,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 21.
               </b>
+              {" "}{" "}
               {" "}
-              Show that for all {" "}
+              {" "}
+              <span class="t-3003-c">
+                Show that for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $A, B \in \rr$
               </Math>
@@ -5801,10 +8033,16 @@ export default function __Chapter13__() {
               $$
               A\cos x + B\sin x = W\cdot\cos(x - \psi)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for all {" "}
+              <span class="t-3003-c">
+                for all {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:11:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $x \in \rr$
@@ -5815,17 +8053,28 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Starting from the desired endpoint, note that
+              <span class="t-3003-c">
+                Starting from the desired endpoint, note that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:15:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(x - \psi) = \cos x\cos\psi + \sin x \sin \psi
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by the “angle-difference formula” (cf. {" "}
+              <span class="t-3003-c">
+                by the “angle-difference formula” (cf. {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:21:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_167_h.a.i_"
                 class="in-chapter-link"
@@ -5839,20 +8088,34 @@ export default function __Chapter13__() {
               $$
               W\cdot\cos(x - \psi)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              equals
+              <span class="t-3003-c">
+                equals
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:27:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (W\cos\psi)\cdot\cos x + (W\sin\psi)\cdot\sin x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where we suggestively group the terms to underscore
+              <span class="t-3003-c">
+                where we suggestively group the terms to underscore
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:33:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               that all we need to do in order to “win” is to satisfy 
               the equations
             </OuterP>
@@ -5864,10 +8127,16 @@ export default function __Chapter13__() {
               B &amp;= \up&#123;1.5&#125;W\rt&#123;0.1&#125;\sin\psi\,
               \end&#123;aligned&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and this can be done simply by setting {" "}
+              <span class="t-3003-c">
+                and this can be done simply by setting {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:44:9
+                </span>
+              </span>
               <Math>
                 $(W, \psi)$
               </Math>
@@ -5887,10 +8156,16 @@ export default function __Chapter13__() {
               $$
               W = \sqrt&#123;A^2 + B^2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and...
+              <span class="t-3003-c">
+                and...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:52:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -5901,10 +8176,18 @@ export default function __Chapter13__() {
               \up&#123;1.2&#125;\rm&#123;anything&#125; &amp;\te&#123;if &#125;\, A = 0, B = 0
               \end&#123;cases&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...where we copy-paste a formula from the chapter. 
+              <span class="t-3003-c">
+                ...where we copy-paste a formula from the chapter. {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_Acosx_plus_Bsinx_polar_conversion_.wly:62:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               (Or just {" "}
               <span class="code-cartouche">
                 psi = atan2(B, A)
@@ -5928,8 +8211,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 22.
               </b>
+              {" "}{" "}
               {" "}
-              Relate {" "}
+              {" "}
+              <span class="t-3003-c">
+                Relate {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:4:5
+                </span>
+              </span>
               <InChapterLink
                 href="#_170_h.a.i_"
                 class="in-chapter-link"
@@ -5955,29 +8245,50 @@ export default function __Chapter13__() {
               >
                 Exercise 20
               </InChapterLink>
+              {" "}{" "}
               {" "}
-              establishes that
+              {" "}
+              <span class="t-3003-c">
+                establishes that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:23:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos x + \sin x = \sqrt&#123;2&#125;\cos(x - \eta/2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              but this is the special case
+              <span class="t-3003-c">
+                but this is the special case
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:29:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               A = B = 1
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              of
+              <span class="t-3003-c">
+                of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:33:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <InChapterLink
                 href="#_171_h.a.i_"
                 class="in-chapter-link"
@@ -5991,20 +8302,32 @@ export default function __Chapter13__() {
               $$
               \cos x + \sin x = 1\cdot \cos x + 1\cdot \sin x
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and since
+              <span class="t-3003-c">
+                and since
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:40:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (\sqrt&#123;2&#125;, \eta/2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              are the (“the”) polar coordinates of the point {" "}
+              <span class="t-3003-c">
+                are the (“the”) polar coordinates of the point {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_relate_general_Acosx_plus_Bsinx_polar_conversion_to_cosx_plus_sinx_.wly:46:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $(1, 1) \in \rr^2$
@@ -6020,15 +8343,29 @@ export default function __Chapter13__() {
               <b>
                 Exercise 23.
               </b>
+              {" "}{" "}
               {" "}
-              Illustrate the “Gregorinovich sandwich”
+              {" "}
+              <span class="t-3003-c">
+                Illustrate the “Gregorinovich sandwich”
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_draw_the_sandwich_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               with a picture that actually looks like
               a sandwich.
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The sandwich, which states that
+              <span class="t-3003-c">
+                The sandwich, which states that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_draw_the_sandwich_.wly:10:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -6039,13 +8376,20 @@ export default function __Chapter13__() {
                 src="/build-img/svgo-svg/172j.svg"
                 offsetX="4em"
                 atLeastAsWide={true}
+                local_url="./images/e5_greg_sandwich_tant_cloud.svg"
                 intrinsicWidth={400}
                 intrinsicHeight={150}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for {" "}
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_draw_the_sandwich_.wly:20:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $0 &lt; \theta &lt; \eta$
@@ -6065,6 +8409,7 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/vI4f.svg"
+              local_url="./images/e5_greg_sandwich.svg"
               intrinsicWidth={470}
               intrinsicHeight={400}
             />
@@ -6078,8 +8423,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 24.
               </b>
+              {" "}{" "}
               {" "}
-              Argue that, in the following figure, the
+              {" "}
+              <span class="t-3003-c">
+                Argue that, in the following figure, the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               angle marked ‘?’ equals {" "}
               <NoBreak>
                 <Math>
@@ -6093,13 +8447,21 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/XRFw.svg"
+              local_url="./images/svg_ch5_ex_tangent_angle_v2.svg"
               intrinsicWidth={400}
               intrinsicHeight={265}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The ending and starting half-lines of the
+              <span class="t-3003-c">
+                The ending and starting half-lines of the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:13:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               angle marked ‘?’ are both {" "}
               <Math>
                 $90^\circ$
@@ -6111,12 +8473,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/wC_h.svg"
+              local_url="./images/svg_ch5_ex_tangent_angle_explanation_v2.svg"
               intrinsicWidth={400}
               intrinsicHeight={275}
             />
             <Pause />
             <OuterP>
-              The angle marked ‘?’ is therefore obtained
+              <span class="t-3003-c">
+                The angle marked ‘?’ is therefore obtained
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:21:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               by a {" "}
               <Math>
                 $90^\circ$
@@ -6136,8 +8506,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                This holds no matter which quadrant we
+                {" "}
+                <span class="t-3003-c">
+                  This holds no matter which quadrant we
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:27:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 push {" "}
                 <Math>
                   $\theta$
@@ -6147,6 +8526,7 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/Wi-I.svg"
+                local_url="./images/svg_ch5_ex_tangent_angle_explanation_other_quadrants_machine_version.svg"
                 intrinsicWidth={720}
                 intrinsicHeight={285}
               />
@@ -6157,51 +8537,109 @@ export default function __Chapter13__() {
                 <i>
                   Note 2.
                 </i>
+                {" "}{" "}
                 {" "}
-                Here is an attempt at verbalization:
+                {" "}
+                <span class="t-3003-c">
+                  Here is an attempt at verbalization:
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:35:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                the counterclockwise angle from the positive
+                <span class="t-3003-c">
+                  the counterclockwise angle from the positive
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:37:15
+                  </span>
+                </span>
                 {" "}
+                {" "}
+                {" "}{" "}
                 <Math>
                   $x$
                 </Math>
-                {" "} axis to
+                <span class="t-3003-c">
+                  {" "} axis to
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:38:16
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 the radial vector [of angle {" "}
                 <NoBreak>
                   <Math>
                     $\theta$
                   </Math>
-                  ]
+                  <span class="t-3003-c">
+                    ]
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:39:49
+                    </span>
+                  </span>
                 </NoBreak>
+                {" "}{" "}
                 {" "}
-                equals the counterclockwise angle from the positive
                 {" "}
+                <span class="t-3003-c">
+                  equals the counterclockwise angle from the positive
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:40:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                {" "}{" "}
                 <Math>
                   $y$
                 </Math>
-                {" "} axis to the counterclockwise tangent [of angle {" "}
+                <span class="t-3003-c">
+                  {" "} axis to the counterclockwise tangent [of angle {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:41:16
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $\theta$
                   </Math>
-                  ]
+                  <span class="t-3003-c">
+                    ]
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:41:72
+                    </span>
+                  </span>
                 </NoBreak>
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                With the various terms illustrated here:
+                <span class="t-3003-c">
+                  With the various terms illustrated here:
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:43:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <Image
                 src="/build-img/svgo-svg/hFz7.svg"
+                local_url="./images/svg_ch5_ex_tangent_angle_verbalization_explanation.svg"
                 intrinsicWidth={510}
                 intrinsicHeight={290}
               />
               <Pause />
               <OuterP>
-                ...but if it was such a great verbalization we
+                <span class="t-3003-c">
+                  ...but if it was such a great verbalization we
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_rotate_central_90_.wly:48:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 wouldn't need to illustrate it, ergo, we failed!
               </OuterP>
             </SolutionNote>
@@ -6213,8 +8651,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 25.
               </b>
+              {" "}{" "}
               {" "}
-              By what factor are areas stretched
+              {" "}
+              <span class="t-3003-c">
+                By what factor are areas stretched
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               as a function of the latitude {" "}
               <Math>
                 $\theta$
@@ -6235,33 +8682,51 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/dKeI.svg"
+              local_url="./images/svg_ch5_ex_horizontal_projection_sphere_statement.svg"
               intrinsicWidth={450}
               intrinsicHeight={380}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Areas are scaled by a factor of
+              <span class="t-3003-c">
+                Areas are scaled by a factor of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:16:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sec(\theta) \cdot \cos(\theta) = 1
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              because latitudes are stretched by a factor of
+              <span class="t-3003-c">
+                because latitudes are stretched by a factor of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:20:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sec(\theta)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as covered in {" "}
+              <span class="t-3003-c">
+                as covered in {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:31:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_194_h.a.i_"
                 class="in-chapter-link"
@@ -6278,20 +8743,34 @@ export default function __Chapter13__() {
               $$
               \cos(\theta)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...as depicted in this...
+              <span class="t-3003-c">
+                ...as depicted in this...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:40:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/BvFn.svg"
+              local_url="./images/svg_ch5_ex_horizontal_projection_sphere_cos_explanation.svg"
               intrinsicWidth={560}
               intrinsicHeight={370}
             />
             <Pause />
             <OuterP>
-              ...sketch, and because the
+              <span class="t-3003-c">
+                ...sketch, and because the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:45:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               overall scaling in area is the latitudinal
               scaling factor times the longitudinal
               scaling factor. (Area = width {" "}
@@ -6314,8 +8793,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                As a consequence, 
+                {" "}
+                <span class="t-3003-c">
+                  As a consequence, {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:59:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 the area of a shape on the sphere is equal to
                 the area of the projection of that shape onto
                 the cylinder, for any shape.
@@ -6323,11 +8811,21 @@ export default function __Chapter13__() {
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                Archimedean property
+                <span class="t-3003-c">
+                  Archimedean property
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:65:15
+                  </span>
+                </span>
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                of the sphere.
+                <span class="t-3003-c">
+                  of the sphere.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:67:13
+                  </span>
+                </span>
               </OuterP>
             </SolutionNote>
             <Pause />
@@ -6336,8 +8834,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 2.
                 </i>
+                {" "}{" "}
                 {" "}
-                For example, the following two orange areas, one
+                {" "}
+                <span class="t-3003-c">
+                  For example, the following two orange areas, one
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:93:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 on the sphere and one on the cylinder, are
                 equal, by the Archimedean property (this is a Lambert
                 projection):
@@ -6345,12 +8852,20 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/pG5W.svg"
+                local_url="./images/svg_ch5_ex_horizontal_projection_sphere_orange_1.svg"
                 intrinsicWidth={450}
                 intrinsicHeight={440}
               />
               <Pause />
               <OuterP>
-                For a second, more exotic example,
+                <span class="t-3003-c">
+                  For a second, more exotic example,
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:101:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 the 8 “tube sections” 
                 of each circle
                 in this diagram...
@@ -6358,12 +8873,20 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/7Dao.svg"
+                local_url="./images/svg_ch5_ex_horizontal_projection_sphere_orange_9.svg"
                 intrinsicWidth={450}
                 intrinsicHeight={440}
               />
               <Pause />
               <OuterP>
-                ...have equal areas on the cylinder,
+                <span class="t-3003-c">
+                  ...have equal areas on the cylinder,
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_archimedean_projection_new_ver_.wly:109:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 even though dissimilar in shape,
                 since those sections
                 have equal area to one another on the sphere.
@@ -6379,8 +8902,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 26.
               </b>
+              {" "}{" "}
               {" "}
-              Rank the {" "}
+              {" "}
+              <span class="t-3003-c">
+                Rank the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_rank_the_7_slices_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $7$
               </Math>
@@ -6391,13 +8921,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/MAo2.svg"
+              local_url="./images/svg_ch5_ex_pez_sphere_statement.svg"
               intrinsicWidth={500}
               intrinsicHeight={340}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The three slices of height {" "}
+              <span class="t-3003-c">
+                The three slices of height {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_rank_the_7_slices_.wly:13:9
+                </span>
+              </span>
               <Math>
                 $1/3$
               </Math>
@@ -6429,8 +8965,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                This holds because each slice has the same area
+                {" "}
+                <span class="t-3003-c">
+                  This holds because each slice has the same area
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_rank_the_7_slices_.wly:20:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 as the horizontal projection of that slice onto a cylinder
                 hugging the sphere, by {" "}
                 <InChapterLink
@@ -6444,6 +8989,7 @@ export default function __Chapter13__() {
                 height.
                 <ImageRight
                   src="/build-img/svgo-svg/xEpL.svg"
+                  local_url="./images/svg_ch5_ex_pez_sphere_cloud.svg"
                   intrinsicWidth={900}
                   intrinsicHeight={420}
                 />
@@ -6457,8 +9003,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 27.
               </b>
+              {" "}{" "}
               {" "}
-              Give a formula for the area of a sphere of
+              {" "}
+              <span class="t-3003-c">
+                Give a formula for the area of a sphere of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_area_formula_from_archimedean_property_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               radius {" "}
               <NoBreak>
                 <Math>
@@ -6470,7 +9025,12 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The area of a sphere of radius {" "}
+              <span class="t-3003-c">
+                The area of a sphere of radius {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_area_formula_from_archimedean_property_.wly:9:9
+                </span>
+              </span>
               <Math>
                 $r$
               </Math>
@@ -6481,10 +9041,18 @@ export default function __Chapter13__() {
               $$
               4\eta\rt&#123;0.05&#125;r\cdot 2r = 8\eta\rt&#123;0.05&#125;r^2
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              because it is the same as the area of a cylinder
+              <span class="t-3003-c">
+                because it is the same as the area of a cylinder
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_area_formula_from_archimedean_property_.wly:13:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               of radius {" "}
               <Math>
                 $r$
@@ -6508,22 +9076,34 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/ivEh.svg"
+              local_url="./images/svg_ch5_ex_sphere_area.svg"
               intrinsicWidth={500}
               intrinsicHeight={260}
             />
             <Pause />
             <OuterP>
-              (Namely,
+              <span class="t-3003-c">
+                (Namely,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_area_formula_from_archimedean_property_.wly:19:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               4\eta\rt&#123;0.05&#125;r\cdot 2r
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is the product “circumference {" "}
+              <span class="t-3003-c">
+                is the product “circumference {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_area_formula_from_archimedean_property_.wly:23:9
+                </span>
+              </span>
               <Math>
                 $\times$
               </Math>
@@ -6538,8 +9118,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 28.
               </b>
+              {" "}{" "}
               {" "}
-              Give a formula for the volume of a sphere of
+              {" "}
+              <span class="t-3003-c">
+                Give a formula for the volume of a sphere of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_volume_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               radius {" "}
               <Math>
                 $r$
@@ -6550,27 +9139,44 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We can view the sphere as made up of many cones:
+              <span class="t-3003-c">
+                We can view the sphere as made up of many cones:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_volume_.wly:10:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/TNdV.svg"
+              local_url="./images/svg_ch5_ex_sphere_volume_idea.svg"
               intrinsicWidth={240}
               intrinsicHeight={240}
             />
             <Pause />
             <OuterP>
-              When we add up the volume
+              <span class="t-3003-c">
+                When we add up the volume
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_volume_.wly:15:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;1\over 3&#125;\times \rm&#123;base&#125; \times \rm&#123;height&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              over all these cones, each height is nearly {" "}
+              <span class="t-3003-c">
+                over all these cones, each height is nearly {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_volume_.wly:21:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $r$
@@ -6585,20 +9191,34 @@ export default function __Chapter13__() {
               $$
               &#123;1\over 3&#125;\times \rm&#123;base&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              over all the cones, which comes out to
+              <span class="t-3003-c">
+                over all the cones, which comes out to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_volume_.wly:28:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;1\over 3&#125;\times (&#123;\rm sphere\,\,area&#125;)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              because the sum of all the areas of the bases
+              <span class="t-3003-c">
+                because the sum of all the areas of the bases
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_volume_.wly:34:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               is the sphere area. (Everything speaking
               approximately, for many fine cones, in the
               limit of our imagination as they become
@@ -6617,11 +9237,17 @@ export default function __Chapter13__() {
                   $$
                   V = &#123;1\over 3&#125;\times (&#123;\rm sphere\,\,area&#125;) \times r = &#123;8\over 3&#125;\eta\rt&#123;.1&#125;r^3
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </div>
             </center>
             <OuterP>
-              for the volume {" "}
+              <span class="t-3003-c">
+                for the volume {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_volume_.wly:52:9
+                </span>
+              </span>
               <Math>
                 $V$
               </Math>
@@ -6638,11 +9264,17 @@ export default function __Chapter13__() {
                   $$
                   A = 8\eta\rt&#123;.05&#125;r^2
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </div>
             </center>
             <OuterP>
-              by {" "}
+              <span class="t-3003-c">
+                by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sphere_volume_.wly:64:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_177_h.a.i_"
                 class="in-chapter-link"
@@ -6659,16 +9291,33 @@ export default function __Chapter13__() {
               <b>
                 Exercise 29.
               </b>
+              {" "}{" "}
               {" "}
-              If a
+              {" "}
+              <span class="t-3003-c">
+                If a
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              vector
+              <span class="t-3003-c">
+                vector
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:6:7
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              is {" "}
+              <span class="t-3003-c">
+                is {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:8:5
+                </span>
+              </span>
               <i>
                 a pair of numbers
               </i>
@@ -6677,56 +9326,97 @@ export default function __Chapter13__() {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              sum
+              <span class="t-3003-c">
+                sum
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:11:7
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              of two vectors. (The most logical definition wins.)
+              <span class="t-3003-c">
+                of two vectors. (The most logical definition wins.)
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:13:5
+                </span>
+              </span>
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              The standard definition is that the sum
+              <span class="t-3003-c">
+                The standard definition is that the sum
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:17:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \vec&#123;u&#125; + \vec&#123;v&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              of a vector
+              <span class="t-3003-c">
+                of a vector
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:23:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \vec&#123;u&#125; = (u_x, u_y)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and of a vector
+              <span class="t-3003-c">
+                and of a vector
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:29:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \vec&#123;v&#125; = (v_x, v_y)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is the vector
+              <span class="t-3003-c">
+                is the vector
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:35:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (u_x + v_x, u_y + v_y)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              whose first coordinate is the sum of the first
+              <span class="t-3003-c">
+                whose first coordinate is the sum of the first
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:41:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               coordinates of {" "}
               <Math>
                 $\vec&#123;u&#125;$
@@ -6752,7 +9442,12 @@ export default function __Chapter13__() {
             <Pause />
             <OuterP>
               <i>
-                Example 1.
+                <span class="t-3003-c">
+                  Example 1.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:48:10
+                  </span>
+                </span>
               </i>
             </OuterP>
             <Pause />
@@ -6760,20 +9455,32 @@ export default function __Chapter13__() {
               $$
               \vec&#123;u&#125; = (100, 100)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:52:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \vec&#123;v&#125; = (1, -1)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              then
+              <span class="t-3003-c">
+                then
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:56:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -6784,33 +9491,52 @@ export default function __Chapter13__() {
                 src="/build-img/svgo-svg/rUfo.svg"
                 offsetX="1em"
                 atLeastAsWide={true}
+                local_url="./images/svg_ch5_ex_vector_sum_101_cloud.svg"
                 intrinsicWidth={240}
                 intrinsicHeight={200}
               />
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              because
+              <span class="t-3003-c">
+                because
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:66:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               100 + 1 = 101
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              on the one hand, and
+              <span class="t-3003-c">
+                on the one hand, and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:72:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               100 - 1 = 99
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              on the other hand.
+              <span class="t-3003-c">
+                on the other hand.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:78:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -6818,8 +9544,15 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                The little arrow {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The little arrow {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:82:13
+                  </span>
+                </span>
                 <NoBreak>
                   “
                   <Math>
@@ -6838,8 +9571,15 @@ export default function __Chapter13__() {
                 <i>
                   Note 2.
                 </i>
+                {" "}{" "}
                 {" "}
-                If we represent the vectors {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If we represent the vectors {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:88:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $\vec&#123;u&#125;$
@@ -6905,22 +9645,36 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/Sx1Y.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_vectors.svg"
                 intrinsicWidth={450}
                 intrinsicHeight={240}
               />
               <Pause />
               <OuterP>
-                ...then..
+                <span class="t-3003-c">
+                  ...then..
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:96:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 u_x + v_x
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                may be geometrically realized as the concatenation
+                <span class="t-3003-c">
+                  may be geometrically realized as the concatenation
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:102:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 of the {" "}
                 <Math>
                   $u_x$
@@ -6936,22 +9690,36 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/JkS_.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_ux_plus_vx.svg"
                 intrinsicWidth={450}
                 intrinsicHeight={135}
               />
               <Pause />
               <OuterP>
-                ...component displacements, while...
+                <span class="t-3003-c">
+                  ...component displacements, while...
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:108:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 u_y + v_y
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                ...may be geometrically realized as the concatenation
+                <span class="t-3003-c">
+                  ...may be geometrically realized as the concatenation
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:114:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 of the {" "}
                 <Math>
                   $u_y$
@@ -6967,12 +9735,20 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/efoR.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_uy_plus_vy.svg"
                 intrinsicWidth={450}
                 intrinsicHeight={150}
               />
               <Pause />
               <OuterP>
-                ...component displacements; moreover, both
+                <span class="t-3003-c">
+                  ...component displacements; moreover, both
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:120:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 concatenations may be simultaneously obtained by
                 concatenating the original {" "}
                 <Math>
@@ -6988,12 +9764,18 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/Qnaf.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_u_concat_v.svg"
                 intrinsicWidth={450}
                 intrinsicHeight={305}
               />
               <Pause />
               <OuterP>
-                ...which actually implies that {" "}
+                <span class="t-3003-c">
+                  ...which actually implies that {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:128:13
+                  </span>
+                </span>
                 <Math>
                   $\vec&#123;u&#125; + \vec&#123;v&#125;$
                 </Math>
@@ -7020,37 +9802,77 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/7Z4q.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_u_plus_v.svg"
                 intrinsicWidth={450}
                 intrinsicHeight={305}
               />
               <Pause />
               <OuterP>
-                This makes a mess, but the point is that this
+                <span class="t-3003-c">
+                  This makes a mess, but the point is that this
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:137:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 gives us a
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                geometric interpretation
+                <span class="t-3003-c">
+                  geometric interpretation
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:140:15
+                  </span>
+                </span>
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                or
+                <span class="t-3003-c">
+                  or
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:142:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                geometric representation
+                <span class="t-3003-c">
+                  geometric representation
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:144:15
+                  </span>
+                </span>
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                or
+                <span class="t-3003-c">
+                  or
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:146:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                geometric method of evaluation
+                <span class="t-3003-c">
+                  geometric method of evaluation
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:148:15
+                  </span>
+                </span>
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                for the sum of two vectors: concatenate the arrows
+                <span class="t-3003-c">
+                  for the sum of two vectors: concatenate the arrows
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:150:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 of the vectors you're summing, and take the final
                 displacement from the head of the first arrow to the
                 tail of the last arrow.
@@ -7062,8 +9884,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 3.
                 </i>
+                {" "}{" "}
                 {" "}
-                The solution to Exercise 7 can be cast in terms of
+                {" "}
+                <span class="t-3003-c">
+                  The solution to Exercise 7 can be cast in terms of
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_vector_addition_definition_.wly:157:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 vector addition, with, specifically, the position
                 vector of the point being equal to the sum of the
                 position vector of the circle's center with the “radial
@@ -7073,6 +9904,7 @@ export default function __Chapter13__() {
               <Image
                 style="margin-top:1em;margin-bottom:0.8em;"
                 src="/build-img/svgo-svg/Mzki.svg"
+                local_url="./images/svg_ch5_ex_vector_sum_previous_example.svg"
                 intrinsicWidth={500}
                 intrinsicHeight={260}
               />
@@ -7085,8 +9917,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 30.
               </b>
+              {" "}{" "}
               {" "}
-              What are the maximum and minimum values
+              {" "}
+              <span class="t-3003-c">
+                What are the maximum and minimum values
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               of
             </OuterP>
             <Pause />
@@ -7094,10 +9935,16 @@ export default function __Chapter13__() {
               $$
               \theta \ra \cos\theta\sin\theta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and for which {" "}
+              <span class="t-3003-c">
+                and for which {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:11:5
+                </span>
+              </span>
               <Math>
                 $\theta$
               </Math>
@@ -7108,7 +9955,12 @@ export default function __Chapter13__() {
           <Solution>
             <OuterP>
               <i>
-                Solution 1.
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:16:10
+                  </span>
+                </span>
               </i>
               {" "} For a geometric solution we remind ourselves that if we plot all the solutions of
             </OuterP>
@@ -7117,31 +9969,51 @@ export default function __Chapter13__() {
               $$
               xy = 1
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              we find the curve
+              <span class="t-3003-c">
+                we find the curve
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:22:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               y = &#123;1\over x&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (equivalent!) whose general aspect is...
+              <span class="t-3003-c">
+                (equivalent!) whose general aspect is...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:28:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/HPwG.svg"
               width="470px"
+              local_url="./images/_e5_max_cosx_sinx_one_over_x_graph.svg"
               intrinsicWidth={615}
               intrinsicHeight={568}
             />
             <Pause />
             <OuterP>
-              ...like so; a little more generally,
+              <span class="t-3003-c">
+                ...like so; a little more generally,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:34:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               “isosets” of the two-variable function...
             </OuterP>
             <Pause />
@@ -7149,21 +10021,33 @@ export default function __Chapter13__() {
               $$
               (x, y) \ra xy
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...have this general aspect...
+              <span class="t-3003-c">
+                ...have this general aspect...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:41:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/ME1k.svg"
               style="margin-bottom:0.5em;"
+              local_url="./images/svg_ch5_ex_max_xy_xy_isosets.svg"
               intrinsicWidth={488}
               intrinsicHeight={495}
             />
             <Pause />
             <OuterP>
-              ...where you see the curve {" "}
+              <span class="t-3003-c">
+                ...where you see the curve {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:47:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -7196,12 +10080,20 @@ export default function __Chapter13__() {
             <Image
               src="/build-img/svgo-svg/FGx3.svg"
               style="margin-bottom:0.5em;"
+              local_url="./images/svg_ch5_ex_max_xy_rainbow.svg"
               intrinsicWidth={420}
               intrinsicHeight={540}
             />
             <Pause />
             <OuterP>
-              The geometric insight that is of interest to
+              <span class="t-3003-c">
+                The geometric insight that is of interest to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:66:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               is that,
               at any given
               distance from the origin, the lines
@@ -7211,20 +10103,34 @@ export default function __Chapter13__() {
               $$
               x = y
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:76:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               x = -y
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              hold the largest and smallest values, respectively,
+              <span class="t-3003-c">
+                hold the largest and smallest values, respectively,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:83:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               of {" "}
               <NoBreak>
                 <Math>
@@ -7236,22 +10142,34 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/YYAQ.svg"
+              local_url="./images/svg_ch5_ex_max_xy_fixed_distance_v2.svg"
               intrinsicWidth={430}
               intrinsicHeight={540}
             />
             <Pause />
             <OuterP>
-              In other words,
+              <span class="t-3003-c">
+                In other words,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:89:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cos(\theta)\cdot\sin(\theta),
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as a value of the form {" "}
+              <span class="t-3003-c">
+                as a value of the form {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:93:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -7275,40 +10193,66 @@ export default function __Chapter13__() {
               $$
               (\cos \theta, \sin \theta) = \pm(\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where it attains value
+              <span class="t-3003-c">
+                where it attains value
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:101:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sqrt&#123;0.5&#125; \cdot \sqrt&#123;0.5&#125; = &#123;1\over 2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and will reach its minimum when
+              <span class="t-3003-c">
+                and will reach its minimum when
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:108:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (\cos \theta, \sin \theta) = \pm(-\sqrt&#123;0.5&#125;, \sqrt&#123;0.5&#125;)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where it attains value
+              <span class="t-3003-c">
+                where it attains value
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:114:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (-\sqrt&#123;0.5&#125;) \cdot \sqrt&#123;0.5&#125; = -&#123;1\over 2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              while, to answer the last part of the question,
+              <span class="t-3003-c">
+                while, to answer the last part of the question,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:121:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               the set of {" "}
               <NoBreak>
                 <Math>
@@ -7324,30 +10268,48 @@ export default function __Chapter13__() {
               $$
               \&#123;0.5\eta + 2\eta k: k \in \zz\&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...and...
+              <span class="t-3003-c">
+                ...and...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:129:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \&#123;1.5\eta + 2\eta k: k \in \zz\&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...respectively, as illustrated...
+              <span class="t-3003-c">
+                ...respectively, as illustrated...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:135:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/FyVW.svg"
+              local_url="./images/svg_ch5_ex_max_xy_angles_v2.svg"
               intrinsicWidth={650}
               intrinsicHeight={525}
             />
             <Pause />
             <OuterP>
-              ...here.
+              <span class="t-3003-c">
+                ...here.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:140:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -7355,8 +10317,15 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                Here are annotated graphs of {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Here are annotated graphs of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_isosets_of_xy_v5_.wly:146:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $x \ra \cos x\sin x$
@@ -7371,12 +10340,14 @@ export default function __Chapter13__() {
               <Image
                 src="/build-img/svgo-svg/7Hpe.svg"
                 style="margin-bottom:-0.5em"
+                local_url="./images/svg_ch5_ex_max_xy_graph_v2.svg"
                 intrinsicWidth={700}
                 intrinsicHeight={180}
               />
               <Pause />
               <Image
                 src="/build-img/svgo-svg/H0zm.svg"
+                local_url="./images/svg_ch5_ex_max_xy_graph_degrees.svg"
                 intrinsicWidth={700}
                 intrinsicHeight={180}
               />
@@ -7389,8 +10360,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 31.
               </b>
+              {" "}{" "}
               {" "}
-              What is the angle marked ‘?’, as a function
+              {" "}
+              <span class="t-3003-c">
+                What is the angle marked ‘?’, as a function
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_complement_calculation_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               of {" "}
               <NoBreak>
                 <Math>
@@ -7402,14 +10382,22 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/Vd8x.svg"
+              local_url="./images/svg_ch5_ex_angle_sum_180.svg"
               intrinsicWidth={300}
               intrinsicHeight={110}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since the angles of a triangle add to
+              <span class="t-3003-c">
+                Since the angles of a triangle add to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_complement_calculation_.wly:12:9
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
                   $180^\circ = 2\eta$
@@ -7423,30 +10411,48 @@ export default function __Chapter13__() {
               $$
               \theta + \eta + \te&#123;?&#125; = 2\eta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for ‘?’, giving us
+              <span class="t-3003-c">
+                for ‘?’, giving us
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_complement_calculation_.wly:19:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \te&#123;?&#125; = 2\eta - \eta - \theta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or an answer of...
+              <span class="t-3003-c">
+                or an answer of...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_complement_calculation_.wly:26:9
+                </span>
+              </span>
             </OuterP>
             <Boxed>
               <MathBlock>
                 $$
                 \eta - \theta
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
             </Boxed>
             <OuterP>
-              ...!!
+              <span class="t-3003-c">
+                ...!!
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_complement_calculation_.wly:33:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -7454,8 +10460,15 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                Two angles that sum to {" "}
+                {" "}
+                <span class="t-3003-c">
+                  Two angles that sum to {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_complement_calculation_.wly:45:13
+                  </span>
+                </span>
                 <Math>
                   $\eta$
                 </Math>
@@ -7477,11 +10490,23 @@ export default function __Chapter13__() {
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                complimentary
+                <span class="t-3003-c">
+                  complimentary
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_complement_calculation_.wly:53:15
+                  </span>
+                </span>
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                which would indicate that the angles are
+                <span class="t-3003-c">
+                  which would indicate that the angles are
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_complement_calculation_.wly:55:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 given to you for free—everything in math is
                 free, not just those angles!)
               </OuterP>
@@ -7494,9 +10519,18 @@ export default function __Chapter13__() {
               <b>
                 Exercise 32.
               </b>
+              {" "}{" "}
               {" "}
-              What is the angle marked ‘?’, as a function of
               {" "}
+              <span class="t-3003-c">
+                What is the angle marked ‘?’, as a function of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_complement_of_complement_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
                   $\theta$
@@ -7507,13 +10541,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/MXN9.svg"
+              local_url="./images/svg_ch5_ex_angle_sum_180_followup.svg"
               intrinsicWidth={300}
               intrinsicHeight={110}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              It is {" "}
+              <span class="t-3003-c">
+                It is {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_complement_of_complement_.wly:12:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\theta$
@@ -7526,12 +10566,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/SIuZ.svg"
+              local_url="./images/svg_ch5_ex_angle_sum_180_followup_explanation.svg"
               intrinsicWidth={380}
               intrinsicHeight={210}
             />
             <Pause />
             <OuterP>
-              Another method uses the fact that,
+              <span class="t-3003-c">
+                Another method uses the fact that,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_complement_of_complement_.wly:18:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               together with the angle immediately to its left
               (which happens to be {" "}
               <NoBreak>
@@ -7558,12 +10606,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/lswQ.svg"
+              local_url="./images/svg_ch5_ex_angle_sum_180_followup_explanation_2.svg"
               intrinsicWidth={380}
               intrinsicHeight={130}
             />
             <Pause />
             <OuterP>
-              (In one case we use the fact that the
+              <span class="t-3003-c">
+                (In one case we use the fact that the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_complement_of_complement_.wly:28:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               medium-sized triangle is a right triangle,
               in another case that the smallest-size
               triangle is a right triangle—and in both cases
@@ -7578,8 +10634,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 33.
               </b>
+              {" "}{" "}
               {" "}
-              Express {" "}
+              {" "}
+              <span class="t-3003-c">
+                Express {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_tan^2_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $A/B$
               </Math>
@@ -7594,13 +10657,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/WqQR.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio.svg"
               intrinsicWidth={300}
               intrinsicHeight={150}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              We shall use the height {" "}
+              <span class="t-3003-c">
+                We shall use the height {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_tan^2_.wly:11:9
+                </span>
+              </span>
               <Math>
                 $C$
               </Math>
@@ -7620,12 +10689,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/1KiR.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_height_C.svg"
               intrinsicWidth={360}
               intrinsicHeight={153}
             />
             <Pause />
             <OuterP>
-              On the one hand, {" "}
+              <span class="t-3003-c">
+                On the one hand, {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_tan^2_.wly:17:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $C/B = \tan(\theta)$
@@ -7636,12 +10711,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/DU_p.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_left_part.svg"
               intrinsicWidth={360}
               intrinsicHeight={228}
             />
             <Pause />
             <OuterP>
-              On the other hand, {" "}
+              <span class="t-3003-c">
+                On the other hand, {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_tan^2_.wly:22:9
+                </span>
+              </span>
               <Math>
                 $A/C = \tan(\theta)$
               </Math>
@@ -7657,22 +10738,34 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/OHG8.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_right_part.svg"
               intrinsicWidth={430}
               intrinsicHeight={222}
             />
             <Pause />
             <OuterP>
-              The answer is therefore:
+              <span class="t-3003-c">
+                The answer is therefore:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_tan^2_.wly:30:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \tan(\theta)\cdot\tan(\theta) = \tan^2(\theta).
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (As per the fact that {" "}
+              <span class="t-3003-c">
+                (As per the fact that {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_tan^2_.wly:36:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $(A/B) = (C/B)\cdot(A/C)$
@@ -7688,8 +10781,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 34.
               </b>
+              {" "}{" "}
               {" "}
-              Express {" "}
+              {" "}
+              <span class="t-3003-c">
+                Express {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $A/B$
               </Math>
@@ -7704,18 +10804,29 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/8gZl.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A.svg"
               intrinsicWidth={300}
               intrinsicHeight={185}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Here are two solutions:
+              <span class="t-3003-c">
+                Here are two solutions:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:11:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                Solution 1.
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:15:10
+                  </span>
+                </span>
               </i>
               {" "} We use the small leg {" "}
               <Math>
@@ -7738,12 +10849,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/0rFq.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_D.svg"
               intrinsicWidth={360}
               intrinsicHeight={190}
             />
             <Pause />
             <OuterP>
-              On the one hand, {" "}
+              <span class="t-3003-c">
+                On the one hand, {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:22:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $D/B = \sec(\theta)\,\, (= 1/\cos(\theta))$
@@ -7754,12 +10871,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/xVQI.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A_left_part.svg"
               intrinsicWidth={360}
               intrinsicHeight={238}
             />
             <Pause />
             <OuterP>
-              On the other hand, {" "}
+              <span class="t-3003-c">
+                On the other hand, {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:27:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $A/D = \sec(\theta)$
@@ -7771,25 +10894,37 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/4_JC.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A_right_part_shrunk.svg"
               intrinsicWidth={450}
               intrinsicHeight={236}
             />
             <Pause />
             <OuterP>
-              Thus:
+              <span class="t-3003-c">
+                Thus:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:32:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;A\over B&#125; = &#123;D\over B&#125;\times &#123;A\over D&#125; = \sec(\theta)\cdot \sec(\theta) = \sec^2(\theta).
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <StarDivider style="margin-top:0.5em;" />
             <Pause />
             <OuterP>
               <i>
-                Solution 2.
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:41:10
+                  </span>
+                </span>
               </i>
               {" "}
               We decompose {" "}
@@ -7818,32 +10953,50 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/YcZS.svg"
+              local_url="./images/svg_ch5_ex_tan_sq_AB_ratio_big_A_with_Aprime.svg"
               intrinsicWidth={360}
               intrinsicHeight={191}
             />
             <Pause />
             <OuterP>
-              We find:
+              <span class="t-3003-c">
+                We find:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:49:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;A\over B&#125; = &#123;&#123;B + A'&#125;\over B&#125; = &#123;B\over B&#125; + &#123;A'\over B&#125; = 1 + \tan^2(\theta)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...since
+              <span class="t-3003-c">
+                ...since
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:55:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;A'\over B&#125; = \tan^2(\theta)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by Exercise 22. (The End.)
+              <span class="t-3003-c">
+                by Exercise 22. (The End.)
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:61:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -7851,18 +11004,31 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                Since both solutions answer the same question, we deduce that
+                {" "}
+                <span class="t-3003-c">
+                  Since both solutions answer the same question, we deduce that
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:65:13
+                  </span>
+                </span>
               </OuterP>
               <Boxed>
                 <MathBlock>
                   $$
                   \sec^2(\theta) = 1 + \tan^2(\theta)
                   $$
+                  <MathJaxSvgExportTooltip />
                 </MathBlock>
               </Boxed>
               <OuterP>
-                for all {" "}
+                <span class="t-3003-c">
+                  for all {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_ratio_A_over_B_1_plus_tan^2_.wly:72:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $0 &lt; \theta &lt; \eta$
@@ -7895,8 +11061,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 35.
               </b>
+              {" "}{" "}
               {" "}
-              An access staircase goes up the side of a
+              {" "}
+              <span class="t-3003-c">
+                An access staircase goes up the side of a
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               hemispheric gas tank. It keeps a constant angle
               of {" "}
               <Math>
@@ -7913,19 +11088,32 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/wF1d.svg"
+              local_url="./images/svg_ch5_ex_gas_sphere.svg"
               intrinsicWidth={620}
               intrinsicHeight={425}
             />
             <Pause />
             <OuterP>
-              How long, roughly, is the inside handrail
+              <span class="t-3003-c">
+                How long, roughly, is the inside handrail
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:13:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               of the staircase as a function of the radius
               of the tank?
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Putting {" "}
+              <span class="t-3003-c">
+                Putting {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:19:9
+                </span>
+              </span>
               <Math>
                 $r$
               </Math>
@@ -7936,20 +11124,34 @@ export default function __Chapter13__() {
               $$
               \approx r(1 + \eta/2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              where
+              <span class="t-3003-c">
+                where
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:25:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               r\cdot 1=r
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              accounts for the first (lower) portion of the
+              <span class="t-3003-c">
+                accounts for the first (lower) portion of the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:31:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               handrail, and
             </OuterP>
             <Pause />
@@ -7957,16 +11159,31 @@ export default function __Chapter13__() {
               $$
               r\cdot(\eta/2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              accounts for the upper portion of the handrail.
+              <span class="t-3003-c">
+                accounts for the upper portion of the handrail.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:38:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               (Ignoring that the handrail doesn't quite
               follow through to the tippy-top of the gas tank,
               per the picture.)
             </OuterP>
             <OuterP class="indent-10">
-              To reason about the lower portion of the handrail
+              <span class="t-3003-c">
+                To reason about the lower portion of the handrail
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:43:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               imagine a butterly that follows up the
               handrail by flying straight up and
               straight over, then straight up and straight
@@ -7975,12 +11192,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/EiSR.svg"
+              local_url="./images/svg_ch5_ex_gas_sphere_butterfly.svg"
               intrinsicWidth={460}
               intrinsicHeight={415}
             />
             <Pause />
             <OuterP>
-              The total length of the handrail is the sum of
+              <span class="t-3003-c">
+                The total length of the handrail is the sum of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:52:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               all the diagonal segments (in dotted white) above.
               Because the diagonal segment has length
             </OuterP>
@@ -7989,10 +11214,16 @@ export default function __Chapter13__() {
               $$
               \sqrt&#123;2&#125;h
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for a leg in which the butterly goes up by {" "}
+              <span class="t-3003-c">
+                for a leg in which the butterly goes up by {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:60:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $h$
@@ -8007,10 +11238,18 @@ export default function __Chapter13__() {
               $$
               \sqrt&#123;2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              times the total amount that the butterfly goes up
+              <span class="t-3003-c">
+                times the total amount that the butterfly goes up
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:67:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               for the first half of the handrail. But this
               amount—call it {" "}
               <NoBreak>
@@ -8025,20 +11264,34 @@ export default function __Chapter13__() {
               $$
               r\cdot\sin(45^\circ) = r\cdot &#123;1\over \sqrt&#123;2&#125;&#125; = &#123;r\over \sqrt&#123;2&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as illustrated here:
+              <span class="t-3003-c">
+                as illustrated here:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:75:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/VrOC.svg"
+              local_url="./images/svg_ch5_ex_gas_sphere_profile.svg"
               intrinsicWidth={900}
               intrinsicHeight={400}
             />
             <Pause />
             <OuterP>
-              And therefore the sum of the white diagonal segments
+              <span class="t-3003-c">
+                And therefore the sum of the white diagonal segments
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:80:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               is
             </OuterP>
             <Pause />
@@ -8046,10 +11299,16 @@ export default function __Chapter13__() {
               $$
               \sqrt&#123;2&#125;\cdot H = \sqrt&#123;2&#125;\cdot &#123;r\over \sqrt&#123;2&#125;&#125; = r
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...just {" "}
+              <span class="t-3003-c">
+                ...just {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:87:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $r$
@@ -8059,7 +11318,14 @@ export default function __Chapter13__() {
               {" "} as we said.
             </OuterP>
             <OuterP class="indent-10">
-              On the other hand, the upper portion of the handrail
+              <span class="t-3003-c">
+                On the other hand, the upper portion of the handrail
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:89:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               has length
             </OuterP>
             <Pause />
@@ -8067,10 +11333,16 @@ export default function __Chapter13__() {
               $$
               r\cdot(\eta/2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              (modulo the kerfuffle at the top) because, in a circle of radius {" "}
+              <span class="t-3003-c">
+                (modulo the kerfuffle at the top) because, in a circle of radius {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:96:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $r$
@@ -8093,12 +11365,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/E5ov.svg"
+              local_url="./images/svg_ch5_ex_gas_sphere_profile_2.svg"
               intrinsicWidth={900}
               intrinsicHeight={400}
             />
             <Pause />
             <OuterP>
-              ...and hence the {" "}
+              <span class="t-3003-c">
+                ...and hence the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:102:9
+                </span>
+              </span>
               <i>
                 total
               </i>
@@ -8110,10 +11388,16 @@ export default function __Chapter13__() {
               $$
               \approx r + r\cdot\eta/2 = r(1 + \eta/2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...as claimed.
+              <span class="t-3003-c">
+                ...as claimed.
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:109:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <SolutionNote>
@@ -8121,8 +11405,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                Another way to think about the length of the lower
+                {" "}
+                <span class="t-3003-c">
+                  Another way to think about the length of the lower
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:113:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 portion of the handrail is via the green triangle 
                 depicted below, that drops down  onto the handrail
                 like a curtain, starting at the top of the lower
@@ -8131,12 +11424,20 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/tyZN.svg"
+                local_url="./images/svg_ch5_ex_gas_sphere_green_2_1_45.svg"
                 intrinsicWidth={620}
                 intrinsicHeight={435}
               />
               <Pause />
               <OuterP>
-                If we “unroll” the triangle onto a vertical plane
+                <span class="t-3003-c">
+                  If we “unroll” the triangle onto a vertical plane
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:122:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 while keeping its left edge vertical we find a 
                 triangle with a straight lower edge at {" "}
                 <Math>
@@ -8149,12 +11450,20 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/-SnV.svg"
+                local_url="./images/svg_ch5_ex_gas_sphere_triangle_out_flat.svg"
                 intrinsicWidth={350}
                 intrinsicHeight={280}
               />
               <Pause />
               <OuterP>
-                Hence the length of the lower half of the handrail
+                <span class="t-3003-c">
+                  Hence the length of the lower half of the handrail
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:131:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 is
               </OuterP>
               <Pause />
@@ -8162,10 +11471,16 @@ export default function __Chapter13__() {
                 $$
                 \large \sqrt&#123;2&#125;H
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                with {" "}
+                <span class="t-3003-c">
+                  with {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank.wly:138:13
+                  </span>
+                </span>
                 <Math>
                   $H = r/\sqrt&#123;2&#125;$
                 </Math>
@@ -8180,18 +11495,31 @@ export default function __Chapter13__() {
               <b>
                 Exercise 36.
               </b>
+              {" "}{" "}
               {" "}
-              Give a decimal approximation to
+              {" "}
+              <span class="t-3003-c">
+                Give a decimal approximation to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:3:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               r(1 + \eta/2)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for {" "}
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:7:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $r = 100$
@@ -8210,17 +11538,28 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Since
+              <span class="t-3003-c">
+                Since
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:11:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \eta \approx &#123;11\over 7&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              within 1/1000th, we have
+              <span class="t-3003-c">
+                within 1/1000th, we have
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:17:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
@@ -8237,20 +11576,32 @@ export default function __Chapter13__() {
                                          =&amp;\,\,\,\dn&#123;0.0&#125;\up&#123;1.3&#125; 1.8r
               \end&#123;align*&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              leading to an approximation of
+              <span class="t-3003-c">
+                leading to an approximation of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:33:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \approx 180\te&#123;m&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for {" "}
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:38:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $r = 100$
@@ -8265,30 +11616,48 @@ export default function __Chapter13__() {
               $$
               \eta \approx &#123;10.5\over 7&#125; = 1.5
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which gives
+              <span class="t-3003-c">
+                which gives
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:43:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               1 + \eta/2 \approx 1.75
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and a final approximation of
+              <span class="t-3003-c">
+                and a final approximation of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:47:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \approx 175\te&#123;m&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for {" "}
+              <span class="t-3003-c">
+                for {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:51:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $r = 100$
@@ -8302,9 +11671,18 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                The two approximations given produce
                 {" "}
+                <span class="t-3003-c">
+                  The two approximations given produce
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:55:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
+                {" "}{" "}
                 <NoBreak>
                   1
                   <Math>
@@ -8339,10 +11717,16 @@ export default function __Chapter13__() {
                 $$
                 1.5
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                is nearly {" "}
+                <span class="t-3003-c">
+                  is nearly {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:65:13
+                  </span>
+                </span>
                 <NoBreak>
                   5
                   <Math>
@@ -8365,8 +11749,15 @@ export default function __Chapter13__() {
                 <i>
                   Note 2.
                 </i>
+                {" "}{" "}
                 {" "}
-                The true value is {" "}
+                {" "}
+                <span class="t-3003-c">
+                  The true value is {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:72:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $178.5$
@@ -8380,20 +11771,32 @@ export default function __Chapter13__() {
                 $$
                 \eta/2 = 0.785\dots
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                and some, as
+                <span class="t-3003-c">
+                  and some, as
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:78:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <MathBlock>
                 $$
                 \eta = 1.570\dots
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                and some. (Note that half of {" "}
+                <span class="t-3003-c">
+                  and some. (Note that half of {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:84:13
+                  </span>
+                </span>
                 <Math>
                   $0.07$
                 </Math>
@@ -8420,10 +11823,18 @@ export default function __Chapter13__() {
                 $$
                 1.57/2
                 $$
+                <MathJaxSvgExportTooltip />
               </MathBlock>
               <Pause />
               <OuterP>
-                “by head” constitutes another perfectly valid
+                <span class="t-3003-c">
+                  “by head” constitutes another perfectly valid
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_gas_tank_decimal_approximation_.wly:92:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 method of approximation, if you can remember
                 that {" "}
                 <NoBreak>
@@ -8442,8 +11853,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 37.
               </b>
+              {" "}{" "}
               {" "}
-              A ship travels from the South pole of a watery
+              {" "}
+              <span class="t-3003-c">
+                A ship travels from the South pole of a watery
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               copy of the Earth to the North pole while maintaining
               a constant compass bearing of {" "}
               <Math>
@@ -8456,45 +11876,73 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/NUnQ.svg"
+              local_url="./images/svg_ch5_ex_spiral_sphere.svg"
               intrinsicWidth={620}
               intrinsicHeight={400}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Imagine that a butterfly that only flies by
+              <span class="t-3003-c">
+                Imagine that a butterfly that only flies by
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:14:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               small steps East and North, alternately, follows 
               with the boat:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/tjm5.svg"
+              local_url="./images/svg_ch5_ex_butterfly_fig.svg"
               intrinsicWidth={500}
               intrinsicHeight={270}
             />
             <Pause />
             <OuterP>
-              (We replace
+              <span class="t-3003-c">
+                (We replace
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:21:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Huge 5^\circ
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              by
+              <span class="t-3003-c">
+                by
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:27:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Huge \alpha
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              radians for more generality, that will make the
+              <span class="t-3003-c">
+                radians for more generality, that will make the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:33:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               problem no more nor less easy.) The total of all the
               small northward legs that the butterfly travels is
             </OuterP>
@@ -8503,10 +11951,16 @@ export default function __Chapter13__() {
               $$
               20004\,\te&#123;km&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              or one-half the so-called {" "}
+              <span class="t-3003-c">
+                or one-half the so-called {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:41:9
+                </span>
+              </span>
               <i>
                 meridional circumference
               </i>
@@ -8519,20 +11973,34 @@ export default function __Chapter13__() {
               $$
               \Huge \csc(\alpha)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              times the sum of all the butterly's northward legs:
+              <span class="t-3003-c">
+                times the sum of all the butterly's northward legs:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:49:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/u2Fw.svg"
+              local_url="./images/svg_ch5_ex_butterfly_fig_with_csc.svg"
               intrinsicWidth={500}
               intrinsicHeight={270}
             />
             <Pause />
             <OuterP>
-              The total distance traveled by the ship
+              <span class="t-3003-c">
+                The total distance traveled by the ship
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:54:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               is therefore
             </OuterP>
             <Pause />
@@ -8540,20 +12008,32 @@ export default function __Chapter13__() {
               $$
               \Large 20004\,\te&#123;km&#125;\cdot \csc \alpha = &#123;20004\,\te&#123;km&#125; \over \sin \alpha&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              that comes out to
+              <span class="t-3003-c">
+                that comes out to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:61:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \Large \sim 229520\,\te&#123;km&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              with {" "}
+              <span class="t-3003-c">
+                with {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:67:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\alpha = 5^\circ$
@@ -8567,8 +12047,17 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                In reality the butterly's triangle is
+                {" "}
+                <span class="t-3003-c">
+                  In reality the butterly's triangle is
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_a_ship_.wly:71:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 drawn on a spherical shell and it is
                 only because the triangle is very small
                 compared to the radius of the shell that
@@ -8598,8 +12087,17 @@ export default function __Chapter13__() {
               <b>
                 Exercise 38.
               </b>
+              {" "}{" "}
               {" "}
-              In the drawing below, at what coordinates,
+              {" "}
+              <span class="t-3003-c">
+                In the drawing below, at what coordinates,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:4:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               expressed as a function of {" "}
               <NoBreak>
                 <Math>
@@ -8622,13 +12120,21 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/AdMn.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent.svg"
               intrinsicWidth={550}
               intrinsicHeight={340}
             />
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Start by assuming
+              <span class="t-3003-c">
+                Start by assuming
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:14:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               that {" "}
               <Math>
                 $\theta$
@@ -8642,45 +12148,89 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/nF2I.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_Q1.svg"
               intrinsicWidth={400}
               intrinsicHeight={190}
             />
             <Pause />
             <OuterP>
-              Regarding this diagram, note that:
+              <span class="t-3003-c">
+                Regarding this diagram, note that:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:24:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <List style="gap:1em">
               <Item>
                 <p>
-                  we have already “used up” the fact that
+                  <span class="t-3003-c">
+                    we have already “used up” the fact that
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:29:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
                   the radius of the circle is {" "}
                   <Math>
                     $1$
                   </Math>
-                  {" "} by
+                  <span class="t-3003-c">
+                    {" "} by
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:30:44
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
                   making the dropped height (which used to
                   be a radius) length {" "}
                   <NoBreak>
                     <Math>
                       $1$
                     </Math>
-                    ;
+                    <span class="t-3003-c">
+                      ;
+                      <span class="t-3003">
+                        ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:32:36
+                      </span>
+                    </span>
                   </NoBreak>
                 </p>
               </Item>
               <Item>
                 <p>
-                  we use a “the complement of my complement
+                  <span class="t-3003-c">
+                    we use a “the complement of my complement
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:34:13
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
                   is myself”-type argument to deduce that the
                   upper left angle is {" "}
                   <NoBreak>
                     <Math>
                       $\theta$
                     </Math>
-                    ,
+                    <span class="t-3003-c">
+                      ,
+                      <span class="t-3003">
+                        ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:36:41
+                      </span>
+                    </span>
                   </NoBreak>
-                  {" "} as well
+                  <span class="t-3003-c">
+                    {" "} as well
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:36:41
+                    </span>
+                  </span>
+                  {" "}
+                  {" "}
                   (cf. {" "}
                   <InChapterLink
                     href="#_181_h.a.i_"
@@ -8688,21 +12238,38 @@ export default function __Chapter13__() {
                   >
                     Exercise 31
                   </InChapterLink>
-                  &#8288;,
+                  <span class="t-3003-c">
+                    &#8288;,
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:37:13
+                    </span>
+                  </span>
                   {" "}
+                  {" "}
+                  {" "}{" "}
                   <InChapterLink
                     href="#_182_h.a.i_"
                     class="in-chapter-link"
                   >
                     Exercise 32
                   </InChapterLink>
-                  &#8288;).
+                  <span class="t-3003-c">
+                    &#8288;).
+                    <span class="t-3003">
+                      ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:38:13
+                    </span>
+                  </span>
                 </p>
               </Item>
             </List>
             <Pause />
             <OuterP>
-              Because {" "}
+              <span class="t-3003-c">
+                Because {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:40:9
+                </span>
+              </span>
               <Math>
                 $1 \cdot \sec(\theta) = \sec(\theta)$
               </Math>
@@ -8724,18 +12291,27 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/wgBS.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_Q1_first_solve.svg"
               intrinsicWidth={400}
               intrinsicHeight={190}
             />
             <Pause />
             <Image
               src="/build-img/svgo-svg/D8sZ.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_Q1_second_solve.svg"
               intrinsicWidth={400}
               intrinsicHeight={200}
             />
             <Pause />
             <OuterP>
-              ...i.e., in the first quadrant, at least, the
+              <span class="t-3003-c">
+                ...i.e., in the first quadrant, at least, the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:50:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               coordinates are {" "}
               <Math>
                 $\sec(\theta)$
@@ -8745,23 +12321,39 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/i6Bn.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_Q1_with_answer.svg"
               intrinsicWidth={550}
               intrinsicHeight={340}
             />
             <Pause />
             <OuterP>
-              For the other quadrants we can reason by
+              <span class="t-3003-c">
+                For the other quadrants we can reason by
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:56:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               symmetry with the first quadrant:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/TRpy.svg"
+              local_url="./images/svg_ch5_ex_theta_tangent_all_quadrants.svg"
               intrinsicWidth={660}
               intrinsicHeight={530}
             />
             <Pause />
             <OuterP>
-              In more detail, the product of the two coordinates
+              <span class="t-3003-c">
+                In more detail, the product of the two coordinates
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:62:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               marked by purple arrows is the same in all four
               quadrants, because “minus times minus is plus”; but
               in first quadrant, the product is {" "}
@@ -8838,10 +12430,16 @@ export default function __Chapter13__() {
               $$
               \Huge \sec\theta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for the {" "}
+              <span class="t-3003-c">
+                for the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:84:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $x$
@@ -8855,10 +12453,16 @@ export default function __Chapter13__() {
               $$
               \Huge \csc\theta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              for the {" "}
+              <span class="t-3003-c">
+                for the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_secant_cosecant_intersections_.wly:90:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $y$
@@ -8875,24 +12479,40 @@ export default function __Chapter13__() {
               <b>
                 Exercise 39.
               </b>
+              {" "}{" "}
               {" "}
-              Stipulating
+              {" "}
+              <span class="t-3003-c">
+                Stipulating
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:4:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \,\tan\theta = &#123;\sin\theta\over\cos\theta&#125;,
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <MathBlock>
               $$
               \cot\theta = &#123;\cos\theta\over\sin\theta&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              as definitions of 
+              <span class="t-3003-c">
+                as definitions of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:13:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               tan {" "}
               <i>
                 &amp;
@@ -8924,17 +12544,30 @@ export default function __Chapter13__() {
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              Note that
+              <span class="t-3003-c">
+                Note that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:24:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;\sin\theta\over\cos\theta&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              can be understood as 
+              <span class="t-3003-c">
+                can be understood as {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:30:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               a fraction of the form “rise over run”,
               i.e., the slope of the line from {" "}
               <Math>
@@ -8951,12 +12584,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/d3kY.svg"
+              local_url="./images/e5_tan_cot_unit_circle_1.svg"
               intrinsicWidth={660}
               intrinsicHeight={360}
             />
             <Pause />
             <OuterP>
-              However, one way to “materialize” a slope 
+              <span class="t-3003-c">
+                However, one way to “materialize” a slope {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:37:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               as a displacement
               is to scale the triangle “rise over run” until
               the “run” becomes {" "}
@@ -8981,12 +12622,18 @@ export default function __Chapter13__() {
             <Image
               src="/build-img/svgo-svg/wJEo.svg"
               style="margin-bottom:-0.5em"
+              local_url="./images/e5_tan_cot_unit_circle_2.svg"
               intrinsicWidth={980}
               intrinsicHeight={450}
             />
             <Pause />
             <OuterP>
-              This also works if {" "}
+              <span class="t-3003-c">
+                This also works if {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:49:9
+                </span>
+              </span>
               <Math>
                 $\theta$
               </Math>
@@ -8998,22 +12645,36 @@ export default function __Chapter13__() {
             <Image
               src="/build-img/svgo-svg/VCX7.svg"
               style="margin-bottom:-0.5em"
+              local_url="./images/e5_tan_cot_unit_circle_3.svg"
               intrinsicWidth={980}
               intrinsicHeight={384}
             />
             <Pause />
             <OuterP>
-              Symmetrically, the ratio
+              <span class="t-3003-c">
+                Symmetrically, the ratio
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:57:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cot\theta = &#123;\cos\theta \over \sin\theta&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              has the form “run over rise”, and can
+              <span class="t-3003-c">
+                has the form “run over rise”, and can
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:63:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               be evaluated by scaling the same triangle
               until “rise” becomes {" "}
               <NoBreak>
@@ -9035,12 +12696,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/qnKn.svg"
+              local_url="./images/e5_tan_cot_unit_circle_4.svg"
               intrinsicWidth={660}
               intrinsicHeight={440}
             />
             <Pause />
             <OuterP>
-              Overall,
+              <span class="t-3003-c">
+                Overall,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:72:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               to give self-contained verbalizations of these
               constructions, we have...
             </OuterP>
@@ -9049,19 +12718,43 @@ export default function __Chapter13__() {
               <Math>
                 $\tan\theta$
               </Math>
-              {" "} is the {" "}
+              <span class="t-3003-c">
+                {" "} is the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:80:23
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $y$
                 </Math>
-                -coordinate
+                <span class="t-3003-c">
+                  -coordinate
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:80:34
+                  </span>
+                </span>
               </NoBreak>
-              {" "} of the
+              <span class="t-3003-c">
+                {" "} of the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:80:34
+                </span>
+              </span>
+              {" "}
+              {" "}
               intersection of {" "}
               <Math>
                 $x = 1$
               </Math>
-              {" "} with the line through
+              <span class="t-3003-c">
+                {" "} with the line through
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:81:32
+                </span>
+              </span>
+              {" "}
+              {" "}
               the origin and {" "}
               <Math>
                 $(\cos\theta, \sin\theta)$
@@ -9069,7 +12762,12 @@ export default function __Chapter13__() {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              ...for {" "}
+              <span class="t-3003-c">
+                ...for {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:84:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\tan\theta$
@@ -9083,19 +12781,43 @@ export default function __Chapter13__() {
               <Math>
                 $\cot\theta$
               </Math>
-              {" "} is the {" "}
+              <span class="t-3003-c">
+                {" "} is the {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:90:23
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $x$
                 </Math>
-                -coordinate
+                <span class="t-3003-c">
+                  -coordinate
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:90:34
+                  </span>
+                </span>
               </NoBreak>
-              {" "} of the
+              <span class="t-3003-c">
+                {" "} of the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:90:34
+                </span>
+              </span>
+              {" "}
+              {" "}
               intersection of {" "}
               <Math>
                 $y = 1$
               </Math>
-              {" "} with the line through the origin
+              <span class="t-3003-c">
+                {" "} with the line through the origin
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:91:32
+                </span>
+              </span>
+              {" "}
+              {" "}
               and {" "}
               <Math>
                 $(\cos\theta, \sin\theta)$
@@ -9103,7 +12825,12 @@ export default function __Chapter13__() {
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              ...for {" "}
+              <span class="t-3003-c">
+                ...for {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_tan_cot_on_unit_circle_.wly:94:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\cot\theta$
@@ -9119,8 +12846,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 40.
               </b>
+              {" "}{" "}
               {" "}
-              If {" "}
+              {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:4:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $0$
@@ -9145,22 +12879,36 @@ export default function __Chapter13__() {
             <Image
               style="margin-top:0.8em;margin-bottom:0.8em;"
               src="/build-img/svgo-svg/j4h0.svg"
+              local_url="./images/e5_line_with_0_1_and_A.svg"
               intrinsicWidth={450}
               intrinsicHeight={40}
             />
             <Pause />
             <OuterP>
-              ...how can we find the placement of...
+              <span class="t-3003-c">
+                ...how can we find the placement of...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:11:5
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               1 / A
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...on the same line by a purely geometric construction?
+              <span class="t-3003-c">
+                ...on the same line by a purely geometric construction?
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:17:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               What about if {" "}
               <NoBreak>
                 <Math>
@@ -9181,7 +12929,12 @@ export default function __Chapter13__() {
           <Solution>
             <OuterP>
               <i>
-                Solution 1.
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:22:10
+                  </span>
+                </span>
               </i>
               {" "}
               The idea is to find
@@ -9223,18 +12976,25 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/kxTm.svg"
+              local_url="./images/e5_line_with_0_1_and_A_and_secant.svg"
               intrinsicWidth={485}
               intrinsicHeight={225}
             />
             <Pause />
             <Image
               src="/build-img/svgo-svg/ryx0.svg"
+              local_url="./images/e5_line_with_0_1_and_A_and_cos.svg"
               intrinsicWidth={485}
               intrinsicHeight={225}
             />
             <Pause />
             <OuterP>
-              (Cf. {" "}
+              <span class="t-3003-c">
+                (Cf. {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:34:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_188_h.a.i_"
                 class="in-chapter-link"
@@ -9249,16 +13009,31 @@ export default function __Chapter13__() {
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              ~ ~ case {" "}
+              <span class="t-3003-c">
+                ~ ~ case {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:40:11
+                </span>
+              </span>
               <Math>
                 $|A| &gt; 1$
               </Math>
-              {" "} ~ ~
+              <span class="t-3003-c">
+                {" "} ~ ~
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:40:29
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
               <i>
-                Step 1.
+                <span class="t-3003-c">
+                  Step 1.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:42:10
+                  </span>
+                </span>
               </i>
               {" "} Find the midpoint between {" "}
               <Math>
@@ -9277,13 +13052,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/JM7s.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step1.svg"
               intrinsicWidth={485}
               intrinsicHeight={540}
             />
             <Pause />
             <OuterP>
               <i>
-                Step 2.
+                <span class="t-3003-c">
+                  Step 2.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:48:10
+                  </span>
+                </span>
               </i>
               {" "} Draw a semicircle of radius {" "}
               <Math>
@@ -9295,13 +13076,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/eQmC.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step2.svg"
               intrinsicWidth={485}
               intrinsicHeight={330}
             />
             <Pause />
             <OuterP>
               <i>
-                Step 3.
+                <span class="t-3003-c">
+                  Step 3.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:54:10
+                  </span>
+                </span>
               </i>
               {" "} Draw a circle of radius {" "}
               <Math>
@@ -9319,13 +13106,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/emr1.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step3.svg"
               intrinsicWidth={485}
               intrinsicHeight={330}
             />
             <Pause />
             <OuterP>
               <i>
-                Step 4.
+                <span class="t-3003-c">
+                  Step 4.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:60:10
+                  </span>
+                </span>
               </i>
               {" "} Draw a line through the intersections
               of the two circles to find the position of {" "}
@@ -9339,23 +13132,39 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/XE7K.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step4.svg"
               intrinsicWidth={485}
               intrinsicHeight={330}
             />
             <Pause />
             <OuterP>
-              (The procedure works because
+              <span class="t-3003-c">
+                (The procedure works because
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:66:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               this triangle...
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/KO2V.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Agt1_step4_with_triangle.svg"
               intrinsicWidth={485}
               intrinsicHeight={330}
             />
             <Pause />
             <OuterP>
-              ...is actually right-angled at its upper corner
+              <span class="t-3003-c">
+                ...is actually right-angled at its upper corner
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:72:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               by 
               the Peloponnesian circle theorem.
               This implies that the line from {" "}
@@ -9381,19 +13190,35 @@ export default function __Chapter13__() {
               y = 1
               \end&#123;gathered&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <CentralDisplayItalic>
-              ~ ~ case {" "}
+              <span class="t-3003-c">
+                ~ ~ case {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:86:11
+                </span>
+              </span>
               <Math>
                 $|A| &lt; 1$
               </Math>
-              {" "} ~ ~
+              <span class="t-3003-c">
+                {" "} ~ ~
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:86:29
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
               <i>
-                Step 1.
+                <span class="t-3003-c">
+                  Step 1.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:88:10
+                  </span>
+                </span>
               </i>
               {" "} 
               With {" "}
@@ -9423,13 +13248,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/RGWo.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Alt1_step1_v3.svg"
               intrinsicWidth={485}
               intrinsicHeight={121}
             />
             <Pause />
             <OuterP>
               <i>
-                Step 2.
+                <span class="t-3003-c">
+                  Step 2.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:98:10
+                  </span>
+                </span>
               </i>
               {" "} Use these points to draw a perpendicular 
               through {" "}
@@ -9451,13 +13282,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/4MXO.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Alt1_step2_v3.svg"
               intrinsicWidth={485}
               intrinsicHeight={190}
             />
             <Pause />
             <OuterP>
               <i>
-                Step 3.
+                <span class="t-3003-c">
+                  Step 3.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:105:10
+                  </span>
+                </span>
               </i>
               {" "} 
               Draw a circle of radius {" "}
@@ -9482,13 +13319,19 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/FPj6.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Alt1_step4_v3.svg"
               intrinsicWidth={485}
               intrinsicHeight={210}
             />
             <Pause />
             <OuterP>
               <i>
-                Step 4.
+                <span class="t-3003-c">
+                  Step 4.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:113:10
+                  </span>
+                </span>
               </i>
               {" "} 
               Construct a perpendicular to this line
@@ -9506,6 +13349,7 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/hKBQ.svg"
+              local_url="./images/e5_line_with_0_1_and_A_Alt1_step5_v3_smaller.svg"
               intrinsicWidth={485}
               intrinsicHeight={245}
             />
@@ -9514,7 +13358,12 @@ export default function __Chapter13__() {
             <Pause />
             <OuterP>
               <i>
-                Solution 2.
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:125:10
+                  </span>
+                </span>
               </i>
               {" "} Note that for an angle
             </OuterP>
@@ -9523,30 +13372,50 @@ export default function __Chapter13__() {
               $$
               \theta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              the values
+              <span class="t-3003-c">
+                the values
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:131:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \tan\theta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              and
+              <span class="t-3003-c">
+                and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:131:34
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \cot\theta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              can be
+              <span class="t-3003-c">
+                can be
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:131:53
+                </span>
+              </span>
+              {" "}
+              {" "}
               found here and here, by {" "}
               <InChapterLink
                 href="#_189_h.a.i_"
@@ -9567,22 +13436,34 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/SB49.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_without_A.svg"
               intrinsicWidth={640}
               intrinsicHeight={229}
             />
             <Pause />
             <OuterP>
-              However,
+              <span class="t-3003-c">
+                However,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:138:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \,\cot\theta = 1/\tan\theta,
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              so if {" "}
+              <span class="t-3003-c">
+                so if {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:144:9
+                </span>
+              </span>
               <Math>
                 $\tan\theta = A$
               </Math>
@@ -9617,12 +13498,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/vM7r.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_idea.svg"
               intrinsicWidth={640}
               intrinsicHeight={229}
             />
             <Pause />
             <OuterP>
-              Or, symmetrically, we can treat {" "}
+              <span class="t-3003-c">
+                Or, symmetrically, we can treat {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:151:9
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
@@ -9649,12 +13536,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/5-80.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_idea_symmetric.svg"
               intrinsicWidth={640}
               intrinsicHeight={520}
             />
             <Pause />
             <OuterP>
-              The second diagram
+              <span class="t-3003-c">
+                The second diagram
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:188:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               can also
               be understood in terms of “materializing” the slope
               of a line of slope {" "}
@@ -9673,12 +13568,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/xbp-.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_idea_symmetric_slope_explained.svg"
               intrinsicWidth={640}
               intrinsicHeight={610}
             />
             <Pause />
             <OuterP>
-              ...like so; 
+              <span class="t-3003-c">
+                ...like so; {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:197:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               and symmetrically, the first diagram can 
               be understood in terms of scaling a “rise over run”
               triangle until the {" "}
@@ -9696,12 +13599,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/YikH.svg"
+              local_url="./images/e5_line_with_0_1_and_A_tancot_idea_slope_explained.svg"
               intrinsicWidth={750}
               intrinsicHeight={460}
             />
             <Pause />
             <OuterP>
-              ...like so, since {" "}
+              <span class="t-3003-c">
+                ...like so, since {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:206:9
+                </span>
+              </span>
               <NoBreak>
                 “
                 <Math>
@@ -9744,7 +13653,14 @@ export default function __Chapter13__() {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              Complete compass-and-ruler constructions can
+              <span class="t-3003-c">
+                Complete compass-and-ruler constructions can
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_geometric_construction_of_1_over_A_new_ver_.wly:211:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               easily be reconstituted from the above diagrams,
               and we hereby declare the second solution finished!!
             </OuterP>
@@ -9756,8 +13672,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 41.
               </b>
+              {" "}{" "}
               {" "}
-              Given a number line with {" "}
+              {" "}
+              <span class="t-3003-c">
+                Given a number line with {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:4:5
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $0$
@@ -9789,7 +13712,12 @@ export default function __Chapter13__() {
           <Solution>
             <OuterP>
               <i>
-                Solution 1.
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:11:10
+                  </span>
+                </span>
               </i>
               {" "} If {" "}
               <NoBreak>
@@ -9819,12 +13747,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/MGoY.svg"
+              local_url="./images/e5_x_square_x_cube_construction_1.svg"
               intrinsicWidth={485}
               intrinsicHeight={290}
             />
             <Pause />
             <OuterP>
-              Take the intersection of this line with a
+              <span class="t-3003-c">
+                Take the intersection of this line with a
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:18:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               circle of center {" "}
               <Math>
                 $(0, 0)$
@@ -9840,12 +13776,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/RxWQ.svg"
+              local_url="./images/e5_x_square_x_cube_construction_2_38deg.svg"
               intrinsicWidth={485}
               intrinsicHeight={205}
             />
             <Pause />
             <OuterP>
-              This gives us an angle {" "}
+              <span class="t-3003-c">
+                This gives us an angle {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:24:9
+                </span>
+              </span>
               <Math>
                 $\theta$
               </Math>
@@ -9860,12 +13802,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/g3LH.svg"
+              local_url="./images/e5_x_square_x_cube_construction_3.svg"
               intrinsicWidth={485}
               intrinsicHeight={205}
             />
             <Pause />
             <OuterP>
-              Now apply one of the “powers of
+              <span class="t-3003-c">
+                Now apply one of the “powers of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:29:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               secant” constructions to obtain powers of {" "}
               <NoBreak>
                 <Math>
@@ -9879,6 +13829,7 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/K2J8.svg"
+              local_url="./images/e5_x_square_x_cube_construction_4.svg"
               intrinsicWidth={485}
               intrinsicHeight={400}
             />
@@ -9886,16 +13837,29 @@ export default function __Chapter13__() {
             <Image
               src="/build-img/svgo-svg/Ubox.svg"
               style="margin-bottom:0.5em;"
+              local_url="./images/e5_x_square_x_cube_construction_5.svg"
               intrinsicWidth={485}
               intrinsicHeight={390}
             />
             <Pause />
             <OuterP>
-              (Either of these constructiongs requires constructing
+              <span class="t-3003-c">
+                (Either of these constructiongs requires constructing
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:40:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               perpendiculars, but we know how to do that.)
             </OuterP>
             <OuterP class="indent-10">
-              If {" "}
+              <span class="t-3003-c">
+                If {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:43:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $A &lt; 1$
@@ -9936,12 +13900,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/9g0C.svg"
+              local_url="./images/e5_x_square_x_cube_construction_7.svg"
               intrinsicWidth={485}
               intrinsicHeight={180}
             />
             <Pause />
             <OuterP>
-              We can then do a “powers of cosine” construction,
+              <span class="t-3003-c">
+                We can then do a “powers of cosine” construction,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:51:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               that is symmetric to powers of secant, to
               find powers of {" "}
               <NoBreak>
@@ -9955,39 +13927,75 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/6l6A.svg"
+              local_url="./images/e5_x_square_x_cube_construction_8.svg"
               intrinsicWidth={485}
               intrinsicHeight={243}
             />
             <Pause />
             <OuterP>
-              Though in this case, it bears discussing how we
+              <span class="t-3003-c">
+                Though in this case, it bears discussing how we
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:58:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               construct, say, this perpendicular:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/1-DQ.svg"
+              local_url="./images/e5_x_square_x_cube_construction_9.svg"
               intrinsicWidth={485}
               intrinsicHeight={243}
             />
             <Pause />
             <OuterP>
-              ...because this perpendicular must
+              <span class="t-3003-c">
+                ...because this perpendicular must
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:64:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              arrive
+              <span class="t-3003-c">
+                arrive
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:66:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              perpendicularly at a given line, not
+              <span class="t-3003-c">
+                perpendicularly at a given line, not
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:68:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              depart
+              <span class="t-3003-c">
+                depart
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:70:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              perpendicularly from a given line. 
+              <span class="t-3003-c">
+                perpendicularly from a given line. {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:72:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               (In the order in which the construction unfolds,
               this perpendicular “originates” from its upper end,
               a situation we have not encountered yet.)
@@ -10001,23 +14009,39 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/FFkM.svg"
+              local_url="./images/e5_x_square_x_cube_construction_10.svg"
               intrinsicWidth={485}
               intrinsicHeight={162}
             />
             <Pause />
             <OuterP>
-              Then use those crossings as the
+              <span class="t-3003-c">
+                Then use those crossings as the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:86:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               centers of two more circles of equal radius...
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/9C_S.svg"
+              local_url="./images/e5_x_square_x_cube_construction_11.svg"
               intrinsicWidth={485}
               intrinsicHeight={193}
             />
             <Pause />
             <OuterP>
-              ...whose intersection gives us a second point
+              <span class="t-3003-c">
+                ...whose intersection gives us a second point
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:92:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               (even two more points, if we use a radius
               different from the first orange circle), and the means to draw
               the perpendicular itself.
@@ -10025,7 +14049,12 @@ export default function __Chapter13__() {
             <Pause />
             <OuterP>
               <i>
-                Solution 2.
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:99:10
+                  </span>
+                </span>
               </i>
               {" "} Regardless of whether {" "}
               <Math>
@@ -10060,12 +14089,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/shlb.svg"
+              local_url="./images/e5_x_square_x_cube_construction_13.svg"
               intrinsicWidth={485}
               intrinsicHeight={230}
             />
             <Pause />
             <OuterP>
-              This defines a an angle {" "}
+              <span class="t-3003-c">
+                This defines a an angle {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:107:9
+                </span>
+              </span>
               <Math>
                 $\theta$
               </Math>
@@ -10080,23 +14115,39 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/wSrB.svg"
+              local_url="./images/e5_x_square_x_cube_construction_14.svg"
               intrinsicWidth={485}
               intrinsicHeight={205}
             />
             <Pause />
             <OuterP>
-              Then we can use any construction for powers of
+              <span class="t-3003-c">
+                Then we can use any construction for powers of
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:112:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               tan, for example this spiral construction:
             </OuterP>
             <Pause />
             <Image
               src="/build-img/svgo-svg/PFh1.svg"
+              local_url="./images/e5_x_square_x_cube_construction_15.svg"
               intrinsicWidth={485}
               intrinsicHeight={275}
             />
             <Pause />
             <OuterP>
-              (Again, constructing the spiral means constructing
+              <span class="t-3003-c">
+                (Again, constructing the spiral means constructing
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:118:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               a sequence of perpendiculars, but we can do that!)
             </OuterP>
             <Pause />
@@ -10105,8 +14156,15 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                If {" "}
+                {" "}
+                <span class="t-3003-c">
+                  If {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:123:13
+                  </span>
+                </span>
                 <Math>
                   $A &lt; 1$
                 </Math>
@@ -10133,12 +14191,18 @@ export default function __Chapter13__() {
               <Pause />
               <Image
                 src="/build-img/svgo-svg/XL-k.svg"
+                local_url="./images/e5_x_square_x_cube_construction_16_v6.svg"
                 intrinsicWidth={485}
                 intrinsicHeight={252}
               />
               <Pause />
               <OuterP>
-                (No such thing exists for {" "}
+                <span class="t-3003-c">
+                  (No such thing exists for {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_x_square_x_cube_construction_.wly:132:13
+                  </span>
+                </span>
                 <NoBreak>
                   <Math>
                     $A &gt; 1$
@@ -10155,8 +14219,15 @@ export default function __Chapter13__() {
               <b>
                 Exercise 42.
               </b>
+              {" "}{" "}
               {" "}
-              Given two lengths {" "}
+              {" "}
+              <span class="t-3003-c">
+                Given two lengths {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:4:5
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
@@ -10174,16 +14245,31 @@ export default function __Chapter13__() {
               $$
               \sqrt&#123;AB&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              be constructed using
+              <span class="t-3003-c">
+                be constructed using
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:8:5
+                </span>
+              </span>
+              {" "}
+              {" "}
               only ruler and compass?
             </OuterP>
           </ExerciseStatement>
           <Solution>
             <OuterP>
-              A preliminary “arithmetic” observation is that
+              <span class="t-3003-c">
+                A preliminary “arithmetic” observation is that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:13:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               there is a common multiplicative
               factor
             </OuterP>
@@ -10192,10 +14278,16 @@ export default function __Chapter13__() {
               $$
               \gamma
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              separating {" "}
+              <span class="t-3003-c">
+                separating {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:15:26
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $A$
@@ -10221,32 +14313,52 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/3JBw.svg"
+              local_url="./images/e5_sqrt_AB_construction_1_v2.svg"
               intrinsicWidth={450}
               intrinsicHeight={105}
             />
             <Pause />
             <OuterP>
-              The proof is that
+              <span class="t-3003-c">
+                The proof is that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:21:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;\sqrt&#123;AB&#125;\over A&#125; = &#123;B\over\sqrt&#123;AB&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is equivalent to
+              <span class="t-3003-c">
+                is equivalent to
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:27:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               (\sqrt&#123;AB&#125;)^2 = AB
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which is true
+              <span class="t-3003-c">
+                which is true
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:33:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               by definition of {" "}
               <NoBreak>
                 <Math>
@@ -10262,20 +14374,32 @@ export default function __Chapter13__() {
               $$
               &#123;\sqrt&#123;AB&#125;\over A&#125; = &#123;\sqrt&#123;A&#125;\cdot\sqrt&#123;B&#125;\over A&#125; = &#123;\sqrt&#123;B&#125;\over \sqrt&#123;A&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...while...
+              <span class="t-3003-c">
+                ...while...
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:41:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               &#123;B\over \sqrt&#123;AB&#125;&#125; = &#123;B \over \sqrt&#123;A&#125;\cdot\sqrt&#123;B&#125;&#125; = &#123;\sqrt&#123;B&#125;\over \sqrt&#123;A&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              ...is equal, and we can explicitly see that {" "}
+              <span class="t-3003-c">
+                ...is equal, and we can explicitly see that {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:47:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\gamma = \sqrt&#123;B&#125;/\sqrt&#123;A&#125;$
@@ -10302,12 +14426,22 @@ export default function __Chapter13__() {
               </NoBreak>
             </OuterP>
             <OuterP class="indent-10">
-              This observation in hand, we can give two solutions:
+              <span class="t-3003-c">
+                This observation in hand, we can give two solutions:
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:53:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                Solution 1.
+                <span class="t-3003-c">
+                  Solution 1.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:57:10
+                  </span>
+                </span>
               </i>
               {" "} Assume wlog (= “without loss of generality”)
               that {" "}
@@ -10338,12 +14472,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/83jd.svg"
+              local_url="./images/e5_sqrt_AB_construction_2.svg"
               intrinsicWidth={450}
               intrinsicHeight={213}
             />
             <Pause />
             <OuterP>
-              We construct {" "}
+              <span class="t-3003-c">
+                We construct {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:66:9
+                </span>
+              </span>
               <Math>
                 $B/2$
               </Math>
@@ -10367,12 +14507,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/aEvK.svg"
+              local_url="./images/e5_sqrt_AB_construction_3_v2.svg"
               intrinsicWidth={450}
               intrinsicHeight={485}
             />
             <Pause />
             <OuterP>
-              We draw a half-circle of radius {" "}
+              <span class="t-3003-c">
+                We draw a half-circle of radius {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:72:9
+                </span>
+              </span>
               <Math>
                 $B/2$
               </Math>
@@ -10396,12 +14542,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/7wy4.svg"
+              local_url="./images/e5_sqrt_AB_construction_5.svg"
               intrinsicWidth={450}
               intrinsicHeight={200}
             />
             <Pause />
             <OuterP>
-              ...the red triangle above is a right triangle by the
+              <span class="t-3003-c">
+                ...the red triangle above is a right triangle by the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:84:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               Peloponnesian circle theorem, so we have effectively 
               succeeded in constructing this diagram,
               for some angle {" "}
@@ -10415,12 +14569,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/Usrx.svg"
+              local_url="./images/e5_sqrt_AB_construction_6.svg"
               intrinsicWidth={450}
               intrinsicHeight={215}
             />
             <Pause />
             <OuterP>
-              As seen in {" "}
+              <span class="t-3003-c">
+                As seen in {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:93:9
+                </span>
+              </span>
               <InChapterLink
                 href="#_184_h.a.i_"
                 class="in-chapter-link"
@@ -10435,20 +14595,32 @@ export default function __Chapter13__() {
               $$
               &#123;B\over A&#125; = \sec^2\theta
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              in this case, implying that
+              <span class="t-3003-c">
+                in this case, implying that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:100:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \sec\theta = &#123;\sqrt&#123;B&#125;\over\sqrt&#123;A&#125;&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is the factor {" "}
+              <span class="t-3003-c">
+                is the factor {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:106:9
+                </span>
+              </span>
               <Math>
                 $\gamma$
               </Math>
@@ -10460,10 +14632,16 @@ export default function __Chapter13__() {
               $$
               A\sec\theta = A\gamma = \sqrt&#123;AB&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which places {" "}
+              <span class="t-3003-c">
+                which places {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:114:9
+                </span>
+              </span>
               <NoBreak>
                 <Math>
                   $\sqrt&#123;AB&#125;$
@@ -10474,18 +14652,31 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/S9xt.svg"
+              local_url="./images/e5_sqrt_AB_construction_7.svg"
               intrinsicWidth={450}
               intrinsicHeight={190}
             />
             <Pause />
             <OuterP>
-              ...here, in our construction from a few lines
+              <span class="t-3003-c">
+                ...here, in our construction from a few lines
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:119:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               above.
             </OuterP>
             <Pause />
             <OuterP>
               <i>
-                Solution 2.
+                <span class="t-3003-c">
+                  Solution 2.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:124:10
+                  </span>
+                </span>
               </i>
               {" "}
               Place {" "}
@@ -10501,12 +14692,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/-HLJ.svg"
+              local_url="./images/e5_sqrt_AB_solution2_0.svg"
               intrinsicWidth={470}
               intrinsicHeight={129}
             />
             <Pause />
             <OuterP>
-              Find the middle of the combined segment and
+              <span class="t-3003-c">
+                Find the middle of the combined segment and
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:132:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               use it to
               draw a semicircle whose diameter is the
               combined segment:
@@ -10514,12 +14713,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/OwXA.svg"
+              local_url="./images/e5_sqrt_AB_solution2_1.svg"
               intrinsicWidth={450}
               intrinsicHeight={380}
             />
             <Pause />
             <OuterP>
-              Draw a perpendicular
+              <span class="t-3003-c">
+                Draw a perpendicular
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:140:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               to the segment at the point where {" "}
               <Math>
                 $A$
@@ -10535,12 +14742,20 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/-W11.svg"
+              local_url="./images/e5_sqrt_AB_solution2_2.svg"
               intrinsicWidth={450}
               intrinsicHeight={225}
             />
             <Pause />
             <OuterP>
-              Because 
+              <span class="t-3003-c">
+                Because {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:148:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               of the right angle,
               the angle {" "}
               <Math>
@@ -10560,12 +14775,18 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/UWy5.svg"
+              local_url="./images/e5_sqrt_AB_solution2_3.svg"
               intrinsicWidth={450}
               intrinsicHeight={225}
             />
             <Pause />
             <OuterP>
-              The ratio that takes {" "}
+              <span class="t-3003-c">
+                The ratio that takes {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:157:9
+                </span>
+              </span>
               <Math>
                 $A$
               </Math>
@@ -10586,22 +14807,34 @@ export default function __Chapter13__() {
             <Pause />
             <Image
               src="/build-img/svgo-svg/KocC.svg"
+              local_url="./images/e5_sqrt_AB_solution2_4.svg"
               intrinsicWidth={450}
               intrinsicHeight={225}
             />
             <Pause />
             <OuterP>
-              This implies that
+              <span class="t-3003-c">
+                This implies that
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:164:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <MathBlock>
               $$
               \tan(\theta)
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is the factor {" "}
+              <span class="t-3003-c">
+                is the factor {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:170:9
+                </span>
+              </span>
               <Math>
                 $\gamma$
               </Math>
@@ -10622,7 +14855,12 @@ export default function __Chapter13__() {
             <Pause />
             <OuterP>
               <i>
-                Vocabulary.
+                <span class="t-3003-c">
+                  Vocabulary.
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:176:10
+                  </span>
+                </span>
               </i>
               {" "} The square-root-of-the-product
             </OuterP>
@@ -10631,18 +14869,34 @@ export default function __Chapter13__() {
               $$
               \sqrt&#123;xy&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              is called the
+              <span class="t-3003-c">
+                is called the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:182:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              geometric mean
+              <span class="t-3003-c">
+                geometric mean
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:182:25
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              of {" "}
+              <span class="t-3003-c">
+                of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:182:41
+                </span>
+              </span>
               <Math>
                 $x$
               </Math>
@@ -10675,18 +14929,34 @@ export default function __Chapter13__() {
               $$
               &#123;x + y\over 2&#125;
               $$
+              <MathJaxSvgExportTooltip />
             </MathBlock>
             <Pause />
             <OuterP>
-              which is called the
+              <span class="t-3003-c">
+                which is called the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:189:9
+                </span>
+              </span>
             </OuterP>
             <Pause />
             <CentralDisplayItalic>
-              arithmetic mean
+              <span class="t-3003-c">
+                arithmetic mean
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:191:11
+                </span>
+              </span>
             </CentralDisplayItalic>
             <Pause />
             <OuterP>
-              (or just “mean”) of {" "}
+              <span class="t-3003-c">
+                (or just “mean”) of {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:193:9
+                </span>
+              </span>
               <Math>
                 $x$
               </Math>
@@ -10718,16 +14988,35 @@ export default function __Chapter13__() {
                 <i>
                   Note 1.
                 </i>
+                {" "}{" "}
                 {" "}
-                Legend has it that a
+                {" "}
+                <span class="t-3003-c">
+                  Legend has it that a
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:197:13
+                  </span>
+                </span>
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                geometric progression
+                <span class="t-3003-c">
+                  geometric progression
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:199:15
+                  </span>
+                </span>
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                is so-called because each term 
+                <span class="t-3003-c">
+                  is so-called because each term {" "}
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:201:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 in the sequence
                 that is not the first or the last is the
                 geometric mean of the two terms on either side,
@@ -10735,11 +15024,23 @@ export default function __Chapter13__() {
               </OuterP>
               <Pause />
               <CentralDisplayItalic>
-                arithmetic progression
+                <span class="t-3003-c">
+                  arithmetic progression
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:207:15
+                  </span>
+                </span>
               </CentralDisplayItalic>
               <Pause />
               <OuterP>
-                is so-called because each term
+                <span class="t-3003-c">
+                  is so-called because each term
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trig2^exercises/_sqrt_xy_construction_.wly:209:13
+                  </span>
+                </span>
+                {" "}
+                {" "}
                 in the sequence
                 that is not the first or the last is the
                 arithematic mean of the two terms on either side.
@@ -10766,18 +15067,33 @@ export default function __Chapter13__() {
       <Section id="section-1">
         <OuterP>
           <b>
-            Polar coordinates.
+            <span class="t-3003-c">
+              Polar coordinates.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:4:6
+              </span>
+            </span>
           </b>
           {" "}
           The so-called
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          polar coordinates
+          <span class="t-3003-c">
+            polar coordinates
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:7:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          of a point {" "}
+          <span class="t-3003-c">
+            of a point {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:9:5
+            </span>
+          </span>
           <Math>
             $P$
           </Math>
@@ -10789,10 +15105,16 @@ export default function __Chapter13__() {
           $$
           (r, \theta)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          with {" "}
+          <span class="t-3003-c">
+            with {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:16:5
+            </span>
+          </span>
           <Math>
             $r \geq 0$
           </Math>
@@ -10803,10 +15125,16 @@ export default function __Chapter13__() {
           $$
           P = (r\cos(\theta), r\sin(\theta)).
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          That is:
+          <span class="t-3003-c">
+            That is:
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:22:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <List style="padding-left:1.8em;">
@@ -10815,11 +15143,21 @@ export default function __Chapter13__() {
               <Math>
                 $r$
               </Math>
-              {" "} is the distance from {" "}
+              <span class="t-3003-c">
+                {" "} is the distance from {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trigonometry.wly:27:12
+                </span>
+              </span>
               <Math>
                 $P$
               </Math>
-              {" "} to the origin;
+              <span class="t-3003-c">
+                {" "} to the origin;
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trigonometry.wly:27:37
+                </span>
+              </span>
             </p>
           </Item>
           <Item>
@@ -10827,30 +15165,64 @@ export default function __Chapter13__() {
               <Math>
                 $\theta$
               </Math>
-              {" "} is “the” counterclockwise angle
+              <span class="t-3003-c">
+                {" "} is “the” counterclockwise angle
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trigonometry.wly:29:17
+                </span>
+              </span>
+              {" "}
+              {" "}
               from the positive {" "}
               <Math>
                 $x$
               </Math>
-              {" "} axis to the segment
+              <span class="t-3003-c">
+                {" "} axis to the segment
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trigonometry.wly:30:30
+                </span>
+              </span>
               {" "}
+              {" "}
+              {" "}{" "}
               <NoBreak>
                 <Math>
                   $OP$
                 </Math>
-                ,
+                <span class="t-3003-c">
+                  ,
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trigonometry.wly:31:13
+                  </span>
+                </span>
               </NoBreak>
-              {" "} where {" "}
+              <span class="t-3003-c">
+                {" "} where {" "}
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trigonometry.wly:31:13
+                </span>
+              </span>
               <Math>
                 $O$
               </Math>
-              {" "} is the origin;
+              <span class="t-3003-c">
+                {" "} is the origin;
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trigonometry.wly:31:24
+                </span>
+              </span>
             </p>
           </Item>
         </List>
         <Pause />
         <OuterP>
-          ...even though {" "}
+          <span class="t-3003-c">
+            ...even though {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:33:5
+            </span>
+          </span>
           <Math>
             $\theta$
           </Math>
@@ -10897,10 +15269,16 @@ export default function __Chapter13__() {
           $$
           P = (0, 0)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          and any value of {" "}
+          <span class="t-3003-c">
+            and any value of {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:45:5
+            </span>
+          </span>
           <Math>
             $\theta$
           </Math>
@@ -10912,13 +15290,26 @@ export default function __Chapter13__() {
           $$
           P = (0\cdot \cos\theta, 0\cdot \sin\theta)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          namely.)
+          <span class="t-3003-c">
+            namely.)
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:52:5
+            </span>
+          </span>
         </OuterP>
         <OuterP class="indent-10">
-          NONETHELESS—even though the polar coordinates
+          <span class="t-3003-c">
+            NONETHELESS—even though the polar coordinates
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:54:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           of a point are not (not ever!) uniquely
           determined, we say “the” polar coordinates of
           a point, out of expediency!
@@ -10929,31 +15320,48 @@ export default function __Chapter13__() {
             <b>
               Example 1.
             </b>
+            {" "}{" "}
             {" "}
-            The pairs
+            {" "}
+            <span class="t-3003-c">
+              The pairs
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:61:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             (\sqrt&#123;2&#125;,\, -3.5\eta)
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <MathBlock>
             $$
             (\sqrt&#123;2&#125;,\, 0.5\eta)
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <MathBlock>
             $$
             (\sqrt&#123;2&#125;,\, 4.5\eta)
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            count among the polar coordinates of the point
+            <span class="t-3003-c">
+              count among the polar coordinates of the point
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:73:9
+              </span>
+            </span>
             {" "}
+            {" "}
+            {" "}{" "}
             <NoBreak>
               <Math>
                 $(1, 1) \in \rr^2$
@@ -10968,31 +15376,48 @@ export default function __Chapter13__() {
             <b>
               Example 2.
             </b>
+            {" "}{" "}
             {" "}
-            The pairs
+            {" "}
+            <span class="t-3003-c">
+              The pairs
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:78:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             (\sqrt&#123;2&#125;,\, -2.5\eta)
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <MathBlock>
             $$
             (\sqrt&#123;2&#125;,\, 1.5\eta)
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <MathBlock>
             $$
             (\sqrt&#123;2&#125;,\, 101.5\eta)
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            count among the polar coordinates of the point
+            <span class="t-3003-c">
+              count among the polar coordinates of the point
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:90:9
+              </span>
+            </span>
             {" "}
+            {" "}
+            {" "}{" "}
             <NoBreak>
               <Math>
                 $(-1, 1) \in \rr^2$
@@ -11015,7 +15440,12 @@ const Rest = () => {
       <Section id="section-2">
         <OuterP>
           <b>
-            Change-of-coordinate formulas.
+            <span class="t-3003-c">
+              Change-of-coordinate formulas.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:95:6
+              </span>
+            </span>
           </b>
           {" "}
           Definitionally, the equations
@@ -11026,10 +15456,18 @@ const Rest = () => {
           \displaylines&#123;x = r \cos(\theta)\\
           \up&#123;1.3&#125;y = r \sin(\theta)&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          give the change-of-coordinate formulas
+          <span class="t-3003-c">
+            give the change-of-coordinate formulas
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:103:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           from a polar coordinate {" "}
           <Math>
             $(r, \theta)$
@@ -11044,7 +15482,14 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          Conversely, to recover the polar
+          <span class="t-3003-c">
+            Conversely, to recover the polar
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:107:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           coordinates {" "}
           <Math>
             $(r, \theta)$
@@ -11064,10 +15509,18 @@ const Rest = () => {
           $$
           r = \sqrt&#123;x^2 + y^2&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          by the Pythagorean theorem, but the
+          <span class="t-3003-c">
+            by the Pythagorean theorem, but the
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:115:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           formula for {" "}
           <Math>
             $\theta$
@@ -11087,16 +15540,29 @@ const Rest = () => {
           \up&#123;1.2&#125;\rm&#123;?&#125; &amp; \te&#123;if &#125;\, x = 0, y = 0
           \end&#123;cases&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          ...where “arctan” is
+          <span class="t-3003-c">
+            ...where “arctan” is
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:130:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           some-function-or-other-to-be-discussed-later.
         </OuterP>
         <Pause />
         <OuterP>
           <i>
-            Note.
+            <span class="t-3003-c">
+              Note.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:135:6
+              </span>
+            </span>
           </i>
           {" "}
           Popular programming languages such as
@@ -11137,7 +15603,12 @@ const Rest = () => {
           {" "} etc.
         </OuterP>
         <OuterP class="indent-10">
-          But the call goes {" "}
+          <span class="t-3003-c">
+            But the call goes {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:146:5
+            </span>
+          </span>
           <span class="code-cartouche">
             atan2(y, x)
           </span>
@@ -11151,16 +15622,31 @@ const Rest = () => {
         <Pause />
         <CentralDisplay>
           <NoBreak>
-            “
+            <span class="t-3003-c">
+              “
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:157:7
+              </span>
+            </span>
             <Math>
               $\arctan(y/x)$
             </Math>
-            ”
+            <span class="t-3003-c">
+              ”
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:157:22
+              </span>
+            </span>
           </NoBreak>
         </CentralDisplay>
         <Pause />
         <OuterP>
-          ...you hit {" "}
+          <span class="t-3003-c">
+            ...you hit {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:159:5
+            </span>
+          </span>
           <NoBreak>
             “
             <Math>
@@ -11180,7 +15666,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <i>
-            Vocabulary.
+            <span class="t-3003-c">
+              Vocabulary.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:163:6
+              </span>
+            </span>
           </i>
           {" "}
           The first coordinate of a polar
@@ -11228,7 +15719,12 @@ const Rest = () => {
       <Section id="section-3">
         <OuterP>
           <b>
-            A famous diagram.
+            <span class="t-3003-c">
+              A famous diagram.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:172:6
+              </span>
+            </span>
           </b>
           {" "}
           There is a somewhat infamous diagram similar
@@ -11260,12 +15756,20 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/-N5q.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_1.svg"
           intrinsicWidth={400}
           intrinsicHeight={240}
         />
         <Pause />
         <OuterP>
-          Rotate a copy of the smaller
+          <span class="t-3003-c">
+            Rotate a copy of the smaller
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:181:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           triangle by {" "}
           <Math>
             $90^\circ$
@@ -11276,12 +15780,20 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/-oWb.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_2.svg"
           intrinsicWidth={440}
           intrinsicHeight={275}
         />
         <Pause />
         <OuterP>
-          Therefore, if we snap a scaled copy of the
+          <span class="t-3003-c">
+            Therefore, if we snap a scaled copy of the
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:188:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           smaller triangle onto the remaining non-hypotenuse
           side of the bigger triangle, we get a single
           straight side (you can also think in terms of
@@ -11296,12 +15808,20 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/ADw8.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_3.svg"
           intrinsicWidth={440}
           intrinsicHeight={240}
         />
         <Pause />
         <OuterP>
-          We finish by setting the
+          <span class="t-3003-c">
+            We finish by setting the
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:197:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           hypotenuse of the original big triangle to
           have length {" "}
           <NoBreak>
@@ -11314,12 +15834,18 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/1jEs.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_4.svg"
           intrinsicWidth={440}
           intrinsicHeight={240}
         />
         <Pause />
         <OuterP>
-          The sum of {" "}
+          <span class="t-3003-c">
+            The sum of {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:204:5
+            </span>
+          </span>
           <Math>
             $\theta_1$
           </Math>
@@ -11338,12 +15864,18 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/G2n-.svg"
+          local_url="./images/svg_ch5_ch_snail_stack_greater_eta.svg"
           intrinsicWidth={440}
           intrinsicHeight={245}
         />
         <Pause />
         <OuterP>
-          ...but, by construction, {" "}
+          <span class="t-3003-c">
+            ...but, by construction, {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:209:5
+            </span>
+          </span>
           <Math>
             $\theta_1$
           </Math>
@@ -11375,7 +15907,12 @@ const Rest = () => {
       <Section id="section-4">
         <OuterP>
           <b>
-            The angle-sum formulas.
+            <span class="t-3003-c">
+              The angle-sum formulas.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:217:6
+              </span>
+            </span>
           </b>
           {" "}
           In the “famous diagram” there
@@ -11395,12 +15932,18 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/pFL0.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_1.svg"
           intrinsicWidth={440}
           intrinsicHeight={345}
         />
         <Pause />
         <OuterP>
-          (Note by the way that {" "}
+          <span class="t-3003-c">
+            (Note by the way that {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:228:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $0 \leq \theta_1 \leq \eta$
@@ -11443,7 +15986,14 @@ const Rest = () => {
           products are nonnegative, as well.)
         </OuterP>
         <OuterP class="indent-10">
-          On the other hand, if we inscribe the
+          <span class="t-3003-c">
+            On the other hand, if we inscribe the
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:237:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           figure in the unit circle with the joint angle
           {" "}
           <Math>
@@ -11456,32 +16006,52 @@ const Rest = () => {
           $$
           \,\sin(\theta_1 + \theta_2)\,
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          and
+          <span class="t-3003-c">
+            and
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:245:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \,\cos(\theta_1 + \theta_2)\,
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          make an appearance as coordinates, and
+          <span class="t-3003-c">
+            make an appearance as coordinates, and
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:251:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           that these coordinates can be expressed as
           sums or differences of the four outer edges:
         </OuterP>
         <Pause />
         <Image
           src="/build-img/svgo-svg/C7FC.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_2.svg"
           intrinsicWidth={540}
           intrinsicHeight={420}
         />
         <Pause />
         <OuterP>
-          (Or with {" "}
+          <span class="t-3003-c">
+            (Or with {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:258:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $\theta_1 + \theta_2 &gt; \eta$
@@ -11492,25 +16062,42 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/cixf.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_3.svg"
           intrinsicWidth={540}
           intrinsicHeight={420}
         />
         <Pause />
         <OuterP>
-          ...works as well!)
+          <span class="t-3003-c">
+            ...works as well!)
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:263:5
+            </span>
+          </span>
         </OuterP>
         <OuterP class="indent-10">
-          In other words, we find...
+          <span class="t-3003-c">
+            In other words, we find...
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:265:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <Image
           src="/build-img/svgo-svg/FJxQ.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_formulas_flowers.svg"
           intrinsicWidth={540}
           intrinsicHeight={333}
         />
         <Pause />
         <OuterP>
-          ...for {" "}
+          <span class="t-3003-c">
+            ...for {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:270:5
+            </span>
+          </span>
           <Math>
             $\theta_1$
           </Math>
@@ -11558,20 +16145,38 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/3BtA.svg"
+          local_url="./images/svg_ch5_ch_angle_sum_formulas_by_heart.svg"
           intrinsicWidth={540}
           intrinsicHeight={333}
         />
         <Pause />
         <OuterP>
-          These patterns alone are
+          <span class="t-3003-c">
+            These patterns alone are
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:281:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          enough
+          <span class="t-3003-c">
+            enough
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:283:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          to reconstruct the formulas from scratch!
+          <span class="t-3003-c">
+            to reconstruct the formulas from scratch!
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:285:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           (Well, a lot of students remember the formulas
           that way, at least.)
         </OuterP>
@@ -11582,7 +16187,12 @@ const Rest = () => {
       <Section id="section-5">
         <OuterP>
           <b>
-            The Abercrombie inequality.
+            <span class="t-3003-c">
+              The Abercrombie inequality.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:291:6
+              </span>
+            </span>
           </b>
           {" "}
           Take an ordinary angle of aperture less than
@@ -11597,20 +16207,38 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/dXdk.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_statement.svg"
           intrinsicWidth={440}
           intrinsicHeight={130}
         />
         <Pause />
         <OuterP>
-          The eponymous
+          <span class="t-3003-c">
+            The eponymous
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:300:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplayItalic>
-          Abercrombie inequality
+          <span class="t-3003-c">
+            Abercrombie inequality
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:302:7
+            </span>
+          </span>
         </CentralDisplayItalic>
         <Pause />
         <OuterP>
-          states that
+          <span class="t-3003-c">
+            states that
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:304:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           the length of the arc is less than or equal to the length of the segment, i.e., that
         </OuterP>
         <Pause />
@@ -11618,10 +16246,16 @@ const Rest = () => {
           $$
           A\leq S
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          where {" "}
+          <span class="t-3003-c">
+            where {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:311:5
+            </span>
+          </span>
           <Math>
             $A$
           </Math>
@@ -11633,7 +16267,14 @@ const Rest = () => {
           the length of the segment, as in the figure.
         </OuterP>
         <OuterP class="indent-10">
-          The proof is that, if this were not the case,
+          <span class="t-3003-c">
+            The proof is that, if this were not the case,
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:317:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           the length {" "}
           <Math>
             $S$
@@ -11648,12 +16289,18 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/KxqB.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_to_the_left.svg"
           intrinsicWidth={460}
           intrinsicHeight={59}
         />
         <Pause />
         <OuterP>
-          ...and in the space between {" "}
+          <span class="t-3003-c">
+            ...and in the space between {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:324:5
+            </span>
+          </span>
           <Math>
             $S$
           </Math>
@@ -11675,12 +16322,20 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/0Mwx.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_with_P.svg"
           intrinsicWidth={460}
           intrinsicHeight={288}
         />
         <Pause />
         <OuterP>
-          ...because such polygonal lines can
+          <span class="t-3003-c">
+            ...because such polygonal lines can
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:331:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           approximate the arc arbitrarily closely, i.e.,
           have lengths that come arbitrarily close to
           {" "}
@@ -11708,32 +16363,50 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/Vx2_.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_shadows.svg"
           intrinsicWidth={460}
           intrinsicHeight={155}
         />
         <Pause />
         <OuterP>
-          This follows from the diagram:
+          <span class="t-3003-c">
+            This follows from the diagram:
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:345:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <Image
           src="/build-img/svgo-svg/onjp.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_s1s2p1p2.svg"
           intrinsicWidth={460}
           intrinsicHeight={210}
         />
         <Pause />
         <OuterP>
-          The point is that
+          <span class="t-3003-c">
+            The point is that
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:350:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \overline&#123;s_1s_2&#125;\, &gt; \,\overline&#123;p_1p_2&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          because {" "}
+          <span class="t-3003-c">
+            because {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:356:5
+            </span>
+          </span>
           <Math>
             $s_1$
           </Math>
@@ -11783,7 +16456,12 @@ const Rest = () => {
           {" "} would not clear the arc).
         </OuterP>
         <OuterP class="indent-10">
-          Therefore, each segment of {" "}
+          <span class="t-3003-c">
+            Therefore, each segment of {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:364:5
+            </span>
+          </span>
           <Math>
             $P$
           </Math>
@@ -11810,12 +16488,20 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/2Fam.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_to_the_left_second.svg"
           intrinsicWidth={460}
           intrinsicHeight={60}
         />
         <Pause />
         <OuterP>
-          ...on the number line is 
+          <span class="t-3003-c">
+            ...on the number line is {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:373:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           false—we have achieved a so-called {" "}
           <i>
             contradiction
@@ -11826,12 +16512,20 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/dTqx.svg"
+          local_url="./images/svg_ch5_ch_abercrombie_to_the_left_third.svg"
           intrinsicWidth={460}
           intrinsicHeight={60}
         />
         <Pause />
         <OuterP>
-          ...on the number line is an impossibility,
+          <span class="t-3003-c">
+            ...on the number line is an impossibility,
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:380:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           i.e., it must be that {" "}
           <NoBreak>
             <Math>
@@ -11841,7 +16535,12 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          One can polish a few more details by noting that:
+          <span class="t-3003-c">
+            One can polish a few more details by noting that:
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:383:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <List
@@ -11851,19 +16550,43 @@ const Rest = () => {
         >
           <Item>
             <p>
-              the segment can be tangent to the
+              <span class="t-3003-c">
+                the segment can be tangent to the
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trigonometry.wly:390:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               arc at one point, the proof will still go
               through (so the segment does not need to
               {" "}
               <i>
-                strictly
+                <span class="t-3003-c">
+                  strictly
+                  <span class="t-3003">
+                    ./src/content/ch9a_trig2/trigonometry.wly:393:10
+                  </span>
+                </span>
               </i>
-              {" "} clear the arc);
+              <span class="t-3003-c">
+                {" "} clear the arc);
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trigonometry.wly:393:19
+                </span>
+              </span>
             </p>
           </Item>
           <Item>
             <p>
-              as long as the angle is nonzero,
+              <span class="t-3003-c">
+                as long as the angle is nonzero,
+                <span class="t-3003">
+                  ./src/content/ch9a_trig2/trigonometry.wly:395:9
+                </span>
+              </span>
+              {" "}
+              {" "}
               and the arc has nonzero radius, the
               length of the segment will be STRICTLY
               GREATER than the length of the arc,
@@ -11873,7 +16596,12 @@ const Rest = () => {
         </List>
         <Pause />
         <OuterP>
-          (Point {" "}
+          <span class="t-3003-c">
+            (Point {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:401:5
+            </span>
+          </span>
           <b>
             (ii)
           </b>
@@ -11890,7 +16618,12 @@ const Rest = () => {
       <Section id="section-6">
         <OuterP>
           <b>
-            The Gregorinovich sandwich.
+            <span class="t-3003-c">
+              The Gregorinovich sandwich.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:409:6
+              </span>
+            </span>
           </b>
           {" "}
           The “Gregorinovich sandwich”—sometimes
@@ -11905,10 +16638,16 @@ const Rest = () => {
           $$
           \sin(\theta) \,&lt;\, \theta \,&lt;\, &#123;\sin(\theta)\over\cos(\theta)&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          for all {" "}
+          <span class="t-3003-c">
+            for all {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:417:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $0 &lt; \theta &lt; \eta$
@@ -11929,30 +16668,48 @@ const Rest = () => {
           $$
           \sin(\theta)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          below, and
+          <span class="t-3003-c">
+            below, and
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:424:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           &#123;\sin(\theta)\over\cos(\theta)&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          above. (Indeed,
+          <span class="t-3003-c">
+            above. (Indeed,
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:428:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           &#123;\sin(\theta)\over\cos(\theta)&#125; &gt; \sin(\theta)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          in the range {" "}
+          <span class="t-3003-c">
+            in the range {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:432:5
+            </span>
+          </span>
           <Math>
             $0 &lt; \theta &lt; \eta$
           </Math>
@@ -11964,18 +16721,34 @@ const Rest = () => {
           $$
           \cos(\theta)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          makes you
+          <span class="t-3003-c">
+            makes you
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:437:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <CentralDisplay>
-          BIGGER
+          <span class="t-3003-c">
+            BIGGER
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:438:7
+            </span>
+          </span>
         </CentralDisplay>
         <Pause />
         <OuterP>
-          when {" "}
+          <span class="t-3003-c">
+            when {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:439:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $0 &lt; \cos(\theta) &lt; 1$
@@ -11999,11 +16772,21 @@ const Rest = () => {
         </OuterP>
         <Pause />
         <CentralDisplay>
-          DRAMATICALLY BIGGER
+          <span class="t-3003-c">
+            DRAMATICALLY BIGGER
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:442:7
+            </span>
+          </span>
         </CentralDisplay>
         <Pause />
         <OuterP>
-          when {" "}
+          <span class="t-3003-c">
+            when {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:443:5
+            </span>
+          </span>
           <Math>
             $\cos(\theta)$
           </Math>
@@ -12035,17 +16818,28 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          The first inequality
+          <span class="t-3003-c">
+            The first inequality
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:446:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \sin(\theta) \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; \theta
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          follows by this illustration (using {" "}
+          <span class="t-3003-c">
+            follows by this illustration (using {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:452:5
+            </span>
+          </span>
           <NoBreak>
             <Math>
               $0 &lt; \theta &lt; \eta$
@@ -12056,22 +16850,34 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/wtkr.svg"
+          local_url="./images/svg_ch5_ch_fisher_first_ineq.svg"
           intrinsicWidth={440}
           intrinsicHeight={420}
         />
         <Pause />
         <OuterP>
-          Namely, per the one slightly pedantic logic,
+          <span class="t-3003-c">
+            Namely, per the one slightly pedantic logic,
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:457:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           \theta &gt; L
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          on the one hand, where {" "}
+          <span class="t-3003-c">
+            on the one hand, where {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:463:5
+            </span>
+          </span>
           <Math>
             $L$
           </Math>
@@ -12083,11 +16889,19 @@ const Rest = () => {
           $$
           L &gt; \sin(\theta)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          on the other hand. Together, this implies
+          <span class="t-3003-c">
+            on the other hand. Together, this implies
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:470:5
+            </span>
+          </span>
           {" "}
+          {" "}
+          {" "}{" "}
           <NoBreak>
             <Math>
               $\theta \rt&#123;0.1&#125;&gt;\rt&#123;0.1&#125; \sin(\theta)$
@@ -12096,17 +16910,28 @@ const Rest = () => {
           </NoBreak>
         </OuterP>
         <OuterP class="indent-10">
-          For the second inequality, note that
+          <span class="t-3003-c">
+            For the second inequality, note that
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:473:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           &#123;\sin(\theta)\over \cos(\theta)&#125; = &#123;1\over \cos(\theta)&#125;\cdot \sin(\theta)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          is the length that {" "}
+          <span class="t-3003-c">
+            is the length that {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:479:5
+            </span>
+          </span>
           <Math>
             $\theta$
           </Math>
@@ -12122,22 +16947,34 @@ const Rest = () => {
         <Pause />
         <Image
           src="/build-img/svgo-svg/HxgB.svg"
+          local_url="./images/svg_ch5_ch_fisher_second_ineq.svg"
           intrinsicWidth={440}
           intrinsicHeight={420}
         />
         <Pause />
         <OuterP>
-          Specifically,
+          <span class="t-3003-c">
+            Specifically,
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:485:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           &#123;1\over \cos(\theta)&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          turns the bottom segment of length {" "}
+          <span class="t-3003-c">
+            turns the bottom segment of length {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:491:5
+            </span>
+          </span>
           <Math>
             $1$
           </Math>
@@ -12162,32 +16999,58 @@ const Rest = () => {
           $$
           \sin(\theta)
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          brings one over to the right-hand segment
+          <span class="t-3003-c">
+            brings one over to the right-hand segment
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:503:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           from the pink hypotenuse, being the
           hypotenuse-to-opposite multiplicative
           factor.
         </OuterP>
         <OuterP class="indent-10">
-          The fact that
+          <span class="t-3003-c">
+            The fact that
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:508:5
+            </span>
+          </span>
         </OuterP>
         <Pause />
         <MathBlock>
           $$
           &#123;\theta&#125; \rt&#123;0.1&#125;&lt;\rt&#123;0.1&#125; &#123;\sin(\theta)\over \cos(\theta)&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          then follows from the “polished” version
+          <span class="t-3003-c">
+            then follows from the “polished” version
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:514:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           of the Abercrombie inequality. (The version
           that allows the segment to be tangent to the
           arc, and that claims a strict inequality.)
         </OuterP>
         <OuterP class="indent-10">
-          (In fact, the identity {" "}
+          <span class="t-3003-c">
+            (In fact, the identity {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:519:5
+            </span>
+          </span>
           <Math>
             $\tan = \sec \cdot \sin$
           </Math>
@@ -12200,10 +17063,18 @@ const Rest = () => {
           $$
           \sin(\theta) &lt; \theta &lt; \tan(\theta)\rt&#123;0.1&#125;
           $$
+          <MathJaxSvgExportTooltip />
         </MathBlock>
         <Pause />
         <OuterP>
-          is another way of writing the Grigorinovich
+          <span class="t-3003-c">
+            is another way of writing the Grigorinovich
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:527:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           sandwich.)
         </OuterP>
       </Section>
@@ -12213,7 +17084,12 @@ const Rest = () => {
       <Section id="section-7">
         <OuterP>
           <b>
-            Cartographic projections.
+            <span class="t-3003-c">
+              Cartographic projections.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:532:6
+              </span>
+            </span>
           </b>
         </OuterP>
         <Pause />
@@ -12222,8 +17098,17 @@ const Rest = () => {
             <b>
               Example 3.
             </b>
+            {" "}{" "}
             {" "}
-            If the Earth [is modeled as] a sphere
+            {" "}
+            <span class="t-3003-c">
+              If the Earth [is modeled as] a sphere
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:537:9
+              </span>
+            </span>
+            {" "}
+            {" "}
             of radius {" "}
             <Math>
               $1$
@@ -12245,12 +17130,18 @@ const Rest = () => {
           <Image
             width="480px"
             src="/build-img/svgo-svg/_wct.svg"
+            local_url="./images/country_sphere_35_m45.svg"
             intrinsicWidth={760}
             intrinsicHeight="596.22009"
           />
           <Pause />
           <OuterP>
-            [&#8288;
+            <span class="t-3003-c">
+              [&#8288;
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:545:9
+              </span>
+            </span>
             <InChapterLink
               href="#_194_h.a.i_"
               class="in-chapter-link"
@@ -12276,22 +17167,34 @@ const Rest = () => {
             width="480px"
             src="/build-img/svgo-svg/ZWuF.svg"
             style="margin-bottom:-1em"
+            local_url="./images/country_sphere_35_m45_sec_v3.svg"
             intrinsicWidth="762.5"
             intrinsicHeight="805.41925"
           />
           <Pause />
           <OuterP>
-            ...because...
+            <span class="t-3003-c">
+              ...because...
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:558:9
+              </span>
+            </span>
           </OuterP>
           <Pause />
           <MathBlock>
             $$
             \Huge \sec(\theta)\cdot\cos(\theta) = 1
             $$
+            <MathJaxSvgExportTooltip />
           </MathBlock>
           <Pause />
           <OuterP>
-            ...which means that {" "}
+            <span class="t-3003-c">
+              ...which means that {" "}
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:564:9
+              </span>
+            </span>
             <NoBreak>
               “
               <Math>
@@ -12318,7 +17221,12 @@ const Rest = () => {
         <Pause />
         <OuterP>
           <b>
-            **Vocabulary.
+            <span class="t-3003-c">
+              **Vocabulary.
+              <span class="t-3003">
+                ./src/content/ch9a_trig2/trigonometry.wly:572:6
+              </span>
+            </span>
           </b>
           {" "} A (so-called
           {" "}
@@ -12351,12 +17259,20 @@ const Rest = () => {
         <Image
           width="1300px"
           src="/build-img/svgo-svg/sA2I.svg"
+          local_url="./images/plate_caree_central_lambert_combination_with_use_saved.svg"
           intrinsicWidth={1960}
           intrinsicHeight={1300}
         />
         <Pause />
         <OuterP>
-          (In the plate carée, at right, 
+          <span class="t-3003-c">
+            (In the plate carée, at right, {" "}
+            <span class="t-3003">
+              ./src/content/ch9a_trig2/trigonometry.wly:587:5
+            </span>
+          </span>
+          {" "}
+          {" "}
           longitudes are “unrolled” onto the cylinder,
           which preserves north-south distances.)
         </OuterP>

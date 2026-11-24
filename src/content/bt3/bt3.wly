@@ -449,6 +449,7 @@
     *Distance formula in the plane.*
     Take arbitrary points $P = (x_1,y_1)$, $Q = (x_2,y_2)$ in
     the plane:
+    !! draw an orthogonal triangle with $P$ and $Q$ as corners:
     !! Imagine a right triangle whose corners are
     !! given by coordinates $(x_1, y_1)$, $(x_2, y_2)$,
     !! and, say, $(x_1, y_2)$:
@@ -469,24 +470,59 @@
 
     Then, a few observations: 
 
-    - $c$, the hypotenuse of the triangle, is the 
-    distance from $(x_1, y_1)$ to $(x_2, y_2)$
+    |> Pause
 
-    - $a^2 = (x_2 - x_1)^2$ [regardless of whether
-    $x_1 < x_2$ or not: a minus sign in “$x_2 - x_1$” is washed away
-    by the square]
+    1. $c = \overline{PQ}$, 
+    were “$\overline{PQ}$” means the distance from
+    $P$ to $Q$
+    !! the hypotenuse of the triangle, is the 
+    !! distance from $(x_1, y_1)$ to $(x_2, y_2)$; we 
+    !! will “$\overline{PQ}$” for this distance, below
 
-    - $b^2 = (y_2 - y_1)^2$ [regardless of whether
-    $y_1 < y_2$ or not: a minus sign in “$y_2 - y_1$” is washed away
-    by the square]
+    |> Pause
+
+    2. $a^2 = (x_2 - x_1)^2$, regardless of whether
+    $x_1 < x_2$ or not (a minus sign in “$x_2 - x_1$” is washed away
+    by the square)
+
+    |> Pause
+
+    3. $b^2 = (y_2 - y_1)^2$, regardless of whether
+    $y_1 < y_2$ or not (a minus sign in “$y_2 - y_1$” is washed away
+    by the square)
 
     |> Pause
 
     Thus
 
     $$
-    c = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+    c = \sqrt{a^2 + b^2}
     $$ 
+
+    becomes 
+
+    $$
+    \overline{PQ} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+    $$ 
+
+    after taking these observations into
+    account, or “the distance from $P$ to $Q$ is 
+    $\sqrt{\textit{...}}$”. We refer to the square 
+    root
+
+    |> Boxed
+
+        $$
+        \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+        $$
+
+    as the _distance formula_ 
+    or _Pythagorean distance_
+    or _Euclidean distance_
+    from a point
+    $(x_1, y_1)$ to a point $(x_2, y_2)$ in the
+    plane.
+        
 
 
 |> Section
