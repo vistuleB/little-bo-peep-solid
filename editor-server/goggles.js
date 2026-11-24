@@ -4,7 +4,10 @@
     layer,
     lastLayout = "";
   const send = (data) =>
-    parent.postMessage({ ...data, kind: "writerly-preview" }, origin);
+    parent.postMessage(
+      { ...data, path: location.pathname, kind: "writerly-preview" },
+      origin,
+    );
   function draw() {
     if (!enabled) {
       layer?.remove();
@@ -89,8 +92,13 @@
   });
   addEventListener("scroll", schedule, { passive: true });
   addEventListener("resize", schedule);
+  let lastPath = location.pathname;
   // Typesetting and lazy sections can move source fragments without a scroll.
   setInterval(() => {
+    if (lastPath !== location.pathname) {
+      lastPath = location.pathname;
+      send({ action: "location" });
+    }
     if (enabled) schedule();
   }, 750);
   send({ action: "ready" });
