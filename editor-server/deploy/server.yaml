@@ -7,6 +7,8 @@ services:
     ports:
       - "127.0.0.1:3020:3019"
     environment:
+      EDITOR_GOOGLE_CLIENT_ID: "${EDITOR_GOOGLE_CLIENT_ID:-}"
+      EDITOR_GOOGLE_EMAIL: "${EDITOR_GOOGLE_EMAIL:-}"
       EDITOR_ORIGIN: "https://${EDITOR_DOMAIN:?Set EDITOR_DOMAIN}"
       EDITOR_PREVIEW_DOMAIN: "${EDITOR_PREVIEW_DOMAIN:?Set EDITOR_PREVIEW_DOMAIN}"
       EDITOR_REPO_URL: git@github.com:vistuleB/little-bo-peep-solid.git
