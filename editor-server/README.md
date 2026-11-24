@@ -4,7 +4,7 @@ This service owns a full clone and independent draft worktrees. It does not use 
 
 ## Local use
 
-Install the same Node (22.12+), npm, Gleam, Erlang/OTP and image-processing dependencies used by the book renderer. Dependencies in `renderer/gleam.toml` are resolved by Gleam. The service runs `npm ci` for each build snapshot and adds that snapshot's `node_modules/.bin` to PATH.
+Install the same Node (22.12+), npm, Gleam, Erlang/OTP and image-processing dependencies used by the book renderer. Dependencies in `renderer/gleam.toml` are resolved by Gleam. Each branch retains a detached build workspace, including `node_modules` and `renderer/build`. The service runs `npm ci` initially and when the package manifests, npm configuration, or Node/npm version change. Gleam reuses its incremental compiler and package cache. Other untracked/ignored build files are cleared before each build, and tracked files are reset to the requested commit.
 
 ```
 EDITOR_REPO_URL=git@github.com:vistuleB/little-bo-peep-solid.git npm run editor
@@ -16,7 +16,7 @@ A branch is a server draft of a remote branch. Refresh fetches remote state; Syn
 
 Only tracked existing `src/content/**/*.wly` files are editable. Source buffers remain in browser memory until Commit. Changing branch or syncing with edits requires Commit or Discard. Reloading loses uncommitted edits. Commit checks the branch revision to avoid overwriting another session's changes. Server filesystem changes left by a crash block commits/sync until manually recovered.
 
-Build is explicit, from a committed detached snapshot. Allowed command forms are `gleam run` and `gleam run -- --only <selectors>`. Commands are parsed into arguments and run without a shell; `--local` and other CLI options are rejected. The server sets `PLACE=EDITOR_SERVER`, runs the renderer and the production app build, and publishes only a successful `.output/public` directory. Previous successful previews remain available after failures. Source editing can continue during a build. Build logs are session-only. Five commands are retained per branch.
+Build is explicit, from a committed revision in its separate build workspace. Allowed command forms are `gleam run` and `gleam run -- --only <selectors>`. Commands are parsed into arguments and run without a shell; `--local` and other CLI options are rejected. The server sets `PLACE=EDITOR_SERVER`, runs the renderer and the production app build, and publishes only a successful `.output/public` directory. Previous successful previews remain available after failures. Source editing can continue during a build. Build logs are session-only. Five commands are retained per branch.
 
 Each successful preview includes a manifest of its revision, command, pages, and source locations. Goggles use those locations to open the source editor. When the preview is older than the draft, the UI warns that line positions can have shifted. Source locations are public alongside the preview. Built text and assets use their existing root-relative URLs on a separate preview hostname.
 
