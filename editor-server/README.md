@@ -2,9 +2,17 @@
 
 This service owns a full clone and independent draft worktrees. It does not use or modify the checkout from which it is launched. `develop` and `codex-suggestions` need the editor infrastructure merged before their previews can be built.
 
+## Google sign-in
+
+Run `npm ci --prefix editor-server` when setting up the editor locally. The deployment image installs these separate server dependencies automatically.
+
+Configure a Google Auth Platform **Web application** client with `https://edit.toiletscrollcalculus.com` as an authorized JavaScript origin. The popup callback flow requires no redirect URI or client secret. Set `EDITOR_GOOGLE_CLIENT_ID` and `EDITOR_GOOGLE_EMAIL` together (in the deployment's `server.env` for Compose). Only that account is accepted. The first login must use Gmail or Google Workspace; its stable Google subject ID is stored in the data directory's `google-account.json`. Changing accounts requires explicit operator removal of that binding as well as updating the email setting. Google identity tokens are verified by Google's official library; each sign-in also needs a short-lived, single-use nonce bound to the browser cookie.
+
+Without these settings, token login works as before. It remains available as recovery when Google is configured. No Gmail, Drive, or other Google API access is requested.
+
 ## Local use
 
-Install the same Node (22.12+), npm, Gleam, Erlang/OTP and image-processing dependencies used by the book renderer. Dependencies in `renderer/gleam.toml` are resolved by Gleam. Each branch retains a detached build workspace, including `node_modules` and `renderer/build`. The service runs `npm ci` initially and when the package manifests, npm configuration, or Node/npm version change. Gleam reuses its incremental compiler and package cache. Other untracked/ignored build files are cleared before each build, and tracked files are reset to the requested commit.
+Install the same Node (22.12+), npm, Gleam, Erlang/OTP and image-processing dependencies used by the book renderer. Dependencies in `renderer/gleam.toml` are resolved by Gleam. Each branch retains a detached build workspace, including `node_modules` and `renderer/build`. The service runs `npm ci` initially and when the package manifests, npm configuration, or Node/npm version change. Gleam reuses its incremental compiler and package cache. Other untracked/ignored build files are cleared before each build, and tracked files are reset to the requested commit. The server supplies `WLY_IMAGE_CACHE_DIR` outside the worktrees for shared image storage. The Gleam renderer alone computes cache keys from source contents and the renderer/dependency/toolchain recipe, verifies output hashes, and restores or rebuilds images. Desktop builds use the same logic, defaulting to `renderer/build/image-cache`. Timestamp-only image-map entries rebuild once to acquire hashes. Published previews remain independent copies.
 
 ```
 EDITOR_REPO_URL=git@github.com:vistuleB/little-bo-peep-solid.git npm run editor
@@ -58,7 +66,7 @@ The repository is trusted executable code: builds run its npm scripts and Gleam 
 
 `npm run test:editor` uses a disposable local bare remote. It tests command rejection, optimistic commits, sync, divergent merges, conflict isolation, continued editing, missing branches, and restart persistence. No test pushes to GitHub.
 
-“Clean build cache” on the branch page removes only the selected branch’s detached build workspace and dependency cache stamp. It is unavailable during builds; the next build reinstalls dependencies. Source drafts, Git history, browser edits, and published previews are preserved.
+“Clean build cache” on the branch page removes the selected branch’s detached build workspace and dependency cache stamp, plus the shared optimized-image cache. It is unavailable during builds; the next build reinstalls dependencies. Source drafts, Git history, browser edits, and published previews are preserved.
 
 Above Preview, a diagonal split control has independent toggles: the snail in Preview makes tapping Source return to the visible source; the kite in Source makes entering Preview seek the visible editor line instead of restoring the previous preview position. These two settings are independent session state. The goggles half enables clickable source overlays in Preview and is disabled in Source. Tracking scans visible, distinct source locations in reading order, uses the first filename to collect three, and chooses their lowest line number. With fewer locations it uses the strongest available match. Editor-to-preview seeks the closest rendered line; unbuilt edits and lazy/unrendered content remain best-effort.
 

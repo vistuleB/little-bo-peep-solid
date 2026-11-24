@@ -18,15 +18,19 @@
       <p id="notice" hidden role="status"></p>
       <section id="login">
         <h1>Source editor</h1>
-        <p>Enter the token shown by the editing server.</p>
-        <form id="login-form">
-          <input
-            type="password"
-            id="token"
-            autocomplete="current-password"
-            aria-label="Editor token"
-          /><button class="primary">Sign in</button>
-        </form>
+        <div id="google-signin" hidden></div>
+        <details id="token-login" open>
+          <summary>Use an editor token</summary>
+          <p id="token-hint">Enter your editor token.</p>
+          <form id="login-form">
+            <input
+              type="password"
+              id="token"
+              autocomplete="current-password"
+              aria-label="Editor token"
+            /><button class="primary">Sign in</button>
+          </form>
+        </details>
       </section>
       <main id="branches" hidden>
         <div class="heading">
@@ -95,7 +99,13 @@
         </div>
         <button data-mode="branches">⑂<span>Branches</span></button
         ><button data-mode="source">⌨<span>Source</span></button
-        ><button data-mode="preview">▤<span>Preview</span></button>
+        ><button
+          data-mode="preview"
+          disabled
+          title="Build this branch successfully to enable Preview"
+        >
+          ▤<span>Preview</span>
+        </button>
       </nav>
     </div>
     <dialog id="files-dialog">

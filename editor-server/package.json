@@ -1,0 +1,8 @@
+{
+  "name": "toilet-scroll-editor-server",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "google-auth-library": "11.3.4"
+  }
+}

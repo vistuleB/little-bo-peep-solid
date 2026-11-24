@@ -8,3 +8,5 @@
 !deploy/git-askpass.sh
 !deploy/healthcheck.mjs
 !deploy/Dockerfile
+!package.json
+!package-lock.json

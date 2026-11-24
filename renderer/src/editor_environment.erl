@@ -1,5 +1,5 @@
 -module(editor_environment).
--export([get_place/0]).
+-export([get_place/0, image_cache_directory/0]).
 get_place() ->
     case os:getenv("PLACE") of
         false ->
@@ -12,5 +12,11 @@ get_place() ->
                     end;
                 _ -> <<>>
             end;
+        Value -> unicode:characters_to_binary(Value)
+    end.
+
+image_cache_directory() ->
+    case os:getenv("WLY_IMAGE_CACHE_DIR") of
+        false -> <<>>;
         Value -> unicode:characters_to_binary(Value)
     end.

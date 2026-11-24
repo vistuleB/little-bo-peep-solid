@@ -304,14 +304,37 @@ dialog input[type="search"] {
   margin: 9px 0;
 }
 #login {
-  padding: 25px;
+  width: 100%;
+  max-width: 384px;
+  align-self: center;
+  margin: 32px auto;
+  padding: 0 32px;
+}
+#login h1 {
+  text-align: center;
+}
+#google-signin {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0;
+}
+#token-login {
+  margin-top: 28px;
+}
+#token-login summary {
+  text-align: center;
+  color: #65736a;
+  cursor: pointer;
+}
+#token-hint {
+  margin-top: 20px;
 }
 #login input {
   width: 100%;
   padding: 12px;
   margin: 15px 0;
 }
-#login button {
+#login-form button {
   width: 100%;
 }
 body.busy {

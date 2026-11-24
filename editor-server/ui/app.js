@@ -71,7 +71,14 @@ const button = (text, fn, className = "") => {
 function branchInfo() {
   return state.branches.find((b) => b.name === state.branch);
 }
+const canPreview = () =>
+  !!state.preview && state.preview.branch === state.branch;
 function update() {
+  const previewButton = $('nav [data-mode="preview"]');
+  previewButton.disabled = !canPreview();
+  previewButton.title = canPreview()
+    ? "Open the latest successful build"
+    : "Build this branch successfully to enable Preview";
   const info = branchInfo();
   $("#branch-pill").textContent = state.branch
     ? `${state.branch} · ${info?.ahead ?? "?"} ↑ / ${info?.behind ?? "?"} ↓${dirty().length ? " · edited" : ""}`
@@ -117,6 +124,7 @@ function update() {
   $("#goggles").setAttribute("aria-pressed", String(state.goggles));
 }
 function mode(value) {
+  if (value === "preview" && !canPreview()) return;
   if (value !== "branches" && !state.branch) {
     notice("Choose a branch first.");
     return;
@@ -223,6 +231,8 @@ async function chooseBranch(name) {
   state.documents.clear();
   state.file = null;
   state.revision = null;
+  state.preview = null;
+  update();
   state.files = (await api("files?branch=" + encodeURIComponent(name))).files;
   state.previewPath = null;
   state.pendingTarget = null;
@@ -605,3 +615,41 @@ $("#clean-build-cache").onclick = () =>
       "Build cache cleared. The next build starts fresh. Source and previews are unchanged.",
     );
   });
+
+async function setupGoogleLogin() {
+  const config = await api("auth-config");
+  if (!config.googleClientId) return;
+  const script = document.createElement("script");
+  script.src = "https://accounts.google.com/gsi/client";
+  script.async = true;
+  script.onerror = () =>
+    notice(
+      "Google sign-in could not load. You can still use your editor token.",
+    );
+  script.onload = () => {
+    google.accounts.id.initialize({
+      client_id: config.googleClientId,
+      nonce: config.nonce,
+      auto_select: false,
+      callback: ({ credential }) =>
+        perform(async () => {
+          await api("login/google", { credential });
+          await boot();
+        }),
+    });
+    $("#google-signin").hidden = false;
+    $("#token-login").open = false;
+    google.accounts.id.renderButton($("#google-signin"), {
+      type: "standard",
+      theme: "outline",
+      size: "large",
+      text: "signin_with",
+      width: Math.min(
+        320,
+        Math.max(200, document.documentElement.clientWidth - 64),
+      ),
+    });
+  };
+  document.head.append(script);
+}
+setupGoogleLogin().catch(() => {});
