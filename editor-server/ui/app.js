@@ -11,6 +11,9 @@ const state = {
   preview: null,
   previewPath: null,
   goggles: false,
+  followSource: false,
+  followPreview: false,
+  pendingTarget: null,
   mode: "branches",
   job: null,
 };
@@ -86,7 +89,19 @@ function update() {
   $("#preview-meta").textContent = state.preview
     ? `${state.preview.revision.slice(0, 8)}${state.preview.revision !== info?.revision ? " · earlier build" : ""}`
     : "No successful build";
-  $("#goggles").disabled = !state.preview;
+  $("#preview-tools").hidden = !["source", "preview"].includes(state.mode);
+  const inPreview = state.mode === "preview";
+  $("#follow").setAttribute(
+    "aria-pressed",
+    String(inPreview ? state.followSource : state.followPreview),
+  );
+  $("#follow span").textContent = inPreview ? "🐌" : "🪁";
+  const followLabel = inPreview
+    ? "Snail trail: tap Preview again to return to the source you are reading"
+    : "Kite chase: Preview follows the visible editor line instead of its previous position";
+  $("#follow").title = followLabel;
+  $("#follow").setAttribute("aria-label", followLabel);
+  $("#goggles").disabled = !state.preview || !inPreview;
   $("#goggles").setAttribute("aria-pressed", String(state.goggles));
 }
 function mode(value) {
@@ -94,11 +109,22 @@ function mode(value) {
     notice("Choose a branch first.");
     return;
   }
+  const fromSource = state.mode === "source" && value === "preview";
+  if (fromSource && state.followPreview && state.file) {
+    const editor = $("#editor");
+    state.pendingTarget = {
+      file: state.file,
+      line:
+        Math.floor(
+          editor.scrollTop / parseFloat(getComputedStyle(editor).lineHeight),
+        ) + 1,
+    };
+  }
   state.mode = value;
   for (const name of ["branches", "source", "preview"])
     $("#" + name).hidden = name !== value;
   document
-    .querySelectorAll("nav button")
+    .querySelectorAll("nav [data-mode]")
     .forEach((b) => b.classList.toggle("active", b.dataset.mode === value));
   if (value === "preview") {
     goggles(false);
@@ -186,6 +212,7 @@ async function chooseBranch(name) {
   state.revision = null;
   state.files = (await api("files?branch=" + encodeURIComponent(name))).files;
   state.previewPath = null;
+  state.pendingTarget = null;
   state.preview = await api("preview?branch=" + encodeURIComponent(name));
   $("#editor").value = "";
   $("#frame").removeAttribute("src");
@@ -252,8 +279,7 @@ async function openFile(file, line = 1) {
   );
   $("#editor").value = state.documents.get(file).content;
   update();
-  if (line > 1) {
-    mode("source");
+  if (line >= 1) {
     const editor = $("#editor");
     const offset = editor.value
       .split("\n")
@@ -261,7 +287,10 @@ async function openFile(file, line = 1) {
       .reduce((n, s) => n + s.length + 1, 0);
     editor.focus();
     editor.setSelectionRange(offset, offset);
-    editor.scrollTop = Math.max(0, (line - 3) * 21.45);
+    editor.scrollTop = Math.max(
+      0,
+      (line - 3) * parseFloat(getComputedStyle(editor).lineHeight),
+    );
   }
 }
 $("#editor").oninput = () => {
@@ -353,27 +382,45 @@ function positionPreview() {
   $("#frame").hidden = !state.preview;
   if (!state.preview) return;
   const frame = $("#frame");
-  const page =
-    state.preview.pages.find(
-      (p) =>
-        p.path === state.previewPath &&
-        (!state.file || p.sources.some((s) => s.file === state.file)),
-    ) ||
-    state.preview.pages.find((p) =>
-      p.sources.some((s) => s.file === state.file),
-    );
+  const wanted = state.pendingTarget;
+  const page = wanted
+    ? state.preview.pages.find(
+        (p) =>
+          p.path === state.previewPath &&
+          p.sources.some((s) => s.file === wanted.file),
+      ) ||
+      state.preview.pages.find((p) =>
+        p.sources.some((s) => s.file === wanted.file),
+      )
+    : state.preview.pages.find((p) => p.path === state.previewPath) ||
+      state.preview.pages.find((p) =>
+        p.sources.some((s) => s.file === state.file),
+      );
   const target = page ||
     state.preview.pages.find((p) => p.sources.length) || { path: "/" };
-  // Returning from a source jump preserves position when already on this page.
   const key = state.preview.id + target.path;
   if (frame.dataset.build !== key) {
     frame.src = state.preview.url + target.path;
     frame.dataset.build = key;
-  }
-  if (state.file && !page)
+  } else if (wanted) sendPreviewTarget();
+  if (wanted && !page) {
+    state.pendingTarget = null;
     notice(
-      "That file is not included in this build. Showing the first available page.",
+      "That source is not included in this build. Showing the available preview.",
     );
+  }
+}
+function sendPreviewTarget() {
+  if (!state.pendingTarget || !state.preview) return;
+  $("#frame").contentWindow?.postMessage(
+    {
+      kind: "writerly-editor",
+      action: "seek",
+      ...state.pendingTarget,
+    },
+    state.preview.url,
+  );
+  state.pendingTarget = null;
 }
 addEventListener("message", (event) => {
   if (
@@ -387,7 +434,12 @@ addEventListener("message", (event) => {
     state.previewPath = event.data.path;
     $("#frame").dataset.build = state.preview.id + event.data.path;
   }
-  if (event.data.action === "ready") goggles(false);
+  if (event.data.action === "ready") {
+    goggles(false);
+    sendPreviewTarget();
+  }
+  if (event.data.action === "no-source")
+    notice("No visible source location found here.");
   if (event.data.action === "source")
     perform(async () => {
       const file =
@@ -404,8 +456,8 @@ addEventListener("message", (event) => {
       if (event.data.revision !== state.preview.revision)
         throw new Error("Preview revision mismatch. Rebuild the preview.");
       goggles(false);
-      await openFile(file, line);
       mode("source");
+      await openFile(file, line);
       if (state.preview.revision !== branchInfo()?.revision)
         notice(
           "This preview is from an earlier commit; line positions may have shifted.",
@@ -475,7 +527,16 @@ $("#refresh").onclick = () => perform(() => refresh(true));
 $("#branch-pill").onclick = () => mode("branches");
 $("nav").onclick = (event) => {
   const target = event.target.closest("[data-mode]");
-  if (target) mode(target.dataset.mode);
+  if (!target) return;
+  if (target.dataset.mode === "preview" && state.mode === "preview") {
+    if (state.followSource && state.preview)
+      $("#frame").contentWindow?.postMessage(
+        { kind: "writerly-editor", action: "track-source" },
+        state.preview.url,
+      );
+    return;
+  }
+  mode(target.dataset.mode);
 };
 $("#file-picker").onclick = () => {
   renderTree();
@@ -490,6 +551,11 @@ $("#custom-command").oninput = () => {
   $("#custom-radio").checked = true;
 };
 $("#goggles").onclick = () => goggles(!state.goggles);
+$("#follow").onclick = () => {
+  if (state.mode === "preview") state.followSource = !state.followSource;
+  else state.followPreview = !state.followPreview;
+  update();
+};
 perform(boot);
 
 $("#clean-build-cache").onclick = () =>
