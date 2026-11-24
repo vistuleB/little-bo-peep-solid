@@ -6,7 +6,7 @@ const script = await readFile(
   new URL("../goggles.js", import.meta.url),
   "utf8",
 );
-function preview(rows, { contentPresent = true } = {}) {
+function preview(rows, { contentPresent = true, headerHeight = 0 } = {}) {
   let timer;
   const events = {},
     sent = [],
@@ -28,18 +28,20 @@ function preview(rows, { contentPresent = true } = {}) {
     document: {
       currentScript: { dataset: { editorOrigin: "http://editor" } },
       querySelectorAll: () => fragments,
-      querySelector: () =>
-        contentPresent
-          ? {
-              querySelectorAll: () => fragments.filter((f) => !f.outside),
-              getBoundingClientRect: () => ({
-                top: 0,
-                bottom: 1000,
-                left: 0,
-                right: 375,
-              }),
-            }
-          : null,
+      querySelector: (selector) =>
+        selector === "[data-header-blob]"
+          ? { getBoundingClientRect: () => ({ height: headerHeight }) }
+          : contentPresent
+            ? {
+                querySelectorAll: () => fragments.filter((f) => !f.outside),
+                getBoundingClientRect: () => ({
+                  top: 0,
+                  bottom: 1000,
+                  left: 0,
+                  right: 375,
+                }),
+              }
+            : null,
       createRange: () => ({
         selectNodeContents(f) {
           this.f = f;
@@ -155,4 +157,13 @@ test("snail ignores header blames even when they would win the three-location vo
   });
   loading.message({ action: "track-source" });
   assert.equal(loading.sent.at(-1).action, "no-source");
+});
+
+test("kite reserves the rendered header height above the target", () => {
+  const p = preview([["a.wly", 30, 300]], { headerHeight: 84 });
+  p.message({ action: "seek", file: "src/content/a.wly", line: 30 });
+  assert.equal(p.scrolls[0].top, 188);
+  const nearTop = preview([["a.wly", 1, 40]], { headerHeight: 84 });
+  nearTop.message({ action: "seek", file: "src/content/a.wly", line: 1 });
+  assert.equal(nearTop.scrolls[0].top, 0);
 });
