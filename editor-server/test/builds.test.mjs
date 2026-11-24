@@ -25,13 +25,20 @@ test("branch build workspace retains caches, resets sources, and publishes immut
   const record = await ws.open("develop");
   let installs = 0,
     renders = 0,
-    fail = false;
+    fail = false,
+    corrupt = false;
   const execute = async (cmd, args, cwd) => {
     if (args[0] === "--version") return "1";
     if (cmd === "npm" && args[0] === "ci") {
       installs++;
       await fs.mkdir(path.join(cwd, "node_modules"), { recursive: true });
     } else if (cmd === "gleam") {
+      if (corrupt) {
+        corrupt = false;
+        throw new Error(
+          `File IO failure\n${cwd}/build/packages/gleam_stdlib/gleam.toml\nNo such file or directory`,
+        );
+      }
       renders++;
       const dir = path.dirname(cwd);
       if (renders > 1 && installs < 3)
@@ -134,5 +141,10 @@ test("branch build workspace retains caches, resets sources, and publishes immut
     null,
   );
   assert.equal((await build(builder)).status, "ready");
+  assert.equal(installs, 3);
+  corrupt = true;
+  const repaired = await build(builder);
+  assert.equal(repaired.status, "ready", repaired.log);
+  assert.match(repaired.log, /retrying once/);
   assert.equal(installs, 3);
 });
