@@ -37,6 +37,11 @@ export class Builds {
           { force: true },
         );
       });
+      // Shared optimized images must also be cleared for a true cold rebuild.
+      await fs.rm(path.join(ws.root, "build-cache", "images"), {
+        recursive: true,
+        force: true,
+      });
       return { ok: true };
     } finally {
       this.cleaning = false;
@@ -105,6 +110,7 @@ export class Builds {
         env: {
           PLACE: "EDITOR_SERVER",
           EDITOR_REVISION: job.revision,
+          WLY_IMAGE_CACHE_DIR: path.join(ws.root, "build-cache", "images"),
           PATH:
             path.join(dir, "node_modules/.bin") +
             path.delimiter +
