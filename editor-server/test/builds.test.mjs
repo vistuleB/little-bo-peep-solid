@@ -34,7 +34,7 @@ test("branch build workspace retains caches, resets sources, and publishes immut
     } else if (cmd === "gleam") {
       renders++;
       const dir = path.dirname(cwd);
-      if (renders > 1)
+      if (renders > 1 && installs < 3)
         assert.equal(
           await fs.readFile(path.join(cwd, "build/cache"), "utf8"),
           "compiled",
@@ -107,4 +107,32 @@ test("branch build workspace retains caches, resets sources, and publishes immut
   assert.ok(
     await fs.stat(path.join(ws.root, "build-workspaces", idFor("develop"))),
   );
+  const preview = record.preview.id;
+  builder.starting = true;
+  await assert.rejects(builder.clean("develop"), /Wait/);
+  builder.starting = false;
+  const cleaning = builder.clean("develop");
+  await assert.rejects(builder.start("develop", "gleam run"), /cleanup/);
+  await cleaning;
+  await builder.clean("develop"); // Already empty is harmless.
+  assert.equal(record.preview.id, preview);
+  assert.equal(
+    (await ws.source("develop", "src/content/ch1.wly")).content,
+    "second",
+  );
+  assert.equal(
+    await fs.readFile(
+      path.join(ws.root, "previews", preview, "index.html"),
+      "utf8",
+    ),
+    "second",
+  );
+  assert.equal(
+    await fs
+      .stat(path.join(ws.root, "build-workspaces", idFor("develop")))
+      .catch(() => null),
+    null,
+  );
+  assert.equal((await build(builder)).status, "ready");
+  assert.equal(installs, 3);
 });
