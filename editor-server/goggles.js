@@ -8,15 +8,19 @@
       { ...data, path: location.pathname, kind: "writerly-preview" },
       origin,
     );
-  function fragments() {
-    return [...document.querySelectorAll("[data-wly-file]")].map((fragment) => {
+  function fragments(root = document) {
+    return [...root.querySelectorAll("[data-wly-file]")].map((fragment) => {
       const range = document.createRange();
       range.selectNodeContents(fragment);
       return { fragment, rects: [...range.getClientRects()] };
     });
   }
   function trackSource(navigate = true) {
-    const visible = fragments()
+    // Page owns the article/TOC content. Nav and header source live outside it.
+    // Never fall back to document-wide sampling while a route is loading.
+    const content = document.querySelector("#PageCameraSurface");
+    const bounds = content?.getBoundingClientRect();
+    const visible = (content ? fragments(content) : [])
       .map(({ fragment, rects }) => ({
         fragment,
         rect: rects
@@ -27,7 +31,11 @@
               r.bottom > 0 &&
               r.top < innerHeight &&
               r.right > 0 &&
-              r.left < innerWidth,
+              r.left < innerWidth &&
+              r.bottom > bounds.top &&
+              r.top < bounds.bottom &&
+              r.right > bounds.left &&
+              r.left < bounds.right,
           )
           .sort((a, b) => a.top - b.top || a.left - b.left)[0],
       }))

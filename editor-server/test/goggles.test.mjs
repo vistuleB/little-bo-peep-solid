@@ -6,13 +6,14 @@ const script = await readFile(
   new URL("../goggles.js", import.meta.url),
   "utf8",
 );
-function preview(rows) {
+function preview(rows, { contentPresent = true } = {}) {
   let timer;
   const events = {},
     sent = [],
     scrolls = [];
   const parent = { postMessage: (data) => sent.push(data) };
-  const fragments = rows.map(([file, line, top]) => ({
+  const fragments = rows.map(([file, line, top, outside = false]) => ({
+    outside,
     dataset: { wlyFile: file, wlyLine: String(line), wlyRevision: "revision" },
     rect: {
       top,
@@ -27,6 +28,18 @@ function preview(rows) {
     document: {
       currentScript: { dataset: { editorOrigin: "http://editor" } },
       querySelectorAll: () => fragments,
+      querySelector: () =>
+        contentPresent
+          ? {
+              querySelectorAll: () => fragments.filter((f) => !f.outside),
+              getBoundingClientRect: () => ({
+                top: 0,
+                bottom: 1000,
+                left: 0,
+                right: 375,
+              }),
+            }
+          : null,
       createRange: () => ({
         selectNodeContents(f) {
           this.f = f;
@@ -123,4 +136,23 @@ test("live tracking reports searching then locked without navigating, and stops 
   empty.message({ action: "tracking", enabled: true });
   empty.settle();
   assert.equal(empty.sent.at(-1).status, "none");
+});
+
+test("snail ignores header blames even when they would win the three-location vote", () => {
+  const p = preview([
+    ["__parent.wly", 10, 0, true],
+    ["__parent.wly", 11, 10, true],
+    ["__parent.wly", 12, 20, true],
+    ["bt3/bt3.wly", 30, 30],
+    ["bt3/bt3.wly", 31, 40],
+    ["bt3/bt3.wly", 32, 50],
+  ]);
+  p.message({ action: "track-source" });
+  assert.equal(p.sent.at(-1).file, "bt3/bt3.wly");
+  assert.equal(p.sent.at(-1).line, 30);
+  const loading = preview([["__parent.wly", 10, 0, true]], {
+    contentPresent: false,
+  });
+  loading.message({ action: "track-source" });
+  assert.equal(loading.sent.at(-1).action, "no-source");
 });
