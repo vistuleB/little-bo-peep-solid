@@ -628,13 +628,16 @@ async function setupGoogleLogin() {
         }),
     });
     $("#google-signin").hidden = false;
-    $("#token-hint").textContent = "Or use your editor token:";
+    $("#token-login").open = false;
     google.accounts.id.renderButton($("#google-signin"), {
       type: "standard",
       theme: "outline",
       size: "large",
       text: "signin_with",
-      width: 280,
+      width: Math.min(
+        320,
+        Math.max(200, document.documentElement.clientWidth - 64),
+      ),
     });
   };
   document.head.append(script);

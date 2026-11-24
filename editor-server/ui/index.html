@@ -19,15 +19,18 @@
       <section id="login">
         <h1>Source editor</h1>
         <div id="google-signin" hidden></div>
-        <p id="token-hint">Enter your editor token.</p>
-        <form id="login-form">
-          <input
-            type="password"
-            id="token"
-            autocomplete="current-password"
-            aria-label="Editor token"
-          /><button class="primary">Sign in</button>
-        </form>
+        <details id="token-login" open>
+          <summary>Use an editor token</summary>
+          <p id="token-hint">Enter your editor token.</p>
+          <form id="login-form">
+            <input
+              type="password"
+              id="token"
+              autocomplete="current-password"
+              aria-label="Editor token"
+            /><button class="primary">Sign in</button>
+          </form>
+        </details>
       </section>
       <main id="branches" hidden>
         <div class="heading">
