@@ -99,7 +99,13 @@
         </div>
         <button data-mode="branches">⑂<span>Branches</span></button
         ><button data-mode="source">⌨<span>Source</span></button
-        ><button data-mode="preview">▤<span>Preview</span></button>
+        ><button
+          data-mode="preview"
+          disabled
+          title="Build this branch successfully to enable Preview"
+        >
+          ▤<span>Preview</span>
+        </button>
       </nav>
     </div>
     <dialog id="files-dialog">
