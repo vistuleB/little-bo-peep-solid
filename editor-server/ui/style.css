@@ -406,3 +406,35 @@ nav {
 #source .actions {
   padding-right: calc((100% - 16px) / 3);
 }
+
+#follow::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  bottom: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid #51734a;
+}
+#follow[data-tracking="off"]::after {
+  display: none;
+}
+#follow[data-tracking="locked"]::after {
+  background: #51734a;
+}
+#follow[data-tracking="searching"]::after {
+  border-right-color: transparent;
+  animation: snail-search 0.7s linear infinite;
+}
+@keyframes snail-search {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #follow[data-tracking="searching"]::after {
+    animation: none;
+    border-style: dotted;
+  }
+}
