@@ -1,0 +1,9 @@
+{$EDITOR_DOMAIN}, *.{$EDITOR_PREVIEW_DOMAIN} {
+    tls {
+        dns porkbun {
+            api_key {env.PORKBUN_API_KEY}
+            api_secret_key {env.PORKBUN_API_SECRET_KEY}
+        }
+    }
+    reverse_proxy editor:3019
+}
