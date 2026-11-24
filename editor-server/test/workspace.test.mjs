@@ -5,6 +5,7 @@ import os from "node:os";
 import path from "node:path";
 import { Workspace, run } from "../workspace.mjs";
 import { buildArguments } from "../commands.mjs";
+import { Builds } from "../builds.mjs";
 import { resolvePlace } from "../../config/place.mjs";
 
 test("build command parser accepts selectors and rejects shell/CLI escapes", () => {
@@ -107,6 +108,19 @@ test("commit, sync, divergence, conflict isolation, missing remote and restart",
   await git(["push", "origin", "--delete", "develop"]);
   await assert.rejects(ws.sync("develop"), /remote branch is missing/);
   assert.equal((await ws.branches())[0].remoteMissing, true);
+  // A failed build leaves the previous preview and committed source intact.
+  record.preview = { id: "previous" };
+  await ws.save();
+  const builds = new Builds(ws);
+  const job = await builds.start("develop", "gleam run -- --only ch1");
+  const deadline = Date.now() + 15000;
+  while (["queued", "building"].includes(job.status) && Date.now() < deadline)
+    await new Promise((resolve) => setTimeout(resolve, 50));
+  assert.equal(job.status, "failed");
+  assert.equal(record.preview.id, "previous");
+  assert.equal(record.command, "gleam run -- --only ch1");
+  assert.equal((await ws.source("develop", file)).content, "still editable\n");
+  await ws.queue;
   const restart = new Workspace(ws.root, remote);
   await restart.init();
   assert.equal(

@@ -26,7 +26,8 @@
         button.title = `${fragment.dataset.wlyFile}:${fragment.dataset.wlyLine}`;
         button.setAttribute("aria-label", "Edit " + button.title);
         button.style.cssText = `position:absolute;left:${rect.left + scrollX}px;top:${rect.top + scrollY}px;width:${rect.width}px;height:${rect.height}px;border:1px solid #4a8a69;border-radius:5px;background:#62ae7b22;padding:0;pointer-events:auto;cursor:pointer`;
-        button.onclick = (event) => {
+        button.onpointerdown = button.onclick = (event) => {
+          if (!enabled) return;
           event.preventDefault();
           event.stopPropagation();
           enabled = false;

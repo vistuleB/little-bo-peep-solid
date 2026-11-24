@@ -24,6 +24,7 @@ export class Builds {
     try {
       revision = await ws.exclusive(async () => {
         const record = await ws.open(branch);
+        await ws.command(branch, command);
         return ws.git(["rev-parse", record.ref]);
       });
     } finally {
@@ -87,12 +88,12 @@ export class Builds {
         JSON.stringify(manifest),
       );
       job.manifest = manifest;
-      job.status = "ready";
       await ws.exclusive(async () => {
         const record = ws.state.branches[job.branch];
         record.preview = manifest;
-        await ws.command(job.branch, job.command);
+        await ws.save();
       });
+      job.status = "ready";
     } catch (error) {
       job.status = "failed";
       log("\n" + error.message);
@@ -117,8 +118,23 @@ export async function sourceManifest(dir, job) {
       .filter((f) => f.endsWith(".tsx"))
       .map((f) => `article/${f}`),
   ];
+  let common = "";
+  for (const file of [
+    "HeaderBlob",
+    "LeftHeaderBlob",
+    "HamburgerPanelAuthorSuppliedContents",
+  ]) {
+    try {
+      common += await fs.readFile(
+        path.join(dir, "src/components", file + ".tsx"),
+        "utf8",
+      );
+    } catch (error) {
+      if (error.code !== "ENOENT") throw error;
+    }
+  }
   for (const file of candidates) {
-    const text = await fs.readFile(path.join(routes, file), "utf8");
+    const text = (await fs.readFile(path.join(routes, file), "utf8")) + common;
     const sources = [];
     for (const match of text.matchAll(/<SourceFragment\b([^>]+)>/g)) {
       const name = /\bfile="([^"]+)"/.exec(match[1])?.[1];
