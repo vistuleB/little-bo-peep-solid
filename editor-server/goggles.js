@@ -107,8 +107,13 @@
       );
       if (candidates.length) {
         const rect = candidates[0].rects.find((r) => r.width && r.height);
+        // Reserve the rendered header height even if it is currently scrolled
+        // away: mobile navigation can become fixed as the jump completes.
+        const headerHeight =
+          document.querySelector("[data-header-blob]")?.getBoundingClientRect()
+            .height || 0;
         scrollTo({
-          top: Math.max(0, scrollY + rect.top - 28),
+          top: Math.max(0, scrollY + rect.top - headerHeight - 28),
           behavior: "instant",
         });
         return;
