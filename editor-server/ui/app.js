@@ -9,6 +9,7 @@ const state = {
   recents: new Map(),
   lastFiles: new Map(),
   preview: null,
+  previewPath: null,
   goggles: false,
   mode: "branches",
   job: null,
@@ -182,6 +183,7 @@ async function chooseBranch(name) {
   state.file = null;
   state.revision = null;
   state.files = (await api("files?branch=" + encodeURIComponent(name))).files;
+  state.previewPath = null;
   state.preview = await api("preview?branch=" + encodeURIComponent(name));
   $("#editor").value = "";
   $("#frame").removeAttribute("src");
@@ -349,9 +351,15 @@ function positionPreview() {
   $("#frame").hidden = !state.preview;
   if (!state.preview) return;
   const frame = $("#frame");
-  const page = state.preview.pages.find((p) =>
-    p.sources.some((s) => s.file === state.file),
-  );
+  const page =
+    state.preview.pages.find(
+      (p) =>
+        p.path === state.previewPath &&
+        (!state.file || p.sources.some((s) => s.file === state.file)),
+    ) ||
+    state.preview.pages.find((p) =>
+      p.sources.some((s) => s.file === state.file),
+    );
   const target = page ||
     state.preview.pages.find((p) => p.sources.length) || { path: "/" };
   // Returning from a source jump preserves position when already on this page.
@@ -373,6 +381,11 @@ addEventListener("message", (event) => {
     event.data?.kind !== "writerly-preview"
   )
     return;
+  if (state.preview.pages.some((p) => p.path === event.data.path)) {
+    state.previewPath = event.data.path;
+    $("#frame").dataset.build = state.preview.id + event.data.path;
+  }
+  if (event.data.action === "ready") goggles(false);
   if (event.data.action === "source")
     perform(async () => {
       const file =
