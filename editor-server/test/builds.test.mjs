@@ -27,7 +27,11 @@ test("branch build workspace retains caches, resets sources, and publishes immut
     renders = 0,
     fail = false,
     corrupt = false;
-  const execute = async (cmd, args, cwd) => {
+  const execute = async (cmd, args, cwd, options) => {
+    assert.equal(
+      options.env.WLY_IMAGE_CACHE_DIR,
+      path.join(ws.root, "build-cache", "images"),
+    );
     if (args[0] === "--version") return "1";
     if (cmd === "npm" && args[0] === "ci") {
       installs++;
@@ -40,6 +44,14 @@ test("branch build workspace retains caches, resets sources, and publishes immut
         );
       }
       renders++;
+      const cache = options.env.WLY_IMAGE_CACHE_DIR;
+      if (renders > 1 && installs < 3)
+        assert.equal(
+          await fs.readFile(path.join(cache, "renderer-owned"), "utf8"),
+          "opaque",
+        );
+      await fs.mkdir(cache, { recursive: true });
+      await fs.writeFile(path.join(cache, "renderer-owned"), "opaque");
       const dir = path.dirname(cwd);
       if (renders > 1 && installs < 3)
         assert.equal(
@@ -122,6 +134,12 @@ test("branch build workspace retains caches, resets sources, and publishes immut
   await assert.rejects(builder.start("develop", "gleam run"), /cleanup/);
   await cleaning;
   await builder.clean("develop"); // Already empty is harmless.
+  assert.equal(
+    await fs
+      .stat(path.join(ws.root, "build-cache", "images"))
+      .catch(() => null),
+    null,
+  );
   assert.equal(record.preview.id, preview);
   assert.equal(
     (await ws.source("develop", "src/content/ch1.wly")).content,

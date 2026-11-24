@@ -1,8 +1,5 @@
 import ansel/image
 import either_or.{Either}
-import filepath
-import gleam/bit_array
-import gleam/crypto
 import gleam/dict.{type Dict}
 import gleam/dynamic/decode
 import gleam/float
@@ -14,6 +11,8 @@ import gleam/option.{type Option, None, Some}
 import gleam/regexp
 import gleam/result
 import gleam/string.{inspect as ins}
+import image_cache
+import image_filename
 import on
 import shellout
 import simplifile
@@ -108,8 +107,9 @@ type InnerParam {
     src_2_src_img_length: Int,
     build_2_build_img: String,
     image_map_path: String,
-    src_img_mod_times: LastModifiedTimes,
-    build_img_files: FileSet,
+    source_files: FileSet,
+    cache_recipe: String,
+    cache_directory: String,
     cleanup_image_map: Bool,
     cleanup_build_img: Bool,
     quick_mode: Bool,
@@ -134,9 +134,8 @@ fn param_to_inner_param(param: Param) -> Result(InnerParam, DesugaringError) {
   let exec_2_src_img = exec_2_src <> src_2_src_img
   let exec_2_build_img = exec_2_build <> build_2_build_img
   let src_2_src_img_length = src_2_src_img |> string.length()
-  let build_img_files = load_relative_file_set(exec_2_build_img)
 
-  use src_img_mod_times <- on.ok(load_last_modified_times(exec_2_src_img))
+  let source_files = load_relative_file_set(exec_2_src_img)
 
   InnerParam(
     exec_2_src: exec_2_src,
@@ -147,8 +146,9 @@ fn param_to_inner_param(param: Param) -> Result(InnerParam, DesugaringError) {
     src_2_src_img_length: src_2_src_img_length,
     build_2_build_img: build_2_build_img,
     image_map_path: param.4,
-    src_img_mod_times: src_img_mod_times,
-    build_img_files: build_img_files,
+    source_files: source_files,
+    cache_recipe: image_cache.recipe(),
+    cache_directory: image_cache.directory(),
     cleanup_image_map: param.5,
     cleanup_build_img: param.6,
     quick_mode: param.7,
@@ -165,6 +165,8 @@ type BuildImgInfo {
   BuildImgInfo(
     build_version: String,
     build_version_created_on: Int,
+    cache_key: String,
+    output_digest: String,
     build_method: BuildMethod,
     build_version_size: Int,
     original_size: Int,
@@ -181,10 +183,6 @@ type BuildImgInfo {
 type ImageMap =
   Dict(String, BuildImgInfo)
 
-type LastModifiedTimes =
-  Dict(String, Int)
-
-// path -> last_modified timestamp
 type FileSet =
   Dict(String, Nil)
 
@@ -230,6 +228,14 @@ fn build_img_info_prettified_json_string(
   <> margin2
   <> "\"build-version-created-on\": "
   <> { json.int(info.build_version_created_on) |> json.to_string }
+  <> ",\n"
+  <> margin2
+  <> "\"cache-key\": "
+  <> { json.string(info.cache_key) |> json.to_string }
+  <> ",\n"
+  <> margin2
+  <> "\"output-digest\": "
+  <> { json.string(info.output_digest) |> json.to_string }
   <> ",\n"
   <> margin2
   <> "\"build-method\": "
@@ -298,6 +304,8 @@ fn build_img_info_decoder() -> decode.Decoder(BuildImgInfo) {
     "build-version-created-on",
     decode.int,
   )
+  use cache_key <- decode.optional_field("cache-key", "", decode.string)
+  use output_digest <- decode.optional_field("output-digest", "", decode.string)
   use build_method <- decode.field("build-method", decode.string)
   use build_version_size <- decode.field("build-version-size", decode.int)
   use original_size <- decode.field("original-size", decode.int)
@@ -330,6 +338,8 @@ fn build_img_info_decoder() -> decode.Decoder(BuildImgInfo) {
     BuildImgInfo(
       build_version: build_version,
       build_version_created_on: build_version_created_on,
+      cache_key: cache_key,
+      output_digest: output_digest,
       build_method: build_method,
       build_version_size: build_version_size,
       original_size: original_size,
@@ -452,49 +462,6 @@ fn save_image_map(
   }
 }
 
-fn load_last_modified_time_entries(
-  root: String,
-  directory: String,
-) -> Result(List(#(String, Int)), DesugaringError) {
-  use names <- on.error_ok(simplifile.read_directory(directory), fn(error) {
-    Error(DesugaringError(
-      desugarer_blame(460),
-      simplifile.describe_error(error),
-    ))
-  })
-  list.try_fold(names, [], fn(entries, name) {
-    let path = filepath.join(directory, name)
-    use info <- on.error_ok(simplifile.file_info(path), fn(error) {
-      Error(DesugaringError(
-        desugarer_blame(468),
-        simplifile.describe_error(error),
-      ))
-    })
-    case simplifile.file_info_type(info) {
-      simplifile.File ->
-        Ok([
-          #(core.assert_drop_prefix(path, root), info.mtime_seconds),
-          ..entries
-        ])
-      simplifile.Directory -> {
-        use nested <- on.ok(load_last_modified_time_entries(root, path))
-        Ok(list.append(nested, entries))
-      }
-      _ -> Ok(entries)
-    }
-  })
-}
-
-fn load_last_modified_times(
-  exec_2_src_img: String,
-) -> Result(LastModifiedTimes, DesugaringError) {
-  use entries <- on.ok(load_last_modified_time_entries(
-    exec_2_src_img,
-    exec_2_src_img,
-  ))
-  Ok(dict.from_list(entries))
-}
-
 fn load_relative_file_set(directory: String) -> FileSet {
   case simplifile.get_files(directory) {
     Ok(paths) ->
@@ -517,31 +484,13 @@ fn img_extension(src: String, blame: Blame) -> Result(String, DesugaringError) {
   }
 }
 
-fn hash_is_used(image_map: ImageMap, hash: String) -> Bool {
-  image_map
-  |> dict.values
-  |> list.any(fn(info) {
-    info.build_version
-    |> string.split("/")
-    |> list.last
-    |> result.map(string.starts_with(_, hash))
-    |> result.unwrap(False)
-  })
-}
-
 fn get_hashed_filename(original_name: String, image_map: ImageMap) -> String {
-  let big_string =
-    original_name
-    |> bit_array.from_string
-    |> crypto.hash(crypto.Md5, _)
-    |> bit_array.base64_url_encode(False)
-  let s1 = string.slice(big_string, 0, 4)
-  use <- on.eager_false_true(hash_is_used(image_map, s1), s1)
-  let s2 = string.slice(big_string, 4, 8)
-  use <- on.false_true(hash_is_used(image_map, s1 <> s2), fn() { s1 <> s2 })
-  let s3 = string.slice(big_string, 8, 12)
-  s1 <> s2 <> s3
-  // 64^(-12) = 2^{-72} seems pretty unlucky! let us know!
+  // Rebuilding an image must not collide with its own previous output.
+  let occupied =
+    image_map
+    |> dict.to_list
+    |> list.map(fn(entry) { #(entry.0, entry.1.build_version) })
+  image_filename.allocate(original_name, occupied)
 }
 
 fn get_modified_date(path: String) -> Result(Int, simplifile.FileError) {
@@ -624,37 +573,36 @@ fn create_dirs_on_path_to_file(
   |> simplifile.create_directory_all
 }
 
-fn build_or_miraculously_retrieve_existing_build_image(
+fn build_image(
   via: BuildMethod,
   exec_2_src_version: String,
   exec_2_build_img: String,
   build_img_2_build_version: String,
-  original_last_modified: Int,
+  cache_key: String,
+  cache_directory: String,
 ) -> Result(BuildImgInfo, DesugaringError) {
   let exec_2_build_version = exec_2_build_img <> build_img_2_build_version
   let _ = create_dirs_on_path_to_file(exec_2_build_version)
 
+  use restored <- on.ok(
+    cache_io(image_cache.restore(
+      cache_directory,
+      cache_key,
+      exec_2_build_version,
+    )),
+  )
+  use _ <- on.ok(case restored {
+    True -> {
+      io.println(whoami <> ": cached " <> exec_2_src_version)
+      Ok(Nil)
+    }
+    False -> run_shellout(via, exec_2_src_version, exec_2_build_version)
+  })
+  use output_digest <- on.ok(
+    cache_io(image_cache.file_digest(exec_2_build_version)),
+  )
   use _ <- on.ok(
-    case
-      {
-        { simplifile.is_file(exec_2_build_version) == Ok(True) }
-        && { get_modified_date(exec_2_build_version) |> result.unwrap(-1) }
-        > original_last_modified
-      }
-    {
-      True -> {
-        io.println(
-          whoami
-          <> ": found existing "
-          <> { via |> build_method_to_string |> string.uppercase }
-          <> "-build of "
-          <> exec_2_src_version
-          <> "; adding back to dictionary",
-        )
-        Ok(Nil)
-      }
-      False -> run_shellout(via, exec_2_src_version, exec_2_build_version)
-    },
+    cache_io(image_cache.save(cache_directory, cache_key, exec_2_build_version)),
   )
 
   use modified_date <- on.error_ok(
@@ -689,6 +637,8 @@ fn build_or_miraculously_retrieve_existing_build_image(
   BuildImgInfo(
     build_version: build_img_2_build_version,
     build_version_created_on: modified_date,
+    cache_key: cache_key,
+    output_digest: output_digest,
     build_method: via,
     build_version_size: new_size,
     original_size: original_size,
@@ -909,8 +859,8 @@ fn v_before(
 
   // escape #4: the source file does not exist; we escape,
   // but generate a warning
-  use last_modified <- on.error_ok(
-    dict.get(inner.src_img_mod_times, src_img_2_src_version),
+  use _ <- on.error_ok(
+    dict.get(inner.source_files, src_img_2_src_version),
     fn(_) {
       Ok(
         #(vxml, image_map, [
@@ -937,29 +887,34 @@ fn v_before(
     False -> SVGO
   }
 
+  use cache_key <- on.ok(
+    cache_io(image_cache.key(
+      inner.exec_2_src_img <> src_img_2_src_version,
+      src_img_2_src_version,
+      build_method_to_string(cmd),
+      inner.cache_recipe,
+    )),
+  )
+
   let up_to_date_img_info = {
     use img_info <- on.error_ok(
       dict.get(image_map, src_img_2_src_version),
       fn(_) { None },
     )
-    use <- on.eager_true_false(
-      last_modified > img_info.build_version_created_on,
-      None,
-    )
-    use <- on.eager_true_false(
-      cmd == SVGO && img_info.build_method != cmd && !inner.quick_mode,
-      None,
-    )
+    use <- on.eager_true_false(cache_key != img_info.cache_key, None)
+    use <- on.eager_true_false(img_info.build_method != cmd, None)
     use <- on.true_false(
-      img_info.used_last_build
-        || dict.has_key(inner.build_img_files, img_info.build_version),
+      image_cache.valid(
+        inner.exec_2_build_img <> img_info.build_version,
+        img_info.output_digest,
+      ),
       fn() { Some(img_info) },
     )
     io.println(
       whoami
       <> ": "
       <> img_info.build_version
-      <> " missing from "
+      <> " missing or corrupt in "
       <> inner.exec_2_build_img
       <> " (!!)",
     )
@@ -1008,12 +963,13 @@ fn v_before(
       <> extension
   }
 
-  use img_info <- on.ok(build_or_miraculously_retrieve_existing_build_image(
+  use img_info <- on.ok(build_image(
     cmd,
     inner.exec_2_src_img <> src_img_2_src_version,
     inner.exec_2_build_img,
     build_img_2_build_version,
-    last_modified,
+    cache_key,
+    inner.cache_directory,
   ))
 
   use img_info <- on.ok(ensure_intrinsic_dimensions(
@@ -1191,4 +1147,15 @@ fn assertive_tests_data() -> List(testing.AssertiveTestData(Param)) {
 
 pub fn assertive_tests() {
   testing.collection(name, assertive_tests_data(), constructor)
+}
+
+fn cache_io(
+  value: Result(a, simplifile.FileError),
+) -> Result(a, DesugaringError) {
+  result.map_error(value, fn(error) {
+    DesugaringError(
+      bl.no_blame,
+      "Image cache: " <> simplifile.describe_error(error),
+    )
+  })
 }
