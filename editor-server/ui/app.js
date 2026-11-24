@@ -71,7 +71,14 @@ const button = (text, fn, className = "") => {
 function branchInfo() {
   return state.branches.find((b) => b.name === state.branch);
 }
+const canPreview = () =>
+  !!state.preview && state.preview.branch === state.branch;
 function update() {
+  const previewButton = $('nav [data-mode="preview"]');
+  previewButton.disabled = !canPreview();
+  previewButton.title = canPreview()
+    ? "Open the latest successful build"
+    : "Build this branch successfully to enable Preview";
   const info = branchInfo();
   $("#branch-pill").textContent = state.branch
     ? `${state.branch} · ${info?.ahead ?? "?"} ↑ / ${info?.behind ?? "?"} ↓${dirty().length ? " · edited" : ""}`
@@ -117,6 +124,7 @@ function update() {
   $("#goggles").setAttribute("aria-pressed", String(state.goggles));
 }
 function mode(value) {
+  if (value === "preview" && !canPreview()) return;
   if (value !== "branches" && !state.branch) {
     notice("Choose a branch first.");
     return;
@@ -223,6 +231,8 @@ async function chooseBranch(name) {
   state.documents.clear();
   state.file = null;
   state.revision = null;
+  state.preview = null;
+  update();
   state.files = (await api("files?branch=" + encodeURIComponent(name))).files;
   state.previewPath = null;
   state.pendingTarget = null;
