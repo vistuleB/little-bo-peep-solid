@@ -1,0 +1,30 @@
+name: book-editor-rehearsal
+services:
+  editor:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "127.0.0.1:${EDITOR_PUBLIC_PORT:-3020}:3019"
+    environment:
+      EDITOR_ORIGIN: "http://localhost:${EDITOR_PUBLIC_PORT:-3020}"
+      EDITOR_PREVIEW_DOMAIN: localhost
+      EDITOR_REPO_URL: "${EDITOR_CONTAINER_REPO_URL:-https://github.com/vistuleB/little-bo-peep-solid.git}"
+      EDITOR_GIT_NAME: "Book editor"
+      EDITOR_GIT_EMAIL: "editor@localhost"
+    volumes:
+      - editor-data:/data
+    secrets:
+      - editor_token
+      - github_token
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 4g
+    cpus: 2
+secrets:
+  editor_token:
+    file: ../../.editor-data/container-secrets/editor-token
+  github_token:
+    file: ../../.editor-data/container-secrets/github-token
+volumes:
+  editor-data:

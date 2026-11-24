@@ -30,6 +30,10 @@ Each successful preview includes a manifest of its revision, command, pages, and
 
 Set `PLACE=LOCAL` in your desktop `.env`, replacing `AUTHOR_MODE=true`. PLACE is independent of NODE_ENV. The renderer and app config both read it; explicit process environment overrides `.env`. `VITE_ENV` remains a separate existing flag.
 
+## Container rehearsal
+
+See [deploy/README.md](deploy/README.md) for the separate Linux image, persistent volume, runtime credentials, and an automated build/restart rehearsal on port 3020.
+
 ## Remote deployment
 
 Keep the official product deployment separate. Run this service behind HTTPS with authenticated editing and public previews:
