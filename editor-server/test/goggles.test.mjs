@@ -10,7 +10,8 @@ function preview(rows, { contentPresent = true, headerHeight = 0 } = {}) {
   let timer;
   const events = {},
     sent = [],
-    scrolls = [];
+    scrolls = [],
+    keys = [];
   const parent = { postMessage: (data) => sent.push(data) };
   const fragments = rows.map(([file, line, top, outside = false]) => ({
     outside,
@@ -26,6 +27,12 @@ function preview(rows, { contentPresent = true, headerHeight = 0 } = {}) {
   }));
   vm.runInNewContext(script, {
     document: {
+      activeElement: {
+        dispatchEvent: (event) => {
+          keys.push(event);
+          return false;
+        },
+      },
       currentScript: { dataset: { editorOrigin: "http://editor" } },
       querySelectorAll: () => fragments,
       querySelector: (selector) =>
@@ -51,6 +58,12 @@ function preview(rows, { contentPresent = true, headerHeight = 0 } = {}) {
         },
       }),
     },
+    KeyboardEvent: class {
+      constructor(type, options) {
+        this.type = type;
+        Object.assign(this, options);
+      }
+    },
     parent,
     location: { pathname: "/article/test" },
     innerHeight: 400,
@@ -73,6 +86,7 @@ function preview(rows, { contentPresent = true, headerHeight = 0 } = {}) {
   return {
     sent,
     scrolls,
+    keys,
     settle: () => {
       const fn = timer;
       timer = null;
@@ -184,4 +198,22 @@ test("snail excludes the obscured top 54px for both live locks and source jumps"
   p.message({ action: "track-source" });
   assert.equal(p.sent.at(-1).file, "visible.wly");
   assert.equal(p.sent.at(-1).line, 20);
+});
+
+test("shell keyboard forwarding dispatches one app event with modifiers intact", () => {
+  const p = preview([]);
+  p.message({
+    action: "keyboard",
+    type: "keydown",
+    key: "ArrowRight",
+    code: "ArrowRight",
+    shiftKey: true,
+    repeat: true,
+  });
+  assert.equal(p.keys.length, 1);
+  assert.equal(p.keys[0].key, "ArrowRight");
+  assert.equal(p.keys[0].shiftKey, true);
+  assert.equal(p.keys[0].repeat, true);
+  p.message({ action: "keyboard", type: "click", key: "x" });
+  assert.equal(p.keys.length, 1);
 });

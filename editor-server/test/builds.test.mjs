@@ -233,6 +233,26 @@ test("branch build workspace retains caches, resets sources, and publishes immut
   assert.equal(repaired.status, "ready", repaired.log);
   assert.match(repaired.log, /retrying once/);
   assert.equal(installs, 3);
+  let published = 0;
+  const incremental = new Builds(
+    ws,
+    async (...args) => {
+      assert.notDeepEqual(args.slice(0, 2), ["npm", ["run", "build"]]);
+      return execute(...args);
+    },
+    {
+      publish: async (_dir, manifest) => {
+        published++;
+        return { ...manifest, live: true };
+      },
+      exclusive: (fn) => fn(),
+      stop: async () => {},
+    },
+  );
+  const fast = await build(incremental);
+  assert.equal(fast.status, "ready", fast.log);
+  assert.equal(fast.manifest.live, true);
+  assert.equal(published, 1);
 });
 
 test("aborting a subprocess terminates its process group", async () => {

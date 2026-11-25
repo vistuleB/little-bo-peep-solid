@@ -1,5 +1,6 @@
 (() => {
   const origin = document.currentScript.dataset.editorOrigin;
+  const revision = document.currentScript.dataset.revision;
   let enabled = false,
     layer,
     lastLayout = "";
@@ -76,7 +77,7 @@
       status: "locked",
       file: fragment.dataset.wlyFile,
       line: Number(fragment.dataset.wlyLine),
-      revision: fragment.dataset.wlyRevision,
+      revision: revision || fragment.dataset.wlyRevision,
     });
   }
   let tracking = false,
@@ -179,7 +180,7 @@
           action: "source",
           file: fragment.dataset.wlyFile,
           line: Number(fragment.dataset.wlyLine),
-          revision: fragment.dataset.wlyRevision,
+          revision: revision || fragment.dataset.wlyRevision,
         });
       };
       layer.append(button);
@@ -203,6 +204,51 @@
       event.data?.kind !== "writerly-editor"
     )
       return;
+    if (event.data.action === "keyboard") {
+      const data = event.data;
+      if (
+        !["keydown", "keyup"].includes(data.type) ||
+        typeof data.key !== "string"
+      )
+        return;
+      const key = new KeyboardEvent(data.type, {
+        key: data.key,
+        code: data.code,
+        repeat: !!data.repeat,
+        altKey: !!data.altKey,
+        ctrlKey: !!data.ctrlKey,
+        metaKey: !!data.metaKey,
+        shiftKey: !!data.shiftKey,
+        bubbles: true,
+        cancelable: true,
+      });
+      const target = document.activeElement || document.body;
+      const unhandled = target.dispatchEvent(key);
+      // Synthetic events do not perform browser default scrolling.
+      if (
+        unhandled &&
+        data.type === "keydown" &&
+        !data.ctrlKey &&
+        !data.metaKey &&
+        !data.altKey
+      ) {
+        const amount =
+          data.key === "PageDown" || data.key === " "
+            ? innerHeight * 0.8
+            : data.key === "PageUp"
+              ? -innerHeight * 0.8
+              : data.key === "ArrowDown"
+                ? 40
+                : data.key === "ArrowUp"
+                  ? -40
+                  : 0;
+        if (amount) scrollBy({ top: amount, behavior: "auto" });
+        if (data.key === "Home") scrollTo({ top: 0 });
+        if (data.key === "End")
+          scrollTo({ top: document.documentElement.scrollHeight });
+      }
+      return;
+    }
     if (event.data.action === "tracking") {
       tracking = !!event.data.enabled;
       clearTimeout(trackingTimer);

@@ -6,7 +6,8 @@ import { sourceKey, running } from "./ui/preview-state.mjs";
 import { buildArguments } from "./commands.mjs";
 
 export class Builds {
-  constructor(workspace, execute = run) {
+  constructor(workspace, execute = run, live = null) {
+    this.live = live;
     this.execute = execute;
     this.workspace = workspace;
     this.jobs = new Map();
@@ -26,6 +27,7 @@ export class Builds {
       throw new Error("Unknown branch.");
     this.cleaning = true;
     try {
+      if (this.live) await this.live.exclusive(() => this.live.stop());
       const ws = this.workspace;
       await ws.exclusive(async () => {
         const dir = path.join(ws.root, "build-workspaces", idFor(branch));
@@ -104,6 +106,7 @@ export class Builds {
       revision,
       command,
       status: "queued",
+      production: !!snapshot.production,
       draft: changes.length > 0,
       sourceKey: inputKey,
       log: "",
@@ -195,6 +198,7 @@ export class Builds {
         cached.npm !== npmKey ||
         !(await exists(path.join(dir, "node_modules")))
       ) {
+        if (this.live) await this.live.exclusive(() => this.live.stop());
         await fs.rm(stamp, { force: true });
         await this.execute(
           "npm",
@@ -237,6 +241,25 @@ export class Builds {
           force: true,
         });
         await render();
+      }
+      if (this.live && !job.production) {
+        check();
+        const manifest = await sourceManifest(dir, job);
+        // Publication is short and non-cancellable; rendering above remains cancellable.
+        job.status = "publishing";
+        job.manifest = await this.live.publish(
+          dir,
+          manifest,
+          npmKey,
+          log,
+          signal,
+        );
+        await ws.exclusive(async () => {
+          ws.state.branches[job.branch].preview = job.manifest;
+          await ws.save();
+        });
+        job.status = "ready";
+        return;
       }
       await this.execute("npm", ["run", "build"], dir, options);
       check();
