@@ -1,3 +1,4 @@
+import { needsBuild, running } from "./preview-state.mjs";
 const $ = (selector) => document.querySelector(selector);
 const state = {
   branch: null,
@@ -11,12 +12,16 @@ const state = {
   preview: null,
   previewPath: null,
   goggles: false,
-  followSource: false,
+  followSource: true,
   tracking: { status: "searching" },
-  followPreview: false,
+  followPreview: true,
   pendingTarget: null,
   mode: "branches",
   job: null,
+  jobBranch: null,
+  jobStatus: null,
+  buildStarting: false,
+  buildPanel: false,
 };
 const dirty = () =>
   [...state.documents].filter(([, doc]) => doc.content !== doc.original);
@@ -75,13 +80,14 @@ const canPreview = () =>
   !!state.preview && state.preview.branch === state.branch;
 function update() {
   const previewButton = $('nav [data-mode="preview"]');
-  previewButton.disabled = !canPreview();
-  previewButton.title = canPreview()
-    ? "Open the latest successful build"
-    : "Build this branch successfully to enable Preview";
+  previewButton.disabled = !state.branch;
+  previewButton.title = "Preview current edits (build if needed)";
+  $("#app").dataset.mode = state.mode;
   const info = branchInfo();
   $("#branch-pill").textContent = state.branch
-    ? `${state.branch} · ${info?.ahead ?? "?"} ↑ / ${info?.behind ?? "?"} ↓${dirty().length ? " · edited" : ""}`
+    ? state.mode === "preview"
+      ? `${state.branch}${state.preview ? " · " + state.preview.revision.slice(0, 8) + (state.preview.draft ? " · draft" : "") : ""}`
+      : `${state.branch} · ${info?.ahead ?? "?"} ↑ / ${info?.behind ?? "?"} ↓${dirty().length ? " · edited" : ""}`
     : "Choose a branch";
   $("#source-meta").textContent = state.file
     ? `${dirty().length ? dirty().length + " edited file(s)" : "Committed"} · ${state.revision?.slice(0, 8) || ""}`
@@ -90,41 +96,40 @@ function update() {
   $("#clean-build-cache").disabled =
     $("#source-build").disabled =
     $("#build").disabled =
-      !!state.job || !state.branch;
+      !!state.job || state.buildStarting || !state.branch;
   $("#file-picker").textContent = state.file || "Choose a .wly file ▾";
   $("#editor").disabled = !state.file;
   $("#build-settings").hidden = !state.branch;
-  $("#preview-meta").textContent = state.preview
-    ? `${state.preview.revision.slice(0, 8)}${state.preview.revision !== info?.revision ? " · earlier build" : ""}`
-    : "No successful build";
-  $("#preview-tools").hidden = !["source", "preview"].includes(state.mode);
-  const inPreview = state.mode === "preview";
-  $("#follow").setAttribute(
-    "aria-pressed",
-    String(inPreview ? state.followSource : state.followPreview),
-  );
-  $("#follow span").textContent = inPreview ? "🐌" : "🪁";
-  const followLabel = inPreview
-    ? "Snail trail: Source follows the passage you are reading"
-    : "Kite chase: Preview follows the visible editor line instead of its previous position";
-  const tracking = state.tracking;
-  const status = inPreview && state.followSource ? tracking.status : "off";
-  $("#follow").dataset.tracking = status;
-  const detail =
-    status === "locked"
-      ? ` · ${tracking.file}:${tracking.line}`
-      : status === "searching"
-        ? " · Finding source…"
-        : status === "none"
-          ? " · No visible source found"
-          : "";
-  $("#follow").title = followLabel + detail;
-  $("#follow").setAttribute("aria-label", followLabel + detail);
-  $("#goggles").disabled = !state.preview || !inPreview;
-  $("#goggles").setAttribute("aria-pressed", String(state.goggles));
+  const showingBuild = state.buildPanel && state.jobBranch === state.branch;
+  $("#build-terminal").hidden = !showingBuild;
+  const active = state.buildStarting || running(state.jobStatus);
+  $("#build-terminal").classList.toggle("is-running", active);
+  $("#build-status").textContent = state.buildStarting
+    ? "Preparing build…"
+    : {
+        queued: "Queued…",
+        building: "Building preview…",
+        cancelling: "Cancelling…",
+        publishing: "Publishing preview…",
+        failed: "Build failed",
+        cancelled: "Build cancelled",
+        ready: "Preview ready",
+      }[state.jobStatus] || "Build";
+  $("#cancel-build").hidden = !active;
+  $("#cancel-build").disabled =
+    !state.job || ["cancelling", "publishing"].includes(state.jobStatus);
+  $("#build-result-actions").hidden = active;
+  $("#previous-preview").hidden = !canPreview();
+  $("#retry-build").disabled = !!state.job || state.buildStarting;
+  const sourceButton = $('nav [data-mode="source"]');
+  sourceButton.dataset.tracking =
+    state.mode === "preview" ? state.tracking.status : "off";
+  sourceButton.title =
+    state.mode === "preview"
+      ? "Return to source at the visible passage"
+      : "Source";
 }
 function mode(value) {
-  if (value === "preview" && !canPreview()) return;
   if (value !== "branches" && !state.branch) {
     notice("Choose a branch first.");
     return;
@@ -507,51 +512,112 @@ addEventListener("message", (event) => {
         );
     });
 });
-async function build() {
-  if (state.job) return;
-  if (
-    !(await settle(
-      "Build uses committed files. Commit & continue builds your changes.",
-    ))
-  )
-    return;
-  const job = await api("build", {
-    branch: state.branch,
-    command: selectedCommand(),
-  });
-  state.job = job.id;
-  $("#build-log").open = true;
-  update();
-  poll();
+function currentChanges() {
+  return dirty().map(([file, doc]) => ({ file, content: doc.content }));
 }
-async function poll() {
+async function enterPreview() {
+  if (!state.branch) return;
+  const rebuild = await needsBuild(
+    state.preview,
+    state.branch,
+    state.revision || branchInfo()?.revision,
+    currentChanges(),
+    selectedCommand(),
+  );
+  mode("preview");
+  if (state.job || state.buildStarting) {
+    if (state.jobBranch !== state.branch)
+      notice(
+        "Another branch is building. Wait for it to finish before building this preview.",
+      );
+    else state.buildPanel = true;
+    update();
+    return;
+  }
+  if (rebuild) await build();
+  else {
+    state.buildPanel = false;
+    update();
+  }
+}
+async function build() {
+  if (state.job || state.buildStarting || !state.branch) return;
+  state.buildStarting = true;
+  state.jobBranch = state.branch;
+  state.jobStatus = "queued";
+  state.buildPanel = true;
+  $("#preview-log").textContent = "Preparing current editor contents…";
+  mode("preview");
+  update();
   try {
-    const job = await api("job?id=" + state.job);
+    const job = await api("build", {
+      branch: state.branch,
+      command: selectedCommand(),
+      revision: state.revision || branchInfo()?.revision,
+      changes: currentChanges(),
+    });
+    state.job = job.id;
+    state.jobStatus = job.status;
+    $("#build-log").open = true;
+    poll(job.id);
+  } catch (error) {
+    state.jobStatus = "failed";
+    $("#preview-log").textContent = error.message;
+  } finally {
+    state.buildStarting = false;
+    update();
+  }
+}
+async function poll(id) {
+  if (id !== state.job) return;
+  try {
+    const job = await api("job?id=" + id);
+    if (id !== state.job) return;
+    state.jobStatus = job.status;
     $("#log").textContent = job.log || job.status;
-    if (["queued", "building"].includes(job.status)) {
-      setTimeout(poll, 1200);
+    const terminal = $("#preview-log");
+    const atBottom =
+      terminal.scrollHeight - terminal.scrollTop - terminal.clientHeight < 32;
+    terminal.textContent = job.log || job.status;
+    if (atBottom) terminal.scrollTop = terminal.scrollHeight;
+    update();
+    if (running(job.status)) {
+      setTimeout(() => poll(id), 1000);
       return;
     }
-    state.job = null;
     if (job.status === "ready") {
       await refresh();
       if (state.branch === job.branch) {
         state.preview = { ...job.manifest, url: job.url };
+        state.buildPanel = false;
         renderCommands();
         if (state.mode === "preview") positionPreview();
       }
-      notice("Preview built.");
-    } else
-      notice(
-        "Build failed. The previous successful preview is still available.",
-      );
+      notice("");
+    }
+    state.job = null;
     update();
   } catch (error) {
-    state.job = null;
-    notice(error.message);
-    update();
+    notice("Waiting for build connection: " + error.message);
+    if (id === state.job) setTimeout(() => poll(id), 2500);
   }
 }
+$("#cancel-build").onclick = async () => {
+  if (!state.job) return;
+  state.jobStatus = "cancelling";
+  update();
+  try {
+    await api("cancel-build", { id: state.job });
+  } catch (error) {
+    notice(error.message);
+  }
+};
+$("#retry-build").onclick = () => perform(build);
+$("#previous-preview").onclick = () => {
+  state.buildPanel = false;
+  positionPreview();
+  update();
+};
 $("#login-form").onsubmit = (event) => {
   event.preventDefault();
   perform(async () => {
@@ -572,6 +638,10 @@ $("nav").onclick = (event) => {
   const target = event.target.closest("[data-mode]");
   if (!target) return;
   if (target.dataset.mode === state.mode) return;
+  if (target.dataset.mode === "preview") {
+    perform(enterPreview);
+    return;
+  }
   if (
     target.dataset.mode === "source" &&
     state.mode === "preview" &&
@@ -597,14 +667,6 @@ $("#discard").onclick = discard;
 $("#build").onclick = $("#source-build").onclick = () => perform(build);
 $("#custom-command").oninput = () => {
   $("#custom-radio").checked = true;
-};
-$("#goggles").onclick = () => goggles(!state.goggles);
-$("#follow").onclick = () => {
-  if (state.mode === "preview") state.followSource = !state.followSource;
-  else state.followPreview = !state.followPreview;
-  state.tracking = { status: "searching" };
-  syncTracking();
-  update();
 };
 perform(boot);
 

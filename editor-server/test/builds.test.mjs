@@ -4,6 +4,7 @@ import { promises as fs } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { Workspace, run, idFor } from "../workspace.mjs";
+import { running, sourceKey, needsBuild } from "../ui/preview-state.mjs";
 import { Builds } from "../builds.mjs";
 
 test("branch build workspace retains caches, resets sources, and publishes immutable previews", async (t) => {
@@ -82,8 +83,7 @@ test("branch build workspace retains caches, resets sources, and publishes immut
   };
   const build = async (builder) => {
     const job = await builder.start("develop", "gleam run");
-    while (["queued", "building"].includes(job.status))
-      await new Promise((r) => setTimeout(r, 10));
+    while (running(job.status)) await new Promise((r) => setTimeout(r, 10));
     return job;
   };
   let builder = new Builds(ws, execute);
@@ -112,13 +112,81 @@ test("branch build workspace retains caches, resets sources, and publishes immut
     ),
     "second",
   );
+
+  const latest = await ws.source("develop", "src/content/ch1.wly");
+  const changes = [{ file: "src/content/ch1.wly", content: "browser draft" }];
+  const draft = await builder.start("develop", "gleam run", {
+    revision: latest.revision,
+    changes,
+  });
+  while (running(draft.status)) await new Promise((r) => setTimeout(r, 10));
+  assert.equal(draft.status, "ready", draft.log);
+  assert.equal(
+    await fs.readFile(
+      path.join(ws.root, "previews", draft.id, "index.html"),
+      "utf8",
+    ),
+    "browser draft",
+  );
+  assert.equal(
+    (await ws.source("develop", "src/content/ch1.wly")).content,
+    "second",
+  );
+  assert.equal(await ws.git(["status", "--porcelain"], record.dir), "");
+  assert.equal(
+    await needsBuild(
+      draft.manifest,
+      "develop",
+      latest.revision,
+      changes,
+      "gleam run",
+    ),
+    false,
+  );
+  assert.equal(
+    await needsBuild(
+      draft.manifest,
+      "develop",
+      latest.revision,
+      [],
+      "gleam run",
+    ),
+    true,
+  );
+  assert.equal((await build(builder)).status, "ready");
+  const preserved = record.preview.id;
+  let entered;
+  const started = new Promise((resolve) => (entered = resolve));
+  const cancellable = new Builds(ws, async (...args) => {
+    if (args[0] !== "gleam") return execute(...args);
+    entered();
+    await new Promise((resolve, reject) =>
+      args[3].signal.addEventListener(
+        "abort",
+        () => reject(new Error("stopped")),
+        { once: true },
+      ),
+    );
+  });
+  const cancelled = await cancellable.start("develop", "gleam run");
+  await started;
+  cancellable.cancel(cancelled.id);
+  assert.equal(cancellable.busy(), true);
+  while (running(cancelled.status)) await new Promise((r) => setTimeout(r, 10));
+  assert.equal(cancelled.status, "cancelled");
+  assert.equal(record.preview.id, preserved);
+  assert.equal(cancellable.busy(), false);
+  await assert.rejects(
+    builder.start("develop", "gleam run", { revision: "stale", changes }),
+    /Branch changed/,
+  );
   await fs.writeFile(path.join(record.dir, "package-lock.json"), "two");
   await ws.git(["add", "package-lock.json"], record.dir);
   await ws.git(["commit", "-m", "dependency change"], record.dir);
   fail = true;
   assert.equal((await build(builder)).status, "failed");
   assert.equal(installs, 2);
-  assert.equal(record.preview.id, second.id);
+  assert.equal(record.preview.id, preserved);
   fail = false;
   assert.equal((await build(builder)).status, "ready");
   assert.equal(installs, 2);
@@ -165,4 +233,28 @@ test("branch build workspace retains caches, resets sources, and publishes immut
   assert.equal(repaired.status, "ready", repaired.log);
   assert.match(repaired.log, /retrying once/);
   assert.equal(installs, 3);
+});
+
+test("aborting a subprocess terminates its process group", async () => {
+  const controller = new AbortController();
+  let grandchild;
+  const pending = run(
+    process.execPath,
+    [
+      "-e",
+      'const {spawn}=require("node:child_process"); const c=spawn(process.execPath,["-e","setInterval(()=>{},1000)"],{stdio:"ignore"}); console.log(c.pid); setInterval(()=>{},1000)',
+    ],
+    process.cwd(),
+    {
+      signal: controller.signal,
+      log(text) {
+        grandchild = Number(text.trim());
+        controller.abort();
+      },
+    },
+  );
+  await assert.rejects(pending);
+  assert.ok(grandchild > 0);
+  await new Promise((r) => setTimeout(r, 100));
+  assert.throws(() => process.kill(grandchild, 0), { code: "ESRCH" });
 });

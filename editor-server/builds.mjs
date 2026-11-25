@@ -2,6 +2,7 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { createHash, randomBytes } from "node:crypto";
 import { idFor, run } from "./workspace.mjs";
+import { sourceKey, running } from "./ui/preview-state.mjs";
 import { buildArguments } from "./commands.mjs";
 
 export class Builds {
@@ -9,14 +10,13 @@ export class Builds {
     this.execute = execute;
     this.workspace = workspace;
     this.jobs = new Map();
+    this.controllers = new Map();
   }
   busy() {
     return (
       this.starting ||
       this.cleaning ||
-      [...this.jobs.values()].some((job) =>
-        ["queued", "building"].includes(job.status),
-      )
+      [...this.jobs.values()].some((job) => running(job.status))
     );
   }
   async clean(branch) {
@@ -47,19 +47,53 @@ export class Builds {
       this.cleaning = false;
     }
   }
-  async start(branch, command) {
+  cancel(id) {
+    const job = this.jobs.get(id);
+    if (!job) throw new Error("Unknown build.");
+    if (["queued", "building", "cancelling"].includes(job.status)) {
+      job.status = "cancelling";
+      this.controllers.get(id)?.abort();
+    }
+    return { id, status: job.status };
+  }
+  async start(branch, command, snapshot = {}) {
     const ws = this.workspace;
     buildArguments(command);
     if (this.busy())
       throw new Error("A build or cache cleanup is already running.");
+    let revision, inputKey;
+    const changes = structuredClone(snapshot.changes || []);
+    if (!Array.isArray(changes) || changes.length > 100)
+      throw new Error("Invalid build changes.");
     this.starting = true;
-    let revision;
     try {
       revision = await ws.exclusive(async () => {
         const record = await ws.open(branch);
+        const revision = await ws.git(["rev-parse", record.ref]);
+        if (
+          (snapshot.revision && snapshot.revision !== revision) ||
+          (changes.length && !snapshot.revision)
+        )
+          throw new Error(
+            "Branch changed. Reload before building; your edits are still available.",
+          );
+        const seen = new Set();
+        for (const change of changes) {
+          if (
+            !change ||
+            typeof change.file !== "string" ||
+            typeof change.content !== "string" ||
+            Buffer.byteLength(change.content) > 2_000_000 ||
+            seen.has(change.file)
+          )
+            throw new Error("Invalid build changes.");
+          seen.add(change.file);
+          await ws.source(branch, change.file);
+        }
         await ws.command(branch, command);
-        return ws.git(["rev-parse", record.ref]);
+        return revision;
       });
+      inputKey = await sourceKey(revision, changes);
     } finally {
       this.starting = false;
     }
@@ -70,22 +104,30 @@ export class Builds {
       revision,
       command,
       status: "queued",
+      draft: changes.length > 0,
+      sourceKey: inputKey,
       log: "",
       manifest: null,
     };
     this.jobs.set(id, job);
+    this.controllers.set(id, new AbortController());
     // Build snapshots independently; source editing remains available.
-    this.perform(job).catch(() => {});
+    this.perform(job, changes).catch(() => {});
     return job;
   }
-  async perform(job) {
+  async perform(job, changes = []) {
     const ws = this.workspace,
       dir = path.join(ws.root, "build-workspaces", idFor(job.branch));
     const log = (text) => {
       job.log = (job.log + text).slice(-100_000);
     };
-    job.status = "building";
+    const signal = this.controllers.get(job.id).signal;
+    const check = () => {
+      if (signal.aborted) throw new Error("Build cancelled.");
+    };
+    if (!signal.aborted) job.status = "building";
     try {
+      check();
       await fs.mkdir(path.dirname(dir), { recursive: true });
       await ws.exclusive(async () => {
         if (await exists(path.join(dir, ".git"))) {
@@ -106,7 +148,18 @@ export class Builds {
           await ws.git(["worktree", "add", "--detach", dir, job.revision]);
         }
       });
+      check();
+      for (const { file, content } of changes) {
+        const target = path.join(dir, file);
+        if (
+          (await fs.realpath(target)) !== target ||
+          !(await fs.lstat(target)).isFile()
+        )
+          throw new Error("Invalid build source path.");
+        await fs.writeFile(target, content);
+      }
       const options = {
+        signal,
         env: {
           PLACE: "EDITOR_SERVER",
           EDITOR_REVISION: job.revision,
@@ -186,6 +239,7 @@ export class Builds {
         await render();
       }
       await this.execute("npm", ["run", "build"], dir, options);
+      check();
       const manifest = await sourceManifest(dir, job);
       const publicDir = path.join(ws.root, "previews", job.id);
       await fs.mkdir(path.dirname(publicDir), { recursive: true });
@@ -198,14 +252,36 @@ export class Builds {
       );
       job.manifest = manifest;
       await ws.exclusive(async () => {
+        check();
+        job.status = "publishing";
         const record = ws.state.branches[job.branch];
+        const previous = record.preview;
         record.preview = manifest;
-        await ws.save();
+        try {
+          await ws.save();
+        } catch (error) {
+          record.preview = previous;
+          throw error;
+        }
       });
       job.status = "ready";
     } catch (error) {
-      job.status = "failed";
-      log("\n" + error.message);
+      const status = signal.aborted ? "cancelled" : "failed";
+      log(
+        "\n" +
+          (signal.aborted
+            ? "Build cancelled. Previous preview preserved."
+            : error.message),
+      );
+      await fs
+        .rm(path.join(ws.root, "previews", job.id), {
+          recursive: true,
+          force: true,
+        })
+        .catch(() => {});
+      job.status = status;
+    } finally {
+      this.controllers.delete(job.id);
     }
   }
 }
@@ -260,6 +336,8 @@ export async function sourceManifest(dir, job) {
     branch: job.branch,
     revision: job.revision,
     command: job.command,
+    sourceKey: job.sourceKey,
+    draft: !!job.draft,
     builtAt: new Date().toISOString(),
     pages,
   };

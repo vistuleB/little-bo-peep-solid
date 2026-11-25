@@ -72,37 +72,27 @@
         </div>
       </main>
       <main id="preview" hidden>
-        <div class="heading">
-          <span id="preview-meta" class="muted"></span>
-        </div>
         <p id="preview-empty">Build this branch to open its preview.</p>
         <iframe id="frame" title="Book preview" hidden></iframe>
+        <section id="build-terminal" hidden aria-label="Preview build">
+          <div class="terminal-heading">
+            <span id="build-status" role="status">Building preview…</span>
+            <button id="cancel-build">Cancel</button>
+          </div>
+          <pre id="preview-log" tabindex="0" aria-label="Build output"></pre>
+          <div id="build-result-actions" hidden>
+            <button id="retry-build">Try again</button>
+            <button id="previous-preview">Show previous preview</button>
+          </div>
+        </section>
       </main>
       <nav hidden>
-        <div
-          id="preview-tools"
-          hidden
-          role="group"
-          aria-label="Preview navigation tools"
-        >
-          <button id="follow" aria-pressed="false">
-            <span aria-hidden="true">🐌</span>
-          </button>
-          <button
-            id="goggles"
-            aria-pressed="false"
-            title="Blame goggles"
-            aria-label="Blame goggles"
-          >
-            <span aria-hidden="true">🥽</span>
-          </button>
-        </div>
         <button data-mode="branches">⑂<span>Branches</span></button
         ><button data-mode="source">⌨<span>Source</span></button
         ><button
           data-mode="preview"
           disabled
-          title="Build this branch successfully to enable Preview"
+          title="Choose a branch to preview"
         >
           ▤<span>Preview</span>
         </button>

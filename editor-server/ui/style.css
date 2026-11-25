@@ -215,12 +215,6 @@ nav button.active {
   display: flex;
   flex-direction: column;
 }
-#preview .heading {
-  padding: 8px 12px;
-}
-#preview-meta {
-  flex: 1;
-}
 #frame {
   border: 0;
   width: 100%;
@@ -349,115 +343,92 @@ body.busy {
   }
 }
 
-/* Two independently tappable wedges; the seam is 30 degrees from vertical. */
-nav {
-  position: relative;
+/* Compact reading chrome; tracking remains on without a separate toolbar. */
+#app[data-mode="preview"] header {
+  padding: 6px 10px;
 }
-#preview-tools {
-  position: absolute;
-  bottom: 100%;
-  right: 8px;
-  width: calc((100% - 16px) / 3);
-  height: 64px;
-  border: 1px solid #bdcdb9;
-  border-radius: 14px 14px 0 0;
-  overflow: hidden;
-  background: #f4f6f0;
-  box-shadow: 0 -3px 10px #203d2312;
-}
-#preview-tools button {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  border-radius: 0;
-  padding: 0;
-  color: #50664f;
-  background: #f4f6f0;
-}
-#preview-tools button span {
-  font-size: 25px;
-  margin: 0;
-}
-#follow {
-  clip-path: polygon(
-    0 0,
-    calc(50% + 18.5px) 0,
-    calc(50% - 18.5px) 100%,
-    0 100%
-  );
-}
-#goggles {
-  clip-path: polygon(
-    calc(50% + 18.5px) 0,
-    100% 0,
-    100% 100%,
-    calc(50% - 18.5px) 100%
-  );
-}
-#follow span {
-  transform: translateX(-25%);
-}
-#goggles span {
-  transform: translateX(25%);
-}
-#preview-tools::after {
-  content: "";
-  position: absolute;
-  top: -6px;
-  bottom: -6px;
-  left: 50%;
-  width: 1px;
-  background: #aabda5;
-  transform: rotate(30deg);
-  pointer-events: none;
-}
-#preview-tools button[aria-pressed="true"] {
-  background: #cce3b8;
-}
-#preview-tools button:disabled {
-  opacity: 1;
-  background: #eeeee8;
-}
-#preview-tools button:disabled span {
-  opacity: 0.3;
-  filter: grayscale(1);
-}
-#preview-tools button:focus-visible {
-  outline: none;
-  background: #f3dea1;
-}
-#source .actions {
-  padding-right: calc((100% - 16px) / 3);
-}
-
-#follow::after {
-  content: "";
-  position: absolute;
-  left: 12px;
-  bottom: 8px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: 1.5px solid #51734a;
-}
-#follow[data-tracking="off"]::after {
+#app[data-mode="preview"] .brand {
   display: none;
 }
-#follow[data-tracking="locked"]::after {
-  background: #51734a;
+#app[data-mode="preview"] #branch-pill {
+  padding: 7px 10px;
+  font-size: 12px;
 }
-#follow[data-tracking="searching"]::after {
+nav button {
+  padding: 6px;
+  font-size: 19px;
+}
+nav button span {
+  margin-top: 1px;
+}
+#preview {
+  position: relative;
+}
+#build-terminal {
+  position: absolute;
+  inset: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  border-radius: 10px;
+  border: 1px solid #56715e;
+  background: #17251d;
+  color: #dceadf;
+  box-shadow: 0 4px 20px #10201830;
+  overflow: hidden;
+}
+.terminal-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid #3a5141;
+}
+#build-terminal button {
+  background: #293e30;
+  color: #e4eee7;
+  border-color: #56715e;
+  padding: 7px 10px;
+}
+#preview-log {
+  flex: 1;
+  min-height: 0;
+  margin: 0;
+  padding: 12px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font:
+    11px/1.5 ui-monospace,
+    monospace;
+}
+#build-result-actions {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+}
+#build-terminal.is-running #build-status::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 8px;
+  border: 2px solid #718b79;
   border-right-color: transparent;
-  animation: snail-search 0.7s linear infinite;
+  border-radius: 50%;
+  animation: build-spin 0.8s linear infinite;
 }
-@keyframes snail-search {
+nav [data-mode="source"][data-tracking="locked"] {
+  color: #335a42;
+}
+@keyframes build-spin {
   to {
     transform: rotate(360deg);
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  #follow[data-tracking="searching"]::after {
+  #build-terminal.is-running #build-status::before {
     animation: none;
-    border-style: dotted;
   }
 }

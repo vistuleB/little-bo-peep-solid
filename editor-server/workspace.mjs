@@ -10,18 +10,42 @@ export async function run(
   executable,
   args,
   cwd,
-  { env = {}, log = () => {}, timeout = 600_000 } = {},
+  { env = {}, log = () => {}, timeout = 600_000, signal } = {},
 ) {
   return new Promise((resolve, reject) => {
+    if (signal?.aborted) return reject(new Error("Build cancelled."));
+    const grouped = !!signal && process.platform !== "win32";
     const child = spawn(executable, args, {
       cwd,
       shell: false,
+      detached: grouped,
       env: { ...process.env, GIT_TERMINAL_PROMPT: "0", ...env },
     });
     let output = "";
-    const timer = setTimeout(() => {
-      child.kill("SIGTERM");
-    }, timeout);
+    let killTimer;
+    const kill = (how) => {
+      try {
+        if (grouped && child.pid) process.kill(-child.pid, how);
+        else child.kill(how);
+      } catch (error) {
+        if (error.code !== "ESRCH") throw error;
+      }
+    };
+    const stop = () => {
+      kill("SIGTERM");
+      killTimer ??= setTimeout(() => kill("SIGKILL"), 1500);
+    };
+    const timer = setTimeout(stop, timeout);
+    signal?.addEventListener("abort", stop, { once: true });
+    const cleanup = () => {
+      clearTimeout(timer);
+      if (killTimer) {
+        kill("SIGKILL");
+        clearTimeout(killTimer);
+      }
+      signal?.removeEventListener("abort", stop);
+    };
+    if (signal?.aborted) stop();
     for (const stream of [child.stdout, child.stderr])
       stream.on("data", (chunk) => {
         const text = chunk.toString();
@@ -29,12 +53,12 @@ export async function run(
         log(text);
       });
     child.on("error", (error) => {
-      clearTimeout(timer);
+      cleanup();
       reject(error);
     });
     child.on("close", (code) => {
-      clearTimeout(timer);
-      code === 0
+      cleanup();
+      code === 0 && !signal?.aborted
         ? resolve(output.trim())
         : reject(
             new Error(
