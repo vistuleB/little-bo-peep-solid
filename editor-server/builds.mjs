@@ -107,6 +107,7 @@ export class Builds {
       command,
       status: "queued",
       production: !!snapshot.production,
+      scratch: !!snapshot.scratch,
       draft: changes.length > 0,
       sourceKey: inputKey,
       log: "",
@@ -131,22 +132,57 @@ export class Builds {
     if (!signal.aborted) job.status = "building";
     try {
       check();
+      if (job.scratch) {
+        log(
+          "Building from scratch: clearing this branch’s workspace and caches.\n",
+        );
+        if (this.live)
+          await this.live.exclusive(() =>
+            this.live.preserveDependencies(job.branch, dir),
+          );
+        await ws.exclusive(async () => {
+          if (await exists(path.join(dir, ".git")))
+            await ws.git(["worktree", "remove", "--force", dir]);
+          else await fs.rm(dir, { recursive: true, force: true });
+        });
+        await fs.rm(
+          path.join(ws.root, "build-cache", idFor(job.branch) + ".json"),
+          { force: true },
+        );
+        await fs.rm(
+          path.join(ws.root, "build-cache", "images", idFor(job.branch)),
+          { recursive: true, force: true },
+        );
+      }
       await fs.mkdir(path.dirname(dir), { recursive: true });
       await ws.exclusive(async () => {
         if (await exists(path.join(dir, ".git"))) {
-          await ws.git(["reset", "--hard", job.revision], dir);
-          // Remove stale generated files, retaining only the dependency caches.
-          await ws.git(
-            [
-              "clean",
-              "-ffdx",
-              "-e",
-              "/node_modules/",
-              "-e",
-              "/renderer/build/",
-            ],
-            dir,
-          );
+          // Restore only changed inputs. Renderer output (including deliberately
+          // absent routes) belongs to the preceding build, not the Git snapshot.
+          const changed = (
+            await ws.git(
+              ["diff", "--name-only", "--no-renames", "-z", job.revision, "--"],
+              dir,
+            )
+          )
+            .split("\0")
+            .filter((file) => file && !generatedOutput(file));
+          for (let i = 0; i < changed.length; i += 100)
+            await ws.git(
+              [
+                "restore",
+                "--source",
+                job.revision,
+                "--worktree",
+                "--",
+                ...changed.slice(i, i + 100),
+              ],
+              dir,
+            );
+          // Advance the baseline without writing any worktree files.
+          if ((await ws.git(["rev-parse", "HEAD"], dir)) !== job.revision)
+            await ws.git(["reset", "--mixed", job.revision], dir);
+          log("Reusing generated output; refreshed changed source inputs.\n");
         } else {
           await ws.git(["worktree", "add", "--detach", dir, job.revision]);
         }
@@ -166,7 +202,9 @@ export class Builds {
         env: {
           PLACE: "EDITOR_SERVER",
           EDITOR_REVISION: job.revision,
-          WLY_IMAGE_CACHE_DIR: path.join(ws.root, "build-cache", "images"),
+          WLY_IMAGE_CACHE_DIR: job.scratch
+            ? path.join(ws.root, "build-cache", "images", idFor(job.branch))
+            : path.join(ws.root, "build-cache", "images"),
           PATH:
             path.join(dir, "node_modules/.bin") +
             path.delimiter +
@@ -388,4 +426,15 @@ async function fingerprint(dir, files, extra) {
     }
   }
   return hash.digest("hex");
+}
+
+function generatedOutput(file) {
+  return (
+    file === "image-map.json" ||
+    file === "src/routes/index.tsx" ||
+    /^src\/routes\/article\/[^/]+\.tsx$/.test(file) ||
+    /^src\/components\/(HeaderBlob|LeftHeaderBlob|HamburgerPanelAuthorSuppliedContents)\.tsx$/.test(
+      file,
+    )
+  );
 }

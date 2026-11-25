@@ -547,7 +547,7 @@ async function enterPreview() {
     mode("preview");
   }
 }
-async function build(production = false) {
+async function build(production = false, scratch = false) {
   if (state.job || state.buildStarting || !state.branch) return;
   if (state.mode !== "preview") state.buildReturnMode = state.mode;
   else state.buildReturnMode = canPreview() ? "preview" : "branches";
@@ -565,6 +565,7 @@ async function build(production = false) {
       revision: state.revision || branchInfo()?.revision,
       changes: currentChanges(),
       production,
+      scratch,
     });
     state.job = job.id;
     state.jobStatus = job.status;
@@ -715,13 +716,7 @@ $("#custom-command").oninput = () => {
 };
 perform(boot);
 
-$("#clean-build-cache").onclick = () =>
-  perform(async () => {
-    await api("clean-build-cache", { branch: state.branch });
-    notice(
-      "Build cache cleared. The next build starts fresh. Source and previews are unchanged.",
-    );
-  });
+$("#clean-build-cache").onclick = () => perform(() => build(false, true));
 
 async function setupGoogleLogin() {
   const config = await api("auth-config");
