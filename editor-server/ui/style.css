@@ -466,3 +466,44 @@ nav [data-mode="source"][data-tracking="locked"] {
   font-size: 20px;
   line-height: 1;
 }
+
+/* The two actions retain their positions when either half is disabled. */
+.history-actions {
+  display: grid;
+  grid-template-columns: 1fr 90px 1fr;
+  gap: 8px;
+}
+.history-actions > button {
+  min-width: 0;
+  padding-inline: 6px;
+  font-size: 0.9rem;
+}
+.save-split {
+  position: relative;
+  display: flex;
+  min-height: 44px;
+}
+.save-split button {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  margin: 0;
+}
+.save-split #discard {
+  clip-path: polygon(0 0, 65% 0, 35% 100%, 0 100%);
+  padding-right: 48%;
+}
+.save-split #commit {
+  clip-path: polygon(66% 0, 100% 0, 100% 100%, 36% 100%);
+  padding-left: 48%;
+}
+#sync-message {
+  display: block;
+  width: 100%;
+  margin-block: 10px;
+}
+.sync-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
