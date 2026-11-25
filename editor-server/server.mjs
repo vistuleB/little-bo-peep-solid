@@ -236,7 +236,16 @@ const server = http.createServer(async (req, res) => {
       if (req.method === "POST") {
         const data = await body(req);
         if (url.pathname === "/api/build")
-          return json(res, 202, await builds.start(data.branch, data.command));
+          return json(
+            res,
+            202,
+            await builds.start(data.branch, data.command, {
+              revision: data.revision,
+              changes: data.changes,
+            }),
+          );
+        if (url.pathname === "/api/cancel-build")
+          return json(res, 200, builds.cancel(data.id));
         if (url.pathname === "/api/clean-build-cache")
           return json(res, 200, await builds.clean(data.branch));
         const value = await ws.exclusive(async () => {
