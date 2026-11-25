@@ -470,7 +470,7 @@ nav [data-mode="source"][data-tracking="locked"] {
 /* The two actions retain their positions when either half is disabled. */
 .history-actions {
   display: grid;
-  grid-template-columns: 1fr 90px 1fr;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
   gap: 8px;
 }
 .history-actions > button {
@@ -506,4 +506,45 @@ nav [data-mode="source"][data-tracking="locked"] {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+/* Share the column grid and horizontal inset with the history controls above. */
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  gap: 8px;
+  padding-inline: 12px;
+}
+.save-split {
+  border: 1px solid #9aac9b;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.save-split::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -20%;
+  bottom: -20%;
+  left: 50%;
+  width: 1.5px;
+  background: #627b66;
+  transform: rotate(30deg);
+  pointer-events: none;
+}
+.save-split #discard {
+  clip-path: polygon(
+    0 0,
+    calc(50% + 12.7px) 0,
+    calc(50% - 12.7px) 100%,
+    0 100%
+  );
+}
+.save-split #commit {
+  clip-path: polygon(
+    calc(50% + 12.7px) 0,
+    100% 0,
+    100% 100%,
+    calc(50% - 12.7px) 100%
+  );
 }

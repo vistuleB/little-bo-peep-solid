@@ -1,3 +1,4 @@
+import { rememberPosition, restorePosition } from "./editor-position.mjs";
 import { needsBuild, running } from "./preview-state.mjs";
 const $ = (selector) => document.querySelector(selector);
 const state = {
@@ -104,6 +105,14 @@ function branchInfo() {
 }
 const canPreview = () =>
   !!state.preview && state.preview.branch === state.branch;
+function canSync(info = branchInfo()) {
+  return (
+    !!info &&
+    (info.ahead !== 0 ||
+      info.behind !== 0 ||
+      (info.name === state.branch && dirty().length > 0))
+  );
+}
 function update() {
   const previewButton = $('nav [data-mode="preview"]');
   previewButton.disabled = !state.branch;
@@ -134,7 +143,14 @@ function update() {
   $("#history-forward").textContent = info?.reinstate
     ? `Reinstate (${info.reinstate})`
     : "Sync";
-  $("#history-forward").disabled = locked || !state.branch;
+  $("#history-forward").disabled =
+    locked || !state.branch || (!info?.reinstate && !canSync(info));
+  document.querySelectorAll("[data-sync-branch]").forEach((button) => {
+    const branch = state.branches.find(
+      (b) => b.name === button.dataset.syncBranch,
+    );
+    button.disabled = locked || !canSync(branch);
+  });
   previewButton.disabled = !state.branch || locked;
   $("#clean-build-cache").disabled =
     $("#production-build").disabled =
@@ -233,13 +249,14 @@ function renderBranches() {
         ? "Server draft"
         : "Available on GitHub";
     footer.append(label);
-    footer.append(
-      button("Sync", async () => {
-        if (state.branch !== branch.name && !(await chooseBranch(branch.name)))
-          return;
-        await syncBranch();
-      }),
-    );
+    const sync = button("Sync", async () => {
+      if (state.branch !== branch.name && !(await chooseBranch(branch.name)))
+        return;
+      await syncBranch();
+    });
+    sync.dataset.syncBranch = branch.name;
+    sync.disabled = state.saving || state.moving || !canSync(branch);
+    footer.append(sync);
     card.append(footer);
     $("#branch-list").append(card);
   }
@@ -283,6 +300,7 @@ async function chooseBranch(name) {
   try {
     const result = await api("open", { branch: name });
     state.branch = name;
+    notice("");
     state.branches = result.branches;
     state.documents.clear();
     state.file = null;
@@ -448,14 +466,21 @@ async function setCommit() {
   }
 }
 async function reloadSource(branch) {
+  const editor = $("#editor");
+  const file = state.file;
+  const position = rememberPosition(
+    editor,
+    parseFloat(getComputedStyle(editor).lineHeight),
+  );
   state.documents.clear();
   applyBranch(branch);
   state.files = (
     await api("files?branch=" + encodeURIComponent(state.branch))
   ).files;
-  if (state.file && state.files.includes(state.file))
-    await openFile(state.file);
-  else {
+  if (file && state.files.includes(file)) {
+    await openFile(file, 0);
+    restorePosition(editor, position);
+  } else {
     state.file = null;
     $("#editor").value = "";
     update();
@@ -509,7 +534,7 @@ function syncChoice() {
   });
 }
 async function syncBranch() {
-  if (state.saving || state.moving) return;
+  if (state.saving || state.moving || !canSync()) return;
   if (!(await settle("Commit or discard your edits before syncing."))) return;
   state.moving = true;
   update();
@@ -663,8 +688,8 @@ addEventListener("message", (event) => {
     state.tracking = event.data;
     update();
   }
-  if (event.data.action === "no-source") {
-    if (event.data.returnToSource) mode("source");
+  if (event.data.action === "no-source" && event.data.returnToSource) {
+    mode("source");
     notice(
       "No visible source location found here. Showing your last source position.",
     );
@@ -698,6 +723,7 @@ function currentChanges() {
 }
 async function enterPreview() {
   if (!state.branch || state.saving || state.moving) return;
+  notice("");
   const rebuild = await needsBuild(
     state.preview,
     state.branch,
@@ -731,6 +757,7 @@ async function build(production = false, scratch = false) {
   )
     return;
   if (!(await commit())) return;
+  notice("");
   if (state.mode !== "preview") state.buildReturnMode = state.mode;
   else state.buildReturnMode = canPreview() ? "preview" : "branches";
   state.buildStarting = true;
@@ -856,6 +883,7 @@ $("#login-form").onsubmit = (event) => {
 };
 async function boot() {
   await refresh();
+  notice("");
   $("#login").hidden = true;
   $("nav").hidden = false;
   mode("branches");
