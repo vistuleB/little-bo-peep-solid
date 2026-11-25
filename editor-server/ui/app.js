@@ -939,6 +939,17 @@ async function boot() {
   $("nav").hidden = false;
   mode("branches");
 }
+async function signOut(all) {
+  if (state.saving || state.moving) return;
+  if (!(await settle("Commit or discard your edits before signing out.")))
+    return;
+  if (all && !window.confirm("Sign out all devices, including this one?"))
+    return;
+  await api(all ? "logout-all" : "logout", {});
+  window.location.reload();
+}
+$("#sign-out").onclick = () => perform(() => signOut(false));
+$("#sign-out-all").onclick = () => perform(() => signOut(true));
 $("#refresh").onclick = () => perform(() => refresh(true));
 $("#branch-pill").onclick = () => mode("branches");
 $("nav").onclick = (event) => {
