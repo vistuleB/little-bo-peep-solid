@@ -271,6 +271,9 @@
     enabled = !!event.data.goggles;
     draw();
   });
+  addEventListener("keydown", (event) => {
+    if (event.key === "Escape") send({ action: "escape" });
+  });
   const moved = () => {
     schedule();
     scheduleTracking();

@@ -26,7 +26,7 @@ const state = {
 const dirty = () =>
   [...state.documents].filter(([, doc]) => doc.content !== doc.original);
 const notice = (text) => {
-  $("#notice").textContent = text || "";
+  $("#notice-text").textContent = text || "";
   $("#notice").hidden = !text;
 };
 async function api(route, data) {
@@ -471,6 +471,10 @@ addEventListener("message", (event) => {
     event.data?.kind !== "writerly-preview"
   )
     return;
+  if (event.data.action === "escape") {
+    dismissMessage();
+    return;
+  }
   if (state.preview.pages.some((p) => p.path === event.data.path)) {
     state.previewPath = event.data.path;
     $("#frame").dataset.build = state.preview.id + event.data.path;
@@ -545,6 +549,8 @@ async function enterPreview() {
 }
 async function build(production = false) {
   if (state.job || state.buildStarting || !state.branch) return;
+  if (state.mode !== "preview") state.buildReturnMode = state.mode;
+  else state.buildReturnMode = canPreview() ? "preview" : "branches";
   state.buildStarting = true;
   state.jobBranch = state.branch;
   state.jobStatus = "queued";
@@ -607,6 +613,40 @@ async function poll(id) {
     if (id === state.job) setTimeout(() => poll(id), 2500);
   }
 }
+function closeBuild() {
+  state.buildPanel = false;
+  if (state.mode === "preview")
+    mode(state.buildReturnMode || (canPreview() ? "preview" : "branches"));
+  else update();
+}
+function dismissMessage() {
+  if (document.querySelector("dialog[open]")) return false;
+  if (state.mode === "preview" && !$("#build-terminal").hidden) {
+    closeBuild();
+    return true;
+  }
+  if (!$("#notice").hidden) {
+    notice("");
+    return true;
+  }
+  if (state.mode === "branches" && $("#build-log").open) {
+    $("#build-log").open = false;
+    return true;
+  }
+  return false;
+}
+$("#close-build").onclick = closeBuild;
+$("#close-notice").onclick = () => notice("");
+addEventListener(
+  "keydown",
+  (event) => {
+    if (event.key === "Escape" && dismissMessage()) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  },
+  { capture: true },
+);
 $("#cancel-build").onclick = async () => {
   if (!state.job) return;
   state.jobStatus = "cancelling";

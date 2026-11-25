@@ -32,7 +32,16 @@
         <div class="brand">Toilet Scroll <small>EDITOR</small></div>
         <button id="branch-pill">Choose a branch</button>
       </header>
-      <p id="notice" hidden role="status"></p>
+      <div id="notice" hidden role="status">
+        <span id="notice-text"></span
+        ><button
+          id="close-notice"
+          aria-label="Dismiss message"
+          title="Dismiss (Escape)"
+        >
+          ×
+        </button>
+      </div>
       <section id="login">
         <h1>Source editor</h1>
         <div id="google-signin" hidden></div>
@@ -95,7 +104,16 @@
         <section id="build-terminal" hidden aria-label="Preview build">
           <div class="terminal-heading">
             <span id="build-status" role="status">Building preview…</span>
-            <button id="cancel-build">Cancel</button>
+            <div class="terminal-controls">
+              <button id="cancel-build">Cancel</button
+              ><button
+                id="close-build"
+                aria-label="Close build window"
+                title="Close (Escape)"
+              >
+                ×
+              </button>
+            </div>
           </div>
           <pre id="preview-log" tabindex="0" aria-label="Build output"></pre>
           <div id="build-result-actions" hidden>

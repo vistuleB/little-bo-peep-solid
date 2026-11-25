@@ -439,3 +439,30 @@ nav [data-mode="source"][data-tracking="locked"] {
     animation: none;
   }
 }
+
+.terminal-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+#notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+#notice-text {
+  flex: 1;
+  min-width: 0;
+}
+#close-notice {
+  flex: none;
+  border: 0;
+  background: none;
+  padding: 0 6px;
+  font-size: 22px;
+  line-height: 1;
+}
+#close-build {
+  font-size: 20px;
+  line-height: 1;
+}
