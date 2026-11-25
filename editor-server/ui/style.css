@@ -378,6 +378,7 @@ nav button span {
   overflow: hidden;
 }
 .terminal-heading {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -394,6 +395,7 @@ nav button span {
 #preview-log {
   flex: 1;
   min-height: 0;
+  max-height: none;
   margin: 0;
   padding: 12px;
   overflow: auto;
@@ -407,6 +409,11 @@ nav button span {
   display: flex;
   gap: 8px;
   padding: 10px 12px;
+}
+/* Keep the live output above a proportional empty area, not a fixed pixel cap. */
+#build-terminal.is-running::after {
+  content: "";
+  flex: 0 0 30%;
 }
 #build-terminal.is-running #build-status::before {
   content: "";

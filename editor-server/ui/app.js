@@ -579,8 +579,8 @@ async function poll(id) {
     const atBottom =
       terminal.scrollHeight - terminal.scrollTop - terminal.clientHeight < 32;
     terminal.textContent = job.log || job.status;
-    if (atBottom) terminal.scrollTop = terminal.scrollHeight;
     update();
+    if (atBottom) terminal.scrollTop = terminal.scrollHeight;
     if (running(job.status)) {
       setTimeout(() => poll(id), 1000);
       return;
