@@ -1,6 +1,8 @@
 import { needsBuild, running } from "./preview-state.mjs";
 const $ = (selector) => document.querySelector(selector);
 const state = {
+  saving: false,
+  moving: false,
   branch: null,
   branches: [],
   file: null,
@@ -47,24 +49,48 @@ async function api(route, data) {
   }
   return result;
 }
-let activeOperations = 0;
 async function perform(fn) {
-  activeOperations++;
-  $("#app").inert = true;
-  notice("");
-  document.body.classList.add("busy");
   try {
     return await fn();
   } catch (error) {
     notice(error.message);
     return false;
-  } finally {
-    activeOperations--;
-    if (!activeOperations) {
-      $("#app").inert = false;
-      document.body.classList.remove("busy");
-    }
   }
+}
+let refreshSequence = 0;
+function applyBranch(branch) {
+  ++refreshSequence; // Ignore older branch-count requests still in flight.
+  const index = state.branches.findIndex((b) => b.name === branch.name);
+  if (index < 0) state.branches.push(branch);
+  else state.branches[index] = branch;
+  if (branch.name === state.branch) state.revision = branch.revision;
+  renderBranches();
+  update();
+}
+function confirmForward(count, action = "Commit") {
+  if (!count) return Promise.resolve(true);
+  return confirmAction(
+    `${action} here will discard ${count} revision${count === 1 ? "" : "s"} available to reinstate.`,
+    action,
+  );
+}
+function confirmAction(text, label) {
+  return new Promise((resolve) => {
+    const dialog = $("#confirm-action");
+    $("#confirm-text").textContent = text;
+    $("#confirm-yes").textContent = label;
+    const close = (value) => {
+      dialog.close();
+      resolve(value);
+    };
+    $("#confirm-yes").onclick = () => close(true);
+    $("#confirm-no").onclick = () => close(false);
+    dialog.oncancel = (e) => {
+      e.preventDefault();
+      close(false);
+    };
+    dialog.showModal();
+  });
 }
 const button = (text, fn, className = "") => {
   const b = document.createElement("button");
@@ -92,14 +118,32 @@ function update() {
   $("#source-meta").textContent = state.file
     ? `${dirty().length ? dirty().length + " edited file(s)" : "Committed"} · ${state.revision?.slice(0, 8) || ""}`
     : "Choose an existing .wly file.";
-  $("#commit").disabled = $("#discard").disabled = !dirty().length;
+  const editing = dirty().length > 0;
+  const locked = state.saving || state.moving;
+  $("#discard").disabled = locked || !editing;
+  $("#commit").disabled = locked || (!editing && !info?.reinstate);
+  $("#commit").title = state.saving
+    ? "Saving…"
+    : editing
+      ? "Commit changes"
+      : "Set this commit";
+  $("#commit").setAttribute("aria-label", $("#commit").title);
+  $("#commit").textContent = state.saving ? "…" : "✓";
+  $("#history-back").textContent = `Discard (${info?.discard || 0})`;
+  $("#history-back").disabled = locked || !info?.discard;
+  $("#history-forward").textContent = info?.reinstate
+    ? `Reinstate (${info.reinstate})`
+    : "Sync";
+  $("#history-forward").disabled = locked || !state.branch;
+  previewButton.disabled = !state.branch || locked;
   $("#clean-build-cache").disabled =
     $("#production-build").disabled =
     $("#source-build").disabled =
     $("#build").disabled =
-      !!state.job || state.buildStarting || !state.branch;
+      !!state.job || state.buildStarting || !state.branch || locked;
+  $("#file-picker").disabled = locked;
   $("#file-picker").textContent = state.file || "Choose a .wly file ▾";
-  $("#editor").disabled = !state.file;
+  $("#editor").disabled = !state.file || state.moving;
   $("#build-settings").hidden = !state.branch;
   const showingBuild = state.buildPanel && state.jobBranch === state.branch;
   $("#build-terminal").hidden = !showingBuild;
@@ -123,6 +167,7 @@ function update() {
   $("#previous-preview").hidden = !canPreview();
   $("#retry-build").disabled = !!state.job || state.buildStarting;
   const sourceButton = $('nav [data-mode="source"]');
+  sourceButton.disabled = !state.branch || state.moving;
   sourceButton.dataset.tracking =
     state.mode === "preview" ? state.tracking.status : "off";
   sourceButton.title =
@@ -159,9 +204,12 @@ function mode(value) {
   syncTracking();
   update();
   if (value === "preview" && state.preview) focusPreview();
+  if (value === "branches") refresh().catch((error) => notice(error.message));
 }
 async function refresh(fetchRemote = false) {
+  const sequence = ++refreshSequence;
   const result = fetchRemote ? await api("refresh", {}) : await api("branches");
+  if (sequence !== refreshSequence) return;
   state.branches = result.branches;
   renderBranches();
   update();
@@ -189,12 +237,7 @@ function renderBranches() {
       button("Sync", async () => {
         if (state.branch !== branch.name && !(await chooseBranch(branch.name)))
           return;
-        if (!(await settle("Commit or discard before syncing."))) return;
-        await api("sync", { branch: branch.name });
-        state.documents.clear();
-        await refresh();
-        if (state.file) await openFile(state.file);
-        notice("Branch synced.");
+        await syncBranch();
       }),
     );
     card.append(footer);
@@ -218,13 +261,16 @@ async function settle(text) {
     };
     $("#decision-commit").onclick = () =>
       perform(async () => {
-        await commit();
-        close(true);
+        if (await commit()) close(true);
       });
     dialog.showModal();
   });
 }
 async function chooseBranch(name) {
+  if (state.saving || state.moving) {
+    notice("Wait for the current save or history operation.");
+    return false;
+  }
   if (name === state.branch) return true;
   if (
     !(await settle(
@@ -232,28 +278,35 @@ async function chooseBranch(name) {
     ))
   )
     return false;
-  const result = await api("open", { branch: name });
-  state.branch = name;
-  state.branches = result.branches;
-  state.documents.clear();
-  state.file = null;
-  state.revision = null;
-  state.preview = null;
+  state.moving = true;
   update();
-  state.files = (await api("files?branch=" + encodeURIComponent(name))).files;
-  state.previewPath = null;
-  state.pendingTarget = null;
-  state.preview = await api("preview?branch=" + encodeURIComponent(name));
-  $("#editor").value = "";
-  $("#frame").removeAttribute("src");
-  $("#frame").hidden = true;
-  delete $("#frame").dataset.build;
-  renderBranches();
-  renderCommands();
-  update();
-  const previous = state.lastFiles.get(name);
-  if (previous && state.files.includes(previous)) await openFile(previous);
-  return true;
+  try {
+    const result = await api("open", { branch: name });
+    state.branch = name;
+    state.branches = result.branches;
+    state.documents.clear();
+    state.file = null;
+    state.revision = branchInfo()?.revision || null;
+    state.preview = null;
+    update();
+    state.files = (await api("files?branch=" + encodeURIComponent(name))).files;
+    state.previewPath = null;
+    state.pendingTarget = null;
+    state.preview = await api("preview?branch=" + encodeURIComponent(name));
+    $("#editor").value = "";
+    $("#frame").removeAttribute("src");
+    $("#frame").hidden = true;
+    delete $("#frame").dataset.build;
+    renderBranches();
+    renderCommands();
+    update();
+    const previous = state.lastFiles.get(name);
+    if (previous && state.files.includes(previous)) await openFile(previous);
+    return true;
+  } finally {
+    state.moving = false;
+    update();
+  }
 }
 function renderCommands() {
   const info = branchInfo();
@@ -341,22 +394,143 @@ function discard() {
   update();
 }
 async function commit() {
-  const changes = dirty().map(([file, doc]) => ({
-    file,
-    content: doc.content,
-  }));
-  if (!changes.length) return;
-  // Keep the exact submitted text; edits made during the request remain dirty.
-  const result = await api("commit", {
-    branch: state.branch,
-    revision: state.revision,
-    changes,
-  });
-  for (const change of changes)
-    state.documents.get(change.file).original = change.content;
-  state.revision = result.revision;
-  await refresh();
+  if (state.saving || state.moving) return false;
+  const changes = currentChanges();
+  const forward = branchInfo()?.reinstate || 0;
+  if (!changes.length) return true; // Preview of a clean past commit never sets it.
+  state.saving = true;
   update();
+  try {
+    if (!(await confirmForward(forward))) return false;
+    const branch = state.branch;
+    const result = await api("commit", {
+      branch,
+      revision: state.revision || branchInfo()?.revision,
+      changes,
+      discardForward: forward,
+    });
+    // Typing remains possible during the request; only submitted text is saved.
+    for (const change of changes)
+      state.documents.get(change.file).original = change.content;
+    applyBranch(result.branch);
+    notice(
+      dirty().length
+        ? "Submitted edits saved; newer typing is still uncommitted."
+        : "",
+    );
+    return true;
+  } finally {
+    state.saving = false;
+    update();
+  }
+}
+async function setCommit() {
+  if (dirty().length) return commit();
+  if (state.saving || state.moving) return;
+  const forward = branchInfo()?.reinstate || 0;
+  if (!forward) return;
+  state.moving = true;
+  update();
+  try {
+    if (!(await confirmForward(forward, "Set this commit"))) return;
+    applyBranch(
+      (
+        await api("set", {
+          branch: state.branch,
+          revision: state.revision || branchInfo()?.revision,
+          discardForward: forward,
+        })
+      ).branch,
+    );
+  } finally {
+    state.moving = false;
+    update();
+  }
+}
+async function reloadSource(branch) {
+  state.documents.clear();
+  applyBranch(branch);
+  state.files = (
+    await api("files?branch=" + encodeURIComponent(state.branch))
+  ).files;
+  if (state.file && state.files.includes(state.file))
+    await openFile(state.file);
+  else {
+    state.file = null;
+    $("#editor").value = "";
+    update();
+  }
+}
+async function navigateHistory(direction) {
+  if (state.saving || state.moving) return;
+  if (
+    !(await settle("Commit or discard your edits before navigating revisions."))
+  )
+    return;
+  // Committing clears forward memory, so a requested Next may cease to exist.
+  if (direction === 1 && !branchInfo()?.reinstate) return;
+  if (direction === -1 && !branchInfo()?.discard) return;
+  state.moving = true;
+  update();
+  try {
+    const result = await api("history", {
+      branch: state.branch,
+      revision: state.revision || branchInfo()?.revision,
+      direction,
+    });
+    await reloadSource(result.branch);
+  } finally {
+    state.moving = false;
+    update();
+  }
+}
+function syncChoice() {
+  return new Promise((resolve) => {
+    const dialog = $("#sync-dialog");
+    const info = branchInfo();
+    $("#sync-description").textContent =
+      `Sync first ${info?.discard || 0} of ${(info?.discard || 0) + (info?.reinstate || 0)} local revisions. ${info?.reinstate || 0} will remain available to reinstate.`;
+    $("#sync-message").value = "";
+    const close = (value) => {
+      dialog.close();
+      resolve(value);
+    };
+    $("#sync-plain").onclick = () =>
+      close({ squash: false, message: $("#sync-message").value });
+    $("#sync-squash").disabled = !info?.discard;
+    $("#sync-squash").onclick = () =>
+      close({ squash: true, message: $("#sync-message").value });
+    $("#sync-cancel").onclick = () => close(null);
+    dialog.oncancel = (e) => {
+      e.preventDefault();
+      close(null);
+    };
+    dialog.showModal();
+  });
+}
+async function syncBranch() {
+  if (state.saving || state.moving) return;
+  if (!(await settle("Commit or discard your edits before syncing."))) return;
+  state.moving = true;
+  update();
+  try {
+    const choice = await syncChoice();
+    if (!choice) return;
+    const info = branchInfo();
+    notice(
+      `Syncing first ${info?.discard || 0} of ${(info?.discard || 0) + (info?.reinstate || 0)} local revisions…`,
+    );
+    const result = await api("sync", {
+      branch: state.branch,
+      revision: state.revision || info?.revision,
+      ...choice,
+    });
+    await reloadSource(result.branch);
+    notice("Synced. Remaining revisions are still available to reinstate.");
+  } finally {
+    state.moving = false;
+    update();
+  }
 }
 function renderTree() {
   const query = $("#file-search").value.toLowerCase();
@@ -523,7 +697,7 @@ function currentChanges() {
   return dirty().map(([file, doc]) => ({ file, content: doc.content }));
 }
 async function enterPreview() {
-  if (!state.branch) return;
+  if (!state.branch || state.saving || state.moving) return;
   const rebuild = await needsBuild(
     state.preview,
     state.branch,
@@ -548,7 +722,15 @@ async function enterPreview() {
   }
 }
 async function build(production = false, scratch = false) {
-  if (state.job || state.buildStarting || !state.branch) return;
+  if (
+    state.job ||
+    state.buildStarting ||
+    !state.branch ||
+    state.saving ||
+    state.moving
+  )
+    return;
+  if (!(await commit())) return;
   if (state.mode !== "preview") state.buildReturnMode = state.mode;
   else state.buildReturnMode = canPreview() ? "preview" : "branches";
   state.buildStarting = true;
@@ -563,7 +745,7 @@ async function build(production = false, scratch = false) {
       branch: state.branch,
       command: selectedCommand(),
       revision: state.revision || branchInfo()?.revision,
-      changes: currentChanges(),
+      changes: [],
       production,
       scratch,
     });
@@ -708,7 +890,10 @@ $("#file-picker").onclick = () => {
 };
 $("#file-search").oninput = renderTree;
 $("#close-files").onclick = () => $("#files-dialog").close();
-$("#commit").onclick = () => perform(commit);
+$("#commit").onclick = () => perform(setCommit);
+$("#history-back").onclick = () => perform(() => navigateHistory(-1));
+$("#history-forward").onclick = () =>
+  perform(() => (branchInfo()?.reinstate ? navigateHistory(1) : syncBranch()));
 $("#discard").onclick = discard;
 $("#build").onclick = $("#source-build").onclick = () => perform(build);
 $("#custom-command").oninput = () => {

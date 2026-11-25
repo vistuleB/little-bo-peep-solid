@@ -92,10 +92,26 @@
           autocorrect="off"
           aria-label="Writerly source"
         ></textarea>
-        <div class="actions">
-          <button id="discard">Discard</button
-          ><button id="commit" class="primary">Commit changes</button
-          ><button id="source-build">Build</button>
+        <div class="actions history-actions">
+          <button id="history-back">Discard (0)</button>
+          <div class="save-split">
+            <button
+              id="discard"
+              aria-label="Discard uncommitted changes"
+              title="Discard uncommitted changes"
+            >
+              🗑
+            </button>
+            <button
+              id="commit"
+              aria-label="Commit changes"
+              title="Commit changes"
+            >
+              ✓
+            </button>
+          </div>
+          <button id="history-forward">Sync</button>
+          <button id="source-build" hidden>Build</button>
         </div>
       </main>
       <main id="preview" hidden>
@@ -155,6 +171,28 @@
         <button id="decision-commit" class="primary">Commit & continue</button
         ><button id="decision-discard">Discard & continue</button
         ><button id="decision-cancel">Cancel</button>
+      </div>
+    </dialog>
+    <dialog id="confirm-action">
+      <p id="confirm-text"></p>
+      <button id="confirm-no">Cancel</button
+      ><button id="confirm-yes">Commit</button>
+    </dialog>
+    <dialog id="sync-dialog">
+      <h2>Sync</h2>
+      <p id="sync-description"></p>
+      <label
+        >Optional commit message (squash or merge)
+        <input
+          id="sync-message"
+          maxlength="2000"
+          placeholder="Describe this change"
+        />
+      </label>
+      <div class="sync-options">
+        <button id="sync-plain">Sync</button>
+        <button id="sync-squash">Squash &amp; sync</button>
+        <button id="sync-cancel">Cancel</button>
       </div>
     </dialog>
     <script type="module" src="/app.js"></script>
