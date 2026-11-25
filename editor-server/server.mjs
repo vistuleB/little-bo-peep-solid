@@ -250,6 +250,7 @@ const server = http.createServer(async (req, res) => {
               revision: data.revision,
               changes: data.changes,
               production: data.production === true,
+              scratch: data.scratch === true,
             }),
           );
         if (url.pathname === "/api/cancel-build")

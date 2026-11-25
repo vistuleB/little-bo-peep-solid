@@ -19,6 +19,11 @@ test("branch build workspace retains caches, resets sources, and publishes immut
   await fs.mkdir(path.join(repo, "src/content"), { recursive: true });
   await fs.writeFile(path.join(repo, "src/content/ch1.wly"), "first");
   await fs.writeFile(path.join(repo, "package-lock.json"), "one");
+  await fs.mkdir(path.join(repo, "src/routes/article"), { recursive: true });
+  await fs.writeFile(
+    path.join(repo, "src/routes/article/unused.tsx"),
+    "committed unused route",
+  );
   await git(["add", "."]);
   await git(["commit", "-m", "initial"]);
   const ws = new Workspace(path.join(root, "server"), repo);
@@ -61,10 +66,23 @@ test("branch build workspace retains caches, resets sources, and publishes immut
         );
       await fs.mkdir(path.join(cwd, "build"), { recursive: true });
       await fs.writeFile(path.join(cwd, "build/cache"), "compiled");
-      assert.equal(
-        await fs.stat(path.join(dir, "stale.tsx")).catch(() => null),
-        null,
-      );
+      if (renders > 1 && installs < 3) {
+        assert.equal(
+          await fs
+            .stat(path.join(dir, "src/routes/article/unused.tsx"))
+            .catch(() => null),
+          null,
+          "deleted generated routes must not be restored",
+        );
+        assert.equal(
+          await fs.readFile(path.join(dir, "stale.tsx"), "utf8"),
+          "stale",
+          "untracked build artifacts survive",
+        );
+      }
+      await fs.rm(path.join(dir, "src/routes/article/unused.tsx"), {
+        force: true,
+      });
       await fs.mkdir(path.join(dir, "src/routes/article"), { recursive: true });
       await fs.writeFile(
         path.join(dir, "src/routes/index.tsx"),
@@ -154,6 +172,14 @@ test("branch build workspace retains caches, resets sources, and publishes immut
     true,
   );
   assert.equal((await build(builder)).status, "ready");
+  assert.equal(
+    await fs.readFile(
+      path.join(ws.root, "previews", record.preview.id, "index.html"),
+      "utf8",
+    ),
+    "second",
+    "discarded browser changes are restored before building",
+  );
   const preserved = record.preview.id;
   let entered;
   const started = new Promise((resolve) => (entered = resolve));
@@ -181,15 +207,39 @@ test("branch build workspace retains caches, resets sources, and publishes immut
     /Branch changed/,
   );
   await fs.writeFile(path.join(record.dir, "package-lock.json"), "two");
-  await ws.git(["add", "package-lock.json"], record.dir);
+  await fs.writeFile(path.join(record.dir, "src/added.ts"), "new input");
+  await ws.git(["add", "package-lock.json", "src/added.ts"], record.dir);
   await ws.git(["commit", "-m", "dependency change"], record.dir);
   fail = true;
   assert.equal((await build(builder)).status, "failed");
   assert.equal(installs, 2);
+  assert.equal(
+    await fs.readFile(
+      path.join(ws.root, "build-workspaces", idFor("develop"), "src/added.ts"),
+      "utf8",
+    ),
+    "new input",
+  );
+  await fs.rm(path.join(record.dir, "src/added.ts"));
+  await ws.git(["add", "-u"], record.dir);
+  await ws.git(["commit", "-m", "remove input"], record.dir);
   assert.equal(record.preview.id, preserved);
   fail = false;
   assert.equal((await build(builder)).status, "ready");
   assert.equal(installs, 2);
+  assert.equal(
+    await fs
+      .stat(
+        path.join(
+          ws.root,
+          "build-workspaces",
+          idFor("develop"),
+          "src/added.ts",
+        ),
+      )
+      .catch(() => null),
+    null,
+  );
   assert.equal(await ws.git(["status", "--porcelain"], record.dir), "");
   assert.ok(
     await fs.stat(path.join(ws.root, "build-workspaces", idFor("develop"))),
@@ -253,6 +303,35 @@ test("branch build workspace retains caches, resets sources, and publishes immut
   assert.equal(fast.status, "ready", fast.log);
   assert.equal(fast.manifest.live, true);
   assert.equal(published, 1);
+  const scratchBuilder = new Builds(ws, async (cmd, args, cwd, options) => {
+    if (cmd === "gleam")
+      assert.equal(
+        await fs
+          .stat(path.join(path.dirname(cwd), "stale.tsx"))
+          .catch(() => null),
+        null,
+      );
+    return execute(cmd, args, cwd, {
+      ...options,
+      env: {
+        ...options.env,
+        WLY_IMAGE_CACHE_DIR: path.join(ws.root, "build-cache", "images"),
+      },
+    });
+  });
+  const cold = await scratchBuilder.start("develop", "gleam run", {
+    scratch: true,
+  });
+  while (running(cold.status)) await new Promise((r) => setTimeout(r, 10));
+  assert.equal(cold.status, "ready", cold.log);
+  assert.equal(installs, 4);
+  assert.equal(
+    await fs.readFile(
+      path.join(ws.root, "previews", preview, "index.html"),
+      "utf8",
+    ),
+    "second",
+  );
 });
 
 test("aborting a subprocess terminates its process group", async () => {

@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { promises as fs } from "node:fs";
 import os from "node:os";
 import path from "node:path";
-import { syncRuntime } from "../live-preview.mjs";
+import { syncRuntime, LivePreviews } from "../live-preview.mjs";
 
 test("runtime publication updates changed files only and excludes checkout secrets and Writerly sources", async (t) => {
   const root = await fs.mkdtemp(path.join(os.tmpdir(), "live-preview-"));
@@ -38,4 +38,37 @@ test("runtime publication updates changed files only and excludes checkout secre
     "second",
   );
   await assert.rejects(fs.access(path.join(target, "public/image.svg")));
+});
+
+test("scratch rebuild preserves the previous preview's dependency tree", async (t) => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "live-dependencies-"));
+  t.after(() => fs.rm(root, { recursive: true, force: true }));
+  const live = new LivePreviews(
+    { root },
+    "https://editor.invalid",
+    () => "https://preview.invalid",
+  );
+  const source = path.join(root, "build");
+  const runtime = live.directory("develop");
+  await fs.mkdir(path.join(source, "node_modules"), { recursive: true });
+  await fs.mkdir(runtime, { recursive: true });
+  await fs.writeFile(
+    path.join(source, "node_modules/marker"),
+    "old dependencies",
+  );
+  await fs.symlink(
+    path.join(source, "node_modules"),
+    path.join(runtime, "node_modules"),
+  );
+  await live.preserveDependencies("develop", source);
+  await fs.rm(source, { recursive: true, force: true });
+  assert.equal(
+    await fs.readFile(path.join(runtime, "node_modules/marker"), "utf8"),
+    "old dependencies",
+  );
+  await live.preserveDependencies("develop", source);
+  assert.equal(
+    await fs.readFile(path.join(runtime, "node_modules/marker"), "utf8"),
+    "old dependencies",
+  );
 });

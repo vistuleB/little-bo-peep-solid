@@ -143,6 +143,22 @@ export class LivePreviews {
     kill("SIGKILL");
     await active.closed;
   }
+  async preserveDependencies(branch, source) {
+    const dir = this.directory(branch);
+    const link = path.join(dir, "node_modules");
+    if (
+      (await fs.readlink(link).catch(() => null)) !==
+      path.join(source, "node_modules")
+    )
+      return;
+    await this.stop();
+    const backup = path.join(dir, ".previous-node_modules");
+    await fs.rm(backup, { recursive: true, force: true });
+    await fs.rename(path.join(source, "node_modules"), backup);
+    await fs.unlink(link);
+    await fs.symlink(backup, link, "dir");
+  }
+
   async publish(source, manifest, npmKey, log, signal) {
     return this.exclusive(async () => {
       signal.throwIfAborted();
