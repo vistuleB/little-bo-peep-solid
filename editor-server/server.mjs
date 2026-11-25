@@ -3,8 +3,9 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { randomBytes, timingSafeEqual, createHash } from "node:crypto";
-import { Workspace } from "./workspace.mjs";
+import { Workspace, run } from "./workspace.mjs";
 import { GoogleLogin } from "./google-auth.mjs";
+import { LivePreviews } from "./live-preview.mjs";
 import { Builds } from "./builds.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -22,7 +23,8 @@ const ws = new Workspace(
   process.env.EDITOR_REPO_URL,
 );
 await ws.init();
-const builds = new Builds(ws);
+const live = new LivePreviews(ws, origin, previewURL);
+const builds = new Builds(ws, run, live);
 const googleLogin = new GoogleLogin({
   clientId: process.env.EDITOR_GOOGLE_CLIENT_ID,
   email: process.env.EDITOR_GOOGLE_EMAIL,
@@ -120,6 +122,10 @@ const server = http.createServer(async (req, res) => {
         return json(res, 405, { error: "Preview is read-only" });
       if (url.pathname === "/_editor/goggles.js")
         return serve(res, here, "/goggles.js");
+      const current = Object.values(ws.state.branches).find(
+        (b) => b.preview?.id === previewMatch[1],
+      )?.preview;
+      if (current?.live) return await live.proxy(req, res, current);
       const previewRoot = path.join(ws.root, "previews", previewMatch[1]);
       let fallback = false;
       try {
@@ -204,7 +210,8 @@ const server = http.createServer(async (req, res) => {
             job
               ? {
                   ...job,
-                  url: job.status === "ready" ? previewURL(job.id) : null,
+                  url:
+                    job.status === "ready" ? previewURL(job.manifest.id) : null,
                 }
               : { error: "Unknown build" },
           );
@@ -242,6 +249,7 @@ const server = http.createServer(async (req, res) => {
             await builds.start(data.branch, data.command, {
               revision: data.revision,
               changes: data.changes,
+              production: data.production === true,
             }),
           );
         if (url.pathname === "/api/cancel-build")
@@ -278,8 +286,29 @@ const server = http.createServer(async (req, res) => {
     json(res, 400, { error: error.message });
   }
 });
+server.on("upgrade", (req, socket, head) => {
+  const host = req.headers.host || "";
+  const match = /^b-([a-f0-9]{24})\./.exec(host);
+  const current =
+    match &&
+    host === new URL(previewURL(match[1])).host &&
+    Object.values(ws.state.branches).find(
+      (b) => b.preview?.live && b.preview.id === match[1],
+    )?.preview;
+  if (!current || req.headers.origin !== previewURL(current.id)) {
+    socket.destroy();
+    return;
+  }
+  live.upgrade(req, socket, head, current);
+});
 server.listen(port, process.env.EDITOR_HOST || "127.0.0.1", () => {
   console.log(`Editor: ${origin}\nData: ${ws.root}`);
   if (!process.env.EDITOR_TOKEN)
     console.log(`One-session editor token: ${token}`);
 });
+
+for (const signal of ["SIGTERM", "SIGINT"])
+  process.on(signal, async () => {
+    await live.stop();
+    process.exit(0);
+  });

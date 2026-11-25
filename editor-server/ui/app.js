@@ -94,6 +94,7 @@ function update() {
     : "Choose an existing .wly file.";
   $("#commit").disabled = $("#discard").disabled = !dirty().length;
   $("#clean-build-cache").disabled =
+    $("#production-build").disabled =
     $("#source-build").disabled =
     $("#build").disabled =
       !!state.job || state.buildStarting || !state.branch;
@@ -153,10 +154,11 @@ function mode(value) {
     .forEach((b) => b.classList.toggle("active", b.dataset.mode === value));
   if (value === "preview") {
     goggles(false);
-    positionPreview();
+    if (!state.buildPanel) positionPreview();
   }
   syncTracking();
   update();
+  if (value === "preview" && state.preview) focusPreview();
 }
 async function refresh(fetchRemote = false) {
   const result = fetchRemote ? await api("refresh", {}) : await api("branches");
@@ -477,6 +479,7 @@ addEventListener("message", (event) => {
     goggles(false);
     sendPreviewTarget();
     syncTracking();
+    focusPreview();
   }
   if (event.data.action === "tracking") {
     state.tracking = event.data;
@@ -524,8 +527,8 @@ async function enterPreview() {
     currentChanges(),
     selectedCommand(),
   );
-  mode("preview");
   if (state.job || state.buildStarting) {
+    mode("preview");
     if (state.jobBranch !== state.branch)
       notice(
         "Another branch is building. Wait for it to finish before building this preview.",
@@ -537,10 +540,10 @@ async function enterPreview() {
   if (rebuild) await build();
   else {
     state.buildPanel = false;
-    update();
+    mode("preview");
   }
 }
-async function build() {
+async function build(production = false) {
   if (state.job || state.buildStarting || !state.branch) return;
   state.buildStarting = true;
   state.jobBranch = state.branch;
@@ -555,6 +558,7 @@ async function build() {
       command: selectedCommand(),
       revision: state.revision || branchInfo()?.revision,
       changes: currentChanges(),
+      production,
     });
     state.job = job.id;
     state.jobStatus = job.status;
@@ -590,6 +594,7 @@ async function poll(id) {
       if (state.branch === job.branch) {
         state.preview = { ...job.manifest, url: job.url };
         state.buildPanel = false;
+        delete $("#frame").dataset.build;
         renderCommands();
         if (state.mode === "preview") positionPreview();
       }
@@ -715,3 +720,44 @@ async function setupGoogleLogin() {
   document.head.append(script);
 }
 setupGoogleLogin().catch(() => {});
+
+function focusPreview() {
+  if (state.mode === "preview" && !state.buildPanel && state.preview)
+    $("#frame").contentWindow?.focus();
+}
+for (const type of ["keydown", "keyup"])
+  addEventListener(type, (event) => {
+    if (
+      state.mode !== "preview" ||
+      state.buildPanel ||
+      !state.preview ||
+      !$("#login").hidden ||
+      document.querySelector("dialog[open]")
+    )
+      return;
+    // Events originating inside the iframe already reach the app; only shell events arrive here.
+    $("#frame").contentWindow?.postMessage(
+      {
+        kind: "writerly-editor",
+        action: "keyboard",
+        type,
+        key: event.key,
+        code: event.code,
+        repeat: event.repeat,
+        altKey: event.altKey,
+        ctrlKey: event.ctrlKey,
+        metaKey: event.metaKey,
+        shiftKey: event.shiftKey,
+      },
+      state.preview.url,
+    );
+    // Preserve browser/system shortcuts and keyboard navigation of controls.
+    if (
+      !event.metaKey &&
+      !event.ctrlKey &&
+      !event.altKey &&
+      event.key !== "Tab"
+    )
+      event.preventDefault();
+  });
+$("#production-build").onclick = () => perform(() => build(true));

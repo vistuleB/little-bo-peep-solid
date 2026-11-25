@@ -1,5 +1,7 @@
 import { defineConfig } from "@solidjs/start/config";
 import { loadEnv } from "vite";
+import path from "node:path";
+import { realpathSync } from "node:fs";
 import { resolvePlace } from "./config/place.mjs";
 
 const mode = process.env.NODE_ENV || "development";
@@ -11,6 +13,8 @@ const mathJAXVersion =
   process.env.MATHJAX_VERSION || env.MATHJAX_VERSION || "4";
 const place = resolvePlace({ ...env, ...process.env });
 const isLocalMode = place === "LOCAL";
+const livePreview =
+  place === "EDITOR_SERVER" && process.env.EDITOR_LIVE_PREVIEW === "true";
 const mathJaxDebugAttributes =
   (process.env.MATHJAX_DEBUG_ATTRIBUTES || env.MATHJAX_DEBUG_ATTRIBUTES) ===
     "true" || isLocalMode;
@@ -34,7 +38,29 @@ export default defineConfig({
   ...(isLocalMode && {
     middleware: "src/server/middleware.ts",
   }),
-  vite: {
+  vite: ({ router }) => ({
+    ...(livePreview && {
+      server: {
+        hmr: {
+          port: JSON.parse(process.env.EDITOR_HMR_PORTS || "{}")[router],
+          clientPort: Number(
+            new URL(process.env.EDITOR_PREVIEW_URL!).port ||
+              (process.env.EDITOR_PREVIEW_URL!.startsWith("https:") ? 443 : 80),
+          ),
+          protocol: process.env.EDITOR_PREVIEW_URL!.startsWith("https:")
+            ? "wss"
+            : "ws",
+          path: "/_editor/hmr/" + router,
+        },
+        fs: {
+          strict: true,
+          allow: [
+            process.cwd(),
+            realpathSync(path.join(process.cwd(), "node_modules")),
+          ],
+        },
+      },
+    }),
     define: {
       "import.meta.env.PLACE": JSON.stringify(place),
       "import.meta.env.EDITOR_REVISION": JSON.stringify(
@@ -49,5 +75,5 @@ export default defineConfig({
         prerenderMathJaxCacheVersion,
       ),
     },
-  },
+  }),
 });
