@@ -517,11 +517,18 @@
         $$
 
     as the _distance formula_ 
-    or _Pythagorean distance_
-    or _Euclidean distance_
+    for the distance 
     from a point
     $(x_1, y_1)$ to a point $(x_2, y_2)$ in the
-    plane.
+    plane. This is also
+
+    __Pythagorean distance__
+
+    or
+
+    __Euclidean distance__
+
+    depending on the speaker and place.
         
 
 
