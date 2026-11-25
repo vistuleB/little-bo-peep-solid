@@ -204,6 +204,14 @@ const server = http.createServer(async (req, res) => {
           return json(res, 200, {
             branches: await ws.exclusive(() => ws.branches()),
           });
+        if (url.pathname === "/api/commits")
+          return json(
+            res,
+            200,
+            await ws.exclusive(() =>
+              ws.recentCommits(url.searchParams.get("branch")),
+            ),
+          );
         if (url.pathname === "/api/job") {
           const job = builds.jobs.get(url.searchParams.get("id"));
           return json(
