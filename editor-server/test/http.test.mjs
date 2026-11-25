@@ -161,6 +161,39 @@ for (const googleEnabled of [false, true])
       ).status,
       400,
     );
+    assert.match(login.headers.get("set-cookie"), /Max-Age=7776000/);
+    const otherLogin = await request("/api/login", {
+      data: { token: "test-token" },
+    });
+    const otherCookie = otherLogin.headers.get("set-cookie").split(";")[0];
+    assert.notEqual(cookie, otherCookie);
+    assert.equal(
+      (
+        await request("/api/logout", {
+          cookie,
+          data: {},
+          requestOrigin: "https://evil.example",
+        })
+      ).status,
+      403,
+    );
+    const logout = await request("/api/logout", { cookie, data: {} });
+    assert.equal(logout.status, 200);
+    assert.match(logout.headers.get("set-cookie"), /Max-Age=0/);
+    assert.equal((await request("/api/branches", { cookie })).status, 401);
+    assert.equal(
+      (await request("/api/branches", { cookie: otherCookie })).status,
+      200,
+    );
+    assert.equal(
+      (await request("/api/logout-all", { cookie: otherCookie, data: {} }))
+        .status,
+      200,
+    );
+    assert.equal(
+      (await request("/api/branches", { cookie: otherCookie })).status,
+      401,
+    );
     const page = await request("/");
     assert.match(
       page.headers.get("content-security-policy"),

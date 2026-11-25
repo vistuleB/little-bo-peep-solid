@@ -7,6 +7,7 @@ import { Workspace, run } from "./workspace.mjs";
 import { GoogleLogin } from "./google-auth.mjs";
 import { LivePreviews } from "./live-preview.mjs";
 import { Builds } from "./builds.mjs";
+import { Sessions } from "./sessions.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.EDITOR_PORT || 3019);
@@ -17,7 +18,6 @@ const previewPort = new URL(origin).port;
 const previewURL = (id) =>
   `${previewProtocol}//b-${id}.${previewDomain}${previewPort ? ":" + previewPort : ""}`;
 const token = process.env.EDITOR_TOKEN || randomBytes(24).toString("base64url");
-const session = randomBytes(32).toString("base64url");
 const ws = new Workspace(
   process.env.EDITOR_DATA_DIR || path.join(process.cwd(), ".editor-data"),
   process.env.EDITOR_REPO_URL,
@@ -30,12 +30,12 @@ const googleLogin = new GoogleLogin({
   email: process.env.EDITOR_GOOGLE_EMAIL,
   subjectFile: path.join(ws.root, "google-account.json"),
 });
-const sessionCookie = `editor_session=${session}; HttpOnly; SameSite=Strict; Path=/${previewProtocol === "https:" ? "; Secure" : ""}`;
+const sessions = new Sessions(
+  path.join(ws.root, "sessions.json"),
+  previewProtocol === "https:",
+);
+await sessions.init();
 const hash = (text) => createHash("sha256").update(text).digest();
-const authenticated = (req) =>
-  (req.headers.cookie || "")
-    .split(";")
-    .some((c) => c.trim() === `editor_session=${session}`);
 const json = (res, status, value) => {
   res.writeHead(status, {
     "content-type": "application/json",
@@ -182,7 +182,7 @@ const server = http.createServer(async (req, res) => {
           });
         }
         res.setHeader("set-cookie", [
-          sessionCookie,
+          await sessions.issue(),
           `editor_google_nonce=; HttpOnly; SameSite=Strict; Path=/api/; Max-Age=0${previewProtocol === "https:" ? "; Secure" : ""}`,
         ]);
         return json(res, 200, { ok: true });
@@ -194,11 +194,19 @@ const server = http.createServer(async (req, res) => {
           !timingSafeEqual(hash(data.token), hash(token))
         )
           return json(res, 401, { error: "Incorrect editor token" });
-        res.setHeader("set-cookie", sessionCookie);
+        res.setHeader("set-cookie", await sessions.issue());
         return json(res, 200, { ok: true });
       }
-      if (!authenticated(req))
+      if (!(await sessions.authenticate(req, res)))
         return json(res, 401, { error: "Sign in to the editor." });
+      if (
+        req.method === "POST" &&
+        ["/api/logout", "/api/logout-all"].includes(url.pathname)
+      ) {
+        await sessions.revoke(req, url.pathname === "/api/logout-all");
+        res.setHeader("set-cookie", sessions.cookie("", 0));
+        return json(res, 200, { ok: true });
+      }
       if (req.method === "GET") {
         if (url.pathname === "/api/branches")
           return json(res, 200, {
