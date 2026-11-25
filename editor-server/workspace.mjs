@@ -143,49 +143,163 @@ export class Workspace {
       .split("\n")
       .filter((n) => n && n !== "HEAD");
   }
+  async history(name, record = this.state.branches[name]) {
+    const revision = await this.git(["rev-parse", record.ref]);
+    const saved = record.history;
+    if (saved) {
+      const position = [saved.base, ...saved.commits].indexOf(revision);
+      if (position >= 0) {
+        let published = 0;
+        try {
+          const common = await this.git([
+            "merge-base",
+            revision,
+            `refs/remotes/origin/${name}`,
+          ]);
+          published = Math.max(
+            0,
+            [saved.base, ...saved.commits].indexOf(common),
+          );
+        } catch {
+          /* A missing remote does not erase local history. */
+        }
+        return {
+          base: published ? saved.commits[published - 1] : saved.base,
+          commits: saved.commits.slice(published),
+          position: position - published,
+        };
+      }
+    }
+    if (saved && saved.position < saved.commits.length)
+      throw new Error(
+        "Branch history changed outside the editor; manual recovery required.",
+      );
+    let base = saved?.base;
+    if (!base) {
+      try {
+        base = await this.git([
+          "merge-base",
+          revision,
+          `refs/remotes/origin/${name}`,
+        ]);
+      } catch {
+        base = revision;
+      }
+    }
+    const commits = (
+      await this.git([
+        "rev-list",
+        "--first-parent",
+        "--reverse",
+        `${base}..${revision}`,
+      ])
+    )
+      .split("\n")
+      .filter(Boolean);
+    return { base, commits, position: commits.length };
+  }
+  async storeHistory(name, history) {
+    // A real Git ref protects forward revisions from garbage collection.
+    await this.git([
+      "update-ref",
+      `refs/editor-history/${idFor(name)}`,
+      history.commits.at(-1) || history.base,
+    ]);
+    this.state.branches[name].history = history;
+    await this.save();
+  }
+  async branchInfo(name, remotes) {
+    const record = this.state.branches[name];
+    const remoteExists = (remotes || (await this.remoteBranches())).includes(
+      name,
+    );
+    let ahead = 0,
+      behind = remoteExists ? 0 : null;
+    if (record && remoteExists)
+      [ahead, behind] = (
+        await this.git([
+          "rev-list",
+          "--left-right",
+          "--count",
+          `${record.ref}...refs/remotes/origin/${name}`,
+        ])
+      )
+        .split(/\s+/)
+        .map(Number);
+    else if (record) ahead = null;
+    const history = record ? await this.history(name, record) : null;
+    return {
+      name,
+      ahead,
+      behind,
+      remoteMissing: !remoteExists,
+      opened: !!record,
+      lastUsed: record?.lastUsed || null,
+      command: record?.command || "gleam run",
+      commands: record?.commands || ["gleam run"],
+      preview: record?.preview || null,
+      revision: history
+        ? history.commits[history.position - 1] || history.base
+        : null,
+      discard: history?.position || 0,
+      reinstate: history ? history.commits.length - history.position : 0,
+    };
+  }
   async branches() {
+    const remotes = await this.remoteBranches();
     const names = [
-      ...new Set([
-        ...(await this.remoteBranches()),
-        ...Object.keys(this.state.branches),
-      ]),
+      ...new Set([...remotes, ...Object.keys(this.state.branches)]),
     ].sort(
       (a, b) =>
         (this.state.branches[b]?.lastUsed || 0) -
           (this.state.branches[a]?.lastUsed || 0) || a.localeCompare(b),
     );
-    return Promise.all(
-      names.map(async (name) => {
-        const record = this.state.branches[name];
-        const remoteExists = (await this.remoteBranches()).includes(name);
-        let ahead = 0,
-          behind = remoteExists ? 0 : null;
-        if (record && remoteExists)
-          [ahead, behind] = (
-            await this.git([
-              "rev-list",
-              "--left-right",
-              "--count",
-              `${record.ref}...refs/remotes/origin/${name}`,
-            ])
-          )
-            .split(/\s+/)
-            .map(Number);
-        else if (record) ahead = null;
-        return {
-          name,
-          ahead,
-          behind,
-          remoteMissing: !remoteExists,
-          opened: !!record,
-          lastUsed: record?.lastUsed || null,
-          command: record?.command || "gleam run",
-          commands: record?.commands || ["gleam run"],
-          preview: record?.preview || null,
-          revision: record ? await this.git(["rev-parse", record.ref]) : null,
-        };
-      }),
+    return Promise.all(names.map((name) => this.branchInfo(name, remotes)));
+  }
+  async checkRevision(record, revision) {
+    if ((await this.git(["rev-parse", record.ref])) !== revision)
+      throw new Error(
+        "The branch changed. Reload before continuing; your browser edits are still available.",
+      );
+    if (await this.git(["status", "--porcelain"], record.dir))
+      throw new Error(
+        "The server draft has unfinished filesystem changes; manual recovery is required.",
+      );
+  }
+  async move(name, revision, direction) {
+    const record = await this.open(name);
+    await this.checkRevision(record, revision);
+    const history = await this.history(name, record);
+    if (direction !== -1 && direction !== 1)
+      throw new Error("Invalid history direction.");
+    const position = history.position + direction;
+    if (position < 0 || position > history.commits.length)
+      throw new Error("No revision in that direction.");
+    // Save/pin the existing tip before moving the checked-out branch backwards.
+    await this.storeHistory(name, history);
+    await this.git(
+      ["reset", "--hard", history.commits[position - 1] || history.base],
+      record.dir,
     );
+    history.position = position;
+    await this.storeHistory(name, history);
+    return { branch: await this.branchInfo(name) };
+  }
+  async set(name, revision, expectedForward) {
+    const record = await this.open(name);
+    await this.checkRevision(record, revision);
+    const history = await this.history(name, record);
+    this.checkForward(history, expectedForward);
+    history.commits = history.commits.slice(0, history.position);
+    await this.storeHistory(name, history);
+    return { branch: await this.branchInfo(name) };
+  }
+  checkForward(history, expected) {
+    const forward = history.commits.length - history.position;
+    if (forward && expected !== forward)
+      throw new Error(
+        `Confirm discarding ${forward} revisions available to reinstate.`,
+      );
   }
   // Only explicit UI selection counts as use. Internal opens for builds,
   // source reads and background work must not reshuffle the menu.
@@ -245,8 +359,11 @@ export class Workspace {
       revision: await this.git(["rev-parse", "HEAD"], record.dir),
     };
   }
-  async commit(name, revision, changes) {
-    const { dir } = await this.open(name);
+  async commit(name, revision, changes, expectedForward) {
+    const record = await this.open(name);
+    const { dir } = record;
+    const history = await this.history(name, record);
+    this.checkForward(history, expectedForward);
     if ((await this.git(["rev-parse", "HEAD"], dir)) !== revision)
       throw new Error(
         "The branch changed. Reload before committing; your browser edits are still available.",
@@ -258,16 +375,22 @@ export class Workspace {
     if (!Array.isArray(changes) || !changes.length || changes.length > 100)
       throw new Error("No changes to commit.");
     const originals = new Map();
+    const files = new Set(await this.files(name));
     for (const change of changes) {
       if (
         typeof change.content !== "string" ||
         Buffer.byteLength(change.content) > 2_000_000
       )
         throw new Error("Invalid source content.");
-      originals.set(
-        change.file,
-        (await this.source(name, change.file)).content,
-      );
+      if (!files.has(change.file) || originals.has(change.file))
+        throw new Error("Choose distinct existing tracked .wly files.");
+      const full = path.join(dir, change.file);
+      if (
+        !(await fs.lstat(full)).isFile() ||
+        (await fs.realpath(full)) !== full
+      )
+        throw new Error("Symbolic links are not editable.");
+      originals.set(change.file, await fs.readFile(full, "utf8"));
     }
     try {
       for (const { file, content } of changes)
@@ -288,7 +411,13 @@ export class Workspace {
       await this.git(["reset", "--", ...originals.keys()], dir);
       throw error;
     }
-    return { revision: await this.git(["rev-parse", "HEAD"], dir) };
+    const next = await this.git(["rev-parse", "HEAD"], dir);
+    if (next !== revision) {
+      history.commits = [...history.commits.slice(0, history.position), next];
+      history.position = history.commits.length;
+      await this.storeHistory(name, history);
+    }
+    return { revision: next, branch: await this.branchInfo(name) };
   }
   async command(name, command) {
     buildArguments(command);
@@ -300,30 +429,77 @@ export class Workspace {
     );
     await this.save();
   }
-  async sync(name) {
+  async sync(name, options = {}) {
     const record = await this.open(name);
-    if (await this.git(["status", "--porcelain"], record.dir))
-      throw new Error("Server draft is dirty; manual recovery required.");
+    const current = await this.git(["rev-parse", record.ref]);
+    await this.checkRevision(record, options.revision || current);
+    const message =
+      typeof options.message === "string" ? options.message.trim() : "";
+    if (message.length > 2000) throw new Error("Commit message is too long.");
     await this.fetch();
     if (!(await this.remoteBranches()).includes(name))
       throw new Error(
         "The remote branch is missing. The server draft is preserved.",
       );
+    const history = await this.history(name, record);
+    const future = history.commits.slice(history.position);
+    const remote = `refs/remotes/origin/${name}`;
     const temp = path.join(this.root, "sync", randomUUID());
     await fs.mkdir(path.dirname(temp), { recursive: true });
-    await this.git(["worktree", "add", "--detach", temp, record.ref]);
+    await this.git(["worktree", "add", "--detach", temp, current]);
     try {
+      if (options.squash && history.position > 0) {
+        // Squash only local history, never rewrite commits already on GitHub.
+        await this.git(["reset", "--soft", history.base], temp);
+        if (await this.git(["diff", "--cached", "--name-only"], temp))
+          await this.git(
+            [
+              "commit",
+              "-m",
+              message || `Edit ${history.position} local revisions`,
+            ],
+            temp,
+          );
+      }
       await this.git(
-        ["merge", "--no-edit", `refs/remotes/origin/${name}`],
+        ["merge", "--no-edit", ...(message ? ["-m", message] : []), remote],
         temp,
       );
-      await this.git(["push", "origin", `HEAD:refs/heads/${name}`], temp);
-      const revision = await this.git(["rev-parse", "HEAD"], temp);
-      await this.git(["reset", "--hard", revision], record.dir);
-      await this.fetch();
-      return { revision };
+      const published = await this.git(["rev-parse", "HEAD"], temp);
+      // Rebase forward memory before pushing. A conflict leaves both GitHub and
+      // the user's working history untouched; no half-completed sync.
+      const reinstatable = [];
+      if (published === current) reinstatable.push(...future);
+      else
+        for (const commit of future) {
+          await this.git(
+            [
+              "cherry-pick",
+              "--allow-empty",
+              "--keep-redundant-commits",
+              commit,
+            ],
+            temp,
+          );
+          reinstatable.push(await this.git(["rev-parse", "HEAD"], temp));
+        }
+      await this.git(
+        ["push", "origin", `${published}:refs/heads/${name}`],
+        temp,
+      );
+      await this.git([
+        "update-ref",
+        `refs/editor-history/${idFor(name)}`,
+        reinstatable.at(-1) || published,
+      ]);
+      await this.git(["reset", "--hard", published], record.dir);
+      await this.storeHistory(name, {
+        base: published,
+        commits: reinstatable,
+        position: 0,
+      });
+      return { revision: published, branch: await this.branchInfo(name) };
     } finally {
-      // Only this disposable merge worktree is removed, including conflict files.
       await this.git(["worktree", "remove", "--force", temp]);
     }
   }

@@ -201,7 +201,9 @@ const server = http.createServer(async (req, res) => {
         return json(res, 401, { error: "Sign in to the editor." });
       if (req.method === "GET") {
         if (url.pathname === "/api/branches")
-          return json(res, 200, { branches: await ws.branches() });
+          return json(res, 200, {
+            branches: await ws.exclusive(() => ws.branches()),
+          });
         if (url.pathname === "/api/job") {
           const job = builds.jobs.get(url.searchParams.get("id"));
           return json(
@@ -250,6 +252,7 @@ const server = http.createServer(async (req, res) => {
               revision: data.revision,
               changes: data.changes,
               production: data.production === true,
+              scratch: data.scratch === true,
             }),
           );
         if (url.pathname === "/api/cancel-build")
@@ -265,12 +268,25 @@ const server = http.createServer(async (req, res) => {
               await ws.select(data.branch);
               return { branches: await ws.branches() };
             case "/api/commit":
-              return ws.commit(data.branch, data.revision, data.changes);
+              return ws.commit(
+                data.branch,
+                data.revision,
+                data.changes,
+                data.discardForward,
+              );
+            case "/api/history":
+              return ws.move(data.branch, data.revision, data.direction);
+            case "/api/set":
+              return ws.set(data.branch, data.revision, data.discardForward);
             case "/api/command":
               await ws.command(data.branch, data.command);
               return { ok: true };
             case "/api/sync":
-              return ws.sync(data.branch);
+              return ws.sync(data.branch, {
+                revision: data.revision,
+                squash: data.squash === true,
+                message: data.message,
+              });
             default:
               throw new Error("Unknown operation");
           }
