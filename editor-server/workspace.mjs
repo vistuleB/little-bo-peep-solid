@@ -1,3 +1,4 @@
+import { editorCommitMessage } from "./commit-message.mjs";
 import { spawn } from "node:child_process";
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -208,6 +209,26 @@ export class Workspace {
     this.state.branches[name].history = history;
     await this.save();
   }
+  async recentCommits(name) {
+    const record = this.state.branches[name];
+    if (!record) throw new Error("Select a branch first.");
+    const revision = await this.git(["rev-parse", record.ref]);
+    const output = await this.git([
+      "log",
+      "-5",
+      "--format=%H%x09%s",
+      revision,
+      "--",
+    ]);
+    const commits = output
+      .split("\n")
+      .filter(Boolean)
+      .map((line) => {
+        const tab = line.indexOf("\t");
+        return { hash: line.slice(0, tab), message: line.slice(tab + 1) };
+      });
+    return { revision, commits };
+  }
   async branchInfo(name, remotes) {
     const record = this.state.branches[name];
     const remoteExists = (remotes || (await this.remoteBranches())).includes(
@@ -398,11 +419,7 @@ export class Workspace {
       await this.git(["add", "--", ...originals.keys()], dir);
       if (await this.git(["diff", "--cached", "--name-only"], dir))
         await this.git(
-          [
-            "commit",
-            "-m",
-            `Edit ${originals.size} Writerly file${originals.size === 1 ? "" : "s"}`,
-          ],
+          ["commit", "-m", editorCommitMessage(changes, originals)],
           dir,
         );
     } catch (error) {

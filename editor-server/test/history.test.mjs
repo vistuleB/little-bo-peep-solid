@@ -163,3 +163,19 @@ test("refresh recognizes revisions published by another checkout before squash",
   await git(["merge-base", "--is-ancestor", published, "HEAD"]);
   assert.equal(await git(["log", "-1", "--format=%s"]), "Only new edits");
 });
+
+test("recent commits follows the selected revision and returns five hashes and subjects", async (t) => {
+  const { ws, info, commit, move } = await fixture(t);
+  await assert.rejects(ws.recentCommits("unknown"), /Select a branch/);
+  for (let i = 1; i <= 6; i++) await commit(`revision ${i}`);
+  const latest = await ws.recentCommits("develop");
+  assert.equal(latest.commits.length, 5);
+  assert.equal(latest.revision, (await info()).revision);
+  assert.equal(latest.commits[0].hash, latest.revision);
+  assert.match(latest.commits[0].hash, /^[a-f0-9]{40}$/);
+  assert.match(latest.commits[0].message, /^EDITOR: a\.wly:1 .*5.* -> .*6/);
+  await move(-1);
+  const previous = await ws.recentCommits("develop");
+  assert.equal(previous.commits[0].hash, latest.commits[1].hash);
+  assert.equal(previous.commits.length, 5);
+});

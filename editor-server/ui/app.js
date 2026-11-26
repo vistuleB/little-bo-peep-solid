@@ -230,6 +230,56 @@ async function refresh(fetchRemote = false) {
   renderBranches();
   update();
 }
+const commitLists = new Map();
+function appendRecentCommits(card, branch) {
+  const key = branch.name + ":" + branch.revision;
+  const entry = commitLists.get(key);
+  const list = document.createElement("ol");
+  list.className = "recent-commits";
+  list.setAttribute("aria-label", "Latest five commits");
+  if (!entry?.commits) {
+    const row = document.createElement("li");
+    row.textContent = entry?.error || "Loading commits…";
+    list.append(row);
+  } else
+    for (const commit of entry.commits) {
+      const row = document.createElement("li");
+      const hash = document.createElement("code");
+      hash.textContent = commit.hash.slice(0, 8);
+      hash.title = commit.hash;
+      const message = document.createElement("span");
+      message.textContent = commit.message;
+      row.append(hash, message);
+      list.append(row);
+    }
+  card.append(list);
+  if (!entry) {
+    commitLists.set(key, { pending: true });
+    api("commits?branch=" + encodeURIComponent(branch.name))
+      .then((result) => {
+        if (result.revision !== branch.revision) {
+          commitLists.delete(key);
+          return refresh();
+        }
+        commitLists.set(key, result);
+        if (
+          state.branch === branch.name &&
+          branchInfo()?.revision === branch.revision
+        )
+          renderBranches();
+      })
+      .catch((error) => {
+        commitLists.set(key, {
+          error: "Could not load commits: " + error.message,
+        });
+        if (
+          state.branch === branch.name &&
+          branchInfo()?.revision === branch.revision
+        )
+          renderBranches();
+      });
+  }
+}
 function renderBranches() {
   $("#branch-list").replaceChildren();
   for (const branch of state.branches) {
@@ -258,6 +308,7 @@ function renderBranches() {
     sync.disabled = state.saving || state.moving || !canSync(branch);
     footer.append(sync);
     card.append(footer);
+    if (branch.name === state.branch) appendRecentCommits(card, branch);
     $("#branch-list").append(card);
   }
 }
@@ -551,7 +602,7 @@ async function syncBranch() {
       ...choice,
     });
     await reloadSource(result.branch);
-    notice("Synced. Remaining revisions are still available to reinstate.");
+    notice("");
   } finally {
     state.moving = false;
     update();
@@ -888,6 +939,17 @@ async function boot() {
   $("nav").hidden = false;
   mode("branches");
 }
+async function signOut(all) {
+  if (state.saving || state.moving) return;
+  if (!(await settle("Commit or discard your edits before signing out.")))
+    return;
+  if (all && !window.confirm("Sign out all devices, including this one?"))
+    return;
+  await api(all ? "logout-all" : "logout", {});
+  window.location.reload();
+}
+$("#sign-out").onclick = () => perform(() => signOut(false));
+$("#sign-out-all").onclick = () => perform(() => signOut(true));
 $("#refresh").onclick = () => perform(() => refresh(true));
 $("#branch-pill").onclick = () => mode("branches");
 $("nav").onclick = (event) => {
