@@ -173,7 +173,7 @@ test("recent commits follows the selected revision and returns five hashes and s
   assert.equal(latest.revision, (await info()).revision);
   assert.equal(latest.commits[0].hash, latest.revision);
   assert.match(latest.commits[0].hash, /^[a-f0-9]{40}$/);
-  assert.equal(latest.commits[0].message, "Edit 1 Writerly file");
+  assert.match(latest.commits[0].message, /^EDITOR: a\.wly:1 .*5.* -> .*6/);
   await move(-1);
   const previous = await ws.recentCommits("develop");
   assert.equal(previous.commits[0].hash, latest.commits[1].hash);
