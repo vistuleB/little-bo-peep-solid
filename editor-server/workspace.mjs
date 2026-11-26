@@ -1,3 +1,4 @@
+import { editorCommitMessage } from "./commit-message.mjs";
 import { spawn } from "node:child_process";
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -418,11 +419,7 @@ export class Workspace {
       await this.git(["add", "--", ...originals.keys()], dir);
       if (await this.git(["diff", "--cached", "--name-only"], dir))
         await this.git(
-          [
-            "commit",
-            "-m",
-            `Edit ${originals.size} Writerly file${originals.size === 1 ? "" : "s"}`,
-          ],
+          ["commit", "-m", editorCommitMessage(changes, originals)],
           dir,
         );
     } catch (error) {
