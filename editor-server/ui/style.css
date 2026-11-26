@@ -126,6 +126,17 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+.branch-actions {
+  display: flex;
+  gap: 6px;
+  flex: none;
+}
+.branch-preview {
+  width: 40px;
+  padding: 8px;
+  font-size: 20px;
+  line-height: 1;
+}
 .primary {
   background: #365d47;
   color: white;

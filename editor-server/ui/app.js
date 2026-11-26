@@ -160,6 +160,9 @@ function update() {
     );
     button.disabled = locked || !canSync(branch);
   });
+  document.querySelectorAll("[data-preview-branch]").forEach((button) => {
+    button.disabled = locked;
+  });
   previewButton.disabled = !state.branch || locked;
   $("#clean-build-cache").disabled =
     $("#production-build").disabled =
@@ -315,7 +318,22 @@ function renderBranches() {
     });
     sync.dataset.syncBranch = branch.name;
     sync.disabled = state.saving || state.moving || !canSync(branch);
-    footer.append(sync);
+    const preview = button(
+      "▤",
+      async () => {
+        if (!(await chooseBranch(branch.name))) return;
+        await enterPreview();
+      },
+      "branch-preview",
+    );
+    preview.dataset.previewBranch = branch.name;
+    preview.title = `Preview ${branch.name}`;
+    preview.setAttribute("aria-label", preview.title);
+    preview.disabled = state.saving || state.moving;
+    const actions = document.createElement("div");
+    actions.className = "branch-actions";
+    actions.append(sync, preview);
+    footer.append(actions);
     card.append(footer);
     if (branch.name === state.branch) appendRecentCommits(card, branch);
     $("#branch-list").append(card);
