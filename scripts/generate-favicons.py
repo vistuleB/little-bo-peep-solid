@@ -3,6 +3,7 @@ Requires Pillow. Uses the same font and 22:16 font-size/line-height ratio
 as the original text HeaderBlob. No illustration or AI-redrawn lettering.
 """
 from pathlib import Path
+import sys
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -20,12 +21,14 @@ factor = 232 * SCALE / max(right-left, bottom-top)
 font = ImageFont.truetype(str(FONT), round(220 * factor))
 x = (256*SCALE - (right-left)*factor)/2 - left*factor
 y = (256*SCALE - (bottom-top)*factor)/2 - top*factor
-for theme, color in [('local', '#dcebdd'), ('remote', '#f5f0f0')]:
+for theme, color in [('local', '#dcebdd'), ('remote', '#f5f0f0'), ('editor', '#000000')]:
+    if '--editor-only' in sys.argv and theme != 'editor':
+        continue
     im = Image.new('RGB', (256*SCALE, 256*SCALE), color)
     draw = ImageDraw.Draw(im)
     for i, word in enumerate(words):
-        draw.text((x, y + i*160*factor), word, font=font, fill='black', anchor='ls')
-    for size in (256, 180):
-        output = ROOT / f'public/favicon-tsc-{theme}-v1-{size}.png'
+        draw.text((x, y + i*160*factor), word, font=font, fill='white' if theme == 'editor' else 'black', anchor='ls')
+    for size in ((256, 180, 32) if theme == 'editor' else (256, 180)):
+        output = ROOT / (f'editor-server/ui/favicon-editor-v3-{size}.png' if theme == 'editor' else f'public/favicon-tsc-{theme}-v1-{size}.png')
         im.resize((size,size), Image.Resampling.LANCZOS).save(output)
         print(output.relative_to(ROOT))
