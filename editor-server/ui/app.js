@@ -1,6 +1,15 @@
 import { rememberPosition, restorePosition } from "./editor-position.mjs";
 import { needsBuild, running } from "./preview-state.mjs";
 const $ = (selector) => document.querySelector(selector);
+// iPadOS can identify as desktop macOS. Limit focus zoom only on iOS;
+// leave other browsers' pinch-zoom limits unchanged.
+const isIOS =
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+if (isIOS) {
+  const viewport = $('meta[name="viewport"]');
+  viewport.content += ",maximum-scale=1";
+}
 const state = {
   saving: false,
   moving: false,
