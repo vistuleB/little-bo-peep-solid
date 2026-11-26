@@ -39,3 +39,15 @@ test("unchanged files are skipped and additional changed files counted", () => {
     'EDITOR: b.wly:1 "old" -> "new" (+1 file)',
   );
 });
+
+test("whitespace-only edits show visible spaces, including trailing spaces", () => {
+  assert.equal(
+    message("is  also", "is also"),
+    'EDITOR: bt3.wly:1 "is··also" -> "is·also"',
+  );
+  assert.equal(
+    message("hello ", "hello"),
+    'EDITOR: bt3.wly:1 "hello·" -> "hello"',
+  );
+  assert.equal(message("a\tb", "a b"), 'EDITOR: bt3.wly:1 "a\\tb" -> "a·b"');
+});

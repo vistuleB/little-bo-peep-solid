@@ -17,6 +17,8 @@ export function editorCommitMessage(changes, originals) {
     line++;
   const oldLine = before[line] || "";
   const newLine = after[line] || "";
+  const whitespaceOnly =
+    oldLine.replace(/\s/g, "") === newLine.replace(/\s/g, "");
   let column = 0;
   while (
     column < oldLine.length &&
@@ -30,7 +32,10 @@ export function editorCommitMessage(changes, originals) {
     const chars = Array.from(text.slice(start));
     return JSON.stringify(
       (start && text ? "…" : "") +
-        chars.slice(0, 10).join("") +
+        chars
+          .slice(0, 10)
+          .map((char) => (whitespaceOnly && char === " " ? "·" : char))
+          .join("") +
         (chars.length > 10 ? "…" : ""),
     );
   };
