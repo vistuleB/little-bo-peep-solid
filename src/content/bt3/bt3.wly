@@ -532,9 +532,42 @@
         
 |> Section
 
-    *The distane formula in 3 dimensions.*
-    Hello.
+    *The distance formula in 3 dimensions.*
+    There are two
+    |> del
+        right
+    \ orthogonal triangles in this drawing:
 
+
+    |> Image
+
+    On the one hand, the red triangle gives
+    us
+
+    $$
+    c^2 = a^2 + b^2
+    $$
+
+    since $c$ is the hypotenuse of that triangle
+    and $a$ and $b$ are its legs, while the blue
+    triangle gives us
+
+    $$
+    e^2 = c^2 + d^2
+    $$
+
+    since $e$ is the hypotenuse of that triangle,
+    and $c$ and $d$ are its legs.
+    
+
+    ...orrrr_rrrr_...
+
+    |> Boxed
+        $$
+        e^2 = a^2+b^2+d^2
+        $$
+
+    ...by using the fact that $c^2$ is equal to $a^2+b^2$
 |> Section
     *The squares.* Observe this computation ofthe
     area of a certain square:
