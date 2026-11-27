@@ -1,3 +1,4 @@
+import { indentationEdit } from "./indentation.mjs";
 import { rememberPosition, restorePosition } from "./editor-position.mjs";
 import { needsBuild, running } from "./preview-state.mjs";
 const $ = (selector) => document.querySelector(selector);
@@ -489,7 +490,21 @@ $("#editor").onkeydown = (event) => {
     !event.metaKey &&
     !event.altKey
   ) {
-    if (insertEditorText("    ")) event.preventDefault();
+    event.preventDefault();
+    const el = event.target;
+    const start = el.selectionStart,
+      end = el.selectionEnd;
+    const direction = el.selectionDirection;
+    const edit = indentationEdit(el.value, start, end, event.shiftKey);
+    if (el.value.slice(edit.from, edit.to) === edit.text) return;
+    const scrollTop = el.scrollTop,
+      scrollLeft = el.scrollLeft;
+    el.setSelectionRange(edit.from, edit.to);
+    if (insertEditorText(edit.text))
+      el.setSelectionRange(edit.start, edit.end, direction);
+    else el.setSelectionRange(start, end, direction);
+    el.scrollTop = scrollTop;
+    el.scrollLeft = scrollLeft;
   }
 };
 $("#editor").addEventListener("beforeinput", (event) => {
