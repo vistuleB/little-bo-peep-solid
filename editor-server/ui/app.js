@@ -1,6 +1,15 @@
 import { rememberPosition, restorePosition } from "./editor-position.mjs";
 import { needsBuild, running } from "./preview-state.mjs";
 const $ = (selector) => document.querySelector(selector);
+// iPadOS can identify as desktop macOS. Limit focus zoom only on iOS;
+// leave other browsers' pinch-zoom limits unchanged.
+const isIOS =
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+if (isIOS) {
+  const viewport = $('meta[name="viewport"]');
+  viewport.content += ",maximum-scale=1";
+}
 const state = {
   saving: false,
   moving: false,
@@ -150,6 +159,9 @@ function update() {
       (b) => b.name === button.dataset.syncBranch,
     );
     button.disabled = locked || !canSync(branch);
+  });
+  document.querySelectorAll("[data-preview-branch]").forEach((button) => {
+    button.disabled = locked;
   });
   previewButton.disabled = !state.branch || locked;
   $("#clean-build-cache").disabled =
@@ -306,7 +318,22 @@ function renderBranches() {
     });
     sync.dataset.syncBranch = branch.name;
     sync.disabled = state.saving || state.moving || !canSync(branch);
-    footer.append(sync);
+    const preview = button(
+      "▤",
+      async () => {
+        if (!(await chooseBranch(branch.name))) return;
+        await enterPreview();
+      },
+      "branch-preview",
+    );
+    preview.dataset.previewBranch = branch.name;
+    preview.title = `Preview ${branch.name}`;
+    preview.setAttribute("aria-label", preview.title);
+    preview.disabled = state.saving || state.moving;
+    const actions = document.createElement("div");
+    actions.className = "branch-actions";
+    actions.append(sync, preview);
+    footer.append(actions);
     card.append(footer);
     if (branch.name === state.branch) appendRecentCommits(card, branch);
     $("#branch-list").append(card);
