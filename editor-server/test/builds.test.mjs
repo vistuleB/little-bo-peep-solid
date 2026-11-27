@@ -357,3 +357,57 @@ test("aborting a subprocess terminates its process group", async () => {
   await new Promise((r) => setTimeout(r, 100));
   assert.throws(() => process.kill(grandchild, 0), { code: "ESRCH" });
 });
+
+test("preview reuse follows file trees rather than history-only commit changes", async () => {
+  const preview = {
+    branch: "develop",
+    revision: "old",
+    tree: "same-tree",
+    command: "gleam run",
+    contentKey: await sourceKey("same-tree"),
+  };
+  assert.equal(
+    await needsBuild(
+      preview,
+      "develop",
+      "squashed",
+      [],
+      "gleam run",
+      "same-tree",
+    ),
+    false,
+  );
+  assert.equal(
+    await needsBuild(
+      preview,
+      "develop",
+      "new",
+      [],
+      "gleam run",
+      "different-tree",
+    ),
+    true,
+  );
+  assert.equal(
+    await needsBuild(
+      preview,
+      "develop",
+      "old",
+      [{ file: "a.wly", content: "edit" }],
+      "gleam run",
+      "same-tree",
+    ),
+    true,
+  );
+  assert.equal(
+    await needsBuild(
+      preview,
+      "develop",
+      "old",
+      [],
+      "gleam run -- --only bt3",
+      "same-tree",
+    ),
+    true,
+  );
+});

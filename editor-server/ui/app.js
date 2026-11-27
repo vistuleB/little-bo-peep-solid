@@ -456,7 +456,8 @@ async function openFile(file, line = 1) {
       3,
     ),
   );
-  $("#editor").value = state.documents.get(file).content;
+  const content = state.documents.get(file).content;
+  if ($("#editor").value !== content) $("#editor").value = content;
   update();
   if (line >= 1) {
     const editor = $("#editor");
@@ -476,14 +477,33 @@ $("#editor").oninput = () => {
   if (state.file) state.documents.get(state.file).content = $("#editor").value;
   update();
 };
+// insertText goes through the browser editing transaction, preserving native undo.
+function insertEditorText(text) {
+  return document.execCommand("insertText", false, text);
+}
 $("#editor").onkeydown = (event) => {
-  if (event.key === "Tab") {
-    event.preventDefault();
-    const el = event.target;
-    el.setRangeText("    ", el.selectionStart, el.selectionEnd, "end");
-    el.dispatchEvent(new Event("input"));
+  if (
+    event.key === "Tab" &&
+    !event.ctrlKey &&
+    !event.metaKey &&
+    !event.altKey
+  ) {
+    if (insertEditorText("    ")) event.preventDefault();
   }
 };
+$("#editor").addEventListener("beforeinput", (event) => {
+  if (
+    event.inputType !== "insertLineBreak" ||
+    event.isComposing ||
+    !event.cancelable
+  )
+    return;
+  const el = event.target;
+  const preceding = el.value.slice(0, el.selectionStart);
+  const line = preceding.slice(preceding.lastIndexOf("\n") + 1);
+  const indent = line.match(/^[ \t]*/)[0];
+  if (indent && insertEditorText("\n" + indent)) event.preventDefault();
+});
 function discard() {
   for (const doc of state.documents.values()) doc.content = doc.original;
   if (state.file) $("#editor").value = state.documents.get(state.file).content;
@@ -790,7 +810,10 @@ addEventListener("message", (event) => {
       goggles(false);
       mode("source");
       await openFile(file, line);
-      if (state.preview.revision !== branchInfo()?.revision)
+      if (
+        state.preview.revision !== branchInfo()?.revision &&
+        (!state.preview.tree || state.preview.tree !== branchInfo()?.tree)
+      )
         notice(
           "This preview is from an earlier commit; line positions may have shifted.",
         );
@@ -808,6 +831,7 @@ async function enterPreview() {
     state.revision || branchInfo()?.revision,
     currentChanges(),
     selectedCommand(),
+    branchInfo()?.tree,
   );
   if (state.job || state.buildStarting) {
     mode("preview");

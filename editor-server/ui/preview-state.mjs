@@ -14,7 +14,23 @@ export async function sourceKey(revision, changes = []) {
     .map((b) => b.toString(16).padStart(2, "0"))
     .join("");
 }
-export async function needsBuild(preview, branch, revision, changes, command) {
+export async function needsBuild(
+  preview,
+  branch,
+  revision,
+  changes,
+  command,
+  tree,
+) {
+  if (tree && preview?.tree) {
+    if (
+      preview.branch !== branch ||
+      preview.command !== command ||
+      preview.tree !== tree
+    )
+      return true;
+    return preview.contentKey !== (await sourceKey(tree, changes));
+  }
   if (
     !preview ||
     preview.branch !== branch ||
