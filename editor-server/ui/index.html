@@ -116,7 +116,19 @@
               ✓
             </button>
           </div>
-          <button id="history-forward">Sync</button>
+          <button id="history-forward" hidden>Reinstate (0)</button>
+          <div class="sync-split" id="source-sync">
+            <button data-sync-choice="plain" title="Sync" aria-label="Sync">
+              ↑↓
+            </button>
+            <button
+              data-sync-choice="squash"
+              title="Squash &amp; sync"
+              aria-label="Squash and sync"
+            >
+              ▰↑↓
+            </button>
+          </div>
           <button id="source-build" hidden>Build</button>
         </div>
       </main>
@@ -143,6 +155,20 @@
             <button id="previous-preview">Show previous preview</button>
           </div>
         </section>
+        <div class="preview-actions">
+          <div class="sync-split" id="preview-sync">
+            <button data-sync-choice="plain" title="Sync" aria-label="Sync">
+              ↑↓
+            </button>
+            <button
+              data-sync-choice="squash"
+              title="Squash &amp; sync"
+              aria-label="Squash and sync"
+            >
+              ▰↑↓
+            </button>
+          </div>
+        </div>
       </main>
       <nav hidden>
         <button data-mode="branches">⑂<span>Branches</span></button
@@ -185,21 +211,23 @@
       ><button id="confirm-yes">Commit</button>
     </dialog>
     <dialog id="sync-dialog">
-      <h2>Sync</h2>
-      <p id="sync-description"></p>
-      <label
-        >Optional commit message (squash or merge)
-        <input
-          id="sync-message"
-          maxlength="2000"
-          placeholder="Describe this change"
-        />
-      </label>
-      <div class="sync-options">
-        <button id="sync-plain">Sync</button>
-        <button id="sync-squash">Squash &amp; sync</button>
-        <button id="sync-cancel">Cancel</button>
-      </div>
+      <form id="sync-form">
+        <h2>Sync</h2>
+        <p id="sync-description"></p>
+        <label
+          >Optional commit message (squash or merge)
+          <input
+            id="sync-message"
+            maxlength="2000"
+            placeholder="Describe this change"
+          />
+        </label>
+        <div class="sync-options">
+          <label><input type="checkbox" id="sync-squash" /> Squash</label>
+          <button type="submit" id="sync-plain">Sync</button>
+          <button type="button" id="sync-cancel">Cancel</button>
+        </div>
+      </form>
     </dialog>
     <script type="module" src="/app.js"></script>
   </body>
