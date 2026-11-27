@@ -63,7 +63,7 @@ export class Builds {
     buildArguments(command);
     if (this.busy())
       throw new Error("A build or cache cleanup is already running.");
-    let revision, inputKey;
+    let revision, inputKey, tree, contentKey;
     const changes = structuredClone(snapshot.changes || []);
     if (!Array.isArray(changes) || changes.length > 100)
       throw new Error("Invalid build changes.");
@@ -96,6 +96,8 @@ export class Builds {
         return revision;
       });
       inputKey = await sourceKey(revision, changes);
+      tree = await ws.git(["rev-parse", `${revision}^{tree}`]);
+      contentKey = await sourceKey(tree, changes);
     } finally {
       this.starting = false;
     }
@@ -110,6 +112,8 @@ export class Builds {
       scratch: !!snapshot.scratch,
       draft: changes.length > 0,
       sourceKey: inputKey,
+      tree,
+      contentKey,
       log: "",
       manifest: null,
     };
@@ -398,6 +402,8 @@ export async function sourceManifest(dir, job) {
     revision: job.revision,
     command: job.command,
     sourceKey: job.sourceKey,
+    tree: job.tree,
+    contentKey: job.contentKey,
     draft: !!job.draft,
     builtAt: new Date().toISOString(),
     pages,
