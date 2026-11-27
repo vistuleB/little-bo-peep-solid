@@ -533,7 +533,7 @@
 |> Section
 
     *The distance formula in 3 dimensions.*
-    There are two
+    There are two 
     |> del
         right
     \ orthogonal triangles in this drawing:
@@ -558,9 +558,8 @@
 
     since $e$ is the hypotenuse of that triangle,
     and $c$ and $d$ are its legs.
-    
 
-    ...orrrr_rrrr_...
+    Orrrr_rrrr_...
 
     |> Boxed
         $$
