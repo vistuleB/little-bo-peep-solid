@@ -559,14 +559,21 @@
     since $e$ is the hypotenuse of that triangle,
     and $c$ and $d$ are its legs.
 
-    Orrrr_rrrr_...
+    Orrrrrrrr...
 
     |> Boxed
         $$
         e^2 = a^2+b^2+d^2
         $$
 
-    ...by using the fact that $c^2$ is equal to $a^2+b^2$
+    ...by using $c^2 = a^2+b^2$. (Take “$c^2$” in
+    “$e^2 = c^2 + d^2$” and replace by“$a^2 + b^2$.)
+    
+    We thus have
+    
+    |> Boxed
+    
+    
 |> Section
     *The squares.* Observe this computation ofthe
     area of a certain square:
