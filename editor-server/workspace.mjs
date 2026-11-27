@@ -1,3 +1,4 @@
+import { sourceKey } from "./ui/preview-state.mjs";
 import { editorCommitMessage } from "./commit-message.mjs";
 import { spawn } from "node:child_process";
 import { promises as fs } from "node:fs";
@@ -249,6 +250,14 @@ export class Workspace {
         .map(Number);
     else if (record) ahead = null;
     const history = record ? await this.history(name, record) : null;
+    // Upgrade existing clean previews without rebuilding their identical files.
+    if (record?.preview && !record.preview.tree && !record.preview.draft) {
+      record.preview.tree = await this.git([
+        "rev-parse",
+        `${record.preview.revision}^{tree}`,
+      ]);
+      record.preview.contentKey = await sourceKey(record.preview.tree);
+    }
     return {
       name,
       ahead,
@@ -261,6 +270,9 @@ export class Workspace {
       preview: record?.preview || null,
       revision: history
         ? history.commits[history.position - 1] || history.base
+        : null,
+      tree: record
+        ? await this.git(["rev-parse", `${record.ref}^{tree}`])
         : null,
       discard: history?.position || 0,
       reinstate: history ? history.commits.length - history.position : 0,
