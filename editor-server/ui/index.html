@@ -64,12 +64,6 @@
           <button id="refresh">Refresh</button>
         </div>
         <p class="muted">Outgoing / incoming · last fetched state</p>
-        <details>
-          <summary>Sign-in</summary>
-          <p>This browser stays signed in for 90 days, renewed with use.</p>
-          <button id="sign-out">Sign out this device</button>
-          <button id="sign-out-all">Sign out all devices</button>
-        </details>
         <div id="branch-list"></div>
         <section id="build-settings" hidden>
           <h2>Build</h2>
@@ -85,6 +79,12 @@
         <details id="build-log">
           <summary>Build log</summary>
           <pre id="log">No build started this session.</pre>
+        </details>
+        <details id="account">
+          <summary>Account</summary>
+          <p>This browser stays signed in for 90 days, renewed with use.</p>
+          <button id="sign-out">Sign out this device</button>
+          <button id="sign-out-all">Sign out all devices</button>
         </details>
       </main>
       <main id="source" hidden>

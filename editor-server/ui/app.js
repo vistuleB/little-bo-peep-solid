@@ -297,20 +297,16 @@ function renderBranches() {
   for (const branch of state.branches) {
     const card = document.createElement("article");
     card.className = "card" + (branch.name === state.branch ? " selected" : "");
-    card.append(button(branch.name, () => chooseBranch(branch.name), "name"));
+    const heading = document.createElement("div");
+    heading.className = "branch-heading";
+    heading.append(
+      button(branch.name, () => chooseBranch(branch.name), "name"),
+    );
+    card.append(heading);
     const counts = document.createElement("div");
     counts.className = "counts";
     counts.textContent = `${branch.ahead ?? "?"} ↑ / ${branch.behind ?? "?"} ↓`;
     card.append(counts);
-    const footer = document.createElement("footer");
-    const label = document.createElement("span");
-    label.className = "muted";
-    label.textContent = branch.remoteMissing
-      ? "Missing on GitHub"
-      : branch.opened
-        ? "Server draft"
-        : "Available on GitHub";
-    footer.append(label);
     const sync = button("Sync", async () => {
       if (state.branch !== branch.name && !(await chooseBranch(branch.name)))
         return;
@@ -333,8 +329,13 @@ function renderBranches() {
     const actions = document.createElement("div");
     actions.className = "branch-actions";
     actions.append(sync, preview);
-    footer.append(actions);
-    card.append(footer);
+    heading.append(actions);
+    if (branch.remoteMissing) {
+      const warning = document.createElement("span");
+      warning.className = "muted";
+      warning.textContent = "Missing on GitHub";
+      card.append(warning);
+    }
     if (branch.name === state.branch) appendRecentCommits(card, branch);
     $("#branch-list").append(card);
   }
