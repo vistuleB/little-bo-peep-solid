@@ -590,3 +590,33 @@ nav {
   padding-top: 16px;
   border-top: 1px solid #dce3d8;
 }
+
+.sync-split {
+  display: flex;
+  min-height: 44px;
+  border: 1px solid #9aac9b;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.sync-split button {
+  flex: 1;
+  border: 0;
+  border-radius: 0;
+  padding: 8px 4px;
+}
+.sync-split button + button {
+  border-left: 1px solid #9aac9b;
+}
+.preview-actions {
+  flex: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  gap: 8px;
+  padding: 8px 12px 12px;
+}
+#preview-sync {
+  grid-column: 3;
+}
+.sync-options {
+  align-items: center;
+}
