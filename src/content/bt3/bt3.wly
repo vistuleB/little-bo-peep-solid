@@ -532,8 +532,9 @@
         
 |> Section
 
-    *The distane formula in 3 dimensions.*
-    Hello.
+    *The distance formula in 3 dimensions.*
+    In this drawing, $a$ and $b$ and $c$
+    form a right triangle:
 
 |> Section
     *The squares.* Observe this computation ofthe
