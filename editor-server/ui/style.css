@@ -110,6 +110,7 @@ main {
   border-color: #7b9c7c;
 }
 .card .name {
+  min-width: 0;
   border: 0;
   padding: 0;
   background: none;
@@ -119,9 +120,10 @@ main {
 }
 .card .counts {
   font-size: 19px;
-  margin: 14px 0;
+  margin: 10px 0 0;
 }
-.card footer {
+.branch-heading {
+  gap: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -581,4 +583,10 @@ nav {
   white-space: pre-wrap;
   min-width: 0;
   overflow-wrap: anywhere;
+}
+
+#account {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #dce3d8;
 }
