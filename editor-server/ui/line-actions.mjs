@@ -5,6 +5,13 @@ const lineEnd = (text, position) => {
   return newline < 0 ? text.length : newline + 1;
 };
 
+export function retractLines(text, start, end, top = false) {
+  if (start === end) return { start, end };
+  if (top) return { start: Math.min(end, lineEnd(text, start)), end };
+  const last = text[end - 1] === "\n" ? end - 1 : end;
+  return { start, end: Math.max(start, lineStart(text, last)) };
+}
+
 export function selectLines(text, start, end, up = false) {
   const first = lineStart(text, start);
   const last = end > start && text[end - 1] === "\n" ? end - 1 : end;
@@ -219,7 +226,7 @@ export function installLineActions(editor) {
       !event.altKey ||
       event.metaKey ||
       event.ctrlKey ||
-      event.shiftKey ||
+      (event.shiftKey && !["KeyJ", "KeyK"].includes(event.code)) ||
       event.isComposing ||
       editor.readOnly ||
       editor.disabled
@@ -230,7 +237,8 @@ export function installLineActions(editor) {
     const start = editor.selectionStart,
       end = editor.selectionEnd;
     if (event.code === "KeyJ" || event.code === "KeyK") {
-      const range = selectLines(
+      if (event.shiftKey && start === end) return;
+      const range = (event.shiftKey ? retractLines : selectLines)(
         editor.value,
         start,
         end,
