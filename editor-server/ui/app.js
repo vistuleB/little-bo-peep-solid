@@ -1,4 +1,5 @@
 import { indentationEdit } from "./indentation.mjs";
+import { installLineActions } from "./line-actions.mjs";
 import { rememberPosition, restorePosition } from "./editor-position.mjs";
 import { needsBuild, running } from "./preview-state.mjs";
 const $ = (selector) => document.querySelector(selector);
@@ -36,6 +37,35 @@ const state = {
   buildStarting: false,
   buildPanel: false,
 };
+const placesKey = "editor-branch-places-v1";
+let places = {};
+try {
+  places = JSON.parse(localStorage.getItem(placesKey) || "{}");
+} catch {}
+function rememberSourcePlace() {
+  if (state.mode !== "source" || !state.branch || !state.file || state.moving)
+    return;
+  const editor = $("#editor");
+  const position = rememberPosition(
+    editor,
+    parseFloat(getComputedStyle(editor).lineHeight),
+  );
+  // Retain only the three anchor lines, not a persistent copy of the source.
+  position.lines = Object.fromEntries(
+    [position.start.line, position.end.line, position.top].map((i) => [
+      i,
+      position.lines[i],
+    ]),
+  );
+  places[state.branch] = { file: state.file, position };
+  try {
+    localStorage.setItem(placesKey, JSON.stringify(places));
+  } catch {}
+}
+for (const event of ["input", "scroll", "keyup", "click"])
+  $("#editor").addEventListener(event, rememberSourcePlace);
+addEventListener("pagehide", rememberSourcePlace);
+
 const dirty = () =>
   [...state.documents].filter(([, doc]) => doc.content !== doc.original);
 const notice = (text) => {
@@ -150,9 +180,12 @@ function update() {
   $("#commit").textContent = state.saving ? "…" : "✓";
   $("#history-back").textContent = `Discard (${info?.discard || 0})`;
   $("#history-back").disabled = locked || !info?.discard;
-  $("#history-forward").textContent = info?.reinstate
-    ? `Reinstate (${info.reinstate})`
-    : "Sync";
+  $("#history-forward").textContent = `Reinstate (${info?.reinstate || 0})`;
+  $("#history-forward").hidden = !info?.reinstate;
+  $("#source-sync").hidden = !!info?.reinstate;
+  document.querySelectorAll("[data-sync-choice]").forEach((button) => {
+    button.disabled = locked || !canSync(info);
+  });
   $("#history-forward").disabled =
     locked || !state.branch || (!info?.reinstate && !canSync(info));
   document.querySelectorAll("[data-sync-branch]").forEach((button) => {
@@ -161,9 +194,11 @@ function update() {
     );
     button.disabled = locked || !canSync(branch);
   });
-  document.querySelectorAll("[data-preview-branch]").forEach((button) => {
-    button.disabled = locked;
-  });
+  document
+    .querySelectorAll("[data-preview-branch], [data-edit-branch]")
+    .forEach((button) => {
+      button.disabled = locked;
+    });
   previewButton.disabled = !state.branch || locked;
   $("#clean-build-cache").disabled =
     $("#production-build").disabled =
@@ -205,6 +240,7 @@ function update() {
       : "Source";
 }
 function mode(value) {
+  if (value !== state.mode) rememberSourcePlace();
   if (value !== "branches" && !state.branch) {
     notice("Choose a branch first.");
     return;
@@ -329,7 +365,12 @@ function renderBranches() {
     preview.disabled = state.saving || state.moving;
     const actions = document.createElement("div");
     actions.className = "branch-actions";
-    actions.append(sync, preview);
+    const edit = button("✎", () => editBranch(branch.name), "branch-preview");
+    edit.dataset.editBranch = branch.name;
+    edit.title = `Edit ${branch.name}`;
+    edit.setAttribute("aria-label", edit.title);
+    edit.disabled = state.saving || state.moving;
+    actions.append(sync, edit, preview);
     heading.append(actions);
     if (branch.remoteMissing) {
       const warning = document.createElement("span");
@@ -369,6 +410,7 @@ async function chooseBranch(name) {
     return false;
   }
   if (name === state.branch) return true;
+  rememberSourcePlace();
   if (
     !(await settle(
       "Switching branches requires committing or discarding these edits.",
@@ -398,13 +440,39 @@ async function chooseBranch(name) {
     renderBranches();
     renderCommands();
     update();
-    const previous = state.lastFiles.get(name);
-    if (previous && state.files.includes(previous)) await openFile(previous);
+    const previous = places[name]?.file || state.lastFiles.get(name);
+    if (previous && state.files.includes(previous)) await openFile(previous, 0);
     return true;
   } finally {
     state.moving = false;
     update();
   }
+}
+async function editBranch(name) {
+  if (!(await chooseBranch(name))) return;
+  const saved = places[name];
+  const file =
+    saved && state.files.includes(saved.file)
+      ? saved.file
+      : state.file || state.files[0];
+  if (file) await openFile(file, 0);
+  mode("source");
+  if (saved?.file === file && saved.position)
+    restorePosition($("#editor"), saved.position);
+  if (
+    !state.job &&
+    !state.buildStarting &&
+    (await needsBuild(
+      state.preview,
+      name,
+      state.revision || branchInfo()?.revision,
+      currentChanges(),
+      selectedCommand(),
+      branchInfo()?.tree,
+    )) &&
+    state.branch === name
+  )
+    await build(false, false, true);
 }
 function renderCommands() {
   const info = branchInfo();
@@ -433,6 +501,7 @@ function selectedCommand() {
     : $("input[name=command]:checked")?.value || "gleam run";
 }
 async function openFile(file, line = 1) {
+  if (file !== state.file) rememberSourcePlace();
   if (!state.files.includes(file))
     throw new Error("This source file is absent from the current branch.");
   if (!state.documents.has(file)) {
@@ -483,6 +552,7 @@ $("#editor").oninput = () => {
 function insertEditorText(text) {
   return document.execCommand("insertText", false, text);
 }
+installLineActions($("#editor"));
 $("#editor").onkeydown = (event) => {
   if (
     event.key === "Tab" &&
@@ -623,7 +693,7 @@ async function navigateHistory(direction) {
     update();
   }
 }
-function syncChoice() {
+function syncChoice(squash = false) {
   return new Promise((resolve) => {
     const dialog = $("#sync-dialog");
     const info = branchInfo();
@@ -634,11 +704,21 @@ function syncChoice() {
       dialog.close();
       resolve(value);
     };
-    $("#sync-plain").onclick = () =>
-      close({ squash: false, message: $("#sync-message").value });
+    $("#sync-squash").checked = squash && !!info?.discard;
     $("#sync-squash").disabled = !info?.discard;
-    $("#sync-squash").onclick = () =>
-      close({ squash: true, message: $("#sync-message").value });
+    $("#sync-form").onsubmit = (event) => {
+      event.preventDefault();
+      close({
+        squash: $("#sync-squash").checked,
+        message: $("#sync-message").value,
+      });
+    };
+    dialog.onkeydown = (event) => {
+      if (event.key === "Enter" && !event.isComposing) {
+        event.preventDefault();
+        $("#sync-form").requestSubmit();
+      }
+    };
     $("#sync-cancel").onclick = () => close(null);
     dialog.oncancel = (e) => {
       e.preventDefault();
@@ -647,13 +727,13 @@ function syncChoice() {
     dialog.showModal();
   });
 }
-async function syncBranch() {
+async function syncBranch(squash = false) {
   if (state.saving || state.moving || !canSync()) return;
   if (!(await settle("Commit or discard your edits before syncing."))) return;
   state.moving = true;
   update();
   try {
-    const choice = await syncChoice();
+    const choice = await syncChoice(squash);
     if (!choice) return;
     const info = branchInfo();
     notice(
@@ -865,7 +945,7 @@ async function enterPreview() {
     mode("preview");
   }
 }
-async function build(production = false, scratch = false) {
+async function build(production = false, scratch = false, background = false) {
   if (
     state.job ||
     state.buildStarting ||
@@ -881,9 +961,9 @@ async function build(production = false, scratch = false) {
   state.buildStarting = true;
   state.jobBranch = state.branch;
   state.jobStatus = "queued";
-  state.buildPanel = true;
+  state.buildPanel = !background;
   $("#preview-log").textContent = "Preparing current editor contents…";
-  mode("preview");
+  if (!background) mode("preview");
   update();
   try {
     const job = await api("build", {
@@ -901,6 +981,8 @@ async function build(production = false, scratch = false) {
   } catch (error) {
     state.jobStatus = "failed";
     $("#preview-log").textContent = error.message;
+    $("#log").textContent = error.message;
+    $("#build-log").open = true;
   } finally {
     state.buildStarting = false;
     update();
@@ -968,6 +1050,15 @@ $("#close-notice").onclick = () => notice("");
 addEventListener(
   "keydown",
   (event) => {
+    // A focused source selection gets the first Escape; subsequent Escape can
+    // dismiss a notice. Dialogs retain their own Escape handling.
+    if (
+      event.key === "Escape" &&
+      !event.isComposing &&
+      event.target === $("#editor") &&
+      event.target.selectionStart !== event.target.selectionEnd
+    )
+      return;
     if (event.key === "Escape" && dismissMessage()) {
       event.preventDefault();
       event.stopImmediatePropagation();
@@ -1049,8 +1140,10 @@ $("#file-search").oninput = renderTree;
 $("#close-files").onclick = () => $("#files-dialog").close();
 $("#commit").onclick = () => perform(setCommit);
 $("#history-back").onclick = () => perform(() => navigateHistory(-1));
-$("#history-forward").onclick = () =>
-  perform(() => (branchInfo()?.reinstate ? navigateHistory(1) : syncBranch()));
+$("#history-forward").onclick = () => perform(() => navigateHistory(1));
+for (const button of document.querySelectorAll("[data-sync-choice]"))
+  button.onclick = () =>
+    perform(() => syncBranch(button.dataset.syncChoice === "squash"));
 $("#discard").onclick = discard;
 $("#build").onclick = $("#source-build").onclick = () => perform(build);
 $("#custom-command").oninput = () => {
