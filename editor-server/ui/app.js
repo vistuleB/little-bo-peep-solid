@@ -1,4 +1,5 @@
 import { indentationEdit } from "./indentation.mjs";
+import { installLineActions } from "./line-actions.mjs";
 import { rememberPosition, restorePosition } from "./editor-position.mjs";
 import { needsBuild, running } from "./preview-state.mjs";
 const $ = (selector) => document.querySelector(selector);
@@ -551,6 +552,7 @@ $("#editor").oninput = () => {
 function insertEditorText(text) {
   return document.execCommand("insertText", false, text);
 }
+installLineActions($("#editor"));
 $("#editor").onkeydown = (event) => {
   if (
     event.key === "Tab" &&
