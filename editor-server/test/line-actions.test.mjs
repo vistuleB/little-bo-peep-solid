@@ -59,3 +59,17 @@ test("handles EOF, empty lines and document boundaries without losing text", () 
   assert.equal(moveLines("one", 1, 1, false), null);
   assert.equal(moveLines("one\ntwo", 0, 7, false), null);
 });
+
+test("retraction fixes the opposite edge and collapses at that edge", async () => {
+  const { retractLines } = await import("../ui/line-actions.mjs");
+  const text = "one\ntwo\nthree";
+  assert.deepEqual(retractLines(text, 0, 13, true), { start: 4, end: 13 });
+  assert.deepEqual(retractLines(text, 0, 13), { start: 0, end: 8 });
+  assert.deepEqual(retractLines(text, 0, 8), { start: 0, end: 4 });
+  assert.deepEqual(retractLines(text, 4, 8, true), { start: 8, end: 8 });
+  assert.deepEqual(retractLines(text, 4, 8), { start: 4, end: 4 });
+  assert.deepEqual(retractLines(text, 5, 6), { start: 5, end: 5 });
+  assert.deepEqual(retractLines(text, 5, 6, true), { start: 6, end: 6 });
+  assert.deepEqual(retractLines(text, 5, 5, true), { start: 5, end: 5 });
+  assert.deepEqual(retractLines("\n\nx", 0, 2, true), { start: 1, end: 2 });
+});
