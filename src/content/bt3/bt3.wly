@@ -536,9 +536,14 @@
     There are two 
     |> del
         right
+    \ 
+    |> del
+        orthogonal
+    \ 
+    |> del
+        right
     \ orthogonal triangles in this drawing:
-
-
+    \ 
     |> Image
 
     On the one hand, the red triangle gives
@@ -574,51 +579,51 @@
     |> Boxed
     
     
-|> Section
-    *The squares.* Observe this computation ofthe
-    area of a certain square:
+!! |> Section
+!!     *The squares.* Observe this computation ofthe
+!!     area of a certain square:
 
-    |> Image
-        src=tmp-images/bt3_tapestry.svg
+!!     |> Image
+!!         src=tmp-images/bt3_tapestry.svg
 
-    !! Because the area of the square is $2$, its
-    !! sidelength is $\sqrt{2}$.
-    !! If we tilt the square at a different angle
-    !! we can carry it out again, for a less trivial
-    !! instance:
+!!     !! Because the area of the square is $2$, its
+!!     !! sidelength is $\sqrt{2}$.
+!!     !! If we tilt the square at a different angle
+!!     !! we can carry it out again, for a less trivial
+!!     !! instance:
 
-    !! The interest of doing the computation this 
-    !! roundabout way (as opposed to directly cutting
-    !! the square into 4 triangles 
-    !! |> InlineImage
-    !!     width=1.7em
-    !!     style=margin-block:-1em;vertical-align:middle
-    !!     src=tmp-images/bt3_tapestry_square_divided.svg
-    !! )
-    !! is that we can replicate the same subtract-the-corner-triangles
-    !! approach for a differently tilted square:
+!!     !! The interest of doing the computation this 
+!!     !! roundabout way (as opposed to directly cutting
+!!     !! the square into 4 triangles 
+!!     !! |> InlineImage
+!!     !!     width=1.7em
+!!     !!     style=margin-block:-1em;vertical-align:middle
+!!     !!     src=tmp-images/bt3_tapestry_square_divided.svg
+!!     !! )
+!!     !! is that we can replicate the same subtract-the-corner-triangles
+!!     !! approach for a differently tilted square:
 
-    We could have cut up the square directly 
-    into four triangles of area $1/2$ 
-    |> NoBreak
-        (
-        |> InlineImage
-            width=1.7em
-            style=margin-block:-1em;vertical-align:middle
-            src=tmp-images/bt3_tapestry_square_divided.svg
-        )
-    \ but the interest of the above 
-    !! subtract-the-corner-triangles 
-    approach is that it
-    generalizes to a tilted square:
+!!     We could have cut up the square directly 
+!!     into four triangles of area $1/2$ 
+!!     |> NoBreak
+!!         (
+!!         |> InlineImage
+!!             width=1.7em
+!!             style=margin-block:-1em;vertical-align:middle
+!!             src=tmp-images/bt3_tapestry_square_divided.svg
+!!         )
+!!     \ but the interest of the above 
+!!     !! subtract-the-corner-triangles 
+!!     approach is that it
+!!     generalizes to a tilted square:
 
-    |> Image
-        src=tmp-images/bt3_tapestry2.svg
+!!     |> Image
+!!         src=tmp-images/bt3_tapestry2.svg
 
-    (Different square, different area—naturally!)
-    Or keeping the triangle legs as arbitrary variables
-    $a$ and $b$, which gives us a “general formula” for the
-    area:
+!!     (Different square, different area—naturally!)
+!!     Or keeping the triangle legs as arbitrary variables
+!!     $a$ and $b$, which gives us a “general formula” for the
+!!     area:
 
     |> CodexSuggestion
 
