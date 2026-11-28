@@ -99,6 +99,68 @@ export function commentLines(text, start, end) {
   };
 }
 
+// The source textarea has wrapping disabled, so logical rows match visual rows.
+function lineViewport(editor) {
+  const style = editor.ownerDocument.defaultView.getComputedStyle(editor);
+  const height =
+    parseFloat(style.lineHeight) || parseFloat(style.fontSize) * 1.2;
+  const padding = parseFloat(style.paddingTop) || 0;
+  const row = (position) =>
+    editor.value.slice(0, position).split("\n").length - 1;
+  const top = (position) => padding + row(position) * height;
+  return { height, padding, row, top };
+}
+
+function revealSelectionEnd(editor, up) {
+  const { height, padding, row } = lineViewport(editor);
+  const lastRow = editor.value.split("\n").length - 1;
+  const end = editor.selectionEnd;
+  const selectedEnd =
+    end > editor.selectionStart && editor.value[end - 1] === "\n"
+      ? end - 1
+      : end;
+  const target = up
+    ? Math.max(0, row(editor.selectionStart) - 1)
+    : Math.min(lastRow, row(selectedEnd) + 1);
+  const top = padding + target * height;
+  if (top < editor.scrollTop) editor.scrollTop = top;
+  else if (top + height > editor.scrollTop + editor.clientHeight)
+    editor.scrollTop = top + height - editor.clientHeight;
+}
+
+function dropSelection(editor) {
+  const { top, height } = lineViewport(editor);
+  const start = editor.selectionStart,
+    end = editor.selectionEnd;
+  const visible = (position) =>
+    top(position) >= editor.scrollTop &&
+    top(position) + height <= editor.scrollTop + editor.clientHeight;
+  const active = editor.selectionDirection === "backward" ? start : end;
+  const other = active === start ? end : start;
+  const distance = (position) =>
+    Math.max(
+      editor.scrollTop - top(position),
+      top(position) + height - editor.scrollTop - editor.clientHeight,
+      0,
+    );
+  const caret = visible(active)
+    ? active
+    : visible(other)
+      ? other
+      : distance(active) <= distance(other)
+        ? active
+        : other;
+  const scroll = editor.scrollTop,
+    left = editor.scrollLeft;
+  editor.setSelectionRange(caret, caret);
+  editor.scrollTop = scroll;
+  editor.scrollLeft = left;
+  if (!visible(caret)) {
+    if (top(caret) < scroll) editor.scrollTop = top(caret);
+    else editor.scrollTop = top(caret) + height - editor.clientHeight;
+  }
+}
+
 export function installLineActions(editor) {
   const win = editor.ownerDocument.defaultView;
   let leftOption = false;
@@ -122,6 +184,14 @@ export function installLineActions(editor) {
   });
   editor.addEventListener("keydown", (event) => {
     if (event.isComposing || editor.readOnly || editor.disabled) return;
+    if (
+      event.key === "Escape" &&
+      editor.selectionStart !== editor.selectionEnd
+    ) {
+      event.preventDefault();
+      dropSelection(editor);
+      return;
+    }
     if (
       event.metaKey &&
       !event.ctrlKey &&
@@ -171,6 +241,7 @@ export function installLineActions(editor) {
         range.end,
         event.code === "KeyJ" ? "backward" : "forward",
       );
+      revealSelectionEnd(editor, event.code === "KeyJ");
       return;
     }
     const edit = moveLines(editor.value, start, end, event.code === "ArrowUp");
