@@ -1050,6 +1050,15 @@ $("#close-notice").onclick = () => notice("");
 addEventListener(
   "keydown",
   (event) => {
+    // A focused source selection gets the first Escape; subsequent Escape can
+    // dismiss a notice. Dialogs retain their own Escape handling.
+    if (
+      event.key === "Escape" &&
+      !event.isComposing &&
+      event.target === $("#editor") &&
+      event.target.selectionStart !== event.target.selectionEnd
+    )
+      return;
     if (event.key === "Escape" && dismissMessage()) {
       event.preventDefault();
       event.stopImmediatePropagation();
