@@ -82,6 +82,78 @@
   }
   let tracking = false,
     trackingTimer;
+  function clickedSource(event) {
+    const target =
+      event.target instanceof Element
+        ? event.target
+        : event.target.parentElement;
+    let fragment = target?.closest("[data-wly-file]");
+    if (!fragment) {
+      let distance = Infinity;
+      for (const item of fragments()) {
+        for (const rect of item.rects) {
+          if (!rect.width || !rect.height) continue;
+          const d = Math.hypot(
+            Math.max(rect.left - event.clientX, event.clientX - rect.right, 0),
+            Math.max(rect.top - event.clientY, event.clientY - rect.bottom, 0),
+          );
+          if (d < distance) {
+            distance = d;
+            fragment = item.fragment;
+          }
+        }
+      }
+    }
+    if (!fragment) return;
+    let caret;
+    const position = document.caretPositionFromPoint?.(
+      event.clientX,
+      event.clientY,
+    );
+    const range =
+      !position && document.caretRangeFromPoint?.(event.clientX, event.clientY);
+    const node = position?.offsetNode || range?.startContainer;
+    const offset = position?.offset ?? range?.startOffset;
+    if (
+      node?.nodeType === 3 &&
+      fragment.contains(node) &&
+      !node.parentElement.closest(
+        "svg, math, mjx-container, .MathJax, script, style",
+      )
+    ) {
+      caret = {
+        before: node.textContent.slice(Math.max(0, offset - 80), offset),
+        after: node.textContent.slice(offset, offset + 80),
+      };
+    }
+    send({
+      action: "source",
+      file: fragment.dataset.wlyFile,
+      line: Number(fragment.dataset.wlyLine),
+      revision: revision || fragment.dataset.wlyRevision,
+      caret,
+    });
+  }
+  // Capture before links and book interactions. Ordinary clicks stay untouched.
+  addEventListener(
+    "pointerdown",
+    (event) => {
+      if (!event.metaKey || event.button !== 0) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    },
+    true,
+  );
+  addEventListener(
+    "click",
+    (event) => {
+      if (!event.metaKey || event.button !== 0) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      clickedSource(event);
+    },
+    true,
+  );
   function scheduleTracking() {
     if (!tracking) return;
     clearTimeout(trackingTimer);

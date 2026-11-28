@@ -1,5 +1,6 @@
 import { indentationEdit } from "./indentation.mjs";
 import { installLineActions } from "./line-actions.mjs";
+import { sourceCaret } from "./source-caret.mjs";
 import { rememberPosition, restorePosition } from "./editor-position.mjs";
 import { needsBuild, running } from "./preview-state.mjs";
 const $ = (selector) => document.querySelector(selector);
@@ -906,6 +907,17 @@ addEventListener("message", (event) => {
       goggles(false);
       mode("source");
       await openFile(file, line);
+      if (event.data.caret) {
+        const editor = $("#editor");
+        const offset = sourceCaret(editor.value, line, event.data.caret);
+        editor.setSelectionRange(offset, offset);
+        const row = editor.value.slice(0, offset).split("\n").length - 1;
+        editor.scrollTop = Math.max(
+          0,
+          (row - 2) * parseFloat(getComputedStyle(editor).lineHeight),
+        );
+        rememberSourcePlace();
+      }
       if (
         state.preview.revision !== branchInfo()?.revision &&
         (!state.preview.tree || state.preview.tree !== branchInfo()?.tree)
